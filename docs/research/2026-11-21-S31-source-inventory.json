@@ -4,6 +4,73 @@
   "source_root": "C:\\Pyrrhic\\mandate-research-sources\\S4",
   "sources": [
     {
+      "label": "A",
+      "title": "Daniel Ammen, The Atlantic Coast (1883)",
+      "item": "atlanticcoas00amme",
+      "local_path": "atlanticcoas00amme/atlanticcoas00amme.pdf",
+      "bytes": 16040623,
+      "sha256": "f3557a20757e4958f1de9f3ee4e64509c46c6edb520b44133455ed4bf5c8f1e4",
+      "pdf_pages": 316,
+      "archive_url": "https://archive.org/details/atlanticcoas00amme",
+      "scan_url": "https://archive.org/download/atlanticcoas00amme/atlanticcoas00amme.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 28,
+          "pdf": 50,
+          "evidence": "S31/readings/A-p28.json",
+          "sha256": "4cf7af4954a9b7ec9557eb534062061653d79bbdb1b65c8eef46833eff2de83e",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 29,
+          "pdf": 51,
+          "evidence": "S31/readings/A-p29.json",
+          "sha256": "538d8f9cdf1383ebd15aefab0c18a0de834b981b3c8fdfd4a218af08cb5dad63",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 30,
+          "pdf": 52,
+          "evidence": "S31/readings/A-p30.json",
+          "sha256": "e39aee516eea1ab2a455fee22dbb124a1d3222f72045b15a653781aa344486dd",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 31,
+          "pdf": 53,
+          "evidence": "S31/readings/A-p31.json",
+          "sha256": "10b81f216bd220d3218d15cf3271233145d8f46b009b94425300c6186730f6aa",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "source_class": "retrospective naval narrative",
+      "page_examples": [
+        {
+          "printed": 13,
+          "pdf": 35
+        },
+        {
+          "printed": 163,
+          "pdf": 189
+        },
+        {
+          "printed": 182,
+          "pdf": 212
+        },
+        {
+          "printed": 189,
+          "pdf": 219
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Later compilation/reconstruction"
+    },
+    {
       "label": "CARMAN-T",
       "title": "Ezra A. Carman, Antietam manuscript transcription (selected chapters; appended game roster excluded)",
       "local_path": "S31/carman-antietam.pdf",
@@ -102,6 +169,1023 @@
       "acquisition": "New S31 scan"
     },
     {
+      "label": "DON-HRS",
+      "title": "Historic Resource Study for Fort Donelson National Battlefield",
+      "local_path": "S31/donelson-hrs.pdf",
+      "archive_url": "https://www.govinfo.gov/app/details/GOVPUB-I29-PURL-gpo235492",
+      "scan_url": "https://www.govinfo.gov/content/pkg/GOVPUB-I29-PURL-gpo235492/pdf/GOVPUB-I29-PURL-gpo235492.pdf",
+      "source_class": "later government historic-resource study; nearby quantities only",
+      "bytes": 19152982,
+      "sha256": "7a68316cacd4e2627ead3a419005648499d132af1a1d0edc0cfc698d75274fa2",
+      "pdf_pages": 416,
+      "pages": [
+        {
+          "printed": 59,
+          "pdf": 79,
+          "evidence": "S31/readings/DON-HRS-p59.json",
+          "sha256": "a737c0d8c9da9d39813edbec94e922d720e22c88a9ee31c09156ded5b0e19e68",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 63,
+          "pdf": 83,
+          "evidence": "S31/readings/DON-HRS-p63.json",
+          "sha256": "83bca525e8cb6c1da88958fca2c1ed9beb4f099afd95ac5886a72c664dc41c15",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 93,
+          "pdf": 113,
+          "evidence": "S31/readings/DON-HRS-p93.json",
+          "sha256": "734eae2c16cbff72ae3ad702a8f166117db470356e1fddfbeb89f665a2d88d50",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 94,
+          "pdf": 114,
+          "evidence": "S31/readings/DON-HRS-p94.json",
+          "sha256": "b1c50717281df8696e4064b325a0cc0318fbcc003534047b4511a24131478bd1",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "acquisition": "New S31 scan"
+    },
+    {
+      "label": "ONR I-18",
+      "item": "cu31924080772191",
+      "title": "Official Records of the Union and Confederate Navies, series I, volume 18 (1904)",
+      "archive_url": "https://archive.org/details/cu31924080772191",
+      "scan_url": "https://ia600102.us.archive.org/32/items/cu31924080772191/cu31924080772191.pdf",
+      "local_path": "S21/cu31924080772191/cu31924080772191.pdf",
+      "bytes": 53869997,
+      "sha256": "f286d017e57ef71810db1b9f60057b94b546589d02d686eabcab1e3d3e95f306",
+      "pages": [
+        {
+          "printed": 67,
+          "pdf": 93,
+          "evidence": "S31/readings/ONR_I-18-p67.json",
+          "sha256": "eb71a327c87d2dc0f0f0f38c9402ce38136069b02e74786a68602cb099c85e47",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 68,
+          "pdf": 94,
+          "evidence": "S31/readings/ONR_I-18-p68.json",
+          "sha256": "ef79ecb97040d127c3682d95dc2f455f2c3f551e54b1106820946b8eaf2e9672",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 69,
+          "pdf": 95,
+          "evidence": "S31/readings/ONR_I-18-p69.json",
+          "sha256": "9608349caffe253133a1a8842442cf843151b8c2cec1c37e2e6ea5d866bfc4db",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 70,
+          "pdf": 96,
+          "evidence": "S31/readings/ONR_I-18-p70.json",
+          "sha256": "e26d375813cb37696ed34a9ad3e16bb6daba4680cabf292ec637f8a5c8977a7f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 71,
+          "pdf": 97,
+          "evidence": "S31/readings/ONR_I-18-p71.json",
+          "sha256": "1aca9aefa28ed46693f04cd62787fe4a36abe111fa7eb4fc4e0a4b5924bb49a0",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 72,
+          "pdf": 98,
+          "evidence": "S31/readings/ONR_I-18-p72.json",
+          "sha256": "6f2411de70ceb548184ae02820068e1314b583ba12016b70fe6a6cd2e5839a80",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 154,
+          "pdf": 184,
+          "evidence": "S31/readings/ONR_I-18-p154.json",
+          "sha256": "10bf9d0df679e8270c966111ded168ea344f8a90b0827f8e63665b4e5581484c",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 155,
+          "pdf": 185,
+          "evidence": "S31/readings/ONR_I-18-p155.json",
+          "sha256": "35f7777ef33fec7cf525613533d52221043448cd5f811a2b7365e26b3dcb8121",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 156,
+          "pdf": 186,
+          "evidence": "S31/readings/ONR_I-18-p156.json",
+          "sha256": "7a5885863133fc4be37e8739384ff71105392813335ab97e87e8d96fca1c0599",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 157,
+          "pdf": 187,
+          "evidence": "S31/readings/ONR_I-18-p157.json",
+          "sha256": "362fc653396a11a9f1c7b012dc7cb9ed0caa1a3211422711b66a6e59ec890b2f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 158,
+          "pdf": 188,
+          "evidence": "S31/readings/ONR_I-18-p158.json",
+          "sha256": "9c5ba58dca26a8f37dd6afde205bfa8c5b7b3afbc832f7ec9214eb718bd3c95a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 159,
+          "pdf": 189,
+          "evidence": "S31/readings/ONR_I-18-p159.json",
+          "sha256": "b94f11002e6bd1725a7f54a51a760687d7fa95e530483a79a114fa02a03e2814",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 1001,
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "ONR I-22",
+      "item": "cu31924080777448",
+      "title": "Official Records of the Union and Confederate Navies, series I, volume 22 (1908)",
+      "archive_url": "https://archive.org/details/cu31924080777448",
+      "scan_url": "https://ia902804.us.archive.org/4/items/cu31924080777448/cu31924080777448.pdf",
+      "local_path": "S21/cu31924080777448/cu31924080777448.pdf",
+      "bytes": 47636360,
+      "sha256": "185316ef52a550b32761daad005471ee5b1b61b5d7dca8eb516d08dc8f9834a1",
+      "pages": [
+        {
+          "printed": 297,
+          "pdf": 327,
+          "evidence": "S31/readings/ONR_I-22-p297.json",
+          "sha256": "099f2e8537cf1200c91548b93c2be1ba35ad70583d1f86639d0f69d4d3fcc9ed",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 298,
+          "pdf": 328,
+          "evidence": "S31/readings/ONR_I-22-p298.json",
+          "sha256": "440c9cdfc4289867eea4935846df9ac474015c95202b83bd301472a217075728",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 299,
+          "pdf": 329,
+          "evidence": "S31/readings/ONR_I-22-p299.json",
+          "sha256": "39213078e80fd09842e5b5bb8b68717ff4593609eeca7a7ec7714fee9dd9e6f7",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 300,
+          "pdf": 330,
+          "evidence": "S31/readings/ONR_I-22-p300.json",
+          "sha256": "e26767f79fd565b1b9e6c4783e4a23b877efcb161120c298662ae1b11f3013bb",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 301,
+          "pdf": 331,
+          "evidence": "S31/readings/ONR_I-22-p301.json",
+          "sha256": "883fc3b79132f64c7e64c2b8f961da20c9925dac064673c78f2e5e10ed2e7dd2",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 330,
+          "pdf": 360,
+          "evidence": "S31/readings/ONR_I-22-p330.json",
+          "sha256": "7a90e2a9b47b15c787abae4be0a8559af5564c44b8b4eb81c04857dbb22bb5f4",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 331,
+          "pdf": 361,
+          "evidence": "S31/readings/ONR_I-22-p331.json",
+          "sha256": "4ddc116c2c67084037528d9fd4f95d22490afd96c31f497cfaa3269b9800b6a3",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 332,
+          "pdf": 362,
+          "evidence": "S31/readings/ONR_I-22-p332.json",
+          "sha256": "e9ac3677d73385137579180a79af200361f24a5e55c4873af6a10512a27b6f02",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 333,
+          "pdf": 363,
+          "evidence": "S31/readings/ONR_I-22-p333.json",
+          "sha256": "9184532e2448b005828dde58ade2bfe83fec751f527b23029a7ee0ab27f3f182",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 334,
+          "pdf": 364,
+          "evidence": "S31/readings/ONR_I-22-p334.json",
+          "sha256": "f58d748ed47ae121fdb2d1b5af706c9a7c758a0e4857a7b727f997f8e927a6a2",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 335,
+          "pdf": 365,
+          "evidence": "S31/readings/ONR_I-22-p335.json",
+          "sha256": "03ede07a6741812852dd6e533044ba9390e4a164e9d7d00f4f7fa4360d0d110d",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 336,
+          "pdf": 366,
+          "evidence": "S31/readings/ONR_I-22-p336.json",
+          "sha256": "96a8d90f5a46ebba29f3806f22e424bd479f341049b68391f043cb45e8610e9a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 540,
+          "pdf": 570,
+          "evidence": "S31/readings/ONR_I-22-p540.json",
+          "sha256": "69dbdd65ff7554cfef66edbc086047f650ae3995fb184ba47d4273a848ad456c",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 541,
+          "pdf": 571,
+          "evidence": "S31/readings/ONR_I-22-p541.json",
+          "sha256": "674c340d9863fca1964671c4914ecd587397f75526432a58ddd18c0a754d76c9",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 542,
+          "pdf": 572,
+          "evidence": "S31/readings/ONR_I-22-p542.json",
+          "sha256": "5f52b582b8c11de505e75160b91363112f8053b120021d2072f3049af238d547",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 543,
+          "pdf": 573,
+          "evidence": "S31/readings/ONR_I-22-p543.json",
+          "sha256": "79ef7d21426a596c95928b9573173f83999f43b999479980857916ada8167d77",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 544,
+          "pdf": 574,
+          "evidence": "S31/readings/ONR_I-22-p544.json",
+          "sha256": "f4478f664ce80d62e44c68b6e05ddbd841e179889d4f5f7fee5d2d3f33abfe61",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 545,
+          "pdf": 575,
+          "evidence": "S31/readings/ONR_I-22-p545.json",
+          "sha256": "71d6214c4d54e61dd8f7a20a40f0778ee4df0304aa3a2c2071833372b1bb211b",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 546,
+          "pdf": 576,
+          "evidence": "S31/readings/ONR_I-22-p546.json",
+          "sha256": "70aac22a968394062155e5ba142304bdc635d68ab4dea186e3386a030b310767",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 711,
+          "pdf": 745,
+          "evidence": "S31/readings/ONR_I-22-p711.json",
+          "sha256": "976415f064e1f27e36961c6631424c8ebdb47b484757d860aac6f20821a10620",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 712,
+          "pdf": 746,
+          "evidence": "S31/readings/ONR_I-22-p712.json",
+          "sha256": "e8702a71d8ff5a4f5e95375f718a571a6dc3b506bd8b08a44fc762cea5ce5f13",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 713,
+          "pdf": 747,
+          "evidence": "S31/readings/ONR_I-22-p713.json",
+          "sha256": "995b2f4696c7eda8645f65b158d924735ef1407f91c2cd32e8e6f1d8b0682478",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 714,
+          "pdf": 748,
+          "evidence": "S31/readings/ONR_I-22-p714.json",
+          "sha256": "bcdd2557349b7bdba32c1d168bf5d7d82ed1617938d15f66751fdb3cb58f03f4",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 715,
+          "pdf": 749,
+          "evidence": "S31/readings/ONR_I-22-p715.json",
+          "sha256": "323bad35531166a0ce92c353038746f663e7c904859b2c330f5502cee06bfa18",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 716,
+          "pdf": 750,
+          "evidence": "S31/readings/ONR_I-22-p716.json",
+          "sha256": "b208c1b8d011eb932fd4c72f82c1eac6cfa7b0f6e6b4fae0ee3ddc746751954c",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 1008,
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "ONR I-23",
+      "item": "cu31924080772225",
+      "title": "Official Records of the Union and Confederate Navies, series I, volume 23 (1910)",
+      "archive_url": "https://archive.org/details/cu31924080772225",
+      "scan_url": "https://ia601508.us.archive.org/4/items/cu31924080772225/cu31924080772225.pdf",
+      "local_path": "S21/cu31924080772225/cu31924080772225.pdf",
+      "bytes": 40118773,
+      "sha256": "134673b6499d23de460a57c30957a204f72763e19cc2458ba7d1ba22c534dcce",
+      "pdf_pages": 840,
+      "pages": [
+        {
+          "printed": 121,
+          "pdf": 149,
+          "evidence": "S31/readings/ONR_I-23-p121.json",
+          "sha256": "255a5d5d97a753502fee9d410a20465fdc6beaad615b76fc68bbf59cf5fea493",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 122,
+          "pdf": 150,
+          "evidence": "S31/readings/ONR_I-23-p122.json",
+          "sha256": "96881c7166f3544174e92b88d47ab1d42ae5dc3952dbe85318dfdd9999eb728b",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 123,
+          "pdf": 151,
+          "evidence": "S31/readings/ONR_I-23-p123.json",
+          "sha256": "a2e7b30b12393d5c4dfb8e39fadc3c8fe5e35a3b8acf31fc2d7d3c1cc5382aa7",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 124,
+          "pdf": 152,
+          "evidence": "S31/readings/ONR_I-23-p124.json",
+          "sha256": "929343be0abef2f0adfeb3ccb234fec1b10e8226c322a53bd0f1f49c6b42804b",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 125,
+          "pdf": 157,
+          "evidence": "S31/readings/ONR_I-23-p125.json",
+          "sha256": "b157551aa2786cf3c07de043feddb00aaa849b4af8e2f1afd8ae6e7d6b4dfed0",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 126,
+          "pdf": 158,
+          "evidence": "S31/readings/ONR_I-23-p126.json",
+          "sha256": "826f088cd1bd8892c56ac94b7c774b5a273279fa9a8409f0d4e8d277c7609985",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 136,
+          "pdf": 168,
+          "evidence": "S31/readings/ONR_I-23-p136.json",
+          "sha256": "fd5dc6af01801b2f77d9ee86677740b51da2c53e4204f887bc1cfa38540596ee",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 137,
+          "pdf": 169,
+          "evidence": "S31/readings/ONR_I-23-p137.json",
+          "sha256": "6c9c60776d96f1cedc97a35d2aa75e691e6fbf9a5ca8790d0bc5632d67003f76",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 138,
+          "pdf": 170,
+          "evidence": "S31/readings/ONR_I-23-p138.json",
+          "sha256": "626f749d4ffb825eac7da3d3593e41ff02aa88a49180e0d2e63e78d382fbd6e7",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 139,
+          "pdf": 171,
+          "evidence": "S31/readings/ONR_I-23-p139.json",
+          "sha256": "384cbb00ac20092c6d31588e064a1c1a8b6534f3d2dff1d3ff4040e929019278",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 175,
+          "pdf": 207,
+          "evidence": "S31/readings/ONR_I-23-p175.json",
+          "sha256": "926b750548513963ed289373ee789e53ff55fa5d31e51488a2fbc700a27fe28a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 176,
+          "pdf": 208,
+          "evidence": "S31/readings/ONR_I-23-p176.json",
+          "sha256": "89ed6681783b21fc35e1dbf9dc0c37778ed27e8ee84b6067a10baf119ecdff49",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 177,
+          "pdf": 209,
+          "evidence": "S31/readings/ONR_I-23-p177.json",
+          "sha256": "4ad4ef4b4aaa888de0d8367c77bda29f3f226cab3f1b61456e3948f5274fdc1d",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 178,
+          "pdf": 210,
+          "evidence": "S31/readings/ONR_I-23-p178.json",
+          "sha256": "0514905c5abda044439cbc952aaee16db74aca878279b54437d6b1a29549a738",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 179,
+          "pdf": 211,
+          "evidence": "S31/readings/ONR_I-23-p179.json",
+          "sha256": "fcc8326765c6dad1a260182dba05ff6dc702dcadb1bb88192a7b624e0351e1dc",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 180,
+          "pdf": 212,
+          "evidence": "S31/readings/ONR_I-23-p180.json",
+          "sha256": "4e6ac591cb6486c6f8f035563d0023015f6a8278d730041c773442b92d94cce7",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 294,
+          "pdf": 326,
+          "evidence": "S31/readings/ONR_I-23-p294.json",
+          "sha256": "8c03ac6d8462af8c8da4906fb4572e4eb54e8053b7e44461b77dd46f2491d768",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 295,
+          "pdf": 327,
+          "evidence": "S31/readings/ONR_I-23-p295.json",
+          "sha256": "a8dc67aa4a96c6931fec8e971449c32b593e5e5919c48dd2b6955e10b31ca91f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 296,
+          "pdf": 328,
+          "evidence": "S31/readings/ONR_I-23-p296.json",
+          "sha256": "088c65a43fef7c31e46c7bdfb6f32114076c259576adb897fd3bd67f933cec0e",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 297,
+          "pdf": 329,
+          "evidence": "S31/readings/ONR_I-23-p297.json",
+          "sha256": "feac8ebc62376069c0dee7cb537d8250c3b778f10a4a39244a91bbf287ee2129",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 298,
+          "pdf": 330,
+          "evidence": "S31/readings/ONR_I-23-p298.json",
+          "sha256": "ee5526012db29df055cd2ae8793833e61a0de107c505046e2eaf0d436be409fa",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 299,
+          "pdf": 331,
+          "evidence": "S31/readings/ONR_I-23-p299.json",
+          "sha256": "8e63e4608fcb4162f86c1851d928e93f0bf24b2a4ac87dc9f458a149c9ec9f20",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 352,
+          "pdf": 386,
+          "evidence": "S31/readings/ONR_I-23-p352.json",
+          "sha256": "6d654508b5fcba4776126e40a7204391862b6739df915095a9532a5ebd6e733e",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 353,
+          "pdf": 387,
+          "evidence": "S31/readings/ONR_I-23-p353.json",
+          "sha256": "822cbc662f9a1b008beb14c413beb01a730743b2aa801532a5435e523e1fe781",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 354,
+          "pdf": 388,
+          "evidence": "S31/readings/ONR_I-23-p354.json",
+          "sha256": "058645eab6b710549ef21dbbcd30fddbb2fc4e1ecef157aafcc49e67b106a361",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 355,
+          "pdf": 389,
+          "evidence": "S31/readings/ONR_I-23-p355.json",
+          "sha256": "04a593aeda3bae70ec780905999542ffa4057b7bfefb8ab493726d169c41060a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 356,
+          "pdf": 390,
+          "evidence": "S31/readings/ONR_I-23-p356.json",
+          "sha256": "499b18090c1b2c211c0495a95b26857b34d287c5717f50e9956fbec66eaf7a22",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 357,
+          "pdf": 391,
+          "evidence": "S31/readings/ONR_I-23-p357.json",
+          "sha256": "8e4958815c8dbef76bd9d3fc82d1eb8ef0a8f64328ae45d4853c9edabc63c14d",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 358,
+          "pdf": 392,
+          "evidence": "S31/readings/ONR_I-23-p358.json",
+          "sha256": "91f26fb62d9ff4c41629a9af361c053bbd77a844c1732f075dc7d9c02c1fa1a5",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "ONR I-6",
+      "item": "officialrecords16librgoog",
+      "title": "Official Records of the Union and Confederate Navies, series I, volume 6 (1897)",
+      "archive_url": "https://archive.org/details/officialrecords16librgoog",
+      "scan_url": "https://ia601403.us.archive.org/32/items/officialrecords16librgoog/officialrecords16librgoog_text.pdf",
+      "local_path": "S21/officialrecords16librgoog/officialrecords16librgoog_text.pdf",
+      "bytes": 73269555,
+      "sha256": "f231cf9bd5917280fff97ffd980d7dda5e13c8e22b4ef88126f37de1d335ffe0",
+      "pages": [
+        {
+          "printed": 122,
+          "pdf": 153,
+          "evidence": "S31/readings/ONR_I-6-p122.json",
+          "sha256": "a308ad4044db192d014127ba2ab2660e68634587c248157be278ca655c83a238",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 123,
+          "pdf": 154,
+          "evidence": "S31/readings/ONR_I-6-p123.json",
+          "sha256": "684a326c8ad4e38ecca96c73c787d397aac12506ab8e4f14af3a5bd1d58a26bb",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 124,
+          "pdf": 155,
+          "evidence": "S31/readings/ONR_I-6-p124.json",
+          "sha256": "a89bcdca01336a3d96f1a532f50ec44ac24173b18ce1e0d411c169124a3128b6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 125,
+          "pdf": 156,
+          "evidence": "S31/readings/ONR_I-6-p125.json",
+          "sha256": "a00ed3a97f71756c7848bb197243dd522a9c4174013dcca554b0aec7e1e849e1",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 141,
+          "pdf": 172,
+          "evidence": "S31/readings/ONR_I-6-p141.json",
+          "sha256": "00bcf1dcfbc4681fabdcb1b27ef0fdd7c1eec87d0dfb621969c7101d3b1c3672",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 142,
+          "pdf": 173,
+          "evidence": "S31/readings/ONR_I-6-p142.json",
+          "sha256": "40583fd72d3f51f78951f1dd15062f2f2e360aa7688a065cd71cfb0be1d13db6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 143,
+          "pdf": 174,
+          "evidence": "S31/readings/ONR_I-6-p143.json",
+          "sha256": "bcac9b937c91700c48ad04a6cab88165afddc7b6f63c48c895e31542eb0021d3",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 144,
+          "pdf": 175,
+          "evidence": "S31/readings/ONR_I-6-p144.json",
+          "sha256": "90d2573453684c77ccc737ed1f9fed9d596fb40c51e126a330db2699bbdab423",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 145,
+          "pdf": 176,
+          "evidence": "S31/readings/ONR_I-6-p145.json",
+          "sha256": "3c81b015ef0437b2939a3fc4b0085c748f8ebe2c7f28d41b4c1c659888d6be8a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 146,
+          "pdf": 177,
+          "evidence": "S31/readings/ONR_I-6-p146.json",
+          "sha256": "fc425fe63e43d5e857746ad72592fa0e669ce4b33c59793158787b56436c9d89",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 579,
+          "pdf": 622,
+          "evidence": "S31/readings/ONR_I-6-p579.json",
+          "sha256": "20427450d810dd1264b4949c73a88e70dc0020879227868214f235b3561ab625",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 580,
+          "pdf": 623,
+          "evidence": "S31/readings/ONR_I-6-p580.json",
+          "sha256": "56f6cb98edec270881e1d8fbb1f08e18658a638f9bf40db3fe750da486f925d7",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 581,
+          "pdf": 624,
+          "evidence": "S31/readings/ONR_I-6-p581.json",
+          "sha256": "9dedf3a6cdae4a24b9e05029f0a3ea91529ea3297e24747cc6ce87e4b5826261",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 582,
+          "pdf": 625,
+          "evidence": "S31/readings/ONR_I-6-p582.json",
+          "sha256": "8b05daa418c60d517e4ffc188a4d0595135a9d9e56a64a546896d8a45a8bd769",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 944,
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "ONR I-7",
+      "item": "officialrecords13librgoog",
+      "title": "Official Records of the Union and Confederate Navies, series I, volume 7 (1898)",
+      "archive_url": "https://archive.org/details/officialrecords13librgoog",
+      "scan_url": "https://ia600702.us.archive.org/35/items/officialrecords13librgoog/officialrecords13librgoog_text.pdf",
+      "local_path": "S21/officialrecords13librgoog/officialrecords13librgoog_text.pdf",
+      "bytes": 57497116,
+      "sha256": "9a38fd48d0090b62251cd5b6e8920d0694cf16af71c08056b105ffa61ababec7",
+      "pdf_pages": 931,
+      "pages": [
+        {
+          "printed": 49,
+          "pdf": 82,
+          "evidence": "S31/readings/ONR_I-7-p49.json",
+          "sha256": "da2a0934516c8df0e3c94f14eb0c11ee42c51f5d19bab29ebb91a1c853f91d4b",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 50,
+          "pdf": 83,
+          "evidence": "S31/readings/ONR_I-7-p50.json",
+          "sha256": "52273168e188a42a0f5efaec87ad37dc8f8246b6b02090a1b73b346ff26d12e0",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 51,
+          "pdf": 84,
+          "evidence": "S31/readings/ONR_I-7-p51.json",
+          "sha256": "9bf1f3331b1aed93da496ec887c2d23afb8b5c22c95effeb020e10ea8e2480a1",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 52,
+          "pdf": 85,
+          "evidence": "S31/readings/ONR_I-7-p52.json",
+          "sha256": "1ba61524bbb351d768dfe159a763b56a39924e13aaf363aeb1b83ed58bc99e61",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 53,
+          "pdf": 86,
+          "evidence": "S31/readings/ONR_I-7-p53.json",
+          "sha256": "233f03e71bfee945fd4866e47ecacc328359f0213fd6dda642917a71bec34530",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 54,
+          "pdf": 87,
+          "evidence": "S31/readings/ONR_I-7-p54.json",
+          "sha256": "b740945d07c504f7de093ea3653010d9c2ca86e2d90918319eb43cc9efdfc266",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 55,
+          "pdf": 88,
+          "evidence": "S31/readings/ONR_I-7-p55.json",
+          "sha256": "7e8ebd2684089abf42c473814db07f2bd2c9ea33a3726cb1c497c072e1e9fd31",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-IX",
+      "title": "Official Records, series I, volume IX (1883)",
+      "item": "warofrebellion09unit",
+      "local_path": "warofrebellion09unit/warofrebellion09unit.pdf",
+      "bytes": 79125288,
+      "sha256": "f5320ac74f6834a4855bdb5b7ca2af37a338e44573f3d7256799a1e08ca6d082",
+      "pdf_pages": 820,
+      "archive_url": "https://archive.org/details/warofrebellion09unit",
+      "scan_url": "https://archive.org/download/warofrebellion09unit/warofrebellion09unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 90,
+          "pdf": 102,
+          "evidence": "S31/readings/OR_I-IX-p90.json",
+          "sha256": "32db79e74461350d86082770b5cf33b64885f84609908a126603067f586fe6ec",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 91,
+          "pdf": 103,
+          "evidence": "S31/readings/OR_I-IX-p91.json",
+          "sha256": "489b71074a4ba9302b0fe467db0259ef19f575aa6391075458a1bbd073c6c1b1",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 92,
+          "pdf": 104,
+          "evidence": "S31/readings/OR_I-IX-p92.json",
+          "sha256": "661b4eba3bb3953f490f2bbdebe657c6a5363b16f16b2a81fc6bf9c0a750bd35",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 93,
+          "pdf": 105,
+          "evidence": "S31/readings/OR_I-IX-p93.json",
+          "sha256": "629a9f98b051dae11b6b91ab82c6b8fde15c9c38461b28cb6e622db731ef7861",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 94,
+          "pdf": 106,
+          "evidence": "S31/readings/OR_I-IX-p94.json",
+          "sha256": "e5c954257c420a8d2accafbc47f35c5e836323de7bf52727a88e8bf7d8313f24",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 98,
+          "pdf": 110,
+          "evidence": "S31/readings/OR_I-IX-p98.json",
+          "sha256": "4f239eabcc5a68f8bbe0ea7869b3335256914c443b96ee40123e1f2ed69bfd2b",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 99,
+          "pdf": 111,
+          "evidence": "S31/readings/OR_I-IX-p99.json",
+          "sha256": "1368a4cce4012e93e8ae1a2de4e3529cd70090f35823fbf6094414f0df14124c",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 100,
+          "pdf": 112,
+          "evidence": "S31/readings/OR_I-IX-p100.json",
+          "sha256": "7871f940e88685de6963352c8102d76ef91d61ed42ab53bb6bb1a30a0fd02499",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 101,
+          "pdf": 113,
+          "evidence": "S31/readings/OR_I-IX-p101.json",
+          "sha256": "d444a8d5ea79015c572fc0fcdd4bdbbe6f6282c917047a26dd5035503ab46867",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 208,
+          "pdf": 220,
+          "evidence": "S31/readings/OR_I-IX-p208.json",
+          "sha256": "e767ed83d8fad199903a59a049f4543fa392675bc6abb7493d86e8053cc4c5cf",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 209,
+          "pdf": 221,
+          "evidence": "S31/readings/OR_I-IX-p209.json",
+          "sha256": "36b598103a92e6fb1abb8ca9ba24ca18b695d3abeaeeca0a798591d09178d6a4",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 210,
+          "pdf": 222,
+          "evidence": "S31/readings/OR_I-IX-p210.json",
+          "sha256": "744339f9f8d40bac8980d3506292f9a806e67abc2357200b06395722c1bc17c9",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 211,
+          "pdf": 223,
+          "evidence": "S31/readings/OR_I-IX-p211.json",
+          "sha256": "f16d62b02b5bee42f41db4f9c7687b23781f1cebba77e4b3a6dd235bec87dcdb",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 212,
+          "pdf": 224,
+          "evidence": "S31/readings/OR_I-IX-p212.json",
+          "sha256": "9baf3ae7d5522780ba2b0e19daed751ae384eac0988494188258ce6badd03f22",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 213,
+          "pdf": 225,
+          "evidence": "S31/readings/OR_I-IX-p213.json",
+          "sha256": "7453cb57f4dfca1cc811d1299f00b9bf9a251de07157830efa2fbe3eeb1f28c3",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 214,
+          "pdf": 226,
+          "evidence": "S31/readings/OR_I-IX-p214.json",
+          "sha256": "873a2e64291bff2ceb6ed9c4a9fbce90f47f6518e52bf59c0887740a94b111b0",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 226,
+          "pdf": 238,
+          "evidence": "S31/readings/OR_I-IX-p226.json",
+          "sha256": "5e44878f27b8d399182a2929c49366a2b068f5b8765d221bcec258a03dfba251",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 227,
+          "pdf": 239,
+          "evidence": "S31/readings/OR_I-IX-p227.json",
+          "sha256": "be0431aef4f930f2ede90a1407e4a535939b8aa17bd07f730bacef9deab715fd",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 228,
+          "pdf": 240,
+          "evidence": "S31/readings/OR_I-IX-p228.json",
+          "sha256": "1e5bc7c3ed8dbfdec87f14aa4291d654d627470c98f0568b983b2b1ae24d664a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 229,
+          "pdf": 241,
+          "evidence": "S31/readings/OR_I-IX-p229.json",
+          "sha256": "9ca7411ddba63977f1e436f91ed92668936e603d0265b9d88930856ae5a29a00",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 230,
+          "pdf": 242,
+          "evidence": "S31/readings/OR_I-IX-p230.json",
+          "sha256": "7f1e940c93e8e55485f34852221097cd1d13eb0e53702420242df50cf628b0a6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 1,
+          "pdf": 13
+        },
+        {
+          "printed": 481,
+          "pdf": 493
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
       "label": "OR I-LI.1",
       "title": "Official Records, series I, volume LI, part I (1897)",
       "local_path": "S31/or51-1.pdf",
@@ -186,6 +1270,394 @@
         }
       ],
       "acquisition": "New S31 scan"
+    },
+    {
+      "label": "OR I-V",
+      "title": "Official Records, series I, volume V (1881)",
+      "item": "warofrebellion05unit",
+      "local_path": "warofrebellion05unit/warofrebellion05unit.pdf",
+      "bytes": 119747989,
+      "sha256": "c36ab1965afbb04c30a5dc7e9f3bff7bd39e9e17a5df3c4c9334f9275309c0e1",
+      "pdf_pages": 1226,
+      "archive_url": "https://archive.org/details/warofrebellion05unit",
+      "scan_url": "https://archive.org/download/warofrebellion05unit/warofrebellion05unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 399,
+          "pdf": 409,
+          "evidence": "S31/readings/OR_I-V-p399.json",
+          "sha256": "2da1db18c0549c444e20da72abff4be3a979f3d6a97bdd9bd0bd3e38c9133d3a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 562,
+          "pdf": 572,
+          "evidence": "S31/readings/OR_I-V-p562.json",
+          "sha256": "0879b838bb101689419eb3de9ecd394156da02eb1496ee0ae96ffdbda2f9f570",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 563,
+          "pdf": 573,
+          "evidence": "S31/readings/OR_I-V-p563.json",
+          "sha256": "2b51cb58dfb408399cfe0a27df7ce311a7defc627ecf15641086a47b2d6369c8",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 564,
+          "pdf": 574,
+          "evidence": "S31/readings/OR_I-V-p564.json",
+          "sha256": "649fbf07010e425c5ef8a0649b83e5f03afad64ff44a10a91de48cfd5718c7f7",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 565,
+          "pdf": 575,
+          "evidence": "S31/readings/OR_I-V-p565.json",
+          "sha256": "139008390c482b8773b4ede2d612f0064878afc9f9193a7cfb6ff13cbc8a5a84",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 566,
+          "pdf": 576,
+          "evidence": "S31/readings/OR_I-V-p566.json",
+          "sha256": "558d29edf41e56cbc490846c513e7513ba91f8ed6e73d089e85314edd7f5d655",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 567,
+          "pdf": 577,
+          "evidence": "S31/readings/OR_I-V-p567.json",
+          "sha256": "4f84b092e7267bb2b8f0fd7f6425acd33136b73542b224a4f8b5761eff06a7b8",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 732,
+          "pdf": 742,
+          "evidence": "S31/readings/OR_I-V-p732.json",
+          "sha256": "c7b5562849dab74f8bf7fa7b9a96e77a8a149c0a6c6e24d4873ca2908e317cef",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 290,
+          "pdf": 300
+        },
+        {
+          "printed": 308,
+          "pdf": 318
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-VII",
+      "title": "Official Records, series I, volume VII (1882)",
+      "item": "warofrebellion07unit",
+      "local_path": "warofrebellion07unit/warofrebellion07unit.pdf",
+      "bytes": 102409570,
+      "sha256": "4e430999ad6aa131916f94b32cb09b15e2c040abb2445c9ebb4642244702e089",
+      "pdf_pages": 1046,
+      "archive_url": "https://archive.org/details/warofrebellion07unit",
+      "scan_url": "https://archive.org/download/warofrebellion07unit/warofrebellion07unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 174,
+          "pdf": 186,
+          "evidence": "S31/readings/OR_I-VII-p174.json",
+          "sha256": "aa2e111fc2c5b10b8ce964ddb65a652c32b447a65f0c516a3d4a7472cb64efef",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 175,
+          "pdf": 187,
+          "evidence": "S31/readings/OR_I-VII-p175.json",
+          "sha256": "8ced9bc8d3cb76dbf5cc254ac19a61d8189c0f327010f8ead8d2b39baa401bd6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 176,
+          "pdf": 188,
+          "evidence": "S31/readings/OR_I-VII-p176.json",
+          "sha256": "60e3c55c94b79fc515c9ae632ecc5b2ebd9ddd6494334687864f62e42a05d6e6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 177,
+          "pdf": 189,
+          "evidence": "S31/readings/OR_I-VII-p177.json",
+          "sha256": "0ae45dc9eb10de8b1f8ce07a3142a5c622c4c1eabb1afde6f6f5bdeb83b5fff4",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 178,
+          "pdf": 190,
+          "evidence": "S31/readings/OR_I-VII-p178.json",
+          "sha256": "430973d6eb62e7790885c3dc8b04664ae307d7d487f2cb80b125a50bfd11402a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 179,
+          "pdf": 191,
+          "evidence": "S31/readings/OR_I-VII-p179.json",
+          "sha256": "a22365049a115913e1d6f5c90c85ddff9a66336ca1472f982a8c32d6eed1dcb1",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 202,
+          "pdf": 214,
+          "evidence": "S31/readings/OR_I-VII-p202.json",
+          "sha256": "24a47ce09643c596d30fa81692d56c96588f4ba6384d4a56891ccf93ea3b5a05",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 203,
+          "pdf": 215,
+          "evidence": "S31/readings/OR_I-VII-p203.json",
+          "sha256": "336a878714cd8cc3947d62fce15e64dfdff630abc448e2a21d77ddf39f25defd",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 204,
+          "pdf": 216,
+          "evidence": "S31/readings/OR_I-VII-p204.json",
+          "sha256": "2589854a15a8a99d6cc9061f9759b86af977a0a2d2e6434c687f431b6f831725",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 226,
+          "pdf": 238,
+          "evidence": "S31/readings/OR_I-VII-p226.json",
+          "sha256": "cbefb9967548fec02c46709aa0b1561609d87cf01a46fa36dace2e9d2cf83f22",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 227,
+          "pdf": 239,
+          "evidence": "S31/readings/OR_I-VII-p227.json",
+          "sha256": "dc6702a6ccf2e735cc7ad01d33236f4c1b2c60b56769f9ed3124865166af53c6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 228,
+          "pdf": 240,
+          "evidence": "S31/readings/OR_I-VII-p228.json",
+          "sha256": "55c874e4346945b4cbcb5d78fcce4f3bbc01e55378d7dfcc062bfefb609fba38",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 229,
+          "pdf": 241,
+          "evidence": "S31/readings/OR_I-VII-p229.json",
+          "sha256": "ce89e53ef286226fabce476021a435582c49038c1872e56b0891915979d339e8",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 169,
+          "pdf": 181
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-VIII",
+      "title": "Official Records, series I, volume VIII (1883)",
+      "item": "warofrebellion08unit",
+      "local_path": "warofrebellion08unit/warofrebellion08unit.pdf",
+      "bytes": 88512743,
+      "sha256": "0cadfc289bcadfc22272dbe917f591d7d993616e463c83cf7257c8c21f501d33",
+      "pdf_pages": 938,
+      "archive_url": "https://archive.org/details/warofrebellion08unit",
+      "scan_url": "https://archive.org/download/warofrebellion08unit/warofrebellion08unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 232,
+          "pdf": 244,
+          "evidence": "S31/readings/OR_I-VIII-p232.json",
+          "sha256": "d5a7ced9eb7314f2de99ffa399e686cabd5b597304ef2e6d8945bd38f194713a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 233,
+          "pdf": 245,
+          "evidence": "S31/readings/OR_I-VIII-p233.json",
+          "sha256": "8a73f9147f327c1dc79efefdaf9b6d51e86424ca006e377d48d1df56be81f87c",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 234,
+          "pdf": 246,
+          "evidence": "S31/readings/OR_I-VIII-p234.json",
+          "sha256": "dec5648a644f99c39585348737e1adc12df9b10d37548d9710807261dad8e9af",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 240,
+          "pdf": 252,
+          "evidence": "S31/readings/OR_I-VIII-p240.json",
+          "sha256": "154cbf7e5893836a76e8c6b62a5e9ec68efa54ab65ade82dbdeaac8066dc85eb",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 241,
+          "pdf": 253,
+          "evidence": "S31/readings/OR_I-VIII-p241.json",
+          "sha256": "d50a542fd9c02482fde65e8cf015b59246fce5354dc7e74610113ea125592c61",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 242,
+          "pdf": 254,
+          "evidence": "S31/readings/OR_I-VIII-p242.json",
+          "sha256": "4eac2f30880f55cbc1286539976e6effb59b7763d73f40a6da75895107b76d42",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 245,
+          "pdf": 257,
+          "evidence": "S31/readings/OR_I-VIII-p245.json",
+          "sha256": "6cfa4602e7170d01e2651779db531ea3d85f1a77c73feafa34eeac128384af47",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 246,
+          "pdf": 258,
+          "evidence": "S31/readings/OR_I-VIII-p246.json",
+          "sha256": "f8694788f0d9f1422d743544a7e421ebbf933ed1641e79c1074376407cf4ba38",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 247,
+          "pdf": 259,
+          "evidence": "S31/readings/OR_I-VIII-p247.json",
+          "sha256": "3862de9f33a54214e934ee7e7b8126b60185f33f25b1777895d0500d1a28dd41",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 248,
+          "pdf": 260,
+          "evidence": "S31/readings/OR_I-VIII-p248.json",
+          "sha256": "cbc54937c2f03c3912eb4be121eb659a2e236abd3d2360d3bfff01ca8ec6ee88",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 249,
+          "pdf": 261,
+          "evidence": "S31/readings/OR_I-VIII-p249.json",
+          "sha256": "0f8dfefd3166b5b813b63feb54ff30648843072c59d8cc7c697d35e00fb85bbe",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 196,
+          "pdf": 208
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-X.1",
+      "title": "Official Records, series I, volume X, part I (1884)",
+      "item": "warofrebellion101unit",
+      "local_path": "warofrebellion101unit/warofrebellion101unit.pdf",
+      "bytes": 116205347,
+      "sha256": "08aea2cabaface9893c5ae68928a1bdbcd4a10152f28db575970a48b46c1abfc",
+      "pdf_pages": 1048,
+      "archive_url": "https://archive.org/details/warofrebellion101unit",
+      "scan_url": "https://archive.org/download/warofrebellion101unit/warofrebellion101unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 376,
+          "pdf": 390,
+          "evidence": "S31/readings/OR_I-X.1-p376.json",
+          "sha256": "e592d91431be7072966c2a74afa63029559dfb2dd3ddaee3e396fb8984475547",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 377,
+          "pdf": 391,
+          "evidence": "S31/readings/OR_I-X.1-p377.json",
+          "sha256": "b0f6f094cc34f7f69ceec20e9b3b846577bcb33007c20874866c7f90323a495f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 378,
+          "pdf": 392,
+          "evidence": "S31/readings/OR_I-X.1-p378.json",
+          "sha256": "8cf3a501f679f2d13e9426a50f4fd95eaa14217e244f0d17ff67f1deb9d844c8",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 379,
+          "pdf": 393,
+          "evidence": "S31/readings/OR_I-X.1-p379.json",
+          "sha256": "26fb02d90e20e206bda4b6784b97c5469c3cfdf8d16a6b18be6c1fb476cdc4ab",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 112,
+          "pdf": 126
+        },
+        {
+          "printed": 396,
+          "pdf": 410
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
     },
     {
       "label": "OR I-XI.1",
@@ -406,7 +1878,12 @@
           "pdf": 354,
           "evidence": "S31/readings/OR_I-XI.2-p348.json",
           "sha256": "c5dce6669e1d1baa23e81d6200ab2d6e193345904faced7084a439305e19a446",
-          "images": [],
+          "images": [
+            {
+              "path": "S31/images/OR_I-XI.2-p348.png",
+              "sha256": "eb3c610ca17306d4d70d919e615c000c65136ebe12477986df11edc6499d2b69"
+            }
+          ],
           "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
         },
         {
@@ -414,7 +1891,12 @@
           "pdf": 355,
           "evidence": "S31/readings/OR_I-XI.2-p349.json",
           "sha256": "b497203021937a732b4c7d181c42d187eec80944119a1c063145feff23f50506",
-          "images": [],
+          "images": [
+            {
+              "path": "S31/images/OR_I-XI.2-p349.png",
+              "sha256": "cc18446ce1e4cfa673ffa866d29ea87eea948108a6ebb94e6ad0efd94d6b454e"
+            }
+          ],
           "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
         },
         {
@@ -870,6 +2352,54 @@
           "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
         },
         {
+          "printed": 600,
+          "pdf": 606,
+          "evidence": "S31/readings/OR_I-XII.3-p600.json",
+          "sha256": "1b8f39322b0e150f2c90a39cf297616324c14fd94fc0fa7ebc772c7dce9f2d05",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 601,
+          "pdf": 607,
+          "evidence": "S31/readings/OR_I-XII.3-p601.json",
+          "sha256": "968744120a85f81635d7324b873b4a2f0351b56c1872202f8976abcdb793913e",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 602,
+          "pdf": 608,
+          "evidence": "S31/readings/OR_I-XII.3-p602.json",
+          "sha256": "9ffb4209e2110df575c8e3493d6d5f09aee062cba0e8a5d625e4a2e6da7df519",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 603,
+          "pdf": 609,
+          "evidence": "S31/readings/OR_I-XII.3-p603.json",
+          "sha256": "cc2758fb2b017d4d914e2da48191ab5aea29f16258bac481da956ad4b109cd74",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 604,
+          "pdf": 610,
+          "evidence": "S31/readings/OR_I-XII.3-p604.json",
+          "sha256": "9875987b464bbaac1831d2bc81d473a76505fdf5153dc659308e0fbffa93abdd",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 605,
+          "pdf": 611,
+          "evidence": "S31/readings/OR_I-XII.3-p605.json",
+          "sha256": "fecbfcf2c0585573ab1db4a0fe701835475827b38bcd9ed98baf6cf07908893d",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
           "printed": 618,
           "pdf": 624,
           "evidence": "S31/readings/OR_I-XII.3-p618.json",
@@ -1147,11 +2677,1175 @@
       ],
       "acquisition": "Reused prior scan in place; hash checked in S31",
       "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XIX.2",
+      "title": "Official Records, series I, volume XIX, part II (1887)",
+      "item": "warofrebellion192unit",
+      "local_path": "warofrebellion192unit/warofrebellion192unit.pdf",
+      "bytes": 79097442,
+      "sha256": "feeffadde0922072422b88d3d5517da69412f1f9e08a4a910283e9ac728f9a62",
+      "pdf_pages": 838,
+      "archive_url": "https://archive.org/details/warofrebellion192unit",
+      "scan_url": "https://archive.org/download/warofrebellion192unit/warofrebellion192unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 712,
+          "pdf": 718,
+          "evidence": "S31/readings/OR_I-XIX.2-p712.json",
+          "sha256": "c96506732e90d39265ebf3ae483e0b4b513cdfd5991e70d539ef7931649dc485",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 713,
+          "pdf": 719,
+          "evidence": "S31/readings/OR_I-XIX.2-p713.json",
+          "sha256": "8538ee42899e1d2f805e3cc990834aefbdd46f4a1696aa29f8544da91361c144",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 714,
+          "pdf": 720,
+          "evidence": "S31/readings/OR_I-XIX.2-p714.json",
+          "sha256": "fcd3ee2a68e4559c9a7563f5404f502f7af39d6dc3838a70d163798b38b32295",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 555,
+          "pdf": 561
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XVI.1",
+      "title": "Official Records, series I, volume XVI, part I (1886)",
+      "item": "warofrebellion161unit",
+      "local_path": "warofrebellion161unit/warofrebellion161unit.pdf",
+      "bytes": 150031790,
+      "sha256": "97de1b361f66872936b293b627b3b61c63361dd206213fda8a5e8989964c1d30",
+      "pdf_pages": 1264,
+      "archive_url": "https://archive.org/details/warofrebellion161unit",
+      "scan_url": "https://archive.org/download/warofrebellion161unit/warofrebellion161unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 1040,
+          "pdf": 1054,
+          "evidence": "S31/readings/OR_I-XVI.1-p1040.json",
+          "sha256": "08a00bb8659a09e6dd8f9dfb9ad8d2a4d9a017efb9cbc426afefdf740633d7de",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1041,
+          "pdf": 1055,
+          "evidence": "S31/readings/OR_I-XVI.1-p1041.json",
+          "sha256": "79534dc98aedf6002d435df62b6b3d11c9433ea4968b12feb0f0b06bc71ade46",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1042,
+          "pdf": 1056,
+          "evidence": "S31/readings/OR_I-XVI.1-p1042.json",
+          "sha256": "ac0be8c1a62d7bee327ab955f0cc41e38a24aa22a9e2f88b0d8fc014640d6884",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1071,
+          "pdf": 1085,
+          "evidence": "S31/readings/OR_I-XVI.1-p1071.json",
+          "sha256": "56e839df99d21b756c6c05bcc45eb499f4d27b1f48b90b38a6cce223c267dbad",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1072,
+          "pdf": 1086,
+          "evidence": "S31/readings/OR_I-XVI.1-p1072.json",
+          "sha256": "76f2880fc00e98b043d5903576087d76fd93643ab6708a3daf571e48c56feae2",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1073,
+          "pdf": 1087,
+          "evidence": "S31/readings/OR_I-XVI.1-p1073.json",
+          "sha256": "7797cfe9ea2a40348fa0d6c4463cb13e88c29a0506f280981fcc84bdd5c56ad4",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1074,
+          "pdf": 1088,
+          "evidence": "S31/readings/OR_I-XVI.1-p1074.json",
+          "sha256": "2a2afe4549087dcc39f05cb7cc1d43402f1c79470c1972fda7ac8c8e5fdeae15",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1075,
+          "pdf": 1089,
+          "evidence": "S31/readings/OR_I-XVI.1-p1075.json",
+          "sha256": "6ee61d06a80af0fac3f60bc403f8e879d980404e70eb5de8f54d9e57df5b1308",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1076,
+          "pdf": 1090,
+          "evidence": "S31/readings/OR_I-XVI.1-p1076.json",
+          "sha256": "587726133f3350185abe67fca3bfa1a1a91dd3f4c069f001d3e03398eac7e514",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1077,
+          "pdf": 1091,
+          "evidence": "S31/readings/OR_I-XVI.1-p1077.json",
+          "sha256": "851c75a4c28c89ed567aaf8120c08c1b0516ba9545cbdbdc12df52924213cc90",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1078,
+          "pdf": 1092,
+          "evidence": "S31/readings/OR_I-XVI.1-p1078.json",
+          "sha256": "f7cb4bd3b90b455e82dbccaccc85b6aeec15102fa2f1880ee6ec824b2556d352",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1079,
+          "pdf": 1093,
+          "evidence": "S31/readings/OR_I-XVI.1-p1079.json",
+          "sha256": "716b6e87e6ad77efbede8785b414b0c2bfa2e95e26e55fe8cf1615d7c437bbf0",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1080,
+          "pdf": 1094,
+          "evidence": "S31/readings/OR_I-XVI.1-p1080.json",
+          "sha256": "80566adfcfd8d65865ad788a765b66d91cd97468229814d674b7dd35355eb5f2",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1081,
+          "pdf": 1095,
+          "evidence": "S31/readings/OR_I-XVI.1-p1081.json",
+          "sha256": "d785e01d6e9ce6560f60dfcaed5048b9945f88ace4b216323571055637021ebf",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1082,
+          "pdf": 1096,
+          "evidence": "S31/readings/OR_I-XVI.1-p1082.json",
+          "sha256": "45980b9b26e1ff824522a1df0283c4a297b67bdc068345c48aa5eac0adcc2a04",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1083,
+          "pdf": 1097,
+          "evidence": "S31/readings/OR_I-XVI.1-p1083.json",
+          "sha256": "46d18421f08ff6ce596d2587683d41fba6c7462ffc1bacc8ecf12660f8312e25",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1121,
+          "pdf": 1135,
+          "evidence": "S31/readings/OR_I-XVI.1-p1121.json",
+          "sha256": "12407267b6bf1d638eeafc3c0f291da1a2d4a26106c7a063f2b928e05b1ecb3f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1122,
+          "pdf": 1136,
+          "evidence": "S31/readings/OR_I-XVI.1-p1122.json",
+          "sha256": "d973b8780a425ce5db4d5b41dbcdb49c08701c75bbcbd998cc849cdcf9ff7540",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1123,
+          "pdf": 1137,
+          "evidence": "S31/readings/OR_I-XVI.1-p1123.json",
+          "sha256": "31005a46edfd57753f73dc017c584b00de3bbc2aa7b45678734add87752e613b",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1124,
+          "pdf": 1138,
+          "evidence": "S31/readings/OR_I-XVI.1-p1124.json",
+          "sha256": "d5fa6728d5ba9dcf93ccaf471e2162b5f62ba342ba7070fb932f6b1f6bb943dd",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1125,
+          "pdf": 1139,
+          "evidence": "S31/readings/OR_I-XVI.1-p1125.json",
+          "sha256": "579ba63d42c07e2b7e50b4f769fd9226924dea6c8936df82bd4010f1af0dd3d6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1132,
+          "pdf": 1146,
+          "evidence": "S31/readings/OR_I-XVI.1-p1132.json",
+          "sha256": "fffc23b3b9025b7f9d26485e413f9f75891a4c1013b40b5da3ece9794a44c165",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1133,
+          "pdf": 1147,
+          "evidence": "S31/readings/OR_I-XVI.1-p1133.json",
+          "sha256": "d566430c6381323e9867b213b7f3d6264c42b9c607e1f8572955c73762e6ac5d",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1134,
+          "pdf": 1148,
+          "evidence": "S31/readings/OR_I-XVI.1-p1134.json",
+          "sha256": "92f66fb700bb1dbb84acc85180eb98e3971b5bb97155c8b881e7f8a72776d609",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1135,
+          "pdf": 1149,
+          "evidence": "S31/readings/OR_I-XVI.1-p1135.json",
+          "sha256": "1d0887b9c0cb4ff8c55dee9273b03421ede75364e3fa7ec9b29eb48f90bac2b2",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 1036,
+          "pdf": 1050
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XVI.2",
+      "title": "Official Records, series I, volume XVI, part II (1886)",
+      "item": "warofrebellion162unit",
+      "local_path": "S14/warofrebellion162unit/warofrebellion162unit.pdf",
+      "bytes": 103012128,
+      "sha256": "833bf7aa7335e0678a0c3f5337837ec301636c75ceeb273e0032206593c68acc",
+      "pdf_pages": 1128,
+      "archive_url": "https://archive.org/details/warofrebellion162unit",
+      "scan_url": "https://archive.org/download/warofrebellion162unit/warofrebellion162unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 899,
+          "pdf": 905,
+          "evidence": "S31/readings/OR_I-XVI.2-p899.json",
+          "sha256": "9ed3a72542cd71a7696b867b428ea7e4c351d6df76d17f826d50d6b8d60f4f2c",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 900,
+          "pdf": 906,
+          "evidence": "S31/readings/OR_I-XVI.2-p900.json",
+          "sha256": "65e8474835156a4a7d632ecf3d24a2272bd644eb05faefe1f583554877970a7d",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 901,
+          "pdf": 907,
+          "evidence": "S31/readings/OR_I-XVI.2-p901.json",
+          "sha256": "4bece6d0a8805c6f71a5150c055fd89334d7121056f5e0c60b361436c5df9a61",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XVII.1",
+      "title": "Official Records, series I, volume XVII, part I (1886)",
+      "item": "warofrebellion171unit",
+      "local_path": "warofrebellion171unit/warofrebellion171unit.pdf",
+      "bytes": 96191022,
+      "sha256": "0bd056ab7722c92c1a9865a391ed3c4751536f7495c42aa3f39a8903c309f6b1",
+      "pdf_pages": 920,
+      "archive_url": "https://archive.org/details/warofrebellion171unit",
+      "scan_url": "https://archive.org/download/warofrebellion171unit/warofrebellion171unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 218,
+          "pdf": 234,
+          "evidence": "S31/readings/OR_I-XVII.1-p218.json",
+          "sha256": "abdef457510656d951ff4bf415473b71186d09d17d90b33568d43ebfcc5f9cae",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 219,
+          "pdf": 235,
+          "evidence": "S31/readings/OR_I-XVII.1-p219.json",
+          "sha256": "8985de3faab57c957b9bb3fac2c76acdeb93ef9d95426c65eea88e79a18db309",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 220,
+          "pdf": 236,
+          "evidence": "S31/readings/OR_I-XVII.1-p220.json",
+          "sha256": "eee49089aeb653d03dface04e3eecdf89b98ea4d14c5421fa8c74d74ea46418e",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 226,
+          "pdf": 242,
+          "evidence": "S31/readings/OR_I-XVII.1-p226.json",
+          "sha256": "1b8f733963b5d576065f7129b89af45ac1f945c1c21a12c69cd9e93d125c7e60",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 227,
+          "pdf": 243,
+          "evidence": "S31/readings/OR_I-XVII.1-p227.json",
+          "sha256": "8cc656164032dc155014e241d277c4c46bf02efc9a2511828e3542d6c2362f76",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 228,
+          "pdf": 244,
+          "evidence": "S31/readings/OR_I-XVII.1-p228.json",
+          "sha256": "ff3ec9fad97d4905071f05864f4287990d7087d7efd5e630fee96edceb6680e2",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 229,
+          "pdf": 245,
+          "evidence": "S31/readings/OR_I-XVII.1-p229.json",
+          "sha256": "97dfc3b943c7d94d0ed86da2b522c5b7a2521685a0caeb8f81a1aa3e3f97fdcc",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 230,
+          "pdf": 246,
+          "evidence": "S31/readings/OR_I-XVII.1-p230.json",
+          "sha256": "77db30d0772288de429d0a0d7265f3c5568605437cce3ce91ebbcb1cf4f8c1b0",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 231,
+          "pdf": 247,
+          "evidence": "S31/readings/OR_I-XVII.1-p231.json",
+          "sha256": "04c7276cdc21e9fc39fa7a336121a567af4707643931aa961b395d407c1b5912",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 232,
+          "pdf": 248,
+          "evidence": "S31/readings/OR_I-XVII.1-p232.json",
+          "sha256": "21d5041d65deb8e4334c06870fc1abc69f7452a6d707fcbeff72284e1245f0f7",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 335,
+          "pdf": 351,
+          "evidence": "S31/readings/OR_I-XVII.1-p335.json",
+          "sha256": "29c65935d9e48f2cc5f28b293b05e1f7d2fc2c5139c2570bd2c6e31450be2e38",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 336,
+          "pdf": 352,
+          "evidence": "S31/readings/OR_I-XVII.1-p336.json",
+          "sha256": "d588fed777cd702657e9717ebdb607b3a6caab7b95d48d99f18f2449dca8407b",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 337,
+          "pdf": 353,
+          "evidence": "S31/readings/OR_I-XVII.1-p337.json",
+          "sha256": "35f5f81d863adf8cc7ad317740e796652cc62b459d9405e081450aa0818aa7dd",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 338,
+          "pdf": 354,
+          "evidence": "S31/readings/OR_I-XVII.1-p338.json",
+          "sha256": "1d34bc1853de3e7fc2ea05363c134b46d8e7cc9478fc447a23f27da5148e4ed0",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 385,
+          "pdf": 401,
+          "evidence": "S31/readings/OR_I-XVII.1-p385.json",
+          "sha256": "e63f87ea266e6ed2640437332c5eb32677e2d2e2bff9e7051f8297df8e457d92",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 386,
+          "pdf": 402,
+          "evidence": "S31/readings/OR_I-XVII.1-p386.json",
+          "sha256": "5a2b4ea47c049625556f9b910bf00180a700f0418c46703b0b66a9e90327f41d",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 393,
+          "pdf": 409,
+          "evidence": "S31/readings/OR_I-XVII.1-p393.json",
+          "sha256": "ce0d8cd3e12e1eac8ed1d0e4d30fe05a9119ef310a095bbb2b5afb7c3b0def0f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 394,
+          "pdf": 410,
+          "evidence": "S31/readings/OR_I-XVII.1-p394.json",
+          "sha256": "420b5a34ee75152a48a0de870e8dec24372c9884592e1c03a46b429a54ab47ba",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 395,
+          "pdf": 411,
+          "evidence": "S31/readings/OR_I-XVII.1-p395.json",
+          "sha256": "8bad7546c090f2adf7017e0322defc41dc89dab54902154af28fdc7044c516bc",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 396,
+          "pdf": 412,
+          "evidence": "S31/readings/OR_I-XVII.1-p396.json",
+          "sha256": "c40159e8c96ea698a7bd3ad67ed700b30bd9d5a42e78c3a6e3babd56fe4c79d0",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 397,
+          "pdf": 413,
+          "evidence": "S31/readings/OR_I-XVII.1-p397.json",
+          "sha256": "b37c8d48c6221c7bef2f49f399d78798862671a4ca3f3677d6f3fb20423a0cb0",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 398,
+          "pdf": 414,
+          "evidence": "S31/readings/OR_I-XVII.1-p398.json",
+          "sha256": "990bd80a51eef3e4b9740b92cc7a2472c81fab0b8b9efe7c4595a404426aeb42",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 399,
+          "pdf": 415,
+          "evidence": "S31/readings/OR_I-XVII.1-p399.json",
+          "sha256": "09dd3d56189274822809999b87b606a017f24df2961b90e6b67c197bd1a457f8",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 400,
+          "pdf": 416,
+          "evidence": "S31/readings/OR_I-XVII.1-p400.json",
+          "sha256": "91404eb92e93ab0bffa1c18a918829f8430e5e2c168351dbfc097478b7ac18eb",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 401,
+          "pdf": 417,
+          "evidence": "S31/readings/OR_I-XVII.1-p401.json",
+          "sha256": "585d53dc71fe95260152a729abf3f8e403a60ada988090c410a786fbf3215a20",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 402,
+          "pdf": 418,
+          "evidence": "S31/readings/OR_I-XVII.1-p402.json",
+          "sha256": "f1573f4deaa72d476d44eeb5fe91d3675da3458535f705177eff4615ef5b96a0",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 403,
+          "pdf": 419,
+          "evidence": "S31/readings/OR_I-XVII.1-p403.json",
+          "sha256": "d45c00ec011070445250ce51d644d07ad8b0033cead67de1e2302773f67b4a89",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 404,
+          "pdf": 420,
+          "evidence": "S31/readings/OR_I-XVII.1-p404.json",
+          "sha256": "fcfe18941fe004f54e8ebabd29d6c00210a857fd2af6919e1d9f4b4ecca7ee9f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 78,
+          "pdf": 94
+        },
+        {
+          "printed": 176,
+          "pdf": 192
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XVII.2",
+      "title": "Official Records, series I, volume XVII, part II (1887)",
+      "item": "warofrebellion172unit",
+      "local_path": "S14/warofrebellion172unit/warofrebellion172unit.pdf",
+      "bytes": 96210483,
+      "sha256": "2cebc26d3e21d6fce2a4e713e941983a91b57430a54c420d26d6577973d76bc5",
+      "pdf_pages": 1036,
+      "archive_url": "https://archive.org/details/warofrebellion172unit",
+      "scan_url": "https://archive.org/download/warofrebellion172unit/warofrebellion172unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 244,
+          "pdf": 250,
+          "evidence": "S31/readings/OR_I-XVII.2-p244.json",
+          "sha256": "bad741b7345a92d16c06e301d3a1c622eeed219c87dffe0602aafcb067cd6589",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 245,
+          "pdf": 251,
+          "evidence": "S31/readings/OR_I-XVII.2-p245.json",
+          "sha256": "0b19da27f7101f2698ae7e163ae473cbd6e32d3622cce6bd91bd4758c5c9e7fa",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 246,
+          "pdf": 252,
+          "evidence": "S31/readings/OR_I-XVII.2-p246.json",
+          "sha256": "48e9e44f7f4a2c3efd1cd4c7534b51038c05ac2b68d71c26cb77ad81efb4011f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 247,
+          "pdf": 253,
+          "evidence": "S31/readings/OR_I-XVII.2-p247.json",
+          "sha256": "be5b52f9284099c35bcb7d8f1159d563dbf3aedaa85bc8440becfb09b3da44d5",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 248,
+          "pdf": 254,
+          "evidence": "S31/readings/OR_I-XVII.2-p248.json",
+          "sha256": "47a4a412066034683689f98948d8457ccfbe723252c56bc5929e79adfaf66e69",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 249,
+          "pdf": 255,
+          "evidence": "S31/readings/OR_I-XVII.2-p249.json",
+          "sha256": "1478932a61cf198f958d6266c34776023c3b96b15c08b2e1f9eccd94bf9eebb8",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 250,
+          "pdf": 256,
+          "evidence": "S31/readings/OR_I-XVII.2-p250.json",
+          "sha256": "edbfc0d5cad3583bd6d42b2d0c99393f9595ea729e5c73e1c6f8967155abbadc",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 329,
+          "pdf": 335,
+          "evidence": "S31/readings/OR_I-XVII.2-p329.json",
+          "sha256": "a41d1cecc060443e8070dd505cfbb9a14fea90eaac839ce10c70fa1c83c432b7",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 330,
+          "pdf": 336,
+          "evidence": "S31/readings/OR_I-XVII.2-p330.json",
+          "sha256": "6a69050a079b48517a953bfde667477f5683cb8a7dc8d3439652a1c4a48a32ca",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 331,
+          "pdf": 337,
+          "evidence": "S31/readings/OR_I-XVII.2-p331.json",
+          "sha256": "fdf2b0f8b5d5ccd5c430f62c9fcd46a75ec48a1fa77372d8568d32e202664c50",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 332,
+          "pdf": 338,
+          "evidence": "S31/readings/OR_I-XVII.2-p332.json",
+          "sha256": "e89d867f66b918912250f31fce734d238575c9e1214140f448493910bce9dc25",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 337,
+          "pdf": 343,
+          "evidence": "S31/readings/OR_I-XVII.2-p337.json",
+          "sha256": "358a17d2d96623ba24fd2f96ef1230a73dc4a65962e24f54d961a8dbe5932c4b",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 338,
+          "pdf": 344,
+          "evidence": "S31/readings/OR_I-XVII.2-p338.json",
+          "sha256": "4bfbba093fd4f6dd228ba9eeafc5d628bb46bc2755bac9de5f7d622d87070b65",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 339,
+          "pdf": 345,
+          "evidence": "S31/readings/OR_I-XVII.2-p339.json",
+          "sha256": "7175bb5bd00c4df11efabc1f5f2aee4fbcd08534357ed491d2ed9724d6ec41da",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 340,
+          "pdf": 346,
+          "evidence": "S31/readings/OR_I-XVII.2-p340.json",
+          "sha256": "b3fa82364691b0a5a1ddc6f5af8fabf7c42946eead154410102d5c7001720ea4",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XX.2",
+      "title": "Official Records, series I, volume XX, part II (1887)",
+      "item": "warofrebellion202unit",
+      "local_path": "S14/warofrebellion202unit/warofrebellion202unit.pdf",
+      "bytes": 56581503,
+      "sha256": "7b9bca70d077a0eca423e0c65fcf591c75c02c80096aba7cbccb44d11b409c13",
+      "pdf_pages": 596,
+      "archive_url": "https://archive.org/details/warofrebellion202unit",
+      "scan_url": "https://archive.org/download/warofrebellion202unit/warofrebellion202unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 75,
+          "pdf": 81,
+          "evidence": "S31/readings/OR_I-XX.2-p75.json",
+          "sha256": "5d59abd451063539a6f593b237344f32a0d6d51be5c8e7f8c8c87c8feaf42636",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 76,
+          "pdf": 82,
+          "evidence": "S31/readings/OR_I-XX.2-p76.json",
+          "sha256": "12a10c898490e2ac490a39ac93302d764a0f5ad24a128f3b1c97b51f49b9c01e",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 77,
+          "pdf": 83,
+          "evidence": "S31/readings/OR_I-XX.2-p77.json",
+          "sha256": "8ddf8c76c7223f4a7e3703c835628dedd241c6d1e954a3c269389a3e8a44f02a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 78,
+          "pdf": 84,
+          "evidence": "S31/readings/OR_I-XX.2-p78.json",
+          "sha256": "a8fbdd4d4ce79c9411d72f9896d097e5f802d1a3413ad6b688726be9996fee60",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 79,
+          "pdf": 85,
+          "evidence": "S31/readings/OR_I-XX.2-p79.json",
+          "sha256": "2a8503e3b41c2ff5422644f1e0a8d1dcfb2f34413b9882b0041c23ceba2340d2",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 98,
+          "pdf": 104,
+          "evidence": "S31/readings/OR_I-XX.2-p98.json",
+          "sha256": "d4573128dbe6506ca37e74fed0297e45d929b13a1737a0bfb2ab259c9f99d541",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 99,
+          "pdf": 105,
+          "evidence": "S31/readings/OR_I-XX.2-p99.json",
+          "sha256": "16ccf9f1585a04c3202a850e8f3440f9ef44e0d4d5de745425995a76eac61bc6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 100,
+          "pdf": 106,
+          "evidence": "S31/readings/OR_I-XX.2-p100.json",
+          "sha256": "61f507a65d2df02f9255076d4ca473015c3c50112d12c866afc5764e14c76a27",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 411,
+          "pdf": 417,
+          "evidence": "S31/readings/OR_I-XX.2-p411.json",
+          "sha256": "efca816d6db466fdf2e466aa6cc5b6d211ff7599b7d2994daf2918eb6da141c9",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 412,
+          "pdf": 418,
+          "evidence": "S31/readings/OR_I-XX.2-p412.json",
+          "sha256": "69a9f22bc9ec1bf1a95b4d723a752bbe092ba284d2286c2795a451b6c582efb9",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 413,
+          "pdf": 419,
+          "evidence": "S31/readings/OR_I-XX.2-p413.json",
+          "sha256": "817c3140f1732e663b1835d71c61dd0af460241f68d265dce02aa0a1e4970127",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 414,
+          "pdf": 420,
+          "evidence": "S31/readings/OR_I-XX.2-p414.json",
+          "sha256": "f7cdab3464420cf7104b1264bbd313739428b4bafb99a8f8606e248ed1793109",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 423,
+          "pdf": 429,
+          "evidence": "S31/readings/OR_I-XX.2-p423.json",
+          "sha256": "02608ac2c957cc92e030847ecfa317059fd04f0c5737eecd2ef6af7c4eba2415",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 424,
+          "pdf": 430,
+          "evidence": "S31/readings/OR_I-XX.2-p424.json",
+          "sha256": "fbb4265aa69d14b3b87025423c3ed2c75c93f519becaa9b7174d2567bdd4eb33",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 425,
+          "pdf": 431,
+          "evidence": "S31/readings/OR_I-XX.2-p425.json",
+          "sha256": "bbed23001d93e13cbaa4c8596a1bf3361a673f1e95eb3f79865b3505732761e6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 428,
+          "pdf": 434,
+          "evidence": "S31/readings/OR_I-XX.2-p428.json",
+          "sha256": "e5cb4325a07bd33e0cd8bd3e771ff079940cdac56b719ede40360f5ae6be745f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 429,
+          "pdf": 435,
+          "evidence": "S31/readings/OR_I-XX.2-p429.json",
+          "sha256": "fa81c2aa8d3c30c990ef898b0e2723f32f2e11d679ae599057fd83d2baa5f3fa",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 430,
+          "pdf": 436,
+          "evidence": "S31/readings/OR_I-XX.2-p430.json",
+          "sha256": "8150c9aae8ad0270a98c06a0fdc7888eeeef076a1faca34d92701e4a83fa3f9b",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 431,
+          "pdf": 437,
+          "evidence": "S31/readings/OR_I-XX.2-p431.json",
+          "sha256": "09ff516aaf7d5d3dfb065d2133ad76541e273de9219b356dc3fca86973b199e6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 432,
+          "pdf": 438,
+          "evidence": "S31/readings/OR_I-XX.2-p432.json",
+          "sha256": "ff76c118fb28a695bd555459c2071a988fdc8fc52c9c804e8c4251a1e7231093",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 433,
+          "pdf": 439,
+          "evidence": "S31/readings/OR_I-XX.2-p433.json",
+          "sha256": "1d69274586cb513f92752dd291b03928e324b3fc1e3b158e7c8e7265932f7f58",
+          "images": [
+            {
+              "path": "S31/images/OR_I-XX.2-p433.png",
+              "sha256": "2edeef82023f5f80cde32a49294ecf746546fb39dd20b4e6d65661e094bd611e"
+            }
+          ],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "OR I-XXI",
+      "title": "Official Records, series I, volume XXI (1888)",
+      "item": "warofrebellion21unit",
+      "local_path": "warofrebellion21unit/warofrebellion21unit.pdf",
+      "bytes": 135987331,
+      "sha256": "867a4a51628cc8a0af6d3c527b55729afd9eea45f45a63c8fb2ce21f760369ab",
+      "pdf_pages": 1280,
+      "archive_url": "https://archive.org/details/warofrebellion21unit",
+      "scan_url": "https://archive.org/download/warofrebellion21unit/warofrebellion21unit.pdf",
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pages": [
+        {
+          "printed": 760,
+          "pdf": 752,
+          "evidence": "S31/readings/OR_I-XXI-p760.json",
+          "sha256": "22f32f4641e2d9538fbbda47c10f6f0e88da70f8435a826502f24d15de7beb4f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 761,
+          "pdf": 753,
+          "evidence": "S31/readings/OR_I-XXI-p761.json",
+          "sha256": "2d7f8325828383d21d51de820f007c9d05174893a5892daa430a68bbded9ba81",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 762,
+          "pdf": 754,
+          "evidence": "S31/readings/OR_I-XXI-p762.json",
+          "sha256": "9261a0c01dc3f7283beae5e0ffabc50b7279558b57567c6a932cc97671bec049",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 763,
+          "pdf": 755,
+          "evidence": "S31/readings/OR_I-XXI-p763.json",
+          "sha256": "b1f672fba597c5cec4cfa919a4ded1a11a9a5de0802c844e10198d27121ca822",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 775,
+          "pdf": 767,
+          "evidence": "S31/readings/OR_I-XXI-p775.json",
+          "sha256": "6f9944e7d336b5f2be237653e007d09ce8c1d29c1d654d7344cd1d7474216b61",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 776,
+          "pdf": 768,
+          "evidence": "S31/readings/OR_I-XXI-p776.json",
+          "sha256": "165b8592a502d098af07d5ddde3c6ec5a416413fa00297118884f905388b70bb",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 777,
+          "pdf": 769,
+          "evidence": "S31/readings/OR_I-XXI-p777.json",
+          "sha256": "f088e386afd774e50d7fcac7c1f4182fa7d853cbbb1636da36bc05e37d951861",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 924,
+          "pdf": 916,
+          "evidence": "S31/readings/OR_I-XXI-p924.json",
+          "sha256": "65f01b2ae1b4740e1f348b41ea9fe1e2c09509eb1c17f4aea405802916def90a",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 925,
+          "pdf": 917,
+          "evidence": "S31/readings/OR_I-XXI-p925.json",
+          "sha256": "977ce77817fb5211879b6714d5f6157437d1b62083507924b3ba7c954090e0bc",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1023,
+          "pdf": 1015,
+          "evidence": "S31/readings/OR_I-XXI-p1023.json",
+          "sha256": "a2b798e9c284b7367827c7330a515274a03ad10c78c563727e67087ff9c4d0ad",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1024,
+          "pdf": 1016,
+          "evidence": "S31/readings/OR_I-XXI-p1024.json",
+          "sha256": "7d4f26b9ccb0afeb9ec0b7fe14e7bc6fefe915f49e4a81b82aad03280bc2a27f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1025,
+          "pdf": 1017,
+          "evidence": "S31/readings/OR_I-XXI-p1025.json",
+          "sha256": "aea6a32c327488eef4aa0367f51b92700ebb6ff0ed67d5f4bb0e888111ff8e9e",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1026,
+          "pdf": 1018,
+          "evidence": "S31/readings/OR_I-XXI-p1026.json",
+          "sha256": "e4f95e94bc00161c3d82c55ac1c404838accf82aa078e3ca00a5948d28074369",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 1027,
+          "pdf": 1019,
+          "evidence": "S31/readings/OR_I-XXI-p1027.json",
+          "sha256": "d94d39fec209f0c7bf560544704eb42f3ed38942a1b844332a637f5f090bc24f",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "source_class": "edited official documents",
+      "page_examples": [
+        {
+          "printed": 83,
+          "pdf": 85
+        },
+        {
+          "printed": 172,
+          "pdf": 174
+        }
+      ],
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Contemporary documents published in later official collection"
+    },
+    {
+      "label": "R",
+      "item": "battleofshilohor00unit",
+      "title": "David W. Reed / Shiloh National Military Park Commission, The Battle of Shiloh and the Organizations Engaged (1902; revised 1909)",
+      "archive_url": "https://archive.org/details/battleofshilohor00unit",
+      "scan_url": "https://ia600909.us.archive.org/12/items/battleofshilohor00unit/battleofshilohor00unit_bw.pdf",
+      "local_path": "S21/battleofshilohor00unit/battleofshilohor00unit_bw.pdf",
+      "bytes": 7647895,
+      "sha256": "1d8da21642beedd1cf8638eeb966f8f23799c104abfc5bb3587eceba0e4df30e",
+      "pages": [
+        {
+          "printed": 99,
+          "pdf": 101,
+          "evidence": "S31/readings/R-p99.json",
+          "sha256": "294628c1362b2fd9ccba7911b0713d8a4b5ea89efef5b985ee311da24d93e36d",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 100,
+          "pdf": 102,
+          "evidence": "S31/readings/R-p100.json",
+          "sha256": "4897e66bd05bf6074629d83e2e6964f90967a087de16607c8b187241a9a2d254",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 101,
+          "pdf": 103,
+          "evidence": "S31/readings/R-p101.json",
+          "sha256": "55a1662ba1c9562944b7bca1d56b6ddbf47a0383a6ce52a0931a0cb27a0dbf45",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 102,
+          "pdf": 104,
+          "evidence": "S31/readings/R-p102.json",
+          "sha256": "3df442a41cff67b527c16b103dd17ba7a727b06703de96d4fb092747219999c6",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 111,
+          "pdf": 113,
+          "evidence": "S31/readings/R-p111.json",
+          "sha256": "5405d9af4ea578972120dc931cbea75460ddb97a85e14990c0df2f6d0aca6ca5",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        },
+        {
+          "printed": 112,
+          "pdf": 114,
+          "evidence": "S31/readings/R-p112.json",
+          "sha256": "c6e033f164d83f110b096d818d2439ca86347d41603547844f990f6aacbb6ca3",
+          "images": [],
+          "read_scope": "Selected passages and keyword searches only. Retention is not whole-page/whole-volume reading. Quantitative results name their exact passages in the register."
+        }
+      ],
+      "read_scope": "Only the selected passages/lines listed here. Keyword searches are finding aids, not whole-volume reading. A retained page record is not a claim to read every line.",
+      "pdf_pages": 144,
+      "acquisition": "Reused prior scan in place; hash checked in S31",
+      "source_character": "Later compilation/reconstruction"
     }
   ],
   "excluded": [
     "Hartwig 2023 Appendix C was read through Firecrawl as a finding aid; local PDF acquisition returned HTTP 403. No quantity in this delivery derives from it.",
     "CARMAN-T pp.144-161 appended game roster: excluded entirely.",
     "Search snippets, regimental loss percentages, prisoner counts, nominal complements and authorised strengths are not dated full-command returns."
-  ]
+  ],
+  "finding_aids": [
+    {
+      "url": "https://www.archives.gov/research/guide-fed-records/groups/094.html",
+      "local_path": "S31/finding-aids/rg94.html",
+      "sha256": "4172c2e836f99e10c1dde3794e45b0cc47274f4cc3beffb3ee874d3df7790aea",
+      "sections_read": "94.2.2 and 94.2.4",
+      "limit": "Finding aid only; not an individual muster or field return."
+    },
+    {
+      "url": "https://www.archives.gov/research/guide-fed-records/groups/109.html",
+      "local_path": "S31/finding-aids/rg109.html",
+      "sha256": "7c48884e563b3972fcab1fd511580bd1dbed8e6878cc7b1dfb73341baa13f542",
+      "sections_read": "109.9",
+      "limit": "Finding aid only; not an individual muster or field return."
+    },
+    {
+      "url": "https://www.archives.gov/publications/prologue/1995/summer/little-regiment-1.html",
+      "local_path": "S31/finding-aids/musick-units.html",
+      "sha256": "260dbc82f476f9f72131b2ddb4e376d744b3324d85b316b3fedbc046b6b6c57c",
+      "sections_read": "Military returns; RG 94 entry66 and RG109 entry65",
+      "limit": "Finding aid only; not an individual muster or field return."
+    },
+    {
+      "url": "https://www.archives.gov/publications/prologue/1995/summer/navy-records-1861-1924.html",
+      "local_path": "S31/finding-aids/navy-personnel.html",
+      "sha256": "3c582bcb65c640c8eedbe97a8f2d8a106d29ab931b9d01f0de41aa60447de738",
+      "sections_read": "Service records and original muster rolls",
+      "limit": "Finding aid only; not an individual muster or field return."
+    },
+    {
+      "url": "https://www.archives.gov/publications/prologue/2001/fall/black-sailors",
+      "local_path": "S31/finding-aids/navy-muster-survival.html",
+      "sha256": "858a185a46a9290b6033ae57989bfd96bbc43000bd37cf8fec61294b99dee8bd",
+      "sections_read": "Quarterly muster survival caveat",
+      "limit": "Finding aid only; not an individual muster or field return."
+    },
+    {
+      "url": "https://www.archives.gov/research/military/navy/muster-rolls",
+      "local_path": "S31/finding-aids/navy-musters.html",
+      "sha256": "6c7932de36f810bcb56b92938025aa26f91c15bf1a23f61af0546cd005042543",
+      "sections_read": "Muster Rolls1860-1939; RG24 entry132, series563603",
+      "limit": "Finding aid only; not an individual muster or field return."
+    },
+    {
+      "url": "https://www.archives.gov/research/guide-fed-records/groups/045.html",
+      "local_path": "S31/finding-aids/rg45.html",
+      "sha256": "6df467c9a3c415de278c1f13a87caf81be39e46a7c251d33194fe4902032d01f",
+      "sections_read": "45.8.6 and45.9",
+      "limit": "Finding aid only; not an individual muster or field return."
+    }
+  ],
+  "original_manuscript_access_limit": "No individual Army manuscript morning return or Navy ship muster was acquired/read. NARA identifies digitized Navy rolls in series563603; bounded catalog queries did not establish a correct vessel/date roll, and unverified descendant filters were not treated as searched-roll evidence. No new account, key request, payment or contact was made.",
+  "page_corrections": {
+    "corrections": [
+      {
+        "source": "ONR I-6",
+        "printed": "579-582",
+        "pdf": "622-625",
+        "reason": "Interleaved plates add four pages; preceding +39 offset is wrong here."
+      },
+      {
+        "source": "ONR I-23",
+        "printed": "125-126",
+        "pdf": "157-158",
+        "reason": "Four plate pages follow printed124; +28 and +30 land on plates, correct offset+32."
+      },
+      {
+        "source": "Port Royal",
+        "excluded": "ONR I-6 pp.552-555",
+        "replacement": "A pp.28-31",
+        "reason": "ONR passages are Roanoke, not Port Royal. No Port Royal quantity relies on them."
+      }
+    ],
+    "rule": "Wrong-offset extracts/logs are retained only as acquisition diagnostics, excluded from factual citations; final inventory points to the corrected page records."
+  }
 }
