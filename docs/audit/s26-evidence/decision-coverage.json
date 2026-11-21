@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 15,
+    "path": "docs/decisions/0015-seats.md",
+    "status": "Status: accepted (2026-11-14). The owner chose \"rules first, AI as an upgrade\" and accepted the seat plan: one set of decision types for rules, AI and humans; Lincoln's seat first, \"play a general\" second, multiplayer third. Supersedes 0011. Clarifies 0007 and widens 0009. Refined by 0032 (reports have authors, routes and filters). Design: `docs/design/FOUNDATION.md` section 8.",
+    "sha256": "ecf00b50653923e3318499c8f5c3a79ef126a102166bc13d17b4f9763e7edd97",
+    "implementationAnchor": "packages/kernel/src/seats/requests.ts",
+    "implementationSha256": "8d85a62004ce70b93ded8f3f7bf52466bd2a31f200b33696c7db025726b4d77e",
+    "findingGroups": [
+      "A01",
+      "A02",
+      "A04",
+      "D12"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 16,
+    "path": "docs/decisions/0016-goals-plans-and-arrows.md",
+    "status": "Status: accepted (2026-11-14). The owner asked to plan operations as president (\"giving grand goals maybe, like, take New Orleans. Then your commander prepares a plan\"), chose \"edit arrows, at a cost\" over \"approve or send back\", and chose to transfer divisions between commanders. Supersedes 0001. Amended by 0026 (kernel-drafted plans, edit grammar, corps as posts, promotion lists, visits) and 0033 (transfers name a force). Design: `docs/design/FOUNDATION.md` section 5. Amended by 0040 (first-month walkthrough revisions).",
+    "sha256": "3ee930d1e084966fe891776f50ffec62140470479af2b8c956dee5929256343e",
+    "implementationAnchor": "packages/kernel/src/log/commands.ts",
+    "implementationSha256": "fc113408d726b8805f767aa23c8dee2e949720a7e3d4b7a4bc2d20711384718b",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 17,
+    "path": "docs/decisions/0017-real-time-with-pause.md",
+    "status": "Status: superseded by 0027 (2026-11-14; variable turns of up to a week). Accepted earlier the same day: the lead proposed it in the brainstorm and the owner did not object; the owner's favourite games (Europa Universalis, Imperator, HoI) all run this way. Supersedes 0010. Amended by 0026 (the kernel owns all latency). Design: `docs/design/FOUNDATION.md` section 9.",
+    "disposition": "superseded; apply 0027"
+  },
+  {
+    "id": 18,
+    "path": "docs/decisions/0018-civil-war-scope.md",
+    "status": "Status: accepted (2026-11-14). The owner: \"OK civil war it is\", playing Lincoln, Union first. Supersedes 0004. Amended by 0028 (the campaign starts at the March 1861 inauguration). Design: `docs/design/FOUNDATION.md` section 3.",
+    "sha256": "2d48e32fda5d15bb9f809701108879bc6d84bc86f7b3ec889a80953c25cac647",
+    "implementationAnchor": "packages/cli/src/console/game.ts",
+    "implementationSha256": "c845342c7f8d2e2d507524598df76320d250616f49b674872a557eeca25731a2",
+    "findingGroups": [
+      "D01"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 19,
+    "path": "docs/decisions/0019-regions-over-a-typed-graph.md",
+    "status": "Status: accepted (2026-11-14). The owner asked \"Hexes? Something like AGEoD?\"; the games survey and the AWWV-architecture note both recommend this model. Extends 0013 (how the map is drawn) with what the map is. Extended by 0031 (extent, size, sources). Design: `docs/design/FOUNDATION.md` section 4.",
+    "sha256": "55ef81ef730bb35a831d504c566c60ae8bb6418b4678eab5599be8984c101ebe",
+    "implementationAnchor": "packages/kernel/src/world/graph.ts",
+    "implementationSha256": "89b530eee9e31c1900a8e2313d34121da31b0d9d05c77de7cd1ad211e3307743",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 20,
+    "path": "docs/decisions/0020-people-hidden-stats-and-assessment.md",
+    "status": "Status: accepted (2026-11-14). The owner asked for \"stats that change with battles lost or won. Traits too\", chose the staff's assessment over true numbers, asked for staff observers and hidden gems, and chose \"history's shadow\" as the default. Clarifies 0007. Amended by 0026 (the 1864 rival general; cited stat centres). Design: `docs/design/FOUNDATION.md` section 6; evidence in `docs/research/2026-11-14-union-command-and-promotion.md`. Amended by 0040 (first-month walkthrough revisions).",
+    "sha256": "0a2d6d6e9315c4443d95ec1ba16d61d6971f57ec32e52c863035f913de709f47",
+    "implementationAnchor": "packages/kernel/src/people/people.ts",
+    "implementationSha256": "9def059d43fa83b8b217856854930af7225368b7a4abfa51c97079bad92ee3e9",
+    "findingGroups": [
+      "D05",
+      "D06",
+      "D07"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 21,
+    "path": "docs/decisions/0021-sensitive-history-gate.md",
+    "status": "Status: accepted (2026-11-14). AWWV's founding brief for this project recommends a gate from day one and states, \"Recommended default, which I confirm: no Lost Cause framing\", which the owner forwarded as guidance. The representation of enslaved people is the lead's recommendation, open to the owner's review like every record. Amended by 0026 (wider scope, placement rule, Black regiments, a playable Confederacy needs its own record).",
+    "sha256": "42f5495bfd507e0c1af599bbf800160b0f914b16709ed8fcd659de27887592a8",
+    "implementationAnchor": "packages/pack-format/src/gate.ts",
+    "implementationSha256": "bd013db28c94e72dd659875367e8aa03ba9442caec5c2f4a63da2fdfa3c90a4a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 22,
+    "path": "docs/decisions/0022-voice-is-never-state.md",
+    "status": "Status: accepted (2026-11-14). From the AI-players research, which recommends this record. Amends 0005 for generated prose about real people. Amended by 0038 (no live AI in the Steam build until Valve clears it). Design: `docs/design/FOUNDATION.md` section 8.",
+    "sha256": "dc725675a52820ee1fdbde621d96982aef06f30b2b258c4d4151cb4f5445de2e",
+    "implementationAnchor": "packages/kernel/src/log/session.ts",
+    "implementationSha256": "6ef246111e55230d4b838e82c46f79dd2e8708e4bdc2412cabcc23e8b21af34f",
+    "findingGroups": [
+      "D12"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 23,
+    "path": "docs/decisions/0023-the-home-front.md",
+    "status": "Status: accepted (2026-11-14). The owner chose a HoI-light economy run through people, \"losing the 1864 election ends the game, you play as Lincoln\", and history as pressure. Amended by 0026 (the ending is a verdict, not a historical claim) and 0028 (victory by two national wills). Design: `docs/design/FOUNDATION.md` section 7. Amended by 0040 (first-month walkthrough revisions).",
+    "sha256": "f4a7f93f172dc4dfb4d76bb2258ec341ef68a32c72c06cfe7990b4ce72900aeb",
+    "implementationAnchor": "packages/kernel/src/politics/politics.ts",
+    "implementationSha256": "16b4892205e88f5f87ecc91f6a32d421e5c1790309fb65a55431b0ce76d611b2",
+    "findingGroups": [
+      "D01",
+      "D02"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 24,
+    "path": "docs/decisions/0024-the-wars-with-fronts-test.md",
+    "status": "Status: accepted (2026-11-14). Follows from 0018, which narrowed the engine's promise; flagged by the foundation review. Amends 0003.",
+    "sha256": "838dc918bb5efafe953582dd6eddf1d7ca7a88f6bd352221d132b821b273b196",
+    "implementationAnchor": "tools/check-pack-boundary.mjs",
+    "implementationSha256": "062cfaced8b030ea9a20c02ec70de8e93259bdb5173e4cc955ed793ac07ca94c",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 25,
+    "path": "docs/decisions/0025-attention-under-real-time.md",
+    "status": "Status: accepted (2026-11-14). The foundation review found that attention (proposal P9; `attentionPerTurn` in the M2 kernel) vanished when turns became real time (0017). Recommended by the lead. Amended by 0040 (first-month walkthrough revisions). Amended by 0041 (clarifications).",
+    "sha256": "326c75b02840fc4b6f66329536a4a96159194172fe96b72a8f710cd9fed406e9",
+    "implementationAnchor": "packages/kernel/src/seats/attention.ts",
+    "implementationSha256": "5c9ef196655164a846b3de80cf460a9d360836c5f8a5a87a089657c091d9ddab",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 26,
+    "path": "docs/decisions/0026-foundation-review-revisions.md",
+    "status": "Status: accepted (2026-11-14). From the independent review of `docs/design/FOUNDATION.md` and 0015–0023 (verdict: ready after fixes). The lead accepted these fixes; the owner can overturn any of them. Amends 0016, 0017, 0020, 0021 and 0023. Amended by 0033 and 0040 (first-month walkthrough revisions).",
+    "sha256": "0d23cdbb36d7ed0fd586c815829d38b466f43725f4cf635a7a0cbc0dc3d5cf0b",
+    "implementationAnchor": "packages/kernel/src/planner/edits.ts",
+    "implementationSha256": "d97d68c81417d3595f1aad1e24673348fe3bd8e32c7fb9e4d93ee5ee9a1323c7",
+    "findingGroups": [
+      "A04",
+      "D08"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 27,
+    "path": "docs/decisions/0027-variable-weekly-turns.md",
+    "status": "Status: accepted (2026-11-14). The owner, asked about pacing under real time: \"Are we talking about real time game here? I think turn based would fit it better?\" The lead agreed and recommended variable turns capped at a week; the owner can overturn the variant. Supersedes 0017. Amended by 0040 (first-month walkthrough revisions).",
+    "sha256": "e2a949a9217cb8f1a79ea6bbaf82d09d75bc8f2b135b38b408d2e99cc947eb90",
+    "implementationAnchor": "packages/cli/src/console/game.ts",
+    "implementationSha256": "c845342c7f8d2e2d507524598df76320d250616f49b674872a557eeca25731a2",
+    "findingGroups": [
+      "M08"
+    ],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 28,
+    "path": "docs/decisions/0028-start-victory-navy.md",
+    "status": "Status: accepted (2026-11-14). The owner chose a March 1861 start (over the lead's recommendation of April 1861), \"two wills\" for victory, and the navy \"through people\". Amends 0018 and 0023. Amended by 0040 (first-month walkthrough revisions). Clarified by 0042 (the inaugural is the premise, not a choice).",
+    "sha256": "00bcfe8d558d4b21f7df6958db1ad17c7093abe695d34d16615a1d3514655bcf",
+    "implementationAnchor": "packages/kernel/src/politics/politics.ts",
+    "implementationSha256": "16b4892205e88f5f87ecc91f6a32d421e5c1790309fb65a55431b0ce76d611b2",
+    "findingGroups": [
+      "D01"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 29,
+    "path": "docs/decisions/0029-seasons-sieges-raids-confederacy.md",
+    "status": "Status: accepted (2026-11-14). The owner chose the lead's recommendation on all four questions. Amended by 0041 (clarifications).",
+    "sha256": "32abc9ea6c236e59cd0fdc4ac0f3fc2c8611d425b0cfc86f5609db36bbcb1e7b",
+    "implementationAnchor": "packages/kernel/src/infrastructure/infrastructure.ts",
+    "implementationSha256": "477738d11e682e3e4d9e440b6d72810c53c14847bc18697d6babf8a000e183b7",
+    "findingGroups": [
+      "D03",
+      "D04"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 30,
+    "path": "docs/decisions/0030-foundation-commitments.md",
+    "status": "Status: accepted (2026-11-14). Recommendations from the lead's foundation checklist; the owner takes recommendations by default. Amends the Phase 0 and Phase 1 plan in `docs/design/FOUNDATION.md` section 12. Amended by 0041 (clarifications).",
+    "sha256": "6148c03ab76b6e1d885420f66ebea3575dec7fc3d2db2a249945073fd807e6f9",
+    "implementationAnchor": "packages/cli/src/desk/render.ts",
+    "implementationSha256": "1a0d39d40e5ffbe7ae606c082346386b04c86a975eb6d420b12582e87d2533ca",
+    "findingGroups": [
+      "A06"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 31,
+    "path": "docs/decisions/0031-map-extent-size-sources.md",
+    "status": "Status: accepted (2026-11-14). The owner chose the map lane's recommendations for extent (\"full war, edges coarse\") and size (\"about 250\"). Sources and pipeline follow `docs/research/2026-11-14-map-extent-size-sources.md`. Extends 0019.",
+    "sha256": "64515fd29f4f66c3ad8c6e922e04b4eedbf43d7581e34df3702c740783447ff0",
+    "implementationAnchor": "packs/union-1861/source/world/regions.csv",
+    "implementationSha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 32,
+    "path": "docs/decisions/0032-reports-authors-routes-filters.md",
+    "status": "Status: accepted (2026-11-14). From the information-flows lane (`docs/research/2026-11-14-union-information-flows.md`), which found that not every report reached Lincoln through the commander, and that the War Department filtered the wire. Recommended by the lead; the owner takes recommendations by default. Refines 0008, 0015 and FOUNDATION sections 5 and 8. Amended by 0040 (first-month walkthrough revisions) and 0046 (security orders go through a holder or a situation option, never a free-standing verb).",
+    "sha256": "c38056cc8864cf6926f7cc1f3cfe8c1f70e5c244fdd15a59317365f4e24e1d14",
+    "implementationAnchor": "packages/kernel/src/messages/transit.ts",
+    "implementationSha256": "75811d3f51ca400e3550d662291826bb6befba5a8bd8441afe4d05e7bc8869bd",
+    "findingGroups": [
+      "D10",
+      "M04"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 33,
+    "path": "docs/decisions/0033-forces-scale-and-data-sources.md",
+    "status": "Status: accepted (2026-11-14). From the war-scale lane (`docs/research/2026-11-14-war-scale.md`) and the secession-winter lane (`docs/research/2026-11-14-secession-winter-1861.md`). Recommended by the lead; the owner takes recommendations by default. Amends 0016 and 0026; extends 0031's sourcing rule to all pack data. Amended by 0040 (first-month walkthrough revisions).",
+    "sha256": "d84a908a93f0a2702c2e39a2ec9cebabcb60a0fb3f3bc5cd409e16c819883829",
+    "implementationAnchor": "packages/kernel/src/command/command.ts",
+    "implementationSha256": "be3b5bcec0d9e0758dbc2d05461e6250c175bf292f720bdfdfd716087439b56a",
+    "findingGroups": [
+      "D15"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 34,
+    "path": "docs/decisions/0034-one-standing-steward.md",
+    "status": "Status: accepted (2026-11-14). The owner asked to examine AWWV's integration steward and consider permanent lanes, including a docs steward. The steward-research lane (`docs/research/2026-11-14-awwv-steward-and-standing-lanes.md`) recommended one combined steward; the lead accepted it. Amends `docs/LANES.md`, which had deferred the steward until more than four lanes ran. Amended by 0045 (the steward integrates: it verifies and merges accepted work) and 0047 (a second standing lane, the reviewer).",
+    "sha256": "ee60466bfeb8d94a9444d53479e641dbd0b9c0215a13c8d1a889fda6ac581aa8",
+    "implementationAnchor": "docs/LANES.md",
+    "implementationSha256": "a80e6a8b1ef9e828fd41047972b9308ba95b76fb5becb30b81e41f0e755fae0e",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 35,
+    "path": "docs/decisions/0035-the-stack.md",
+    "status": "Status: accepted (2026-11-14). The owner asked to be preemptive about tools this time (AWWV found MapLibre only after a month, and rebuilt its map four times). From the tooling survey (`docs/research/2026-11-14-tooling-survey.md`), which read every version and licence from the tools' own pages on 2026-11-14. Recommended by the lead; the owner takes recommendations by default. Confirms 0013's renderer. Amended by 0043 (the tripwire's result: PixiJS stands; lazy bake; authored label hints).",
+    "sha256": "d18ec25e804e72ce2e28583b65896a748ec749e612a796a03174a97224f4e7e0",
+    "implementationAnchor": "package.json",
+    "implementationSha256": "5eb5d20bc6ed0eecb785223929c5cc8e9e21ff6fb49c2a15575e44bd52e22b73",
+    "findingGroups": [
+      "A08",
+      "M07"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 36,
+    "path": "docs/decisions/0036-the-title.md",
+    "status": "Status: accepted (2026-11-14). The owner chose the title from a collision check (`docs/research/2026-11-14-name-collisions.md`): \"Yes, I like it.\"",
+    "sha256": "76d81134af5ae6b0e2c57ad3d65caeaeb1b013d11fdb994df2a1fc9c2d8b99d8",
+    "implementationAnchor": "packages/cli/src/console/session.ts",
+    "implementationSha256": "aed51c3686d585fd78acee8057de8da95ce39003df2f9a0ac4306c5316b94a99",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 37,
+    "path": "docs/decisions/0037-commercial-prove-it-first.md",
+    "status": "Status: accepted (2026-11-14). The owner chose \"Commercial, prove it first\" over \"all in\" and \"passion project\", on the lead's recommendation. Extended by 0039 (positioning, price, go or no-go bands).",
+    "sha256": "643ad4ed8579f7f733fa1fad5c4a58c80f85a84865a4173d661839f196c08a99",
+    "implementationAnchor": "docs/ROADMAP.md",
+    "implementationSha256": "d20adcbbce979e3244111f61b42193f938700c2e10398ec2ac18e941454e0ebd",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 38,
+    "path": "docs/decisions/0038-no-live-ai-on-steam-until-cleared.md",
+    "status": "Status: accepted (2026-11-14). The owner chose \"defer, AI off on Steam\" on the lead's recommendation. Amends 0022. Extended by 0039 (AI is never in the headline; Steam's disclosure covers pre-generated text too).",
+    "sha256": "1c38f585f38046a3b9c3dbe2b75c26ae02ca70952f04a3501bd8bb1a9c5183a3",
+    "implementationAnchor": "package.json",
+    "implementationSha256": "5eb5d20bc6ed0eecb785223929c5cc8e9e21ff6fb49c2a15575e44bd52e22b73",
+    "findingGroups": [
+      "D12"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 39,
+    "path": "docs/decisions/0039-positioning-and-go-no-go.md",
+    "status": "Status: accepted (2026-11-14) as the working basis for the owner's spending decisions, which remain the owner's (0037). From the market-research lane (`docs/research/2026-11-14-market.md`); all sales figures there are estimates from review multipliers and trackers. Extends 0037 and amends how 0022 and 0038 present AI. Amended by 0040 (first-month walkthrough revisions).",
+    "sha256": "66a4089ffc67138cd7240b23e01547ccd4e96ea2b3223ddeeeedda0ce92dc3dd",
+    "implementationAnchor": "prototypes/desk/package.json",
+    "implementationSha256": "a1875f97f9d56e1677b8de3efbb3c7cb14e6b06696955bf09394af224ed6b966",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 40,
+    "path": "docs/decisions/0040-first-month-revisions.md",
+    "status": "Status: accepted (2026-11-14). From `docs/design/FIRST-MONTH.md`, a paper play-through of 4 March to 11 April 1861 against the design (11 stops, 16 decisions, 12 of 36 attention, about 41 minutes). Its verdict: fun as a political thriller, and cheap to operate once these gaps are fixed. The lead accepted its fixes; the owner can overturn any of them. Amends 0016, 0020, 0023, 0025, 0026, 0027, 0028, 0032, 0033 and 0039; supersedes 0028's \"who is seen to fire first\" lever. Amended by 0041 (clarifications) and 0046 (two triggers, waiting options, chains, staff-line authors, decision and notice kinds).",
+    "sha256": "295061a10c2c804779959f1ce2bc2b2badce56491f415edbde671f7815aca8a5",
+    "implementationAnchor": "packages/kernel/src/tick/situations.ts",
+    "implementationSha256": "5e3f6f3acef4236aafc8b49f4ef71df62f292007fdb6bfe9bae9d47cd00b50f9",
+    "findingGroups": [
+      "D09",
+      "M08"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 41,
+    "path": "docs/decisions/0041-clarifications-owners-and-wording.md",
+    "status": "Status: accepted (2026-11-14). Gaps found while folding 0040 into FOUNDATION, and by the combat-model, navy and first-month lanes. Amends 0025, 0029, 0030 and 0040.",
+    "sha256": "8d77dff5e80d4b10bfd0dbde4c50eabca7d3a67f5d103dd81e942e5215d55395",
+    "implementationAnchor": "packages/kernel/src/ownership.ts",
+    "implementationSha256": "584b764a650feb66daf1db8d52db04b8847cff96da5e9812979256107cf91441",
+    "findingGroups": [
+      "D06",
+      "D07",
+      "D08"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 42,
+    "path": "docs/decisions/0042-the-inaugural-is-the-premise.md",
+    "status": "Status: accepted (2026-11-14). Raised by the first-month walkthrough (`docs/design/FIRST-MONTH.md`, Findings), which started after the inaugural and left its tone to the lead. The lead asked the owner twice without a recommendation; under the working style in `CLAUDE.md` the lead decides instead. The owner can overturn it. Clarifies 0028.",
+    "sha256": "bb4393a7a4d947ff5339db8c46ebbe9db410c0a941b3cdf2e596cafe0d719279",
+    "implementationAnchor": "packs/union-1861/source/scenarios/march_1861/scenario.json",
+    "implementationSha256": "978e08f81c1e28f34ac1beab2d0f76d6bdddd2c8bdc56cc9d9ae53df40be1879",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 43,
+    "path": "docs/decisions/0043-map-tripwire-pixijs-stands.md",
+    "status": "Status: accepted (2026-11-14). From Phase 0 lane 0.10, run early on stand-in regions (`prototypes/map-tripwire/README.md`, `results/measurements.json`, screenshots). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0035.",
+    "sha256": "b4758dd8c51ccccf90a4e3a0f1e9b5e2339dddd9b24b8916566c2ddd1c7a45b9",
+    "implementationAnchor": "prototypes/desk/web/map/renderer.ts",
+    "implementationSha256": "9b6a5abe792bde05462530e8ced5ef9de5880ab38dc0cf39a72a767c70923647",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 44,
+    "path": "docs/decisions/0044-engineering-foundations.md",
+    "status": "Status: accepted (2026-11-14). From Phase 0 lane 0.1 (`notes/lane-0.1-foundations.md`) and its separate reviewer (two passes; approved after fixes). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0002 and carries out FOUNDATION sections 10–11 and 0035's engineering rules.",
+    "sha256": "47c3c40be15cfe28c69972702016269a56582b16d99c15f2491feaa3c4b8ad4c",
+    "implementationAnchor": "packages/kernel/src/serialize/canonical.ts",
+    "implementationSha256": "02fc54d941cbd3a1327c57f1e430338e8a86811dda4c089b6ef431a046ae37b9",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 45,
+    "path": "docs/decisions/0045-the-steward-integrates.md",
+    "status": "Status: accepted (2026-11-14). The owner asked why reviews didn't run as sessions and pointed to AWWV's integration steward. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0034 and `docs/LANES.md`. Amended by 0047 (reviews go to a standing reviewer lane).",
+    "sha256": "03336804a4c280578d7ca1b87051ddcc4b5ce82f24ce3edc35b26df6aa558783",
+    "implementationAnchor": ".githooks/pre-commit",
+    "implementationSha256": "6de1446ba999b82153413ebf1a07b2fefe3fcb6b1bd50881bfdce55ef6160d70",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 46,
+    "path": "docs/decisions/0046-gate-checklist-and-situations-catalogue.md",
+    "status": "Status: accepted (2026-11-14). From two design lanes: `docs/design/SENSITIVE-HISTORY.md` (approved by a separate gate reviewer after two rounds of fixes) and `docs/design/SITUATIONS-1861-62.md` (60 situations, March 1861 to December 1862). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Applies 0021 and 0026; amends 0032 and 0040. Refined by 0069 (the Indian Territory nations' representation, ahead of R3).",
+    "sha256": "6ef3922ab0f7cdb1cc624a3678756c3d835a987c8e6bc1eb68b48feb35e0412d",
+    "implementationAnchor": "packages/pack-format/src/gate.ts",
+    "implementationSha256": "bd013db28c94e72dd659875367e8aa03ba9442caec5c2f4a63da2fdfa3c90a4a",
+    "findingGroups": [
+      "D16"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 47,
+    "path": "docs/decisions/0047-a-standing-reviewer.md",
+    "status": "Status: accepted (2026-11-14). The owner asked for \"a permanent review and integration session\". Integration already has one (the steward, 0045); this adds a permanent reviewer beside it. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0034, 0045 and `docs/LANES.md`.",
+    "sha256": "24014218d52c8fde6b072ca55cc871913dba81d91bd53de9515a1e1f11f314f1",
+    "implementationAnchor": "docs/LANES.md",
+    "implementationSha256": "a80e6a8b1ef9e828fd41047972b9308ba95b76fb5becb30b81e41f0e755fae0e",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 48,
+    "path": "docs/decisions/0048-assets-are-made-by-codex.md",
+    "status": "Status: accepted (2026-11-14). The owner: commissioning \"can be done by Codex. He made all the assets for my other games too\", through one coordination file that Claude writes requests into and Codex reports in. Mirrors the owner's other projects (Far Postings' `CODEX.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amended by 0051 (no AI likenesses of real people until a lawyer clears it; game-resolution assets only; full provenance). Amended by 0089 (Codex also builds the desk prototype in `prototypes/desk/`). Amended by 0092 (Codex also takes coding tasks through its command line).",
+    "sha256": "e53930e48cd23db353c440644898835b547968d578da4b5471a7892bd1e55b56",
+    "implementationAnchor": "docs/design/ASSETS.md",
+    "implementationSha256": "56cb251b6020858cfce64ecde46e72678c5e95294aae299222ce719a33c0efc6",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 49,
+    "path": "docs/decisions/0049-ultrawide-first.md",
+    "status": "Status: accepted (2026-11-14). Owner directive: \"game should be optimized for ultrawide, my monitor, so make sure that is clear from the start.\" The owner plays on a 3440×1440, 21:9 monitor at 144 Hz with an AMD Radeon RX 7800 XT (recorded in the owner's Far Postings decision 0025; the map tripwire measured on the same machine, 0043). Follows Far Postings' rule, adapted to the desk.",
+    "sha256": "40d94c582bcdd7bffb35ceea3bb742ca387b31b705fc4020006956faea97bc33",
+    "implementationAnchor": "prototypes/desk/web/App.tsx",
+    "implementationSha256": "0f65e818b20912ec8d73acaf61b4cfa75bb1d0a0848ca32f8eed976be848d885",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 50,
+    "path": "docs/decisions/0050-world-format-v2.md",
+    "status": "Status: accepted (2026-11-14). From Phase 0 lane 0.2 (`notes/lane-0.2-world-format.md`, which lists every choice with what it rejected) and the standing reviewer's two passes (approved after fixes). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 4, 10 and 11, and decisions 0019, 0029, 0030, 0031, 0033, 0040, 0043 and 0044. Amended by 0055 (starting sides come from the post held on the start date; supply sources and depots are scenario data) and 0058 (a post kind's role, a post's intelligence chief, and each region's civil government at the start) and 0065 (a department's side is State; stores carry their date).",
+    "sha256": "3deafef26a78b9359b6bbdc1121396b4b6ea155b8833815febb98d9203bb10a7",
+    "implementationAnchor": "packages/pack-format/src/schemas.ts",
+    "implementationSha256": "d3a3db0f2afd6644f39dbce6f1aa2255e0a6a346e1b5b76faa10fbd75a11579b",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 51,
+    "path": "docs/decisions/0051-codex-output-rules.md",
+    "status": "Status: accepted (2026-11-14). From the research note on Codex's terms (`docs/research/2026-11-14-codex-output-terms.md`) and the note on image sources (`docs/research/2026-11-14-portrait-and-image-sources.md`), both under review. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0048. Amended by 0077 (a procedural, non-machine-learned engraving finish is allowed processing for real people's portraits).",
+    "sha256": "40b0660193a1512ad7bc49dfd29a1fe71e70374f6cf2a8b9e3a1989200e1e152",
+    "implementationAnchor": "docs/design/ASSETS.md",
+    "implementationSha256": "56cb251b6020858cfce64ecde46e72678c5e95294aae299222ce719a33c0efc6",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 52,
+    "path": "docs/decisions/0052-seats-knowledge-and-the-command-log.md",
+    "status": "Status: accepted (2026-11-14). From Phase 0 lane 0.6 (`notes/lane-0.6-seats.md`, which lists each choice with what it rejected) and the standing reviewer's two passes (approved after fixes). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 5, 8, 9 and 10, and decisions 0011, 0015, 0032, 0035, 0040, 0041 and 0044. Amended by 0059 (immutable records are declared by type in `IMMUTABLE_RECORDS`).",
+    "sha256": "a28b36318f62811b94862e3ede7ea2a02ad4149e0d56b20a77c1be0fb668cb74",
+    "implementationAnchor": "packages/kernel/src/seats/requests.ts",
+    "implementationSha256": "8d85a62004ce70b93ded8f3f7bf52466bd2a31f200b33696c7db025726b4d77e",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 53,
+    "path": "docs/decisions/0053-presentation-and-asset-briefs.md",
+    "status": "Status: accepted (2026-11-14). From the presentation design lane (`docs/design/PRESENTATION.md`, `docs/design/ASSETS.md`), approved by the standing reviewer and, for its image and sound rules, by a separate gate reviewer. The owner asked for how the game looks and plays to be written down, with asset briefs and an owner. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Applies 0013, 0025, 0032, 0040, 0043, 0046, 0048, 0049 and 0051.",
+    "sha256": "a23020a1c988cd9731a23660b128359057fa8ed59d431a1f0b13bde16688ae6f",
+    "implementationAnchor": "prototypes/desk/web/App.tsx",
+    "implementationSha256": "0f65e818b20912ec8d73acaf61b4cfa75bb1d0a0848ca32f8eed976be848d885",
+    "findingGroups": [
+      "D13"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 54,
+    "path": "docs/decisions/0054-control-fronts-pockets-and-supply.md",
+    "status": "Status: accepted (2026-11-14). From Phase 0 lane 0.4 (`notes/lane-0.4-control.md`, fifteen choices, each with what it rejected) and the standing reviewer's two passes (approved after fixes). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 4 and 10, and decisions 0013, 0019, 0029, 0044, 0050 and 0052. Amended by 0055 (neutral regions are passable unless their government closes them).",
+    "sha256": "df81c29e53eb0a3426d70224231798e20f37c3bb3e550a4d16663fb1c850529c",
+    "implementationAnchor": "packages/kernel/src/control-index/derived.ts",
+    "implementationSha256": "0454fa2f73d5c457697d697f5b8358706dc5ca8eda00f8f824967ed497d53cf2",
+    "findingGroups": [
+      "A09"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 55,
+    "path": "docs/decisions/0055-neutral-passage-starting-sides-and-supply-sources.md",
+    "status": "Status: accepted (2026-11-14). From the standing reviewer's review of lane 0.3 (the Union 1861 data), which found that the data and lane 0.4's rules together cut Washington off from the North by land, put every traced region in a pocket on day one, and gave men their eventual side at the start. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0050 and 0054. Amended by 0058 (which regions a government holds, and what an unknown government means for passage) and 0065 (a government's side can change in play).",
+    "sha256": "c6cd3a572ab99e8a682fce11110b6d31571e30f5de892319f038daf1cffcc373",
+    "implementationAnchor": "packages/kernel/src/command/command.ts",
+    "implementationSha256": "be3b5bcec0d9e0758dbc2d05461e6250c175bf292f720bdfdfd716087439b56a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 56,
+    "path": "docs/decisions/0056-union-1861-start-data.md",
+    "status": "Status: accepted (2026-11-14). From lane 0.3, which converted the Union drafts into world format v2 (merged as 52b2199), and the standing reviewer's four rounds on it. The lane's hand-over, `notes/lane-0.3-union-data.md`, holds the counts and the full lists. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Builds on 0050 and 0055.",
+    "sha256": "7e9663b6fb79dca1c613db2626dea6443c63d0910649b20d70a9dfaec6580153",
+    "implementationAnchor": "packs/union-1861/source/world/people.csv",
+    "implementationSha256": "a573d659ae35f370f93adc798cb6375daa969fb1d5f374c5f092569442f59adb",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 57,
+    "path": "docs/decisions/0057-situations-engine-and-gate-tests.md",
+    "status": "Status: accepted (2026-11-14). From lane 0.7, which built the situations schema, the situations phase of the day tick and the sensitive-history gate's mechanical checks (merged as 87407ae). The gate reviewer and the standing reviewer each approved it after two rounds. The lane's hand-over, `notes/lane-0.7-situations.md`, maps each gate question to its test. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Builds on 0040, 0046 and 0052. Amended by 0060 (every route to an atrocity; a response decision's own costs).",
+    "sha256": "c5e71c17addd2166ddf7db48abf5a860b0425e2746b137bb18a6a629f99acef4",
+    "implementationAnchor": "packages/kernel/src/tick/situations.ts",
+    "implementationSha256": "5e3f6f3acef4236aafc8b49f4ef71df62f292007fdb6bfe9bae9d47cd00b50f9",
+    "findingGroups": [
+      "A11"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 58,
+    "path": "docs/decisions/0058-lane-0.5-format-gaps.md",
+    "status": "Status: accepted (2026-11-14). Amends 0050 and 0055. Amended by 0061 (government flags on department kinds, `unknown` as a value, the State field names). From lane 0.5, which found four things lane 0.6's stand-in comms World supplies, or 0055 needs, that the v2 World cannot carry:",
+    "sha256": "b887591c245fc9da4d8b1ec3dc87894fc9819d1adc792cefd85037d66883a18f",
+    "implementationAnchor": "packages/kernel/src/seats/world.ts",
+    "implementationSha256": "895baf705820ddd5e82e962a41b7039fc37041aa00a63b4a414a1e60fab0ed3f",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 59,
+    "path": "docs/decisions/0059-tooling-scanner-index-hook-records.md",
+    "status": "Status: accepted (2026-11-14). From the tooling batch (`notes/tooling-batch.md`), four small-tooling items from `docs/OPEN_QUESTIONS.md`, approved twice by the standing reviewer. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0052.",
+    "sha256": "9f4e06b81b23567169591e98d66f67d64983d51028d9d0028b8c16c5fbeddc8a",
+    "implementationAnchor": "tools/staged-check.ts",
+    "implementationSha256": "10de7769109c785e4e3b1229245116fc977458c67240b21bfa0690dc9241015d",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 60,
+    "path": "docs/decisions/0060-every-route-to-an-atrocity.md",
+    "status": "Status: accepted (2026-11-14). From the gate reviewer's re-checks of lane 0.7 (G3, G4, G5 and G6 in `review-gate-lane-0.7.md`) and lane 0.7's fixes. G3 merged as 789df5a, G4 is approved at 77b7e30, and G5 and G6 are ruled on here. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0057. Amended by 0063 (an option that lowers the actor is watched) and 0071 (a cleared flag is a route).",
+    "sha256": "6ea4464c998439cdae34d12f2b9ab77e4d17a88b2b3a0948a60ac80921ae931a",
+    "implementationAnchor": "packages/pack-format/src/gate.ts",
+    "implementationSha256": "bd013db28c94e72dd659875367e8aa03ba9442caec5c2f4a63da2fdfa3c90a4a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 61,
+    "path": "docs/decisions/0061-how-the-0058-fields-were-built.md",
+    "status": "Status: accepted (2026-11-14). Amended by 0064 (an unknown government closes neutral passage and supply, not movement). From lane 0.7's session, which built 0058's three format fields on `format-0058` (merged as 7e221dc; hand-over in `notes/format-0058.md`), and the standing reviewer's approval with four nits, two of them fixed before merge. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0058.",
+    "sha256": "4b80f2f64b681344c99f61a4fa087015859c76958b7636836095d55e702220fe",
+    "implementationAnchor": "packages/kernel/src/command/command.ts",
+    "implementationSha256": "be3b5bcec0d9e0758dbc2d05461e6250c175bf292f720bdfdfd716087439b56a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 62,
+    "path": "docs/decisions/0062-the-planner-shape.md",
+    "status": "Status: accepted (2026-11-15). Applies 0026 and 0030. From Phase 0 lane 0.9's planner spike (`prototypes/planner-spike/`, `notes/lane-0.9-planner.md`) and the standing reviewer's approval (`review-lane-0.9.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "2dea99c43975966c4fa957f4ad03b85f74eccc86c0ca3ac8f187b0d1132e02fe",
+    "implementationAnchor": "packages/kernel/src/planner/draft.ts",
+    "implementationSha256": "265bb5408106891dce2976f54482df18ff85a7843082331e202067d99e157be7",
+    "findingGroups": [
+      "A05"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 63,
+    "path": "docs/decisions/0063-atrocity-levers-are-watched.md",
+    "status": "Status: accepted (2026-11-15). Amends 0060. Amended by 0074 (D6 reads the inaction outcome of a decision about an atrocity-class order or sentence as watched). From the gate reviewer's re-check of G5 and G6 (nit N10) and lane 0.7's G7, approved at bd5d01f with a precision control added (663e962). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "a0fd4b2f7b3a7e05e7912fa198bd1a4203c00f2d5152f9c78e1442d70d5fa56f",
+    "implementationAnchor": "packages/pack-format/src/gate.ts",
+    "implementationSha256": "bd013db28c94e72dd659875367e8aa03ba9442caec5c2f4a63da2fdfa3c90a4a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 64,
+    "path": "docs/decisions/0064-forces-command-movement-and-the-contest.md",
+    "status": "Status: accepted (2026-11-15). Amends 0061. Amended by 0066 (each side's war flag is its own, set only by its own decision), 0072 (the war gate only delays the day-1 march; the generic principal is a stand-in) and 0076 (the battle model replaces the simple contest). From Phase 0 lane 0.5 (`notes/lane-0.5-forces.md`, merged as ce9d9d1) and the standing reviewer's review (`review-lane-0.5.md`, approved after one fix). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 4, 9 and 10, and decisions 0019, 0033, 0040, 0050, 0054, 0055, 0058 and 0061.",
+    "sha256": "3d7db9af404372666a55fe5bd177f18d14525745a883c9dd279255a30f05065c",
+    "implementationAnchor": "packages/kernel/src/forces/forces.ts",
+    "implementationSha256": "a5eccb04e3c1282001c6e4947df581e273e992adb0b8c5a989bb6e2e50448b6b",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 65,
+    "path": "docs/decisions/0065-a-governments-side-is-state.md",
+    "status": "Status: accepted (2026-11-15). Amends 0050 and 0055. Amended by 0067 (Fort Pickens' stores are unknown; the holder's-side rule as built). From the research lane on governments and stores (`docs/research/2026-11-15-governments-and-stores-1861.md`), which found that a department's faction is World data and cannot change in play. Phase 0 could close a neutral government's land, but no situation could take Virginia out of the Union in April 1861, or move a nation into a treaty. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "e7bcc31c7d38119ffec87f96e8d0b1ae7d45964621cbb49f1b8896432a63643b",
+    "implementationAnchor": "packages/kernel/src/command/command.ts",
+    "implementationSha256": "be3b5bcec0d9e0758dbc2d05461e6250c175bf292f720bdfdfd716087439b56a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 66,
+    "path": "docs/decisions/0066-the-war-begins-by-each-governments-decision.md",
+    "status": "Status: accepted (2026-11-15). Amends 0064. Amended by 0068 (war decisions cannot be delegated). From the standing reviewer's review of lane 0.8 (S1 in `review-lane-0.8.md`). The war gate read the war flag straight from State. A notice applies its effects when it fires, but surfaces only when its report arrives, so a notice that set the flag would tell every principal the war had begun before news of it reached him. That is the hindsight 0046's two triggers exist to stop. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "f90af3ba7b6f33d710f848f042d0d89a30f80adccee78a762e128797d2f7607c",
+    "implementationAnchor": "packages/kernel/src/situations/conditions.ts",
+    "implementationSha256": "6836678cd2f2feaf314f47fb92b66315113fe8168747cce8fb9b14f28f4f54e0",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 67,
+    "path": "docs/decisions/0067-government-sides-as-built.md",
+    "status": "Status: accepted (2026-11-15). Amends 0065. From lane 0.5's `phase0-department-sides` (approved in `review-department-sides.md`) and the standing reviewer's check of the governments research (`review-governments-stores.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "5d5bb8a48f65ce8172a128101f7a53721e9ba4d8473d8013e004579df7a754a9",
+    "implementationAnchor": "packages/kernel/src/command/command.ts",
+    "implementationSha256": "be3b5bcec0d9e0758dbc2d05461e6250c175bf292f720bdfdfd716087439b56a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 68,
+    "path": "docs/decisions/0068-the-runner-and-the-done-check.md",
+    "status": "Status: accepted (2026-11-15). Amends 0066. Amended by 0072 (the at-war Union run is a mechanics run, not a war; its bands are reset) and 0075 (the behaviour criterion accepts a contest or an occupation, with a control change). From Phase 0 lane 0.8 (`notes/lane-0.8-done-check.md`) and the standing reviewer's review and re-checks (`review-lane-0.8.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION sections 11 and 12.",
+    "sha256": "c92b2c041d948594d2c6fa2add459adb5102a4f02b939211de123216a950d67b",
+    "implementationAnchor": "packages/cli/src/done-check.ts",
+    "implementationSha256": "dbde1e317ff0693a6ae66dbcec45bff4e5f0915eb4792a2451913a87722cae01",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 69,
+    "path": "docs/decisions/0069-the-indian-territory-nations-govern-themselves.md",
+    "status": "Status: accepted (2026-11-15). Refines 0046. Amended by 0070 (a nation's act names itself, depends on no principal's choice, and stays with its own polity; \"much of\", not \"most\"). Places part of record R3 ahead of R3 itself. From the gate review of the governments research (`review-gate-indian-territory.md`, approve after fixes) and the research note `docs/research/2026-11-15-governments-and-stores-1861.md`. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. R3 adopts or supersedes this when it is written.",
+    "sha256": "78935d216a46438ee1395dc29090ab3ed7d7f1334cf679365dbd77d135a13f4c",
+    "implementationAnchor": "packages/kernel/src/command/command.ts",
+    "implementationSha256": "be3b5bcec0d9e0758dbc2d05461e6250c175bf292f720bdfdfd716087439b56a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 70,
+    "path": "docs/decisions/0070-a-nations-act-is-its-own.md",
+    "status": "Status: accepted (2026-11-15). Amends 0069. Amended by 0071 (a cleared flag is a route; a standing goal is a choice). From the standing reviewer's and the gate reviewer's reviews of the `selfGoverning` rule (`review-selfgoverning.md`, `review-gate-selfgoverning.md`) and the gate reviewer's review of the Indian Territory split (`review-gate-indian-territory.md`, Part 2). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "f4eff753efd5e38ffb23f256ba9c1be314e500d1e637ceb8077871aba222dbc7",
+    "implementationAnchor": "packages/pack-format/src/gate.ts",
+    "implementationSha256": "bd013db28c94e72dd659875367e8aa03ba9442caec5c2f4a63da2fdfa3c90a4a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 71,
+    "path": "docs/decisions/0071-cleared-flags-and-goals-are-routes.md",
+    "status": "Status: accepted (2026-11-15). Amends 0060 and 0070. From the standing reviewer's and the gate reviewer's re-checks of the `selfGoverning` rule (`review-selfgoverning.md`, `review-gate-selfgoverning.md`; approved at 6b6e187). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "caac1ad899c0e2cc87666aab7ca6e68e3e8524712321ab3b7148997dcc73106b",
+    "implementationAnchor": "packages/kernel/src/situations/conditions.ts",
+    "implementationSha256": "6836678cd2f2feaf314f47fb92b66315113fe8168747cce8fb9b14f28f4f54e0",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 72,
+    "path": "docs/decisions/0072-phase-0-closes-with-a-close-out.md",
+    "status": "Status: accepted (2026-11-15). Amends 0064 and 0068. From the Phase 0 exit review (`review-phase0-exit.md`), a fresh lane that reviewed no Phase 0 lane. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "f9a71eae8bd46294536e8d90c992cde1bc0965c2f972290b3da381fb9017d3e9",
+    "implementationAnchor": "packages/kernel/src/ownership.ts",
+    "implementationSha256": "584b764a650feb66daf1db8d52db04b8847cff96da5e9812979256107cf91441",
+    "findingGroups": [
+      "A07"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 73,
+    "path": "docs/decisions/0073-phase-1-plan.md",
+    "status": "Status: accepted (2026-11-16). From the lead's draft of FOUNDATION section 12's Phase 1 plan and a fresh review lane that reviewed none of Phase 0's lanes (`review-phase1-plan.md`: approve after fixes, nothing blocking, every fix taken). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION section 12 and 0072's hand-over.",
+    "sha256": "2fdb8086ffe69d400348f726c6bd41f8a7fb148f8905302e26ad672ba183eba5",
+    "implementationAnchor": "docs/design/FOUNDATION.md",
+    "implementationSha256": "0569e414dfaa1eeaf126c89408d71ace9423a32525218c2cd05f60520473b1e2",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 74,
+    "path": "docs/decisions/0074-the-gate-for-1a.md",
+    "status": "Status: accepted (2026-11-16). Amends 0063. Amended by 0082 (a chosen policy applies its row's pushback through the owners: who carries the floor's difference, an unpaid floor recorded, and inaction's own policy). From:",
+    "sha256": "99befa42c11ed623695ce54d86a6e9ff2c922fc52c85f5979dd51ec4c025cde0",
+    "implementationAnchor": "packages/kernel/src/compliance.ts",
+    "implementationSha256": "a9fa1421835af6c2950cce4c0624222e3ce64325819a8c17c6775f52f244296f",
+    "findingGroups": [
+      "D16"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 75,
+    "path": "docs/decisions/0075-the-planner-as-built.md",
+    "status": "Status: accepted (2026-11-16). Amends 0068. From Phase 1 lane 1.2 (`notes/lane-1.2-planner.md`) and the standing reviewer's review and re-checks (`review-lane-1.2.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION section 12's row 1.2 (0073) in 0062's shape.",
+    "sha256": "11e0c43b3f3195030d8652132ac3175feb32f6dc5a445692f46e5fc4ad938c2d",
+    "implementationAnchor": "packages/kernel/src/planner/input.ts",
+    "implementationSha256": "f8924af77ebfd891e8c68797aba2cbcd392e00bf3ae1c9f6f6224faf1e329d82",
+    "findingGroups": [
+      "A05",
+      "D04"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 76,
+    "path": "docs/decisions/0076-the-battle-model-as-built.md",
+    "status": "Status: accepted (2026-11-16). Amends 0064. From Phase 1 lane 1.3 (`notes/lane-1.3-combat.md`), the standing reviewer's review and re-check (`review-lane-1.3.md`), and the gate reviewer's read of its capture parts (`review-gate-1861.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION section 12's row 1.3 (0073) from `docs/research/2026-11-14-combat-model.md`, under 0074's capture ruling.",
+    "sha256": "714a549a582cd837e008e07d365dde4480f0fd5d82caa28576c766bfab25efa5",
+    "implementationAnchor": "packages/kernel/src/combat/resolve.ts",
+    "implementationSha256": "1c958c3e65c89dc28ec0e7f7e70b2fd2f6d3d64bece6753e86b29f128a7f6b80",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 77,
+    "path": "docs/decisions/0077-portraits-get-a-procedural-engraving.md",
+    "status": "Status: accepted (2026-11-16). Amends 0051. Decided by the owner on the lead's recommendation.",
+    "sha256": "266b8d4d76799111f8c7bb61f547dd1dba6139e47f38f892e63321d10acaefa3",
+    "implementationAnchor": "docs/design/ASSETS.md",
+    "implementationSha256": "56cb251b6020858cfce64ecde46e72678c5e95294aae299222ce719a33c0efc6",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 78,
+    "path": "docs/decisions/0078-men-and-regions-as-built.md",
+    "status": "Status: accepted (2026-11-16). From Phase 1 lane 1.7 (`notes/lane-1.7-men-regions.md`), the standing reviewer's review and re-checks (`review-lane-1.7.md`), and the gate reviewer's verdicts G-1.7a and G-1.7b (`review-gate-1861.md`). Decided by the lead under the working style in `CLAUDE.md`, adopting the gate reviewer's recommendations; the owner can overturn it. Carries out FOUNDATION section 12's row 1.7 (0073) under 0046 and 0074.",
+    "sha256": "5ac5ba965c5dad52c7556c3ef0733c8eb14d08304e12725dcee654dafe61ecfa",
+    "implementationAnchor": "packages/kernel/src/regions/regions.ts",
+    "implementationSha256": "a138a2fafd882ec98e70b0787ddfe606e4dce8091250eb938340756df661a47b",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 79,
+    "path": "docs/decisions/0079-the-people-verbs-as-built.md",
+    "status": "Status: accepted (2026-11-16). From Phase 1 lane 1.5 (`notes/lane-1.5-people-verbs.md`), the standing reviewer's review and re-check (`review-lane-1.5.md`), and the gate reviewer's verdict (`review-gate-1861.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION section 12's row 1.5 (0073), with 0074's cost-only values.",
+    "sha256": "facb0427e0980ffeb44d867c5278c384f78c90a56838b60a212975203c775095",
+    "implementationAnchor": "packages/kernel/src/tick/verbs.ts",
+    "implementationSha256": "ea04e0116cab2a93bac4eb5dd533f37f7aced50795bc831516d8b7a47834efc7",
+    "findingGroups": [
+      "D10"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 80,
+    "path": "docs/decisions/0080-operations-as-built.md",
+    "status": "Status: accepted (2026-11-16). From Phase 1 lane 1.4 (`notes/lane-1.4-operations.md`), the standing reviewer's review and re-checks (`review-lane-1.4.md`), and the gate reviewer's verdict (`review-gate-1861.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION section 12's row 1.4 (0073), under 0074 and 0076.",
+    "sha256": "95f65edb414ab628051cc85fd5b4f8d598c855291fe4db6ee85402bbe3e35f6b",
+    "implementationAnchor": "packages/kernel/src/tick/operations.ts",
+    "implementationSha256": "f37e9f49e87cc171645c7a24ccba94a58dde9cdefc2b2dab7226441a3d0416e4",
+    "findingGroups": [
+      "D11"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 81,
+    "path": "docs/decisions/0081-detachments-as-built.md",
+    "status": "Status: accepted (2026-11-16). From Phase 1 lane 1.4b (`notes/lane-1.4b-detachments.md`) and the standing reviewer's review (`review-lane-1.4b.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out 0080's consequence for lane 1.4b, on lane 1.7's block creation (0078). Amended by 0083 (a detachment can't rejoin on the day it was made, so no id is re-minted).",
+    "sha256": "fd0534c472435159e630efa60cfd39c33ca91497eba3190893793bb4bc67eae2",
+    "implementationAnchor": "packages/kernel/src/forces/detachments.ts",
+    "implementationSha256": "7d10e403755f263e4669b5aecea831451f334f0fab59f35b26610a94f54a0d25",
+    "findingGroups": [
+      "D11"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 82,
+    "path": "docs/decisions/0082-the-value-map-in-play.md",
+    "status": "Status: accepted (2026-11-16). Amends 0074. From:",
+    "sha256": "3c3dcfbe8cd825e13632b0137c9e30591c99287e074bfda33b0ed43686c7e50c",
+    "implementationAnchor": "packages/kernel/src/tick/policy.ts",
+    "implementationSha256": "dab689ae33ada2b6ff0972916893d497340a81b6b7654499b97c939cdb96833d",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 83,
+    "path": "docs/decisions/0083-no-rejoin-on-the-day-made.md",
+    "status": "Status: accepted (2026-11-16). Amends 0081. From Phase 1 lane 1.4c (`notes/lane-1.4c-shell-fix.md`) and the standing reviewer's review (`review-lane-1.4c.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "84ad4506826ce4109c0274a516d609b1cebd84fd4f007d9aacd873b9bc47e574",
+    "implementationAnchor": "packages/kernel/src/forces/detachments.ts",
+    "implementationSha256": "7d10e403755f263e4669b5aecea831451f334f0fab59f35b26610a94f54a0d25",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 84,
+    "path": "docs/decisions/0084-politics-first-cut-as-built.md",
+    "status": "Status: accepted (2026-11-16). From:",
+    "sha256": "75c6e064759d2e3faf59c0b197bd99cbefd5199d1207607fda0182cb27c88912",
+    "implementationAnchor": "packages/kernel/src/politics/politics.ts",
+    "implementationSha256": "16b4892205e88f5f87ecc91f6a32d421e5c1790309fb65a55431b0ce76d611b2",
+    "findingGroups": [
+      "D01",
+      "D10"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 85,
+    "path": "docs/decisions/0085-evidence-rules-and-the-1860-census.md",
+    "status": "Status: accepted (2026-11-16). Amended by 0087 (the rules as checks; a later work sources facts but not judgments; a period document printed verbatim later counts as contemporary; older judgment cells meet the same rule). From:",
+    "sha256": "5ec8ee054e1b9c0c16e29ad9c695fbf17b3718729d227ccb918fd64758d62ca7",
+    "implementationAnchor": "packages/pack-format/src/banned-sources.ts",
+    "implementationSha256": "cde47956d0aad3bb51e3306783085bbeecce37205fcd5ee9004f5f22ca16289a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 86,
+    "path": "docs/decisions/0086-wall-clock-tests-behind-a-flag.md",
+    "status": "Status: accepted (2026-11-16). From Phase 1 lane 1.0t (`notes/lane-1.0t-timing.md`) and the standing reviewer's review (`review-lane-1.0t.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "9d5cdb825690905edca54a93c994f6fad480bdb910c9ba5b713b19785b547372",
+    "implementationAnchor": "vitest.config.ts",
+    "implementationSha256": "5de05d7ada0531d41390181f25b8c73f7f8d3f131261b5b0d503af0070676867",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 87,
+    "path": "docs/decisions/0087-evidence-rules-as-checks.md",
+    "status": "Status: accepted (2026-11-16). Amends 0085. From:",
+    "sha256": "eec24909598aa40e3e17515e48dcb850c875307136dc5a9b075e52fab1cba316",
+    "implementationAnchor": "packages/pack-format/src/banned-sources.ts",
+    "implementationSha256": "cde47956d0aad3bb51e3306783085bbeecce37205fcd5ee9004f5f22ca16289a",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 88,
+    "path": "docs/decisions/0088-the-console-and-m2-retired.md",
+    "status": "Status: accepted (2026-11-17). From Phase 1 lane 1.13 (`notes/lane-1.13-console.md`, merged `fb1dea7`) and the standing reviewer's review and final verdict (`review-lane-1.13.md`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION section 12's row 1.13 (0073), under 0016, 0027 and 0052.",
+    "sha256": "a6c3bf416d078fe25f24a077d1d6dd87f1e11c4df87bd3f9d6b4d47ce645b3df",
+    "implementationAnchor": "packages/cli/src/console/session.ts",
+    "implementationSha256": "aed51c3686d585fd78acee8057de8da95ce39003df2f9a0ac4306c5316b94a99",
+    "findingGroups": [
+      "A04"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 89,
+    "path": "docs/decisions/0089-codex-builds-a-desk-prototype.md",
+    "status": "Status: accepted (2026-11-17). The owner asked whether Codex could build a playable desk too, pointing to the room screen of their earlier game (AWWV). Their larger Codex plan runs to 22 November 2026, and Claude's side of the project is paused to save tokens. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0048 (what Codex may write). Amended by 0090 (Codex also drafts the map icons in `prototypes/map-icons/`) and 0091 (the prototype gains the staff map).",
+    "sha256": "657f3c2a62489caf5fb73944d0fe9724b6a7c8099d0dbed6ac8bf0377e60df71",
+    "implementationAnchor": "prototypes/desk/web/App.tsx",
+    "implementationSha256": "0f65e818b20912ec8d73acaf61b4cfa75bb1d0a0848ca32f8eed976be848d885",
+    "findingGroups": [
+      "A06",
+      "D13"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 90,
+    "path": "docs/decisions/0090-codex-decoration-icons-and-desk-access.md",
+    "status": "Status: accepted (2026-11-17). The owner asked for more work for Codex while their Codex plan lasts (to 22 November 2026). Claude's side of the project stays paused. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0089 (Codex's write scope gains `prototypes/map-icons/`). Amended by 0091 (the staff map is built now, as R18).",
+    "sha256": "fb612a50c087bd2564fb605a4a9b4e700606191d499554935420c9ab64ee2706",
+    "implementationAnchor": "prototypes/map-icons/package.json",
+    "implementationSha256": "93f088a9cfdf0d4bed98c71426d98ada7166c0838ae2fa64399ff9c35cc1b287",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 91,
+    "path": "docs/decisions/0091-codex-builds-the-staff-map-prototype.md",
+    "status": "Status: accepted (2026-11-17). The owner asked where the map comes in, since a player should not play through dry reports alone. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0090 (which had rejected the staff map for now) and 0089 (the desk prototype's scope). Amended by 0093 (the look is the engineer's manuscript, and the map covers the table).",
+    "sha256": "4645f275a94fcd9bb7fdc52e37eba5d4e4ede97d6dcda82165b2a1e4f2f3d82b",
+    "implementationAnchor": "prototypes/desk/web/map/renderer.ts",
+    "implementationSha256": "9b6a5abe792bde05462530e8ced5ef9de5880ab38dc0cf39a72a767c70923647",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 92,
+    "path": "docs/decisions/0092-codex-takes-coding-tasks.md",
+    "status": "Status: accepted (2026-11-18). The owner: \"since we now know you can use Codex CLI, use it for coding tasks as well\". Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0048 (Codex's scope). Amended by 0096 (Codex takes over the paused 1A lanes, reviews Claude's work, and may use git to read). Amended by 0106 (during the sprint to 22 November, Codex commits on its own sprint branch).",
+    "sha256": "d2bef438276ee8f906457aa12b1bb9c9da9584940657c4cb23b15d9f42f8c741",
+    "implementationAnchor": ".githooks/pre-commit",
+    "implementationSha256": "6de1446ba999b82153413ebf1a07b2fefe3fcb6b1bd50881bfdce55ef6160d70",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 93,
+    "path": "docs/decisions/0093-the-map-is-the-engineers-manuscript-on-the-table.md",
+    "status": "Status: accepted (2026-11-18). The owner found the staff map \"very bland\" and called it \"the heart of the game\". Codex drew three looks and a layout mock (R22, R23), and the owner chose look A: \"A, but it needs to be improved much\". The layout follows the lead's recommendation, decided under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0091 (the prototype's look and the map's place on the desk). Refines 0013's 1862 era skin. Refined by 0094 (claimed control in bold colour) and 0095 (no pictorial signs, for now).",
+    "sha256": "6ad36c22fedbc3d6963f75cee96e151957e7e013ae3aebe2c47952d20a61f767",
+    "implementationAnchor": "prototypes/desk/web/map/renderer.ts",
+    "implementationSha256": "9b6a5abe792bde05462530e8ced5ef9de5880ab38dc0cf39a72a767c70923647",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 94,
+    "path": "docs/decisions/0094-claimed-control-on-the-presidents-map.md",
+    "status": "Status: accepted (2026-11-18). The owner approved the kernel work (\"Go ahead\") and set the colour direction for the map: \"way too drab. We need color, control needs to be marked... it should look like a real staff map, yes, but with a splash of fun and gaming.\" Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out the consequence of 0054 that the staff map's lane owes (\"the control index is a function of any control table, so the staff map can draw fronts from a seat's claimed control\"). Refines 0093 item 1 on colour.",
+    "sha256": "4f8a48bf192ac68db167802ac4aabcd7602b08d9ba8d0171681f814ef3cb12ce",
+    "implementationAnchor": "packages/kernel/src/view/claimed-control.ts",
+    "implementationSha256": "1070d4c506526c998b57690a2d7bfcee42f2eafdd3f43730c0eafe1a271f25c0",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 95,
+    "path": "docs/decisions/0095-the-staff-map-draws-no-pictorial-signs-for-now.md",
+    "status": "Status: accepted (2026-11-18). The owner, after seeing R36, R38, R39 and R40: \"I dislike all of those. At this point, I'd rather stick to the straight map if we can't get better solutions.\" Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Narrows 0013 item 3 for `union-1861`. Refines 0093.",
+    "sha256": "a952d10c20ab294309228198a5888f8c07c5c4ee7adfe8c40cf2124b8a1566d0",
+    "implementationAnchor": "prototypes/desk/web/map/renderer.ts",
+    "implementationSha256": "9b6a5abe792bde05462530e8ced5ef9de5880ab38dc0cf39a72a767c70923647",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 96,
+    "path": "docs/decisions/0096-codex-resumes-milestone-1a.md",
+    "status": "Status: accepted (2026-11-19). The owner: \"Give him more work, he can do anything you can, I want to use his tokens\". Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0092 (Codex's scope and its use of git). Amended by 0106 (the sprint to 22 November: Codex commits on its own branches, and review is deferred to the sprint's end).",
+    "sha256": "e94770e409615f54f16561efa78a5b63fb5ee45e7aa1ffd70cba0816213cabc3",
+    "implementationAnchor": "CODEX.md",
+    "implementationSha256": "f17d4ca7f0548fa373fd78ce37975071f174889cc4a736ccf67a7e774dcee267",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 97,
+    "path": "docs/decisions/0097-the-1861-starts-blocs-after-re-sourcing.md",
+    "status": "Status: accepted (2026-11-19). The rulings that lane 1.11r3's re-sourcing left owed. Rounds 1 and 2 were researched by Claude's lane and by Codex (R45), and reviewed by Codex (R44, R50) and by Claude's standing reviewer. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Applies 0085 and 0087 to `union-1861`'s people.",
+    "sha256": "1f5e480ddf94af28d46f095e506f7eb2e4bda38095b41a1caf41cbedd1a42d23",
+    "implementationAnchor": "packs/union-1861/source/world/people.csv",
+    "implementationSha256": "a573d659ae35f370f93adc798cb6375daa969fb1d5f374c5f092569442f59adb",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 98,
+    "path": "docs/decisions/0098-rule-seat-doctrine-concentration-bombardment-and-lost-commanders.md",
+    "status": "Status: accepted (2026-11-19). The rulings lane 1.12 left owed. Part A was built by Claude's lane and merged as `4a52663`; Part B was built by Codex (R48, `ba76d27`) and reaches main after its review. Codex drafted this record from the lane's hand-over (R53, under 0096). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. It replaces the generic principal that 0072 labelled a stand-in. Extended by 0104 (the opening of the war in the history run).",
+    "sha256": "45e69c6845b0cff5569945c764e4968bba4cd8d941fd7deb583b6807828bc9ef",
+    "implementationAnchor": "packages/rule-seats/src/index.ts",
+    "implementationSha256": "5e7a666913761973c76ecbb19bcfdd5a9c42204c1752a1acc7b9ee7fdc1a924b",
+    "findingGroups": [
+      "A03",
+      "O03"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 99,
+    "path": "docs/decisions/0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md",
+    "status": "Status: accepted (2026-11-19). The rulings lane 1.14 Part A left owed. Part A was built by Claude's lane and merged as `a00f2d8`, with Codex's merge of main (`b8501cc`) and the Confederate ceiling (`3c2754b`, R58). Codex drafted this record from the lane's hand-over (R53, under 0096). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "65efb25be08a0bd4fb9c1238fb187e87e553a9a2e144af6353fa84e5d32c7c4c",
+    "implementationAnchor": "packages/cli/src/history-run.ts",
+    "implementationSha256": "c9dd7502891a354f379deb05ea60c72c0eb8a39c5e42033ef5c7b88472423528",
+    "findingGroups": [
+      "M06"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 100,
+    "path": "docs/decisions/0100-sourced-situations-absent-staff-advice-and-declared-governments.md",
+    "status": "Status: accepted (2026-11-19). The rulings lane 1.11 left owed. Built by Claude's lane and by Codex (R47, R55, R64, R69, under 0096) on `phase1-situations` at `2c2a4bd`, and reviewed by Claude's standing reviewer and the gate reviewer. Codex drafted this record (R71). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "91969a111bd2cb204c845bfcd5741a661abea283c54a5b6fb539fb1489f8c82e",
+    "implementationAnchor": "packages/kernel/src/tick/situations.ts",
+    "implementationSha256": "5e3f6f3acef4236aafc8b49f4ef71df62f292007fdb6bfe9bae9d47cd00b50f9",
+    "findingGroups": [
+      "A10"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 101,
+    "path": "docs/decisions/0101-an-officers-resignation-service-side-and-reported-choice.md",
+    "status": "Status: accepted (2026-11-19). The rulings of the resignation lane, opened by 0096 from lane 1.12's note. Built by Codex (R49, R61) on `phase1-resignation` at `5a96a16`, and reviewed by Claude's standing reviewer and the gate reviewer. Codex drafted this record (R71). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "c08b9033bd14499ae6695147f20076bef160255731395b22784ab8f449b474e9",
+    "implementationAnchor": "packages/kernel/src/tick/people-week.ts",
+    "implementationSha256": "226589cf8905838b0c9e732b227a855c287e1b05cd661f8c01b3d23860aae5ab",
+    "findingGroups": [
+      "A02"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 102,
+    "path": "docs/decisions/0102-send-a-plan-back-with-notes-the-commander-may-decline.md",
+    "status": "Status: accepted (2026-11-19). Built by Codex (R56, R67, under 0096) on `plan-sendback-notes` at `9f933f5`, closing the send-back gap from R18 (OPEN_QUESTIONS, Phase 2), and reviewed by Claude's standing reviewer. Codex drafted this record (R71). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "cba0035f2127817f937c5a8b30d77d24dbb1ef3c69659b1f5c769c60657b3f97",
+    "implementationAnchor": "packages/kernel/src/planner/notes.ts",
+    "implementationSha256": "929ccc8b6f8116133f948128970b85d44b82b35320f0c5da7c442f0f30ed0ec5",
+    "findingGroups": [
+      "A03"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 103,
+    "path": "docs/decisions/0103-the-press-carries-received-stories-into-the-seat-view.md",
+    "status": "Status: accepted (2026-11-19). Extends 0084's press as a report route. Built by Codex (R54, R63, R68, under 0096) on `press-tests` at `f8f74da`, and reviewed by Claude's standing reviewer. Codex drafted this record (R71). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it.",
+    "sha256": "1b1757353698f4da0385c0e107ea31e6e0423f5fbe063e3a42be9ad6034b7d7d",
+    "implementationAnchor": "packages/kernel/src/politics/press.ts",
+    "implementationSha256": "7356de5b4cc4e3e441685ad7fac42ae784545f2b828c7d466185f2c9fbebe777",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 104,
+    "path": "docs/decisions/0104-the-opening-of-the-war-follows-its-causes-and-its-news.md",
+    "status": "Status: accepted (2026-11-20). The lead's rulings when lanes 1.11 and 1.12 met in one history run. Built by Codex (R74, R78, R80, R81, under 0096) on `phase1-rule-seats-b`, and reviewed by Claude's standing reviewer and the gate reviewer. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Applies 0066 and 0040 to the opening; extends 0098 and records a change to 0052's tick order.",
+    "sha256": "71e027a052d41eeefc8580d0135bcd5139a43aea053692fde3a4ea7083e6d304",
+    "implementationAnchor": "packages/kernel/src/tick/deliver.ts",
+    "implementationSha256": "02f7b0f8fe3ff415daa5ef59c0f89d500eeb8fc2505c70093723527bce97f63d",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 105,
+    "path": "docs/decisions/0105-1as-first-calibration-round-continue-or-park.md",
+    "status": "Status: accepted (2026-11-20). The lead's continue-or-park ruling after lane 1.14 Part B's first budget of eight measured runs (Codex's R85, under 0096, on `phase1-done-check-1b` at `ede2a55`), as `docs/LANES.md` requires of a calibration lane. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Applies 0099.",
+    "sha256": "5a14db9fe4d4cf093e2e22bdb3e2f269222508ebc88e9fd5403fe5a5f4d34b6e",
+    "implementationAnchor": "packages/kernel/src/tick/bombard.ts",
+    "implementationSha256": "5764a8044497de374adf25737f87846456fb29b8bea5f1760ff10f3986b22da9",
+    "findingGroups": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M06"
+    ],
+    "disposition": "see listed findings",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  },
+  {
+    "id": 106,
+    "path": "docs/decisions/0106-the-codex-sprint-to-22-november.md",
+    "status": "Status: accepted (2026-11-20). The owner: \"we need to use all of Codex' generous allowance in the next two days. Use the raw power, we can review what he created in two days. No bottlenecks, we need max productivity.\" Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0092 and 0096 for the sprint only.",
+    "sha256": "46a0745d0129d2adea42cc4f8d85874294812beb612fb4898d3d94abed81ee22",
+    "implementationAnchor": ".githooks/pre-commit",
+    "implementationSha256": "6de1446ba999b82153413ebf1a07b2fefe3fcb6b1bd50881bfdce55ef6160d70",
+    "findingGroups": [],
+    "disposition": "see findings/phase limits and later amendments; no additional demonstrated contradiction",
+    "limits": "process and art records checked for scope/precedence only; no external history, rights, spend, hosted CI or reviewer acceptance certified"
+  }
+]

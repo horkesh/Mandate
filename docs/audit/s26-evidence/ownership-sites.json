@@ -1,0 +1,1991 @@
+{
+  "sourceFiles": 196,
+  "fields": [
+    {
+      "field": "each faction's current capital",
+      "writer": "command",
+      "proposedBy": [
+        "scenario start",
+        "situations"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "factionCapitals"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/command/capitals.ts",
+          "key": "factionCapitals",
+          "line": 18,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "factionCapitals",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "factionCapitals",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "region control",
+      "writer": "control",
+      "proposedBy": [
+        "combat",
+        "occupation"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "regionControl"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/control/control.ts",
+          "key": "regionControl",
+          "line": 180,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "regionControl",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "regionControl",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "each land region's civil government (a department, or unknown)",
+      "writer": "command",
+      "proposedBy": [
+        "situations"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "regionGovernments"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "regionGovernments",
+          "line": 516,
+          "form": "write through a parenthesised target"
+        },
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "regionGovernments",
+          "line": 831,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "regionGovernments",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "regionGovernments",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "neutral governments closed to passage, with the day each closed",
+      "writer": "command",
+      "proposedBy": [
+        "situations"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "closedGovernments"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "closedGovernments",
+          "line": 567,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "closedGovernments",
+          "line": 575,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "closedGovernments",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "closedGovernments",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "each department's side (a faction, or none for a neutral government)",
+      "writer": "command",
+      "proposedBy": [
+        "situations"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "departmentFactions"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "departmentFactions",
+          "line": 617,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "departmentFactions",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "departmentFactions",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "region population, loyalty, supply value",
+      "writer": "regions",
+      "proposedBy": [
+        "economy",
+        "situations",
+        "occupation"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "regionLoyalty"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "regionLoyalty",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "regionLoyalty",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "edge condition",
+      "writer": "infrastructure",
+      "proposedBy": [
+        "combat",
+        "raids",
+        "repair orders"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "infraEdgeCondition"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/infrastructure/infrastructure.ts",
+          "key": "infraEdgeCondition",
+          "line": 175,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "infraEdgeCondition",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "infraEdgeCondition",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "division location",
+      "writer": "movement",
+      "proposedBy": [
+        "operations",
+        "recruitment (a new block placed, a disbanded one removed)"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "forceLocations"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/movement/march.ts",
+          "key": "forceLocations",
+          "line": 182,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/movement/march.ts",
+          "key": "forceLocations",
+          "line": 208,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/movement/march.ts",
+          "key": "forceLocations",
+          "line": 243,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/movement/movement.ts",
+          "key": "forceLocations",
+          "line": 113,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "forceLocations",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "forceLocations",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "a block's order to join its post at the post's seat",
+      "writer": "movement",
+      "proposedBy": [
+        "verbs (a transfer)",
+        "operations (the day's legs)"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "forceJoins"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/movement/join.ts",
+          "key": "forceJoins",
+          "line": 35,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/movement/join.ts",
+          "key": "forceJoins",
+          "line": 44,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/movement/join.ts",
+          "key": "forceJoins",
+          "line": 53,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "forceJoins",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "forceJoins",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "division strength, morale, experience, equipment",
+      "writer": "forces",
+      "proposedBy": [
+        "combat",
+        "attrition",
+        "economy",
+        "recruitment"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "forceBlockStates"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/forces/detachments.ts",
+          "key": "forceBlockStates",
+          "line": 101,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/forces/detachments.ts",
+          "key": "forceBlockStates",
+          "line": 103,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/forces/enlistment.ts",
+          "key": "forceBlockStates",
+          "line": 107,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/forces/forces.ts",
+          "key": "forceBlockStates",
+          "line": 181,
+          "form": "write through a parenthesised target"
+        },
+        {
+          "path": "packages/kernel/src/forces/forces.ts",
+          "key": "forceBlockStates",
+          "line": 276,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/forces/stores.ts",
+          "key": "forceBlockStates",
+          "line": 69,
+          "form": "write through a parenthesised target"
+        },
+        {
+          "path": "packages/kernel/src/forces/stragglers.ts",
+          "key": "forceBlockStates",
+          "line": 18,
+          "form": "write through a parenthesised target"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "forceBlockStates",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "forceBlockStates",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "a force block's stores on hand",
+      "writer": "forces",
+      "proposedBy": [
+        "supply (daily)",
+        "operations (a sea delivery)"
+      ],
+      "code": [],
+      "sites": []
+    },
+    {
+      "field": "detachments below the force block (garrisons, landings)",
+      "writer": "forces",
+      "proposedBy": [
+        "command",
+        "operations"
+      ],
+      "code": [],
+      "sites": []
+    },
+    {
+      "field": "stragglers: men absent from a force block who rejoin over days",
+      "writer": "forces",
+      "proposedBy": [
+        "combat",
+        "attrition"
+      ],
+      "code": [],
+      "sites": []
+    },
+    {
+      "field": "battle records",
+      "writer": "combat",
+      "proposedBy": [],
+      "code": [
+        {
+          "record": "State",
+          "key": "battleRecords"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/combat/records.ts",
+          "key": "battleRecords",
+          "line": 172,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/combat/records.ts",
+          "key": "battleRecords",
+          "line": 189,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "battleRecords",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "battleRecords",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "fortification and entrenchment",
+      "writer": "regions",
+      "proposedBy": [
+        "operations",
+        "combat"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "regionFortification"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/regions/regions.ts",
+          "key": "regionFortification",
+          "line": 88,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "regionFortification",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "regionFortification",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "division-to-post assignment",
+      "writer": "command",
+      "proposedBy": [
+        "transfers",
+        "the army commander's assignments",
+        "combat (a surrendered block is released, lane 1.3)",
+        "recruitment (a new block to its governor, a disbanded one away)"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "forceAssignments"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "forceAssignments",
+          "line": 330,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "forceAssignments",
+          "line": 404,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "forceAssignments",
+          "line": 478,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "forceAssignments",
+          "line": 639,
+          "form": "write through a parenthesised target"
+        },
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "forceAssignments",
+          "line": 647,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/levies.ts",
+          "key": "forceAssignments",
+          "line": 78,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "forceAssignments",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "forceAssignments",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "people in posts; temporary posts",
+      "writer": "command",
+      "proposedBy": [
+        "appoint",
+        "relieve",
+        "promotion lists",
+        "an operation's end",
+        "combat (a commander killed, wounded or captured leaves his post vacant, lane 1.3)"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "postStates"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "postStates",
+          "line": 220,
+          "form": "write through a parenthesised target"
+        },
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "postStates",
+          "line": 281,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "postStates",
+          "line": 478,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "postStates",
+          "line": 503,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/command.ts",
+          "key": "postStates",
+          "line": 635,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "postStates",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "postStates",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "standing agreements and prior orders on a post",
+      "writer": "command",
+      "proposedBy": [
+        "verbs",
+        "situations",
+        "orders from the holder's own department",
+        "a call a governor answered (his levy in hand)"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "postLevies"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/command/levies.ts",
+          "key": "postLevies",
+          "line": 48,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/levies.ts",
+          "key": "postLevies",
+          "line": 78,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "postLevies",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "postLevies",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "a person's stats, traits, standing, grievances, regard",
+      "writer": "people",
+      "proposedBy": [
+        "combat results",
+        "the press",
+        "verbs",
+        "ladder",
+        "a bypassed relay"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "personTrue"
+        },
+        {
+          "record": "State",
+          "key": "personTraits"
+        },
+        {
+          "record": "State",
+          "key": "personStanding"
+        },
+        {
+          "record": "State",
+          "key": "personGrievances"
+        },
+        {
+          "record": "State",
+          "key": "personRegard"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personTrue",
+          "line": 152,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personTrue",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personTrue",
+          "line": 185,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personTraits",
+          "line": 152,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personTraits",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personTraits",
+          "line": 185,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personStanding",
+          "line": 152,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personStanding",
+          "line": 191,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personStanding",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personStanding",
+          "line": 185,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personGrievances",
+          "line": 152,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personGrievances",
+          "line": 209,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personGrievances",
+          "line": 277,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personGrievances",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personGrievances",
+          "line": 185,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personRegard",
+          "line": 152,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personRegard",
+          "line": 202,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personRegard",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personRegard",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "a person's service, bloc and resignation choice",
+      "writer": "people",
+      "proposedBy": [
+        "people step"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "personService"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personService",
+          "line": 188,
+          "form": "spread update"
+        }
+      ]
+    },
+    {
+      "field": "a person's stances on record (from Consult)",
+      "writer": "people",
+      "proposedBy": [
+        "Consult answers"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "personStances"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personStances",
+          "line": 152,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personStances",
+          "line": 223,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personStances",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personStances",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "a person's status (serving, wounded, killed, captured) and its date",
+      "writer": "people",
+      "proposedBy": [
+        "combat"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "personStatus"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personStatus",
+          "line": 152,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personStatus",
+          "line": 218,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personStatus",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personStatus",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "a person's ladder rung and rivals",
+      "writer": "ladder",
+      "proposedBy": [
+        "weekly people step"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "personRungs"
+        },
+        {
+          "record": "State",
+          "key": "personRivals"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/ladder/ladder.ts",
+          "key": "personRungs",
+          "line": 83,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personRungs",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personRungs",
+          "line": 185,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/ladder/ladder.ts",
+          "key": "personRivals",
+          "line": 83,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personRivals",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personRivals",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "promises made to a person (kind, day made, day due)",
+      "writer": "people",
+      "proposedBy": [
+        "promise",
+        "audience"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "personPromises"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personPromises",
+          "line": 152,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personPromises",
+          "line": 251,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personPromises",
+          "line": 259,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personPromises",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personPromises",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "inquiries a person received this week (his patience)",
+      "writer": "people",
+      "proposedBy": [
+        "inquire"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "personInquiries"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personInquiries",
+          "line": 152,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personInquiries",
+          "line": 264,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personInquiries",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personInquiries",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "observers: a person at a commander's headquarters reporting to his sender",
+      "writer": "command",
+      "proposedBy": [
+        "the observer verb",
+        "audience (recall)"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "observerPostings"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/command/observers.ts",
+          "key": "observerPostings",
+          "line": 24,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/observers.ts",
+          "key": "observerPostings",
+          "line": 31,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/command/observers.ts",
+          "key": "observerPostings",
+          "line": 37,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "observerPostings",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "observerPostings",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "the president's attention this week",
+      "writer": "seats",
+      "proposedBy": [
+        "command validation (spending)",
+        "the weekly refill"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "seatAttention"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/seats/attention.ts",
+          "key": "seatAttention",
+          "line": 43,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/seats/attention.ts",
+          "key": "seatAttention",
+          "line": 48,
+          "form": "write through a parenthesised target"
+        },
+        {
+          "path": "packages/kernel/src/seats/attention.ts",
+          "key": "seatAttention",
+          "line": 52,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "seatAttention",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "seatAttention",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "seat initiative state (each initiative's last firing day)",
+      "writer": "seats",
+      "proposedBy": [
+        "the weekly people step"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "seatInitiatives"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/seats/attention.ts",
+          "key": "seatInitiatives",
+          "line": 57,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "seatInitiatives",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "seatInitiatives",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "responses to orders (declared and actual rungs, reasons)",
+      "writer": "proxy",
+      "proposedBy": [
+        "message arrival"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "orderResponses"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/proxy/responses.ts",
+          "key": "orderResponses",
+          "line": 81,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/proxy/responses.ts",
+          "key": "orderResponses",
+          "line": 115,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "orderResponses",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "orderResponses",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "audience state",
+      "writer": "audience",
+      "proposedBy": [
+        "the audience verb"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "audienceHeld"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/audience/audience.ts",
+          "key": "audienceHeld",
+          "line": 202,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "audienceHeld",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "audienceHeld",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "goals, plans, approvals, edits",
+      "writer": "plans",
+      "proposedBy": [
+        "verbs",
+        "seat selections",
+        "order arrival",
+        "the planner (draft sets, on request)"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "planRecords"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/plans/plans.ts",
+          "key": "planRecords",
+          "line": 97,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "planRecords",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "planRecords",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "operations and their lifecycles",
+      "writer": "operations",
+      "proposedBy": [
+        "plan approval",
+        "movement and combat outcomes",
+        "a support request answered"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "operationRecords"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/operations/operations.ts",
+          "key": "operationRecords",
+          "line": 170,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/operations/operations.ts",
+          "key": "operationRecords",
+          "line": 192,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "operationRecords",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "operationRecords",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "knowledge (reports per seat)",
+      "writer": "knowledge",
+      "proposedBy": [
+        "opening bulletins",
+        "message delivery",
+        "pruning"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "knowledgeBySeat"
+        },
+        {
+          "record": "State",
+          "key": "openingControlReports"
+        },
+        {
+          "record": "State",
+          "key": "openingControlClaims"
+        },
+        {
+          "record": "State",
+          "key": "reportTruth"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/knowledge/knowledge.ts",
+          "key": "knowledgeBySeat",
+          "line": 66,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/knowledge/knowledge.ts",
+          "key": "knowledgeBySeat",
+          "line": 92,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/knowledge/knowledge.ts",
+          "key": "knowledgeBySeat",
+          "line": 181,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "knowledgeBySeat",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "knowledgeBySeat",
+          "line": 185,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/knowledge/knowledge.ts",
+          "key": "openingControlReports",
+          "line": 66,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/knowledge/knowledge.ts",
+          "key": "openingControlClaims",
+          "line": 66,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/knowledge/knowledge.ts",
+          "key": "reportTruth",
+          "line": 66,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/knowledge/knowledge.ts",
+          "key": "reportTruth",
+          "line": 92,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/knowledge/knowledge.ts",
+          "key": "reportTruth",
+          "line": 181,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "reportTruth",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "reportTruth",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "messages in transit",
+      "writer": "messages",
+      "proposedBy": [
+        "commands",
+        "reports",
+        "relay links forwarding an order",
+        "the kernel's latency rules"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "messagesInTransit"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/messages/transit.ts",
+          "key": "messagesInTransit",
+          "line": 155,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/messages/transit.ts",
+          "key": "messagesInTransit",
+          "line": 162,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "messagesInTransit",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "messagesInTransit",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "economy stocks",
+      "writer": "economy",
+      "proposedBy": [
+        "weekly step",
+        "verbs"
+      ],
+      "code": [],
+      "sites": []
+    },
+    {
+      "field": "situations fired, live (open options, clocks) and decided",
+      "writer": "situations",
+      "proposedBy": [
+        "cause evaluation",
+        "decisions",
+        "delegated seats' choices"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "situationStates"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/situations/situations.ts",
+          "key": "situationStates",
+          "line": 48,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "situationStates",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "situationStates",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "blocs, mandate, election results",
+      "writer": "politics",
+      "proposedBy": [
+        "the weekly step (drift, the ladder)",
+        "the press",
+        "address",
+        "situations"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "blocSupport"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/politics/politics.ts",
+          "key": "blocSupport",
+          "line": 243,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "blocSupport",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "blocSupport",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "each chamber of Congress's state (sitting, adjourned, special session called)",
+      "writer": "politics",
+      "proposedBy": [
+        "situations (a call)",
+        "the pack's session calendar, daily"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "chamberStates"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/politics/politics.ts",
+          "key": "chamberStates",
+          "line": 243,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "chamberStates",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "chamberStates",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "the framing term (who the public believes began the war)",
+      "writer": "politics",
+      "proposedBy": [
+        "the war's opening situations",
+        "the press"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "warFraming"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/politics/politics.ts",
+          "key": "warFraming",
+          "line": 193,
+          "form": "write through a local alias"
+        },
+        {
+          "path": "packages/kernel/src/politics/politics.ts",
+          "key": "warFraming",
+          "line": 243,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "warFraming",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "warFraming",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "the Congress accountability ledger: acts taken while Congress was away",
+      "writer": "politics",
+      "proposedBy": [
+        "situations (an act owed an answer; an answer)",
+        "the chambers meeting"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "congressLedger"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/politics/politics.ts",
+          "key": "congressLedger",
+          "line": 243,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "congressLedger",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "congressLedger",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "people who have reached Union lines",
+      "writer": "regions",
+      "proposedBy": [
+        "the derived self-emancipation term (0046); never a lever"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "regionReachedUnionLines"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/regions/regions.ts",
+          "key": "regionReachedUnionLines",
+          "line": 171,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "regionReachedUnionLines",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "regionReachedUnionLines",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "a raised block's enlistment: who raised it on whose call, and when its men's term ends",
+      "writer": "forces",
+      "proposedBy": [
+        "recruitment"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "forceEnlistments"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/forces/detachments.ts",
+          "key": "forceEnlistments",
+          "line": 103,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/forces/enlistment.ts",
+          "key": "forceEnlistments",
+          "line": 107,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "forceEnlistments",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "forceEnlistments",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "seat assignments",
+      "writer": "seats",
+      "proposedBy": [
+        "setup",
+        "the player's settings"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "seatAssignments"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/seats/seats.ts",
+          "key": "seatAssignments",
+          "line": 41,
+          "form": "write through a parenthesised target"
+        },
+        {
+          "path": "packages/kernel/src/seats/seats.ts",
+          "key": "seatAssignments",
+          "line": 48,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "seatAssignments",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "seatAssignments",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "water edge obstructions (works or batteries in hostile hands; cleared)",
+      "writer": "infrastructure",
+      "proposedBy": [
+        "combat",
+        "operations (a siege, a clearing)",
+        "situations"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "infraObstructions"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/infrastructure/infrastructure.ts",
+          "key": "infraObstructions",
+          "line": 177,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "infraObstructions",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "infraObstructions",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "depot condition (struck by raids, repaired)",
+      "writer": "infrastructure",
+      "proposedBy": [
+        "raids",
+        "combat",
+        "repair orders"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "infraDepotCondition"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/infrastructure/infrastructure.ts",
+          "key": "infraDepotCondition",
+          "line": 176,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "infraDepotCondition",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "infraDepotCondition",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "a post's department (changed on a scheduled date or by a situation)",
+      "writer": "command",
+      "proposedBy": [
+        "scheduled department changes in the scenario start",
+        "situations"
+      ],
+      "code": [],
+      "sites": []
+    },
+    {
+      "field": "a person's ranks, one per kind (regular, volunteer, brevet) held at once, each with its date",
+      "writer": "people",
+      "proposedBy": [
+        "promotion lists",
+        "appoint"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "personRanks"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personRanks",
+          "line": 152,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/people/people.ts",
+          "key": "personRanks",
+          "line": 231,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personRanks",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "personRanks",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    },
+    {
+      "field": "today's weather per weather zone",
+      "writer": "weather",
+      "proposedBy": [
+        "the day tick, from its named seeded stream (0029)"
+      ],
+      "code": [],
+      "sites": []
+    },
+    {
+      "field": "the current day",
+      "writer": "tick",
+      "proposedBy": [
+        "the day tick"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "stateDay"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "stateDay",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "stateDay",
+          "line": 185,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/tick.ts",
+          "key": "stateDay",
+          "line": 364,
+          "form": "spread update"
+        }
+      ]
+    },
+    {
+      "field": "situation chain and wait state",
+      "writer": "situations",
+      "proposedBy": [
+        "situation effects (flags set and cleared)"
+      ],
+      "code": [
+        {
+          "record": "State",
+          "key": "situationFlags"
+        }
+      ],
+      "sites": [
+        {
+          "path": "packages/kernel/src/situations/situations.ts",
+          "key": "situationFlags",
+          "line": 128,
+          "form": "spread update"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "situationFlags",
+          "line": 84,
+          "form": "object literal"
+        },
+        {
+          "path": "packages/kernel/src/tick/setup.ts",
+          "key": "situationFlags",
+          "line": 185,
+          "form": "object literal"
+        }
+      ]
+    }
+  ],
+  "classification": [],
+  "violations": []
+}

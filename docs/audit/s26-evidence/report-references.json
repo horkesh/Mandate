@@ -1,0 +1,967 @@
+[
+  {
+    "path": "docs/VISION.md",
+    "line": 3,
+    "text": "The game is *By Order of the President* (0036); its engine is codenamed Mandate. This is the pitch; the integrated design is [design/FOUNDATION.md](design/FOUNDATION.md), and the accepted decisions in [decisions/](decisions/) outrank both."
+  },
+  {
+    "path": "docs/decisions/0015-seats.md",
+    "line": 14,
+    "text": "- **A seat** decides for one person: the rules model, an AI model, or (later) a human. Every seat gets a request built only from what that person may know and the kernel's menu of legal responses, and returns a typed response. The same decision types serve every kind of seat."
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 23,
+    "text": "2. No ground truth about your own forces; a staff map drawn from dated, sourced, fading reports (0013)."
+  },
+  {
+    "path": "docs/VISION.md",
+    "line": 26,
+    "text": "4. **You see what you're told.** Every fact on screen has an author, and authors have reasons to shade the truth. Fog of war is political, not only spatial. Even a general's own ability is hidden: you see your staff's assessment of him, built from biased sources, which sharpens as he fights (0020)."
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "line": 168,
+    "text": "    const men = commandedBlocks(state, id).reduce((n, b) => n + (state.forceBlockStates[b]!.fbStrength ?? 0), 0);"
+  },
+  {
+    "path": "packages/kernel/src/seats/api.ts",
+    "line": 99,
+    "text": "  readonly men: number;"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "line": 311,
+    "text": "    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `principal:${faction}:${day}`, view: viewFor(world, state, seat, cache), menu: principalMenu(world, state, faction, ground) }));"
+  },
+  {
+    "path": "docs/decisions/0015-seats.md",
+    "line": 16,
+    "text": "- **Knowledge is scoped per seat.** Each seat stores the reports that reached it; `viewFor(state, seatId)` replaces the per-faction view."
+  },
+  {
+    "path": "docs/decisions/0101-an-officers-resignation-service-side-and-reported-choice.md",
+    "line": 35,
+    "text": "8. **The principal hears an act through ordinary reports.** The officer's letter is authored at his serving location and travels through the normal routes. Resignation is reported to both principals; a stay to the existing side. Hidden `service_term` terms remain in truth. The desk reports only that he resigned or remains in service, without revealing values, scores or a hindsight explanation. Sources: `serviceChoices`; \u201cWhere this lane stopped\u201d; the gate note's \u201cThe fourth draft.\u201d Current service affects simulation and candidate eligibility without granting instant knowledge of the letter."
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "line": 185,
+    "text": "    .filter((p) => p.id !== f.principal && sideOfPerson(world.map, state, p.id) === faction && heldPost(state, p.id) === null && (state.personStatus[p.id]?.statusKind ?? 'serving') === 'serving')"
+  },
+  {
+    "path": "packages/kernel/src/command/command.ts",
+    "line": 250,
+    "text": "export function sideOfPerson(map: WorldIndex, state: State, person: PersonId): FactionId | null {"
+  },
+  {
+    "path": "docs/decisions/0098-rule-seat-doctrine-concentration-bombardment-and-lost-commanders.md",
+    "line": 29,
+    "text": "9. **The menu follows news of a lost commander.** The lead's ruling on `review-lane-1.13.md` item 2, under 0052 and 0027, keeps a lost commander's post commandable until the principal receives the loss report. Reappointment waits for that news. An order sent to the believed holder travels to the headquarters. If the post is vacant or has changed holder on arrival, it returns by its route with `order-returned` and `vacant_post` or `holder_changed`, rather than receiving a compliance answer. A known vacancy is refused immediately. Source: \u201cPosts as the principal believes them.\u201d"
+  },
+  {
+    "path": "docs/decisions/0102-send-a-plan-back-with-notes-the-commander-may-decline.md",
+    "line": 21,
+    "text": "5. **Deliver his stated account through knowledge.** Proxy stores actual responses; plans stores the marks and response references. His submitted report carries `reportNotes`, with stated account and reasons. The principal's review reads that received report, never the response table. Private note amounts, generation tags and willingness stay hidden. The submitted plan's visible score excludes its private note term, as does the received `plan-submitted` claim. Sources: \u201cR56 rulings,\u201d item 5; \u201cWhat changed\u201d; R67's N3 regression, which requires a positive private term before checking its exclusion; the lead's R67 approval."
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "line": 62,
+    "text": "    const holder = state.postStates[post]?.postHolder ?? null;"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "line": 67,
+    "text": "    out.push({ post, holder, report: r.planSubmitted, plan: optionView(candidateOf(r, r.planChosen)!, false), ...(account === undefined ? {} : { notes: account }) });"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "line": 167,
+    "text": "    const holder = believedHolder(state, f.principal, id, losses)!;"
+  },
+  {
+    "path": "docs/decisions/0088-the-console-and-m2-retired.md",
+    "line": 17,
+    "text": "- **Plan review:** approve, send back, and 0026's edits. `preview` re-expands an edit through the kernel's `previewEdit`, built the way `answerEdit` builds it, and shows the route and its time before the edit is sent. It shows nothing of the commander's judgement."
+  },
+  {
+    "path": "docs/decisions/0026-foundation-review-revisions.md",
+    "line": 14,
+    "text": "- **The kernel owns all latency.** A command applies on the day it is issued and creates a message that travels; the recipient acts when it arrives. The shell never computes arrival times."
+  },
+  {
+    "path": "packages/kernel/src/tick/edit-preview.ts",
+    "line": 36,
+    "text": "  const holder = state.postStates[post]?.postHolder ?? null;"
+  },
+  {
+    "path": "packages/kernel/src/tick/edit-preview.ts",
+    "line": 43,
+    "text": "  const input = plannerInputFor(world, state, derived, network, month, viewFor(world, state, seatIdFor(holder), createViewCache()), post, record.planGoal, day);"
+  },
+  {
+    "path": "packages/cli/src/console/game.ts",
+    "line": 108,
+    "text": "    return phase0.previewEdit(this.world, this.stateNow, post, edit, this.stateNow.stateDay + 1);"
+  },
+  {
+    "path": "packages/cli/src/console/session.ts",
+    "line": 59,
+    "text": "      case 'preview': {"
+  },
+  {
+    "path": "packages/cli/src/desk/render.ts",
+    "line": 25,
+    "text": "  return [`  ${plan.method}/${plan.variant}: he expects about ${plan.perceivedEnemy.toString()} of the enemy${asks}${conds}`, ...plan.axes.map(axisLine)];"
+  },
+  {
+    "path": "docs/decisions/0062-the-planner-shape.md",
+    "line": 30,
+    "text": "- **`planner`** is a pure function, `draft(world, derived, view, request)` and `applyEdit`. It reads beliefs from the commander's view, never truth, and that includes what he believes of fortifications and obstructions: a commander learns of a boom by report."
+  },
+  {
+    "path": "docs/decisions/0075-the-planner-as-built.md",
+    "line": 20,
+    "text": "- Two own-side derived inputs still reflect truth: edge condition, and the side's supply reach. That is acceptable while nothing in 1A damages edges. 1B's raids add a path that goes by report."
+  },
+  {
+    "path": "packages/kernel/src/planner/input.ts",
+    "line": 126,
+    "text": "    ground: { map: world.map, index: derived.index, network: plannerNetwork(network), month },"
+  },
+  {
+    "path": "packages/kernel/src/planner/context.ts",
+    "line": 84,
+    "text": "export function enemyHeld(index: ControlIndex, region: RegionId, faction: FactionId): boolean {"
+  },
+  {
+    "path": "packages/kernel/src/planner/route.ts",
+    "line": 142,
+    "text": "        legHeld: mode === 'land' && enemyHeld(ground.index, next, ctx.input.faction),"
+  },
+  {
+    "path": "packages/kernel/src/planner/axes.ts",
+    "line": 74,
+    "text": "  if (goal.goalPosture !== 'hold' && enemyHeld(ground.index, objective, faction)) {"
+  },
+  {
+    "path": "docs/decisions/0030-foundation-commitments.md",
+    "line": 13,
+    "text": "3. **All player-facing text lives in pack string tables**, keyed by id, from the first line of text. Engine code produces typed reasons and ids, never English (this already follows from 0003). Localisation stays possible without a rewrite."
+  },
+  {
+    "path": "docs/decisions/0089-codex-builds-a-desk-prototype.md",
+    "line": 25,
+    "text": "- **Every word comes from a string table** (0030): the pack's strings, or a desk string table in the prototype for chrome."
+  },
+  {
+    "path": "packages/cli/src/desk/render.ts",
+    "line": 31,
+    "text": "  if (open.length === 0) return ['No situation is before you.'];"
+  },
+  {
+    "path": "packages/cli/src/desk/dispatches.ts",
+    "line": 26,
+    "text": "      return 'objects to the order';"
+  },
+  {
+    "path": "packages/cli/src/desk/commands.ts",
+    "line": 50,
+    "text": "export const HELP: readonly string[] = ["
+  },
+  {
+    "path": "packages/cli/src/console/session.ts",
+    "line": 33,
+    "text": "    const lines = ['By Order of the President: the console (type \"help\" for every order you can give).', ...this.morningScreen()];"
+  },
+  {
+    "path": "packages/kernel/src/tick/edit-preview.ts",
+    "line": 37,
+    "text": "  if (record === undefined || record.planDraft === null || holder === null) return { ok: false, reason: `${post} has no drafted plan to edit` };"
+  },
+  {
+    "path": "prototypes/desk/web/map/StaffMap.tsx",
+    "line": 211,
+    "text": "  return <><ul>{request.view.reports.map(r=><li key={r.id}>{t(r.author,'person')}, {reportDate(request.requestDay,date,r.day)}: {[...reportControlWords(r,t),...r.claims.filter(c=>c.kind!=='control').map(c=>`${c.kind==='enemy-strength'&&c.value===0?S.noEnemySeen:S.claims[c.kind]??display(c.kind)}${c.region?` at ${t(c.region,'region')}`:''}${c.value?`: ${display(String(c.value))}`:''}`)].join('; ')}</li>)}</ul>{request.menu.menuKind==='principal'&&request.menu.reviews.map(r=><section key={r.post}><h3>{t(r.holder,'person')}</h3>{r.plan.axes.map(a=><p key={a.name}>{display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' \u2192 ')}</p>)}</section>)}</>;"
+  },
+  {
+    "path": "docs/decisions/0072-phase-0-closes-with-a-close-out.md",
+    "line": 25,
+    "text": "   - The report templates, latency rules, `CONFLICT_WINDOW_DAYS` and `SCORE_CAP` move into `WorldRules`, each stated by every pack, with no hidden default (0032, FOUNDATION section 8, 0064)."
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 466,
+    "text": "- **Every new kernel default is a pack rule in `WorldRules`**, stated by every pack, with no hidden default (0072). Every new State field gets its `OWNED_FIELDS` entry and its row in section 10. The reserved rows for the Congress ledger and for the people who have reached Union lines get their writers in 1.6 and 1.7."
+  },
+  {
+    "path": "packages/kernel/src/tick/commander-losses.ts",
+    "line": 33,
+    "text": "        reportClaims: [{ claimKind: 'commander-lost', claimRegion: region, claimValue: 0, claimToken: status.statusKind, claimConfidence: 900 }],"
+  },
+  {
+    "path": "packages/kernel/src/tick/people-week.ts",
+    "line": 137,
+    "text": "          reportAdvice: { adviceRecommends: initiative.recommends, adviceReasons: answer.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: 1000 })), adviceConfidence: 700 },"
+  },
+  {
+    "path": "packages/kernel/src/tick/orders.ts",
+    "line": 275,
+    "text": "        reportAdvice: { adviceRecommends: 'withdraw-order', adviceReasons: decision.stated, adviceConfidence: 800 },"
+  },
+  {
+    "path": "packages/kernel/src/tick/plans.ts",
+    "line": 109,
+    "text": "      reportAdvice: options.objection === undefined ? null : { adviceRecommends: 'keep-own-plan', adviceReasons: options.objection, adviceConfidence: 800 },"
+  },
+  {
+    "path": "packages/kernel/src/tick/recruitment.ts",
+    "line": 124,
+    "text": "      reportAdvice: objects ? { adviceRecommends: 'withdraw-order', adviceReasons: answer.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: 1000 })), adviceConfidence: 800 } : null,"
+  },
+  {
+    "path": "packages/kernel/src/tick/verbs.ts",
+    "line": 325,
+    "text": "          if (belief !== undefined) claims.push({ claimKind: 'enemy-strength', claimRegion: subject, claimValue: belief.value, claimToken: null, claimConfidence: 600 });"
+  },
+  {
+    "path": "packages/kernel/src/tick/verbs.ts",
+    "line": 390,
+    "text": "    if (holder !== null) claims.push({ claimKind: 'goal-status', claimRegion: null, claimValue: 0, claimToken: (state.planRecords[p.obsPost]?.planStatus ?? 'holding') as string, claimConfidence: 700 });"
+  },
+  {
+    "path": "packages/kernel/src/tick/verbs.ts",
+    "line": 370,
+    "text": "    reportTo([answered(false)], { adviceRecommends: 'withdraw-order', adviceReasons: stated(answer), adviceConfidence: 800 }, 'advice', 'memorandum');"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "line": 127,
+    "text": "        body: body(author.person, author.post, ctx.day, phase.toHour, 'wire-dispatch', null, region, [{...claim('battle-phase', region, well, phase.phase, 600), claimBattle: battle, claimBattleDays: [bday.bdayDay], claimCommander: side.bsideCommander}, claim('enemy-strength', region, seen, null, 500), ...field]),"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "line": 148,
+    "text": "        claim('own-losses', region, own.kw, 'first', 600),"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "line": 149,
+    "text": "        claim('missing', region, own.missing, 'first', 500),"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "line": 150,
+    "text": "        claim('casualties', region, claimed, 'enemy', 400),"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "line": 167,
+    "text": "        claim('own-losses', region, side.bsideKw, 'full', 900),"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "line": 168,
+    "text": "        claim('missing', region, side.bsideMissing, 'full', 800),"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "line": 169,
+    "text": "        claim('captured', region, side.bsideCaptured, 'full', 800),"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "line": 191,
+    "text": "      body: body(p.postHolder, post, ctx.day, null, 'informal', 'governor-wire', region, [claim('operation', region, field === side ? 1 : 0, 'battle', 400), ...control]),"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "line": 214,
+    "text": "        body: body(holder, post, ctx.day, null, 'wire-dispatch', null, hq, [claim('pocket', hq, 1, null, 900)]),"
+  },
+  {
+    "path": "packages/kernel/src/tick/verbs.ts",
+    "line": 343,
+    "text": "          const confidence = Math.max(100, best.score);"
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "line": 124,
+    "text": "        claims.push(claim('enemy-strength', region, Math.trunc((seen * bias) / 1000), null, 700));"
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "line": 129,
+    "text": "          claims.push(claim('works', region, works, null, 700));"
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "line": 137,
+    "text": "        claims.push(claim('obstruction', by, o === null ? 0 : 1, edge, 700));"
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "line": 161,
+    "text": "        claims.push(claim('enemy-strength', region, b.value, null, 600));"
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "line": 166,
+    "text": "        claims.push(claim('effective-strength', null, Math.trunc((strength * world.rules.traits.wantsMenPermille) / 1000), null, 800));"
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "line": 186,
+    "text": "          claim('present-for-duty', null, strength, null, 900),"
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "line": 187,
+    "text": "          claim('present-and-absent', null, paper, null, 900),"
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "line": 210,
+    "text": "          body: body(holder, id, day, 'informal', 'cabinet-word', { kind: 'post', id: subject }, [claim('present-for-duty', null, value, null, 700)]),"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/templates.ts",
+    "line": 18,
+    "text": "  readonly templateSubtype: string | null;"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 198,
+    "text": "- **World**: static pack data (region terrain and starting values, edges with lengths and capacities, people's historical records with citations, situations). Immutable, hashed, never saved; a save references it by hash."
+  },
+  {
+    "path": "docs/decisions/0035-the-stack.md",
+    "line": 33,
+    "text": "- `viewFor` returns stable references for unchanged data, so the interface can skip re-rendering."
+  },
+  {
+    "path": "packages/kernel/src/view/view.ts",
+    "line": 263,
+    "text": "            .map((o) => freeze({ id: o.id, label: o.label, proposedBy: o.proposedBy === 'inaction' ? 'inaction' : Array.isArray(o.proposedBy) ? freeze([...(o.proposedBy as readonly PersonId[])]) : o.proposedBy, group: o.group })),"
+  },
+  {
+    "path": "packages/kernel/src/view/view.ts",
+    "line": 51,
+    "text": "function freeze<T extends object>(o: T): T {"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "line": 344,
+    "text": "function freezeDeep<T>(value: T): T {"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 200,
+    "text": "- **Derived**: pure functions of World and State. Their caches are keyed by a signature computed from the State they read (for example each faction's band and holder per region, the month and the network) and tied to their World; they live outside State, so no \"dirty\" flag or cache can be saved, and a signature cannot drift from the data it describes (0054)."
+  },
+  {
+    "path": "docs/decisions/0054-control-fronts-pockets-and-supply.md",
+    "line": 17,
+    "text": "**Caches** of derived data are keyed by a signature computed from the State they read (bands, holders, the month, the network), tied to their World, held by the caller and never saved, so they cannot drift."
+  },
+  {
+    "path": "packages/kernel/src/view/view.ts",
+    "line": 124,
+    "text": "  const post = heldPost(state, person.id);"
+  },
+  {
+    "path": "packages/kernel/src/view/view.ts",
+    "line": 207,
+    "text": "    previous.region === region &&"
+  },
+  {
+    "path": "packages/cli/src/console/game.ts",
+    "line": 123,
+    "text": "      this.viewCache = phase0.createViewCache();"
+  },
+  {
+    "path": "docs/decisions/0100-sourced-situations-absent-staff-advice-and-declared-governments.md",
+    "line": 54,
+    "text": "13. **Clark's opening side comes from his lieutenant-governorship [I].** His office-service tag follows the Texas office he already held, under 0055; it does not place him in the governorship on 5 March. That earlier post is not separately modelled. The succession notice replaces Houston with Clark on day 11, 16 March, with the office held by Clark in every later reference day. Current office presentation must not keep Houston as governor after that succession; old dated papers remain historical papers. Sources: R55's Texas section and proposed ruling 2; Crane, chapter XXV, and the Legislative Reference Library office-term entry as read and cited there; the Convention proceedings, TX-CONV-1861 pp. 183\u2013187. The gate note's \u201cOutside my scope\u201d makes current-holder correctness a condition of promotion."
+  },
+  {
+    "path": "packages/kernel/src/view/people.ts",
+    "line": 76,
+    "text": "          if (p.owner === 'command' && p.field === 'department_side' && p.subject !== null && p.side !== null && p.delta > 0) knownSides.set(p.subject as DepartmentId, p.side);"
+  },
+  {
+    "path": "packages/kernel/src/view/people.ts",
+    "line": 93,
+    "text": "    } else if (r.authorPost !== null) tell(r.authorPost, r.author, 'held', r);"
+  },
+  {
+    "path": "packs/union-1861/situations/texas_governor_changed.json",
+    "line": 16,
+    "text": "        \"field\": \"post_succession\","
+  },
+  {
+    "path": "packages/kernel/src/tick/forces.ts",
+    "line": 107,
+    "text": "        ctx.mapEvents.push({ event: 'post_succeeded', post: a.subject, from: a.from, to: a.to, reason: a.reason, cause: a.cause });"
+  },
+  {
+    "path": "docs/decisions/0057-situations-engine-and-gate-tests.md",
+    "line": 45,
+    "text": "- The rule rests on a convention: every side measure reads higher-is-better for its own side, as the published schema states. When Phase 1 builds the owners of measures (will, pressure clocks, ledgers, grievances), each owner declares its measure's direction, and the check uses that declared direction."
+  },
+  {
+    "path": "packages/pack-format/src/gate.ts",
+    "line": 983,
+    "text": " * Every side measure reads higher-is-better for its own side (the published schema states it for `propose.delta`)."
+  },
+  {
+    "path": "packages/pack-format/src/gate.ts",
+    "line": 987,
+    "text": "  if (effect.propose.delta > 0) return effect.propose.side === actingSide ? 'raises the acting side\u2019s measure' : 'raises another side\u2019s measure';"
+  },
+  {
+    "path": "packages/pack-format/src/situations.ts",
+    "line": 85,
+    "text": "        'Signed permille. Every side measure reads higher-is-better for its own side: a rise helps that side, a fall harms it. The gate\u2019s sign rule (E7, D5) relies on this, so a field where higher is worse for its side (war-weariness, say) must be declared the other way round.',"
+  },
+  {
+    "path": "docs/decisions/0105-1as-first-calibration-round-continue-or-park.md",
+    "line": 28,
+    "text": "   - repeat calls allowed where the record has them."
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "line": 114,
+    "text": "function calledOn(state: State, principal: PersonId, post: PostId): boolean {"
+  },
+  {
+    "path": "packages/rule-seats/src/index.ts",
+    "line": 182,
+    "text": "    if (r === undefined || r.called || route === undefined) continue;"
+  },
+  {
+    "path": "docs/decisions/0105-1as-first-calibration-round-continue-or-park.md",
+    "line": 31,
+    "text": "   - **The bombardment writes a battle record** with its actual loss terms, so Sumter counts as the Confederate planned operation fought. Telemetry is not a battle record, and no battle is forced by a weight."
+  },
+  {
+    "path": "packages/kernel/src/tick/bombard.ts",
+    "line": 42,
+    "text": "  fire(ctx, 'combat.battle_day');"
+  },
+  {
+    "path": "packages/kernel/src/tick/bombard.ts",
+    "line": 57,
+    "text": "  let state = applyForces(start, fort.forces).state;"
+  },
+  {
+    "path": "docs/decisions/0105-1as-first-calibration-round-continue-or-park.md",
+    "line": 34,
+    "text": "   - **The two thresholds separate.** A spontaneous initiative's admission threshold becomes its own pack rule, apart from ordinary compliance. Then `complyAt` can be calibrated against the reservations band without flooding the initiatives."
+  },
+  {
+    "path": "packages/kernel/src/tick/people-week.ts",
+    "line": 121,
+    "text": "      const answer = resolveDirective(profileOf(world, state, p, principal), { boldness: initiative.boldness, honours: initiative.honours, offends: initiative.offends, required: 0 }, contextFor(world, state, p), rules.compliance);"
+  },
+  {
+    "path": "packages/kernel/src/tick/people-week.ts",
+    "line": 122,
+    "text": "      if (!TAKES.has(answer.actual)) continue;"
+  },
+  {
+    "path": "packages/kernel/src/people/verb-rules.ts",
+    "line": 55,
+    "text": "export interface InitiativeRule {"
+  },
+  {
+    "path": "docs/decisions/0105-1as-first-calibration-round-continue-or-park.md",
+    "line": 35,
+    "text": "   - **The filter office** gets its holder from the sourced record. No filter hold is invented by relabelling other screening."
+  },
+  {
+    "path": "docs/decisions/0032-reports-authors-routes-filters.md",
+    "line": 29,
+    "text": "**Filters.** The War Department's telegraph office is a post whose holders (the Secretary of War and the office's managers) can hold, trim or delay wires, by their own compliance and values. Editors and censors filter press reports. The president can go around a filter (reading the raw wires himself, at an attention cost, 0025) and can issue or lift security orders such as press and mail bans, as can his commanders."
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/posts.csv",
+    "line": 103,
+    "text": "us_president_secretary,Private Secretary to the President,private_secretary,us_executive,us_president,washington,,,,SEJ-XI p.289; NYT-1861-03-08; NOTE-people-posts-1861,\"A caller-screening post, with role null on purpose (lead's ruling, 2026-11-15): in the kernel a role-filter post sits on the wire and every telegraph report passes it first, and 0040 leaves the March 1861 telegraph filter empty; screening callers and mail is a Phase 1 filter on informal routes. The Executive Journal records the President's messages of 5 March 1861 as received \"\"by Mr. Nicolay, his secretary\"\" (SEJ-XI p.289), and the New York Times's Washington dispatch of 7 March reports that at the White House \"\"all callers have first to see Nicolay, the Secretary, who now bears the brunt of the labor\"\" (NYT-1861-03-08). What he screened is callers: that he also sorted the mail, or held telegrams, is not sourced. Not Senate-confirmed; there is no commission date.\""
+  },
+  {
+    "path": "packages/kernel/src/seats/posts.ts",
+    "line": 108,
+    "text": "export function filterPostOf(world: SeatsWorld, state: State, faction: FactionId): PostId | null {"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 430,
+    "text": "   - dispatches, including a battle day's hour-stamped dispatches."
+  },
+  {
+    "path": "packages/cli/test/console-session.test.ts",
+    "line": 238,
+    "text": "  it.fails('reads a battle day\u2019s dispatches with their hours in chronological order', () => {"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 425,
+    "text": "   - every Phase 0 criterion still passes: the same hashes on Linux and Windows, resume, the liveness gate for every mechanic, and the tick budget, re-measured with the planner, people and situations running."
+  },
+  {
+    "path": "docs/decisions/0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md",
+    "line": 21,
+    "text": "5. **Both sides must fight a planned operation.** The Union band is 1\u201326; the Confederate band is 1\u20134, retaining FOUNDATION's requirement for each side. The lower Confederate case is Sumter, on Davis's government's order, which lane 1.12 makes fightable. Upper edges count the researched cases, with the note's inferred or disputed cases disclosed. A drafted operation must execute and fight through the battle model; the operation criterion also checks a loss breakdown whose parts sum. Sources: `checkpoints.json`, `operations_union` and `operations_confederate`; \u201cThe lead's rulings and the gate review\u201d; `85c3a37`; `history-run.ts`, `operationsFought` and `operationScore`."
+  },
+  {
+    "path": "docs/decisions/0105-1as-first-calibration-round-continue-or-park.md",
+    "line": 36,
+    "text": "5. **Lever sweep: park D6 clearance until 1B,** which owns the missing consequence channel (people's grievance through policy pushback; 0099, G-1.14c and d). **Continue its recruitment-chain item now,** with item 2."
+  },
+  {
+    "path": "packages/cli/src/done-check.ts",
+    "line": 29,
+    "text": "export const TICK_BUDGET_MS = 40;"
+  },
+  {
+    "path": "packages/cli/src/done-check.ts",
+    "line": 85,
+    "text": "export const MILESTONE_1A: readonly CriterionId[] = ['checkpoints', 'operation', 'pushback', 'unknown-strength', 'stand-ins', 'lever-sweep'];"
+  },
+  {
+    "path": "docs/decisions/0035-the-stack.md",
+    "line": 18,
+    "text": "| Property and model-based tests | fast-check | Phase 0 |"
+  },
+  {
+    "path": "package.json",
+    "line": 31,
+    "text": "  \"devDependencies\": {"
+  },
+  {
+    "path": "packages/kernel/package.json",
+    "line": 13,
+    "text": "  \"mandate\": {"
+  },
+  {
+    "path": "docs/decisions/0027-variable-weekly-turns.md",
+    "line": 15,
+    "text": "- **A turn runs up to seven days** (pack-set maximum) and **ends early at a decision point**: an objection or refusal, a battle report, a closed pocket, a situation that needs the player, a plan ready for review. The player can also set which events end a turn."
+  },
+  {
+    "path": "docs/decisions/0040-first-month-revisions.md",
+    "line": 30,
+    "text": "**Stops (amends 0027).** A goal can carry **\"approve as drafted unless he objects\"**, so the plan executes without a stop unless he objects or departs far from the goal. Lists, promotions and routine returns go to the inbox and never end a turn. \"A report I asked for has arrived\" is an optional stop."
+  },
+  {
+    "path": "packages/cli/src/console/game.ts",
+    "line": 129,
+    "text": "      if (points.length > 0) return { days, stopped: [...new Set(points)].sort() };"
+  },
+  {
+    "path": "packages/kernel/src/tick/deliver.ts",
+    "line": 91,
+    "text": "    if (report.reportClaims.some((c) => c.claimKind === 'plan-submitted')) ctx.decisionPoints.push({ point: 'plan-review', seat, report: msg.msgOrigin, situation: null });"
+  },
+  {
+    "path": "prototypes/desk/web/settings.ts",
+    "line": 4,
+    "text": "export const defaults = { scale: 100, mapScale: 100, contrast: false, lamp: false, plain: false, muted: true, speed: 'brisk' };"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 218,
+    "text": "| `people`, `compliance`, `reading`, `audience`, `proxy`, `ladder` | State writers | the M1/M2 people core, recast for goals and plans |"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 275,
+    "text": "| responses to orders (declared and actual rungs, reasons) | `proxy` | message arrival, a policy's carriers answering it (0082); computed by `compliance` and `reading`, which are pure and write nothing |"
+  },
+  {
+    "path": "packages/kernel/src/ownership.ts",
+    "line": 44,
+    "text": "  { name: 'compliance', layer: 'pure', owns: 'responses to orders, computed; writes nothing' },"
+  },
+  {
+    "path": "packages/kernel/src/ownership.ts",
+    "line": 45,
+    "text": "  { name: 'reading', layer: 'pure', owns: 'how an order is read, computed; writes nothing' },"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 204,
+    "text": "Module map, adapted from the AWWV-architecture note:"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 239,
+    "text": "| region population, loyalty (`regionLoyalty`, from sourced start values; never a stand-in for control), supply value | `regions` | economy, situations, occupation |"
+  },
+  {
+    "path": "packages/kernel/src/ownership.ts",
+    "line": 36,
+    "text": "  { name: 'regions', layer: 'State', owns: 'region population, loyalty, supply value, fortification' },"
+  },
+  {
+    "path": "packages/kernel/src/regions/regions.ts",
+    "line": 88,
+    "text": "  return { state: { ...state, regionFortification: sorted }, changes };"
+  },
+  {
+    "path": "docs/decisions/0098-rule-seat-doctrine-concentration-bombardment-and-lost-commanders.md",
+    "line": 21,
+    "text": "5. **A transfer includes an order to join the receiving post.** `forceJoins` is State owned by `movement`, in `movement/join.ts`. Each transferred block heads for the receiving post's pack-defined seat. Operations starts its next permitted quickest leg each day; blocks travelling together to the same seat march together. The order ends on arrival or when the block leaves the post, surrenders, disappears or enters one of that post's operations. With no route it waits, records `no_route`, and tries again each day. This supplies movement to a named command rather than a new planner assault. A hold goal holds its named objective, or the post's seat if none is named. Source: \u201cA transfer concentrates (the lead's Fix 1).\u201d"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 216,
+    "text": "| `movement` | writer | the only writer of location; owns and exports the movement passage rule, which `planner` imports (0062) |"
+  },
+  {
+    "path": "packages/kernel/src/ownership.ts",
+    "line": 100,
+    "text": "  field(\"a block's order to join its post at the post's seat\", 'movement', ['verbs (a transfer)', 'operations (the day\\'s legs)'], [at('State', 'forceJoins')]),"
+  },
+  {
+    "path": "packages/kernel/src/movement/join.ts",
+    "line": 35,
+    "text": "  return { ...state, forceJoins: next };"
+  },
+  {
+    "path": "docs/decisions/0018-civil-war-scope.md",
+    "line": 13,
+    "text": "- Mandate's first game is the American Civil War, the whole war from 1861 to 1865. The player is Lincoln."
+  },
+  {
+    "path": "docs/decisions/0028-start-victory-navy.md",
+    "line": 18,
+    "text": "**Victory: two wills.** Each side has a national will, derived from its blocs, losses, territory, armies and events."
+  },
+  {
+    "path": "docs/decisions/0084-politics-first-cut-as-built.md",
+    "line": 103,
+    "text": "  - national will, elections and the verdict."
+  },
+  {
+    "path": "packages/kernel/src/tick/politics.ts",
+    "line": 27,
+    "text": "export const POLITICS_RESERVED_FIELDS = ['foreign-patience', 'national-will'] as const;"
+  },
+  {
+    "path": "packages/kernel/src/politics/politics.ts",
+    "line": 90,
+    "text": "export function mandateOf(rules: PoliticsRules, state: State, faction: FactionId): { readonly value: number; readonly terms: readonly PoliticsTerm[] } {"
+  },
+  {
+    "path": "docs/decisions/0023-the-home-front.md",
+    "line": 14,
+    "text": "- **Foreign powers** (Britain, France) are pressure clocks worked through the Secretary of State's seat, not playable factions."
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 481,
+    "text": "- **Foreign powers and the blockade:** the British and French pressure clocks and the blockade clock (section 7), which 1A's situations name but no 1A lane builds; and weather (0029), if the history run's winter needs it."
+  },
+  {
+    "path": "docs/decisions/0023-the-home-front.md",
+    "line": 11,
+    "text": "- **Economy:** money, men, munitions and rail capacity. Each lever has a holder who can stall (treasury, governors, the War Department). The player sets priorities and picks people."
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 482,
+    "text": "- **The economy:** money (the Treasury and Congress, with the gold premium), munitions (Ripley and Meigs) and rail capacity per named line, each lever with a holder who can stall."
+  },
+  {
+    "path": "packages/kernel/src/ownership.ts",
+    "line": 150,
+    "text": "  field('economy stocks', 'economy', ['weekly step', 'verbs']),"
+  },
+  {
+    "path": "packages/kernel/src/forces/enlistment.ts",
+    "line": 9,
+    "text": " * There is no `men` stock in `economy` in 1A (that is 1B): a regiment goes straight from the governor into a block."
+  },
+  {
+    "path": "docs/decisions/0029-seasons-sieges-raids-confederacy.md",
+    "line": 10,
+    "text": "- Weather is exogenous noise from a named seeded stream (0007); how a commander reacts to it is not."
+  },
+  {
+    "path": "packages/kernel/src/world/graph.ts",
+    "line": 85,
+    "text": "  /** Reserved for weather (0029); null until the pack defines zones. */"
+  },
+  {
+    "path": "packages/kernel/src/world/scenario.ts",
+    "line": 278,
+    "text": "  'weather (reserved: nothing at a start yet)': 'weather',"
+  },
+  {
+    "path": "docs/decisions/0029-seasons-sieges-raids-confederacy.md",
+    "line": 18,
+    "text": "- Raids are operations a commander can launch to damage rail and river edges (`infrastructure`, FOUNDATION section 10) or strike depots."
+  },
+  {
+    "path": "packages/kernel/src/infrastructure/infrastructure.ts",
+    "line": 35,
+    "text": "export const INFRASTRUCTURE_CAUSES = ['combat', 'raids', 'repair', 'operations', 'situations'] as const;"
+  },
+  {
+    "path": "packages/kernel/src/planner/types.ts",
+    "line": 137,
+    "text": "export const METHODS = ['bombard', 'by_water', 'direct', 'flank', 'holding', 'pincer', 'supply_line'] as const;"
+  },
+  {
+    "path": "docs/decisions/0020-people-hidden-stats-and-assessment.md",
+    "line": 14,
+    "text": "- **Public standing** moves with the press and the blocs; **reputation and nerve are separate stats**, and a general's traits decide how a result moves him. **Earned traits** come from events."
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 483,
+    "text": "- **People:** stats, assessment, the officer pool and the reckoning (section 6); and the verbs 1A did not need: promotion lists, visit and honour."
+  },
+  {
+    "path": "packages/kernel/src/people/people.ts",
+    "line": 156,
+    "text": "export type PeopleChange ="
+  },
+  {
+    "path": "packages/kernel/src/people/people.ts",
+    "line": 130,
+    "text": "    personTrue[p.id] = {"
+  },
+  {
+    "path": "docs/decisions/0020-people-hidden-stats-and-assessment.md",
+    "line": 15,
+    "text": "- **Assessment.** The player sees his staff's assessment of each general, built from biased sources (the general's reports, observers, newspapers, rivals, West Point reputation) and converging on the truth as the general fights, fastest from independent sources."
+  },
+  {
+    "path": "docs/decisions/0041-clarifications-owners-and-wording.md",
+    "line": 9,
+    "text": "- **Adviser credibility** as the president sees it: Derived from his own knowledge (the advice reports he received and what followed), never stored."
+  },
+  {
+    "path": "packages/kernel/src/view/people.ts",
+    "line": 117,
+    "text": "    const assessments: KnownPersonView['assessments'][number][] = [];"
+  },
+  {
+    "path": "packages/kernel/src/politics/politics.ts",
+    "line": 105,
+    "text": "export function credibilityOf(rules: PoliticsRules, state: State, faction: FactionId | null, principal: PersonId | null): { readonly value: number; readonly terms: readonly PoliticsTerm[] } {"
+  },
+  {
+    "path": "docs/decisions/0020-people-hidden-stats-and-assessment.md",
+    "line": 17,
+    "text": "- **The officer pool:** real junior officers whose rise is not guaranteed, and invented ones, checked against rosters so none is a real person. They surface through battle reports; superiors can take their credit."
+  },
+  {
+    "path": "docs/decisions/0041-clarifications-owners-and-wording.md",
+    "line": 21,
+    "text": "**Separate random streams** (from the combat model, under 0007 and 0020): generals killed or wounded in battle draw from their own named stream with a fixed number of draws per day; generated officers draw from a stream keyed by the report that names them, so reading a report cannot shift later draws."
+  },
+  {
+    "path": "packages/kernel/src/people/people.ts",
+    "line": 118,
+    "text": "export function initialPeople(map: WorldIndex, start: ScenarioStart, seed: number, mode: ShadowMode): PeopleStart {"
+  },
+  {
+    "path": "packages/kernel/src/world/world.ts",
+    "line": 304,
+    "text": "  readonly people: PeopleRules;"
+  },
+  {
+    "path": "docs/decisions/0026-foundation-review-revisions.md",
+    "line": 11,
+    "text": "- **Promotions arrive as lists** from superiors and the War Department, which the player approves, amends or overrides (overriding costs standing). The player can still nominate anyone."
+  },
+  {
+    "path": "docs/decisions/0041-clarifications-owners-and-wording.md",
+    "line": 15,
+    "text": "**Business during a visit** (amends 0025). While the president is away from Washington, business that reaches him goes to the holder he named as his delegate before leaving; with no delegate, it resolves to its `inaction` outcome (0040). The historical default is never used for the player."
+  },
+  {
+    "path": "packages/kernel/src/log/commands.ts",
+    "line": 225,
+    "text": "export const COMMAND_KINDS = ['address', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer'] as const;"
+  },
+  {
+    "path": "docs/decisions/0040-first-month-revisions.md",
+    "line": 19,
+    "text": "- **Proposals:** any person can submit a candidate plan the kernel drafts from his traits; the player adopts it by attaching it to a goal for a holder, who reads it like any order (0026's rule that seats never invent unvalidated plans stands)."
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 450,
+    "text": "| 1.11 | **Situations, March to July 1861** (split on 2026-11-16: data entry runs as 1.11a, beside the authoring).  S01 to S21 as pack data; the gated ones are authored only after their topics are registered (1.8), with the gate reviewer's sign-off. Fox's plan in S01, which nobody ordered, enters through `provision-notice`'s temporary post (0040); proposals proper are 1B's. Also:<br>\u2022 the Confederate seat opening the war, as the one labelled railroad, with 0040's ordered triggers (Sumter, Pickens, a last date) and fallback, and each side's war-flag decision (0066);<br>\u2022 the border-state chains proposing department sides (0065);<br>\u2022 the upper South's secessions as notices fired by their causes (among them the call for troops, S09), each proposing its government's side;<br>\u2022 the Indian Territory nations' own acts in the window as each nation's notice (0069, 0070), registered under `indian-territory-1861`: the posts abandoned in April and May, the Creek treaty of 10 July, and the Choctaw and Chickasaw treaty of 12 July;<br>\u2022 Seward's initiative-menu entry, whose memorandum raises S07;<br>\u2022 data entry of 1.9's and 1.10's findings | 1.8's registration and the gate reviewer's sign-off for the gated items; 1.9; 1.10. Options that propose to owners not yet built are reported, not applied (0057), so authoring need not wait for those owners | Opus, high |"
+  },
+  {
+    "path": "packages/kernel/src/plans/plans.ts",
+    "line": 58,
+    "text": "export interface PlanRecord {"
+  },
+  {
+    "path": "packages/kernel/src/planner/draft.ts",
+    "line": 33,
+    "text": "export function draft(input: PlannerInput): DraftSet {"
+  },
+  {
+    "path": "docs/decisions/0032-reports-authors-routes-filters.md",
+    "line": 31,
+    "text": "**Symmetry.** The enemy's knowledge is built the same way (0009): newspapers, agents and leaks give him reports about the Union, so a leak can cost the Union militarily."
+  },
+  {
+    "path": "docs/decisions/0079-the-people-verbs-as-built.md",
+    "line": 25,
+    "text": "- **Consult:** the answers become stances on record. The cost of reversing one is 1B's. Consult goes by courier."
+  },
+  {
+    "path": "docs/decisions/0084-politics-first-cut-as-built.md",
+    "line": 99,
+    "text": "  - papers with a slant, and leaks;"
+  },
+  {
+    "path": "packages/kernel/src/tick/politics.ts",
+    "line": 84,
+    "text": "function readers(ctx: TickContext, state: State, faction: FactionId): PersonId[] {"
+  },
+  {
+    "path": "packages/kernel/src/people/people.ts",
+    "line": 55,
+    "text": "  readonly stanceRecommends: string;"
+  },
+  {
+    "path": "docs/decisions/0080-operations-as-built.md",
+    "line": 57,
+    "text": "  - the siege method, for an axis that faces an enemy its commander won't attack;"
+  },
+  {
+    "path": "docs/decisions/0081-detachments-as-built.md",
+    "line": 53,
+    "text": "  - embarkation, since a by-water axis today needs its troops to start aboard;"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 484,
+    "text": "- **The planner and operations, second pass:** proposals, the siege method, rivers, rail capacity, ships' stores and blockade stations (lane 0.9)."
+  },
+  {
+    "path": "packages/kernel/src/forces/stores.ts",
+    "line": 74,
+    "text": "    // STAND-IN(owner: 1B, ships' stores; 0064; labelled by lane 1.4): ships and troops afloat neither eat nor draw stores."
+  },
+  {
+    "path": "packages/kernel/src/planner/methods.ts",
+    "line": 256,
+    "text": "export function byWater(ctx: Ctx): Outcome[] {"
+  },
+  {
+    "path": "docs/decisions/0015-seats.md",
+    "line": 15,
+    "text": "- **Rules first.** Every person plays well on the rules model alone, offline and free. An AI seat wraps a rule seat and falls back to it on timeout, invalid output, a failed consistency check or a missing key."
+  },
+  {
+    "path": "docs/decisions/0022-voice-is-never-state.md",
+    "line": 13,
+    "text": "- **Voice is never state.** Generated text is stored in a transcript the kernel never reads; no outcome depends on it."
+  },
+  {
+    "path": "docs/decisions/0038-no-live-ai-on-steam-until-cleared.md",
+    "line": 12,
+    "text": "- Until Valve answers, **the Steam build ships with template voices only.** The game is fully playable without any AI model (0015, 0022), so nothing is lost but the generated letters."
+  },
+  {
+    "path": "packages/kernel/src/seats/api.ts",
+    "line": 23,
+    "text": "export const SEAT_DRIVERS = ['ai', 'human', 'rules'] as const;"
+  },
+  {
+    "path": "packages/kernel/src/log/session.ts",
+    "line": 61,
+    "text": "  const answer = seat.respond(request);"
+  },
+  {
+    "path": "packages/cli/src/console/game.ts",
+    "line": 65,
+    "text": "    if (playable === undefined || playable.principal === null) throw new Error(`pack ${options.pack} has no playable faction with a principal`);"
+  },
+  {
+    "path": "docs/decisions/0053-presentation-and-asset-briefs.md",
+    "line": 7,
+    "text": "**The game is played at a desk.** `docs/design/PRESENTATION.md` is canon for the interface; elements it marks \"proposed\" are accepted with it."
+  },
+  {
+    "path": "docs/decisions/0089-codex-builds-a-desk-prototype.md",
+    "line": 27,
+    "text": "- **A prototype, not canon.** When Phase 2 opens, the desk lane decides whether to promote it to a package and extracts the shared presenter that section 6 proposes (\"one presenter, two renderers\")."
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 498,
+    "text": "**Phase 2** is the desk and the staff map. Its done check is set when Phase 1 lands; the working version is that the owner plays Lincoln through 1861\u201362 at the desk, on the staff map, and finds plan review and the audience worth playing. Phase 2 also yields the public demo (0037, 0039): the desk, the audience and plan review, starting from a later scenario with armies in the field, because the March 1861 start has no armies and so no arrows (0040)."
+  },
+  {
+    "path": "prototypes/desk/package.json",
+    "line": 2,
+    "text": "  \"name\": \"presidential-desk-prototype\","
+  },
+  {
+    "path": "prototypes/desk/web/App.tsx",
+    "line": 32,
+    "text": "export function App() {"
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 73,
+    "text": "- **Regions.** Irregular, drawn to real terrain, numbering in the hundreds (AGEoD's 3,000+ is the commonest complaint). Navigable rivers and sea lanes can be their own regions. A region's terrain and starting values are World data; its population, loyalty and supply value change during play and are State (section 10)."
+  },
+  {
+    "path": "packages/kernel/src/ownership.ts",
+    "line": 94,
+    "text": "  field('region population, loyalty, supply value', 'regions', ['economy', 'situations', 'occupation'], [at('State', 'regionLoyalty')]),"
+  },
+  {
+    "path": "packages/kernel/src/regions/regions.ts",
+    "line": 107,
+    "text": "export function initialLoyalty(map: WorldIndex, start: ScenarioStart): LoyaltyTable {"
+  },
+  {
+    "path": "docs/decisions/0033-forces-scale-and-data-sources.md",
+    "line": 25,
+    "text": "**Economy refinement.** Raising new regiments and refilling old ones are separate levers, because the Union raised new regiments while old ones shrank (Phase 1 economy)."
+  },
+  {
+    "path": "packages/kernel/src/tick/recruitment.ts",
+    "line": 51,
+    "text": "export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: CallCommand): RejectionReason | null {"
+  },
+  {
+    "path": "docs/decisions/0046-gate-checklist-and-situations-catalogue.md",
+    "line": 13,
+    "text": "- **The ship rule.** A scenario cannot ship while a topic in `record` status, or needs-source as a whole topic, overlaps its dates; the slice's ship-blockers are listed in the checklist's section 4. A later-start scenario may omit a gated situation whose moment has passed, but never the topic's derived and text facets."
+  },
+  {
+    "path": "docs/decisions/0074-the-gate-for-1a.md",
+    "line": 33,
+    "text": "- **R2 and R4 proper re-rule capture before the first Black unit exists in force data.** That re-ruling also covers any Black teamsters or servants taken at Bull Run, if research finds them."
+  },
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "line": 485,
+    "text": "- **The gate**, each record recorded and registered before its situations:"
+  },
+  {
+    "path": "packs/union-1861/gate/register.json",
+    "line": 268,
+    "text": "      \"status\": \"record\","
+  },
+  {
+    "path": "packages/pack-format/src/gate.ts",
+    "line": 16,
+    "text": " *     release.json         the scenarios a release ships, with their windows (A8, the ship rule)"
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "firstActualHook": {
+    "command": "git commit -F docs/audit/runs/s26/commit-message.txt (real pre-commit hook)",
+    "exit": 1,
+    "seconds": 489.6587002,
+    "filesPassed": 138,
+    "filesFailed": 1,
+    "testsPassed": 1534,
+    "expectedFailure": 1,
+    "skips": 17,
+    "failure": {
+      "file": "packages/cli/test/done-check.test.ts",
+      "line": 36,
+      "stage": "beforeAll",
+      "timeoutMs": 300000,
+      "message": "Hook timed out in 300000ms."
+    }
+  },
+  "unreachedGates": {
+    "boundary": {
+      "command": "npm run check:boundary",
+      "exit": 0,
+      "seconds": 1.9206158
+    },
+    "licences": {
+      "command": "npm run check:licences",
+      "exit": 0,
+      "seconds": 1.8925185
+    },
+    "decisions": {
+      "command": "npm run check:decisions",
+      "exit": 0,
+      "seconds": 2.1014055
+    }
+  },
+  "targetedVerification": {
+    "command": "VITEST_MAX_WORKERS=1 npx vitest run packages/cli/test/done-check.test.ts",
+    "exit": 0,
+    "seconds": 185.550708,
+    "filesPassed": 1,
+    "testsPassed": 14,
+    "normalTimingSkips": 1
+  },
+  "diagnosis": "[I] Parallel contention is supported by the unchanged isolated pass and the repository config warning, not established as an exclusive causal diagnosis.",
+  "retryPlan": "One real git commit hook with VITEST_MAX_WORKERS=1. Full 139-file collection; no test, timeout, budget, assertion, configuration file or source change.",
+  "reusedEvidence": [
+    "required no-git check",
+    "nine audit probes",
+    "one default eight-seed done check",
+    "ownership census"
+  ],
+  "retainedEvidence": [
+    {
+      "path": "docs/audit/runs/s26/hook-attempt-1.log",
+      "bytes": 18644,
+      "sha256": "a75b9474f30dc82b604b081e19b91cddeca53c2f6bc73e768a07f2f59997ec97"
+    },
+    {
+      "path": "docs/audit/runs/s26/commit-attempt-1.json",
+      "bytes": 151,
+      "sha256": "d267e3e796a813b2c7239ff9b0590cd1d11376064f5535e3fd1eb70e770eb4a9"
+    },
+    {
+      "path": "docs/audit/runs/s26/targeted-done-check.log",
+      "bytes": 344,
+      "sha256": "37c104eeb8629b0925d293963f7daa9c1ddd88f39ecbe7fce5f5f5993db27671"
+    },
+    {
+      "path": "docs/audit/runs/s26/targeted-done-check-result.json",
+      "bytes": 147,
+      "sha256": "733e666391eff8a43c52a538adb742b82509e8af67f74d557e526dc97bdfc085"
+    },
+    {
+      "path": "docs/audit/runs/s26/unreached-boundary.log",
+      "bytes": 208,
+      "sha256": "c9791360b9f19ab540c77680035f810d4463e9be54fd4e8af95658a497b2c478"
+    },
+    {
+      "path": "docs/audit/runs/s26/unreached-boundary-result.json",
+      "bytes": 96,
+      "sha256": "60bdcface4bc9479268631aeba75b95f64b6c20490b2eae3131adc6224f54ec1"
+    },
+    {
+      "path": "docs/audit/runs/s26/unreached-licences.log",
+      "bytes": 552,
+      "sha256": "7d41e5e4301849c17b27df3bd2c2419572a252cda182cce22ec6d0c7f828e1c5"
+    },
+    {
+      "path": "docs/audit/runs/s26/unreached-licences-result.json",
+      "bytes": 96,
+      "sha256": "617494fad8d8ab8d58ef832919643ffdd326ee7ba5a6d00993a0e2acbf4c9158"
+    },
+    {
+      "path": "docs/audit/runs/s26/unreached-decisions.log",
+      "bytes": 218,
+      "sha256": "b6977128c3f966f4e3600519cff54e352e7aa8166c6717cc4064e119e808890d"
+    },
+    {
+      "path": "docs/audit/runs/s26/unreached-decisions-result.json",
+      "bytes": 97,
+      "sha256": "bf64b6d4327a9b034a665c8f9525fda047c1f1a5f3662a0ab415625a808e0f1f"
+    }
+  ]
+}

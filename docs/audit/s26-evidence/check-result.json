@@ -1,0 +1,5 @@
+﻿{
+    "command":  "MANDATE_NO_GIT=1 npm run check",
+    "exit":  0,
+    "seconds":  224.37457709999998
+}

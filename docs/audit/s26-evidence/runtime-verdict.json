@@ -1,0 +1,808 @@
+{
+  "command": "runDoneCheck(defaults) then measureDrafting(union-1861), audit-only output adapter",
+  "exitReceipt": {
+    "command": "runDoneCheck(defaults) + measureDrafting(union-1861), audit-only output adapter",
+    "exit": 1,
+    "seconds": 2714.0820251
+  },
+  "elapsedSeconds": 2712.7312085,
+  "phase0ExitPassed": false,
+  "allCriteriaPassed": false,
+  "counts": {
+    "phase0": {
+      "passed": 5,
+      "total": 6,
+      "problems": 3
+    },
+    "1A": {
+      "passed": 2,
+      "total": 6,
+      "problems": 10
+    }
+  },
+  "criteria": [
+    {
+      "id": "behaviour",
+      "text": "rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 124 arrivals, 2 battle-days, 20 control changes, confederate 2 front segments 73 supplied 0 pockets; union 2 front segments 36 supplied 0 pockets",
+        "testbed, 120 days: 27 arrivals, 4 battle-days, 35 control changes, north 13 front segments 13 supplied 1 pockets; south 13 front segments 1 supplied 1 pockets"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "hash",
+      "text": "the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 148 daily hashes, final 55a35b1034c19b09",
+        "testbed, 120 days: 120 daily hashes, final 69d8759b02cfa93f"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "resume",
+      "text": "a mid-run save, loaded, resumes to the continuous run\u2019s final hash, and the log replays to every hash",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: from day 60, matches",
+        "testbed, 120 days: from day 40, matches"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "liveness",
+      "text": "every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 161 mechanics inside their bands",
+        "testbed, 120 days: 161 mechanics inside their bands",
+        "testbed, commanders silent, 120 days: 1 mechanics inside their bands",
+        "testbed, the principal edits every plan, 120 days: 6 mechanics inside their bands",
+        "union-1861 before the opening decisions, 30 days (the war gate, 0064): 9 mechanics inside their bands"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "section-ten",
+      "text": "the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite\u2019s)",
+      "problems": [],
+      "evidence": [
+        "packages/kernel/test/compliance.test.ts",
+        "packages/kernel/test/rng.test.ts",
+        "packages/kernel/test/banned-apis.test.ts",
+        "packages/kernel/test/people-verbs.test.ts"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "budget",
+      "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+      "problems": [
+        "union-1861, war by decision, 148 days: median 67.4 ms a day, over the 40 ms budget",
+        "union-1861 history run, 148 days to 1861-07-31: median 130.4 ms a day, over the 40 ms budget",
+        "union-1861 history run, 148 days to 1861-07-31: p95 271.5 ms a day, over 4 times the budget"
+      ],
+      "evidence": [
+        "union-1861, war by decision, 148 days: median 67.35 ms, p95 108.52 ms, max 127.40 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 56)",
+        "testbed, 120 days: median 6.62 ms, p95 57.31 ms, max 119.63 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+        "union-1861 history run, 148 days to 1861-07-31: median 130.35 ms, p95 271.48 ms, max 528.73 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 56)"
+      ],
+      "milestone": "phase0"
+    },
+    {
+      "id": "checkpoints",
+      "milestone": "1A",
+      "text": "the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 20957 men, below 100000",
+        "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1",
+        "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 0 planned operations, below 1"
+      ],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "union-1861 history run, 148 days to 1861-07-31: side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): union 18686 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): below the lower edge, reported and not failed (the band's floor is not binding: no primary return bounds it)",
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate 20957 men of known strength, 13 blocks of unknown strength (band 100000..200000)",
+        "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations (band 1..26)",
+        "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 0 planned operations (band 1..4)",
+        "union-1861 history run, 148 days to 1861-07-31: confederate at war since day 36",
+        "union-1861 history run, 148 days to 1861-07-31: union at war since day 41"
+      ]
+    },
+    {
+      "id": "operation",
+      "milestone": "1A",
+      "text": "at least one operation drafted by the kernel planner, chosen by its commander\u2019s seat, approved, executed and fought with the battle model, with a breakdown",
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: no operation fought a battle in the history run (2 operations, 0 battles)"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "pushback",
+      "milestone": "1A",
+      "text": "pushback fires inside its bands: lower bounds from the record\u2019s sourced cases (S01\u2013S21), upper bounds the lead\u2019s",
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 44, above 9"
+      ],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: relay objections: 2 (band 0..6)",
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 1 (band 2..6)",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0 (band 1..4)",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 44 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 5 (band 2..9)",
+        "union-1861 history run, 148 days to 1861-07-31: objections to a plan: 11 (band 10..42)"
+      ]
+    },
+    {
+      "id": "unknown-strength",
+      "milestone": "1A",
+      "text": "no block fights with unknown strength: every battle record, in every run, lists none unknown",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 0 battles, 0 battle-days read",
+        "testbed, 120 days: 4 battles, 4 battle-days read",
+        "union-1861 history run, 148 days to 1861-07-31: 0 battles, 0 battle-days read"
+      ]
+    },
+    {
+      "id": "stand-ins",
+      "milestone": "1A",
+      "text": "the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+      "problems": [],
+      "evidence": [
+        "standing goals: gone (lane 1.4\u2019s operations (4a64082))",
+        "the consistency judgement: gone (lane 1.2\u2019s planner (0062))",
+        "the trait adapter: gone (lane 1.1\u2019s people recast (`standin/traits.ts` deleted))",
+        "weakest-first transfers: gone (lane 1.5\u2019s people verbs (0079: the sender\u2019s answer picks the blocks))",
+        "conflicts resolved by department: gone (lane 1.1\u2019s compliance (`resolveConflict`))",
+        "the simple contest: gone (lane 1.3\u2019s battle model (0076))",
+        "the generic rule-seat principal: no label names it, so it is gone",
+        "the capital as objective: no label names it, so it is gone",
+        "other stand-ins: packages/kernel/src/forces/stores.ts:74 (owner 1B, ships' stores), packages/kernel/src/planner/route.ts:127 (owner 1B, ships' stores), packages/kernel/src/situations/types.ts:74 (owner 1B, conventions and legislatures), packages/pack-format/src/situations.ts:63 (owner 1B, conventions and legislatures)",
+        "pack values carried from M2, for calibration: union-1861 rules.politics.drift, union-1861 rules.politics.address, union-1861 rules.politics.ladder, union-1861 rules.politics.credibility, union-1861 rules.politics.press.standing"
+      ]
+    },
+    {
+      "id": "lever-sweep",
+      "milestone": "1A",
+      "text": "the lever sweep (D6): no watched option, nor an atrocity-class decision\u2019s inaction, is the victory-only bot\u2019s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active",
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+      ],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: 8 seeds, 8 gated decisions weighed, 248 calls for regiments in the base runs",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: return best in 0 of 8 seeds weighed"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "name": "union-1861, war by decision, 148 days",
+      "checked": {
+        "pack": "union-1861",
+        "atWar": false,
+        "hashMode": "daily",
+        "worldHash": "64ac5215ce5ed3c0a43765cbe7c6fe882f1405b3367a81759c9fc590db37dc4f",
+        "finalDay": 148,
+        "finalHash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+        "logEntries": 62,
+        "rejections": 0,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 60,
+          "finalHash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "timing": null
+      },
+      "dailyHashCount": 148,
+      "repeatHashCount": 148,
+      "everyRepeatHashEqual": true,
+      "timedFinalHashEqual": true,
+      "repeatRejections": 0,
+      "timed": {
+        "pack": "union-1861",
+        "atWar": false,
+        "hashMode": "checkpoints",
+        "worldHash": "64ac5215ce5ed3c0a43765cbe7c6fe882f1405b3367a81759c9fc590db37dc4f",
+        "finalDay": 148,
+        "finalHash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+        "logEntries": 62,
+        "rejections": 0,
+        "replay": null,
+        "resume": null,
+        "timing": {
+          "unit": "ms",
+          "days": 148,
+          "median": 67.35229999999865,
+          "p95": 108.52229999998235,
+          "max": 127.40170000001672
+        }
+      },
+      "observedBattles": 0
+    },
+    {
+      "name": "testbed, 120 days",
+      "checked": {
+        "pack": "testbed",
+        "atWar": false,
+        "hashMode": "daily",
+        "worldHash": "cf6f3b08b9ed40b5a54120e96a4ad8121a43f9a11857beb3e2558b621320d6e1",
+        "finalDay": 120,
+        "finalHash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+        "logEntries": 47,
+        "rejections": 0,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 40,
+          "finalHash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "timing": null
+      },
+      "dailyHashCount": 120,
+      "repeatHashCount": 120,
+      "everyRepeatHashEqual": true,
+      "timedFinalHashEqual": true,
+      "repeatRejections": 0,
+      "timed": {
+        "pack": "testbed",
+        "atWar": false,
+        "hashMode": "checkpoints",
+        "worldHash": "cf6f3b08b9ed40b5a54120e96a4ad8121a43f9a11857beb3e2558b621320d6e1",
+        "finalDay": 120,
+        "finalHash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+        "logEntries": 47,
+        "rejections": 0,
+        "replay": null,
+        "resume": null,
+        "timing": {
+          "unit": "ms",
+          "days": 120,
+          "median": 6.622400000022026,
+          "p95": 57.30790000001434,
+          "max": 119.62840000001597
+        }
+      },
+      "observedBattles": 0
+    }
+  ],
+  "history": [
+    {
+      "name": "union-1861 history run, 148 days to 1861-07-31",
+      "pack": "union-1861",
+      "startDate": "1861-03-05",
+      "summary": {
+        "pack": "union-1861",
+        "atWar": false,
+        "hashMode": "checkpoints",
+        "worldHash": "64ac5215ce5ed3c0a43765cbe7c6fe882f1405b3367a81759c9fc590db37dc4f",
+        "finalDay": 148,
+        "finalHash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+        "logEntries": 62,
+        "rejections": 0,
+        "replay": null,
+        "resume": null,
+        "timing": null
+      },
+      "timed": {
+        "pack": "union-1861",
+        "atWar": false,
+        "hashMode": "checkpoints",
+        "worldHash": "64ac5215ce5ed3c0a43765cbe7c6fe882f1405b3367a81759c9fc590db37dc4f",
+        "finalDay": 148,
+        "finalHash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+        "logEntries": 62,
+        "rejections": 0,
+        "replay": null,
+        "resume": null,
+        "timing": {
+          "unit": "ms",
+          "days": 148,
+          "median": 130.3532000000123,
+          "p95": 271.47650000004796,
+          "max": 528.72570000001
+        }
+      },
+      "sweep": {
+        "seeds": 8,
+        "findings": [
+          {
+            "situation": "fort_monroe_arrivals",
+            "choice": "return",
+            "faction": "union",
+            "weighed": 8,
+            "best": 0
+          }
+        ],
+        "flagged": [],
+        "unpaid": [],
+        "recruitmentCalls": 248,
+        "decisionsWeighed": 8,
+        "unmeasured": [
+          {
+            "situation": "fort_monroe_arrivals",
+            "channel": "people/grievance (policy pushback)",
+            "via": "its own choice"
+          }
+        ],
+        "ledgerUnmet": [],
+        "chainUnexercised": [
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1861,
+            "move": "approve_holding"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1861,
+            "move": "return"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1861,
+            "move": "inaction"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1862,
+            "move": "approve_holding"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1862,
+            "move": "return"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1862,
+            "move": "inaction"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1863,
+            "move": "approve_holding"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1863,
+            "move": "return"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1863,
+            "move": "inaction"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1864,
+            "move": "approve_holding"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1864,
+            "move": "return"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1864,
+            "move": "inaction"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1865,
+            "move": "approve_holding"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1865,
+            "move": "return"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1865,
+            "move": "inaction"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1866,
+            "move": "approve_holding"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1866,
+            "move": "return"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1866,
+            "move": "inaction"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1867,
+            "move": "approve_holding"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1867,
+            "move": "return"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1867,
+            "move": "inaction"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1868,
+            "move": "approve_holding"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1868,
+            "move": "return"
+          },
+          {
+            "situation": "fort_monroe_arrivals",
+            "seed": 1868,
+            "move": "inaction"
+          }
+        ]
+      }
+    }
+  ],
+  "drafting": {
+    "pack": "union-1861",
+    "posts": 23,
+    "drafts": [
+      {
+        "post": "cs_cmd_charleston",
+        "faction": "confederate",
+        "candidates": 3,
+        "searches": 8,
+        "medianMs": 4.904600000008941,
+        "maxMs": 23.89670000039041
+      },
+      {
+        "post": "st_tx_cmd_galveston",
+        "faction": "confederate",
+        "candidates": 4,
+        "searches": 6,
+        "medianMs": 4.490300000179559,
+        "maxMs": 9.193099999800324
+      },
+      {
+        "post": "st_tx_dept_rio_grande",
+        "faction": "confederate",
+        "candidates": 4,
+        "searches": 6,
+        "medianMs": 5.766400000080466,
+        "maxMs": 31.87719999998808
+      },
+      {
+        "post": "st_tx_northwest_frontier",
+        "faction": "confederate",
+        "candidates": 4,
+        "searches": 6,
+        "medianMs": 9.132400000002235,
+        "maxMs": 31.24670000001788
+      },
+      {
+        "post": "us_dc_militia",
+        "faction": "union",
+        "candidates": 3,
+        "searches": 6,
+        "medianMs": 7.334400000050664,
+        "maxMs": 80.28569999989122
+      },
+      {
+        "post": "us_dept_new_mexico",
+        "faction": "union",
+        "candidates": 4,
+        "searches": 6,
+        "medianMs": 6.529500000178814,
+        "maxMs": 45.498399999924004
+      },
+      {
+        "post": "us_dept_pacific",
+        "faction": "union",
+        "candidates": 4,
+        "searches": 6,
+        "medianMs": 6.709100000094622,
+        "maxMs": 203.6803999999538
+      },
+      {
+        "post": "us_dept_texas",
+        "faction": "union",
+        "candidates": 4,
+        "searches": 6,
+        "medianMs": 10.943800000008196,
+        "maxMs": 117.1820000000298
+      },
+      {
+        "post": "us_fort_jefferson",
+        "faction": "union",
+        "candidates": 1,
+        "searches": 2,
+        "medianMs": 0.19149999972432852,
+        "maxMs": 52.241899999789894
+      },
+      {
+        "post": "us_fort_monroe",
+        "faction": "union",
+        "candidates": 3,
+        "searches": 6,
+        "medianMs": 13.265399999916553,
+        "maxMs": 56.35470000002533
+      },
+      {
+        "post": "us_fort_pickens",
+        "faction": "union",
+        "candidates": 1,
+        "searches": 4,
+        "medianMs": 0.18619999988004565,
+        "maxMs": 0.29179999977350235
+      },
+      {
+        "post": "us_fort_sumter",
+        "faction": "union",
+        "candidates": 1,
+        "searches": 2,
+        "medianMs": 0.1666999999433756,
+        "maxMs": 0.22350000031292439
+      },
+      {
+        "post": "us_fort_taylor",
+        "faction": "union",
+        "candidates": 1,
+        "searches": 2,
+        "medianMs": 0.14969999995082617,
+        "maxMs": 0.21129999961704016
+      },
+      {
+        "post": "us_general_in_chief",
+        "faction": "union",
+        "candidates": 3,
+        "searches": 6,
+        "medianMs": 6.938800000119954,
+        "maxMs": 9.092699999921024
+      },
+      {
+        "post": "us_marine_corps",
+        "faction": "union",
+        "candidates": 3,
+        "searches": 8,
+        "medianMs": 8.63620000006631,
+        "maxMs": 37.08300000010058
+      },
+      {
+        "post": "us_navy_african_squadron",
+        "faction": "union",
+        "candidates": 0,
+        "searches": 0,
+        "medianMs": 0.16630000015720725,
+        "maxMs": 0.5563000002875924
+      },
+      {
+        "post": "us_navy_brazil_squadron",
+        "faction": "union",
+        "candidates": 0,
+        "searches": 0,
+        "medianMs": 0.1467999997548759,
+        "maxMs": 0.20660000015050173
+      },
+      {
+        "post": "us_navy_east_india_squadron",
+        "faction": "union",
+        "candidates": 0,
+        "searches": 0,
+        "medianMs": 0.16890000039711595,
+        "maxMs": 2.139200000092387
+      },
+      {
+        "post": "us_navy_home_squadron",
+        "faction": "union",
+        "candidates": 1,
+        "searches": 4,
+        "medianMs": 0.18530000001192093,
+        "maxMs": 1.8105000001378357
+      },
+      {
+        "post": "us_navy_mediterranean_squadron",
+        "faction": "union",
+        "candidates": 0,
+        "searches": 0,
+        "medianMs": 0.14019999979063869,
+        "maxMs": 1.3140999996103346
+      },
+      {
+        "post": "us_navy_pacific_squadron",
+        "faction": "union",
+        "candidates": 0,
+        "searches": 0,
+        "medianMs": 0.12850000010803342,
+        "maxMs": 2.2448999998159707
+      },
+      {
+        "post": "us_navy_yard_washington",
+        "faction": "union",
+        "candidates": 0,
+        "searches": 0,
+        "medianMs": 0.14030000008642673,
+        "maxMs": 1.1647000000812113
+      },
+      {
+        "post": "us_secretary_navy",
+        "faction": "union",
+        "candidates": 0,
+        "searches": 0,
+        "medianMs": 0.1256999997422099,
+        "maxMs": 0.26050000032410026
+      }
+    ],
+    "day": {
+      "days": 20,
+      "median": 128.09860000014305,
+      "p95": 309.8024000003934,
+      "worst": 403.6288000000641
+    },
+    "cappedDay": {
+      "cap": 3,
+      "sides": 2,
+      "worst": 284.1280999998562
+    },
+    "slowestDraftMs": 203.6803999999538,
+    "noLandForce": 7,
+    "sound": true
+  },
+  "rawArtifacts": [
+    {
+      "path": "docs/audit/runs/s26/campaign-process-later.json",
+      "bytes": 151,
+      "sha256": "422720805d683db5a7f43fa0e84be4fa06f3707503024fd430456a4f98da0373"
+    },
+    {
+      "path": "docs/audit/runs/s26/campaign-process.json",
+      "bytes": 355,
+      "sha256": "77e79ef487dcdd523bae2aed1ff53234a6316323ea6029a2d4603ea75162ac82"
+    },
+    {
+      "path": "docs/audit/runs/s26/check.log",
+      "bytes": 1796,
+      "sha256": "96ace4d3c5647254d17c15e6ea98586a51dcb6c2fc5a741e224a2976a928c5e5"
+    },
+    {
+      "path": "docs/audit/runs/s26/commit-preflight.json",
+      "bytes": 159,
+      "sha256": "754efb952daad3134eb8cfc1adc3a236f26af49ec295946c0100573285fd06e6"
+    },
+    {
+      "path": "docs/audit/runs/s26/deferred-search.txt",
+      "bytes": 24674,
+      "sha256": "6d8c82e2a4a062164d4ec3a503a1c258b491961c2034f19c4cb5ad9649bcf696"
+    },
+    {
+      "path": "docs/audit/runs/s26/done-exit.json",
+      "bytes": 156,
+      "sha256": "9189131952200d86f999c96a0473ed050f5d330c012999eeac8ab6ea0669daf6"
+    },
+    {
+      "path": "docs/audit/runs/s26/done-result.json",
+      "bytes": 925050,
+      "sha256": "f2c654ad30bec361dd53adf192e67d1560646658ee7ec2062b066ff203268b92"
+    },
+    {
+      "path": "docs/audit/runs/s26/done-testbed.json",
+      "bytes": 83265,
+      "sha256": "4eeb1063625b71404576fe3db2fc65a04898cac3378d794a9a05eb53916d5128"
+    },
+    {
+      "path": "docs/audit/runs/s26/done-union-1861.json",
+      "bytes": 109917,
+      "sha256": "85683b7ed0d8c98e183176e9cd9e513368606a6dded150a9c4b5249cae98935d"
+    },
+    {
+      "path": "docs/audit/runs/s26/done.log",
+      "bytes": 4152,
+      "sha256": "52ead1fc3a180b2048f93846a40d17fbff0ca1d4de9a6c41f30118d7b3f7cbd1"
+    },
+    {
+      "path": "docs/audit/runs/s26/extend-probes.ts",
+      "bytes": 2550,
+      "sha256": "4cf857a226a09a804113cc9a1a706062e43e778a340422a7067ca42efb70c43c"
+    },
+    {
+      "path": "docs/audit/runs/s26/numeric-sites.txt",
+      "bytes": 11662,
+      "sha256": "6d2164f33faf51948cadca7b256ace35aa82d1c0035c42cbbdbd84a3b6fefea9"
+    },
+    {
+      "path": "docs/audit/runs/s26/ownership.ts",
+      "bytes": 1375,
+      "sha256": "314e734ce58a8509c8945dd78643a573e74757bd83bbe10e11290eb4bb310bb2"
+    },
+    {
+      "path": "docs/audit/runs/s26/probes.log",
+      "bytes": 128,
+      "sha256": "7590702c5a11b53a0b98b959691de5cdc690673d802774fdba1d8894cff2755d"
+    },
+    {
+      "path": "docs/audit/runs/s26/probes.ts",
+      "bytes": 10201,
+      "sha256": "df6ffb4fe749c08d811cf2acdc148b1d8709afd86709cdebbcb90c1eadf87257"
+    },
+    {
+      "path": "docs/audit/runs/s26/report-template.md",
+      "bytes": 31418,
+      "sha256": "61f68b25d0f25fffe2deae7d06b4914187f10cc5468fe3fd17a6059b62d85371"
+    },
+    {
+      "path": "docs/audit/runs/s26/resolve-report.py",
+      "bytes": 1879,
+      "sha256": "5b6d12a9696d284c524bc57ac39b546d6fa945389d1028748970178e52abeac5"
+    },
+    {
+      "path": "docs/audit/runs/s26/run-done.executed.ts.txt",
+      "bytes": 1256,
+      "sha256": "59f009833733d1194d2669c068a37b5e0a631bacff16dc312f6914bef6fe8404"
+    },
+    {
+      "path": "docs/audit/runs/s26/run-done.ts",
+      "bytes": 1279,
+      "sha256": "5b6288dd6fb88cc0a3ee09b84163885a4f9712be8f60863d700dd4b0444cd86f"
+    },
+    {
+      "path": "docs/audit/runs/s26/save-testbed-40.json",
+      "bytes": 320958,
+      "sha256": "ce3ae47efd50c62873a30405fd90ab9112e3c2bb317cfdd46027528b99792cea"
+    },
+    {
+      "path": "docs/audit/runs/s26/save-union-1861-60.json",
+      "bytes": 1355096,
+      "sha256": "4292377f7e7b92471cb79c083bc6c150b8a3f1a6e562522ecfa923214e71ff37"
+    },
+    {
+      "path": "docs/audit/runs/s26/settle-runtime.py",
+      "bytes": 3459,
+      "sha256": "2921109570e9641ebea57a254c75cd87ffe952b6dcf373df7de35e5ffe4c226a"
+    },
+    {
+      "path": "docs/audit/runs/s26/verify-audit.py",
+      "bytes": 4705,
+      "sha256": "8fe76c6ed3eca02370c783fec054ce80135ce4b98966a20729e8de44eca48cad"
+    }
+  ],
+  "limits": [
+    "Local Windows evidence; not Linux CI or a cross-host hash comparison.",
+    "No criterion, budget, data, assertion, seed count or horizon changed.",
+    "D6 remains parked; the sweep is not gate clearance."
+  ]
+}

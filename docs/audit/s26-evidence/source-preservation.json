@@ -1,0 +1,40 @@
+{
+  "baseline": "8f9fddc30e78383fd73a1919a0c56ecc12274f19",
+  "head": "8f9fddc30e78383fd73a1919a0c56ecc12274f19",
+  "branch": "sprint/audit",
+  "baselineFilesChecked": 1673,
+  "changedOriginalFiles": [],
+  "distinctCitations": 193,
+  "priorExactCitationChecks": 193,
+  "decisionRecords": 92,
+  "mainAtVerification": "76f72e015cb7d1b4b1d622a65b4297551b1b9bd6",
+  "mainChangedPathsFromPinnedTree": [
+    "CODEX.md"
+  ],
+  "acceptedRecords": 91,
+  "groups": {
+    "A": 11,
+    "M": 8,
+    "O": 3,
+    "D": 16
+  },
+  "outsideAuditStatus": [],
+  "pendingMarkers": [],
+  "problems": [],
+  "deliveryPaths": [
+    "docs/audit/2026-11-21-canon-against-code.md",
+    "docs/audit/s26-evidence/README.md",
+    "docs/audit/s26-evidence/baseline.json",
+    "docs/audit/s26-evidence/check-result.json",
+    "docs/audit/s26-evidence/decision-coverage.json",
+    "docs/audit/s26-evidence/hook-recovery.json",
+    "docs/audit/s26-evidence/ownership-sites.json",
+    "docs/audit/s26-evidence/probes-result.json",
+    "docs/audit/s26-evidence/probes.json",
+    "docs/audit/s26-evidence/report-references.json",
+    "docs/audit/s26-evidence/runtime-verdict.json",
+    "docs/audit/s26-evidence/situation-causes.json",
+    "docs/audit/s26-evidence/source-preservation.json"
+  ],
+  "nonReportDeliveryPaths": []
+}

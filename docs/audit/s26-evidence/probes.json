@@ -1,0 +1,443 @@
+{
+  "men": {
+    "before": 2000,
+    "after": 1234,
+    "sameKnowledge": true
+  },
+  "candidateStatus": {
+    "before": [
+      "a_spy"
+    ],
+    "after": [],
+    "sameKnowledge": true
+  },
+  "postCache": {
+    "before": "a_office",
+    "cached": "a_office",
+    "fresh": null,
+    "sameReference": true
+  },
+  "reviewsVacancy": {
+    "before": 1,
+    "after": 0,
+    "sameKnowledge": true,
+    "lossReportsInTransit": 1,
+    "believedHolder": "a_bold"
+  },
+  "previewVacancy": {
+    "before": {
+      "ok": true,
+      "plan": {
+        "optionId": "supply_line:depot_steps+timing:a_mid>a_front>b_front>b_mid",
+        "method": "supply_line",
+        "variant": "depot_steps+timing",
+        "score": 733,
+        "terms": [
+          {
+            "term": "goal_fit",
+            "amount": 400
+          },
+          {
+            "term": "force_ratio",
+            "amount": 300
+          },
+          {
+            "term": "time",
+            "amount": 128
+          },
+          {
+            "term": "haste",
+            "amount": 0
+          },
+          {
+            "term": "supply",
+            "amount": -255
+          },
+          {
+            "term": "exposure",
+            "amount": 0
+          },
+          {
+            "term": "coordination",
+            "amount": 0
+          },
+          {
+            "term": "dependence",
+            "amount": 0
+          },
+          {
+            "term": "glory",
+            "amount": 160
+          },
+          {
+            "term": "caution",
+            "amount": 0
+          }
+        ],
+        "axes": [
+          {
+            "name": "main",
+            "post": "a_reserve",
+            "mode": "land",
+            "regions": [
+              "a_mid",
+              "a_front",
+              "b_front",
+              "b_mid"
+            ],
+            "strength": 2000,
+            "phases": [
+              "concentrate",
+              "march",
+              "depot_step",
+              "march",
+              "depot_step",
+              "march"
+            ],
+            "arrival": 16000
+          }
+        ],
+        "requests": [],
+        "conditions": [],
+        "perceivedEnemy": 0,
+        "ratio": 10000
+      }
+    },
+    "after": {
+      "ok": false,
+      "reason": "a_reserve has no drafted plan to edit"
+    }
+  },
+  "plannerTruth": {
+    "before": [
+      {
+        "method": "supply_line",
+        "score": 530,
+        "phases": [
+          {
+            "kind": "concentrate",
+            "days": 1000
+          },
+          {
+            "kind": "march",
+            "days": 6000
+          },
+          {
+            "kind": "depot_step",
+            "days": 1000
+          },
+          {
+            "kind": "march",
+            "days": 3000
+          },
+          {
+            "kind": "depot_step",
+            "days": 1000
+          },
+          {
+            "kind": "march",
+            "days": 3000
+          },
+          {
+            "kind": "assault",
+            "days": 1000
+          }
+        ]
+      },
+      {
+        "method": "direct",
+        "score": 414,
+        "phases": [
+          {
+            "kind": "concentrate",
+            "days": 1000
+          },
+          {
+            "kind": "march",
+            "days": 6000
+          },
+          {
+            "kind": "march",
+            "days": 3000
+          },
+          {
+            "kind": "march",
+            "days": 3000
+          },
+          {
+            "kind": "assault",
+            "days": 1000
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "method": "supply_line",
+        "score": 416,
+        "phases": [
+          {
+            "kind": "concentrate",
+            "days": 1000
+          },
+          {
+            "kind": "march",
+            "days": 6000
+          },
+          {
+            "kind": "depot_step",
+            "days": 1000
+          },
+          {
+            "kind": "march",
+            "days": 3000
+          },
+          {
+            "kind": "depot_step",
+            "days": 1000
+          },
+          {
+            "kind": "march",
+            "days": 3000
+          },
+          {
+            "kind": "reduce",
+            "days": 2000
+          },
+          {
+            "kind": "assault",
+            "days": 1000
+          }
+        ]
+      },
+      {
+        "method": "direct",
+        "score": 300,
+        "phases": [
+          {
+            "kind": "concentrate",
+            "days": 1000
+          },
+          {
+            "kind": "march",
+            "days": 6000
+          },
+          {
+            "kind": "march",
+            "days": 3000
+          },
+          {
+            "kind": "march",
+            "days": 3000
+          },
+          {
+            "kind": "reduce",
+            "days": 2000
+          },
+          {
+            "kind": "assault",
+            "days": 1000
+          }
+        ]
+      }
+    ],
+    "fixedInputs": [
+      "beliefs",
+      "works",
+      "forces",
+      "posts",
+      "supply",
+      "network",
+      "profile",
+      "goal"
+    ]
+  },
+  "worldAlias": {
+    "situation": "fort_monroe_arrivals",
+    "option": "return",
+    "sameReference": true,
+    "frozen": false,
+    "citesFrozen": false,
+    "mutatedWorld": true
+  },
+  "previewOtherSeat": {
+    "samePrincipalKnowledge": true,
+    "before": {
+      "ok": true,
+      "plan": {
+        "optionId": "supply_line:depot_steps+timing:a_mid>a_front>b_front>b_mid",
+        "method": "supply_line",
+        "variant": "depot_steps+timing",
+        "score": 733,
+        "terms": [
+          {
+            "term": "goal_fit",
+            "amount": 400
+          },
+          {
+            "term": "force_ratio",
+            "amount": 300
+          },
+          {
+            "term": "time",
+            "amount": 128
+          },
+          {
+            "term": "haste",
+            "amount": 0
+          },
+          {
+            "term": "supply",
+            "amount": -255
+          },
+          {
+            "term": "exposure",
+            "amount": 0
+          },
+          {
+            "term": "coordination",
+            "amount": 0
+          },
+          {
+            "term": "dependence",
+            "amount": 0
+          },
+          {
+            "term": "glory",
+            "amount": 160
+          },
+          {
+            "term": "caution",
+            "amount": 0
+          }
+        ],
+        "axes": [
+          {
+            "name": "main",
+            "post": "a_reserve",
+            "mode": "land",
+            "regions": [
+              "a_mid",
+              "a_front",
+              "b_front",
+              "b_mid"
+            ],
+            "strength": 2000,
+            "phases": [
+              "concentrate",
+              "march",
+              "depot_step",
+              "march",
+              "depot_step",
+              "march"
+            ],
+            "arrival": 16000
+          }
+        ],
+        "requests": [],
+        "conditions": [],
+        "perceivedEnemy": 0,
+        "ratio": 10000
+      }
+    },
+    "after": {
+      "ok": true,
+      "plan": {
+        "optionId": "supply_line:depot_steps+timing:a_mid>a_front>b_front>b_mid",
+        "method": "supply_line",
+        "variant": "depot_steps+timing",
+        "score": -191,
+        "terms": [
+          {
+            "term": "goal_fit",
+            "amount": 400
+          },
+          {
+            "term": "force_ratio",
+            "amount": -529
+          },
+          {
+            "term": "time",
+            "amount": 96
+          },
+          {
+            "term": "haste",
+            "amount": 0
+          },
+          {
+            "term": "supply",
+            "amount": -255
+          },
+          {
+            "term": "exposure",
+            "amount": -63
+          },
+          {
+            "term": "coordination",
+            "amount": 0
+          },
+          {
+            "term": "dependence",
+            "amount": 0
+          },
+          {
+            "term": "glory",
+            "amount": 160
+          },
+          {
+            "term": "caution",
+            "amount": 0
+          }
+        ],
+        "axes": [
+          {
+            "name": "main",
+            "post": "a_reserve",
+            "mode": "land",
+            "regions": [
+              "a_mid",
+              "a_front",
+              "b_front",
+              "b_mid"
+            ],
+            "strength": 2000,
+            "phases": [
+              "concentrate",
+              "march",
+              "depot_step",
+              "march",
+              "depot_step",
+              "march",
+              "assault"
+            ],
+            "arrival": 17000
+          }
+        ],
+        "requests": [
+          "reinforcement:15000"
+        ],
+        "conditions": [
+          "move_when_reinforced"
+        ],
+        "perceivedEnemy": 17000,
+        "ratio": 117
+      }
+    }
+  },
+  "successionProjection": {
+    "notice": "texas_governor_changed",
+    "receivedDay": 12,
+    "post": {
+      "post": "st_gov_texas",
+      "parent": null,
+      "placementKnown": true,
+      "holder": "houston_samuel",
+      "status": "held",
+      "vacantSince": null,
+      "source": null,
+      "asOfDay": 0,
+      "observerReports": []
+    },
+    "requiredSuccessor": "clark_edward"
+  }
+}

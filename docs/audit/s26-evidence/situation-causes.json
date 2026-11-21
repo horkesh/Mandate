@@ -1,0 +1,1032 @@
+[
+  {
+    "path": "packs/union-1861/situations/arkansas_secedes.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_arkansas",
+        "days": 21
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/baltimore_route_closed.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_massachusetts",
+        "days": 4
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/bates_fugitive_law_opinion.json",
+    "event": {
+      "all": [
+        {
+          "fired": "fort_monroe_arrivals"
+        },
+        {
+          "dayAtLeast": 140
+        }
+      ]
+    },
+    "eventPredicates": [
+      "fired",
+      "dayAtLeast"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/black_volunteer_offers.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_massachusetts",
+        "days": 8
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/blockade_or_closure.json",
+    "event": {
+      "fired": "sumter_fired_upon"
+    },
+    "eventPredicates": [
+      "fired"
+    ],
+    "railroad": null,
+    "knowledge": {
+      "knows": {
+        "subjectKind": "situation",
+        "subjectId": "sumter_fired_upon"
+      }
+    }
+  },
+  {
+    "path": "packs/union-1861/situations/butler_at_fort_monroe.json",
+    "event": {
+      "all": [
+        {
+          "fired": "virginia_secedes"
+        },
+        {
+          "callReceived": {
+            "post": "st_gov_virginia",
+            "days": 37
+          }
+        }
+      ]
+    },
+    "eventPredicates": [
+      "fired",
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/call_for_troops.json",
+    "event": {
+      "any": [
+        {
+          "knows": {
+            "reportType": "wire-dispatch",
+            "subjectKind": "region",
+            "subjectId": "fort_sumter",
+            "claimKind": "battle-phase",
+            "token": "bombard"
+          }
+        },
+        {
+          "knows": {
+            "reportType": "wire-dispatch",
+            "subjectKind": "region",
+            "subjectId": "fort_sumter",
+            "claimKind": "fort-surrendered"
+          }
+        },
+        {
+          "knows": {
+            "subjectKind": "situation",
+            "subjectId": "sumter_evacuated"
+          }
+        }
+      ]
+    },
+    "eventPredicates": [
+      "knows",
+      "knows",
+      "knows"
+    ],
+    "railroad": null,
+    "knowledge": {
+      "any": [
+        {
+          "knows": {
+            "reportType": "wire-dispatch",
+            "subjectKind": "region",
+            "subjectId": "fort_sumter",
+            "claimKind": "fort-surrendered"
+          }
+        },
+        {
+          "knows": {
+            "subjectKind": "situation",
+            "subjectId": "sumter_evacuated"
+          }
+        },
+        {
+          "knows": {
+            "reportType": "wire-dispatch",
+            "subjectKind": "region",
+            "subjectId": "fort_sumter",
+            "claimKind": "battle-phase",
+            "token": "bombard"
+          },
+          "forDays": 2
+        }
+      ]
+    }
+  },
+  {
+    "path": "packs/union-1861/situations/camp_jackson_deaths.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_missouri",
+        "days": 24
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/cherokee_neutrality.json",
+    "event": {
+      "dayAtLeast": 73
+    },
+    "eventPredicates": [
+      "dayAtLeast"
+    ],
+    "railroad": "Principal Chief Ross's proclamation of neutrality of 17 May, the Cherokee government's own act (0070); a nation answers events and news, never a principal's choice, and its council is not modelled, so the proclamation comes on its date",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/chickasaw_treaty.json",
+    "event": {
+      "all": [
+        {
+          "flag": "confederate_protection_act"
+        },
+        {
+          "dayAtLeast": 129
+        }
+      ]
+    },
+    "eventPredicates": [
+      "flag",
+      "dayAtLeast"
+    ],
+    "railroad": "the nation's own treaty of 12 July with the Confederacy, its government's act (0070); a nation's council is not modelled, so its treaty comes on its date once the Confederacy's act is in place, independent of either principal's choices",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/choctaw_treaty.json",
+    "event": {
+      "all": [
+        {
+          "flag": "confederate_protection_act"
+        },
+        {
+          "dayAtLeast": 129
+        }
+      ]
+    },
+    "eventPredicates": [
+      "flag",
+      "dayAtLeast"
+    ],
+    "railroad": "the nation's own treaty of 12 July with the Confederacy, its government's act (0070); a nation's council is not modelled, so its treaty comes on its date once the Confederacy's act is in place, independent of either principal's choices",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_capital_moved.json",
+    "event": {
+      "all": [
+        {
+          "dayAtLeast": 85
+        },
+        {
+          "flag": "virginia_seceded"
+        }
+      ]
+    },
+    "eventPredicates": [
+      "dayAtLeast",
+      "flag"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_commissioners.json",
+    "event": {
+      "dayAtLeast": 10
+    },
+    "eventPredicates": [
+      "dayAtLeast"
+    ],
+    "railroad": "the commissioners reached Washington on 5 March and kept out of sight, working through former senators and the Secretary of State; the president knew of them through him by 15 March at the latest",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_opening.json",
+    "event": {
+      "any": [
+        {
+          "flag": "sumter_relief_ordered"
+        },
+        {
+          "flag": "pickens_landed"
+        },
+        {
+          "dayAtLeast": 41
+        }
+      ]
+    },
+    "eventPredicates": [
+      "flag",
+      "flag",
+      "dayAtLeast"
+    ],
+    "railroad": "the Confederate seat opens the war (0040): on a relief attempt at Sumter, a landing at Pickens, or, failing both, the day Anderson's provisions run out (15 April)",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_protection_act.json",
+    "event": {
+      "dayAtLeast": 77
+    },
+    "eventPredicates": [
+      "dayAtLeast"
+    ],
+    "railroad": "the Confederate Congress's act of 21 May for the protection of certain Indian tribes, which precedes every treaty; its Congress is not modelled, so the act comes on its date, independent of either principal's choices",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_arrivals.json",
+    "event": {
+      "any": [
+        {
+          "fired": "fort_monroe_escape"
+        },
+        {
+          "fired": "fort_monroe_escape_asked"
+        }
+      ]
+    },
+    "eventPredicates": [
+      "fired",
+      "fired"
+    ],
+    "railroad": null,
+    "knowledge": {
+      "any": [
+        {
+          "knows": {
+            "subjectKind": "situation",
+            "subjectId": "fort_monroe_escape"
+          }
+        },
+        {
+          "knows": {
+            "subjectKind": "situation",
+            "subjectId": "fort_monroe_escape_asked"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_escape.json",
+    "event": {
+      "all": [
+        {
+          "fired": "virginia_secedes"
+        },
+        {
+          "callReceived": {
+            "post": "st_gov_virginia",
+            "days": 38
+          }
+        },
+        {
+          "holderPractice": {
+            "post": "us_dept_virginia",
+            "practice": "holds_fugitives"
+          }
+        }
+      ]
+    },
+    "eventPredicates": [
+      "fired",
+      "callReceived",
+      "holderPractice"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_escape_asked.json",
+    "event": {
+      "all": [
+        {
+          "fired": "virginia_secedes"
+        },
+        {
+          "callReceived": {
+            "post": "st_gov_virginia",
+            "days": 38
+          }
+        },
+        {
+          "not": {
+            "holderPractice": {
+              "post": "us_dept_virginia",
+              "practice": "holds_fugitives"
+            }
+          }
+        }
+      ]
+    },
+    "eventPredicates": [
+      "fired",
+      "callReceived",
+      "holderPractice"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/gosport_yard.json",
+    "event": {
+      "fired": "virginia_secedes"
+    },
+    "eventPredicates": [
+      "fired"
+    ],
+    "railroad": null,
+    "knowledge": {
+      "knows": {
+        "subjectKind": "situation",
+        "subjectId": "virginia_secedes"
+      }
+    }
+  },
+  {
+    "path": "packs/union-1861/situations/habeas_on_the_line.json",
+    "event": {
+      "all": [
+        {
+          "flag": "baltimore_route_closed"
+        },
+        {
+          "callReceived": {
+            "post": "st_gov_massachusetts",
+            "days": 12
+          }
+        }
+      ]
+    },
+    "eventPredicates": [
+      "flag",
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/houston_confederate_obligations.json",
+    "event": {
+      "dayAtLeast": 8
+    },
+    "eventPredicates": [
+      "dayAtLeast"
+    ],
+    "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/indian_territory_posts_given_up.json",
+    "event": {
+      "all": [
+        {
+          "decided": "call_for_troops",
+          "options": null
+        },
+        {
+          "dayAtLeast": 51
+        }
+      ]
+    },
+    "eventPredicates": [
+      "decided",
+      "options",
+      "dayAtLeast"
+    ],
+    "railroad": "the Army gives up its posts in the Indian Territory between mid-April and early May (Fort Washita about 15 to 16 April, Fort Arbuckle 3 May, Fort Cobb before 9 May); orders to them are not modelled, so they go on their dates once the call is made",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/kentucky_neutrality.json",
+    "event": {
+      "fired": "kentucky_neutrality_proclaimed"
+    },
+    "eventPredicates": [
+      "fired"
+    ],
+    "railroad": null,
+    "knowledge": {
+      "knows": {
+        "subjectKind": "situation",
+        "subjectId": "kentucky_neutrality_proclaimed"
+      }
+    }
+  },
+  {
+    "path": "packs/union-1861/situations/kentucky_neutrality_proclaimed.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_kentucky",
+        "days": 35
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/lamon_promise.json",
+    "event": {
+      "dayAtLeast": 25
+    },
+    "eventPredicates": [
+      "dayAtLeast"
+    ],
+    "railroad": "Governor Pickens's telegram of 30 March, asking whether Colonel Lamon spoke for the government; Lamon's visit to Charleston is not modelled, so the question comes on its date",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/maryland_legislature.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_maryland",
+        "days": 14
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/mcclellan_proclamation.json",
+    "event": {
+      "decided": "western_virginia",
+      "options": [
+        "cross_river"
+      ]
+    },
+    "eventPredicates": [
+      "decided",
+      "options"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/mcdowell_advance.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_new_york",
+        "days": 75
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/merryman_writ.json",
+    "event": {
+      "all": [
+        {
+          "flag": "habeas_suspended_line"
+        },
+        {
+          "callReceived": {
+            "post": "st_gov_massachusetts",
+            "days": 41
+          }
+        }
+      ]
+    },
+    "eventPredicates": [
+      "flag",
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/missouri_arsenal.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_missouri",
+        "days": 8
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/missouri_provisional_government.json",
+    "event": {
+      "all": [
+        {
+          "callReceived": {
+            "post": "st_gov_missouri",
+            "days": 0
+          }
+        },
+        {
+          "dayAtLeast": 148
+        }
+      ]
+    },
+    "eventPredicates": [
+      "callReceived",
+      "dayAtLeast"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/muscogee_treaty.json",
+    "event": {
+      "all": [
+        {
+          "flag": "confederate_protection_act"
+        },
+        {
+          "dayAtLeast": 127
+        }
+      ]
+    },
+    "eventPredicates": [
+      "flag",
+      "dayAtLeast"
+    ],
+    "railroad": "the nation's own treaty of 10 July with the Confederacy, its government's act (0070); a nation's council is not modelled, so its treaty comes on its date once the Confederacy's act is in place, independent of either principal's choices",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/nelson_arrest_power.json",
+    "event": {
+      "all": [
+        {
+          "flag": "baltimore_route_closed"
+        },
+        {
+          "dayAtLeast": 64
+        }
+      ]
+    },
+    "eventPredicates": [
+      "flag",
+      "dayAtLeast"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/north_carolina_secedes.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_north_carolina",
+        "days": 35
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/officer_resignation.json",
+    "event": {
+      "knows": {
+        "reportType": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "person",
+        "subjectId": null,
+        "claimKind": "service-choice",
+        "token": "resign"
+      }
+    },
+    "eventPredicates": [
+      "knows"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/patterson_martial_law.json",
+    "event": {
+      "all": [
+        {
+          "flag": "baltimore_route_closed"
+        },
+        {
+          "dayAtLeast": 47
+        }
+      ]
+    },
+    "eventPredicates": [
+      "flag",
+      "dayAtLeast"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/pickens_refused.json",
+    "event": {
+      "all": [
+        {
+          "decided": "pickens_reinforcement",
+          "options": [
+            "land_company"
+          ]
+        },
+        {
+          "dayAtLeast": 32
+        }
+      ]
+    },
+    "eventPredicates": [
+      "decided",
+      "options",
+      "dayAtLeast"
+    ],
+    "railroad": "Captain Adams's refusal reaches the president on 6 April: the order's nineteen days out by sea and the five days of the refusal's return are not yet carried by messages at sea (lane 1.4), so the refusal arrives on its date",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/pickens_reinforcement.json",
+    "event": {
+      "dayAtLeast": 1
+    },
+    "eventPredicates": [
+      "dayAtLeast"
+    ],
+    "railroad": "the premise: the January truce, Slemmer's garrison and Captain Adams's ships offshore are present at the start, and the president gave his verbal order on 5 March (0042)",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/pierpont_elected.json",
+    "event": {
+      "all": [
+        {
+          "fired": "wheeling_convention"
+        },
+        {
+          "dayAtLeast": 107
+        }
+      ]
+    },
+    "eventPredicates": [
+      "fired",
+      "dayAtLeast"
+    ],
+    "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/pratt_street_deaths.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_massachusetts",
+        "days": 4
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/seward_memorandum.json",
+    "event": {
+      "knows": {
+        "reportType": "advice",
+        "subtype": "memorandum",
+        "subjectKind": "person",
+        "subjectId": "seward_william_h"
+      }
+    },
+    "eventPredicates": [
+      "knows"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/special_session.json",
+    "event": {
+      "chamber": {
+        "id": "house",
+        "state": "sitting"
+      }
+    },
+    "eventPredicates": [
+      "chamber"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_evacuated.json",
+    "event": {
+      "knows": {
+        "reportType": "wire-dispatch",
+        "subtype": null,
+        "subjectKind": "region",
+        "subjectId": "fort_sumter",
+        "claimKind": "fort-surrendered",
+        "token": "evacuated_under_terms"
+      }
+    },
+    "eventPredicates": [
+      "knows"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_fired_upon.json",
+    "event": {
+      "knows": {
+        "reportType": "wire-dispatch",
+        "subjectKind": "region",
+        "subjectId": "fort_sumter",
+        "claimKind": "battle-phase",
+        "token": "bombard"
+      }
+    },
+    "eventPredicates": [
+      "knows"
+    ],
+    "railroad": null,
+    "knowledge": {
+      "knows": {
+        "reportType": "wire-dispatch",
+        "subjectKind": "region",
+        "subjectId": "fort_sumter",
+        "claimKind": "battle-phase",
+        "token": "bombard"
+      }
+    }
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_garrison.json",
+    "event": {
+      "dayAtLeast": 1
+    },
+    "eventPredicates": [
+      "dayAtLeast"
+    ],
+    "railroad": "the premise: Anderson's letters of 28 February and 2 March reach the president on 4 March, so the situation opens the day after the inaugural (0042)",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_secedes.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_tennessee",
+        "days": 21
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/texas_governor_changed.json",
+    "event": {
+      "dayAtLeast": 11
+    },
+    "eventPredicates": [
+      "dayAtLeast"
+    ],
+    "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/thomson_martial_law.json",
+    "event": {
+      "all": [
+        {
+          "flag": "baltimore_route_closed"
+        },
+        {
+          "dayAtLeast": 49
+        }
+      ]
+    },
+    "eventPredicates": [
+      "flag",
+      "dayAtLeast"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/townsend_fugitive_order.json",
+    "event": {
+      "all": [
+        {
+          "flag": "manassas_advance_ordered"
+        },
+        {
+          "dayAtLeast": 133
+        }
+      ]
+    },
+    "eventPredicates": [
+      "flag",
+      "dayAtLeast"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_secedes.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_virginia",
+        "days": 2
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_unionists.json",
+    "event": {
+      "dayAtLeast": 30
+    },
+    "eventPredicates": [
+      "dayAtLeast"
+    ],
+    "railroad": "the Virginia Unionist's visit of 4 April, which the Secretary of State arranged; the convention's sitting is not modelled, so the meeting comes on its date",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/washington_cut_off.json",
+    "event": {
+      "flag": "baltimore_route_closed"
+    },
+    "eventPredicates": [
+      "flag"
+    ],
+    "railroad": null,
+    "knowledge": {
+      "knows": {
+        "subjectKind": "situation",
+        "subjectId": "baltimore_route_closed"
+      }
+    }
+  },
+  {
+    "path": "packs/union-1861/situations/western_virginia.json",
+    "event": {
+      "callReceived": {
+        "post": "st_gov_virginia",
+        "days": 28
+      }
+    },
+    "eventPredicates": [
+      "callReceived"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_convention.json",
+    "event": {
+      "all": [
+        {
+          "dayAtLeast": 98
+        },
+        {
+          "flag": "virginia_seceded"
+        }
+      ]
+    },
+    "eventPredicates": [
+      "dayAtLeast",
+      "flag"
+    ],
+    "railroad": null,
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_legislature.json",
+    "event": {
+      "all": [
+        {
+          "fired": "pierpont_elected"
+        },
+        {
+          "dayAtLeast": 118
+        }
+      ]
+    },
+    "eventPredicates": [
+      "fired",
+      "dayAtLeast"
+    ],
+    "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_ordinance.json",
+    "event": {
+      "all": [
+        {
+          "fired": "wheeling_convention"
+        },
+        {
+          "dayAtLeast": 106
+        }
+      ]
+    },
+    "eventPredicates": [
+      "fired",
+      "dayAtLeast"
+    ],
+    "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+    "knowledge": null
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_recognition_letter.json",
+    "event": {
+      "all": [
+        {
+          "fired": "pierpont_elected"
+        },
+        {
+          "dayAtLeast": 112
+        }
+      ]
+    },
+    "eventPredicates": [
+      "fired",
+      "dayAtLeast"
+    ],
+    "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
+    "knowledge": null
+  }
+]
