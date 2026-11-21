@@ -142,6 +142,7 @@ export const S = {
   peoplePressure:'Apply pressure', peopleForce:'Force to request', peopleBlocks:'Force blocks', peopleAmount:'Number',
   peopleTransferNote:'The sending holder chooses which units go. Their movement appears only when reported.', peopleDraftTransfer:'Draft this transfer',
   noSituations: 'No situation is before you.', beforeSince: 'Before you since day', advisers: 'Urged by', staff: 'Staff author', noStaffRecommendation: 'No recommendation from the staff',
+  chooseKnownPerson:'Person in the received record', knownPersonNote:'The command is checked when sent; a name on file does not establish eligibility.',
   consultRecipients:'Advisers available for this decision', consultNone:'No further consultation is offered for this decision.',
   signDecision: 'Sign this decision', takeCourse: 'Let it take its course', refer: 'Refer to', consult: 'Ask in writing',
   docketNote: 'Select a decision to sign or refer.',

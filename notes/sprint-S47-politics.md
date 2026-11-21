@@ -20,13 +20,18 @@ coherent step (about 2?4 minutes each based on prior lane evidence).
 Stop expensive retries after any unexpected failure and diagnose retained
 logs first. All raw logs and evidence remain in runs/s47 and art-masters/S47.
 
-Progress: live play reached 13 March. The first observed desk gap sent
+Progress: live play completed 5 March?31 July through the rendered headless
+desk (exit 0): 40 turns, 63 successful commands, zero queue errors,
+dispatch refusals or page errors. Port 5347 was closed by the harness. The first observed desk gap sent
 consultation into a generic military-post editor with an unreadable decision
 token. The decision card now offers only its supplied consultPosts, retains
 its decision, and excludes recipients already in this out-tray. Three new
 regressions failed before correction; these and 17 S39 regressions now pass.
 Two live cabinet consultations were queued and dispatched through the UI.
-A second observed gap is unreadable option/reason tokens in their replies;
+The patronage editor now uses received person identities for promise/pressure,
+not commandable post IDs. Its regression failed before correction; 21 affected
+tests and prototype typecheck pass. A second observed gap remains unreadable
+option/reason tokens in their replies;
 no political or kernel facts are being added by the desk.
 
 Proposed ruling [I]: use the supplied consultation menu on the decision

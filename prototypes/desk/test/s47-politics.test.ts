@@ -3,7 +3,7 @@ import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {ConsoleGame} from '../../../packages/cli/src/console/game.ts';
 import {DeskAdapter} from '../server/adapter.ts';
-import {Situation} from '../web/App.tsx';
+import {Situation,OrderSheet} from '../web/App.tsx';
 const render=(props:any)=>renderToStaticMarkup(createElement(Situation,props));
 function fixture(){
  const data=new DeskAdapter(new ConsoleGame({pack:'testbed'})).snapshot(),menu=data.morning.menu;
@@ -30,4 +30,18 @@ it('does not offer an unsupported consultation when the menu supplies no recipie
  const props=fixture();Object.assign(props.menu.situations[0]!,{consultPosts:[]});
  const html=render(props);expect(html).toContain('No further consultation is offered for this decision.');
  expect(html).not.toContain('Received Secretary A');
+});
+
+// The editor must keep people and posts distinct for political verbs.
+it('uses received people for promise and pressure without inferring eligibility from command truth',()=>{
+ const data=new DeskAdapter(new ConsoleGame({pack:'testbed'})).snapshot(),menu=data.morning.menu;
+ if(menu.menuKind!=='principal')throw Error('principal');
+ Object.assign(data.morning.view,{people:[{person:'known_person',standing:100,stances:[],assessments:[]}]});
+ Object.assign(menu,{commandable:[{post:'military_post',holder:'secret_person'}]});
+ const props={menu,request:data.morning,t:(id:string)=>id,line:'promise known_person',setLine:()=>{},help:[],execute:async()=>{},busy:false,display:(s:string)=>s,commandDisplay:(s:string)=>s,commandInput:(s:string)=>s};
+ for(const verb of ['promise','pressure']){
+  const html=renderToStaticMarkup(createElement(OrderSheet,{...props,line:`${verb} known_person`}));
+  expect(html).toContain('Person in the received record');expect(html).toContain('value="known_person"');
+  expect(html).not.toContain('military_post');expect(html).not.toContain('secret_person');
+ }
 });

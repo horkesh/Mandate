@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
-import type { CommandablePost, OptionView, PrincipalMenu, ReportView, SituationView } from '@mandate/kernel/seat-api';
+import type { CommandablePost, OptionView, PrincipalMenu, ReportView, SeatRequest, SituationView } from '@mandate/kernel/seat-api';
 import { deskApi } from './adapter.ts';
 import type { DeskReply, DeskSnapshot, DeskTurn } from './adapter.ts';
 import { isTyping, SettingsContext, useSettings } from './settings.ts';
@@ -238,7 +238,7 @@ export function App() {
         <button disabled={busy} onClick={() => void execute(`approve ${r.post}`)}>{S.approve}</button><button disabled={busy} onClick={() => void execute(`sendback ${r.post}`)}>{S.sendback}</button><button onClick={() => order(`edit ${r.post} timing days=3`)}>{S.edit}</button></div></section>) : <p>{S.noPlans}</p>}
         {menu.awaiting.map(post => <p key={post}>{t(post, 'post')}, {S.awaiting} <button disabled={busy} onClick={() => void execute(`go ${post}`)}>{S.go}</button></p>)}<Enemy data={data!} t={t} /></>;
       case 'map': return <MapReview destination={destination} data={data!} execute={execute} busy={busy} textEdit={order}/>;
-      case 'orders': return <><OrderSheet menu={menu} t={t} line={line} setLine={value => { setLine(value); setPreview(undefined); }} help={data!.help} execute={execute} busy={busy} display={display} commandDisplay={presenter(data!.strings).commandDisplay} commandInput={presenter(data!.strings).commandInput} onPersonnel={()=>setStack(previous=>[...previous,{panel:'personnel'}])} onCalls={()=>open('run')}/>
+      case 'orders': return <><OrderSheet request={data!.morning} menu={menu} t={t} line={line} setLine={value => { setLine(value); setPreview(undefined); }} help={data!.help} execute={execute} busy={busy} display={display} commandDisplay={presenter(data!.strings).commandDisplay} commandInput={presenter(data!.strings).commandInput} onPersonnel={()=>setStack(previous=>[...previous,{panel:'personnel'}])} onCalls={()=>open('run')}/>
         {preview && <section className="preview"><h3>{S.asSubmitted}</h3>{menu.reviews.find(r => r.post === line.split(/\s+/)[1]) && <Plan plan={menu.reviews.find(r => r.post === line.split(/\s+/)[1])!.plan} t={t} display={display} />}<h3>{S.asEdited}</h3><p>{S.previewNote}</p>{preview.ok ? <Plan plan={preview.plan} t={t} display={display} /> : <p role="alert">{display(preview.reason)}</p>}</section>}</>;
       case 'ledger': return <AccountabilityLedger data={tableData} tab={ledgerTab} setTab={setLedgerTab} openPaper={sourcePaper} dateOf={day=>dateForReport(tableData,day)}/>;
       case 'daybook': return <><p className="margin-note">{S.readOnly}</p>{data!.history.length ? data!.history.map((turn, i) => <section className="day-record" key={i}><h3>{S.turn} {i + 1}</h3>{turn.days.map(day => <section key={day.day}><h4>{day.date}, {S.day} {day.day}</h4>{day.refused.map((r, n) => <p className="refusal" key={n}>{S.refused}: {display(turn.submitted?.find((_,index)=>index===r.commandIndex)?.text??S.orders)}. {refusalText(r.reason,data!.strings)}</p>)}{paperList(day.reports)}{day.points.length > 0 && <p>{S.stopped}: {[...new Set(day.points)].map(p=>S.stopLabels[p]??S.stopUnknown).join(' ')}</p>}</section>)}</section>) : <p className="empty">{S.noDays}</p>}</>;
@@ -302,7 +302,7 @@ export function Paper({ report: r, text, t, dateOf, plain, display }: { display:
   </article>;
 }
 
-export function Situation({ situation: s, menu, t, execute, order, busy,queue=[],dateOf=(d)=>`${S.day} ${d}` }: { situation: SituationView; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean;queue?:readonly {line:string}[];dateOf?:(day:number)=>string }) {
+export function Situation({ situation: s, menu, t, execute, order, busy,queue=[],dateOf=(d)=>`${S.day} ${d}` }: { situation: SituationView; request?:SeatRequest; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean;queue?:readonly {line:string}[];dateOf?:(day:number)=>string }) {
   const [referring, setReferring] = useState(false);
   const [advisers, setAdvisers] = useState<string[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
@@ -332,15 +332,17 @@ function Enemy({ data, t }: { data: DeskSnapshot; t: (key: string, kind?: string
   return <section className="enemy"><h3>{S.enemy}</h3>{beliefs.length ? <dl>{beliefs.map(([region, b]) => { const source = data.morning.view.reports.find(r => r.id === b.source); return <div key={region}><dt>{t(region, 'region')}</dt><dd>{b.value===0?S.noEnemySeen:b.value}, {S.aboutDay} {b.asOfDay}<small>{source ? `${t(source.author, 'person')}, ${dateForReport(data, source.day)}` : `${S.source}: ${S.unknown}`}</small></dd></div>; })}</dl> : <p>{S.noEnemy}</p>}</section>;
 }
 
-export function OrderSheet({ menu, t, line, setLine, help, execute, busy, display, commandDisplay, commandInput,onPersonnel,onCalls }: { commandDisplay: (line: string) => string; commandInput: (value: string, original: string) => string; display: (text: string) => string; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; line: string; setLine: (line: string) => void; help: readonly string[]; execute: (line: string) => Promise<unknown>; busy: boolean;onPersonnel?:()=>void;onCalls?:()=>void }) {
+export function OrderSheet({ request, menu, t, line, setLine, help, execute, busy, display, commandDisplay, commandInput,onPersonnel,onCalls }: { commandDisplay: (line: string) => string; commandInput: (value: string, original: string) => string; display: (text: string) => string; request?:SeatRequest; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; line: string; setLine: (line: string) => void; help: readonly string[]; execute: (line: string) => Promise<unknown>; busy: boolean;onPersonnel?:()=>void;onCalls?:()=>void }) {
   const verb = line.trim().split(/\s+/)[0] ?? '';
   const post = line.trim().split(/\s+/)[1] ?? '';
-  const who = menu.commandable.find(p => p.post === post);
+  const personVerb=verb==='promise'||verb==='pressure';
+  const who = personVerb?undefined:menu.commandable.find(p => p.post === post);
   const governor=verb==='call'?menu.raising.find(p=>p.post===post):undefined;
   const routes=governor?.routes??who?.routes;
   const isEdit = verb === 'edit' || verb === 'preview';
   const cannotPay=outOfAttention(menu.attention.left,commandPrice(line,menu));
-  return <form className="order-sheet" onSubmit={e => { e.preventDefault(); void execute(line); }}><p className="margin-note">{S.commandHelp}</p><div className="form-grid"><label>{S.chooseVerb}<select value={VERBS.includes(verb as typeof VERBS[number]) ? verb : ''} onChange={e => setLine(`${e.target.value} ${post}`)}><option value="">{S.otherOrders}</option>{VERBS.map(word => <option key={word}>{word}</option>)}</select></label><label>{S.choosePerson}<select value={post} onChange={e => { const parts = line.trim().split(/\s+/); parts[1] = e.target.value; setLine(parts.join(' ')); }}><option value="">{S.selection}</option>{verb==='call'?menu.raising.map(p=><option key={p.post} value={p.post}>{t(p.post,'post')}</option>):menu.commandable.map(p => <option key={p.post} value={p.post}>{t(p.holder)}, {t(p.post)}</option>)}</select></label></div>
+  return <form className="order-sheet" onSubmit={e => { e.preventDefault(); void execute(line); }}><p className="margin-note">{S.commandHelp}</p><div className="form-grid"><label>{S.chooseVerb}<select value={VERBS.includes(verb as typeof VERBS[number]) ? verb : ''} onChange={e => setLine(`${e.target.value} ${post}`)}><option value="">{S.otherOrders}</option>{VERBS.map(word => <option key={word}>{word}</option>)}</select></label><label>{personVerb?S.chooseKnownPerson:S.choosePerson}<select value={post} onChange={e => { const parts = line.trim().split(/\s+/); parts[1] = e.target.value; setLine(parts.join(' ')); }}><option value="">{S.selection}</option>{personVerb?(request?.view.people??[]).map(p=><option key={p.person} value={p.person}>{t(p.person,'person')}</option>):verb==='call'?menu.raising.map(p=><option key={p.post} value={p.post}>{t(p.post,'post')}</option>):menu.commandable.map(p => <option key={p.post} value={p.post}>{t(p.holder)}, {t(p.post)}</option>)}</select></label></div>
+    {personVerb&&<p>{S.knownPersonNote}</p>}
     {routes && <p className="route-line">{S.through}: {(governor?[]:who?.relays??[]).map(id => t(id, 'post')).join(' → ') || t(post, 'post')}<br />{routes.map(r => `${r.route}: ${r.typicalDays} ${S.typicalDays}, ${r.price} ${S.routePrice}`).join(' / ')}</p>}
     <label className="command-label">{S.command}<textarea aria-label={S.command} rows={3} spellCheck={false} value={commandDisplay(line)} onChange={e => setLine(commandInput(e.target.value, line))} /></label>
     <PriceNote line={line} menu={menu}/>
