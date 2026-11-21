@@ -1,0 +1,136 @@
+{
+  "base": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+  "branch": "sprint/playtest",
+  "productionPreservation": {
+    "originalTrackedFiles": 1690,
+    "changed": []
+  },
+  "installation": {
+    "command": "npm ci",
+    "exit": 0,
+    "added": 51,
+    "audited": 56,
+    "vulnerabilities": 0,
+    "note": "Initial command tool output; preflight.json records it. No native npm-ci log was captured."
+  },
+  "check": {
+    "command": "MANDATE_NO_GIT=1 npm run check",
+    "exit": 0,
+    "elapsedSeconds": 416.062637
+  },
+  "suite": {
+    "files": 146,
+    "passed": 1595,
+    "expectedFailures": 9,
+    "conditionalSkips": 3,
+    "note": "Eight S27 expected failures plus one inherited expected failure. The later B09 writing case has separate red/expected-failure evidence; the final actual hook collects it too."
+  },
+  "regressions": {
+    "cases": 9,
+    "normalMode": "it.fails; no skips for reported defects",
+    "redMode": "S27_ASSERT_FIXED=1",
+    "redEvidence": [
+      "runs/s27/regressions-red.log",
+      "runs/s27/b07-b08-red.log",
+      "runs/s27/b09-writing-red.log"
+    ],
+    "focusedExpectedFailureEvidence": [
+      "runs/s27/regressions-expected-failure.log",
+      "runs/s27/b09-expected-failure.log"
+    ],
+    "finalTypecheckExit": 0
+  },
+  "doneCheck": {
+    "command": "npm run run:done-check -- --label s27-done",
+    "exit": 1,
+    "started": "2026-11-20T23:07:21.6232310+00:00",
+    "ended": "2026-11-21T00:06:22.2598601+00:00",
+    "elapsedSeconds": 3540.6366291,
+    "phase0": {
+      "passed": 5,
+      "total": 6
+    },
+    "milestone1A": {
+      "passed": 4,
+      "total": 6,
+      "bindingExit": false
+    },
+    "criteria": [
+      "PASS  [behaviour] rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+      "PASS  [hash] the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+      "PASS  [resume] a mid-run save, loaded, resumes to the continuous run’s final hash, and the log replays to every hash",
+      "PASS  [liveness] every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+      "PASS  [section-ten] the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite’s)",
+      "FAIL  [budget] the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+      "PASS  [checkpoints] the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+      "PASS  [operation] at least one operation drafted by the kernel planner, chosen by its commander’s seat, approved, executed and fought with the battle model, with a breakdown",
+      "FAIL  [pushback] pushback fires inside its bands: lower bounds from the record’s sourced cases (S01–S21), upper bounds the lead’s",
+      "PASS  [unknown-strength] no block fights with unknown strength: every battle record, in every run, lists none unknown",
+      "PASS  [stand-ins] the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+      "FAIL  [lever-sweep] the lever sweep (D6): no watched option, nor an atrocity-class decision’s inaction, is the victory-only bot’s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active"
+    ],
+    "problems": [
+      "union-1861, war by decision, 148 days: median 68.3 ms a day, over the 40 ms budget",
+      "union-1861 history run, 148 days to 1861-07-31: median 166.0 ms a day, over the 40 ms budget",
+      "union-1861 history run, 148 days to 1861-07-31: p95 284.4 ms a day, over 4 times the budget",
+      "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+      "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+      "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+      "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 86, above 9",
+      "union-1861 history run, 148 days to 1861-07-31: slow walks: 13, above 9",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: watched option return is the union bot’s best choice in 6 of 8 seeds, more than a quarter",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+    ],
+    "timing": {
+      "budgetMedianMs": 40,
+      "budgetP95Ms": 160,
+      "reference": {
+        "medianMs": 68.26,
+        "p95Ms": 112.17,
+        "maxMs": 139.37
+      },
+      "testbed": {
+        "medianMs": 6.25,
+        "p95Ms": 20.64,
+        "maxMs": 30.66
+      },
+      "history": {
+        "medianMs": 165.99,
+        "p95Ms": 284.4,
+        "maxMs": 346.71
+      }
+    },
+    "sweep": {
+      "seeds": 8,
+      "gatedDecisions": 8,
+      "baseRecruitmentCalls": 624,
+      "watchedReturnBestSeeds": 6,
+      "noD6Clearance": true
+    },
+    "note": "One completed default run with drafting, on a loaded Windows host. No timing retry, Linux CI claim, band change or waiver."
+  },
+  "logs": [
+    {
+      "path": "runs/s27/done-check.log",
+      "sha256": "2fecf4ba019963877f6d87daa34723269a33158cb491bab9ce17fcf6d04c31e0"
+    },
+    {
+      "path": "runs/s27/check-no-git.log",
+      "sha256": "08e36b09b3ef9f35544e5821ec12025a2115b4823bdaec2a83e7141edb5b1094"
+    },
+    {
+      "path": "runs/s27/regressions-red.log",
+      "sha256": "d7841e8efa16cfb66addf0b73f64146e832a2d0fa637ac082f7b31bb98179383"
+    },
+    {
+      "path": "runs/s27/b07-b08-red.log",
+      "sha256": "5710c0e5ad96945cd2d29371fedca405f748eeee464145cec474b843a863c54f"
+    },
+    {
+      "path": "runs/s27/b09-writing-red.log",
+      "sha256": "8f1b228aee4d814d0cfe9e9b15ef7b7c92535581615e51fe2e9ec685f16e5a8e"
+    }
+  ],
+  "hookReceipt": "runs/s27/commit.log and runs/s27/commit-exit.json, written by the actual git commit after this receipt is prepared; final coordination status names its result."
+}
