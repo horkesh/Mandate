@@ -56,7 +56,7 @@ export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,se
  const lastTurn=data.history.at(-1),{text}=presenter(data.strings),menu=data.morning.menu;
   const maxDays=data.morning.turnStops?.maxDays??7;
   const [days,setDays]=useState(maxDays);
-  const calls=menu.menuKind==='principal'?menu.doctrine.calls.filter(c=>c.id&&!c.issued&&c.day<=data.morning.requestDay&&(menu.atWarSince!==null||c.atPeace===true)&&menu.commandable.some(p=>p.post===c.post)):[];
+  const calls=menu.menuKind==='principal'?menu.doctrine.calls.filter(c=>c.id&&!c.issued&&c.day<=data.morning.requestDay&&(menu.atWarSince!==null||c.atPeace===true)&&menu.raising.some(p=>p.post===c.post)):[];
   const {name}=presenter(data.strings);
  return <><p className="margin-note">{S.runNote}</p>
   {lastTurn&&<StopSlip turn={lastTurn} strings={data.strings} openPaper={openPaper} onDocket={onDocket} onPlans={onPlans} onHistory={onHistory}/>}

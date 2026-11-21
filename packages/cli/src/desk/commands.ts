@@ -109,12 +109,12 @@ function noteFrom(token: string, t: (key: string) => string): PlanNote | string 
 /** The route an order to `post` goes by: the one named, else the wire where it reaches him, else the courier. */
 function routeTo(menu: PrincipalMenu, post: string, named: string | undefined): RouteKind | string {
   if (named !== undefined) return named;
-  const routes = menu.commandable.find((c) => c.post === post)?.routes ?? [];
+  const routes = menu.commandable.find((c) => c.post === post)?.routes ?? menu.raising.find(c=>c.post===post)?.routes ?? [];
   return routes.some((r) => r.route === 'wire') ? 'wire' : 'courier';
 }
 
 function knownRoute(menu: PrincipalMenu, post: string, route: string): string | null {
-  const routes = menu.commandable.find((c) => c.post === post)?.routes;
+  const routes = menu.commandable.find((c) => c.post === post)?.routes ?? menu.raising.find(c=>c.post===post)?.routes;
   if (routes === undefined) return null;
   return routes.some((r) => r.route === route) ? null : `${route} is not a route to ${post} (${routes.map((r) => r.route).join(', ')})`;
 }
@@ -241,8 +241,8 @@ export function parseLine(line: string, request: SeatRequest, t: (key: string) =
       return { kind: 'command', word: 'go', command: { cmd: 'go', to: post, route: routeTo(menu, post, opts.get('by')) as RouteKind, bypass: flags.has('bypass') } };
     }
     case 'call': {
-      const problem = commandable(post);
-      if (problem !== null) return fail(problem);
+      if(post===undefined)return fail('Name a governor for the call.');
+      if(!menu.raising.some(r=>r.post===post))return fail(`${post} is not a governor offered for a call on today’s menu.`);
       if(opts.has('scheduled')){
         if(words.length!==1||[...opts.keys()].some(k=>k!=='scheduled'&&k!=='by'))return fail('A scheduled call uses its published terms without overrides.');
         const call=menu.doctrine.calls.find(c=>c.id===opts.get('scheduled')&&c.post===post);

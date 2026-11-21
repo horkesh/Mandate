@@ -48,6 +48,18 @@ The actual playthrough is in `prototypes/desk/test/s29.spec.ts`, run with
 writes; GET snapshots retain received evidence. The first actionable morning
 is 6 March, following the 5 March baseline. Weekly targets end on day 148.
 
+Correction to the first call fixture: the initial full journey reached day 148
+but all five later call identifiers remained unissued. Governors are in the
+menu's `raising` list even when they have no blocks and are absent from
+`commandable`. The first fictional fixture used a field post and missed this.
+A real Union test now reaches day 59, issues the actual May requisition, checks
+zero rejections and its issued marker. The manual call picker and route lookup
+also use the governor menu. The failing original journey is retained, not used
+as final call evidence. A revised journey reuses only the unchanged first eight
+weeks, compares the exact public morning/history at day 56, then runs the
+affected May-to-July path with all five issued markers required. Its evidence
+goes to `art-masters/S29/final-history/`; earlier attempts stay at the S29 root.
+
 Proposed ruling: allow `end [days]` and a turn-sheet day limit within the pack's
 maximum. Reject changing pack rules to land on a historical date, or silently
 advancing past a requested review date.
