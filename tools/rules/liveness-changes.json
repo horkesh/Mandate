@@ -1,0 +1,1166 @@
+[
+  {
+    "key": "testbed, 120 days/map.pocket_relieved",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a pocket is relieved when a repair or a closing reverses; nothing reverses one in these runs"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening."
+    },
+    "observed": 0,
+    "cause": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/people.promise_broken",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/people.promise_kept",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/planner.term.time",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping time alone changes the pick"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly."
+    },
+    "observed": 0,
+    "cause": "S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/recruitment.renewed",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal."
+    },
+    "observed": 0,
+    "cause": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/reports.observer_letter",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/verbs.audience",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/verbs.consulted",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed history resolves its situations before a morning consultation; the Union history consults the open question’s proposers (R84)"
+    },
+    "observed": 0,
+    "cause": "the testbed history resolves its situations before a morning consultation; the Union history consults the open question’s proposers (R84)",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/verbs.in_washington",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861 before the opening decisions, 30 days (the war gate, 0064)/recruitment.called",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 14,
+      "why": "R96: R90's seven sourced 9 March provisional-force requisitions precede the war decisions; other war doctrine still waits on each side's own decision"
+    },
+    "observed": 7,
+    "cause": "R96: R90's seven sourced 9 March provisional-force requisitions precede the war decisions; other war doctrine still waits on each side's own decision",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.battle_closed",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "observed": 2,
+    "cause": "S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.battle_day",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "observed": 4,
+    "cause": "S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.battle_opened",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "observed": 2,
+    "cause": "S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.captured",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "Sumter falls under Anderson on day 39, within the recorded offer window, so its garrison evacuates instead of being captured (R78)"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "observed": 2,
+    "cause": "S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.cut_off",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a side is cut off only with no legal retreat (0019) in a field battle; every testbed loser has a way back, and the Union run fights no field battle in 148 days (Sumter is a bombardment, lane 1.12)"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a side is cut off only with no legal retreat (0019) in a field battle; the retained reference field losers have legal retreats, while the separate trapped-garrison test drives it"
+    },
+    "observed": 0,
+    "cause": "a side is cut off only with no legal retreat (0019) in a field battle; the retained reference field losers have legal retreats, while the separate trapped-garrison test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.flank_broken",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: no combat.flank_broken event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."
+    },
+    "observed": 0,
+    "cause": "S1 national: no combat.flank_broken event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.general_hit",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a commander is hit on a low draw on his own stream; none of the testbed run’s battle-days draws one, and the Union run fights no field battle (lane 1.12)"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a commander is hit on a low draw on his own stream; no retained reference battle-day draws a commander hit, while the separate kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "a commander is hit on a low draw on his own stream; no retained reference battle-day draws a commander hit, while the separate kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.killed_wounded",
+    "before": {
+      "minFires": 0,
+      "why": "Sumter's authored bombardment loss rate is zero and the 148-day run fights no field battle; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "observed": 4,
+    "cause": "S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.missing",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "observed": 4,
+    "cause": "S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.occupation",
+    "before": {
+      "minFires": 9,
+      "maxFires": 36
+    },
+    "after": {
+      "minFires": 62,
+      "maxFires": 248
+    },
+    "observed": 124,
+    "cause": "S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.pursuit_chosen",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "observed": 0,
+    "cause": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.routed",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: no combat.routed event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."
+    },
+    "observed": 0,
+    "cause": "S1 national: no combat.routed event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.withdrew",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "observed": 2,
+    "cause": "S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.works_stormed",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "observed": 0,
+    "cause": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/command.temporary_post_opened",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "observed": 7,
+    "cause": "S1 national [I]: accepted dated appointments open the declared commands through the ordinary verb, without creating forces.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/control.changed",
+    "before": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "after": {
+      "minFires": 64,
+      "maxFires": 256
+    },
+    "observed": 128,
+    "cause": "S1 national [I]: the command concentration and emerged field movements change occupation through the existing control owner.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/control.threshold_crossed",
+    "before": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "after": {
+      "minFires": 19,
+      "maxFires": 78
+    },
+    "observed": 39,
+    "cause": "S1 effective-date [I]: the command concentration and emerged field movements change occupation through the existing control owner.\r",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/forces.stores_fell",
+    "before": {
+      "minFires": 293,
+      "maxFires": 1174
+    },
+    "after": {
+      "minFires": 721,
+      "maxFires": 2886
+    },
+    "observed": 1443,
+    "cause": "S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/forces.stores_low",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 28,
+      "maxFires": 112
+    },
+    "observed": 56,
+    "cause": "S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/forces.stores_refilled",
+    "before": {
+      "minFires": 352,
+      "maxFires": 1408
+    },
+    "after": {
+      "minFires": 545,
+      "maxFires": 2180
+    },
+    "observed": 1090,
+    "cause": "S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/forces.stragglers_returned",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 25,
+      "maxFires": 100
+    },
+    "observed": 50,
+    "cause": "S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/knowledge.pruned_age",
+    "before": {
+      "minFires": 52,
+      "maxFires": 208
+    },
+    "after": {
+      "minFires": 53,
+      "maxFires": 214
+    },
+    "observed": 107,
+    "cause": "S1 national [I]: additional command letters and changed field reports alter ordinary received traffic and age pruning.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/map.pocket_closed",
+    "before": {
+      "minFires": 0,
+      "why": "no new pocket closes in the 148-day Union run; Sumter's opening pocket is lost, not newly closed; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "observed": 3,
+    "cause": "S1 effective-date [I]: changed command journeys, occupation and retreat require the existing map owner to recompute.\r",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/map.pocket_relieved",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a pocket is relieved when a repair or a closing reverses; nothing reverses one in these runs"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening."
+    },
+    "observed": 0,
+    "cause": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/map.recomputed",
+    "before": {
+      "minFires": 12,
+      "maxFires": 48
+    },
+    "after": {
+      "minFires": 26,
+      "maxFires": 104
+    },
+    "observed": 52,
+    "cause": "S1 national [I]: changed command journeys, occupation and retreat require the existing map owner to recompute.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/messages.courier_delay",
+    "before": {
+      "minFires": 32,
+      "maxFires": 128
+    },
+    "after": {
+      "minFires": 63,
+      "maxFires": 252
+    },
+    "observed": 126,
+    "cause": "S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/messages.delivered",
+    "before": {
+      "minFires": 5271,
+      "maxFires": 21086
+    },
+    "after": {
+      "minFires": 5613,
+      "maxFires": 22452
+    },
+    "observed": 11226,
+    "cause": "S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/messages.mail_delay",
+    "before": {
+      "minFires": 1341,
+      "maxFires": 5364
+    },
+    "after": {
+      "minFires": 1351,
+      "maxFires": 5406
+    },
+    "observed": 2703,
+    "cause": "S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/messages.sent",
+    "before": {
+      "minFires": 5592,
+      "maxFires": 22370
+    },
+    "after": {
+      "minFires": 5947,
+      "maxFires": 23788
+    },
+    "observed": 11894,
+    "cause": "S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/movement.arrived",
+    "before": {
+      "minFires": 61,
+      "maxFires": 246
+    },
+    "after": {
+      "minFires": 319,
+      "maxFires": 1276
+    },
+    "observed": 638,
+    "cause": "S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/movement.joined",
+    "before": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "after": {
+      "minFires": 32,
+      "maxFires": 128
+    },
+    "observed": 64,
+    "cause": "S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/movement.leg_started",
+    "before": {
+      "minFires": 49,
+      "maxFires": 196
+    },
+    "after": {
+      "minFires": 155,
+      "maxFires": 620
+    },
+    "observed": 310,
+    "cause": "S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/operations.ended",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "observed": 2,
+    "cause": "S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/operations.repulsed",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "observed": 0,
+    "cause": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/operations.stage",
+    "before": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "after": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "observed": 9,
+    "cause": "S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/operations.works",
+    "before": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "observed": 2,
+    "cause": "S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/orders.relayed",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "observed": 4,
+    "cause": "S1 national [I]: new command and transfer responses alter the ordinary retained/pruned response set.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/orders.responses_pruned",
+    "before": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "after": {
+      "minFires": 13,
+      "maxFires": 54
+    },
+    "observed": 27,
+    "cause": "S1 national [I]: new command and transfer responses alter the ordinary retained/pruned response set.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/people.promise_broken",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/people.promise_kept",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.supply",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 appointments: no planner.term.supply event in this observed command/plan path; unchanged testbed fires it 2 times. S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick."
+    },
+    "observed": 0,
+    "cause": "S1 appointments: no planner.term.supply event in this observed command/plan path; unchanged testbed fires it 2 times. S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.time",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping time alone changes the pick"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S34 people-data integration [I]: changed sourced commander ratings alter the planner choice; dropping the time term changes one selected candidate. The planner and its scoring coefficients are unchanged. Observed once in runs/s34/people-reference.json."
+    },
+    "observed": 1,
+    "cause": "S34 people-data integration [I]: changed sourced commander ratings alter the planner choice; dropping the time term changes one selected candidate. The planner and its scoring coefficients are unchanged. Observed once in runs/s34/people-reference.json.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/plans.goal_reached",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "observed": 2,
+    "cause": "S1 national [I]: the integrated sourced build changes this existing counter through its normal owner.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/politics.support",
+    "before": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "after": {
+      "minFires": 42,
+      "maxFires": 170
+    },
+    "observed": 85,
+    "cause": "S1 national [I]: the emerged field movements and reports change ordinary political inputs; no troop notice directly writes support.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.answered",
+    "before": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "after": {
+      "minFires": 30,
+      "maxFires": 122
+    },
+    "observed": 61,
+    "cause": "S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.called",
+    "before": {
+      "minFires": 15,
+      "maxFires": 62
+    },
+    "after": {
+      "minFires": 48,
+      "maxFires": 194
+    },
+    "observed": 97,
+    "cause": "S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.men",
+    "before": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "after": {
+      "minFires": 23,
+      "maxFires": 92
+    },
+    "observed": 46,
+    "cause": "S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.mustered",
+    "before": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "after": {
+      "minFires": 25,
+      "maxFires": 100
+    },
+    "observed": 50,
+    "cause": "S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.refused",
+    "before": {
+      "minFires": 6,
+      "maxFires": 24
+    },
+    "after": {
+      "minFires": 18,
+      "maxFires": 72
+    },
+    "observed": 36,
+    "cause": "S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.renewed",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal."
+    },
+    "observed": 0,
+    "cause": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.slow_walked",
+    "before": {
+      "minFires": 7,
+      "maxFires": 30
+    },
+    "after": {
+      "minFires": 27,
+      "maxFires": 110
+    },
+    "observed": 55,
+    "cause": "S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/regions.reached_lines",
+    "before": {
+      "minFires": 126,
+      "maxFires": 506
+    },
+    "after": {
+      "minFires": 137,
+      "maxFires": 548
+    },
+    "observed": 274,
+    "cause": "S1 national [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/regions.self_emancipation",
+    "before": {
+      "minFires": 1540,
+      "maxFires": 6162
+    },
+    "after": {
+      "minFires": 1548,
+      "maxFires": 6194
+    },
+    "observed": 3097,
+    "cause": "S1 national [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.battle_dispatch",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 9,
+      "maxFires": 36
+    },
+    "observed": 18,
+    "cause": "S1 national [I]: new command locations, field phases and routed traffic change reports through existing senders.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.casualty_return",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 6,
+      "maxFires": 24
+    },
+    "observed": 12,
+    "cause": "S1 national [I]: new command locations, field phases and routed traffic change reports through existing senders.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.governor_wire",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "observed": 4,
+    "cause": "S1 national [I]: new command locations, field phases and routed traffic change reports through existing senders.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.observer_letter",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.pocket",
+    "before": {
+      "minFires": 0,
+      "why": "no headquarters is cut off by a closing pocket in the 148-day Union run; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports."
+    },
+    "observed": 3,
+    "cause": "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/seats.attention_spent",
+    "before": {
+      "minFires": 14,
+      "maxFires": 58
+    },
+    "after": {
+      "minFires": 65,
+      "maxFires": 260
+    },
+    "observed": 130,
+    "cause": "S1 national [I]: appointments, normal transfers and changed battle days consume attention and decision requests.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/seats.battle_orders",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 30,
+      "maxFires": 120
+    },
+    "observed": 60,
+    "cause": "S1 national [I]: appointments, normal transfers and changed battle days consume attention and decision requests.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/seats.initiative",
+    "before": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "S16 dating holds remove two cabinet officers' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json."
+    },
+    "observed": 3,
+    "cause": "S16 dating holds remove two cabinet officers' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/situations.fired",
+    "before": {
+      "minFires": 27,
+      "maxFires": 108
+    },
+    "after": {
+      "minFires": 31,
+      "maxFires": 124,
+      "why": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle."
+    },
+    "observed": 62,
+    "cause": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/situations.notice_reports",
+    "before": {
+      "minFires": 18,
+      "maxFires": 72
+    },
+    "after": {
+      "minFires": 22,
+      "maxFires": 88,
+      "why": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle."
+    },
+    "observed": 44,
+    "cause": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/situations.noticed",
+    "before": {
+      "minFires": 17,
+      "maxFires": 70
+    },
+    "after": {
+      "minFires": 21,
+      "maxFires": 86,
+      "why": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle."
+    },
+    "observed": 43,
+    "cause": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/situations.proposals",
+    "before": {
+      "minFires": 13,
+      "maxFires": 52
+    },
+    "after": {
+      "minFires": 20,
+      "maxFires": 82,
+      "why": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle."
+    },
+    "observed": 41,
+    "cause": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/situations.surfaced",
+    "before": {
+      "minFires": 27,
+      "maxFires": 108
+    },
+    "after": {
+      "minFires": 30,
+      "maxFires": 122,
+      "why": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle."
+    },
+    "observed": 61,
+    "cause": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/verbs.answered",
+    "before": {
+      "minFires": 24,
+      "maxFires": 98
+    },
+    "after": {
+      "minFires": 44,
+      "maxFires": 176
+    },
+    "observed": 88,
+    "cause": "S1 national [I]: dated appointments and ordinary concentration transfers add their normal answers.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/verbs.audience",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/verbs.consulted",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "observed": 5,
+    "cause": "R84 rule-seat consultations now ask the open situation sourced proposers; five observed consultations set around(5). See the retained R84 and S1 hand-over.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/verbs.in_washington",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  }
+]

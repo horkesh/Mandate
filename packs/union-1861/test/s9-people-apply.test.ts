@@ -80,7 +80,8 @@ describe('S9 incremental people apply', () => {
     const { rows, outputs } = run();
     expect(rows.get('houston_samuel')![4]).toBe('union:HOUSTON-DALY-1860 p118 dated 1860-08-14+HOUSTON-AUSTIN-1860-DOC p599 dated 1860-09-22');
     expect(rows.get('houston_samuel')![4]).not.toContain('slavery_defence');
-    const draft = JSON.parse(outputs.get(`${base}situations/drafts/s9-people-gate.json`));
+    expect([...outputs.keys()].some(p => p.includes('/situations/'))).toBe(false);
+    const draft = JSON.parse(outputs.get(`${base}source/drafts/people/s9-people-gate.json`));
     expect(draft.status).toBe('draft');
     expect(draft.recommendations[0].cell).toBe('value:slavery_defence');
     expect(draft.gateReview).toBeUndefined();

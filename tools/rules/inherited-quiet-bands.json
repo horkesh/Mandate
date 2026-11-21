@@ -1,0 +1,369 @@
+[
+  {
+    "key": "testbed, 120 days/map.pocket_relieved",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a pocket is relieved when a repair or a closing reverses; nothing reverses one in these runs"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening."
+    },
+    "observed": 0,
+    "cause": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/people.promise_broken",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/people.promise_kept",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/planner.term.time",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping time alone changes the pick"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly."
+    },
+    "observed": 0,
+    "cause": "S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/recruitment.renewed",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal."
+    },
+    "observed": 0,
+    "cause": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/reports.observer_letter",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/verbs.audience",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/verbs.consulted",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed history resolves its situations before a morning consultation; the Union history consults the open question’s proposers (R84)"
+    },
+    "observed": 0,
+    "cause": "the testbed history resolves its situations before a morning consultation; the Union history consults the open question’s proposers (R84)",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "testbed, 120 days/verbs.in_washington",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.cut_off",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a side is cut off only with no legal retreat (0019) in a field battle; every testbed loser has a way back, and the Union run fights no field battle in 148 days (Sumter is a bombardment, lane 1.12)"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a side is cut off only with no legal retreat (0019) in a field battle; the retained reference field losers have legal retreats, while the separate trapped-garrison test drives it"
+    },
+    "observed": 0,
+    "cause": "a side is cut off only with no legal retreat (0019) in a field battle; the retained reference field losers have legal retreats, while the separate trapped-garrison test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.flank_broken",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: no combat.flank_broken event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."
+    },
+    "observed": 0,
+    "cause": "S1 national: no combat.flank_broken event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.general_hit",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a commander is hit on a low draw on his own stream; none of the testbed run’s battle-days draws one, and the Union run fights no field battle (lane 1.12)"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a commander is hit on a low draw on his own stream; no retained reference battle-day draws a commander hit, while the separate kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "a commander is hit on a low draw on his own stream; no retained reference battle-day draws a commander hit, while the separate kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.pursuit_chosen",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "observed": 0,
+    "cause": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.routed",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: no combat.routed event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."
+    },
+    "observed": 0,
+    "cause": "S1 national: no combat.routed event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.works_stormed",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "observed": 0,
+    "cause": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/map.pocket_relieved",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a pocket is relieved when a repair or a closing reverses; nothing reverses one in these runs"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening."
+    },
+    "observed": 0,
+    "cause": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/operations.repulsed",
+    "before": {
+      "minFires": 0,
+      "why": "the 148-day Union history run fights no field battle: its only combat is the two-day bombardment of Sumter; the testbed run fires it"
+    },
+    "after": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "observed": 0,
+    "cause": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/people.promise_broken",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/people.promise_kept",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.supply",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 appointments: no planner.term.supply event in this observed command/plan path; unchanged testbed fires it 2 times. S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick."
+    },
+    "observed": 0,
+    "cause": "S1 appointments: no planner.term.supply event in this observed command/plan path; unchanged testbed fires it 2 times. S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.renewed",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal."
+    },
+    "observed": 0,
+    "cause": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal.",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.observer_letter",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/verbs.audience",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/verbs.in_washington",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal’s doctrine uses appoint, transfer, inquire and call (lane 1.12); consult waits for situations to consult on (lane 1.12 Part B), and audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "observed": 0,
+    "cause": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it",
+    "evidence": "notes/lane-1.14-done-check.md#s34-inherited-band-records"
+  }
+]

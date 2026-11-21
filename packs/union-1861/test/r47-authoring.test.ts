@@ -35,7 +35,7 @@ describe('R47 sourced authoring', () => {
     const houston = map.world.people.find((p) => p.id === 'houston_samuel')!;
     expect(houston.values.find((v) => v.value === 'union')?.cites.map((c) => c.source)).toEqual(['HOUSTON-DALY-1860', 'HOUSTON-AUSTIN-1860-DOC']);
     expect(houston.values.some((v) => v.value === 'slavery_defence')).toBe(false);
-    const draft = raw('situations/drafts/s9-people-gate.json');
+    const draft = raw('source/drafts/people/s9-people-gate.json');
     expect(draft.status).toBe('draft');
     expect(draft.gateReview).toBeUndefined();
     expect(draft.recommendations.map((r: { person: string; cell: string }) => `${r.person}/${r.cell}`)).toEqual([

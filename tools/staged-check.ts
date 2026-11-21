@@ -34,6 +34,7 @@ import { copyFileSync, existsSync, lstatSync, mkdirSync, mkdtempSync, readdirSyn
 import { tmpdir } from 'node:os';
 import { basename, dirname, join, relative, resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { stagedRuleHistoryProblems } from './rule-history.ts';
 
 export const SNAPSHOT_PREFIX = 'mandate-staged-';
 export const DEFAULT_COMMAND = 'npm run --silent check';
@@ -189,6 +190,17 @@ export interface StagedCheckResult {
 }
 
 export function stagedCheck({ root, command = DEFAULT_COMMAND, env = {}, tmp = tmpdir(), log = (line: string) => console.error(line) }: StagedCheckOptions): StagedCheckResult {
+  if (command === DEFAULT_COMMAND) {
+    // An unstaged future checker must not impose rules on an older staged tree.
+    // Once installed, removing the checker itself is also a reviewable failure.
+    const inIndex = spawnSync('git', ['cat-file', '-e', ':tools/rule-history.ts'], { cwd: root }).status === 0;
+    const inParent = spawnSync('git', ['cat-file', '-e', 'HEAD:tools/rule-history.ts'], { cwd: root }).status === 0;
+    const problems = inIndex ? stagedRuleHistoryProblems(root) : inParent ? ['the installed rule-history checker cannot be removed'] : [];
+    if (problems.length) {
+      for (const p of problems) log(p);
+      return { mode: 'in-place', status: 1, snapshot: null };
+    }
+  }
   if (treeEqualsIndex(root)) {
     log('pre-commit: the working tree equals the index; checking it in place.');
     return { mode: 'in-place', status: run(command, root, env), snapshot: null };

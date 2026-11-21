@@ -1,0 +1,86 @@
+[
+  {
+    "rule": "situation-cause",
+    "path": "packs/union-1861/situations/chickasaw_treaty.json",
+    "hash": "e688e29d256a5cda8e90c7f55a0299a8c663052b559ecac3851521c8eae76e80",
+    "detail": "railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "situation-cause",
+    "path": "packs/union-1861/situations/choctaw_treaty.json",
+    "hash": "c1140ff2cd4aa18ad6a49e64876d2c3781c23e8dd4c2f2555f265071ab20f51a",
+    "detail": "railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "situation-cause",
+    "path": "packs/union-1861/situations/indian_territory_posts_given_up.json",
+    "hash": "1494571d18284be599a63cefa9d327ccdf94275bca7d0afbac6d85955341af42",
+    "detail": "railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "situation-cause",
+    "path": "packs/union-1861/situations/muscogee_treaty.json",
+    "hash": "5bc676823a57af98aadd52e5c973ef1c4a76bb0bb060d2a7c7987fe32ffdddbc",
+    "detail": "railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "situation-cause",
+    "path": "packs/union-1861/situations/pickens_refused.json",
+    "hash": "f1eea7ecc5ace95ab2086b9ca9341f88621b05cd024985053412fc664ac98ec1",
+    "detail": "railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "situation-cause",
+    "path": "packs/union-1861/situations/pierpont_elected.json",
+    "hash": "5e88c886bdbf4aab4778ee9267f33020e7749d8fe15391e8d44bc4400309a9cd",
+    "detail": "railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "situation-cause",
+    "path": "packs/union-1861/situations/texas_governor_changed.json",
+    "hash": "bab3ee570059bc129c314fbdc8d796d376ebdd4defd79b357dc9ffc16c85d18c",
+    "detail": "event can hold with no positive cause in State; railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "situation-cause",
+    "path": "packs/union-1861/situations/wheeling_legislature.json",
+    "hash": "ffe8803717f2b2e58234c6caffc3c5b1bc1a05655cf8569d2cf18605d7a92875",
+    "detail": "railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "situation-cause",
+    "path": "packs/union-1861/situations/wheeling_ordinance.json",
+    "hash": "554f63910a68c45d4459972fb96422cc85b37f928d20ec9c8431761937a693ad",
+    "detail": "railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "situation-cause",
+    "path": "packs/union-1861/situations/wheeling_recognition_letter.json",
+    "hash": "546520eaa14a635dbbd7ab77296bb9e087e8e234352b08b217e518120f82a7f0",
+    "detail": "railroad label requires a cited premise/outside-model exemption"
+  },
+  {
+    "rule": "projection-truth",
+    "path": "packages/kernel/src/seats/requests.ts",
+    "hash": "4115e46745232d2e3557e2246794ed8037be50f9ccf7bfa99c884ae76b7603b0",
+    "detail": "reviewsFor reaches packages/kernel/src/seats/requests.ts:reviewsFor (postStates)"
+  },
+  {
+    "rule": "projection-truth",
+    "path": "packages/kernel/src/seats/requests.ts",
+    "hash": "5d24276984c2d407c206a5759231bdb3a084d4fec82db7f0c6f20e660f09dfed",
+    "detail": "doctrineView reaches packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates)"
+  },
+  {
+    "rule": "projection-truth",
+    "path": "packages/kernel/src/seats/requests.ts",
+    "hash": "d711a24a4f70ba702ab1bee16189fb09a46624dfb1b1c9693723541adda51081",
+    "detail": "principalMenu reaches packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/command/command.ts:unpostedPeopleOnSide (personService, postStates); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:principalMenu (personService, postStates); packages/kernel/src/seats/requests.ts:reviewsFor (postStates)"
+  },
+  {
+    "rule": "projection-truth",
+    "path": "packages/kernel/src/seats/requests.ts",
+    "hash": "c8a2a50620ef112f690dac58f058cee07fb5d05171e8d2f5a51fe938367d4e2b",
+    "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/command/command.ts:unpostedPeopleOnSide (personService, postStates); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:pendingRequests (postStates); packages/kernel/src/seats/requests.ts:principalMenu (personService, postStates); packages/kernel/src/seats/requests.ts:reviewsFor (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+  }
+]

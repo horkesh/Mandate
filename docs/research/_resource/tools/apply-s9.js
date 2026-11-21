@@ -200,7 +200,7 @@ function applyS9(files) {
     [PEOPLE, serialise([header, ...rows])],
     [HELD, serialise([['person', 'cell', 'prior_value', 'reader_basis'], ...heldRows.map(c => [c.person, c.cell, c.prior_value, c.reader_basis])])],
     [PACK + 'PROVENANCE.json', JSON.stringify(provenance, null, 2) + '\n'],
-    [PACK + 'situations/drafts/s9-people-gate.json', JSON.stringify(draft, null, 2) + '\n'],
+    [PACK + 'source/drafts/people/s9-people-gate.json', JSON.stringify(draft, null, 2) + '\n'],
   ]);
   return { outputs, report };
 }

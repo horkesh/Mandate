@@ -30,6 +30,58 @@ band-structure checks pass without another run. Evidence: `runs/s34/people-refer
 and `people-rescored.json`. S16's initiative band and reason are retained;
 S1's combat/recruitment bounds and all historical acceptance bands remain.
 
+### S34 inherited band records
+
+The S18 merge retains its immutable 338-band origin. The append-only
+`tools/rules/liveness-changes.json` records every one of the 80 differences
+from that origin to this combined tree: exact before/after objects, original
+observed centre, cause and this evidence pointer. Sixty-one change numerical
+bounds or add a mechanic; nineteen change explanation metadata only. These
+are imported S1/S16 changes, plus the one S34 time-term correction above,
+not eighty new calibrations. The positive centres retain the original
+`around(n)` bounds; they are not claimed as this integration's fresh counts.
+The coming done check will report those counts against the retained bands.
+
+Twenty-four records retain pre-S18 quiet/not-here transitions. They are
+exactly baselined in `inherited-quiet-bands.json`, including their causes;
+the staged-history guard makes that list immutable. Unlisted future
+zero-floor changes still fail. The existing liveness tests continue to
+require live driving tests and explanations. The checker now compares
+positive numeric limits independently of `why`, rather than rejecting the
+cause metadata its own Band interface permits. Three new failing controls
+and a fourth immutability control pass after correction; the focused set
+is 73 tests. No historical checkpoint, pushback or tick-budget limit changed.
+
+The four S18 checks retain ten B2 findings and the three unresolved menu
+roots. A fourth root, `doctrineView`, reaches current post/department data
+through S1's dated appointment derivation; its player-visible classification
+needs the lead, so it is an exact finding, not a new permitted derivation.
+Four existing kernel-only derivations have refreshed closure hashes with
+their original citations and scope. The signed inventory remains 29 paths;
+no signature was written. The unchanged S9 people-placement dossier moved
+to `source/drafts/people/s9-people-gate.json` (SHA-256
+`c4a333e4c41791cf707cb49cf30c428d26982972d3ac720f3fa42de24687c00f`),
+and its writer/test use that location. It is still unsigned and unloaded.
+
+Proposed rulings [I]: accept the explicit inherited ledger and immutable
+quiet baseline; reject resetting the origin, relaxing positive `around(n)`
+or allowing future quiet transitions by prose alone. Retain all 14 exact
+findings for classification; reject converting unresolved menu truth reads
+into broad allowances. Keep the dossier out of the playable-situation
+directory; reject skipping arbitrary malformed draft JSON in the scanner.
+
+S18 integration failure diagnosis: the first hook stopped before tests
+because a Python rewrite used Windows' default text decoding and damaged
+apostrophes in exact ledger records. Regenerating from UTF-8 inputs restores
+the chain and quiet-baseline matches. The next hook completed all tests
+with exactly one failure: the existing R47 test still opened the dossier's
+old path (1 failed, 1,741 passed, three skips). A repository-wide consumer
+search identifies the writer and both test readers; all now use the new
+path. The dossier bytes and every historical/gated assertion are preserved.
+Before repeating the hook, rerun that entire authoring file, the apply test,
+typecheck and all four static checks. Retain both failed logs; this retry
+answers whether all consumers now agree on the corrected location.
+
 ## S1 delivery for lead review (2026-11-21): 1A remains unmet
 
 S1's bounded integration/build/test/calibration work is delivered on `sprint/1a` in `C:/Pyrrhic/sprint-1a`, from `ceff796`. `npm ci` ran first: exit 0, 51 packages, zero vulnerabilities. No push, history rewrite or other-lane write. Every completed commit used the real hook and Codex footer. The five requested merges are separate and ordered; R97 was read from its supplied worktree without changing it. Independent review and gate signatures remain deferred to Claude under 0106; nothing is signed here. The current delivery has a source HOLD and unmet acceptance, so it is not a claim that 1A is finished.
