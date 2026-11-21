@@ -1,0 +1,61 @@
+{
+  "id": "s28_cs_april_exemptions",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.s28_cs_april_exemptions.title",
+  "text": "situation.s28_cs_april_exemptions.text",
+  "earliest": "1862-04-21",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 413
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_cs_april_exemptions"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_cs_april_exemptions"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_president"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "confederate-conscription"
+    ],
+    "placement": "event",
+    "risks": [],
+    "actingSide": "confederate"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-OR",
+      "at": "IV-1 p. 1081; exemption act approved 21 April 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "cs_president",
+      "person": "davis_jefferson"
+    }
+  ],
+  "namedOnly": "The documents’ addressees and proposed appointees identify the record. They do not establish present postholding. The reading index retains identity and post gaps; no fictional holder is inserted."
+}

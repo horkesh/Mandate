@@ -1,0 +1,93 @@
+{
+  "id": "s28_hunter_revocation",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_hunter_revocation.title",
+  "text": "situation.s28_hunter_revocation.text",
+  "earliest": "1862-05-19",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 441
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_hunter_revocation"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_hunter_revocation"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-STAT12",
+      "at": "12 Stat. pp. 1264–1265; Lincoln proclamation, 19 May 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Dated papers are attributed to their historical authors; no later officeholding or present delivery is asserted. Unrostered addressees require identity/post resolution before promotion.",
+  "options": [
+    {
+      "id": "revoke",
+      "label": "situation.s28_hunter_revocation.option.revoke",
+      "displayKey": 10,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_hunter_revocation.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "revoke"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_hunter_revocation: no separate cabinet staff recommendation established by this bounded selection."
+      }
+    ]
+  }
+}

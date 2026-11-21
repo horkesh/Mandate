@@ -1,0 +1,113 @@
+{
+  "id": "s28_preliminary_emancipation",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_preliminary_emancipation.title",
+  "text": "situation.s28_preliminary_emancipation.text",
+  "earliest": "1862-09-22",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 567
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_preliminary_emancipation"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_preliminary_emancipation"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-WELLES",
+      "at": "I pp. 142–144; dated entry for 22 September 1862, Blair’s objection to expediency at this time."
+    },
+    {
+      "source": "S13-STAT12",
+      "at": "12 Stat. pp. 1267–1268; proclamation, 22 September 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    },
+    {
+      "post": null,
+      "person": "blair_montgomery"
+    }
+  ],
+  "namedOnly": "Dated papers are attributed to their historical authors; no later officeholding or present delivery is asserted. Unrostered addressees require identity/post resolution before promotion.",
+  "options": [
+    {
+      "id": "delay",
+      "label": "situation.s28_preliminary_emancipation.option.delay",
+      "displayKey": 10,
+      "proposedBy": [
+        "blair_montgomery"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    },
+    {
+      "id": "issue-preliminary",
+      "label": "situation.s28_preliminary_emancipation.option.issue-preliminary",
+      "displayKey": 20,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_preliminary_emancipation.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "issue-preliminary"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_preliminary_emancipation: no separate cabinet staff recommendation established by this bounded selection."
+      }
+    ]
+  }
+}

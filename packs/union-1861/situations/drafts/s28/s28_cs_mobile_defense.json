@@ -1,0 +1,92 @@
+{
+  "id": "s28_cs_mobile_defense",
+  "kind": "decision",
+  "faction": "confederate",
+  "title": "situation.s28_cs_mobile_defense.title",
+  "text": "situation.s28_cs_mobile_defense.text",
+  "earliest": "1862-03-10",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 371
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_cs_mobile_defense"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_cs_mobile_defense"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_president"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed no gate topic: this bounded facet concerns river-defense through military, diplomatic or legislative authority. It authorizes no act on a protected population or atrocity-class conduct."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-DAVIS1",
+      "at": "I p. 196; message of 10 March 1862."
+    },
+    {
+      "source": "S28-DAVIS1",
+      "at": "I p. 196; 10 March 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "cs_president",
+      "person": "davis_jefferson"
+    }
+  ],
+  "namedOnly": "The documents’ addressees and proposed appointees identify the record. They do not establish present postholding. The reading index retains identity and post gaps; no fictional holder is inserted.",
+  "options": [
+    {
+      "id": "request-appropriation",
+      "label": "situation.s28_cs_mobile_defense.option.request-appropriation",
+      "displayKey": 10,
+      "proposedBy": [
+        "davis_jefferson"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_cs_mobile_defense.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "request-appropriation"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_cs_mobile_defense: no separate staff-line recommendation established by this selection; option proponents are recorded separately."
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "s28_july_emancipation_draft",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_july_emancipation_draft.title",
+  "text": "situation.s28_july_emancipation_draft.text",
+  "earliest": "1862-07-22",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 505
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_july_emancipation_draft"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_july_emancipation_draft"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-CW2",
+      "at": "II p. 213; draft headed 22 July 1862 in the edition."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Dated papers are attributed to their historical authors; no later officeholding or present delivery is asserted. Unrostered addressees require identity/post resolution before promotion.",
+  "options": [
+    {
+      "id": "issue-now",
+      "label": "situation.s28_july_emancipation_draft.option.issue-now",
+      "displayKey": 10,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_july_emancipation_draft.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "unsourced": "The selected documents establish advocacy, not the eventual resolution of this proposed facet."
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_july_emancipation_draft: no separate cabinet staff recommendation established by this bounded selection."
+      }
+    ]
+  }
+}

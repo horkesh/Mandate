@@ -1,0 +1,116 @@
+{
+  "id": "s28_cs_kentucky_neutrality",
+  "kind": "decision",
+  "faction": "confederate",
+  "title": "situation.s28_cs_kentucky_neutrality.title",
+  "text": "situation.s28_cs_kentucky_neutrality.text",
+  "earliest": "1861-09-04",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 184
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_cs_kentucky_neutrality"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_cs_kentucky_neutrality"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_president"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed no gate topic: this bounded facet concerns kentucky through military, diplomatic or legislative authority. It authorizes no act on a protected population or atrocity-class conduct."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-OR",
+      "at": "I-4 pp. 179–181; correspondence of 1–5 September 1861; especially Walker, Polk and Davis, 4 September."
+    },
+    {
+      "source": "S28-OR",
+      "at": "I-4 p. 181; Polk and Davis, 4 September 1861."
+    },
+    {
+      "source": "S28-OR",
+      "at": "I-4 p. 180; Walker to Polk, 4 September 1861."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "cs_president",
+      "person": "davis_jefferson"
+    },
+    {
+      "post": null,
+      "person": "polk_leonidas"
+    },
+    {
+      "post": null,
+      "person": "walker_leroy_p"
+    }
+  ],
+  "namedOnly": "The documents’ addressees and proposed appointees identify the record. They do not establish present postholding. The reading index retains identity and post gaps; no fictional holder is inserted.",
+  "options": [
+    {
+      "id": "retain-position",
+      "label": "situation.s28_cs_kentucky_neutrality.option.retain-position",
+      "displayKey": 10,
+      "proposedBy": [
+        "polk_leonidas"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    },
+    {
+      "id": "withdraw",
+      "label": "situation.s28_cs_kentucky_neutrality.option.withdraw",
+      "displayKey": 20,
+      "proposedBy": [
+        "walker_leroy_p"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_cs_kentucky_neutrality.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "retain-position"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_cs_kentucky_neutrality: no separate staff-line recommendation established by this selection; option proponents are recorded separately."
+      }
+    ]
+  }
+}

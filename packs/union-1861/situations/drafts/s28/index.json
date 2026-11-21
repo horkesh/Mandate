@@ -1,0 +1,1282 @@
+{
+  "request": "S28",
+  "base": "7321b2b",
+  "status": "unsigned drafts; never loaded in the live pack",
+  "items": [
+    {
+      "id": "s28_fremont_private_request",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "emancipation-policy",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_fremont_private_request",
+      "optionEvidence": {
+        "private-request": [
+          {
+            "source": "S13-OR",
+            "at": "I-3 pp. 469–470; Lincoln to Frémont, 2 September 1861, second point only."
+          }
+        ]
+      },
+      "acts": {
+        "private-request": "Presidential request through the department commander, acknowledged amendment and emancipation-policy owner; the shooting paragraph is excluded."
+      },
+      "needs": [
+        "Presidential request through the department commander, acknowledged amendment and emancipation-policy owner; the shooting paragraph is excluded.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost",
+        "gate-held-topic"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_fremont_public_order",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "emancipation-policy",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_fremont_public_order",
+      "optionEvidence": {
+        "public-order": [
+          {
+            "source": "S13-OR",
+            "at": "I-3 pp. 485–486; Lincoln to Frémont, 11 September 1861."
+          }
+        ]
+      },
+      "acts": {
+        "public-order": "A public instruction, delivery, publication and the appropriate emancipation policy; no shooting or reprisal permission."
+      },
+      "needs": [
+        "A public instruction, delivery, publication and the appropriate emancipation policy; no shooting or reprisal permission.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost",
+        "gate-held-topic"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_maryland_arrest_instruction",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "union-habeas-and-arrests",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_maryland_arrest_instruction",
+      "optionEvidence": {
+        "detain": [
+          {
+            "source": "S13-OR",
+            "at": "I-5 p. 193; Cameron to Banks, 11 September 1861."
+          }
+        ]
+      },
+      "acts": {
+        "detain": "Security policy through a holder; individual detention authority, grounds, hearing and review remain separate acts, with locked costs."
+      },
+      "needs": [
+        "Security policy through a holder; individual detention authority, grounds, hearing and review remain separate acts, with locked costs.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_compensated_emancipation_offer",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "emancipation-policy",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_compensated_emancipation_offer",
+      "optionEvidence": {
+        "propose": [
+          {
+            "source": "S13-CW2",
+            "at": "II pp. 129–130; message of 6 March 1862."
+          }
+        ]
+      },
+      "acts": {
+        "propose": "Congressional resolution and appropriation, a state’s own acceptance and abolition law; no federal purchase or population quantity."
+      },
+      "needs": [
+        "Congressional resolution and appropriation, a state’s own acceptance and abolition law; no federal purchase or population quantity.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost",
+        "gate-held-topic"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_hunter_revocation",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "emancipation-policy",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_hunter_revocation",
+      "optionEvidence": {
+        "revoke": [
+          {
+            "source": "S13-STAT12",
+            "at": "12 Stat. pp. 1264–1265; Lincoln proclamation, 19 May 1862."
+          }
+        ]
+      },
+      "acts": {
+        "revoke": "Authenticated receipt, presidential revocation and policy communication; no general power to free or return a quantity of people."
+      },
+      "needs": [
+        "Authenticated receipt, presidential revocation and policy communication; no general power to free or return a quantity of people.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost",
+        "gate-held-topic"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_confiscation_bill",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "emancipation-policy",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_confiscation_bill",
+      "optionEvidence": {
+        "sign-with-resolution": [
+          {
+            "source": "S13-CW2",
+            "at": "II p. 209; message of 17 July 1862."
+          }
+        ],
+        "veto": [
+          {
+            "source": "S13-CW2",
+            "at": "II pp. 209–211; prepared objection enclosed with the 17 July message."
+          }
+        ]
+      },
+      "acts": {
+        "sign-with-resolution": "Presented bill, explanatory resolution, presidential approval or return, congressional receipt and statute owner. The objection is a prepared alternative, not an actual veto.",
+        "veto": "Presented bill, explanatory resolution, presidential approval or return, congressional receipt and statute owner. The objection is a prepared alternative, not an actual veto."
+      },
+      "needs": [
+        "Presented bill, explanatory resolution, presidential approval or return, congressional receipt and statute owner. The objection is a prepared alternative, not an actual veto.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost",
+        "gate-held-topic"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_july_emancipation_draft",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "emancipation-policy",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_july_emancipation_draft",
+      "optionEvidence": {
+        "issue-now": [
+          {
+            "source": "S13-CW2",
+            "at": "II p. 213; draft headed 22 July 1862 in the edition."
+          }
+        ]
+      },
+      "acts": {
+        "issue-now": "Private draft versus publication, authenticated cabinet receipt, proclamation owner and later conditions; exact deliberation time is not established by an editorial heading."
+      },
+      "needs": [
+        "Private draft versus publication, authenticated cabinet receipt, proclamation owner and later conditions; exact deliberation time is not established by an editorial heading.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost",
+        "gate-held-topic"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_greeley_reply",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "emancipation-policy",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_greeley_reply",
+      "optionEvidence": {
+        "union-first-reply": [
+          {
+            "source": "S13-CW2",
+            "at": "II pp. 227–228; Lincoln to Greeley, 22 August 1862."
+          }
+        ]
+      },
+      "acts": {
+        "union-first-reply": "Public correspondence and publication; this reply neither publishes the July draft nor implements emancipation."
+      },
+      "needs": [
+        "Public correspondence and publication; this reply neither publishes the July draft nor implements emancipation.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost",
+        "gate-held-topic"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_preliminary_emancipation",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "emancipation-policy",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_preliminary_emancipation",
+      "optionEvidence": {
+        "delay": [
+          {
+            "source": "S13-WELLES",
+            "at": "I pp. 142–144; dated entry for 22 September 1862, Blair’s objection to expediency at this time."
+          }
+        ],
+        "issue-preliminary": [
+          {
+            "source": "S13-STAT12",
+            "at": "12 Stat. pp. 1267–1268; proclamation, 22 September 1862."
+          }
+        ]
+      },
+      "acts": {
+        "delay": "Private objection, presidential publication, separate current enforcement and future freedom provisions. Blair’s forecast is attributed; no state departure or election result is guaranteed.",
+        "issue-preliminary": "Private objection, presidential publication, separate current enforcement and future freedom provisions. Blair’s forecast is attributed; no state departure or election result is guaranteed."
+      },
+      "needs": [
+        "Private objection, presidential publication, separate current enforcement and future freedom provisions. Blair’s forecast is attributed; no state departure or election result is guaranteed.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost",
+        "gate-held-topic"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_august_arrest_order",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "union-habeas-and-arrests",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_august_arrest_order",
+      "optionEvidence": {
+        "war-department-order": [
+          {
+            "source": "S13-OR",
+            "at": "III-2 pp. 321–322; dated order of 8 August 1862, excluding the undated press explanation."
+          }
+        ]
+      },
+      "acts": {
+        "war-department-order": "Security instruction through holders, individual custody, grounds and military process, with separate reporting and costs."
+      },
+      "needs": [
+        "Security instruction through holders, individual custody, grounds and military process, with separate reporting and costs.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_september_habeas",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "union-habeas-and-arrests",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_september_habeas",
+      "optionEvidence": {
+        "nationwide": [
+          {
+            "source": "S13-CW2",
+            "at": "II p. 239; proclamation, 24 September 1862."
+          }
+        ]
+      },
+      "acts": {
+        "nationwide": "Presidential proclamation, communicated jurisdiction and individual review. No detention count or presumed guilt is a score."
+      },
+      "needs": [
+        "Presidential proclamation, communicated jurisdiction and individual review. No detention count or presumed guilt is a score.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost"
+      ],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_railroad_instructions",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "none: railroad command authority",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_railroad_instructions",
+      "optionEvidence": {
+        "back-railroad": [
+          {
+            "source": "S28-OR",
+            "at": "I-12, part III, p. 638; Halleck and Kelton instructions to Haupt, 23 August 1862."
+          }
+        ]
+      },
+      "acts": {
+        "back-railroad": "Railroad authority, timetable and competing military transport requests. Haupt needs a real identity/post; no arrest threat or claimed number kept out of battle is adopted."
+      },
+      "needs": [
+        "Railroad authority, timetable and competing military transport requests. Haupt needs a real identity/post; no arrest threat or claimed number kept out of battle is adopted.",
+        "Period document producer, actual receipt route and current author/post guards."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Reproduced dated documents are evidence of advocacy. Their later publication is not a period message.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_kentucky_neutrality",
+      "faction": "confederate",
+      "subject": "kentucky",
+      "gateTopic": "none: kentucky",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_kentucky_neutrality",
+      "optionEvidence": {
+        "retain-position": [
+          {
+            "source": "S28-OR",
+            "at": "I-4 p. 181; Polk and Davis, 4 September 1861."
+          }
+        ],
+        "withdraw": [
+          {
+            "source": "S28-OR",
+            "at": "I-4 p. 180; Walker to Polk, 4 September 1861."
+          }
+        ]
+      },
+      "acts": {
+        "retain-position": "Separate received Walker and Polk papers, military instructions through the responsible commander and actual compliance. The dated compilation does not establish their intraday receipt order.",
+        "withdraw": "Separate received Walker and Polk papers, military instructions through the responsible commander and actual compliance. The dated compilation does not establish their intraday receipt order."
+      },
+      "needs": [
+        "Separate received Walker and Polk papers, military instructions through the responsible commander and actual compliance. The dated compilation does not establish their intraday receipt order.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_kentucky_application",
+      "faction": "confederate",
+      "subject": "kentucky",
+      "gateTopic": "none: kentucky",
+      "facet": "notice draft; intent/report only",
+      "receipt": "s28_document_cs_kentucky_application",
+      "optionEvidence": {},
+      "acts": {},
+      "needs": [
+        "Government-formation and legitimacy records, congressional advice and diplomatic recognition. This notice cannot transfer Kentucky’s regions or decide for its inhabitants.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_recognition_missions",
+      "faction": "confederate",
+      "subject": "recognition",
+      "gateTopic": "none: recognition",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_recognition_missions",
+      "optionEvidence": {
+        "fund-agents": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I pp. 76–77; 29 April 1861."
+          }
+        ]
+      },
+      "acts": {
+        "fund-agents": "Congressional appropriation, commissions, instructions, dispatch and actual foreign reception. No recognition or treaty is guaranteed."
+      },
+      "needs": [
+        "Congressional appropriation, commissions, instructions, dispatch and actual foreign reception. No recognition or treaty is guaranteed.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_blockade_representation",
+      "faction": "confederate",
+      "subject": "recognition",
+      "gateTopic": "none: recognition",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_blockade_representation",
+      "optionEvidence": {
+        "submit-evidence": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I pp. 142–143; 18 November 1861."
+          }
+        ]
+      },
+      "acts": {
+        "submit-evidence": "Dated evidence packet, diplomatic instructions and foreign reply. Davis’s assertion that the evidence proves inefficiency is not a finding by a foreign court or government."
+      },
+      "needs": [
+        "Dated evidence packet, diplomatic instructions and foreign reply. Davis’s assertion that the evidence proves inefficiency is not a finding by a foreign court or government.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_danville_link",
+      "faction": "confederate",
+      "subject": "railroad-legislation",
+      "gateTopic": "none: railroad-legislation",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_danville_link",
+      "optionEvidence": {
+        "request-aid": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I pp. 139–140; 18 November 1861."
+          }
+        ]
+      },
+      "acts": {
+        "request-aid": "Legislative authority, agreement, procurement, construction and inspected opening. A recommendation does not create a rail edge or capacity."
+      },
+      "needs": [
+        "Legislative authority, agreement, procurement, construction and inspected opening. A recommendation does not create a rail edge or capacity.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_inspection_report",
+      "faction": "confederate",
+      "subject": "congressional-reporting",
+      "gateTopic": "none: congressional-reporting",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_inspection_report",
+      "optionEvidence": {
+        "withhold-report": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I p. 193; received 1 March 1862."
+          }
+        ]
+      },
+      "acts": {
+        "withhold-report": "Congressional request and answer with a real report inventory. The date is congressional receipt in the edition, not a proved composition or dispatch date."
+      },
+      "needs": [
+        "Congressional request and answer with a real report inventory. The date is congressional receipt in the edition, not a proved composition or dispatch date.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_mobile_defense",
+      "faction": "confederate",
+      "subject": "river-defense",
+      "gateTopic": "none: river-defense",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_mobile_defense",
+      "optionEvidence": {
+        "request-appropriation": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I p. 196; 10 March 1862."
+          }
+        ]
+      },
+      "acts": {
+        "request-appropriation": "The underlying Mallory plan, legislative appropriation, naval procurement and command responsibility. Neither a ship nor a fortified position is created here."
+      },
+      "needs": [
+        "The underlying Mallory plan, legislative appropriation, naval procurement and command responsibility. Neither a ship nor a fortified position is created here.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_ironclad_opportunity",
+      "faction": "confederate",
+      "subject": "naval-procurement",
+      "gateTopic": "none: naval-procurement",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_ironclad_opportunity",
+      "optionEvidence": {
+        "request-funds": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I p. 201; 20 March 1862."
+          }
+        ]
+      },
+      "acts": {
+        "request-funds": "Mallory’s estimate, appropriation, contract, foreign restrictions, delivery and actual commissioning. No automatic vessel gain or invented price."
+      },
+      "needs": [
+        "Mallory’s estimate, appropriation, contract, foreign restrictions, delivery and actual commissioning. No automatic vessel gain or invented price.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_james_defenses",
+      "faction": "confederate",
+      "subject": "military-defense",
+      "gateTopic": "none: military-defense",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_james_defenses",
+      "optionEvidence": {
+        "complete-works": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I pp. 202–203; 20 March 1862."
+          }
+        ]
+      },
+      "acts": {
+        "complete-works": "Engineer instructions, available material, gun transfers and inspected completion. The source contains estimates and a defensive opinion, not an invulnerable Richmond."
+      },
+      "needs": [
+        "Engineer instructions, available material, gun transfers and inspected completion. The source contains estimates and a defensive opinion, not an invulnerable Richmond.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_mississippi_floating_defenses",
+      "faction": "confederate",
+      "subject": "mississippi",
+      "gateTopic": "none: mississippi",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_mississippi_floating_defenses",
+      "optionEvidence": {
+        "request-funds": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I pp. 203–204; 24 March 1862."
+          }
+        ]
+      },
+      "acts": {
+        "request-funds": "Underlying estimate and Mississippi defense allocation, congressional appropriation, procurement and command. The requested sum is documentary text, not a treasury delta or proof of payment."
+      },
+      "needs": [
+        "Underlying estimate and Mississippi defense allocation, congressional appropriation, procurement and command. The requested sum is documentary text, not a treasury delta or proof of payment.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_conscription_proposal",
+      "faction": "confederate",
+      "subject": "conscription",
+      "gateTopic": "confederate-conscription",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_conscription_proposal",
+      "optionEvidence": {
+        "request-law": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I pp. 205–206; 28 March 1862."
+          }
+        ]
+      },
+      "acts": {
+        "request-law": "Bill, congressional action, presidential approval, enrollment rules, liability, exemptions and muster. Defensible locked costs and the inaction policy remain missing."
+      },
+      "needs": [
+        "Bill, congressional action, presidential approval, enrollment rules, liability, exemptions and muster. Defensible locked costs and the inaction policy remain missing.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost"
+      ],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_conscription_act",
+      "faction": "confederate",
+      "subject": "conscription",
+      "gateTopic": "confederate-conscription",
+      "facet": "notice draft; intent/report only",
+      "receipt": "s28_document_cs_conscription_act",
+      "optionEvidence": {},
+      "acts": {},
+      "needs": [
+        "The enacted-law cause and authenticated period text, then calls, enrollment, exemptions, term calculation, muster and joining. The later 28 April general order cannot be delivered on 16 April.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned"
+      ],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_conscription_amendments",
+      "faction": "confederate",
+      "subject": "conscription",
+      "gateTopic": "confederate-conscription",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_conscription_amendments",
+      "optionEvidence": {
+        "state-transfer": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I p. 212; 17 April 1862."
+          }
+        ],
+        "promotion-rule": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I pp. 212–213; 17 April 1862."
+          }
+        ],
+        "volunteer-choice": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I p. 213; 17 April 1862."
+          }
+        ]
+      },
+      "acts": {
+        "state-transfer": "Separate amendments and enactment, state offers, transfer acceptance and election/promotion authority. Each requested change may be adopted separately; none rearranges forces here.",
+        "promotion-rule": "Separate amendments and enactment, state offers, transfer acceptance and election/promotion authority. Each requested change may be adopted separately; none rearranges forces here.",
+        "volunteer-choice": "Separate amendments and enactment, state offers, transfer acceptance and election/promotion authority. Each requested change may be adopted separately; none rearranges forces here."
+      },
+      "needs": [
+        "Separate amendments and enactment, state offers, transfer acceptance and election/promotion authority. Each requested change may be adopted separately; none rearranges forces here.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost"
+      ],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_georgia_organizations",
+      "faction": "confederate",
+      "subject": "conscription",
+      "gateTopic": "confederate-conscription",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_georgia_organizations",
+      "optionEvidence": {
+        "preserve-organization": [
+          {
+            "source": "S28-OR",
+            "at": "IV-1 p. 1072; Davis to Brown, 17 April 1862."
+          }
+        ],
+        "assign-companies": [
+          {
+            "source": "S28-OR",
+            "at": "IV-1 p. 1067; Randolph to Brown, 16 April 1862."
+          }
+        ]
+      },
+      "acts": {
+        "preserve-organization": "Resolve actual state/Confederate command, expiration, muster and transfer. Randolph’s instruction is not a repeal of the act; Davis postpones disorganization, not all liability.",
+        "assign-companies": "Resolve actual state/Confederate command, expiration, muster and transfer. Randolph’s instruction is not a repeal of the act; Davis postpones disorganization, not all liability."
+      },
+      "needs": [
+        "Resolve actual state/Confederate command, expiration, muster and transfer. Randolph’s instruction is not a repeal of the act; Davis postpones disorganization, not all liability.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost"
+      ],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_april_exemptions",
+      "faction": "confederate",
+      "subject": "exemptions",
+      "gateTopic": "confederate-conscription",
+      "facet": "notice draft; intent/report only",
+      "receipt": "s28_document_cs_april_exemptions",
+      "optionEvidence": {},
+      "acts": {},
+      "needs": [
+        "Statute receipt, eligibility evidence, the Secretary’s rules and individual determination. Statutory exemptions are not proof that a named person received one.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned"
+      ],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_conscription_extension_request",
+      "faction": "confederate",
+      "subject": "conscription",
+      "gateTopic": "confederate-conscription",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_conscription_extension_request",
+      "optionEvidence": {
+        "request-extension": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I p. 236; 18 August 1862."
+          }
+        ]
+      },
+      "acts": {
+        "request-extension": "Legislative extension, presidential call, locality and age bands, exemptions, enrollment and actual joining. The proposal alone adds no soldiers."
+      },
+      "needs": [
+        "Legislative extension, presidential call, locality and age bands, exemptions, enrollment and actual joining. The proposal alone adds no soldiers.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost"
+      ],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_september_conscription_act",
+      "faction": "confederate",
+      "subject": "conscription",
+      "gateTopic": "confederate-conscription",
+      "facet": "notice draft; intent/report only",
+      "receipt": "s28_document_cs_september_conscription_act",
+      "optionEvidence": {},
+      "acts": {},
+      "needs": [
+        "Enacted-law cause, the actual call and geographic scope, local suspension, individual liability and muster. The granted discretion is not evidence of a particular suspension.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned"
+      ],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_october_exemption_act",
+      "faction": "confederate",
+      "subject": "exemptions",
+      "gateTopic": "twenty-slave-law",
+      "facet": "notice draft; 0046 interim event: no rule-seat choice",
+      "receipt": "s28_document_cs_october_exemption_act",
+      "optionEvidence": {},
+      "acts": {},
+      "needs": [
+        "0046 interim event only: no presidential option to choose control of enslaved people. Statute passage and receipt, eligibility and implementation, protected agency and locked consequences remain with their owners.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned"
+      ],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_maryland_offensive",
+      "faction": "confederate",
+      "subject": "september-offensive",
+      "gateTopic": "none: september-offensive",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_maryland_offensive",
+      "optionEvidence": {
+        "support-movement": [
+          {
+            "source": "S28-OR",
+            "at": "I-19 part II pp. 590–591; 3 September 1862."
+          }
+        ],
+        "improve-defenses": [
+          {
+            "source": "S28-OR",
+            "at": "I-19 part II p. 591; 3 September 1862."
+          }
+        ]
+      },
+      "acts": {
+        "support-movement": "Received Lee letter, presidential answer, commander’s actual plan, readiness and supply. A principal’s choice neither crosses a river nor dictates a battle. Lee’s current Confederate post and service require dating.",
+        "improve-defenses": "Received Lee letter, presidential answer, commander’s actual plan, readiness and supply. A principal’s choice neither crosses a river nor dictates a battle. Lee’s current Confederate post and service require dating."
+      },
+      "needs": [
+        "Received Lee letter, presidential answer, commander’s actual plan, readiness and supply. A principal’s choice neither crosses a river nor dictates a battle. Lee’s current Confederate post and service require dating.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_offensive_disapproval_window",
+      "faction": "confederate",
+      "subject": "september-offensive",
+      "gateTopic": "none: september-offensive",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_offensive_disapproval_window",
+      "optionEvidence": {
+        "permit-proposal": [
+          {
+            "source": "S28-OR",
+            "at": "I-19 part II pp. 591–592; 4 September 1862."
+          }
+        ]
+      },
+      "acts": {
+        "permit-proposal": "Actual receipt before the disapproval window closes, presidential reply and a future reported condition before any Pennsylvania extension. No advocate for a blanket prohibition was established in these pages."
+      },
+      "needs": [
+        "Actual receipt before the disapproval window closes, presidential reply and a future reported condition before any Pennsylvania extension. No advocate for a blanket prohibition was established in these pages.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_richmond_habeas",
+      "faction": "confederate",
+      "subject": "habeas",
+      "gateTopic": "confederate-habeas",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_richmond_habeas",
+      "optionEvidence": {
+        "issue-suspension": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I p. 220; 1 March 1862."
+          }
+        ]
+      },
+      "acts": {
+        "issue-suspension": "The enabling act, lawful duration, scope, orders through the responsible holder, individual grounds and hearing. Cost and policy owners are absent; no free security lever."
+      },
+      "needs": [
+        "The enabling act, lawful duration, scope, orders through the responsible holder, individual grounds and hearing. Cost and policy owners are absent; no free security lever.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost"
+      ],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_east_tennessee_habeas",
+      "faction": "confederate",
+      "subject": "habeas",
+      "gateTopic": "confederate-habeas",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_east_tennessee_habeas",
+      "optionEvidence": {
+        "issue-suspension": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I p. 225; 8 April 1862."
+          }
+        ]
+      },
+      "acts": {
+        "issue-suspension": "Enabling authority and expiry, department boundary, communicated orders and individual review. No reprisals, execution permission or civilian-targeting goal is included."
+      },
+      "needs": [
+        "Enabling authority and expiry, department boundary, communicated orders and individual review. No reprisals, execution permission or civilian-targeting goal is included.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost"
+      ],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_vessel_veto",
+      "faction": "confederate",
+      "subject": "naval-procurement",
+      "gateTopic": "none: naval-procurement",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_vessel_veto",
+      "optionEvidence": {
+        "return-bill": [
+          {
+            "source": "S28-DAVIS1",
+            "at": "I p. 266; received 13 October 1862."
+          }
+        ]
+      },
+      "acts": {
+        "return-bill": "Presented bill, presidential return and congressional receipt; identify the underlying examinations. This edition dates receipt, not necessarily drafting, and creates no procurement outcome."
+      },
+      "needs": [
+        "Presented bill, presidential return and congressional receipt; identify the underlying examinations. This edition dates receipt, not necessarily drafting, and creates no procurement outcome.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_hunter_sustain",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "emancipation-policy",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_hunter_sustain",
+      "optionEvidence": {
+        "let-stand": [
+          {
+            "source": "S28-CHASE-MAY16",
+            "at": "pp. 1–2 (recto and verso), Chase to Lincoln, 16 May 1862; contemporary secretarial copy, SMC 501; both manuscript images read."
+          }
+        ]
+      },
+      "acts": {
+        "let-stand": "A received Chase letter, presidential reply and a legally scoped command decision. Actual policy, affected people’s agency, locked costs and resulting acts require their owners."
+      },
+      "needs": [
+        "Authenticated receipt, presidential revocation and policy communication; no general power to free or return a quantity of people.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost",
+        "gate-held-topic"
+      ],
+      "sourceLimits": "The two-page contemporary secretarial copy supplies Chase as advocate on 16 May, replacing the original candidate’s attribution to Hunter on 19 May. It is not an autograph letter, an authenticated receipt time or evidence that Lincoln accepted the advice.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_vicksburg_inquiry",
+      "faction": "confederate",
+      "subject": "mississippi",
+      "gateTopic": "none: mississippi",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_vicksburg_inquiry",
+      "optionEvidence": {
+        "request-report": [
+          {
+            "source": "S28-OR",
+            "at": "I-15 p. 754; Davis to Smith, 14 June 1862."
+          }
+        ]
+      },
+      "acts": {
+        "request-report": "Actual inquiry sent to Smith, his received answer, naval construction and military defense authorities. The neighboring letter’s reprisal proposal is excluded under 0046; it supplies no presidential option."
+      },
+      "needs": [
+        "Actual inquiry sent to Smith, his received answer, naval construction and military defense authorities. The neighboring letter’s reprisal proposal is excluded under 0046; it supplies no presidential option.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_kentucky_support_request",
+      "faction": "confederate",
+      "subject": "western-offensive",
+      "gateTopic": "none: western-offensive",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_kentucky_support_request",
+      "optionEvidence": {
+        "support-advance": [
+          {
+            "source": "S28-OR",
+            "at": "I-16 part II p. 769; Smith to Davis, 21 August 1862."
+          }
+        ]
+      },
+      "acts": {
+        "support-advance": "Actual receipt of Smith’s report, dated commands and readiness of Marshall and other forces, supply and transport. No territorial transfer, predicted recruitment or guaranteed local welcome. The source records Smith’s decision, not an implemented Davis response."
+      },
+      "needs": [
+        "Actual receipt of Smith’s report, dated commands and readiness of Marshall and other forces, supply and transport. No territorial transfer, predicted recruitment or guaranteed local welcome. The source records Smith’s decision, not an implemented Davis response.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_french_commercial_authority",
+      "faction": "confederate",
+      "subject": "recognition",
+      "gateTopic": "none: recognition",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_french_commercial_authority",
+      "optionEvidence": {
+        "commercial-terms": [
+          {
+            "source": "S28-DAVIS2",
+            "at": "II p. 228; 12 April 1862."
+          }
+        ],
+        "conditional-subsidy": [
+          {
+            "source": "S28-DAVIS2",
+            "at": "II p. 229; 12 April 1862."
+          }
+        ]
+      },
+      "acts": {
+        "commercial-terms": "Actual instructions and received Slidell dispatch, inquiry, treaty authority and ratification, finance and delivery. The cited cotton valuations and promised military results are Benjamin’s estimates, not executable resources, profits or outcomes.",
+        "conditional-subsidy": "Actual instructions and received Slidell dispatch, inquiry, treaty authority and ratification, finance and delivery. The cited cotton valuations and promised military results are Benjamin’s estimates, not executable resources, profits or outcomes."
+      },
+      "needs": [
+        "Actual instructions and received Slidell dispatch, inquiry, treaty authority and ratification, finance and delivery. The cited cotton valuations and promised military results are Benjamin’s estimates, not executable resources, profits or outcomes.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_recognition_priority",
+      "faction": "confederate",
+      "subject": "recognition",
+      "gateTopic": "none: recognition",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_recognition_priority",
+      "optionEvidence": {
+        "authorize-discretion": [
+          {
+            "source": "S28-DAVIS2",
+            "at": "II p. 231; 12 April 1862."
+          }
+        ]
+      },
+      "acts": {
+        "authorize-discretion": "Received conditional instructions, Slidell’s assessment and actual foreign response. No automatic recognition, change of belligerent status or negotiated peace."
+      },
+      "needs": [
+        "Received conditional instructions, Slidell’s assessment and actual foreign response. No automatic recognition, change of belligerent status or negotiated peace.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_cs_diplomatic_dispatch_route",
+      "faction": "confederate",
+      "subject": "diplomatic-communications",
+      "gateTopic": "none: diplomatic-communications",
+      "facet": "decision draft; intent/report only",
+      "receipt": "s28_document_cs_diplomatic_dispatch_route",
+      "optionEvidence": {
+        "request-permission": [
+          {
+            "source": "S28-DAVIS2",
+            "at": "II pp. 230–231; 12 April 1862."
+          }
+        ]
+      },
+      "acts": {
+        "request-permission": "Actual Slidell instruction, French decision, authorized carrier and permitted dispatches. A diplomatic request creates neither a route edge nor a successful delivery."
+      },
+      "needs": [
+        "Actual Slidell instruction, French decision, authorized carrier and permitted dispatches. A diplomatic request creates neither a route edge nor a successful delivery.",
+        "Period document producer, actual received paper and route, dated authors/posts, and a prior-act guard where the paper reports a completed act."
+      ],
+      "expectedBlockers": [],
+      "sourceLimits": "Dated document reproduced in a later edition. Advocacy, claims and estimates are attributed; later publication is not a period inbox paper.",
+      "inferences": [
+        "[I] The source document is isolated as a deliberation or received-document facet; no physical event is scheduled and no legal or military effect is implemented."
+      ]
+    },
+    {
+      "id": "s28_fremont_sustain",
+      "faction": "union",
+      "subject": "held-candidates",
+      "gateTopic": "emancipation-policy",
+      "facet": "decision draft; intent only",
+      "receipt": "s28_document_fremont_sustain",
+      "optionEvidence": {
+        "emancipation-stand": [
+          {
+            "source": "S28-FREMONT-SEP8",
+            "at": "pp. 1–4, Frémont to Lincoln, 8 September 1861, four-image item mal.1156100; complete LoC transcription read, emancipation paragraph only. Manuscript pagination not separately inspected."
+          }
+        ]
+      },
+      "acts": {
+        "emancipation-stand": "Actual receipt of the 8 September letter and a presidential response confined to the emancipation clause. Policy, affected people’s agency, locked costs and lawful resulting acts remain for their owners."
+      },
+      "needs": [
+        "Authenticated receipt, presidential revocation and policy communication; no general power to free or return a quantity of people.",
+        "Period document producer, actual receipt route and current author/post guards.",
+        "Gate placement, policy rows, defensible unconditional own-side costs and review; inaction must also be costed."
+      ],
+      "expectedBlockers": [
+        "gate-unsigned",
+        "gate-no-locked-cost",
+        "gate-held-topic"
+      ],
+      "sourceLimits": "Complete LoC transcription of the four-image letter was read through alternate retrieval after direct HTTP403 failures. This is not an image-by-image palaeographic check. The conditional request for public correction does not retract Frémont’s explicit defense of the clause. The separate shooting/retaliation proposal is excluded under0046.",
+      "inferences": [
+        "[I] The selected advocacy is separated into a presidential response facet; no action path is implemented."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "s28_cs_blockade_representation",
+  "kind": "decision",
+  "faction": "confederate",
+  "title": "situation.s28_cs_blockade_representation.title",
+  "text": "situation.s28_cs_blockade_representation.text",
+  "earliest": "1861-11-18",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 259
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_cs_blockade_representation"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_cs_blockade_representation"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_president"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed no gate topic: this bounded facet concerns recognition through military, diplomatic or legislative authority. It authorizes no act on a protected population or atrocity-class conduct."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-DAVIS1",
+      "at": "I pp. 136, 142–143; message of 18 November 1861."
+    },
+    {
+      "source": "S28-DAVIS1",
+      "at": "I pp. 142–143; 18 November 1861."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "cs_president",
+      "person": "davis_jefferson"
+    }
+  ],
+  "namedOnly": "The documents’ addressees and proposed appointees identify the record. They do not establish present postholding. The reading index retains identity and post gaps; no fictional holder is inserted.",
+  "options": [
+    {
+      "id": "submit-evidence",
+      "label": "situation.s28_cs_blockade_representation.option.submit-evidence",
+      "displayKey": 10,
+      "proposedBy": [
+        "davis_jefferson"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_cs_blockade_representation.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "submit-evidence"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_cs_blockade_representation: no separate staff-line recommendation established by this selection; option proponents are recorded separately."
+      }
+    ]
+  }
+}

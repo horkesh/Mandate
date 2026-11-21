@@ -1,0 +1,93 @@
+{
+  "id": "s28_greeley_reply",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_greeley_reply.title",
+  "text": "situation.s28_greeley_reply.text",
+  "earliest": "1862-08-22",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 536
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_greeley_reply"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_greeley_reply"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-CW2",
+      "at": "II pp. 227–228; Lincoln to Greeley, 22 August 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Dated papers are attributed to their historical authors; no later officeholding or present delivery is asserted. Unrostered addressees require identity/post resolution before promotion.",
+  "options": [
+    {
+      "id": "union-first-reply",
+      "label": "situation.s28_greeley_reply.option.union-first-reply",
+      "displayKey": 10,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_greeley_reply.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "union-first-reply"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_greeley_reply: no separate cabinet staff recommendation established by this bounded selection."
+      }
+    ]
+  }
+}

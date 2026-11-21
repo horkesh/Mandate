@@ -1,0 +1,61 @@
+{
+  "id": "s28_cs_conscription_act",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.s28_cs_conscription_act.title",
+  "text": "situation.s28_cs_conscription_act.text",
+  "earliest": "1862-04-16",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 408
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_cs_conscription_act"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_cs_conscription_act"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_president"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "confederate-conscription"
+    ],
+    "placement": "event",
+    "risks": [],
+    "actingSide": "confederate"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-OR",
+      "at": "IV-1 pp. 1095–1097, act of 16 April 1862 reproduced in General Orders 30 of 28 April; p. 1067, Randolph’s dated approval-day telegram."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "cs_president",
+      "person": "davis_jefferson"
+    }
+  ],
+  "namedOnly": "The documents’ addressees and proposed appointees identify the record. They do not establish present postholding. The reading index retains identity and post gaps; no fictional holder is inserted."
+}

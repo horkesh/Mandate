@@ -1,0 +1,93 @@
+{
+  "id": "s28_september_habeas",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_september_habeas.title",
+  "text": "situation.s28_september_habeas.text",
+  "earliest": "1862-09-24",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 569
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_september_habeas"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_september_habeas"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "union-habeas-and-arrests"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-CW2",
+      "at": "II p. 239; proclamation, 24 September 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Dated papers are attributed to their historical authors; no later officeholding or present delivery is asserted. Unrostered addressees require identity/post resolution before promotion.",
+  "options": [
+    {
+      "id": "nationwide",
+      "label": "situation.s28_september_habeas.option.nationwide",
+      "displayKey": 10,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_september_habeas.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "nationwide"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_september_habeas: no separate cabinet staff recommendation established by this bounded selection."
+      }
+    ]
+  }
+}

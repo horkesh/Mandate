@@ -1,0 +1,94 @@
+{
+  "id": "s28_cs_recognition_priority",
+  "kind": "decision",
+  "faction": "confederate",
+  "title": "situation.s28_cs_recognition_priority.title",
+  "text": "situation.s28_cs_recognition_priority.text",
+  "earliest": "1862-04-12",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 404
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_cs_recognition_priority"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_cs_recognition_priority"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_president"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed no gate topic: this bounded facet concerns recognition through military, diplomatic or legislative authority. It authorizes no act on a protected population or atrocity-class conduct."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-DAVIS2",
+      "at": "II pp. 231–232; Benjamin to Slidell, confidential no. 3, 12 April 1862."
+    },
+    {
+      "source": "S28-DAVIS2",
+      "at": "II p. 231; 12 April 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "cs_president",
+      "person": "davis_jefferson"
+    },
+    {
+      "post": null,
+      "person": "benjamin_judah_p"
+    }
+  ],
+  "namedOnly": "The documents’ addressees and proposed appointees identify the record. They do not establish present postholding. The reading index retains identity and post gaps; no fictional holder is inserted.",
+  "options": [
+    {
+      "id": "authorize-discretion",
+      "label": "situation.s28_cs_recognition_priority.option.authorize-discretion",
+      "displayKey": 10,
+      "proposedBy": [
+        "benjamin_judah_p"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_cs_recognition_priority.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "unsourced": "The selected document establishes the proposed course, not its eventual adoption in this separate decision facet."
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_cs_recognition_priority: no separate staff-line recommendation established by this selection; option proponents are recorded separately."
+      }
+    ]
+  }
+}

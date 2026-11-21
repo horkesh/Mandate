@@ -1,0 +1,15 @@
+# S28 unsigned situations
+
+This bench adds 42 drafts to S13 without changing S13 or the live pack: 14 Union drafts covering 16 of its 17 held options, and 28 Confederate drafts. `advocate-search.json` accounts for every original candidate. Seward’s precise victory condition remains held. Frémont’s 8 September letter explicitly defends his emancipation clause. Chase’s contemporary 16 May letter supplies the advocate for letting Hunter’s order stand; the evidence date and proponent differ from the original tentative candidate.
+
+Each JSON is an unsigned `SituationDef` authoring draft, with text in `strings.json` and page citations in the definition and `index.json`. Every `gateReview` is null. These are proposed facets, not signed content or implemented institutions. The index records the document receipt, proposed gate topic, missing acts, source limits and expected production blockers for each one. [I] The receipt contracts isolate deliberation from reported action; they do not assert that an actual period packet producer exists.
+
+The ordinary military, legislative and diplomatic facets propose `gate.none` with a bounded reason. Coercive conscription and habeas decisions retain empty locked costs and their real `gate-no-locked-cost` errors. The emancipation drafts additionally retain the live register’s held-topic error. No numerical penalty was invented to clear the gate. The October exemption law is an event notice under 0046, including its system of plantation policing and control of enslaved people; it offers no presidential choice over that conduct. Its enacted-law cause remains unimplemented.
+
+`topics.json` contains three proposed bench rows, not changes to the live gate register. S23 and the gate reviewer retain that register. A passing ordinary-draft loader probe is a structural result, not approval of its no-topic ruling or historical promotion.
+
+`validate.ts` uses the production schema, semantic validator, gate and loader in an isolated in-memory overlay. It returns all gate errors. Its CLI exits successfully only when the errors match the declared blockers; that does **not** mean every draft loads. The tests independently probe every definition and require the right received document after its earliest date. A date alone, a different paper and a future receipt fail. The live loader excludes all S28 situations, strings and provenance.
+
+Run the focused check with `npx vitest run packs/union-1861/test/s28-drafts.test.ts`. Run `node --import tsx packs/union-1861/situations/drafts/s28/validate.ts` for per-draft results. `sources-read.md` and `reading-manifest.json` record the selected readings and external evidence. The lane hand-over is `notes/sprint-S28-situations.md`.
+
+Before promotion, the lead must resolve each proposed ruling, establish dated authors and postholding, supply actual received papers and typed acts through their owners, complete costs and inaction policy, and obtain the independent gate review after the sprint. No source signature is a gate signature.

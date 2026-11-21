@@ -1,0 +1,91 @@
+{
+  "id": "s28_fremont_sustain",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_fremont_sustain.title",
+  "text": "situation.s28_fremont_sustain.text",
+  "earliest": "1861-09-08",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 188
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_fremont_sustain"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_fremont_sustain"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-FREMONT-SEP8",
+      "at": "pp. 1–4, Frémont to Lincoln, 8 September 1861, four-image item mal.1156100; complete LoC transcription read, emancipation paragraph only. Manuscript pagination not separately inspected."
+    }
+  ],
+  "speakers": [
+    {
+      "post": null,
+      "person": "fremont_john_c"
+    }
+  ],
+  "namedOnly": "Frémont is the author of the received-letter proposal. His dated command, Lincoln’s actual receipt and a typed response remain unimplemented. The letter’s separate shooting proposal is excluded.",
+  "options": [
+    {
+      "id": "emancipation-stand",
+      "label": "situation.s28_fremont_sustain.option.emancipation-stand",
+      "displayKey": 10,
+      "proposedBy": [
+        "fremont_john_c"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_fremont_sustain.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "unsourced": "The 8 September letter establishes Frémont’s defense of the clause, not Lincoln’s acceptance of it."
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_fremont_sustain: no additional staff-line recommendation established in this letter; Frémont is the option proponent."
+      }
+    ]
+  }
+}

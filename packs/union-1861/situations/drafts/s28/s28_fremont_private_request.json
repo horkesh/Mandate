@@ -1,0 +1,93 @@
+{
+  "id": "s28_fremont_private_request",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_fremont_private_request.title",
+  "text": "situation.s28_fremont_private_request.text",
+  "earliest": "1861-09-02",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 182
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_fremont_private_request"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_fremont_private_request"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "I-3 pp. 469–470; Lincoln to Frémont, 2 September 1861, second point only."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Dated papers are attributed to their historical authors; no later officeholding or present delivery is asserted. Unrostered addressees require identity/post resolution before promotion.",
+  "options": [
+    {
+      "id": "private-request",
+      "label": "situation.s28_fremont_private_request.option.private-request",
+      "displayKey": 10,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_fremont_private_request.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "private-request"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_fremont_private_request: no separate cabinet staff recommendation established by this bounded selection."
+      }
+    ]
+  }
+}

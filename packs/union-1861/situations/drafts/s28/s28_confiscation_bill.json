@@ -1,0 +1,109 @@
+{
+  "id": "s28_confiscation_bill",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_confiscation_bill.title",
+  "text": "situation.s28_confiscation_bill.text",
+  "earliest": "1862-07-17",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 500
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_confiscation_bill"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_confiscation_bill"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-CW2",
+      "at": "II p. 209; message of 17 July 1862."
+    },
+    {
+      "source": "S13-CW2",
+      "at": "II pp. 209–211; prepared objection enclosed with the 17 July message."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "us_president",
+      "person": "lincoln_abraham"
+    }
+  ],
+  "namedOnly": "Dated papers are attributed to their historical authors; no later officeholding or present delivery is asserted. Unrostered addressees require identity/post resolution before promotion.",
+  "options": [
+    {
+      "id": "sign-with-resolution",
+      "label": "situation.s28_confiscation_bill.option.sign-with-resolution",
+      "displayKey": 10,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    },
+    {
+      "id": "veto",
+      "label": "situation.s28_confiscation_bill.option.veto",
+      "displayKey": 20,
+      "proposedBy": [
+        "lincoln_abraham"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_confiscation_bill.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "sign-with-resolution"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_confiscation_bill: no separate cabinet staff recommendation established by this bounded selection."
+      }
+    ]
+  }
+}

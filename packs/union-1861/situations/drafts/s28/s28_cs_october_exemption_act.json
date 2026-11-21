@@ -1,0 +1,61 @@
+{
+  "id": "s28_cs_october_exemption_act",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.s28_cs_october_exemption_act.title",
+  "text": "situation.s28_cs_october_exemption_act.text",
+  "earliest": "1862-10-11",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 586
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_cs_october_exemption_act"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_cs_october_exemption_act"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_president"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "twenty-slave-law"
+    ],
+    "placement": "event",
+    "risks": [],
+    "actingSide": "confederate"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-CSSTAT",
+      "at": "First Congress, second session, pp. 77–79, chapter XLV, approved 11 October 1862; especially the plantation-policing clauses on p. 79."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "cs_president",
+      "person": "davis_jefferson"
+    }
+  ],
+  "namedOnly": "The documents’ addressees and proposed appointees identify the record. They do not establish present postholding. The reading index retains identity and post gaps; no fictional holder is inserted."
+}

@@ -1,0 +1,112 @@
+{
+  "id": "s28_cs_maryland_offensive",
+  "kind": "decision",
+  "faction": "confederate",
+  "title": "situation.s28_cs_maryland_offensive.title",
+  "text": "situation.s28_cs_maryland_offensive.text",
+  "earliest": "1862-09-03",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 548
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_cs_maryland_offensive"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_cs_maryland_offensive"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_president"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed no gate topic: this bounded facet concerns september-offensive through military, diplomatic or legislative authority. It authorizes no act on a protected population or atrocity-class conduct."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-OR",
+      "at": "I-19 part II pp. 590–591; Lee to Davis, 3 September 1862."
+    },
+    {
+      "source": "S28-OR",
+      "at": "I-19 part II pp. 590–591; 3 September 1862."
+    },
+    {
+      "source": "S28-OR",
+      "at": "I-19 part II p. 591; 3 September 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": "cs_president",
+      "person": "davis_jefferson"
+    },
+    {
+      "post": null,
+      "person": "lee_robert_e"
+    }
+  ],
+  "namedOnly": "The documents’ addressees and proposed appointees identify the record. They do not establish present postholding. The reading index retains identity and post gaps; no fictional holder is inserted.",
+  "options": [
+    {
+      "id": "support-movement",
+      "label": "situation.s28_cs_maryland_offensive.option.support-movement",
+      "displayKey": 10,
+      "proposedBy": [
+        "lee_robert_e"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": [],
+      "group": "support-movement"
+    },
+    {
+      "id": "improve-defenses",
+      "label": "situation.s28_cs_maryland_offensive.option.improve-defenses",
+      "displayKey": 20,
+      "proposedBy": [
+        "lee_robert_e"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": [],
+      "group": "improve-defenses"
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_cs_maryland_offensive.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "unsourced": "The selected document establishes the proposed course, not its eventual adoption in this separate decision facet."
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_cs_maryland_offensive: no separate staff-line recommendation established by this selection; option proponents are recorded separately."
+      }
+    ]
+  }
+}

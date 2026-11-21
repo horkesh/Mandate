@@ -1,0 +1,91 @@
+{
+  "id": "s28_hunter_sustain",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_hunter_sustain.title",
+  "text": "situation.s28_hunter_sustain.text",
+  "earliest": "1862-05-16",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 438
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_hunter_sustain"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_hunter_sustain"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "emancipation-policy"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-CHASE-MAY16",
+      "at": "pp. 1–2 (recto and verso), Chase to Lincoln, 16 May 1862; contemporary secretarial copy, SMC 501; both manuscript images read."
+    }
+  ],
+  "speakers": [
+    {
+      "post": null,
+      "person": "chase_salmon_p"
+    }
+  ],
+  "namedOnly": "Dated papers are attributed to their historical authors; no later officeholding or present delivery is asserted. Unrostered addressees require identity/post resolution before promotion.",
+  "options": [
+    {
+      "id": "let-stand",
+      "label": "situation.s28_hunter_sustain.option.let-stand",
+      "displayKey": 10,
+      "proposedBy": [
+        "chase_salmon_p"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_hunter_sustain.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "unsourced": "This letter establishes Chase’s recommendation, not Lincoln’s adoption of it."
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_hunter_sustain: Chase is the option proponent; no additional staff-line advice is supplied by these two pages."
+      }
+    ]
+  }
+}

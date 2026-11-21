@@ -1,0 +1,93 @@
+{
+  "id": "s28_august_arrest_order",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_august_arrest_order.title",
+  "text": "situation.s28_august_arrest_order.text",
+  "earliest": "1862-08-08",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 522
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_august_arrest_order"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_august_arrest_order"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "union-habeas-and-arrests"
+    ],
+    "placement": "decision",
+    "risks": [],
+    "actingSide": "union"
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S13-OR",
+      "at": "III-2 pp. 321–322; dated order of 8 August 1862, excluding the undated press explanation."
+    }
+  ],
+  "speakers": [
+    {
+      "post": null,
+      "person": "stanton_edwin_m"
+    }
+  ],
+  "namedOnly": "Dated papers are attributed to their historical authors; no later officeholding or present delivery is asserted. Unrostered addressees require identity/post resolution before promotion.",
+  "options": [
+    {
+      "id": "war-department-order",
+      "label": "situation.s28_august_arrest_order.option.war-department-order",
+      "displayKey": 10,
+      "proposedBy": [
+        "stanton_edwin_m"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_august_arrest_order.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "war-department-order"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_august_arrest_order: no separate cabinet staff recommendation established by this bounded selection."
+      }
+    ]
+  }
+}

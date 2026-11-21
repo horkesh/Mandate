@@ -1,0 +1,88 @@
+{
+  "id": "s28_railroad_instructions",
+  "kind": "decision",
+  "faction": "union",
+  "title": "situation.s28_railroad_instructions.title",
+  "text": "situation.s28_railroad_instructions.text",
+  "earliest": "1862-08-23",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 537
+      },
+      {
+        "knows": {
+          "reportType": "informal",
+          "subtype": "cabinet-word",
+          "subjectKind": "situation",
+          "subjectId": "s28_document_railroad_instructions"
+        }
+      }
+    ]
+  },
+  "knowledge": {
+    "knows": {
+      "reportType": "informal",
+      "subtype": "cabinet-word",
+      "subjectKind": "situation",
+      "subjectId": "s28_document_railroad_instructions"
+    }
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Proposed no gate topic: this facet concerns the chain for railroad instructions. It excludes the memoir’s detention threat and any policy toward civilians."
+  },
+  "gateReview": null,
+  "citations": [
+    {
+      "source": "S28-OR",
+      "at": "I-12, part III, p. 638; Halleck and Kelton instructions to Haupt, 23 August 1862."
+    }
+  ],
+  "speakers": [
+    {
+      "post": null,
+      "person": "halleck_henry_w"
+    }
+  ],
+  "namedOnly": "Dated papers are attributed to their historical authors; no later officeholding or present delivery is asserted. Unrostered addressees require identity/post resolution before promotion.",
+  "options": [
+    {
+      "id": "back-railroad",
+      "label": "situation.s28_railroad_instructions.option.back-railroad",
+      "displayKey": 10,
+      "proposedBy": [
+        "halleck_henry_w"
+      ],
+      "effects": [],
+      "orders": [],
+      "calls": [],
+      "lockedCosts": []
+    }
+  ],
+  "inaction": {
+    "text": "situation.s28_railroad_instructions.inaction",
+    "effects": []
+  },
+  "historicalDefault": {
+    "options": [
+      "back-railroad"
+    ]
+  },
+  "staffAbsence": {
+    "none": "no-adviser-on-record",
+    "cites": [
+      {
+        "source": "S28-READING",
+        "at": "sources-read.md; s28_railroad_instructions: no separate cabinet staff recommendation established by this bounded selection."
+      }
+    ]
+  }
+}

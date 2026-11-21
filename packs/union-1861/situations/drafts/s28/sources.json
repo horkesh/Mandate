@@ -1,0 +1,75 @@
+{
+  "formatVersion": 2,
+  "sources": [
+    {
+      "key": "S28-OR",
+      "title": "Official Records of the Union and Confederate Armies: selected period correspondence and laws",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "OR I-4 pp. 179–181 (https://archive.org/details/warofrebellion04secrrich); I-12 part III p. 638 (https://archive.org/details/cu31924077730145); I-19 part II pp. 590–592 (https://archive.org/details/warofrebellion192unit); IV-1 pp. 1067, 1072, 1095–1097 (https://archive.org/details/cu31924079579532). Exact local files, hashes and selected pages in reading-manifest.json. Additional selections: I-15 p. 754 (https://archive.org/details/warofrebellion0115rootrich); I-16 part II pp. 768–769 (https://archive.org/details/cu31924077730228, corrected S22 cache only).",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S28-DAVIS1",
+      "title": "James D. Richardson, A Compilation of the Messages and Papers of the Confederacy, I (1906): dated documents only",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/compilationofmes01conf; dated presidential documents reproduced in a later compilation. Editorial biographies, historical summaries, index assertions and Davis’s later memoir are not evidence for these drafts.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S28-CSSTAT",
+      "title": "Confederate public acts, first Congress, second session (1862)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/statutesatlargeo213conf; printed pp. 61–62, 77–79, acts of 27 September and 11 October 1862. OCR is checked against the printed headers; the act’s approval date controls over an OCR-corrupted marginal date.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S28-READING",
+      "title": "S28 bounded advocate searches and draft authoring record (2026-11-21)",
+      "kind": "pointer",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "situations/drafts/s28/sources-read.md, advocate-search.json and index.json. A bounded absence is not a claim that no adviser existed.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S28-CHASE-MAY16",
+      "title": "Salmon P. Chase to Abraham Lincoln, 16 May 1862, contemporary secretarial copy (SMC 501)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://www.shapell.org/manuscript/chase-letter-abraham-lincoln-general-hunter-emancipation-order/; pp. 1–2 (recto/verso), both manuscript images inspected; image URLs and SHA-256 in reading-manifest.json. Catalogue description identifies the copy; its modern interpretive essay is not evidence for the decision.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S28-DAVIS2",
+      "title": "James D. Richardson, A Compilation of the Messages and Papers of the Confederacy, II (1906): dated diplomatic correspondence only",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/compilationofmes02conf; Benjamin to Slidell, confidential no. 3, 12 April 1862, pp. 227–232. A later compilation of the period dispatch, not a period-delivered edition.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S28-FREMONT-SEP8",
+      "title": "John C. Frémont to Abraham Lincoln, 8 September 1861, LoC mal.1156100",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://www.loc.gov/resource/mal.1156100/?st=text; complete Library of Congress transcription of a four-image letter, pp. 1–4. The emancipation paragraph supplies the advocacy; the separate shooting proposal is excluded. Source transcription retained externally with hash; manuscript images were not inspected. Modern editorial annotation is not evidence for the option.",
+      "licencePage": null,
+      "licenceReadOn": null
+    }
+  ]
+}
