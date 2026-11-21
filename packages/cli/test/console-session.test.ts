@@ -82,7 +82,7 @@ function offered(lines: readonly string[]): Map<string, Set<string>> {
 describe('R86 console preflight', () => {
   it('opens at peace with readable situation, post and plan selectors', () => {
     const p = player();
-    expect(p.date).toBe('1861-03-06');
+    expect(p.date).toBe('1861-03-05');
     expect(p.transcript.join('\n')).toContain('; at peace;');
     expect(p.type('help').join('\n')).toContain('edit <post>');
     expect(p.type('posts').join('\n')).toMatch(/^us_dc_militia: \w+/m);

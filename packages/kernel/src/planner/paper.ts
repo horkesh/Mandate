@@ -14,6 +14,7 @@ export function enclosePlan(input: PlannerInput, set: DraftSet, chosen: PlanCand
     paperBeliefs: [...input.beliefs], paperWorks: [...input.works], paperObstructions: [...input.obstructions],
     paperControl: Object.fromEntries([...input.ground.index.holdings].map(([region, holding]) => [region, Object.fromEntries(holding.tracedBy.map(faction => [faction,input.ground.index.threshold + (holding.holder === faction && holding.tracedBy.length > 1 ? 1 : 0)]))])),
     paperSupplied: [...input.supply.paths.keys()], paperNetwork: { ...input.ground.network, obstructions: [] }, paperMonth: input.ground.month,
+    ...(input.notes?.length ? { paperNoteBasis: { notes: input.notes, scoreWeight: input.noteScoreWeight ?? 0 } } : {}),
   };
 }
 
@@ -29,5 +30,6 @@ export function inputFromPaper(world: SeatsWorld, paper: PlanPaper): PlannerInpu
     rules: world.map.world.rules.planner, assaultMargin: world.rules.people.traits.assaultMargin,
     reinforceShare: { timid: world.rules.people.compliance.reinforceShareTimid, bold: world.rules.people.compliance.reinforceShareBold },
     day: paper.paperDraft.draftDay, bombardment: world.map.world.rules.combat.bombardment,
+    ...(paper.paperNoteBasis === undefined ? {} : { notes: paper.paperNoteBasis.notes, noteScoreWeight: paper.paperNoteBasis.scoreWeight }),
   };
 }

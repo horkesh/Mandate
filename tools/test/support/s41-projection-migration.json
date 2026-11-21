@@ -1,0 +1,65 @@
+{
+  "mergeHead": "f595bd7e976898d6d25aad27a04fd179c7804ec2",
+  "cause": "S41 merges S35 note scoring and notice text into S36 received-only correspondence. Protected-read identities and derivation reasons/citations remain exactly the same; only the full helper closures change.",
+  "findingCountBefore": 13,
+  "findingCountAfter": 13,
+  "identitiesEqual": true,
+  "migrations": [
+    {
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "4328aa2f640e219a3233180a3504622c52dac104412fe7b5dcf5d464f12459a0",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "81a098578985867d3f2e8ab92192c77e4b226b15c18585a0f96425f7eedd8f04",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates)"
+      }
+    },
+    {
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "13f708599adf0e053dc5411b530bbca3e2f045750bdcb3e1f7b7627dd6ff1fca",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:pendingRequests (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "bb77ac5a1639b41791eda4ccc9bb8b9543e49843f852f761ad7653d9dbb8dcc4",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:pendingRequests (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      }
+    }
+  ],
+  "derivations": [
+    {
+      "before": {
+        "path": "packages/kernel/src/view/view.ts",
+        "symbol": "viewFor",
+        "hash": "8b99c206dad4f32e0023e4094aeb6a071990ede795060f0decd21581f9f955a2",
+        "reason": "Own seat identity, faction and physical location; the people catalogue itself consumes received evidence.",
+        "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+      },
+      "after": {
+        "path": "packages/kernel/src/view/view.ts",
+        "symbol": "viewFor",
+        "hash": "a3b7efb0632e71a45fc6a2046d2ef0e649688aa38d43c08118e7a977fbac172d",
+        "reason": "Own seat identity, faction and physical location; the people catalogue itself consumes received evidence.",
+        "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+      }
+    }
+  ],
+  "fingerprints": [
+    [
+      "683f2f0eb4d4357d3dd0f0fb4c8901178955422f26a0f4dc20f50f97a47b2a70",
+      "e9df44c4223656553049df0225f435bb728d8758be38ea38539680d8efeb9b51"
+    ],
+    [
+      "0f6c5fc8ca58c921091127f913633f14421f1e8a3b70281d6f103ac7cc646167",
+      "f2795e1599a9499adc1c51288476d7f62276dbfdbc0d0856ae79038ce9cbd1af"
+    ]
+  ]
+}

@@ -37,7 +37,7 @@ export class ConsoleSession {
   }
 
   private morningScreen(): string[] {
-    const lines = morningLines(this.request, this.seenFrom, this.t, { date: this.game.dateOf(this.request.requestDay), attention: this.request.view.attention });
+    const lines = morningLines(this.request, this.seenFrom, this.t, { date: this.game.dateOfRequest(this.request.requestDay), attention: this.request.view.attention });
     this.seenFrom = this.request.requestDay;
     return lines;
   }
@@ -50,7 +50,7 @@ export class ConsoleSession {
       case 'error':
         return { lines: [input.message], done: false };
       case 'quit':
-        return { lines: [t('console.quit', { day: String(this.request.requestDay), date: this.game.dateOf(this.request.requestDay) })], done: true };
+        return { lines: [t('console.quit', { day: String(this.request.requestDay), date: this.game.dateOfRequest(this.request.requestDay) })], done: true };
       case 'command':
         this.queue.push(input.command);
         return { lines: [t('console.queue.add', { index: String(this.queue.length), command: commandText(input.command, t) })], done: false };
@@ -116,7 +116,7 @@ export class ConsoleSession {
       : this.t('console.turn.stopped', { points: result.stopped.join(', ') }));
     this.request = this.game.morning();
     this.seenFrom = this.request.requestDay;
-    lines.push(...morningLines(this.request, this.request.requestDay, this.t, { date: this.game.dateOf(this.request.requestDay), attention: this.request.view.attention }).slice(0, 1));
+    lines.push(...morningLines(this.request, this.request.requestDay, this.t, { date: this.game.dateOfRequest(this.request.requestDay), attention: this.request.view.attention }).slice(0, 1));
     const menu = this.request.menu as phase0.PrincipalMenu;
     const open = this.request.view.situations.filter((s) => s.status === 'open');
     if (open.length > 0) lines.push(this.t('console.morning.situations', { situations: open.map(s => s.id).join(', ') }));

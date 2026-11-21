@@ -21,6 +21,7 @@ import { blocksOf, makeCtx, type Ctx, type PlannerInput } from './context.ts';
 import { weights } from './methods.ts';
 import { overlap, search, viaRoute } from './route.ts';
 import { demandFor, makeCandidate } from './score.ts';
+import { scoreNotes } from './notes.ts';
 import type { AxisMode, PlanAxis, PlanCandidate, DraftSet, PlannerForce, TermKind } from './types.ts';
 
 /** A term that fell between his chosen plan and the edited one, and by how much. */
@@ -132,7 +133,7 @@ export function applyEdit(input: PlannerInput, set: DraftSet, chosen: PlanCandid
   }
   const posts = new Set(axes.map((x) => x.axisPost));
   const requests = chosen.candRequests.filter((r) => r.reqKind !== 'reinforcement').filter((r) => r.reqKind !== 'cooperating_axis' || axes.some((x) => x.axisName === 'partner') || (r.reqPost !== null && posts.has(r.reqPost)));
-  const edited = makeCandidate(ctx, chosen.candMethod, `${chosen.candVariant}+${edit.editKind}`, axes, requests);
+  const edited = scoreNotes(ctx, makeCandidate(ctx, chosen.candMethod, `${chosen.candVariant}+${edit.editKind}`, axes, requests), set.draftCandidates);
   // His judgement: the best he drafted for the goal as he understood it.
   const best = set.draftCandidates[0]?.candScore ?? chosen.candScore;
   const distance = clampPermille(best - edited.candScore);

@@ -193,7 +193,8 @@ export function parseLine(line: string, request: SeatRequest, t: DeskStrings): D
       if (problem !== null) return fail(problem);
       const posture = words[1];
       if (posture === undefined || !(POSTURES as readonly string[]).includes(posture)) return fail(t('console.error.order', { post: '<post>', postures: POSTURES.join('|') }));
-      const objective = (words[2] ?? null) as RegionId | null;
+      const goalFlags = new Set(['rail', 'norail', 'river', 'sea', 'neutral', 'await', 'review', 'bypass']);
+      const objective = (words.slice(2).find(w => !goalFlags.has(w)) ?? null) as RegionId | null;
       if (posture !== 'hold' && objective === null) return fail(t('console.error.objective', { posture: posture }));
       const d = menu.goalDefaults;
       const risk = opts.has('risk') ? whole(opts.get('risk')) : d.risk;

@@ -1,0 +1,1913 @@
+[
+  {
+    "seq": 1,
+    "steps": [
+      {
+        "op": "capture",
+        "name": "opening-3440"
+      },
+      {
+        "op": "click",
+        "name": "In-tray 1"
+      },
+      {
+        "op": "click",
+        "selector": "[data-testid=paper-link]",
+        "index": 0
+      },
+      {
+        "op": "capture",
+        "name": "opening-paper-3440"
+      }
+    ]
+  },
+  {
+    "seq": 2,
+    "steps": [
+      {
+        "op": "book",
+        "name": "Org board"
+      }
+    ]
+  },
+  {
+    "seq": 3,
+    "steps": [
+      {
+        "op": "click",
+        "name": "District of Columbia militia (Inspector General) Charles P. Stone"
+      },
+      {
+        "op": "capture",
+        "name": "opening-command-card-3440"
+      }
+    ]
+  },
+  {
+    "seq": 4,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Ask for a report"
+      }
+    ]
+  },
+  {
+    "seq": 5,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Sign to out-tray",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      }
+    ]
+  },
+  {
+    "seq": 6,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Begin the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 7,
+    "steps": [
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "name": "Open the docket"
+      }
+    ]
+  },
+  {
+    "seq": 8,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Land Captain Vogdes's company from the ships Urged by: Edward Bates, William H. Seward, Salmon P. Chase"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "capture",
+        "name": "first-decisions-3440"
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "In-tray 1"
+      },
+      {
+        "op": "click",
+        "selector": "[data-testid=paper-link]",
+        "index": 0
+      }
+    ]
+  },
+  {
+    "seq": 9,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 10,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Open the docket"
+      }
+    ]
+  },
+  {
+    "seq": 11,
+    "because": "Keep policy with the president; leave Sumter open while the only offered option is withdrawal.",
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Answer that the policy is the president's to carry out Urged by: Abraham Lincoln"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "In-tray 31"
+      }
+    ]
+  },
+  {
+    "seq": 12,
+    "steps": [
+      {
+        "op": "click",
+        "selector": "[data-testid=paper-link]",
+        "index": 0
+      }
+    ]
+  },
+  {
+    "seq": 13,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Return to tray"
+      },
+      {
+        "op": "click",
+        "selector": "[data-testid=paper-link]",
+        "index": 1
+      }
+    ]
+  },
+  {
+    "seq": 14,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "name": "Open the docket"
+      }
+    ]
+  },
+  {
+    "seq": 15,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "File a refusal, hold back its delivery, and keep an unofficial channel through Justice Campbell Urged by: William H. Seward"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 16,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "name": "Docket 1"
+      }
+    ]
+  },
+  {
+    "seq": 17,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "name": "Docket 1"
+      }
+    ]
+  },
+  {
+    "seq": 18,
+    "op": "click",
+    "name": "Open the docket"
+  },
+  {
+    "seq": 19,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Answer that the government will not try to supply Fort Sumter without giving the governor notice Urged by: William H. Seward"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 20,
+    "op": "click",
+    "name": "Open the docket"
+  },
+  {
+    "seq": 21,
+    "because": "Do not surrender a fort; wait for a way to supply it while provision time remains imprecise.",
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 22,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Let it take its course",
+        "index": 1,
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 23,
+    "because": "Use the Navy chain and faster messenger for Pickens; supply Sumter instead of withdrawing.",
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Send a Navy Department order to land the company, carried overland by special messenger Urged by: Gideon Welles"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Send provisions with warships, and give the governor of South Carolina notice Urged by: Gideon Welles, Montgomery Blair, Salmon P. Chase"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "index": 1,
+        "command": true
+      },
+      {
+        "op": "capture",
+        "name": "sumter-relief-3440"
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 24,
+    "op": "click",
+    "name": "Related paper: Robert Anderson ? Telegraphic dispatch"
+  },
+  {
+    "seq": 25,
+    "op": "click",
+    "name": "Related paper: Robert Anderson",
+    "exact": false
+  },
+  {
+    "seq": 26,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 27,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Proclaim a blockade Urged by: William H. Seward"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 28,
+    "op": "click",
+    "name": "Open the docket"
+  },
+  {
+    "seq": 29,
+    "steps": [
+      {
+        "op": "capture",
+        "name": "call-with-no-choice-3440"
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "select",
+        "label": "Maximum days this turn",
+        "value": "1"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 30,
+    "steps": [
+      {
+        "op": "select",
+        "selector": "dialog[open] select",
+        "value": "1"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 31,
+    "because": "Call the militia under the supplied law and summon Congress, then seek an early field advance.",
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Call 75,000 militia for three months under the 1795 law, and summon Congress for 4 July Urged by: Simon Cameron"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "select",
+        "selector": "dialog[open] select",
+        "value": "1"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "book",
+        "name": "Write an order"
+      },
+      {
+        "op": "select",
+        "selector": ".order-sheet select",
+        "index": 0,
+        "value": "order"
+      }
+    ]
+  },
+  {
+    "seq": 32,
+    "because": "The desk now says At war. Ask the only Washington field commander for a reviewed advance on Richmond.",
+    "steps": [
+      {
+        "op": "fill",
+        "label": "Console command",
+        "value": "order ‹District of Columbia militia (Inspector General)› take ‹Richmond› review"
+      },
+      {
+        "op": "click",
+        "name": "Sign to out-tray",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      }
+    ]
+  },
+  {
+    "seq": 33,
+    "steps": [
+      {
+        "op": "select",
+        "selector": "dialog[open] select",
+        "value": "7"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 34,
+    "steps": [
+      {
+        "op": "click",
+        "name": "In-tray 64"
+      }
+    ]
+  },
+  {
+    "seq": 35,
+    "steps": [
+      {
+        "op": "click",
+        "selector": "[data-testid=paper-link]",
+        "index": 1
+      }
+    ]
+  },
+  {
+    "seq": 36,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Return to tray"
+      },
+      {
+        "op": "click",
+        "selector": "[data-testid=paper-link]",
+        "index": 3
+      }
+    ]
+  },
+  {
+    "seq": 37,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 38,
+    "op": "click",
+    "name": "Related paper: Winfield Scott",
+    "exact": false
+  },
+  {
+    "seq": 39,
+    "steps": [
+      {
+        "op": "book",
+        "name": "Write an order"
+      },
+      {
+        "op": "fill",
+        "label": "Console command",
+        "value": "order ‹District of Columbia militia (Inspector General)› take ‹Richmond› review by=wire bypass"
+      },
+      {
+        "op": "click",
+        "name": "Sign to out-tray",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 40,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Hold the yard Urged by: Gideon Welles"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "book",
+        "name": "Plans & enemy"
+      }
+    ]
+  },
+  {
+    "seq": 41,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 42,
+    "op": "click",
+    "name": "Review the plan"
+  },
+  {
+    "seq": 43,
+    "because": "Press the received Richmond plan despite its small reported force, using direct delivery after Scott's objection. The estimate is 24 days, not a promised battle date.",
+    "steps": [
+      {
+        "op": "select",
+        "selector": ".map-plan-sheet select",
+        "index": 0,
+        "value": "wire"
+      },
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Around the relaying offices"
+      },
+      {
+        "op": "capture",
+        "name": "early-richmond-plan-3440"
+      },
+      {
+        "op": "click",
+        "name": "Approve as drafted",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 44,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Bring troops around Baltimore by Annapolis Urged by: Winfield Scott"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 45,
+    "op": "click",
+    "name": "Read the daybook"
+  },
+  {
+    "seq": 46,
+    "steps": [
+      {
+        "op": "click",
+        "selector": ".day-record:last-child [data-testid=paper-link]",
+        "index": 0
+      }
+    ]
+  },
+  {
+    "seq": 47,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 48,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 49,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 50,
+    "op": "click",
+    "name": "Open the docket"
+  },
+  {
+    "seq": 51,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Back Lyon and enrol St. Louis's loyal volunteers Urged by: Francis P. Blair Jr., Nathaniel Lyon"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 52,
+    "steps": [
+      {
+        "op": "book",
+        "name": "Write an order"
+      },
+      {
+        "op": "fill",
+        "label": "Console command",
+        "value": "inquire ‹District of Columbia militia (Inspector General)›"
+      },
+      {
+        "op": "click",
+        "name": "Sign to out-tray",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 53,
+    "op": "click",
+    "name": "Open the docket"
+  },
+  {
+    "seq": 54,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Authorise the general-in-chief to suspend the writ of habeas corpus on the military line, where resistance makes it necessary"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 55,
+    "steps": [
+      {
+        "op": "book",
+        "name": "Org board"
+      },
+      {
+        "op": "fill",
+        "label": "Find a post or holder",
+        "value": "Stone"
+      },
+      {
+        "op": "click",
+        "name": "District of Columbia militia (Inspector General) Charles P. Stone"
+      }
+    ]
+  },
+  {
+    "seq": 56,
+    "op": "click",
+    "selector": ".post-papers article button",
+    "index": 0
+  },
+  {
+    "seq": 57,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 58,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      }
+    ]
+  },
+  {
+    "seq": 59,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 60,
+    "steps": [
+      {
+        "op": "book",
+        "name": "Write an order"
+      },
+      {
+        "op": "fill",
+        "label": "Console command",
+        "value": "inquire ‹District of Columbia militia (Inspector General)›"
+      },
+      {
+        "op": "click",
+        "name": "Sign to out-tray",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      }
+    ]
+  },
+  {
+    "seq": 61,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "book",
+        "name": "Org board"
+      },
+      {
+        "op": "fill",
+        "label": "Find a post or holder",
+        "value": "Stone"
+      },
+      {
+        "op": "click",
+        "name": "District of Columbia militia (Inspector General) Charles P. Stone"
+      },
+      {
+        "op": "click",
+        "selector": ".post-papers article button",
+        "index": 0
+      }
+    ]
+  },
+  {
+    "seq": 62,
+    "steps": [
+      {
+        "op": "capture",
+        "name": "early-advance-report-3440"
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 63,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Order the Department of the Ohio across the river Urged by: George B. McClellan"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 64,
+    "op": "click",
+    "name": "Related paper: Charles P. Stone",
+    "exact": false
+  },
+  {
+    "seq": 65,
+    "steps": [
+      {
+        "op": "capture",
+        "name": "richmond-arrival-3440"
+      },
+      {
+        "op": "size",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "op": "capture",
+        "name": "richmond-arrival-1920"
+      },
+      {
+        "op": "size",
+        "width": 3440,
+        "height": 1440
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      }
+    ]
+  },
+  {
+    "seq": 66,
+    "because": "Raise the first twelve offered long-term contingents within the displayed twelve attention allowance.",
+    "steps": [
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 67,
+    "op": "click",
+    "name": "Open the docket"
+  },
+  {
+    "seq": 68,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Do not give them up: employ them and keep account, their final status reserved Urged by: Simon Cameron"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Send arms quietly to Kentucky's Unionists Urged by: Simon Cameron"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "index": 1,
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      }
+    ]
+  },
+  {
+    "seq": 69,
+    "steps": [
+      {
+        "op": "capture",
+        "name": "decision-outtray-gap-3440"
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "index": 0,
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 70,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 71,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 72,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 73,
+    "steps": [
+      {
+        "op": "book",
+        "name": "Org board"
+      },
+      {
+        "op": "fill",
+        "label": "Find a post or holder",
+        "value": "Stone"
+      },
+      {
+        "op": "click",
+        "name": "District of Columbia militia (Inspector General) Charles P. Stone"
+      },
+      {
+        "op": "click",
+        "name": "Request an audience"
+      },
+      {
+        "op": "capture",
+        "name": "audience-after-arrival-3440"
+      }
+    ]
+  },
+  {
+    "seq": 74,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Sign to out-tray",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 75,
+    "op": "click",
+    "name": "Related paper: Charles P. Stone",
+    "exact": false,
+    "index": 0
+  },
+  {
+    "seq": 76,
+    "steps": [
+      {
+        "op": "book",
+        "name": "Org board"
+      },
+      {
+        "op": "fill",
+        "label": "Find a post or holder",
+        "value": "Stone"
+      }
+    ]
+  },
+  {
+    "seq": 77,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 78,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 79,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 80,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 81,
+    "steps": [
+      {
+        "op": "capture",
+        "name": "july-advance-choice-3440"
+      },
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Advance now, before the terms run out Urged by: Montgomery Blair, Francis P. Blair Jr."
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "selector": ".table-docket > button"
+      }
+    ]
+  },
+  {
+    "seq": 82,
+    "steps": [
+      {
+        "op": "check",
+        "role": "checkbox",
+        "name": "Ask for 400,000 men and $400 million, and defend the spring's acts Urged by: Salmon P. Chase"
+      },
+      {
+        "op": "click",
+        "name": "Sign this decision",
+        "command": true
+      },
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      }
+    ]
+  },
+  {
+    "seq": 83,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Sign this call",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "book",
+        "name": "Org board"
+      },
+      {
+        "op": "fill",
+        "label": "Find a post or holder",
+        "value": "McDowell"
+      },
+      {
+        "op": "capture",
+        "name": "mcdowell-missing-board-3440"
+      }
+    ]
+  },
+  {
+    "seq": 84,
+    "steps": [
+      {
+        "op": "book",
+        "name": "Write an order"
+      },
+      {
+        "op": "select",
+        "selector": ".order-sheet select",
+        "index": 0,
+        "value": "appoint"
+      },
+      {
+        "op": "capture",
+        "name": "appointment-form-gap-3440"
+      }
+    ]
+  },
+  {
+    "seq": 85,
+    "steps": [
+      {
+        "op": "rest"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      }
+    ]
+  },
+  {
+    "seq": 86,
+    "steps": [
+      {
+        "op": "capture",
+        "name": "unavailable-advance-3440"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "select",
+        "selector": "dialog[open] select",
+        "value": "5"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      },
+      {
+        "op": "capture",
+        "name": "july31-3440"
+      },
+      {
+        "op": "size",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "op": "capture",
+        "name": "july31-1920"
+      }
+    ]
+  },
+  {
+    "seq": 87,
+    "steps": [
+      {
+        "op": "click",
+        "name": "Let the days run"
+      },
+      {
+        "op": "select",
+        "selector": "dialog[open] select",
+        "value": "6"
+      },
+      {
+        "op": "click",
+        "name": "Send orders & run days",
+        "command": true
+      },
+      {
+        "op": "click",
+        "name": "To the next morning"
+      }
+    ]
+  },
+  {
+    "seq": 88,
+    "steps": [
+      {
+        "op": "capture",
+        "name": "completed-july31-1920"
+      },
+      {
+        "op": "size",
+        "width": 3440,
+        "height": 1440
+      },
+      {
+        "op": "capture",
+        "name": "completed-july31-3440"
+      },
+      {
+        "op": "done"
+      }
+    ]
+  }
+]

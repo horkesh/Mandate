@@ -232,6 +232,8 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'ReportBody',
   'PlanPaper',
   'PlanPaper.paperNetwork',
+  'PlanPaper.paperNoteBasis',
+  'PlanPaper.paperNoteBasis.notes',
   'KnownSentOrder',
   'ReportClaim', // Includes claimBattle, claimBattleDays and claimCommander: authored once, filed only by knowledge.
   'AdviceBody',

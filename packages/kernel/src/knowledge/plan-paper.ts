@@ -2,6 +2,7 @@
 import type { EdgeId, FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { PlanGoal } from '../plans/goal.ts';
 import type { DraftSet, PlanCandidate } from '../planner/types.ts';
+import type { PlanNote } from '../plans/notes.ts';
 
 export interface PlanPaper {
   readonly paperPost: PostId;
@@ -21,4 +22,9 @@ export interface PlanPaper {
   readonly paperSupplied: readonly RegionId[];
   readonly paperNetwork: { readonly edgeCondition: Readonly<Record<EdgeId, number>>; readonly depotCondition: Readonly<Record<string, number>>; readonly obstructions: readonly []; readonly neutralGround?: Readonly<Record<RegionId, 'open' | 'closed'>> };
   readonly paperMonth: number;
+  /** Historical admitted preferences for this draft's scorer. Never projected as player terms. */
+  readonly paperNoteBasis?: {
+    readonly notes: readonly { readonly mark: PlanNote; readonly weight: number }[];
+    readonly scoreWeight: number;
+  };
 }

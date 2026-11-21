@@ -9,6 +9,23 @@ function session(overrides: Record<string, string>) {
 }
 
 describe('console wording from the pack', () => {
+  it('S41 keeps edit days, delivery and audience values behind substituted pack wording', () => {
+    const desk = session({
+      'console.command.edit': 'CHANGE {post}{days}',
+      'console.command.edit-days': ' WAIT={days}',
+      'console.command.review-route': '{command} / {route}{bypass}',
+      'console.command.bypass': ' DIRECT',
+      'console.command.through-chain': ' CHAIN',
+      'console.command.counter-adjust': 'BOLD={boldness}',
+      'console.command.audience': 'VISIT {post}{counters}',
+    });
+    desk.handle('order n_army_east take salient_tip review');
+    desk.handle('end');
+    expect(desk.handle('edit n_army_east timing days=1 by=wire bypass').lines[0]).toContain('CHANGE n_army_east WAIT=1 / wire DIRECT');
+    expect(desk.handle('approve n_army_east by=wire').lines[0]).toContain('/ wire CHAIN');
+    expect(desk.handle('audience n_army_east adjust:100').lines[0]).toContain('VISIT n_army_east: BOLD=100');
+  });
+
   it('formats the opening and leaves the command grammar intact', () => {
     const desk = session({
       'console.start': 'Welcome',
@@ -18,7 +35,7 @@ describe('console wording from the pack', () => {
     });
     const opening = desk.start();
     expect(opening[0]).toBe('Welcome');
-    expect(opening[1]).toContain('n_leader | 1861-04-02 | 1');
+    expect(opening[1]).toContain('n_leader | 1861-04-01 | 1');
     expect(desk.handle('help').lines[0]).toBe('Read the desk:');
     expect(desk.handle('order unknown hold').lines).toEqual(['No such post: unknown']);
   });

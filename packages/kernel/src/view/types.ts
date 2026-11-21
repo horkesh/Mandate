@@ -52,6 +52,8 @@ export interface AdviceView {
 }
 
 export interface ReportView {
+  /** Authored body key of this received notice, matched by subject, type and subtype. */
+  readonly text?: string;
   readonly notes?: readonly NoteAccount[];
   readonly id: MessageId;
   readonly type: ReportType;

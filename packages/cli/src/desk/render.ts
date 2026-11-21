@@ -90,7 +90,11 @@ export function morningLines(request: SeatRequest, sinceDay: number, t: DeskStri
 /** The days of a turn passing: each day's new reports and any orders refused. */
 export function dayLines(day: { readonly day: number; readonly date: string; readonly reports: readonly ReportView[]; readonly refused: readonly { readonly what: string; readonly reason: string }[] }, t: DeskStrings): string[] {
   const out = [t('console.day', { date: day.date, day: String(day.day) })];
-  for (const r of day.refused) out.push(t('console.refused', { command: r.what, reason: r.reason }));
+  for (const r of day.refused) {
+    const key = `console.refusal.${r.reason}`;
+    const reason = t(key);
+    out.push(t('console.refused', { command: r.what, reason: reason === key ? t('console.refusal.unavailable') : reason }));
+  }
   for (const l of dispatchLog(day, 0, t)) out.push('  ' + l);
   return out;
 }
@@ -110,14 +114,18 @@ export function commandText(c: SeatCommand, t: DeskStrings): string {
         bypass: c.bypass ? t('console.command.bypass') : '',
       });
     case 'review': {
+      const routed = (command: string) => t('console.command.review-route', {
+        command, route: c.route, bypass: t(c.bypass ? 'console.command.bypass' : 'console.command.through-chain'),
+      });
       if (c.action === 'edit' && c.edit !== null) {
         const axis = c.edit.axis === null ? '' : ' ' + c.edit.axis;
         const objective = c.edit.region === null ? '' : t('console.command.edit-to', { region: c.edit.region });
         const via = c.edit.via.length === 0 ? '' : t('console.via', { posts: c.edit.via.join(',') });
-        return t('console.command.edit', { post: c.to, kind: c.edit.kind, axis, objective, via });
+        const days = c.edit.concentration === null ? '' : t('console.command.edit-days', { days: String(c.edit.concentration) });
+        return routed(t('console.command.edit', { post: c.to, kind: c.edit.kind, axis, objective, via, days }));
       }
       const notes = c.notes?.length ? ': ' + c.notes.map(n => noteText(n, t)).join(' ') : '';
-      return t(c.action === 'approve' ? 'console.command.approve' : 'console.command.send-back', { post: c.to, notes });
+      return routed(t(c.action === 'approve' ? 'console.command.approve' : 'console.command.send-back', { post: c.to, notes }));
     }
     case 'decide':
       return t('console.command.decide', { situation: c.situation, options: c.options.length === 0 ? t('console.command.no-options') : c.options.join(', ') });
@@ -126,7 +134,12 @@ export function commandText(c: SeatCommand, t: DeskStrings): string {
     case 'transfer':
       return t('console.command.transfer', { amount: String(c.amount), force: c.force, from: c.from, to: c.to });
     case 'audience': {
-      const counters = c.counters.length === 0 ? '' : ': ' + c.counters.map(k => k.kind).join(', ');
+      const counters = c.counters.length === 0 ? '' : ': ' + c.counters.map(k => {
+        if (k.kind === 'adjust') return t('console.command.counter-adjust', { boldness: String(k.boldness) });
+        if (k.kind === 'frame') return t('console.command.counter-frame', { value: String(k.value) });
+        if (k.kind === 'reinforce') return t('console.command.counter-reinforce', { post: String(k.from), men: String(k.men) });
+        return k.kind;
+      }).join(', ');
       return t('console.command.audience', { post: c.to, counters });
     }
     case 'go':

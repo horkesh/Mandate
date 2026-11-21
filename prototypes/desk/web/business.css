@@ -29,3 +29,19 @@
 .high-contrast :is(.attention-coins i,.ledger-tabs,.table-stop,.business-stop,.queued-price,.return-entry,.missing-projection){background:#fff;color:#111;border-color:#111;box-shadow:none}.high-contrast .attention-coins i.proposed{background:#111;outline-color:#111;box-shadow:none}.high-contrast .ledger-spread{background:none}.high-contrast .action-price,.high-contrast .record-status{color:#111}.high-contrast .table-app dialog[data-kind=ledger]{border-color:#111}
 @media(max-width:1100px){.ledger-spread{display:block;background:none}.ledger-leaf{padding:1.2em}.table-stop{left:190px;max-width:calc(100vw - 220px);width:500px}.return-entry header{display:block}}
 @media(prefers-reduced-motion:reduce){.table-stop{transform:none}}
+.advance-agenda{border-block:1px solid #a28e69;padding:.6em 0;margin:.8em 0}.advance-agenda article{margin:.6em 0}.advance-agenda h4{margin:.4em 0}.table-books .plan-pending-badge{display:block;max-width:13em;white-space:normal;color:inherit;font-size:.85em;line-height:1.35}.plan-pending-badge:empty{display:none}
+.table-app dialog:is([data-kind=progress],[data-kind=personnel]){width:min(980px,calc(100vw - 72px))}
+.table-app dialog:is([data-kind=progress],[data-kind=personnel])>.panel-header{position:sticky;top:0;z-index:2;background:var(--paper)}
+.operations-record,.personnel-sheet{max-width:72ch;margin:auto;overflow-wrap:anywhere}
+.command-record{border-top:3px double #a28e69;margin-top:1.5em;padding-top:.7em}
+.command-record h3{font-size:1.45em}.command-record h4{font-size:1.1em;margin:.9em 0 .5em}
+.command-record summary{cursor:pointer;margin:1em 0}.command-record li{margin-bottom:.8em}
+.progress-paper{border-left:2px solid #a28e69;margin:1em 0;padding:.3em 0 .5em 1em}
+.progress-paper p{margin:.45em 0}.progress-paper small,.received-clock small{display:block;line-height:1.5}
+.progress-paper button{margin-top:.8em}.received-clock{border:1px solid #a28e69;padding:.8em 1em;margin:.9em 0}
+.personnel-sheet form{display:grid;gap:1em;padding:1em 0;border-block:1px solid #a28e69}
+.personnel-sheet label{display:grid;gap:.4em}.personnel-sheet select{width:100%;min-width:0;max-width:100%;padding:.6em;color:var(--ink);background:var(--paper);border:1px solid #887351}
+.personnel-sheet li small{display:block}.personnel-sheet li{margin:.8em 0}
+.table-run small{display:block;font-size:.8em;margin-top:.25em}
+.first-morning-note{position:absolute;left:235px;top:150px;z-index:23;width:min(430px,38vw);padding:1.1em 1.3em;background:var(--paper);color:var(--ink);border:1px solid #9e8963;box-shadow:3px 6px 14px #39260c44;font-size:calc(17px * var(--text-scale));line-height:1.6}
+.high-contrast :is(.command-record,.progress-paper,.received-clock,.personnel-sheet form,.personnel-sheet select){border-color:#111}

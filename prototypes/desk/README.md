@@ -1182,3 +1182,72 @@ also stays red: timing, pushback and lever-sweep measurement/coverage. No
 threshold changed. Read [the report](../../docs/playtests/2026-11-21-desk-history-run.md)
 and [handover](../../notes/sprint-S29-desk.md) before treating results as
 acceptance. The automatic history's battle is not proof of the human scene.
+
+### S33: pressing the July advance
+
+The human player reaches a Manassas battle through the desk: goal on day
+133, response to the relay objection, edit and approval on 138. Battle
+papers written 28–29 July arrive 29–30 July. Read
+[the S33 report](../../docs/playtests/2026-11-21-desk-manassas.md) for the
+strategy, exact evidence, kernel scoring finding and open checks.
+
+The turn sheet offers an advance only when due and at war. It opens an
+editable goal requiring review. Plans show outstanding reviews, supplied
+duration and what approval permits. Map review offers actual menu routes
+and an explicit bypass choice. A dispatched slip is distinct from a march.
+
+Use only this prototype's headless harness, on owned port **5297**:
+
+```powershell
+$env:S33_OUTPUT='C:/Pyrrhic/ByOrderOfThePresident/art-masters/S33/new-run'
+Remove-Item Env:S33_DISCOVERY -ErrorAction SilentlyContinue
+Remove-Item Env:S33_OBSERVER -ErrorAction SilentlyContinue
+npx playwright test --config playwright.s33.config.ts
+```
+
+Use a fresh evidence folder. `S33_DISCOVERY=1` checks native controls against
+the retained primary `S33/press-advance/` trajectory. `S33_OBSERVER=1` is a
+separate read-only paper harness attached to the already owned S33 server;
+it starts no server and allows no command POST. Regular runs close their
+own server. Do not use a real browser.
+
+Read-only developer diagnostics, never State loaded into the desk:
+
+```powershell
+node --import tsx scripts/s33-trace.ts
+node --import tsx scripts/s33-compare.ts
+node --import tsx scripts/s33-audit.ts
+```
+
+The comparison reproduces recorded public mornings and shows why S29's edit
+slow-walks; private responses stay outside the product. S33's required
+default done check remains red (Phase 0 5/6, 1A 4/6). The battle result does
+not waive timing, pushback or sweep failures.
+
+### S39: a new player's received record
+
+The desk now offers **Orders & progress**, a received office roster and a
+nomination draft, dated source papers, readable signed decisions/refusals,
+and a due-call route to the existing requisition form. Relative plan clocks
+say when no operation start date was received. Own orders, declared replies
+and observed arrivals remain separate. The roster uses received people and
+posts; live candidate eligibility is not a personnel record.
+
+Read [the S39 report](../../docs/playtests/2026-11-21-new-player-1a.md) and
+[handover](../../notes/sprint-S39-play.md). Two fresh human games reached
+31 July; the default done check still has seven problems (local Phase 0
+6/6, binding 1A 4/6). No kernel/public-contract gap was fixed here.
+
+S39 uses only this prototype's headless harness, on owned port **5309**:
+
+```powershell
+$env:S39_PROFILE='advance' # or training; use a fresh evidence folder
+npx playwright test --config playwright.s39.config.ts
+```
+
+This interactive observation harness waits for explicit file-driven UI
+steps; it is not an automatic strategy. The retained S39 folders are
+evidence and must not be overwritten. `S39_VERIFY=1` selects separate opening
+and received-public-record presentation checks. The latter require retained
+public snapshots and prohibit command POSTs; they do not load State or
+replay the campaign. Each run closes its own server. Never use a real browser.

@@ -14,13 +14,14 @@ import {clearFilters} from './intray.ts';
 import type {TrayFilters} from './intray.ts';
 import { S, VERBS } from './strings.ts';
 import {pressStories} from './press.ts';
-import {AudienceScene, OrgBoard, PostDetails} from './People.tsx';
+import {AudienceScene, OrgBoard, PostDetails,PersonnelSheet} from './People.tsx';
 import type {CounterDraft} from './people.ts';
 import type { Panel } from './strings.ts';
 import {dayFrames,playbackSnapshot,reportPlace} from './table.ts';
-import {AccountabilityLedger,AttentionSheet,AttentionTokens,PriceNote,StopSlip,TurnSheet} from './DeskViews.tsx';
+import {AccountabilityLedger,AttentionSheet,AttentionTokens,PriceNote,StopSlip,TurnSheet,OperationsSheet,CallsBadge,FirstMorningNote} from './DeskViews.tsx';
 import type {Price} from './business.ts';
-import {commandPrice,outOfAttention} from './business.ts';
+import {commandPrice,outOfAttention,refusalText,slipText,subjectName} from './business.ts';
+import {deskDate} from './plan-business.ts';
 import type {Point} from './map/model.ts';
 import './table.css';
 
@@ -198,7 +199,8 @@ export function App() {
   const menu = tableData.morning.menu as PrincipalMenu;
   const reports = tableData.morning.view.reports;
   const active = tableData.morning.view.situations.filter(s => s.status === 'open' || s.status === 'waiting');
-  const { name: t, text: display } = presenter(data.strings);
+  const {text:display}=presenter(data.strings);
+  const t=(id:string,kind?:string|number)=>subjectName(tableData.morning,data.strings,id,kind);
   const current = stack.at(-1);
   const date = frame?.day.date ?? data.date;
   const planOpen=!!current&&['plans','map'].includes(current.panel)&&menu.reviews.length>0&&!current.paper;
@@ -226,19 +228,21 @@ export function App() {
       case 'attention': return <AttentionSheet data={tableData} dateOf={day=>dateForReport(tableData,day)}/>;
       case 'inbox': return <InTray data={tableData} papers={reports.filter(r=>!filed.has(r.id))} read={read} filters={trayFilters} setFilters={setTrayFilters} openSummary={()=>setStack(previous=>[...previous,{panel:'inbox',summary:true}])}>{paperList}</InTray>;
       case 'file': return <><label className="search">{S.search}<input value={query} onChange={e => setQuery(e.target.value)} /></label>{paperList(reports.filter(r => filed.has(r.id) && `${t(r.author, 'person')} ${t(r.subjectId, r.subjectKind)} ${dateForReport(data!, r.day)} ${r.day}`.toLowerCase().includes(query.toLowerCase())))}</>;
-      case 'outbox': return <><p className="margin-note">{S.outboxNote}</p>{data!.queue.length ? <ol className="order-list">{data!.queue.map((q, i) => <li key={`${i}:${q.line}`}><p>{display(q.text)}</p><code>{display(q.line)}</code><button disabled={busy} onClick={() => void execute(`cancel ${i + 1}`)}>{S.cancel}</button></li>)}</ol> : <p className="empty">{S.noQueue}</p>}<button onClick={() => order('')}>{S.orders}</button></>;
-      case 'board': return <OrgBoard request={tableData.morning} strings={data!.strings} openPaper={sourcePaper} dateOf={day=>dateForReport(tableData,day)} openPost={post=>{setStack(previous=>[...previous,{panel:'board',post}]);sound('pin');}}/>;
-      case 'docket': return <><p className="margin-note">{S.docketNote}</p>{active.length ? active.map(s => <Situation key={s.id} situation={s} menu={menu} t={t} execute={execute} order={order} busy={busy} queue={data!.queue} />) : <p className="empty">{S.noSituations}</p>}</>;
+      case 'outbox': return <><p className="margin-note">{S.outboxNote}</p>{data!.queue.length ? <ol className="order-list">{data!.queue.map((q, i) => <li key={`${i}:${q.line}`}><p>{display(slipText(data!.morning,data!.strings,q.line,q.text))}</p><code>{display(q.line)}</code><button disabled={busy} onClick={() => void execute(`cancel ${i + 1}`)}>{S.cancel}</button></li>)}</ol> : <p className="empty">{S.noQueue}</p>}<button onClick={() => order('')}>{S.orders}</button></>;
+      case 'board': return <OrgBoard request={tableData.morning} strings={data!.strings} openPaper={sourcePaper} dateOf={day=>dateForReport(tableData,day)} onPersonnel={()=>setStack(previous=>[...previous,{panel:'personnel'}])} openPost={post=>{setStack(previous=>[...previous,{panel:'board',post}]);sound('pin');}}/>;
+      case 'personnel': return <PersonnelSheet request={tableData.morning} strings={data!.strings} order={order} openPaper={sourcePaper} dateOf={day=>dateForReport(tableData,day)}/>;
+      case 'progress': return <OperationsSheet data={tableData} openPaper={sourcePaper} dateOf={day=>dateForReport(tableData,day)}/>;
+      case 'docket': return <><p className="margin-note">{S.docketNote}</p>{active.length ? active.map(s => <Situation key={s.id} situation={s} menu={menu} t={t} execute={execute} order={order} busy={busy} queue={data!.queue} dateOf={day=>dateForReport(tableData,day)} />) : <p className="empty">{S.noSituations}</p>}</>;
       case 'plans': if(menu.reviews.length)return <MapReview destination={destination} data={data!} execute={execute} busy={busy} textEdit={order}/>;
         return <><button className="primary" onClick={() => setStack(previous => [...previous, { panel: 'map' }])}>{M.review}</button><h3>{S.submitted}</h3>{menu.reviews.length ? menu.reviews.map(r => <section className="plan-card" key={r.post}><p className="eyebrow">{t(r.holder, 'person')}, {t(r.post, 'post')}</p><Plan plan={r.plan} t={t} display={display} /><div className="actions">
         <button disabled={busy} onClick={() => void execute(`approve ${r.post}`)}>{S.approve}</button><button disabled={busy} onClick={() => void execute(`sendback ${r.post}`)}>{S.sendback}</button><button onClick={() => order(`edit ${r.post} timing days=3`)}>{S.edit}</button></div></section>) : <p>{S.noPlans}</p>}
         {menu.awaiting.map(post => <p key={post}>{t(post, 'post')}, {S.awaiting} <button disabled={busy} onClick={() => void execute(`go ${post}`)}>{S.go}</button></p>)}<Enemy data={data!} t={t} /></>;
       case 'map': return <MapReview destination={destination} data={data!} execute={execute} busy={busy} textEdit={order}/>;
-      case 'orders': return <><OrderSheet menu={menu} t={t} line={line} setLine={value => { setLine(value); setPreview(undefined); }} help={data!.help} execute={execute} busy={busy} display={display} commandDisplay={presenter(data!.strings).commandDisplay} commandInput={presenter(data!.strings).commandInput} />
+      case 'orders': return <><OrderSheet menu={menu} t={t} line={line} setLine={value => { setLine(value); setPreview(undefined); }} help={data!.help} execute={execute} busy={busy} display={display} commandDisplay={presenter(data!.strings).commandDisplay} commandInput={presenter(data!.strings).commandInput} onPersonnel={()=>setStack(previous=>[...previous,{panel:'personnel'}])} onCalls={()=>open('run')}/>
         {preview && <section className="preview"><h3>{S.asSubmitted}</h3>{menu.reviews.find(r => r.post === line.split(/\s+/)[1]) && <Plan plan={menu.reviews.find(r => r.post === line.split(/\s+/)[1])!.plan} t={t} display={display} />}<h3>{S.asEdited}</h3><p>{S.previewNote}</p>{preview.ok ? <Plan plan={preview.plan} t={t} display={display} /> : <p role="alert">{display(preview.reason)}</p>}</section>}</>;
       case 'ledger': return <AccountabilityLedger data={tableData} tab={ledgerTab} setTab={setLedgerTab} openPaper={sourcePaper} dateOf={day=>dateForReport(tableData,day)}/>;
-      case 'daybook': return <><p className="margin-note">{S.readOnly}</p>{data!.history.length ? data!.history.map((turn, i) => <section className="day-record" key={i}><h3>{S.turn} {i + 1}</h3>{turn.days.map(day => <section key={day.day}><h4>{day.date}, {S.day} {day.day}</h4>{day.refused.map((r, n) => <p className="refusal" key={n}>{S.refused}: {display(JSON.stringify(r.command))}, {display(r.reason)}</p>)}{paperList(day.reports)}{day.points.length > 0 && <p>{S.stopped}: {display(day.points.join(', '))}</p>}</section>)}</section>) : <p className="empty">{S.noDays}</p>}</>;
-      case 'run': return <TurnSheet data={data!} busy={busy} setStops={setStops} signCall={execute} run={days=>void execute(`end ${days}`)} openPaper={sourcePaper} onDocket={()=>open('docket')} onPlans={()=>open('plans')} onHistory={()=>open('daybook')}/>;
+      case 'daybook': return <><p className="margin-note">{S.readOnly}</p>{data!.history.length ? data!.history.map((turn, i) => <section className="day-record" key={i}><h3>{S.turn} {i + 1}</h3>{turn.days.map(day => <section key={day.day}><h4>{day.date}, {S.day} {day.day}</h4>{day.refused.map((r, n) => <p className="refusal" key={n}>{S.refused}: {display(turn.submitted?.find((_,index)=>index===r.commandIndex)?.text??S.orders)}. {refusalText(r.reason,data!.strings)}</p>)}{paperList(day.reports)}{day.points.length > 0 && <p>{S.stopped}: {[...new Set(day.points)].map(p=>S.stopLabels[p]??S.stopUnknown).join(' ')}</p>}</section>)}</section>) : <p className="empty">{S.noDays}</p>}</>;
+      case 'run': return <TurnSheet data={data!} busy={busy} setStops={setStops} signCall={execute} onOrder={order} run={days=>void execute(`end ${days}`)} openPaper={sourcePaper} onDocket={()=>open('docket')} onPlans={()=>open('plans')} onHistory={()=>open('daybook')}/>;
       case 'help': return <><p>{S.typingNote}</p><table className="key-card"><tbody>{S.keys.map(([key, action]) => <tr key={key}><th scope="row"><kbd>{key}</kbd></th><td>{action}</td></tr>)}</tbody></table>
         <button onClick={() => open('find')}>{S.find}</button><button onClick={nextUnread}>{S.nextUnread}</button>
         <div className="settings"><label className="scale-setting">{S.textSize} <output>{settings.scale}%</output><input type="range" aria-label={S.textSize} min="80" max="200" step="1" value={settings.scale} onChange={e => setSettings(old => ({ ...old, scale: Number(e.target.value) }))}/></label>
@@ -252,6 +256,7 @@ export function App() {
   return <SettingsContext.Provider value={settings}><div onFocusCapture={e=>previewPrice(e.target)} onMouseOver={e=>previewPrice(e.target)} className={`app table-app ${current?.audience?'audience-open':''} ${plain ? 'plain' : ''} ${settings.scale > 140 ? 'large-type' : ''} ${settings.contrast ? 'high-contrast' : ''} ${settings.lamp ? 'evening-lamp' : ''}`} style={{ '--text-scale': settings.scale / 100 } as CSSProperties}>
     <div ref={room} data-testid="desk" className="desk-shell table-shell" inert={modalDepth>0}>
       <main className="playable-table" aria-label={S.subtitle}>
+        {!current&&!playback&&<FirstMorningNote data={tableData}/>}
         <MapReview data={tableData} destination={destination} execute={execute} busy={busy} textEdit={order} table reviewOpen={planOpen} mapProps={{
           focusPaper:current?.paper?{id:current.paper.id,region:reportPlace(current.paper)}:undefined,
           arrival:frame?.phase==='mark'&&frame.report?{id:frame.report.id,region:reportPlace(frame.report),text:`${t(frame.report.author,'person')}, ${dateForReport(data,frame.report.day)}`} : undefined,
@@ -260,9 +265,9 @@ export function App() {
         }}/>
         <div className="table-calendar"><button disabled={!!playback} onClick={()=>open('calendar')} aria-label={S.calendar}><time>{date}</time><small>{menu.atWarSince===null?S.atPeace:S.atWar}</small></button><button disabled={!!playback} onClick={()=>open('attention')} aria-label={S.attention}><span>{S.attention}</span><AttentionTokens left={tableData.morning.view.attention} price={actionPrice}/></button></div>
         <div className="table-trays">{(['inbox','outbox'] as const).map(id=><button key={id} className={`tray-stack ${id}`} onClick={()=>open(id)} aria-label={`${S[id]} ${count(id)}`}><img src={art(objects[id]!)} alt=""/><span>{S[id]} <b>{count(id)}</b></span><small>{id==='inbox'?S.freshCount:S.signedCount}</small></button>)}</div>
-        <nav className="table-books" aria-label={S.deskObjects}>{(['board','ledger','file','daybook','plans','orders','help'] as const).map(id=><button disabled={!!playback} key={id} onClick={()=>open(id)}>{objects[id]&&<img src={art(objects[id]!)} alt=""/>}<span>{S[id]}</span></button>)}<button aria-pressed={!muted} onClick={()=>setSettings(old=>({...old,muted:!old.muted}))}>{muted?S.soundOn:S.mute}</button></nav>
-        <section className="table-docket" aria-label={S.docket}><button onClick={()=>open('docket')}>{S.docket} {active.length}</button><div>{active.length?active.map(s=><button className="docket-card" key={s.id} onClick={()=>open('docket')}><strong>{t(s.title)}</strong><small>{S.beforeSince} {s.surfacedDay}</small></button>):<span>{S.noDocket}</span>}</div></section>
-        {!playback&&<button className="table-run" onClick={()=>open('run')}>{S.run}</button>}
+        <nav className="table-books" aria-label={S.deskObjects}>{(['board','ledger','file','daybook','plans','progress','orders','help'] as const).map(id=><button disabled={!!playback} key={id} onClick={()=>open(id)} aria-label={id==='plans'?S.plans:undefined} aria-describedby={id==='plans'?'plan-pending-count':undefined}>{objects[id]&&<img src={art(objects[id]!)} alt=""/>}<span>{S[id]}</span>{id==='plans'&&<small id="plan-pending-count" className="plan-pending-badge">{menu.reviews.length>0?S.planReviewCount(menu.reviews.length):menu.awaiting.length>0?S.planGoCount(menu.awaiting.length):''}</small>}</button>)}<button aria-pressed={!muted} onClick={()=>setSettings(old=>({...old,muted:!old.muted}))}>{muted?S.soundOn:S.mute}</button></nav>
+        <section className="table-docket" aria-label={S.docket}><button onClick={()=>open('docket')}>{S.docket} {active.length}</button><div>{active.length?active.map(s=><button className="docket-card" key={s.id} onClick={()=>open('docket')}><strong>{t(s.title)}</strong><small>{S.beforeDate} {dateForReport(tableData,s.surfacedDay)}</small></button>):<span>{S.noDocket}</span>}</div></section>
+        {!playback&&<button className="table-run" aria-label={S.run} aria-describedby="due-call-count" onClick={()=>open('run')}>{S.run}<span id="due-call-count"><CallsBadge data={tableData}/></span></button>}
         {playback&&<section className="table-playback" data-testid="turn-playback" aria-live="polite"><time>{date}</time><p>{frame?.report?`${t(frame.report.author,'person')}, ${S.genres[frame.report.type]??S.paper}`:S.noReports}</p>{frame?.day.refused.map((r,i)=><p className="refusal" key={i}>{S.refused}: {display(r.reason)}</p>)}
           {playback.index===frames.length-1?<><p>{S.stopped}: {playback.turn.stopped==='week'?S.stopLabels.week:playback.turn.stopped.map(p=>S.stopLabels[p]??S.stopUnknown).join(' ')}</p><button autoFocus onClick={()=>{setPlayback(null);setHeldMap(null);requestAnimationFrame(()=>document.querySelector<HTMLElement>('.table-stop button')?.focus());}}>{S.nextMorning}</button></>:<><button onClick={()=>setPaused(p=>!p)}>{paused?S.resumeDays:S.pauseDays}</button>{paused&&<p>{S.playbackPaused}</p>}<button onClick={skipDays}>{S.skipDays}</button><button onClick={()=>setPlayback(p=>{if(!p)return p;const next=frames.findIndex((f,i)=>i>p.index&&f.day.day!==frames[p.index]?.day.day);return {...p,index:next<0?frames.length-1:next};})}>{S.nextDay}</button></>}
         </section>}
@@ -280,11 +285,7 @@ export function App() {
 }
 
 function dateForReport(data: DeskSnapshot, day: number): string {
-  // Calendar derivation uses the exposed morning date and day, never kernel calendar/world.
-  const morning = new Date(data.date + 'T12:00:00Z');
-  if (!Number.isFinite(morning.valueOf())) return `${S.day} ${day}`;
-  morning.setUTCDate(morning.getUTCDate() + day - data.morning.requestDay);
-  return morning.toISOString().slice(0, 10);
+  return deskDate(data,day);
 }
 
 export function Paper({ report: r, text, t, dateOf, plain, display }: { display: (text: string) => string; report: ReportView; text: string; t: (key: string, kind?: string | number) => string; dateOf: (day: number) => string; plain: boolean }) {
@@ -301,14 +302,15 @@ export function Paper({ report: r, text, t, dateOf, plain, display }: { display:
   </article>;
 }
 
-export function Situation({ situation: s, menu, t, execute, order, busy,queue=[] }: { situation: SituationView; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean;queue?:readonly {line:string}[] }) {
+export function Situation({ situation: s, menu, t, execute, order, busy,queue=[],dateOf=(d)=>`${S.day} ${d}` }: { situation: SituationView; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean;queue?:readonly {line:string}[];dateOf?:(day:number)=>string }) {
   const [referring, setReferring] = useState(false);
   const [selected, setSelected] = useState<string[]>([]);
   const choice = menu.situations.find(c => c.situation === s.id);
   const pending=queue.map(q=>q.line.trim().split(/\s+/)).find(words=>words[0]==='decide'&&words[1]===s.id);
   const picked=pending?pending.slice(2):selected;
-  return <section className="situation"><p className="eyebrow">{s.status}, {S.beforeSince} {s.surfacedDay}</p><h3>{t(s.title)}</h3><p>{t(s.text)}</p>{s.staffAbsence === 'no-adviser-on-record' && <p>{S.noStaffRecommendation}</p>}{s.staffAuthor && <p>{S.staff}: {t(s.staffAuthor, 'person')}</p>}
+  return <section className="situation"><p className="eyebrow">{s.status}, {S.beforeDate} {dateOf(s.surfacedDay)}</p><h3>{t(s.title)}</h3><p>{t(s.text)}</p>{s.staffAbsence === 'no-adviser-on-record' && <p>{S.noStaffRecommendation}</p>}{s.staffAuthor && <p>{S.staff}: {t(s.staffAuthor, 'person')}</p>}
     {pending&&<p role="status">{S.decisionQueued}</p>}
+    {choice?.options.length===0&&<p role="status">{S.noAnswers} {S.noAnswersNote}</p>}
     <fieldset disabled={busy || !choice || !!pending}><legend>{S.selection}</legend>{s.options.filter(o => choice?.options.some(c => c.optionId === o.id)).map(o => <label className="situation-option" key={o.id}><input type="checkbox" checked={picked.includes(o.id)} onChange={e => setSelected(old => e.target.checked ? [...old, o.id] : old.filter(id => id !== o.id))} /><span>{t(o.label)}<small>{o.proposedBy === 'inaction' ? S.takeCourse : Array.isArray(o.proposedBy) ? `${S.advisers}: ${o.proposedBy.map(id => t(id, 'person')).join(', ')}` : ''}</small></span></label>)}</fieldset>
     <div className="actions"><button disabled={busy || !choice || !selected.length || !!pending} onClick={() => void execute(`decide ${s.id} ${selected.join(' ')}`)}>{S.signDecision}</button><button disabled={busy || !choice || !!pending} onClick={() => void execute(`decide ${s.id}`)}>{S.takeCourse}</button><button disabled={!choice} onClick={() => order(`consult ${s.id} `)}>{S.consult}</button>{!!choice?.delegableTo.length && <button disabled={!!pending} data-hotkey="r" onClick={() => setReferring(value => !value)}>{S.referDecision}</button>}{referring && choice?.delegableTo.map(post => <button disabled={busy || !!pending} key={post} onClick={() => void execute(`delegate ${s.id} ${post}`)}>{S.refer} {t(post, 'post')}</button>)}</div>
   </section>;
@@ -322,7 +324,7 @@ function Enemy({ data, t }: { data: DeskSnapshot; t: (key: string, kind?: string
   return <section className="enemy"><h3>{S.enemy}</h3>{beliefs.length ? <dl>{beliefs.map(([region, b]) => { const source = data.morning.view.reports.find(r => r.id === b.source); return <div key={region}><dt>{t(region, 'region')}</dt><dd>{b.value===0?S.noEnemySeen:b.value}, {S.aboutDay} {b.asOfDay}<small>{source ? `${t(source.author, 'person')}, ${dateForReport(data, source.day)}` : `${S.source}: ${S.unknown}`}</small></dd></div>; })}</dl> : <p>{S.noEnemy}</p>}</section>;
 }
 
-export function OrderSheet({ menu, t, line, setLine, help, execute, busy, display, commandDisplay, commandInput }: { commandDisplay: (line: string) => string; commandInput: (value: string, original: string) => string; display: (text: string) => string; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; line: string; setLine: (line: string) => void; help: readonly string[]; execute: (line: string) => Promise<unknown>; busy: boolean }) {
+export function OrderSheet({ menu, t, line, setLine, help, execute, busy, display, commandDisplay, commandInput,onPersonnel,onCalls }: { commandDisplay: (line: string) => string; commandInput: (value: string, original: string) => string; display: (text: string) => string; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; line: string; setLine: (line: string) => void; help: readonly string[]; execute: (line: string) => Promise<unknown>; busy: boolean;onPersonnel?:()=>void;onCalls?:()=>void }) {
   const verb = line.trim().split(/\s+/)[0] ?? '';
   const post = line.trim().split(/\s+/)[1] ?? '';
   const who = menu.commandable.find(p => p.post === post);
@@ -334,6 +336,8 @@ export function OrderSheet({ menu, t, line, setLine, help, execute, busy, displa
     {routes && <p className="route-line">{S.through}: {(governor?[]:who?.relays??[]).map(id => t(id, 'post')).join(' → ') || t(post, 'post')}<br />{routes.map(r => `${r.route}: ${r.typicalDays} ${S.typicalDays}, ${r.price} ${S.routePrice}`).join(' / ')}</p>}
     <label className="command-label">{S.command}<textarea aria-label={S.command} rows={3} spellCheck={false} value={commandDisplay(line)} onChange={e => setLine(commandInput(e.target.value, line))} /></label>
     <PriceNote line={line} menu={menu}/>
+    {verb==='appoint'&&onPersonnel&&<p>{S.personnelOrderHelp} <button type="button" onClick={onPersonnel}>{S.personnelTitle}</button></p>}
+    {verb==='call'&&onCalls&&<p>{S.callTermsHelp} <button type="button" onClick={onCalls}>{S.reviewCalls}</button></p>}
     <div className="grammar-hint">{help.filter(text => text.trim().startsWith(verb + ' ') || (isEdit && text.includes('<objective|waypoints|timing'))).map((text, i) => <p key={i}>{display(text)}</p>)}</div><div className="actions"><button data-hotkey="s" type="submit" className="primary" disabled={busy || !line.trim() || cannotPay}>{S.sign}</button>{isEdit && <button type="button" disabled={busy} onClick={() => void execute(line.replace(/^(edit|preview)\b/, 'preview'))}>{S.preview}</button>}</div>
   </form>;
 }

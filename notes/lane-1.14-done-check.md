@@ -901,3 +901,19 @@ The held concentration receipt contracts, dated appointment departmentSide prere
 ## S41 time band ruling
 
 Applied the lead's 2026-11-21 CODEX message, "S40 received; the lead's ruling on the time band; S41 amended". S36 changes the received inputs to the day-136 draft; direct still wins 304 to 279 with time removed. The reference therefore records zero decisive time picks. Restore only this band to 0..0 and append exactly one record to the frozen list (24 to 25). The 338-band origin is unchanged. The constructed pincer control in packages/cli/test/planner.test.ts picks direct with time and holding without time; it also asserts liveTerms contains time. Scoring and the decisive-pick definition are unchanged. Whole-list fingerprints authorize only the exact old/new lists, then freeze the result again; changed, reordered, removed or extra transitions fail.
+
+
+## S41 merge and follow-ups
+
+Step 0 is committed as a611ee327889eb03ad489f3bdb97db7566b6506d, parents 50a5820 and ed4fb19, through the ordinary hook: exit 0 in 447.10 seconds, 203 files / 1,912 passed / nine inherited expected failures / three timing skips and all chained gates. The constructed time control and exact 24-to-25 freeze transition pass.
+
+The whole play merge is pinned at f595bd7e976898d6d25aad27a04fd179c7804ec2. Thirteen handwritten conflicts are reconciled, retaining received menus/caches, S37 telemetry and S39 desk records. S35 console corrections stay behind the formatter: objective flags, readable notices/refusals, edit days/routes/bypass, audience values and ICU singular days. Four imported parser fixtures and one old localization date expectation are adapted to the combined API, preserving their assertions. The two received-preview regressions fail before the follow-up with false distance 600 and pass after it for 0/7-day notes, save/load and private-state changes. The optional sealed note basis is carried in the received plan enclosure; ordinary unnoted enclosures retain their shape. No scoring coefficient or accepted band changes.
+
+S39's exact guard correction is retained alongside S36/S40. The two residual closure hashes migrate only for the exact play merge, with full before/after receipts and rejection controls. All 13 finding identities and the six derivation identities/reasons/citations remain; viewFor's existing own-seat derivation changes its closure hash for readable received notices. No truth exception is added. Existing S40 concentration patch remains unapplied. Whole-branch review remains deferred under 0106.
+
+## Findings outside my scope (S41 source)
+
+Retain the held receipt contracts, all historical pushback and D6 gaps, source/lifecycle holds, CI and whole-branch/gate review. The final integrated-candidate report will route the source proposals and later statuses after runtime/replay evidence settles.
+
+
+S41 hook correction: the first play-merge hook exits 1 in 445.50 seconds, with only two assertions failing in one-writer.test.ts; 202 other files / 1,920 assertions pass, with three existing timing skips. The optional note-basis object and its nested note entries were missing from IMMUTABLE_RECORDS. Both are now explicitly immutable under knowledge; no owner or write permission changed. The complete focused ownership/preview/history selection passes 62 assertions. The one desk-suite failure was a generic label hiding supplied pack wording; pack wording now wins, with all 30 affected tests passing and the other 136 passing assertions reused. The exact mandatory hook is retried because a merge must commit through it; no done-check campaign has started. A receipt-construction alias was corrected to preserve the derivation's true before hash, and the headless harness now saves each batch's rendered text for divergence evidence. Neither affects simulation. All failures and exits remain in runs/s41.

@@ -92,6 +92,12 @@ export class ConsoleGame {
       : w.formatIsoDate(w.dateOfDay(this.stateNow.calendarStart, day));
   }
 
+  /** The actionable morning precedes the numbered tick requested at that boundary.
+   * Event/report days keep dateOf's existing mapping. */
+  dateOfRequest(requestDay: number): string {
+    return this.dateOf(requestDay - 1);
+  }
+
   /** The morning's request for his seat: the view and the menu for the next day. */
   morning(): phase0.SeatRequest {
     const request = phase0.pendingRequests(this.world, this.stateNow, this.viewCache).find((r) => r.requestSeat === this.seat);

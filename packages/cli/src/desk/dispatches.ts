@@ -88,7 +88,8 @@ function reportCopy(r: ReportView, t: DeskStrings): string {
 
 /** The received copy, shared with the browser's desk adapter. */
 export function reportBody(r: ReportView, t: DeskStrings): string {
-  const copy = reportCopy(r, t);
+  const base = reportCopy(r, t);
+  const copy = r.text === undefined || r.type === 'press' ? base : t('console.report.text', { copy: base, text: t(r.text) });
   return r.advice === null ? copy : t('console.report.advice', {
     copy, option: r.advice.recommends, reasons: r.advice.reasons.map(x => x.kind).join(', '),
   });
