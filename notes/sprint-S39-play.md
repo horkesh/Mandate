@@ -1,51 +1,44 @@
 # S39: a new player's 1A
 
-For the lead: work in progress on `sprint/play`, from `ddea338`.
+For the lead: three items. S39 only, `C:/Pyrrhic/sprint-play`, branch
+`sprint/play`, from `ddea338`. Root npm ci ran first. No later `sprint/1a`
+merge, other sprint worktree write, push, history rewrite or signature.
 
-Merged S33 as `7828026` and S35 as `850ed7f`, both through the actual hook.
-The S35 integration migrated only two identical protected-read closures;
-the exact-pin controls and receipt are in `runs/s39/`. No unresolved finding
-was removed and no read-path identity added. B01–B09: 11 passing assertions;
-S33: nine passing regressions. Final merge hook: 175 files, 1,808 passing,
-five skips, no expected failures. Initial guard failure retained.
+1. Merged pinned S33/S35 through the actual hook as `7828026` and `850ed7f`.
+   Exact-pin fingerprint migration retains all 14 finding identities; no
+   truth exception. B01–B09: 11 passing assertions. S33: nine passing tests.
+   Received-record desk corrections are `f747c2f`; that hook passed 175 files /
+   1,810 tests / three skips. Final closeout identity and hook evidence:
+   `runs/s39/post-commit.json`, `runs/s39/hook-closeout.log`.
+2. Two fresh human-seat games reached 31 July through headless UI only.
+   Advance: 44 turns, 86 successful commands; training: 42 / 79. Neither had
+   queue errors, dispatch refusals or page errors. Received Richmond arrivals
+   and battle papers belong to the advance trajectory; no Manassas paper
+   appeared there. Training's declared transfer compliance proves neither
+   an arrived manifest nor training. Own port 5309 is closed.
+3. Required root check passes 173 files / 1,789 tests / three skips. Final
+   affected prototype selection passes 29 tests; typecheck/build and three
+   headless UI checks pass. Unaffected full-suite evidence is reused after
+   correcting its one queue-text failure. One default done check, eight
+   seeds with drafting: exit 1, Phase 0 6/6 locally, binding 1A 4/6. Retain
+   relay holds 1, filter holds 0, trims 0, reservations 16, slow walks 18,
+   Fort Monroe's invalid D6 measure and the unexercised border recruitment
+   chain. Union's nonbinding 95,000 floor remains unestablished. No bands,
+   seeds, timing limits or victory definition changed; no expensive rerun.
 
-Early-advance observation complete through 31 July, headless exit 0, zero
-page errors. Fresh goal on 16 April, received relay objection, direct repeat
-on 19 April, review approval on 21 April. Received Richmond arrival on
-19 May; no claim that this establishes a battle, historical plausibility or
-control. Capture names incorrectly anticipating a July 31 endpoint were
-renamed to July 25; actual completed captures are explicitly named
-`completed-july31-*`. Training also completed 31 July, headless exit 0,
-zero page errors. It chose the long-term volunteer call, held Stone, signed
-the offered requisitions over two allowances, requested 30,000 men from New
-York on its received return, received Morgan's declared compliance, and
-chose wait-and-train on 30 June. No operational advance was sent.
+Proposed rulings [I]: accept the received-only desk corrections; route the
+six public/kernel gaps to their owners. They concern establishment,
+advance/train policy versus actual commands, missing operation-start
+reports, absent drill/readiness progress, transfer manifests and
+signing/execution wording. Do not manufacture missing received information.
 
-Desk corrections underway: completed-day calendar anchor (including map and
-playback); received decision labels retained on own slips; typed refusal
-wording; precise stop links; empty-decision explanation; received office
-roster/nomination context; received progress and relative plan clocks; call
-badge and singular regiment copy; first-morning dispatch explanation.
-New records tests fail before implementation and pass after correction.
-S33's synthetic date fixture now declares completed day 3 / request day 4
-consistently with S35; its nine behavioral assertions are retained.
+Report: [new-player playtest](../docs/playtests/2026-11-21-new-player-1a.md).
+Index: [validation receipts](../docs/playtests/s39-validation.json).
+Local evidence: `runs/s39/`, `art-masters/S39/`. Inventories and diagnostics
+preceded this closeout: 834 runtime inputs and 437 build files / 479,246,096
+bytes unchanged across measurement; 41 capture/recipe pairs, zero pixel
+edits. Current replay/resume checks pass; Linux CI is not certified here.
 
-Scope: merge the pinned S33/S35 deliveries; play two human-seat campaigns
-through July using rendered desk information; fix desk gaps with tests; list
-kernel gaps without changing them. Only the prototype headless Playwright
-harness may drive play. Own port 5309, closed at completion. No push.
-
-Validation: root and prototype npm ci first; each merge through the hook;
-B01–B09 and the nine S33 regressions; startup/map/selectors before campaigns;
-test-first desk fixes; focused correction checks; final prototype suite,
-typecheck/build, required root check and one standing done check. Expected
-cost: several minutes per full hook and roughly 20–25 minutes for the one
-done check, plus observed play. Stop costly retries after a failure and
-diagnose retained evidence. No calibration, changed bands or extra campaign.
-
-Decisions during play come only from rendered text, labels, papers and
-controls. The harness records that evidence and separate public responses
-for later diagnosis; no source-derived move policy or inherited play script.
-
-Findings outside my scope: whole-branch/gate review remains with Claude under
-0106. S37, S36 and every other sprint lane remain separate.
+Findings outside my scope: K1–K6, the seven retained done-check problems,
+D6, calibration, historical certification, whole-branch/gate review under
+0106, all other sprint lanes, Linux CI and release. Nothing is signed.

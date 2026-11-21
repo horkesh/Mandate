@@ -1,0 +1,450 @@
+{
+  "scope": "S39 only; own sprint/play branch; no later sprint/1a merge; no push",
+  "base": "ddea3384942652660f86f281af24c549b484afc6",
+  "commitsBeforeCloseout": [
+    "78280265547269ba64e82cede33ef72f57ad9347",
+    "850ed7f488ee3de6fb6faded35b7a2a287049a9d",
+    "f747c2f9abe5ea67e0b829536a0439a2494192cb"
+  ],
+  "closeoutReceipt": "runs/s39/post-commit.json",
+  "review": "Whole-branch and gate review deferred to Claude under 0106; unsigned.",
+  "campaigns": [
+    {
+      "profile": "advance",
+      "firstMorning": "1861-03-05",
+      "finalMorning": "1861-07-31",
+      "completedDay": 148,
+      "days": 148,
+      "turns": 44,
+      "commands": 86,
+      "queueErrors": [],
+      "dispatchRefusals": [],
+      "arrivals": [
+        {
+          "id": "m.72.stone_charles_p.lincoln_abraham.arrived.us_dc_militia",
+          "author": "stone_charles_p",
+          "written": "1861-05-16",
+          "received": "1861-05-19"
+        },
+        {
+          "id": "m.95.stone_charles_p.lincoln_abraham.arrived.us_dc_militia",
+          "author": "stone_charles_p",
+          "written": "1861-06-08",
+          "received": "1861-06-09"
+        }
+      ],
+      "sourceSha256": "14e8013b82ba3839e63a412eaee8d1c1fbd565786caef18f7bdc3cb5b4cec8d7",
+      "fieldDispatches": 18
+    },
+    {
+      "profile": "training",
+      "firstMorning": "1861-03-05",
+      "finalMorning": "1861-07-31",
+      "completedDay": 148,
+      "days": 148,
+      "turns": 42,
+      "commands": 79,
+      "queueErrors": [],
+      "dispatchRefusals": [],
+      "arrivals": [],
+      "sourceSha256": "6fca821b896c9f8c65ff6b32f09f286018924ba6d6ecdfa40a96f1c6f3d2e754",
+      "fieldDispatches": 0
+    }
+  ],
+  "tests": {
+    "b01ToB09AssertionsPassed": 11,
+    "s33RegressionsPassed": 9,
+    "s39RecordsPrivacyTestsPassed": 17,
+    "fullDeskFirstAttempt": {
+      "passed": 141,
+      "failed": 1,
+      "correction": "Preserve raw non-decision queue identity; verified in final affected selection."
+    },
+    "finalAffectedDeskSelectionPassed": 29,
+    "headlessUiChecksPassed": 3,
+    "rootCheck": {
+      "exit": 0,
+      "files": 173,
+      "passed": 1789,
+      "skipped": 3
+    },
+    "prototypeTypecheckExit": 0,
+    "prototypeBuildExit": 0,
+    "implementationHook": {
+      "exit": 0,
+      "files": 175,
+      "passed": 1810,
+      "skipped": 3
+    }
+  },
+  "doneCheck": {
+    "receipt": {
+      "drafting": true,
+      "command": "npm run run:done-check -- --milestone 1a --label s39-new-player",
+      "defaultSeeds": true,
+      "elapsedSeconds": 986.1105838999999,
+      "exit": 1
+    },
+    "passed": {
+      "phase0": 6,
+      "1A": 4
+    },
+    "problems": [
+      "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+      "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+      "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+      "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 16, above 9",
+      "union-1861 history run, 148 days to 1861-07-31: slow walks: 18, above 9",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+    ],
+    "timings": [
+      {
+        "name": "union-1861, war by decision, 148 days",
+        "median": 30.13,
+        "p95": 50.33,
+        "max": 62.56,
+        "days": 148
+      },
+      {
+        "name": "testbed, 120 days",
+        "median": 2.45,
+        "p95": 4.44,
+        "max": 5.27,
+        "days": 120
+      },
+      {
+        "name": "union-1861 history run, 148 days to 1861-07-31",
+        "median": 22.64,
+        "p95": 39.0,
+        "max": 55.32,
+        "days": 148
+      }
+    ],
+    "summaries": [
+      {
+        "path": "runs/s39-new-player/20261121-043918-29868-9f43eb/summary.json",
+        "sha256": "1416b283c4ffc941f5512b330c41af381db5f993dc17eade0ca63f77d22f525e",
+        "pack": "union-1861",
+        "finalDay": 148,
+        "worldHash": "0fb1ffbd096d002a51b252c3c90d8a47ed7e671c47249651150a7ab7ab16a728",
+        "initialHash": "cf2b9c789c8782bebd9d911714d898c4c17970982ccd264f3b776857aacc86c2",
+        "finalHash": "d2e9277f12d7b46dfb8ae48be469f8777f2c6b3f8e4d0f8f32adf091b0d9ee82",
+        "dailyHashes": 148,
+        "rejections": 0,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 60,
+          "finalHash": "d2e9277f12d7b46dfb8ae48be469f8777f2c6b3f8e4d0f8f32adf091b0d9ee82",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "lastCheckpoint": {
+          "day": 148,
+          "hash": "d2e9277f12d7b46dfb8ae48be469f8777f2c6b3f8e4d0f8f32adf091b0d9ee82",
+          "scores": {
+            "factions": [
+              {
+                "faction": "confederate",
+                "held": 79,
+                "traced": 80,
+                "controlPermille": 78795,
+                "supplied": 77,
+                "frontLines": 4,
+                "frontSegments": 4,
+                "pockets": 3,
+                "pocketRegions": 3,
+                "menKnown": 124167,
+                "blocksUnknownStrength": 17
+              },
+              {
+                "faction": "union",
+                "held": 38,
+                "traced": 38,
+                "controlPermille": 37780,
+                "supplied": 38,
+                "frontLines": 4,
+                "frontSegments": 4,
+                "pockets": 0,
+                "pocketRegions": 0,
+                "menKnown": 92089,
+                "blocksUnknownStrength": 4
+              }
+            ],
+            "contestedRegions": 1,
+            "blocksMarching": 21,
+            "blocksTotal": 130
+          }
+        }
+      },
+      {
+        "path": "runs/s39-new-player/20261121-043946-29868-d2b5d4/summary.json",
+        "sha256": "4bee30845a227527fff335def2c1054c1c8f7588dea9c8422ed3555a77c398f2",
+        "pack": "testbed",
+        "finalDay": 120,
+        "worldHash": "da5bfbf0de57227a8c56d2ccaa89600786c4d83716b91b949294217f35820604",
+        "initialHash": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b",
+        "finalHash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+        "dailyHashes": 120,
+        "rejections": 0,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 40,
+          "finalHash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "lastCheckpoint": {
+          "day": 120,
+          "hash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+          "scores": {
+            "factions": [
+              {
+                "faction": "north",
+                "held": 11,
+                "traced": 14,
+                "controlPermille": 11710,
+                "supplied": 13,
+                "frontLines": 2,
+                "frontSegments": 13,
+                "pockets": 1,
+                "pocketRegions": 1,
+                "menKnown": 21949,
+                "blocksUnknownStrength": 0
+              },
+              {
+                "faction": "south",
+                "held": 11,
+                "traced": 11,
+                "controlPermille": 10028,
+                "supplied": 1,
+                "frontLines": 2,
+                "frontSegments": 13,
+                "pockets": 1,
+                "pocketRegions": 10,
+                "menKnown": 18473,
+                "blocksUnknownStrength": 0
+              }
+            ],
+            "contestedRegions": 3,
+            "blocksMarching": 0,
+            "blocksTotal": 20
+          }
+        }
+      }
+    ],
+    "bandDefinitionsChangedByS39": false,
+    "campaignsRun": 1
+  },
+  "kernelGaps": [
+    {
+      "id": "K1",
+      "gap": "A human player has no received proposal to establish the dated field commands.",
+      "cause": "principalMenu restricts onDate historical appointments to a rules-driven principal; the separate doctrine appointment view contains only fromDate rows. Temporary post declarations are resolved inside the appoint verb, and are not a received establishment catalogue.",
+      "sources": [
+        "packages/kernel/src/seats/requests.ts:212-245",
+        "packages/kernel/src/seats/requests.ts:273-285",
+        "packages/kernel/src/tick/verbs.ts:248-278",
+        "packages/kernel/src/seats/api.ts:181-189"
+      ],
+      "deskAction": "Show received office records and a nomination draft from people on file. Do not expose live candidate seniority, invent a McDowell appointment or offer unseen establishment templates.",
+      "remainingOwner": "Kernel/public appointment proposal contract; S36 owns the separate eligibility leak."
+    },
+    {
+      "id": "K2",
+      "gap": "The advance/train policy card does not itself command or train an army, and its fixed text can describe a McDowell plan absent from the human desk.",
+      "cause": "advance_now sets manassas_advance_ordered; drill_first sets advance_put_off. Neither option issues a goal, appointment or training action.",
+      "sources": [
+        "packs/union-1861/situations/mcdowell_advance.json:15-58",
+        "packs/union-1861/strings/en.json:situation.mcdowell_advance.text"
+      ],
+      "deskAction": "Retain the separate own-order record and the existing lawful due-goal offer. An unavailable command remains unavailable.",
+      "remainingOwner": "Pack/kernel owner must reconcile the received wording and actual command contract; no setting or signed content changed here."
+    },
+    {
+      "id": "K3",
+      "gap": "No authored operation-start clock reaches the principal.",
+      "cause": "opStartDay and axis since/until clocks live in operation State. ReportView carries received papers and ClaimView carries qualitative operation stages; it has no operation-start field. A received plan supplies relative axis arrival duration, not the execution start.",
+      "sources": [
+        "packages/kernel/src/operations/operations.ts:72-86",
+        "packages/kernel/src/operations/operations.ts:124-135",
+        "packages/kernel/src/view/types.ts:38-81",
+        "packages/kernel/src/tick/operations.ts:503-524"
+      ],
+      "deskAction": "Show the received duration, dated status, source and battle hours. Explicitly state that no start date is given. Never date an arrival from dispatch or approval.",
+      "remainingOwner": "Author/project an operation-start report if this clock is required."
+    },
+    {
+      "id": "K4",
+      "gap": "Waiting and raising troops give no received drill/readiness progress record.",
+      "cause": "The force condition has experience, whose documented gain is in combat. Recruitment creates blocks in the pack starting condition. The human command vocabulary has no drill act and the principal view has no readiness/training projection; the train-first policy only sets a flag.",
+      "sources": [
+        "packages/kernel/src/forces/forces.ts:37-44",
+        "packages/kernel/src/forces/enlistment.ts:64-84",
+        "packages/kernel/src/combat/battle.ts:333",
+        "packages/kernel/src/seats/api.ts",
+        "packs/union-1861/situations/mcdowell_advance.json:35-57"
+      ],
+      "deskAction": "Expose the actual received state returns and replies. Do not manufacture a training meter or treat time spent holding as evidence of readiness.",
+      "remainingOwner": "Kernel/design owner decides what drill means and what the commander reports."
+    },
+    {
+      "id": "K5",
+      "gap": "A transfer reply does not give a received manifest or joining progress.",
+      "cause": "The sender chooses blocks according to his actual response, reassigns them and orders joins toward the receiving post seat. The reply contains verb-answered with carried/declared fields, without a block/men manifest or a joining schedule. Headquarters follows the strongest directly commanded block.",
+      "sources": [
+        "packages/kernel/src/tick/verbs.ts:242-247",
+        "packages/kernel/src/tick/verbs.ts:308-331",
+        "packages/kernel/src/seats/posts.ts:72-99"
+      ],
+      "deskAction": "Keep Morgan's declared reply separate from later positions and arrivals. A York-and-Gettysburg headquarters report while the command is holding is consistent with the strongest-block rule [I]; do not present it as a completed transfer.",
+      "remainingOwner": "Received transfer manifest/join reports and the intended headquarters abstraction."
+    },
+    {
+      "id": "K6",
+      "gap": "A request morning and its executed tick use different civil dates.",
+      "cause": "dateOfRequest(requestDay) returns dateOf(requestDay-1); submitted commands execute on the next numbered tick. Dated doctrine remains eligible against requestDay. Thus a due proposal can bear the next execution date rather than the signing morning date.",
+      "sources": [
+        "packages/cli/src/console/game.ts:83-91",
+        "packages/cli/src/console/game.ts:126-145",
+        "prototypes/desk/web/plan-business.ts:3-5",
+        "prototypes/desk/web/DeskViews.tsx:67-71"
+      ],
+      "deskAction": "Fix event and paper stamps using the completed-day anchor, preserve the accepted request-day eligibility bound, and report signing mornings separately from execution dates.",
+      "remainingOwner": "Lead confirms the intended proposal/signing/execution wording; no event clock shift or eligibility retiming here."
+    }
+  ],
+  "preservation": {
+    "runtimeInputs": 834,
+    "buildFiles": 437,
+    "buildBytes": 479246096,
+    "runtimeChanged": [],
+    "buildChanged": [],
+    "captureRecipePairs": 41,
+    "pixelEdits": 0
+  },
+  "receipts": [
+    {
+      "path": "runs/s39/npm-ci.log",
+      "bytes": 298,
+      "sha256": "9726cca0cf04e2584680a5c9eaa2330a2a4e34d66ce36797b2f276d016eef5b8"
+    },
+    {
+      "path": "runs/s39/desk-npm-ci.log",
+      "bytes": 644,
+      "sha256": "d04d903f014c78f246ef011076265b56f9056b66a71d8c3b105b5846c7f7d33d"
+    },
+    {
+      "path": "runs/s39/hook-merge-desk.log",
+      "bytes": 21284,
+      "sha256": "fc68e0cf349e430e37a1a61358d0efcb1541ba5b28214607cb6dde52db0b38cf"
+    },
+    {
+      "path": "runs/s39/hook-merge-fixes.log",
+      "bytes": 5658,
+      "sha256": "45a6d810b3faaae089651d7447ed7a8982a3a882ee023199c49592cc7df4f926"
+    },
+    {
+      "path": "runs/s39/hook-merge-fixes-corrected.log",
+      "bytes": 21448,
+      "sha256": "1a4d3a3e712c077fe8a573a85df4b0ddb81bc6c2e11b2f15dcf80dc49c984841"
+    },
+    {
+      "path": "runs/s39/hook-implementation.log",
+      "bytes": 22056,
+      "sha256": "c11ce188e31eadc0b0d2e635a3fb716a2fff10e5758f187caee2cda6bd6d16b0"
+    },
+    {
+      "path": "runs/s39/b01-b09-corrected.log",
+      "bytes": 368,
+      "sha256": "2bbdb150805a08a86f1930e936cc7d11b02f1d37cd231e1f366f63ac23085fc2"
+    },
+    {
+      "path": "runs/s39/s33-regressions.log",
+      "bytes": 394,
+      "sha256": "4523dd786eccc1a9d403abb228f05b0381ab3fbfc8338647a5072dc4f6cdf621"
+    },
+    {
+      "path": "runs/s39/desk-suite.log",
+      "bytes": 3232,
+      "sha256": "767c74fe8cb315873a8478c5f3d11b6e3f647ffdfa41f9427fcfde616f4deee9"
+    },
+    {
+      "path": "runs/s39/last-copy-targeted.log",
+      "bytes": 400,
+      "sha256": "070631c2068b571480e9f6db58f94faffa3c2e89ceefdb92deccf4e3cdd4bd62"
+    },
+    {
+      "path": "runs/s39/final-build.log",
+      "bytes": 11008,
+      "sha256": "eef02150dcc7705cb30e31fbfd60d4d8789427c6a14150567b0cdbae5b3bd2a8"
+    },
+    {
+      "path": "runs/s39/final-desk-typecheck.log",
+      "bytes": 136,
+      "sha256": "f76ad92fa6b25eea91ee1a3374db54519ea1439545e833ea2d618e840ab2bc8d"
+    },
+    {
+      "path": "runs/s39/verify-corrected-ui.log",
+      "bytes": 2076,
+      "sha256": "6987bd5bea86b89283fe99338d0f6d64b050d3500a7f2df6a90b20ecd6a6962c"
+    },
+    {
+      "path": "runs/s39/verify-battle-paper.log",
+      "bytes": 1680,
+      "sha256": "5d80928fb951d87b4e5a5fd9efe33744e6377dc1dffb4ca90a7ad47f6412f57d"
+    },
+    {
+      "path": "runs/s39/root-check.log",
+      "bytes": 1980,
+      "sha256": "dafe941f0a619e39f6d12525364f9cfb76b8adf4bb421f8a216b95b70e5400a6"
+    },
+    {
+      "path": "runs/s39/done-check.log",
+      "bytes": 22578,
+      "sha256": "32755ea8e00a2df5a8eb1bd7d70f3e799e693feef3b4a21e199e5787add48e02"
+    },
+    {
+      "path": "runs/s39/final-verdict.json",
+      "bytes": 24168,
+      "sha256": "5c54743843cc81304c45b6ed17e8b94522dcab82b774f38cb68746906589271e"
+    },
+    {
+      "path": "runs/s39/inventory-before.json",
+      "bytes": 236031,
+      "sha256": "a59303add859c275cf31e15c1143f5151b18baeda69c89a401194d336267c5c7"
+    },
+    {
+      "path": "runs/s39/inventory-after.json",
+      "bytes": 236069,
+      "sha256": "31f096a712a3e150a77146d8b9f7fb7c7b027d042c665b0e4bee3a684cf05412"
+    },
+    {
+      "path": "art-masters/S39/public-observation-summary.json",
+      "bytes": 11329,
+      "sha256": "91bcd29d7176f274feef610d9c77f3a6d83979d842399153a876c32f5384fdc8"
+    },
+    {
+      "path": "art-masters/S39/capture-inventory.json",
+      "bytes": 15415,
+      "sha256": "ebe48ab9f1037f922438d83e330eac840a466600b4d3aaf1d2058218744f160f"
+    },
+    {
+      "path": "runs/s39/merge-fingerprint-receipt.json",
+      "bytes": 2567,
+      "sha256": "24de668e26ebab85cfb04781480e8481787840708f3e85b29fc693545dbc51be"
+    }
+  ],
+  "limits": [
+    "Local Windows timing is not Linux CI or certification of the unloaded 20ms aim.",
+    "Union known strength 92089, four unknown blocks; nonbinding 95000 floor remains unestablished.",
+    "Received public-snapshot presentation checks are not additional campaigns or loaded State.",
+    "All seven done-check problems remain open; no campaign was rerun."
+  ]
+}

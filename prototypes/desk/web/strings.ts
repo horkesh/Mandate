@@ -125,7 +125,7 @@ export const S = {
   audienceValue:'Value to name', audienceBoldness:'Boldness (0–1000)', audienceFrom:'Reinforcements from', audienceMen:'Men to request',
   audienceIncomplete:'Complete each answer before signing.', audienceReturn:'Return to the desk',
   counterLabels:{frame:'Frame the order in terms of a value',adjust:'Adjust its boldness',reinforce:'Promise reinforcements',promise_advancement:'Promise advancement',withdraw_overseer:'Withdraw the observer',ease_pressure:'Ease the pressure',vindicate:'Vindicate him publicly',threaten:'Threaten relief'},
-  reasonLabels:{values_offended:'The order offends a value',too_rash:'The order is too rash',too_timid:'The order is too timid',lacks_resources:'He lacks resources',holds_grievance:'He holds a grievance',distrusts_issuer:'He distrusts the issuer',has_standing:'He has standing to resist'},
+  reasonLabels:{values_offended:'The order offends a value',values_honoured:'The order honours a value',too_rash:'The order is too rash',too_timid:'The order is too timid',lacks_resources:'He lacks resources',holds_grievance:'He holds a grievance',distrusts_issuer:'He distrusts the issuer',has_standing:'He has standing to resist',shielded_by_standing:'He has standing to resist'},
   boardNote:'Posts show the opening establishment and the changes reported to you.', boardIncomplete:'Posts outside those chains are shown where their placement is supplied.',
   boardUnplaced:'Placement not supplied', boardUnknown:'Holder unknown', boardVacant:'Vacant',
   boardVacantSince:(date:string)=>`Vacant since ${date}`,
@@ -189,6 +189,7 @@ export const S = {
     casualties: 'Enemy losses claimed', framing: 'Public reading reported', works: 'Works reported',
   } as Record<string, string>,
   commandTerms: {
+    comply_with_reservations:'comply with reservations',slow_walk:'take more time',
     supply_line:'Advance by successive depots',depot_steps:'Successive depot stages',depot_step:'Establish a depot',
     add_axis: 'add axis', remove_axis: 'remove axis', own_request: 'own request',
     quiet_department: 'quiet department', promise_advancement: 'promise advancement',

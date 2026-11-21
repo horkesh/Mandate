@@ -48,6 +48,7 @@ it('renders received reason vocabulary and singular regiments without changing p
  const p=presenter({});expect(p.text('values_offended, has_standing')).toBe('The order offends a value, He has standing to resist');
  expect(S.callRegiments(1)).toBe('1 regiment');
  expect(p.text('call 1 regiments for 90 days')).toBe('call 1 regiment for 90 days');
+ expect(p.text('comply_with_reservations; shielded_by_standing; values_honoured')).toBe('comply with reservations; He has standing to resist; The order honours a value');
 });
 it('makes due calls discoverable at rest without showing future or peace-time requisitions',()=>{
  expect((views as any).CallsBadge).toBeTypeOf('function');
