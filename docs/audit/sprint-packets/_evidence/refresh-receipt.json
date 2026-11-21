@@ -1,0 +1,17 @@
+{
+  "changed": {
+    "origin/main": [
+      "c09e5bedb32443e18f806b83187a8959f294643a",
+      "b01764406738b42633277c8bf00099e093bf20e9"
+    ],
+    "origin/sprint/desk": [
+      "c6f9799012bc6b447226984e5efddd6b84912b7e",
+      "7db8c80a605c4410f458487778cadc7008ac8909"
+    ]
+  },
+  "rerunPairs": 27,
+  "reusedPairs": 78,
+  "mainChanges": [
+    "CODEX.md"
+  ]
+}

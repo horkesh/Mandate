@@ -1,0 +1,514 @@
+{
+  "files": [
+    {
+      "path": "1a.md",
+      "bytes": 45512,
+      "sha256": "99e778314b30aaa0603a99788a94355cc8dd4ecd0d5f2d66c96a5a70baac1efc"
+    },
+    {
+      "path": "_evidence/.gitignore",
+      "bytes": 29,
+      "sha256": "a4389a59a893ae980f324ecee37f6486ecbd9e0d012768acaf26eff3360b1851"
+    },
+    {
+      "path": "_evidence/build_packets.py",
+      "bytes": 61694,
+      "sha256": "b10212bef160e1d7d4047c191b05d76a5be415a0120153096413b391d59e8366"
+    },
+    {
+      "path": "_evidence/CODEX-pre-sprint-statuses.md",
+      "bytes": 54055,
+      "sha256": "8be1283be32a7595d102b8aeb01bad5448f176239a8da86f326271037a0c9977"
+    },
+    {
+      "path": "_evidence/CODEX-sprint-snapshot.md",
+      "bytes": 185224,
+      "sha256": "ebda85e2cad4230b89036275e531ad344a87f017f34c896de8e098cb643008a8"
+    },
+    {
+      "path": "_evidence/collect.py",
+      "bytes": 4207,
+      "sha256": "774537e5073c6222997813486df3118e3c1438cf01fddacb69b9acd546c78e01"
+    },
+    {
+      "path": "_evidence/external-decisions/D01-phase-1b-scope-and-sequence.md",
+      "bytes": 4264,
+      "sha256": "803873100b400337025e456a21030696b4d048c762cd2c78da01149b1447cc4b"
+    },
+    {
+      "path": "_evidence/external-decisions/D02-people-evidence-and-declarations.md",
+      "bytes": 6073,
+      "sha256": "5d9be73cb7b4678515f7c65fbb66db58190497a73332387ca2cfe8f769eabb5e"
+    },
+    {
+      "path": "_evidence/external-decisions/D03-home-front-elections-and-wills.md",
+      "bytes": 4574,
+      "sha256": "5aa658353eb825062345c11e9b98f5a77d7ad6631b3042760341c692ea70cd06"
+    },
+    {
+      "path": "_evidence/external-decisions/D04-economy-foreign-and-capacity.md",
+      "bytes": 5073,
+      "sha256": "76696d3214df32f3e1b068ee71f47b00d5c9b2ced7a3a54726f75491c0fc92dc"
+    },
+    {
+      "path": "_evidence/external-decisions/D05-proposals-sieges-and-carriage.md",
+      "bytes": 5800,
+      "sha256": "3a5866b81b7333024dfcc370768e074b6a274fe40f2055233ca10c971587c82d"
+    },
+    {
+      "path": "_evidence/external-decisions/D06-recurring-and-grouped-situations.md",
+      "bytes": 4365,
+      "sha256": "cdbbb23156587c34ed7a9e28dfc9bc206839c5a5d5d4d4cde9e161faa4875e42"
+    },
+    {
+      "path": "_evidence/external-decisions/D07-phase-1-check-and-calibration.md",
+      "bytes": 4938,
+      "sha256": "17d07bda9f84e71036163ec734c3973c9ce103de0539a5f677494f5c98f85db4"
+    },
+    {
+      "path": "_evidence/external-decisions/D08-r2-black-military-service.md",
+      "bytes": 3915,
+      "sha256": "fe5f8b90e7d14a57f654f3981427a139d8c548eabed1991d30b5426d9009a009"
+    },
+    {
+      "path": "_evidence/external-decisions/D09-r3-native-nations.md",
+      "bytes": 4057,
+      "sha256": "ed4f4221c42c14f1ab15b58745bf12b4ae1e1f6957f79f762400960dd0f4a4bb"
+    },
+    {
+      "path": "_evidence/external-decisions/D10-r4-prisoners-and-exchange.md",
+      "bytes": 4126,
+      "sha256": "593a85a05422c71044219f20e9d4072694090806926d53f0f2b7de276a688785"
+    },
+    {
+      "path": "_evidence/external-decisions/D11-r6-civilians-and-commanders.md",
+      "bytes": 4474,
+      "sha256": "5f47ef597acf9b0cb9531d49f69d64b7dc81640fbc144ecd0f3bf69c479f99d8"
+    },
+    {
+      "path": "_evidence/external-decisions/D12-r7-emancipation-and-fugitive-policy.md",
+      "bytes": 4899,
+      "sha256": "93f845954f65a9aa88d61e63425713b292335a67f50ed51899d4155636cc5c7a"
+    },
+    {
+      "path": "_evidence/external-decisions/D13-r5-verdict-and-reckoning.md",
+      "bytes": 3534,
+      "sha256": "c13f1cc2a33786f6d11591b710da784798050ab203a0354c51e93d65e04b2f43"
+    },
+    {
+      "path": "_evidence/external-decisions/D14-freedpeople-camps-research-and-placement.md",
+      "bytes": 3768,
+      "sha256": "488c8d41189f12638a46a4dbbf22a239626a1d60f899f5e2de5a16ed0ac1a1ca"
+    },
+    {
+      "path": "_evidence/external-decisions.json",
+      "bytes": 3766,
+      "sha256": "762680a69c43d57a191c3843628e47b7aee47f2edf9046a2606a16f3424f844d"
+    },
+    {
+      "path": "_evidence/gates.json",
+      "bytes": 69044,
+      "sha256": "41c62d47db4a1970c52b2119610e402b821c11a86e9d0a58c48543efa423bfc3"
+    },
+    {
+      "path": "_evidence/handovers/1a/notes/lane-1.12-rule-seats.md",
+      "bytes": 119308,
+      "sha256": "7c8d9a5889d4fcb752ec5a3d60dcefd8367407844628cc9927b16d513f893917"
+    },
+    {
+      "path": "_evidence/handovers/1a/notes/lane-1.14-done-check.md",
+      "bytes": 55503,
+      "sha256": "eaa84d9baa1bf0f8a256b5e66b79fe4aa994236dcf33503e5e14b394e33ad611"
+    },
+    {
+      "path": "_evidence/handovers/1a/notes/lane-1.3-combat.md",
+      "bytes": 26460,
+      "sha256": "a2c531ee3331d9de6768c1930822577db951b1c089ad0d5603f0068df731b0e3"
+    },
+    {
+      "path": "_evidence/handovers/1a/notes/lane-1.5-people-verbs.md",
+      "bytes": 17841,
+      "sha256": "ddc4d9dc1c88759e92f8201c8708344e63998c39286bf8113171c2b0f973048a"
+    },
+    {
+      "path": "_evidence/handovers/1a/notes/lane-1.7-men-regions.md",
+      "bytes": 46271,
+      "sha256": "4a02412e05b37d7e1e897fbc85f168b70f24f1029b7da2f49f0a6d5eebaab28f"
+    },
+    {
+      "path": "_evidence/handovers/audit/docs/audit/2026-11-21-canon-against-code.md",
+      "bytes": 45371,
+      "sha256": "a8b6065c55ee7f6f4c4ed457581fcd4d1e206b77fd2167c076c9307e01cfed9d"
+    },
+    {
+      "path": "_evidence/handovers/checks/notes/sprint-S18-checks.md",
+      "bytes": 12564,
+      "sha256": "d3682f25d5ea33a3a130d040002c7e0bf8d74fc1e8ea86570b1d1be52ea52952"
+    },
+    {
+      "path": "_evidence/handovers/desk/docs/playtests/2026-11-21-desk-history-run.md",
+      "bytes": 18999,
+      "sha256": "9f48dcad35b46a0d956116839e01d3e42d1d61f889424183a7b745d4fc3b4889"
+    },
+    {
+      "path": "_evidence/handovers/desk/notes/lane-1.12-rule-seats.md",
+      "bytes": 119308,
+      "sha256": "7c8d9a5889d4fcb752ec5a3d60dcefd8367407844628cc9927b16d513f893917"
+    },
+    {
+      "path": "_evidence/handovers/desk/notes/lane-1.14-done-check.md",
+      "bytes": 55503,
+      "sha256": "eaa84d9baa1bf0f8a256b5e66b79fe4aa994236dcf33503e5e14b394e33ad611"
+    },
+    {
+      "path": "_evidence/handovers/desk/notes/lane-1.3-combat.md",
+      "bytes": 26460,
+      "sha256": "a2c531ee3331d9de6768c1930822577db951b1c089ad0d5603f0068df731b0e3"
+    },
+    {
+      "path": "_evidence/handovers/desk/notes/lane-1.5-people-verbs.md",
+      "bytes": 17841,
+      "sha256": "ddc4d9dc1c88759e92f8201c8708344e63998c39286bf8113171c2b0f973048a"
+    },
+    {
+      "path": "_evidence/handovers/desk/notes/lane-1.7-men-regions.md",
+      "bytes": 46271,
+      "sha256": "4a02412e05b37d7e1e897fbc85f168b70f24f1029b7da2f49f0a6d5eebaab28f"
+    },
+    {
+      "path": "_evidence/handovers/desk/notes/sprint-S19-desk.md",
+      "bytes": 8823,
+      "sha256": "93465be9b78b8f9c9b551aafa945b2e9c4f3a85ef91ae96e5acf1add1a3d14f1"
+    },
+    {
+      "path": "_evidence/handovers/desk/notes/sprint-S29-desk.md",
+      "bytes": 3599,
+      "sha256": "8aca4510106e1fdedfa9815ea723d2b575a652c6b9b89c521516f480b5ffdc22"
+    },
+    {
+      "path": "_evidence/handovers/people-data/notes/lane-1.11r3-research.md",
+      "bytes": 60649,
+      "sha256": "efc4b228931d12b51b040e012568308a8c14a275066064782ec3fe5e3838aa0e"
+    },
+    {
+      "path": "_evidence/handovers/perf/notes/lane-1.12-rule-seats.md",
+      "bytes": 119308,
+      "sha256": "7c8d9a5889d4fcb752ec5a3d60dcefd8367407844628cc9927b16d513f893917"
+    },
+    {
+      "path": "_evidence/handovers/perf/notes/lane-1.14-done-check.md",
+      "bytes": 55503,
+      "sha256": "eaa84d9baa1bf0f8a256b5e66b79fe4aa994236dcf33503e5e14b394e33ad611"
+    },
+    {
+      "path": "_evidence/handovers/perf/notes/lane-1.3-combat.md",
+      "bytes": 26460,
+      "sha256": "a2c531ee3331d9de6768c1930822577db951b1c089ad0d5603f0068df731b0e3"
+    },
+    {
+      "path": "_evidence/handovers/perf/notes/lane-1.5-people-verbs.md",
+      "bytes": 17841,
+      "sha256": "ddc4d9dc1c88759e92f8201c8708344e63998c39286bf8113171c2b0f973048a"
+    },
+    {
+      "path": "_evidence/handovers/perf/notes/lane-1.7-men-regions.md",
+      "bytes": 46271,
+      "sha256": "4a02412e05b37d7e1e897fbc85f168b70f24f1029b7da2f49f0a6d5eebaab28f"
+    },
+    {
+      "path": "_evidence/handovers/perf/notes/lane-s2-perf.md",
+      "bytes": 60203,
+      "sha256": "e88066310ef9ab047b49d362584fea377c616e3c8883de588ef2f6ba4d30d1f9"
+    },
+    {
+      "path": "_evidence/handovers/plan-1b/docs/design/PHASE-1B-PROPOSAL.md",
+      "bytes": 63123,
+      "sha256": "fc540e4150a781d7b7aa4b1995862358afa20660ac5394410206e1e981790f52"
+    },
+    {
+      "path": "_evidence/handovers/plan-1b/notes/lane-1b-plan.md",
+      "bytes": 23705,
+      "sha256": "b0a7bcb7e30552ff1512f3c7a2c11e615cce97b3da9840e27b6961819e30f0bf"
+    },
+    {
+      "path": "_evidence/handovers/playtest/docs/playtests/2026-11-21-console-playtests.md",
+      "bytes": 22578,
+      "sha256": "70a62fbe0ee8c68c96259844296fd802d107f31670576945a64aa2ba1bba5b21"
+    },
+    {
+      "path": "_evidence/handovers/playtest/notes/lane-1.12-rule-seats.md",
+      "bytes": 119308,
+      "sha256": "7c8d9a5889d4fcb752ec5a3d60dcefd8367407844628cc9927b16d513f893917"
+    },
+    {
+      "path": "_evidence/handovers/playtest/notes/lane-1.14-done-check.md",
+      "bytes": 55503,
+      "sha256": "eaa84d9baa1bf0f8a256b5e66b79fe4aa994236dcf33503e5e14b394e33ad611"
+    },
+    {
+      "path": "_evidence/handovers/playtest/notes/lane-1.3-combat.md",
+      "bytes": 26460,
+      "sha256": "a2c531ee3331d9de6768c1930822577db951b1c089ad0d5603f0068df731b0e3"
+    },
+    {
+      "path": "_evidence/handovers/playtest/notes/lane-1.5-people-verbs.md",
+      "bytes": 17841,
+      "sha256": "ddc4d9dc1c88759e92f8201c8708344e63998c39286bf8113171c2b0f973048a"
+    },
+    {
+      "path": "_evidence/handovers/playtest/notes/lane-1.7-men-regions.md",
+      "bytes": 46271,
+      "sha256": "4a02412e05b37d7e1e897fbc85f168b70f24f1029b7da2f49f0a6d5eebaab28f"
+    },
+    {
+      "path": "_evidence/handovers/research-cast/notes/sprint-S12-cast.md",
+      "bytes": 8593,
+      "sha256": "7fae0a7e6f1c57eaebd88c6a510dfdac50908eeac5549af28aae972759215ae4"
+    },
+    {
+      "path": "_evidence/handovers/research-cast/notes/sprint-S22-regard.md",
+      "bytes": 11501,
+      "sha256": "f860e7acaf1dcea35e83ffd96a0f779dfe0d511622688c9f54f0a0287b873672"
+    },
+    {
+      "path": "_evidence/handovers/research-cast/notes/sprint-S6-cast.md",
+      "bytes": 3486,
+      "sha256": "30b8b0da6b7eb2e791458e47a55ab791603e76d6feef2e3acdc7c0c5fbfec77c"
+    },
+    {
+      "path": "_evidence/handovers/research-foreign-economy/notes/lane-s5-foreign-economy.md",
+      "bytes": 11773,
+      "sha256": "ab5cef33a14f9041a84633c85a79f6d6b03bfdfee3a5ade361d7e2fabdb9759f"
+    },
+    {
+      "path": "_evidence/handovers/research-foreign-economy/notes/sprint-S15-manpower-economy.md",
+      "bytes": 13411,
+      "sha256": "aeda97910b05d5ac646d16cbb2f1fe2a20be511a6d1207b647793b5117905ead"
+    },
+    {
+      "path": "_evidence/handovers/research-foreign-economy/notes/sprint-S24-supply.md",
+      "bytes": 10180,
+      "sha256": "7e19c262850acf6cf5d0f54c028e6c253dedd9ae792742e36f311a5977df12fa"
+    },
+    {
+      "path": "_evidence/handovers/research-gate/notes/lane-s7-research-gate.md",
+      "bytes": 7508,
+      "sha256": "76d87bde1efab0653d560473bddf4a06a91e6347e4fca7772b563af6e59bd50a"
+    },
+    {
+      "path": "_evidence/handovers/research-gate/packs/union-1861/gate/drafts/README.md",
+      "bytes": 10994,
+      "sha256": "d550b9ddf0c330ae66b67e20820337e240bf05cc2f4191a4a86990bd1863f47f"
+    },
+    {
+      "path": "_evidence/handovers/research-military/notes/sprint-S14-oob-drafts.md",
+      "bytes": 11880,
+      "sha256": "4a469389830c35df137aa7eb918a3f55d517f402546d979f084021f5e6409d3c"
+    },
+    {
+      "path": "_evidence/handovers/research-military/notes/sprint-S21-unknown-strengths.md",
+      "bytes": 9059,
+      "sha256": "14da15612a89b799825aa284793bc4cb70bf417d7ba5ec9fc9ab5e628483cc7a"
+    },
+    {
+      "path": "_evidence/handovers/research-military/notes/sprint-S31-unknown-strengths.md",
+      "bytes": 10261,
+      "sha256": "6ed1630cd4ab3559a751fa38c45ed95ffe3bd3fd1d1ba3cd6471189edae0319a"
+    },
+    {
+      "path": "_evidence/handovers/research-military/notes/sprint-S4-research-military.md",
+      "bytes": 8521,
+      "sha256": "0fda3bd2e665437781fcc14b1dc52418d191ab32c5669df6c902fb8ec135e636"
+    },
+    {
+      "path": "_evidence/handovers/research-politics/notes/sprint-S3-politics.md",
+      "bytes": 21920,
+      "sha256": "4e378f0c5d4c4e0918d56de9ce924a360ad14944e85a412831b82cb6d64ee2f9"
+    },
+    {
+      "path": "_evidence/handovers/situations-1862/notes/sprint-S13-situations.md",
+      "bytes": 9468,
+      "sha256": "68ffb89e916e50de72a7f7fd7272ec519dba9c16956b208249b3829d6fcf2a21"
+    },
+    {
+      "path": "_evidence/handovers/situations-1862/notes/sprint-S28-situations.md",
+      "bytes": 7945,
+      "sha256": "9c7210bcff39a57f86dfe29d0e370fefc94ead59bb2c956458afc8360c2f580c"
+    },
+    {
+      "path": "_evidence/inventory-initial.json",
+      "bytes": 131850,
+      "sha256": "83ddc6863a83100cde0f3495668b71c990136649761571701d1e8d85a72e49f7"
+    },
+    {
+      "path": "_evidence/inventory.json",
+      "bytes": 157299,
+      "sha256": "453d0f2da5dc158f95be471f44cd0a1a4a0fe90d5109046ffae0719c3b92f8ac"
+    },
+    {
+      "path": "_evidence/merge-tree-initial.json",
+      "bytes": 62760,
+      "sha256": "8036c2365760c617af89b134cac82b00218527fee0cd5f2856d81309a4ae02cb"
+    },
+    {
+      "path": "_evidence/merge-tree.json",
+      "bytes": 60914,
+      "sha256": "97ff8480ddf8d3f00ca4ae8281cc75e858e94d4dbe5d701e83bc67da6b8703b0"
+    },
+    {
+      "path": "_evidence/packet-checks.json",
+      "bytes": 859067,
+      "sha256": "567faddf6b22f86e1de694a2b6421b1435bd82e3a8fb5c15b346a646d5cd84c4"
+    },
+    {
+      "path": "_evidence/preservation-before.json",
+      "bytes": 200584,
+      "sha256": "d382990ce07bbcb42db846e46ab5f66588153095677cc422b8deb48deafb4e3a"
+    },
+    {
+      "path": "_evidence/proposal-source-audit.json",
+      "bytes": 10408,
+      "sha256": "6cb9b4edf1e89c2649f6ec67fc5138d1ed50150d7b58c39d95734f7d523e86e0"
+    },
+    {
+      "path": "_evidence/references.json",
+      "bytes": 498965,
+      "sha256": "16f8cc7013fc76f129844bafac2d47233c1b8209827d5d19adf49437a722c3f3"
+    },
+    {
+      "path": "_evidence/refresh-receipt.json",
+      "bytes": 380,
+      "sha256": "f1f18a62fda614a66614004f435dccf338f4c0080c3d89b87db5adf2d67f4aa5"
+    },
+    {
+      "path": "_evidence/refresh.py",
+      "bytes": 4032,
+      "sha256": "7d470cbfeb6945c3d7c6aa0743299493c583ab9dffb0cc25f9cf22e4f56fea65"
+    },
+    {
+      "path": "_evidence/rulings.json",
+      "bytes": 180351,
+      "sha256": "9b9009f580e6484b239373ef842cc047582570994679144e3564097dd090af94"
+    },
+    {
+      "path": "_evidence/run-done.ts",
+      "bytes": 1354,
+      "sha256": "08ac0a4eb86023c033c16460a9427afdd3b2f15a6983b3a0155f95bcc3630ef9"
+    },
+    {
+      "path": "_evidence/runtime-diagnostics.json",
+      "bytes": 20321,
+      "sha256": "18f6fc813a6fb9fc95bc0b913235c83a9ec029dfde2aec37ef8afa166f33c287"
+    },
+    {
+      "path": "_evidence/runtime-inventory.json",
+      "bytes": 5146,
+      "sha256": "4553e0d5c57df1ba52926e7b8b8a863a7b3b3e6570b60d6d33226349cb1b0f4d"
+    },
+    {
+      "path": "_evidence/settle.py",
+      "bytes": 3906,
+      "sha256": "5ff2aba913a224f2c0586ac0dab3779cf37276392fdeabf3445dd435050b0898"
+    },
+    {
+      "path": "_evidence/status-coverage.json",
+      "bytes": 4388,
+      "sha256": "568172c7de706fa73d4094e50020cc31b6469d8fe85622340ea9b860a80abdbc"
+    },
+    {
+      "path": "_evidence/status-source.json",
+      "bytes": 220266,
+      "sha256": "f52824ac1d871bb03544118bb4e55cd5f3faa07cf7210ffbd1fec9f2b562c8d2"
+    },
+    {
+      "path": "_evidence/validate-runtime.py",
+      "bytes": 1155,
+      "sha256": "0e2b26c3fbc8c6a33fe2ec27cf24d85384a19dba944f82739eedf49d90f823e3"
+    },
+    {
+      "path": "_evidence/verify_packets.py",
+      "bytes": 8118,
+      "sha256": "297444431ac8ee28aac9ff78d7cb89523b15adcdf19eb0df2d3efa03638c6428"
+    },
+    {
+      "path": "_evidence/write_readme.py",
+      "bytes": 14571,
+      "sha256": "ba9b547deaf1cce6cab3c2a3a08e62e2714090dc098a0bb7dfc2945a256434cb"
+    },
+    {
+      "path": "audit.md",
+      "bytes": 11897,
+      "sha256": "60ae70223f8a1cd618ca648b424a3d9b6e5a5bab1494ca5c9af63621b97a316d"
+    },
+    {
+      "path": "checks.md",
+      "bytes": 15093,
+      "sha256": "b853d07c98e3ddbc147373c487e62e9b0d98f4c7450d00378a74a1a95dbf6a24"
+    },
+    {
+      "path": "desk.md",
+      "bytes": 47784,
+      "sha256": "49042ac8167bda01e1c61ccc2749ecdbfb36ba81818604e0c41f902fda231c46"
+    },
+    {
+      "path": "people-data.md",
+      "bytes": 19833,
+      "sha256": "5f61806c2475b2bf6d56e1df61cd5a037fdf9b83604612afc309d51658e4c955"
+    },
+    {
+      "path": "perf.md",
+      "bytes": 38092,
+      "sha256": "460ee469d05d74d517cb2e5e746b1da0f8de8c46ff127a2ba2ef0f68f21cd4b1"
+    },
+    {
+      "path": "plan-1b.md",
+      "bytes": 102676,
+      "sha256": "501c02f4afcbeb27b3317a5f007715124583b76305492f52c6ec187eb76c936f"
+    },
+    {
+      "path": "playtest.md",
+      "bytes": 32443,
+      "sha256": "203f1d63a2b6b90143a68ad1c9baeef7f92e005e263ff0b7894d370bdc01f6e1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15197,
+      "sha256": "fd69a660c442186695db16a88798da1046baf11e49af6b3c337b97d8abf9c04e"
+    },
+    {
+      "path": "research-cast.md",
+      "bytes": 30020,
+      "sha256": "048c641ae25370cb1499774a9bef65e42a30ef8ff810f0b149cdec1db42ef226"
+    },
+    {
+      "path": "research-foreign-economy.md",
+      "bytes": 41066,
+      "sha256": "cfee7aa97c3485c55d9b588dda4417f6a52c453ddf563cd906da4b2e90bcc4a8"
+    },
+    {
+      "path": "research-gate.md",
+      "bytes": 50701,
+      "sha256": "791e9a6f7361057edd2c7f1905173ebfc5c790dce1d61b5ecd15ab08549bc69d"
+    },
+    {
+      "path": "research-military.md",
+      "bytes": 65034,
+      "sha256": "799a28e49929effe78a4558dcfeec52bd816b96ffb04407478ea24adf91c11ee"
+    },
+    {
+      "path": "research-politics.md",
+      "bytes": 28402,
+      "sha256": "3602b7a4dd4368cbf561d695538ae8f577c1bb4a421768ad0f23f962e1dc686c"
+    },
+    {
+      "path": "situations-1862.md",
+      "bytes": 82315,
+      "sha256": "14078fc4af33012701fd767c3150463039391a19cedf126cf6ad31b312782b67"
+    }
+  ],
+  "excludedClosingRecords": [
+    "delivery-inventory.json",
+    "validation-summary.json"
+  ],
+  "note": "Substantive packets, sources and verification evidence inventoried before the final result record. No runtime/package build is delivered."
+}

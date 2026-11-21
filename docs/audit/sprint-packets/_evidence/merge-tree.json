@@ -1,0 +1,2007 @@
+[
+  {
+    "left": "main",
+    "right": "1a",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004"
+    ],
+    "exit": 0,
+    "tree": "eb0348a0d5c3508ba9e054e3247a9bccba261f71",
+    "conflicts": [],
+    "stdout": "eb0348a0d5c3508ba9e054e3247a9bccba261f71\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "audit",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95"
+    ],
+    "exit": 0,
+    "tree": "6d3786a0e3ca8de79f0179f0b0d2c0dc9de00cf9",
+    "conflicts": [],
+    "stdout": "6d3786a0e3ca8de79f0179f0b0d2c0dc9de00cf9\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "checks",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab"
+    ],
+    "exit": 0,
+    "tree": "78db7be1ffd373e853434f76eeee4c1af5d7fcf5",
+    "conflicts": [],
+    "stdout": "78db7be1ffd373e853434f76eeee4c1af5d7fcf5\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "desk",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "7db8c80a605c4410f458487778cadc7008ac8909"
+    ],
+    "exit": 0,
+    "tree": "f5ff39966eff0131b85df1dbea921737bf658aeb",
+    "conflicts": [],
+    "stdout": "f5ff39966eff0131b85df1dbea921737bf658aeb\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "people-data",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0"
+    ],
+    "exit": 0,
+    "tree": "3cecffdc2e66d99afa45fc05ebd671ec7efde5de",
+    "conflicts": [],
+    "stdout": "3cecffdc2e66d99afa45fc05ebd671ec7efde5de\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "perf",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab"
+    ],
+    "exit": 0,
+    "tree": "619c1dc5ccf17baa07506c66f267cbb4a39df3bb",
+    "conflicts": [],
+    "stdout": "619c1dc5ccf17baa07506c66f267cbb4a39df3bb\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "plan-1b",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a"
+    ],
+    "exit": 0,
+    "tree": "3bfe67d17a13e49481423b39f19390e07c2b7c35",
+    "conflicts": [],
+    "stdout": "3bfe67d17a13e49481423b39f19390e07c2b7c35\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "playtest",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b"
+    ],
+    "exit": 0,
+    "tree": "65790d7aeef4f7fddff19b4cfffd59563e8688a6",
+    "conflicts": [],
+    "stdout": "65790d7aeef4f7fddff19b4cfffd59563e8688a6\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "research-cast",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459"
+    ],
+    "exit": 0,
+    "tree": "f47013f381d7179d44f6118cedf1e0a31a27f9b4",
+    "conflicts": [],
+    "stdout": "f47013f381d7179d44f6118cedf1e0a31a27f9b4\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "research-foreign-economy",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6"
+    ],
+    "exit": 0,
+    "tree": "9c27b27131afab6efd63ba148e2e2fcbb4f266fa",
+    "conflicts": [],
+    "stdout": "9c27b27131afab6efd63ba148e2e2fcbb4f266fa\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "research-gate",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "3ce5b4335c7fe5c240784c17b4a3098dec5ef97c",
+    "conflicts": [],
+    "stdout": "3ce5b4335c7fe5c240784c17b4a3098dec5ef97c\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "research-military",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "4972fe03bb0119533cd171bf5dc88badf1d318f6",
+    "conflicts": [],
+    "stdout": "4972fe03bb0119533cd171bf5dc88badf1d318f6\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "research-politics",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "9b128ceeff1dd6d16dacb46e5458d4aa17bfad91",
+    "conflicts": [],
+    "stdout": "9b128ceeff1dd6d16dacb46e5458d4aa17bfad91\n",
+    "stderr": ""
+  },
+  {
+    "left": "main",
+    "right": "situations-1862",
+    "leftSha": "b01764406738b42633277c8bf00099e093bf20e9",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "b01764406738b42633277c8bf00099e093bf20e9",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "34ff703077603e1b834acb9b7ff19993b4388a2d",
+    "conflicts": [],
+    "stdout": "34ff703077603e1b834acb9b7ff19993b4388a2d\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "audit",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95"
+    ],
+    "exit": 0,
+    "tree": "68cdff53e388de7c2781f8438523a0e965f45294",
+    "conflicts": [],
+    "stdout": "68cdff53e388de7c2781f8438523a0e965f45294\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "checks",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab"
+    ],
+    "exit": 0,
+    "tree": "3d7a6371f9e7b9f2fb0afd04809c01ff9d8d2c7e",
+    "conflicts": [],
+    "stdout": "3d7a6371f9e7b9f2fb0afd04809c01ff9d8d2c7e\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "desk",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "7db8c80a605c4410f458487778cadc7008ac8909"
+    ],
+    "exit": 0,
+    "tree": "f23991470b704a812eecf14e4141bc2b39ce2f0e",
+    "conflicts": [],
+    "stdout": "f23991470b704a812eecf14e4141bc2b39ce2f0e\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "people-data",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0"
+    ],
+    "exit": 1,
+    "tree": "f1c30931a3f2cad0398af56a4cf12718d77626cc",
+    "conflicts": [
+      "packages/cli/src/liveness-gate.ts"
+    ],
+    "stdout": "f1c30931a3f2cad0398af56a4cf12718d77626cc\npackages/cli/src/liveness-gate.ts\n\nAuto-merging packages/cli/src/liveness-gate.ts\nCONFLICT (content): Merge conflict in packages/cli/src/liveness-gate.ts\nAuto-merging packs/union-1861/data/world.json\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "perf",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab"
+    ],
+    "exit": 0,
+    "tree": "d531e68d8e1ae53d54b7d7d2e7cdc6a5a28e410d",
+    "conflicts": [],
+    "stdout": "d531e68d8e1ae53d54b7d7d2e7cdc6a5a28e410d\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "plan-1b",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a"
+    ],
+    "exit": 0,
+    "tree": "4da86892f46c67f7eef5dea4343e5e8ee38cccd2",
+    "conflicts": [],
+    "stdout": "4da86892f46c67f7eef5dea4343e5e8ee38cccd2\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "playtest",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b"
+    ],
+    "exit": 0,
+    "tree": "d5374b9004601896400b340c7e911c6cfe52270e",
+    "conflicts": [],
+    "stdout": "d5374b9004601896400b340c7e911c6cfe52270e\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "research-cast",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459"
+    ],
+    "exit": 0,
+    "tree": "44bbcff3f3e57cd477c077c2df89dd45837ee087",
+    "conflicts": [],
+    "stdout": "44bbcff3f3e57cd477c077c2df89dd45837ee087\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "research-foreign-economy",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6"
+    ],
+    "exit": 0,
+    "tree": "7484640be241ecd873bc20f453645fa4b4ac2d9a",
+    "conflicts": [],
+    "stdout": "7484640be241ecd873bc20f453645fa4b4ac2d9a\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "research-gate",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "f58ccd1a8bfc328a2bac8c911bf4a626b4a6c0f1",
+    "conflicts": [],
+    "stdout": "f58ccd1a8bfc328a2bac8c911bf4a626b4a6c0f1\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "research-military",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "9f3b3681c758fe07ded647730bd2161dfb2d5786",
+    "conflicts": [],
+    "stdout": "9f3b3681c758fe07ded647730bd2161dfb2d5786\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "research-politics",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "9c2d4462b057085f195917a6a85126bd7b90914c",
+    "conflicts": [],
+    "stdout": "9c2d4462b057085f195917a6a85126bd7b90914c\n",
+    "stderr": ""
+  },
+  {
+    "left": "1a",
+    "right": "situations-1862",
+    "leftSha": "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "bf6cc66c025a0567a991f1a94eb9ba20656f4004",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "62f9c48e886d625300026ba367d1e13a5af8e0b8",
+    "conflicts": [],
+    "stdout": "62f9c48e886d625300026ba367d1e13a5af8e0b8\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "checks",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab"
+    ],
+    "exit": 0,
+    "tree": "8acf57bcb18ddaaaf785a89c197029a129eae6a8",
+    "conflicts": [],
+    "stdout": "8acf57bcb18ddaaaf785a89c197029a129eae6a8\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "desk",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "7db8c80a605c4410f458487778cadc7008ac8909"
+    ],
+    "exit": 0,
+    "tree": "8bfcae081bd16aed996df565fe2a97c9aa5a2de8",
+    "conflicts": [],
+    "stdout": "8bfcae081bd16aed996df565fe2a97c9aa5a2de8\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "people-data",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0"
+    ],
+    "exit": 0,
+    "tree": "5e6e8e34c2ee10f5ff8c8f64278a56fb1481abe3",
+    "conflicts": [],
+    "stdout": "5e6e8e34c2ee10f5ff8c8f64278a56fb1481abe3\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "perf",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab"
+    ],
+    "exit": 0,
+    "tree": "f72dcb479b9b74cbe09b697ef61fbd6e45811fc1",
+    "conflicts": [],
+    "stdout": "f72dcb479b9b74cbe09b697ef61fbd6e45811fc1\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "plan-1b",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a"
+    ],
+    "exit": 0,
+    "tree": "364980a0a97cdef478793fa141bd23eb89d76612",
+    "conflicts": [],
+    "stdout": "364980a0a97cdef478793fa141bd23eb89d76612\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "playtest",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b"
+    ],
+    "exit": 0,
+    "tree": "b58d3c1b4d0b3f64ec8369f1b61c8f1cc741219e",
+    "conflicts": [],
+    "stdout": "b58d3c1b4d0b3f64ec8369f1b61c8f1cc741219e\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "research-cast",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459"
+    ],
+    "exit": 0,
+    "tree": "54171fe68c89443e799a09f05b15c6dbfc33d672",
+    "conflicts": [],
+    "stdout": "54171fe68c89443e799a09f05b15c6dbfc33d672\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "research-foreign-economy",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6"
+    ],
+    "exit": 0,
+    "tree": "53106e1b4bc78438db4f9165f229c65f7f5956b3",
+    "conflicts": [],
+    "stdout": "53106e1b4bc78438db4f9165f229c65f7f5956b3\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "research-gate",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "cd6fd10fc76e9dbe26e22c3b91dd6f530c4fb6f1",
+    "conflicts": [],
+    "stdout": "cd6fd10fc76e9dbe26e22c3b91dd6f530c4fb6f1\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "research-military",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "f5c3b833640f836c0f56e136ad56dc8e17476758",
+    "conflicts": [],
+    "stdout": "f5c3b833640f836c0f56e136ad56dc8e17476758\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "research-politics",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "afdb0076d2b4aade251b36c063c38fdb565c0487",
+    "conflicts": [],
+    "stdout": "afdb0076d2b4aade251b36c063c38fdb565c0487\n",
+    "stderr": ""
+  },
+  {
+    "left": "audit",
+    "right": "situations-1862",
+    "leftSha": "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "9ab0f5e7473d36685b2556c518214d6eaf8bcc95",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "3784c764a75db6404d666c9b7fd6a15d3557ec0c",
+    "conflicts": [],
+    "stdout": "3784c764a75db6404d666c9b7fd6a15d3557ec0c\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "desk",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "7db8c80a605c4410f458487778cadc7008ac8909"
+    ],
+    "exit": 0,
+    "tree": "dc532368d1ae1183a8d8425c2328d95060640fc8",
+    "conflicts": [],
+    "stdout": "dc532368d1ae1183a8d8425c2328d95060640fc8\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "people-data",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0"
+    ],
+    "exit": 0,
+    "tree": "3deb64638bdbcc05e0f56274e56b2e8b91342051",
+    "conflicts": [],
+    "stdout": "3deb64638bdbcc05e0f56274e56b2e8b91342051\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "perf",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab"
+    ],
+    "exit": 0,
+    "tree": "cdda6725f07b6e69074fd50eed9cb8520a8a87bc",
+    "conflicts": [],
+    "stdout": "cdda6725f07b6e69074fd50eed9cb8520a8a87bc\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "plan-1b",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a"
+    ],
+    "exit": 0,
+    "tree": "f8a8bdb9f23e5545c457d3beaf2cb682fec4b81e",
+    "conflicts": [],
+    "stdout": "f8a8bdb9f23e5545c457d3beaf2cb682fec4b81e\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "playtest",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b"
+    ],
+    "exit": 0,
+    "tree": "edb54f26274b199abbdd00284513188a9ceb8dba",
+    "conflicts": [],
+    "stdout": "edb54f26274b199abbdd00284513188a9ceb8dba\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "research-cast",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459"
+    ],
+    "exit": 0,
+    "tree": "eb39bc163e331131b651091cbdb358eb50b04029",
+    "conflicts": [],
+    "stdout": "eb39bc163e331131b651091cbdb358eb50b04029\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "research-foreign-economy",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6"
+    ],
+    "exit": 0,
+    "tree": "a80f63fcfcdb38f8d867bdbb604cfb3574ab4198",
+    "conflicts": [],
+    "stdout": "a80f63fcfcdb38f8d867bdbb604cfb3574ab4198\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "research-gate",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "efd069e8ad232701514f6a422d1d3988fb323c71",
+    "conflicts": [],
+    "stdout": "efd069e8ad232701514f6a422d1d3988fb323c71\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "research-military",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "0afe22f297f9689c02f3424518ec653f8abe26a2",
+    "conflicts": [],
+    "stdout": "0afe22f297f9689c02f3424518ec653f8abe26a2\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "research-politics",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "870ad1e05c3231faac69778efb8a7740ba242a1f",
+    "conflicts": [],
+    "stdout": "870ad1e05c3231faac69778efb8a7740ba242a1f\n",
+    "stderr": ""
+  },
+  {
+    "left": "checks",
+    "right": "situations-1862",
+    "leftSha": "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "39c279cefc3e836e9a7f6a39acbb6772393a16ab",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "97eb085e1d3f399acd92364835c85fa9d20f56c3",
+    "conflicts": [],
+    "stdout": "97eb085e1d3f399acd92364835c85fa9d20f56c3\n",
+    "stderr": ""
+  },
+  {
+    "left": "desk",
+    "right": "people-data",
+    "leftSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "rightSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7db8c80a605c4410f458487778cadc7008ac8909",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0"
+    ],
+    "exit": 1,
+    "tree": "f85824ba19fc3220a14b4b7abf2a929723f66084",
+    "conflicts": [
+      "packages/cli/src/liveness-gate.ts"
+    ],
+    "stdout": "f85824ba19fc3220a14b4b7abf2a929723f66084\npackages/cli/src/liveness-gate.ts\n\nAuto-merging packages/cli/src/liveness-gate.ts\nCONFLICT (content): Merge conflict in packages/cli/src/liveness-gate.ts\nAuto-merging packs/union-1861/data/world.json\n",
+    "stderr": ""
+  },
+  {
+    "left": "desk",
+    "right": "perf",
+    "leftSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "rightSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7db8c80a605c4410f458487778cadc7008ac8909",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab"
+    ],
+    "exit": 1,
+    "tree": "c6bb8be422cd214ab0e412840beeaf286dfff8c0",
+    "conflicts": [
+      "packages/kernel/src/view/view.ts"
+    ],
+    "stdout": "c6bb8be422cd214ab0e412840beeaf286dfff8c0\npackages/kernel/src/view/view.ts\n\nAuto-merging packages/kernel/src/tick/context.ts\nAuto-merging packages/kernel/src/view/view.ts\nCONFLICT (content): Merge conflict in packages/kernel/src/view/view.ts\n",
+    "stderr": ""
+  },
+  {
+    "left": "desk",
+    "right": "plan-1b",
+    "leftSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "rightSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7db8c80a605c4410f458487778cadc7008ac8909",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a"
+    ],
+    "exit": 0,
+    "tree": "da60f32a9061963e51c553b27e89a476ea1ab102",
+    "conflicts": [],
+    "stdout": "da60f32a9061963e51c553b27e89a476ea1ab102\n",
+    "stderr": ""
+  },
+  {
+    "left": "desk",
+    "right": "playtest",
+    "leftSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "rightSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7db8c80a605c4410f458487778cadc7008ac8909",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b"
+    ],
+    "exit": 0,
+    "tree": "6f66841b1a20a2a734f8fd4a49be4d45f658d19f",
+    "conflicts": [],
+    "stdout": "6f66841b1a20a2a734f8fd4a49be4d45f658d19f\n",
+    "stderr": ""
+  },
+  {
+    "left": "desk",
+    "right": "research-cast",
+    "leftSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "rightSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7db8c80a605c4410f458487778cadc7008ac8909",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459"
+    ],
+    "exit": 0,
+    "tree": "10ec2fbb9366f3c40d37feba98377fdced228e48",
+    "conflicts": [],
+    "stdout": "10ec2fbb9366f3c40d37feba98377fdced228e48\n",
+    "stderr": ""
+  },
+  {
+    "left": "desk",
+    "right": "research-foreign-economy",
+    "leftSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "rightSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7db8c80a605c4410f458487778cadc7008ac8909",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6"
+    ],
+    "exit": 0,
+    "tree": "da3fd2210e58095a57c871d6b9f7074f291ff1fa",
+    "conflicts": [],
+    "stdout": "da3fd2210e58095a57c871d6b9f7074f291ff1fa\n",
+    "stderr": ""
+  },
+  {
+    "left": "desk",
+    "right": "research-gate",
+    "leftSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7db8c80a605c4410f458487778cadc7008ac8909",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "f0c9cf03fbd80a9efb0bc180f4bdd55b5dda1b99",
+    "conflicts": [],
+    "stdout": "f0c9cf03fbd80a9efb0bc180f4bdd55b5dda1b99\n",
+    "stderr": ""
+  },
+  {
+    "left": "desk",
+    "right": "research-military",
+    "leftSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7db8c80a605c4410f458487778cadc7008ac8909",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "902e9f5d46059e31ab96e30f3b5ce0553ad7ee0c",
+    "conflicts": [],
+    "stdout": "902e9f5d46059e31ab96e30f3b5ce0553ad7ee0c\n",
+    "stderr": ""
+  },
+  {
+    "left": "desk",
+    "right": "research-politics",
+    "leftSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7db8c80a605c4410f458487778cadc7008ac8909",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "d00ad661d468412160550991bac0c45c124c7b73",
+    "conflicts": [],
+    "stdout": "d00ad661d468412160550991bac0c45c124c7b73\n",
+    "stderr": ""
+  },
+  {
+    "left": "desk",
+    "right": "situations-1862",
+    "leftSha": "7db8c80a605c4410f458487778cadc7008ac8909",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7db8c80a605c4410f458487778cadc7008ac8909",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "b8f7e183f7256efc8a88480848fb536935936bdf",
+    "conflicts": [],
+    "stdout": "b8f7e183f7256efc8a88480848fb536935936bdf\n",
+    "stderr": ""
+  },
+  {
+    "left": "people-data",
+    "right": "perf",
+    "leftSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "rightSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab"
+    ],
+    "exit": 1,
+    "tree": "624bf7d3adbf08dae60d1c8e22d0e3688fcd6934",
+    "conflicts": [
+      "packages/cli/src/liveness-gate.ts"
+    ],
+    "stdout": "624bf7d3adbf08dae60d1c8e22d0e3688fcd6934\npackages/cli/src/liveness-gate.ts\n\nAuto-merging packages/cli/src/liveness-gate.ts\nCONFLICT (content): Merge conflict in packages/cli/src/liveness-gate.ts\nAuto-merging packs/union-1861/data/world.json\n",
+    "stderr": ""
+  },
+  {
+    "left": "people-data",
+    "right": "plan-1b",
+    "leftSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "rightSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a"
+    ],
+    "exit": 0,
+    "tree": "7faed61b98aa59bc073071b603757c51b37abfc0",
+    "conflicts": [],
+    "stdout": "7faed61b98aa59bc073071b603757c51b37abfc0\n",
+    "stderr": ""
+  },
+  {
+    "left": "people-data",
+    "right": "playtest",
+    "leftSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "rightSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b"
+    ],
+    "exit": 1,
+    "tree": "d6d5b6ef1183810d8feed26bc76e17c257574e45",
+    "conflicts": [
+      "packages/cli/src/liveness-gate.ts"
+    ],
+    "stdout": "d6d5b6ef1183810d8feed26bc76e17c257574e45\npackages/cli/src/liveness-gate.ts\n\nAuto-merging packages/cli/src/liveness-gate.ts\nCONFLICT (content): Merge conflict in packages/cli/src/liveness-gate.ts\nAuto-merging packs/union-1861/data/world.json\n",
+    "stderr": ""
+  },
+  {
+    "left": "people-data",
+    "right": "research-cast",
+    "leftSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "rightSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459"
+    ],
+    "exit": 0,
+    "tree": "9f0a32c938b65c99d9e9914268fe90ad44ba55ee",
+    "conflicts": [],
+    "stdout": "9f0a32c938b65c99d9e9914268fe90ad44ba55ee\n",
+    "stderr": ""
+  },
+  {
+    "left": "people-data",
+    "right": "research-foreign-economy",
+    "leftSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "rightSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6"
+    ],
+    "exit": 0,
+    "tree": "a9deb2e68b86e11a3e1313f768d35c0f6f69ce26",
+    "conflicts": [],
+    "stdout": "a9deb2e68b86e11a3e1313f768d35c0f6f69ce26\n",
+    "stderr": ""
+  },
+  {
+    "left": "people-data",
+    "right": "research-gate",
+    "leftSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "7c92156d19b4f1e7a1f2f42223e5af1bd1a96280",
+    "conflicts": [],
+    "stdout": "7c92156d19b4f1e7a1f2f42223e5af1bd1a96280\n",
+    "stderr": ""
+  },
+  {
+    "left": "people-data",
+    "right": "research-military",
+    "leftSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "14a4a06455aa98c2b016335e836018ca1c4d186f",
+    "conflicts": [],
+    "stdout": "14a4a06455aa98c2b016335e836018ca1c4d186f\n",
+    "stderr": ""
+  },
+  {
+    "left": "people-data",
+    "right": "research-politics",
+    "leftSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "68d00bb2b22a8146222782808ab5e685770a6724",
+    "conflicts": [],
+    "stdout": "68d00bb2b22a8146222782808ab5e685770a6724\n",
+    "stderr": ""
+  },
+  {
+    "left": "people-data",
+    "right": "situations-1862",
+    "leftSha": "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "637e1d427d4489ff4b084b83d3c397c50d349ae0",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "28d676f7698903f7a2bbde895ca02c2f767fdf2c",
+    "conflicts": [],
+    "stdout": "28d676f7698903f7a2bbde895ca02c2f767fdf2c\n",
+    "stderr": ""
+  },
+  {
+    "left": "perf",
+    "right": "plan-1b",
+    "leftSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "rightSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a"
+    ],
+    "exit": 0,
+    "tree": "ff1e61ca8bc4839092b6932861c6778a3613d0e3",
+    "conflicts": [],
+    "stdout": "ff1e61ca8bc4839092b6932861c6778a3613d0e3\n",
+    "stderr": ""
+  },
+  {
+    "left": "perf",
+    "right": "playtest",
+    "leftSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "rightSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b"
+    ],
+    "exit": 0,
+    "tree": "e54b9a5f8f3ec9dc112ffc59a06b891964a89646",
+    "conflicts": [],
+    "stdout": "e54b9a5f8f3ec9dc112ffc59a06b891964a89646\n",
+    "stderr": ""
+  },
+  {
+    "left": "perf",
+    "right": "research-cast",
+    "leftSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "rightSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459"
+    ],
+    "exit": 0,
+    "tree": "e9703a8dd758e2a99788689afc38350d8ba74e8c",
+    "conflicts": [],
+    "stdout": "e9703a8dd758e2a99788689afc38350d8ba74e8c\n",
+    "stderr": ""
+  },
+  {
+    "left": "perf",
+    "right": "research-foreign-economy",
+    "leftSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "rightSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6"
+    ],
+    "exit": 0,
+    "tree": "8fcd91dcea42b1b7e93b72158d0c3703b3fddf74",
+    "conflicts": [],
+    "stdout": "8fcd91dcea42b1b7e93b72158d0c3703b3fddf74\n",
+    "stderr": ""
+  },
+  {
+    "left": "perf",
+    "right": "research-gate",
+    "leftSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "c1832ac0876f4d9c27b0684c2eaf9e501b9595a4",
+    "conflicts": [],
+    "stdout": "c1832ac0876f4d9c27b0684c2eaf9e501b9595a4\n",
+    "stderr": ""
+  },
+  {
+    "left": "perf",
+    "right": "research-military",
+    "leftSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "76081ba64283af3fd35d17df7b3e7b3ce750fc1e",
+    "conflicts": [],
+    "stdout": "76081ba64283af3fd35d17df7b3e7b3ce750fc1e\n",
+    "stderr": ""
+  },
+  {
+    "left": "perf",
+    "right": "research-politics",
+    "leftSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "8b83c3034453898f9481529269fc5db832696c59",
+    "conflicts": [],
+    "stdout": "8b83c3034453898f9481529269fc5db832696c59\n",
+    "stderr": ""
+  },
+  {
+    "left": "perf",
+    "right": "situations-1862",
+    "leftSha": "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "3155d90ef0be0ee25d9074ad2aa8dc15cabfa9ab",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "f96173f8b31c70be31ecd655b79ba367a0631658",
+    "conflicts": [],
+    "stdout": "f96173f8b31c70be31ecd655b79ba367a0631658\n",
+    "stderr": ""
+  },
+  {
+    "left": "plan-1b",
+    "right": "playtest",
+    "leftSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "rightSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b"
+    ],
+    "exit": 0,
+    "tree": "5f1ad77cf8bfb40f525f872911bf135721608e67",
+    "conflicts": [],
+    "stdout": "5f1ad77cf8bfb40f525f872911bf135721608e67\n",
+    "stderr": ""
+  },
+  {
+    "left": "plan-1b",
+    "right": "research-cast",
+    "leftSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "rightSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459"
+    ],
+    "exit": 0,
+    "tree": "d964c4cf0e82faa01e1264e6b1b7a864d0852a68",
+    "conflicts": [],
+    "stdout": "d964c4cf0e82faa01e1264e6b1b7a864d0852a68\n",
+    "stderr": ""
+  },
+  {
+    "left": "plan-1b",
+    "right": "research-foreign-economy",
+    "leftSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "rightSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6"
+    ],
+    "exit": 0,
+    "tree": "244c7317a5b20a033a98dbafba308fd200425086",
+    "conflicts": [],
+    "stdout": "244c7317a5b20a033a98dbafba308fd200425086\n",
+    "stderr": ""
+  },
+  {
+    "left": "plan-1b",
+    "right": "research-gate",
+    "leftSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "67a04dbb4dfb5e889f96b4538d3e5b1e5a52db8f",
+    "conflicts": [],
+    "stdout": "67a04dbb4dfb5e889f96b4538d3e5b1e5a52db8f\n",
+    "stderr": ""
+  },
+  {
+    "left": "plan-1b",
+    "right": "research-military",
+    "leftSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "e61b549fc9cf0de82446d9e85c3b0cd1747504be",
+    "conflicts": [],
+    "stdout": "e61b549fc9cf0de82446d9e85c3b0cd1747504be\n",
+    "stderr": ""
+  },
+  {
+    "left": "plan-1b",
+    "right": "research-politics",
+    "leftSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "75c6a6f3751c2fb5f41bd5a987865245dc9060ac",
+    "conflicts": [],
+    "stdout": "75c6a6f3751c2fb5f41bd5a987865245dc9060ac\n",
+    "stderr": ""
+  },
+  {
+    "left": "plan-1b",
+    "right": "situations-1862",
+    "leftSha": "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "97a03792e492c2267c3f0890bfb8ecd40867fa8a",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "a0f22e10e365766372a7cfad91bd8f7ba6097b7e",
+    "conflicts": [],
+    "stdout": "a0f22e10e365766372a7cfad91bd8f7ba6097b7e\n",
+    "stderr": ""
+  },
+  {
+    "left": "playtest",
+    "right": "research-cast",
+    "leftSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "rightSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459"
+    ],
+    "exit": 0,
+    "tree": "ab52b0211f1bf12c119ff2a60330c31251ea344b",
+    "conflicts": [],
+    "stdout": "ab52b0211f1bf12c119ff2a60330c31251ea344b\n",
+    "stderr": ""
+  },
+  {
+    "left": "playtest",
+    "right": "research-foreign-economy",
+    "leftSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "rightSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6"
+    ],
+    "exit": 0,
+    "tree": "e167f7dcd619b4939f5a4c9ecc17a0e611bb14a6",
+    "conflicts": [],
+    "stdout": "e167f7dcd619b4939f5a4c9ecc17a0e611bb14a6\n",
+    "stderr": ""
+  },
+  {
+    "left": "playtest",
+    "right": "research-gate",
+    "leftSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "dc90a41c11b1af5296b6626761458b4e12df7a89",
+    "conflicts": [],
+    "stdout": "dc90a41c11b1af5296b6626761458b4e12df7a89\n",
+    "stderr": ""
+  },
+  {
+    "left": "playtest",
+    "right": "research-military",
+    "leftSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "cbb39eb4a238d08723184af5a00446a7441779d5",
+    "conflicts": [],
+    "stdout": "cbb39eb4a238d08723184af5a00446a7441779d5\n",
+    "stderr": ""
+  },
+  {
+    "left": "playtest",
+    "right": "research-politics",
+    "leftSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "d51b6715a23ac310b2e51394ef1cac3d2c0f1143",
+    "conflicts": [],
+    "stdout": "d51b6715a23ac310b2e51394ef1cac3d2c0f1143\n",
+    "stderr": ""
+  },
+  {
+    "left": "playtest",
+    "right": "situations-1862",
+    "leftSha": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "e6084288cc2c98f93d028bd87a7183639356cb6e",
+    "conflicts": [],
+    "stdout": "e6084288cc2c98f93d028bd87a7183639356cb6e\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-cast",
+    "right": "research-foreign-economy",
+    "leftSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "rightSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6"
+    ],
+    "exit": 0,
+    "tree": "e0342372c3e7761d4b90613578aea89276532244",
+    "conflicts": [],
+    "stdout": "e0342372c3e7761d4b90613578aea89276532244\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-cast",
+    "right": "research-gate",
+    "leftSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "6203f387f6c76527ca9da78014f65ced5b3edb94",
+    "conflicts": [],
+    "stdout": "6203f387f6c76527ca9da78014f65ced5b3edb94\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-cast",
+    "right": "research-military",
+    "leftSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "e79c14d6bc6790863ba99c745e7e0b019d212c32",
+    "conflicts": [],
+    "stdout": "e79c14d6bc6790863ba99c745e7e0b019d212c32\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-cast",
+    "right": "research-politics",
+    "leftSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "f8ed9a3213982ce16b407e2a530604628def35f6",
+    "conflicts": [],
+    "stdout": "f8ed9a3213982ce16b407e2a530604628def35f6\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-cast",
+    "right": "situations-1862",
+    "leftSha": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "2819824c26a26ab0ef6103f73870ef224933a5cb",
+    "conflicts": [],
+    "stdout": "2819824c26a26ab0ef6103f73870ef224933a5cb\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-foreign-economy",
+    "right": "research-gate",
+    "leftSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "rightSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6"
+    ],
+    "exit": 0,
+    "tree": "9a6520ed66f03066fc795b149da8e0a9144d6c0e",
+    "conflicts": [],
+    "stdout": "9a6520ed66f03066fc795b149da8e0a9144d6c0e\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-foreign-economy",
+    "right": "research-military",
+    "leftSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "f0e7b9238bbaea256fbf9b3e013a6b470cc15987",
+    "conflicts": [],
+    "stdout": "f0e7b9238bbaea256fbf9b3e013a6b470cc15987\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-foreign-economy",
+    "right": "research-politics",
+    "leftSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "7c5fd1207576988ff5a530bffc5947610d21d008",
+    "conflicts": [],
+    "stdout": "7c5fd1207576988ff5a530bffc5947610d21d008\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-foreign-economy",
+    "right": "situations-1862",
+    "leftSha": "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "c70441af68b9052f6ea52d9e23b2d303fa72dda6",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "3a1837a6e819e67dc952ac9cbf233cd3f0700100",
+    "conflicts": [],
+    "stdout": "3a1837a6e819e67dc952ac9cbf233cd3f0700100\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-gate",
+    "right": "research-military",
+    "leftSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "rightSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994"
+    ],
+    "exit": 0,
+    "tree": "04cee0f861937a7cc23ffad7c235a7e7ac98e002",
+    "conflicts": [],
+    "stdout": "04cee0f861937a7cc23ffad7c235a7e7ac98e002\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-gate",
+    "right": "research-politics",
+    "leftSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "85bda5079ec51629b0065f1bc6531bd9aea0c8b7",
+    "conflicts": [],
+    "stdout": "85bda5079ec51629b0065f1bc6531bd9aea0c8b7\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-gate",
+    "right": "situations-1862",
+    "leftSha": "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "4220d6124ca3b93aa6513e5096e9fc3a95859eb6",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "d4e73a672591fbb0ab3ba317af99664e0bd278a5",
+    "conflicts": [],
+    "stdout": "d4e73a672591fbb0ab3ba317af99664e0bd278a5\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-military",
+    "right": "research-politics",
+    "leftSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "rightSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+      "cd9213219ed251d73dd78c622325e44feeac39d1"
+    ],
+    "exit": 0,
+    "tree": "c46b9535cdd444d21880f8d3fd6f3650afa796e8",
+    "conflicts": [],
+    "stdout": "c46b9535cdd444d21880f8d3fd6f3650afa796e8\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-military",
+    "right": "situations-1862",
+    "leftSha": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "adf08fdfc017a9a545884ec797b37411ab171364",
+    "conflicts": [],
+    "stdout": "adf08fdfc017a9a545884ec797b37411ab171364\n",
+    "stderr": ""
+  },
+  {
+    "left": "research-politics",
+    "right": "situations-1862",
+    "leftSha": "cd9213219ed251d73dd78c622325e44feeac39d1",
+    "rightSha": "6dd333d6d95dc24f1b2b1127b4f62354d57c5301",
+    "command": [
+      "git",
+      "merge-tree",
+      "--write-tree",
+      "--name-only",
+      "cd9213219ed251d73dd78c622325e44feeac39d1",
+      "6dd333d6d95dc24f1b2b1127b4f62354d57c5301"
+    ],
+    "exit": 0,
+    "tree": "9df94cc5c5dfc2d5824e6040e1187f321fb61815",
+    "conflicts": [],
+    "stdout": "9df94cc5c5dfc2d5824e6040e1187f321fb61815\n",
+    "stderr": ""
+  }
+]

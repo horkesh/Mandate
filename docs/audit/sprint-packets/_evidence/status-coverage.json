@@ -1,0 +1,242 @@
+[
+  {
+    "branch": "1a",
+    "request": "R84",
+    "originalLine": 4240,
+    "lineCount": 21
+  },
+  {
+    "branch": "1a",
+    "request": "R89",
+    "originalLine": 4484,
+    "lineCount": 23
+  },
+  {
+    "branch": "1a",
+    "request": "R93",
+    "originalLine": 4507,
+    "lineCount": 19
+  },
+  {
+    "branch": "1a",
+    "request": "R91",
+    "originalLine": 4526,
+    "lineCount": 21
+  },
+  {
+    "branch": "1a",
+    "request": "R92",
+    "originalLine": 4547,
+    "lineCount": 19
+  },
+  {
+    "branch": "1a",
+    "request": "R94",
+    "originalLine": 4566,
+    "lineCount": 19
+  },
+  {
+    "branch": "1a",
+    "request": "R90",
+    "originalLine": 4612,
+    "lineCount": 27
+  },
+  {
+    "branch": "1a",
+    "request": "R95",
+    "originalLine": 4685,
+    "lineCount": 19
+  },
+  {
+    "branch": "1a",
+    "request": "R96",
+    "originalLine": 4704,
+    "lineCount": 31
+  },
+  {
+    "branch": "1a",
+    "request": "R98",
+    "originalLine": 4735,
+    "lineCount": 40
+  },
+  {
+    "branch": "1a",
+    "request": "R97",
+    "originalLine": 4775,
+    "lineCount": 30
+  },
+  {
+    "branch": "audit",
+    "request": "S26",
+    "originalLine": 5781,
+    "lineCount": 21
+  },
+  {
+    "branch": "checks",
+    "request": "S18",
+    "originalLine": 5441,
+    "lineCount": 28
+  },
+  {
+    "branch": "desk",
+    "request": "S8",
+    "originalLine": 5161,
+    "lineCount": 25
+  },
+  {
+    "branch": "desk",
+    "request": "S19",
+    "originalLine": 5565,
+    "lineCount": 29
+  },
+  {
+    "branch": "desk",
+    "request": "S29",
+    "originalLine": 5616,
+    "lineCount": 14
+  },
+  {
+    "branch": "desk",
+    "request": "S29",
+    "originalLine": 5946,
+    "lineCount": 19
+  },
+  {
+    "branch": "people-data",
+    "request": "S9",
+    "originalLine": 5105,
+    "lineCount": 23
+  },
+  {
+    "branch": "people-data",
+    "request": "S16",
+    "originalLine": 5389,
+    "lineCount": 26
+  },
+  {
+    "branch": "perf",
+    "request": "S2",
+    "originalLine": 5206,
+    "lineCount": 31
+  },
+  {
+    "branch": "perf",
+    "request": "S20",
+    "originalLine": 5630,
+    "lineCount": 25
+  },
+  {
+    "branch": "perf",
+    "request": "S30",
+    "originalLine": 5889,
+    "lineCount": 37
+  },
+  {
+    "branch": "plan-1b",
+    "request": "S10",
+    "originalLine": 4880,
+    "lineCount": 21
+  },
+  {
+    "branch": "plan-1b",
+    "request": "S11",
+    "originalLine": 5727,
+    "lineCount": 40
+  },
+  {
+    "branch": "playtest",
+    "request": "S27",
+    "originalLine": 5767,
+    "lineCount": 14
+  },
+  {
+    "branch": "research-cast",
+    "request": "S6",
+    "originalLine": 4921,
+    "lineCount": 29
+  },
+  {
+    "branch": "research-cast",
+    "request": "S12",
+    "originalLine": 5300,
+    "lineCount": 27
+  },
+  {
+    "branch": "research-cast",
+    "request": "S22",
+    "originalLine": 5822,
+    "lineCount": 25
+  },
+  {
+    "branch": "research-foreign-economy",
+    "request": "S15",
+    "originalLine": 5345,
+    "lineCount": 25
+  },
+  {
+    "branch": "research-foreign-economy",
+    "request": "S24",
+    "originalLine": 5704,
+    "lineCount": 23
+  },
+  {
+    "branch": "research-gate",
+    "request": "S7",
+    "originalLine": 4965,
+    "lineCount": 19
+  },
+  {
+    "branch": "research-gate",
+    "request": "S23",
+    "originalLine": 5847,
+    "lineCount": 25
+  },
+  {
+    "branch": "research-military",
+    "request": "S4",
+    "originalLine": 5009,
+    "lineCount": 30
+  },
+  {
+    "branch": "research-military",
+    "request": "S14",
+    "originalLine": 5250,
+    "lineCount": 37
+  },
+  {
+    "branch": "research-military",
+    "request": "S21",
+    "originalLine": 5668,
+    "lineCount": 25
+  },
+  {
+    "branch": "research-military",
+    "request": "S31",
+    "originalLine": 5872,
+    "lineCount": 17
+  },
+  {
+    "branch": "research-politics",
+    "request": "S3",
+    "originalLine": 5074,
+    "lineCount": 31
+  },
+  {
+    "branch": "research-politics",
+    "request": "S17",
+    "originalLine": 5370,
+    "lineCount": 19
+  },
+  {
+    "branch": "situations-1862",
+    "request": "S13",
+    "originalLine": 5516,
+    "lineCount": 27
+  },
+  {
+    "branch": "situations-1862",
+    "request": "S28",
+    "originalLine": 5802,
+    "lineCount": 20
+  }
+]

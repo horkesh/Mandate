@@ -1,0 +1,390 @@
+{
+  "scope": "Explicit proposed-ruling headings in every changed branch hand-over. This is a source-marker cross-check, not automatic semantic approval.",
+  "records": [
+    {
+      "branch": "1a",
+      "file": "notes/lane-1.12-rule-seats.md",
+      "line": 534,
+      "heading": "### Proposed rulings [I]",
+      "rulingIds": [
+        9,
+        10,
+        11
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "1a",
+      "file": "notes/lane-1.7-men-regions.md",
+      "line": 93,
+      "heading": "### Sources and proposed rulings",
+      "rulingIds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "1a",
+      "file": "notes/lane-1.7-men-regions.md",
+      "line": 212,
+      "heading": "### Proposed rulings and limits [I]",
+      "rulingIds": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "checks",
+      "file": "notes/sprint-S18-checks.md",
+      "line": 59,
+      "heading": "## Proposed rulings and rejected alternatives",
+      "rulingIds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "desk",
+      "file": "notes/lane-1.12-rule-seats.md",
+      "line": 534,
+      "heading": "### Proposed rulings [I]",
+      "rulingIds": [],
+      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+    },
+    {
+      "branch": "desk",
+      "file": "notes/lane-1.7-men-regions.md",
+      "line": 93,
+      "heading": "### Sources and proposed rulings",
+      "rulingIds": [],
+      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+    },
+    {
+      "branch": "desk",
+      "file": "notes/lane-1.7-men-regions.md",
+      "line": 212,
+      "heading": "### Proposed rulings and limits [I]",
+      "rulingIds": [],
+      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+    },
+    {
+      "branch": "people-data",
+      "file": "notes/lane-1.11r3-research.md",
+      "line": 128,
+      "heading": "### Proposed rulings",
+      "rulingIds": [],
+      "disposition": "Pre-S9/main history, not a new sprint proposal; retained unchanged in the copied hand-over"
+    },
+    {
+      "branch": "people-data",
+      "file": "notes/lane-1.11r3-research.md",
+      "line": 253,
+      "heading": "### Proposed rulings",
+      "rulingIds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "perf",
+      "file": "notes/lane-1.12-rule-seats.md",
+      "line": 534,
+      "heading": "### Proposed rulings [I]",
+      "rulingIds": [],
+      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+    },
+    {
+      "branch": "perf",
+      "file": "notes/lane-1.7-men-regions.md",
+      "line": 93,
+      "heading": "### Sources and proposed rulings",
+      "rulingIds": [],
+      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+    },
+    {
+      "branch": "perf",
+      "file": "notes/lane-1.7-men-regions.md",
+      "line": 212,
+      "heading": "### Proposed rulings and limits [I]",
+      "rulingIds": [],
+      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+    },
+    {
+      "branch": "perf",
+      "file": "notes/lane-s2-perf.md",
+      "line": 213,
+      "heading": "## S30 proposed rulings",
+      "rulingIds": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "perf",
+      "file": "notes/lane-s2-perf.md",
+      "line": 485,
+      "heading": "## Proposed rulings",
+      "rulingIds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "perf",
+      "file": "notes/lane-s2-perf.md",
+      "line": 497,
+      "heading": "## S20 proposed rulings",
+      "rulingIds": [
+        4,
+        5,
+        6
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "plan-1b",
+      "file": "notes/lane-1b-plan.md",
+      "line": 13,
+      "heading": "## S10 proposed rulings retained",
+      "rulingIds": [
+        1,
+        2,
+        3
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "plan-1b",
+      "file": "notes/lane-1b-plan.md",
+      "line": 80,
+      "heading": "### Author self-review and proposed rulings",
+      "rulingIds": [],
+      "disposition": "S11 recommendations unpacked from the more specific proposal section-11 table and external D01-D14 clauses"
+    },
+    {
+      "branch": "playtest",
+      "file": "notes/lane-1.12-rule-seats.md",
+      "line": 534,
+      "heading": "### Proposed rulings [I]",
+      "rulingIds": [],
+      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+    },
+    {
+      "branch": "playtest",
+      "file": "notes/lane-1.7-men-regions.md",
+      "line": 93,
+      "heading": "### Sources and proposed rulings",
+      "rulingIds": [],
+      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+    },
+    {
+      "branch": "playtest",
+      "file": "notes/lane-1.7-men-regions.md",
+      "line": 212,
+      "heading": "### Proposed rulings and limits [I]",
+      "rulingIds": [],
+      "disposition": "Shared integration proposals enumerated in 1a.md; descendant packet explicitly inherits them"
+    },
+    {
+      "branch": "research-cast",
+      "file": "notes/sprint-S12-cast.md",
+      "line": 41,
+      "heading": "## Proposed rulings",
+      "rulingIds": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "research-cast",
+      "file": "notes/sprint-S22-regard.md",
+      "line": 17,
+      "heading": "## Proposed rulings and rejected alternatives",
+      "rulingIds": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "research-cast",
+      "file": "notes/sprint-S6-cast.md",
+      "line": 13,
+      "heading": "## For the lead: proposed rulings",
+      "rulingIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "research-foreign-economy",
+      "file": "notes/lane-s5-foreign-economy.md",
+      "line": 46,
+      "heading": "## Proposed rulings",
+      "rulingIds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "research-foreign-economy",
+      "file": "notes/sprint-S15-manpower-economy.md",
+      "line": 56,
+      "heading": "## Proposed rulings",
+      "rulingIds": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "research-foreign-economy",
+      "file": "notes/sprint-S24-supply.md",
+      "line": 15,
+      "heading": "## 2. Proposed rulings and remaining evidence",
+      "rulingIds": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "research-gate",
+      "file": "notes/lane-s7-research-gate.md",
+      "line": 39,
+      "heading": "## Proposed rulings",
+      "rulingIds": [],
+      "disposition": "S7 explicitly reports no proposed ruling; S23 proposals are in its separate README and 33 dossiers"
+    },
+    {
+      "branch": "research-military",
+      "file": "notes/sprint-S14-oob-drafts.md",
+      "line": 65,
+      "heading": "## For the lead: proposed rulings and residuals",
+      "rulingIds": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "research-military",
+      "file": "notes/sprint-S21-unknown-strengths.md",
+      "line": 50,
+      "heading": "## Commits and proposed rulings",
+      "rulingIds": [
+        15,
+        16,
+        17
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "research-military",
+      "file": "notes/sprint-S31-unknown-strengths.md",
+      "line": 65,
+      "heading": "## Commits and proposed rulings",
+      "rulingIds": [
+        18,
+        19,
+        20
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "research-military",
+      "file": "notes/sprint-S4-research-military.md",
+      "line": 16,
+      "heading": "## Proposed rulings",
+      "rulingIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "research-politics",
+      "file": "notes/sprint-S3-politics.md",
+      "line": 25,
+      "heading": "## Proposed rulings",
+      "rulingIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "disposition": "Directly enumerated in this packet"
+    },
+    {
+      "branch": "situations-1862",
+      "file": "notes/sprint-S28-situations.md",
+      "line": 11,
+      "heading": "## Proposed rulings",
+      "rulingIds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "disposition": "Directly enumerated in this packet"
+    }
+  ]
+}

@@ -1,0 +1,2116 @@
+{
+  "1a": [
+    [
+      "packs/union-1861/situations/arkansas_forces_transferred.json",
+      "arkansas_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/north_carolina_forces_transferred.json",
+      "north_carolina_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_forces_return.json",
+      "tennessee_forces_return",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_forces_transferred.json",
+      "tennessee_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_military_league.json",
+      "tennessee_military_league",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/virginia_forces_return.json",
+      "virginia_forces_return",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/virginia_forces_transferred.json",
+      "virginia_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ]
+  ],
+  "audit": [],
+  "checks": [],
+  "desk": [
+    [
+      "packs/union-1861/situations/arkansas_forces_transferred.json",
+      "arkansas_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/north_carolina_forces_transferred.json",
+      "north_carolina_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_forces_return.json",
+      "tennessee_forces_return",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_forces_transferred.json",
+      "tennessee_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_military_league.json",
+      "tennessee_military_league",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/virginia_forces_return.json",
+      "virginia_forces_return",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/virginia_forces_transferred.json",
+      "virginia_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ]
+  ],
+  "people-data": [
+    [
+      "packs/union-1861/situations/drafts/s9-people-gate.json",
+      "sumner_charles/trait:antislavery",
+      "KEEP",
+      "rs15 requests later review of this antislavery placement; draft for the gate under 0106."
+    ],
+    [
+      "packs/union-1861/situations/drafts/s9-people-gate.json",
+      "wilson_henry/trait:antislavery",
+      "KEEP",
+      "rs15 requests later review of this antislavery placement; draft for the gate under 0106."
+    ],
+    [
+      "packs/union-1861/situations/drafts/s9-people-gate.json",
+      "houston_samuel/value:slavery_defence",
+      "CHANGE",
+      "0074 cost-only value; S9 explicitly requires a gate draft."
+    ],
+    [
+      "packs/union-1861/situations/drafts/s9-people-gate.json",
+      "clark_edward/value:state_autonomy",
+      "CHANGE",
+      "0074 cause-of-secession placement; review the explicit companion slavery_defence HOLD before placing this value."
+    ],
+    [
+      "packs/union-1861/situations/drafts/s9-people-gate.json",
+      "clark_edward/value:slavery_defence",
+      "companion HOLD",
+      "The signed call on Texas journal pp9-12 invokes the threatened Southern social order but does not explicitly name slavery in its substantive declaration. The December 1860 newspaper notice is reprinted on p9. [I] No separately supported slavery_defence value is entered from euphemism alone. HOLD, as an explicit companion research lead under 0074. Do not silently omit this issue when reviewing or placing the proposed state_autonomy value, and do not borrow another Clark's vote or another man's declaration."
+    ],
+    [
+      "packs/union-1861/source/drafts/people/held-back-judgments-1861.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ]
+  ],
+  "perf": [
+    [
+      "packs/union-1861/situations/arkansas_forces_transferred.json",
+      "arkansas_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/north_carolina_forces_transferred.json",
+      "north_carolina_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_forces_return.json",
+      "tennessee_forces_return",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_forces_transferred.json",
+      "tennessee_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_military_league.json",
+      "tennessee_military_league",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/virginia_forces_return.json",
+      "virginia_forces_return",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/virginia_forces_transferred.json",
+      "virginia_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ]
+  ],
+  "plan-1b": [
+    [
+      "_external/D08-r2-black-military-service.md",
+      "D08",
+      "gate decision draft",
+      "Hash-verified external candidate; reconcile S11 before acceptance."
+    ],
+    [
+      "_external/D09-r3-native-nations.md",
+      "D09",
+      "gate decision draft",
+      "Hash-verified external candidate; reconcile S11 before acceptance."
+    ],
+    [
+      "_external/D10-r4-prisoners-and-exchange.md",
+      "D10",
+      "gate decision draft",
+      "Hash-verified external candidate; reconcile S11 before acceptance."
+    ],
+    [
+      "_external/D11-r6-civilians-and-commanders.md",
+      "D11",
+      "gate decision draft",
+      "Hash-verified external candidate; reconcile S11 before acceptance."
+    ],
+    [
+      "_external/D12-r7-emancipation-and-fugitive-policy.md",
+      "D12",
+      "gate decision draft",
+      "Hash-verified external candidate; reconcile S11 before acceptance."
+    ],
+    [
+      "_external/D13-r5-verdict-and-reckoning.md",
+      "D13",
+      "gate decision draft",
+      "Hash-verified external candidate; reconcile S11 before acceptance."
+    ],
+    [
+      "_external/D14-freedpeople-camps-research-and-placement.md",
+      "D14",
+      "gate decision draft",
+      "Hash-verified external candidate; reconcile S11 before acceptance."
+    ],
+    [
+      "docs/design/1b/1.15-entry-and-acceptance.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.16-gate-records-and-exchange.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.17-cast-and-service.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.18-campaigns-and-physical-inputs.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.19-congress-and-elections-research.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.20-foreign-and-economy-research.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.21-gate-research-gaps.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.22-evidence-and-gate-format.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.23-reports-and-declarations.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.24-people-over-a-campaign.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.25-officers-visits-and-posts.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.26-home-front.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.27-foreign-and-blockade.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.28-treasury-and-congress.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.29-equipment-calls-and-capacity.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.30-rail-weather-and-combat.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.31-planner-and-land-operations.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.32-carriage-and-blockade-stations.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.33-raids-and-conduct.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.34-situations-1861.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.35-situations-early-1862.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.36-situations-late-1862.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.37-principals-and-commanders.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.38-console-and-reckoning.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.39-phase-one-check.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ],
+    [
+      "docs/design/1b/1.40-exit-review.md",
+      "design proposal",
+      "facet triage",
+      "Read its gate section; ordinary notes are not automatically gated systems."
+    ]
+  ],
+  "playtest": [
+    [
+      "packs/union-1861/situations/arkansas_forces_transferred.json",
+      "arkansas_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/north_carolina_forces_transferred.json",
+      "north_carolina_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_forces_return.json",
+      "tennessee_forces_return",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_forces_transferred.json",
+      "tennessee_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/tennessee_military_league.json",
+      "tennessee_military_league",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/virginia_forces_return.json",
+      "virginia_forces_return",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/virginia_forces_transferred.json",
+      "virginia_forces_transferred",
+      "proposed gate.none",
+      "classification review"
+    ]
+  ],
+  "research-cast": [
+    [
+      "docs/research/S6/temporal.csv",
+      "brown_joseph_e/value:slavery_defence",
+      "draft-sensitive-history",
+      "CSV record 95; research only"
+    ],
+    [
+      "docs/research/S6/temporal.csv",
+      "brown_joseph_e/value:state_autonomy",
+      "draft-sensitive-history",
+      "CSV record 96; research only"
+    ],
+    [
+      "docs/research/S6/temporal.csv",
+      "mcclellan_george_b/value:slavery_noninterference",
+      "draft-sensitive-history",
+      "CSV record 291; research only"
+    ],
+    [
+      "docs/research/S6/temporal.csv",
+      "milton_john/value:slavery_defence",
+      "draft-sensitive-history",
+      "CSV record 311; research only"
+    ],
+    [
+      "docs/research/S6/temporal.csv",
+      "pettus_john_j/value:state_autonomy",
+      "draft-sensitive-history",
+      "CSV record 349; research only"
+    ],
+    [
+      "docs/research/S6/temporal.csv",
+      "vance_zebulon_b/value:state_autonomy",
+      "draft-sensitive-history",
+      "CSV record 494; research only"
+    ]
+  ],
+  "research-foreign-economy": [
+    [
+      "packs/union-1861/source/drafts/calls/1862/README.md",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/calls/1862/call-catalogue.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/calls/1862/exemption-classes.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/calls/1862/manpower-observations.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/calls/1862/quota-revisions.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/calls/1862/service-terms.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/calls/1862/union-retrospective-credits.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/calls/1862/union-state-quotas.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/economy/README.md",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/economy/confederate-rail-returns.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/economy/finance-inputs.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/economy/industry-baselines-production.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/economy/legal-constraints.json",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/economy/prices-exchange.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/economy/rail-operations.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/economy/richmond-danville-locomotives.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/economy/union-ordnance-return.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/economy/unresolved-inputs.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/foreign/README.md",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/foreign/diplomatic-sequence.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/foreign/named-vessel-monthly-1862.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/foreign/named-vessel-register-1862.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/foreign/pressure-quantities.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/README.md",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/depots.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/edges.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/evidence-notes.md",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/map-joins.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/map-needs.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/quartermaster-returns.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/rail-gauges.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/rail-operations.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/river-operations.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/source-pages.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/sources.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/stores.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/transfers.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/supply/unresolved-inputs.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ]
+  ],
+  "research-gate": [
+    [
+      "packs/union-1861/gate/drafts/black-enlistment-1861-offers.draft.json",
+      "black-enlistment-1861-offers",
+      "decision, event",
+      "open; dependencies R2"
+    ],
+    [
+      "packs/union-1861/gate/drafts/black-enlistment.draft.json",
+      "black-enlistment",
+      "decision, derived, event, text",
+      "record; dependencies R2, R4, 0074"
+    ],
+    [
+      "packs/union-1861/gate/drafts/black-sailors.draft.json",
+      "black-sailors",
+      "decision, text",
+      "open; dependencies R2"
+    ],
+    [
+      "packs/union-1861/gate/drafts/black-soldiers-pay.draft.json",
+      "black-soldiers-pay",
+      "text",
+      "record; dependencies R2"
+    ],
+    [
+      "packs/union-1861/gate/drafts/capture-in-battle.draft.json",
+      "capture-in-battle",
+      "event, text",
+      "open; dependencies 0074, R2, R4"
+    ],
+    [
+      "packs/union-1861/gate/drafts/captured-black-soldiers.draft.json",
+      "captured-black-soldiers",
+      "event, text",
+      "open; dependencies R2, R4, 0074"
+    ],
+    [
+      "packs/union-1861/gate/drafts/cause-of-secession.draft.json",
+      "cause-of-secession",
+      "event, text",
+      "open; dependencies "
+    ],
+    [
+      "packs/union-1861/gate/drafts/civilian-deaths-1861.draft.json",
+      "civilian-deaths-1861",
+      "event, text",
+      "open; dependencies 0074"
+    ],
+    [
+      "packs/union-1861/gate/drafts/confederate-enslaved-labour.draft.json",
+      "confederate-enslaved-labour",
+      "text",
+      "open; dependencies "
+    ],
+    [
+      "packs/union-1861/gate/drafts/confederate-habeas.draft.json",
+      "confederate-habeas",
+      "decision, event, text",
+      "open; dependencies 0046 R8"
+    ],
+    [
+      "packs/union-1861/gate/drafts/corwin-amendment.draft.json",
+      "corwin-amendment",
+      "text",
+      "open; dependencies "
+    ],
+    [
+      "packs/union-1861/gate/drafts/dakota-war-1862.draft.json",
+      "dakota-war-1862",
+      "event, derived, text",
+      "record; dependencies R3, 0074 Dakota exception"
+    ],
+    [
+      "packs/union-1861/gate/drafts/emancipation-policy.draft.json",
+      "emancipation-policy",
+      "decision, derived, event, text",
+      "record; dependencies R7, R2 for enlistment, R6 for shooting clause"
+    ],
+    [
+      "packs/union-1861/gate/drafts/fort-pillow-and-jccw.draft.json",
+      "fort-pillow-and-jccw",
+      "event, text",
+      "record; dependencies SENSITIVE-HISTORY 3.6, R3 for Sand Creek"
+    ],
+    [
+      "packs/union-1861/gate/drafts/fugitive-policy.draft.json",
+      "fugitive-policy",
+      "decision, event, text",
+      "open; dependencies R7, 0046, 0074"
+    ],
+    [
+      "packs/union-1861/gate/drafts/guerrilla-war-west.draft.json",
+      "guerrilla-war-west",
+      "derived, event, decision",
+      "record; dependencies R6, 0074"
+    ],
+    [
+      "packs/union-1861/gate/drafts/inaugural-slavery-passage.draft.json",
+      "inaugural-slavery-passage",
+      "event, text",
+      "open; dependencies "
+    ],
+    [
+      "packs/union-1861/gate/drafts/indian-territory-1861.draft.json",
+      "indian-territory-1861",
+      "derived, event, text",
+      "open; dependencies 0069, 0070, R3"
+    ],
+    [
+      "packs/union-1861/gate/drafts/lost-cause-traps.draft.json",
+      "lost-cause-traps",
+      "refused",
+      "open; dependencies "
+    ],
+    [
+      "packs/union-1861/gate/drafts/northern-racism-cost.draft.json",
+      "northern-racism-cost",
+      "derived, text",
+      "open; dependencies "
+    ],
+    [
+      "packs/union-1861/gate/drafts/occupation-orders.draft.json",
+      "occupation-orders",
+      "event, text",
+      "record; dependencies R6, 0074"
+    ],
+    [
+      "packs/union-1861/gate/drafts/press-suppression.draft.json",
+      "press-suppression",
+      "decision, event",
+      "open; dependencies 0046 R8"
+    ],
+    [
+      "packs/union-1861/gate/drafts/prisoners-and-exchange.draft.json",
+      "prisoners-and-exchange",
+      "decision, event, text",
+      "record; dependencies R4, R2, 0074"
+    ],
+    [
+      "packs/union-1861/gate/drafts/prize-money-and-cotton.draft.json",
+      "prize-money-and-cotton",
+      "refused",
+      "open; dependencies "
+    ],
+    [
+      "packs/union-1861/gate/drafts/riots-and-mobs.draft.json",
+      "riots-and-mobs",
+      "event, text",
+      "open; dependencies 0074, D5"
+    ],
+    [
+      "packs/union-1861/gate/drafts/self-emancipation.draft.json",
+      "self-emancipation",
+      "derived, event",
+      "open; dependencies "
+    ],
+    [
+      "packs/union-1861/gate/drafts/slavery-as-wealth.draft.json",
+      "slavery-as-wealth",
+      "text",
+      "open; dependencies "
+    ],
+    [
+      "packs/union-1861/gate/drafts/twenty-slave-law.draft.json",
+      "twenty-slave-law",
+      "event, text",
+      "open; dependencies "
+    ],
+    [
+      "packs/union-1861/gate/drafts/union-freedpeople-camps.draft.json",
+      "union-freedpeople-camps",
+      "event, text",
+      "open; dependencies SENSITIVE-HISTORY 3.2 whole-topic source hold"
+    ],
+    [
+      "packs/union-1861/gate/drafts/union-habeas-and-arrests.draft.json",
+      "union-habeas-and-arrests",
+      "decision, event, derived",
+      "open; dependencies 0046 R8"
+    ],
+    [
+      "packs/union-1861/gate/drafts/unionist-repression.draft.json",
+      "unionist-repression",
+      "event, derived, text",
+      "record; dependencies R6, 0074"
+    ],
+    [
+      "packs/union-1861/gate/drafts/verdict-text.draft.json",
+      "verdict-text",
+      "text",
+      "open; dependencies R5"
+    ],
+    [
+      "packs/union-1861/gate/drafts/war-aims-1861.draft.json",
+      "war-aims-1861",
+      "decision, text",
+      "open; dependencies "
+    ]
+  ],
+  "research-military": [
+    [
+      "packs/union-1861/checkpoints-1862.draft.json",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/checkpoints-battles-1862.draft.json",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/README.md",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/anv_18620720.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/anv_18621110.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/anv_18621120.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/corinth_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/corinth_u.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/cumberland_18621120.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/donelson_u.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/east_18610817.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/east_18610831.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/east_186110.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/east_186112.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/east_186202.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/east_tennessee_18621120.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/flotilla_18610812.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/flotilla_18610906.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/grand_divisions.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/hampton_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/hatteras_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/hatteras_order.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/hatteras_u.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/henry_navy.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/island10_navy.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/kentucky_18621031.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/manassas_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/manassas_u.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/maryland_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/maryland_u.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/memphis_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/memphis_u.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/mississippi_18620814.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/mississippi_18621001.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/new_mexico_18620328.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/newbern_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/newbern_u.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/neworleans_navy.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/neworleans_passage.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/north_carolina_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/observations.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/ohio_oct1_return.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/pea_ridge.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/perryville_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/perryville_u.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/polk_oct3.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/port_royal.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/posts.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/potomac_18620520.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/potomac_18620620.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/potomac_18620810.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/potomac_18620820.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/potomac_18621110.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/roanoke_u.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/seven_days_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/seven_days_u.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/shiloh_c.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/shiloh_c_march.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/shiloh_ohio.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/shiloh_u_return.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/st_charles.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/stores-observations.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/tennessee_186210.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/tennessee_18621110.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/tennessee_c_18621120.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/tennessee_c_18621129.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/west_18620930.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/oob/1862/yorktown.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ]
+  ],
+  "research-politics": [
+    [
+      "packs/union-1861/checkpoints-politics-1862.draft.json",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/README.md",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/congress-delegates.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/congress-members.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/congress-session-members.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/congress-sessions.json",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/governor-party-observations.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/legislative-ledger.json",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/midterm-original-winners.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/midterm-scope.json",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/midterm-state-counts.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/political-alignments.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/press-content-observations.json",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/press-distribution-constraints.json",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/press-papers.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/press-reach-observations.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/press-role-observations.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/senate-roll-calls.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/sources.json",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/state-legislature-party-observations.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ],
+    [
+      "packs/union-1861/source/drafts/politics/statewide-vote-references.csv",
+      "source/observation draft",
+      "facet triage",
+      "Unloaded; no placement/signature follows from its presence."
+    ]
+  ],
+  "situations-1862": [
+    [
+      "packs/union-1861/situations/drafts/s13_after_antietam.json",
+      "s13_after_antietam",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_after_antietam_decision.json",
+      "s13_after_antietam_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_altoona_governors.json",
+      "s13_altoona_governors",
+      "emancipation-policy",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_arms_and_contracts.json",
+      "s13_arms_and_contracts",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_arms_and_contracts_decision.json",
+      "s13_arms_and_contracts_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_army_of_virginia.json",
+      "s13_army_of_virginia",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_army_of_virginia_decision.json",
+      "s13_army_of_virginia_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_army_will_not_move.json",
+      "s13_army_will_not_move",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_army_will_not_move_decision.json",
+      "s13_army_will_not_move_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_atlantic_squadron_division.json",
+      "s13_atlantic_squadron_division",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_atlantic_squadron_division_decision.json",
+      "s13_atlantic_squadron_division_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_bond_agent.json",
+      "s13_bond_agent",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_buell_east_tennessee.json",
+      "s13_buell_east_tennessee",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_buell_east_tennessee_decision.json",
+      "s13_buell_east_tennessee_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_buell_relief.json",
+      "s13_buell_relief",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_buell_relief_decision.json",
+      "s13_buell_relief_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_cabinet_remonstrance.json",
+      "s13_cabinet_remonstrance",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_cabinet_remonstrance_decision.json",
+      "s13_cabinet_remonstrance_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_committee_and_stone.json",
+      "s13_committee_and_stone",
+      "union-habeas-and-arrests",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_compensated_emancipation.json",
+      "s13_compensated_emancipation",
+      "emancipation-policy",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_confiscation_and_militia_acts.json",
+      "s13_confiscation_and_militia_acts",
+      "emancipation-policy, black-enlistment",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_dakota_war.json",
+      "s13_dakota_war",
+      "dakota-war-1862",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_emancipation_cabinet_draft.json",
+      "s13_emancipation_cabinet_draft",
+      "emancipation-policy",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_emancipation_preliminary.json",
+      "s13_emancipation_preliminary",
+      "emancipation-policy",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_foreign_contracts.json",
+      "s13_foreign_contracts",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_foreign_contracts_decision.json",
+      "s13_foreign_contracts_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_fredericksburg_bridges.json",
+      "s13_fredericksburg_bridges",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_fremont_department.json",
+      "s13_fremont_department",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_fremont_department_decision.json",
+      "s13_fremont_department_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_fremont_proclamation.json",
+      "s13_fremont_proclamation",
+      "emancipation-policy, union-habeas-and-arrests, guerrilla-war-west",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_general_in_chief_1861.json",
+      "s13_general_in_chief_1861",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_general_in_chief_1861_decision.json",
+      "s13_general_in_chief_1861_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_general_in_chief_1862.json",
+      "s13_general_in_chief_1862",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_general_in_chief_1862_decision.json",
+      "s13_general_in_chief_1862_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_grant_rumour.json",
+      "s13_grant_rumour",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_grant_rumour_decision.json",
+      "s13_grant_rumour_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_greeley_reply.json",
+      "s13_greeley_reply",
+      "emancipation-policy",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_hampton_roads_scare.json",
+      "s13_hampton_roads_scare",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_harrisons_landing_letter.json",
+      "s13_harrisons_landing_letter",
+      "emancipation-policy",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_hunter_order.json",
+      "s13_hunter_order",
+      "emancipation-policy",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_kentucky_camp_protest.json",
+      "s13_kentucky_camp_protest",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_kentucky_camp_protest_decision.json",
+      "s13_kentucky_camp_protest_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_maryland_legislature_autumn.json",
+      "s13_maryland_legislature_autumn",
+      "union-habeas-and-arrests",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_mcclellan_relief.json",
+      "s13_mcclellan_relief",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_mcclellan_relief_decision.json",
+      "s13_mcclellan_relief_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_military_arrests.json",
+      "s13_military_arrests",
+      "union-habeas-and-arrests",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_military_arrests_august.json",
+      "s13_military_arrests_august",
+      "union-habeas-and-arrests",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_new_orleans_command.json",
+      "s13_new_orleans_command",
+      "occupation-orders",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_norfolk.json",
+      "s13_norfolk",
+      "capture-in-battle",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_peninsula_withdrawal.json",
+      "s13_peninsula_withdrawal",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_peninsula_withdrawal_decision.json",
+      "s13_peninsula_withdrawal_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_railroad_dispute.json",
+      "s13_railroad_dispute",
+      "union-habeas-and-arrests",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_recruiting_call.json",
+      "s13_recruiting_call",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_recruiting_call_decision.json",
+      "s13_recruiting_call_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_recruiting_closed.json",
+      "s13_recruiting_closed",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_recruiting_closed_decision.json",
+      "s13_recruiting_closed_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_recruiting_new_call.json",
+      "s13_recruiting_new_call",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_recruiting_new_call_decision.json",
+      "s13_recruiting_new_call_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_river_squadron.json",
+      "s13_river_squadron",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_river_squadron_decision.json",
+      "s13_river_squadron_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_river_transfer_act.json",
+      "s13_river_transfer_act",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_stone_arrest_report.json",
+      "s13_stone_arrest_report",
+      "union-habeas-and-arrests",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_treasury_notes.json",
+      "s13_treasury_notes",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_trent_affair.json",
+      "s13_trent_affair",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_trent_affair_decision.json",
+      "s13_trent_affair_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_vicksburg_river_1862.json",
+      "s13_vicksburg_river_1862",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_war_department_report.json",
+      "s13_war_department_report",
+      "emancipation-policy, black-enlistment",
+      "text"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_war_department_secretary.json",
+      "s13_war_department_secretary",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_war_department_secretary_decision.json",
+      "s13_war_department_secretary_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_war_orders_march_1862.json",
+      "s13_war_orders_march_1862",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_war_orders_march_1862_decision.json",
+      "s13_war_orders_march_1862_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_washington_cover.json",
+      "s13_washington_cover",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s13_washington_cover_decision.json",
+      "s13_washington_cover_decision",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_august_arrest_order.json",
+      "s28_august_arrest_order",
+      "union-habeas-and-arrests",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_compensated_emancipation_offer.json",
+      "s28_compensated_emancipation_offer",
+      "emancipation-policy",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_confiscation_bill.json",
+      "s28_confiscation_bill",
+      "emancipation-policy",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_april_exemptions.json",
+      "s28_cs_april_exemptions",
+      "confederate-conscription",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_blockade_representation.json",
+      "s28_cs_blockade_representation",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_conscription_act.json",
+      "s28_cs_conscription_act",
+      "confederate-conscription",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_conscription_amendments.json",
+      "s28_cs_conscription_amendments",
+      "confederate-conscription",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_conscription_extension_request.json",
+      "s28_cs_conscription_extension_request",
+      "confederate-conscription",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_conscription_proposal.json",
+      "s28_cs_conscription_proposal",
+      "confederate-conscription",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_danville_link.json",
+      "s28_cs_danville_link",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_diplomatic_dispatch_route.json",
+      "s28_cs_diplomatic_dispatch_route",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_east_tennessee_habeas.json",
+      "s28_cs_east_tennessee_habeas",
+      "confederate-habeas",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_french_commercial_authority.json",
+      "s28_cs_french_commercial_authority",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_georgia_organizations.json",
+      "s28_cs_georgia_organizations",
+      "confederate-conscription",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_inspection_report.json",
+      "s28_cs_inspection_report",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_ironclad_opportunity.json",
+      "s28_cs_ironclad_opportunity",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_james_defenses.json",
+      "s28_cs_james_defenses",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_kentucky_application.json",
+      "s28_cs_kentucky_application",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_kentucky_neutrality.json",
+      "s28_cs_kentucky_neutrality",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_kentucky_support_request.json",
+      "s28_cs_kentucky_support_request",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_maryland_offensive.json",
+      "s28_cs_maryland_offensive",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_mississippi_floating_defenses.json",
+      "s28_cs_mississippi_floating_defenses",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_mobile_defense.json",
+      "s28_cs_mobile_defense",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_october_exemption_act.json",
+      "s28_cs_october_exemption_act",
+      "twenty-slave-law",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_offensive_disapproval_window.json",
+      "s28_cs_offensive_disapproval_window",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_recognition_missions.json",
+      "s28_cs_recognition_missions",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_recognition_priority.json",
+      "s28_cs_recognition_priority",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_richmond_habeas.json",
+      "s28_cs_richmond_habeas",
+      "confederate-habeas",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_september_conscription_act.json",
+      "s28_cs_september_conscription_act",
+      "confederate-conscription",
+      "event"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_vessel_veto.json",
+      "s28_cs_vessel_veto",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_cs_vicksburg_inquiry.json",
+      "s28_cs_vicksburg_inquiry",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_fremont_private_request.json",
+      "s28_fremont_private_request",
+      "emancipation-policy",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_fremont_public_order.json",
+      "s28_fremont_public_order",
+      "emancipation-policy",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_fremont_sustain.json",
+      "s28_fremont_sustain",
+      "emancipation-policy",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_greeley_reply.json",
+      "s28_greeley_reply",
+      "emancipation-policy",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_hunter_revocation.json",
+      "s28_hunter_revocation",
+      "emancipation-policy",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_hunter_sustain.json",
+      "s28_hunter_sustain",
+      "emancipation-policy",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_july_emancipation_draft.json",
+      "s28_july_emancipation_draft",
+      "emancipation-policy",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_maryland_arrest_instruction.json",
+      "s28_maryland_arrest_instruction",
+      "union-habeas-and-arrests",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_preliminary_emancipation.json",
+      "s28_preliminary_emancipation",
+      "emancipation-policy",
+      "decision"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_railroad_instructions.json",
+      "s28_railroad_instructions",
+      "proposed gate.none",
+      "classification review"
+    ],
+    [
+      "packs/union-1861/situations/drafts/s28/s28_september_habeas.json",
+      "s28_september_habeas",
+      "union-habeas-and-arrests",
+      "decision"
+    ]
+  ]
+}

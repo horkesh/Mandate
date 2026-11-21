@@ -1,0 +1,2034 @@
+{
+  "audit": [
+    {
+      "text": "Route A01–A05/A10 to menu/preview/projection owners; confirm A02's explicit legal-menu interpretation before adopting a correction. Recommend preserving received-evidence semantics and enforcing actual eligibility on resolution [I]. Reject silently broadening truth exceptions. Retain A08/A09's direct-API/cache limits when routing them.",
+      "path": "docs/audit/2026-11-21-canon-against-code.md",
+      "line": 222,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep deferred D rows separate from current violations and 1A completion. Reject interpreting a full-game promise as a claim that all later phases are built. Keep every agreed criterion and 0105's parked D6 clearance intact.",
+      "path": "docs/audit/2026-11-21-canon-against-code.md",
+      "line": 223,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Reconcile section 10 with the correct existing writers after review. Reject moving code into a facade to match stale prose, or treating setup construction as a competing owner.",
+      "path": "docs/audit/2026-11-21-canon-against-code.md",
+      "line": 224,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Proposed rulings: (1) route the menu/preview/projection corrections, confirming A02's legal-response exception before adopting that correction; recommend received-evidence display with actual eligibility enforced on resolution, rejecting a silently expanded truth exception; (2) separate later-phase promises from current violations and completion criteria, rejecting green checks as a waiver and retaining parked D6; (3) reconcile section 10 with correct implemented writers after review, rejecting facade moves or treating setup construction as a second runtime writer. No ruling or clearance is made here.",
+      "path": "CODEX.md",
+      "line": 5789,
+      "origin": "S26 author status"
+    }
+  ],
+  "checks": [
+    {
+      "text": "Keep an exact, non-growing baseline for the 13 current findings so this lane can deliver checks without changing production. Reject broad exclusions or silently accepting edited/new defects.",
+      "path": "notes/sprint-S18-checks.md",
+      "line": 61,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Require explicit cited premise/outside-model exemptions for date-only branches and railroad labels. Reject trusting the railroad prose alone or attempting natural-language historical inference in a validator.",
+      "path": "notes/sprint-S18-checks.md",
+      "line": 62,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Permit only exact cited projection derivations, including their helper closure. Reject a file-wide whitelist and a root-only fingerprint that would miss an intermediate helper's changed target.",
+      "path": "notes/sprint-S18-checks.md",
+      "line": 63,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Use an immutable 338-band origin and append-only observation/cause records. Reject automatically running campaigns to fit bands or accepting arbitrary hand-written limits. Existing quiet/stalled bands stay at the origin; introducing a new quiet/stalled shape needs an explicit lead policy rather than an implicit exception to the positive `around(observed)` rule. Explicit retirements require a cause too.",
+      "path": "notes/sprint-S18-checks.md",
+      "line": 64,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Retain the known signed-path inventory so removing both the gate tag and the sign-off cannot hide an edit. Reject checking only currently gated items or writing replacement sign-offs in S18.",
+      "path": "notes/sprint-S18-checks.md",
+      "line": 65,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Proposed rulings:** exact non-growing baseline, cited causal exemptions, full-closure derivation allowances, immutable liveness origin with chained causes, and protected signed-path inventory. Rejected alternatives and limits are in the hand-over. Evidence: **`runs/s18/final-checks.json`**, `main-audit-settled.json`, `runtime-evidence.json`, red/green logs and commit receipts. Inventories and runtime diagnostics preceded final documentation.",
+      "path": "CODEX.md",
+      "line": 5460,
+      "origin": "S18 author status"
+    }
+  ],
+  "people-data": [
+    {
+      "text": "Retain real bounds and conservative date holds; reject fabricated exact days or letting the day-only parser silently admit a straddling bound. Retain unresolved-date limits explicitly.",
+      "path": "notes/lane-1.11r3-research.md",
+      "line": 255,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep the four sensitive placements in `situations/drafts/s9-people-gate.json` for the gate, including the two rs15 traits and Clark's companion issue; reject unsigned live placement or silently dropping the slavery finding. This conservative placement remains for the lead/gate to rule on.",
+      "path": "notes/lane-1.11r3-research.md",
+      "line": 256,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Admit only McClellan's timely professional appraisal from S6, as above [I]; reject high, March reputation, wholesale application of its later table, or letting its search HOLDs erase prior evidence.",
+      "path": "notes/lane-1.11r3-research.md",
+      "line": 257,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Preserve the historical failures and route them to integration. A tentative two-band-only patch is **withdrawn and unapplied**: the full check exposed more than a band discrepancy. Reject restoring untimely motives, changing thresholds, weakening assertions or quieting a failed criterion merely to obtain a data commit.",
+      "path": "notes/lane-1.11r3-research.md",
+      "line": 258,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Seward proposed ruling:** defer his new boldness, candour, motives and Blair relationship pending a dated-value ruling. His proposed empty motives remove **conciliation and reputation**, the two values honoured by `bid_for_direction`. Initial willingness changes **380 to -82**: values **400 to 0**, temperament **-55 to -117**; the other terms are unchanged. Restoring those motives alone gives **318**, while restoring boldness alone gives **-20**. The research dates the cabinet opinions to March 1861 (`NH-CW` VI pp192-201), and his *Some Thoughts for the President*, printed in *Complete Works* II **p29**, and Lincoln's reply **pp30-32**, to **1 April 1861**. These are not proven pre-5-March motives. The read headings and date register are in `docs/research/_resource/evidence-r52/lincoln-heading-extracts.json` and `dating.csv`. Keep the baseline pending a proper dated application [I]; reject backdating April evidence, dropping the memorandum assertion, quieting initiative, or changing its admission threshold.",
+      "path": "notes/lane-1.11r3-research.md",
+      "line": 275,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "**Walker proposed ruling:** defer every new row change pending the same design question, including the proposed experience/boldness/regard holds, removal of caution/order and relationships, and date annotations. Initial advance-order willingness changes **-164 (object) to 44 (comply with reservations)**: the caution penalty **-200 to 0**, temperament **-105 to -7**, regard **90 to 0**, deterrence unchanged at **51**. Restoring caution with the other old motives alone gives **-156**; restoring boldness alone gives **-54**. The retained *Official Records* I-1 **p301** prints Walker's **11 April 1861** conditional direction to avoid unnecessary bombardment; its reading is in `evidence-r52/official-page-extracts.json`. The broad dating table retains the April bound; Jones's **22 May / 20 July** entries likewise do not establish start-day motives or regard. Keep the baseline until the lead rules on dated application [I]; reject converting the asserted bypass to an ordinary relay order or weakening any opening date. All existing bypass, bombardment, evacuation, initiative and console-choice assertions pass unchanged. The exact **day-37 wire bypass, day-38 bombardment and day-39 evacuation** checks remain ordinary tests.",
+      "path": "notes/lane-1.11r3-research.md",
+      "line": 277,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Only **`seats.initiative`** breaches its old band after the deferrals: **3 observed**, old **4-18**, new **`around(3)` = 1-6**. Cause: Bates and Caleb Smith lose conciliation when their later March cabinet opinions are held; the seven-day event comparison shows their initiatives disappearing while Seward's survives. Aggregate firings fall **3 to 1** on each of days **7, 70 and 133**, consistent with the unchanged 60-day cooldown [I]. Cause is recorded in the band's `why`; exact events and all 28 changed measured rows, including magnitude-only changes, are in **`initiative-cause.json`** and **`band-reconciliation.json`**. Every other liveness band, including grievance fading, is unchanged. No historical, checkpoint, strength, pushback, victory or timing bound changed.",
+      "path": "notes/lane-1.11r3-research.md",
+      "line": 283,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "**Seward:** removing conciliation/reputation removes **400** initiative points; the boldness hold costs another **62**. Initial willingness **380 → -82**; restoring motives alone gives **318**, restoring boldness alone **-20**. The cabinet-opinion source is bounded to March (`NH-CW` VI pp192-201), and his *Some Thoughts*, *Complete Works* II **p29**, and Lincoln's reply **pp30-32**, are **1 April 1861**. Recommend a properly dated-value ruling [I]; reject backdating, losing the memorandum assertion, quieting initiative or changing its threshold.",
+      "path": "CODEX.md",
+      "line": 5399,
+      "origin": "S16 author status"
+    },
+    {
+      "text": "**Walker:** removing caution changes the advance-order value term **-200 → 0**, temperament **-105 → -7**, regard **90 → 0**; deterrence remains **51**. Willingness **-164 (object) → 44 (reservations)**. Restoring motives alone gives **-156**, boldness alone **-54**. The read *OR* I-1 **p301** gives his **11 April 1861** conditional direction; the dating table conservatively retains the April bound, and Jones's May/July evidence is likewise later than the start. Recommend dated application [I]; reject replacing the asserted bypass with an ordinary relay order or weakening a date.",
+      "path": "CODEX.md",
+      "line": 5400,
+      "origin": "S16 author status"
+    }
+  ],
+  "perf": [
+    {
+      "text": "Accept consecutive report batches within the knowledge owner, flushing before every intervening reader. Rejected: changed report cadence/order, dropped reports or in-place State mutation.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 487,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Accept caller-owned freeze and opening-report caches keyed by immutable inputs. Rejected: global mutable caches or persisted derived data.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 488,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Park the measured planner caches. Rejected: retaining extra allocation and invalidation code without evidence of a saving. The 40 ms budget, 20 ms unloaded aim and all behavior criteria remain unchanged.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 489,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Accept the command owner's single-pass unposted roster. Rejected: retaining repeated post/World searches for every person; changing service choices, availability, rank order or menu values.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 499,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Accept lazy force-presence derivation local to one census-term call. Rejected: repeated neighbor scans, a cross-State presence cache, or changing any term, destination, cadence, gate content or band.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 500,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Accept only the fully keyed, deeply frozen candidate graph in the caller-owned cache. Rejected: caching a whole morning request, sharing the known-problematic morning view into planning, shallow-freeze shortcuts or persisted derived data.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 501,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Retain both appointment behavior and the existing candidate optimization, rejecting either-side conflict replacement. Further choices will be recorded with their rejected alternatives after measurement.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 215,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Accept a command-owned inverse lookup held by the tick caller, keyed by exact post-table identity. Reject module-global caching, caching a person's side/location, persisting derived data, or assuming insertion order for duplicate holders. Reject the freezer candidates for lack of consistent direct benefit.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 217,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Park the request/view holder extension after its negative direct median; reject retaining extra cache plumbing on intuition alone. Prefer local one-pass command membership for post lists, rejecting a cross-State cache or changed eligibility.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 219,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Park nearest-wire memoization after negative whole-run paired medians in both slots. Reject accepting a direct-query proxy or unpaired medians instead of the requested estimator; no repeated timing campaign to seek a win.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 221,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Park the local relay candidate after its negative direct median as well; reject retaining a work-count reduction without a measured runtime benefit. No broader view/cache or planner changes are delivered.",
+      "path": "notes/lane-s2-perf.md",
+      "line": 223,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Inherits every integration proposal in 1a.md, including the runner ceiling, appointment contracts, call/transfer representation and parked R93 experiment. Review them with 1a; neither descendant supersedes those choices.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 3,
+      "origin": "inherited coverage"
+    },
+    {
+      "text": "**Proposed rulings:** (1) accept single-pass availability, rejecting repeated person/post searches or altered candidate values; (2) accept a local lazy presence set, rejecting cross-State caching or changed terms/cadence; (3) accept only fully keyed, deeply frozen candidate graphs, rejecting whole-morning/planning-view sharing, shallow-freeze shortcuts or persisted derived data.",
+      "path": "CODEX.md",
+      "line": 5648,
+      "origin": "S20 author status"
+    },
+    {
+      "text": "**3. Proposed rulings, with rejected alternatives.** Accept the caller-owned inverse holder table, keyed by exact immutable post-table identity, and local one-pass force membership. Reject global/persisted caches, cached service/location, changed post eligibility and insertion-order shortcuts. Park the freezer variants, the general view-holder extension and the local relay candidate after no consistent direct saving; park nearest-wire memoization after negative whole-run paired medians in both slots, despite its direct-query win. Reject using a proxy or unpaired medians to overrule the requested estimator. Every rejected production edit and test is absent from the delivery; evidence is retained.",
+      "path": "CODEX.md",
+      "line": 5917,
+      "origin": "S30 author status"
+    }
+  ],
+  "research-cast": [
+    {
+      "text": "Preserve 0085/0087's boundaries. Reject applying the 67 later observations to starting cells or letting S6 HOLD erase vetted evidence.",
+      "path": "notes/sprint-S6-cast.md",
+      "line": 15,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Review McClellan competence above from Sherman's 20 May 1861 letter as the sole temporal opening candidate. Reject converting it into March reputation.",
+      "path": "notes/sprint-S6-cast.md",
+      "line": 16,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep bands role-bounded. Reject gifts from appointments/self-appraisal and numeric conversion of votes.",
+      "path": "notes/sprint-S6-cast.md",
+      "line": 17,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Prefer Randolph acceptance on 15 November; preserve Seddon's 20/21 conflict and March acting overlap. Reject invented assumption dates.",
+      "path": "notes/sprint-S6-cast.md",
+      "line": 18,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep Brown's linked motives, Milton's slavery-defence motive and McClellan's qualified policy as four gate-draft rows. Reject signatures and placements.",
+      "path": "notes/sprint-S6-cast.md",
+      "line": 19,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Retain contrary evidence and HOLD dispositions not established by the act. Full rejected alternatives are in the cast note.",
+      "path": "notes/sprint-S6-cast.md",
+      "line": 20,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Preserve separate observer assessments when witnesses disagree; reject averaging hostile and favorable voices into an invented national reputation.",
+      "path": "notes/sprint-S12-cast.md",
+      "line": 43,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Use command snapshots and distinct commission events; reject carrying a rank or temporary command across an unproved interval.",
+      "path": "notes/sprint-S12-cast.md",
+      "line": 44,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Separate election, appointment, confirmation, arrival and assumption. Reject stale recipient lists and prospective 1863 governors backdated into 1862.",
+      "path": "notes/sprint-S12-cast.md",
+      "line": 45,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Retain role-bounded qualitative proposals, directed relationships, source conflicts and OCR ambiguity. Reject exact numerical centres, self-appraisal as gift proof, later biography as a contemporary leg and silent emendation from memory.",
+      "path": "notes/sprint-S12-cast.md",
+      "line": 46,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Preserve date and transmission [I].** Halleck's Grant accusations, support and qualified investigative reply remain separate. Lincoln's organizational confidence in McClellan coexists with offensive-command criticism and personal kindness. Reject reciprocal inference, a timeless last-row-wins score or a public-reputation average. The index and sidecars cite every passage by page.",
+      "path": "notes/sprint-S22-regard.md",
+      "line": 19,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Use the actual consumer direction [I].** Planner `expectedCooperation` reads the drafter toward the proposed partner holder; compliance `resolveOrderConflict` reads the subordinate toward each issuer. The people builder seeds principal regard before named overrides. Keep `regard_others:<target>` observations and require deliberate temporal/principal reconciliation. Reject double-counting scalar/named forms or inferring the partner's actual willingness from the drafter's confidence.",
+      "path": "notes/sprint-S22-regard.md",
+      "line": 20,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Keep opposing claims [I].** Johnston's protest and Davis's reply both qualify. Jackson's charges against Loring and Loring's rebuttal establish antagonism without a conviction. Bragg/Smith have separate reciprocal August documents; Smith's later Louisville confidence is an expectation. Reject treating alleged motives, corruption, sabotage or an expected conquest as established facts.",
+      "path": "notes/sprint-S22-regard.md",
+      "line": 21,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Preserve rs syntax without running the old apply [I].** It deletes HOLD fields, skips whole people and lacks dates; repeated cells overwrite. The three files pass the unchanged parser and semantic round-trip. Research HOLD preserves vetted evidence. Reject March-5 backdating, installing unreviewed source keys or using the destructive HOLD path.",
+      "path": "notes/sprint-S22-regard.md",
+      "line": 22,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Clear only the gift actually judged [I].** Explicit ability and personal gallantry support narrow above proposals. General credit, wounds, promotions, victory and service duration do not fill all stats. Preserve official-commendation selection bias. Gibson's brigade-handling criticism does not isolate his responsibility after superior/staff intervention. Reject numerical fitting and army-level genius inferred from brigade praise.",
+      "path": "notes/sprint-S22-regard.md",
+      "line": 23,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Respect document and identity boundaries [I].** Hardee's February 1863 main Shiloh report and Bragg's May 1863 Perryville narrative are excluded. Doubleday's missing original date stays blank. Beauregard's quoted November 5 words cite Davis's surviving November 10 reply; quotation and original are not two witnesses. Lincoln's August 6 ambiguous final pronoun supplies no stat. Gustavus W. Smith retains the S6 handle; Edward Johnson has an explicit new provisional S22 handle; General Huger remains an unresolved lead. Reject invented ids, dates and accepted tenures.",
+      "path": "notes/sprint-S22-regard.md",
+      "line": 24,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**For the lead, proposed rulings [I], with rejected alternatives in the notes:**",
+      "path": "CODEX.md",
+      "line": 4933,
+      "origin": "S6 author status"
+    },
+    {
+      "text": "Preserve 0085/0087's existing boundaries. **67 later observations** need a dated 1B model; reject backdating them or feeding S6 HOLD to the current baseline apply, which clears fields.",
+      "path": "CODEX.md",
+      "line": 4934,
+      "origin": "S6 author status"
+    },
+    {
+      "text": "Send **McClellan competence above** to S9/review as the **sole temporal opening candidate**, from Sherman's explicit professional appraisal of **20 May 1861**, *Sherman Letters* pp120-121. Reject using it for March reputation, nerve or organising gifts.",
+      "path": "CODEX.md",
+      "line": 4935,
+      "origin": "S6 author status"
+    },
+    {
+      "text": "Keep stat bands role-bounded and outside voices visible. Reject gifts from appointments or self-appraisal, and arithmetic conversion of confirmation votes into personality scores.",
+      "path": "CODEX.md",
+      "line": 4936,
+      "origin": "S6 author status"
+    },
+    {
+      "text": "Prefer **15 November** for Randolph's recorded resignation acceptance (OR IV-2 p178); preserve Seddon's **20/21 November** conflict (p196 versus Wright p154) and March acting overlap. Reject invented assumption dates.",
+      "path": "CODEX.md",
+      "line": 4937,
+      "origin": "S6 author status"
+    },
+    {
+      "text": "Keep **four positive sensitive-history value rows** as drafts: Brown's linked State-authority/slavery motives, Milton's coercive motive and McClellan's qualified policy. Slavery terms remain costOnly under 0074. Reject placements and signatures.",
+      "path": "CODEX.md",
+      "line": 4938,
+      "origin": "S6 author status"
+    },
+    {
+      "text": "Retain contrary evidence and HOLD dispositions the acts do not establish. Reject Jackson-as-insubordinate from a request after compliance, Buell-as-coward from supply objections, and public confidence as proof of private affection.",
+      "path": "CODEX.md",
+      "line": 4939,
+      "origin": "S6 author status"
+    },
+    {
+      "text": "**2. Proposed rulings, checks and what remains.** **[I]** Preserve dated observers and directed relationship targets; reject invented national-reputation averages and counting a diarist's several reported speakers as independent archives. Separate appointment/date of rank/confirmation/command and election/arrival/assumption; reject highest eventual rank, continuous tenure from a roster, stale circular recipients and 1863 successors backdated into 1862. Retain role-bounded qualitative bands and source conflicts; reject precise numerical centres, self-appraisal/appointment/victory/service length as gift proof, later biography as a contemporary leg and silent emendation from memory. **Do not run the old apply**: research HOLD does not clear separately vetted evidence. Nothing here becomes a March-1861 start without the temporal ruling; all sensitive observations remain unsigned research drafts.",
+      "path": "CODEX.md",
+      "line": 5314,
+      "origin": "S12 author status"
+    },
+    {
+      "text": "**2. Proposed rulings [I].** Preserve dated observer→subject judgments, mixed opinions, transmission and allegations; reject timeless last-row-wins, reciprocal inference and public-reputation averaging. Match the planner's drafter→partner-holder and compliance's subordinate→issuer directions; reconcile named/principal forms deliberately. Preserve rs syntax for a later temporal apply; reject the present destructive HOLD path and March-5 backdating. Keep specific ability/gallantry evidence separate from promotions, wounds, service duration and general commendation; reject numerical fitting and army-level genius from brigade praise. Keep opposing Johnston/Davis and Jackson/Loring claims, Bragg/Smith's actual reciprocal letters and Pemberton expectations without deciding guilt or outcomes. Exclude Hardee's February 1863 and Bragg's May 1863 narratives; do not borrow Doubleday's next report's date. Preserve quotation/original dates and ambiguous pronouns. No invented Huger id or silently accepted pool identity. The hand-over and source-boundary table supply evidence and rejected alternatives.",
+      "path": "CODEX.md",
+      "line": 5832,
+      "origin": "S22 author status"
+    }
+  ],
+  "research-foreign-economy": [
+    {
+      "text": "Preserve separate diplomatic stages and received reports through the Secretary of State. Reject one cotton-distress threshold that automatically grants recognition, and reject exposing private foreign cabinet knowledge to Lincoln without a route. The historical sequences support distinctions but do not measure a daily probability equation.",
+      "path": "notes/lane-s5-foreign-economy.md",
+      "line": 50,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep authorization, instrument issue/placement, receipts, obligations and payment distinct, with domestic paper separate from external purchasing means. Reject spending full loan ceilings on enactment, crediting annual individual income duty before its collection date, or backdating 1863 Erlanger proceeds and tax-in-kind law into 1862.",
+      "path": "notes/lane-s5-foreign-economy.md",
+      "line": 51,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Define each blockade measure before calibration: inventory/readiness, port status, legal acceptance, attempted passages, captures and delivered cargo. Reject treating 427 vessels including construction as deployed blockaders, or 543 cumulative seizures as a capture percentage without attempts. Reconcile cargo and finance effects to avoid duplicating one loss.",
+      "path": "notes/lane-s5-foreign-economy.md",
+      "line": 52,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Require matched windows, territories, denominations and reporting perimeters for historical comparisons. Reject arbitrary broad bands around isolated points, averaging contradictory totals, and translating prewar annual output or rail miles directly into serviceable 1862 supply. Wider bands remain an unmet research/design question until supported or explicitly ruled on.",
+      "path": "notes/lane-s5-foreign-economy.md",
+      "line": 53,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep authority, executive call, quota, enrollment, muster, retention, expiry and field strength distinct. Reject immediate full armies on enactment and double-counting retained men.",
+      "path": "notes/sprint-S15-manpower-economy.md",
+      "line": 60,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep dated quota/credit revisions and original tables. Reject silently rescaling 334,835 to 300,000 or using final furnished totals as arrivals on call dates.",
+      "path": "notes/sprint-S15-manpower-economy.md",
+      "line": 61,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Retain calendar terms and original enlistment dates. Reject a universal ninety-day expiry or a new three-year Confederate clock beginning April 16.",
+      "path": "notes/sprint-S15-manpower-economy.md",
+      "line": 62,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep exemptions as conditional research classifications for review. Reject universal occupational percentages, blanket enslaver exemptions and any managed stock of protected people.",
+      "path": "notes/sprint-S15-manpower-economy.md",
+      "line": 63,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Match units, currencies, periods, territories, instruments and reporting stages before adoption. Reject generic economy scalars, authorized ceilings as immediate cash, unsupported recurring tax receipts and arbitrary calibration bands around isolated observations.",
+      "path": "notes/sprint-S15-manpower-economy.md",
+      "line": 64,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep actual production, purchases, furnishing, stock, claimed capacity, forecasts, rail extent and operation distinct. Reject annual output as November stocks, contracts as completed arms, nominal engines as usable haulage, and annual transport work as daily rated capacity.",
+      "path": "notes/sprint-S15-manpower-economy.md",
+      "line": 65,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Preserve diplomatic authority and communication routes. Reject automatic knowledge of private correspondence, speech equals Cabinet policy, and cotton distress as a measured recognition threshold.",
+      "path": "notes/sprint-S15-manpower-economy.md",
+      "line": 66,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep the monthly named-vessel series under its explicit subset definition. Reject a complete blockade-count/rate label, unsupported year repairs or adding overlapping annual seizure totals.",
+      "path": "notes/sprint-S15-manpower-economy.md",
+      "line": 67,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Preserve physical units, report scope and reporting stage. Reject revenue, diet demand, annual freight, purchase totals, nominal cars or a promised shipment as rated daily capacity or on-hand stock.",
+      "path": "notes/sprint-S24-supply.md",
+      "line": 19,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Preserve gauge effective dates, military conversion and actual transfer arrangements. Reject a permanent inherited gauge after regauging or a universal break-of-gauge penalty.",
+      "path": "notes/sprint-S24-supply.md",
+      "line": 20,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Resolve company identities, named landings, coarse terminal joins, existing intermediate corridors and dated access before promotion. Reject bypass edges, live self-loops, implied access to Richmond, or through Union supply past Vicksburg.",
+      "path": "notes/sprint-S24-supply.md",
+      "line": 21,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Preserve orders, promises, witnesses' qualifications and source arithmetic. Reject turning an instruction into delivery, adding overlapping accounts, repairing printed numbers silently, or treating retrospective reports as contemporary principal knowledge.",
+      "path": "notes/sprint-S24-supply.md",
+      "line": 22,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep local acquisition and sensitive material as unsigned evidence for the appropriate review. Reject free local supply, protected people as freight/labour stock, or civilian coercion as an automatic capacity multiplier.",
+      "path": "notes/sprint-S24-supply.md",
+      "line": 23,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Proposed rulings [I]:** keep law/call/quota/enrollment/muster/retention/expiry/field strength distinct, preserve source revisions and calendar terms, and reject rescaling quotas or adding retained men twice. Match economic units, currencies, periods and reporting stages; reject authority as immediate cash, capacity/contracts as delivered output, annual rail work as daily capacity, and private correspondence/speeches as received Cabinet policy. Preserve the named-vessel subset rather than invent a complete capture count or denominator. Conditional exemptions remain research for the gate. The hand-over supplies all eight proposals and rejected alternatives. Route the page-cited direct-tax recurrence clarification to S3; do not implement S5's earlier annual summary as recurring receipts.",
+      "path": "CODEX.md",
+      "line": 5361,
+      "origin": "S15 author status"
+    },
+    {
+      "text": "**2. Proposed rulings [I], with rejected alternatives.** Preserve dated operations and physical units, rejecting demand/revenue/nominal rolling stock as rated capacity. Preserve conversion dates and actual transfers, rejecting permanent inherited gauge and a universal transfer penalty. Resolve terminal/river reach/company joins and existing intermediate corridors, rejecting live self-loops, bypass edges or implied access past Vicksburg/to Richmond. Preserve source disagreements and reporting stages, rejecting silent arithmetic repairs, retrospective principal knowledge or delivery inferred from an order. Keep local acquisition and sensitive material unsigned for review, rejecting protected people as freight/labour stock or civilian coercion as free supply. The fifteen evidence holds and thirty map needs remain unresolved; none is filled by tuning.",
+      "path": "CODEX.md",
+      "line": 5712,
+      "origin": "S24 author status"
+    }
+  ],
+  "research-military": [
+    {
+      "text": "Keep pfd, estimated effectives, entered-battle strength and a multi-day contribution distinct. Reject an unqualified strength ratio or double conversion of Livermore's figures.",
+      "path": "notes/sprint-S4-research-military.md",
+      "line": 20,
+      "origin": "hand-over"
+    },
+    {
+      "text": "For the primary Bull Run casualty reference, prefer OR components 2,708 U / 1,982 C, retaining Livermore's 1,981 C variant. Preserve OR Potomac 21,863 versus L 21,883; reject a silently constructed hybrid Confederate strength. The suggested numerical tolerances remain analyst proposals, not accepted bounds.",
+      "path": "notes/sprint-S4-research-military.md",
+      "line": 21,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Preserve overlapping windows and reporting dates. Reject adding the Seven Days sub-battles to its campaign total, or treating Donelson's missing/captured as deaths.",
+      "path": "notes/sprint-S4-research-military.md",
+      "line": 22,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep army identity, formal corps, temporary attachment and roster succession dated. Reject merging the two III Corps at Second Manassas or treating all successors as simultaneous commands.",
+      "path": "notes/sprint-S4-research-military.md",
+      "line": 23,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Define naval control by an operation and reach: passage, protected transport, landing, occupation or sustained denial. Reject declaring the Confederacy divided by the June 1862 fleet meeting above Vicksburg.",
+      "path": "notes/sprint-S4-research-military.md",
+      "line": 24,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Retain source disagreements as attributed evidence, including Antietam's reconstruction and the November bridge explanations. Reject averaging incompatible counts into false precision or deriving character scores from blame.",
+      "path": "notes/sprint-S4-research-military.md",
+      "line": 25,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Use Mahan's specific 1 October flotilla-transfer passage provisionally, flagging his conflicting July statement. Reject a verified legal date until the underlying transfer order is checked.",
+      "path": "notes/sprint-S4-research-military.md",
+      "line": 26,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Keep source observations and dates.** Reject a timeless 1862 roster, backdating later returns, treating the disputed nominal 1 October return as a certified deployment or turning dates into automatic battles.",
+      "path": "notes/sprint-S14-oob-drafts.md",
+      "line": 67,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Select non-overlapping forces before applying.** Reject summing parents/children, treating territorial divisions as tactical divisions or apportioning parent strengths. Resolve uncovered troops and every unknown that could fight; the 203 holds are not a waiver.",
+      "path": "notes/sprint-S14-oob-drafts.md",
+      "line": 68,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Keep measures and command evidence separate.** Reject pfd/effective/enrolled equivalence, reconverting Livermore, unit eponyms as current occupants and synthetic cast IDs. S12 needs person/rank/service crosswalks and assumption instruments.",
+      "path": "notes/sprint-S14-oob-drafts.md",
+      "line": 69,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Preserve three corps and incomplete coverage.** GO 151 names Smith, Polk and Hardee; the 20 November numeric return is narrower. Reject substituting East Tennessee department strength for Smith corps. Original subordinate returns, November Cumberland divisions and smaller-action paired returns remain needed.",
+      "path": "notes/sprint-S14-oob-drafts.md",
+      "line": 70,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Preserve naval/supply evidence types.** Reject hulls as crews, contracted/building ships as service-ready, generic complements and provision orders as fulfilled stocks. Fleet complements, actual stocks and the original flotilla-transfer instrument remain needed; Mahan's July/October conflict stays unresolved.",
+      "path": "notes/sprint-S14-oob-drafts.md",
+      "line": 71,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Keep checkpoint gaps visible.** Union/battle widths are review proposals, never fitted to a run. Reject a Confederate national bound from partial mixed measures or an outside-window total. The national hold and unsupported battle kinds remain integration work; 1B owners must decide their observation/schema contract. Empty pushback and copied victory weights supply no new ruling.",
+      "path": "notes/sprint-S14-oob-drafts.md",
+      "line": 72,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Route review and failures to their owners.** Claude's standing reviewer reviews the whole branch after the sprint; the gate reviewer retains every placement/signature. Reject author sign-off and new gate-none claims. Unchanged runtime failures belong to S1/S2 and integration, not S14 data tuning.",
+      "path": "notes/sprint-S14-oob-drafts.md",
+      "line": 73,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Preserve measured observations and explicit bounds.** Reject backdating, equating a bound with a headcount, treating a compiler estimate as an original return, or treating limited infantry/enlisted strength as all ranks and arms. Integration must deliberately map each measure before application.",
+      "path": "notes/sprint-S21-unknown-strengths.md",
+      "line": 56,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Keep unresolved coverage held.** Reject unknown equals zero, nominal regiment/division/crew sizes, partial-table completion and adding overlapping parents/children. Seek original subordinate morning returns, the state/regimental returns and original muster/crew rolls named per ID. The remaining 163 are research and integration holds, not a waived acceptance criterion.",
+      "path": "notes/sprint-S21-unknown-strengths.md",
+      "line": 58,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Route decisions and review to the lead.** The second East Tennessee division/cavalry coverage, print discrepancies and measure mapping need explicit review. Reject silently selecting a convenient alternative. Whole-branch and gate review remain Claude's under 0106; no author or gate-none sign-off is supplied.",
+      "path": "notes/sprint-S21-unknown-strengths.md",
+      "line": 60,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Preserve limited dated observations and bounds.** Reject full-command/duty relabelling, equality for an exclusive bound, nearby-date backfilling or filling absent arms by assumptions. The 149 blanks are still research/integration holds.",
+      "path": "notes/sprint-S31-unknown-strengths.md",
+      "line": 70,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Attribute reconstructions and hold source conflicts.** Reject appended game rosters, silent transcription correction or implied original-manuscript verification. Read the exact original morning/muster sheets named in the register before claiming exact returns.",
+      "path": "notes/sprint-S31-unknown-strengths.md",
+      "line": 72,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Keep review/application with the lead and integration owners.** Reject automatic parent/child addition, simultaneous campaign rosters, inferred cast/service identities or author sign-off. Whole-branch and gate review remain Claude's under 0106.",
+      "path": "notes/sprint-S31-unknown-strengths.md",
+      "line": 74,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Proposed rulings [I], with rejected alternatives in the hand-over:**",
+      "path": "CODEX.md",
+      "line": 5019,
+      "origin": "S4 author status"
+    },
+    {
+      "text": "Keep pfd, reconstructed effectives, entered-battle strength and multi-day contributions distinct. Reject one unqualified strength ratio or converting Livermore's already converted figures again.",
+      "path": "CODEX.md",
+      "line": 5020,
+      "origin": "S4 author status"
+    },
+    {
+      "text": "Prefer the primary Bull Run casualty components, 2,708 U / 1,982 C, while retaining Livermore's 1,981 variant and the separate Potomac strength discrepancy. Reject a silently assembled hybrid total. Suggested tolerances remain analyst proposals.",
+      "path": "CODEX.md",
+      "line": 5021,
+      "origin": "S4 author status"
+    },
+    {
+      "text": "Preserve source windows and reporting dates. Reject adding Seven Days subsidiary totals to its campaign total or treating missing/captured as deaths.",
+      "path": "CODEX.md",
+      "line": 5022,
+      "origin": "S4 author status"
+    },
+    {
+      "text": "Date army identity, corps, temporary attachment and succession separately. Reject merging Second Manassas's two III Corps or counting successive commanders simultaneously.",
+      "path": "CODEX.md",
+      "line": 5023,
+      "origin": "S4 author status"
+    },
+    {
+      "text": "Define naval control by passage, transport protection, landing, occupation or denial of a named reach. Reject declaring the Confederacy divided by the June 1862 fleet meeting above Vicksburg.",
+      "path": "CODEX.md",
+      "line": 5024,
+      "origin": "S4 author status"
+    },
+    {
+      "text": "Retain Antietam's reconstruction dispute and the November bridge disagreement as attributed evidence. Reject averaging incompatible figures into false precision or deriving traits from later accusations.",
+      "path": "CODEX.md",
+      "line": 5025,
+      "origin": "S4 author status"
+    },
+    {
+      "text": "Use Mahan's specific 1 October flotilla-transfer passage provisionally, flagging his conflicting July statement. Reject a verified legal date until the underlying order is read.",
+      "path": "CODEX.md",
+      "line": 5026,
+      "origin": "S4 author status"
+    },
+    {
+      "text": "**For the lead / proposed rulings [I], with rejected alternatives and residuals in `notes/sprint-S14-oob-drafts.md`:**",
+      "path": "CODEX.md",
+      "line": 5270,
+      "origin": "S14 author status"
+    },
+    {
+      "text": "Preserve dated observations and source measures; reject timeless rosters, late-return backfills and automatic historical battles.",
+      "path": "CODEX.md",
+      "line": 5272,
+      "origin": "S14 author status"
+    },
+    {
+      "text": "Choose non-overlapping leaves before applying; reject parent/child sums, tactical treatment of territorial divisions and guessed shares for unknowns.",
+      "path": "CODEX.md",
+      "line": 5273,
+      "origin": "S14 author status"
+    },
+    {
+      "text": "Preserve GO151's three corps and the return's narrower coverage; reject substituting the whole East Tennessee department for Smith's unreturned corps.",
+      "path": "CODEX.md",
+      "line": 5274,
+      "origin": "S14 author status"
+    },
+    {
+      "text": "Keep hulls, crews, service readiness and actual stocks separate; reject generic complements and treating provision orders as fulfilled. The original flotilla-transfer instrument remains unread.",
+      "path": "CODEX.md",
+      "line": 5275,
+      "origin": "S14 author status"
+    },
+    {
+      "text": "Keep band proposals and the national hold explicit; reject fitting bands to a run, adding overlapping Seven Days totals or inventing a national Confederate November count. Route that count's further manpower work alongside S15; today's battle-observation/schema contract remains for 1B owners.",
+      "path": "CODEX.md",
+      "line": 5276,
+      "origin": "S14 author status"
+    },
+    {
+      "text": "Keep eponyms separate from occupants; reject fabricated cast/service edges. S12 needs the person/rank/tenure crosswalks; missing division returns, actual stocks, November Cumberland detail and smaller-action paired returns remain research work.",
+      "path": "CODEX.md",
+      "line": 5277,
+      "origin": "S14 author status"
+    },
+    {
+      "text": "Review the whole branch under 0106 and retain gate review. Reject author sign-off or new gate-none claims. The unchanged runtime failures remain with S1/S2 and integration; a passing data audit waives no criterion.",
+      "path": "CODEX.md",
+      "line": 5278,
+      "origin": "S14 author status"
+    },
+    {
+      "text": "**2. Source limits and proposed rulings [I].** Keep dated duty, aggregate-present, infantry-only, enlisted marching, engaged, estimated and reconstructed observations distinct. Reject backdating or turning upper bounds into headcounts. McCook **7,553** on Reed p.100 versus **7,552** on pp.102,111, Davies's **2,934** component sum versus printed **2,924** infantry on October 3 (OR I-XVII.1 p.251), incomplete McLaws cells and East Tennessee cavalry attachment coverage remain explicit. Branch's **less than 4,000** is a March 14 field-men bound, not equality (OR I-IX pp.241–242). Rodgers's **198** is a **June 7** supply requisition (ONR I-22 p.282), not an August/September fleet muster. Hull lists, prisoner totals and necessary complements do not establish actual crews. The hand-over records alternatives rejected and the returns still needed. The 163 holds do not waive unknown-strength acceptance. Whole-branch and gate review remain Claude's under 0106.",
+      "path": "CODEX.md",
+      "line": 5678,
+      "origin": "S21 author status"
+    },
+    {
+      "text": "**3. Proposed rulings [I] and remaining work.** Retain limited dated measures and exclusive bounds, rejecting full-command relabelling/backdating/equality; attribute reconstructions and hold source conflicts, rejecting game rosters or implied manuscript verification; leave parent/child accounting, cast/service joins, application and whole-branch/gate review to the lead/integration owners and Claude under 0106. **Findings outside my scope:** S1/S2 runtime problems and S12/1B joins/coverage remain with those owners; the 149 gaps need the named original returns/rolls. No other sprint worktree, active runtime/input/checkpoint, store, post or signature was changed. Read shared CODEX fresh, including the intervening messages, before this one UTF-8 append; its previous byte prefix is preserved and checked. The sole main-checkout write is this requested append.",
+      "path": "CODEX.md",
+      "line": 5884,
+      "origin": "S31 author status"
+    }
+  ],
+  "research-politics": [
+    {
+      "text": "[I] Keep the 37th serving through November and treat the midterms as returns for its successor; reject seating the 38th on election night.",
+      "path": "notes/sprint-S3-politics.md",
+      "line": 27,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Prefer the direct Globe's 60–48 first-confiscation House tally over McPherson's conflicting 61–48; reject averaging them.",
+      "path": "notes/sprint-S3-politics.md",
+      "line": 28,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Preserve local election labels and separate actual authority, policy implementation and attributed political responses; reject one national support scalar inferred from seats.",
+      "path": "notes/sprint-S3-politics.md",
+      "line": 29,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Use **151 original contests**, not 154: Vermont's successor House returns are explicitly **1863** in TA64 p. 55. Wisconsin's Hanchett won and then died; retain its original result and subsequent vacancy separately. Reject inferring a House election from a general state-election calendar.",
+      "path": "notes/sprint-S3-politics.md",
+      "line": 30,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Propose **63–79 Democratic local-ticket winners**, **0–2 Independent Democratic**, and **71–87 Republican/Union plus Missouri Emancipation**, constrained to sum to 151, with the named state checks in the note. These are design envelopes, not historical error bars or adopted acceptance criteria. Reject passing a national total with a wholly wrong state pattern, or silently waiving any exact-winner criterion the lead adopts.",
+      "path": "notes/sprint-S3-politics.md",
+      "line": 31,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Keep office transitions, state chambers, soldier voting machinery, press arguments and oversight separate. Reject election-night replacement of all governors, a universal soldier franchise, unmeasured press effects or an editorial allegation treated as established fact.",
+      "path": "notes/sprint-S3-politics.md",
+      "line": 32,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Proposed rulings [I]: retain the November original-contest denominator and the state-pattern constraints; reject immediate seating of the 38th, counting later 1863/1864 results in November, making governor-party equal legislative control, or accepting a wrong binding historical winner merely because it is inside a band. The current checkpoint schema has no election kind, so the new file remains a schema proposal and is not loaded. Source/identity crosswalks and adoption remain with the lead.",
+      "path": "notes/sprint-S3-politics.md",
+      "line": 91,
+      "origin": "hand-over"
+    },
+    {
+      "text": "The **100,000** Thompson circulation advertisement, **over 1,000 / nearly 500** reported Daily News consignments, and the **1860** aggregate press columns retain their different units, periods and qualifications. **Every runtime reach and permanent press-faction field remains unknown.** [I] Proposed ruling: adopt source-qualified observations for review; reject translating copies into unique readers, votes, coercion effects or runtime permille without evidence. The Tribune Clubs offer is for a book, not newspaper circulation. The failed Herald page-4 retrieval is not cited as read. No executable suppression option, signed content or live editor mapping is authored.",
+      "path": "notes/sprint-S3-politics.md",
+      "line": 103,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Proposed rulings [I], with rejected alternatives in the notes:**",
+      "path": "CODEX.md",
+      "line": 5088,
+      "origin": "S3 author status"
+    },
+    {
+      "text": "Use **30 November 1862** for the proposed return checkpoint, keep the 37th serving, and distinguish election, receipt, vacancy and seating. Reject instant seating of the 38th or importing later elections into November. The **151-contest** subset excludes Vermont's explicitly **1863** House return (TA64 p. 55) and keeps Wisconsin's original election separate from Hanchett's subsequent death.",
+      "path": "CODEX.md",
+      "line": 5089,
+      "origin": "S3 author status"
+    },
+    {
+      "text": "Preserve local election labels. Propose **63–79 Democratic**, **0–2 Independent Democratic**, and **71–87 Republican/Union plus Missouri Emancipation** winners, constrained to total 151, with named state checks. Reject a single national support scalar or a pass with the wrong regional distribution. These widths and any exact-winner obligations need the lead's ruling; no existing criterion was relaxed.",
+      "path": "CODEX.md",
+      "line": 5090,
+      "origin": "S3 author status"
+    },
+    {
+      "text": "Keep the Directory's **72 D / 85 R / 27 Other, 184** wider initial-election series separate (CD24 p. 1355). The jurisdictional reconciliation [I] includes later West Virginia and **1864 Nevada**; it is not a November total. Reject averaging incompatible party classifications; the member crosswalk remains open.",
+      "path": "CODEX.md",
+      "line": 5091,
+      "origin": "S3 author status"
+    },
+    {
+      "text": "Prefer the direct Globe's **60–48** first-confiscation House tally (G61 p. 431), retaining McPherson's **61–48** conflict (MP p. 195). Reject silently repairing or averaging sources. Keep office transitions, soldier eligibility/delivery and press effects separately evidenced; reject universal soldier participation or an editorial allegation as an omniscient fact.",
+      "path": "CODEX.md",
+      "line": 5092,
+      "origin": "S3 author status"
+    },
+    {
+      "text": "**2. Proposed rulings and limits.** **[I]** Preserve dated party/role/documentary observations and local ticket labels; reject permanent factions or policy support inferred from party. Preserve original winners, later vacancies, publication, receipt and seating separately; reject seating the 38th in November or scoring 1863/1864 returns then. Retain conflicts and source/arithmetic distinctions; reject silent repairs. Keep circulation advertisements, seized consignments and 1860 aggregate columns in their own units; reject converting copies into unique readers, votes or runtime permille. All sensitive summaries remain unsigned research drafts. The live checkpoint schema has no election measure kind; the new file remains a proposal. Broad bands do not waive a binding named-winner requirement. Exact accessions, unresolved qualification dates, missing original House roll-call pages, per-paper 1862 circulation and receipt remain held. Review, identity/schema adoption, gate approval and loading belong to the lead under 0106.",
+      "path": "CODEX.md",
+      "line": 5378,
+      "origin": "S17 author status"
+    }
+  ],
+  "research-gate": [
+    {
+      "text": "**[I] Preserve the holds and use bounded source clearance.** S7 supports particular camp reports, service disputes and local conditions. Recommend reviewing those facets individually before any source lift. Reject treating a published report as a national census, an order as implementation, or a typed reason as an implemented mechanic. R2, R3, R4, R6 and the camps' whole-topic source hold remain unresolved. The new `emancipation-policy` candidate is held for R7; the committee candidate is conservatively held until its in-window facet is separated and re-sourced. These extra proposed holds are explicit recommendations, not changes to live release behavior.",
+      "path": "packs/union-1861/gate/drafts/README.md",
+      "line": 26,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Distinguish the March and July fugitive restrictions by conduct.** The 13 March Article of War prohibits employing commanded forces to return fugitives; July separately restricts deciding claims and surrendering people. Recommend a March gate for the earlier prohibited conduct and retain July's additional clauses. Reject a blind date replacement. The inherited expiry and option ids are unchanged pending the lead's conduct/owner/knowledge ruling.",
+      "path": "packs/union-1861/gate/drafts/README.md",
+      "line": 27,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Keep agency, hostile claims and later testimony separate.** Recommend reading Pierce against Hunter's account, distinguishing separate Saxton authorities from actual enlistment, preserving the statutory word “may” in the clothing provision, and treating the November capture documents as reports and threats without inventing the captives' fate. Carpenter, Taylor and Big Eagle retain their later publication/interview provenance. Reject a uniform voluntary-service claim, mortality rates from incompatible counts, a unit-strength total from authorization ceilings, or a new July transcript assembled from retrospective testimony.",
+      "path": "packs/union-1861/gate/drafts/README.md",
+      "line": 28,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**2. Proposed rulings [I].** Preserve inherited windows, placements, holds, expiry ids and every refusal; review local camp/service evidence by supported facet rather than lift whole topics automatically. Distinguish the **13 March commanded-force return prohibition** from **July's separate claim-adjudication/surrender clauses**; reject a blind expiry-date replacement. Keep Hunter/Stanton/Pierce's competing evidence, separate authorizations from actual service, preserve statutory clothing-payment qualifications, and leave the November captives' fate unresolved. Retrospective cabinet/Taylor/Big Eagle evidence retains its provenance. Reject invented counts, mortality rates from incompatible denominators, direct resource unlocks, execution levers and an automatic return-to-service system. R2/R3/R4/R6, the whole-topic camp hold and R7's proposed policy candidate remain for their owners; no record or signature is supplied. Native agency never substitutes for atrocity sign/dependency checks. The conservative committee candidate needs separation and primary-source work; later massacres stay later.",
+      "path": "CODEX.md",
+      "line": 5855,
+      "origin": "S23 author status"
+    },
+    {
+      "text": "[I] Retain the existing direct-acceptance hold and Congress route; reject backdating later authority. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/black-enlistment-1861-offers.draft.json",
+      "line": 128,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Recommend record-held policy/agency/service facets with conflicts retained; reject automatic growth from authorizations. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/black-enlistment.draft.json",
+      "line": 153,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Recommend departmental policy plus text under the existing no-crews model; reject a naval recruitment pool. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/black-sailors.draft.json",
+      "line": 117,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Retain record with interim text only; propose grievance/advocacy separately for R2, never budget savings. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/black-soldiers-pay.draft.json",
+      "line": 122,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Retain the 0074 envelope and all inherited refusals; reject a prisoner inventory or a complete exchange mechanic. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/capture-in-battle.draft.json",
+      "line": 116,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Recommend atrocity-class event/text from the 14 November report, with no individual fate inferred; reject beginning the topic only in December. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/captured-black-soldiers.draft.json",
+      "line": 118,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/cause-of-secession.draft.json",
+      "line": 96,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Retain the exact live window and permanent refusal; reject assigning new 1862 conduct to this 1861 container. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/civilian-deaths-1861.draft.json",
+      "line": 104,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Retain text-only treatment and permanent resource/assignment refusals; reject a new economic input. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/confederate-enslaved-labour.draft.json",
+      "line": 111,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Recommend policy symmetry with locked costs and separately sourced conduct; reject blanket suspension or severity rewards. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/confederate-habeas.draft.json",
+      "line": 112,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/corwin-amendment.draft.json",
+      "line": 99,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Keep record/no interim and propose only bounded voice support. Refuse an execution lever pending R3; reject treating the interview as a trial-file substitute. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/dakota-war-1862.draft.json",
+      "line": 141,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry lane 1.8 C.2 as a record-held candidate; recommend separate policy facets, agency terms and watched colonization. Reject virtue scoring and direct resource unlocks. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/emancipation-policy.draft.json",
+      "line": 170,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Recommend a conservative record-held candidate until the in-window committee facet is separated/re-sourced; reject opening all later atrocity facets with one 1861 start. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/fort-pillow-and-jccw.draft.json",
+      "line": 101,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Recommend a separate March prohibition gate for use of commanded forces, retaining July’s independent prohibitions. Reject a blind July-to-March date replacement. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/fugitive-policy.draft.json",
+      "line": 146,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Preserve the two permanent live signatures. Defer any executions-and-reprisals split to R6; reject a rename that drops the refusal. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/guerrilla-war-west.draft.json",
+      "line": 133,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/inaugural-slavery-passage.draft.json",
+      "line": 100,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry existing 0069/0070 agency envelope and all nation-target refusals; reject a unified Native faction or blanket source lift. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/indian-territory-1861.draft.json",
+      "line": 191,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/lost-cause-traps.draft.json",
+      "line": 108,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/northern-racism-cost.draft.json",
+      "line": 105,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Recommend record-held atrocity event/text; separate any non-atrocity administration from this class before decision authoring. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/occupation-orders.draft.json",
+      "line": 113,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry policy and independent-event facets; reject a free-standing verb or seat-directed mob. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/press-suppression.draft.json",
+      "line": 111,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Keep all R4 holds and permanent killing refusals; propose policy/events/text for review without choosing a prisoner-stock system. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/prisoners-and-exchange.draft.json",
+      "line": 138,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Register only the gated refused facet; reject gating all ordinary cotton trade or creating plantation labor controls. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/prize-money-and-cotton.draft.json",
+      "line": 108,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry the existing ordinary-event topic for independently caused reaction; reject laundering atrocity benefits through a different tag. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/riots-and-mobs.draft.json",
+      "line": 106,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Retain the live derived/event envelope and protected fields; add S7 source support without a new resource. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/self-emancipation.draft.json",
+      "line": 144,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry the existing text-only refusal; reject a finance term that values people. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/slavery-as-wealth.draft.json",
+      "line": 104,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Recommend event/text with differentiated clauses; reject a player exemption slider, slavery-free paraphrase or assumed effect size. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/twenty-slave-law.draft.json",
+      "line": 112,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Recommend bounded local event/text clearance after review rather than a blanket source lift or a labor-allocation system. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/union-freedpeople-camps.draft.json",
+      "line": 131,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry existing policy/event/derived envelope and arrest-score refusal; reject free or unnoticed arrests. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/union-habeas-and-arrests.draft.json",
+      "line": 120,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Recommend an in-window East Tennessee candidate, held for R6, with later Shelton Laurel excluded. Reject claiming S7 cleared every repression facet. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/unionist-repression.draft.json",
+      "line": 120,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/verdict-text.draft.json",
+      "line": 103,
+      "origin": "S23 topic-specific proposal"
+    },
+    {
+      "text": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording. Rejected alternatives: [I] Treating this draft or its schema check as placement/signature approval.; [I] Filling source gaps with inferred counts, motives, causal coefficients or implementation.",
+      "path": "packs/union-1861/gate/drafts/war-aims-1861.draft.json",
+      "line": 96,
+      "origin": "S23 topic-specific proposal"
+    }
+  ],
+  "situations-1862": [
+    {
+      "text": "[I] Preserve the separate stages and knowledge limits of each document. Reject using a later law, reply, edition or outcome as an earlier received paper. An actual receipt and, where appropriate, a prior enacted-law cause remain prerequisites for promotion.",
+      "path": "notes/sprint-S28-situations.md",
+      "line": 13,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Accept the bounded period advocacy identified in the search ledger, while leaving Seward's complete victory condition held. Reject a generic choice inferred from hindsight or a memoir presented as a contemporary cabinet minute.",
+      "path": "notes/sprint-S28-situations.md",
+      "line": 14,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Keep ordinary facets as proposed `gate.none` items and coercive conscription/habeas as cost-bearing sensitive decisions. Reject a free security lever. Each no-topic ruling still needs review of its precise facet.",
+      "path": "notes/sprint-S28-situations.md",
+      "line": 15,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Retain 0046's event placement for the October act's protected-population provisions. Reject making those provisions a presidential option. The law's actual passage and implementation are not supplied by a date or statutory text alone.",
+      "path": "notes/sprint-S28-situations.md",
+      "line": 16,
+      "origin": "hand-over"
+    },
+    {
+      "text": "[I] Leave all locked costs and effects empty in this bench. Reject invented numerical penalties, fabricated advisers and automatic state, military or diplomatic results. The missing owners and acts are recorded per item.",
+      "path": "notes/sprint-S28-situations.md",
+      "line": 17,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Use independent received-document and deliberation facets until real period producers and act owners exist. Reject bare-calendar physical notices, new story flags, fictional source routes and presenting a retrospective publication as period news. The receipt is the State cause here; no physical event is claimed to wait for news.",
+      "path": "notes/sprint-S13-situations.md",
+      "line": 15,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Offer only the courses the read sources support; keep all other catalogue alternatives with explicit holds. Use the typed, cited bounded absence when no separate staff recommendation was established. Reject invented advocates, unsourced defaults, generalized hostility presented as advice, and causal claims about election timing from an order dated after an election. Staff confidence 500 is an uncalibrated draft display choice, not a historical probability or personality judgment.",
+      "path": "notes/sprint-S13-situations.md",
+      "line": 16,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Report the missing acts instead of applying substitutes. Command already exists, but `post_succession` is notice-only, incumbent-checked and preserves status; it is not a retirement, discretionary relief, dual command or field-transfer verb (0100 §12). Reject unrelated scalar deltas, fake state regiments from a national call and generic flags that pretend those owners acted.",
+      "path": "notes/sprint-S13-situations.md",
+      "line": 17,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep sensitive policy candidates outside offered decisions until placement, policy rows and defensible locked costs exist. Reject arbitrary penalties inserted only to satisfy the checker, occupation severity, reprisal permission and execution choices. Use the canon’s civilians vocabulary for the proposed occupation topic rather than borrowing civil liberties as a substitute. Dakota remains a record-review notice under its hold.",
+      "path": "notes/sprint-S13-situations.md",
+      "line": 18,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Separate the legal transfer direction of 16 July (12 Stat. 587 §§1–2), administrative handover, and Welles’s 1 October selection. Reject the catalogue’s 1 October statutory effective date: the act says after passage. Keep the 1 July recruiting letter, proposed next-day publication and subsequent quotas distinct (OR III-2 pp. 187–188). These are proposed catalogue corrections, not silent canon edits.",
+      "path": "notes/sprint-S13-situations.md",
+      "line": 19,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Preserve source classifications and limits. Welles’s opening remains weak under `WELLES-D1-RETRO`; the Hampton Roads notice now uses the contemporary 10 March instruction, CW II p. 136. Reject rekeying a weak source as strong. Attribute interested accounts, allegations and recollections; do not turn authority into compliance, forecasts into returns, claims into guilt, or reported money into actual payment. The page corrections and uncertainties are retained in the bibliography.",
+      "path": "notes/sprint-S13-situations.md",
+      "line": 20,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**2. Sources and proposed rulings [I].** Reading records retain hashes for **27 source files, 180 reading/search extracts and one copied scan**, with printed-page limits and excluded acquisitions. No whole-volume reading is claimed. Main proposed rulings and their rejected alternatives are in the hand-over: received-document facets until period producers exist; only sourced advocacy and bounded typed staff absence; missing acts reported instead of fake flags or deltas; sensitive candidates held until real policy rows and defensible locked costs exist; legal effect separated from handover; source classifications preserved. Staff confidence 500 is an uncalibrated draft display choice, not a sourced probability or trait.",
+      "path": "CODEX.md",
+      "line": 5526,
+      "origin": "S13 author status"
+    },
+    {
+      "text": "**Proposed rulings [I]:** preserve document stages and actual receipt requirements; accept only the bounded period advocacy in the ledger; retain ordinary facets as proposed no-topic rulings; keep the protected-population exemption facet an event under 0046; leave policy, locked costs and typed acts to their owners. Rejected: invented advocates or penalties, memoirs as period cabinet minutes, date-only physical events, automatic outcomes and a presidential choice over the October law's control of enslaved people (Confederate public acts, first Congress, second session, pp. 77–79). Nineteen ordinary drafts pass isolated structural loading; 23 retain their actual unsigned/cost/held-topic blockers. This is not promotion or gate approval.",
+      "path": "CODEX.md",
+      "line": 5811,
+      "origin": "S28 author status"
+    }
+  ],
+  "plan-1b": [
+    {
+      "text": "Recommend 30 November 1862 as the integration endpoint [I], while retaining the original start and the actual December/later release obligations. State-law election dates, pending contests and later seating stay distinct. Reject one national election date or an endpoint used to erase a held topic. D01 and the proposal retain the 1A exit-review and playtest prerequisite.",
+      "path": "notes/lane-1b-plan.md",
+      "line": 15,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Recommend the bounded sequence and explicit interface ownership [I], with the normal four-lane/two-simulation cap after the temporary sprint. The proposed 1B counting of behaviour-changing data is explicitly an amendment to 0073's lane-specific pack exemption, not an account of 1A. Separate briefs cover accepted R4 implementation, permanent-post lifecycle/eligibility and the R93 geometry question parked to 1B. Reject circular complete-lane dependencies or expanding a running lane.",
+      "path": "notes/lane-1b-plan.md",
+      "line": 16,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Recommend report-based knowledge and real consequence owners before calibration [I]. D02–D07 specify the candidate contracts; D08–D14 preserve the gate's exact holds and review needs. They reconcile the old R6/R7 drafts with 0074: no confirm/let-stand option for atrocity orders, permanent collective-reprisal refusals, no fund-a-scheme, and an R2/R4 capture re-ruling before the first Black unit. Reject treating a draft as source verification, a signature, a protected-person pool or D6 clearance.",
+      "path": "notes/lane-1b-plan.md",
+      "line": 17,
+      "origin": "hand-over"
+    },
+    {
+      "text": "| Most M/L rows combine distinct contracts and integrations | Replace the compressed sizes with named bounded S/M briefs. Keep stable ids and the lane cap; reject dispatching a six-step row as one growing lane. Research 1.17–1.21 remains bounded as before. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 224,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Recurrence/group semantics were hidden inside the first full case | Split 1.34a1 from a2 and move a1 after evidence/reports, before visits/group gate probes. Reject waiting for every economic/naval mechanic to define a situation occurrence. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 225,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Appointment cases need permanent posts before the final people workflow | Bring 1.25c forward when authority/tenure/report contracts are ready; lists still depend only on 1.26a. Reject a complete-home-front/complete-personnel circular wait. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 226,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Real blockade and agency consequences complete after early interfaces | Separate 1.27a/b and 1.29a/b/c; make 1.26c and D6 wait for real service/capacity. Reject an interface fixture counted as a campaign consequence. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 227,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Black-service formation was implicit inside ordinary recruitment | Add bounded 1.29d under the accepted R2/R4 contract: source-backed offers and institutional acceptance, then conserved force creation. Eight total 1.29 steps are four M briefs; reject a protected governor-call pool or a policy-to-troops unlock. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 228,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Post eligibility, committee custody and parole risk duplicate availability truth | 1.25c defines one people-owned restriction contract and derives availability. Session/authority step 1.26a1 precedes consumers; actual custody is a2 after the accepted facet. R4 retains a minimal combat-owned loss origin for return validation after pruning, without a prisoner stock. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 229,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Stores units conflict across narrative and accepted split/rejoin implementation | 1.32 requires a units audit against forces/detachments.ts and a proposed 0081 amendment if physical accounting changes. Preserve accepted semantics meanwhile; reject silent weighted-day replacement or an unsupported physical-conservation claim. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 230,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Navy encounters and captured returns cross existing 0076 boundaries | 1.32c needs an explicit naval combat scope record; 1.16c needs R4 to amend applicable 0074/0076 capture/status rules. Reject ships fed through land combat by tag and automatic capture clearing. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 231,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Freelancing can be confused with non-principal order authority | 1.31c needs an accepted own-post kernel initiative path preserving 0052; no new non-principal OrderCommand privilege. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 232,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Reckoning can violate either truth boundaries or pruning | 1.38c uses a separate immutable projection and read-only replay from the complete saved command log. Recommend only factual closed-battle comparisons during continuing play and hidden people values at terminal reckoning, subject to R5. Preserve event-day truth and 0080 pruning; reject an import exemption, indefinite daily-State retention or today's values substituted for past facts. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 233,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Exit review/playtest/disposition were compressed into one S | Two steps at 1.40; retain independent technical/gate review and the owner playtest. Author self-review clears none of them. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 234,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "| Simultaneous terminal causes have no declared priority | Recommend a typed simultaneous-break result retaining every end-of-day cause, subject to lead/R5 acceptance. Reject awarding victory by iteration/id order or predicting a peace. |",
+      "path": "docs/design/PHASE-1B-PROPOSAL.md",
+      "line": 235,
+      "origin": "S11 self-review table"
+    },
+    {
+      "text": "**Proposed rulings [I]:** (1) 30 November 1862 as the integration endpoint, retaining December/later release obligations and distinct election/return/seating dates; reject one national election date or omission by cutoff. (2) Bounded sub-briefs and explicit interfaces, with behaviour-changing data counting against 1B's simulation limit as a proposed amendment; reject circular complete-lane waits. (3) Report-based knowledge and actual consequence owners before calibration; reject protected-person resources, partial-score D6 clearance or this proposal substituting for 1A's exit review. Alternatives and further rulings are in D01–D14. R6/R7 drafts are reconciled with 0074's permanent refusals and later restrictions.",
+      "path": "CODEX.md",
+      "line": 4888,
+      "origin": "S10 author status"
+    },
+    {
+      "text": "**D01** — **Proposed [I]: accept the proposal's lane structure as the candidate for 1A's exit review.** Opening simulation work waits for that review, the owner's playtest findings and an explicit disposition of every inherited failed criterion. Preserve 0105's separate S1 calibration and S2's unchanged-behaviour budget work. Rejected alternatives: [D01.A1, D01.A2, D01.A3, D01.A4](#d01-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D01-phase-1b-scope-and-sequence.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D01** — **Proposed [I]: use 30 November 1862 as 1B's integration endpoint**, keeping the original 5 March 1861 start. The final election observation distinguishes results already known, pending elections and future seating. Lane 1.19 must source state timetables before the lead freezes that contract. This date is a design boundary, not an assertion that the next House was complete. Rejected alternatives: [D01.A1, D01.A2, D01.A3, D01.A4](#d01-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D01-phase-1b-scope-and-sequence.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D01** — **Proposed [I]: adopt lanes 1.15–1.40 and their bounded sub-briefs**, subject to revision from the exit review. Size counts coherent merges; it promises neither days nor throughput. After 0106's temporary sprint, use the ordinary four active lanes and at most two simulation lanes. For this proposed 1B schedule, behaviour-changing data and rule-seat work count as simulation. **This would amend 0073/FOUNDATION's lane-specific exemption for 1.11-style pack authoring when applied to 1B**, not retroactively change 1A's schedule; draft-only content and research still do not count. Rejected alternatives: [D01.A1, D01.A2, D01.A3, D01.A4](#d01-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D01-phase-1b-scope-and-sequence.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D01** — **Proposed [I]: accept interfaces before their consumers**, with a small playable case before bulk content, and freeze bands before final calibration. Exact field ownership, file scope, seeds, cost and stopping rules belong in each brief. No lane grows to absorb a newly found system. Rejected alternatives: [D01.A1, D01.A2, D01.A3, D01.A4](#d01-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D01-phase-1b-scope-and-sequence.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D01** — **Retain accepted boundaries:** principal-only commands, symmetric machinery with 0046's interim Confederate rule, single writers, pure integer kernel, explainable terms, reviewed sources, separate gate review and signatures. No playable Confederacy, Phase 2 build, publication or spending is included. Rejected alternatives: [D01.A1, D01.A2, D01.A3, D01.A4](#d01-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D01-phase-1b-scope-and-sequence.md",
+      "line": 19,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D01** — **Proposed [I]: retain the full release obligations separately.** December catalogue stages are a named backlog, and a held topic overlapping the shipped scenario still blocks release. Acceptance of this plan neither signs content nor changes the register. Rejected alternatives: [D01.A1, D01.A2, D01.A3, D01.A4](#d01-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D01-phase-1b-scope-and-sequence.md",
+      "line": 20,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D02** — **Retain accepted truth boundaries.** `people` alone writes stats, traits, standing, grievances, ranks, stances and service; `command` alone writes occupancy/assignment; `proxy` keeps actual replies private. Assessment and adviser credibility are derived from that principal's received evidence, not saved true-stat estimates. Rejected alternatives: [D02.A1, D02.A2, D02.A3, D02.A4](#d02-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D02-people-evidence-and-declarations.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D02** — **Proposed [I]: retain origin identity through reports and reprints.** Independent originating sources can strengthen assessment; repeated printing of one account cannot masquerade as several witnesses. Explanations show source, date and uncertainty without revealing true bands. Battle updates and earned traits use explicit pack rules; winning never automatically makes a man braver. Rejected alternatives: [D02.A1, D02.A2, D02.A3, D02.A4](#d02-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D02-people-evidence-and-declarations.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D02** — **Proposed [I]: add an explicit declaration path for a live audience case.** The menu reads a received or in-person declared account with speaker, recipient, subject and as-of day. It does not execute `previewAudience` over hidden inputs on a UI read. Actual replies occur through a validated command; their declared reasons travel as attributable reports. Consult preserves its actual situation subject. A prior answer remains prior evidence. Rejected alternatives: [D02.A1, D02.A2, D02.A3, D02.A4](#d02-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D02-people-evidence-and-declarations.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D02** — **Proposed [I]: officer discovery and nomination records belong to `people`.** Real juniors and invented officers surface through reports. Generated identity uses a report-keyed stream under 0041, so reading order changes nothing; names must pass the real-person/roster check. A list's nomination, seniority, consent/lapse and rank validity are distinct from a post appointment. The rank validator checks every proposed rank against the vocabulary before mutation. Rejected alternatives: [D02.A1, D02.A2, D02.A3, D02.A4](#d02-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D02-people-evidence-and-declarations.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D02** — **Proposed [I]: a later commission changes a civilian's service/bloc only by a dated, explicit pack rule.** Preserve 0101's existing service-choice writer and the fifteen protected rows. Do not equate every office or appointment with army membership or infer allegiance from birthplace. Unsupported membership stays unknown. Rejected alternatives: [D02.A1, D02.A2, D02.A3, D02.A4](#d02-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D02-people-evidence-and-declarations.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D02** — **Retain the visit boundary in 0041.** The principal names a delegate before leaving; business otherwise takes inaction, never the hidden historical default. Reports from a visit remain fallible. Proposed [I]: visit/return/delegation are logged and saved; honour and list amendments use the accepted attention rules. A retrospective reckoning uses a separate authorised surface. Rejected alternatives: [D02.A1, D02.A2, D02.A3, D02.A4](#d02-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D02-people-evidence-and-declarations.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D02** — **Proposed [I]: price stance reversal, relief resentment and political escalation with typed terms through existing owners.** Practice changes require the relevant gate record and cited conduct; they are not invented value changes. Calibrate these effects only after independent evidence and consequence coverage exist. Rejected alternatives: [D02.A1, D02.A2, D02.A3, D02.A4](#d02-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D02-people-evidence-and-declarations.md",
+      "line": 19,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D02** — **Proposed [I]: source personal eligibility after office and wounded-to-duty recovery separately.** Houston's routable office-service tag under 0100 is not itself a fact of personal allegiance or a nomination entitlement after succession. Lane 1.17 must source the later status before 1.25c changes eligibility. A recovery path would extend 0076 item 11's “not yet” wounded return limitation; `people` alone applies it after acceptance. It must not clear killed/captured status or supply an unsourced healing timetable. Rejected alternatives: [D02.A1, D02.A2, D02.A3, D02.A4](#d02-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D02-people-evidence-and-declarations.md",
+      "line": 20,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D02** — **Proposed [I]: `command` owns source-backed permanent post creation, merger, abolition and chain changes**, with atomic validation of occupants and assignments and ordinary bounce rules for old dispatches. Corps remain posts; the deferred inside-army relay mechanic is not introduced by administrative restructuring. 1.25c lands this contract before 1.37's doctrine consumes it. Rejected alternatives: [D02.A1, D02.A2, D02.A3, D02.A4](#d02-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D02-people-evidence-and-declarations.md",
+      "line": 21,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D03** — **Proposed [I]: implement institutions before elections.** `politics` owns each chamber's state, legislative actions, the accountability ledger and election results. A bill passed by Congress, presidential signature/veto and execution by a department are distinct acts. Session/lapse and conventions' acts use sourced pack calendars and causes; receipt delay is not a universal legislature simulation. Rejected alternatives: [D03.A1, D03.A2, D03.A3, D03.A4](#d03-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D03-home-front-elections-and-wills.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D03** — **Proposed [I]: model the Joint Committee through investigating seats and reports.** Requests reach holders, whose answers and leaks use ordinary routes. A committee report is an interested account, not access to combat truth. Historical case evidence, authority and the lawful range of actions precede content authoring. Rejected alternatives: [D03.A1, D03.A2, D03.A3, D03.A4](#d03-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D03-home-front-elections-and-wills.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D03** — **Retain the received-story press boundary.** Editors and political actors can send sourced leaks or records already known to them; alignment changes selection and framing, not the facts they secretly know. Proposed [I]: an enemy readership route preserves origin and latency; no immediate cross-side truth copy. Effects go only to the existing `politics` and `people` writers. Rejected alternatives: [D03.A1, D03.A2, D03.A3, D03.A4](#d03-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D03-home-front-elections-and-wills.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D03** — **Proposed [I]: political generals and stance/relief costs flow through regard, grievance, standing and ladder behaviour.** A popularity term cannot simply appoint the opposition's future candidate or guarantee a later election. The 1864 rival path remains possible under 0026, while 1B tests the political action visible in its own window. Rejected alternatives: [D03.A1, D03.A2, D03.A3, D03.A4](#d03-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D03-home-front-elections-and-wills.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D03** — **Proposed [I]: state laws determine election eligibility and procedure.** Pack records carry actual voting dates, lawful soldier-voting arrangements and their effective period, party crosswalks and source uncertainty. National results aggregate state observations. Keep ballots, elected seats, confirmed returns and seating/composition distinct. Future contests remain pending at the November checkpoint. Rejected alternatives: [D03.A1, D03.A2, D03.A3, D03.A4](#d03-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D03-home-front-elections-and-wills.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D03** — **Retain 0028's two derived wills, with proposed implementation [I].** `politics` derives each from explicit typed terms including blocs, losses, territory, armies, blockade and policy consequences. Do not save a second mandate or will stock. Each source contribution is explainable and counted once; values and thresholds remain pack rules to calibrate, not historical facts. Rejected alternatives: [D03.A1, D03.A2, D03.A3, D03.A4](#d03-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D03-home-front-elections-and-wills.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D03** — **Proposed [I]: causal channels and gate directions are required before political scoring.** Racist opposition is named as such where the gate requires it, not disguised as neutral economic concern. A border bloc policy value needs sourced/gate-reviewed data; no silent rating fills the gap. R5 governs verdict clauses and R7 policy effects. Rejected alternatives: [D03.A1, D03.A2, D03.A3, D03.A4](#d03-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D03-home-front-elections-and-wills.md",
+      "line": 19,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D04** — **Retain `economy` as the sole writer of money, obligations, munitions and named-line capacity allocations.** Proposed [I]: use declared integer units, dated instruments and typed transactions. Congress authorises; Treasury and procurement holders execute through their own answers. A priority is an instruction to a person, not a purchase that bypasses him. Rejected alternatives: [D04.A1, D04.A2, D04.A3, D04.A4](#d04-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D04-economy-foreign-and-capacity.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D04** — **Proposed [I]: keep recruitment flows distinct.** Governors answer calls for new blocks; the War Department supplies refills to existing blocks, through `forces` for strength, `movement` for location and `command` for assignment. No duplicated free-men stock is introduced merely to make a dashboard total. Terms, service expiry and casualty/refill accounting remain explicit. Rejected alternatives: [D04.A1, D04.A2, D04.A3, D04.A4](#d04-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D04-economy-foreign-and-capacity.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D04** — **Proposed [I]: use `politics` for separately identified foreign/blockade clock State.** Blockade effectiveness is derived from supplied active stations; it is an input to pressure, not another saved copy of station strength. Britain and France remain non-playable powers worked through the Secretary of State. Clock units, directions, lags and limits are pack data with typed explanations. Rejected alternatives: [D04.A1, D04.A2, D04.A3, D04.A4](#d04-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D04-economy-foreign-and-capacity.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D04** — **Proposed [I]: foreign actions are authored pack acts over conditions.** Demands, deadlines and restrictions have cause, transmission and receipt. A clock threshold does not make a holder instantly know a demand or automatically agree to it. The 1.27a contract is usable on a fictional station fixture; real-pack blockade completion waits for 1.32's actual station service. Rejected alternatives: [D04.A1, D04.A2, D04.A3, D04.A4](#d04-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D04-economy-foreign-and-capacity.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D04** — **Proposed [I]: named rail allocations are shared inputs to actual movement and supply.** The railroad holder can stall. The already-ruled gauge-break transfer carries a pack cost; parallel named lines remain distinct. Demand and available allocation cannot both spend the same capacity. The planner uses the reported allocation/condition contract, not hidden damage. Rejected alternatives: [D04.A1, D04.A2, D04.A3, D04.A4](#d04-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D04-economy-foreign-and-capacity.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D04** — **Retain weather's existing owner and randomness boundary.** Proposed [I]: a named weather-zone/day stream supplies exogenous conditions. They affect actual passage/capacity and enter commanders' stated reasons through known conditions. Commanders' reactions never roll dice. Any new combat weather/supply term is checked against named fixtures; no blanket assault-rate fitting. Rejected alternatives: [D04.A1, D04.A2, D04.A3, D04.A4](#d04-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D04-economy-foreign-and-capacity.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D04** — **Retain 0078's protected-agency restrictions.** Only the allowed capacity reader and `tick/regions.ts` consume self-emancipation/arrival inputs. Proposed [I]: its effect on enemy capacity has named typed terms and calibration evidence, without a labour stock, recruitment pool or direct benefit assigned by a policy option. The census is never depleted. No valuation of enslaved people enters Treasury finance. Rejected alternatives: [D04.A1, D04.A2, D04.A3, D04.A4](#d04-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D04-economy-foreign-and-capacity.md",
+      "line": 19,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D04** — **Proposed [I]: every new side measure declares its favourable direction before effects load.** Sign and dependency checks follow it through stocks, flags, clocks and derived measures. Missing directions, unsupported units or unmeasured consequences remain errors/holds rather than free zero-cost effects. Rejected alternatives: [D04.A1, D04.A2, D04.A3, D04.A4](#d04-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D04-economy-foreign-and-capacity.md",
+      "line": 20,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D05** — **Proposed [I]: report the ground before it affects planning.** Derive known edge condition, capacity and the supply reach dependent on them from the commander's received information. Identical views must draft identical candidates when only hidden damage changes. Actual movement still reads real passage and may discover a failure. Keep the existing shared passage rule and one-level planner; no second simulation inside planning. Rejected alternatives: [D05.A1, D05.A2, D05.A3, D05.A4](#d05-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D05-proposals-sieges-and-carriage.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D05** — **Proposed [I]: save an unsolicited proposal as a kernel-drafted candidate from its author's view.** Adoption attaches its identity to an ordinary goal addressed to the executing holder. That holder can object or reinterpret an outsider's plan. The proposing person's seat does not assign units, teleport troops or bypass review. Proposal generation respects per-side drafting limits and deterministic content ids. Rejected alternatives: [D05.A1, D05.A2, D05.A3, D05.A4](#d05-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D05-proposals-sieges-and-carriage.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D05** — **Proposed [I]: a siege is an operation stage/method**, with elapsed time, supply, works, progress and abandonment carried by existing owners and reports. The commander chooses; the player supplies, questions or replaces him. No tactical approaches/mines or automatic dated capitulation. Named test cases distinguish a continuing stand-off, a real siege and an assault. Rejected alternatives: [D05.A1, D05.A2, D05.A3, D05.A4](#d05-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D05-proposals-sieges-and-carriage.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D05** — **Proposed [I]: add river and rail-capacity-aware candidates and a commander-authored garrison step.** Route permissions, support requests and recipient compliance remain in force. The commander assigns men; a player edits goals/arrows within the accepted grammar. Freelancing is a validated seat initiative executed as an operation, not a new direct unit verb. Rejected alternatives: [D05.A1, D05.A2, D05.A3, D05.A4](#d05-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D05-proposals-sieges-and-carriage.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D05** — **Proposed [I]: carriage uses one checked proposal across existing owners.** `movement` alone places a block on a carrier or ashore; `forces` alone splits/joins strength and stores; `command` alone assigns; `operations` alone changes stage. Validate capacity, adjacency, carrier support and all affected blocks before applying anything. An axis names and moves every carrier it needs, not just the first. Rejected alternatives: [D05.A1, D05.A2, D05.A3, D05.A4](#d05-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D05-proposals-sieges-and-carriage.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D05** — **Retain 0081/0083 identity and conservation.** Empty parent shells remain until the accepted rejoin/disband path removes them; they cannot be traded as units. A landing's detachment identity is not replaced with a new parent path. Same-day rejoin remains refused, including counter-suffixed ids. Stores and stragglers are conserved apart from separately explained consumption/loss. Rejected alternatives: [D05.A1, D05.A2, D05.A3, D05.A4](#d05-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D05-proposals-sieges-and-carriage.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D05** — **Proposed [I]: afloat units consume and obtain stores under the same supply contract the planner scores.** Supplied blockade stations contribute service; unsupported ones can run low or leave. Navy encounter/battle news uses the existing abstract squadron/post scale, with typed loss records and ordinary reports. No ship movement commands are exposed to the principal. Rejected alternatives: [D05.A1, D05.A2, D05.A3, D05.A4](#d05-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D05-proposals-sieges-and-carriage.md",
+      "line": 19,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D05** — **Retain the raid/atrocity boundary.** Military edges and depots may be raid targets; civilians, protected people, homes and collective reprisals are not goal targets. `infrastructure` applies damage/repair proposals and reports carry the new information. R3/R6 must place conduct before it loads. Rejected alternatives: [D05.A1, D05.A2, D05.A3, D05.A4](#d05-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D05-proposals-sieges-and-carriage.md",
+      "line": 20,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D05** — **Proposed [I]: 1.30c owns R93's confined-assault contact/exposure question**, explicitly parked to 1B in OPEN_QUESTIONS. Separate the men abreast from cumulative exposure only under a lead-approved bounded geometry definition, with defenders' fire as the limiting evidence. This would amend 0076 item 1; it is not an accepted change now. Preserve the other named assault fixtures and stop at the agreed probe/implementation budget, rather than raising all loss rates to fit Wagner. Rejected alternatives: [D05.A1, D05.A2, D05.A3, D05.A4](#d05-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D05-proposals-sieges-and-carriage.md",
+      "line": 21,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D06** — **Proposed [I]: distinguish resurfacing, deferral and a new occurrence.** Resurfacing shows an already-open case again. A deferral records what the principal chose to await and the receiving condition. Reopening a decided case requires a newly satisfied authored cause or stage and gets a distinct occurrence id. None overwrites the previous resolution. Rejected alternatives: [D06.A1, D06.A2, D06.A3, D06.A4](#d06-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D06-recurring-and-grouped-situations.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D06** — **Proposed [I]: `situations` is the single writer of occurrence, stage, wait and group state.** The command log names the occurrence being decided; stale ids are refused. Saved decisions and pending waits replay exactly, including across changes of holder and policy authority. People stances remain with `people`, actual replies with `proxy` and reports with `knowledge`. Rejected alternatives: [D06.A1, D06.A2, D06.A3, D06.A4](#d06-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D06-recurring-and-grouped-situations.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D06** — **Proposed [I]: compatible groups are decided as one validated bundle.** The schema declares compatibility and mutually exclusive choices. Validate the entire bundle against the same offered morning before charging attention or proposing effects. Charge the accepted decision once under 0040; no partial effects from an invalid bundle. Locked costs are applied to every actual selected outcome and inaction as the gate requires; shared costs cannot be dropped or multiplied accidentally. Rejected alternatives: [D06.A1, D06.A2, D06.A3, D06.A4](#d06-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D06-recurring-and-grouped-situations.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D06** — **Proposed [I]: wait conditions and new options surface on received/public knowledge.** They must not leak a hidden battle, a future statute or a private stance. Institutional authority may change legal options, but expiration is explicit and author-tested. Historical defaults remain hidden and subject to the same legal validation. Rejected alternatives: [D06.A1, D06.A2, D06.A3, D06.A4](#d06-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D06-recurring-and-grouped-situations.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D06** — **Proposed [I]: collective petitions retain each participant and origin.** Prefer a single authored act/chain using the existing initiative/report interface to inventing a new group-decision engine. No participant is given knowledge, a signature or a judgment not supported by evidence. A bargaining resignation is distinct from 0101's service-side resignation. Rejected alternatives: [D06.A1, D06.A2, D06.A3, D06.A4](#d06-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D06-recurring-and-grouped-situations.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D06** — **Retain gate dependence and signature rules.** Groups, waits, flags and later occurrences remain forward routes for D5/D6. A new policy or wording changes the hash and returns to review. Changing practice in play requires the accepted R7/R6 contract, not a situation writing a static World row. Removing a “held until” rule does not remove a permanent refusal beside it. Rejected alternatives: [D06.A1, D06.A2, D06.A3, D06.A4](#d06-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D06-recurring-and-grouped-situations.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D07** — **Proposed [I]: freeze the Phase 1 acceptance specification before final calibration.** Lane 1.15 names the endpoint, reference cases, seeds and checkpoints. Research supplies compatible measures, units, dated observations, source pages, inferred limits and binding status. No run supplies its own historical target. Missing evidence remains an unmet criterion. Rejected alternatives: [D07.A1, D07.A2, D07.A3](#d07-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D07-phase-1-check-and-calibration.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D07** — **Proposed [I]: make all retained Phase 0 and 1A criteria binding alongside the new Phase 1 criteria** in the actual implemented milestone path. Verify the flag and exit behaviour with a deliberately failing fixture before CI uses it. A default exit 0, expected-failure annotation, parked criterion or absent observation is not a phase pass. Rejected alternatives: [D07.A1, D07.A2, D07.A3](#d07-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D07-phase-1-check-and-calibration.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D07** — **Retain 0099's D6 coverage rule.** Follow flags, policy pushback, grievance/ladder, capacity, foreign and national-will terms to the eventual measured outcomes. Exercise the new border-government call/answer/levy after each affected policy fork. A transfer, old levy or an unexercised route cannot satisfy it. Inaction/delegation/grouped choices retain their watched status and cost. Rejected alternatives: [D07.A1, D07.A2, D07.A3](#d07-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D07-phase-1-check-and-calibration.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D07** — **Proposed [I]: extend the victory measure only after the real consequence owners exist.** Return each count and contribution, explain directions and double-counting, and obtain an explicit lead/gate ruling. Do not add every stock positively merely to claim channel coverage. A partial consequence remains “measured in part,” invalid as D6 clearance. Ties count as best; watched best in more than a quarter of seeds and any unpaid floor remain breaches. Rejected alternatives: [D07.A1, D07.A2, D07.A3](#d07-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D07-phase-1-check-and-calibration.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D07** — **Proposed [I]: one final budget of eight measured calibration changes** opens on the frozen integrated 1B head. Make one change per measured run, source corrections before engine parameters. The eight-seed D6 comparison inside a run is not eight calibration changes. Keep baseline, rejected candidates, complete failures, commands, exits and source/pack hashes. Rejected alternatives: [D07.A1, D07.A2, D07.A3](#d07-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D07-phase-1-check-and-calibration.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D07** — **Retain deterministic and cost checks.** Daily hashes, repeat/replay, saved-log replay and resume must agree, including around bills, elections, embarking and recurrent/grouped decisions. Linux/Windows evidence remains required. The existing median 40 ms/p95 160 ms limits stand unless a separate record supersedes them; local loaded or unloaded readings cannot certify CI. Rejected alternatives: [D07.A1, D07.A2, D07.A3](#d07-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D07-phase-1-check-and-calibration.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D07** — **Proposed [I]: gate expensive runs with cheap prerequisites**, including local workspace resolution, compiler, selected tests, pack/schema freshness, signed-item validity, a one-day start and a short complete reference before multiplying the longer horizon. Record the question, commands, cost and stop rule before starting. After failure inspect all categories, reproduce and verify cheaply, then rerun only affected evidence. Never repeat a full unchanged suite for reassurance. Rejected alternatives: [D07.A1, D07.A2, D07.A3](#d07-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D07-phase-1-check-and-calibration.md",
+      "line": 19,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D07** — **Proposed [I]: after the eight changes, give a continue-or-park recommendation per unmet criterion.** The lead owns any new budget or retirement of a criterion. The fresh exit review remains independent and the separate gate reviewer signs content. A calibration ceiling reached is not completion. Rejected alternatives: [D07.A1, D07.A2, D07.A3](#d07-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D07-phase-1-check-and-calibration.md",
+      "line": 20,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D08** — **Recommended [I]: retain policy choices through named holders and Congress**, only where contemporary advocates and lawful authority are sourced for that stage. Do not backdate a later acceptance path into 1861. The exact options, labels, authority and defaults remain HOLD until the lead and gate reviewer read the evidence. Rejected alternatives: [D08.A1, D08.A2, D08.A3](#d08-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D08-r2-black-military-service.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D08** — **Retain 0026's agency rule.** Enlistment is the choice of free Black men and freedpeople responding to policy and conditions, never a pool the principal calls up, a race selector on a transfer or an emancipation bonus that instantly creates units. Rejected alternatives: [D08.A1, D08.A2, D08.A3](#d08-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D08-r2-black-military-service.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D08** — **Recommended [I]: represent unequal treatment/pay as cited conditions and derived grievances/enlistment responses**, with a sourced policy route for pressing Congress only when evidenced. The pay difference cannot create savings available to the player. Duty/officer policy remains needs-source until placed; Navy service is separately represented at the existing naval scale, without a crew pool. Rejected alternatives: [D08.A1, D08.A2, D08.A3](#d08-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D08-r2-black-military-service.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D08** — **Recommended [I]: route any resulting ordinary force creation through existing owners** only after its agency-safe formation contract is accepted. `forces` creates, `movement` places and `command` assigns. No situation directly proposes a protected-person count or consumes a census stock. The exact admissible metadata and derivation receive separate gate review. Rejected alternatives: [D08.A1, D08.A2, D08.A3](#d08-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D08-r2-black-military-service.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D08** — **Retain locked consequences and capture boundaries.** Conditions feed attributed responses by actors; no virtue score, racist narrator voice or captured-people fate option. Under 0074, **R2 and R4 must re-rule capture before the first Black unit exists in force data**, including any newly researched captured Black teamsters/servants facet. R4 handles exchange, and Confederate capture-policy acts retain 0046's event restriction. Later topics remain registered for their actual window. Rejected alternatives: [D08.A1, D08.A2, D08.A3](#d08-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D08-r2-black-military-service.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D08** — **Recommended [I]: keep R2's release hold until the evidence, placement, refused signatures, agency reasons, working readers and content-hash sign-offs are complete.** Source availability or a proposed decision is not clearance. Rejected alternatives: [D08.A1, D08.A2, D08.A3](#d08-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D08-r2-black-military-service.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D09** — **Retain nations as their own governments/seats or sourced data**, never subdivisions whose allegiance follows a neighbouring state. A treaty or response is the nation's own act, with its own people and internal conflicts represented as the read evidence permits. No Union or Confederate recruitment verb draws on a national manpower pool. Rejected alternatives: [D09.A1, D09.A2, D09.A3](#d09-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D09-r3-native-nations.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D09** — **Recommended [I]: define protection at the interface.** It forbids resource/population targeting and coerced manpower flows, while diplomacy can reach a nation's authorised holder. The lead/gate reviewer settles which specific diplomatic facets are legal after the contemporary evidence is read. Neither administrative convenience nor present military control erases a polity. Rejected alternatives: [D09.A1, D09.A2, D09.A3](#d09-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D09-r3-native-nations.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D09** — **Retain 0069's runtime region-government guard** for any first in-play region move. Validate same-kind/polity requirements and return the reserved refusal. Geographic gaps, mixed-government regions, Osage and other territorial nations receive sourced mapping or explicit unknowns; do not infer the boundaries from the game engine's existing departments. Rejected alternatives: [D09.A1, D09.A2, D09.A3](#d09-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D09-r3-native-nations.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D09** — **Recommended [I]: keep the Dakota war and sentence-review facets held until Native-voiced evidence and the competing institutional accounts are read.** Prefer a review/suspension/information process through holders, with executions narrated as conduct rather than a player selecting people or an execution count. The final permitted choices and inaction still need the lead/gate ruling; this recommendation does not author or auto-schedule the historical act. Rejected alternatives: [D09.A1, D09.A2, D09.A3](#d09-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D09-r3-native-nations.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D09** — **Retain atrocity and sign rules.** No option orders or profits from killing protected people; appointment, delegation, waiting or a formally legal sentence cannot bypass the rule. Facts, actors' positions and disputes appear through attributed text and reports, not a game's moral or military reward for a chosen fate. Rejected alternatives: [D09.A1, D09.A2, D09.A3](#d09-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D09-r3-native-nations.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D09** — **Recommended [I]: review the whole release window**, including December tails and later-facet labels. R3's ship hold remains while its required facets or whole-topic evidence are missing; ending 1B earlier cannot waive it. Rejected alternatives: [D09.A1, D09.A2, D09.A3](#d09-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D09-r3-native-nations.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D10** — **Retain 0074's present battle rule** until an accepted R4 expressly supersedes the part it changes. Captures are typed battle losses; no camp stock, parole, exchange or individual fate action is introduced by the plan alone. Cited surrender terms remain restricted to the actual historical case and its commander/date guards. Rejected alternatives: [D10.A1, D10.A2, D10.A3](#d10-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D10-r4-prisoners-and-exchange.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D10** — **Recommended [I]: make exchange policy a situation through the War Department and authorised agents**, with the sourced choices, counterpart responses and locked political/institutional consequences. The other side's restrictions are attributable acts under the interim Confederate rule where protected people are touched. No officer chooses a captive's death or enslavement from a menu. Rejected alternatives: [D10.A1, D10.A2, D10.A3](#d10-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D10-r4-prisoners-and-exchange.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D10** — **Recommended [I]: begin with source-backed events/text for camps and conditions**, naming the people and administrative actors without a capacity-efficiency game. No prisoner labour or savings stock, no “cheaper” maltreatment and no prisoner-count target for a player. A precise simulation of exchange returns needs its own reviewed conservation/eligibility contract before this boundary can expand. Rejected alternatives: [D10.A1, D10.A2, D10.A3](#d10-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D10-r4-prisoners-and-exchange.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D10** — **Recommended [I]: if accepted exchange/parole later returns people to service**, identify which existing owner changes person status, force strength, location and eligibility, and name the exact superseded 0074 clause. Prove no double creation, double count or automatic clearing of `captured` before releasing that path. This draft neither authorises that path nor claims an event/text model completes the historical exchange policy. Rejected alternatives: [D10.A1, D10.A2, D10.A3](#d10-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D10-r4-prisoners-and-exchange.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D10** — **Retain permanent refusals.** Killing hostages/prisoners, lot selection, enslaving captives and retaliation executions cannot become options, goals or initiatives. An indirectly beneficial atrocity remains refused. All relevant costs and responses, including inaction, remain in D5/D6 coverage. Rejected alternatives: [D10.A1, D10.A2, D10.A3](#d10-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D10-r4-prisoners-and-exchange.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D10** — **Recommended [I]: remove only holds justified by the accepted facet record.** Pattern probes distinguish narrated sources from allowed policy. Keep needs-source conditions and the release blocker until required evidence and placements are complete; never delete all R4 narrator rules as one batch. Rejected alternatives: [D10.A1, D10.A2, D10.A3](#d10-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D10-r4-prisoners-and-exchange.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D11** — **Recommended [I]: split ordinary guerrilla pressure/policy from atrocity-class executions and reprisals**, as C.1 recommends. The exact topic ids/classes receive gate review. The split must preserve every permanent refused signature and every affected existing signed item's identity or explicitly send it for re-review. Rejected alternatives: [D11.A1, D11.A2, D11.A3](#d11-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D11-r6-civilians-and-commanders.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D11** — **Retain 0046/0029 and 0074:** guerrilla war is regional pressure, and military raids target infrastructure/depots. No player or non-player goal, option or initiative targets civilians, burns civilian homes or orders collective reprisals. **0074 explicitly includes assessments laid on a community, banishment and hostages in the atrocity-class collective-reprisal boundary**, carrying both topics. The old C.1 draft cannot place those as ordinary non-atrocity policy. No appointment, delegated order or change of topic class circumvents that refusal. Rejected alternatives: [D11.A1, D11.A2, D11.A3](#d11-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D11-r6-civilians-and-commanders.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D11** — **Recommended [I]: conduct is source-backed seat behaviour with locked consequences through owners.** Atrocity-class conduct is event/text under the sign rule; it never improves the acting side's control, supply, loyalty, will or favourable foreign pressure. Under 0057/0060, a notice's effects may only worsen the acting side's own measures; other sides stay unchanged. A tainted response decision has its separate deciding-side locked-cost rule and no favourable gain. The fact that a commander was appointed or had formal authority is no exception. Rejected alternatives: [D11.A1, D11.A2, D11.A3](#d11-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D11-r6-civilians-and-commanders.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D11** — **Retain 0074's response boundary:** every option restricts, suspends, refers or revokes the atrocity-class order/sentence; letting it stand is only inaction, costed under E7, narrated as non-intervention in a matter put before the president and watched by D6. Recommended [I]: use the ordinary relief/pressure/order pathways and sourced restriction/review situations for the concrete cases. Restricting or revoking a shooting clause is distinct from deciding an emancipation clause. No confirm-execution or “let stand” option is offered. Dakota's review remains R3's separate ruling, as 0074 expressly requires. Rejected alternatives: [D11.A1, D11.A2, D11.A3](#d11-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D11-r6-civilians-and-commanders.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D11** — **Recommended [I]: separate periods and evidence holds.** In-window occupation and guerrilla cases are included only after their facet is sourced and placed. Later examples remain labelled later. Do not use one verified commander's case to invent motives or conduct for another side or theatre. Rejected alternatives: [D11.A1, D11.A2, D11.A3](#d11-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D11-r6-civilians-and-commanders.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D11** — **Retain the ship hold until the record and required facets are accepted.** Remove only a matching temporary hold rule; keep permanent refusals. If one wording rule is narrowed for ordinary military narration, prove its atrocity cases still fail with independent probes. Rejected alternatives: [D11.A1, D11.A2, D11.A3](#d11-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D11-r6-civilians-and-commanders.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D12** — **Retain 0046's policy-versus-resource boundary.** The already-accepted `return` policy ruling is not redrafted: its costs are locked, it is watched, it says return to slavery plainly, and its expiry follows the accepted supersession rule. The lead/gate reviewer checks precise statute predicates against read sources before any later case is authored. Rejected alternatives: [D12.A1, D12.A2, D12.A3, D12.A4](#d12-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D12-r7-emancipation-and-fugitive-policy.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D12** — **Recommended [I]: place each later policy stage separately**, using the prior R7 draft as an inventory: commanders' policy orders and presidential replies, congressional acts and signing choices, compensated emancipation, the proclamation and colonization policy. The lead/gate reviewer accepts only the sourced advisers' options, lawful authority, inaction and hidden default. A catalogue menu is not a verified set of choices. Rejected alternatives: [D12.A1, D12.A2, D12.A3, D12.A4](#d12-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D12-r7-emancipation-and-fugitive-policy.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D12** — **Retain 0074's restrictions when reconciling the old draft.** Drop `fund-a-scheme`. Separate any shooting/reprisal clause from emancipation; no “uphold” confirms a killing, burning or collective reprisal. Slavery-defence/noninterference values stay cost-only, and attributed quotations never become narrator reasons or option labels. Rejected alternatives: [D12.A1, D12.A2, D12.A3, D12.A4](#d12-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D12-r7-emancipation-and-fugitive-policy.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D12** — **Recommended [I]: all effects run through named actor and agency channels.** Blocs, border loyalty, commanders, foreign pressure and institutional accountability have typed, locked consequences; people's resistance/flight and enlistment remain their own responses. No policy directly fills Union men, labour, wealth or virtue. A compensation obligation is an accepted fixed institutional amount, never a per-person player price or movable protected quantity. Rejected alternatives: [D12.A1, D12.A2, D12.A3, D12.A4](#d12-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D12-r7-emancipation-and-fugitive-policy.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D12** — **Retain 0078's distinctions.** Protecting people at Union lines is not ending slavery in a whole region. The derivation retains internal resistance and flight to lines, including Union-held slave states. World census inputs are read-only. Only the restricted reader derives enemy capacity; arrivals cannot be recruited or allocated by an economy function. Rejected alternatives: [D12.A1, D12.A2, D12.A3, D12.A4](#d12-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D12-r7-emancipation-and-fugitive-policy.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D12** — **Recommended [I]: a new legal/policy cause can reopen a case under D06's occurrence contract**, preserving its earlier decisions. Practice changes are cited acts through the accepted owner, never edits to immutable World data. New inaction or group combinations carry their policy costs and hashes; floors remain paid and unpaid floors remain breaches. Rejected alternatives: [D12.A1, D12.A2, D12.A3, D12.A4](#d12-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D12-r7-emancipation-and-fugitive-policy.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D12** — **Recommended [I]: colonization is only source-backed policy toward willing actors**, with no option sending, counting, transporting or pricing people as a managed quantity. The exact permitted in-window choices need gate review; all watched/cost requirements remain. Later schemes and the final proclamation remain in their own period and do not fire early to satisfy November coverage. Rejected alternatives: [D12.A1, D12.A2, D12.A3, D12.A4](#d12-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D12-r7-emancipation-and-fugitive-policy.md",
+      "line": 19,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D12** — **Retain D6's hold while any channel is unmeasured**, including policy grievances, enemy capacity, foreign and election effects. R2 governs service; R6 governs civilian conduct; the camps topic remains needs-source until its own record. Acceptance of R7 cannot clear those topics by implication. Rejected alternatives: [D12.A1, D12.A2, D12.A3, D12.A4](#d12-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D12-r7-emancipation-and-fugitive-policy.md",
+      "line": 20,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D13** — **Recommended [I]: adopt the register's factual-clause requirement for every relevant ending.** Where the Confederacy is not defeated, state from cited founding documents what it was founded to protect and state slavery's status in the actual end state. The Union-victory verdict includes that status and names self-emancipation and Black service when they contribute. No credit is assigned to the president alone. Rejected alternatives: [D13.A1, D13.A2, D13.A3](#d13-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D13-r5-verdict-and-reckoning.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D13** — **Retain 0026:** the verdict predicts neither peace terms nor what another president would have done. A 1B midterm result is a checkpoint with consequences, not the 1864 game-ending election. Reaching November is a milestone observation, not victory or release clearance. Rejected alternatives: [D13.A1, D13.A2, D13.A3](#d13-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D13-r5-verdict-and-reckoning.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D13** — **Recommended [I]: `politics` derives national will and outcome explanations; `knowledge` supplies what the player was told.** State clauses read the authorised end-state derivation once the verdict/reckoning is invoked; they do not back-propagate into a live seat menu. Keep private causes and unreported truth inaccessible during ordinary play. Rejected alternatives: [D13.A1, D13.A2, D13.A3](#d13-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D13-r5-verdict-and-reckoning.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D13** — **Recommended [I]: the reckoning is an explicitly retrospective surface**, comparing retained reports with the corresponding game's events/stats. Optional battle reckonings must be labelled retrospective and isolated from continuing-play knowledge; the lead must settle any disclosure that could inform ongoing play before it ships. Keep the existing report, battle and response references long enough to support their lawful uses, without disabling 0080 pruning globally. Rejected alternatives: [D13.A1, D13.A2, D13.A3](#d13-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D13-r5-verdict-and-reckoning.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D13** — **Retain the narrator boundary.** No virtue score, moral praise/scolding, Lost Cause thesis, automatic “feuds lost it” explanation or statement that public reputation equals true competence. Reasons show actual contributing terms and their source/uncertainty. Rejected alternatives: [D13.A1, D13.A2, D13.A3](#d13-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D13-r5-verdict-and-reckoning.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D14** — **Recommended [I]: commission the smallest complete evidence dossier** for the camps and conditions required in the actual release window. Read records of the people themselves alongside administrative and medical accounts where available; preserve their different interests and incompatible measures. Distinguish the source's observation date from its publication date and identify unread/blocked leads. Rejected alternatives: [D14.A1, D14.A2, D14.A3](#d14-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D14-freedpeople-camps-research-and-placement.md",
+      "line": 13,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D14** — **Retain the whole-topic hold until the dossier and placement record are accepted.** A later-start scenario, a full military campaign or a signed policy situation cannot silently clear it. The release lane must inspect the actual scenario/topic overlap and required text/derived facets. Rejected alternatives: [D14.A1, D14.A2, D14.A3](#d14-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D14-freedpeople-camps-research-and-placement.md",
+      "line": 14,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D14** — **Recommended [I]: begin the placement proposal with attributed events and text**, plus only the already-permitted agency-derived terms. Whether a further policy reply is needed goes to the gate reviewer after the evidence identifies the actors and authority. A narrated-only choice is not automatically a complete or sufficient placement. Rejected alternatives: [D14.A1, D14.A2, D14.A3](#d14-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D14-freedpeople-camps-research-and-placement.md",
+      "line": 15,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D14** — **Retain permanent resource refusals.** No Union labour stock, plantation labour assignment, price per person, transport allocation or policy effect that spends the people counted at the lines. Arrivals and protected census data are not an economy's input pool. Any fixed institutional appropriation requires its own source and accepted policy contract. Rejected alternatives: [D14.A1, D14.A2, D14.A3](#d14-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D14-freedpeople-camps-research-and-placement.md",
+      "line": 16,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D14** — **Recommended [I]: show conditions and people's responses with explicit agency and uncertainty**, without a productivity/efficiency reward or an option improving measures through deprivation. Both omission and an invented benign condition misstate the topic; unresolved evidence must remain visible in the hand-over. Rejected alternatives: [D14.A1, D14.A2, D14.A3](#d14-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D14-freedpeople-camps-research-and-placement.md",
+      "line": 17,
+      "origin": "external decision clause, hash-verified"
+    },
+    {
+      "text": "**D14** — **Recommended [I]: if the dossier reveals a genuinely new mechanism**, stop that item at a proposed bounded brief with its fields, sole writers, gate placement and validation cost. Do not enlarge the research lane into implementing it or call report-only staging done. Rejected alternatives: [D14.A1, D14.A2, D14.A3](#d14-alternatives), listed below once for all clauses of this draft.",
+      "path": "_external/D14-freedpeople-camps-research-and-placement.md",
+      "line": 18,
+      "origin": "external decision clause, hash-verified"
+    }
+  ],
+  "playtest": [
+    {
+      "text": "**[I] Proposed for the lead:** preserve reported defects as expected failures with an explicit red mode until fixes are reviewed. Rejected alternatives: skipped tests, unconditional failing assertions, disabling the hook, or fixing production in S27.",
+      "path": "docs/playtests/2026-11-21-console-playtests.md",
+      "line": 137,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Proposed:** retain the missing 5 March criterion and distinguish console receipt, last printed menus and physical truth. Rejected alternatives: altering initial State, direct kernel orders, using the rule-seat history as a substitute for console play, or counting August as July.",
+      "path": "docs/playtests/2026-11-21-console-playtests.md",
+      "line": 139,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**[I] Proposed:** apply the literal imperative-triad rule to the two substantive labels pending the lead's interpretation. Rejected alternatives: silently exempting them or deleting policy acts to shorten their wording. Any sensitive-copy rewrite remains for its author and gate reviewer; no signature or player copy was changed here.",
+      "path": "docs/playtests/2026-11-21-console-playtests.md",
+      "line": 141,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Inherits every integration proposal in 1a.md, including the runner ceiling, appointment contracts, call/transfer representation and parked R93 experiment. Review them with 1a; neither descendant supersedes those choices.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 3,
+      "origin": "inherited coverage"
+    },
+    {
+      "text": "**2. Regressions and proposed rulings [I].** Nine cases have actual red assertion evidence: missing first morning; hold flags consumed as objectives; lost timing, bypass and audience arguments; unreadable notice bodies; raw refusal codes; singular-day wording; and the literal imperative-triad conflict. Normal tests use expected failures, with explicit red mode; fixtures are guarded outside them. **No game, pack, signature or band fix.** Propose retaining expected failures and the March gap, and applying the literal writing rule pending your interpretation. Reject skips, bypassing the hook, hidden-State setup, forced battles and deleting policy acts to shorten labels. The report distinguishes proven defects from resistance, allocation observations and completeness questions.",
+      "path": "CODEX.md",
+      "line": 5773,
+      "origin": "S27 author status"
+    }
+  ],
+  "desk": [
+    {
+      "text": "Keep shorter turns as a driver preference within the pack maximum. Reject changing pack weeks or silently passing a chosen date. Keep own-queue decisions visibly pending; reject pretending queueing applied effects.",
+      "path": "docs/playtests/2026-11-21-desk-history-run.md",
+      "line": 185,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Use complete identified-call fields and governor routes from the public menu. Reject inferred quotas or replacing war terms with fixed durations. An issued marker means issued, not fulfilled.",
+      "path": "docs/playtests/2026-11-21-desk-history-run.md",
+      "line": 188,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Supply lawful human appointment/establishment context. [requests.ts](../../packages/kernel/src/seats/requests.ts) restricts dated `historicalAppointments` to the rules driver; none appears in 22 human menus. Separately, the actual Union appointment table at this pin in [world.json](../../packs/union-1861/data/world.json) contains **only Butler on 22 May**. McDowell and Patterson are absent, not merely hidden by that restriction. Their sourced establishments/appointments belong to S1's owner. Reject automatic historical defaults or relabelling Stone.",
+      "path": "docs/playtests/2026-11-21-desk-history-run.md",
+      "line": 191,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Author a public live-clock marker, reported ranges and explanation of unavailable alternatives. `SituationView` supplies none. Reject deriving deadlines or future options from private effects, especially at Sumter.",
+      "path": "docs/playtests/2026-11-21-desk-history-run.md",
+      "line": 199,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Complete the prospective audience case, legal counters and declared replies. The filed answer works but is not a current numbered case. Reject inventing one from private traits or old reasons.",
+      "path": "docs/playtests/2026-11-21-desk-history-run.md",
+      "line": 202,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Have the contract owner classify the plan DTO's numeric score/weighted terms. The review carries score 772 and terms including `goal_fit`, `force_ratio`, `time`, `supply`, `glory`; [optionView](../../packages/kernel/src/tick/plans.ts) with `false` hides private notes but retains those fields. The desk does **not** display the numbers. This is a possible oversharing review question, not a proven canon violation or permission to use the numbers as advice.",
+      "path": "docs/playtests/2026-11-21-desk-history-run.md",
+      "line": 205,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Preserve missing human Manassas as open acceptance. [I] Different holders, explicit review and transport make this trajectory differ from automated history; they do not prove which caused the absence. Reject fabricated reports, truth imported from the automated run, or pack tuning for a screenshot. The next bounded investigation belongs to the human operation/appointment contract owner, using the retained commands/replies.",
+      "path": "docs/playtests/2026-11-21-desk-history-run.md",
+      "line": 212,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Inherits every integration proposal in 1a.md, including the runner ceiling, appointment contracts, call/transfer representation and parked R93 experiment. Review them with 1a; neither descendant supersedes those choices.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 3,
+      "origin": "inherited coverage"
+    },
+    {
+      "text": "Use public chamber records and own recorded choices; reject certifying ratification from hidden congressLedger state.",
+      "path": "notes/sprint-S19-desk.md",
+      "line": 28,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Show explicit audience requests and own invitations; reject an objection as a request or reconstruction of a private prospective case.",
+      "path": "notes/sprint-S19-desk.md",
+      "line": 30,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Keep stop preferences in the console driver; reject new State or simulation commands.",
+      "path": "notes/sprint-S19-desk.md",
+      "line": 31,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Use dated cited public composition; reject converting bloc support/voice into legislative seat counts.",
+      "path": "notes/sprint-S19-desk.md",
+      "line": 33,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "**Proposed rulings, with rejected alternatives:** (1) keep dispatched slips in the shell's existing turn history, rejecting a second simulation ledger or inferring execution from dispatch; (2) keep wait notes as requests for a redraft, rejecting a conversion into movement orders or an audience/compliance preview; (3) leave unavailable projections explicit, rejecting private State/pack-effect reads, a guessed refill date or inferred Congressional ratification.",
+      "path": "CODEX.md",
+      "line": 5177,
+      "origin": "S8 author status"
+    },
+    {
+      "text": "**Proposed rulings, with rejected alternatives:** use public chamber records and known actions rather than congressLedger or unchosen effects; use dated published counts rather than converting bloc support/voice into seats; derive refill from the actual own budget rather than weekdays; keep stop preferences in the driver rather than State or the command log; show explicit requests and own invitations rather than interpreting an objection as an audience request or recomputing private compliance. The lead's whole-branch review under 0106 remains due; nothing is signed or cleared for main.",
+      "path": "CODEX.md",
+      "line": 5579,
+      "origin": "S19 author status"
+    },
+    {
+      "text": "Proposed rulings: keep bounded driver turns, complete menu-supplied calls and visibly pending own-queue answers; reject changing pack weeks, inferred call terms or claiming dispatch is execution. Supply lawful human appointment context and authored clocks/audience cases; reject automatic historical defaults or reconstruction from private effects. Classify numeric plan scores before exposing them. Preserve the human Manassas failure, rather than importing the automated battle.",
+      "path": "CODEX.md",
+      "line": 5958,
+      "origin": "S29 author status"
+    }
+  ],
+  "1a": [
+    {
+      "text": "Preserve conditional readiness separately from active muster; reject treating both April totals as troops already in service or adding a statutory maximum as another call.",
+      "path": "notes/lane-1.7-men-regions.md",
+      "line": 101,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Use only the documented public-wire exchange, without assigning Union control to Richmond or changing Virginia's signed delay; reject false territorial control and an unbounded inference of public wire access.",
+      "path": "notes/lane-1.7-men-regions.md",
+      "line": 102,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Enter Virginia's 40,000 on the first read quantitative date, 17 June, without back-projecting that count to 6 June. Treat North Carolina's four already-serving twelve-month regiments as three additional equivalents after its separate 22 April requisition, avoiding that explicit overlap. The original individual State enlistment dates are unknown: twelve months from the model muster for the Virginia/Tennessee/Arkansas entries is an **inferred horizon-limited approximation**, not a sourced expiry. Review this limit before accepting the data.",
+      "path": "notes/lane-1.7-men-regions.md",
+      "line": 103,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Preserve unknown sub-regimental headcounts and war terms instead of inventing full regiments or a fixed war-end date. New York's July entry uses the verified 25 July public proclamation date; the exact earlier presidential requisition date is not established here.",
+      "path": "notes/lane-1.7-men-regions.md",
+      "line": 104,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Aggregate entry for forces not separately represented before transfer.** Use the existing block, placement and assignment owners at the state government’s seat, with existing recruitment stores and condition rules, then ordinary transfers and joins. This is an administrative approximation, not sourced field disposition. Virginia keeps the single default-arm infantry aggregate from R90; the read total has no arm breakdown, so this is not a claim that all its volunteers were infantry. Reject another governor-compliance request, a new economy stock, invented field posts or a forced battle.",
+      "path": "notes/lane-1.7-men-regions.md",
+      "line": 214,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Separate act from quantity.** Virginia’s later 40,000 is not back-projected to 6 June. Tennessee’s tender is not a certificate of completed muster on 29 June or 2 July. Later quantities fill the same contingents. Regimental men use the unchanged 1,000-men norm [I], not exact reported headcounts. Sub-regimental headcounts remain null. Reject duplicate numerical transfers in May and July or fresh blocks for the same later returns.",
+      "path": "notes/lane-1.7-men-regions.md",
+      "line": 215,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Preserve uncertainty about original expiries.** The former twelve-month-from-model-muster approximation is removed for these institutional entries. `enlEndsDay: null` with `enlTermUnknown: true` means an unread original expiry, distinct from North Carolina’s known war service. No new twelve-month term starts at transfer. The governor recorded at entry is bookkeeping, nullable during a vacancy, not an assertion that he personally raised every regiment. Original individual dates and expiries remain for research beyond this horizon.",
+      "path": "notes/lane-1.7-men-regions.md",
+      "line": 216,
+      "origin": "hand-over"
+    },
+    {
+      "text": "**Credit the included North Carolina requisition dynamically.** Its four already-serving regiment equivalents credit surviving men or pending levies linked to the April requisition, using durable `enlCallId` after response pruning. This history’s April answer is `object`, so the credited amount is zero and all four equivalents enter. Reject the old fixed subtraction of one merely requested regiment. Other earlier calls have no read regiment-to-regiment crosswalk; no such identity was invented.",
+      "path": "notes/lane-1.7-men-regions.md",
+      "line": 217,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Use the sourced assignment dates for doctrine letters; normal delivery determines completion, rather than forcing historical arrivals. Davis's doctrine exercises the R98 authorization; the printed 31 May order is by Lee. In this history Beauregard's letter is sent on **31 May/day 87** and completes on **5 June/day 92**, later than his recorded arrival. Reject adjusting courier weights or forcing headquarters placement to match a date.",
+      "path": "notes/lane-1.12-rule-seats.md",
+      "line": 536,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Preserve Johnston's cross-side eligibility guard. This base still has him serving as Union Quartermaster General, without 0101's resignation/service owner, so **his Harpers Ferry command does not open in this run**. A fixture supplying only the missing service prerequisite makes his sourced assignment eligible. Reject changing his starting side or implementing the separate resignation lane here. The existing Union operation likewise remains under **Stone**, because this base has no McDowell department establishment; R98 does not repair that other-side gap.",
+      "path": "notes/lane-1.12-rule-seats.md",
+      "line": 537,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep the existing bundle-transfer semantics: the named former Charleston concentration sends its commanded blocks, including opening blocks, while new levies go to the latest established northern command. This is an allocation approximation, not a sourced regiment list. It does not move an already established Johnston army to Manassas. Review this choice explicitly: four unknown opening blocks reach combat. Reject inventing their headcounts, hiding their participation or fitting the battle to a date or result. New establishment answers also prevent repeated dated appointments after ordinary response pruning.",
+      "path": "notes/lane-1.12-rule-seats.md",
+      "line": 538,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep initiativeAt as an independent required pack rule, at behavior-preserving 150 in both packs; reject retaining the trial complyAt=10 as production calibration.",
+      "path": "notes/lane-1.5-people-verbs.md",
+      "line": 125,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "The detailed dated finding and retained extract paths are in the **R92 section of `docs/research/2026-11-14-union-information-flows.md`**. No holder, person, post kind, value, trait or situation was added or relabelled; Nicolay's existing role remains null. Proposed ruling: retain that distinction and the empty wire role; reject filling it from mail/caller work or an undated technical title merely to pass a band.",
+      "path": "notes/lane-1.5-people-verbs.md",
+      "line": 139,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Keep both effective-date appointments and cause-dependent reassignment; reject dropping either side’s resignation-aware/dated contract during integration.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 17,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "The first merge-5 hook stopped at the done-check setup's 300-second deadline: 143 other files / 1,571 tests pass, one inherited expected failure, 17 skips (14 caused by the failed setup, three optional timing checks). Boundary/licence/decision gates were not reached; merge 4's unchanged-input evidence is retained. Stop and diagnose, not a two-worker retry. An isolated one-worker run also exhausted 300 seconds. The bounded 600-second probe passes all 14 applicable assertions in 282.14 seconds, with the existing optional timing skip. CPU samples of 69-79 percent and about 12 GiB free memory establish host observations only, not a cause. The revised approach makes the one named runner setup ceiling 600 seconds and uses one file worker for the hook. Every assertion, collected test and milestone/tick budget is preserved. This runner-only change is a proposed ruling; reject skipping the setup, suppressing a failing criterion, or attributing a production regression without evidence. Evidence and stopping rule: `runs/s1/merge-5-timeout-plan.json`. Another setup timeout stops expensive retries for a new diagnosis.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 23,
+      "origin": "hand-over"
+    },
+    {
+      "text": "Use bounded test-file concurrency after the retained failures, with a 600-second runner setup ceiling; reject skipping setup, suppressing criteria or treating the ceiling as a relaxed production tick budget.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 33,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "Keep R93 as a report-only parked contact experiment; reject retaining its failed exposure formula or moving historical/loss bounds to make it pass.",
+      "path": "notes/lane-1.14-done-check.md",
+      "line": 21,
+      "origin": "S32 unpacking of the cited proposal [I]"
+    },
+    {
+      "text": "**July proposed ruling [I]: retain the ledger response.** `special_session` answers Congress through `ask_war_footing`. The read message addresses Congress and requests legislative authority ([Old South Leaflets 189, pp. 1, 8; collected pp. 253, 260](https://upload.wikimedia.org/wikipedia/commons/d/dd/Lincoln%27s_first_message_to_Congress_-_message_to_Congress_in_special_session%2C_July_4%2C_1861_%28IA_lincolnsfirstmes00unit%29.pdf#page=8)); `address` instead rewards one political bloc and penalizes others. No sourced bloc was established. Rejected inventing one. Every other Part B item is built or assigned in the hand-over; calibration remains R85, resignation its own lane, and the stand-ins retain their owners.",
+      "path": "CODEX.md",
+      "line": 4248,
+      "origin": "R84 author status"
+    },
+    {
+      "text": "**Butler is appointed on 22 May/day 78 to `us_dept_virginia`; Dimick stays at `us_fort_monroe` every day through July.** Scott's order of **18 May** preserves Dimick's regular-garrison command (*Butler Correspondence* I, [pp. 94?95](https://archive.org/details/privateoffice01butlrich/page/94/mode/2up), read). Butler's **24 May** report dates his arrival to Wednesday at 8 a.m. and lists Dimick's command ([ibid., p. 104](https://archive.org/details/privateoffice01butlrich/page/104/mode/1up); [OR I-2, p. 648](https://ehistory.osu.edu/books/official-records/002/0648), read). **Proposed ruling [I]:** use that arrival/assumption day, 22 May, as the effective rule-seat appointment at daily granularity. The actual order remains dated 18 May. Rejected relieving Dimick, pre-opening the department in March, or treating the order date as the arrival date. The department's temporary representation remains the existing 1B stand-in.",
+      "path": "CODEX.md",
+      "line": 4488,
+      "origin": "R89 author status"
+    },
+    {
+      "text": "**Proposed ruling [I]:** retain production and authorize a narrow design of cumulative, role-specific fire exposure for works assaults, constrained by a sourced approach and actual opposing fire. It would touch the loss numerator's shared `contact`, requiring an amendment to **0076 item 1**. Reject simple own-attacker exposure, frontage reduction, terrain removal and the already-rejected global rate increase as remedies. The [NPS geometry account](https://www.nps.gov/articles/the-54th-massachusetts-and-the-second-battle-of-fort-wagner.htm#ftref6), citing Emilio pp. 78–80, supports the confined uncovered approach and crossfire; no width-to-men conversion was invented. The existing fixture's garrison withdraws in all twenty baseline samples, so this is loss evidence, not historical-verdict validation.",
+      "path": "CODEX.md",
+      "line": 4515,
+      "origin": "R93 author status"
+    },
+    {
+      "text": "**The wire-filter role remains unfilled.** Hay assigns presidential letters to himself and visitors/general supervision to Nicolay: [Herndon and Weik II, pp. 225–226](https://archive.org/stream/abrahamlincolntr02hernuoft/abrahamlincolntr02hernuoft_djvu.txt), read. The named telegram-withholding case is **Eckert, 21 October 1861**, after this run's window: [Bates, pp. 93–96](https://archive.org/stream/lincolnintelegra00bates/lincolnintelegra00bates_djvu.txt), read. Strouse's superintendent title (Bates p. 27) does not establish screening Lincoln's wires. Proposed ruling [I]: retain the empty March–July role; reject relabelling mail/caller work or technical management. Detailed source limits and extracts are recorded in the information-flows note's R92 section.",
+      "path": "CODEX.md",
+      "line": 4555,
+      "origin": "R92 author status"
+    },
+    {
+      "text": "**Virginia:** Cameron's call reaches Letcher by public wire on **15 April/day 41**; the **unchanged signed situation fires on 17 April/day 43**. Sources: [OR III-1 p. 68](https://ehistory.osu.edu/books/official-records/122/0068), [p. 76](https://ehistory.osu.edu/books/official-records/122/0076). Proposed ruling [I]: represent the documented 15–16 April exchange without assigning military control to Richmond. Reject changing the signed delay or inventing wider wire access.",
+      "path": "CODEX.md",
+      "line": 4620,
+      "origin": "R90 author status"
+    },
+    {
+      "text": "**Source limits / proposed rulings [I]:** use 17 June's first read Virginia count without back-projecting it to the 6 June proclamation; preserve unknown cavalry/artillery headcounts and indefinite war service. Original individual State enlistment dates remain unknown: the Virginia/Tennessee/Arkansas twelve-month terms from model muster are an **inferred, horizon-limited approximation**, not sourced individual expiries. The hand-over lists these choices and rejected alternatives for review.",
+      "path": "CODEX.md",
+      "line": 4624,
+      "origin": "R90 author status"
+    }
+  ]
+}

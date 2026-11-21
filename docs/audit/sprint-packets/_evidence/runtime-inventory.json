@@ -1,0 +1,140 @@
+{
+  "files": [
+    {
+      "path": "_evidence/validation-raw/check.json",
+      "bytes": 153,
+      "sha256": "8dfff419d18ec17cf5f1d021a4e40a4611ff58c5c77c9df79b0098854bf21d5e"
+    },
+    {
+      "path": "_evidence/validation-raw/check.log",
+      "bytes": 1049,
+      "sha256": "b29332e9c8e1df1d947d8664180538b8c668362b309e789af7a853d276cc50d0"
+    },
+    {
+      "path": "_evidence/validation-raw/commit-message.txt",
+      "bytes": 230,
+      "sha256": "392e77a7008f5f788dc16f0762095a89db584577e3b5617f7028883a1e1382b4"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/1a.diff",
+      "bytes": 1523863,
+      "sha256": "0b029c6c7a70fa5844e75aaea15a5918045ae74cc637ab88f559707e01cf7e62"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/audit.diff",
+      "bytes": 706157,
+      "sha256": "939bdaea35dfbb90be0a141ea79268142608a194e45a26c1d468bfd2c9b782fe"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/checks.diff",
+      "bytes": 152012,
+      "sha256": "4e6aa1551bcc7933ac63b61d2542e610785b7554ddb74767109441c8f987c02b"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/desk.diff",
+      "bytes": 1825567,
+      "sha256": "3593a8d48ed0aaffe63255f8a63454e0c9fdd6b9bad492242b956009ff5664e9"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/people-data.diff",
+      "bytes": 1186483,
+      "sha256": "4260d533cc0f398e5c4288b3875193df170d36f343718da3f9d0c8b34ef31d6b"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/perf.diff",
+      "bytes": 1642350,
+      "sha256": "98844cace49cb997ff99b2a02d175e823c9a22a4c546093d7b36d5ddfe17f648"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/plan-1b.diff",
+      "bytes": 295877,
+      "sha256": "85c818fa1e2959f8f60910049a0b15bd5b66d11652218b5e340af55d9687d92f"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/playtest.diff",
+      "bytes": 1789211,
+      "sha256": "7dfd855237e6986b60290000e998b0c666f4b045f01becd6a2e60efc37a2bbd4"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/research-cast.diff",
+      "bytes": 2626771,
+      "sha256": "937d1aada964cd8d6c2eac727ab517067b68838f070cdfaaaaa00f30fcb53905"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/research-foreign-economy.diff",
+      "bytes": 653287,
+      "sha256": "1bacbf5be4fcaa89769dde39ed1e64b2a8e06005e594ae84a7e9e238d2fe1056"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/research-gate.diff",
+      "bytes": 404359,
+      "sha256": "4daebfa607f0f715d4c5a5f9413dcb83ccb78feda0a39bdda003290bfefa0e14"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/research-military.diff",
+      "bytes": 1663777,
+      "sha256": "d0bfd081e4810aa1fbaa6de229eb19daeeae0ee069b6b28e3dca278999060518"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/research-politics.diff",
+      "bytes": 654799,
+      "sha256": "22800222ff0fde28f4caa448e4eb3261dfec66c2ff69cf0019f5cfb5d57d4465"
+    },
+    {
+      "path": "_evidence/validation-raw/diffs/situations-1862.diff",
+      "bytes": 954372,
+      "sha256": "1375c9b1bcd10ca9c730fd340120d60dc48384714979b2818646776ec70145ca"
+    },
+    {
+      "path": "_evidence/validation-raw/done-check.json",
+      "bytes": 207,
+      "sha256": "d0f4c362739ddd4d2eea3ea123ebd1756d29044fab115e04dea96ffb77633c03"
+    },
+    {
+      "path": "_evidence/validation-raw/done-check.log",
+      "bytes": 1754,
+      "sha256": "4d5e29c2aceffbb01d6227abe990e1c4b2a9e1c892ee21347f7dfb033b96479c"
+    },
+    {
+      "path": "_evidence/validation-raw/done-result.json",
+      "bytes": 924745,
+      "sha256": "43c6da453f8a119992d6ee02b1b6f537779ca407f57065a2d396a60d9a562285"
+    },
+    {
+      "path": "_evidence/validation-raw/done-testbed.json",
+      "bytes": 83265,
+      "sha256": "4eeb1063625b71404576fe3db2fc65a04898cac3378d794a9a05eb53916d5128"
+    },
+    {
+      "path": "_evidence/validation-raw/done-union-1861.json",
+      "bytes": 109917,
+      "sha256": "85683b7ed0d8c98e183176e9cd9e513368606a6dded150a9c4b5249cae98935d"
+    },
+    {
+      "path": "_evidence/validation-raw/preflight.json",
+      "bytes": 227,
+      "sha256": "f45e153a8ff5fb830d4c04e1635c9300bc605b17782f527b46f9f97d6dff66cc"
+    },
+    {
+      "path": "_evidence/validation-raw/preflight.log",
+      "bytes": 22,
+      "sha256": "6d71368a446b776aafb0145cb3e5f171d172c37f541b4eeb0050eb54a1f8c369"
+    },
+    {
+      "path": "_evidence/validation-raw/save-testbed-40.json",
+      "bytes": 320958,
+      "sha256": "ce3ae47efd50c62873a30405fd90ab9112e3c2bb317cfdd46027528b99792cea"
+    },
+    {
+      "path": "_evidence/validation-raw/save-union-1861-60.json",
+      "bytes": 1355096,
+      "sha256": "4292377f7e7b92471cb79c083bc6c150b8a3f1a6e562522ecfa923214e71ff37"
+    },
+    {
+      "path": "_evidence/validation-raw/staged-whitespace.log",
+      "bytes": 290019,
+      "sha256": "bd930c3b83f935dd8d5908360bed26dbc9e942147b78a279082554b6afe25290"
+    }
+  ],
+  "note": "Before the commit; the later hook/commit/status append receipts remain separately local and in CODEX."
+}

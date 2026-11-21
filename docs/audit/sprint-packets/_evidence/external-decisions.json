@@ -1,0 +1,86 @@
+[
+  {
+    "file": "D01-phase-1b-scope-and-sequence.md",
+    "sha256": "803873100b400337025e456a21030696b4d048c762cd2c78da01149b1447cc4b",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D01-phase-1b-scope-and-sequence.md",
+    "gate": false
+  },
+  {
+    "file": "D02-people-evidence-and-declarations.md",
+    "sha256": "5d9be73cb7b4678515f7c65fbb66db58190497a73332387ca2cfe8f769eabb5e",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D02-people-evidence-and-declarations.md",
+    "gate": false
+  },
+  {
+    "file": "D03-home-front-elections-and-wills.md",
+    "sha256": "5aa658353eb825062345c11e9b98f5a77d7ad6631b3042760341c692ea70cd06",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D03-home-front-elections-and-wills.md",
+    "gate": false
+  },
+  {
+    "file": "D04-economy-foreign-and-capacity.md",
+    "sha256": "76696d3214df32f3e1b068ee71f47b00d5c9b2ced7a3a54726f75491c0fc92dc",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D04-economy-foreign-and-capacity.md",
+    "gate": false
+  },
+  {
+    "file": "D05-proposals-sieges-and-carriage.md",
+    "sha256": "3a5866b81b7333024dfcc370768e074b6a274fe40f2055233ca10c971587c82d",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D05-proposals-sieges-and-carriage.md",
+    "gate": false
+  },
+  {
+    "file": "D06-recurring-and-grouped-situations.md",
+    "sha256": "cdbbb23156587c34ed7a9e28dfc9bc206839c5a5d5d4d4cde9e161faa4875e42",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D06-recurring-and-grouped-situations.md",
+    "gate": false
+  },
+  {
+    "file": "D07-phase-1-check-and-calibration.md",
+    "sha256": "17d07bda9f84e71036163ec734c3973c9ce103de0539a5f677494f5c98f85db4",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D07-phase-1-check-and-calibration.md",
+    "gate": false
+  },
+  {
+    "file": "D08-r2-black-military-service.md",
+    "sha256": "fe5f8b90e7d14a57f654f3981427a139d8c548eabed1991d30b5426d9009a009",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D08-r2-black-military-service.md",
+    "gate": true
+  },
+  {
+    "file": "D09-r3-native-nations.md",
+    "sha256": "ed4f4221c42c14f1ab15b58745bf12b4ae1e1f6957f79f762400960dd0f4a4bb",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D09-r3-native-nations.md",
+    "gate": true
+  },
+  {
+    "file": "D10-r4-prisoners-and-exchange.md",
+    "sha256": "593a85a05422c71044219f20e9d4072694090806926d53f0f2b7de276a688785",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D10-r4-prisoners-and-exchange.md",
+    "gate": true
+  },
+  {
+    "file": "D11-r6-civilians-and-commanders.md",
+    "sha256": "5f47ef597acf9b0cb9531d49f69d64b7dc81640fbc144ecd0f3bf69c479f99d8",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D11-r6-civilians-and-commanders.md",
+    "gate": true
+  },
+  {
+    "file": "D12-r7-emancipation-and-fugitive-policy.md",
+    "sha256": "93f845954f65a9aa88d61e63425713b292335a67f50ed51899d4155636cc5c7a",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D12-r7-emancipation-and-fugitive-policy.md",
+    "gate": true
+  },
+  {
+    "file": "D13-r5-verdict-and-reckoning.md",
+    "sha256": "c13f1cc2a33786f6d11591b710da784798050ab203a0354c51e93d65e04b2f43",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D13-r5-verdict-and-reckoning.md",
+    "gate": true
+  },
+  {
+    "file": "D14-freedpeople-camps-research-and-placement.md",
+    "sha256": "488c8d41189f12638a46a4dbbf22a239626a1d60f899f5e2de5a16ed0ac1a1ca",
+    "path": "C:\\Pyrrhic\\mandate-reviews\\decision-drafts\\1b\\D14-freedpeople-camps-research-and-placement.md",
+    "gate": true
+  }
+]

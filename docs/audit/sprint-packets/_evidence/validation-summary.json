@@ -1,0 +1,83 @@
+{
+  "scope": "S32 only, starting sprint/audit at 9ab0f5e; no production or other-worktree edits",
+  "packets": 14,
+  "index": "README.md",
+  "packetAudit": {
+    "passed": 7227,
+    "failed": 0,
+    "branches": 14,
+    "pairs": 105,
+    "sourceReferences": 2473,
+    "uniqueSourceBlobs": 894,
+    "protectedOriginalFiles": 1686
+  },
+  "workspacePreflight": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "docs/audit/sprint-packets/_evidence/run-done.ts",
+      "--preflight"
+    ],
+    "exit": 0,
+    "seconds": 0.6803464000004169,
+    "workers": 1,
+    "noGit": null
+  },
+  "requiredNoGitCheck": {
+    "command": [
+      "cmd",
+      "/c",
+      "npm run check"
+    ],
+    "exit": 0,
+    "seconds": 451.11975679999887,
+    "workers": 1,
+    "noGit": "1",
+    "testFilesPassed": 137,
+    "testsPassed": 1530,
+    "expectedFailures": 1,
+    "skips": 3,
+    "chainedGates": [
+      "typecheck",
+      "boundary",
+      "licences",
+      "106-decision index"
+    ]
+  },
+  "defaultDoneCheck": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "docs/audit/sprint-packets/_evidence/run-done.ts"
+    ],
+    "exit": 0,
+    "seconds": 1486.5113591000008,
+    "workers": 1,
+    "noGit": null,
+    "phase0": "6/6",
+    "supplemental1A": "2/6",
+    "problems": [
+      "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 20957 men, below 100000",
+      "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1",
+      "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 0 planned operations, below 1",
+      "union-1861 history run, 148 days to 1861-07-31: no operation fought a battle in the history run (2 operations, 0 battles)",
+      "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+      "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+      "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+      "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 44, above 9",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+    ],
+    "details": "runtime-diagnostics.json",
+    "noRetry": true
+  },
+  "commitHook": "Must pass the actual configured hook. Its subsequent result/hash belongs in local validation-raw/commit.json and the one CODEX append, not in a self-referential commit.",
+  "preservation": "Every original tracked file hash preserved by focused audit; new delivery paths confined to docs/audit/sprint-packets.",
+  "limitations": [
+    "This runtime check is on the audit baseline, not every sprint branch.",
+    "No Linux CI, independent standing review, lead ruling, gate signature, cumulative merge or acceptance waiver.",
+    "Raw diffs/logs/summaries/saves remain local and ignored; their paths and hashes are inventoried."
+  ]
+}
