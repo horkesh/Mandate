@@ -12,7 +12,7 @@ import type { BakedAtlas } from './atlas.ts';
 import { grain } from './manuscript.ts';
 import { graticuleTicks } from './graticule.ts';
 import { PALETTES } from './skins.ts';
-import {OPENING_FRAMES} from './framing.ts';
+import {regionLabelDistance} from './region-labels.ts';
 import {labelPolicy,labelVisible} from './label-visibility.ts';
 import type { Look } from './skins.ts';
 import {controlColour,controlOpacity,controlStrength,sharedFront,contactMark} from './control.ts';
@@ -101,6 +101,7 @@ export class StaffRenderer {
   private omittedLabels:{id:string;point:Point;box:Box;collision:boolean}[]=[];
   private study:StudyMarks|null=null;
   private regionRings=new Map<string,Point[][][]>();
+  private labelAreas=new Map<string,Point[][][]>();
   private liveObstacles:Box[]=[];
   private riverObstacles:Box[]=[];
   private overlayBoxes:Box[]=[];
@@ -151,7 +152,11 @@ export class StaffRenderer {
       return { path: new Path2D(path(object) ?? ''), bbox: [b[0][0],b[0][1],b[1][0],b[1][1]], kind, rank };
     };
     this.regionAngles=new Map(Object.entries(geometry.regionAngles??{}));
-    for (const r of this.regions) if (r.shape) this.regionPaths.set(r.id,make(r.shape,'region'));
+    for (const r of this.regions) if (r.shape) {
+      this.regionPaths.set(r.id,make(r.shape,'region'));
+      const polygons=(r.shape.type==='Polygon'?[r.shape.coordinates]:r.shape.coordinates) as Point[][][];
+      this.labelAreas.set(r.id,polygons.map(polygon=>polygon.map(ring=>ring.map(point=>this.project(point)))));
+    }
     const points = this.regions.filter(r => r.point && !['off_map','off-map'].includes(r.kind)).map(r => this.project(r.point!));
     // Reference points alone miss northern Maine and other outlying vertices.
     for(const path of this.regionPaths.values())points.push([path.bbox[0],path.bbox[1]],[path.bbox[2],path.bbox[3]]);
@@ -283,7 +288,6 @@ export class StaffRenderer {
   }
   fitOpening(){
     this.fit();
-    const box=OPENING_FRAMES[this.geometry.pack];if(box)this.fitGeographic(box);
   }
   private labelZoom(){
     if(this.geometry.schematic)return this.camera.z/this.camera.fit;
@@ -609,6 +613,7 @@ export class StaffRenderer {
     // captions; neither an authored label anchor nor a large search ring may
     // detach the name from its town. Live marks and papers retain priority.
     const namedTowns=new Set<string>();
+    const townIds=new Set(placeNameHints(this.geometry.pack,this.calendar,Infinity).map(t=>t.id));
     // The plain map keeps every former town-name candidate. A drawing's water
     // displacement and footprint must never displace or suppress its name.
     if(!this.signsEnabled)for(const hint of placeNameHints(this.geometry.pack,this.calendar,labelZoom)){
@@ -707,9 +712,21 @@ export class StaffRenderer {
       for(let ring=1;r.kind!=='sea'&&ring<=(r.kind==='key_point'?5:2);ring++)for(const [dx,dy] of [[1,0],[-1,0],[0,-1],[0,1],[1,-1],[-1,-1],[1,1],[-1,1]])offsets.push([dx!*(text.width/2+ring*28),dy!*ring*28]);
       for(const [dx,dy] of offsets){
         text.position.set(p[0]+dx,p[1]+dy);
+        // Collision avoidance may hide a name, but cannot move it to another
+        // part of the country. Area names stay within 12 screen pixels of
+        // their own polygon; unshaped regions stay at their authored anchor.
+        if(r.kind==='land'){
+          const world:Point=[(text.x-this.camera.x)/this.camera.z,(text.y-this.camera.y)/this.camera.z];
+          const rings=this.labelAreas.get(r.id)??[];
+          const distance=rings.length?regionLabelDistance(world,rings)*this.camera.z:Math.hypot(dx,dy);
+          if(distance>12)continue;
+        }
         // Measure after the authored spine rotation and any display offset.
         const bounds=text.getBounds();
         const b:Box=[bounds.x-3,bounds.y-3,bounds.x+bounds.width+3,bounds.y+bounds.height+3];
+        // A town whose dedicated label did not fit still cannot escape through
+        // the general-label fallback. Keep the nearest text edge by its point.
+        if((r.kind==='key_point'||townIds.has(r.id))&&boxDistance(p,[bounds.x,bounds.y,bounds.x+bounds.width,bounds.y+bounds.height])>12)continue;
         if(this.furnitureDrawn.some(s=>s.nameGap!==undefined&&boxDistance(s.point,b)<s.nameGap))continue;
         if(b[0]<frame[0]+4||b[1]<frame[1]+4||b[2]>frame[2]-4||b[3]>frame[3]-4||occupied.some(x=>overlaps(x,b))||this.riverObstacles.some(x=>overlaps(x,b)))continue;
         occupied.push(b);text.alpha=this.reviewPost?.55:.88;this.labels.addChild(text);break;
