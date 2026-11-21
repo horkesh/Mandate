@@ -304,15 +304,23 @@ export function Paper({ report: r, text, t, dateOf, plain, display }: { display:
 
 export function Situation({ situation: s, menu, t, execute, order, busy,queue=[],dateOf=(d)=>`${S.day} ${d}` }: { situation: SituationView; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean;queue?:readonly {line:string}[];dateOf?:(day:number)=>string }) {
   const [referring, setReferring] = useState(false);
+  const [advisers, setAdvisers] = useState<string[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
   const choice = menu.situations.find(c => c.situation === s.id);
   const pending=queue.map(q=>q.line.trim().split(/\s+/)).find(words=>words[0]==='decide'&&words[1]===s.id);
   const picked=pending?pending.slice(2):selected;
+  const asked=queue.flatMap(q=>{const w=q.line.trim().split(/\s+/);return w[0]==='consult'&&w[1]===s.id?w.slice(2):[];});
+  const available:readonly string[]=(choice?.consultPosts??[]).filter(post=>!asked.includes(post));
+  const recipients=advisers.filter(post=>available.includes(post));
+  const consultation=`consult ${s.id} ${recipients.join(' ')}`;
   return <section className="situation"><p className="eyebrow">{s.status}, {S.beforeDate} {dateOf(s.surfacedDay)}</p><h3>{t(s.title)}</h3><p>{t(s.text)}</p>{s.staffAbsence === 'no-adviser-on-record' && <p>{S.noStaffRecommendation}</p>}{s.staffAuthor && <p>{S.staff}: {t(s.staffAuthor, 'person')}</p>}
     {pending&&<p role="status">{S.decisionQueued}</p>}
     {choice?.options.length===0&&<p role="status">{S.noAnswers} {S.noAnswersNote}</p>}
     <fieldset disabled={busy || !choice || !!pending}><legend>{S.selection}</legend>{s.options.filter(o => choice?.options.some(c => c.optionId === o.id)).map(o => <label className="situation-option" key={o.id}><input type="checkbox" checked={picked.includes(o.id)} onChange={e => setSelected(old => e.target.checked ? [...old, o.id] : old.filter(id => id !== o.id))} /><span>{t(o.label)}<small>{o.proposedBy === 'inaction' ? S.takeCourse : Array.isArray(o.proposedBy) ? `${S.advisers}: ${o.proposedBy.map(id => t(id, 'person')).join(', ')}` : ''}</small></span></label>)}</fieldset>
-    <div className="actions"><button disabled={busy || !choice || !selected.length || !!pending} onClick={() => void execute(`decide ${s.id} ${selected.join(' ')}`)}>{S.signDecision}</button><button disabled={busy || !choice || !!pending} onClick={() => void execute(`decide ${s.id}`)}>{S.takeCourse}</button><button disabled={!choice} onClick={() => order(`consult ${s.id} `)}>{S.consult}</button>{!!choice?.delegableTo.length && <button disabled={!!pending} data-hotkey="r" onClick={() => setReferring(value => !value)}>{S.referDecision}</button>}{referring && choice?.delegableTo.map(post => <button disabled={busy || !!pending} key={post} onClick={() => void execute(`delegate ${s.id} ${post}`)}>{S.refer} {t(post, 'post')}</button>)}</div>
+    <div className="actions"><button disabled={busy || !choice || !selected.length || !!pending} onClick={() => void execute(`decide ${s.id} ${selected.join(' ')}`)}>{S.signDecision}</button><button disabled={busy || !choice || !!pending} onClick={() => void execute(`decide ${s.id}`)}>{S.takeCourse}</button>{!!choice?.delegableTo.length && <button disabled={!!pending} data-hotkey="r" onClick={() => setReferring(value => !value)}>{S.referDecision}</button>}{referring && choice?.delegableTo.map(post => <button disabled={busy || !!pending} key={post} onClick={() => void execute(`delegate ${s.id} ${post}`)}>{S.refer} {t(post, 'post')}</button>)}</div>
+    {choice&&<fieldset disabled={busy}><legend>{S.consultRecipients}</legend>{available.length?available.map(post=><label className="situation-option" key={post}><input type="checkbox" checked={recipients.includes(post)} onChange={e=>setAdvisers(old=>e.target.checked?[...old,post]:old.filter(id=>id!==post))}/><span>{t(post,'post')}</span></label>):<p>{S.consultNone}</p>}
+      {available.length>0&&<><PriceNote line={consultation} menu={menu}/><button disabled={!recipients.length||outOfAttention(menu.attention.left,commandPrice(consultation,menu))} onClick={()=>void execute(consultation)}>{S.consult}</button></>}
+    </fieldset>}
   </section>;
 }
 
