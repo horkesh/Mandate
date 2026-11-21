@@ -31,8 +31,21 @@ Two live cabinet consultations were queued and dispatched through the UI.
 The patronage editor now uses received person identities for promise/pressure,
 not commandable post IDs. Its regression failed before correction; 21 affected
 tests and prototype typecheck pass. A second observed gap remains unreadable
-option/reason tokens in their replies;
-no political or kernel facts are being added by the desk.
+option/reason tokens in their replies. Advice now uses unique labels from
+received situations, preserving direct supplied generic wording and refusing
+ambiguous/future alternatives. Call responses use their declared token rather
+than infer refusal from a zero count. Long dockets now keep their close control
+in view. The baseline headless header regression failed with viewport ratio 0;
+the targeted correction passes at 1920 and 3440. The build passes. The unit suite
+had 40 unaffected passing files and one generic-wording failure, corrected and
+verified in the 31-test affected selection. Four headless checks pass across
+retained runs; the unchanged consultation test is reused. Initial quote-encoding
+and selector setup failures are retained, not counted as product failures.
+The default eight-seed done check is running once under runs/s47; no runtime
+simulation input, band or scoring change is made. Final report follows its result.
+
+Commits so far: 1935005 (map merge), 3989729 (consultations), 4b9e8b8
+(completed play and patronage recipients). Each passed the actual hook.
 
 Proposed ruling [I]: use the supplied consultation menu on the decision
 card; reject guessed cabinet eligibility or a second kernel path.

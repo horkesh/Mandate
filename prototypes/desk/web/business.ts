@@ -80,3 +80,42 @@ export function operationRecords(data:DeskSnapshot):OperationRecord[]{
   plans:(data.approvedPlans??[]).filter(p=>p.post===post),
  }));
 }
+
+/** Advice labels come from the situations already received, never a guessed string key. */
+export function recommendationText(request:SeatRequest,strings:Readonly<Record<string,string>>,report:ReportView):string|null {
+ if(!report.advice||report.day>request.view.day||report.receivedDay>request.view.day)return null;
+ const value=report.advice.recommends;
+ const known=request.view.situations.filter(s=>s.surfacedDay<=request.view.day);
+ const situations=report.subjectKind==='situation'?known.filter(s=>s.id===report.subjectId):
+  report.claims.some(c=>c.kind==='verb-answered'&&c.token?.startsWith('consult:'))?known:[];
+ const labels=[...new Set(situations.flatMap(s=>s.options.filter(o=>o.id===value).map(o=>strings[o.label]).filter((v):v is string=>v!==undefined)))];
+ if(labels.length===1)return labels[0]!;
+ if(labels.length>1)return S.recommendationMissing;
+ if(Object.hasOwn(strings,value))return strings[value]!;
+ if(S.replyRecommendations[value])return S.replyRecommendations[value]!;
+ const consult=report.claims.some(c=>c.kind==='verb-answered'&&c.token?.startsWith('consult:'));
+ return report.subjectKind!=='situation'&&!consult?presenter(strings).text(value):S.recommendationMissing;
+}
+/** Render stated political advice without private weights or an inferred outcome. */
+export function politicalPaperText(request:SeatRequest,strings:Readonly<Record<string,string>>,report:ReportView,raw:string):string {
+ if(report.day>request.view.day||report.receivedDay>request.view.day)return S.paperNotReceived;
+ let result=raw;
+ if(report.subjectKind==='situation'){
+  const situation=request.view.situations.find(s=>s.id===report.subjectId&&s.surfacedDay<=request.view.day);
+  if(situation&&strings[situation.title])result=result.replace(`about situation ${report.subjectId}`,`${S.subject}: ${strings[situation.title]}`);
+ }
+ for(const claim of report.claims){
+  if(claim.kind==='call-answer')result=result.replace(`call-answer ${claim.value}`,`${S.callReplies[claim.token??'']??S.callReply}; ${S.reportedCount}: ${claim.value}`);
+  if(claim.kind==='verb-answered'&&claim.token?.startsWith('consult:')){
+   const response=claim.token.slice('consult:'.length),label=S.consultReplies[response];
+   if(label)result=result.replace(`consult: ${response}`,label);
+  }
+ }
+ if(report.advice){
+  result=result.split(' | recommends ')[0]!;
+  const reasons=report.advice.reasons.map(r=>(S.reasonLabels as Record<string,string>)[r.kind]??r.kind.replaceAll('_',' '));
+  result+=`; ${S.recommends}: ${recommendationText(request,strings,report)}`;
+  if(reasons.length)result+=`; ${S.statedReasons}: ${reasons.join(', ')}`;
+ }
+ return result;
+}

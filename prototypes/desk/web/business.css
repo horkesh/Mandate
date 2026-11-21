@@ -31,7 +31,7 @@
 @media(prefers-reduced-motion:reduce){.table-stop{transform:none}}
 .advance-agenda{border-block:1px solid #a28e69;padding:.6em 0;margin:.8em 0}.advance-agenda article{margin:.6em 0}.advance-agenda h4{margin:.4em 0}.table-books .plan-pending-badge{display:block;max-width:13em;white-space:normal;color:inherit;font-size:.85em;line-height:1.35}.plan-pending-badge:empty{display:none}
 .table-app dialog:is([data-kind=progress],[data-kind=personnel]){width:min(980px,calc(100vw - 72px))}
-.table-app dialog:is([data-kind=progress],[data-kind=personnel])>.panel-header{position:sticky;top:0;z-index:2;background:var(--paper)}
+.table-app dialog:is([data-kind=progress],[data-kind=personnel],[data-kind=docket])>.panel-header{position:sticky;top:0;z-index:2;background:var(--paper)}
 .operations-record,.personnel-sheet{max-width:72ch;margin:auto;overflow-wrap:anywhere}
 .command-record{border-top:3px double #a28e69;margin-top:1.5em;padding-top:.7em}
 .command-record h3{font-size:1.45em}.command-record h4{font-size:1.1em;margin:.9em 0 .5em}

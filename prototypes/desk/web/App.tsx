@@ -20,7 +20,7 @@ import type { Panel } from './strings.ts';
 import {dayFrames,playbackSnapshot,reportPlace} from './table.ts';
 import {AccountabilityLedger,AttentionSheet,AttentionTokens,PriceNote,StopSlip,TurnSheet,OperationsSheet,CallsBadge,FirstMorningNote} from './DeskViews.tsx';
 import type {Price} from './business.ts';
-import {commandPrice,outOfAttention,refusalText,slipText,subjectName} from './business.ts';
+import {commandPrice,outOfAttention,refusalText,slipText,subjectName,politicalPaperText} from './business.ts';
 import {deskDate} from './plan-business.ts';
 import type {Point} from './map/model.ts';
 import './table.css';
@@ -217,7 +217,7 @@ export function App() {
   function content(): ReactNode {
     if (!current) return null;
     if(current.summary)return <WeeklyPaper data={tableData} openPaper={paper}/>;
-    if (current.paper) return <><Paper report={current.paper} text={data!.paperText[current.paper.id] ?? ''} t={t} dateOf={day => dateForReport(data!, day)} plain={plain} display={display} />
+    if (current.paper) return <><Paper report={current.paper} text={politicalPaperText(data!.morning,data!.strings,current.paper,data!.paperText[current.paper.id] ?? '')} t={t} dateOf={day => dateForReport(data!, day)} plain={plain} display={display} />
       <div className="actions"><button data-hotkey="f" onClick={() => { setFiled(previous => new Set(previous).add(current.paper!.id)); sound('stamp'); back(); }}>{S.filePaper}</button>
         {current.paper.authorPost && <button data-hotkey="i" onClick={() => order(`inquire ${current.paper!.authorPost}`)}>{S.ask}</button>}</div></>;
     if(current.audience){const key=`${tableData.morning.requestKey}:${menu.commandable.find(p=>p.post===current.audience)?.holder??''}:${current.audience}`;return <AudienceScene key={key} request={tableData.morning} strings={data!.strings} post={current.audience} busy={busy||!!playback||data!.closed} queue={data!.queue} execute={execute} openPaper={sourcePaper} draft={audienceDrafts[key]??[]} setDraft={value=>setAudienceDrafts(old=>({...old,[key]:value}))}/>;}
@@ -302,7 +302,7 @@ export function Paper({ report: r, text, t, dateOf, plain, display }: { display:
   </article>;
 }
 
-export function Situation({ situation: s, menu, t, execute, order, busy,queue=[],dateOf=(d)=>`${S.day} ${d}` }: { situation: SituationView; request?:SeatRequest; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean;queue?:readonly {line:string}[];dateOf?:(day:number)=>string }) {
+export function Situation({ situation: s, menu, t, execute, order, busy,queue=[],dateOf=(d)=>`${S.day} ${d}` }: { situation: SituationView; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean;queue?:readonly {line:string}[];dateOf?:(day:number)=>string }) {
   const [referring, setReferring] = useState(false);
   const [advisers, setAdvisers] = useState<string[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
@@ -348,7 +348,7 @@ export function OrderSheet({ request, menu, t, line, setLine, help, execute, bus
     <PriceNote line={line} menu={menu}/>
     {verb==='appoint'&&onPersonnel&&<p>{S.personnelOrderHelp} <button type="button" onClick={onPersonnel}>{S.personnelTitle}</button></p>}
     {verb==='call'&&onCalls&&<p>{S.callTermsHelp} <button type="button" onClick={onCalls}>{S.reviewCalls}</button></p>}
-    <div className="grammar-hint">{help.filter(text => text.trim().startsWith(verb + ' ') || (isEdit && text.includes('<objective|waypoints|timing'))).map((text, i) => <p key={i}>{display(text)}</p>)}</div><div className="actions"><button data-hotkey="s" type="submit" className="primary" disabled={busy || !line.trim() || cannotPay}>{S.sign}</button>{isEdit && <button type="button" disabled={busy} onClick={() => void execute(line.replace(/^(edit|preview)\b/, 'preview'))}>{S.preview}</button>}</div>
+    <div className="grammar-hint">{help.filter(text => text.trim().startsWith(verb + ' ') || text.includes(`| ${verb} `) || (isEdit && text.includes('<objective|waypoints|timing'))).map((text, i) => <p key={i}>{display(text)}</p>)}</div><div className="actions"><button data-hotkey="s" type="submit" className="primary" disabled={busy || !line.trim() || cannotPay}>{S.sign}</button>{isEdit && <button type="button" disabled={busy} onClick={() => void execute(line.replace(/^(edit|preview)\b/, 'preview'))}>{S.preview}</button>}</div>
   </form>;
 }
 

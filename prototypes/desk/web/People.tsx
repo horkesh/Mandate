@@ -6,7 +6,7 @@ import {presenter} from './presentation.ts';
 import {S} from './strings.ts';
 import './people.css';
 import {PriceNote} from './DeskViews.tsx';
-import {commandPrice,outOfAttention} from './business.ts';
+import {commandPrice,outOfAttention,recommendationText} from './business.ts';
 
 type Common={request:SeatRequest;strings:Readonly<Record<string,string>>};
 type PaperOpener={openPaper:(report:ReportView)=>void};
@@ -76,7 +76,7 @@ function PersonKnowledge({request,strings,person,post,openPaper}:Common&PaperOpe
   return <>
     <h4>{S.boardAssessment}</h4>{assessments.length?assessments.map(r=><div key={r.id}><p>{text(r.advice!.recommends)}</p><Source report={r} strings={strings} openPaper={openPaper}/></div>):<p>{S.boardAssessmentMissing}</p>}
     <h4>{S.boardStanding}</h4><p>{known?.standing==null?S.boardStandingMissing:S.boardStandingValue(known.standing)}</p>
-    <h4>{S.boardStances}</h4>{known?.stances.length?<ul>{known.stances.map(s=>{const r=source(s.source);return <li key={s.source}>{text(s.recommends)}{r&&<Source report={r} strings={strings} openPaper={openPaper}/>}</li>;})}</ul>:<p>{S.boardStancesMissing}</p>}
+    <h4>{S.boardStances}</h4>{known?.stances.length?<ul>{known.stances.map(s=>{const r=source(s.source);return <li key={s.source}>{r?recommendationText(request,strings,r)??S.recommendationMissing:S.recommendationMissing}{r&&<Source report={r} strings={strings} openPaper={openPaper}/>}</li>;})}</ul>:<p>{S.boardStancesMissing}</p>}
     <h4>{S.boardObservers}</h4>{observers.length?observers.map(id=>{const r=source(id);return r?<Source key={id} report={r} strings={strings} openPaper={openPaper}/>:null;}):<p>{S.boardObserversMissing}</p>}
   </>;
 }
@@ -110,7 +110,7 @@ export function PostDetails({request,strings,post,openPaper,order,openAudience}:
       {last?<p>{S.boardLastHeard}: {name(last.author,'person')}, {S.day} {last.day}</p>:<p>{S.boardNoReports}</p>}
       {[...node.reports].reverse().map(report=><article key={report.id}>
         <Source report={report} strings={strings} openPaper={openPaper}/>
-        {report.advice&&<><p>{S.recommends}: {text(report.advice.recommends)}</p><ol>{report.advice.reasons.map((reason,i)=><li key={i}>{(S.reasonLabels as Record<string,string>)[reason.kind]??text(reason.kind.replaceAll('_',' '))}</li>)}</ol></>}
+        {report.advice&&<><p>{S.recommends}: {recommendationText(request,strings,report)??S.recommendationMissing}</p><ol>{report.advice.reasons.map((reason,i)=><li key={i}>{(S.reasonLabels as Record<string,string>)[reason.kind]??text(reason.kind.replaceAll('_',' '))}</li>)}</ol></>}
       </article>)}
     </section>
   </section>;
