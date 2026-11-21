@@ -20,6 +20,7 @@ import { term } from '../knowledge/truth.ts';
 import { liveTerms, draft } from '../planner/draft.ts';
 import { applyEdit, concretePlan, editDirective, PLAN_HOLDS } from '../planner/edits.ts';
 import { plannerInputFor } from '../planner/input.ts';
+import type { PlannerInput } from '../planner/context.ts';
 import type { PlanCandidate, TermKind } from '../planner/types.ts';
 import { goalKindOf } from '../plans/goal.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
@@ -161,6 +162,18 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
 const SHIRKS: readonly ComplianceRung[] = ['slow_walk', 'reinterpret'];
 const OBJECTS: readonly ComplianceRung[] = ['object', 'refuse'];
 
+/** The same delivered marks and fixed compliance readings for a draft and its edits. */
+function withNotePreferences(input: PlannerInput, world: SeatsWorld, state: State, record: PlanRecord): PlannerInput {
+  const rules = world.map.world.rules.plans.notes;
+  const notes = (record.planNotes ?? []).map(n => {
+    const response = state.orderResponses[n.readingResponse]!;
+    const rung = rules.rungs.find(r => r.rung === response.respActual);
+    if (rung === undefined) throw new RangeError(`pack has no note weight for ${response.respActual}`);
+    return { mark: n.readingMark, weight: rung.weight };
+  });
+  return notes.length ? { ...input, notes, noteScoreWeight: rules.scoreWeight } : input;
+}
+
 /** A stated reason's weight, permille, for the answer he sends: its gap, departure, shortfall or grievance weight; else full. */
 function statedWeight(r: Reason): number {
   if ('gap' in r) return r.gap;
@@ -199,15 +212,8 @@ export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): St
     }
     used[faction] = (used[faction] ?? 0) + 1;
     const view = viewFor(world, state, seatIdFor(holder), cache);
-    const noteRules = world.map.world.rules.plans.notes;
-    const notes = (record.planNotes ?? []).map(n => {
-      const response = state.orderResponses[n.readingResponse]!;
-      const rung = noteRules.rungs.find(r => r.rung === response.respActual);
-      if (rung === undefined) throw new RangeError(`pack has no note weight for ${response.respActual}`);
-      return { mark: n.readingMark, weight: rung.weight };
-    });
-    const input = plannerInputFor(world, state, derived, network, month, view, post, record.planGoal, day);
-    const set = draft(notes.length ? { ...input, notes, noteScoreWeight: noteRules.scoreWeight } : input);
+    const input = withNotePreferences(plannerInputFor(world, state, derived, network, month, view, post, record.planGoal, day), world, state, record);
+    const set = draft(input);
     fire(ctx, 'plans.drafted');
     fire(ctx, 'planner.candidates', set.draftCandidates.length);
     fire(ctx, 'planner.searches', set.draftSearches);
@@ -237,7 +243,7 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
   };
   if (holder === null || chosen === undefined || record.planDraft === null) return invalid('no plan to edit', start);
   const view = viewFor(world, start, seatIdFor(holder), cache);
-  const input = plannerInputFor(world, start, derived, network, month, view, post, record.planGoal, day);
+  const input = withNotePreferences(plannerInputFor(world, start, derived, network, month, view, post, record.planGoal, day), world, start, record);
   const result = applyEdit(input, record.planDraft, chosen, pending.pendingSpec);
   if (!result.ok) {
     toIssuer(ctx, start, post, record, [{ claimKind: 'plan-answer', claimRegion: objective, claimValue: 0, claimToken: 'invalid', claimConfidence: 1000 }], { answers: pending.pendingOrder, tag: `answer.${post}` });

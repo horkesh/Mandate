@@ -1,10 +1,10 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { ConsoleGame } from '../../packages/cli/src/console/game.ts';
 import { ConsoleSession } from '../../packages/cli/src/console/session.ts';
+import { packStrings } from '../../packages/cli/src/seats-world.ts';
+import { writingCandidates } from './writing-screen.mjs';
 
-const bug = process.env.S27_ASSERT_FIXED === '1' ? it : it.fails;
-
-describe('S27 literal standing writing rule', () => {
+describe('S27 writing screen under the S35 ruling', () => {
   let offeredLabel: string;
   beforeAll(() => {
     const session = new ConsoleSession(new ConsoleGame({ pack: 'union-1861' }));
@@ -18,9 +18,12 @@ describe('S27 literal standing writing rule', () => {
     expect(offeredLabel).toMatch(/^  - hold_and_talk: /);
   });
 
-  bug('S27-B09: an offered label avoids a triad of short imperatives', () => {
-    // The three acts are substantive. S27 reports the literal wording-rule
-    // conflict; it changes neither their policy nor their signed text.
-    expect(offeredLabel).not.toMatch(/File a refusal, hold back its delivery, and keep /);
+  it('S27-B09: flags a slogan-form triad and leaves concrete policy labels alone', () => {
+    const strings = packStrings('union-1861');
+    const hold = strings['situation.confederate_commissioners.option.hold_and_talk']!;
+    const approve = strings['situation.fort_monroe_arrivals.option.approve_holding']!;
+    expect(offeredLabel).toContain(hold);
+    expect(approve).toBe('Do not give them up: employ them and keep account, their final status reserved');
+    expect(writingCandidates(['Hold. Press. Prevail.', offeredLabel, approve])).toEqual(['Hold. Press. Prevail.']);
   });
 });

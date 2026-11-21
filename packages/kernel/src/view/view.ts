@@ -74,10 +74,15 @@ function claimView(c: ReportClaim): ClaimView {
   });
 }
 
-function reportView(r: KnownReport, threshold: number): ReportView {
+function reportView(r: KnownReport, world: SeatsWorld): ReportView {
   const b = r.knownBody;
+  const notice = b.reportSubjectKind === 'situation'
+    ? world.situations.find(s => s.id === b.reportSubjectId && s.kind === 'notice'
+      && s.report?.reportType === b.reportType && s.report.subtype === b.reportSubtype)
+    : undefined;
   return freeze({
     id: r.id,
+    ...(notice === undefined ? {} : { text: notice.text }),
     ...(b.reportNotes === undefined ? {} : { notes: freeze(b.reportNotes.map(n => freeze({ ...n, accountMark: freeze({ ...n.accountMark, markVia: freeze([...n.accountMark.markVia]) }), accountReasons: freeze(n.accountReasons.map(s => freeze({ ...s }))) }))) }),
     type: b.reportType,
     subtype: b.reportSubtype,
@@ -86,7 +91,7 @@ function reportView(r: KnownReport, threshold: number): ReportView {
     subjectKind: b.reportSubjectKind,
     subjectId: b.reportSubjectId,
     claims: freeze(b.reportClaims.map(claimView)),
-    reportedControl: freeze([...controlEvidence([r], threshold)].map(([region, { holder, contested }]) => freeze({ region, holder, contested }))),
+    reportedControl: freeze([...controlEvidence([r], world.map.world.rules.supplyControlPermille)].map(([region, { holder, contested }]) => freeze({ region, holder, contested }))),
     ...(r.knownPublicOpening === true ? { openingControl: true as const } : {}),
     day: b.reportDay,
     hour: b.reportHour,
@@ -139,7 +144,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
       reportsForView(knowledge).map((r) => {
         let v = cache.reports.get(r);
         if (v === undefined) {
-          v = reportView(r, world.map.world.rules.supplyControlPermille);
+          v = reportView(r, world);
           cache.reports.set(r, v);
         }
         return v;

@@ -35,7 +35,7 @@ export class DeskAdapter {
     }));
     // Deliberate allow-list. Never spread ConsoleGame or return its log/state/world.
     return structuredClone({
-      pack: this.game.pack, morning, date: this.game.dateOf(morning.requestDay),
+      pack: this.game.pack, morning, date: this.game.dateOfRequest(morning.requestDay),
       strings: this.game.strings, queue: this.queue.map(q => ({ line: q.line, text: commandText(q.command, key => this.game.strings[key] ?? key) })),
       history: this.history, paperText, help: HELP, closed: this.closed,approvedPlans:[...this.approvedPlans.values()],
     });

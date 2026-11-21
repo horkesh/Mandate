@@ -48,7 +48,7 @@ describe('the console plays a scripted week of the testbed, headless', () => {
   const text = transcript.join('\n');
 
   it('opens on the principal’s first morning, and names the posts he may order', () => {
-    expect(transcript[1]).toBe('=== 1861-04-02 (day 1): n_leader, north; 12 attention left this week ===');
+    expect(transcript[1]).toBe('=== 1861-04-01 (day 1): n_leader, north; 12 attention left this week ===');
     expect(text).toMatch(/^n_army_east: n_organiser via n_war_office; courier 2d/m);
   });
 
@@ -71,7 +71,7 @@ describe('the console plays a scripted week of the testbed, headless', () => {
   it('shows the plan for review, previews an edit before it is sent, and sends the approval', () => {
     expect(text).toContain('n_army_east (n_organiser) submits a plan for your review:');
     expect(text).toMatch(/That edit cannot be made: axis \w+ holds where it stands|As edited \(on today’s map/);
-    expect(turns[1]![0]).toBe('Sent: approve n_army_east\'s plan.');
+    expect(turns[1]![0]).toBe('Sent: approve n_army_east\'s plan by wire, through the chain.');
   });
 
   it('keeps the situations before him for his decision, and sends it', () => {
@@ -134,7 +134,7 @@ describe('the console plays a scripted week of union-1861 (stub until lanes 1.11
   const text = transcript.join('\n');
 
   it('opens on the principal’s first morning, at peace', () => {
-    expect(transcript[1]).toMatch(/^=== 1861-03-06 \(day 1\): lincoln_abraham, union; at peace; \d+ attention left this week ===$/);
+    expect(transcript[1]).toMatch(/^=== 1861-03-05 \(day 1\): lincoln_abraham, union; at peace; \d+ attention left this week ===$/);
     expect(text).toContain('No situation is before you.');
   });
 
@@ -142,7 +142,7 @@ describe('the console plays a scripted week of union-1861 (stub until lanes 1.11
     expect(turns[0]![0]).toBe('Sent: address the radicals; ask us_general_in_chief for a report; ask us_army_hq for a report.');
     expect(daysOf(turns[0]!)).toBeGreaterThan(0);
     expect(daysOf(turns[0]!)).toBeLessThanOrEqual(7);
-    expect(text).toContain('Refused: ask us_army_hq for a report (unknown_post)');
+    expect(text).toContain('Refused: ask us_army_hq for a report (That post is not known.)');
     expect(text).not.toContain('Refused: address');
     expect(text).not.toContain('Refused: ask us_general_in_chief');
   });

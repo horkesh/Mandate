@@ -32,10 +32,11 @@ export function baselineHistoryProblems(before: readonly Finding[], now: readonl
   return now.flatMap(f => {
     const previous = old.get(key(f));
     if (previous === undefined) return [`known findings cannot grow: ${f.rule} ${f.path}`];
-    // CODEX S34 explicitly authorizes baselining the combined sprint code.
-    // Only its pinned desk merge may migrate an EXISTING projection identity;
+    // CODEX S34/S39 explicitly authorize these pinned sprint integrations.
+    // Only their pinned merge may migrate an EXISTING projection identity;
     // no other commit, merge, finding kind or additional read path qualifies.
-    const sprintProjection = mergeHead === '7db8c80a605c4410f458487778cadc7008ac8909' && f.rule === 'projection-truth';
+    const sprintProjection = (mergeHead === '7db8c80a605c4410f458487778cadc7008ac8909'
+      || mergeHead === '64e4a6f0711edd50e1a7cfcd57041924a14005d3') && f.rule === 'projection-truth';
     return previous.hash !== f.hash && !checkerChanged && !sprintProjection ? [`cannot refresh a known defect fingerprint without changing its checker: ${f.rule} ${f.path}`] : [];
   });
 }

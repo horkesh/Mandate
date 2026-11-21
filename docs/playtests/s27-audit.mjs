@@ -4,6 +4,7 @@ import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
+import { writingCandidates } from './writing-screen.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const dir = join(root, 'runs/s27');
@@ -34,7 +35,6 @@ for (const name of names) {
     if (/\| recommends \S+ \([^)]*_[^)]*\)/.test(line)) categories.push('internal-advice-reasons');
     if (/\b(?:comply_with_reservations|slow_walk|awaiting-strength|effective-strength)\b/.test(line)) categories.push('technical-status-or-claim');
     if (/\bfort-surrendered 0\b/.test(line)) categories.push('raw-event-scalar');
-    if (/^- hold_and_talk: File a refusal, hold back its delivery, and keep /.test(line) || /^- approve_holding: Do not give them up: employ them and keep account/.test(line)) categories.push('literal-imperative-triad');
     for (const category of categories) {
       const key = `${category}\0${line}`;
       const row = writing.get(key) ?? { category, text: line, locations: [] };
@@ -64,7 +64,7 @@ for (const name of names) {
     writingLocationsThroughJuly: [...writing.values()],
   });
 }
-const genericBans = [...prose].filter(line => /·|\b[A-Z]{3,}(?: [A-Z]{2,})+\b|(?:[A-Z][a-z]+ [^.;]{1,35}[.;] ){2}[A-Z][a-z]+ [^.;]{1,35}[.;]/.test(line));
+const genericBans = writingCandidates([...prose]);
 const supplemental = [];
 const verbs = /^(order|approve|sendback|edit|go|call|decide|delegate|appoint|relieve|transfer|inquire|consult|audience|observer|promise|pressure|address)(?: |$)/;
 for (const filename of readdirSync(dir).filter(f => /^(preflight|short-probe|survey-.*)\.ndjson$/.test(f)).sort()) {
@@ -78,10 +78,8 @@ writeFileSync(join(root, 'docs/playtests/s27-evidence.json'), `${JSON.stringify(
   base: 'bf6cc66c025a0567a991f1a94eb9ba20656f4004',
   scope: 'Console-visible evidence only. July output excludes later days within an overrun turn; a final morning in August is not July evidence.',
   locationConvention: 'record and offset are zero-based indices in each named NDJSON file. Writing rows enumerate all matching locations, including re-reading the same report.',
-  writingAudit: { genericPatternCandidates: genericBans, manualTriadFindings: [
-    'hold_and_talk: File a refusal, hold back its delivery, and keep an unofficial channel through Justice Campbell',
-    'approve_holding: Do not give them up: employ them and keep account, their final status reserved',
-  ], caution: 'Pattern screening missed the comma-separated imperative triads, found by reading the prose. It is not a proof of literary quality.', distinctNonReportLines: prose.size },
+  writingAudit: { genericPatternCandidates: genericBans, manualTriadFindings: [],
+    caution: 'S35: substantive policy labels are permitted. This candidate screen is not a proof of literary quality.', distinctNonReportLines: prose.size },
   strategies, supplemental,
 }, null, 2)}\n`);
 writeFileSync(join(dir, 'prose-for-reading.txt'), `${[...prose].sort().join('\n')}\n`);

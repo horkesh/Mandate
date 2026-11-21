@@ -72,17 +72,23 @@ export function noteCandidates(ctx: Ctx, originals: readonly PlanCandidate[]): P
     const alt = alternative(ctx, combined, reading.mark, index);
     if (alt) { candidates.push(alt); combined = alt; }
   }
+  return candidates.map(c => scoreNotes(ctx, c, candidates));
+}
+
+/** Score a rebuilt candidate on the same delivered-note basis as its draft.
+ * Alternatives explain an unfollowed mark; they never change its weight. */
+export function scoreNotes(ctx: Ctx, c: PlanCandidate, alternatives: readonly PlanCandidate[]): PlanCandidate {
+  const notes = ctx.input.notes ?? [];
+  if (!notes.length) return c;
   const max = ctx.input.noteScoreWeight;
   if (max === undefined) throw new RangeError('note scoring needs the pack weight');
-  return candidates.map(c => {
-    const breakdown = notes.map((n, i) => {
-      const followed = followsNote(c, n.mark);
-      const possible = candidates.some(other => followsNote(other, n.mark));
-      return { noteIndex: i, noteFollowed: n.weight > 0 && followed,
-        noteWhy: n.weight <= 0 ? 'declined' as const : followed ? 'followed' as const : possible ? 'own_judgement' as const : 'unavailable' as const,
-        noteAmount: n.weight > 0 && followed ? Math.trunc(max * n.weight / 1000) : 0 };
-    });
-    const term: PlanTerm = { contribTerm: 'notes', contribAmount: breakdown.reduce((s,n) => s+n.noteAmount,0), contribWhy: 'delivered marks, weighted by compliance' };
-    return { ...c, candNotes: breakdown, candTerms: [...c.candTerms, term], candScore: c.candScore + term.contribAmount };
+  const breakdown = notes.map((n, i) => {
+    const followed = followsNote(c, n.mark);
+    const possible = followed || alternatives.some(other => followsNote(other, n.mark));
+    return { noteIndex: i, noteFollowed: n.weight > 0 && followed,
+      noteWhy: n.weight <= 0 ? 'declined' as const : followed ? 'followed' as const : possible ? 'own_judgement' as const : 'unavailable' as const,
+      noteAmount: n.weight > 0 && followed ? Math.trunc(max * n.weight / 1000) : 0 };
   });
+  const term: PlanTerm = { contribTerm: 'notes', contribAmount: breakdown.reduce((s,n) => s+n.noteAmount,0), contribWhy: 'delivered marks, weighted by compliance' };
+  return { ...c, candNotes: breakdown, candTerms: [...c.candTerms, term], candScore: c.candScore + term.contribAmount };
 }

@@ -1,0 +1,605 @@
+{
+  "scope": "S35 only; no push, no signatures, headless CLI tools only",
+  "base": "78eb7dbff1243409265ab2f71b41ceab08abeb36",
+  "playtest": "4bf2b8bab7e3478db66e6d08a4e1f4a718c9a83b",
+  "deskReadOnly": "9c820e4bc0f93d4bb570777fe918fd7b3ce5e64d",
+  "hashEvidence": [
+    {
+      "name": "history",
+      "days": 148,
+      "initial": "2f9387fb0cf695384b3d6df8e734abaf2607e8e08aed5edc00e04899098c2dcc",
+      "final": "0cfa53c7505b94a60d454e824f2a8fa0c4ade794005e60b8391666e71944a52b",
+      "world": "0965f8a2e2779963c827679ae1aa841ae166bb540bcbd78f171679c760a71ffb",
+      "sameWorld": true,
+      "sameInitial": true,
+      "sameDailyHashes": true,
+      "sameCheckpoints": true,
+      "sameDailyActivity": true,
+      "sameLiveness": true,
+      "beforeFile": "runs/s35/baseline-history.json",
+      "afterFile": "runs/s35/final-history.json"
+    },
+    {
+      "name": "testbed",
+      "days": 120,
+      "initial": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b",
+      "final": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+      "world": "da5bfbf0de57227a8c56d2ccaa89600786c4d83716b91b949294217f35820604",
+      "sameWorld": true,
+      "sameInitial": true,
+      "sameDailyHashes": true,
+      "sameCheckpoints": true,
+      "sameDailyActivity": true,
+      "sameLiveness": true,
+      "beforeFile": "runs/s35/baseline-testbed.json",
+      "afterFile": "runs/s35/final-testbed.json"
+    }
+  ],
+  "human": [
+    {
+      "label": "before",
+      "source": "runs/s35/before-s29.json",
+      "sha256": "ea941e8857a94318c71fdd4909fcf1507ef4b143bed3cfed460d48f9b5652a58",
+      "hash": "fc9b52e82b0e7f2d5acbb2f6377e6150a1561a0c37b15eb9982dfcb0e38a9459",
+      "rejections": 0,
+      "editDay": 140,
+      "chosenScore": 1372,
+      "chosenNotes": {
+        "contribTerm": "notes",
+        "contribAmount": 600,
+        "contribWhy": "delivered marks, weighted by compliance"
+      },
+      "counter": {
+        "counterSpec": {
+          "editKind": "waypoints",
+          "editAxis": "main",
+          "editRegion": null,
+          "editVia": [
+            "northern_virginia"
+          ],
+          "editConcentration": null
+        },
+        "counterOrder": "m.140.lincoln_abraham.stone_charles_p.edit.us_dc_militia",
+        "counterDay": 140,
+        "counterDistance": 600,
+        "counterFell": [
+          {
+            "dropTerm": "notes",
+            "dropAmount": 600
+          }
+        ],
+        "counterInvalid": null,
+        "counterResponse": "m.140.lincoln_abraham.stone_charles_p.edit.us_dc_militia|stone_charles_p"
+      },
+      "approvedScore": 1313,
+      "actual": "reinterpret",
+      "declared": "comply",
+      "battles": [
+        {
+          "id": "battle:fort_sumter:38",
+          "start": 38,
+          "end": 39,
+          "foughtDays": [
+            38,
+            39
+          ]
+        },
+        {
+          "id": "battle:manassas:145",
+          "start": 145,
+          "end": 146,
+          "foughtDays": [
+            145,
+            146
+          ]
+        }
+      ],
+      "fieldPapers": [
+        {
+          "id": "m.145.stone_charles_p.lincoln_abraham.battle.dawn.union",
+          "author": "stone_charles_p",
+          "day": 145,
+          "hour": 8,
+          "written": "1861-07-28",
+          "received": "1861-07-30"
+        },
+        {
+          "id": "m.145.stone_charles_p.lincoln_abraham.battle.evening.union",
+          "author": "stone_charles_p",
+          "day": 145,
+          "hour": 21,
+          "written": "1861-07-28",
+          "received": "1861-07-30"
+        },
+        {
+          "id": "m.145.stone_charles_p.lincoln_abraham.battle.morning.union",
+          "author": "stone_charles_p",
+          "day": 145,
+          "hour": 12,
+          "written": "1861-07-28",
+          "received": "1861-07-30"
+        },
+        {
+          "id": "m.146.stone_charles_p.lincoln_abraham.battle.dawn.union",
+          "author": "stone_charles_p",
+          "day": 146,
+          "hour": 8,
+          "written": "1861-07-29",
+          "received": "1861-07-30"
+        },
+        {
+          "id": "m.146.stone_charles_p.lincoln_abraham.battle.morning.union",
+          "author": "stone_charles_p",
+          "day": 146,
+          "hour": 12,
+          "written": "1861-07-29",
+          "received": "1861-07-30"
+        },
+        {
+          "id": "m.145.stone_charles_p.lincoln_abraham.battle.afternoon.union",
+          "author": "stone_charles_p",
+          "day": 145,
+          "hour": 17,
+          "written": "1861-07-28",
+          "received": "1861-07-31"
+        },
+        {
+          "id": "m.146.stone_charles_p.lincoln_abraham.battle.afternoon.union",
+          "author": "stone_charles_p",
+          "day": 146,
+          "hour": 17,
+          "written": "1861-07-29",
+          "received": "1861-07-31"
+        },
+        {
+          "id": "m.146.stone_charles_p.lincoln_abraham.battle.evening.union",
+          "author": "stone_charles_p",
+          "day": 146,
+          "hour": 21,
+          "written": "1861-07-29",
+          "received": "1861-07-31"
+        }
+      ]
+    },
+    {
+      "label": "after",
+      "source": "runs/s35/after-s29.json",
+      "sha256": "03e2d1aa9532ccaf38c4460bc1bebabc1e04a12fce613999fd4f0170aebbfff1",
+      "hash": "9abc3fc2d9ec93271f0b1a9411a8f885fc8aed4aec928403b2ecc96181eb130f",
+      "rejections": 0,
+      "editDay": 140,
+      "chosenScore": 1372,
+      "chosenNotes": {
+        "contribTerm": "notes",
+        "contribAmount": 600,
+        "contribWhy": "delivered marks, weighted by compliance"
+      },
+      "counter": {
+        "counterSpec": {
+          "editKind": "waypoints",
+          "editAxis": "main",
+          "editRegion": null,
+          "editVia": [
+            "northern_virginia"
+          ],
+          "editConcentration": null
+        },
+        "counterOrder": "m.140.lincoln_abraham.stone_charles_p.edit.us_dc_militia",
+        "counterDay": 140,
+        "counterDistance": 0,
+        "counterFell": [],
+        "counterInvalid": null,
+        "counterResponse": "m.140.lincoln_abraham.stone_charles_p.edit.us_dc_militia|stone_charles_p"
+      },
+      "approvedScore": 1372,
+      "actual": "comply",
+      "declared": "comply",
+      "battles": [
+        {
+          "id": "battle:fort_sumter:38",
+          "start": 38,
+          "end": 39,
+          "foughtDays": [
+            38,
+            39
+          ]
+        },
+        {
+          "id": "battle:manassas:147",
+          "start": 147,
+          "end": null,
+          "foughtDays": [
+            147,
+            148
+          ]
+        }
+      ],
+      "fieldPapers": [
+        {
+          "id": "m.147.stone_charles_p.lincoln_abraham.battle.afternoon.union",
+          "author": "stone_charles_p",
+          "day": 147,
+          "hour": 17,
+          "written": "1861-07-30",
+          "received": "1861-07-31"
+        },
+        {
+          "id": "m.147.stone_charles_p.lincoln_abraham.battle.dawn.union",
+          "author": "stone_charles_p",
+          "day": 147,
+          "hour": 8,
+          "written": "1861-07-30",
+          "received": "1861-07-31"
+        },
+        {
+          "id": "m.147.stone_charles_p.lincoln_abraham.battle.evening.union",
+          "author": "stone_charles_p",
+          "day": 147,
+          "hour": 21,
+          "written": "1861-07-30",
+          "received": "1861-07-31"
+        },
+        {
+          "id": "m.147.stone_charles_p.lincoln_abraham.battle.morning.union",
+          "author": "stone_charles_p",
+          "day": 147,
+          "hour": 12,
+          "written": "1861-07-30",
+          "received": "1861-07-31"
+        }
+      ]
+    }
+  ],
+  "runtime": {
+    "exit": 1,
+    "elapsedSeconds": 1411.6586928710938,
+    "criteria": [
+      "PASS  [behaviour] rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+      "PASS  [hash] the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+      "PASS  [resume] a mid-run save, loaded, resumes to the continuous run’s final hash, and the log replays to every hash",
+      "PASS  [liveness] every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+      "PASS  [section-ten] the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite’s)",
+      "FAIL  [budget] the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+      "      ! union-1861, war by decision, 148 days: median 49.5 ms a day, over the 40 ms budget",
+      "      ! union-1861 history run, 148 days to 1861-07-31: median 50.1 ms a day, over the 40 ms budget",
+      "PASS  [checkpoints] the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+      "PASS  [operation] at least one operation drafted by the kernel planner, chosen by its commander’s seat, approved, executed and fought with the battle model, with a breakdown",
+      "FAIL  [pushback] pushback fires inside its bands: lower bounds from the record’s sourced cases (S01–S21), upper bounds the lead’s",
+      "      ! union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+      "      ! union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+      "      ! union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+      "      ! union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 16, above 9",
+      "      ! union-1861 history run, 148 days to 1861-07-31: slow walks: 15, above 9",
+      "PASS  [unknown-strength] no block fights with unknown strength: every battle record, in every run, lists none unknown",
+      "PASS  [stand-ins] the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+      "FAIL  [lever-sweep] the lever sweep (D6): no watched option, nor an atrocity-class decision’s inaction, is the victory-only bot’s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active",
+      "      ! union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+      "      ! union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+    ],
+    "timing": [
+      "FAIL  [budget] the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+      "        union-1861, war by decision, 148 days: median 49.53 ms, p95 73.28 ms, max 94.29 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 62)",
+      "        testbed, 120 days: median 3.90 ms, p95 5.05 ms, max 12.24 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+      "        union-1861 history run, 148 days to 1861-07-31: median 50.15 ms, p95 73.32 ms, max 97.92 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 62)",
+      "      ! union-1861, war by decision, 148 days: median 49.5 ms a day, over the 40 ms budget",
+      "      ! union-1861 history run, 148 days to 1861-07-31: median 50.1 ms a day, over the 40 ms budget",
+      "  union-1861, war by decision, 148 days: median 49.53 ms, p95 73.28 ms, max 94.29 ms over 148 days",
+      "  testbed, 120 days: median 3.90 ms, p95 5.05 ms, max 12.24 ms over 120 days",
+      "  union-1861 history run, 148 days to 1861-07-31: median 50.15 ms, p95 73.32 ms, max 97.92 ms over 148 days",
+      "  one day of all 23 drafts back to back: median 43.0 ms, p95 49.4 ms, worst 49.6 ms over 20 days; slowest single draft 8.1 ms; a capped day (the pack's 3 slowest drafts for each of 2 sides, together) at worst 28.0 ms"
+    ],
+    "changedBandDefinitions": [],
+    "changedReferenceLiveness": [],
+    "log": "runs/s35/done-check.log"
+  },
+  "inventory": [
+    {
+      "path": "docs/playtests/2026-11-21-console-playtests.md",
+      "bytes": 22427,
+      "sha256": "d1ea816f6672cca94f309b1f89b7046881114d6a277a0d7405f48a7d43fc12f2"
+    },
+    {
+      "path": "docs/playtests/s27-audit.mjs",
+      "bytes": 5768,
+      "sha256": "8ac7bd224b1d0e9a6e0219896510a3643200fb62b20bfb3a8b9b2244c692eb29"
+    },
+    {
+      "path": "docs/playtests/s27-console-playtests.mjs",
+      "bytes": 11423,
+      "sha256": "0dfbfa79a8254627952681443a2affd67590bad52d9089cea462de755da5abfd"
+    },
+    {
+      "path": "docs/playtests/s27-console-regressions.test.ts",
+      "bytes": 5979,
+      "sha256": "422ca9f9f62452c4c47f07911bde79be43188e133cf39f9d540f391582343bc5"
+    },
+    {
+      "path": "docs/playtests/s27-evidence.json",
+      "bytes": 193789,
+      "sha256": "f3481f4210ba286f4394465090ac1af6abdc8b2c6ece3f24b55dcc8e9d7fc266"
+    },
+    {
+      "path": "docs/playtests/s27-validation.json",
+      "bytes": 6995,
+      "sha256": "a0e9c57f862fdc915d6f92d1f046c842e0d36e6b6acf91e8536147bcd3a29169"
+    },
+    {
+      "path": "docs/playtests/s27-writing-regressions.test.ts",
+      "bytes": 1459,
+      "sha256": "73c9e04135f9425d67c121c7f11af47ccdd6a9e62411a8dd6b88ffa66237313c"
+    },
+    {
+      "path": "docs/playtests/s35-replay.ts",
+      "bytes": 4438,
+      "sha256": "463cb51edda83e4dddec0ee23e0c173a0cd661213c5656c913107aa12a51d237"
+    },
+    {
+      "path": "docs/playtests/s35-s29-commands.json",
+      "bytes": 18841,
+      "sha256": "bab6f111c213d89ce7584dc8281e6eb115122e49c83fef025e9dc7cc75449aa0"
+    },
+    {
+      "path": "docs/playtests/writing-screen.d.mts",
+      "bytes": 71,
+      "sha256": "7c465515d90f11a574ab93ce61f2f3cf2d95b7e419dda00c7115845cedef609b"
+    },
+    {
+      "path": "docs/playtests/writing-screen.mjs",
+      "bytes": 355,
+      "sha256": "5943c4fb4334707a24be10fbb6adca4fc8966bbad3cd0138e9b50f6ad2c9d372"
+    },
+    {
+      "path": "packages/cli/src/console/game.ts",
+      "bytes": 7807,
+      "sha256": "f9cf9b0f87deb1b3d57f7373b85caeefec166864a62d3f7dd120c265ee98339e"
+    },
+    {
+      "path": "packages/cli/src/console/session.ts",
+      "bytes": 6238,
+      "sha256": "a20f74cec16af0a0e05683518e3d8845e3506bf7007a8066ee45d5a5b44a6571"
+    },
+    {
+      "path": "packages/cli/src/desk/commands.ts",
+      "bytes": 19781,
+      "sha256": "7e15b7454571a573a86c18ac779aa84f4b268cc0a1d56eebff39594d284a1b75"
+    },
+    {
+      "path": "packages/cli/src/desk/dispatches.ts",
+      "bytes": 5754,
+      "sha256": "b0bd20058ff5e085c514077d784a3a8674b86454c15209da0361e228b75f9be4"
+    },
+    {
+      "path": "packages/cli/src/desk/render.ts",
+      "bytes": 9113,
+      "sha256": "bd96fe0223c2ba43e9f59a725762739dca33225610514bb18589c6047188acd8"
+    },
+    {
+      "path": "packages/cli/test/console-session.test.ts",
+      "bytes": 15871,
+      "sha256": "220661247e8c2acfcf36fc11de8c3f1328c9067f9dd6ee83876ea9b100f23864"
+    },
+    {
+      "path": "packages/cli/test/console.test.ts",
+      "bytes": 8213,
+      "sha256": "6e350e981877fd3e9c86726c7d5c4605e84510eb4b3f9e7edde38bc324d1b06d"
+    },
+    {
+      "path": "packages/cli/test/play-fixes.test.ts",
+      "bytes": 3601,
+      "sha256": "33cd7210b7731ae8e04744f46cc63255d8dde70d8d06f9ec7a10a1b10121a799"
+    },
+    {
+      "path": "packages/kernel/src/planner/edits.ts",
+      "bytes": 11559,
+      "sha256": "c98292dd67458f5e8f11a47deaba86cb3894b282693ca46a688b5696c466d980"
+    },
+    {
+      "path": "packages/kernel/src/planner/notes.ts",
+      "bytes": 5490,
+      "sha256": "2058c55e7c3b6486595888cb837a2370e2bc0e866bbc59005398fb46a45370d8"
+    },
+    {
+      "path": "packages/kernel/src/tick/plans.ts",
+      "bytes": 16178,
+      "sha256": "0e0a0e8b7276efb490faed7ebd41d5a35b4afd784d5946e0ead80bb140491d44"
+    },
+    {
+      "path": "packages/kernel/src/view/types.ts",
+      "bytes": 9203,
+      "sha256": "61b4ece697d20a47b8bcc5337adb3cfb676d1c48e153df5f070f27289697710f"
+    },
+    {
+      "path": "packages/kernel/src/view/view.ts",
+      "bytes": 13759,
+      "sha256": "5a9fb2cfe62b6a80486c3450c6152557835768e8406f1ecc28226cea16676400"
+    },
+    {
+      "path": "packages/kernel/test/sendback-notes.test.ts",
+      "bytes": 11992,
+      "sha256": "ac1daca54f4a3a601538340304c857b3a64ccfa20557565c8b3c013dd19139ad"
+    },
+    {
+      "path": "packages/kernel/test/situations.test.ts",
+      "bytes": 30632,
+      "sha256": "cc73d82225d694c03bae00d2c3d685fc6c5eb6957e843854a23ddedead11ad1b"
+    },
+    {
+      "path": "packs/testbed/strings/en.json",
+      "bytes": 12157,
+      "sha256": "d1339283118e2dec89117f6517bd851fbe33704d3ec4486da16e3229c5337d1d"
+    },
+    {
+      "path": "packs/union-1861/strings/en.json",
+      "bytes": 41614,
+      "sha256": "e9c8ad05a8550f0543730957583183b11e34037d9ced7fbb02c3f523a809c3d5"
+    },
+    {
+      "path": "packs/union-1861/test/s27-console-playtests.test.ts",
+      "bytes": 288,
+      "sha256": "3484caa634bf32b0ab5fc34469dc2f014a3469d5b320a7f64e24a4b91be6b4c9"
+    },
+    {
+      "path": "packs/union-1861/test/s35-scoring.test.ts",
+      "bytes": 1579,
+      "sha256": "3f679f00860aed626d35745086ceda2589e8671a839d1cb63aedce4d96e17ca9"
+    },
+    {
+      "path": "prototypes/desk/server/adapter.ts",
+      "bytes": 4829,
+      "sha256": "01a15002fd41dfade0407c1fbb6452c44fc83d7a6b3c2111f9785c523c86475b"
+    }
+  ],
+  "excludedCloseoutDocs": [
+    "notes/sprint-S35-fixes-play.md",
+    "docs/playtests/2026-11-21-play-fixes.md",
+    "docs/playtests/s35-validation.json"
+  ],
+  "stringEvidence": [
+    {
+      "path": "packs/testbed/strings/en.json",
+      "existingKeysPreserved": 159,
+      "addedKeys": [
+        "console.refusal.bad_goal",
+        "console.refusal.bad_review",
+        "console.refusal.bad_selection",
+        "console.refusal.no_plan",
+        "console.refusal.not_delegable",
+        "console.refusal.not_the_decider",
+        "console.refusal.situation_not_open",
+        "console.refusal.duplicate_choice",
+        "console.refusal.malformed",
+        "console.refusal.no_such_request",
+        "console.refusal.not_a_principal",
+        "console.refusal.not_an_option",
+        "console.refusal.not_field_post",
+        "console.refusal.not_raising_post",
+        "console.refusal.bad_call",
+        "console.refusal.other_side",
+        "console.refusal.player_seat",
+        "console.refusal.route_unavailable",
+        "console.refusal.unknown_post",
+        "console.refusal.unknown_seat",
+        "console.refusal.vacant_post",
+        "console.refusal.wrong_day",
+        "console.refusal.already_promised",
+        "console.refusal.bad_counters",
+        "console.refusal.no_attention",
+        "console.refusal.person_holds_post",
+        "console.refusal.post_held",
+        "console.refusal.too_soon",
+        "console.refusal.unknown_bloc",
+        "console.refusal.unknown_person",
+        "console.refusal.unknown_rank",
+        "console.refusal.unknown_region",
+        "console.refusal.unavailable"
+      ]
+    },
+    {
+      "path": "packs/union-1861/strings/en.json",
+      "existingKeysPreserved": 434,
+      "addedKeys": [
+        "console.refusal.bad_goal",
+        "console.refusal.bad_review",
+        "console.refusal.bad_selection",
+        "console.refusal.no_plan",
+        "console.refusal.not_delegable",
+        "console.refusal.not_the_decider",
+        "console.refusal.situation_not_open",
+        "console.refusal.duplicate_choice",
+        "console.refusal.malformed",
+        "console.refusal.no_such_request",
+        "console.refusal.not_a_principal",
+        "console.refusal.not_an_option",
+        "console.refusal.not_field_post",
+        "console.refusal.not_raising_post",
+        "console.refusal.bad_call",
+        "console.refusal.other_side",
+        "console.refusal.player_seat",
+        "console.refusal.route_unavailable",
+        "console.refusal.unknown_post",
+        "console.refusal.unknown_seat",
+        "console.refusal.vacant_post",
+        "console.refusal.wrong_day",
+        "console.refusal.already_promised",
+        "console.refusal.bad_counters",
+        "console.refusal.no_attention",
+        "console.refusal.person_holds_post",
+        "console.refusal.post_held",
+        "console.refusal.too_soon",
+        "console.refusal.unknown_bloc",
+        "console.refusal.unknown_person",
+        "console.refusal.unknown_rank",
+        "console.refusal.unknown_region",
+        "console.refusal.unavailable"
+      ]
+    }
+  ],
+  "preservation": {
+    "originalTracked": 1699,
+    "protectedInputs": 169,
+    "protectedInputsChanged": [],
+    "originalPathsOutsideChange": 1682
+  },
+  "logs": [
+    {
+      "path": "runs/s35/merge-focused.log",
+      "sha256": "4c486d54053ccd0ed0e05e08e20faa00b2da95bd8a01016a375f4936eb962fd3"
+    },
+    {
+      "path": "runs/s35/merge-hook.log",
+      "sha256": "36971afa00fb077e6630d1994e26dc5aa79588ca0a66ead9728b8727d86beb7b"
+    },
+    {
+      "path": "runs/s35/console-red.log",
+      "sha256": "e17dd610d367406186ec3c5e3942532a2274693f9e2b9c89bc2241c2c677fe57"
+    },
+    {
+      "path": "runs/s35/priority-green.log",
+      "sha256": "a85f6f27bcd442cbb09b6e3160497d6592f7e530fcd08e7ac9cbaf621fc8947b"
+    },
+    {
+      "path": "runs/s35/console-green.log",
+      "sha256": "364c0c638757e550e52eebbe496a24c05d6039bf0a2ae0aad8c187c353473e77"
+    },
+    {
+      "path": "runs/s35/console-targeted.log",
+      "sha256": "5383cbf0ac82db2af0cc1d9dd2937c633d26461a8d8b9e11641ed68e21d92a96"
+    },
+    {
+      "path": "runs/s35/console-correction.log",
+      "sha256": "13d33a7e04a28ececc94aeeeb4f8df2800dc0829d8279e594123f79e558d87af"
+    },
+    {
+      "path": "runs/s35/console-session.log",
+      "sha256": "4948586d5026e39b66c42d6d50433b7b3c5bd4b5464ff9e6be75111bf6d6a2f4"
+    },
+    {
+      "path": "runs/s35/console-hook.log",
+      "sha256": "9ebe41670a4d6591c2c8e4a79288da6b73769413e0e262f46fc9f2b8e8162c21"
+    },
+    {
+      "path": "runs/s35/note-red.log",
+      "sha256": "36e3d8804349795960fe1407ffb9545bbe654f1db8d9433d14ce5fc16b748691"
+    },
+    {
+      "path": "runs/s35/note-vitest-red.log",
+      "sha256": "f567df4f2bf15803cbcdecddb3a00bd43271c61a29794c754d85680935dc2f98"
+    },
+    {
+      "path": "runs/s35/note-kernel-red.log",
+      "sha256": "57245c83641d8e4ce85dc309f89cec1d5668539a3a9f5732218ca4ff9cce8889"
+    },
+    {
+      "path": "runs/s35/note-green.log",
+      "sha256": "b05e179f370c1545a03ff7c04a19c1539dcddda978cb6c00f0b950cde25df6b4"
+    },
+    {
+      "path": "runs/s35/full-check.log",
+      "sha256": "89c36c5e53c4ca95b39f5efaddd874019438fa0602dda5bbcee0dff9989db451"
+    },
+    {
+      "path": "runs/s35/done-check.log",
+      "sha256": "55e533fb8efb33998c189fab251f80d96c532916f3d9d0c6d32f8a9292caee88"
+    }
+  ]
+}
