@@ -1,0 +1,245 @@
+{
+  "draft": true,
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topics": [
+    {
+      "topic": "self-emancipation",
+      "subject": "slavery",
+      "file": "self-emancipation.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "fugitive-policy",
+      "subject": "slavery",
+      "file": "fugitive-policy.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "union-freedpeople-camps",
+      "subject": "slavery",
+      "file": "union-freedpeople-camps.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "emancipation-policy",
+      "subject": "slavery",
+      "file": "emancipation-policy.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "confederate-enslaved-labour",
+      "subject": "slavery",
+      "file": "confederate-enslaved-labour.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "slavery-as-wealth",
+      "subject": "slavery",
+      "file": "slavery-as-wealth.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "prize-money-and-cotton",
+      "subject": "slavery",
+      "file": "prize-money-and-cotton.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "black-enlistment-1861-offers",
+      "subject": "service",
+      "file": "black-enlistment-1861-offers.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "black-enlistment",
+      "subject": "service",
+      "file": "black-enlistment.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "black-soldiers-pay",
+      "subject": "service",
+      "file": "black-soldiers-pay.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "black-sailors",
+      "subject": "service",
+      "file": "black-sailors.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "captured-black-soldiers",
+      "subject": "service",
+      "file": "captured-black-soldiers.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "capture-in-battle",
+      "subject": "prisoners",
+      "file": "capture-in-battle.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "prisoners-and-exchange",
+      "subject": "prisoners",
+      "file": "prisoners-and-exchange.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "guerrilla-war-west",
+      "subject": "civilians",
+      "file": "guerrilla-war-west.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "occupation-orders",
+      "subject": "civilians",
+      "file": "occupation-orders.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "unionist-repression",
+      "subject": "civilians",
+      "file": "unionist-repression.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "confederate-habeas",
+      "subject": "civilians",
+      "file": "confederate-habeas.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "union-habeas-and-arrests",
+      "subject": "civilians",
+      "file": "union-habeas-and-arrests.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "press-suppression",
+      "subject": "civilians",
+      "file": "press-suppression.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "riots-and-mobs",
+      "subject": "civilians",
+      "file": "riots-and-mobs.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "civilian-deaths-1861",
+      "subject": "civilians",
+      "file": "civilian-deaths-1861.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "twenty-slave-law",
+      "subject": "civilians",
+      "file": "twenty-slave-law.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "fort-pillow-and-jccw",
+      "subject": "civilians",
+      "file": "fort-pillow-and-jccw.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "indian-territory-1861",
+      "subject": "nations",
+      "file": "indian-territory-1861.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "dakota-war-1862",
+      "subject": "nations",
+      "file": "dakota-war-1862.draft.json",
+      "liveAtBase": false
+    },
+    {
+      "topic": "cause-of-secession",
+      "subject": "framing",
+      "file": "cause-of-secession.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "inaugural-slavery-passage",
+      "subject": "framing",
+      "file": "inaugural-slavery-passage.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "corwin-amendment",
+      "subject": "framing",
+      "file": "corwin-amendment.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "war-aims-1861",
+      "subject": "framing",
+      "file": "war-aims-1861.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "lost-cause-traps",
+      "subject": "framing",
+      "file": "lost-cause-traps.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "northern-racism-cost",
+      "subject": "framing",
+      "file": "northern-racism-cost.draft.json",
+      "liveAtBase": true
+    },
+    {
+      "topic": "verdict-text",
+      "subject": "framing",
+      "file": "verdict-text.draft.json",
+      "liveAtBase": false
+    }
+  ],
+  "rulesOnly": [
+    {
+      "topic": "neutral-option-wording",
+      "file": "common-rules.json",
+      "basis": "SENSITIVE-HISTORY 3.1: rule, not a register topic"
+    }
+  ],
+  "outsideWindow": [
+    {
+      "topic": "bread-riots",
+      "disposition": "Outside August 1861–November 1862; do not author or backdate.",
+      "basis": "SENSITIVE-HISTORY 3.4–3.7"
+    },
+    {
+      "topic": "confederate-arming-enslaved",
+      "disposition": "Outside August 1861–November 1862; do not author or backdate.",
+      "basis": "SENSITIVE-HISTORY 3.4–3.7"
+    },
+    {
+      "topic": "draft-riots",
+      "disposition": "Outside August 1861–November 1862; do not author or backdate.",
+      "basis": "SENSITIVE-HISTORY 3.4–3.7"
+    },
+    {
+      "topic": "commutation",
+      "disposition": "Outside August 1861–November 1862; do not author or backdate.",
+      "basis": "SENSITIVE-HISTORY 3.4–3.7"
+    },
+    {
+      "topic": "emergency-militia-1863",
+      "disposition": "Outside August 1861–November 1862; do not author or backdate.",
+      "basis": "SENSITIVE-HISTORY 3.4–3.7"
+    }
+  ],
+  "notes": [
+    "civilian-deaths-1861 has in-scope 1861 continuation only; no 1862 extension.",
+    "war-aims-1861 decision ends 6 August; later text remains bounded context.",
+    "fort-pillow-and-jccw covers only the in-window committee facet; later massacres not opened.",
+    "verdict-text is a continuing framing obligation, not authored verdict content.",
+    "prize-money-and-cotton includes only the protected-labor refusal; ordinary prizes/cotton remain outside the gate."
+  ]
+}

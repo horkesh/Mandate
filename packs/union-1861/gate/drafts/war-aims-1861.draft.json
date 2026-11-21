@@ -1,0 +1,101 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "war-aims-1861",
+  "subject": "framing",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "a4ec73aa2870ad43f7386db29841dd5d1ed08ed2de0b4bdf7c4a2c2fcacbd5da",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "war-aims-1861",
+    "class": "cause-and-aims",
+    "window": {
+      "from": "1861-07-04",
+      "to": "1861-08-06"
+    },
+    "placements": [
+      "decision",
+      "text"
+    ],
+    "status": "open",
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "refused": [],
+    "agencyReasons": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "war-aims",
+    "law"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "decision",
+      "recommendation": "[I] The live decision window ends 6 August. Carry submitted Senate text with its institutional status; later war-policy proposals use their own topics.",
+      "evidence": [
+        "war-aims",
+        "law"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "Crittenden"
+      },
+      {
+        "term": "Johnson"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "No adoption claim from a submission printing. It does not expressly say slavery; neither erase the implications nor insert an invented quotation."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "Johnson submitted the resolution on 24 July.",
+        "rejectExample": "The submission proves both chambers adopted identical words.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "lost-cause",
+    "hindsight",
+    "scoring"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "House wording/adoption votes remain unresolved in S7; do not expand the July decision through November 1862."
+  ],
+  "proposedRuling": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

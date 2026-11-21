@@ -1,0 +1,113 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "lost-cause-traps",
+  "subject": "framing",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "809e478442b52c723269d7312339e7f8244fb1f018e4acebb64d411598ba9ba9",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "lost-cause-traps",
+    "class": "cause-and-aims",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "refused"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "fieldPattern": "(?:^|[-_.:/])(?:black|colou?red|negro(?:es)?|african|enslaved|slaves?|servants?)[-_.:/](?:soldiers?|troops?|regiments?|companies|battalions?|units?|infantry|cavalry|artillery|volunteers?|strength)(?:$|[-_.:/])|(?:^|[-_.:/])(?:soldiers?|troops?|regiments?|companies|battalions?|units?|strength)[-_.:/](?:black|colou?red|negro(?:es)?|african|enslaved|slaves?|servants?)(?:$|[-_.:/])",
+        "reason": "no force field names race: no Black soldiers in Confederate force data (trap 3, \"Black Confederates\": they appear only as coerced labourers and body servants, [CS 4.2, 4.6]), and no goal or transfer field selects either side's forces by race (SENSITIVE-HISTORY 3.3, black-enlistment, refused)"
+      },
+      {
+        "fieldPattern": "(?:^|[-_.:/])(?:enslaved|slaves?|servants?|freedpeople|freedmen|black|colou?red|negro(?:es)?)[-_.:/](?:[a-z]+[-_.:/])?(?:loyalty|loyal|fidelity|faithfulness|contentment|docility|obedience)(?:$|[-_.:/])",
+        "optionPattern": "(?:loyal|faithful|happy|contented|devoted)[a-z_-]*(?:slaves?|servants?|enslaved)",
+        "labelPattern": "\\b(?:loyal|faithful|happy|contented|devoted)\\s+(?:slaves?|servants?|negro(?:es)?|enslaved)\\b",
+        "reason": "no loyalty value for any protected population, and no \"loyal slaves\" (trap 4, SENSITIVE-HISTORY 3.4; [CS 4.6])"
+      }
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "agencyReasons": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "confederate-acts",
+    "hunter-service",
+    "native-1862"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "refused",
+      "recommendation": "[I] Carry permanent framing/resource/composition refusals; period actors’ racist rationales never become narrator facts.",
+      "evidence": [
+        "confederate-acts",
+        "hunter-service",
+        "native-1862"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "slavery"
+      },
+      {
+        "term": "enslav\\w*"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Native Guards recitals do not prove willing Black Confederate combat. Nations/Black Southerners cannot disappear into a white Confederacy called the South."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The account attributes the official’s claim.",
+        "rejectExample": "Loyal enslaved people supported the Confederate cause.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "lost-cause",
+    "hindsight",
+    "scoring"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "No new source-policy exception; banned memoirs remain banned and weak evidence never sole."
+  ],
+  "proposedRuling": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "northern-racism-cost",
+  "subject": "framing",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "7d90ddcd0c6844684a6f227c6a6328e4f823f8519102941a5c39bf71ad5cc3da",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "northern-racism-cost",
+    "class": "slavery-and-emancipation",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "derived",
+      "text"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "labelPattern": "\\beconomic (?:concern|worry|worries|anxiety)\\b",
+        "reason": "the racist opposition to emancipation and Black enlistment is named as racist opposition, never framed as a neutral \"economic concern\" (SENSITIVE-HISTORY 3.2, northern-racism-cost, refused)"
+      }
+    ],
+    "agencyReasons": [
+      "agency:political-opposition"
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "protectedFields": []
+  },
+  "sources": [
+    "cabinet",
+    "colonization",
+    "jacobs"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "docs/design/SENSITIVE-HISTORY.md section 3.2; northern-racism-cost",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "derived",
+      "recommendation": "[I] Carry named racist opposition and attributed reaction; political costs must not become the game’s endorsement of racism.",
+      "evidence": [
+        "cabinet",
+        "colonization",
+        "jacobs"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] Each reason names people’s own choices responding to conditions; protected inputs have no player writer. The ids are candidate vocabulary, not implemented terms.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "slavery"
+      },
+      {
+        "term": "enslav\\w*"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Do not disguise racist opposition as a neutral economic concern. Blair’s fear and Jacobs’s report are neither a poll nor measured election effects."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The reason names racist opposition to emancipation.",
+        "rejectExample": "Neutral economic concerns explain all opposition.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "lost-cause",
+    "hindsight",
+    "scoring"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "S3 owns vote/opinion calibration; no coefficients or bloc unity are inferred."
+  ],
+  "proposedRuling": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

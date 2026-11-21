@@ -1,0 +1,101 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "cause-of-secession",
+  "subject": "framing",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "ed1b22f3096605d4d2d8dd89e1fe0700f1309ae92eddf97c6904628314f81f3d",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "cause-of-secession",
+    "class": "cause-and-aims",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "optionPattern": "states[-_]?rights|northern[-_]aggression|between[-_]the[-_]states",
+        "labelPattern": "\\bstates[’']?\\s*rights\\b|\\bWar of Northern Aggression\\b|\\bWar Between the States\\b",
+        "reason": "no option names \"states' rights\" as the cause, or relitigates it: the seceded states' declarations, the Confederate constitution's slavery clauses and Stephens's Cornerstone speech name slavery (SENSITIVE-HISTORY 3.1, refused; [SW 6.1], [CS 4.1]; 0021)"
+      }
+    ],
+    "protectedGroups": [
+      "Black people",
+      "enslaved people"
+    ],
+    "agencyReasons": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "confederate-acts"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] The premise and founding-document framing continue; 1862 laws can illustrate slavery policy but cannot replace the founding sources.",
+      "evidence": [
+        "confederate-acts"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "slavery"
+      },
+      {
+        "term": "enslav\\w*"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Do not substitute states-rights language or treat 1862 legislation as proof of every founder’s motive."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The text names slavery rather than obscuring it.",
+        "rejectExample": "The cause was simply states’ rights.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "lost-cause",
+    "hindsight",
+    "scoring"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "Existing founding-document quotations remain exactly as reviewed; any new excerpt needs its own primary source and attribution."
+  ],
+  "proposedRuling": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

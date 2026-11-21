@@ -1,0 +1,104 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "corwin-amendment",
+  "subject": "framing",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "0ea65b920c9d9230070f319adb59caa8ba99ec11349d50f7f8ae264a381b4610",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "corwin-amendment",
+    "class": "cause-and-aims",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "text"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "optionPattern": "corwin",
+        "labelPattern": "\\bCorwin\\b",
+        "reason": "the Corwin amendment (passed 2 March 1861) is text only: no option offers it as a bargaining chip or a peace term, which would make slavery a cost-free chip (SENSITIVE-HISTORY 3.1, refused; [SW 6.3, 6.8])"
+      }
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "agencyReasons": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "war-aims"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "text",
+      "recommendation": "[I] Carry text-only historical context; Johnson’s July resolution is a distinct document, not a new amendment bargain.",
+      "evidence": [
+        "war-aims"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "slavery"
+      },
+      {
+        "term": "enslav\\w*"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "Never offer the amendment or re-enslavement as a peace chip; no new treaty text."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The amendment remains cited background.",
+        "rejectExample": "Trade the amendment for peace.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "lost-cause",
+    "hindsight",
+    "scoring"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "S7 does not re-source ratification history; no new date or adoption claim."
+  ],
+  "proposedRuling": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}

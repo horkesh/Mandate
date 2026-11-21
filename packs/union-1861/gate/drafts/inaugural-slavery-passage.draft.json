@@ -1,0 +1,105 @@
+{
+  "draft": true,
+  "purpose": "Unsigned S23 proposal for the separate gate reviewer. Never loaded or a sign-off.",
+  "baseCommit": "5c1e8ed4739b135abe02914aae13ec6e1bd88d32",
+  "topic": "inaugural-slavery-passage",
+  "subject": "framing",
+  "reviewWindow": {
+    "from": "1861-08-01",
+    "to": "1862-11-30"
+  },
+  "liveBaseline": {
+    "present": true,
+    "entrySha256": "4907b3650bd8f9abde4d2a9b2fac73253d16ed56fc631b12c6d4f6bd519714a7",
+    "status": "open",
+    "needsSource": false
+  },
+  "entry": {
+    "id": "inaugural-slavery-passage",
+    "class": "cause-and-aims",
+    "window": {
+      "from": "1861-03-04",
+      "to": "1862-12-31"
+    },
+    "placements": [
+      "event",
+      "text"
+    ],
+    "status": "open",
+    "refused": [
+      {
+        "optionPattern": "(?:inaugural|inauguration)[a-z_-]*(?:tone|wording|passage|version|text|draft|revise|rewrite|soften|harden)|(?:tone|wording|revise|rewrite|soften|harden)[a-z_-]*(?:inaugural|inauguration)",
+        "labelPattern": "\\b(?:revise|rewrite|soften|harden|change|reword|amend)\\w*\\b.{0,30}\\binaugural\\b",
+        "reason": "the inaugural, and its passage disclaiming any purpose to interfere with slavery in the states, is a fixed premise: no tone option and no live situation on 4 March, because varying it would score the player or leak hindsight (SENSITIVE-HISTORY 3.1, refused; 0042; [SW 6.3], [MF] row 12)"
+      }
+    ],
+    "protectedGroups": [
+      "enslaved people",
+      "freedpeople",
+      "refugees from slavery",
+      "free Black men",
+      "Black women",
+      "Black children"
+    ],
+    "agencyReasons": [],
+    "protectedFields": []
+  },
+  "sources": [
+    "law"
+  ],
+  "baselineEvidence": {
+    "placementAuthority": "docs/design/SENSITIVE-HISTORY.md section 3; accepted by 0046 and amended by 0074",
+    "inheritedSourceMap": "notes/lane-1.8-gate.md section B.4",
+    "scope": "Carried authority/source pointers, not a claim to have newly rechecked every older primary source."
+  },
+  "windowBasis": "[I] Candidate review envelope, not an incident trigger, publication date or proof of receipt. A named act still needs its own source/date. Inherited windows are byte-for-byte unchanged.",
+  "facets": [
+    {
+      "placement": "event",
+      "recommendation": "[I] Carry the fixed 4 March premise as later briefing context; no replay or tone choice. Later law does not rewrite the inaugural.",
+      "evidence": [
+        "law"
+      ]
+    }
+  ],
+  "agencyReasonNotes": "[I] No class-required agency reason. Preserve named actors in reports; do not invent a derived mechanic or use absence of a reason as permission to target people.",
+  "triggerRules": {
+    "terms": [
+      {
+        "term": "slavery"
+      },
+      {
+        "term": "enslav\\w*"
+      }
+    ],
+    "allow": [],
+    "policy": "[I] Whole-word rules from triggerMatches; use the live proper-noun allowlist as well. A match requests review, never assigns a topic automatically. No gate:none approval is supplied."
+  },
+  "wordingRules": {
+    "inherit": "common-rules.json",
+    "topicRules": [
+      "No narrator claim that the inaugural promised the later proclamation. Keep quoted passages attributed and complete enough to retain slavery content."
+    ],
+    "examples": [
+      {
+        "allowedOnlyAsWordingExample": "The briefing distinguishes the inaugural from later policy.",
+        "rejectExample": "Rewrite the inaugural to anticipate emancipation.",
+        "notPlayerContent": true
+      }
+    ]
+  },
+  "risks": [
+    "lost-cause",
+    "hindsight",
+    "scoring"
+  ],
+  "reviewDependencies": [],
+  "remaining": [
+    "No new inaugural text or starting values are authored."
+  ],
+  "proposedRuling": "[I] Carry the reviewed baseline envelope; add S7 limits as review notes. Reject changed premises, hindsight and unapproved new wording.",
+  "rejectedAlternatives": [
+    "[I] Treating this draft or its schema check as placement/signature approval.",
+    "[I] Filling source gaps with inferred counts, motives, causal coefficients or implementation."
+  ]
+}
