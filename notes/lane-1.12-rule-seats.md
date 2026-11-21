@@ -1,5 +1,14 @@
 # Lane 1.12: rule-seat principals and commander seats (Parts A and B)
 
+
+## S1 final command and rule-seat delivery (2026-11-21)
+
+S1's integration, build and test changes are committed through the real hook; final calibration and closeout are proposed for review under 0106. The complete default eight-seed verification with drafting passes all five non-timing Phase 0 criteria. 1A is 4/6, still unmet for pushback and D6; timing remains S2's. Retain ordinary complyAt 10 as a proposed partial improvement: reservations fall from 101 to 16, still above 9. InitiativeAt stays 150 and every sourced band is unchanged. The eight-comparison budget is spent; there is no ninth run. Final Manassas is McDowell against Beauregard on July 27 and 29, with 90,600/40,000 and 83,156/16,000 men present. These are model outputs.
+
+The default sweep's 0/8 return-best result does not clear D6: its grievance channel is missing and all 24 strict border-levy chains remain unexercised. Transfer and remuster cannot count as a new governor levy. The fourth Charleston source count and Patterson discharge lifecycle remain held. Saunders's correct Union value is now grounded in his Iowa home under 0055, with a read 1880 official directory citation. Only his source metadata changes after the frozen measurement, with full World equivalence proof. No starting-side exception or other cast values were introduced.
+
+All eight public console tests pass, including actual July battle existence and separate chronology. Full sources, per-build tables, exact eight comparisons, verdict/recommendations and preservation evidence are at the top of `lane-1.14-done-check.md`. Older stopping points below are superseded by that delivery. Independent review and signatures remain Claude's; no accepted ruling is recorded here.
+
 ## Current S1 command-roster integration (2026-11-21)
 
 This supersedes the older R98 stop reports below: S1 has merged the five requested branches and R97, preserving main's normal resignation and both appointment contracts. The full eight-seed integration check passes every non-timing Phase 0 criterion; timing is S2's, and pushback/D6 remain unmet.
@@ -752,3 +761,7 @@ R97 is implemented in `C:/Pyrrhic/mandate-transfers-1861` on `phase1-transfers-1
 ### Findings outside my scope
 
 Claude’s independent review and ruling on the five unchanged liveness-band breaches remain pending. R98 and the other inherited milestone failures retain their own owners.
+
+## Findings outside my scope
+
+1A remains unmet; see the S1 final verdict in `lane-1.14-done-check.md`. The lead owns deferred review/rulings and unavailable review-ID reconciliation. S2 owns the integrated timing problem;1 Bowns grievance consequences and individual service/consent. The fourth Charleston strength, discharge lifecycle, filter-role source and strict new-border-levy chain remain bounded follow-ups. No other lane's files or branch was written.

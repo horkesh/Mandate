@@ -183,8 +183,9 @@ describe('Union 1861 world v2', () => {
     // That office has no post here. Its service side follows Texas under 0055, independently of his later succession.
     expect(person('clark_edward').provenance.some((c) => c.source === 'CRANE-HOUSTON-1884')).toBe(true);
     expect(person('clark_edward').faction).toBe(world.departments.find(d => d.id === 'st_texas')!.faction);
-    expect(person('saunders_alvin').faction).toBe('union'); // S1 source note marks this starting-service inference [I].
-    expect([count((p) => p.faction === 'union'), count((p) => p.faction === 'confederate')]).toEqual([83 + 1 + 8 - 1 + 3 + 1 + 1, 12 + 2 + 1]); // prior inventory, Clark's already-held Texas office, and S1's explicitly inferred Saunders service side
+    expect(person('saunders_alvin').faction).toBe('union'); // S1: Iowa home under 0055, not his later office [I].
+    expect(person('saunders_alvin').provenance.some(c => c.source === 'CD-1880')).toBe(true);
+    expect([count((p) => p.faction === 'union'), count((p) => p.faction === 'confederate')]).toEqual([83 + 1 + 8 - 1 + 3 + 1 + 1, 12 + 2 + 1]); // prior inventory, Clark's already-held Texas office, and S1's Iowa-home mapping for Saunders under 0055
   });
 
   it('has supply sources for both sides, each in a region that side holds, and depots at the navy yards (0055)', () => {

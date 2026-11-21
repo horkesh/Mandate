@@ -1607,7 +1607,7 @@
       "kind": "primary",
       "licence": "public-domain",
       "basis": "expired-copyright",
-      "copyUsed": "https://archive.texashistorytrust.org/view/728572066/142/; /143/; /144/. Only the verbatim 1860 letter, not the 1943 editorsâ€™ judgments or annotations. The printing identifies Governorsâ€™ Letters and Executive Records, 1859-1861 pp. 210-211, Texas State Library.",
+      "copyUsed": "https://archive.texashistorytrust.org/view/728572066/142/; /143/; /144/. Only the verbatim 1860 letter, not the 1943 editors\u00e2\u20ac\u2122 judgments or annotations. The printing identifies Governors\u00e2\u20ac\u2122 Letters and Executive Records, 1859-1861 pp. 210-211, Texas State Library.",
       "licencePage": null,
       "licenceReadOn": null
     },
@@ -1678,6 +1678,16 @@
       "licence": "public-domain",
       "basis": "expired-copyright",
       "copyUsed": "https://archive.org/download/historyoffirstre00minn/historyoffirstre00minn_djvu.txt; printed p.17 read for the voluntary May 11 remuster, credited from April 29; retrospective regimental history, not a newly verified May 1861 muster roll. Retained in C:/Pyrrhic/mandate-research-sources/S1/first-minnesota-history.txt.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "CD-1880",
+      "title": "Congressional Directory, compiled by F.A.Richardson for Congress, second edition corrected 29 January 1880, GPO 1880: Nebraska, Senators, Alvin Saunders entry",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "Wikimedia copy of Internet Archive congressionaldir014667mbp; title pages and Saunders entry read 21 November 2026. Official lifetime biography, treated conservatively as retrospective for 1861 home inference. https://upload.wikimedia.org/wikipedia/commons/6/6e/Congressional_Directory_Compiled_For_The_Use_Of_Congress_Second_Edition_%28IA_congressionaldir014667mbp%29.pdf",
       "licencePage": null,
       "licenceReadOn": null
     }

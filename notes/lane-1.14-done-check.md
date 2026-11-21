@@ -1,6 +1,89 @@
 # Lane 1.14: the 1A done check and calibration
 
-## S1 sprint integration (2026-11-20, in progress)
+## S1 delivery for lead review (2026-11-21): 1A remains unmet
+
+S1's bounded integration/build/test/calibration work is delivered on `sprint/1a` in `C:/Pyrrhic/sprint-1a`, from `ceff796`. `npm ci` ran first: exit 0, 51 packages, zero vulnerabilities. No push, history rewrite or other-lane write. Every completed commit used the real hook and Codex footer. The five requested merges are separate and ordered; R97 was read from its supplied worktree without changing it. Independent review and gate signatures remain deferred to Claude under 0106; nothing is signed here. The current delivery has a source HOLD and unmet acceptance, so it is not a claim that 1A is finished.
+
+| Commit | Delivery |
+|---|---|
+| `1802907` | Merge northern concentration and sourced calls into sprint/1a |
+| `e76c334` | Merge bombardment battle records into sprint/1a |
+| `f72c709` | Merge dated rule-seat appointments into sprint/1a |
+| `df291e6` | Merge independent initiative threshold into sprint/1a |
+| `9d0ad82` | Merge bounded assault-contact findings into sprint/1a |
+| `bf6cc66` | Integrate state-force acts with northern concentration |
+| `7032e4e` | Source three Charleston opening strengths |
+| `ca428f7` | Date department appointments and Harpers Ferry command |
+| `cffb0d1` | Implement sourced national enlistment paths |
+| `9edd547` | Close battle chronology and command regression gaps |
+
+The closeout commit carries ordinary `complyAt: 10` (from 150), keeping `initiativeAt: 150`, the final handovers and the source-only correction below. This is the best tested partial improvement preserving every non-timing Phase 0 criterion, proposed for review. Reservations still fail 16 against 1..9. Reject 3/5 despite their passing reservations count because their required recruitment-delay floor fails; reject 30/50 as worse reservation results. No historical band is widened and no failure is waived.
+
+The integration's full default eight-seed check with drafting passed all five non-timing Phase 0 criteria before the final build. The final eight-seed/drafting comparison again passes all five; timing fails at the unchanged 40/160 ms budget. The final result is Phase 0 **5/6**, 1A **4/6**, exit 1. Pushback and D6 remain unmet. The complete result, all failures and recommendations are `runs/s1/final-verdict.json` and `calibration-08-done.json`.
+
+### The completed eight-comparison budget
+
+Comparison 1 explicitly reuses the unchanged post-build `national-final` history; it is not a new rerun. Comparisons 2-6 each change only ordinary compliance against that control. Comparison 7 changes only the seed against 4. Comparison 8 verifies the selected configuration with the complete default harness, all 8 seeds 1861-1868, the unchanged 400-day ceiling, replay/save and drafting. There was no ninth comparison. The control reuse is proven by `control-reuse-proof.json`; exact commands/configurations and fixed-band hashes are in `calibration-plan.md` and `calibration-manifest.json`. Candidate mechanical and sourced bands were never recentered.
+
+| Comparison | Single comparison/control | Reservations | Delayed calls | Union reference liveness |
+|---|---|---:|---:|---|
+|1|reused sourced build; complyAt 150; seed 1861|101|55|PASS after build-only reconciliation|
+|2|complyAt 3 vs 1|5|19|FAIL: below fixed 27 floor|
+|3|complyAt 5 vs 1|5|19|FAIL: below fixed 27 floor|
+|4|complyAt 10 vs 1|16|29|PASS|
+|5|complyAt 30 vs 1|39|37|PASS|
+|6|complyAt 50 vs 1|75|42|PASS|
+|7|seed 1862 vs 4, same 10|18|34|five sensitivity breaches; checkpoints/operation/unknown-strength pass|
+|8|full default verification at 10|16|29|all required reference/exercise bands PASS|
+
+The low-threshold recruitment counter is not dead: `recruitment.slow_walked` counts any accepted call with positive muster delay, including reservation rungs. Promoting these to ordinary compliance reduces it to 19. That explains the observed failure; it does not authorize moving its 27 floor. Seed 7 additionally fires the guarded Minnesota renewal, while the default reference correctly lacks an eligible regiment. Its five fixed-band sensitivity breaches are stragglers returned 179, pocket relief 1, relay-held 0, renewal 1 and battle orders 18. These are retained, not hidden or recentered. Initiatives remain 9 in every history probe.
+
+### Final verdict and next bounded work
+
+| Criterion | Verdict | Recommendation |
+|---|---|---|
+| phase 0 behaviour | PASS | park tuning; preserve the working mechanism |
+| phase 0 hash | PASS | park; retain deterministic checks |
+| phase 0 resume | PASS | park; retain save/replay controls |
+| phase 0 liveness | PASS | park band changes; preserve fixed required floors |
+| phase 0 section-ten | PASS | park; preserve single owners and pure kernel |
+| phase 0 budget | FAIL | continue with S2 on integrated runtime; no budget increase |
+| 1A checkpoints | PASS | park numerical tuning; preserve sourced bands |
+| 1A operation | PASS | park forced-battle work; retain emerged battle and record regressions |
+| 1A pushback | FAIL | continue source/role mapping and bounded compliance work; no ninth comparison here |
+| 1A unknown-strength | PASS | park calibration; continue the fourth Charleston source HOLD |
+| 1A stand-ins | PASS | park 1A replacement work; route remaining named stand-ins to 1B |
+| 1A lever-sweep | FAIL | parkD 6 clearance to 1B under 0105; continue strict new-border-governor levy chain |
+
+Pushback: relay objections 2 and plan objections 36 pass. Relay holds 1 vs 2..6, filter holds 0 vs 1..9, trims 0 vs 1..4, reservations 16 vs 1..9 and slow walks 15 vs 2..9 fail. Continue the specific missing causes. The read primary OR III-1 p.324 gives Scott's July 8 telegraph restriction, confirmed by Cameron, but names no censor. Retrospective public-censorship leads do not establish a holder for the modeled incoming presidential-report filter. Do not install Nicolay as a wire censor from the sourced caller-screening evidence, or substitute public censorship without resolving its traffic, source and gate contract. This is a source/role-mapping HOLD, not permission to park all 1A or relabel another screen as a filter hold.
+
+D6: 744 base-run recruitment calls, 8 gated decisions weighed, return best 0/8 seeds. That numeric result is diagnostic only: the victory measure still lacks the people/grievance channel and all 24 strict border-governor levy chains are unexercised. 0105 parks clearance to 1B while requiring the chain item to continue. Institutional transfer and voluntary remuster remain excluded from new border-governor levies. No D6 clearance.
+
+Final timing on this shared Windows host: Union war-by-decision median 55.44 ms, p95 151.27 ms; history median 60.57 ms, p95 135.14 ms. Both medians fail 40 ms; both p95 values remain below 160 ms. S2 owns the integrated performance/CI work; this is not a Linux measure or a budget increase. Drafting is sound: 23 commands, 16 with land forces; day median 42.9 ms, p95 49.0 ms, worst 53.7 ms; capped day worst 25.4 ms. Drafting remains informational under the existing contract.
+
+### Build outcomes and remaining source limits
+
+The per-build histories and daily tables below remain the detailed record. R97 produces Stone/Beauregard at Manassas July 27-29, starting 45,600/40,000 and ending 43,175/54,144. Three sourced Charleston strengths leave that July unchanged. The dated-command and separate Johnston histories produce McDowell/Beauregard July 25-29, 45,600/40,000 first day and 43,532/53,932 last. The national build and selected final configuration produce McDowell/Beauregard July 27 and 29:90,600/40,000 then 83,156/16,000 present. These are model outputs, not historical strength returns. July 31 known strength 99,791 Union/124,218 Confederate; unknown blocks 4/17. None fights unknown in the checked histories. The distinct public-word console route fights under Stone and receives 28 hour-stamped July dispatch lines; it does not borrow the rule-seat appointments or inject battle state.
+
+The four Charleston requests yielded three read counts (Johnson 100, Palmetto 146 mixed, Rifles 450) and a fourth **source HOLD** for Anderson's First SC Regular Infantry. 960 all-State-regulars is not that regiment; 700 in August 1862 cannot be backdated. Additional bounded newspaper/OR/NPS/State-report searches did not supply a separate opening return. The final newspaper collection lead failed retrieval and contributes no adopted fact. Preserve unknown rather than invent a fourth count.
+
+The national path covers 16 additional quotas/56 regiments, keeps the earlier New York tender and Indiana June 11 call distinct, implements the Minnesota unit's guarded voluntary remuster rather than a duplicate levy, and supplies a three-arm central Regular recruiting path. The Regular organization minimum 18,154 and maximum 22,714 are not enlisted strength. Actual men remain unknown; Smith may object and does in the default history. Individual remuster consent/replacement remains a labeled 1B stand-in. Patterson's sourced July 27 discharge is still not implemented by the appointment rows. No unsourced retirement/faction change was added.
+
+A closeout source audit corrected the Saunders rationale:0055 requires his starting post/home, not a future office. The read official 1880 Congressional Directory (second edition corrected 29 January, F. A. Richardson, GPO; Nebraska/Senators/Alvin Saunders entry), corroborated by the official Biographical Directory, supports the Iowa-home mapping [I]. The source row and cast audit now cite it. Union remains unchanged; no birth/death, judgement or other simulation cell is populated. The biography is conservatively classified secondary for 1861 home inference. This supersedes the earlier mistaken future-office rationale, not 0055.
+
+The source correction was applied only after comparison 8 completed and all 300 runtime hashes were identical before/after. Generated-World equivalence proves that **only Saunders's provenance list changes**; every other World field is identical. The old measured World/pack remain archived. No behavioral campaign is repeated for this metadata correction. `source-metadata-equivalence.json`, `saunders-source-correction.json` and the required full hook retain the proof and new World validation. Source inventory:48 retained entries, only cited/read passages claimed, at `C:/Pyrrhic/mandate-research-sources/S1/sources-read.json`.
+
+### Verification, preservation and review
+
+The test-gap commit's full hook passed 154 files/1,669 tests, three optional timing skips and **no expected failure**. All 8 console tests also pass at 10. New bombardment cadence, actual capital-dispatch/save and in-transit command-parent regressions pass; P1-P3 already exist and pass. The original B4/B5 and V4/C2/C4 descriptions remain unavailable: these named contract regressions do not certify unavailable IDs closed. The lead must reconcile those IDs during review.
+
+Before writing this final result, package diagnostics (`npm ls --depth=0`, Node 22.23.2), affected source test/19 cases, typecheck, generation, boundary, licences, decision index, artifact inventory and preservation audit pass. Historical `checkpoints.json` has exact base/final SHA-256 `a45b94342892cd8954cdf72ca11478ae77b7026b1239300125fbade34cc42b9f`. Testbed data/day 40 save and this worktree's own CODEX copy are unchanged. Only Saunders's source/note columns differ from the national cast inventory; all cast values and all other rows are preserved. Eight-comparison inventory has 17 retained artifacts, including two checked summaries/two mid-run saves. All workspace links resolve here.
+
+The closeout commit requires one final real full hook, with the affected gates already preflighted: two workers, 600-second setup ceiling, all collection/assertions intact; expected 4-6 minutes. Stop on failure, inspect all categories, verify a targeted correction before any required retry; no new calibration. Evidence: `runs/s1/closeout-hook.log` and `closeout-hook-exit.json`. Final audit/inventory paths: `final-audit.json`, `final-evidence-inventory.json`, `runtime-diagnostics.json`, `final-runtime-candidate.json`. All logs remain in ignored `runs/s1/`; no raw scan is committed.
+
+Proposed rulings [I]: retain 10 as a partial compliance improvement with unchanged initiative admission; accept the sourced command/quota paths, unknown actual Regular strength, conservative whole-unit renewal and due-until-sent appointments; retain the remaining source/lifecycle holds. Reject fabricated strengths/levies, future-office starting sides, retrying a refused appointment, moving candidate bands, relabeling transfers/remusters as a new levy, forcing battle, or claiming D6 from 0/8 alone. The lead rules after independent/gate review; no accepted decision record or signature was written here.
+
+## S1 sprint integration record (2026-11-20)
 
 S1 works only in `C:/Pyrrhic/sprint-1a`, branch `sprint/1a`, from `ceff796`, under 0106. `npm ci` ran first (exit 0, 51 packages, zero vulnerabilities). Independent review and gate signatures are deferred to Claude after the sprint. No push or other-lane write is authorized.
 
@@ -92,7 +175,7 @@ Sixteen distinct additional state quotas, 56 regiments, now issue through ordina
 
 A declared recruiting office under the existing Adjutant General opens by C. F. Smith's accepted ordinary appointment on April27 (GO12 section4 p.31, return to previously assigned duties). GO16 May4 pp.36-40 directs eight infantry, one cavalry and one artillery regiments. The visually checked minimum18154 and maximum22714 are organization, not a return. Three separate ordinary calls retain unknown actual strength and the proper arms; no five-day automatic paper army is fabricated. Three-year terms use July29 act section5 p.101 retrospectively [I]. The later ninth infantry increment is not another nine-regiment levy. Unknown-strength recruiting units stay at the bureau under the existing concentration rule. The actual Smith objects to all three in this history; a separate fictional willing-holder control proves all three can muster distinctly with unknown strength. A numeric-organization regression also prevents converting an explicit eight-regiment quota into seventeen default-sized regiments.
 
-Nebraska uses its existing government/region and an ordinary governor post, initially vacant. Saunders has minimal identity, unsourced traits/dates unknown, Union starting service [I], and a May15 dated appointment representing first-read confirmed holding (his p.204 letter), not the legal appointment date. Its call follows his actual appointment. No Native Nation recruitment was added.
+Nebraska uses its existing government/region and an ordinary governor post, initially vacant. Saunders has minimal identity, unsourced traits/dates unknown, an Iowa-home starting-side inference under0055 (source correction above), and a May15 dated appointment representing first-read confirmed holding (his p.204 letter), not the legal appointment date. Its call follows his actual appointment. No Native Nation recruitment was added.
 
 The first national history exposed an opening-screen assumption that the earlier smaller build missed: the exact-day historical offer disappears if attention cannot pay that day. It lost McDowell and had no Union fought operation. Retain that evidence in `runs/s1/national*`. Correction [I]: an unsent dated appointment stays due and its candidate reserved until its own letter is sent; an answer/refusal is not retried. Only identities of the principal's own letters are read. Human/AI menus remain unchanged. Red/green tests cover delayed offers and final refusal. The corrected history opens McDowell on day85 (May29), through delivery, not a calendar write. Patterson remains day53, Johnston resigns day48 and accepts Harpers Ferry day79, Smith day53. A dated row still does not retire Patterson on July27; that lifecycle remains a sourced limitation.
 
@@ -419,3 +502,7 @@ Runtime checks, the complete failure list and five output artifacts were invento
 - 1.3/1.4 own the bombardment record gap and a bounded assault-contact investigation. The Wagner result is not permission to increase every assault's losses.
 - 1B owns the sourced politics/ladder targets outside this window and the four labelled stand-ins. They remain uncalibrated; a passing label scan does not settle their values.
 - The lead/steward must integrate R82, R83 and R84, prepare main's merge into this branch under read-only-Git rules, obtain independent review, and remeasure on the integrated head. None of this run's evidence includes those changes.
+
+## Findings outside my scope
+
+S1's calibration budget is spent and1A remains unmet. The lead must obtain the deferred independent/gate review, reconcile the unavailable review IDs and rule on the proposed partial calibration; no extra comparison is authorized here. S2 owns the current integrated tick budget with hashes preserved. The fourth Charleston strength, Patterson discharge lifecycle, correct wire-filter traffic/holder source and strict post-policy border-governor levy remain explicit bounded follow-ups.1 Bowns the missing grievance consequence channel and individual remuster consent/service work; transfers/remusters are not substitutes for the strict levy chain. The late-read Iowa July 9 cavalry order (OR III-1 p.324) concerns an already accepted regiment; without its prior identity/terms it is not entered as another levy. Earlier dated stop reports below their headings are retained as history and are superseded by this S1 delivery.
