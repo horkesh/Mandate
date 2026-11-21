@@ -381,5 +381,20 @@
     "observed": 0,
     "cause": "S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick.",
     "evidence": "notes/lane-1.14-done-check.md#s41-time-band-ruling"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.withdrew",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal."
+    },
+    "observed": 0,
+    "cause": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal.",
+    "evidence": "notes/lane-1.14-done-check.md#s44-lead-band-rulings"
   }
 ]

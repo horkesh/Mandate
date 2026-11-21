@@ -1008,3 +1008,92 @@ fingerprint exceptions, scoring changes or passing other checks as a waiver.
 - Linux CI on the final candidate, owner/exit review, steward integration,
   pushing and release remain with their owners. S41's requested work is delivered
   for review; 1A is not cleared.
+
+
+## S42 in progress (2026-11-21)
+
+Bounded plan: supply sourced received Virginia papers and durable institutional
+receipts, apply the held concentration and appointment prerequisites, test
+cheaply, then one default binding done check and one actual hook. Sources and
+red/green evidence are in runs/s42 and the dated research note. The short trace
+reaches Manassas with zero rejected commands; four unchanged liveness bands
+fail. The required long checks are running; no band or scoring change is made.
+
+## Findings outside my scope (S42 in progress)
+
+The lead retains any new quiet-band ruling, review, CI, integration and release.
+S43 and its worktree remain untouched. This is not a completion verdict.
+
+
+## S42 delivery at the hook (2026-11-21)
+
+For the lead: three items. S42 only on sprint/1a from edc57b0. The received
+Virginia papers and durable institutional evidence are implemented, and the
+held concentration plus dated appointment prerequisites use that evidence.
+Sources read and page citations: the dated research note, OR I-2 p. 783,
+pp. 844–845, 901–902 and 911–912. The reference reaches Manassas on 29 July
+and finishes 31 July with 222 commands and zero rejections. No battle,
+troops, historical arrival or historical receipt stamp was invented.
+
+One default binding done check: exit 1,
+1071.25 seconds; Phase 0 5/6,
+1A 4/6. All 268 checked daily hashes replay; both saved-log
+replays and final resumed hashes match.
+One actual commit attempt: exit 1, 147.83 seconds;
+1,948 passed, three failed, three existing timing skips. Its only failures
+are the four unchanged Union liveness bands (routing 1/0..0, withdrawal
+0/1..5, straggler returns 24/25..100, returned orders 1/0..0). No retry,
+new quiet transition, scoring change, bypass, push or commit. HEAD remains
+edc57b0. The candidate and evidence are staged for the lead's ruling.
+Boundary, licences and 106 decisions pass separately; typecheck and S18
+pass. The prerelease save fixture is regenerated, with its old bytes saved.
+
+Full report: docs/audit/s42-received-concentration.md. Portable source,
+counter, hash, command, returned-order and preservation receipts:
+docs/audit/s42-evidence/. Raw exits/logs: runs/s42/. Final inventories and
+runtime diagnostics preceded final-result documentation.
+
+Proposed rulings [I]: accept the received correction and exact S18 closure
+reductions; recenter only the three documented positive counts by around;
+rule explicitly on a Union-only withdrawal quiet band (testbed still has
+three withdrawals). Reject truth exceptions, invented knowledge, forced
+combat, counting routs as withdrawals, or bypassing the hook. The quiet
+list, origin, bands and acceptance criteria are unchanged here.
+
+## Findings outside my scope (S42)
+
+The lead's four band rulings before another commit attempt; remaining 1A
+failures; whole-branch/gate verdicts, final-head CI, steward integration,
+pushing and release. S43 and its worktree are untouched. Nothing is signed
+or waived. S42's candidate is reviewable but blocked from committing.
+
+
+## S44 lead band rulings
+
+The lead?s 21 November CODEX message ?S42 and S43 received; the lead?s four
+band rulings; S44, commit S42? authorizes exactly four Union changes:
+routing and returned orders to `around(1)` (1?4), straggler returns to
+`around(24)` (12?48), and withdrawal to 0?0. Received-only concentration
+and the Virginia papers change Davis?s posture and the 29 July battle?s
+outcome to a rout; the day-87 Charleston transfer reaches a vacated post.
+The unchanged testbed?s three withdrawals are the withdrawal live control.
+The S42 summaries and full cause evidence are reused, with no new done
+check. Scoring and rout/withdrawal accounting remain unchanged.
+
+S18?s frozen quiet list grows only 25 ? 26 through an exact whole-list
+fingerprint guard with rejection controls. All old records and the
+338-band origin remain. The four append-only band records cite this ruling.
+Cheap preflight and retained-evidence checks pass; the actual commit hook
+remains the required commit gate. Final commit/result go to the sole
+CODEX status; logs, exits and preservation evidence are in `runs/s44/`.
+No new proposed ruling is needed: the lead already ruled on all four.
+The first S44 hook passed 1,952 tests but rejected setting names in the
+engine-side explanations. Only their wording and its frozen-list fingerprint
+were corrected; boundary, typecheck, rules, 17 guard tests, licences and
+decisions pass before the mandatory hook retry. The failed log is retained.
+
+## Findings outside my scope (S44)
+
+Remaining 1A failures, whole-branch and gate review, final-head CI,
+integration, pushing and release remain with their owners. S42?s original
+done-check result is historical evidence, not a new acceptance verdict.

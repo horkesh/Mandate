@@ -692,5 +692,12 @@
   "console.command.counter-adjust": "adjust:{boldness}",
   "console.command.counter-frame": "frame:{value}",
   "console.command.counter-reinforce": "reinforce:{post}:{men}",
-  "console.report.text": "{copy}. {text}"
+  "console.report.text": "{copy}. {text}",
+  "situation.virginia_military_convention.title": "Virginia military convention",
+  "situation.virginia_military_convention.text": "The War Department asks Virginia for the strength and rendezvous of its troops under the convention placing the state’s military force at the President’s disposal.",
+  "situation.harpers_ferry_assignment_notice.title": "Command near Harpers Ferry",
+  "situation.harpers_ferry_assignment_notice.text": "The War Department assigns Johnston to the troops near Harpers Ferry and directs him to arrange reinforcements through Lynchburg. This is an assignment, not a report of his arrival.",
+  "situation.manassas_reinforcement_notice.title": "Report from Camp Pickens",
+  "situation.manassas_reinforcement_notice.text": "Beauregard’s report to the President requests reinforcements for his command at Camp Pickens. He describes unfinished defenses, poor equipment and a shortage of transport.",
+  "reason.military-convention-confirmed": "The Virginia military convention places its military force at Confederate disposal."
 }

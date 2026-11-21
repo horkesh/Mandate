@@ -1,0 +1,391 @@
+{
+  "baseline": "S40 diagnostic, final hash equals all S41 daily hashes and final State",
+  "beforeHash": "bffdb4255a3bf3759a2c3c782f87468a4d286744eeee9b2130e1669bb8bee3d3",
+  "afterHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+  "changedGroups": [
+    {
+      "key": "80:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "transfer",
+          "from": "cs_cmd_charleston",
+          "to": "cs_cmd_harpers_ferry",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "86:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "inquire",
+          "to": "cs_cmd_harpers_ferry",
+          "subject": null,
+          "route": "courier"
+        }
+      ],
+      "after": [
+        {
+          "cmd": "inquire",
+          "to": "cs_cmd_charleston",
+          "subject": null,
+          "route": "wire"
+        }
+      ]
+    },
+    {
+      "key": "86:seat:lincoln_abraham",
+      "before": [
+        {
+          "cmd": "transfer",
+          "from": "us_dc_militia",
+          "to": "us_dept_northeastern_virginia",
+          "force": "blocks",
+          "amount": 999,
+          "route": "courier"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "87:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "appoint",
+          "post": "cs_cmd_manassas",
+          "person": "beauregard_pierre_g_t",
+          "rank": null,
+          "route": "wire",
+          "from": "cs_cmd_charleston"
+        }
+      ],
+      "after": [
+        {
+          "cmd": "appoint",
+          "post": "cs_cmd_manassas",
+          "person": "beauregard_pierre_g_t",
+          "rank": null,
+          "route": "wire",
+          "from": "cs_cmd_charleston"
+        },
+        {
+          "cmd": "transfer",
+          "from": "cs_cmd_charleston",
+          "to": "cs_cmd_harpers_ferry",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        }
+      ]
+    },
+    {
+      "key": "87:seat:lincoln_abraham",
+      "before": [
+        {
+          "cmd": "transfer",
+          "from": "st_gov_new_york",
+          "to": "us_dept_northeastern_virginia",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        },
+        {
+          "cmd": "transfer",
+          "from": "st_gov_wisconsin",
+          "to": "us_dept_northeastern_virginia",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        }
+      ],
+      "after": [
+        {
+          "cmd": "transfer",
+          "from": "st_gov_new_york",
+          "to": "us_dept_northeastern_virginia",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        },
+        {
+          "cmd": "transfer",
+          "from": "st_gov_wisconsin",
+          "to": "us_dept_northeastern_virginia",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        },
+        {
+          "cmd": "transfer",
+          "from": "us_dc_militia",
+          "to": "us_dept_northeastern_virginia",
+          "force": "blocks",
+          "amount": 999,
+          "route": "courier"
+        }
+      ]
+    },
+    {
+      "key": "93:seat:davis_jefferson",
+      "before": [],
+      "after": [
+        {
+          "cmd": "appoint",
+          "post": "cs_cmd_charleston",
+          "person": "twiggs_david_e",
+          "rank": null,
+          "route": "wire"
+        }
+      ]
+    },
+    {
+      "key": "94:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "transfer",
+          "from": "st_gov_virginia",
+          "to": "cs_cmd_manassas",
+          "force": "blocks",
+          "amount": 999,
+          "route": "courier"
+        }
+      ],
+      "after": [
+        {
+          "cmd": "transfer",
+          "from": "cs_cmd_charleston",
+          "to": "cs_cmd_harpers_ferry",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        },
+        {
+          "cmd": "transfer",
+          "from": "st_gov_virginia",
+          "to": "cs_cmd_harpers_ferry",
+          "force": "blocks",
+          "amount": 999,
+          "route": "courier"
+        }
+      ]
+    },
+    {
+      "key": "100:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "inquire",
+          "to": "cs_cmd_manassas",
+          "subject": null,
+          "route": "courier"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "107:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "inquire",
+          "to": "cs_cmd_manassas",
+          "subject": null,
+          "route": "courier"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "114:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "inquire",
+          "to": "cs_cmd_manassas",
+          "subject": null,
+          "route": "courier"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "127:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "transfer",
+          "from": "st_gov_georgia",
+          "to": "cs_cmd_manassas",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "128:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "inquire",
+          "to": "cs_cmd_manassas",
+          "subject": null,
+          "route": "courier"
+        }
+      ],
+      "after": [
+        {
+          "cmd": "transfer",
+          "from": "st_gov_georgia",
+          "to": "cs_cmd_manassas",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        },
+        {
+          "cmd": "inquire",
+          "to": "cs_cmd_manassas",
+          "subject": null,
+          "route": "courier"
+        }
+      ]
+    },
+    {
+      "key": "130:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "transfer",
+          "from": "st_gov_alabama",
+          "to": "cs_cmd_manassas",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "131:seat:davis_jefferson",
+      "before": [],
+      "after": [
+        {
+          "cmd": "transfer",
+          "from": "st_gov_alabama",
+          "to": "cs_cmd_manassas",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        }
+      ]
+    },
+    {
+      "key": "135:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "inquire",
+          "to": "cs_cmd_manassas",
+          "subject": null,
+          "route": "courier"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "136:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "transfer",
+          "from": "st_gov_mississippi",
+          "to": "cs_cmd_manassas",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "137:seat:davis_jefferson",
+      "before": [],
+      "after": [
+        {
+          "cmd": "transfer",
+          "from": "st_gov_mississippi",
+          "to": "cs_cmd_manassas",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        }
+      ]
+    },
+    {
+      "key": "141:seat:davis_jefferson",
+      "before": [],
+      "after": [
+        {
+          "cmd": "transfer",
+          "from": "st_gov_arkansas",
+          "to": "cs_cmd_manassas",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        }
+      ]
+    },
+    {
+      "key": "143:seat:beauregard_pierre_g_t",
+      "before": [
+        {
+          "cmd": "battle",
+          "post": "cs_cmd_manassas",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "143:seat:mcdowell_irvin",
+      "before": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_northeastern_virginia",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "144:seat:beauregard_pierre_g_t",
+      "before": [
+        {
+          "cmd": "battle",
+          "post": "cs_cmd_manassas",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ],
+      "after": []
+    },
+    {
+      "key": "144:seat:mcdowell_irvin",
+      "before": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_northeastern_virginia",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ],
+      "after": []
+    }
+  ]
+}

@@ -7,14 +7,14 @@
  * for orders, and is shown the plans submitted to him that have reached him.
  */
 import { strictCompare } from '../compare.ts';
-import { commandedBlocks, declaredAppointment, departmentSide, heldPost, sideOfPerson, unpostedPeopleOnSide } from '../command/command.ts';
+import { commandedBlocks, declaredAppointment, heldPost, sideOfPerson, unpostedPeopleOnSide } from '../command/command.ts';
 import { commanderView, mayAttackToday, presenceByRegion, sideCommand } from '../combat/battle.ts';
 import { believedRatio, commitAtDawn, cutOffChoice, pursuitChoice, standAtNight } from '../combat/decide.ts';
 import { BATTLE_ORDER_OPTIONS } from '../combat/order-kinds.ts';
 import { openBattleIn } from '../combat/records.ts';
 import { buildControlIndex } from '../control-index/control-index.ts';
 import { factionOfBlock, isNaval } from '../forces/forces.ts';
-import type { FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
+import type { DepartmentId, FactionId, ForceBlockId, PersonId, PostId, RegionId } from '../ids.ts';
 import { ORDER_ROUTES, routeLatency, type LatencyMap } from '../messages/latency.ts';
 import { mintMessageId } from '../messages/transit.ts';
 import type { MarchGround } from '../movement/march.ts';
@@ -37,7 +37,7 @@ import { seatIdFor } from './seats.ts';
 import { attentionLeft } from './attention.ts';
 import { latencyMapFor, type SeatsWorld } from './world.ts';
 import type { SeatView } from '../view/types.ts';
-import { receivedCandidates, receivedStrength, receivedPlanPapers } from './received.ts';
+import { receivedCandidates, receivedStrength, receivedPlanPapers, receivedDepartmentSides, receivedPostSide } from './received.ts';
 
 /** What a day's menus are judged on: the march ground and the latency of the morning's map. */
 export interface MorningGround {
@@ -113,14 +113,15 @@ function calledOn(state: State, principal: PersonId, post: PostId): boolean {
 }
 
 /** The pack's doctrine for a faction's principal, its offensives' dates as days of the run (day 0 is the start's date). */
-function doctrineView(world: SeatsWorld, state: State, faction: FactionId): DoctrineView {
+function doctrineView(world: SeatsWorld, state: State, faction: FactionId, receivedView: SeatView): DoctrineView {
   const row = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === faction);
   // No row: no doctrine (he answers his commanders and orders nothing of his own; a pack states one for every faction).
   if (row === undefined) return { crossNeutral: false, concentrateAt: null, calls: [], offensives: [], inquireEveryDays: 0, appointKinds: { land: [], naval: [] } };
   if (state.calendarStart === null) throw new RangeError('the seats layer needs a calendar (a scenario start)');
   const start = daysFromCivil(parseIsoDate(state.calendarStart));
-  const due = (date: string, department: Parameters<typeof departmentSide>[1]) => state.stateDay + 1 >= daysFromCivil(parseIsoDate(date)) - start && departmentSide(state, department) === faction;
-  const concentration = [...(row.concentrations ?? [])].filter(c => due(c.fromDate, c.requiresDepartment) && (state.postStates[c.post]?.postHolder ?? null) !== null && postFaction(world, state, c.post) === faction)
+  const sides = receivedDepartmentSides(world, receivedView);
+  const due = (date: string, department: DepartmentId) => state.stateDay + 1 >= daysFromCivil(parseIsoDate(date)) - start && sides.get(department) === faction;
+  const concentration = [...(row.concentrations ?? [])].filter(c => due(c.fromDate, c.requiresDepartment) && receivedPostSide(world, receivedView, sides, c.post) === faction)
     .sort((a, b) => strictCompare(b.fromDate, a.fromDate) || strictCompare(a.post, b.post))[0];
   return {
     crossNeutral: row.crossNeutral,
@@ -258,12 +259,13 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   }
   const awaiting = postsInStatus(state, 'ready').filter((p) => state.planRecords[p]!.planIssuer === f.principal && !answerInTransit(state, f.principal, p, ['go']));
   const d = world.map.world.rules.plans.goalDefaults;
-  const doctrine = doctrineView(world, state, faction);
+  const doctrine = doctrineView(world, state, faction, receivedView);
   const appointments = world.map.world.rules.ruleSeats.principals.find(r => r.faction === faction)?.appointments;
   const receivedPosts = receivedView.posts;
+  const receivedSides = receivedDepartmentSides(world, receivedView);
   const appointmentView = appointments?.filter(a => 'fromDate' in a).map(a => ({
     post: a.post, person: a.person, from: a.fromPost,
-    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && departmentSide(state, a.requiresDepartment) === faction && receivedCandidates(world,state,f.principal,faction,a.fromPost,receivedView).some(p=>p.person===a.person) && !receivedPosts.some(p=>p.post===a.post),
+    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && receivedSides.get(a.requiresDepartment) === faction && receivedCandidates(world,state,f.principal,faction,a.fromPost,receivedView).some(p=>p.person===a.person) && !receivedPosts.some(p=>p.post===a.post),
     issued: state.messagesInTransit.some(m => m.msgVerb?.verbKind === 'appoint' && m.msgVerb.verbIssuer === f.principal && m.msgVerb.verbPost === a.post) || Object.values(state.orderResponses).some(r => r.respKind === 'verb:appoint' && r.respPost === a.post && r.respPerson === a.person),
     routes: routesTo(a.fromPost ?? a.post),
   }));

@@ -1,0 +1,42 @@
+{
+  "id": "manassas_reinforcement_notice",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.manassas_reinforcement_notice.title",
+  "text": "situation.manassas_reinforcement_notice.text",
+  "earliest": "1861-06-03",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 90
+      },
+      {
+        "flag": "virginia_seceded"
+      },
+      {
+        "holds": {
+          "post": "cs_cmd_manassas",
+          "person": "beauregard_pierre_g_t"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative military correspondence only; no secession-cause claim, policy toward protected populations or civilian-conduct effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 pp. 901–902, Beauregard to Davis, Camp Pickens, 3 June 1861"
+    }
+  ],
+  "namedOnly": "A ministry summary of the cited correspondence; no new personal speech or forced arrival is asserted."
+}

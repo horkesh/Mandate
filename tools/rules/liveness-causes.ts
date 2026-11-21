@@ -25,8 +25,8 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
     if (fingerprint(expected[r.key] ?? null) !== fingerprint(r.before)) problems.push(`${where}: before band does not follow the previous record`);
     if (r.after !== null) {
       const n = r.observed;
-      // S34 imports older quiet bands; the lead's post-S40 ruling adds exactly
-      // one S41 transition. The history guard freezes both exact lists.
+      // S34 imports older quiet bands; the lead authorizes one S41 time
+      // transition and one S44 Union withdrawal. The history guard freezes each exact list.
       const inherited = n === 0 && r.after.minFires === 0 && inheritedQuiet.some(old => fingerprint(old) === fingerprint(r));
       if (!inherited) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
@@ -50,5 +50,9 @@ export function inheritedQuietHistoryProblems(before: readonly LivenessChange[],
   // Whole-list fingerprints also protect every inherited cause and its order.
   if (fingerprint(before) === '3564e8067f5bef5d18d6550577f8cebeed9260479dce9ae2df89c0447d8e4fcf'
     && fingerprint(current) === 'e03d9388b49e0d0a8592f43e030b77a5bce0e4067565e16b85a4c504c11cd06e') return [];
+  // CODEX.md, 2026-11-21, S44: only the exact 25 -> 26 Union withdrawal
+  // transition is authorized; the testbed remains the live control.
+  if (fingerprint(before) === 'e03d9388b49e0d0a8592f43e030b77a5bce0e4067565e16b85a4c504c11cd06e'
+    && fingerprint(current) === 'aaf5fa67478773643a5632e80ae666fbb3da3cb8e3d35cc27a5701037b987ba5') return [];
   return fingerprint(before) === fingerprint(current) ? [] : ['the S34 inherited quiet-band baseline is immutable; future changes need ordinary cause records'];
 }

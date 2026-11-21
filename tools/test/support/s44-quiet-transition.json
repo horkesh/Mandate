@@ -1,0 +1,20 @@
+{
+  "ruling": "CODEX.md, 2026-11-21: S42 and S43 received; the lead?s four band rulings; S44, commit S42",
+  "beforeHash": "e03d9388b49e0d0a8592f43e030b77a5bce0e4067565e16b85a4c504c11cd06e",
+  "afterHash": "aaf5fa67478773643a5632e80ae666fbb3da3cb8e3d35cc27a5701037b987ba5",
+  "record": {
+    "key": "union-1861, war by decision, 148 days/combat.withdrew",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal."
+    },
+    "observed": 0,
+    "cause": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal.",
+    "evidence": "notes/lane-1.14-done-check.md#s44-lead-band-rulings"
+  }
+}

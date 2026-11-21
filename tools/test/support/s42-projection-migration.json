@@ -1,0 +1,46 @@
+{
+  "authority": "CODEX S42: replace held concentration and dated appointment government prerequisites with received papers. No remaining truth read is excused.",
+  "base": "edc57b05142a95757ef120080edf8d934406fa0c",
+  "retired": [
+    {
+      "rule": "projection-truth",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "hash": "5d24276984c2d407c206a5759231bdb3a084d4fec82db7f0c6f20e660f09dfed",
+      "detail": "doctrineView reaches packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates)"
+    }
+  ],
+  "migrations": [
+    {
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "81a098578985867d3f2e8ab92192c77e4b226b15c18585a0f96425f7eedd8f04",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "a3ebc201f3d30c41e51b60225f5d0bc0f5e5f5651fc4490af33efdf65c6b6753",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates)"
+      },
+      "beforeFingerprint": "e9df44c4223656553049df0225f435bb728d8758be38ea38539680d8efeb9b51",
+      "afterFingerprint": "0fe8a09f60faa3fec7e6243bcafe134b765245eb7316f3abe52932b8b399f9d1"
+    },
+    {
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "bb77ac5a1639b41791eda4ccc9bb8b9543e49843f852f761ad7653d9dbb8dcc4",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:pendingRequests (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "8a2d64df76ea8d5ba09cb9b5caeb3120fa79fd8850827abc165daccf46af45c9",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:pendingRequests (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      "beforeFingerprint": "f2795e1599a9499adc1c51288476d7f62276dbfdbc0d0856ae79038ce9cbd1af",
+      "afterFingerprint": "4007c2ad815dec3adae45719b206266cfb2274a5029c1a5f22694062555ac377"
+    }
+  ]
+}

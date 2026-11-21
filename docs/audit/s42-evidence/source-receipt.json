@@ -1,0 +1,35 @@
+{
+  "sourceURL": "https://archive.org/download/cu31924077730186/cu31924077730186_djvu.txt",
+  "sourceSHA256": "66d9a89b843925389e1d2d5d9798dc4e0c66f9a0488bbfcc8705659e4b37ebbf",
+  "sourceRead": "retained primary Cornell scan OCR; copied from S1, not search summaries",
+  "excerptFiles": {
+    "read-p783.txt": {
+      "sha256": "6ba5692590e6d383a22889e49594a73da20b6c0c60fdf14559b80b9094beb945",
+      "ocrLinesOneBased": [
+        56506,
+        56598
+      ]
+    },
+    "read-p844-845.txt": {
+      "sha256": "0fdcd826c06f5038369542e0a8ba6bd401ef31e18f54fe1342121ec708489e80",
+      "ocrLinesOneBased": [
+        60651,
+        60791
+      ]
+    },
+    "read-p901-902.txt": {
+      "sha256": "ad4da7dbc939a61b84ddf6535e3afa8ad40a177288f99a910b38d34857d045d5",
+      "ocrLinesOneBased": [
+        64506,
+        64604
+      ]
+    },
+    "read-p910-912.txt": {
+      "sha256": "ed69e188ce9d541428be8a8d0d3ab231368916a455ac4af227a25707ce7e935c",
+      "ocrLinesOneBased": [
+        65121,
+        65295
+      ]
+    }
+  }
+}

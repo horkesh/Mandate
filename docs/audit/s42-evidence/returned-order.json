@@ -1,0 +1,1125 @@
+{
+  "lastDay": 97,
+  "events": [
+    {
+      "day": 92,
+      "pending": [
+        {
+          "id": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "msgOrigin": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "msgFrom": "davis_jefferson",
+          "msgTo": "davis_jefferson",
+          "msgToPost": "cs_president",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 92,
+          "msgArriveDay": 97,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "davis_jefferson",
+            "reportAuthorPost": null,
+            "reportSubjectKind": "post",
+            "reportSubjectId": "cs_cmd_charleston",
+            "reportClaims": [
+              {
+                "claimKind": "order-returned",
+                "claimRegion": null,
+                "claimValue": 0,
+                "claimToken": "vacant_post",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 92,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.87.davis_jefferson.beauregard_pierre_g_t.verb.transfer.cs_cmd_charleston"
+          },
+          "msgTruth": {
+            "truthTerms": [
+              {
+                "termKind": "observed",
+                "termPerson": "beauregard_pierre_g_t",
+                "termPost": "cs_cmd_charleston",
+                "termRegion": null,
+                "termValue": 0,
+                "termRule": "vacant_post"
+              }
+            ],
+            "truthTrimmed": []
+          }
+        }
+      ],
+      "received": []
+    },
+    {
+      "day": 93,
+      "pending": [
+        {
+          "id": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "msgOrigin": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "msgFrom": "davis_jefferson",
+          "msgTo": "davis_jefferson",
+          "msgToPost": "cs_president",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 92,
+          "msgArriveDay": 97,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "davis_jefferson",
+            "reportAuthorPost": null,
+            "reportSubjectKind": "post",
+            "reportSubjectId": "cs_cmd_charleston",
+            "reportClaims": [
+              {
+                "claimKind": "order-returned",
+                "claimRegion": null,
+                "claimValue": 0,
+                "claimToken": "vacant_post",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 92,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.87.davis_jefferson.beauregard_pierre_g_t.verb.transfer.cs_cmd_charleston"
+          },
+          "msgTruth": {
+            "truthTerms": [
+              {
+                "termKind": "observed",
+                "termPerson": "beauregard_pierre_g_t",
+                "termPost": "cs_cmd_charleston",
+                "termRegion": null,
+                "termValue": 0,
+                "termRule": "vacant_post"
+              }
+            ],
+            "truthTrimmed": []
+          }
+        }
+      ],
+      "received": []
+    },
+    {
+      "day": 94,
+      "pending": [
+        {
+          "id": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "msgOrigin": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "msgFrom": "davis_jefferson",
+          "msgTo": "davis_jefferson",
+          "msgToPost": "cs_president",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 92,
+          "msgArriveDay": 97,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "davis_jefferson",
+            "reportAuthorPost": null,
+            "reportSubjectKind": "post",
+            "reportSubjectId": "cs_cmd_charleston",
+            "reportClaims": [
+              {
+                "claimKind": "order-returned",
+                "claimRegion": null,
+                "claimValue": 0,
+                "claimToken": "vacant_post",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 92,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.87.davis_jefferson.beauregard_pierre_g_t.verb.transfer.cs_cmd_charleston"
+          },
+          "msgTruth": {
+            "truthTerms": [
+              {
+                "termKind": "observed",
+                "termPerson": "beauregard_pierre_g_t",
+                "termPost": "cs_cmd_charleston",
+                "termRegion": null,
+                "termValue": 0,
+                "termRule": "vacant_post"
+              }
+            ],
+            "truthTrimmed": []
+          }
+        }
+      ],
+      "received": []
+    },
+    {
+      "day": 95,
+      "pending": [
+        {
+          "id": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "msgOrigin": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "msgFrom": "davis_jefferson",
+          "msgTo": "davis_jefferson",
+          "msgToPost": "cs_president",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 92,
+          "msgArriveDay": 97,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "davis_jefferson",
+            "reportAuthorPost": null,
+            "reportSubjectKind": "post",
+            "reportSubjectId": "cs_cmd_charleston",
+            "reportClaims": [
+              {
+                "claimKind": "order-returned",
+                "claimRegion": null,
+                "claimValue": 0,
+                "claimToken": "vacant_post",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 92,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.87.davis_jefferson.beauregard_pierre_g_t.verb.transfer.cs_cmd_charleston"
+          },
+          "msgTruth": {
+            "truthTerms": [
+              {
+                "termKind": "observed",
+                "termPerson": "beauregard_pierre_g_t",
+                "termPost": "cs_cmd_charleston",
+                "termRegion": null,
+                "termValue": 0,
+                "termRule": "vacant_post"
+              }
+            ],
+            "truthTrimmed": []
+          }
+        }
+      ],
+      "received": []
+    },
+    {
+      "day": 96,
+      "pending": [
+        {
+          "id": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "msgOrigin": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "msgFrom": "davis_jefferson",
+          "msgTo": "davis_jefferson",
+          "msgToPost": "cs_president",
+          "msgRole": "addressee",
+          "msgRoute": "wire",
+          "msgSentDay": 92,
+          "msgArriveDay": 97,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": null,
+          "msgVerb": null,
+          "msgReport": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "davis_jefferson",
+            "reportAuthorPost": null,
+            "reportSubjectKind": "post",
+            "reportSubjectId": "cs_cmd_charleston",
+            "reportClaims": [
+              {
+                "claimKind": "order-returned",
+                "claimRegion": null,
+                "claimValue": 0,
+                "claimToken": "vacant_post",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 92,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.87.davis_jefferson.beauregard_pierre_g_t.verb.transfer.cs_cmd_charleston"
+          },
+          "msgTruth": {
+            "truthTerms": [
+              {
+                "termKind": "observed",
+                "termPerson": "beauregard_pierre_g_t",
+                "termPost": "cs_cmd_charleston",
+                "termRegion": null,
+                "termValue": 0,
+                "termRule": "vacant_post"
+              }
+            ],
+            "truthTrimmed": []
+          }
+        }
+      ],
+      "received": []
+    },
+    {
+      "day": 97,
+      "pending": [],
+      "received": [
+        {
+          "id": "m.92.davis_jefferson.davis_jefferson.returned.cs_cmd_charleston",
+          "knownReceivedDay": 97,
+          "knownRoute": "wire",
+          "knownVia": [],
+          "knownBody": {
+            "reportType": "wire-dispatch",
+            "reportSubtype": null,
+            "reportAuthor": "davis_jefferson",
+            "reportAuthorPost": null,
+            "reportSubjectKind": "post",
+            "reportSubjectId": "cs_cmd_charleston",
+            "reportClaims": [
+              {
+                "claimKind": "order-returned",
+                "claimRegion": null,
+                "claimValue": 0,
+                "claimToken": "vacant_post",
+                "claimConfidence": 1000
+              }
+            ],
+            "reportDay": 92,
+            "reportHour": null,
+            "reportAdvice": null,
+            "reportAnswers": "m.87.davis_jefferson.beauregard_pierre_g_t.verb.transfer.cs_cmd_charleston"
+          }
+        }
+      ]
+    }
+  ],
+  "liveness": [
+    {
+      "mechanic": "combat.battle_closed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.battle_day",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "combat.battle_opened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.captured",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.flank_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.general_hit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.killed_wounded",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.missing",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.occupation",
+      "fires": 25,
+      "magnitude": 1960
+    },
+    {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.routed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "command.government_established",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.post_succeeded",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.side_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 7,
+      "magnitude": 7
+    },
+    {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "control.changed",
+      "fires": 27,
+      "magnitude": 3960
+    },
+    {
+      "mechanic": "control.threshold_crossed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "forces.stores_fell",
+      "fires": 356,
+      "magnitude": 349935
+    },
+    {
+      "mechanic": "forces.stores_low",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "forces.stores_refilled",
+      "fires": 587,
+      "magnitude": 574161
+    },
+    {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 57,
+      "magnitude": 755
+    },
+    {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 95,
+      "magnitude": 5737
+    },
+    {
+      "mechanic": "ladder.moved",
+      "fires": 4,
+      "magnitude": 4
+    },
+    {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "map.pocket_closed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "map.pocket_relieved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "map.recomputed",
+      "fires": 97,
+      "magnitude": 108
+    },
+    {
+      "mechanic": "messages.courier_delay",
+      "fires": 45,
+      "magnitude": 45
+    },
+    {
+      "mechanic": "messages.delivered",
+      "fires": 7095,
+      "magnitude": 7095
+    },
+    {
+      "mechanic": "messages.mail_delay",
+      "fires": 1624,
+      "magnitude": 1624
+    },
+    {
+      "mechanic": "messages.sent",
+      "fires": 7558,
+      "magnitude": 7558
+    },
+    {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "movement.arrived",
+      "fires": 223,
+      "magnitude": 223
+    },
+    {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "movement.joined",
+      "fires": 37,
+      "magnitude": 37
+    },
+    {
+      "mechanic": "movement.leg_started",
+      "fires": 176,
+      "magnitude": 176
+    },
+    {
+      "mechanic": "operations.ended",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.opened",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.stage",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.works",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "orders.bypassed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "orders.obeyed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "orders.relay_objected",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "orders.relayed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "orders.responses_pruned",
+      "fires": 2,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "orders.returned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "people.grievances_faded",
+      "fires": 10,
+      "magnitude": 10
+    },
+    {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.resigned",
+      "fires": 14,
+      "magnitude": 14
+    },
+    {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "planner.candidates",
+      "fires": 1,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "planner.searches",
+      "fires": 1,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.supply",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.drafted",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.goal_reached",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "plans.goal_set",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.went_ahead",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.front_page",
+      "fires": 39,
+      "magnitude": 39
+    },
+    {
+      "mechanic": "politics.met",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.opened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.support",
+      "fires": 39,
+      "magnitude": 39
+    },
+    {
+      "mechanic": "recruitment.answered",
+      "fires": 43,
+      "magnitude": 43
+    },
+    {
+      "mechanic": "recruitment.called",
+      "fires": 73,
+      "magnitude": 73
+    },
+    {
+      "mechanic": "recruitment.disbanded",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.men",
+      "fires": 35,
+      "magnitude": 155500
+    },
+    {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.mustered",
+      "fires": 35,
+      "magnitude": 35
+    },
+    {
+      "mechanic": "recruitment.refused",
+      "fires": 30,
+      "magnitude": 30
+    },
+    {
+      "mechanic": "recruitment.renewed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 20,
+      "magnitude": 20
+    },
+    {
+      "mechanic": "regions.reached_lines",
+      "fires": 166,
+      "magnitude": 166
+    },
+    {
+      "mechanic": "regions.self_emancipation",
+      "fires": 1961,
+      "magnitude": 1961
+    },
+    {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "reports.casualty_return",
+      "fires": 8,
+      "magnitude": 8
+    },
+    {
+      "mechanic": "reports.commander_lost",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.governor_wire",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.pocket",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.attention_refilled",
+      "fires": 13,
+      "magnitude": 26
+    },
+    {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.attention_spent",
+      "fires": 97,
+      "magnitude": 97
+    },
+    {
+      "mechanic": "seats.battle_orders",
+      "fires": 56,
+      "magnitude": 56
+    },
+    {
+      "mechanic": "seats.choices",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.initiative",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "situations.decided",
+      "fires": 16,
+      "magnitude": 16
+    },
+    {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.fired",
+      "fires": 46,
+      "magnitude": 46
+    },
+    {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.notice_reports",
+      "fires": 30,
+      "magnitude": 30
+    },
+    {
+      "mechanic": "situations.noticed",
+      "fires": 29,
+      "magnitude": 29
+    },
+    {
+      "mechanic": "situations.options_changed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.proposals",
+      "fires": 21,
+      "magnitude": 585
+    },
+    {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "situations.staff_lines",
+      "fires": 16,
+      "magnitude": 16
+    },
+    {
+      "mechanic": "situations.surfaced",
+      "fires": 45,
+      "magnitude": 45
+    },
+    {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "verbs.answered",
+      "fires": 64,
+      "magnitude": 64
+    },
+    {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "verbs.declined",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    }
+  ]
+}

@@ -30,6 +30,16 @@ export function baselineHistoryProblems(before: readonly Finding[], now: readonl
   const key = (f: Finding) => `${f.rule}|${f.path}|${f.detail}`;
   const old = new Map(before.map(f => [key(f), f]));
   return now.flatMap(f => {
+    // S42 retires doctrineView's truth finding. These are the two exact
+    // residual closures after removing its holder/side reads and the dated
+    // appointment's departmentSide prerequisite. No residual read is allowed
+    // by this migration; every one remains a known finding. Full receipts:
+    // tools/test/support/s42-projection-migration.json.
+    const s42 = [
+      ['e9df44c4223656553049df0225f435bb728d8758be38ea38539680d8efeb9b51', '0fe8a09f60faa3fec7e6243bcafe134b765245eb7316f3abe52932b8b399f9d1'],
+      ['f2795e1599a9499adc1c51288476d7f62276dbfdbc0d0856ae79038ce9cbd1af', '4007c2ad815dec3adae45719b206266cfb2274a5029c1a5f22694062555ac377'],
+    ];
+    if (s42.some(([from,to]) => fingerprint(f) === to && before.some(b => fingerprint(b) === from))) return [];
     // S40's named S36 merge removes the review root and retains the concentration finding and changes
     // the two residual closures to received inputs plus the existing own-seat
     // derivation. Bind whole findings, not just symbols or protected fields.

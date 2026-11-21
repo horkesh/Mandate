@@ -1178,5 +1178,67 @@
     "observed": 0,
     "cause": "S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick.",
     "evidence": "notes/lane-1.14-done-check.md#s41-time-band-ruling"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.routed",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: no combat.routed event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured one rout."
+    },
+    "observed": 1,
+    "cause": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured one rout.",
+    "evidence": "notes/lane-1.14-done-check.md#s44-lead-band-rulings"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/orders.returned",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no dispatch arrives at a vacant or changed post in either reference run; the kernel test sends one before the loss is reported and drives its return"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the day-87 Charleston transfer reaches a vacated post after reassignment. Its return is written day 92 and received day 97; S42 measured one return."
+    },
+    "observed": 1,
+    "cause": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the day-87 Charleston transfer reaches a vacated post after reassignment. Its return is written day 92 and received day 97; S42 measured one return.",
+    "evidence": "notes/lane-1.14-done-check.md#s44-lead-band-rulings"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/forces.stragglers_returned",
+    "before": {
+      "minFires": 25,
+      "maxFires": 100
+    },
+    "after": {
+      "minFires": 12,
+      "maxFires": 48,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting."
+    },
+    "observed": 24,
+    "cause": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting.",
+    "evidence": "notes/lane-1.14-done-check.md#s44-lead-band-rulings"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.withdrew",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal."
+    },
+    "observed": 0,
+    "cause": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal.",
+    "evidence": "notes/lane-1.14-done-check.md#s44-lead-band-rulings"
   }
 ]

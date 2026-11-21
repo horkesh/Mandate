@@ -1,0 +1,47 @@
+{
+  "id": "virginia_military_convention",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.virginia_military_convention.title",
+  "text": "situation.virginia_military_convention.text",
+  "earliest": "1861-04-26",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 52
+      },
+      {
+        "flag": "virginia_seceded"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "department_side",
+        "subject": "st_virginia",
+        "side": "confederate",
+        "delta": 1,
+        "reason": "military-convention-confirmed"
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative military correspondence only; no secession-cause claim, policy toward protected populations or civilian-conduct effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p. 783, Walker to Letcher, Montgomery, 26 April 1861"
+    }
+  ],
+  "namedOnly": "A ministry summary of the cited correspondence; no new personal speech or forced arrival is asserted."
+}

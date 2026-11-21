@@ -1,0 +1,36 @@
+{
+  "id": "harpers_ferry_assignment_notice",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.harpers_ferry_assignment_notice.title",
+  "text": "situation.harpers_ferry_assignment_notice.text",
+  "earliest": "1861-05-15",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 71
+      },
+      {
+        "flag": "virginia_seceded"
+      }
+    ]
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative military correspondence only; no secession-cause claim, policy toward protected populations or civilian-conduct effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 pp. 844–845, Cooper to Johnston, Montgomery, 15 May 1861"
+    }
+  ],
+  "namedOnly": "A ministry summary of the cited correspondence; no new personal speech or forced arrival is asserted."
+}

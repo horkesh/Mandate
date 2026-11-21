@@ -1,5 +1,15 @@
 # Integrated candidate: S41
 
+**S42 follow-up, with S44?s lead rulings applied:** the received concentration
+reaches Manassas. S44 recentres routing and returned orders to `around(1)`,
+straggler returns to `around(24)`, and Union withdrawal to 0?0, with the
+testbed?s three withdrawals as live control. Only the exact quiet-list
+transition 25 ? 26 is allowed; the 338-band origin remains immutable.
+[The S42 report](s42-received-concentration.md) retains its original failed
+hook and single done-check evidence. S44?s commit hook is the remaining
+commit gate; final commit/result are in CODEX.md and `runs/s44/`.
+No new done check or acceptance clearance is claimed.
+
 For the lead: three items. The last code merge is committed on `sprint/1a` at **`5482371fea08bcf3d3154ffca7aa3319796054ad`**. The default binding done check passes **Phase 0 6/6 locally**, while **1A remains 4/6**. The headless desk replay's observed outcome is recorded below. This is the entry point for whole-branch review under 0106; it supplies no approval, gate signature, D6 clearance or release verdict. Nothing was pushed.
 
 ## What is integrated

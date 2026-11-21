@@ -15,6 +15,18 @@ it('permits only the exact S39 fixes merge to migrate an existing projection fin
 });
 
 const finding: Finding = { rule: 'projection-truth', path: 'view.ts', detail: 'a known read', hash: 'old' };
+it('permits only S42’s two exact residual closures after removing received-concentration truth reads', () => {
+  const receipt = JSON.parse(readFileSync(new URL('./support/s42-projection-migration.json', import.meta.url), 'utf8')) as {
+    migrations: { before: Finding; after: Finding }[];
+  };
+  for (const { before, after } of receipt.migrations) {
+    expect(baselineHistoryProblems([before], [after], false)).toEqual([]);
+    expect(baselineHistoryProblems([], [after], false)).not.toEqual([]);
+    for (const change of [{ hash: 'edited' }, { path: 'another.ts' }, { detail: after.detail + '; another truth read' }]) {
+      expect(baselineHistoryProblems([before], [{ ...after, ...change }], false)).not.toEqual([]);
+    }
+  }
+});
 it('permits removing resolved findings but never silently growing the known-defect baseline', () => {
   expect(baselineHistoryProblems([finding], [], false)).toEqual([]);
   expect(baselineHistoryProblems([finding], [finding], false)).toEqual([]);

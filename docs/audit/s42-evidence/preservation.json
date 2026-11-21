@@ -1,0 +1,9 @@
+{
+  "measuredTrackedFiles": 1879,
+  "changedDuringMeasurement": [
+    "notes/lane-1.14-done-check.md"
+  ],
+  "changedRuntimeInputs": [],
+  "removedEntryPaths": [],
+  "note": "Implementation and validation used the S42 worktree; primary sources and coordination use their authorized external paths. S43 worktree was never accessed. No browser or server was started."
+}

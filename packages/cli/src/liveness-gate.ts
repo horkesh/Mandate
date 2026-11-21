@@ -155,7 +155,6 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'movement.join_blocked': { why: 'every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait', test: 'packages/kernel/test/join.test.ts', needle: 'waits, typed no_route, when no route reaches the seat' },
   // R77 retains R74: a late fort fall captures; matching recorded terms have a named kernel driver.
   'reports.commander_lost': { why: 'Sumter evacuates under terms in the Union reference and no testbed commander is lost; the kernel test captures a commander through the shared reporting path', test: 'packages/kernel/test/believed-posts.test.ts', needle: 'a capture from any other phase is reported by the shared path' },
-  'orders.returned': { why: 'no dispatch arrives at a vacant or changed post in either reference run; the kernel test sends one before the loss is reported and drives its return', test: 'packages/kernel/test/believed-posts.test.ts', needle: 'bounces on arrival as a returned dispatch, typed' },
   'orders.conflict': { why: 'a conflict needs two issuers, a chain order and one sent around it; here only the principal orders', test: 'packages/kernel/test/seats-orders.test.ts', needle: 'conflicting orders: one down the chain, one around it' },
   'reports.filtered': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
   'reports.trimmed': { why: FILTER_EMPTY, test: 'packages/kernel/test/seats-orders.test.ts', needle: 'holds a wire for a day and cuts the losses from it' },
@@ -239,6 +238,7 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  * (each pack's checkpoints.json) are independent and unchanged; these are mechanic liveness counts only.
  */
 const UNION_BANDS: Record<string, GateBand> = {
+  'orders.returned': { ...around(1), why: "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the day-87 Charleston transfer reaches a vacated post after reassignment. Its return is written day 92 and received day 97; S42 measured one return." },
   'planner.term.time': quiet('S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick.'),
   'people.resigned': around(7),
   // R82: an integrated government notice offers one officer his choice; he stays.
@@ -254,15 +254,15 @@ const UNION_BANDS: Record<string, GateBand> = {
   'combat.occupation': around(124), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
   'combat.pursuit_chosen': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'combat.surrendered': around(1),
-  'combat.withdrew': around(2), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
+  'combat.withdrew': quiet("S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal."),
   'control.changed': around(128), // S1 national [I]: the command concentration and emerged field movements change occupation through the existing control owner.
   'control.threshold_crossed': around(39), // S1 effective-date [I]: the command concentration and emerged field movements change occupation through the existing control owner.
   'forces.stores_fell': around(1443), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
   'forces.stores_low': around(56), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
   'forces.stores_refilled': around(1090), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
-  'forces.stragglers_returned': around(50), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
+  'forces.stragglers_returned': { ...around(24), why: "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting." },
   'combat.flank_broken': quiet("S1 national: no combat.flank_broken event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."),
-  'combat.routed': quiet("S1 national: no combat.routed event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."),
+  'combat.routed': { ...around(1), why: "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured one rout." },
   'combat.works_stormed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'operations.ended': around(2), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
   'operations.opened': around(2),
@@ -363,6 +363,7 @@ const UNION_BANDS: Record<string, GateBand> = {
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
 const TESTBED_BANDS: Record<string, GateBand> = {
+  'orders.returned': quiet("no dispatch arrives at a vacant or changed post in either reference run; the kernel test sends one before the loss is reported and drives its return"),
   'planner.term.time': quiet("S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly."),
   'people.resigned': notHere('the testbed reference pack has no service-choice records; union-1861 fires it, and resignation.test.ts drives the government path'),
   'people.stayed': notHere('the testbed reference pack has no service-choice records; union-1861 fires it when an officer stays after his government joins'),

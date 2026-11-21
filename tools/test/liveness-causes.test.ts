@@ -73,4 +73,20 @@ describe('liveness changes require a cause and around(observed)', () => {
     }
     expect(inheritedQuietHistoryProblems(before, [...before, { ...receipt.record, key: 'another/time' }])).not.toEqual([]);
   });
+  it('permits only S44’s exact Union withdrawal ruling and freezes all 26 entries', () => {
+    const receipt = JSON.parse(readFileSync(new URL('./support/s44-quiet-transition.json', import.meta.url), 'utf8'));
+    const after = JSON.parse(readFileSync(new URL('../rules/inherited-quiet-bands.json', import.meta.url), 'utf8'));
+    const before = after.slice(0, 25);
+    expect(after).toHaveLength(26);
+    expect(after[25]).toEqual(receipt.record);
+    expect(inheritedQuietHistoryProblems(before, after)).toEqual([]);
+    expect(inheritedQuietHistoryProblems(after, after)).toEqual([]);
+    for (const changed of [before, [...after, receipt.record], [...before, { ...receipt.record, cause: 'another ruling' }],
+      [...before, { ...receipt.record, key: 'testbed, 120 days/combat.withdrew' }], [...before.slice(1), receipt.record]]) {
+      expect(inheritedQuietHistoryProblems(after, changed)).not.toEqual([]);
+      if (changed !== before) expect(inheritedQuietHistoryProblems(before, changed)).not.toEqual([]);
+    }
+    expect(livenessProblems({ [receipt.record.key]: receipt.record.before }, { [receipt.record.key]: receipt.record.after }, [receipt.record])).not.toEqual([]);
+    expect(livenessProblems({ [receipt.record.key]: receipt.record.before }, { [receipt.record.key]: receipt.record.after }, [receipt.record], after)).toEqual([]);
+  });
 });

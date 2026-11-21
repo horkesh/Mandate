@@ -208,6 +208,26 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
       newest.set(k, Math.max(newest.get(k) ?? -1, stampOrder(r)));
     }
     const expiredControl: KnownReport[] = [];
+    // Received institutional acts remain evidence after ordinary dispatches fade.
+    // Keep the latest appointment and vacancy paper per post, service choice per
+    // person, and official notice per subject. Never rebuild them from live posts.
+    const institutional = new Map<string, KnownReport>();
+    for (const r of held.knownReports) {
+      const b = r.knownBody;
+      if (b.reportDay > day || r.knownReceivedDay > day) continue;
+      const keys: string[] = [];
+      if (b.reportSubjectKind === 'situation' && b.reportType === 'wire-dispatch' && b.reportSubtype === null) keys.push(`notice:${b.reportSubjectId}`);
+      if (b.reportSubjectKind === 'person' && b.reportSubjectId === b.reportAuthor && b.reportClaims.some(c => c.claimKind === 'service-choice')) keys.push(`service:${b.reportAuthor}`);
+      if (b.reportSubjectKind === 'post') {
+        if (b.reportClaims.some(c => c.claimKind === 'verb-answered' && c.claimValue === 1 && c.claimToken?.startsWith('appoint:'))) keys.push(`appointment:${b.reportSubjectId}`);
+        if (b.reportClaims.some(c => c.claimKind === 'commander-lost' || (c.claimKind === 'order-returned' && (c.claimToken === 'vacant_post' || c.claimToken === 'holder_changed')) || (c.claimKind === 'verb-answered' && c.claimValue === 1 && c.claimToken?.startsWith('relieve:')))) keys.push(`vacancy:${b.reportSubjectId}`);
+      }
+      for (const key of keys) {
+        const prior = institutional.get(key);
+        if (prior === undefined || stampOrder(r) > stampOrder(prior) || (stampOrder(r) === stampOrder(prior) && strictCompare(r.id, prior.id) > 0)) institutional.set(key, r);
+      }
+    }
+    const institutionalPapers = new Set(institutional.values());
     const pendingPapers = new Map<string, KnownReport>();
     for (const r of held.knownReports) if (r.knownBody.reportPlan !== undefined) {
       const post = r.knownBody.reportPlan.paperPost;
@@ -215,6 +235,7 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
       if (prior === undefined || stampOrder(r) > stampOrder(prior)) pendingPapers.set(post,r);
     }
     const kept = held.knownReports.filter((r) => {
+      if (institutionalPapers.has(r)) return true;
       // Keep only the latest enclosure per post beyond ordinary dispatch pruning. A late refusal can reopen it;
       // the sender's bounded order copies still prevent an answered paper from becoming actionable again.
       if (r.knownBody.reportPlan !== undefined && pendingPapers.get(r.knownBody.reportPlan.paperPost) === r) return true;

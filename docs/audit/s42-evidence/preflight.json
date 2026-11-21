@@ -1,0 +1,4940 @@
+{
+  "initialHash": "cf2b9c789c8782bebd9d911714d898c4c17970982ccd264f3b776857aacc86c2",
+  "worldHash": "4b32adff541b87ead6e64b1112bf80c89ce6606cc73c4921be22bfc936756ff1",
+  "finalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+  "hashes": [
+    {
+      "day": 1,
+      "hash": "981612fb8ad53a0c5800ecf56a735ef5bec1710d95b911c72c86ab4312b40bd7"
+    },
+    {
+      "day": 2,
+      "hash": "d7c30745400fa70a7e134533c7535825288b6b094d0c3e33858e3e53dfdfcfe8"
+    },
+    {
+      "day": 3,
+      "hash": "c18d38cb162fdbf8d4ce2a6833ba5541ac4d9071712429a03725c58c5cb330da"
+    },
+    {
+      "day": 4,
+      "hash": "155210b328d1fdcf495cdc0d9270059d9eff88b3334ed57e4727ed7c960f805e"
+    },
+    {
+      "day": 5,
+      "hash": "b4552f1727c1cbe870b1220be464951928506ee97a857b1cf87478887c9b345a"
+    },
+    {
+      "day": 6,
+      "hash": "0cdbe277481c36cb58c821148666e25a068c4dadfcc55461765b3e8b73c5ed5f"
+    },
+    {
+      "day": 7,
+      "hash": "6e2463559aed31e27be4684c9d770620b7dd871e8d6be62076df09ef45bf3775"
+    },
+    {
+      "day": 8,
+      "hash": "00fd2c851e2b487a50cf23894bd7015605394c423188620321001ba3218b55bd"
+    },
+    {
+      "day": 9,
+      "hash": "81ba7fd4a8bf8caaeb17554b59572c04d3ef42b6666ea98c2b3972572b2d94f3"
+    },
+    {
+      "day": 10,
+      "hash": "ea603acdbb7139136cc4ffeb86ec76bb02bb50e9490800fe1da8e0b9b2d1ed01"
+    },
+    {
+      "day": 11,
+      "hash": "dd581523cf79afdf5afcfada57accec6d70301ea623c23582a21b95c9d22e927"
+    },
+    {
+      "day": 12,
+      "hash": "3bb3aab32a4299a5936cae297c77a0c77fbfdcd7741f40b30f8b4e59ef83cebf"
+    },
+    {
+      "day": 13,
+      "hash": "1414480a207ec11f06882492c13ece3f9be53f9a4b7a5e161747f9025e81bfcd"
+    },
+    {
+      "day": 14,
+      "hash": "c34b0818d7fa82fa0b9e085580b81abc12793019f9aef789db7ba201a4963ad3"
+    },
+    {
+      "day": 15,
+      "hash": "8c92eaeb5eb7abaa20b3a76ccba8dc9bbea6bb446085f811fd8e24318e5ef299"
+    },
+    {
+      "day": 16,
+      "hash": "3f32634d0d6c2065d33884cff20cd081ff79efc170ab4c6768133aebcd17157d"
+    },
+    {
+      "day": 17,
+      "hash": "3e2485ab2998ed8b7689b7c4ef3725cd9c222e72b6f024a23c97d6afe5a14116"
+    },
+    {
+      "day": 18,
+      "hash": "cecff42e68c9123982e678a8e505086f1abba1ab35e7fe8b9a0474574e10787d"
+    },
+    {
+      "day": 19,
+      "hash": "08bf6525e178f7f7747af10892bda8a7d2a1f29c6674698f7f6f2e9bbb9352c6"
+    },
+    {
+      "day": 20,
+      "hash": "5d9b9a5d34664564be8cf5236d28e812c0216b9a326077c25999bc9d5aff3878"
+    },
+    {
+      "day": 21,
+      "hash": "c647f0f6eac10eade91d5cce30b647ce4976851d7d3a4b36ad9e944bc952e063"
+    },
+    {
+      "day": 22,
+      "hash": "ab30e1705df387562e9e790bf6e1669d363f62d242ed7e76625815c71abe1884"
+    },
+    {
+      "day": 23,
+      "hash": "158bfcc9b90f828adaa7e4bee96d20c54dc443da8e4486e022f506b6515a9d24"
+    },
+    {
+      "day": 24,
+      "hash": "fec55b28c7ea95d4d18888465b91af2c393552a0d9d98bf034e23854fa0f0eae"
+    },
+    {
+      "day": 25,
+      "hash": "081e75841a5ceebb39911dd39f4693d6c90bf4d6779191b3e5408d921b3586be"
+    },
+    {
+      "day": 26,
+      "hash": "2dc41250e5677213e82e47f6964c660bfe76aae0e9b004b73796781e1e5379e0"
+    },
+    {
+      "day": 27,
+      "hash": "248161e13a969866190adc648533535b7f08ef4e59e5afc952c7b5dfea9c5d92"
+    },
+    {
+      "day": 28,
+      "hash": "8e1732048abcba611e02269aa5b6c5c9b0ac565fd7de7ec14605236c32676761"
+    },
+    {
+      "day": 29,
+      "hash": "b418920291bbbe30f17f76df211c38d72068a7a76f3c9843a3f617edbc8bd2b4"
+    },
+    {
+      "day": 30,
+      "hash": "1031f61a3e0dd12105e78ce6eb97f0d888de1484de3e9e67ea4345d8abe5c7cf"
+    },
+    {
+      "day": 31,
+      "hash": "2da1838b28f547e2443966cb2b8c436d85658ee557ecfbbb44b1771035b3fb16"
+    },
+    {
+      "day": 32,
+      "hash": "04d4f8a571fcaa34ef31a16a3bd23afca82f2ac0cd7273c268c4b5d7c888103c"
+    },
+    {
+      "day": 33,
+      "hash": "67212a29942a17fda9e75e8ae029cac35b7008a59a4c0f395ee6529f4976854a"
+    },
+    {
+      "day": 34,
+      "hash": "e0bdda35a08f719f0d4cfe1957eeaf3d0eaddb565a54b78fe6e9b87eb7bea783"
+    },
+    {
+      "day": 35,
+      "hash": "d8c96f272aa6934d2357e7aa6999a1a52565b323123adb94c13c6f4e01d9606f"
+    },
+    {
+      "day": 36,
+      "hash": "dc77b2fe5a71c211f5eeec35f5a1dde6cf1d868adcadf0766c79c290542f895f"
+    },
+    {
+      "day": 37,
+      "hash": "4981b5bb398c44b189b42f01c31b865872bd03ce29e82d793f4c116018cb4347"
+    },
+    {
+      "day": 38,
+      "hash": "6d6f3210f7f4e7a74108733f6e8fd22907902abf23b9c5ba72528e6500e71811"
+    },
+    {
+      "day": 39,
+      "hash": "843fde22b424424e2c5b698e9e98cc88b8bd148a6b3b1c0493508b24436d3988"
+    },
+    {
+      "day": 40,
+      "hash": "1781132ceabf3558593072c85c982ed4f05bcf585452f0c33f32946ec944d381"
+    },
+    {
+      "day": 41,
+      "hash": "aa99df7ea7717e0fddfae7e3620168d1eab1bc218ed79040145d7d4320a30937"
+    },
+    {
+      "day": 42,
+      "hash": "4ea862f60153a6c2f499aca9af3da7c558657f10303a15e28e1300f665243e9c"
+    },
+    {
+      "day": 43,
+      "hash": "b4759d13807cb8b58c0c49b4538c638d61833e83f5593df06263b4e6623409f8"
+    },
+    {
+      "day": 44,
+      "hash": "6e2473e1a082b589e678eb09cb6d0fcc93a258d1907cfbcc4d3ecd437205e393"
+    },
+    {
+      "day": 45,
+      "hash": "b71bca8d0e504ab0ade32cbb6ce7c20560cb62bd7a7b9d627129feca395be98a"
+    },
+    {
+      "day": 46,
+      "hash": "748f46debe942fe44985fe5b694c50c5361e75ec47e3e4581dd9817ede92fc0a"
+    },
+    {
+      "day": 47,
+      "hash": "dc2e3fd4bbb1b08020ca21b69a823a0a691260c8110239aaaf5383c331c3ae11"
+    },
+    {
+      "day": 48,
+      "hash": "f3a663f2c48d95794b49ad431b8aab28cd0bb2b7adaa6269cb39403943a64bd6"
+    },
+    {
+      "day": 49,
+      "hash": "5427d6c4cfa12f242e5c0c98bbba5b590357d6bc6e701cedbeba28f9538015a8"
+    },
+    {
+      "day": 50,
+      "hash": "bb6a8d2b74acc5a68da6d3f1890ab3e874540cba661729be0aa9563af06c2e34"
+    },
+    {
+      "day": 51,
+      "hash": "9488c63257a9af6070a2314271f53e57d205599091c65329e9ce69d20c39f8a0"
+    },
+    {
+      "day": 52,
+      "hash": "08e972d90109cd5916985e3ca3f85b4605fb9d2a45ad5e33c346997422ea5009"
+    },
+    {
+      "day": 53,
+      "hash": "9f906d54f8913d683bb9ac862950f481c00841da73c9c62f2a319accc33f24cf"
+    },
+    {
+      "day": 54,
+      "hash": "f845fa36386e4e20d57c818154ed5362caeb455db2c0c2e603eb978a88814f4a"
+    },
+    {
+      "day": 55,
+      "hash": "66c82c142365ca5153b0b220fb1eb1a5dc9d879a8e8cb6081aa3d50e3275d011"
+    },
+    {
+      "day": 56,
+      "hash": "330f783770ba8a02eb0e1ba6cc25d1640ffdcc3690f6b010ee165d47f469a617"
+    },
+    {
+      "day": 57,
+      "hash": "4d04df7696c97fbe6b1ed68082cd9bb09ccd4507fbbcb4bcf9f614b1fd195072"
+    },
+    {
+      "day": 58,
+      "hash": "99e39ecf743ba31fe715346422ffc7e6fa61535c6da764283201fe1051045675"
+    },
+    {
+      "day": 59,
+      "hash": "594af142a70f7185a7697f2e02fd4e885d7919e3d70315df68f718f3e0ab8fdf"
+    },
+    {
+      "day": 60,
+      "hash": "953da5096ba85f07439748e2b901bff271eabff7e12ebc06919776a68d19eb56"
+    },
+    {
+      "day": 61,
+      "hash": "09618eac26a499699043d7a375eb4e98b921773df4218424e177b60263938da9"
+    },
+    {
+      "day": 62,
+      "hash": "ddaacbefbc4481e9094f7bfedd6a344284157efbda5247f52bf3c54b02cd54be"
+    },
+    {
+      "day": 63,
+      "hash": "8a614ae88dd045b6f2836c3043214cd326310cd0b76cc6a8ecf81119c5536b4b"
+    },
+    {
+      "day": 64,
+      "hash": "77bd971661e93d696bf988ee798cad51da1662f27062d892ab3345d8fb25c946"
+    },
+    {
+      "day": 65,
+      "hash": "ef25962a863653b43d9280c94876397eec651f7ddb7d74cbf3be3f000f3a386a"
+    },
+    {
+      "day": 66,
+      "hash": "77e846469284173a8444d5f4252e9ea46ecc18c9047dea96981a69ae2d69726a"
+    },
+    {
+      "day": 67,
+      "hash": "1aaf83b35e6c0dce7abf4deb24895fa8c158c29018bb97cc332c17a42f5a1a77"
+    },
+    {
+      "day": 68,
+      "hash": "28375d3b590171c047076b6e81879188ae5da87f67ca9fe233d9027292f6d874"
+    },
+    {
+      "day": 69,
+      "hash": "9806b53138372452d51626b2e6a84aaba18f9707494ac269fea85aceb4fdd931"
+    },
+    {
+      "day": 70,
+      "hash": "6861ca9b7a75ab90d29001f31cfeb746252f74a33fb49d3b6ab39f05c800e504"
+    },
+    {
+      "day": 71,
+      "hash": "6bc03d41f98ac5c211d1d92bb96b70d895d06951fd4520cfbc5cd83d0c1671bb"
+    },
+    {
+      "day": 72,
+      "hash": "43d114d851f9243fb3030dea904977eed3d1343fa7ee557a76d4a6b09b2796da"
+    },
+    {
+      "day": 73,
+      "hash": "24b02da62e4cde212ecaa243a43e5a92aa0bca10a813d2d4e173adf8c7b32c83"
+    },
+    {
+      "day": 74,
+      "hash": "2597e99dee84f8cf5de27a601cc049424b2fd6dbae3006ccff997d0be346a673"
+    },
+    {
+      "day": 75,
+      "hash": "0933baf9a110fe2e291673dba658cecf3726460d5c93dbf0bb9768294161b31f"
+    },
+    {
+      "day": 76,
+      "hash": "f6f386284e300571d109d718a3f27eeb1403b1551ac690231f56c6c6220b36c3"
+    },
+    {
+      "day": 77,
+      "hash": "45122cf8f7e9c5dcd58418f451e7bcb5523c5d4893606d484dc0f317ae9700cb"
+    },
+    {
+      "day": 78,
+      "hash": "4e4f5c9ac805b7ae4098f522134c0ffc26c684441a89cc892d82cc32b33de066"
+    },
+    {
+      "day": 79,
+      "hash": "f8e993a08efd1a66d832401e194dfb009d6a04f9b2da5d114deb65ad4906ec1e"
+    },
+    {
+      "day": 80,
+      "hash": "602909361c13bbf0f757c743d39e7689db8908315e6bfb1a8e16c0514b90da61"
+    },
+    {
+      "day": 81,
+      "hash": "adfb4ff723d7a760b8628fbcdb6142544fceb8b11a7a8d72d55a0ad5d7d8107d"
+    },
+    {
+      "day": 82,
+      "hash": "ab4f65c347adee212eca141251e667ed9d3a2c5a70aeb3b8ee91c7ae66d3ea9e"
+    },
+    {
+      "day": 83,
+      "hash": "bf45b73998b3ef724b18a5d78bba4290ac3c217f6fea324a297a00211a67c9fe"
+    },
+    {
+      "day": 84,
+      "hash": "13a03e3cebf82e318bb30c95035fde80ff6c09e94196f0523e5d6849b328c8c0"
+    },
+    {
+      "day": 85,
+      "hash": "10de2be611e81610de841b1a66b8f20415e778edd0fb3ba85cfba5804dfb7a2e"
+    },
+    {
+      "day": 86,
+      "hash": "3a8b98c0051cda6f124977d1c1e74950d49731432bc2cd80ced20f375c09acb8"
+    },
+    {
+      "day": 87,
+      "hash": "aa6608eb91851d27e6e05f65e24a2412aca074215ed5e32a88a477448fe5c201"
+    },
+    {
+      "day": 88,
+      "hash": "3c73ece6b78bfad01e0feb0f36ea12d5843857517341ab8b74e94812911a4cec"
+    },
+    {
+      "day": 89,
+      "hash": "d7f7760c812ab656f3f7d5c98888ba97a203381f76d75c1bb74e0a1782701d43"
+    },
+    {
+      "day": 90,
+      "hash": "f038f1b101af4690090e280850c01a116cf83cfef834ae6cf9c5833a714b2981"
+    },
+    {
+      "day": 91,
+      "hash": "40830af7966b80394343b4d74f87ebab6ad97227dd8aac6dda2332364bfacb4f"
+    },
+    {
+      "day": 92,
+      "hash": "c7289b30f7eec43fa4f105f38deccedec5db38d90455d17c103a652c473517e0"
+    },
+    {
+      "day": 93,
+      "hash": "11d65453cdf14428885827af5e91e50f67bb22403406abe53ad261b5d72c1751"
+    },
+    {
+      "day": 94,
+      "hash": "71a00e950cf1500778a176e294f133b70081eb8c7c59077e7fd3d0d3260b012e"
+    },
+    {
+      "day": 95,
+      "hash": "74858f0ea61b4afb8cbc15c5453563f0cb9f209806bc49002151574f9703aa66"
+    },
+    {
+      "day": 96,
+      "hash": "85643110ee33f46bb6b619ee2f37f7bd11fd61d595061556a921493360fe78cf"
+    },
+    {
+      "day": 97,
+      "hash": "2234087e9d26ebd0b9aab3670dea243cd8098c61321f2a28a25a283f55acf679"
+    },
+    {
+      "day": 98,
+      "hash": "252dd71577d66cab99edb36c187461e52548dd487ae0f983d3244fbd7c599977"
+    },
+    {
+      "day": 99,
+      "hash": "89805ad01ff32b3572b7f5f440d739747ac4420ab65488aa84e3d9fd86ac65a1"
+    },
+    {
+      "day": 100,
+      "hash": "536cc51c9d29eb342b1b63f03a2056c05213c54a721eb4160bb096912d0da252"
+    },
+    {
+      "day": 101,
+      "hash": "2805af719f744a0ba6f902d9d17a31a406bda3ff9603e318552c1fcde5175596"
+    },
+    {
+      "day": 102,
+      "hash": "4f1b8491b5722564175f54177354639ff1d52f22ef277f50ccc7dc508b93e57d"
+    },
+    {
+      "day": 103,
+      "hash": "003c462027490a7ab86a7c27078401561fa7bb5c6737c6605db210c09496437c"
+    },
+    {
+      "day": 104,
+      "hash": "221af86a8184d5fb255002761c5e28808f1b92b9dc34dc2502df922643b9df5b"
+    },
+    {
+      "day": 105,
+      "hash": "caca1246f4f7ef018bf1853141e1d22df9488ab0f7918a762b9ae96b4455aaca"
+    },
+    {
+      "day": 106,
+      "hash": "49c22c78e8436dde12d25035750a887946cca37c3672b18475abd456d1e7f4b6"
+    },
+    {
+      "day": 107,
+      "hash": "a6d2cbe11176627c4a22177e817cfcf643db8394e7de57cc555ab1f3fdbdbd36"
+    },
+    {
+      "day": 108,
+      "hash": "5e7b7acb2b13b0445de38febb8f6c8bc74ea39e059922045c2accacce86dba1b"
+    },
+    {
+      "day": 109,
+      "hash": "15b4a49448fea1c63617cc34b9ef356f9183b291e8788de28fc2b43237148586"
+    },
+    {
+      "day": 110,
+      "hash": "58f7bb73703ed128ea149a56b00fcb74a6c7d31033945fd7e6b0090c3d576c7a"
+    },
+    {
+      "day": 111,
+      "hash": "cd787d1470650cc1cb6605fcba4a26ffba577f6e6a8ce79a5ea6a31adea493d8"
+    },
+    {
+      "day": 112,
+      "hash": "c1fcaa1d030adabce7f8d34d05a87ba1eb01346f678bb652bd671a093e40457a"
+    },
+    {
+      "day": 113,
+      "hash": "5f0d3bd35ed549e6e90e1825aae1d813fb2eb893ad996225b0dc4cab16618699"
+    },
+    {
+      "day": 114,
+      "hash": "95349afaf8f4560b2adb0e18cd956a2563d9b3b55682f523cf05bc4b841b1ef0"
+    },
+    {
+      "day": 115,
+      "hash": "7d138a9fa145735c3abbea543ced9a083ccc94400fcb99a261a3a357f7bd6a7b"
+    },
+    {
+      "day": 116,
+      "hash": "5eb325ffc86b7cbdf3b10b3fcca96c6ffa9bb1f02a5f3e58e33e9ac67c7428c5"
+    },
+    {
+      "day": 117,
+      "hash": "f4e4e1cff7cd04cd69a33c3a7e279ad2872687bf28f50cd880c24efff3c19466"
+    },
+    {
+      "day": 118,
+      "hash": "8a2a1789b08c15af4831c67868f773b791f18731d9657703f35d90e2a2e152a4"
+    },
+    {
+      "day": 119,
+      "hash": "337a7fffec4ea5602710eac8f166d0255c925bdff57c415bb0749d94160eef66"
+    },
+    {
+      "day": 120,
+      "hash": "112478817643467344852b44f34e89d439706071de859ac5629446e144e1f27d"
+    },
+    {
+      "day": 121,
+      "hash": "3c4e674cfd49a980e73ae8fcdd0383a24989afc4219fc5236aec750306576d2e"
+    },
+    {
+      "day": 122,
+      "hash": "4d51ca2e59a69063bd1da1b7f1c11db6145dd775921bc676e088b87984c1f1e2"
+    },
+    {
+      "day": 123,
+      "hash": "15d1bc9fe6fc43dd77b35a7709c2cf4707a7c70f88ec9fae77f51cf12fc96d08"
+    },
+    {
+      "day": 124,
+      "hash": "3ced72fc300f4919d8e9dd52bb72cfbdbce8b0c407ea8cd76a9928e3a9871a31"
+    },
+    {
+      "day": 125,
+      "hash": "d05378a36a6b350cba17feb2ab2f0e13f10662e40a5cc2e75b11585f64095176"
+    },
+    {
+      "day": 126,
+      "hash": "03983385294666b9ae8e563cb36cc6fb208fbe10a20a39aaebc9bbabc6f16953"
+    },
+    {
+      "day": 127,
+      "hash": "d6121293e72c06805f070d832f48b6288a6054867fe4c7800c3ee4166b33a26f"
+    },
+    {
+      "day": 128,
+      "hash": "420fd45829163c813960c96dae8508321d7a3c226c5336948349592d8939595f"
+    },
+    {
+      "day": 129,
+      "hash": "146bcc77b38794118ae55f9ffd8434583d5ce87a5cc7e16c11d330e8ad79f04c"
+    },
+    {
+      "day": 130,
+      "hash": "e02bfd38efd3ff958d90e26f86507186a48092deba558f2baf9c2cf75c02a551"
+    },
+    {
+      "day": 131,
+      "hash": "ae3d9c5dccb57ee27afebb08dd4b334c432c6d5be9c36bafe10942c885086fd0"
+    },
+    {
+      "day": 132,
+      "hash": "1b688590d2eda82bf6bac5cbb89e17728210060d59e705d682cc88d79ec4e0dc"
+    },
+    {
+      "day": 133,
+      "hash": "e43127eedacac653350eede33acc83cc5624cb9009d107222cf6772164ca8ba4"
+    },
+    {
+      "day": 134,
+      "hash": "5df0c28fd71edbe546215adff5c05a7fac47ba769881fb3bff6534464b93bee6"
+    },
+    {
+      "day": 135,
+      "hash": "bab6474900d8589541ae5d217c2b9b05c23b2eccc2375fd5e77e34fe8c41e820"
+    },
+    {
+      "day": 136,
+      "hash": "9e75da6a744acbaed057f57221f9fc09fb1cc41c77415455194d06ef446d4c6b"
+    },
+    {
+      "day": 137,
+      "hash": "1ee7d2afac131bf80ff8fcb50ec1ef591bee7d75fff0fa27016d65fd1b9f7a43"
+    },
+    {
+      "day": 138,
+      "hash": "b8f44f0799a14685d186b48fb71699daba00febcd292919cb89a1940d4bdf5bb"
+    },
+    {
+      "day": 139,
+      "hash": "b014c0908200f2a34f4c4c7778d4002650b80d21c7663eaa70a23da0e028e1e2"
+    },
+    {
+      "day": 140,
+      "hash": "b873ccff6861d2f566d1d6e326842cc7d5880749d7a1c7c3a3e9b77f9b482547"
+    },
+    {
+      "day": 141,
+      "hash": "4e58ac4507f31ab0508c4b244655013892301eb89cb71f5b840c86c1daf5c2f2"
+    },
+    {
+      "day": 142,
+      "hash": "c0bad56fbf6efe6655b6ca1a54623f3b2f96bf15a6048282203ae26da6b55e86"
+    },
+    {
+      "day": 143,
+      "hash": "c20d6dd3f370fd3f69f67cf689519e9758edf3dfe6d1d3880cae42fef4ba28a3"
+    },
+    {
+      "day": 144,
+      "hash": "a1428e3b6479fb7de1626b0d30ed963e31129b1d3151d223104096688049ba58"
+    },
+    {
+      "day": 145,
+      "hash": "d93243dd472ef58e0a1f1d5c42f4508f9945a18d161521218af86c7344e23f85"
+    },
+    {
+      "day": 146,
+      "hash": "f78744c633ee0da7e4642e2035f1cb38da0cb3f353c0470c23c646b965516fab"
+    },
+    {
+      "day": 147,
+      "hash": "5ddfeac7c5b37a60b3705ca49394dee068eb930aecdd214210aefaf7a95ba6c0"
+    },
+    {
+      "day": 148,
+      "hash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8"
+    }
+  ],
+  "rejections": [],
+  "log": [
+    {
+      "day": 2,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "consult",
+        "situation": "sumter_garrison",
+        "posts": [
+          "us_attorney_general",
+          "us_general_in_chief",
+          "us_secretary_interior",
+          "us_secretary_state",
+          "us_secretary_war"
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_alabama",
+        "regiments": 2,
+        "termDays": 365,
+        "route": "courier",
+        "bypass": false,
+        "men": 2000,
+        "callId": "cs_mar09_alabama"
+      }
+    },
+    {
+      "day": 4,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_florida",
+        "regiments": 1,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 500,
+        "callId": "cs_mar09_florida"
+      }
+    },
+    {
+      "day": 4,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_georgia",
+        "regiments": 2,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 2000,
+        "callId": "cs_mar09_georgia"
+      }
+    },
+    {
+      "day": 4,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_louisiana",
+        "regiments": 2,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 1700,
+        "callId": "cs_mar09_louisiana"
+      }
+    },
+    {
+      "day": 4,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_mississippi",
+        "regiments": 2,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 1500,
+        "callId": "cs_mar09_mississippi"
+      }
+    },
+    {
+      "day": 4,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_south_carolina",
+        "regiments": 3,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_mar09_south_carolina"
+      }
+    },
+    {
+      "day": 4,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_texas",
+        "regiments": 1,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 1000,
+        "callId": "cs_mar09_texas"
+      }
+    },
+    {
+      "day": 10,
+      "seat": "seat:houston_samuel",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 10,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 11,
+      "seat": "seat:houston_samuel",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 11,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 12,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 12,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 13,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 13,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 14,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 14,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 15,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 15,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 16,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 16,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 17,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 17,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 18,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 18,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 19,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 19,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 20,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 20,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 21,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 21,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 22,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 22,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 23,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 23,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 24,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 24,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 25,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 25,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 26,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 26,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 27,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 27,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 28,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 28,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 29,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 29,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 30,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 30,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 31,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 31,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 32,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 32,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 33,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 33,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 34,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 34,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_alabama",
+        "regiments": 3,
+        "termDays": 365,
+        "route": "courier",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_apr08_alabama",
+        "readiness": true
+      }
+    },
+    {
+      "day": 34,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_florida",
+        "regiments": 2,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 1500,
+        "callId": "cs_apr08_florida",
+        "readiness": true
+      }
+    },
+    {
+      "day": 34,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_georgia",
+        "regiments": 3,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_apr08_georgia",
+        "readiness": true
+      }
+    },
+    {
+      "day": 34,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_louisiana",
+        "regiments": 3,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_apr08_louisiana",
+        "readiness": true
+      }
+    },
+    {
+      "day": 34,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_mississippi",
+        "regiments": 3,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_apr08_mississippi",
+        "readiness": true
+      }
+    },
+    {
+      "day": 34,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_south_carolina",
+        "regiments": 3,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_apr08_south_carolina",
+        "readiness": true
+      }
+    },
+    {
+      "day": 34,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_texas",
+        "regiments": 3,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_apr08_texas",
+        "readiness": true
+      }
+    },
+    {
+      "day": 34,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 35,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 35,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 36,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 36,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 37,
+      "seat": "seat:clark_edward",
+      "command": {
+        "cmd": "battle",
+        "post": "st_gov_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 37,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "order",
+        "to": "cs_cmd_charleston",
+        "goal": {
+          "objective": "fort_sumter",
+          "posture": "take",
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "committed": [],
+          "awaitWord": false,
+          "approveAsDrafted": true
+        },
+        "route": "wire",
+        "bypass": true
+      }
+    },
+    {
+      "day": 37,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_alabama",
+        "to": "cs_cmd_charleston",
+        "force": "blocks",
+        "amount": 999,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 37,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_georgia",
+        "to": "cs_cmd_charleston",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 37,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_mississippi",
+        "to": "cs_cmd_charleston",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 37,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_south_carolina",
+        "to": "cs_cmd_charleston",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 37,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_texas",
+        "to": "cs_cmd_charleston",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 37,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_charleston",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 37,
+      "seat": "seat:waite_carlos_a",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_texas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 38,
+      "seat": "seat:beauregard_pierre_g_t",
+      "command": {
+        "cmd": "choose",
+        "request": "plan:cs_cmd_charleston:38",
+        "option": "bombard:across_water:charleston"
+      }
+    },
+    {
+      "day": 42,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_alabama",
+        "regiments": 5,
+        "termDays": 365,
+        "route": "courier",
+        "bypass": false,
+        "men": 5000,
+        "callId": "cs_apr16_alabama",
+        "readiness": true
+      }
+    },
+    {
+      "day": 42,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_florida",
+        "regiments": 2,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 2000,
+        "callId": "cs_apr16_florida",
+        "readiness": true
+      }
+    },
+    {
+      "day": 42,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_georgia",
+        "regiments": 5,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 5000,
+        "callId": "cs_apr16_georgia",
+        "readiness": true
+      }
+    },
+    {
+      "day": 42,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_louisiana",
+        "regiments": 5,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 5000,
+        "callId": "cs_apr16_louisiana",
+        "readiness": true
+      }
+    },
+    {
+      "day": 42,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_mississippi",
+        "regiments": 5,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 5000,
+        "callId": "cs_apr16_mississippi",
+        "readiness": true
+      }
+    },
+    {
+      "day": 42,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_south_carolina",
+        "regiments": 5,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 5000,
+        "callId": "cs_apr16_south_carolina",
+        "readiness": true
+      }
+    },
+    {
+      "day": 42,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dc_militia",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 43,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_texas",
+        "regiments": 5,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "men": 5000,
+        "callId": "cs_apr16_texas",
+        "readiness": true
+      }
+    },
+    {
+      "day": 44,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_charleston",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 47,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_connecticut",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 47,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_indiana",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 47,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_massachusetts",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 47,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_new_hampshire",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 48,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_alabama",
+        "regiments": 2,
+        "termDays": 365,
+        "route": "courier",
+        "bypass": false,
+        "callId": "cs_apr22_absolute_alabama"
+      }
+    },
+    {
+      "day": 48,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_arkansas",
+        "regiments": 1,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_apr22_absolute_arkansas"
+      }
+    },
+    {
+      "day": 48,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_georgia",
+        "regiments": 2,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_apr22_absolute_georgia"
+      }
+    },
+    {
+      "day": 48,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_kentucky",
+        "regiments": 1,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_apr22_absolute_kentucky"
+      }
+    },
+    {
+      "day": 48,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_louisiana",
+        "regiments": 1,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_apr22_absolute_louisiana"
+      }
+    },
+    {
+      "day": 49,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dc_militia",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 50,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_mississippi",
+        "regiments": 2,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_apr22_absolute_mississippi"
+      }
+    },
+    {
+      "day": 50,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_north_carolina",
+        "regiments": 1,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_apr22_absolute_north_carolina"
+      }
+    },
+    {
+      "day": 50,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_tennessee",
+        "regiments": 3,
+        "termDays": 365,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_apr22_absolute_tennessee"
+      }
+    },
+    {
+      "day": 50,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_new_york",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 50,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_rhode_island",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 50,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_wisconsin",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 51,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_charleston",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 53,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "appoint",
+        "post": "us_dept_pennsylvania",
+        "person": "patterson_robert",
+        "rank": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 53,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "appoint",
+        "post": "us_recruiting_service",
+        "person": "smith_charles_f",
+        "rank": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 54,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_alabama",
+        "to": "cs_cmd_charleston",
+        "force": "blocks",
+        "amount": 999,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 54,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_georgia",
+        "to": "cs_cmd_charleston",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 56,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_mississippi",
+        "to": "cs_cmd_charleston",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 57,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_illinois",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 57,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_maine",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 57,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_pennsylvania",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 58,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_charleston",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 58,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_maryland",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 59,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_new_york",
+        "regiments": 38,
+        "termDays": 730,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may03_accepted_new_york"
+      }
+    },
+    {
+      "day": 60,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "appoint",
+        "post": "us_dept_pacific",
+        "person": "loring_william_w",
+        "rank": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 60,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "us_recruiting_service",
+        "regiments": 8,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "men": null,
+        "callId": "us_may04_regular_infantry",
+        "arm": "infantry"
+      }
+    },
+    {
+      "day": 60,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "us_recruiting_service",
+        "regiments": 1,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "men": null,
+        "callId": "us_may04_regular_cavalry",
+        "arm": "cavalry"
+      }
+    },
+    {
+      "day": 60,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "us_recruiting_service",
+        "regiments": 1,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "men": null,
+        "callId": "us_may04_regular_artillery",
+        "arm": "artillery"
+      }
+    },
+    {
+      "day": 63,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dc_militia",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 65,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_charleston",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 67,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_arkansas",
+        "to": "cs_cmd_charleston",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 68,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_new_york",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 70,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "appoint",
+        "post": "us_dept_pacific",
+        "person": "loring_william_w",
+        "rank": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 70,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dc_militia",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 71,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "appoint",
+        "post": "tr_gov_nebraska",
+        "person": "saunders_alvin",
+        "rank": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 71,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_massachusetts",
+        "regiments": 6,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may15_vol_massachusetts"
+      }
+    },
+    {
+      "day": 71,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_kansas",
+        "regiments": 1,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may15_vol_kansas"
+      }
+    },
+    {
+      "day": 71,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_rhode_island",
+        "regiments": 1,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may15_vol_rhode_island"
+      }
+    },
+    {
+      "day": 72,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_charleston",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 72,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_connecticut",
+        "regiments": 1,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_connecticut"
+      }
+    },
+    {
+      "day": 72,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_illinois",
+        "regiments": 6,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_illinois"
+      }
+    },
+    {
+      "day": 72,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_indiana",
+        "regiments": 4,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_indiana"
+      }
+    },
+    {
+      "day": 72,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_iowa",
+        "regiments": 2,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_iowa"
+      }
+    },
+    {
+      "day": 72,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_maine",
+        "regiments": 1,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_maine"
+      }
+    },
+    {
+      "day": 72,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_michigan",
+        "regiments": 3,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_michigan"
+      }
+    },
+    {
+      "day": 72,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_new_hampshire",
+        "regiments": 1,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_new_hampshire"
+      }
+    },
+    {
+      "day": 77,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dc_militia",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "appoint",
+        "post": "us_dept_virginia",
+        "person": "butler_benjamin_f",
+        "rank": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "appoint",
+        "post": "us_dept_pacific",
+        "person": "sumner_edwin_v",
+        "rank": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_new_jersey",
+        "regiments": 3,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_new_jersey"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_ohio",
+        "regiments": 9,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_ohio"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_vermont",
+        "regiments": 1,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_vermont"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_wisconsin",
+        "regiments": 2,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_wisconsin"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "tr_gov_nebraska",
+        "regiments": 1,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may15_vol_nebraska"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_new_york",
+        "regiments": 14,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_may16_vol_new_york"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_connecticut",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_indiana",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_massachusetts",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 78,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_new_hampshire",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 79,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "appoint",
+        "post": "cs_cmd_harpers_ferry",
+        "person": "johnston_joseph_e",
+        "rank": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 79,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_charleston",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 84,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dc_militia",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 85,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "appoint",
+        "post": "us_dept_northeastern_virginia",
+        "person": "mcdowell_irvin",
+        "rank": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 85,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_rhode_island",
+        "to": "us_dc_militia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 86,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_charleston",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 87,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "appoint",
+        "post": "cs_cmd_manassas",
+        "person": "beauregard_pierre_g_t",
+        "rank": null,
+        "route": "wire",
+        "from": "cs_cmd_charleston"
+      }
+    },
+    {
+      "day": 87,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "cs_cmd_charleston",
+        "to": "cs_cmd_harpers_ferry",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 87,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_new_york",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 87,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_wisconsin",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 87,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "us_dc_militia",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 88,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_illinois",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 88,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_maine",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 91,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 93,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "appoint",
+        "post": "cs_cmd_charleston",
+        "person": "twiggs_david_e",
+        "rank": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 94,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "cs_cmd_charleston",
+        "to": "cs_cmd_harpers_ferry",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 94,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_virginia",
+        "to": "cs_cmd_harpers_ferry",
+        "force": "blocks",
+        "amount": 999,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 94,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "tr_gov_nebraska",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 98,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_indiana",
+        "regiments": 6,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_jun11_indiana"
+      }
+    },
+    {
+      "day": 98,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 104,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_indiana",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 105,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 112,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 115,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_north_carolina",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 116,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_louisiana",
+        "regiments": 2,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_jun29_extra_louisiana"
+      }
+    },
+    {
+      "day": 116,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_mississippi",
+        "regiments": 2,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_jun29_extra_mississippi"
+      }
+    },
+    {
+      "day": 117,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_alabama",
+        "regiments": null,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": null,
+        "callId": "cs_jun30_cavalry_alabama",
+        "arm": "cavalry"
+      }
+    },
+    {
+      "day": 117,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_arkansas",
+        "regiments": null,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": null,
+        "callId": "cs_jun30_cavalry_arkansas",
+        "arm": "cavalry"
+      }
+    },
+    {
+      "day": 117,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_georgia",
+        "regiments": null,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": null,
+        "callId": "cs_jun30_cavalry_georgia",
+        "arm": "cavalry"
+      }
+    },
+    {
+      "day": 117,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_mississippi",
+        "regiments": null,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": null,
+        "callId": "cs_jun30_cavalry_mississippi",
+        "arm": "cavalry"
+      }
+    },
+    {
+      "day": 117,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_tennessee",
+        "regiments": null,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": null,
+        "callId": "cs_jun30_cavalry_tennessee",
+        "arm": "cavalry"
+      }
+    },
+    {
+      "day": 117,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_alabama",
+        "regiments": 3,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_alabama"
+      }
+    },
+    {
+      "day": 117,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_arkansas",
+        "regiments": 3,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_arkansas"
+      }
+    },
+    {
+      "day": 117,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_florida",
+        "regiments": 1,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 1000,
+        "callId": "cs_jun30_reserve_florida"
+      }
+    },
+    {
+      "day": 117,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_georgia",
+        "regiments": 3,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_georgia"
+      }
+    },
+    {
+      "day": 119,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_louisiana",
+        "regiments": 3,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_louisiana"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_mississippi",
+        "regiments": 3,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_mississippi"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_north_carolina",
+        "regiments": 3,
+        "termDays": null,
+        "route": "courier",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_north_carolina"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_south_carolina",
+        "regiments": 3,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_south_carolina"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_tennessee",
+        "regiments": 3,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_tennessee"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_texas",
+        "regiments": 2,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 2000,
+        "callId": "cs_jun30_reserve_texas"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_virginia",
+        "regiments": 3,
+        "termDays": null,
+        "route": "courier",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_virginia"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_alabama",
+        "regiments": 2,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_jul01_extra_alabama"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_georgia",
+        "regiments": 2,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "callId": "cs_jul01_extra_georgia"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_tennessee",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 121,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_manassas",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 126,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 128,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_georgia",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 128,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_manassas",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 131,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_alabama",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 133,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_arkansas",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 133,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "order",
+        "to": "us_dept_northeastern_virginia",
+        "goal": {
+          "objective": "manassas",
+          "posture": "take",
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "committed": [],
+          "awaitWord": false,
+          "approveAsDrafted": true
+        },
+        "route": "wire",
+        "bypass": false
+      }
+    },
+    {
+      "day": 133,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 136,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "order",
+        "to": "us_dept_northeastern_virginia",
+        "goal": {
+          "objective": "manassas",
+          "posture": "take",
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "committed": [],
+          "awaitWord": false,
+          "approveAsDrafted": true
+        },
+        "route": "wire",
+        "bypass": true
+      }
+    },
+    {
+      "day": 137,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_mississippi",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 137,
+      "seat": "seat:mcdowell_irvin",
+      "command": {
+        "cmd": "choose",
+        "request": "plan:us_dept_northeastern_virginia:137",
+        "option": "direct:least_cost:northern_virginia>manassas"
+      }
+    },
+    {
+      "day": 140,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_south_carolina",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 140,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 141,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_arkansas",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 142,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_manassas",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 142,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_new_york",
+        "regiments": 25,
+        "termDays": 1095,
+        "route": "wire",
+        "bypass": false,
+        "men": 25000,
+        "callId": "us_jul25_new_york"
+      }
+    },
+    {
+      "day": 145,
+      "seat": "seat:beauregard_pierre_g_t",
+      "command": {
+        "cmd": "battle",
+        "post": "cs_cmd_manassas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 145,
+      "seat": "seat:mcdowell_irvin",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_northeastern_virginia",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 146,
+      "seat": "seat:beauregard_pierre_g_t",
+      "command": {
+        "cmd": "battle",
+        "post": "cs_cmd_manassas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 146,
+      "seat": "seat:mcdowell_irvin",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_northeastern_virginia",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 147,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_new_york",
+        "regiments": 2,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_jul30_cavalry_new_york",
+        "arm": "cavalry"
+      }
+    },
+    {
+      "day": 147,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_new_york",
+        "regiments": 2,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "callId": "us_jul30_artillery_new_york",
+        "arm": "artillery"
+      }
+    },
+    {
+      "day": 147,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 148,
+      "seat": "seat:beauregard_pierre_g_t",
+      "command": {
+        "cmd": "battle",
+        "post": "cs_cmd_manassas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 148,
+      "seat": "seat:mcdowell_irvin",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_northeastern_virginia",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    }
+  ],
+  "notices": [
+    {
+      "id": "m.30.seward_william_h.lincoln_abraham.staff.virginia_unionists",
+      "type": "advice",
+      "subtype": "requested",
+      "author": "seward_william_h",
+      "authorPost": "us_secretary_state",
+      "subjectKind": "situation",
+      "subjectId": "virginia_unionists",
+      "claims": [],
+      "reportedControl": [],
+      "day": 30,
+      "hour": null,
+      "advice": {
+        "recommends": "offer_fort",
+        "reasons": [
+          {
+            "kind": "conciliation",
+            "weight": 600
+          }
+        ],
+        "confidence": 500
+      },
+      "answers": null,
+      "receivedDay": 31,
+      "route": "in-person",
+      "via": []
+    },
+    {
+      "id": "m.43.seward_william_h.lincoln_abraham.notice.virginia_secedes",
+      "text": "situation.virginia_secedes.text",
+      "type": "informal",
+      "subtype": "governor-wire",
+      "author": "seward_william_h",
+      "authorPost": "us_secretary_state",
+      "subjectKind": "situation",
+      "subjectId": "virginia_secedes",
+      "claims": [],
+      "reportedControl": [],
+      "day": 43,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 44,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.52.walker_leroy_p.davis_jefferson.notice.virginia_military_convention",
+      "text": "situation.virginia_military_convention.text",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "walker_leroy_p",
+      "authorPost": "cs_secretary_war",
+      "subjectKind": "situation",
+      "subjectId": "virginia_military_convention",
+      "claims": [],
+      "reportedControl": [],
+      "day": 52,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 53,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.69.scott_winfield.lincoln_abraham.staff.western_virginia",
+      "type": "advice",
+      "subtype": "requested",
+      "author": "scott_winfield",
+      "authorPost": "us_general_in_chief",
+      "subjectKind": "situation",
+      "subjectId": "western_virginia",
+      "claims": [],
+      "reportedControl": [],
+      "day": 69,
+      "hour": null,
+      "advice": {
+        "recommends": "cross_river",
+        "reasons": [
+          {
+            "kind": "union",
+            "weight": 600
+          }
+        ],
+        "confidence": 500
+      },
+      "answers": null,
+      "receivedDay": 70,
+      "route": "in-person",
+      "via": []
+    },
+    {
+      "id": "m.71.walker_leroy_p.davis_jefferson.notice.harpers_ferry_assignment_notice",
+      "text": "situation.harpers_ferry_assignment_notice.text",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "walker_leroy_p",
+      "authorPost": "cs_secretary_war",
+      "subjectKind": "situation",
+      "subjectId": "harpers_ferry_assignment_notice",
+      "claims": [],
+      "reportedControl": [],
+      "day": 71,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 72,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.92.walker_leroy_p.davis_jefferson.notice.manassas_reinforcement_notice",
+      "text": "situation.manassas_reinforcement_notice.text",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "walker_leroy_p",
+      "authorPost": "cs_secretary_war",
+      "subjectKind": "situation",
+      "subjectId": "manassas_reinforcement_notice",
+      "claims": [],
+      "reportedControl": [],
+      "day": 92,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 97,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.93.walker_leroy_p.davis_jefferson.notice.virginia_forces_transferred",
+      "text": "situation.virginia_forces_transferred.text",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "walker_leroy_p",
+      "authorPost": "cs_secretary_war",
+      "subjectKind": "situation",
+      "subjectId": "virginia_forces_transferred",
+      "claims": [],
+      "reportedControl": [],
+      "day": 93,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 98,
+      "route": "wire",
+      "via": []
+    },
+    {
+      "id": "m.104.walker_leroy_p.davis_jefferson.notice.virginia_forces_return",
+      "text": "situation.virginia_forces_return.text",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "walker_leroy_p",
+      "authorPost": "cs_secretary_war",
+      "subjectKind": "situation",
+      "subjectId": "virginia_forces_return",
+      "claims": [],
+      "reportedControl": [],
+      "day": 104,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 109,
+      "route": "wire",
+      "via": []
+    }
+  ],
+  "doctrineChanges": [
+    {
+      "day": 1,
+      "faction": "confederate",
+      "doctrine": {
+        "concentrateAt": "cs_cmd_charleston",
+        "appointments": [
+          {
+            "post": "cs_cmd_harpers_ferry",
+            "person": "johnston_joseph_e",
+            "from": null,
+            "ready": false,
+            "issued": false,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 12,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 6,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 7,
+                "price": 0
+              }
+            ]
+          },
+          {
+            "post": "cs_cmd_manassas",
+            "person": "beauregard_pierre_g_t",
+            "from": "cs_cmd_charleston",
+            "ready": false,
+            "issued": false,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 7,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 0,
+                "price": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "day": 1,
+      "faction": "union",
+      "doctrine": {
+        "concentrateAt": "us_dc_militia",
+        "appointments": []
+      }
+    },
+    {
+      "day": 79,
+      "faction": "confederate",
+      "doctrine": {
+        "concentrateAt": "cs_cmd_charleston",
+        "appointments": [
+          {
+            "post": "cs_cmd_harpers_ferry",
+            "person": "johnston_joseph_e",
+            "from": null,
+            "ready": true,
+            "issued": false,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 12,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 6,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 7,
+                "price": 0
+              }
+            ]
+          },
+          {
+            "post": "cs_cmd_manassas",
+            "person": "beauregard_pierre_g_t",
+            "from": "cs_cmd_charleston",
+            "ready": false,
+            "issued": false,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 7,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 0,
+                "price": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "day": 80,
+      "faction": "confederate",
+      "doctrine": {
+        "concentrateAt": "cs_cmd_charleston",
+        "appointments": [
+          {
+            "post": "cs_cmd_harpers_ferry",
+            "person": "johnston_joseph_e",
+            "from": null,
+            "ready": true,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 12,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 6,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 7,
+                "price": 0
+              }
+            ]
+          },
+          {
+            "post": "cs_cmd_manassas",
+            "person": "beauregard_pierre_g_t",
+            "from": "cs_cmd_charleston",
+            "ready": false,
+            "issued": false,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 7,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 0,
+                "price": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "day": 86,
+      "faction": "confederate",
+      "doctrine": {
+        "concentrateAt": "cs_cmd_charleston",
+        "appointments": [
+          {
+            "post": "cs_cmd_harpers_ferry",
+            "person": "johnston_joseph_e",
+            "from": null,
+            "ready": true,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 6,
+                "price": 0
+              }
+            ]
+          },
+          {
+            "post": "cs_cmd_manassas",
+            "person": "beauregard_pierre_g_t",
+            "from": "cs_cmd_charleston",
+            "ready": false,
+            "issued": false,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 5,
+                "price": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "day": 87,
+      "faction": "confederate",
+      "doctrine": {
+        "concentrateAt": "cs_cmd_harpers_ferry",
+        "appointments": [
+          {
+            "post": "cs_cmd_harpers_ferry",
+            "person": "johnston_joseph_e",
+            "from": null,
+            "ready": false,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 6,
+                "price": 0
+              }
+            ]
+          },
+          {
+            "post": "cs_cmd_manassas",
+            "person": "beauregard_pierre_g_t",
+            "from": "cs_cmd_charleston",
+            "ready": true,
+            "issued": false,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 5,
+                "price": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "day": 87,
+      "faction": "union",
+      "doctrine": {
+        "concentrateAt": "us_dept_northeastern_virginia",
+        "appointments": []
+      }
+    },
+    {
+      "day": 88,
+      "faction": "confederate",
+      "doctrine": {
+        "concentrateAt": "cs_cmd_harpers_ferry",
+        "appointments": [
+          {
+            "post": "cs_cmd_harpers_ferry",
+            "person": "johnston_joseph_e",
+            "from": null,
+            "ready": false,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 6,
+                "price": 0
+              }
+            ]
+          },
+          {
+            "post": "cs_cmd_manassas",
+            "person": "beauregard_pierre_g_t",
+            "from": "cs_cmd_charleston",
+            "ready": true,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 5,
+                "price": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "day": 98,
+      "faction": "confederate",
+      "doctrine": {
+        "concentrateAt": "cs_cmd_manassas",
+        "appointments": [
+          {
+            "post": "cs_cmd_harpers_ferry",
+            "person": "johnston_joseph_e",
+            "from": null,
+            "ready": false,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 6,
+                "price": 0
+              }
+            ]
+          },
+          {
+            "post": "cs_cmd_manassas",
+            "person": "beauregard_pierre_g_t",
+            "from": "cs_cmd_charleston",
+            "ready": false,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 5,
+                "price": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "day": 117,
+      "faction": "confederate",
+      "doctrine": {
+        "concentrateAt": "cs_cmd_manassas",
+        "appointments": [
+          {
+            "post": "cs_cmd_harpers_ferry",
+            "person": "johnston_joseph_e",
+            "from": null,
+            "ready": false,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 5,
+                "price": 0
+              }
+            ]
+          },
+          {
+            "post": "cs_cmd_manassas",
+            "person": "beauregard_pierre_g_t",
+            "from": "cs_cmd_charleston",
+            "ready": false,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 5,
+                "price": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "day": 118,
+      "faction": "confederate",
+      "doctrine": {
+        "concentrateAt": "cs_cmd_manassas",
+        "appointments": [
+          {
+            "post": "cs_cmd_harpers_ferry",
+            "person": "johnston_joseph_e",
+            "from": null,
+            "ready": false,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 4,
+                "price": 0
+              }
+            ]
+          },
+          {
+            "post": "cs_cmd_manassas",
+            "person": "beauregard_pierre_g_t",
+            "from": "cs_cmd_charleston",
+            "ready": false,
+            "issued": true,
+            "routes": [
+              {
+                "route": "courier",
+                "typicalDays": 6,
+                "price": 0
+              },
+              {
+                "route": "special-messenger",
+                "typicalDays": 3,
+                "price": 1
+              },
+              {
+                "route": "wire",
+                "typicalDays": 4,
+                "price": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "battles": [
+    {
+      "battleRegion": "fort_sumter",
+      "battleStartDay": 38,
+      "battleEndDay": 39,
+      "battleFactions": [
+        "confederate",
+        "union"
+      ],
+      "battleCauses": [
+        "cs_cmd_charleston"
+      ],
+      "battleDays": [
+        {
+          "bdayDay": 38,
+          "bdayNumber": 1,
+          "bdayType": "bombard",
+          "bdayAttacker": "confederate",
+          "bdayFrontage": 0,
+          "bdayContact": 0,
+          "bdayDraws": 0,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_charleston",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "fb_st_charleston_1st_artillery_battalion",
+                "fb_st_charleston_floating_battery",
+                "fb_st_charleston_fort_johnson"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 416,
+              "bsideCommitted": 416,
+              "bsideEngaged": 416,
+              "bsideBase": 0,
+              "bsideTerms": [],
+              "bsideMultiplier": 1000,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": -1,
+              "bsideFlankThreshold": 0,
+              "bsideFlankTerms": [],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "fb_st_charleston_1st_artillery_battalion",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "fb_st_charleston_floating_battery",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "fb_st_charleston_fort_johnson",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": -1,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_fort_sumter",
+              "bsideCommander": "anderson_robert",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "fb_us_sumter_garrison"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 85,
+              "bsideCommitted": 85,
+              "bsideEngaged": 85,
+              "bsideBase": 0,
+              "bsideTerms": [
+                {
+                  "btermKind": "fire_ratio",
+                  "btermValue": 2000,
+                  "btermSource": "bombardment.ratioCapPermille"
+                }
+              ],
+              "bsideMultiplier": 3000,
+              "bsideKw": 0,
+              "bsideKwParts": [
+                {
+                  "btermKind": "killed_wounded",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.lossPermille"
+                }
+              ],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": -1,
+              "bsideFlankThreshold": 0,
+              "bsideFlankTerms": [],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 420,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "morale_fire",
+                  "btermValue": -120,
+                  "btermSource": "bombardment.moraleLossPerDay"
+                },
+                {
+                  "btermKind": "morale_out_of_stores",
+                  "btermValue": -60,
+                  "btermSource": "bombardment.outOfStoresMoraleLoss"
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "guns_attacker",
+                  "btermValue": 416,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "guns_defender",
+                  "btermValue": 85,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "fire_ratio",
+                  "btermValue": 3000,
+                  "btermSource": "bombardment.ratioCapPermille"
+                },
+                {
+                  "btermKind": "morale_fire",
+                  "btermValue": -120,
+                  "btermSource": "bombardment.moraleLossPerDay"
+                },
+                {
+                  "btermKind": "morale_out_of_stores",
+                  "btermValue": -60,
+                  "btermSource": "bombardment.outOfStoresMoraleLoss"
+                },
+                {
+                  "btermKind": "works_wear",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.worksWearPerDay"
+                },
+                {
+                  "btermKind": "killed_wounded",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.lossPermille"
+                },
+                {
+                  "btermKind": "surrender_floor",
+                  "btermValue": 364,
+                  "btermSource": "anderson_robert"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 471,
+                  "btermSource": "anderson_robert"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "fb_us_sumter_garrison",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": -1,
+              "bsideHit": null
+            }
+          ]
+        },
+        {
+          "bdayDay": 39,
+          "bdayNumber": 2,
+          "bdayType": "bombard",
+          "bdayAttacker": "confederate",
+          "bdayFrontage": 0,
+          "bdayContact": 0,
+          "bdayDraws": 0,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_charleston",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "fb_st_charleston_1st_artillery_battalion",
+                "fb_st_charleston_floating_battery",
+                "fb_st_charleston_fort_johnson"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 416,
+              "bsideCommitted": 416,
+              "bsideEngaged": 416,
+              "bsideBase": 0,
+              "bsideTerms": [],
+              "bsideMultiplier": 1000,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": -1,
+              "bsideFlankThreshold": 0,
+              "bsideFlankTerms": [],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [],
+              "bsideResult": "gained_ground",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "fb_st_charleston_1st_artillery_battalion",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "fb_st_charleston_floating_battery",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "fb_st_charleston_fort_johnson",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": -1,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_fort_sumter",
+              "bsideCommander": "anderson_robert",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "fb_us_sumter_garrison"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 85,
+              "bsideCommitted": 85,
+              "bsideEngaged": 85,
+              "bsideBase": 0,
+              "bsideTerms": [
+                {
+                  "btermKind": "fire_ratio",
+                  "btermValue": 2000,
+                  "btermSource": "bombardment.ratioCapPermille"
+                }
+              ],
+              "bsideMultiplier": 3000,
+              "bsideKw": 0,
+              "bsideKwParts": [
+                {
+                  "btermKind": "killed_wounded",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.lossPermille"
+                }
+              ],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": -1,
+              "bsideFlankThreshold": 0,
+              "bsideFlankTerms": [],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 420,
+              "bsideMoraleAfter": 240,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "morale_fire",
+                  "btermValue": -120,
+                  "btermSource": "bombardment.moraleLossPerDay"
+                },
+                {
+                  "btermKind": "morale_out_of_stores",
+                  "btermValue": -60,
+                  "btermSource": "bombardment.outOfStoresMoraleLoss"
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "guns_attacker",
+                  "btermValue": 416,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "guns_defender",
+                  "btermValue": 85,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "fire_ratio",
+                  "btermValue": 3000,
+                  "btermSource": "bombardment.ratioCapPermille"
+                },
+                {
+                  "btermKind": "morale_fire",
+                  "btermValue": -120,
+                  "btermSource": "bombardment.moraleLossPerDay"
+                },
+                {
+                  "btermKind": "morale_out_of_stores",
+                  "btermValue": -60,
+                  "btermSource": "bombardment.outOfStoresMoraleLoss"
+                },
+                {
+                  "btermKind": "works_wear",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.worksWearPerDay"
+                },
+                {
+                  "btermKind": "killed_wounded",
+                  "btermValue": 0,
+                  "btermSource": "bombardment.lossPermille"
+                },
+                {
+                  "btermKind": "surrender_floor",
+                  "btermValue": 364,
+                  "btermSource": "anderson_robert"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 471,
+                  "btermSource": "anderson_robert"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": "surrender",
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "fb_us_sumter_garrison",
+                  "blossKilled": 0,
+                  "blossWounded": 0,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": -1,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "battleRegion": "manassas",
+      "battleStartDay": 146,
+      "battleEndDay": 146,
+      "battleFactions": [
+        "confederate",
+        "union"
+      ],
+      "battleCauses": [
+        "cs_cmd_manassas",
+        "us_dept_northeastern_virginia"
+      ],
+      "battleDays": [
+        {
+          "bdayDay": 146,
+          "bdayNumber": 1,
+          "bdayType": "meeting",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 16000,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.cs_nc_additional_north_carolina",
+                "state-forces.cs_nc_state_transfer_north_carolina",
+                "state-forces.cs_nc_volunteers_north_carolina"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 16000,
+              "bsideCommitted": 16000,
+              "bsideEngaged": 16000,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -52,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 300,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 120,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -88,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1280,
+              "bsideKw": 3276,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 2559,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -133,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 768,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 307,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -225,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 491,
+              "bsideWounded": 2785,
+              "bsideMissing": 1147,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_routed",
+                  "btermValue": 1638,
+                  "btermSource": "routed"
+                },
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": -491,
+                  "btermSource": null
+                }
+              ],
+              "bsideCaptured": 491,
+              "bsideCapturedParts": [
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": 491,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankDraw": 324,
+              "bsideFlankThreshold": 210,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 160,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 150,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -306,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "nerve",
+                  "btermValue": -38,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -30,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "rout_floor",
+                  "btermValue": -76,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 198,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": "beauregard_pierre_g_t"
+                }
+              ],
+              "bsideResult": "routed",
+              "bsideCutOff": null,
+              "bsideRetreatTo": "fredericksburg",
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "state-forces.cs_nc_additional_north_carolina",
+                  "blossKilled": 61,
+                  "blossWounded": 349,
+                  "blossMissing": 144,
+                  "blossCaptured": 61,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "state-forces.cs_nc_state_transfer_north_carolina",
+                  "blossKilled": 307,
+                  "blossWounded": 1740,
+                  "blossMissing": 717,
+                  "blossCaptured": 307,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "state-forces.cs_nc_volunteers_north_carolina",
+                  "blossKilled": 123,
+                  "blossWounded": 696,
+                  "blossMissing": 286,
+                  "blossCaptured": 123,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 734,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "fb_us_dc_militia",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_illinois.d87",
+                "raised.st_gov_indiana.d103",
+                "raised.st_gov_indiana.d77",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_new_hampshire.d77",
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_rhode_island.d79",
+                "raised.st_gov_wisconsin.d86"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 80600,
+              "bsideCommitted": 56420,
+              "bsideEngaged": 56420,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 52,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -120,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -20,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 912,
+              "bsideKw": 2334,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 2559,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 133,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -307,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -51,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 350,
+              "bsideWounded": 1984,
+              "bsideMissing": 186,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_gained_ground",
+                  "btermValue": 186,
+                  "btermSource": "gained_ground"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 122,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 542,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -42,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "nerve",
+                  "btermValue": 14,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -30,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 4290,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 5239,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 669,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "pursue_believed_ratio",
+                  "btermValue": 5239,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                }
+              ],
+              "bsideResult": "gained_ground",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": "none",
+              "bsideLosses": [
+                {
+                  "blossBlock": "fb_us_dc_militia",
+                  "blossKilled": 3,
+                  "blossWounded": 14,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_connecticut.d77",
+                  "blossKilled": 4,
+                  "blossWounded": 25,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_illinois.d87",
+                  "blossKilled": 26,
+                  "blossWounded": 148,
+                  "blossMissing": 14,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_indiana.d103",
+                  "blossKilled": 26,
+                  "blossWounded": 148,
+                  "blossMissing": 14,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_indiana.d77",
+                  "blossKilled": 18,
+                  "blossWounded": 98,
+                  "blossMissing": 9,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_maine.d87",
+                  "blossKilled": 4,
+                  "blossWounded": 25,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_massachusetts.d76",
+                  "blossKilled": 26,
+                  "blossWounded": 148,
+                  "blossMissing": 14,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_hampshire.d77",
+                  "blossKilled": 4,
+                  "blossWounded": 25,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d67",
+                  "blossKilled": 165,
+                  "blossWounded": 935,
+                  "blossMissing": 88,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d86",
+                  "blossKilled": 61,
+                  "blossWounded": 344,
+                  "blossMissing": 32,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_rhode_island.d79",
+                  "blossKilled": 4,
+                  "blossWounded": 25,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_wisconsin.d86",
+                  "blossKilled": 9,
+                  "blossWounded": 49,
+                  "blossMissing": 5,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 171,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "receipt": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npx.CMD",
+      "tsx",
+      "runs/s42/trace.ts"
+    ],
+    "exit": 0,
+    "seconds": 16.37969609999709,
+    "started": "2026-11-21T07:22:28.615464+00:00",
+    "finished": "2026-11-21T07:22:44.995178+00:00"
+  }
+}

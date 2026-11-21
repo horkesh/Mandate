@@ -2,6 +2,9 @@ import { describe, expect, it } from 'vitest';
 import { ids, phase0 } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { seatsWorld } from '../../../packages/cli/src/seats-world.ts';
+import { deliverReport } from '../../../packages/kernel/src/knowledge/knowledge.ts';
+import { NO_TRUTH } from '../../../packages/kernel/src/knowledge/truth.ts';
+import { report } from '../../../packages/kernel/test/support/s25-fixture.ts';
 
 const P = (s: string) => ids.toId('post', s);
 const CS = ids.toId('faction', 'confederate');
@@ -10,12 +13,33 @@ const rules = createRuleSeat();
 function menu(ready: boolean, day: number) {
   const { world, setup } = seatsWorld('union-1861');
   const start = phase0.createState(world, setup);
-  const state = { ...start, stateDay: day - 1, situationFlags: { ...start.situationFlags, war_begun_confederate: 38 }, departmentFactions: { ...start.departmentFactions, [VA]: ready ? CS : null } };
+  let state: typeof start = { ...start, stateDay: day - 1, situationFlags: { ...start.situationFlags, war_begun_confederate: 38 }, departmentFactions: { ...start.departmentFactions, [VA]: ready ? CS : null } };
+  if (ready) state = deliverReport(state, phase0.seatIdFor(world.faction(CS).principal), report('m.fixture.convention', {
+    reportAuthor: ids.toId('person', 'walker_leroy_p'), reportAuthorPost: P('cs_secretary_war'), reportSubjectKind: 'situation',
+    reportSubjectId: 'virginia_military_convention', reportDay: 52,
+  }, 53), NO_TRUTH);
   const request = phase0.pendingRequests(world, state).find(r => r.menu.menuKind === 'principal' && r.menu.faction === CS)!;
   if (request.menu.menuKind !== 'principal') throw new Error('principal menu required');
   return { world, state, request, doctrine: request.menu.doctrine };
 }
 describe('northern Virginia concentration follows sourced commands and Virginiaâ€™s side', () => {
+  it('S42: changing the unreceived live Virginia side cannot make a dated appointment ready', () => {
+    const before = menu(false, 87);
+    const hidden = { ...before.state, departmentFactions: { ...before.state.departmentFactions, [VA]: CS } };
+    const request = phase0.pendingRequests(before.world, hidden).find(r => r.menu.menuKind === 'principal' && r.menu.faction === CS)!;
+    expect(request.menu).toMatchObject({ doctrine: { appointments: before.doctrine.appointments } });
+  });
+  it('S42: the convention paper is dated and caused, with an ordinary ministry route', () => {
+    const { world, setup } = seatsWorld('union-1861');
+    const notice = world.situations.find(s => s.id === 'virginia_military_convention');
+    expect(notice).toMatchObject({ earliest: '1861-04-26', event: { all: [{ dayAtLeast: 52 }, { flag: 'virginia_seceded' }] },
+      report: { authors: ['cs_secretary_war'], reportType: 'wire-dispatch', subtype: null } });
+    const start = { ...phase0.createState(world, setup), stateDay: 51 };
+    const absent = phase0.tick(world, start, [], { freeze: true });
+    expect(absent.state.messagesInTransit.some(m => m.msgReport?.reportSubjectId === notice!.id)).toBe(false);
+    const caused = phase0.tick(world, { ...start, situationFlags: { virginia_seceded: 48 } }, [], { freeze: true });
+    expect(caused.state.messagesInTransit).toContainEqual(expect.objectContaining({ msgReport: expect.objectContaining({ reportSubjectId: notice!.id, reportDay: 52 }) }));
+  });
   it('does not establish commands or change concentration before the cause or assignment date', () => {
     for (const [joined, day] of [[false, 88], [true, 86]] as const) {
       const m = menu(joined, day);
@@ -66,7 +90,13 @@ describe('northern Virginia concentration follows sourced commands and Virginiaâ
     for (let i = 0; i < 20 && result.state.postStates[P('cs_cmd_manassas')] === undefined; i++) result = phase0.tick(m.world, result.state, [], { freeze: true });
     expect(result.state.postStates[P('cs_cmd_manassas')]).toMatchObject({ postHolder: 'beauregard_pierre_g_t', postSeat: 'manassas' });
     expect(result.state.postStates[P('cs_cmd_charleston')]!.postHolder).toBeNull();
-    const next = phase0.pendingRequests(m.world, result.state).find(r => r.menu.menuKind === 'principal' && r.menu.faction === CS)!;
+    let next = phase0.pendingRequests(m.world, result.state).find(r => r.menu.menuKind === 'principal' && r.menu.faction === CS)!;
+    // Execution is private until the appointment reply returns to the principal.
+    expect(next.menu).toMatchObject({ doctrine: { concentrateAt: 'cs_cmd_charleston' } });
+    for (let i = 0; i < 20 && !next.view.posts.some(p => p.post === P('cs_cmd_manassas') && p.status === 'held'); i++) {
+      result = phase0.tick(m.world, result.state, [], { freeze: true });
+      next = phase0.pendingRequests(m.world, result.state).find(r => r.menu.menuKind === 'principal' && r.menu.faction === CS)!;
+    }
     expect(next.menu).toMatchObject({ doctrine: { concentrateAt: 'cs_cmd_manassas', concentrateFrom: ['cs_cmd_charleston'] } });
   });
 });

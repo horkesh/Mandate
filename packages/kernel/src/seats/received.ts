@@ -1,6 +1,6 @@
 /** Men and appointment availability as the principal has been told, never current service or force tables. */
 import { strictCompare } from '../compare.ts';
-import type { FactionId, PersonId, PostId } from '../ids.ts';
+import type { DepartmentId, FactionId, PersonId, PostId } from '../ids.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
 import type { KnownReport } from '../knowledge/records.ts';
 import { ranksOn } from '../people/ranks.ts';
@@ -11,6 +11,37 @@ import type { Candidate, CommandablePost } from './api.ts';
 import type { SeatView } from '../view/types.ts';
 import { seatIdFor } from './seats.ts';
 import type { SeatsWorld } from './world.ts';
+import { dateOfDay, formatIsoDate } from '../world/calendar.ts';
+
+/** Public opening sides, superseded only by matching government notices in this seat's received papers. */
+export function receivedDepartmentSides(world: SeatsWorld, view: SeatView): ReadonlyMap<DepartmentId, FactionId | null> {
+  const sides = new Map(world.map.world.departments.map(d => [d.id, d.faction]));
+  const reports = view.reports.filter(r => r.day <= view.day && r.receivedDay <= view.day)
+    .sort((a,b) => a.day - b.day || (a.hour ?? -1) - (b.hour ?? -1) || strictCompare(a.id,b.id));
+  for (const report of reports) {
+    if (report.subjectKind !== 'situation') continue;
+    const notice = world.situations.find(s => s.id === report.subjectId);
+    if (notice?.kind !== 'notice' || notice.report?.reportType !== report.type || notice.report.subtype !== report.subtype) continue;
+    for (const effect of notice.effects) {
+      if (!('propose' in effect)) continue;
+      const p = effect.propose;
+      if (p.owner === 'command' && p.field === 'department_side' && p.subject !== null && p.side !== null && p.delta > 0) sides.set(p.subject as DepartmentId, p.side);
+    }
+  }
+  return sides;
+}
+
+/** A known post's public department, including labelled administrative schedules; never the live post table. */
+export function receivedPostSide(world: SeatsWorld, view: SeatView, sides: ReadonlyMap<DepartmentId, FactionId | null>, post: PostId): FactionId | null {
+  if (!view.posts.some(p => p.post === post && p.status === 'held' && p.holder !== null)) return null;
+  const opening = world.start.posts.find(p => p.id === post);
+  const declared = world.start.temporaryPosts.find(p => p.id === post);
+  if (opening === undefined && declared === undefined) return null;
+  const today = formatIsoDate(dateOfDay(world.start.startDate, view.day));
+  const scheduled = [...(opening?.departmentChanges ?? [])].filter(c => c.on <= today).sort((a,b) => strictCompare(a.on,b.on));
+  const department = scheduled.at(-1)?.department ?? opening?.department ?? declared!.department;
+  return sides.get(department) ?? null;
+}
 export function receivedStrength(state: State, principal: PersonId, post: PostId): Pick<CommandablePost, 'men' | 'strengthReport'> {
   const reports = knowledgeOf(state, seatIdFor(principal)).knownReports
     .filter(r => r.knownBody.reportDay <= state.stateDay && r.knownReceivedDay <= state.stateDay && r.knownBody.reportSubjectKind === 'post' && r.knownBody.reportSubjectId === post)
