@@ -58,7 +58,8 @@ function makeRepo(): Repo {
     writeFileSync(join(root, path), text);
   };
   const git = (...args: string[]) => {
-    return execFileSync('git', args, { cwd: root, encoding: 'utf8' });
+    // A fixed identity, as in lfs-git.test.ts: CI runners have none, so the fixture's commits would fail there.
+    return execFileSync('git', ['-c', 'user.name=test', '-c', 'user.email=test@example.invalid', '-c', 'commit.gpgsign=false', ...args], { cwd: root, encoding: 'utf8' });
   };
   git('init', '-q');
   write('.gitignore', 'node_modules/\n');

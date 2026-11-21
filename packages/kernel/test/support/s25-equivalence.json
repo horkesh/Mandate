@@ -1,0 +1,105 @@
+{
+  "scope": "Classification at 39c279c for this finite survey. These are not counted as kills. Producer-domain and representation classifications do not claim equivalence for arbitrary malformed inputs or every exported helper observation.",
+  "mutants": [
+    {
+      "id": "knowledge-01", "classification": "equivalent",
+      "reason": "The immediately preceding unequal-report-day guard excludes equality before this comparison."
+    },
+    {
+      "id": "knowledge-02", "classification": "producer-domain",
+      "reason": "A chronology tie requires the same immutable report identity, stamp and receipt. Current government-report producers supply one government claim per region, so selecting that report again supplies the same value.",
+      "limit": "Contradictory duplicate government claims inside one report are not validated here. No first-versus-last precedence is invented for that malformed producer output."
+    },
+    {
+      "id": "knowledge-07", "classification": "producer-domain",
+      "reason": "REPORT_KINDS sorts the fixed, distinct type/subtype keys. Equality is not a comparison between different entries."
+    },
+    {
+      "id": "view-08", "classification": "equivalent",
+      "reason": "Considering an on-day equal to the current minimum only assigns the same minimum value."
+    },
+    {
+      "id": "combat-02", "classification": "producer-domain",
+      "reason": "The bombard stage requires a positive battery (tick/operations.ts). Against zero defending guns, a positive numerator divided by zero is Infinity, and Math.min returns the same ratio cap as the original guard.",
+      "limit": "A direct helper call with zero attacking and zero defending guns differs. It is not an executable bombardment under the stage guard, and no test locks a zero-battery bombardment into the model."
+    },
+    {
+      "id": "combat-06", "classification": "equivalent",
+      "reason": "Lowering an exact quotient by one gives that part a remainder equal to the denominator. Largest-remainder allocation restores each such part before distributing the original fractional remainders. Final apportioned integers are unchanged."
+    },
+    {
+      "id": "combat-08", "classification": "producer-domain",
+      "reason": "resolveDay marks a flank broken only when a nonnegative draw is below its threshold. A produced broken-flank record therefore has a positive threshold.",
+      "limit": "A hand-constructed broken=true/threshold=0 battle record is outside this classification."
+    },
+    {
+      "id": "control-05", "classification": "equivalent",
+      "reason": "At excess zero, the loop immediately breaks on excess <= 0 before any share, crossing or takenFrom entry changes."
+    },
+    {
+      "id": "supply-01", "classification": "equivalent",
+      "reason": "The comparison is evaluated only after daysPermille values were found unequal."
+    },
+    {
+      "id": "supply-05", "classification": "producer-domain",
+      "reason": "At equal days and equal unique edge id, the memoized leg and predecessor are the same. Replacing that equal label can add queue work but does not change the returned path."
+    },
+    {
+      "id": "messages-05", "classification": "equivalent",
+      "reason": "A zero noise cap adds a draw from a fresh, message-local stream whose only possible result is zero. No extra delay or term is emitted and the stream is not retained."
+    },
+    {
+      "id": "planner-01", "classification": "equivalent",
+      "reason": "At equal gather time the assignment writes the same numeric maximum."
+    },
+    {
+      "id": "planner-02", "classification": "internal-representation",
+      "reason": "It adds zero-valued entries to the internal threat map. Every current consumer reads get(region) ?? 0; none observes membership, size or iterates that map. Routes, scores and saved outputs are unchanged.",
+      "limit": "The returned makeCtx scratch map has a different sparse representation. That representation is not claimed identical."
+    },
+    {
+      "id": "planner-09", "classification": "equivalent",
+      "reason": "The immediately preceding unequal-cost guard excludes equality."
+    },
+    {
+      "id": "operations-01", "classification": "producer-domain",
+      "reason": "The tick opens at most one operation per post per day, under operationId(post, day). Two distinct produced records of one post cannot tie on their start day.",
+      "limit": "Arbitrary putOperations inputs with duplicate post/start-day identities are not claimed equivalent."
+    },
+    {
+      "id": "politics-03", "classification": "producer-domain",
+      "reason": "The entries are from a Map keyed by faction, so different entries have distinct faction keys."
+    },
+    {
+      "id": "reading-01", "classification": "internal-representation",
+      "reason": "It supplies an empty costOnly list instead of omitting it. Compliance already interprets the absent list as empty; no willingness, reasons or saved response changes.",
+      "limit": "The scratch context object has a different optional-property shape."
+    },
+    {
+      "id": "proxy-03", "classification": "equivalent",
+      "reason": "Object.keys visits each response key once. The current key cannot equal a previously retained different key."
+    },
+    {
+      "id": "tick-13", "classification": "equivalent",
+      "reason": "At cadence zero, (day - 1) % 0 is NaN and the equality to zero is false. onCycle still returns false."
+    },
+    {
+      "id": "tick-14", "classification": "producer-domain",
+      "reason": "This comparison is in the legacy map === null branch. Current SeatsWorld requires a WorldIndex and indexSeatsWorld always provides one.",
+      "limit": "A fabricated legacy no-map world is outside the current constructor and public type."
+    },
+    {
+      "id": "tick-19", "classification": "equivalent",
+      "reason": "Valid pushback weights are nonnegative. At total zero, all weights are zero (or absent); the scratch division results fail the final positive-amount filter, giving the same empty distribution. No scratch NaN is persisted."
+    },
+    {
+      "id": "primitives-05", "classification": "canonical-value-equivalent",
+      "reason": "At value equal to the lower bound, returning that bound or that value gives the same canonical integer.",
+      "limit": "JavaScript signed-zero identity can differ. Canonical serialization deliberately identifies -0 with 0; no test preserves a signed-zero representation as a model rule."
+    },
+    {
+      "id": "state-support-02", "classification": "equivalent",
+      "reason": "For zero change, negation or no negation adds the same zero magnitude to a nonnegative integer counter."
+    }
+  ]
+}
