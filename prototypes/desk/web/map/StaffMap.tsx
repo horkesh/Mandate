@@ -222,8 +222,11 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
   const [marks,setMarksState]=useState<PencilMark[]>([]),[message,setMessage]=useState(''),[checking,setChecking]=useState(false);
   const [axis,setAxis]=useState(''),[region,setRegion]=useState('');
   const [waitDays,setWaitDays]=useState(''),[waits,setWaitsState]=useState<WaitNote[]>([]);
+  const [route,setRoute]=useState(''),[bypass,setBypass]=useState(false);
   const [geometry,setGeometry]=useState<MapGeometry|null>(null);
   const review=reviewOpen?(reviews.find(r=>r.post===post)??reviews[0]):undefined;
+  const recipient=menu.menuKind==='principal'?menu.commandable.find(p=>p.post===review?.post):undefined;
+  const deliver=(line:string)=>`${line}${route?` by=${route}`:''}${bypass&&recipient?.relays.length?' bypass':''}`;
   const noteKey=`${data.pack}:${data.morning.requestKey}:${review?.post??''}`;
   const setMarks=(update:PencilMark[]|((old:PencilMark[])=>PencilMark[]))=>setMarksState(old=>{const next=typeof update==='function'?update(old):update;pencilNotebook.set(noteKey,next);return next;});
   const setWaits=(next:WaitNote[])=>{waitNotebook.set(noteKey,next);setWaitsState(next);};
@@ -231,7 +234,7 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
   const axisName=review?.plan.axes.find(a=>a.name===axis)?.name??review?.plan.axes[0]?.name??'';
   const lock=useRef(false);
   useEffect(()=>{loadGeometry(data.pack).then(setGeometry).catch(()=>{});},[data.pack]);
-  useEffect(()=>{setMarksState(pencilNotebook.get(noteKey)??[]);setWaitsState(waitNotebook.get(noteKey)??[]);setWaitDays('');setMessage('');},[noteKey]);
+  useEffect(()=>{setMarksState(pencilNotebook.get(noteKey)??[]);setWaitsState(waitNotebook.get(noteKey)??[]);setWaitDays('');setMessage('');setRoute('');setBypass(false);},[noteKey]);
   const propose=useCallback(async(axis:string,kind:MapEditKind,region?:string)=>{
     if(!review||lock.current||busy)return;lock.current=true;setChecking(true);setMessage(M.previewing);
     try {
@@ -247,7 +250,7 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
     try {
       const commands=notes?[sendbackLine(review.post,marks,review.plan,waits)]:marks.map(m=>m.line);
       let count=0;
-      for(const line of commands){const result=await execute(line);if(!result?.ok){setMessage(result?.message??M.rejected);return;}count++;}
+      for(const line of commands){const result=await execute(deliver(line));if(!result?.ok){setMessage(result?.message??M.rejected);return;}count++;}
       setMessage(notes?(data.strings['plan.note.sent']??''):M.queued);
       setMarks([]);
       if(notes)setWaits([]);
@@ -255,15 +258,20 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
   };
   const handles:Handle[]=review?.plan.axes.flatMap(a=>a.regions.length?[{axis:a.name,kind:'objective' as const,region:a.regions.at(-1)!},{axis:a.name,kind:'waypoints' as const,region:a.regions[Math.max(0,Math.floor((a.regions.length-1)/2))]!}]:[])??[];
   const paper=review?data.morning.view.reports.find(r=>r.id===review.report):undefined;
-  const editCost=menu.menuKind==='principal'?menu.attention.costs.review_edit:undefined;
+  const editCost=menu.menuKind==='principal'?commandPrice(deliver(`edit ${review?.post??''}`),menu)?.max:undefined;
   const marksPrice=editCost===undefined?null:{min:marks.length*editCost,max:marks.length*editCost};
   const cannotPay=menu.menuKind==='principal'&&outOfAttention(menu.attention.left,marksPrice);
-  const cannotSendBack=menu.menuKind==='principal'&&outOfAttention(menu.attention.left,commandPrice(`sendback ${review?.post??''}`,menu));
+  const cannotSendBack=menu.menuKind==='principal'&&outOfAttention(menu.attention.left,commandPrice(deliver(`sendback ${review?.post??''}`),menu));
+  const cannotApprove=menu.menuKind==='principal'&&outOfAttention(menu.attention.left,commandPrice(deliver(`approve ${review?.post??''}`),menu));
   return <div className={`plan-map-layout ${review?'has-plan':'map-only'} ${table?'table-map-layout':''}`}>
     {review&&<aside className="map-plan-sheet">
       {reviews.length>1&&<label>{M.plan}<select aria-label={M.plan} value={review?.post??''} onChange={e=>{setPost(e.target.value);setAxis('');}}>{reviews.map(r=><option key={r.post} value={r.post}>{t(r.holder,'person')}</option>)}</select></label>}
       {review?<><div className="plan-holder"><span className="likeness">{S.noLikeness}</span><div><h3>{t(review.holder,'person')}</h3><p className="plan-byline">{t(review.post,'post')}<br/>{paper&&reportDate(data.morning.requestDay,data.date,paper.day)}</p></div></div><p>{display(review.plan.method)} / {display(review.plan.variant)}</p>
-        {review.plan.axes.map(a=><section className="axis-sheet" key={a.name}><h4>{M.axis} {display(a.name)}</h4><p>{a.regions.map(id=>t(id,'region')).join(' → ')}</p><p>{a.strength} {M.reportedMen}; {display(a.mode)}</p><p>{M.phase}: {display(a.phases.join(', '))}</p><button disabled={busy||checking} onClick={()=>void propose(a.name,'remove_axis')}>{M.strike} {display(a.name)}</button></section>)}
+        <p className="approval-meaning">{M.approvalMeaning}</p><p className="map-handle-note">{M.approvalAwait} {M.approvalDispatch} {M.approvalReply}</p>
+        {recipient&&<fieldset disabled={busy||checking}><legend>{M.reviewDelivery}</legend><label>{M.deliveryRoute}<select aria-label={M.deliveryRoute} value={route} onChange={e=>setRoute(e.target.value)}><option value="">{M.usualRoute}</option>{recipient.routes.map(r=><option key={r.route} value={r.route}>{r.route}: {M.deliveryDays(r.typicalDays,r.price)}</option>)}</select></label>
+         {recipient.relays.length>0&&<><p>{S.through}: {recipient.relays.map(p=>t(p,'post')).join(' → ')}</p><label><input type="checkbox" checked={bypass} onChange={e=>setBypass(e.target.checked)}/>{M.bypass}</label><p className="map-handle-note">{M.bypassRisk}</p></>}
+        </fieldset>}
+        {review.plan.axes.map(a=><section className="axis-sheet" key={a.name}><h4>{M.axis} {display(a.name)}</h4><p>{a.regions.map(id=>t(id,'region')).join(' → ')}</p><p>{a.strength} {M.reportedMen}; {display(a.mode)}</p><p>{M.plannedArrival(Math.ceil(a.arrival/1000))}</p><p>{M.phase}: {display(a.phases.join(', '))}</p><button disabled={busy||checking} onClick={()=>void propose(a.name,'remove_axis')}>{M.strike} {display(a.name)}</button></section>)}
         {(review.notes??[]).length>0&&<ol className="plan-note-account">{noteAccountLines(review.notes!, data.strings, id=>t(id,'region')).map((line,i)=><li key={i}>{line}</li>)}</ol>}
         {review.plan.requests.length>0&&<section><h4>{M.asks}</h4>{review.plan.requests.map(request=><p key={request}>{display(request)}</p>)}</section>}
         <fieldset disabled={busy||checking}><legend>{M.pencil}</legend><label>{M.chooseAxis}<select aria-label={M.chooseAxis} value={axisName} onChange={e=>setAxis(e.target.value)}>{review.plan.axes.map(a=><option key={a.name} value={a.name}>{display(a.name)}</option>)}</select></label>
@@ -274,7 +282,7 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
         {waits.length>0&&<ul className="wait-notes">{waits.map(w=><li key={w.axis}>{M.waitLine(display(w.axis),w.days)} <button onClick={()=>setWaits(waits.filter(n=>n.axis!==w.axis))}>{M.removeWait}</button></li>)}</ul>}
         <p className="action-price">{S.marksPrice(marks.length)}. {S.notesFree}<br/>{M.order}: {priceLabel(marksPrice)}{cannotPay&&<span>{S.attentionAfterRefill}</span>}</p>
         {marks.length>0&&<p className="map-handle-note">{M.separate}</p>}
-        <div className="actions"><button data-attention-key="review_edit" className="primary" disabled={!marks.length||busy||checking||cannotPay} onClick={()=>void send(false)}>{M.order}</button><button data-attention-key="review_send_back" data-hotkey="n" disabled={busy||checking||cannotSendBack} onClick={()=>void send(true)}>{data.strings['plan.note.send']??M.sendback}</button><button disabled={(!marks.length&&!waits.length)||checking} onClick={()=>{setMarks([]);setWaits([]);}}>{M.clear}</button><button data-attention-key="review_approve" data-hotkey="a" disabled={!!marks.length||!!waits.length||busy||checking} onClick={()=>void execute(`approve ${review.post}`)}>{S.approve}</button>{textEdit&&<button disabled={busy||checking} onClick={()=>textEdit(`edit ${review.post} timing days=3`)}>{S.edit}</button>}</div><p className="map-handle-note">{data.strings['plan.note.explanation']??''}</p>
+        <div className="actions"><button data-attention-key="review_edit" className="primary" disabled={!marks.length||busy||checking||cannotPay} onClick={()=>void send(false)}>{M.order}</button><button data-attention-key="review_send_back" data-hotkey="n" disabled={busy||checking||cannotSendBack} onClick={()=>void send(true)}>{data.strings['plan.note.send']??M.sendback}</button><button disabled={(!marks.length&&!waits.length)||checking} onClick={()=>{setMarks([]);setWaits([]);}}>{M.clear}</button><button data-attention-key="review_approve" data-hotkey="a" disabled={!!marks.length||!!waits.length||busy||checking||cannotApprove} onClick={()=>void execute(deliver(`approve ${review.post}`))}>{S.approve}</button>{textEdit&&<button disabled={busy||checking} onClick={()=>textEdit(`edit ${review.post} timing days=3`)}>{S.edit}</button>}</div><p className="map-handle-note">{data.strings['plan.note.explanation']??''}</p>
       </>:<p>{M.noPlan}</p>}
       {message&&<p role="status" className="map-review-message">{display(message)}</p>}
     </aside>}

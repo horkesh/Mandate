@@ -7,6 +7,7 @@ import {presenter} from './presentation.ts';
 import {stopEntries} from './table.ts';
 import {S} from './strings.ts';
 import './business.css';
+import {deskDate,ownGoalStatus} from './plan-business.ts';
 
 export function AttentionTokens({left,price=null}:{left:number|null;price?:Price|null}){
  return <span className="attention-budget" data-testid="attention-budget">
@@ -52,13 +53,25 @@ export function StopSlip({turn,strings,openPaper,onDocket,onPlans,onClose,onHist
   </div>
  </section>;
 }
-export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,setStops,signCall}:{data:DeskSnapshot;busy:boolean;run:(days:number)=>void;openPaper:(r:ReportView)=>void;onDocket:()=>void;onPlans:()=>void;onHistory:()=>void;setStops?:(points:readonly string[])=>Promise<unknown>;signCall?:(line:string)=>Promise<unknown>}){
+export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,setStops,signCall,onOrder}:{data:DeskSnapshot;busy:boolean;run:(days:number)=>void;openPaper:(r:ReportView)=>void;onDocket:()=>void;onPlans:()=>void;onHistory:()=>void;setStops?:(points:readonly string[])=>Promise<unknown>;signCall?:(line:string)=>Promise<unknown>;onOrder?:(line:string)=>void}){
  const lastTurn=data.history.at(-1),{text}=presenter(data.strings),menu=data.morning.menu;
   const maxDays=data.morning.turnStops?.maxDays??7;
   const [days,setDays]=useState(maxDays);
   const calls=menu.menuKind==='principal'?menu.doctrine.calls.filter(c=>c.id&&!c.issued&&c.day<=data.morning.requestDay&&(menu.atWarSince!==null||c.atPeace===true)&&menu.raising.some(p=>p.post===c.post)):[];
   const {name}=presenter(data.strings);
  return <><p className="margin-note">{S.runNote}</p>
+  {menu.menuKind==='principal'&&(menu.reviews.length>0||menu.awaiting.length>0)&&<section data-testid="pending-plans" aria-live="polite">
+   {menu.reviews.length>0&&<p>{S.planReviewCount(menu.reviews.length)}</p>}
+   {menu.awaiting.length>0&&<p>{S.planGoCount(menu.awaiting.length)}</p>}
+   <button disabled={busy} onClick={onPlans}>{S.openPlans}</button>
+  </section>}
+  {menu.menuKind==='principal'&&menu.doctrine.offensives.length>0&&<section className="advance-agenda" data-testid="advance-agenda"><h3>{S.proposedAdvances}</h3><p>{S.advanceDateNote}</p>
+   {menu.doctrine.offensives.map(o=>{const status=ownGoalStatus(data,o.post,o.objective),post=menu.commandable.find(p=>p.post===o.post);
+    return <article key={`${o.post}:${o.day}:${o.objective}`}><h4>{name(o.post,'post')}</h4><p><time>{deskDate(data,o.day)}</time>: {name(o.objective,'region')}</p>
+     {status?<p role="status">{status==='queued'?S.goalQueued:S.goalDispatched}</p>:post?<button disabled={busy||!onOrder} onClick={()=>onOrder?.(`order ${o.post} take ${o.objective} review`)}>{S.reviewGoalOrder}</button>:<p>{S.advanceUnavailable}</p>}
+    </article>;
+   })}
+  </section>}
   {lastTurn&&<StopSlip turn={lastTurn} strings={data.strings} openPaper={openPaper} onDocket={onDocket} onPlans={onPlans} onHistory={onHistory}/>}
   <h3>{data.queue.length} {S.signedCount}</h3>
   {data.queue.map((q,i)=><section key={i}><p>{text(q.text)}</p>{menu.menuKind==='principal'&&<PriceNote line={q.line} menu={menu}/>}</section>)}
