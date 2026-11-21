@@ -36,9 +36,23 @@ on the ignored limit and absent control. This is a driver preference; no State,
 pack maximum or tick behavior changes. Browser operation uses only the desk's
 headless harness on 5293; captures go to the main checkout's S29 masters folder.
 
+The second correction exposes eligible identified calls on the turn sheet and
+copies their complete seat-menu terms through the shared command grammar.
+The first parser probe failed before reaching this path because governors are
+not commandable at peace. Fictional eligible-menu tests then reproduced the
+actual missing path and accepted numeric overrides. The regression checks
+retain issued/early/mismatched-call rejection and duplicate-slip prevention.
+
+The actual playthrough is in `prototypes/desk/test/s29.spec.ts`, run with
+`playwright.s29.config.ts`. It uses a real peace session and only UI actions for
+writes; GET snapshots retain received evidence. The first actionable morning
+is 6 March, following the 5 March baseline. Weekly targets end on day 148.
+
 Proposed ruling: allow `end [days]` and a turn-sheet day limit within the pack's
 maximum. Reject changing pack rules to land on a historical date, or silently
 advancing past a requested review date.
+Use the identified requisition's seat-menu fields rather than reconstructing a
+call from a regiment count. Reject inferring missing terms or changing the pack.
 
 Findings outside my scope: whole-branch review remains deferred to Claude under
 0106. Kernel/history acceptance failures belong to their existing owners.

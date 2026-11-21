@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import type {PrincipalMenu,ReportView} from '@mandate/kernel/seat-api';
 import type {DeskSnapshot,DeskTurn} from './adapter.ts';
-import {commandPrice,ledgerRows,priceLabel,received} from './business.ts';
+import {commandPrice,ledgerRows,priceLabel,received,outOfAttention} from './business.ts';
 import type {Price} from './business.ts';
 import {presenter} from './presentation.ts';
 import {stopEntries} from './table.ts';
@@ -52,16 +52,26 @@ export function StopSlip({turn,strings,openPaper,onDocket,onPlans,onClose,onHist
   </div>
  </section>;
 }
-export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,setStops}:{data:DeskSnapshot;busy:boolean;run:(days:number)=>void;openPaper:(r:ReportView)=>void;onDocket:()=>void;onPlans:()=>void;onHistory:()=>void;setStops?:(points:readonly string[])=>Promise<unknown>}){
+export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,setStops,signCall}:{data:DeskSnapshot;busy:boolean;run:(days:number)=>void;openPaper:(r:ReportView)=>void;onDocket:()=>void;onPlans:()=>void;onHistory:()=>void;setStops?:(points:readonly string[])=>Promise<unknown>;signCall?:(line:string)=>Promise<unknown>}){
  const lastTurn=data.history.at(-1),{text}=presenter(data.strings),menu=data.morning.menu;
   const maxDays=data.morning.turnStops?.maxDays??7;
   const [days,setDays]=useState(maxDays);
+  const calls=menu.menuKind==='principal'?menu.doctrine.calls.filter(c=>c.id&&!c.issued&&c.day<=data.morning.requestDay&&(menu.atWarSince!==null||c.atPeace===true)&&menu.commandable.some(p=>p.post===c.post)):[];
+  const {name}=presenter(data.strings);
  return <><p className="margin-note">{S.runNote}</p>
   {lastTurn&&<StopSlip turn={lastTurn} strings={data.strings} openPaper={openPaper} onDocket={onDocket} onPlans={onPlans} onHistory={onHistory}/>}
   <h3>{data.queue.length} {S.signedCount}</h3>
   {data.queue.map((q,i)=><section key={i}><p>{text(q.text)}</p>{menu.menuKind==='principal'&&<PriceNote line={q.line} menu={menu}/>}</section>)}
   <label>{S.turnDays}<select disabled={busy} value={days} onChange={e=>setDays(Number(e.target.value))}>{Array.from({length:maxDays},(_,i)=>i+1).map(n=><option key={n} value={n}>{n}</option>)}</select></label><p>{S.turnDaysNote}</p>
   <button data-hotkey="run" data-attention-key="free" className="primary" disabled={busy} onClick={()=>run(days)}>{S.sendRun}</button>
+  {calls.length>0&&<section className="scheduled-calls"><h3>{S.callsDue}</h3><p>{S.callsDueNote}</p>{calls.map(c=>{
+    const line=`call ${c.post} scheduled=${c.id}`,queued=data.queue.some(q=>{const words=q.line.trim().split(/\s+/);return words[0]==='call'&&words[1]===c.post&&words.includes(`scheduled=${c.id}`);});
+    return <article key={c.id} data-call-id={c.id}><h4>{name(c.post,'post')}</h4>
+      <p>{c.readiness&&`${S.callReadiness}: `}{c.men!=null?S.callMen(c.men):c.regiments!=null?S.callRegiments(c.regiments):S.callUnknownStrength}{c.arm?`, ${S.callArms[c.arm]??name(c.arm)}`:''}. {c.termDays===null?S.callForWar:S.callTerm(c.termDays)}.</p>
+      {menu.menuKind==='principal'&&<PriceNote line={line} menu={menu}/>}
+      <button data-attention-key="order" disabled={busy||queued||!signCall||(menu.menuKind==='principal'&&outOfAttention(menu.attention.left,commandPrice(line,menu)))} onClick={()=>void signCall?.(line)}>{queued?S.callQueued:S.signCall}</button>
+    </article>;
+  })}</section>}
   <section className="stop-policy"><h3>{S.stopPolicy}</h3>{data.morning.turnStops?<><p>{S.stopLimit(data.morning.turnStops.maxDays)}</p><p>{S.stopSettingsNote}</p><fieldset disabled={busy||!setStops}><legend>{S.stopPolicy}</legend>{data.morning.turnStops.points.map(({point,enabled})=><label key={point}><input type="checkbox" checked={enabled} onChange={e=>{const next=data.morning.turnStops!.points.filter(p=>p.point===point?e.target.checked:p.enabled).map(p=>p.point);void setStops?.(next);}}/>{S.stopChoice(S.stopLabels[point]??S.stopUnknown)}</label>)}<button type="button" onClick={()=>void setStops?.(data.morning.turnStops!.points.map(p=>p.point))}>{S.stopAll}</button></fieldset></>:<><p>{S.stopPolicyNote}</p><p className="hand">{S.stopSettingsMissing}</p></>}</section>
  </>;
 }

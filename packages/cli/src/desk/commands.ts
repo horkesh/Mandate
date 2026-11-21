@@ -64,6 +64,7 @@ export const HELP: readonly string[] = [
   '  edit <post> <objective|waypoints|timing|add_axis|remove_axis> [axis=<name>] [region=<r>] [via=<r>,<r>] [days=N]',
   '  go <post>                             the word an operation prepared under "await my word" waits for',
   '  call <post> <regiments> <termDays>    a call for regiments to a governor',
+  '  call <post> scheduled=<id>           the complete dated requisition offered by today’s menu',
   '  decide <situation> [option ...]       no options: let it take its course',
   '  delegate <situation> <post>',
   '  appoint <post> <person> [rank] | relieve <post> <own_request|outright|quiet_department> [to-post]',
@@ -242,6 +243,15 @@ export function parseLine(line: string, request: SeatRequest, t: (key: string) =
     case 'call': {
       const problem = commandable(post);
       if (problem !== null) return fail(problem);
+      if(opts.has('scheduled')){
+        if(words.length!==1||[...opts.keys()].some(k=>k!=='scheduled'&&k!=='by'))return fail('A scheduled call uses its published terms without overrides.');
+        const call=menu.doctrine.calls.find(c=>c.id===opts.get('scheduled')&&c.post===post);
+        if(!call||call.issued===true||call.day>request.requestDay||(menu.atWarSince===null&&call.atPeace!==true))return fail('That dated call is not available on today’s menu.');
+        const route=routeTo(menu,post!,opts.get('by')),bad=knownRoute(menu,post!,route);
+        if(bad)return fail(bad);
+        return {kind:'command',word:'call',command:{cmd:'call',to:post!,callId:call.id!,regiments:call.regiments,termDays:call.termDays,
+          ...(call.men===undefined?{}:{men:call.men}),...(call.arm===undefined?{}:{arm:call.arm}),...(call.readiness===undefined?{}:{readiness:call.readiness}),route:route as RouteKind,bypass:false}};
+      }
       const regiments = whole(words[1]);
       const termDays = whole(words[2]);
       if (regiments === null || termDays === null) return fail('call <post> <regiments> <termDays>');
