@@ -123,7 +123,7 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       if (!knownPerson(ctx, c.person) || c.person === principal) return reject('unknown_person');
       const picture = viewFor(world, start, seat);
       const held = picture.posts.find(p => p.holder === c.person)?.post ?? null;
-      if (held === null && !receivedCandidates(world, start, principal, side).some(p => p.person === c.person)) return reject('unknown_person');
+      if (held === null && !receivedCandidates(world, start, principal, side, null, picture).some(p => p.person === c.person)) return reject('unknown_person');
       if (c.from === undefined ? held !== null : held !== c.from || c.from === c.post || !postOnSide(ctx, start, c.from, principal)) return reject('person_holds_post');
       if (c.rank !== null && !world.map.world.vocabularies.ranks.some((r) => r.id === c.rank)) return reject('unknown_rank');
       sendVerb(ctx, start, principal, c.person, null, c.route, body('appoint', { verbPost: c.post, verbRank: c.rank, verbTo: c.from ?? null }));

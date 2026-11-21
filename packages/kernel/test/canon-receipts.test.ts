@@ -112,6 +112,17 @@ it('A02 ranks candidates by the public opening ranks instead of hidden promotion
   expect(JSON.stringify(candidates(hidden))).toBe(JSON.stringify(candidates(state)));
 });
 
+it.each([null,POST('a_army')])('A02 keeps dated appointment readiness on the received picture from %s', fromPost => {
+  const person=fromPost===null?P('a_spy'):P('a_gen');
+  const map=indexWorld({...world.map.world,vocabularies:{...world.map.world.vocabularies,postKinds:world.map.world.vocabularies.postKinds.map(p=>p.id==='expedition'?{...p,creatable:'appoint' as const}:p)},rules:{...world.map.world.rules,ruleSeats:{...world.map.world.rules.ruleSeats,principals:world.map.world.rules.ruleSeats.principals.map(p=>p.faction===F('a')?{...p,appointments:[{post:POST('new_command'),person,fromPost,fromDate:'1900-06-01',requiresDepartment:toId('department','a_war'),source:'fixture public appointment'}]}:p)}}});
+  const start={...world.start,temporaryPosts:[{id:POST('new_command'),name:'post.new_command',kind:'expedition',department:toId('department','a_war'),parent:POST('a_office'),holder:person,region:toId('region','a_cap'),operation:'fixture_appointment'}]};
+  const w=indexSeatsWorld(map,start), state=createState(w,{seed:1});
+  const before=principalMenu(w,state,F('a'),morningGround(w,state,1)).doctrine;
+  const hidden={...state,personStatus:{...state.personStatus,[person]:{statusKind:'killed' as const,statusDay:0}},personService:{...state.personService,[person]:{serviceChoice:'resign' as const,serviceFaction:F('b'),serviceBloc:null,serviceDay:0}},postStates:{...state.postStates,[POST('a_army')]:{...state.postStates[POST('a_army')]!,postHolder:null}}};
+  expect(before.appointments?.[0]?.ready).toBe(true);
+  expect(JSON.stringify(principalMenu(w,hidden,F('a'),morningGround(w,hidden,1)).doctrine)).toBe(JSON.stringify(before));
+});
+
 it('A02 accepts an apparently eligible nomination and reports actual ineligibility on resolution', () => {
   const w = indexSeatsWorld(world.map,{...world.start,posts:world.start.posts.map(p => p.id === POST('a_reserve') ? {...p,holder:null}:p)});
   let s = createState(w,{seed:1});

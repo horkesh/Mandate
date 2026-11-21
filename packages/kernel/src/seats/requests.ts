@@ -36,6 +36,7 @@ import { fieldPosts, headquartersOf, isFieldPost, postFaction, relayChain } from
 import { seatIdFor } from './seats.ts';
 import { attentionLeft } from './attention.ts';
 import { latencyMapFor, type SeatsWorld } from './world.ts';
+import type { SeatView } from '../view/types.ts';
 import { receivedCandidates, receivedStrength, receivedPlanPapers } from './received.ts';
 
 /** What a day's menus are judged on: the march ground and the latency of the morning's map. */
@@ -137,8 +138,9 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId): Doct
   };
 }
 
-export function principalMenu(world: SeatsWorld, state: State, faction: FactionId, ground: MorningGround): PrincipalMenu {
+export function principalMenu(world: SeatsWorld, state: State, faction: FactionId, ground: MorningGround, picture?: SeatView): PrincipalMenu {
   const f = world.faction(faction);
+  const receivedView = picture ?? viewFor(world,state,seatIdFor(f.principal));
   // Typical days to a post's seat in pack data, or where it stood at the start of play, or else his own side's capital:
   // the principal is not told where it is today (exit review P2).
   const routesTo = (id: PostId): RouteOption[] => {
@@ -182,7 +184,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   const vacancies: Vacancy[] = ownPosts
     .filter((id) => state.postStates[id]!.postHolder === null && !unreported.has(id) && heldAtStart.has(id) && commandedBlocks(state, id).length > 0)
     .map((id) => ({ post: id, arm: commandedBlocks(state, id).every((b) => isNaval(world.map, state, b)) ? ('naval' as const) : ('land' as const), routes: routesTo(id), appointing: inTransitTo(state, f.principal, id).includes('appoint') }));
-  const candidates: Candidate[] = receivedCandidates(world, state, f.principal, faction);
+  const candidates: Candidate[] = receivedCandidates(world, state, f.principal, faction, null, receivedView);
   const historicalAppointees: PersonId[] = [];
   const historicalAppointments: NonNullable<PrincipalMenu['historicalAppointments']>[number][] = [];
   const history = state.seatAssignments[seatIdFor(f.principal)]?.seatDriver === 'rules';
@@ -247,9 +249,10 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   const d = world.map.world.rules.plans.goalDefaults;
   const doctrine = doctrineView(world, state, faction);
   const appointments = world.map.world.rules.ruleSeats.principals.find(r => r.faction === faction)?.appointments;
+  const receivedPosts = receivedView.posts;
   const appointmentView = appointments?.filter(a => 'fromDate' in a).map(a => ({
     post: a.post, person: a.person, from: a.fromPost,
-    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && departmentSide(state, a.requiresDepartment) === faction && sideOfPerson(world.map, state, a.person) === faction && heldPost(state, a.person) === a.fromPost && (state.personStatus[a.person]?.statusKind ?? 'serving') === 'serving' && state.postStates[a.post] === undefined,
+    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && departmentSide(state, a.requiresDepartment) === faction && receivedCandidates(world,state,f.principal,faction,a.fromPost,receivedView).some(p=>p.person===a.person) && !receivedPosts.some(p=>p.post===a.post),
     issued: state.messagesInTransit.some(m => m.msgVerb?.verbKind === 'appoint' && m.msgVerb.verbIssuer === f.principal && m.msgVerb.verbPost === a.post) || Object.values(state.orderResponses).some(r => r.respKind === 'verb:appoint' && r.respPost === a.post && r.respPerson === a.person),
     routes: routesTo(a.fromPost ?? a.post),
   }));
@@ -369,7 +372,8 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
   const out: SeatRequest[] = [];
   for (const faction of world.factionIds) {
     const seat = seatIdFor(world.faction(faction).principal);
-    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `principal:${faction}:${day}`, view: viewFor(world, state, seat, cache), menu: principalMenu(world, state, faction, ground) }));
+    const view = viewFor(world,state,seat,cache);
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `principal:${faction}:${day}`, view, menu: principalMenu(world, state, faction, ground, view) }));
   }
   for (const def of world.situations) {
     const r = state.situationStates[def.id];
