@@ -1182,3 +1182,44 @@ also stays red: timing, pushback and lever-sweep measurement/coverage. No
 threshold changed. Read [the report](../../docs/playtests/2026-11-21-desk-history-run.md)
 and [handover](../../notes/sprint-S29-desk.md) before treating results as
 acceptance. The automatic history's battle is not proof of the human scene.
+
+### S33: pressing the July advance
+
+The human player reaches a Manassas battle through the desk: goal on day
+133, response to the relay objection, edit and approval on 138. Battle
+papers written 28–29 July arrive 29–30 July. Read
+[the S33 report](../../docs/playtests/2026-11-21-desk-manassas.md) for the
+strategy, exact evidence, kernel scoring finding and open checks.
+
+The turn sheet offers an advance only when due and at war. It opens an
+editable goal requiring review. Plans show outstanding reviews, supplied
+duration and what approval permits. Map review offers actual menu routes
+and an explicit bypass choice. A dispatched slip is distinct from a march.
+
+Use only this prototype's headless harness, on owned port **5297**:
+
+```powershell
+$env:S33_OUTPUT='C:/Pyrrhic/ByOrderOfThePresident/art-masters/S33/new-run'
+Remove-Item Env:S33_DISCOVERY -ErrorAction SilentlyContinue
+Remove-Item Env:S33_OBSERVER -ErrorAction SilentlyContinue
+npx playwright test --config playwright.s33.config.ts
+```
+
+Use a fresh evidence folder. `S33_DISCOVERY=1` checks native controls against
+the retained primary `S33/press-advance/` trajectory. `S33_OBSERVER=1` is a
+separate read-only paper harness attached to the already owned S33 server;
+it starts no server and allows no command POST. Regular runs close their
+own server. Do not use a real browser.
+
+Read-only developer diagnostics, never State loaded into the desk:
+
+```powershell
+node --import tsx scripts/s33-trace.ts
+node --import tsx scripts/s33-compare.ts
+node --import tsx scripts/s33-audit.ts
+```
+
+The comparison reproduces recorded public mornings and shows why S29's edit
+slow-walks; private responses stay outside the product. S33's required
+default done check remains red (Phase 0 5/6, 1A 4/6). The battle result does
+not waive timing, pushback or sweep failures.
