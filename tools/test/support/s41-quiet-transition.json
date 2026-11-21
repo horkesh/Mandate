@@ -1,0 +1,20 @@
+{
+  "beforeHash": "3564e8067f5bef5d18d6550577f8cebeed9260479dce9ae2df89c0447d8e4fcf",
+  "afterHash": "e03d9388b49e0d0a8592f43e030b77a5bce0e4067565e16b85a4c504c11cd06e",
+  "record": {
+    "key": "union-1861, war by decision, 148 days/planner.term.time",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S34 people-data integration [I]: changed sourced commander ratings alter the planner choice; dropping the time term changes one selected candidate. The planner and its scoring coefficients are unchanged. Observed once in runs/s34/people-reference.json."
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick."
+    },
+    "observed": 0,
+    "cause": "S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick.",
+    "evidence": "notes/lane-1.14-done-check.md#s41-time-band-ruling"
+  }
+}

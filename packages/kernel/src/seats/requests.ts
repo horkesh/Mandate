@@ -36,6 +36,8 @@ import { fieldPosts, headquartersOf, isFieldPost, postFaction, relayChain } from
 import { seatIdFor } from './seats.ts';
 import { attentionLeft } from './attention.ts';
 import { latencyMapFor, type SeatsWorld } from './world.ts';
+import type { SeatView } from '../view/types.ts';
+import { receivedCandidates, receivedStrength, receivedPlanPapers } from './received.ts';
 
 /** What a day's menus are judged on: the march ground and the latency of the morning's map. */
 export interface MorningGround {
@@ -55,20 +57,11 @@ export function morningGround(world: SeatsWorld, state: State, day: number): Mor
  * plans still under review, in post order (FOUNDATION section 5: approve, send back, or edit the arrows).
  */
 export function reviewsFor(state: State, principal: PersonId): PlanReview[] {
-  // His commander's dispatch has reached him once it is no longer on its way (his knowledge may since have pruned it,
-  // superseded by a later answer to the same order; the plan still waits for him).
-  const travelling = new Set(state.messagesInTransit.map((m) => m.msgOrigin));
-  const out: PlanReview[] = [];
-  for (const post of postsInStatus(state, 'review')) {
-    const r = state.planRecords[post]!;
-    const holder = state.postStates[post]?.postHolder ?? null;
-    if (r.planIssuer !== principal || r.planSubmitted === null || travelling.has(r.planSubmitted) || holder === null || r.planChosen === null) continue;
-    // He knows what he has already sent: a plan he has answered, the answer still on its way, is not before him again.
-    if (answerInTransit(state, principal, post, ['approve', 'edit', 'send_back'])) continue;
-    const account = state.knowledgeBySeat[seatIdFor(principal)]?.knownReports.find(k => k.id === r.planSubmitted)?.knownBody.reportNotes;
-    out.push({ post, holder, report: r.planSubmitted, plan: optionView(candidateOf(r, r.planChosen)!, false), ...(account === undefined ? {} : { notes: account }) });
-  }
-  return out;
+  return receivedPlanPapers(state, principal).filter(r => !answerInTransit(state,principal,r.knownBody.reportPlan!.paperPost,['approve','edit','send_back'])).map(r => ({
+    post: r.knownBody.reportPlan!.paperPost, holder: r.knownBody.reportAuthor, report: r.id,
+    plan: optionView(r.knownBody.reportPlan!.paperChosen, false),
+    ...(r.knownBody.reportNotes === undefined ? {} : { notes: r.knownBody.reportNotes }),
+  }));
 }
 
 /**
@@ -145,8 +138,9 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId): Doct
   };
 }
 
-export function principalMenu(world: SeatsWorld, state: State, faction: FactionId, ground: MorningGround, cache?: ViewCache): PrincipalMenu {
+export function principalMenu(world: SeatsWorld, state: State, faction: FactionId, ground: MorningGround, cache?: ViewCache, picture?: SeatView): PrincipalMenu {
   const f = world.faction(faction);
+  const receivedView = picture ?? viewFor(world,state,seatIdFor(f.principal),cache);
   // Typical days to a post's seat in pack data, or where it stood at the start of play, or else his own side's capital:
   // the principal is not told where it is today (exit review P2).
   const routesTo = (id: PostId): RouteOption[] => {
@@ -176,8 +170,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   for (const id of [...new Set([...fieldPosts(world, state), ...unreported])].sort(strictCompare)) {
     if (postFaction(world, state, id) !== faction) continue;
     const holder = believedHolder(state, f.principal, id, losses)!;
-    const men = commandedBlocks(state, id).reduce((n, b) => n + (state.forceBlockStates[b]!.fbStrength ?? 0), 0);
-    commandable.push({ post: id, holder, relays: relayChain(state, f.principal, id).slice(0, -1), routes: routesTo(id), men, raising: raisesRegiments(id), inTransit: inTransitTo(state, f.principal, id) });
+    commandable.push({ post: id, holder, relays: relayChain(state, f.principal, id).slice(0, -1), routes: routesTo(id), ...receivedStrength(state, f.principal, id), raising: raisesRegiments(id), inTransit: inTransitTo(state, f.principal, id) });
   }
   // Lane 1.12: what his doctrine reads. Posts that raise regiments, held; posts commanding troops that nobody holds; and
   // the men he may appoint to them, senior first.
@@ -193,18 +186,14 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     .map((id) => ({ post: id, arm: commandedBlocks(state, id).every((b) => isNaval(world.map, state, b)) ? ('naval' as const) : ('land' as const), routes: routesTo(id), appointing: inTransitTo(state, f.principal, id).includes('appoint') }));
   const previousCandidates = cache?.candidates.get(faction);
   let candidates: readonly Candidate[];
-  if (previousCandidates !== undefined && previousCandidates.world === world && previousCandidates.posts === state.postStates && previousCandidates.service === state.personService && previousCandidates.ranks === state.personRanks && previousCandidates.status === state.personStatus) {
+  if (previousCandidates !== undefined && previousCandidates.world === world && previousCandidates.posts === receivedView.posts && previousCandidates.reports === receivedView.reports && previousCandidates.calendar === state.calendarStart) {
     candidates = previousCandidates.candidates;
   } else {
-    const rankIndex = new Map(world.map.world.vocabularies.ranks.map((r, i) => [r.id as string, i]));
-    candidates = unpostedPeopleOnSide(world.map, state, faction)
-      .filter((p) => p.id !== f.principal && (state.personStatus[p.id]?.statusKind ?? 'serving') === 'serving')
-      .map((p) => ({ person: p.id, kind: p.kind as string, seniority: Math.max(-1, ...Object.values(state.personRanks[p.id] ?? {}).map((r) => rankIndex.get(r.rankTerm) ?? -1)) }))
-      .sort((a, b) => b.seniority - a.seniority || strictCompare(a.person, b.person));
+    candidates = receivedCandidates(world, state, f.principal, faction, null, receivedView);
     if (cache !== undefined) {
       // Prove the whole graph frozen before retaining it for another request.
       candidates = freezeDeep(candidates, cache);
-      cache.candidates.set(faction, { world, posts: state.postStates, service: state.personService, ranks: state.personRanks, status: state.personStatus, candidates });
+      cache.candidates.set(faction, { world, posts: receivedView.posts, reports: receivedView.reports, calendar: state.calendarStart, candidates });
     }
   }
   const historicalAppointees: PersonId[] = [];
@@ -271,9 +260,10 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   const d = world.map.world.rules.plans.goalDefaults;
   const doctrine = doctrineView(world, state, faction);
   const appointments = world.map.world.rules.ruleSeats.principals.find(r => r.faction === faction)?.appointments;
+  const receivedPosts = receivedView.posts;
   const appointmentView = appointments?.filter(a => 'fromDate' in a).map(a => ({
     post: a.post, person: a.person, from: a.fromPost,
-    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && departmentSide(state, a.requiresDepartment) === faction && sideOfPerson(world.map, state, a.person) === faction && heldPost(state, a.person) === a.fromPost && (state.personStatus[a.person]?.statusKind ?? 'serving') === 'serving' && state.postStates[a.post] === undefined,
+    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && departmentSide(state, a.requiresDepartment) === faction && receivedCandidates(world,state,f.principal,faction,a.fromPost,receivedView).some(p=>p.person===a.person) && !receivedPosts.some(p=>p.post===a.post),
     issued: state.messagesInTransit.some(m => m.msgVerb?.verbKind === 'appoint' && m.msgVerb.verbIssuer === f.principal && m.msgVerb.verbPost === a.post) || Object.values(state.orderResponses).some(r => r.respKind === 'verb:appoint' && r.respPost === a.post && r.respPerson === a.person),
     routes: routesTo(a.fromPost ?? a.post),
   }));
@@ -393,7 +383,8 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
   const out: SeatRequest[] = [];
   for (const faction of world.factionIds) {
     const seat = seatIdFor(world.faction(faction).principal);
-    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `principal:${faction}:${day}`, view: viewFor(world, state, seat, cache), menu: principalMenu(world, state, faction, ground, cache) }, cache));
+    const view = viewFor(world,state,seat,cache);
+    out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `principal:${faction}:${day}`, view, menu: principalMenu(world, state, faction, ground, cache, view) }, cache));
   }
   for (const def of world.situations) {
     const r = state.situationStates[def.id];

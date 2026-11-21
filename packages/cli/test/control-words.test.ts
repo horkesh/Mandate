@@ -1,5 +1,7 @@
 import { expect, it } from 'vitest';
 import { dispatchLog } from '../src/desk/dispatches.ts';
+import { deskStrings } from '../src/pack-text.ts';
+import { packStrings } from '../src/seats-world.ts';
 import { deliverReport } from '../../kernel/src/knowledge/knowledge.ts';
 import { toId } from '../../kernel/src/ids.ts';
 import { createState } from '../../kernel/src/tick/setup.ts';
@@ -19,7 +21,7 @@ it('words each report’s own holder and contested status without showing contro
         reportClaims: [{ claimKind: 'control', claimRegion: R('a_mid'), claimToken: F('a'), claimValue: a, claimConfidence: 1000 }, { claimKind: 'control', claimRegion: R('a_mid'), claimToken: F('b'), claimValue: b, claimConfidence: 1000 }] },
     }, { truthTerms: [], truthTrimmed: [] });
   }
-  const lines = dispatchLog(viewFor(world, state, seat));
+  const lines = dispatchLog(viewFor(world, state, seat), 0, deskStrings(packStrings('testbed')));
   expect(lines[0]).toContain('a holds a_mid; contested ground');
   expect(lines[1]).toContain('b holds a_mid');
   expect(lines[2]).toContain('no holder reported at a_mid');

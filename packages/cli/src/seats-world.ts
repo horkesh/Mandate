@@ -53,11 +53,16 @@ export function seatsMechanics(): readonly string[] {
 
 /** The pack's strings in its default locale, merged into one table (lane 1.13: the console shows titles and labels). */
 export function packStrings(pack: string): Readonly<Record<string, string>> {
+  return packPresentation(pack).table;
+}
+
+export function packPresentation(pack: string): { table: Readonly<Record<string, string>>; locale: string } {
   const { pack: data } = loadPack(packFilesAt(packRoot(pack)));
-  if (data === null) return {};
-  const out: Record<string, string> = {};
-  for (const { table } of data.strings.get(data.manifest.defaultLocale) ?? []) Object.assign(out, table);
-  return out;
+  if (data === null) return { table: {}, locale: 'en' };
+  const locale = data.manifest.defaultLocale;
+  const table: Record<string, string> = {};
+  for (const file of data.strings.get(locale) ?? []) Object.assign(table, file.table);
+  return { table, locale };
 }
 
 /**

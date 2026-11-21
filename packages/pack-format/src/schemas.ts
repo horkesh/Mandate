@@ -317,6 +317,9 @@ export const RulesSchema = z.strictObject({
       specialMessengerPrice: nonNegative.describe('The attention a special messenger costs its sender. A design parameter.'),
     })
     .describe('How long each route takes beside the map’s courier days (0026, 0032): design parameters the pack states, not sourced facts.'),
+  reportConfidence: z
+    .strictObject(Object.fromEntries(phase0.REPORT_CONFIDENCE_FIELDS.map((field) => [field, permille])) as Record<phase0.ReportConfidenceField, typeof permille>)
+    .describe('Tentative report claim and advice confidence in whole permille. Every pack supplies all fields (0072). Consult minimum is the floor on a recommendation’s score.'),
   reportTemplates: z
     .array(
       z.strictObject({

@@ -112,7 +112,8 @@ export function battleReports(ctx: TickContext, state: State, controlBefore: Reg
 
 /** Each commander's wires at the end of each phase, stamped with its hour. */
 function dispatches(ctx: TickContext, state: State, battle: string, region: RegionId, bday: BattleDay, control: readonly ReportClaim[]): void {
-  const shape = dayShape(ctx.world.map.world.rules.combat, bday);
+  const { combat, reportConfidence } = ctx.world.map.world.rules;
+  const shape = dayShape(combat, bday);
   bday.bdaySides.forEach((side, i) => {
     const author = authorOf(state, side);
     if (author === null) return;
@@ -124,7 +125,7 @@ function dispatches(ctx: TickContext, state: State, battle: string, region: Regi
       const well = mine.flankBreaks || mine.leaves || mine.surrenders || mine.destroyed ? 0 : 1;
       const field = phase === shape.phases.at(-1) ? control : [];
       sendReport(ctx, state, {
-        body: body(author.person, author.post, ctx.day, phase.toHour, 'wire-dispatch', null, region, [{...claim('battle-phase', region, well, phase.phase, 600), claimBattle: battle, claimBattleDays: [bday.bdayDay], claimCommander: side.bsideCommander}, claim('enemy-strength', region, seen, null, 500), ...field]),
+        body: body(author.person, author.post, ctx.day, phase.toHour, 'wire-dispatch', null, region, [{...claim('battle-phase', region, well, phase.phase, reportConfidence.battlePhase), claimBattle: battle, claimBattleDays: [bday.bdayDay], claimCommander: side.bsideCommander}, claim('enemy-strength', region, seen, null, reportConfidence.battleEnemyStrength), ...field]),
         truth: { truthTerms: [term('observed', enemy.bsidePresent, { region }), ...bias.terms, term('observed', mine.killedWounded, { region, rule: `${phase.phase}:killed_wounded_unsaid` }), ...observedControl(region, field)], truthTrimmed: [] },
         to: ctx.world.faction(side.bsideFaction).principal,
         tag: `battle.${phase.phase}.${side.bsideFaction}`,
@@ -136,6 +137,7 @@ function dispatches(ctx: TickContext, state: State, battle: string, region: Regi
 
 /** The evening's first casualty return: his losses low, the captured among the missing, the enemy's as he sees them. */
 function firstReturns(ctx: TickContext, state: State, battle: string, region: RegionId, bday: BattleDay, lowPermille: number): void {
+  const reportConfidence = ctx.world.map.world.rules.reportConfidence;
   bday.bdaySides.forEach((side, i) => {
     const author = authorOf(state, side);
     if (author === null) return;
@@ -145,9 +147,9 @@ function firstReturns(ctx: TickContext, state: State, battle: string, region: Re
     const claimed = Math.trunc((enemy.bsideKw * bias.permille) / 1000);
     sendReport(ctx, state, {
       body: body(author.person, author.post, ctx.day, null, 'casualty-return', null, region, [
-        claim('own-losses', region, own.kw, 'first', 600),
-        claim('missing', region, own.missing, 'first', 500),
-        claim('casualties', region, claimed, 'enemy', 400),
+        claim('own-losses', region, own.kw, 'first', reportConfidence.firstReturnOwnLosses),
+        claim('missing', region, own.missing, 'first', reportConfidence.firstReturnMissing),
+        claim('casualties', region, claimed, 'enemy', reportConfidence.firstReturnEnemyLosses),
       ].map(c => ({...c, claimBattle: battle, claimBattleDays: [bday.bdayDay]}))),
       truth: { truthTerms: [...own.terms, term('observed', enemy.bsideKw, { region, rule: 'enemy_killed_wounded' }), term('claim_inflated', claimed - enemy.bsideKw, { person: author.person, region }), ...bias.terms], truthTrimmed: [] },
       to: ctx.world.faction(side.bsideFaction).principal,
@@ -159,14 +161,15 @@ function firstReturns(ctx: TickContext, state: State, battle: string, region: Re
 
 /** The later return: the full figures, killed and wounded apart, the missing and the captured apart (0074). */
 function fullReturns(ctx: TickContext, state: State, battle: string, region: RegionId, bday: BattleDay): void {
+  const reportConfidence = ctx.world.map.world.rules.reportConfidence;
   for (const side of bday.bdaySides) {
     const author = authorOf(state, side);
     if (author === null) continue;
     sendReport(ctx, state, {
       body: body(author.person, author.post, ctx.day, null, 'casualty-return', null, region, [
-        claim('own-losses', region, side.bsideKw, 'full', 900),
-        claim('missing', region, side.bsideMissing, 'full', 800),
-        claim('captured', region, side.bsideCaptured, 'full', 800),
+        claim('own-losses', region, side.bsideKw, 'full', reportConfidence.fullReturnOwnLosses),
+        claim('missing', region, side.bsideMissing, 'full', reportConfidence.fullReturnMissing),
+        claim('captured', region, side.bsideCaptured, 'full', reportConfidence.fullReturnCaptured),
       ].map(c => ({...c, claimBattle: battle, claimBattleDays: [bday.bdayDay]}))),
       truth: { truthTerms: [term('observed', side.bsideKilled, { region, rule: 'killed' }), term('observed', side.bsideWounded, { region, rule: 'wounded' })], truthTrimmed: [] },
       to: ctx.world.faction(side.bsideFaction).principal,
@@ -188,7 +191,7 @@ function governorWire(ctx: TickContext, state: State, region: RegionId, bday: Ba
     const side = postFaction(ctx.world, state, post);
     if (side === null || !ctx.world.factionIds.includes(side) || !bday.bdaySides.some((s) => s.bsideFaction === side)) continue;
     sendReport(ctx, state, {
-      body: body(p.postHolder, post, ctx.day, null, 'informal', 'governor-wire', region, [claim('operation', region, field === side ? 1 : 0, 'battle', 400), ...control]),
+      body: body(p.postHolder, post, ctx.day, null, 'informal', 'governor-wire', region, [claim('operation', region, field === side ? 1 : 0, 'battle', ctx.world.map.world.rules.reportConfidence.governorWire), ...control]),
       truth: { truthTerms: observedControl(region, control), truthTrimmed: [] },
       to: ctx.world.faction(side).principal,
       tag: `governor.battle.${post}`,
@@ -211,7 +214,7 @@ function pocketReports(ctx: TickContext, state: State): void {
       const hq = headquartersOf(ctx.world, state, post);
       if (holder === null || !e.regions.includes(hq) || !ctx.world.factionIds.includes(e.faction)) continue;
       sendReport(ctx, state, {
-        body: body(holder, post, ctx.day, null, 'wire-dispatch', null, hq, [claim('pocket', hq, 1, null, 900)]),
+        body: body(holder, post, ctx.day, null, 'wire-dispatch', null, hq, [claim('pocket', hq, 1, null, ctx.world.map.world.rules.reportConfidence.pocket)]),
         truth: { truthTerms: [], truthTrimmed: [] },
         to: ctx.world.faction(e.faction).principal,
         tag: `pocket.${post}`,

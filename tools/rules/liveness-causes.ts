@@ -25,8 +25,8 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
     if (fingerprint(expected[r.key] ?? null) !== fingerprint(r.before)) problems.push(`${where}: before band does not follow the previous record`);
     if (r.after !== null) {
       const n = r.observed;
-      // S34 imports older, explicitly documented quiet bands. This exact,
-      // immutable baseline cannot authorize a later zero-floor transition.
+      // S34 imports older quiet bands; the lead's post-S40 ruling adds exactly
+      // one S41 transition. The history guard freezes both exact lists.
       const inherited = n === 0 && r.after.minFires === 0 && inheritedQuiet.some(old => fingerprint(old) === fingerprint(r));
       if (!inherited) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
@@ -45,5 +45,10 @@ export function ledgerHistoryProblems(before: readonly LivenessChange[], current
     ? ['liveness cause history is append-only: old causes cannot be removed, rewritten or reused'] : [];
 }
 export function inheritedQuietHistoryProblems(before: readonly LivenessChange[], current: readonly LivenessChange[]): string[] {
+  // CODEX.md, 2026-11-21, "S40 received; the lead's ruling on the time band;
+  // S41 amended". Only the exact 24 -> 25 record transition is authorized.
+  // Whole-list fingerprints also protect every inherited cause and its order.
+  if (fingerprint(before) === '3564e8067f5bef5d18d6550577f8cebeed9260479dce9ae2df89c0447d8e4fcf'
+    && fingerprint(current) === 'e03d9388b49e0d0a8592f43e030b77a5bce0e4067565e16b85a4c504c11cd06e') return [];
   return fingerprint(before) === fingerprint(current) ? [] : ['the S34 inherited quiet-band baseline is immutable; future changes need ordinary cause records'];
 }

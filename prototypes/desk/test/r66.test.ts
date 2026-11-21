@@ -63,7 +63,7 @@ it('serializes all eight existing counters and rejects incomplete or injected fi
 it('the audience’s generated answers parse as the console’s typed verb without a new action',()=>{
   const request=fixture();
   for(const draft of [{kind:'frame',value:'union'},{kind:'adjust',boldness:400},{kind:'reinforce',from:'west',men:500},...(['promise_advancement','withdraw_overseer','ease_pressure','vindicate','threaten'] as const).map(kind=>({kind}))] as const){
-    const input=parseLine(audienceCommand('army',[draft]),request);
+    const input=parseLine(audienceCommand('army',[draft]),request,key => key);
     expect(input.kind).toBe('command');
     if(input.kind!=='command'||input.command.cmd!=='audience')throw Error('Expected audience');
     expect(input.command.to).toBe('army');expect(input.command.counters).toHaveLength(1);expect(input.command.counters[0]!.kind).toBe(draft.kind);

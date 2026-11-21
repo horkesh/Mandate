@@ -49,9 +49,9 @@ it('S25 planner-04: the one extra axis allowed by an edit cannot be added again'
   const edit = { editKind: 'add_axis' as const, editAxis: null, editRegion: R('a_mid'), editVia: [], editConcentration: null };
   const first = applyEdit(input, set, chosen, edit);
   expect(first.ok).toBe(true);
-  if (!first.ok) throw Error(first.reason);
+  if (!first.ok) throw Error(JSON.stringify(first.reason));
   expect(first.edited.candAxes).toHaveLength(2);
-  expect(applyEdit(input, set, first.edited, edit)).toEqual({ ok: false, reason: 'the plan already has as many axes as he can run, and one more' });
+  expect(applyEdit(input, set, first.edited, edit)).toEqual({ ok: false, reason: { kind: 'too-many-axes' } });
 });
 
 it('S25 planner-05: a staff office has a seat, but no field headquarters in a planner post', () => {

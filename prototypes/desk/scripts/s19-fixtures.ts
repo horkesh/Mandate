@@ -4,6 +4,7 @@ import {ConsoleGame} from '../../../packages/cli/src/console/game.ts';
 import {DeskAdapter} from '../server/adapter.ts';
 import {phase0} from '@mandate/kernel';
 import {parseLine} from '../../../packages/cli/src/desk/commands.ts';
+import {deskStrings} from '../../../packages/cli/src/pack-text.ts';
 const out=resolve('../../../ByOrderOfThePresident/art-masters/S19');mkdirSync(out,{recursive:true});
 const game=new ConsoleGame({pack:'union-1861'}),desk=new DeskAdapter(game),script:string[]=[];
 for(let turn=0;turn<40&&game.state.stateDay<65;turn++){
@@ -20,7 +21,7 @@ writeFileSync(`${out}/union-fixture.json`,JSON.stringify({script,day:game.state.
 // This one-day fixture uses the public tick/seat request rather than forcing ConsoleGame's turn limit.
 const host=new ConsoleGame({pack:'testbed',atWar:true}),hostDesk=new DeskAdapter(host);
 hostDesk.execute('order n_army_west take salient_tip review');hostDesk.execute('end');
-const before=host.morning(),command=parseLine('audience n_army_west',before);
+const before=host.morning(),command=parseLine('audience n_army_west',before,deskStrings(host.strings,host.locale));
 if(command.kind!=='command')throw Error('Audience fixture grammar');
 const entries=phase0.answerEntries(before,{driver:'human',respond:()=>({answerKind:'commands',commands:[command.command]})});
 const result=phase0.tick(host.world,host.state,entries);

@@ -4,10 +4,30 @@ import { canonicalHash } from '@mandate/kernel';
 import { ConsoleGame } from '../../../packages/cli/src/console/game.ts';
 import { ConsoleSession } from '../../../packages/cli/src/console/session.ts';
 import { dispatchLog } from '../../../packages/cli/src/desk/dispatches.ts';
+import { deskStrings } from '../../../packages/cli/src/pack-text.ts';
 import { writeFileSync } from 'node:fs';
 import { DeskAdapter } from '../server/adapter.ts';
 
 describe('the desk uses the console driver and grammar', () => {
+  it('localizes help, received papers and preview refusals in the desk replies', () => {
+    const game = new ConsoleGame({ pack: 'testbed' });
+    Object.assign(game.strings, {
+      'console.help.look': 'Read the record:',
+      'console.report.line': '{received} — {body}',
+      'console.report.opening': '{regions} places in the opening record',
+      'console.preview.needs-region': 'Choose the destination for {edit}',
+    });
+    const desk = new DeskAdapter(game);
+    const snapshot = desk.snapshot();
+    expect(snapshot.help[0]).toBe('Read the record:');
+    expect(Object.values(snapshot.paperText)).toContain('22 places in the opening record');
+    expect(desk.execute('order n_army_east take salient_tip review').ok).toBe(true);
+    expect(desk.execute('end').ok).toBe(true);
+    expect(desk.execute('preview n_army_east objective').preview).toEqual({
+      ok: false, reason: 'Choose the destination for objective',
+    });
+  });
+
   for (const options of [{ pack: 'union-1861' }, { pack: 'union-1861', atWar: true }, { pack: 'testbed' }]) {
     it(`matches command logs over three turns: ${JSON.stringify(options)}`, () => {
       const deskGame = new ConsoleGame(options);
@@ -31,8 +51,9 @@ describe('the desk uses the console driver and grammar', () => {
       expect(desk.snapshot().history).toHaveLength(3);
       expect(desk.snapshot().morning.requestDay).toBeGreaterThan(3);
       const snapshot = desk.snapshot();
+      const t = deskStrings(snapshot.strings, deskGame.locale);
       for (const r of snapshot.morning.view.reports) {
-        const text = dispatchLog({ ...snapshot.morning.view, reports: [r] }, 0, key => snapshot.strings[key] ?? key)[0]!;
+        const text = dispatchLog({ reports: [r] }, 0, t)[0]!;
         expect(snapshot.paperText[r.id]).toBe(text.slice(text.indexOf('): ') + 3));
       }
       writeFileSync(`${evidenceDirectory()}/equivalence-${options.pack}${options.atWar ? '-at-war' : ''}.json`, JSON.stringify({ options, turns: snapshot.history.length, requestDay: snapshot.morning.requestDay, deskLogHash: canonicalHash(deskGame.log), consoleLogHash: canonicalHash(consoleGame.log), equalState: deskGame.hash() === consoleGame.hash() }, null, 2));

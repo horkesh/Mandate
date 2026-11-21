@@ -1,0 +1,38 @@
+{
+  "mergeHead": "ed4fb1945a8692a1c6e85fadf9cfaf6aaac1bea4",
+  "authority": "CODEX S40: integrate S36 received views and retain S34 caches; residual findings are not truth exceptions.",
+  "migrations": [
+    {
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "d711a24a4f70ba702ab1bee16189fb09a46624dfb1b1c9693723541adda51081",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/command/command.ts:unpostedPeopleOnSide (personService, postStates); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:principalMenu (personService, postStates); packages/kernel/src/seats/requests.ts:reviewsFor (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "4328aa2f640e219a3233180a3504622c52dac104412fe7b5dcf5d464f12459a0",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates)"
+      },
+      "beforeFingerprint": "c731e0619318ac076905970c303f941354a97d759860612fb98739de62030608",
+      "afterFingerprint": "683f2f0eb4d4357d3dd0f0fb4c8901178955422f26a0f4dc20f50f97a47b2a70"
+    },
+    {
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "db2e6a4eb578112b413bcf7bfb7c3cb86d46a76e3871b94c10ede5017f3fcc80",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/command/command.ts:unpostedPeopleOnSide (personService, postStates); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:pendingRequests (postStates); packages/kernel/src/seats/requests.ts:principalMenu (personService, postStates); packages/kernel/src/seats/requests.ts:reviewsFor (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "13f708599adf0e053dc5411b530bbca3e2f045750bdcb3e1f7b7627dd6ff1fca",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/requests.ts:doctrineView (postStates); packages/kernel/src/seats/requests.ts:pendingRequests (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      "beforeFingerprint": "787f32b66806b1a082e777b63f94d4777c4d24ad311b73aa890cb938bfc9b79d",
+      "afterFingerprint": "0f6c5fc8ca58c921091127f913633f14421f1e8a3b70281d6f103ac7cc646167"
+    }
+  ]
+}

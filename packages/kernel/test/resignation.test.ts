@@ -73,13 +73,25 @@ describe('an officer chooses his service', () => {
     state = through(world, state, 7).state;
     expect(sideOfPerson(world.map, state, P('a_gen'))).toBe(F('b'));
     expect(state.personRanks[P('a_gen')]).toEqual(ranks);
-    const request = pendingRequests(world, state).find(r => r.requestSeat === seatIdFor(P('b_lead')));
-    expect(request?.menu.menuKind).toBe('principal');
-    if (request?.menu.menuKind !== 'principal') throw new Error('principal request missing');
-    expect(request.menu.candidates.some(c => c.person === P('a_gen'))).toBe(true);
+    const recipient = P('b_lead');
+    const seat = seatIdFor(recipient);
+    const letter = state.messagesInTransit.find((m) => m.msgTo === recipient && m.msgReport?.reportAuthor === P('a_gen')
+      && m.msgReport.reportClaims.some((c) => c.claimKind === 'service-choice' && c.claimToken === 'resign'));
+    expect(letter).toBeDefined();
+    const hasCandidate = (at: State) => {
+      const request = pendingRequests(world, at).find((r) => r.requestSeat === seat);
+      expect(request?.menu.menuKind).toBe('principal');
+      if (request?.menu.menuKind !== 'principal') throw new Error('principal request missing');
+      return request.menu.candidates.some((c) => c.person === P('a_gen'));
+    };
+    state = through(world, state, letter!.msgArriveDay - 1).state;
+    expect(hasCandidate(state)).toBe(false);
+    state = through(world, state, letter!.msgArriveDay).state;
+    expect(viewFor(world, state, seat).reports.some((r) => r.id === letter!.id)).toBe(true);
+    expect(hasCandidate(state)).toBe(true);
     expect(ranks?.regular?.rankTerm).toBe('service_captain');
     state = relieveHolder(state, POST('b_army'));
-    const first = tick(world, state, [{ day: 8, seat: seatIdFor(P('b_lead')), command: {
+    const first = tick(world, state, [{ day: state.stateDay + 1, seat, command: {
       cmd: 'appoint', person: P('a_gen'), post: POST('b_army'), rank: null, route: 'courier',
     } }], { freeze: true });
     expect(first.rejections).toEqual([]);

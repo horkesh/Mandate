@@ -155,6 +155,7 @@ export const S = {
     position: 'Headquarters reported', 'goal-status': 'Goal status', 'enemy-strength': 'Enemy strength reported',
     'order-obeyed': 'Order response', 'order-objected': 'Objects to the order', arrived: 'Arrival reported',
     'plan-submitted': 'Plan submitted', 'plan-answer': 'Answer to your edit', 'verb-answered': 'Reply to your request',
+    'appointment-refused': 'Appointment refused',
     'battle-phase': 'Battle dispatch', 'battle-result': 'Battle result reported', 'own-losses': 'Own killed and wounded reported',
     casualties: 'Enemy losses claimed', framing: 'Public reading reported', works: 'Works reported',
   } as Record<string, string>,

@@ -31,6 +31,10 @@ import { stringKeysOf } from './situations.ts';
 type SituationDef = phase0.SituationDef;
 type Placement = phase0.Placement;
 
+const measureOwners = new Map([['politics', phase0.POLITICS_MEASURE_DIRECTIONS]]);
+type MeasureLookup = (owner: string, field: string) => phase0.MeasureDirection | undefined;
+const measureDirection: MeasureLookup = (owner, field) => measureOwners.get(owner)?.get(field);
+
 export const GATE_DIR = 'gate';
 export const gateFile = (name: string) => `${GATE_DIR}/${name}`;
 
@@ -457,9 +461,9 @@ export function checkGate(
       def.options.forEach((o, i) => {
         if (!costed.has(o.id)) return;
         if (o.lockedCosts.length === 0) err('gate-no-locked-cost', `options[${i}].lockedCosts`, `option "${o.id}" has no locked costs`, 'at least one locked cost on every option of a gated decision (B5)');
-        // 0060 (gate G5): a real cost is a fall on the deciding side's own measures; lowering the enemy is never a price.
-        else if (!o.lockedCosts.some((c) => 'propose' in c && c.propose.side === def.faction && c.propose.delta < 0)) {
-          err('gate-cost-not-own', `options[${i}].lockedCosts`, `option "${o.id}" has no locked cost that falls on ${def.faction}'s own measures`, 'at least one locked cost lowering the deciding side’s own measure; a fall on the enemy is never a cost (B5, 0060)');
+        // 0060 (gate G5): a real cost harms the deciding side itself.
+        else if (!o.lockedCosts.some((c) => harmsSide(c, def.faction))) {
+          err('gate-cost-not-own', `options[${i}].lockedCosts`, `option "${o.id}" has no locked cost that falls on ${def.faction}'s own measures`, 'at least one locked cost that worsens the deciding side’s own measure (B5, 0060)');
         }
       });
       const opposes = (e: phase0.Effect, cost: Extract<phase0.Effect, { propose: unknown }>): boolean =>
@@ -520,7 +524,7 @@ export function checkGate(
         if (effect.propose.side === null) err('gate-acting-side', `${at}.propose.side`, 'an effect of an atrocity-class item names no side', 'the side whose measure it moves (E7)');
         else if (tag.actingSide !== null) {
           const wrong = atrocityMove(effect, tag.actingSide);
-          if (wrong !== null) err('gate-sign-rule', at, `atrocity-class conduct ${wrong}`, 'only a fall in the acting side’s own measures, whoever appointed the actor; every other side’s stay unchanged (E7, D5)');
+          if (wrong !== null) err('gate-sign-rule', at, `atrocity-class conduct ${wrong}`, 'only costs to the acting side’s own declared measures (E7, D5)');
         }
       }
     }
@@ -530,7 +534,7 @@ export function checkGate(
     // acting side's measures. No seat gains anything from an atrocity (0046). An option's own appear, expire or wait
     // condition makes only that option's effects depend on it; the item's trigger makes all of them depend on it.
     const tainted = taint.get(def.id) ?? [];
-    // Gate G7 (N10): in a decision that depends on an atrocity, an option that lowers the actor's measures is a possible
+    // Gate G7 (N10): in a decision that depends on an atrocity, an option that harms the actor's measures is a possible
     // lever, so it is marked watched and the lever sweep (D6) always reads it.
     if (def.kind === 'decision') {
       const unwatched = new Set<number>();
@@ -538,12 +542,11 @@ export function checkGate(
         if (t.atrocity === def.id) continue;
         def.options.forEach((o, i) => {
           if (o.watched || (t.option !== null && o.id !== t.option)) return;
-          const lowersActor = [...o.effects, ...o.lockedCosts].some((e) => 'propose' in e && e.propose.side === t.actingSide && e.propose.delta < 0);
-          if (lowersActor) unwatched.add(i);
+          if ([...o.effects, ...o.lockedCosts].some((e) => harmsSide(e, t.actingSide))) unwatched.add(i);
         });
       }
       for (const i of [...unwatched].sort((a, b) => a - b)) {
-        err('gate-unwatched-lever', `options[${i}].watched`, `option "${def.options[i]!.id}" lowers the acting side’s measures in a decision that depends on an atrocity, and is not watched`, 'watched: true, so the lever sweep always reads it (D6, gate G7)');
+        err('gate-unwatched-lever', `options[${i}].watched`, `option "${def.options[i]!.id}" worsens the acting side’s measures in a decision that depends on an atrocity, and is not watched`, 'watched: true, so the lever sweep always reads it (D6, gate G7)');
       }
     }
     for (const t of tainted) {
@@ -560,7 +563,7 @@ export function checkGate(
         }
         const wrong = atrocityMove(effect, t.actingSide, def.kind === 'decision' ? def.faction : null);
         if (wrong !== null) {
-          err('gate-atrocity-benefit', at, `this effect, conditioned on ${route}, ${wrong}`, def.kind === 'decision' ? 'no rise for any side; a fall only on the acting side’s measures, or the deciding side’s own as the cost of its choice (D5, 0060)' : 'no positive effect for any seat, and no fall but the acting side’s, conditioned on atrocity-class conduct (D5)');
+          err('gate-atrocity-benefit', at, `this effect, conditioned on ${route}, ${wrong}`, def.kind === 'decision' ? 'only costs to the acting side, or to the deciding side as the cost of its choice (D5, 0060)' : 'only costs to the acting side conditioned on atrocity-class conduct (D5)');
         }
       }
     }
@@ -977,19 +980,31 @@ function decidedWith(c: phase0.Condition, situation: string, option: string): bo
 
 /**
  * What is wrong with an atrocity-class term's effect, or null (E7, D5; the lead's ruling on gate re-check G1, which
- * corrects his ruling on N2). It may only lower the acting side's own measures: no seat gains anything from an
- * atrocity (0046), so a rise on any side is refused, outrage included, and a fall on any other side helps the actor.
- * `decider` is the deciding side of a decision that depends on an atrocity: its own falls are the price of its choice (0060).
- * Every side measure reads higher-is-better for its own side (the published schema states it for `propose.delta`).
+ * corrects his ruling on N2). Only a cost to the acting side is allowed (0046).
+ * A decision conditioned on an atrocity can also incur a cost to its own side (0060).
  */
-export function atrocityMove(effect: phase0.Effect, actingSide: string, decider: string | null = null): string | null {
-  if (!('propose' in effect) || effect.propose.side === null || effect.propose.delta === 0) return null;
-  if (effect.propose.delta > 0) return effect.propose.side === actingSide ? 'raises the acting side’s measure' : 'raises another side’s measure';
-  if (effect.propose.side === actingSide) return null;
-  // 0060 (gate G5): in a decision that depends on an atrocity, a fall on the deciding side's own measures is the cost
-  // of the choice, not a gain from the atrocity. Notices have no decider, so only the actor's measures may fall.
-  if (decider !== null && effect.propose.side === decider) return null;
-  return 'lowers another side’s measure, which helps the side that acted';
+export function atrocityMove(effect: phase0.Effect, actingSide: string, decider: string | null = null, directionOf: MeasureLookup = measureDirection): string | null {
+  if (!('propose' in effect) || effect.propose.side === null) return null;
+  const { owner, field, side, delta } = effect.propose;
+  const direction = directionOf(owner, field);
+  if (direction === undefined) return `moves "${owner}.${field}", whose owner has declared no measure direction`;
+  if (delta === 0) return null;
+  const verb = delta > 0 ? 'raises' : 'lowers';
+  const target = side === actingSide ? 'the acting side’s measure' : 'another side’s measure';
+  if (benefitDelta(delta, direction) > 0) return `${verb} ${target}, benefiting its side`;
+  if (side === actingSide || side === decider) return null;
+  return `${verb} ${target}, which helps the side that acted`;
+}
+
+function benefitDelta(delta: number, direction: phase0.MeasureDirection): number {
+  return direction === 'higher-is-better' ? delta : -delta;
+}
+
+function harmsSide(effect: phase0.Effect, side: string): boolean {
+  if (!('propose' in effect) || effect.propose.side !== side) return false;
+  const { owner, field, delta } = effect.propose;
+  const direction = measureDirection(owner, field);
+  return direction !== undefined && benefitDelta(delta, direction) < 0;
 }
 /**
  * The ship rule (A8; section 1), a release check rather than a loader rule:

@@ -5,7 +5,8 @@
  * - **From his view** (`SeatView`): the enemy he believes stands in each region, the works and the obstructions he has
  *   been told of. Nothing about the enemy or the ground is read from truth: not enemy blocks, not `regionFortification`,
  *   not `infraObstructions`.
- * - **From the derived map**: his side's control index (who holds what) and supply (where his trains reach), and the
+ * - **From his view**: the control index is rebuilt from received claims, never the live enemy-holder index.
+ * - **From the derived map**: his side's supply (where his trains reach), and the
  *   network the derivation read (edge condition, neutral ground); the obstructions in it are dropped, so the planner
  *   cannot plan on a boom he has not been told of.
  * - **From his own side's State**: its force blocks (`forces`, `movement`, `command`) and its posts.
@@ -28,6 +29,7 @@ import { traitsOf } from '../people/traits.ts';
 import type { SeatView } from '../view/types.ts';
 import type { PlannerInput } from './context.ts';
 import { profileOf } from './profile.ts';
+import { buildControlIndex } from '../control-index/control-index.ts';
 import type { PlannerForce, PlannerPost } from './types.ts';
 
 /**
@@ -123,7 +125,7 @@ export function plannerInputFor(world: SeatsWorld, state: State, derived: Derive
   const people = world.rules.people;
   const { beliefs, works, obstructions } = viewGround(view);
   return {
-    ground: { map: world.map, index: derived.index, network: plannerNetwork(network), month },
+    ground: { map: world.map, index: buildControlIndex(world.map, Object.fromEntries(Object.entries(view.controlBeliefs).map(([region, belief]) => [region, belief.shares]))), network: plannerNetwork(network), month },
     supply,
     faction,
     beliefs,

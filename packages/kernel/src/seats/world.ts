@@ -23,6 +23,7 @@ import { daysFromCivil, parseIsoDate } from '../world/calendar.ts';
 import { wireOwnerOf, type ControlIndex } from '../control-index/control-index.ts';
 import type { FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import { templateProblems, type ReportTemplate } from '../knowledge/templates.ts';
+import { reportConfidenceProblems } from '../knowledge/confidence.ts';
 import { latencyProblems, type LatencyMap, type LatencyRules } from '../messages/latency.ts';
 import type { PlannerRules, PlansRules, StandingRules } from '../world/world.ts';
 import { noteRulesProblems } from '../plans/note-rules.ts';
@@ -110,6 +111,7 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
   // The kernel takes any World it is handed (a fixture, an adapter), so it checks the pack's rules as the validator does.
   const problems: string[] = [
     ...templateProblems(rules.templates),
+    ...reportConfidenceProblems(pack.reportConfidence),
     ...latencyProblems(rules.latency),
     ...standingProblems(pack.standing),
     ...peopleRulesProblems(pack.people, map.world.vocabularies.values?.map((v) => v.id) ?? [], map.world.vocabularies.traits.map(t => t.id)),

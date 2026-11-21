@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { inheritedQuietHistoryProblems, livenessProblems, ledgerHistoryProblems } from '../rules/liveness-causes.ts';
+import { readFileSync } from 'node:fs';
 
 const original = { 'reference/mechanic': { minFires: 5, maxFires: 20 } };
 const current = { 'reference/mechanic': { minFires: 10, maxFires: 40 } };
@@ -58,5 +59,18 @@ describe('liveness changes require a cause and around(observed)', () => {
     expect(inheritedQuietHistoryProblems([record], [])).not.toEqual([]);
     expect(inheritedQuietHistoryProblems([record], [record, record])).not.toEqual([]);
     expect(inheritedQuietHistoryProblems([record], [{ ...record, cause: 'Changed' }])).not.toEqual([]);
+  });
+  it('permits exactly the lead-authorized S41 time transition, then freezes the 25-entry list', () => {
+    const receipt = JSON.parse(readFileSync(new URL('./support/s41-quiet-transition.json', import.meta.url), 'utf8'));
+    const before = JSON.parse(readFileSync(new URL('../rules/inherited-quiet-bands.json', import.meta.url), 'utf8')).slice(0, 24);
+    const after = [...before, receipt.record];
+    expect(inheritedQuietHistoryProblems(before, after)).toEqual([]);
+    expect(inheritedQuietHistoryProblems(after, after)).toEqual([]);
+    for (const changed of [before, [...after, receipt.record], [...before, { ...receipt.record, cause: 'another ruling' }],
+      [...before.slice(1), receipt.record], [receipt.record, ...before]]) {
+      expect(inheritedQuietHistoryProblems(after, changed)).not.toEqual([]);
+      if (changed !== before) expect(inheritedQuietHistoryProblems(before, changed)).not.toEqual([]);
+    }
+    expect(inheritedQuietHistoryProblems(before, [...before, { ...receipt.record, key: 'another/time' }])).not.toEqual([]);
   });
 });

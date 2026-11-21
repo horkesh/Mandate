@@ -2,6 +2,17 @@ import { describe, expect, it } from 'vitest';
 import { errorsOf, formatGenerated, formatIssue, generatePack, IssueSink, type Issue, type PackData, validatePack, warFlagSources, warFlagsUnset } from '../src/index.ts';
 import { appendRow, filesOf, fixture, type FileMap, replaceOnce, withFile, withNewFile, withoutFile } from './support/fixture.ts';
 
+it.each([undefined, -1, 1001, 1.5])('requires a whole pack confidence in 0..1000 (got %s)', (value) => {
+  const files = withFile('pack.json', (content) => {
+    const pack = JSON.parse(content);
+    pack.rules.reportConfidence = { ...pack.rules.reportConfidence, consultMinimum: value };
+    return JSON.stringify(pack);
+  });
+  expect(errorsOf(generatePack(filesOf(files)).issues)).toContainEqual(expect.objectContaining({
+    file: 'pack.json', at: 'rules.reportConfidence.consultMinimum',
+  }));
+});
+
 const run = (files: FileMap) => generatePack(filesOf(files));
 /** Two temporary posts of a red expedition, with the given links and, optionally, a second operation or a shared department. */
 const joint = (links: string, secondOperation = 'raid', secondDepartment = 'r_sea') =>

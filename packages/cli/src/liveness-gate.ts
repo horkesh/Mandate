@@ -128,6 +128,7 @@ const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (two bo
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
+  'planner.term.time': { why: 'S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick.', test: 'packages/cli/test/planner.test.ts', needle: 'S41 time live control: dropping time changes the chosen candidate' },
   'recruitment.renewed': { why: 'S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal.', test: 'packages/cli/test/enlistment-renewal.test.ts', needle: 'changes only the term and renewal source' },
   'map.pocket_relieved': { why: "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening.", test: "packages/kernel/test/map-tick.test.ts", needle: "then its opening" },
   // R73: doctrine retires the generic Washington attack; the editing exercise edits every reviewed plan.
@@ -238,7 +239,7 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  * (each pack's checkpoints.json) are independent and unchanged; these are mechanic liveness counts only.
  */
 const UNION_BANDS: Record<string, GateBand> = {
-  'planner.term.time': { ...around(1), why: 'S34 people-data integration [I]: changed sourced commander ratings alter the planner choice; dropping the time term changes one selected candidate. The planner and its scoring coefficients are unchanged. Observed once in runs/s34/people-reference.json.' },
+  'planner.term.time': quiet('S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick.'),
   'people.resigned': around(7),
   // R82: an integrated government notice offers one officer his choice; he stays.
   'people.stayed': around(1),

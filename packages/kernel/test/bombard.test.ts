@@ -3,6 +3,7 @@ import { BOMBARD_TARGET_KINDS, bombardDay, fortDay, type BombardDefender } from 
 import type { BombardmentRules } from '../src/combat/rules.ts';
 import { toId, type PersonId } from '../src/ids.ts';
 import { deliverReport, knowledgeOf } from '../src/knowledge/knowledge.ts';
+import { controlClaims } from '../src/knowledge/control-claims.ts';
 import type { State } from '../src/root-state.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
 import { createTelemetry } from '../src/telemetry.ts';
@@ -161,10 +162,21 @@ function game(o: { readonly boldness?: PersonTemper['boldness']; readonly record
     { governments: [{ region: R('town'), department: DEP('b_war'), provenance: [] }] },
   );
   const world = worldOf(map, { ...start, factions: [{ faction: F('a'), principal: PER('a_lead'), capital: R('a1'), playable: true }, { faction: F('b'), principal: PER('b_lead'), capital: R('b1'), playable: true }] });
-  // a's general has been told where b's garrison stands (an estimate), so he has something to fire on.
+  // The general has received the shore's holding and estimates for both possible objectives.
   let state = createState(world, { seed: 1 });
   const seat = seatIdFor(PER('a_gen'));
-  state = deliverReport(state, seat, { id: toId('message', 'estimate.fort'), knownReceivedDay: 0, knownRoute: 'courier', knownVia: [], knownBody: { reportType: 'enemy-estimate', reportSubtype: null, reportAuthor: PER('a_gen'), reportAuthorPost: P('a_army'), reportSubjectKind: 'enemy', reportSubjectId: 'a_army', reportClaims: [{ claimKind: 'enemy-strength', claimRegion: R('fort'), claimValue: 80, claimToken: null, claimConfidence: 900 }, { claimKind: 'enemy-strength', claimRegion: R('town'), claimValue: 500, claimToken: null, claimConfidence: 900 }], reportDay: 0, reportHour: null, reportAdvice: null, reportAnswers: null } }, { truthTerms: [], truthTrimmed: [] });
+  state = deliverReport(state, seat, {
+    id: toId('message', 'estimate.fort'), knownReceivedDay: 0, knownRoute: 'courier', knownVia: [],
+    knownBody: {
+      reportType: 'enemy-estimate', reportSubtype: null, reportAuthor: PER('a_gen'), reportAuthorPost: P('a_army'),
+      reportSubjectKind: 'enemy', reportSubjectId: 'a_army', reportDay: 0, reportHour: null, reportAdvice: null, reportAnswers: null,
+      reportClaims: [
+        ...controlClaims(R('shore'), state.regionControl[R('shore')]!, world.factionIds),
+        { claimKind: 'enemy-strength', claimRegion: R('fort'), claimValue: 80, claimToken: null, claimConfidence: 900 },
+        { claimKind: 'enemy-strength', claimRegion: R('town'), claimValue: 500, claimToken: null, claimConfidence: 900 },
+      ],
+    },
+  }, { truthTerms: [], truthTrimmed: [] });
   return { world, state };
 }
 

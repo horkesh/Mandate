@@ -30,7 +30,7 @@ export function commanderLossReports(ctx: TickContext, before: State, state: Sta
       body: {
         reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: author, reportAuthorPost: authorPost,
         reportSubjectKind: 'post', reportSubjectId: post,
-        reportClaims: [{ claimKind: 'commander-lost', claimRegion: region, claimValue: 0, claimToken: status.statusKind, claimConfidence: 900 }],
+        reportClaims: [{ claimKind: 'commander-lost', claimRegion: region, claimValue: 0, claimToken: status.statusKind, claimConfidence: ctx.world.map.world.rules.reportConfidence.commanderLoss }],
         reportDay: ctx.day, reportHour: null, reportAdvice: null, reportAnswers: null,
       },
       truth: { truthTerms: [term('observed', 0, { person, post, rule: status.statusKind })], truthTrimmed: [] },

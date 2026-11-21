@@ -1,78 +1,112 @@
 /**
- * The desk's dispatch log, as console text: what a seat may read, and only
- * that. Player-facing: it imports the kernel only as `@mandate/kernel/seat-api`
- * and is given a `SeatView`, never State (the kernel's boundary test checks
- * both). The Phase 2 desk replaces the text, not the rule.
+ * The desk's dispatch log, built from the reports a seat can read.
  */
 import type { ClaimView, ReportView, SeatView } from '@mandate/kernel/seat-api';
 import { pressStories } from './press.ts';
+import type { DeskStrings } from './strings.ts';
 
-function claimText(c: ClaimView): string {
-  const where = c.region === null ? '' : ` at ${c.region}`;
+function atRegion(region: ClaimView['region'], t: DeskStrings): string {
+  return region === null ? '' : t('console.report.at', { region });
+}
+
+function claimText(c: ClaimView, t: DeskStrings): string {
+  const where = atRegion(c.region, t);
   switch (c.kind) {
     case 'position':
-      return `headquarters${where}`;
-    case 'goal-status':
-      return `${c.token ?? 'status unknown'}${c.region === null ? '' : ` (objective ${c.region})`}`;
+      return t('console.claim.position', { where });
+    case 'goal-status': {
+      const objective = c.region === null ? '' : t('console.claim.goal-objective', { region: c.region });
+      return t('console.claim.goal-status', { status: c.token ?? t('console.claim.unknown-status'), objective });
+    }
     case 'enemy-strength':
-      return `enemy ${c.value.toString()}${where}`;
-    case 'control':
-      return `control reported${where}`;
+      return t('console.claim.enemy-strength', { value: String(c.value), where });
     case 'control-government':
-      return c.value === 1 ? `neutral government ${c.token ?? 'not named'}${where}` : `${c.token ?? 'government not named'} governs${where}`;
+      return c.value === 1
+        ? t('console.claim.neutral-government', { government: c.token ?? t('console.claim.unidentified'), where })
+        : t('console.claim.government', { government: c.token ?? t('console.claim.unidentified-government'), where });
     case 'order-obeyed':
-      return `order ${c.token ?? (c.value === 1 ? 'obeyed' : 'not obeyed')}`;
+      return t('console.claim.order-obeyed', { answer: c.token ?? t(c.value === 1 ? 'console.claim.obeyed' : 'console.claim.disobeyed') });
     case 'order-objected':
-      return 'objects to the order';
+      return t('console.claim.order-objected');
     case 'arrived':
-      return `arrived${where}`;
-    // Lane 1.13: the claims of plans, battles, returns and the press, as the console shows them.
-    case 'plan-submitted':
-      return `submits a plan (${c.token ?? 'plan'})${c.region === null ? '' : ` for ${c.region}`}`;
+      return t('console.claim.arrived', { where });
+    case 'plan-submitted': {
+      const objective = c.region === null ? '' : t('console.claim.plan-objective', { region: c.region });
+      return t('console.claim.plan-submitted', { plan: c.token ?? t('console.claim.plan'), objective });
+    }
     case 'plan-answer':
-      return `answers your edit: ${c.token ?? 'no answer'}`;
+      return t('console.claim.plan-answer', { answer: c.token ?? t('console.claim.no-answer') });
     case 'service-choice':
-      return c.token === 'resign' ? 'has resigned from his service' : 'remains in his service';
-    case 'verb-answered':
-      return `${(c.token ?? '').replace(':', ': ')}${c.value === 1 ? '' : ' (not done)'}`;
+      return t(c.token === 'resign' ? 'console.claim.resigned' : 'console.claim.remains');
+    case 'verb-answered': {
+      const answer = (c.token ?? '').replace(':', ': ');
+      return c.value === 1 ? answer : t('console.claim.verb-not-done', { answer });
+    }
+    case 'appointment-refused':
+      return t('console.claim.appointment-refused', {
+        reason: t(c.token === null ? 'console.claim.appointment.unknown' : 'console.claim.appointment.' + c.token),
+      });
     case 'battle-phase':
-      return `${c.token ?? 'battle'}${where}: ${c.value === 1 ? 'going well' : 'going badly'}`;
-    case 'battle-result':
-      return `the battle${where}: ${c.token ?? 'unknown'}${c.confidence === 0 ? ', no figures yet' : `, ${c.value.toString()} lost`}`;
+      return t('console.claim.battle-phase', {
+        phase: c.token ?? t('console.claim.battle'), where, course: t(c.value === 1 ? 'console.claim.going-well' : 'console.claim.going-badly'),
+      });
+    case 'battle-result': {
+      const losses = c.confidence === 0 ? t('console.claim.no-figures') : t('console.claim.battle-losses', { value: String(c.value) });
+      return t('console.claim.battle-result', { where, result: c.token ?? t('console.claim.unknown-result'), losses });
+    }
     case 'own-losses':
-      return `own killed and wounded ${c.value.toString()}${where} (${c.token ?? 'return'})`;
+      return t('console.claim.own-losses', { value: String(c.value), where, returnType: c.token ?? t('console.claim.return') });
     case 'casualties':
-      return `enemy losses claimed ${c.value.toString()}${where}`;
+      return t('console.claim.casualties', { value: String(c.value), where });
     case 'framing':
-      return `the public holds the other side began the war (${c.value.toString()})`;
+      return t('console.claim.framing', { value: String(c.value) });
     default:
-      return `${c.kind} ${c.value.toString()}${where}`;
+      return t('console.claim.raw', { kind: c.kind, value: String(c.value), where });
   }
 }
 
-function reportLine(r: ReportView, t: (key: string) => string): string {
-  const kind = r.subtype === null ? r.type : `${r.type}/${r.subtype}`;
-  const via = r.via.length === 0 ? '' : ` via ${r.via.join(', ')}`;
-  const advice = r.advice === null ? '' : ` | recommends ${r.advice.recommends} (${r.advice.reasons.map((x) => x.kind).join(', ')})`;
-  // A report with no claims (a notice, a word in person) is about its subject.
-  const opening=r.openingControl===true;
-  const regions=new Set(r.claims.filter(c=>c.kind==='control'&&c.region!==null).map(c=>c.region));
-  const holdings = (r.reportedControl ?? []).map(c => `${c.holder === null ? `no holder reported at ${c.region}` : `${c.holder} holds ${c.region}`}${c.contested ? '; contested ground' : ''}`);
-  const otherClaims = r.claims.filter(c => c.kind !== 'control').map(claimText);
-  // Older presentation fixtures can lack summaries. Keep their report visible
-  // without guessing a threshold or exposing the shares as figures.
-  const controlFallback = holdings.length === 0 ? [...new Set(r.claims.filter(c => c.kind === 'control').map(c => c.region))].map(region => `control reported${region === null ? '' : ` at ${region}`}`) : [];
-  const claims = opening ? `The opening country report records control and governments for ${regions.size.toString()} regions. The regional claims are entered on the staff map.` : r.claims.length === 0 ? `about ${r.subjectKind} ${r.subjectId}` : [...holdings, ...controlFallback, ...otherClaims].join('; ');
-  // A battle day's dispatches carry their hour (FOUNDATION section 9: the night of the battle, hour by hour).
-  const hour = r.hour === null ? '' : ` at ${r.hour.toString().padStart(2, '0')}:00`;
-  const stories = pressStories(r, t);
-  const copy = r.type === 'press' ? (stories.length === 0 ? t('press.empty') : stories.map(s => `${s.headline}. ${s.body}`).join('; ')) : claims;
-  return `day ${r.receivedDay.toString().padStart(3)}  ${kind} from ${r.author} (written day ${r.day.toString()}${hour}, ${r.route}${via}): ${copy}${advice}`;
+function reportCopy(r: ReportView, t: DeskStrings): string {
+  if (r.type === 'press') {
+    const stories = pressStories(r, t);
+    return stories.length === 0 ? t('press.empty') : stories.map(s => t('console.report.story', { headline: s.headline, body: s.body })).join('; ');
+  }
+  const control = r.claims.filter(c => c.kind === 'control').map(c => c.region);
+  const regions = new Set(control);
+  if (r.openingControl === true) return t('console.report.opening', { regions: String(regions.size - Number(regions.has(null))) });
+  if (r.claims.length === 0) return t('console.report.about', { kind: r.subjectKind, id: r.subjectId });
+  const holdings = (r.reportedControl ?? []).map(c => {
+    const holding = c.holder === null
+      ? t('console.report.no-holder', { region: c.region })
+      : t('console.report.holder', { region: c.region, holder: c.holder });
+    return c.contested ? t('console.report.contested', { holding }) : holding;
+  });
+  // Older presentation fixtures lack summaries. Keep their reports visible without guessing or showing shares.
+  const controlFallback = holdings.length === 0 ? [...regions].map(region => t('console.claim.control', { where: atRegion(region, t) })) : [];
+  const otherClaims = r.claims.filter(c => c.kind !== 'control').map(c => claimText(c, t));
+  return [...holdings, ...controlFallback, ...otherClaims].join('; ');
+}
+
+/** The received copy, shared with the browser's desk adapter. */
+export function reportBody(r: ReportView, t: DeskStrings): string {
+  const copy = reportCopy(r, t);
+  return r.advice === null ? copy : t('console.report.advice', {
+    copy, option: r.advice.recommends, reasons: r.advice.reasons.map(x => x.kind).join(', '),
+  });
+}
+
+function reportLine(r: ReportView, t: DeskStrings): string {
+  const kind = r.subtype === null ? r.type : r.type + '/' + r.subtype;
+  const via = r.via.length === 0 ? '' : t('console.via', { posts: r.via.join(', ') });
+  const hour = r.hour === null ? '' : t('console.report.hour', { hour: String(r.hour).padStart(2, '0') });
+  return t('console.report.line', {
+    received: String(r.receivedDay).padStart(3), kind, author: r.author, day: String(r.day), hour, route: r.route,
+    via, body: reportBody(r, t),
+  });
 }
 
 /**
- * The reports in reading order: by the day received, then the day and hour written, so a battle day's dispatches read
- * dawn to evening (lane 1.13); otherwise in the order the seat holds them.
+ * By the day received, then the day and hour written, so battle dispatches read dawn to evening.
+ * Otherwise use the order the seat holds them.
  */
 export function readingOrder(reports: readonly ReportView[]): ReportView[] {
   return reports
@@ -81,17 +115,17 @@ export function readingOrder(reports: readonly ReportView[]): ReportView[] {
     .map((x) => x.r);
 }
 
-/** The reports a seat holds, received on or after `sinceDay`, in reading order. */
-export function dispatchLog(view: SeatView, sinceDay = 0, t: (key: string) => string = key => key): string[] {
-  return readingOrder(view.reports.filter((r) => r.receivedDay >= sinceDay)).map(r => reportLine(r,t));
+/** The reports a seat holds, received on or after the given day. */
+export function dispatchLog(view: Pick<SeatView, 'reports'>, sinceDay: number, t: DeskStrings): string[] {
+  return readingOrder(view.reports.filter(r => r.receivedDay >= sinceDay)).map(r => reportLine(r, t));
 }
 
 /** What he believes of the enemy, region by region. */
-export function enemyPicture(view: SeatView): string[] {
+export function enemyPicture(view: SeatView, t: DeskStrings): string[] {
   return Object.keys(view.enemyBeliefs)
     .sort()
-    .map((region) => {
+    .map(region => {
       const b = view.enemyBeliefs[region as keyof typeof view.enemyBeliefs]!;
-      return `${region}: about ${b.value.toString()} (as of day ${b.asOfDay.toString()})`;
+      return t('console.enemy.belief', { region, strength: String(b.value), day: String(b.asOfDay) });
     });
 }

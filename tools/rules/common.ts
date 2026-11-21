@@ -30,6 +30,15 @@ export function baselineHistoryProblems(before: readonly Finding[], now: readonl
   const key = (f: Finding) => `${f.rule}|${f.path}|${f.detail}`;
   const old = new Map(before.map(f => [key(f), f]));
   return now.flatMap(f => {
+    // S40's named S36 merge removes the review root and retains the concentration finding and changes
+    // the two residual closures to received inputs plus the existing own-seat
+    // derivation. Bind whole findings, not just symbols or protected fields.
+    // The full before/after receipts are tools/test/support/s40-projection-migration.json.
+    const s40 = [
+      ['c731e0619318ac076905970c303f941354a97d759860612fb98739de62030608', '683f2f0eb4d4357d3dd0f0fb4c8901178955422f26a0f4dc20f50f97a47b2a70'],
+      ['787f32b66806b1a082e777b63f94d4777c4d24ad311b73aa890cb938bfc9b79d', '0f6c5fc8ca58c921091127f913633f14421f1e8a3b70281d6f103ac7cc646167'],
+    ];
+    if (mergeHead === 'ed4fb1945a8692a1c6e85fadf9cfaf6aaac1bea4' && s40.some(([from,to]) => fingerprint(f) === to && before.some(b => fingerprint(b) === from))) return [];
     const previous = old.get(key(f));
     if (previous === undefined) return [`known findings cannot grow: ${f.rule} ${f.path}`];
     // CODEX S34 explicitly authorizes baselining the combined sprint code.

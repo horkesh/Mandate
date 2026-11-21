@@ -7,6 +7,10 @@ import { createState } from '../src/tick/setup.ts';
 import { createViewCache } from '../src/view/view.ts';
 import { indexWorld } from '../src/world/index.ts';
 import { F, P, POST, indexedFixture } from './support/seats-fixture.ts';
+import { deliverReport } from '../src/knowledge/knowledge.ts';
+import { NO_TRUTH } from '../src/knowledge/truth.ts';
+import { seatIdFor } from '../src/seats/seats.ts';
+import { report } from './support/s25-fixture.ts';
 
 const base = indexedFixture();
 const world = indexSeatsWorld(indexWorld({ ...base.map.world, vocabularies: { ...base.map.world.vocabularies, rankKinds: [{ id: 'regular', name: 'rank_kind.regular' }], ranks: [{ id: 'top', name: 'rank.top', seniority: 1, kind: 'regular' }] } }), base.start);
@@ -29,7 +33,7 @@ it('reuses a deeply frozen candidate graph when only the day or unrelated knowle
   expect(() => Object.assign(first[0]!, { seniority: 99 })).toThrow(TypeError);
 });
 
-it('invalidates every candidate dependency and keeps old-State reads equal to fresh derivation', () => {
+it('ignores unreceived truth changes and keeps old-State reads equal to fresh received derivation', () => {
   const cache = createViewCache();
   const initial = menu(world, state, cache).candidates;
   const alternatives: State[] = [
@@ -40,7 +44,7 @@ it('invalidates every candidate dependency and keeps old-State reads equal to fr
   ];
   for (const next of alternatives) {
     const cached = menu(world, next, cache).candidates;
-    expect(cached).not.toBe(initial);
+    expect(cached).toBe(initial);
     expect(cached).toEqual(menu(world, next).candidates);
     expect(menu(world, state, cache).candidates).toEqual(initial);
   }
@@ -48,4 +52,20 @@ it('invalidates every candidate dependency and keeps old-State reads equal to fr
   expect(menu(other, state, cache).candidates).toEqual(menu(other, state).candidates);
   expect(menu(other, state, cache).candidates).not.toEqual(initial);
   expect(menu(world, state, cache).candidates).toEqual(initial);
+});
+
+it('invalidates on a received refusal and on its future receipt date without a new report object', () => {
+  const cache = createViewCache();
+  const seat = seatIdFor(P('a_lead'));
+  const paper = report('m.cached-refusal', { reportAuthor: P('a_spy'), reportAuthorPost: null, reportSubjectKind: 'person', reportSubjectId: 'a_spy',
+    reportDay: 2, reportClaims: [{ claimKind: 'appointment-refused', claimRegion: null, claimValue: 1, claimToken: 'not_serving', claimConfidence: 1000 }] }, 3);
+  const waiting = deliverReport({ ...state, stateDay: 2 }, seat, paper, NO_TRUTH);
+  const before = menu(world, waiting, cache).candidates;
+  expect(before.some(c => c.person === P('a_spy'))).toBe(true);
+  const arrived = { ...waiting, stateDay: 3 };
+  const after = menu(world, arrived, cache).candidates;
+  expect(after).not.toBe(before);
+  expect(after.some(c => c.person === P('a_spy'))).toBe(false);
+  expect(after).toEqual(menu(world, arrived).candidates);
+  expect(menu(world, waiting, cache).candidates).toEqual(before);
 });

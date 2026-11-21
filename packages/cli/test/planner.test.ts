@@ -261,7 +261,9 @@ describe('the 0026 edit grammar', () => {
 
   it('refuses a waypoint no route reaches, as a validation failure with a reason', () => {
     const { input, set } = drafted(SUPPLY, seat('fighter'));
-    expect(planner.applyEdit(input, set, pick(set), edit('waypoints', { via: ['island_fort'] }))).toEqual({ ok: false, reason: 'waypoint island_fort cannot be reached by land' });
+    expect(planner.applyEdit(input, set, pick(set), edit('waypoints', { via: ['island_fort'] }))).toEqual({
+      ok: false, reason: { kind: 'no-waypoint', region: 'island_fort', mode: 'land' },
+    });
   });
 
   it('shortens his concentration ("move now"): haste falls, and the timid man objects or shirks', () => {
@@ -310,7 +312,7 @@ describe('the 0026 edit grammar', () => {
     const { input, set } = drafted(SUPPLY, seat('fighter'));
     const chosen = pick(set);
     const r = planner.applyEdit(input, set, chosen, edit('waypoints', { via: ['e_lowlands'] }));
-    if (!r.ok) throw new Error(r.reason);
+    if (!r.ok) throw new Error(r.reason.kind);
     expect(set.draftCandidates.map((c) => c.id)).toContain(planner.concretePlan(input, set, chosen, r.edited, 'reinterpret').id);
     expect(planner.concretePlan(input, set, chosen, r.edited, 'slow_walk').candAxes[0]!.axisArrival).toBeGreaterThan(r.edited.candAxes[0]!.axisArrival);
     expect(planner.concretePlan(input, set, chosen, r.edited, 'object')).toBe(chosen);
@@ -319,6 +321,17 @@ describe('the 0026 edit grammar', () => {
 });
 
 describe('liveness of the scoring terms, over drafts and edits (0062; lane 0.9)', () => {
+  it('S41 time live control: dropping time changes the chosen candidate', () => {
+    const { set } = drafted(PINCER, seat('appointee'));
+    expect(pick(set).candMethod).toBe('direct');
+    const withoutTime = set.draftCandidates.map(c => ({ ...c,
+      candScore: c.candScore - (c.candTerms.find(t => t.contribTerm === 'time')?.contribAmount ?? 0),
+    })).sort(planner.compareCandidates);
+    expect(withoutTime[0]!.candMethod).toBe('holding');
+    expect(withoutTime[0]!.id).not.toBe(pick(set).id);
+    expect(planner.liveTerms(set)).toContain('time');
+  });
+
   it('counts every scoring term live in some case: dropping it changes a draft’s pick, or it falls under an edit', () => {
     const live = new Set<string>();
     for (const spec of CASES) {

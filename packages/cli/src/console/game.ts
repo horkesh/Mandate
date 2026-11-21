@@ -10,8 +10,9 @@
  */
 import { canonicalHash, ids, phase0, world as w } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
-import { packStrings, seatsWorld } from '../seats-world.ts';
 import {TURN_STOP_POINTS, type TurnStopPoint} from '@mandate/kernel/seat-api';
+import { packPresentation, seatsWorld } from '../seats-world.ts';
+import { deskStrings } from '../pack-text.ts';
 
 export interface GameOptions {
   readonly pack: string;
@@ -50,6 +51,8 @@ export class ConsoleGame {
   readonly worldHash: string;
   readonly seat: ids.SeatId;
   readonly strings: Readonly<Record<string, string>>;
+  readonly locale: string;
+  private readonly principal: ids.PersonId;
   private stateNow: phase0.State;
   private readonly logEntries: phase0.LogEntry[] = [];
   private readonly rules = createRuleSeat();
@@ -62,10 +65,13 @@ export class ConsoleGame {
     this.pack = options.pack;
     this.world = sw.world;
     this.worldHash = sw.worldHash;
-    this.strings = packStrings(options.pack);
+    const presentation = packPresentation(options.pack);
+    this.strings = presentation.table;
+    this.locale = presentation.locale;
     const playable = sw.world.start.factions.find((f) => f.playable && f.principal !== null);
     if (playable === undefined || playable.principal === null) throw new Error(`pack ${options.pack} has no playable faction with a principal`);
-    this.seat = phase0.seatIdFor(playable.principal);
+    this.principal = playable.principal;
+    this.seat = phase0.seatIdFor(this.principal);
     // His seat is a human's: the kernel never takes a situation's historical default for him (0040), and the log says who drove it.
     this.stateNow = phase0.createState(sw.world, { ...sw.setup, drivers: { [playable.principal]: 'human' }, ...(options.atWar === true ? { atWar: true } : {}) });
   }
@@ -81,7 +87,9 @@ export class ConsoleGame {
 
   /** The calendar date of `day`. */
   dateOf(day: number): string {
-    return this.stateNow.calendarStart === null ? `day ${day.toString()}` : w.formatIsoDate(w.dateOfDay(this.stateNow.calendarStart, day));
+    return this.stateNow.calendarStart === null
+      ? deskStrings(this.strings, this.locale)('console.date.no-calendar', { day: String(day) })
+      : w.formatIsoDate(w.dateOfDay(this.stateNow.calendarStart, day));
   }
 
   /** The morning's request for his seat: the view and the menu for the next day. */
@@ -111,9 +119,9 @@ export class ConsoleGame {
     })));
   }
 
-  /** The route an arrow edit would make, as of today (lane 0.9's finding 5). */
+  /** The route an arrow edit would make on the submitted paper's received basis (0062; S36). */
   preview(post: ids.PostId, edit: phase0.EditTerms): phase0.EditPreview {
-    return phase0.previewEdit(this.world, this.stateNow, post, edit, this.stateNow.stateDay + 1);
+    return phase0.previewEdit(this.world, this.stateNow, post, edit, this.stateNow.stateDay + 1, this.principal);
   }
 
   /** Send his orders on the turn's first morning, then let days pass until a decision point or the turn's end. */

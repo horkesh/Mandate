@@ -92,6 +92,9 @@ export type Condition =
 export const LEDGER_STATUSES = ['answered', 'away', 'before'] as const;
 export type LedgerStatus = (typeof LEDGER_STATUSES)[number];
 
+/** How a numeric proposal affects the side that owns the measure (0057). */
+export type MeasureDirection = 'higher-is-better' | 'lower-is-better';
+
 /**
  * An effect. Flags are the situations module's own chain state. Everything
  * else is a typed **proposal** to the module that owns the field (hard rule 5;

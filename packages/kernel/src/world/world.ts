@@ -26,6 +26,7 @@ import type {
 } from './graph.ts';
 import type { PersonRecord } from './people.ts';
 import type { ReportTemplate } from '../knowledge/templates.ts';
+import type { ReportConfidenceRules } from '../knowledge/confidence.ts';
 import type { LatencyRules } from '../messages/latency.ts';
 import type { RecruitmentRules, SelfEmancipationRules } from '../recruitment/rules.ts';
 import type { PeopleRules } from '../people/rules.ts';
@@ -303,6 +304,7 @@ export interface WorldRules {
    * route, its cadence, and the pruning rule for knowledge (FOUNDATION section 8). DESIGN PARAMETERS the pack states (0072).
    */
   readonly reportTemplates: readonly ReportTemplate[];
+  readonly reportConfidence: ReportConfidenceRules;
   readonly standing: StandingRules;
   /** The people core's rules (lane 1.1): history's shadow, compliance, reading orders and reports, traits. DESIGN PARAMETERS the pack states (0072). */
   readonly people: PeopleRules;

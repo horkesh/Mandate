@@ -1,6 +1,10 @@
 import {expect,it} from 'vitest';
 import {ConsoleGame} from '../../../packages/cli/src/console/game.ts';
-import {parseLine} from '../../../packages/cli/src/desk/commands.ts';
+import {parseLine as parseWithStrings} from '../../../packages/cli/src/desk/commands.ts';
+import {deskStrings} from '../../../packages/cli/src/pack-text.ts';
+const textGame = new ConsoleGame({pack:'union-1861'});
+const t = deskStrings(textGame.strings, textGame.locale);
+const parseLine = (line: string, request: Parameters<typeof parseWithStrings>[1]) => parseWithStrings(line, request, t);
 
 it('issues the actual May requisition through a raising governor absent from commandable field posts',()=>{
  const game=new ConsoleGame({pack:'union-1861',atWar:true});game.setTurnStops([]);

@@ -8,7 +8,15 @@ import { tick, TICK_MECHANICS } from '../src/tick/tick.ts';
 import { MAP_MECHANICS } from '../src/tick/map.ts';
 import { createState } from '../src/tick/setup.ts';
 import { ctxFor } from './support/tick-context.ts';
-import { fresh } from './support/s25-fixture.ts';
+import { fresh, report } from './support/s25-fixture.ts';
+import { deliverReport } from '../src/knowledge/knowledge.ts';
+import { NO_TRUTH } from '../src/knowledge/truth.ts';
+import { enclosePlan } from '../src/planner/paper.ts';
+import { plannerInputFor } from '../src/planner/input.ts';
+import { passageOf } from '../src/tick/passage.ts';
+import { deriveMap } from '../src/control-index/derived.ts';
+import { viewFor } from '../src/view/view.ts';
+import { seatIdFor } from '../src/seats/seats.ts';
 import { F, P, POST, R, indexedFixture } from './support/seats-fixture.ts';
 import { goalTerms, order } from './support/test-seats.ts';
 
@@ -27,7 +35,15 @@ function planned(status: PlanRecord['planStatus']) {
   const record: PlanRecord = { ...set.planRecords[post]!, planStatus: status, planChosen: candidate.id,
     planDraft: { draftCommander: P('a_gen'), draftPost: post, draftFaction: F('a'), draftDay: 1,
       draftCandidates: [candidate], draftRejected: [], draftSearches: 0, draftGenerated: 1, draftDeduplicated: 0 } };
-  const ready = { ...set, planRecords: { ...set.planRecords, [post]: record } };
+  let ready = { ...set, stateDay: 1, planRecords: { ...set.planRecords, [post]: record } };
+  if (status === 'review') {
+    const network = passageOf(world.map, ready);
+    const derived = deriveMap(world.map, { control: ready.regionControl, network, month: 6 });
+    const input = plannerInputFor(world, ready, derived, network, 6, viewFor(world, ready, seatIdFor(P('a_gen'))), post, record.planGoal, 1);
+    // Review acts require the submitted paper in the principal's hands (S36), not only a private planStatus.
+    ready = deliverReport(ready, seat, report('s25.submission', { reportAuthorPost: post, reportSubjectKind: 'post', reportSubjectId: post,
+      reportAnswers: record.planOrder, reportPlan: enclosePlan(input, record.planDraft!, candidate) }), NO_TRUTH);
+  }
   return { world, state: ready, seat, post };
 }
 

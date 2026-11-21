@@ -37,7 +37,7 @@
   {
     "path": "packages/kernel/src/view/view.ts",
     "symbol": "viewFor",
-    "hash": "f433eba08689c8c34fc1a4410afdfdfa94f8fc81f09674e5245da4a720c2ef3e",
+    "hash": "8b99c206dad4f32e0023e4094aeb6a071990ede795060f0decd21581f9f955a2",
     "reason": "Own seat identity, faction and physical location; the people catalogue itself consumes received evidence.",
     "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
   }

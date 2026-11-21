@@ -1,0 +1,1326 @@
+{
+  "seconds": 1451.7500845,
+  "command": "npm run run:done-check -- --milestone 1a --label s36-done-final",
+  "codeCommit": "a7eaf410ccada505204d1686726021d3ecf8a4da",
+  "exit": 1,
+  "criteria": [
+    {
+      "milestone": "phase0",
+      "id": "behaviour",
+      "passed": true,
+      "text": "rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 647 arrivals, 4 battle-days, 120 control changes, confederate 4 front segments 77 supplied 3 pockets; union 4 front segments 38 supplied 0 pockets",
+        "testbed, 120 days: 27 arrivals, 4 battle-days, 35 control changes, north 13 front segments 13 supplied 1 pockets; south 13 front segments 1 supplied 1 pockets"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "id": "hash",
+      "passed": true,
+      "text": "the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 148 daily hashes, final 2b007d310e5f9b8c",
+        "testbed, 120 days: 120 daily hashes, final ee1b76d81d16951c"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "id": "resume",
+      "passed": true,
+      "text": "a mid-run save, loaded, resumes to the continuous run’s final hash, and the log replays to every hash",
+      "evidence": [
+        "union-1861, war by decision, 148 days: from day 60, matches",
+        "testbed, 120 days: from day 40, matches"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "id": "liveness",
+      "passed": true,
+      "text": "every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 162 mechanics inside their bands",
+        "testbed, 120 days: 162 mechanics inside their bands",
+        "testbed, commanders silent, 120 days: 1 mechanics inside their bands",
+        "testbed, the principal edits every plan, 120 days: 6 mechanics inside their bands",
+        "union-1861 before the opening decisions, 30 days (the war gate, 0064): 9 mechanics inside their bands"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "id": "section-ten",
+      "passed": true,
+      "text": "the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite’s)",
+      "evidence": [
+        "packages/kernel/test/compliance.test.ts",
+        "packages/kernel/test/rng.test.ts",
+        "packages/kernel/test/banned-apis.test.ts",
+        "packages/kernel/test/people-verbs.test.ts"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "id": "budget",
+      "passed": false,
+      "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+      "evidence": [
+        "union-1861, war by decision, 148 days: median 43.35 ms, p95 66.27 ms, max 81.07 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 62)",
+        "testbed, 120 days: median 4.08 ms, p95 9.34 ms, max 46.44 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+        "union-1861 history run, 148 days to 1861-07-31: median 57.23 ms, p95 111.29 ms, max 157.87 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 62)"
+      ],
+      "problems": [
+        "union-1861, war by decision, 148 days: median 43.4 ms a day, over the 40 ms budget",
+        "union-1861 history run, 148 days to 1861-07-31: median 57.2 ms a day, over the 40 ms budget"
+      ]
+    },
+    {
+      "milestone": "1A",
+      "id": "checkpoints",
+      "passed": true,
+      "text": "the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "union-1861 history run, 148 days to 1861-07-31: side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): union 99791 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate 124098 men of known strength, 17 blocks of unknown strength (band 100000..200000)",
+        "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+        "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+        "union-1861 history run, 148 days to 1861-07-31: confederate at war since day 36",
+        "union-1861 history run, 148 days to 1861-07-31: union at war since day 41"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1A",
+      "id": "operation",
+      "passed": true,
+      "text": "at least one operation drafted by the kernel planner, chosen by its commander’s seat, approved, executed and fought with the battle model, with a breakdown",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+        "union-1861 history run, 148 days to 1861-07-31: op:us_dept_northeastern_virginia:137 (union, direct) fought battle battle:manassas:144"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1A",
+      "id": "pushback",
+      "passed": false,
+      "text": "pushback fires inside its bands: lower bounds from the record’s sourced cases (S01–S21), upper bounds the lead’s",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: relay objections: 2 (band 0..6)",
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 1 (band 2..6)",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0 (band 1..4)",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 15 (band 2..9)",
+        "union-1861 history run, 148 days to 1861-07-31: objections to a plan: 36 (band 10..42)"
+      ],
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17, above 9",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 15, above 9"
+      ]
+    },
+    {
+      "milestone": "1A",
+      "id": "unknown-strength",
+      "passed": true,
+      "text": "no block fights with unknown strength: every battle record, in every run, lists none unknown",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 3 battles, 4 battle-days read",
+        "testbed, 120 days: 4 battles, 4 battle-days read",
+        "union-1861 history run, 148 days to 1861-07-31: 3 battles, 4 battle-days read"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1A",
+      "id": "stand-ins",
+      "passed": true,
+      "text": "the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+      "evidence": [
+        "standing goals: gone (lane 1.4’s operations (4a64082))",
+        "the consistency judgement: gone (lane 1.2’s planner (0062))",
+        "the trait adapter: gone (lane 1.1’s people recast (`standin/traits.ts` deleted))",
+        "weakest-first transfers: gone (lane 1.5’s people verbs (0079: the sender’s answer picks the blocks))",
+        "conflicts resolved by department: gone (lane 1.1’s compliance (`resolveConflict`))",
+        "the simple contest: gone (lane 1.3’s battle model (0076))",
+        "the generic rule-seat principal: no label names it, so it is gone",
+        "the capital as objective: no label names it, so it is gone",
+        "other stand-ins: packages/kernel/src/forces/stores.ts:74 (owner 1B, ships' stores), packages/kernel/src/planner/route.ts:127 (owner 1B, ships' stores), packages/kernel/src/recruitment/renewal.ts:3 (owner 1B, recruitment and service), packages/kernel/src/situations/types.ts:74 (owner 1B, conventions and legislatures), packages/pack-format/src/situations.ts:68 (owner 1B, conventions and legislatures)",
+        "pack values carried from M2, for calibration: union-1861 rules.politics.drift, union-1861 rules.politics.address, union-1861 rules.politics.ladder, union-1861 rules.politics.credibility, union-1861 rules.politics.press.standing"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1A",
+      "id": "lever-sweep",
+      "passed": false,
+      "text": "the lever sweep (D6): no watched option, nor an atrocity-class decision’s inaction, is the victory-only bot’s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: 8 seeds, 8 gated decisions weighed, 744 calls for regiments in the base runs",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: return best in 0 of 8 seeds weighed"
+      ],
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+      ]
+    }
+  ],
+  "phase0Passed": 5,
+  "phase1aPassed": 4,
+  "problemCount": 9,
+  "timings": [
+    "        union-1861, war by decision, 148 days: median 43.35 ms, p95 66.27 ms, max 81.07 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 62)",
+    "        testbed, 120 days: median 4.08 ms, p95 9.34 ms, max 46.44 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+    "        union-1861 history run, 148 days to 1861-07-31: median 57.23 ms, p95 111.29 ms, max 157.87 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 62)",
+    "      ! union-1861, war by decision, 148 days: median 43.4 ms a day, over the 40 ms budget",
+    "      ! union-1861 history run, 148 days to 1861-07-31: median 57.2 ms a day, over the 40 ms budget",
+    "  union-1861, war by decision, 148 days: median 43.35 ms, p95 66.27 ms, max 81.07 ms over 148 days",
+    "  testbed, 120 days: median 4.08 ms, p95 9.34 ms, max 46.44 ms over 120 days",
+    "  union-1861 history run, 148 days to 1861-07-31: median 57.23 ms, p95 111.29 ms, max 157.87 ms over 148 days",
+    "  one day of all 23 drafts back to back: median 27.5 ms, p95 33.1 ms, worst 37.0 ms over 20 days; slowest single draft 10.5 ms; a capped day (the pack's 3 slowest drafts for each of 2 sides, together) at worst 22.7 ms"
+  ],
+  "summaries": [
+    {
+      "path": "runs/s36-done-final/20261121-034756-8248-1572e1/summary.json",
+      "sha256": "b3a2bedea5449e5c915e2ba9648af04c14f98b40f0f3f03de1d2cb9a652c7def",
+      "pack": "union-1861",
+      "finalDay": 148,
+      "worldHash": "6ff0ca3537184d068daf9c5e7208459f8b9a90d71f0a5f79b00ef7ef35ff1ac0",
+      "initialHash": "2f9387fb0cf695384b3d6df8e734abaf2607e8e08aed5edc00e04899098c2dcc",
+      "finalHash": "2b007d310e5f9b8cab193d74485dacc99e4b3334f45c4cb39652caa209a6285c",
+      "turns": [
+        {
+          "turn": 1,
+          "hash": "dccd63cb947d0bc99a6bc3d856d52ea9f7a0af2281fe9322dc25b690fb6f6400"
+        },
+        {
+          "turn": 2,
+          "hash": "235ec43561c087d529ad1e0b91b16303114f3af8c18cc921fc6a044eb7a417e7"
+        },
+        {
+          "turn": 3,
+          "hash": "cea492dfe1d880fc0536f89a95cb2caa8ed45dddaf1d10c58edfcc0a04df0a42"
+        },
+        {
+          "turn": 4,
+          "hash": "13e1012d48014ba6d575a4eb45f06428dc9cdef6f0e20af4915c98cc53be15a6"
+        },
+        {
+          "turn": 5,
+          "hash": "6650d0ee88e815ef8b62356c4e2eb0f8be65c006278e93d62f531168ee5d4336"
+        },
+        {
+          "turn": 6,
+          "hash": "0e509a20293fc3e690b2f4acf67caa7315ae6beab37c910baf2b4459d271cf08"
+        },
+        {
+          "turn": 7,
+          "hash": "7f0d618434bb2ed275a04b2270b2612d37020688b4747951d3837a7178f47384"
+        },
+        {
+          "turn": 8,
+          "hash": "ddffcfc3b11ed3b9fd311939b3aa36e59d349e403346418858f9f0248e89b72d"
+        },
+        {
+          "turn": 9,
+          "hash": "842f849fa74a568d42d8d79db0a27e2dd2df4a15774fd75067b2aabb0102bb7c"
+        },
+        {
+          "turn": 10,
+          "hash": "7ec63b1a861f71301e993cedf4f88933cf58318d59c9b2e5114c728f37fde261"
+        },
+        {
+          "turn": 11,
+          "hash": "296c88283afba5b4322f044615c5d347447916f6ee2985e1f8b368ad358f5e43"
+        },
+        {
+          "turn": 12,
+          "hash": "bd81a3320259fa9788c11ed976f7ed4c0aa933c277ac1bbfd0378482a1b42801"
+        },
+        {
+          "turn": 13,
+          "hash": "70cafce557bf40551022afd36e636ea50433de1bda812f513cb351b5a5aaeda6"
+        },
+        {
+          "turn": 14,
+          "hash": "31cf569eb5c5f93176aa408e53a703581b54b6b45e10a79b1ba389483121362a"
+        },
+        {
+          "turn": 15,
+          "hash": "50ee1e8377679fdeb25b5d6fe00933e6413971cc4fe34eaf492f91f2f93b5cc4"
+        },
+        {
+          "turn": 16,
+          "hash": "43b5dabf104fa41c3484cd517a7d2d5e997ae9cb30381ab971020a17a35b8b24"
+        },
+        {
+          "turn": 17,
+          "hash": "999a6d30c592e88cb9cf8211eaf3c10a5cd6bcd757fa26b70b240a095912fa21"
+        },
+        {
+          "turn": 18,
+          "hash": "7e0a0e38d76220c1a63f178f70d98e8e687852c796b4d533b7d25338beceeedb"
+        },
+        {
+          "turn": 19,
+          "hash": "239e22002c97eccc51b8be69ec0f818c68ef8788e45dfaf657f61d89c6cb7e3c"
+        },
+        {
+          "turn": 20,
+          "hash": "f220d02b420d51d8b3fffff6a5ad8f1d3e6dd1c049c13616770c3629152def4f"
+        },
+        {
+          "turn": 21,
+          "hash": "5c1083cf6095f04823927bebf69fb0051fe71ac4039cc15720b039ed019646df"
+        },
+        {
+          "turn": 22,
+          "hash": "1040c5631c35937413935b27cfe8bf7a5cbbb671439d1335dfc256b30da3aaeb"
+        },
+        {
+          "turn": 23,
+          "hash": "965248b0ba5fb8a7f7f7afb4b53ff47d41b66be22ff5c743f8f133714bb782ef"
+        },
+        {
+          "turn": 24,
+          "hash": "274745a5680a3bc59177491cb7acd015c16e4863c8192adefbd3c4a9570f22d3"
+        },
+        {
+          "turn": 25,
+          "hash": "d29c8c3433d1eb9c91bbb0ff2f381e04d3357f5287d12848726e9b3bd12b35d0"
+        },
+        {
+          "turn": 26,
+          "hash": "23ca46d5bcfda60b162ec1ef9d737755be0dac74609a16c64ee27bd941f90055"
+        },
+        {
+          "turn": 27,
+          "hash": "aa29ad81e9f18e609a0943e111a89a4bb18ecfa610f8177d9f4028ada4a2f593"
+        },
+        {
+          "turn": 28,
+          "hash": "c1cdc970bfc2a679149f621737ceac210c88974d1b7626df2e5cdfac1b07024c"
+        },
+        {
+          "turn": 29,
+          "hash": "8ccb12a46a35d2844574c3abab5a8edd6bb5d8b0b5d5a304f00e4aedf10bf2ff"
+        },
+        {
+          "turn": 30,
+          "hash": "96601b69336985e7a08c1f57f8aa8b151d2fb6fba30f9004fb778e5df355cbc0"
+        },
+        {
+          "turn": 31,
+          "hash": "356e14e86bf293f1a6883fd35592cdc1c1435acf6edab5c206e1fb4cd0109386"
+        },
+        {
+          "turn": 32,
+          "hash": "e100be6470a2274582b185492568a13b8269a80eda9f2b93591396f0dcf60ddf"
+        },
+        {
+          "turn": 33,
+          "hash": "095b896012630669b9683136abfb6361294007d7ba5fce068c8c4a647c2d0eb6"
+        },
+        {
+          "turn": 34,
+          "hash": "e5a8bf4e801ff24b468e96b196cdcff9864dab173e62b359eea22ee1428ff7e9"
+        },
+        {
+          "turn": 35,
+          "hash": "b739909932ab8b896938eef40d38ecad835312cbc2405d9136e22992ea6cd157"
+        },
+        {
+          "turn": 36,
+          "hash": "c5afea3e1076a1d9c6e569c913053109597952f50294fad8509c6dc28f13c00a"
+        },
+        {
+          "turn": 37,
+          "hash": "3f5d2498a66a1d14bbde8ea5b01226ed40da97eaba6f25235f99820ea97c2bd0"
+        },
+        {
+          "turn": 38,
+          "hash": "bd93eb0b237aad3e5e715af83220eabdf0210ebddc94cf53d8743bf8b25b2bc1"
+        },
+        {
+          "turn": 39,
+          "hash": "32542ce4463a5ec519fc719247f82634ce54ed72cb6a4be43910e4f7edfa8b9c"
+        },
+        {
+          "turn": 40,
+          "hash": "1c49270cb9f33662b1e76e7fc4ea8bad4f9776f518506286cc6990ef02e80986"
+        },
+        {
+          "turn": 41,
+          "hash": "9ac7c360bc3f7babf322b769dc0ecf9b21d8c92fca72512654beba7eeaa352a8"
+        },
+        {
+          "turn": 42,
+          "hash": "4771821cdfe21dfc83671bd7dd98d740b8e16925a1e02f277bebcfbb170f4a73"
+        },
+        {
+          "turn": 43,
+          "hash": "f58bc1b671740ff00ea56aec14b8e5dc9a8806c6868acf6831179fa75145ba68"
+        },
+        {
+          "turn": 44,
+          "hash": "1dd06aebfce3e76e52159132f2273ba4739bc38ceb777d0d2eda7cd62f51becd"
+        },
+        {
+          "turn": 45,
+          "hash": "050b421d5d45bce2251159bdf40cede6aee6e98f6346a4958f80c73fa20440c9"
+        },
+        {
+          "turn": 46,
+          "hash": "fceba978ca4c0cb4e1b6de64a86c7014b3cc98418bb33e6f2473771de9fb74b0"
+        },
+        {
+          "turn": 47,
+          "hash": "38d6e3fef9bd4e1b55cd7923659def91195fcb05bddbd6cc3be75e47486a8db1"
+        },
+        {
+          "turn": 48,
+          "hash": "353d3648136676872d2f17746d88d20be7962783fe00fc2fcf6f16ce73cf14d6"
+        },
+        {
+          "turn": 49,
+          "hash": "a21f8aa8e29bb64b0f3afaf3765a092d5463c894ecf955e2ad10bbe263487fed"
+        },
+        {
+          "turn": 50,
+          "hash": "837aa560743dc726e175d5239667daf1e9627b45aafc128d4ac552a3d3b6b48b"
+        },
+        {
+          "turn": 51,
+          "hash": "458f9d87a3898028045617459994555a02a859f005fd2a0a5535020db3cc14f2"
+        },
+        {
+          "turn": 52,
+          "hash": "0f7d522ab0f4b959988f73ab656f65572eb061b852cd09df294b35ad9b148c3a"
+        },
+        {
+          "turn": 53,
+          "hash": "1485dd3fdb6339b5088f943d1a5e6ed0288a4035795a2b6ce36fdee93319f274"
+        },
+        {
+          "turn": 54,
+          "hash": "29e5aaeb7de0a411544e40fcbe06ac21000a981b93941e759b481de9470b497c"
+        },
+        {
+          "turn": 55,
+          "hash": "6fef7b794d7310252bd521ed615f19e419a2b18d80882cac30e13cf61ec22245"
+        },
+        {
+          "turn": 56,
+          "hash": "59e98397c77be3b91b584e608c4cacbdcb5811f2a9b47304db8cf4712bf7a870"
+        },
+        {
+          "turn": 57,
+          "hash": "ef0d4dd8f0173bb9b91852b12e20deb74c3d8508116cd24349d0520805ed8235"
+        },
+        {
+          "turn": 58,
+          "hash": "997adfec0b535866702f61820619e8e59567d49de508aa974d6d435f35b3c587"
+        },
+        {
+          "turn": 59,
+          "hash": "e9a8acd1eb857afc107d2c1bd824b59650128840628401f0cf1c90dd93f15908"
+        },
+        {
+          "turn": 60,
+          "hash": "b7062611058238b770c925aa2eefe246e872ab042dc0a930ab396e2216a67491"
+        },
+        {
+          "turn": 61,
+          "hash": "54f853128ac159f0c5df7428fc93d09c689a507b26cde16ea5cc16cec955401d"
+        },
+        {
+          "turn": 62,
+          "hash": "5bb89d9d98b6f170723b48ad6fab11cbe46ba3ac1f4eac9e47b85064fd386095"
+        },
+        {
+          "turn": 63,
+          "hash": "f60387a2d5d62668a2aa1a5533659d0fd237b120cee0676158452950924215df"
+        },
+        {
+          "turn": 64,
+          "hash": "11aee75e1e58a5dc98199b3a103fa41c6884f9559be8062c400a4ffdb717877c"
+        },
+        {
+          "turn": 65,
+          "hash": "64ca364df3a1bc7cf1acfd1d6fc199ade0f3b88cd995b976d96c739c36da5011"
+        },
+        {
+          "turn": 66,
+          "hash": "9273e3b25cab423f03753138eb28dad2fd05032c1e729124bbdb9e58babb1537"
+        },
+        {
+          "turn": 67,
+          "hash": "e2912e616a976df1ce675ddb8d67873b9c959c1de2347a5b561bac7c6a23c626"
+        },
+        {
+          "turn": 68,
+          "hash": "afc4bca15f79c2e07bff66f8d9eb39244ae6d61b9720daab297a0dabc3533a14"
+        },
+        {
+          "turn": 69,
+          "hash": "22899e771210cebe3a5568dd56111def842c57113c54d3a67585d05f0a566ace"
+        },
+        {
+          "turn": 70,
+          "hash": "8da0797bb09f14da0f57cdc5feb7dcc34964ce01b2627f63f16ed44ccf2ab2d9"
+        },
+        {
+          "turn": 71,
+          "hash": "c22f1e0bf8e36bcabd26bec06ed9a7d04aacd72ca868369b6d394b35e079143b"
+        },
+        {
+          "turn": 72,
+          "hash": "abd6a0e5fec38c4b00571ff6651f57abc3de8fd326d543e92d880033025df04a"
+        },
+        {
+          "turn": 73,
+          "hash": "44c3e0cd23c4292d7fe5de486adf80a24414c5f8a6d1b78695e5c15cb663e04b"
+        },
+        {
+          "turn": 74,
+          "hash": "a14297f340ce9d462de554b798bed31d7fdae7d15f86b9f0598829349aa89431"
+        },
+        {
+          "turn": 75,
+          "hash": "685b82a72a2701fecc155283c28e0ad5df829471dc13a20d2124866e43ec6ffe"
+        },
+        {
+          "turn": 76,
+          "hash": "f108bd4775b1fc7f13a629215bab01d1cb3a27c70ac2c21c5c044c0a28c870ff"
+        },
+        {
+          "turn": 77,
+          "hash": "ca9b3bffd75b23247ca5ed4f76bed9ebae4639c8beae82dd79797f9019356031"
+        },
+        {
+          "turn": 78,
+          "hash": "a9bd67abb7caa05bfc78b5520f0d2f9f5a5bb9d5c5cae39499d2cb93f899e76b"
+        },
+        {
+          "turn": 79,
+          "hash": "01771d0b0295ffd0b5acb27285514e707bc3f4b231f5c422bddcc867a8686318"
+        },
+        {
+          "turn": 80,
+          "hash": "09319e737606685aab9a0f7c77d2c14cebc7e41d0e9568eb56f3d60c51ff02cb"
+        },
+        {
+          "turn": 81,
+          "hash": "27e7b1531affb36883c341cbac755438492792ce2edcf21931501720afad23a7"
+        },
+        {
+          "turn": 82,
+          "hash": "7dfbba1159396bc98551ac780920844b2948fd331445d7bd2b15b00e08062870"
+        },
+        {
+          "turn": 83,
+          "hash": "4d8cad1318db08c75cdcb9ba33bcac8150b09aa5a273976b04f8f3e5b6ae7454"
+        },
+        {
+          "turn": 84,
+          "hash": "2105b236cdc867a1179e9a38bd65fd104b40f80593dca3d612979773d6edc5e2"
+        },
+        {
+          "turn": 85,
+          "hash": "ae2a3323826633611b7819920c7b2dc863603aea93e6dd984d7916ec536ca876"
+        },
+        {
+          "turn": 86,
+          "hash": "879a1c1e1087e9c27dd54e7c9931a62ed300ceb7d2e706fbbd061fb5a16bf813"
+        },
+        {
+          "turn": 87,
+          "hash": "038c05758364514537f3037d70c07022d26f4257f5e160cfc14e61732e8d7960"
+        },
+        {
+          "turn": 88,
+          "hash": "983d3d86a6820a54abc597334a64eb0985b4ac26a93d5b7188d0084a47171559"
+        },
+        {
+          "turn": 89,
+          "hash": "db5e76741261155efe29748dae9a8175910f7ace8c037809df1bf034dd0ccf1d"
+        },
+        {
+          "turn": 90,
+          "hash": "c318d2d0ced11f42da7790a9736ff7aa95b67409d3296750927669f0cf5663d0"
+        },
+        {
+          "turn": 91,
+          "hash": "539dfe70deab7e493d0e5666ad0becfe733f01c94e48352d9a24fa2ff058f868"
+        },
+        {
+          "turn": 92,
+          "hash": "0c2fec029bae9a9cb1cea797dead0749c87ccafa7c7de61634fed30844fb2486"
+        },
+        {
+          "turn": 93,
+          "hash": "48542764cbb81bd0f9d05e2cb9859ebd1edc2d047c413b002644f507bc0c5d47"
+        },
+        {
+          "turn": 94,
+          "hash": "565e3bd33d87ae6e8752dacd36ed532520d3bbec53b2d42ab9c0e17686b5b80d"
+        },
+        {
+          "turn": 95,
+          "hash": "4a0787b09ee2e83466674179eeaa31ce6e6b755c9ee36d0d9444b7967cbecf24"
+        },
+        {
+          "turn": 96,
+          "hash": "edb57d01bbfeb4ac92b6290eba20bc16d3b6082363c3714b4ff7af34dafdb110"
+        },
+        {
+          "turn": 97,
+          "hash": "7fc7e037b3577a7bdc86e857c229e6afd1d8bbe2df8f3b02e339665a09176e28"
+        },
+        {
+          "turn": 98,
+          "hash": "90ec2cfb6e276ca5b3db1d3bdcfbfe55ae70dab5afa5fdc7ca27a1c3c8dc9113"
+        },
+        {
+          "turn": 99,
+          "hash": "928483637de382acf86bbb636b079b41ef2e20480e775dff5f19c4d1e1d9f9b7"
+        },
+        {
+          "turn": 100,
+          "hash": "9db34247a09ad7fd0f4f06568fad3e2b19c307bfcdd6b7bbb1a2688ee84ea1e7"
+        },
+        {
+          "turn": 101,
+          "hash": "8c71c4daa29b29d4f1adf96af7675509a84579fe72b23b7c5c9ccec05f48578b"
+        },
+        {
+          "turn": 102,
+          "hash": "7bfee03767e5a518de687b315fe4ddf6fa94d1535220f93e256603a6c8893c0d"
+        },
+        {
+          "turn": 103,
+          "hash": "aa573780e67c0d46b1c9d476593fa2b3feec216c21f9e32a8937842554fb10a9"
+        },
+        {
+          "turn": 104,
+          "hash": "e164d70f4c8deed4ea5d9bfc9df2386fd2eb9eccb6175c1c7e8af2be8e364202"
+        },
+        {
+          "turn": 105,
+          "hash": "d8ef28d27019241eb99c5e88a070fccf1e7f6356a47a0ff01df409bec4aace94"
+        },
+        {
+          "turn": 106,
+          "hash": "4e3f03c6d8fbc6bca86b24ce51ce45199762e57949aa94a87f81620a5e6eeece"
+        },
+        {
+          "turn": 107,
+          "hash": "9ef3d3a0fa6e129ad716dfbf906eb19e5222da61b60e9911764be2d18700948a"
+        },
+        {
+          "turn": 108,
+          "hash": "63bc245309200bcce02d49182388fc05605a31ed4dd940c764aa3e3f6069883c"
+        },
+        {
+          "turn": 109,
+          "hash": "b32db1672506995f4aa065bcc826d7664470ea8367243a3501cb803c3bb49c94"
+        },
+        {
+          "turn": 110,
+          "hash": "21803d4d73c05278aee12d809c40285af4e9f0304375ba7b6ada430d11da97cb"
+        },
+        {
+          "turn": 111,
+          "hash": "67c975f2632493b6c2f408df14c9ab068f1b6e0d8fea217f7b09c4cd536df6b3"
+        },
+        {
+          "turn": 112,
+          "hash": "2eeed469e48ad7f71ac33f70e791bb00d4f74b856978a40482b02c2ffd52dc93"
+        },
+        {
+          "turn": 113,
+          "hash": "b89afb6700dff6d2b1d8c16018c508faddf66c6a441bda4500dc8e8b3fbbeb54"
+        },
+        {
+          "turn": 114,
+          "hash": "11136e68ddcb57c1e916adce7199db6c660fba4cdafc5efdd5fcaeaee6fb3601"
+        },
+        {
+          "turn": 115,
+          "hash": "15ee1ebb926b42bcf540104e8cf473a86f3396cce0582d0f04d05807b52edc3a"
+        },
+        {
+          "turn": 116,
+          "hash": "92011ef5185cb882d0dc20b3160cb012a6983cde0e347f90cb57d0ad167262c3"
+        },
+        {
+          "turn": 117,
+          "hash": "8e208810e8a9094f5cffd73cc43d7c052224276e3ecc301e40ea2d39aafaaa03"
+        },
+        {
+          "turn": 118,
+          "hash": "52550909cb453900412a8eb002caa753d49284b5893694d73c756f368b619eeb"
+        },
+        {
+          "turn": 119,
+          "hash": "68f139140d113f1962ebfe359fb9118d6a9f4916517a18d57e0efdb0fac26f3e"
+        },
+        {
+          "turn": 120,
+          "hash": "915bb82ff1c4bb8f0401c2cef5ca740799bda9f84d6b2e3c126ce65e9f264f83"
+        },
+        {
+          "turn": 121,
+          "hash": "62b8b28e593b187effa53db98c2230a8b591549877666b85e51fde9c2e9bb89d"
+        },
+        {
+          "turn": 122,
+          "hash": "e24050927338ead4501b83ef58bbab8f81d2f80fab641c7b90faf59a97dc7add"
+        },
+        {
+          "turn": 123,
+          "hash": "8412022a5d61df0584a64eb6f74f6bc308af459921bd758d7ef704999db58cf4"
+        },
+        {
+          "turn": 124,
+          "hash": "a9a03bd451c231f738ee12fdfa8bff2c718c912764775dd208ba95e25c0947c7"
+        },
+        {
+          "turn": 125,
+          "hash": "9018b56e4fe15dd8ade659d73ba7b148481cce19c5346878daf18a83e0c44ba3"
+        },
+        {
+          "turn": 126,
+          "hash": "345a5da94ed73af9eb46562929d42569fc8e6dfe73b625321968b1cf9b569e03"
+        },
+        {
+          "turn": 127,
+          "hash": "576f416b6c2e1075c9f27a3f8a2f186daca68adb464747d67306a122ca8ed852"
+        },
+        {
+          "turn": 128,
+          "hash": "899117fbf4916175980244d2e0e73f4f889933d5a0e57d552d0522ec69070f5c"
+        },
+        {
+          "turn": 129,
+          "hash": "4f3dc603f36647852510151d8bfebf472f4d69a2b21ffaf0af4edfc482ce1dc9"
+        },
+        {
+          "turn": 130,
+          "hash": "b801a70da39c994663cd0df5c2e5d34f418cf98946e488c54a512d7d447ff7a1"
+        },
+        {
+          "turn": 131,
+          "hash": "8d3731d03d48e5da0e66744b975b2b0b2270bf7fd3c4c95b38a367aa607e0884"
+        },
+        {
+          "turn": 132,
+          "hash": "eb8f6535045b67785df110e96c7a039e1690b5c3f1277e94c74524915e37f8ae"
+        },
+        {
+          "turn": 133,
+          "hash": "483a917cd40cdb104686370975d0816702807da4c67a92b4a6a279cc89d1c3b5"
+        },
+        {
+          "turn": 134,
+          "hash": "b852646362b87ec0f9af6865fa6ab83742933dba21927b496bae8064a5f8630d"
+        },
+        {
+          "turn": 135,
+          "hash": "49950b1b85a51e522be15574b308d57c3f6276092ab23db7e8a643288d2f1bd0"
+        },
+        {
+          "turn": 136,
+          "hash": "34d0e2552b41f852403bb4cc7185805b00ce18c47255fea1bf3449876eba1414"
+        },
+        {
+          "turn": 137,
+          "hash": "89916f4ae894ad02bd6e5409ce5ea8c136b8a099eb397ded7b7c306bd6f5d269"
+        },
+        {
+          "turn": 138,
+          "hash": "86adca01f1c5dfb39ce60d08b3afc700466945b6d453fed5924a96795acebb91"
+        },
+        {
+          "turn": 139,
+          "hash": "c11b43413ca7cd2c26222fa76c5e88542d9d675bfaed2a7b9335448f458a5077"
+        },
+        {
+          "turn": 140,
+          "hash": "6a47b4bff7869a7acd158e303814246d51f221b0be956365a246d89341a5d468"
+        },
+        {
+          "turn": 141,
+          "hash": "c09e030f4ca9482827383a1ecfd7c1bcaa2792ea1c62d2c8eee5f7345aa1a64d"
+        },
+        {
+          "turn": 142,
+          "hash": "7c07e0bf51182784bf5c7d93732c28137c626ab3f10192301138f8ff01966eaa"
+        },
+        {
+          "turn": 143,
+          "hash": "a1ab4da554d4c7c03a6ed55015293ef01c60e7cb911bc148c90ccb34a9b018e3"
+        },
+        {
+          "turn": 144,
+          "hash": "770c7f4a90c6e96843d01f1a7a2fc9c9b54a7d15d469b7abb1ac6f36715e823e"
+        },
+        {
+          "turn": 145,
+          "hash": "4c6d86a133a6725c643cab73a4c58f28197698c83e88101fcd81e1965df4a914"
+        },
+        {
+          "turn": 146,
+          "hash": "a7523898f104de847aedb9e0932d82050776a907aee3ee1061a4f8f9a01e0113"
+        },
+        {
+          "turn": 147,
+          "hash": "3af7a859a2f1a208f8a32921e0b1910875f692a8d1f785504d6050fa62941df6"
+        },
+        {
+          "turn": 148,
+          "hash": "2b007d310e5f9b8cab193d74485dacc99e4b3334f45c4cb39652caa209a6285c"
+        }
+      ],
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "2b007d310e5f9b8cab193d74485dacc99e4b3334f45c4cb39652caa209a6285c",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "rejections": 0
+    },
+    {
+      "path": "runs/s36-done-final/20261121-034840-8248-027cc6/summary.json",
+      "sha256": "ddfad340d1cb16d896493d597774d6d41f946f36f9e5c125996bba3875df4078",
+      "pack": "testbed",
+      "finalDay": 120,
+      "worldHash": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5",
+      "initialHash": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b",
+      "finalHash": "ee1b76d81d16951cd9d9cfcaecce1f773128ad5df4bfedea6b1ed60f4b014b56",
+      "turns": [
+        {
+          "turn": 1,
+          "hash": "1b3acc6ee2975160882daa078aeb90e04d9e585ff296f8481a6586c2685c8f0a"
+        },
+        {
+          "turn": 2,
+          "hash": "6f6e444f7a9ce27b83ece36cdadf2e37ba4114e7f7b3734261eb32d7c995f527"
+        },
+        {
+          "turn": 3,
+          "hash": "6527a103a8906f3e9c9aa098f2e58a4b58363e1d16a5b049a0f455f22a73c24e"
+        },
+        {
+          "turn": 4,
+          "hash": "25ec9703a9bf1d7acbf2bb2a0c8a114cf40e35f85d14ff5e83811e5bce868a82"
+        },
+        {
+          "turn": 5,
+          "hash": "fc5388251cf878bb5977f9b423cb4b92ff044c0fa7011fd9e2d0d1eea2f82659"
+        },
+        {
+          "turn": 6,
+          "hash": "db922b9e31939d88d2656c77b755aa3a0ca883a2dd424abdaca7733774187fbf"
+        },
+        {
+          "turn": 7,
+          "hash": "a608c44b8607b7575e8e2f22222460158c15fa46d65a9f7101990d5b245935c7"
+        },
+        {
+          "turn": 8,
+          "hash": "a4c3a98cf6e36e70829f6adbaa0ca35305a06a495daa5f87ba5905ee78917036"
+        },
+        {
+          "turn": 9,
+          "hash": "2afece817a761baa358115618d2d4b6e5c374690f451929980df25cb20c0e0fa"
+        },
+        {
+          "turn": 10,
+          "hash": "d902e6f0fbf4a6b87bd687b656c476cf72558b6d3a1a16ba09264bc543ead92d"
+        },
+        {
+          "turn": 11,
+          "hash": "319c303facb906e69760028d98872f9153732c0f3f1a97a57bf856287d87d455"
+        },
+        {
+          "turn": 12,
+          "hash": "1fd5c26848debc5c0716f278828a100d9f59b270593fb494a76b8918eedc1c07"
+        },
+        {
+          "turn": 13,
+          "hash": "bf30b4064b834e62a317446a415fd3569bef91da3c67663b9bb1bb153d7748ad"
+        },
+        {
+          "turn": 14,
+          "hash": "009406ab90ad8633bd5fb9c07407cdd9a698dd7bf79aa23c399986f96d4e3a3c"
+        },
+        {
+          "turn": 15,
+          "hash": "28f92ca55d3db5cc4ff127eaaf2d4e6151fa02e519e269a8fecfa823a338f7b7"
+        },
+        {
+          "turn": 16,
+          "hash": "f9aa314cce588f04b0d5f8aba43ea2e84711daa388ba6977e71caaae87df5782"
+        },
+        {
+          "turn": 17,
+          "hash": "c009954e2460d507b423a9430ff832f2564e10c086773db170b9f6027924d737"
+        },
+        {
+          "turn": 18,
+          "hash": "85bb477020b2c138c284bb6eb0789b171ec5f363092a8edde888052dacbdc077"
+        },
+        {
+          "turn": 19,
+          "hash": "9189fb3a846bc6122ed3739bab597dc758e5295309800735231ebbbf5b4084c3"
+        },
+        {
+          "turn": 20,
+          "hash": "92dad377aec95f1dc69d3c3addfcda1c60a40350a3c6f65c8f70c5fa003e3d80"
+        },
+        {
+          "turn": 21,
+          "hash": "e680faf83018b1a294e5f5a8c3bc1ea0a4227b55a4aff56c962c3df5ede54170"
+        },
+        {
+          "turn": 22,
+          "hash": "0caeee818c9fe3411dc39913e8bdf920e92558c42909b05efea40b761a8e50e9"
+        },
+        {
+          "turn": 23,
+          "hash": "3180d1f3148a46bea0030c8af6d5dadd6e985d94e0e03e7ac295dbd05484067f"
+        },
+        {
+          "turn": 24,
+          "hash": "ec6c578f2572e3fce0533050bad7b274a6346db91187cd39ce1bd381b555ad2c"
+        },
+        {
+          "turn": 25,
+          "hash": "205c3d2bbf5ae1d17862e1cb1b5c1119cbc047e2776960c1ca2e29c3dee6be57"
+        },
+        {
+          "turn": 26,
+          "hash": "115ca011a637519f73a8ac4836004c8e2387b965f48ef989e52ac206bbf6cbdd"
+        },
+        {
+          "turn": 27,
+          "hash": "20a5a91a746a9c40a9f66d098e92098052eb847653f8f953c0aef1dc0fc3edf3"
+        },
+        {
+          "turn": 28,
+          "hash": "8ec9f2cfa2528955b7adfd6264a81eda2b7531d8f6dde808b840a32d0328ba28"
+        },
+        {
+          "turn": 29,
+          "hash": "5f8a8b1d9c23420e26dcd42f57815d80a7321395c3bb3000e049c5580dfe0973"
+        },
+        {
+          "turn": 30,
+          "hash": "989916ed1bec3de26dbf0896c3f1d3f578936d149f4188cb8181247105343eda"
+        },
+        {
+          "turn": 31,
+          "hash": "64020f47e1fa2e552e1baf457e24ec8841c1d96dc1d91cb3e80d12e36ef1cede"
+        },
+        {
+          "turn": 32,
+          "hash": "802b94f70970ed5bad303b4f5fa1f76c43c78ea7bdd6167507a54f410138b42c"
+        },
+        {
+          "turn": 33,
+          "hash": "40b63696faeb6528be41e848b8386683e6aab41cfeea088988e8ee0187cacf99"
+        },
+        {
+          "turn": 34,
+          "hash": "3391608037576fef67287b490d5852f88882753d9d6ec09c49d899ff88c1233b"
+        },
+        {
+          "turn": 35,
+          "hash": "454274bf37eb74d0eb3fd0ce58b7d5da6ee84c8b762050ea2e140cf42c13bd1e"
+        },
+        {
+          "turn": 36,
+          "hash": "4052d5ef06823f7115b8c34b3ec9bad9ed04ef5f3f5fd4cf21bdc69255678762"
+        },
+        {
+          "turn": 37,
+          "hash": "093d922eac331445416785ee38dd6336a73f9f2a470f3218ed51c0f286d2240a"
+        },
+        {
+          "turn": 38,
+          "hash": "f0e488cf596504ac3c260c5127701dc06f1debae585bbde2b14bf15f4d031a32"
+        },
+        {
+          "turn": 39,
+          "hash": "737f5732b4d64c1ecfa4321139209c03c0e1a1954581319a53347460f9e91eab"
+        },
+        {
+          "turn": 40,
+          "hash": "32c67bcf8e701ade959fcbcf8c3aa795e364fb27285ba023dc0d3fd4ca391fd9"
+        },
+        {
+          "turn": 41,
+          "hash": "b711d9510bc59cae091945c2fb8695101b56d2e8bf6cec43f55024ebd28a722e"
+        },
+        {
+          "turn": 42,
+          "hash": "8b60d05b1862251e9fcc36eb226897763ff018ae4ebbe66ef35a5d047542695d"
+        },
+        {
+          "turn": 43,
+          "hash": "0fd9460a8806f4a6d675237bceaab4d3e931f89b65cc74ce3e5a97f50d8d8b79"
+        },
+        {
+          "turn": 44,
+          "hash": "9d9dfe7923f0d80ee217d1011405c26f44f4036b2f08aa6a43730299b06c8700"
+        },
+        {
+          "turn": 45,
+          "hash": "d22cdd9785405f8cb5747e9876d0c78baeca291a56836694dda895a629282055"
+        },
+        {
+          "turn": 46,
+          "hash": "1e43bd75bcfcce3695967d3f01bb2ec5a42b8b0396a9dadb139cd494402506a2"
+        },
+        {
+          "turn": 47,
+          "hash": "0884ae9712d7613c1c941af47c170ffcc321ad1140a9b29cfa48ef0984fd968c"
+        },
+        {
+          "turn": 48,
+          "hash": "63c2107d77b51c849ccd5c011dca9dbfe655be479c8d5b4b10224ea56046c5be"
+        },
+        {
+          "turn": 49,
+          "hash": "97a232cb01a15b8db044f35141e46f16a1781bfd7ef6682803cebf31b3647258"
+        },
+        {
+          "turn": 50,
+          "hash": "4cc4660e902cffb3ccb715452c007b7e75d0525c7011da727ed5945e820c02e6"
+        },
+        {
+          "turn": 51,
+          "hash": "70a97ccab73e9c14dbe1e7b7af136422820df7e237dd56a74c93ebbd638334be"
+        },
+        {
+          "turn": 52,
+          "hash": "710c8601dd003a72b9184efdcce817293bd57fbe02cebc580537f62933ec72fe"
+        },
+        {
+          "turn": 53,
+          "hash": "5242de42a41f8e1d3c23c51b331cb71bd5eeda37ffa572163ef7fc8781288ad3"
+        },
+        {
+          "turn": 54,
+          "hash": "97af4ea4977159876ba0b486cbcec9a1b9ff8981b7a6bbf77ff81a566efb2ac9"
+        },
+        {
+          "turn": 55,
+          "hash": "4c810a88af8441cf6b9164a2adfbe09b826c4b3a8f2c28e2067eb0d416a8027d"
+        },
+        {
+          "turn": 56,
+          "hash": "e70f1cb9068e1991bf82b3e6c17a1b8e5b4ad45c148c1278eb2ff26dbfef68d1"
+        },
+        {
+          "turn": 57,
+          "hash": "9fcfb7aa60113b02fbe358eeb50c963ba5d94b14e18ddbb4a8b6a0535616e9db"
+        },
+        {
+          "turn": 58,
+          "hash": "4754e6325765156609415ca0b39f2a1e301fed2fd02e34fc8a80a42ae1695dd2"
+        },
+        {
+          "turn": 59,
+          "hash": "985cf9f6d82d773b98e9746818537339626d9dc151d9a8c407f0a26379c0e120"
+        },
+        {
+          "turn": 60,
+          "hash": "21efb13fbd478bbd6b0b913337b931441d212d07aaaaba38b6a5dd551579a414"
+        },
+        {
+          "turn": 61,
+          "hash": "6c341e1e57550cbcb038a78b0eabfa555383db03d9addd802c6fe0db1939d6a7"
+        },
+        {
+          "turn": 62,
+          "hash": "de015cd1a77c45e394b38c11e9eeebe7805c9833800c4de3d02c238b57d1f66e"
+        },
+        {
+          "turn": 63,
+          "hash": "6bae106743a8a8e17296e14a01bb10c76e02f7d7e38b81dde27486fe31dba724"
+        },
+        {
+          "turn": 64,
+          "hash": "2339e2ab5859d3922df4657eb13ec8d27d398879b3b9523e38da854f2cdb5113"
+        },
+        {
+          "turn": 65,
+          "hash": "7ef1b2996a1d7611a5265b8f3a78a8c11d966e2e771504617ca4185466764321"
+        },
+        {
+          "turn": 66,
+          "hash": "8173b69b42f0cba5183780801d8cd2bba58a9bdce0ee3dc9d1cbb3034b539b6c"
+        },
+        {
+          "turn": 67,
+          "hash": "053f44818066d5c1f2c22e175ec8dc030a4cacc4af0eda52217640b4261ecc57"
+        },
+        {
+          "turn": 68,
+          "hash": "bfc5d7080659d0dfa34c954fd4b9711945de49d51222f306349550cb1562850d"
+        },
+        {
+          "turn": 69,
+          "hash": "b6508a4c2d19914c4f0c402f4334dffac19e92630bb45ba06036644b23ac9bed"
+        },
+        {
+          "turn": 70,
+          "hash": "76d458b03b88a0b2a7c67a52f65f687975c154de663dacaa4d5ba1effa38a3eb"
+        },
+        {
+          "turn": 71,
+          "hash": "5da8e741d1e42cb6679c509d348cf19547882618ff054c24ed46c192341291ee"
+        },
+        {
+          "turn": 72,
+          "hash": "df56c0be0d6d316a6709c6c039086313f830d2cd1e61aa401be165f28bd0285b"
+        },
+        {
+          "turn": 73,
+          "hash": "368f1771468eaff8e0c8a430bc621d21f675e9a75c472802156518b0c1b584bf"
+        },
+        {
+          "turn": 74,
+          "hash": "1df40081cb29d70dd770dfa87236184c2a1f64a3077b0911dc99a20a8883e56d"
+        },
+        {
+          "turn": 75,
+          "hash": "16d67fcb588c22b7925ba5c85aafa60c990b004d0b3cb3eeae6b0f2afe14e158"
+        },
+        {
+          "turn": 76,
+          "hash": "664ac3e407af6368121abe77621b0cbb6544a207ae62833f7e9669eba81f116a"
+        },
+        {
+          "turn": 77,
+          "hash": "bcae548fca0c53ab7ad4dd878ffc7f10c5b419f4cc4586788fc24c42644bc1d2"
+        },
+        {
+          "turn": 78,
+          "hash": "bd9f1d3d25dd8b5899c861e0cfd24ad5618d4bd7327311af7de04153281fb753"
+        },
+        {
+          "turn": 79,
+          "hash": "1fcc31b94b77c0087cbcdc9ddd0f5c8f9443e676dd2711f63809b2886fe05420"
+        },
+        {
+          "turn": 80,
+          "hash": "07ea50094310fc5c25ecb5496b751911399767b0786227aaf56557a2aaa1e7c1"
+        },
+        {
+          "turn": 81,
+          "hash": "959005c970154b0413f2c1ab1aacb9faaf37879b8b1b7079c6aa3c26cd762d7b"
+        },
+        {
+          "turn": 82,
+          "hash": "cd99a00c81483e9476ac053cdffe3fb2ad1ca1a175c3a4b1517c41b309c67a4d"
+        },
+        {
+          "turn": 83,
+          "hash": "93ef12ca45e89a24b052ddb80ef853c4f0fa0049d71f278f0ee34c8bb7c1e3ef"
+        },
+        {
+          "turn": 84,
+          "hash": "23b8900710576d205cce0c38a6857149e0b6e0d98bae5f892018995a61661cc8"
+        },
+        {
+          "turn": 85,
+          "hash": "d1e917c222bef8276df52068715a5a60f79f86d7ba4c7792efc96776c6ac2b39"
+        },
+        {
+          "turn": 86,
+          "hash": "7f15c85b9428f350df32b38c535ba978b8be54a1fff0d44a9310d69f3de1f88d"
+        },
+        {
+          "turn": 87,
+          "hash": "804f6fc98a114252d1b0c703a8588db825a6ac703103bb08a8048e6e9a4bd2a2"
+        },
+        {
+          "turn": 88,
+          "hash": "0e44061d32ed465f06a12c0234210cb6a49c96ef61a3a92e5e3c3e7fb482669a"
+        },
+        {
+          "turn": 89,
+          "hash": "a18551fc4a96e75465a27351505e8df27ec2ff8ad1b66999f8bb92d00d991f61"
+        },
+        {
+          "turn": 90,
+          "hash": "7e614aad125eaf10e3cf6d114c031cd0789bb99ec26eaffbb2d4574d4ea2a502"
+        },
+        {
+          "turn": 91,
+          "hash": "8c57eed62933f9f808bd3457ffe92d8acecfb1426367ae4278ac46c6bc797747"
+        },
+        {
+          "turn": 92,
+          "hash": "26dc6a6b248bb3b02459c25e682a399e38ec00c45504041feb773733d526d80d"
+        },
+        {
+          "turn": 93,
+          "hash": "303fab4a90be40a2c493d60d8ab02ab0a1869914fb88316937ca41dc924d0816"
+        },
+        {
+          "turn": 94,
+          "hash": "dc79a4b6260f82cecf4138447ad8be9f5da293fc0ebfd3c3d4eac344388bca80"
+        },
+        {
+          "turn": 95,
+          "hash": "048d89120b03d5acf428dcc9fe81358fca4f487c0cf5acf145275c7ffd88d8d2"
+        },
+        {
+          "turn": 96,
+          "hash": "dbd97698d2dfac357171efea9b8c97579be1407d61178f8c2cdcee612611db07"
+        },
+        {
+          "turn": 97,
+          "hash": "2a54cd572e9f2ab033c78e6ab188983be1d8cf4d94bb0f20c72d44e870ce1a44"
+        },
+        {
+          "turn": 98,
+          "hash": "0ca64920d1f486d46c1f1b06a5ade8fcc8a8510600c002fdffaa0dd88112c830"
+        },
+        {
+          "turn": 99,
+          "hash": "411674f8589135f33755d26508925bab57915e016da7c104a603d7752e7a6d6f"
+        },
+        {
+          "turn": 100,
+          "hash": "46b507c6049d769370f8c168e5629da0c7fd9618b8b93cf5c219fbf21e13f75d"
+        },
+        {
+          "turn": 101,
+          "hash": "746daa3d6c537f37390c24fcb712e0a7ba9676551c1becd0ce25c94e8f312361"
+        },
+        {
+          "turn": 102,
+          "hash": "7d8fcfb617a4b0cca18ce8e3ae14c1ced4e7faed3ecfd99be9c473c8abd53351"
+        },
+        {
+          "turn": 103,
+          "hash": "6cb67134aef2a2ddd7510dafaf645c26f0a39780d248bfe7d0579e7802f15e32"
+        },
+        {
+          "turn": 104,
+          "hash": "e64a37074422af3badee3473be6859ea727514e270e1521b3b92bfebde998fb5"
+        },
+        {
+          "turn": 105,
+          "hash": "5e64a6a5b6c2c3c822195a041553ed2f6fbb1a16a95e95e422c11a5193575702"
+        },
+        {
+          "turn": 106,
+          "hash": "deaa03a42a1b7dafe11be7e7632d4eb32906f6fe351579cc3e54480105e56572"
+        },
+        {
+          "turn": 107,
+          "hash": "05e30321e2c638d9a9f4b865991d1cfc4e4796e100fd3ca0c691e438e6640149"
+        },
+        {
+          "turn": 108,
+          "hash": "0e5aa162c152d95278d1fadd6de286bc08cdbe2488572d951c4035327462d740"
+        },
+        {
+          "turn": 109,
+          "hash": "cfa4b848db65c34fc4b4d342d0f3445922e34eaea835de1df20180e30b96883c"
+        },
+        {
+          "turn": 110,
+          "hash": "224eedabd73ce1c8116dd0b3817581645a028f305adfc0df78726bb696d03817"
+        },
+        {
+          "turn": 111,
+          "hash": "4dceec02bb4853125ff669966a13955984be1cf0c292218a5b62c0d0d077783e"
+        },
+        {
+          "turn": 112,
+          "hash": "c48eca9212ff6c753c918c337c9bc2ae12e4d4b902108abfa4ed2cd3dcdcde56"
+        },
+        {
+          "turn": 113,
+          "hash": "004c6cfc4d1545a342e8ed0688eff2f8452a9d625f54e9864022f79e2a6d905d"
+        },
+        {
+          "turn": 114,
+          "hash": "d99bb455c14d511f53598fc49694548bfa261320a01f5d309a5a45d23af7c442"
+        },
+        {
+          "turn": 115,
+          "hash": "eb7b1394887dfd1b9c6c86416facc224339af6a28f8af4e83998bc179ab4f966"
+        },
+        {
+          "turn": 116,
+          "hash": "c9721f5623c43cff5d02009b6585fb4b5933009caa79a27f93b660218f96673b"
+        },
+        {
+          "turn": 117,
+          "hash": "b1b977ca39fb8bdcd7f6490adc5952918ebd7ef1896e7089aeb4c123185dc02b"
+        },
+        {
+          "turn": 118,
+          "hash": "da0f2d0634a1c956e7b84ec0fd1061283069bca7dc6604311db97f58df5a8f4b"
+        },
+        {
+          "turn": 119,
+          "hash": "263cab3581666a0d0e7e4cf5ecd018a441c19aa1e910145db4760615a654b618"
+        },
+        {
+          "turn": 120,
+          "hash": "ee1b76d81d16951cd9d9cfcaecce1f773128ad5df4bfedea6b1ed60f4b014b56"
+        }
+      ],
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 40,
+        "finalHash": "ee1b76d81d16951cd9d9cfcaecce1f773128ad5df4bfedea6b1ed60f4b014b56",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "rejections": 0
+    }
+  ],
+  "unchangedBands": true,
+  "limitations": [
+    "Local Windows results, not Linux CI.",
+    "No timing, checkpoint, pushback, liveness or lever-sweep band was changed.",
+    "No campaign retry, numerical calibration, D6 clearance, standing/gate acceptance or deferred capability claim."
+  ]
+}

@@ -2,7 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
-import { C2_MINIMUM, checkBlocs, checkGate, errorsOf, formatIssue, gateContentHash, GATE_QUESTIONS_PARTIAL, GATE_QUESTIONS_TESTED, IssueSink, loadPack, proximityHit, publishedSchemas, readGate, readSituations, releaseProblems, signatureRefuses, triggerMatches, type Issue } from '../src/index.ts';
+import { atrocityMove, C2_MINIMUM, checkBlocs, checkGate, errorsOf, formatIssue, gateContentHash, GATE_QUESTIONS_PARTIAL, GATE_QUESTIONS_TESTED, IssueSink, loadPack, proximityHit, publishedSchemas, readGate, readSituations, releaseProblems, signatureRefuses, triggerMatches, type Issue } from '../src/index.ts';
+import type { ids, phase0 } from '@mandate/kernel';
 import { editJson, readTestbed, testbedFiles, type Edits } from './support/testbed.ts';
 
 /**
@@ -485,6 +486,26 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     expect(issues().filter((i) => i.kind === 'gate-sign-rule')).toEqual([]);
   });
 
+  it.each([
+    ['higher-is-better', -15, 15],
+    ['lower-is-better', 15, -15],
+  ] as const)('interprets acting-side and deciding-side costs using %s', (direction, cost, benefit) => {
+    const effect = (side: string, delta: number): phase0.Effect => ({
+      propose: { owner: 'example', field: 'measure', subject: null, side: side as ids.FactionId, delta, reason: 'gate-test' },
+    });
+    const lookup = () => direction;
+    expect(atrocityMove(effect('south', cost), 'south', null, lookup)).toBeNull();
+    expect(atrocityMove(effect('south', benefit), 'south', null, lookup)).not.toBeNull();
+    expect(atrocityMove(effect('north', cost), 'south', null, lookup)).not.toBeNull();
+    expect(atrocityMove(effect('north', cost), 'south', 'north', lookup)).toBeNull();
+    expect(atrocityMove(effect('north', benefit), 'south', 'north', lookup)).not.toBeNull();
+  });
+
+  it('rejects an atrocity proposal whose owner has declared no measure direction', () => {
+    const edited = editJson(sit('harbour_burning'), (s) => Object.assign(s.effects[0].propose, { owner: 'regions', field: 'loyalty' }));
+    firesAt(edited, 'gate-sign-rule', { file: sit('harbour_burning'), at: 'effects[0]', message: 'owner has declared no measure direction' });
+  });
+
   it('D5 (review S5): no effect conditioned on atrocity-class conduct helps the side that acted', () => {
     const benefit = editJson(sit('sanctuary_act'), (s) => {
       s.event = { all: [{ fired: 'harbour_burning' }, { decided: 'fen_crossing' }] };
@@ -628,14 +649,17 @@ describe('the gate’s mechanical questions (SENSITIVE-HISTORY 2.2)', () => {
     expect(graded(z.toJSONSchema(z.strictObject({ karma: z.int() })))).toEqual(['karma']);
   });
 
-  it('gate re-check N7: the published schema states the convention the sign rule relies on, on propose.delta and propose.side', () => {
+  it('gate re-check N7: the published schema documents the direction declaration on propose.delta and ownership on propose.side', () => {
     const described: string[] = [];
     const walk = (v: unknown) => {
       if (Array.isArray(v)) v.forEach(walk);
       else if (v !== null && typeof v === 'object') {
         const o = v as Record<string, unknown>;
         const props = o.properties as Record<string, { description?: string }> | undefined;
-        if (props?.delta !== undefined && props.reason !== undefined) for (const k of ['delta', 'side']) if (/higher-is-better for (its own|that) side/.test(props[k]?.description ?? '')) described.push(k);
+        if (props?.delta !== undefined && props.reason !== undefined) {
+          if (props.delta.description?.includes('The owner declares whether a rise helps or harms the side')) described.push('delta');
+          if (props.side?.description?.includes('The side whose measure this is')) described.push('side');
+        }
         Object.values(o).forEach(walk);
       }
     };

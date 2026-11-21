@@ -30,14 +30,15 @@ import { nextPeopleChange, peopleProjection, type PeopleProjection } from './peo
 import type { ReportClaim } from '../knowledge/report.ts';
 import {attentionBudget, audienceProjection, congressProjection} from './desk.ts';
 import type { Candidate } from '../seats/api.ts';
+import { isProposalBasis } from '../situations/types.ts';
 import type { BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
   readonly desk: Map<SeatId, {world:SeatsWorld; day:number; budget:State['seatAttention'][SeatId]|undefined; chambers:State['chamberStates']; messages:State['messagesInTransit']; reports:readonly ReportView[]; situations:readonly SituationView[]; projection:Pick<SeatView,'attentionBudget'|'congress'|'audiences'>}>;
   /** Request graphs already deeply frozen by this caller; shared view children need no second walk. */
   readonly requestFreeze: FreezeLedger;
-  /** The available roster depends on command/service/rank/status inputs, not the day or incoming papers. */
-  readonly candidates: Map<FactionId, { readonly world: SeatsWorld; readonly posts: State['postStates']; readonly service: State['personService']; readonly ranks: State['personRanks']; readonly status: State['personStatus']; readonly candidates: readonly Candidate[] }>;
+  /** The available roster follows received papers and posts, never hidden command or service truth. */
+  readonly candidates: Map<FactionId, { readonly world: SeatsWorld; readonly reports: readonly ReportView[]; readonly posts: SeatView['posts']; readonly calendar: string | null; readonly candidates: readonly Candidate[] }>;
   readonly knowledge: KnowledgeCache;
   readonly openings: OpeningReportCache;
   readonly reports: WeakMap<KnownReport, ReportView>;
@@ -223,6 +224,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     previous.posts === people.projection.posts &&
     previous.people === people.projection.people &&
     previous.faction === faction &&
+    previous.post === post &&
     previous.region === region &&
     previous.goal === goal &&
     previous.enemyBeliefs === beliefs.beliefs &&
@@ -280,7 +282,7 @@ function situationViews(world: SeatsWorld, state: State, seat: SeatId, person: P
         options: freeze(
           def.options
             .filter((o) => r.sitOpenOptions.includes(o.id))
-            .map((o) => freeze({ id: o.id, label: o.label, proposedBy: o.proposedBy === 'inaction' ? 'inaction' : Array.isArray(o.proposedBy) ? freeze([...(o.proposedBy as readonly PersonId[])]) : o.proposedBy, group: o.group })),
+            .map((o) => freeze({ id: o.id, label: o.label, proposedBy: isProposalBasis(o.proposedBy) ? freeze({ ...o.proposedBy, cites: freeze(o.proposedBy.cites.map(c => freeze({ ...c }))) }) : o.proposedBy === 'inaction' ? 'inaction' : freeze([...o.proposedBy]), group: o.group })),
         ),
         chosen: freeze([...r.sitChosen]),
         delegatedTo: r.sitDelegate,

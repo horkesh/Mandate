@@ -1,7 +1,12 @@
 import {expect,it} from 'vitest';
 import type {PrincipalMenu} from '@mandate/kernel/seat-api';
 import {ConsoleGame} from '../src/console/game.ts';
-import {parseLine} from '../src/desk/commands.ts';
+import {parseLine as parseWithStrings} from '../src/desk/commands.ts';
+import {deskStrings} from '../src/pack-text.ts';
+const textGame = new ConsoleGame({pack:'testbed'});
+const t = deskStrings(textGame.strings, textGame.locale);
+const parseLine = (line: string, request: Parameters<typeof parseWithStrings>[1]) => parseWithStrings(line, request, t);
+
 
 function morning(){
  const request=structuredClone(new ConsoleGame({pack:'testbed'}).morning()),menu=request.menu as PrincipalMenu;

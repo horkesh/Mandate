@@ -18,8 +18,11 @@ import type { ReportClaim, StatedReason, NoteAccount } from '../knowledge/report
 import { followsNote } from '../planner/notes.ts';
 import { term } from '../knowledge/truth.ts';
 import { liveTerms, draft } from '../planner/draft.ts';
-import { applyEdit, concretePlan, editDirective, PLAN_HOLDS } from '../planner/edits.ts';
+import { applyEdit, concretePlan, editDirective, editFailureDiagnostic, PLAN_HOLDS } from '../planner/edits.ts';
 import { plannerInputFor } from '../planner/input.ts';
+import { enclosePlan } from '../planner/paper.ts';
+import { createViewCache } from '../view/view.ts';
+import type { PlanPaper } from '../knowledge/plan-paper.ts';
 import type { PlanCandidate, TermKind } from '../planner/types.ts';
 import { goalKindOf } from '../plans/goal.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
@@ -99,15 +102,16 @@ export function planOptions(state: State, post: PostId, day: number): readonly O
 }
 
 /** A report from a commander to the goal's issuer, answering the goal's order. */
-function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanRecord, claims: readonly ReportClaim[], options: { readonly notes?: readonly NoteAccount[]; readonly objection?: readonly StatedReason[]; readonly truth?: ReturnType<typeof term>[]; readonly answers: MessageId; readonly tag: string }): MessageId {
+function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanRecord, claims: readonly ReportClaim[], options: { readonly plan?: PlanPaper; readonly notes?: readonly NoteAccount[]; readonly objection?: readonly StatedReason[]; readonly truth?: ReturnType<typeof term>[]; readonly answers: MessageId; readonly tag: string }): MessageId {
   const holder = state.postStates[post]!.postHolder!;
   return sendReport(ctx, state, {
     body: answerBody(holder, post, ctx.day, {
       reportType: options.objection === undefined ? 'wire-dispatch' : 'advice',
       reportSubtype: options.objection === undefined ? null : 'memorandum',
       reportClaims: claims,
-      reportAdvice: options.objection === undefined ? null : { adviceRecommends: 'keep-own-plan', adviceReasons: options.objection, adviceConfidence: 800 },
+      reportAdvice: options.objection === undefined ? null : { adviceRecommends: 'keep-own-plan', adviceReasons: options.objection, adviceConfidence: ctx.world.map.world.rules.reportConfidence.planObjection },
       ...(options.notes === undefined ? {} : { reportNotes: options.notes }),
+      ...(options.plan === undefined ? {} : { reportPlan: options.plan }),
       answers: options.answers,
       about: post,
     }),
@@ -147,7 +151,11 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
           accountOutcome: followed ? 'followed' : OBJECTS.includes(response.respDeclared) ? 'declined' : possible ? 'own_judgement' : 'unavailable',
           accountReasons: response.respStated.map(r => ({ reasonKind: r.kind, reasonWeight: statedWeight(r) })) };
       });
-      const report = toIssuer(ctx, state, post, record, [{ claimKind: 'plan-submitted', claimRegion: record.planGoal.goalObjective, claimValue: optionView(c, false).score, claimToken: c.candMethod, claimConfidence: 1000 }], { answers: record.planOrder, tag: `plan.${post}`, ...(notes.length ? { notes } : {}) });
+      const network = passageOf(ctx.world.map, state);
+      const month = monthOf(state, ctx.day);
+      const derived = deriveMap(ctx.world.map, { control: state.regionControl, month, network });
+      const input = plannerInputFor(ctx.world, state, derived, network, month, viewFor(ctx.world, state, seatIdFor(state.postStates[post]!.postHolder!), createViewCache()), post, record.planGoal, ctx.day);
+      const report = toIssuer(ctx, state, post, record, [{ claimKind: 'plan-submitted', claimRegion: record.planGoal.goalObjective, claimValue: optionView(c, false).score, claimToken: c.candMethod, claimConfidence: 1000 }], { plan: enclosePlan(input, record.planDraft!, c), answers: record.planOrder, tag: `plan.${post}`, ...(notes.length ? { notes } : {}) });
       state = submitted(state, post, report);
       fire(ctx, 'plans.submitted');
     } else {
@@ -241,7 +249,7 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
   const result = applyEdit(input, record.planDraft, chosen, pending.pendingSpec);
   if (!result.ok) {
     toIssuer(ctx, start, post, record, [{ claimKind: 'plan-answer', claimRegion: objective, claimValue: 0, claimToken: 'invalid', claimConfidence: 1000 }], { answers: pending.pendingOrder, tag: `answer.${post}` });
-    return invalid(result.reason, start);
+    return invalid(editFailureDiagnostic(result.reason), start);
   }
   const terms = editDirective(input, record.planDraft, result.edited, result.distance, world.map.world.rules.plans.holdingRisk, goalTerms(world.rules.people, goalKindOf(record.planGoal)));
   // Lane 1.5b: what he holds for the plan, on editDirective's scale, so an edit asking more men than it commits states the

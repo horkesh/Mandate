@@ -1,5 +1,6 @@
 import { expect, it } from 'vitest';
 import { baselineHistoryProblems, type Finding } from '../rules/common.ts';
+import { readFileSync } from 'node:fs';
 
 const finding: Finding = { rule: 'projection-truth', path: 'view.ts', detail: 'a known read', hash: 'old' };
 it('permits removing resolved findings but never silently growing the known-defect baseline', () => {
@@ -23,4 +24,21 @@ it('permits only S34\'s exact owner-named desk merge to migrate an existing fing
   expect(baselineHistoryProblems([finding], [{ ...changed, detail: 'a new read path' }], false, head)).not.toEqual([]);
   const cause = { ...finding, rule: 'situation-cause' };
   expect(baselineHistoryProblems([cause], [{ ...cause, hash: 'changed' }], false, head)).not.toEqual([]);
+});
+
+it('permits only S40\'s exact canon merge and two recorded residual projection migrations', () => {
+  const receipt = JSON.parse(readFileSync(new URL('./support/s40-projection-migration.json', import.meta.url), 'utf8')) as {
+    mergeHead: string; migrations: { before: Finding; after: Finding }[];
+  };
+  for (const { before, after } of receipt.migrations) {
+    expect(baselineHistoryProblems([before], [after], false, receipt.mergeHead)).toEqual([]);
+    for (const head of [null, 'another-head', receipt.mergeHead.slice(0,7)]) {
+      expect(baselineHistoryProblems([before], [after], false, head)).not.toEqual([]);
+    }
+    for (const change of [{ hash: 'edited' }, { path: 'another.ts' }, { detail: after.detail + '; another truth read' }]) {
+      expect(baselineHistoryProblems([before], [{ ...after, ...change }], false, receipt.mergeHead)).not.toEqual([]);
+    }
+    expect(baselineHistoryProblems([], [after], false, receipt.mergeHead)).not.toEqual([]);
+    expect(baselineHistoryProblems([before], [after, finding], false, receipt.mergeHead)).not.toEqual([]);
+  }
 });

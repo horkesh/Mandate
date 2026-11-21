@@ -1,0 +1,498 @@
+{
+  "measuredIndexTree": "930c2807d3bf69acb58b42c1d7811868c749d839",
+  "base": "a250b92a851c6102a0e740aa139e0ab8a784cb77",
+  "files": {
+    "packages/cli/src/console/game.ts": {
+      "sha256": "3bc1fa45081532fbe6912b4d898edff3efa9a49829d8ad2f08918080a35d0294",
+      "bytes": 8843
+    },
+    "packages/cli/src/console/preview-text.ts": {
+      "sha256": "ac41448c15575af55b69def47bba69552322af6b556d8bb173ffe6413cfb4c2c",
+      "bytes": 1161
+    },
+    "packages/cli/src/console/session.ts": {
+      "sha256": "f5102d8263795f1277188712723842b74eba1a4bc7ce58c872ddf5d720b3939a",
+      "bytes": 6678
+    },
+    "packages/cli/src/desk/commands.ts": {
+      "sha256": "2d99e2f7bb9c83349829a3da03e0b8470a6ac1c3e507bb86977bf1758366a11e",
+      "bytes": 19759
+    },
+    "packages/cli/src/desk/dispatches.ts": {
+      "sha256": "a659c152cf1df3aa299780624feb2ab2ed4c9e614be275835920c0d2c0d59df5",
+      "bytes": 6724
+    },
+    "packages/cli/src/desk/render.ts": {
+      "sha256": "75475c83fbf2f5bb1477227651273a45b11d38e60cc8f1d2290a4cd6c9beca88",
+      "bytes": 9856
+    },
+    "packages/cli/src/desk/strings.ts": {
+      "sha256": "52dbcd027821bad93a438c52a150b3c27ab2ffbade7785bf7982150a6acd3e31",
+      "bytes": 173
+    },
+    "packages/cli/src/pack-text.ts": {
+      "sha256": "9dbb3a9623695415d5e1d84ce7e799923f606cb4da328a6e62a8a1efe2ed4479",
+      "bytes": 509
+    },
+    "packages/cli/src/run-seats.ts": {
+      "sha256": "a122ab407ae8304a3e6fec1feeab42855606421b17535afb90f03c60cee74411",
+      "bytes": 4140
+    },
+    "packages/cli/src/seats-world.ts": {
+      "sha256": "376cec0b46179801372a3b90eb2a77620df6ecd85aa1b2f76bad23522a53c6ff",
+      "bytes": 4347
+    },
+    "packages/cli/test/control-words.test.ts": {
+      "sha256": "793d06778318c36b03d0a276fa2c49fd487b743ab2c9660a1cc0251a5f0edc39",
+      "bytes": 1950
+    },
+    "packages/cli/test/desk-localization.test.ts": {
+      "sha256": "1e9d706c9522e5b5d2c3ef0f03129761d577ea33b55d110d8004157c4ec9cfb0",
+      "bytes": 2332
+    },
+    "packages/cli/test/fixtures/saves/testbed-seats-day40.json": {
+      "sha256": "e9b7962b46c2441fce16dd7e07fc7a1405176f5da6a9bd7e53f48d0f1c19af04",
+      "bytes": 321270
+    },
+    "packages/cli/test/planner.test.ts": {
+      "sha256": "7914dab410c6d9f990ede75954a6bf2edc38b3cd62f74f151820029da41a3100",
+      "bytes": 26426
+    },
+    "packages/cli/test/press-words.test.ts": {
+      "sha256": "4231034cae73871289bbd0f9b278675ab829e57eaa15e7fe725904d1bb61ad4f",
+      "bytes": 1686
+    },
+    "packages/cli/test/scheduled-calls.test.ts": {
+      "sha256": "987ce81ffaccb0d33cd4e3d0855ef9dd7f5949f9517fb64c783113f45dbc6d7d",
+      "bytes": 2081
+    },
+    "packages/cli/test/seats-run.test.ts": {
+      "sha256": "82d0ba07717ce1be4857a0c9c4bb58414c938cc73891bbb587b07267f2add7e2",
+      "bytes": 4096
+    },
+    "packages/cli/test/sendback-notes.test.ts": {
+      "sha256": "1a4565dc695d14569f0b7e10a8fe78fec52f414a8013321399ee87eef7b1b25b",
+      "bytes": 5462
+    },
+    "packages/cli/test/situation-render.test.ts": {
+      "sha256": "e16e6d60fe27c1f987ab1fa09ef6d22e7da34a08ae175aab561b4de7d2e28119",
+      "bytes": 3467
+    },
+    "packages/cli/test/turn-limit.test.ts": {
+      "sha256": "cc46da0d73274f1f8d4cd657a699db3208199f31af7d8f444461814dda152685",
+      "bytes": 1526
+    },
+    "packages/cli/test/turn-stops.test.ts": {
+      "sha256": "1412a65d0303fcf2d5964442279475d3e700e1f6ba1b86d0688702e9b6c049f2",
+      "bytes": 1577
+    },
+    "packages/cli/test/verb-list.test.ts": {
+      "sha256": "b75e2e488897e2771c2141c243670fe030a75bec00bcef5a8abc60297961b4b5",
+      "bytes": 4420
+    },
+    "packages/kernel/src/knowledge/confidence.ts": {
+      "sha256": "76f9dec62f609036ea5e6126c547b3adffecb45d37f1b2d28b9a0ece4f2bba22",
+      "bytes": 1350
+    },
+    "packages/kernel/src/knowledge/knowledge.ts": {
+      "sha256": "32476d83631a48ace58d11bf918622e75eb2310f88744ed691386fea5a258e9a",
+      "bytes": 15319
+    },
+    "packages/kernel/src/knowledge/plan-paper.ts": {
+      "sha256": "98235062bf02898c50815adc7d4dfb43471c2fe23ccc426afec6ddfcbcf0b96c",
+      "bytes": 1798
+    },
+    "packages/kernel/src/knowledge/report.ts": {
+      "sha256": "023bf55b7a8d5866e24ec86cb0c7623fd5bf7a5461d787c17ff052fa3e79b144",
+      "bytes": 11987
+    },
+    "packages/kernel/src/messages/transit.ts": {
+      "sha256": "49b00bb0e1423caa590a453789c04601813109c848cd6d63c2286a3a2650af17",
+      "bytes": 8394
+    },
+    "packages/kernel/src/ownership.ts": {
+      "sha256": "a1ce57cd1c279db16336ebf47720c3ce3d3a894cdabc95d4010b86891979bbc2",
+      "bytes": 20826
+    },
+    "packages/kernel/src/phase0.ts": {
+      "sha256": "5b6428b18d17b0bda70c7d4cb6865476a408119ad9f9bf388cf22ea686ed8635",
+      "bytes": 4367
+    },
+    "packages/kernel/src/planner/context.ts": {
+      "sha256": "49b3bb0db2ef4f393d9d66b68a879ee57ceea7191ea731d94b6c535981966667",
+      "bytes": 6209
+    },
+    "packages/kernel/src/planner/edits.ts": {
+      "sha256": "c5e2d3da6be0a5b0f6f9a8f28fab11d9825e0dfee4ddc3456710e7d5cd180149",
+      "bytes": 12861
+    },
+    "packages/kernel/src/planner/input.ts": {
+      "sha256": "0efcbec202f7e8ecceb276cd3a9ff4559e4eab3e613a6e824943448e95831dd9",
+      "bytes": 8135
+    },
+    "packages/kernel/src/planner/paper.ts": {
+      "sha256": "252af7e57233f8af7f08f778656e5afa3a7df197732046cc3f658cf973ab4b5d",
+      "bytes": 3093
+    },
+    "packages/kernel/src/plans/goal.ts": {
+      "sha256": "ae8f5e577b176f962e95711699b68128f76eea6f00d13131682bc6a361376f7e",
+      "bytes": 6942
+    },
+    "packages/kernel/src/seats/api.ts": {
+      "sha256": "7b3ab964ff0176880ec3b762e61726bc652bf94fc2bf34983423e63334d5a94c",
+      "bytes": 12465
+    },
+    "packages/kernel/src/seats/received.ts": {
+      "sha256": "131d2265fd69cb616963dd094ec56515b8446923c83c8bd3b812fc07f06a2572",
+      "bytes": 6032
+    },
+    "packages/kernel/src/seats/requests.ts": {
+      "sha256": "0562788c5cbc4c7ba7fca9b17a3b2938d7a4d08e1a96e972ff3fc26737cd0f40",
+      "bytes": 29262
+    },
+    "packages/kernel/src/seats/world.ts": {
+      "sha256": "d5261c5fd8e2a3190160478cc2ccfd6d28e39739c5ca8c09f370a3d67f9c961c",
+      "bytes": 27701
+    },
+    "packages/kernel/src/situations/types.ts": {
+      "sha256": "45737ef824f92b170333b59937e755fb02b19cb57ce6c2883520224a62e67270",
+      "bytes": 18958
+    },
+    "packages/kernel/src/tick/battle-reports.ts": {
+      "sha256": "65310c276e116e6c4a0bd7eb02016fc49504707a4707f521d863fd11aec89684",
+      "bytes": 14996
+    },
+    "packages/kernel/src/tick/commander-losses.ts": {
+      "sha256": "6fd23cf82356df3b6cea9013be361e02d06fb4ec1b2495d2f75e2cf87635b72d",
+      "bytes": 2313
+    },
+    "packages/kernel/src/tick/edit-preview.ts": {
+      "sha256": "d5c6c19361362a80f1d4a12e60bd93de175e2e04d11f3bc0e767dceac5425630",
+      "bytes": 2214
+    },
+    "packages/kernel/src/tick/generate.ts": {
+      "sha256": "c0eb01a19acc2b743962f82bbc23b40c9d1147920b4c3f8eed974e7c6407e9db",
+      "bytes": 12118
+    },
+    "packages/kernel/src/tick/orders.ts": {
+      "sha256": "7486ac7f55bc462b26a28cae2d198f9e88e259f3575ebf7d69004cf8bf7792da",
+      "bytes": 23621
+    },
+    "packages/kernel/src/tick/people-week.ts": {
+      "sha256": "65ad1b20e105662b2840aeff82554a4c7dd9421a5dda581e66268ea822d2da1a",
+      "bytes": 9065
+    },
+    "packages/kernel/src/tick/plans.ts": {
+      "sha256": "341e178027682283e51ab8485f49bb22cd35ac77bf167d102df010c4d5dc1ca4",
+      "bytes": 16648
+    },
+    "packages/kernel/src/tick/politics.ts": {
+      "sha256": "b822d62f0da19d420903bccfd3f62d27d2217fda467ccbaa58dd797ac0ffc8ef",
+      "bytes": 9090
+    },
+    "packages/kernel/src/tick/recruitment.ts": {
+      "sha256": "a5c9a0fdb44301f832e12f2139531cbe291ed8c791d44cd6042d2b7613f4206f",
+      "bytes": 22176
+    },
+    "packages/kernel/src/tick/verbs.ts": {
+      "sha256": "a69b64c3972c17b4e10c514ba5221fe08c078803dbf8665d6aa6ec4374c3d12e",
+      "bytes": 30944
+    },
+    "packages/kernel/src/view/people.ts": {
+      "sha256": "a7e366a3d8ece503f76a65cee6f6dd54ed8922d7e3b74b24c83a3874ca65fe98",
+      "bytes": 8992
+    },
+    "packages/kernel/src/view/view.ts": {
+      "sha256": "377e23302b8f509a5507139ecbf0c6529de76aaa80b899342f23b65e0ccd54bd",
+      "bytes": 15773
+    },
+    "packages/kernel/src/world/world.ts": {
+      "sha256": "0e77d55887399f4cf7ef06e751e093844613471e2b1d500324509f3d6e6d1046",
+      "bytes": 24582
+    },
+    "packages/kernel/test/bombard.test.ts": {
+      "sha256": "47bc6597f9bc58e961bc0162caac5514b7535f5e0188c4482a614e0dc82902f6",
+      "bytes": 33829
+    },
+    "packages/kernel/test/canon-receipts.test.ts": {
+      "sha256": "954ec08ed7d3e1b526e56742607ab22dfc4f84e7c230f37b29c38410f55a2d0a",
+      "bytes": 13054
+    },
+    "packages/kernel/test/gate-wiring.test.ts": {
+      "sha256": "c6c0be6f117983eaf020b44954797bcf655e4d85e0b1eb112610bc1abbe781b4",
+      "bytes": 24028
+    },
+    "packages/kernel/test/operations.test.ts": {
+      "sha256": "1fab5a4c44b62b39cbe127bee54de5f59c7e3734e1835be9707f51d70ae8d2e1",
+      "bytes": 36941
+    },
+    "packages/kernel/test/principal-candidate-cache.test.ts": {
+      "sha256": "040a188059d5e816abfb45fab6ee3b489896c3d44004d98c605bc4b669069da7",
+      "bytes": 4402
+    },
+    "packages/kernel/test/resignation.test.ts": {
+      "sha256": "4b261edda64fa40aa8787f237fe805dd4ebecd18e7bb6b969e496e5b16742cba",
+      "bytes": 12257
+    },
+    "packages/kernel/test/s25-audience.test.ts": {
+      "sha256": "2e0b746850e7e6cc5129d2fc091261c887eb400f914acce45d385bc58f8d262e",
+      "bytes": 1866
+    },
+    "packages/kernel/test/s25-combat.test.ts": {
+      "sha256": "03e9394b2d3d944ef37aa2da811963e8fd7a281213299d67489b705998408f99",
+      "bytes": 1396
+    },
+    "packages/kernel/test/s25-command.test.ts": {
+      "sha256": "5f4caa1008d688a689afebe1d774c77b0658d83b9b6fed9179042bad0ad667f3",
+      "bytes": 1374
+    },
+    "packages/kernel/test/s25-control-index.test.ts": {
+      "sha256": "2f43392c0b79e3b4f5230b1baf73b23944506236f5527c41c29c9531988466da",
+      "bytes": 1390
+    },
+    "packages/kernel/test/s25-forces.test.ts": {
+      "sha256": "7dc8432ac2e29c587bee62d873ca7c6e34ef8c6d6ba1d283aff6c55ef88d2e96",
+      "bytes": 3339
+    },
+    "packages/kernel/test/s25-knowledge.test.ts": {
+      "sha256": "fc452389f566a8c0905de492fdcda5e88c520258e35af1628d4514acb0dcb496",
+      "bytes": 2229
+    },
+    "packages/kernel/test/s25-ladder.test.ts": {
+      "sha256": "e8e4869787f194c2546ac7630776194e832eddff0447a3676bfeaeb28817f6e3",
+      "bytes": 1994
+    },
+    "packages/kernel/test/s25-log.test.ts": {
+      "sha256": "b40bcd65135be2c7ea888e9c160eb1d2bcafe919c3a3565e8629f3590553a237",
+      "bytes": 1554
+    },
+    "packages/kernel/test/s25-messages.test.ts": {
+      "sha256": "e3686c69d0af6d68ae3db5fb172319e75028ce79e15b58e3e0c59405b60d15b1",
+      "bytes": 652
+    },
+    "packages/kernel/test/s25-people.test.ts": {
+      "sha256": "f3cf9d4de54f2599a484f54c92d2df1c2bdaacd1f12c007f7dd6687c4b5361ba",
+      "bytes": 360
+    },
+    "packages/kernel/test/s25-planner.test.ts": {
+      "sha256": "91cc019c993dd48f60dbd58cb0097cd76ee001bc09ae08d8bcb042317fb5c2c8",
+      "bytes": 5871
+    },
+    "packages/kernel/test/s25-plans.test.ts": {
+      "sha256": "a2174ee9839017278ecdca28a19c7af17bf5b14df38317b184da9a4c27057727",
+      "bytes": 1423
+    },
+    "packages/kernel/test/s25-politics.test.ts": {
+      "sha256": "23ef336032e20db8101e806740f516dc692f91e2b4a6d1649e148a9feaeae51a",
+      "bytes": 997
+    },
+    "packages/kernel/test/s25-primitives.test.ts": {
+      "sha256": "8dbbed41a3ae9a3de316e3c5956378067e2cb44478c4c8c2d352b340077e8383",
+      "bytes": 1881
+    },
+    "packages/kernel/test/s25-proxy.test.ts": {
+      "sha256": "7700029fce611355a2e028e947eb5e5b6fbfcdbb4d6bc299bc30dc91425b1486",
+      "bytes": 2945
+    },
+    "packages/kernel/test/s25-reading.test.ts": {
+      "sha256": "751a73d7acc1b4b923efaed2bc11a1f0a7cc1ffdb943c4333f46b16f33021262",
+      "bytes": 2115
+    },
+    "packages/kernel/test/s25-recruitment.test.ts": {
+      "sha256": "b753f9270eb62ecc2fd057a90d4299322bb73d7b7d8e4cb9cd9296c88f5a96ba",
+      "bytes": 722
+    },
+    "packages/kernel/test/s25-regions.test.ts": {
+      "sha256": "072f487236dce5e85dd531fc0a44656d714a27f80d577d91623fa64e7e12911c",
+      "bytes": 2997
+    },
+    "packages/kernel/test/s25-seats.test.ts": {
+      "sha256": "8cb1eb8e8ec025ebad442a9734863750381ebd01ee5aceff47d0dd6fa5e6efd8",
+      "bytes": 2387
+    },
+    "packages/kernel/test/s25-situations.test.ts": {
+      "sha256": "b66c46a247aaf2226c18be09f21a599edd78551fe10469bebe5c895136de39aa",
+      "bytes": 1572
+    },
+    "packages/kernel/test/s25-state-support.test.ts": {
+      "sha256": "d211682bbe437ccc99b4f8f94a39176b0c4149055ec41bffadaf0f376284b90a",
+      "bytes": 728
+    },
+    "packages/kernel/test/s25-supply.test.ts": {
+      "sha256": "edcd9bbaeb2cb652e1646e2bf3f8a2f074696db644a7389f716106561fa07354",
+      "bytes": 1083
+    },
+    "packages/kernel/test/s25-tick-orders.test.ts": {
+      "sha256": "dda856e5c3f3d9d917f22264fc285fbd048049b63d160037da2986977af55f1e",
+      "bytes": 5340
+    },
+    "packages/kernel/test/s25-tick-verbs.test.ts": {
+      "sha256": "a3451cda8a41fd96cc1af2a15f6144eaa4cba11dfd9d1cdded800e6f3609457c",
+      "bytes": 4567
+    },
+    "packages/kernel/test/s25-tick.test.ts": {
+      "sha256": "3ed3f28c9a6ae08020034dc1de9234e02fa31176ea18c3adad80ecb7af01da79",
+      "bytes": 13085
+    },
+    "packages/kernel/test/s25-view.test.ts": {
+      "sha256": "298bd88a55827409c5cec9c49e8de37ce93ce8fa8a927163782ef68f1c15d650",
+      "bytes": 2418
+    },
+    "packages/kernel/test/s25-world.test.ts": {
+      "sha256": "50193a05466416c25f2d685265120b1724b8dff54a43c8f2537bece6d24099aa",
+      "bytes": 323
+    },
+    "packages/kernel/test/seat-view-contracts.test.ts": {
+      "sha256": "2429dacadbabfa2b7bbb91811f3faa076afe59a3d195308c42c2afc48fe3e1de",
+      "bytes": 6709
+    },
+    "packages/kernel/test/support/map-fixture.ts": {
+      "sha256": "188b1ebfc9bde8cab48aade6ab2b2cdf3b5d2a05e2a21ead15c0da5150e7d14f",
+      "bytes": 22068
+    },
+    "packages/kernel/test/support/s25-equivalence.json": {
+      "sha256": "8a8a0ee23284fd5702ccf7c66f80dae54d0fda36b39ed1baab0e7e9a92a623ff",
+      "bytes": 6694
+    },
+    "packages/kernel/test/support/s25-fixture.ts": {
+      "sha256": "38151656b109dadfbe8945881fd1984869be5d03e828f59db45b2924b4d5d9a2",
+      "bytes": 1334
+    },
+    "packages/kernel/test/support/s25-survey-results.json": {
+      "sha256": "f7913bba8ae1b9eb0326935e78c202818bf638c7aa058e0e41cd77cc061ffcac",
+      "bytes": 232809
+    },
+    "packages/kernel/test/support/s25-survey.mjs": {
+      "sha256": "afc79e66707aaeaa830bffca7005b06cbee497a9216f52a6c8d42c57743aee04",
+      "bytes": 12796
+    },
+    "packages/pack-format/schemas/pack.schema.json": {
+      "sha256": "7682db7b038dff07944a6493ea7be861e7fc3bebc0e8f09f3c3fd17a2a735e70",
+      "bytes": 83190
+    },
+    "packages/pack-format/schemas/situation.schema.json": {
+      "sha256": "b3632c9555087cd7d3a6706b6a90740dc55fc59425a48b132db5f6df56223cc3",
+      "bytes": 34538
+    },
+    "packages/pack-format/schemas/world.schema.json": {
+      "sha256": "331db5a17ab489e22daeec0fe2adc3f70992c247d4cba0830924f1f1d89197f4",
+      "bytes": 99434
+    },
+    "packages/pack-format/src/gate.ts": {
+      "sha256": "4e7ddd4eb6c795ea019746153172317552e5c218144301ecccad9c538a5a8e31",
+      "bytes": 65854
+    },
+    "packages/pack-format/src/schemas.ts": {
+      "sha256": "1ab84e07b7c7dfa270a15767f44fbe3707529ef1cf719c921b3d0ead9e78a24a",
+      "bytes": 60296
+    },
+    "packages/pack-format/src/situations.ts": {
+      "sha256": "38d54a0942581af69a50342c56bd799d1072782bf22e2724e8c2ff32ae8cb7b6",
+      "bytes": 50086
+    },
+    "packages/pack-format/test/cells.test.ts": {
+      "sha256": "e407ca036e0a41b59a2d239289692689958934a15cf4fa02701fecae612b4a19",
+      "bytes": 4523
+    },
+    "packages/pack-format/test/gate.test.ts": {
+      "sha256": "9a990b3e3bfb78d3431cbc6daffe36294219c0daba9e8061d7c8d70b33d8cd4f",
+      "bytes": 58451
+    },
+    "packages/pack-format/test/support/fixture.ts": {
+      "sha256": "511a46c928c668165a65620b78cb434941a1a0b2d02c5ad0dd86165cccdd4d73",
+      "bytes": 22923
+    },
+    "packages/pack-format/test/validate.test.ts": {
+      "sha256": "3f67158bd4f161f2636521154e1e904cdc1d272dad989c1ca3bc437c31f4685b",
+      "bytes": 76728
+    },
+    "packages/rule-seats/test/rule-seats.test.ts": {
+      "sha256": "137596f838e0d25e05068ea2faf0c9aa2305d9789867842f2660d651e31888f8",
+      "bytes": 24525
+    },
+    "packs/testbed/data/world.json": {
+      "sha256": "7938364140a352113ca91bf94875f7b7ace37b1d6cbf435f1c701233e8f18927",
+      "bytes": 67838
+    },
+    "packs/testbed/pack.json": {
+      "sha256": "736cd72fff2c4d59bfd7a58dcb3585ad6a8f9794449e6cd197b997640829b943",
+      "bytes": 25121
+    },
+    "packs/testbed/strings/en.json": {
+      "sha256": "5edc109722a2471dcb8ac141deca3040d2da3b756f55643267b0ccf06eb21615",
+      "bytes": 25139
+    },
+    "packs/union-1861/data/world.json": {
+      "sha256": "e2244915d92f89a90edf549e240c79b0329ed5f87400352613954368c2c6caf8",
+      "bytes": 876585
+    },
+    "packs/union-1861/pack.json": {
+      "sha256": "410c9bbb2ab8a67559f8f525f7e1ac78a5ad68793fa774246727e1c42a47d795",
+      "bytes": 88194
+    },
+    "packs/union-1861/strings/en.json": {
+      "sha256": "f5d4b3f14815649648b29b97edaffa2d43f18cb8165964ca252e11076d5e0673",
+      "bytes": 54596
+    },
+    "packs/union-1861/test/desk-scheduled-calls.test.ts": {
+      "sha256": "aa558d97823f3891094170e2adcce50e818b3fc2f42fb4777bb1ae1142813cb6",
+      "bytes": 1520
+    },
+    "prototypes/desk/scripts/s19-fixtures.ts": {
+      "sha256": "e50f300839593338ef11a1c3a79ed55ef48c8657480d8219aac3c9eeb150dcf3",
+      "bytes": 4066
+    },
+    "prototypes/desk/server/adapter.ts": {
+      "sha256": "30fd96395af3aa5414e690377652f7ed30e2095d23b687f2743d4b44057453af",
+      "bytes": 5713
+    },
+    "prototypes/desk/test/adapter.test.ts": {
+      "sha256": "466f350c345f62bdea0a271bfe0458c17b9389208408858e7c650692563a52d2",
+      "bytes": 5321
+    },
+    "prototypes/desk/test/r29.test.ts": {
+      "sha256": "ae126822ad5fb03eaca8595506582096c14d33e907bf0a63f3531be368fe5c25",
+      "bytes": 8113
+    },
+    "prototypes/desk/test/r66.test.ts": {
+      "sha256": "b8b52771dc39bfb855301165882f8e05d6b40bea413113b58c98c50dc9931623",
+      "bytes": 5977
+    },
+    "prototypes/desk/web/map/StaffMap.tsx": {
+      "sha256": "add5bc8949f3c0b16d9de16cfeadb7a778626d628eff41fa88da334e9b137e03",
+      "bytes": 35512
+    },
+    "prototypes/desk/web/map/strings.ts": {
+      "sha256": "3f4808306d36893236ad5f9dd30dfb4e4bfe7db7c3af39b6a6ff2b43de837990",
+      "bytes": 3481
+    },
+    "prototypes/desk/web/strings.ts": {
+      "sha256": "876b393a06fa6bcaf55481fb66dfe6dad7c28f51daa50867e72930156794b840",
+      "bytes": 19954
+    },
+    "tools/rules/common.ts": {
+      "sha256": "0bf44e830034ba4c0c21274e1c8ab4fa9355e0f2bc2b395eb76aaf39b3640a88",
+      "bytes": 3782
+    },
+    "tools/rules/existing-findings.json": {
+      "sha256": "aa68eeda3e036d89f1e3ef3f7474323e1bd17d9e872d7216826a739bc4be4779",
+      "bytes": 5812
+    },
+    "tools/rules/projection-derivations.json": {
+      "sha256": "2197826362bb34330b9e91e1eedb280005e6d54b8a8d643a8a0f129cda3e8a7e",
+      "bytes": 2787
+    },
+    "tools/test/rule-history.test.ts": {
+      "sha256": "ed89e45445de5c0eb0676a5a3caf8418f30a18b4c12c10b2e7b42974defa507c",
+      "bytes": 2999
+    },
+    "tools/test/staged-check.test.ts": {
+      "sha256": "5331370995f57b8fe2b4f9e613209939a2f103ca4647fca46bb1d2ae56f35ff6",
+      "bytes": 15484
+    },
+    "tools/test/support/s40-projection-migration.json": {
+      "sha256": "6400fc63e0aa41c3b9b4303a81d4ac8eadadd16cf58fdffa068e023da721a349",
+      "bytes": 6187
+    }
+  }
+}

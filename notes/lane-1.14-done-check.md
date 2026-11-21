@@ -822,3 +822,82 @@ Validation question: do the integrated contracts retain calls and use received e
 - S35 and S36 retain their own fixes. Their branches were not imported or
   edited. Existing grievance, border-levy, Linux CI and whole-branch/gate
   review obligations remain open. Nothing is signed.
+
+
+## S40: checks committed; canon merge held (2026-11-21)
+
+For the lead: 3 items. S40 only in `C:/Pyrrhic/sprint-1a`, `sprint/1a`, from `a250b92a851c6102a0e740aa139e0ab8a784cb77`. Read the standing, command-line, writing, S1-to-S10 sprint rules and 0106. Root npm ci passed and workspace links resolve here. Headless tools only. No push, history rewrite, other worktree write, signature, or S41 work. The shared file's later S39 delivery and S41 brief were read; S41 explicitly waits for an S40 commit.
+
+### 1. Commit and unresolved merge
+
+The checks merge is committed as **50a5820d195a514204e5e437c594f712c8301247**, parents `a250b92` and `3c23492cb8a795a08b854d4e4911270eb4079d56`, through the actual hook with the Codex footer. Its corrected hook exits 0 in 471.38 seconds: **200 files, 1,879 passed, nine inherited expected failures, three timing skips**, plus all chained checks. The first hook failed only an imported test's old call-term diagnostic; the updated test retains the one-day acceptance and zero-day rejection and adds the already-supported war-duration case. Focused correction passed. No production call-term rule changed.
+
+The second named merge, **ed4fb1945a8692a1c6e85fadf9cfaf6aaac1bea4**, is **resolved and staged, not committed**. Six handwritten conflicts preserve both sides: presentation formatter with turn controls; localized help with scheduled calls and governor routes; both claim kinds; S36 received roster with S34's cache and deep-freeze ledger. The cache now follows received posts/reports, preserves reuse across days, and invalidates at future receipt boundaries. All three schema conflicts were regenerated; both Worlds were regenerated. The unreleased save fixture imported from S36 passes its tests. An old prototype fixture caller now supplies the formatter; the fixture itself was not executed.
+
+The actual canon commit hook, under the standing `MANDATE_NO_GIT=1`, **exits 1 in 467.03 seconds**: **201 files; five failures / 1,883 passed / nine inherited expected failures / three timing skips**. Three assertions expose the same liveness failure; two were old cache assumptions. The latter were corrected and **17 focused cache/receipt tests pass**, including a new future-receipt control. Typecheck passes. The 198 unaffected passing files are reused; no futile full-hook retry was made while the binding liveness failure remains. The unchanged Git-fixture evidence comes from the first merge hook and its 21 focused proxy/staged controls. The second merge cannot be committed through the required hook at this pin. Commit message: `runs/s40/commit-canon.txt`.
+
+The measured staged tree is **930c2807d3bf69acb58b42c1d7811868c749d839**, with HEAD `50a5820` and MERGE_HEAD `ed4fb19`. Final documentation is added afterward; the runtime inputs are unchanged. `origin/sprint/checks` is an ancestor of HEAD; `origin/sprint/fixes-canon` is not yet one. S41's prerequisite is therefore unmet. This is a partial delivery, not a clean/fully committed candidate.
+
+### 2. Requested fixes, cases and proposed rulings
+
+- **Call recognition:** the candidate already had S1's `respKind === 'call'` correction before S40. Retain it. S25's obsolete proxy expectation now checks unconditional retention of first, tied and later content-shortened calls, insertion order, and expiry of an unrelated response. Restoring the original suffix test in memory makes the new regression fail; unchanged source passes. No live source was edited/restored for that control.
+- **Dated concentration: HELD under S40's explicit unreceived-truth fallback.** The paired-State tests fail against the live path and pass with the strict received-only implementation. Its bounded reference probe has no field battle: Davis has no received `st_virginia` side notice for the Harpers Ferry and Manassas concentration rows. Appointment replies briefly establish the posts, then ordinary report pruning loses that establishment picture. At day 148 the true holders remain, but those posts are absent from his received picture. Lincoln's Northeastern Virginia row has its public government prerequisite and later receives a post paper. Do not infer side from control, a successful appointment, or a call answer. The strict patch is preserved, **unapplied**, in `docs/audit/s40-evidence/held-concentration.patch`; its tests are inside the patch and its dated trace is `held-concentration.json`. It applies cleanly with `--unidiff-zero`. Ten additional liveness failures disappear when this held patch is removed; the independent time-term failure remains. No historical band was fitted to this probe, and it was not an eight-seed done check.
+- **Time-term blocker:** S36's received-information integration changes the day-136 draft. Time still contributes +300 to the direct plan and -300 to holding. Removing time leaves direct **304** versus holding **279**, so the correctly defined decisive-pick telemetry is now **0**, formerly **1**. Its binding band remains **1..4**. Do not alter scoring or count every nonzero contribution to satisfy this proxy. Recommend that the lead rule explicitly on one documented return to a quiet band with its live mechanism control; this run does **not** authorize or apply that policy. S18's immutable origin, append-only causes and 24 exact inherited quiet transitions remain unchanged.
+- **Projection receipts [I]:** keep the exact two residual-finding migrations only for the named `ed4fb19` merge, and migrate the existing own-seat view derivation fingerprint for S36's cache fix. Reject a permanent refresh option, broad whitelist or new truth exception. Tests reject other heads, edited paths/hashes, added reads and additional findings. **13 findings remain:** ten B2 labels and three request roots, including the unchanged concentration finding. The resolved `reviewsFor` entry is removed. The receipts are `tools/test/support/s40-projection-migration.json`.
+- **Cache/localization reconciliation [I]:** cache received evidence rather than hidden service/rank/status; preserve cross-day reuse and the freeze ledger. Keep all inherited turn/scheduled-call behavior behind S36's formatter, with both pack string tables. Reject restoring live candidate filtering or English fallbacks. S25's typed planner-error and submitted-plan fixtures were adapted without relaxing their boundary assertions.
+
+Final S18 scan exits 0, with **64 fixture tests** in six files passing. Root/desk typechecks, boundary, licences and the 106-decision index pass. Headless desk units: **111 passed / eight inherited optional-map skips**. The first parser/type preflight errors, three missing-paper fixture failures, cache correction, held-path red/green logs and all failed exits are retained in `runs/s40/`. No browser, server campaign, package build, new timeout or new skip was added.
+
+### 3. One default done check and settled evidence
+
+`npm run run:done-check -- --milestone 1a --label s40-candidate`, all eight default seeds, original 400-day fork cap and drafting, **exits 1 in 896.20 seconds**. **Phase 0 5/6; 1A 4/6.** Behaviour, determinism, resume, section-ten and timing pass. Liveness fails only `planner.term.time` 0 against 1..4.
+
+| 1A criterion | Result and retained qualification |
+|---|---|
+| Checkpoints | Pass as scored. Union 92,089 known men / four unknown blocks remains below the expressly nonbinding 95,000 floor; Confederate 124,046 / 17 unknown blocks. Each side fights one planned operation. |
+| Fought operation | Pass: Sumter operation day 38 and Northeastern Virginia operation day 137, fighting at Manassas day 144. |
+| Pushback | Fail: relay objections 2 / 0..6 and plan objections 38 / 10..42 pass. Relay holds 1 / 2..6, filter holds 0 / 1..9, trims 0 / 1..4, reservations 17 / 1..9, slow walks 18 / 2..9 fail. |
+| Unknown strength | Pass for observed battles: each Union slot three battles / four battle-days; testbed four / four. |
+| Stand-ins | Pass as scanned; labelled 1B owners remain. |
+| Lever sweep | Fail: unmeasured people/grievance channel and all 24 unexercised border-governor moves. Eight gated decisions, eight seeds, 744 base recruitment calls. Return best 0/8 is not D6 clearance. |
+
+These are **eight retained problem statements**, one more than S37 because of liveness. Only the observed reservations counter changes within pushback (16 to 17); no acceptance bound moves.
+
+| Local Windows timing | Median / p95, ms per day |
+|---|---|
+| Union reference | 22.71 / 36.69 |
+| Union history | 21.60 / 35.64 |
+| Testbed | 2.67 / 4.40 |
+
+All are below unchanged 40/160 limits. Shared-host observations do not certify Linux CI or the unloaded 20 ms aim. Drafting is sound: 23 commands, 16 with land forces, all-command median/p95/worst 22.4/23.6/24.2 ms; capped worst 17.8 ms. No completed campaign retry, parameter search or waiver.
+
+**Hashes and causes.** Both initial State hashes match S37. Union changes all **113 daily hashes from day 36 through 148**, ending **bffdb4255a3bf3759a2c3c782f87468a4d286744eeee9b2130e1669bb8bee3d3**, formerly `d2e9277f12d7b46dfb8ae48be469f8777f2c6b3f8e4d0f8f32adf091b0d9ee82`. Testbed changes all **120**, ending **ee1b76d81d16951cd9d9cfcaecce1f773128ad5df4bfedea6b1ed60f4b014b56**, formerly `69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb`; its final matches S36 exactly. S36's own sent-order copies and historical plan enclosures change knowledge; at the Union day-60 and testbed day-40 saves, commands are identical and **knowledgeBySeat is the only changed root field**. Later Union choices change through received candidate/strength/control inputs [I]. All 268 checked hashes repeat/replay; both resumes and saved-log replays match, zero rejections.
+
+Nine Union command groups differ from S37: Lincoln nominates Loring rather than Sumner on day 70, adds Sumner on 78, and Rhode Island's transfer moves from 80 to 85; Davis's Virginia transfer moves 105 to 94, permitting an inquiry on 100, and Mississippi's transfer moves 137 to 136. These are request days. Received eligibility/strength and unchanged attention/in-transit routing explain the changes [I]. A bounded read-only trace matches the final campaign hashes; it is separate from the default sweep. All exact commands, 19 changed liveness rows, every old/new World/final/daily hash and their causes are in `docs/audit/s40-evidence/runtime.json`.
+
+World hashes change with S36's unchanged-valued report-confidence table becoming pack data. Regeneration also repairs one existing Union politics citation's UTF-8 apostrophe; all numerical political fields match. No cast or start data is fitted. Both Worlds' people (262 Union-pack, 17 testbed) and all non-rule top-level data match entry. Art, decisions, gate material, provenance, locks, hooks and every acceptance-band file remain unchanged. All **1,784 original tracked paths** remain.
+
+Package inventories (**13 manifests/locks**), runtime diagnostics and preservation checks preceded this closing narrative. All **1,834 tracked files / 846 runtime inputs** and the staged tree were identical during measurement. Portable receipts: `docs/audit/s40-evidence/validation.json`, `source-inventory.json`, `runtime.json`, held patch/trace, and the two exact migration receipts. Raw commands, logs, exits, inventories, trace States and later append proof: `runs/s40/`. The metadata reader's UTF-16 tree-file correction is retained; it did not rerun simulation. Final documentation is staged with the unresolved merge and does not change the measured runtime inputs.
+
+## Findings outside my scope (S40)
+
+- **Lead decision required before the canon merge and S41:** rule on the zero decisive-time observation under S18, or assign genuine time-sensitive reference coverage. The current band remains binding and the required hook refuses the merge. No acceptance criterion is waived by the passing budget or focused tests.
+- **Knowledge/notice owners:** supply a received government-side path to Davis and durable received establishment memory before adopting the held concentration patch. The related dated appointment `ready` prerequisite still calls `departmentSide`; S36's candidate/readiness correction does not supply that missing government notice. These read paths are not approved truth exceptions.
+- **S41 only after S40 commits:** merge play/desk/fixes-play whole, propagate S35's admitted-note basis to S36's preview enclosures, retain the formatter boundary and replay S39's headless campaign. None was undertaken here; S39's files were not touched.
+- The five historical pushback failures, both D6 evidence gaps, source/lifecycle holds, whole-branch/gate review, Linux CI, steward integration, pushing and release remain with their owners. Nothing is signed.
+
+
+## S41 execution plan (2026-11-21)
+
+S41 only, from HEAD 50a5820 with staged MERGE_HEAD ed4fb19. Step 0 applies the lead's post-S40 ruling: the Union planner.term.time band returns to 0..0, a constructed live control proves dropping time changes the chosen candidate, and the 24-entry frozen list grows by exactly one cited record. The 338-band origin and scoring stay unchanged; the concentration patch stays held. Commit that merge through the hook before fetching/merging origin/sprint/play f595bd7 whole. Preserve received views, caches, S37 counting, S39 guard correction and all finding identities. Then carry the delivered-note basis into received preview enclosures and retain the string-table boundary.
+
+Validation question: does the final integrated candidate preserve the contracts and replay S39's recorded advance to 31 July? Run focused controls, both typechecks, S18 scans/history and desk units before each affected full hook (about 8 to 10 minutes). The play merge hook supplies the required final full check if it covers the final source tree; final documentation commits still use their required hooks. Run one default eight-seed done check with drafting and --milestone 1a (about 15 to 25 minutes), comparing retained S40/S39 evidence for all changed bands/hashes and six 1A criteria. Run only the prototype's headless Playwright harness on owned port 5317; first verify startup, selectors and the initial recorded commands, then continue the same game through the recorded campaign (about 10 to 20 minutes). Stop expensive retries on unexpected failures, diagnose every category and verify corrections cheaply; do not restart campaigns for reassurance. No calibration or extra campaign. Logs/exits go to runs/s41; inventories, runtime diagnostics and preservation checks precede final report/hand-over. Whole-branch review remains deferred to Claude under 0106. Never push, sign, rewrite history or write another worktree except the one final UTF-8 Python status append.
+
+## Findings outside my scope (S41 plan)
+
+The held concentration receipt contracts, dated appointment departmentSide prerequisite, historical pushback bands, D6 gaps, source/lifecycle holds, CI and whole-branch/gate review remain with their owners.
+
+
+## S41 time band ruling
+
+Applied the lead's 2026-11-21 CODEX message, "S40 received; the lead's ruling on the time band; S41 amended". S36 changes the received inputs to the day-136 draft; direct still wins 304 to 279 with time removed. The reference therefore records zero decisive time picks. Restore only this band to 0..0 and append exactly one record to the frozen list (24 to 25). The 338-band origin is unchanged. The constructed pincer control in packages/cli/test/planner.test.ts picks direct with time and holding without time; it also asserts liveTerms contains time. Scoring and the decisive-pick definition are unchanged. Whole-list fingerprints authorize only the exact old/new lists, then freeze the result again; changed, reordered, removed or extra transitions fail.

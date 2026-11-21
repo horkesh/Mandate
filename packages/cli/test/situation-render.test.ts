@@ -3,11 +3,14 @@ import { describe, expect, it } from 'vitest';
 import { toId } from '../../kernel/src/ids.ts';
 import { ConsoleGame } from '../src/console/game.ts';
 import { situationLines } from '../src/desk/render.ts';
+import { deskStrings } from '../src/pack-text.ts';
 import { readFileSync, readdirSync } from 'node:fs';
 import { lexSource } from '../../kernel/test/support/source.ts';
 
 describe('the merged desk renders every proposal form', () => {
-  const menu = new ConsoleGame({ pack: 'testbed' }).morning().menu;
+  const game = new ConsoleGame({ pack: 'testbed' });
+  const t = deskStrings(game.strings, game.locale);
+  const menu = game.morning().menu;
   if (menu.menuKind !== 'principal') throw new Error('the testbed opens at its principal');
 
   const render = (proposedBy: SituationOptionView['proposedBy']) => {
@@ -16,7 +19,7 @@ describe('the merged desk renders every proposal form', () => {
       status: 'open', surfacedDay: 1, chosen: [], delegatedTo: null, staffAuthor: null,
       options: [{ id: 'shelter', label: 'Shelter', proposedBy, group: null }],
     };
-    return situationLines([situation], menu, (key) => key);
+    return situationLines([situation], menu, t);
   };
 
   it.each(['law-and-practice', 'principal-initiative'] as const)('renders a %s proposal without presenting its provenance as advice', (basis) => {
@@ -34,8 +37,8 @@ describe('the merged desk renders every proposal form', () => {
       status: 'open', surfacedDay: 1, chosen: [], delegatedTo: null, staffAuthor: null,
       staffAbsence: 'no-adviser-on-record', options: [],
     } as SituationView;
-    expect(situationLines([situation], menu, (key) => key)).toContain('  No recommendation from the staff');
-    expect(situationLines([{ ...situation, staffAbsence: undefined }], menu, (key) => key)).not.toContain('  No recommendation from the staff');
+    expect(situationLines([situation], menu, t)).toContain('  No recommendation from the staff');
+    expect(situationLines([{ ...situation, staffAbsence: undefined }], menu, t)).not.toContain('  No recommendation from the staff');
   });
 
   it('never inspects a proposal basis or its citations to choose its presentation', () => {

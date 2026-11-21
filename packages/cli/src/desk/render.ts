@@ -1,132 +1,168 @@
 /**
- * The desk's text: what the principal sees each morning and as the days of a turn pass. Player-facing: built only from
- * the morning's request (the view and the menu) and the reports a day brought, through `@mandate/kernel/seat-api`.
- * Strings a pack provides (a situation's title and text, an option's label) are looked up through `t`, which the
- * console hands in; a key with no text shows as the key.
+ * The desk's text is built from the morning's request and the reports a day brought.
+ * Its wording comes from the pack's string table.
  */
-import type { AxisView, OptionView, PrincipalMenu, ReportView, SeatRequest, SituationView } from '@mandate/kernel/seat-api';
+import type { AxisView, OptionView, PrincipalMenu, ReportView, SeatCommand, SeatRequest, SituationView } from '@mandate/kernel/seat-api';
 import { dispatchLog, enemyPicture } from './dispatches.ts';
-import type { SeatCommand } from '@mandate/kernel/seat-api';
 import { noteAccountLines, noteText } from './notes.ts';
+import type { DeskStrings } from './strings.ts';
 
-export type Strings = (key: string) => string;
-
-/** Days from a plan's start, from its permille days. */
-const days = (permille: number): string => `${Math.ceil(permille / 1000).toString()} days`;
-
-function axisLine(a: AxisView): string {
-  return `    ${a.name} (${a.post}, ${a.mode}, ${a.strength.toString()} men): ${a.regions.join(' > ')}, arriving in ${days(a.arrival)}; ${a.phases.join(', ')}`;
+function axisLine(a: AxisView, t: DeskStrings): string {
+  return t('console.plan.axis', {
+    name: a.name, post: a.post, mode: a.mode, strength: String(a.strength),
+    route: a.regions.join(' > '), days: String(Math.ceil(a.arrival / 1000)), phases: a.phases.join(', '),
+  });
 }
 
 /** A plan as he submitted it: its method, axes, what it asks of others and its conditions. */
-export function planLines(plan: OptionView): string[] {
-  const asks = plan.requests.length === 0 ? '' : `; asks: ${plan.requests.join(', ')}`;
-  const conds = plan.conditions.length === 0 ? '' : `; on condition: ${plan.conditions.join(', ')}`;
-  return [`  ${plan.method}/${plan.variant}: he expects about ${plan.perceivedEnemy.toString()} of the enemy${asks}${conds}`, ...plan.axes.map(axisLine)];
+export function planLines(plan: OptionView, t: DeskStrings): string[] {
+  const asks = plan.requests.length === 0 ? '' : t('console.plan.asks', { requests: plan.requests.join(', ') });
+  const conditions = plan.conditions.length === 0 ? '' : t('console.plan.conditions', { conditions: plan.conditions.join(', ') });
+  return [
+    t('console.plan.summary', { method: plan.method, variant: plan.variant, enemy: String(plan.perceivedEnemy), asks, conditions }),
+    ...plan.axes.map(a => axisLine(a, t)),
+  ];
 }
 
 /** The situations before him, open first, with their options in display order. */
-export function situationLines(views: readonly SituationView[], menu: PrincipalMenu, t: Strings): string[] {
-  const open = views.filter((s) => s.status === 'open' || s.status === 'waiting');
-  if (open.length === 0) return ['No situation is before you.'];
+export function situationLines(views: readonly SituationView[], menu: PrincipalMenu, t: DeskStrings): string[] {
+  const open = views.filter(s => s.status === 'open' || s.status === 'waiting');
+  if (open.length === 0) return [t('console.situation.none')];
   const out: string[] = [];
   for (const s of open) {
-    const choice = menu.situations.find((c) => c.situation === s.id);
-    out.push(`${s.id}: ${t(s.title)} (${s.status}, before you since day ${s.surfacedDay.toString()})`);
-    out.push(`  ${t(s.text)}`);
-    if (s.staffAuthor !== null) out.push(`  The staff's advice comes from ${s.staffAuthor} (in your inbox).`);
-    else if (s.staffAbsence === 'no-adviser-on-record') out.push('  No recommendation from the staff');
-    for (const o of s.options) out.push(`  - ${o.id}: ${t(o.label)}${Array.isArray(o.proposedBy) ? ` (urged by ${o.proposedBy.join(', ')})` : ''}`);
-    if (choice !== undefined && choice.delegableTo.length > 0) out.push(`  You may hand it to: ${choice.delegableTo.join(', ')}`);
+    const choice = menu.situations.find(c => c.situation === s.id);
+    out.push(t('console.situation.heading', { id: s.id, title: t(s.title), status: s.status, day: String(s.surfacedDay) }));
+    out.push('  ' + t(s.text));
+    if (s.staffAuthor !== null) out.push(t('console.situation.staff', { author: s.staffAuthor }));
+    else if (s.staffAbsence === 'no-adviser-on-record') out.push(t('console.situation.no-staff'));
+    for (const o of s.options) {
+      const advice = Array.isArray(o.proposedBy) ? t('console.situation.urged', { people: o.proposedBy.join(', ') }) : '';
+      out.push(t('console.situation.option', { id: o.id, label: t(o.label), advice }));
+    }
+    if (choice !== undefined && choice.delegableTo.length > 0) {
+      out.push(t('console.situation.delegate', { posts: choice.delegableTo.join(', ') }));
+    }
   }
   return out;
 }
 
 /** Plans submitted for his review, and operations waiting for his word. */
-export function planReviewLines(menu: PrincipalMenu, t: Strings = key => key): string[] {
+export function planReviewLines(menu: PrincipalMenu, t: DeskStrings): string[] {
   const out: string[] = [];
-  for (const r of menu.reviews) out.push(`${r.post} (${r.holder}) submits a plan for your review:`, ...planLines(r.plan), ...noteAccountLines(r.notes ?? [],t).map(s => `  ${s}`));
-  for (const p of menu.awaiting) out.push(`${p}: prepared, waiting for your word ("go ${p}").`);
-  return out.length === 0 ? ['No plan waits for you.'] : out;
+  for (const r of menu.reviews) {
+    out.push(t('console.plan.review', { post: r.post, holder: r.holder }), ...planLines(r.plan, t), ...noteAccountLines(r.notes ?? [], t).map(s => '  ' + s));
+  }
+  for (const p of menu.awaiting) out.push(t('console.plan.prepared', { post: p }));
+  return out.length === 0 ? [t('console.plan.none')] : out;
 }
 
 /** The posts he may order, each with its holder, the posts an order passes, and its routes. */
-export function postLines(menu: PrincipalMenu): string[] {
-  return menu.commandable.map((c) => {
-    const relays = c.relays.length === 0 ? '' : ` via ${c.relays.join(' > ')}`;
-    const routes = c.routes.map((r) => `${r.route} ${r.typicalDays.toString()}d${r.price > 0 ? ` (${r.price.toString()} attention)` : ''}`).join(', ');
-    return `${c.post}: ${c.holder}${relays}; ${routes}`;
+export function postLines(menu: PrincipalMenu, t: DeskStrings): string[] {
+  return menu.commandable.map(c => {
+    const relays = c.relays.length === 0 ? '' : t('console.via', { posts: c.relays.join(' > ') });
+    const routes = c.routes.map(r => {
+      const price = r.price > 0 ? t('console.post.route-price', { price: String(r.price) }) : '';
+      return t('console.post.route', { route: r.route, days: String(r.typicalDays), price });
+    }).join(', ');
+    return t('console.post', { post: c.post, holder: c.holder, relays, routes });
   });
 }
 
-/** The morning: the date, what arrived since `sinceDay`, and what waits for him. */
-export function morningLines(request: SeatRequest, sinceDay: number, t: Strings, header: { readonly date: string; readonly attention: number | null }): string[] {
+/** The morning: the date, what arrived since the last reading, and what waits for him. */
+export function morningLines(request: SeatRequest, sinceDay: number, t: DeskStrings, header: { readonly date: string; readonly attention: number | null }): string[] {
   const menu = request.menu;
-  if (menu.menuKind !== 'principal') return [`${request.view.person}: ${menu.menuKind}`];
   const view = request.view;
-  const attention = header.attention === null ? '' : `; ${header.attention.toString()} attention left this week`;
-  const war = menu.atWarSince === null ? '; at peace' : '';
-  const out = [`=== ${header.date} (day ${request.requestDay.toString()}): ${view.person}, ${menu.faction}${war}${attention} ===`];
+  if (menu.menuKind !== 'principal') return [t('console.morning.other-seat', { person: view.person, kind: menu.menuKind })];
+  const attention = header.attention === null ? '' : t('console.morning.attention', { attention: String(header.attention) });
+  const peace = menu.atWarSince === null ? t('console.morning.peace') : '';
+  const out = [t('console.morning', { date: header.date, day: String(request.requestDay), person: view.person, faction: menu.faction, peace, attention })];
   const fresh = dispatchLog(view, sinceDay, t);
-  out.push(fresh.length === 0 ? 'Nothing new has arrived.' : `${fresh.length.toString()} new in your inbox:`, ...fresh.map((l) => `  ${l}`));
-  const open = view.situations.filter((s) => s.status === 'open');
-  if (open.length > 0) out.push(`Before you: ${open.map((s) => `${s.id} (${t(s.title)})`).join('; ')}. Type "situations".`);
-  if (menu.reviews.length > 0) out.push(`Plans for your review: ${menu.reviews.map((r) => r.post).join(', ')}. Type "plans".`);
-  if (menu.awaiting.length > 0) out.push(`Waiting for your word: ${menu.awaiting.join(', ')}.`);
+  out.push(fresh.length === 0 ? t('console.morning.nothing-new') : t('console.morning.new-inbox', { count: String(fresh.length) }), ...fresh.map(l => '  ' + l));
+  const open = view.situations.filter(s => s.status === 'open');
+  if (open.length > 0) {
+    out.push(t('console.morning.situations', { situations: open.map(s => t('console.morning.situation', { id: s.id, title: t(s.title) })).join('; ') }));
+  }
+  if (menu.reviews.length > 0) out.push(t('console.morning.plans', { posts: menu.reviews.map(r => r.post).join(', ') }));
+  if (menu.awaiting.length > 0) out.push(t('console.morning.awaiting', { posts: menu.awaiting.join(', ') }));
   return out;
 }
 
-/** The days of a turn passing: each day's new reports, any of his orders refused, and why the turn stopped. */
-export function dayLines(day: { readonly day: number; readonly date: string; readonly reports: readonly ReportView[]; readonly refused: readonly { readonly what: string; readonly reason: string }[] }, t: Strings = key => key): string[] {
-  const out = [`--- ${day.date} (day ${day.day.toString()}) ---`];
-  for (const r of day.refused) out.push(`  Refused: ${r.what} (${r.reason})`);
-  const view = { reports: day.reports } as unknown as Parameters<typeof dispatchLog>[0];
-  for (const l of dispatchLog(view, 0, t)) out.push(`  ${l}`);
+/** The days of a turn passing: each day's new reports and any orders refused. */
+export function dayLines(day: { readonly day: number; readonly date: string; readonly reports: readonly ReportView[]; readonly refused: readonly { readonly what: string; readonly reason: string }[] }, t: DeskStrings): string[] {
+  const out = [t('console.day', { date: day.date, day: String(day.day) })];
+  for (const r of day.refused) out.push(t('console.refused', { command: r.what, reason: r.reason }));
+  for (const l of dispatchLog(day, 0, t)) out.push('  ' + l);
   return out;
 }
 
-export function enemyLines(request: SeatRequest): string[] {
-  const lines = enemyPicture(request.view);
-  return lines.length === 0 ? ['You have no report of the enemy.'] : lines;
+export function enemyLines(request: SeatRequest, t: DeskStrings): string[] {
+  const lines = enemyPicture(request.view, t);
+  return lines.length === 0 ? [t('console.enemy.none')] : lines;
 }
 
 /** A queued command, as the queue lists it. */
-export function commandText(c: SeatCommand, t: Strings = key => key): string {
+export function commandText(c: SeatCommand, t: DeskStrings): string {
   switch (c.cmd) {
     case 'order':
-      return `order ${c.to} to ${c.goal.posture}${c.goal.objective === null ? '' : ` ${c.goal.objective}`} (risk ${c.goal.risk.toString()}, ${c.goal.deadlineDays.toString()} days) by ${c.route}${c.bypass ? ', around the chain' : ''}`;
-    case 'review':
-      return c.action === 'edit' && c.edit !== null ? `edit ${c.to}'s plan: ${c.edit.kind}${c.edit.axis === null ? '' : ` ${c.edit.axis}`}${c.edit.region === null ? '' : ` to ${c.edit.region}`}${c.edit.via.length > 0 ? ` via ${c.edit.via.join(',')}` : ''}` : `${c.action === 'approve' ? 'approve' : 'send back'} ${c.to}'s plan${c.notes?.length ? ': '+c.notes.map(n => noteText(n,t)).join(' ') : ''}`;
+      return t('console.command.order', {
+        post: c.to, posture: c.goal.posture, objective: c.goal.objective === null ? '' : ' ' + c.goal.objective,
+        risk: String(c.goal.risk), days: String(c.goal.deadlineDays), route: c.route,
+        bypass: c.bypass ? t('console.command.bypass') : '',
+      });
+    case 'review': {
+      if (c.action === 'edit' && c.edit !== null) {
+        const axis = c.edit.axis === null ? '' : ' ' + c.edit.axis;
+        const objective = c.edit.region === null ? '' : t('console.command.edit-to', { region: c.edit.region });
+        const via = c.edit.via.length === 0 ? '' : t('console.via', { posts: c.edit.via.join(',') });
+        return t('console.command.edit', { post: c.to, kind: c.edit.kind, axis, objective, via });
+      }
+      const notes = c.notes?.length ? ': ' + c.notes.map(n => noteText(n, t)).join(' ') : '';
+      return t(c.action === 'approve' ? 'console.command.approve' : 'console.command.send-back', { post: c.to, notes });
+    }
     case 'decide':
-      return `decide ${c.situation}: ${c.options.length === 0 ? 'let it take its course' : c.options.join(', ')}`;
+      return t('console.command.decide', { situation: c.situation, options: c.options.length === 0 ? t('console.command.no-options') : c.options.join(', ') });
     case 'delegate':
-      return `hand ${c.situation} to ${c.to}`;
+      return t('console.command.delegate', { situation: c.situation, post: c.to });
     case 'transfer':
-      return `transfer ${c.amount.toString()} ${c.force} from ${c.from} to ${c.to}`;
-    case 'audience':
-      return `audience with ${c.to}${c.counters.length === 0 ? '' : `: ${c.counters.map((k) => k.kind).join(', ')}`}`;
+      return t('console.command.transfer', { amount: String(c.amount), force: c.force, from: c.from, to: c.to });
+    case 'audience': {
+      const counters = c.counters.length === 0 ? '' : ': ' + c.counters.map(k => k.kind).join(', ');
+      return t('console.command.audience', { post: c.to, counters });
+    }
     case 'go':
-      return `the word to go, to ${c.to}`;
-    case 'call':
-      return `${c.readiness ? 'hold ready' : 'call'} ${c.men === null || c.regiments === null ? 'troops of unknown strength' : c.men === undefined ? `${c.regiments.toString()} regiments` : `${c.men.toString()} men`}${c.arm === undefined ? '' : ` of ${c.arm}`} ${c.termDays === null ? 'for the war' : `for ${c.termDays.toString()} days`} from ${c.to}`;
-    case 'appoint':
-      return `appoint ${c.person} to ${c.post}${c.rank === null ? '' : ` as ${c.rank}`}`;
-    case 'relieve':
-      return `relieve ${c.post}'s holder (${c.mode.replace('_', ' ')}${c.to === null ? '' : `, to ${c.to}`})`;
-    case 'inquire':
-      return `ask ${c.to} for a report${c.subject === null ? '' : ` on ${c.subject}`}`;
+      return t('console.command.go', { post: c.to });
+    case 'call': {
+      const force = c.men === null || c.regiments === null ? t('console.command.unknown-strength')
+        : c.men === undefined ? t('console.command.regiments', { count: String(c.regiments) })
+          : t('console.command.men', { count: String(c.men) });
+      const arm = c.arm === undefined ? '' : t('console.command.arm', { arm: c.arm });
+      const term = c.termDays === null ? t('console.command.war-term') : t('console.command.days-term', { days: String(c.termDays) });
+      return t(c.readiness ? 'console.command.hold-ready' : 'console.command.call', { force, arm, term, post: c.to });
+    }
+    case 'appoint': {
+      const rank = c.rank === null ? '' : t('console.command.rank', { rank: c.rank });
+      return t('console.command.appoint', { person: c.person, post: c.post, rank });
+    }
+    case 'relieve': {
+      const to = c.to === null ? '' : t('console.command.relieve-to', { post: c.to });
+      return t('console.command.relieve', { post: c.post, mode: c.mode.replace('_', ' '), to });
+    }
+    case 'inquire': {
+      const subject = c.subject === null ? '' : t('console.command.inquire-subject', { subject: c.subject });
+      return t('console.command.inquire', { post: c.to, subject });
+    }
     case 'consult':
-      return `consult ${c.posts.join(', ')} on ${c.situation}`;
+      return t('console.command.consult', { posts: c.posts.join(', '), situation: c.situation });
     case 'observer':
-      return `send ${c.person} to watch ${c.to}`;
+      return t('console.command.observer', { person: c.person, post: c.to });
     case 'promise':
-      return `promise ${c.person} advancement`;
+      return t('console.command.promise', { person: c.person });
     case 'pressure':
-      return `press ${c.person}`;
+      return t('console.command.pressure', { person: c.person });
     case 'address':
-      return `address the ${c.bloc}`;
-    // Lane 1.12: a commander's battle orders. The kernel refuses them from a player's seat (hard rule 1); listed for completeness.
+      return t('console.command.address', { bloc: c.bloc });
+    // A commander’s battle orders. The kernel refuses them from a player’s seat.
     case 'battle':
-      return `battle orders for ${c.post}: commit ${c.commit}, night ${c.night}, cut off ${c.cutOff}, pursue ${c.pursue}`;
+      return t('console.command.battle', { post: c.post, commit: String(c.commit), night: String(c.night), cutOff: String(c.cutOff), pursue: String(c.pursue) });
   }
 }

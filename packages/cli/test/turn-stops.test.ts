@@ -1,6 +1,10 @@
 import {expect,it} from 'vitest';
 import {ConsoleGame} from '../src/console/game.ts';
-import {parseLine} from '../src/desk/commands.ts';
+import {parseLine as parseWithStrings} from '../src/desk/commands.ts';
+import {deskStrings} from '../src/pack-text.ts';
+const textGame = new ConsoleGame({pack:'testbed'});
+const t = deskStrings(textGame.strings, textGame.locale);
+const parseLine = (line: string, request: Parameters<typeof parseWithStrings>[1]) => parseWithStrings(line, request, t);
 it('projects and changes the driver’s stops without changing State or the command log',()=>{
  const game=new ConsoleGame({pack:'testbed'}), hash=game.hash(), log=JSON.stringify(game.log), before=game.morning();
  expect(before.turnStops?.points.every(p=>p.enabled)).toBe(true);

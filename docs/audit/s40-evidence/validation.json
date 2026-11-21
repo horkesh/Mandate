@@ -1,0 +1,350 @@
+{
+  "measuredTree": "930c2807d3bf69acb58b42c1d7811868c749d839",
+  "postCampaignTree": "930c2807d3bf69acb58b42c1d7811868c749d839",
+  "runtimeInputs": 846,
+  "trackedFiles": 1834,
+  "identicalDuringMeasurement": true,
+  "packageManifests": 13,
+  "preservationReused": "provisional-preservation.json; all recorded files remained identical through measurement",
+  "node": "v22.23.2",
+  "host": "Windows-11-10.0.26200-SP0",
+  "checkCommit": {
+    "args": [
+      "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "commit",
+      "-F",
+      "runs/s40/commit-checks.txt"
+    ],
+    "exit": 0,
+    "seconds": 471.37656649999553,
+    "started": "2026-11-21T04:41:08.405066+00:00",
+    "finished": "2026-11-21T04:48:59.781652+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "canonCommitRejected": {
+    "args": [
+      "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "commit",
+      "-F",
+      "runs/s40/commit-canon.txt"
+    ],
+    "exit": 1,
+    "seconds": 467.0318269999989,
+    "started": "2026-11-21T05:06:40.311507+00:00",
+    "finished": "2026-11-21T05:14:27.343351+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": "1"
+  },
+  "doneCheck": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.cmd",
+      "run",
+      "run:done-check",
+      "--",
+      "--milestone",
+      "1a",
+      "--label",
+      "s40-candidate"
+    ],
+    "exit": 1,
+    "seconds": 896.2035380000016,
+    "started": "2026-11-21T05:17:14.341106+00:00",
+    "finished": "2026-11-21T05:32:10.544662+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "fullCheckFailureCategories": {
+    "liveness": 3,
+    "cacheAssumptions": 2
+  },
+  "cacheCorrection": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\node.EXE",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/principal-candidate-cache.test.ts",
+      "packages/kernel/test/canon-receipts.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.1824844000002486,
+    "started": "2026-11-21T05:15:45.086528+00:00",
+    "finished": "2026-11-21T05:15:46.269030+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "finalRules": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 1.9907785999967018,
+    "started": "2026-11-21T05:16:15.759136+00:00",
+    "finished": "2026-11-21T05:16:17.749931+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "finalS18Fixtures": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\node.EXE",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "tools/test/rule-history.test.ts",
+      "tools/test/projection-truth.test.ts",
+      "tools/test/situation-causes.test.ts",
+      "tools/test/liveness-causes.test.ts",
+      "tools/test/signed-situations.test.ts",
+      "tools/test/pack-content.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.316462300004787,
+    "started": "2026-11-21T05:16:17.863360+00:00",
+    "finished": "2026-11-21T05:16:20.179839+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "finalTypecheck": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.2641501000034623,
+    "started": "2026-11-21T05:15:46.419439+00:00",
+    "finished": "2026-11-21T05:15:47.683607+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "deskUnits": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.cmd",
+      "--prefix",
+      "prototypes/desk",
+      "test",
+      "--",
+      "--maxWorkers",
+      "1"
+    ],
+    "exit": 0,
+    "seconds": 31.85070600000472,
+    "started": "2026-11-21T05:05:58.133174+00:00",
+    "finished": "2026-11-21T05:06:29.983897+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "deskTypecheck": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.cmd",
+      "--prefix",
+      "prototypes/desk",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.3215299000003142,
+    "started": "2026-11-21T05:06:38.100483+00:00",
+    "finished": "2026-11-21T05:06:39.422030+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "finalBoundary": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.5566034000003128,
+    "started": "2026-11-21T05:16:20.329238+00:00",
+    "finished": "2026-11-21T05:16:20.885858+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "finalLicences": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.cmd",
+      "run",
+      "check:licences"
+    ],
+    "exit": 0,
+    "seconds": 0.5855183999956353,
+    "started": "2026-11-21T05:16:20.998303+00:00",
+    "finished": "2026-11-21T05:16:21.583838+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "finalDecisions": {
+    "args": [
+      "C:\\Users\\User\\AppData\\Local\\Volta\\tools\\image\\node\\22.23.2\\npm.cmd",
+      "run",
+      "check:decisions"
+    ],
+    "exit": 0,
+    "seconds": 0.585128499995335,
+    "started": "2026-11-21T05:16:21.694082+00:00",
+    "finished": "2026-11-21T05:16:22.279228+00:00",
+    "head": "50a5820d195a514204e5e437c594f712c8301247",
+    "nodeOptions": "--require=C:\\Pyrrhic\\sprint-1a\\runs\\s40\\one-worker.cjs",
+    "noGit": null
+  },
+  "preservation": {
+    "base": "a250b92",
+    "baseTracked": 1784,
+    "missingOriginalFiles": [],
+    "changedProtected": [],
+    "worlds": [
+      {
+        "pack": "testbed",
+        "people": 17,
+        "samePeople": true,
+        "sameTopLevelExceptRules": {
+          "people": true,
+          "installations": true,
+          "census": true,
+          "weatherZones": true,
+          "factions": true,
+          "pack": true,
+          "edges": true,
+          "railLines": true,
+          "depots": true,
+          "departments": true,
+          "vocabularies": true,
+          "regions": true,
+          "formatVersion": true
+        }
+      },
+      {
+        "pack": "union-1861",
+        "people": 262,
+        "samePeople": true,
+        "sameTopLevelExceptRules": {
+          "people": true,
+          "installations": true,
+          "census": true,
+          "weatherZones": true,
+          "factions": true,
+          "pack": true,
+          "edges": true,
+          "railLines": true,
+          "depots": true,
+          "departments": true,
+          "vocabularies": true,
+          "regions": true,
+          "formatVersion": true
+        }
+      }
+    ]
+  },
+  "packageInventory": {
+    "docs/research/_resource/tools/package.json": {
+      "sha256": "8005a3491db7d92f36ac66369861589f9c47123d3a7c71e643fc2c06168cd45a",
+      "bytes": 25
+    },
+    "package-lock.json": {
+      "sha256": "82dbb02254bcc312709e8db78ae7ed7dd9fc26e0bdea4760c5549c956cc429d9",
+      "bytes": 69293
+    },
+    "package.json": {
+      "sha256": "bc019b9d2445a17e4dcaaf98f331a57676cfab29f86bd49356b50ccce114a729",
+      "bytes": 1464
+    },
+    "packages/cli/package.json": {
+      "sha256": "9831538271a75c8bd564d21b3906ec0172ffa1612706168445c376be082f76b0",
+      "bytes": 454
+    },
+    "packages/kernel/package.json": {
+      "sha256": "cadb9be3b77f4cf7ea8c485c35ff589e428559039368fa02b78e5a8046dc825f",
+      "bytes": 385
+    },
+    "packages/pack-format/package.json": {
+      "sha256": "7e49c716a4f78134a943f21f25fc93e88ecf8bc1bea8e852ab4f78365fe43d33",
+      "bytes": 789
+    },
+    "packages/rule-seats/package.json": {
+      "sha256": "08755847f8bdaf29965239b2f6cfa2c40a0565906d1d34162b27aaf75d365ef8",
+      "bytes": 459
+    },
+    "prototypes/desk/package-lock.json": {
+      "sha256": "022041c25aabad6eba14931604acb543fd4d6abfa4524742c9d23008759f0337",
+      "bytes": 82514
+    },
+    "prototypes/desk/package.json": {
+      "sha256": "a1875f97f9d56e1677b8de3efbb3c7cb14e6b06696955bf09394af224ed6b966",
+      "bytes": 1463
+    },
+    "prototypes/map-icons/package-lock.json": {
+      "sha256": "3b544ca2b62d3af5fce4e9bfa681e7f87b2095b49e1e907a24aa5c8d8299df39",
+      "bytes": 1215
+    },
+    "prototypes/map-icons/package.json": {
+      "sha256": "93f088a9cfdf0d4bed98c71426d98ada7166c0838ae2fa64399ff9c35cc1b287",
+      "bytes": 457
+    },
+    "prototypes/map-tripwire/package-lock.json": {
+      "sha256": "77137df775d047bd4f67b1ba3be6a387a930d9edd2e6a141c0578326d35b225c",
+      "bytes": 40292
+    },
+    "prototypes/map-tripwire/package.json": {
+      "sha256": "5a64613899dbedcbf58954f40fead4771d51e08fa1395856fb0e82210f231d57",
+      "bytes": 786
+    }
+  },
+  "worldContentChanges": [
+    {
+      "pack": "testbed",
+      "changedRuleKeys": [
+        "reportConfidence"
+      ]
+    },
+    {
+      "pack": "union-1861",
+      "changedRuleKeys": [
+        "politics",
+        "reportConfidence"
+      ],
+      "politicsDetail": {
+        "path": "rules.politics.blocs[peace_democrats].cite",
+        "beforePunctuation": "U+00E2 U+20AC U+2122",
+        "afterPunctuation": "U+2019",
+        "cause": "pack:generate reads the existing correctly encoded source; no source claim or numerical political field changed"
+      }
+    }
+  ],
+  "saveRootComparison": [
+    {
+      "day": 60,
+      "changedStateFields": [
+        "knowledgeBySeat"
+      ],
+      "sameCommandsThroughSave": true,
+      "beforeStateHash": "3b0c34a8c1111ebfe10530278027b0e5cdf4297ab7a2e0c267f64703a7e2e800",
+      "afterStateHash": "7500c530ef7034a3deec65f17dc8b5ff1ef1e94f2802b0b13c55e1121c09fb31"
+    },
+    {
+      "day": 40,
+      "changedStateFields": [
+        "knowledgeBySeat"
+      ],
+      "sameCommandsThroughSave": true,
+      "beforeStateHash": "59451bb2b23765a489187595c7300162f1fbcdcf00eb25ffe2d495e5dcb9d8c0",
+      "afterStateHash": "32c67bcf8e701ade959fcbcf8c3aa795e364fb27285ba023dc0d3fd4ca391fd9"
+    }
+  ],
+  "status": "S40 partial: checks committed; canon merge resolved and staged but its hook is rejected. Concentration remains an unapproved finding under the explicit unreceived-truth fallback.",
+  "wholeBranchReview": "Deferred to Claude under 0106; no signature or truth exception added.",
+  "rawEvidence": "runs/s40/"
+}

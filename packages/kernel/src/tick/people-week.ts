@@ -133,7 +133,7 @@ export function peopleWeek(ctx: TickContext, start: State): State {
           reportClaims: [],
           reportDay: ctx.day,
           reportHour: null,
-          reportAdvice: { adviceRecommends: initiative.recommends, adviceReasons: answer.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: 1000 })), adviceConfidence: 700 },
+          reportAdvice: { adviceRecommends: initiative.recommends, adviceReasons: answer.statedReasons.map((r) => ({ reasonKind: r.kind, reasonWeight: 1000 })), adviceConfidence: ctx.world.map.world.rules.reportConfidence.initiativeAdvice },
           reportAnswers: null,
         },
         truth: { truthTerms: answer.contributions.map((k) => term('relay_term', k.amount, { person: p, rule: k.term })), truthTrimmed: [] },

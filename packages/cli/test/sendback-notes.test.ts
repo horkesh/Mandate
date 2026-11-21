@@ -2,6 +2,7 @@ import { expect, it } from 'vitest';
 import { ConsoleGame } from '../src/console/game.ts';
 import { ConsoleSession } from '../src/console/session.ts';
 import { parseLine } from '../src/desk/commands.ts';
+import { deskStrings } from '../src/pack-text.ts';
 import { canonicalHash, ids, phase0 } from '@mandate/kernel';
 
 function ready() {
@@ -16,7 +17,7 @@ function ready() {
 it('the testbed console carries several typed notes through the command log and returns their account', () => {
   const { game, session } = ready();
   const line = 'sendback n_army_west wait:main:7 via:main:w_valley';
-  const parsed = parseLine(line, game.morning());
+  const parsed = parseLine(line, game.morning(), deskStrings(game.strings, game.locale));
   expect(parsed.kind).toBe('command');
   if (parsed.kind !== 'command' || parsed.command.cmd !== 'review') throw Error('review expected');
   expect(parsed.command.notes).toHaveLength(2);
@@ -39,10 +40,11 @@ it('the testbed console carries several typed notes through the command log and 
 
 it('rejects malformed and stray notes rather than silently sending a bare sendback', () => {
   const { game } = ready();
+  const t = deskStrings(game.strings, game.locale);
   for (const extra of ['wait:main:no', 'via:main:', 'avoid:main:', 'focus:main:salient_tip:extra', 'unknown:main:salient_tip', 'note=lost']) {
-    expect(parseLine(`sendback n_army_west ${extra}`, game.morning()).kind, extra).toBe('error');
+    expect(parseLine(`sendback n_army_west ${extra}`, game.morning(), t).kind, extra).toBe('error');
   }
-  expect(parseLine('approve n_army_west wait:main:7', game.morning()).kind).toBe('error');
+  expect(parseLine('approve n_army_west wait:main:7', game.morning(), t).kind).toBe('error');
 });
 
 /** Acceptance cases on the actual fictional pack. Regard is changed through its owner, without changing pack data. */
