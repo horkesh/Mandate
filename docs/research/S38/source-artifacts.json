@@ -1,0 +1,704 @@
+[
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\add_details.py",
+    "bytes": 29627,
+    "sha256": "26beb7b24d09aaee379d46de842d5684ad1a58ea38791bf1331e2614b3cc4652",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\army-register-discovery.json",
+    "bytes": 20624,
+    "sha256": "dc7cf827615dab4474164833e2b9c02547a3e57c770340177ee6bd5fa600fe78",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\ARMY1860-discovery.json",
+    "bytes": 68641,
+    "sha256": "55b939efe2daa74f138fc652897e8f9b8f76dfb3f6cda265f1455144330054fb",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\ARMY1860-PAY.pages.json",
+    "bytes": 153320,
+    "sha256": "e0cd2d062f2e3ce009d5d695700880c956ffaa24df6df8d4d38391f9ae7cde94",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\ARMY1860-PAY.pdf",
+    "bytes": 24487165,
+    "sha256": "f444403ed8473247341c8c5a297529ebf64c10802ec45a8ca0b3d309405f883a",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\ARMY1860-REGISTER.pages.json",
+    "bytes": 791,
+    "sha256": "bc642603761c13a3dcbc9b1aae93f1b24dfd47fcf238aeed2574f8d5f5510aa9",
+    "role": "excluded or unsuccessful acquisition; not authority for S38 service facts"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\ARMY1860-REGISTER.pdf",
+    "bytes": 363264,
+    "sha256": "50f54d6a47f437dabaec3e1bc8fa4a78d5b6f6b4b1a5a5019b90674d1f240aaa",
+    "role": "excluded or unsuccessful acquisition; not authority for S38 service facts"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\ARMY1860-scan-attempt.txt",
+    "bytes": 13,
+    "sha256": "073fc00f1bb556e79c5ba3e8f245a9dcbc1b23c28234d174b576167adcfb55cf",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\ARMY1861-SEP.pages.json",
+    "bytes": 275771,
+    "sha256": "3d18ec30b95ab9605d091940735ebb88e8e3c806145af570dfb7b61edb3d3b64",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalreg00gradgoog.metadata.json",
+    "bytes": 77315,
+    "sha256": "74fdb2555fe86f751f91300214376e8fcebf92976fa44acb8f07c1bad8f3beb7",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalreg00gradgoog_djvu.txt",
+    "bytes": 2878025,
+    "sha256": "615828238382c2658ddf6ffac53754377eb70f710b21d8e9b809e9e5b0e49ead",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalreg00gradgoog_hocr_pageindex.json.gz",
+    "bytes": 9895,
+    "sha256": "3dcca32053523b62f3b42a1cb5ee74c3d0ad0338b630d629f27256d505847273",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalreg00gradgoog_hocr_searchtext.txt.gz",
+    "bytes": 832193,
+    "sha256": "6daab8572a3c8f298b10b1b89c39934c99ecd08f38794386ade383140a79c632",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalreg00gradgoog_page_numbers.json",
+    "bytes": 156013,
+    "sha256": "df3b2b2580742d543a3af3d6bf8c031c29c9430bbfb9fe2c1b24569d10bb7f97",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalreg00gradgoog_scandata.xml",
+    "bytes": 261868,
+    "sha256": "cdfcf910bd636508657cdb32ad89a4c299b2242e806d78e96fc320867f8ee210",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi0000unse.metadata.json",
+    "bytes": 226200,
+    "sha256": "0b91ea903cb3ece4613dfbd26ccbcab7abe679befd59b8d607e89de586c63439",
+    "role": "excluded or unsuccessful acquisition; not authority for S38 service facts"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi0000unse_djvu.txt",
+    "bytes": 7694145,
+    "sha256": "cecea575b3e1b79d5abb1441064fabce3b3b6c2fc253ab28c46bc44fe2791f30",
+    "role": "excluded or unsuccessful acquisition; not authority for S38 service facts"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi0000unse_hocr_searchtext.txt.gz",
+    "bytes": 1612588,
+    "sha256": "e0bae87965d79294b185cf9771b8dee5e48e1497ad1837991b06bc7b5f5df650",
+    "role": "excluded or unsuccessful acquisition; not authority for S38 service facts"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi0000unse_page_numbers.json",
+    "bytes": 398344,
+    "sha256": "3b2c2038046118456cffb05398e8cff0f3b75a4af2d6aea8179663bfe43790d6",
+    "role": "excluded or unsuccessful acquisition; not authority for S38 service facts"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi0000unse_scandata.xml",
+    "bytes": 1269083,
+    "sha256": "bc14244137f1a58261afeec56caedd04fa53f9e0ac58190c68bfaa0ceea8e44a",
+    "role": "excluded or unsuccessful acquisition; not authority for S38 service facts"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi01bost.metadata.json",
+    "bytes": 2,
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi02bost.metadata.json",
+    "bytes": 92297,
+    "sha256": "5ac5efab04d9b870cbdf9c98141eb21d3ef2ebc000813ec21addc06459e1f3f7",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi02bost_djvu.txt",
+    "bytes": 3491767,
+    "sha256": "893eb7d8c249dd38d6970b6cbb1fc19d952c0abd1d693f7eedfab04643e2818e",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi02bost_hocr_pageindex.json.gz",
+    "bytes": 11553,
+    "sha256": "6bf2f14a9fd92fa3cb8ecb52fe179819a4f80d97f1805c108a11cffa89c513db",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi02bost_hocr_searchtext.txt.gz",
+    "bytes": 866429,
+    "sha256": "3bd96c9f5ca2dede7ff5d5b5fca645b72ba454f797c53216a7890e9167e7d2f0",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi02bost_page_numbers.json",
+    "bytes": 152657,
+    "sha256": "b54155b9a97dede9293194a4b15335a37fcbf279100f830b11ccdc85a8213c26",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi02bost_scandata.xml",
+    "bytes": 1194261,
+    "sha256": "c9470dd15d75dc4febffeb9412dfb3bd30c50009089f7cff200c5fc469592836",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi03bost.metadata.json",
+    "bytes": 73903,
+    "sha256": "dcdb4c5222e4805666a505f076ad3b2ddbcd5c91d4803be1b0fe2608f4cc0d6e",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi03bost_djvu.txt",
+    "bytes": 2320673,
+    "sha256": "67c1efc62a31301b639c12adc27120877814aa60d210a66b40af0c1800e6fec5",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi03bost_hocr_searchtext.txt.gz",
+    "bytes": 540711,
+    "sha256": "4929dbdf761e6b511e205150d3c0e8ee92a715fe84c5bd3ac6fd88178a5308c3",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi03bost_page_numbers.json",
+    "bytes": 119640,
+    "sha256": "455709263d86e149b488cd05739143d59c095b49d9c7e788cdf5519eb72389da",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\biographicalregi03bost_scandata.xml",
+    "bytes": 936754,
+    "sha256": "f578281039508f5da43e6b47681e1f4657d37d0af6a0897d7fbca1d40a2418e9",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\CALLAHAN-scandata.zip",
+    "bytes": 101563749,
+    "sha256": "6a3142751cac0951b5fadb53f27610b9c48095efba7e0795ce6b59273636907f",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\CALLAHAN.pages.json",
+    "bytes": 3311382,
+    "sha256": "6ac25aa13380328a183b5f053080b39aad93de498129888ceac9e8b9afc8cdcd",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\CALLAHAN_scandata.xml",
+    "bytes": 506869,
+    "sha256": "8e271883364e14559e182cdbaa873a8c6f764566d9583688dace9ae1dd6de571",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\consolidate.py",
+    "bytes": 3160,
+    "sha256": "0ef36dd42e10168d037335fb4fbefb32f8900d3bd082b287f9ec4ffdaaffd393",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\coverage-input.json",
+    "bytes": 97385,
+    "sha256": "8767cfedf1ca2daee291e04d6422277996a19551fffc8da3555670592fd5d1a9",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-entries.json",
+    "bytes": 7481994,
+    "sha256": "da653cedc8b5385b501aac453b7a2c865d70959e81f41cfbb0ed4f5bbc7434a4",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-prewar-1.txt",
+    "bytes": 14720,
+    "sha256": "a62d045a7d361834c2072d0ad13a2c50f16e1c5e82330ae4882bed4f4321f7d1",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-prewar-2.txt",
+    "bytes": 17928,
+    "sha256": "3a218768ef9d1ad32b3cd14a0e15710f65205e2cbb8fd20e74802a012abb7160",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-prewar-3.txt",
+    "bytes": 16286,
+    "sha256": "cfc3b3e77574297b6f3ac204c5472bb466334a9daf6cfefd4e8fae115d27b745",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-prewar-4.txt",
+    "bytes": 10869,
+    "sha256": "9f9febece93092992399efe50b6dda5aac5950ba8af0af250d38bab9adad8519",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-prewar-5.txt",
+    "bytes": 18644,
+    "sha256": "a573533a2384bd4efa264f2a235ee69edf128c9660aee3c2207a5f7d2ce670bc",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-prewar-6.txt",
+    "bytes": 19615,
+    "sha256": "f2948c0b59d7d239f816a09f1bfe91dc1cdab2fefc07d94f6ed855c198b40517",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-prewar-7.txt",
+    "bytes": 22206,
+    "sha256": "d9c2306baee92281ddadda3ef3a9522ea3ae64c978047fbc1e92c589ca5ca2a0",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-prewar-8.txt",
+    "bytes": 20772,
+    "sha256": "57a2e09bfdaf5736e57f744d6754a6a789a3a5b5ddab3151ad59aacb35e2e3ef",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-prewar-9.txt",
+    "bytes": 10972,
+    "sha256": "f06a2357d8c0dedbb0fe960e8083652e2067041b88ffed2df5bd6da732c1aafd",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-reading-1.txt",
+    "bytes": 36004,
+    "sha256": "01f24ce21acb9f446a60b6ef73babdbad20089b6c1c52eb35f098b1cf6c10f67",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-reading-2.txt",
+    "bytes": 38137,
+    "sha256": "014853589b9f5decd7d4541d9edda5c08b79403f14b8403ed9ec8399961fb794",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-reading-3.txt",
+    "bytes": 41152,
+    "sha256": "d49254e48716842a27d067412a3205522cdfad182aafdce67bf7f127f705e924",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-reading-4.txt",
+    "bytes": 32367,
+    "sha256": "5c6252a7221582b7b7af1c1d3c1d522d8c0251bcce8c471b7ff04aa9671f612d",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-reading-5.txt",
+    "bytes": 40210,
+    "sha256": "5c5bd38734e47c802c959a9b53cc02f8bd9bf94b6964c993f6ab3581f805aba6",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-reading-6.txt",
+    "bytes": 42117,
+    "sha256": "aa2f9fbca7756885c0d4c7308e33a0df5d5be167966a708b29242eea9f322321",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-reading-7.txt",
+    "bytes": 46995,
+    "sha256": "17ff1fd458988545a8be3693d3aa2bcb42c33731c68a5874391a79a212ca872c",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-reading-8.txt",
+    "bytes": 7872,
+    "sha256": "e94600cd0bf24811701889a07db4783fe376b98bed708fdfc80021ee57fa18c0",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum-selected.json",
+    "bytes": 571620,
+    "sha256": "0adba96dd415270e1907b603ed25788a2526f22aca93b8f07ba5381f08b658ea",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\cullum.py",
+    "bytes": 3169,
+    "sha256": "c29b5a80cb0643b700fd4eecf0f47dcd1b62e0f7af0a1002b5e86f14c40ba636",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\CULLUM1868-I-discovery.json",
+    "bytes": 60621,
+    "sha256": "4c323d86a112d87cf79959f2c2bf75a5e63dbbee201e16c76445e06a769552db",
+    "role": "excluded or unsuccessful acquisition; not authority for S38 service facts"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\CULLUM1868-I-scan-attempt.txt",
+    "bytes": 13,
+    "sha256": "073fc00f1bb556e79c5ba3e8f245a9dcbc1b23c28234d174b576167adcfb55cf",
+    "role": "excluded or unsuccessful acquisition; not authority for S38 service facts"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\CULLUM1891-I.pages.json",
+    "bytes": 2898665,
+    "sha256": "21581a33e8a3569a026dcdd544ab6d18c286e5f66785e093b4525e5561d4bb62",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\CULLUM1891-II.pages.json",
+    "bytes": 3566314,
+    "sha256": "cfcd7d5d9640be18c4b1451f9b04cf1d0cb20e6532d634ef1d00cda625f97d8e",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\delivery-working.json",
+    "bytes": 1836193,
+    "sha256": "d7f2a490c33208f41bfb755f4e099dc47fdf8d54784e91ec885d4a734d9dc391",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\final-working.json",
+    "bytes": 1806852,
+    "sha256": "bd6e6abeb8092b44ad2c7489baca25f5598115d103ee866491af131a23f982ac",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\finish_data.py",
+    "bytes": 18661,
+    "sha256": "58bdf737c03e4e403197bb698a77f4fd436071d6c2cd07660988334d0cd504ba",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-candidates.json",
+    "bytes": 366871,
+    "sha256": "47c70a16556e1cd0bbec0f20dab5e8ac5150f4f7b285f2ed9bb9f1c526086f41",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-entries.json",
+    "bytes": 6672370,
+    "sha256": "0096c462aa3195ecc1a410b8bea42c9d0853d0d8e74046abd9efd4aff5725b5a",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\HEITMAN-G.meta.json",
+    "bytes": 116655,
+    "sha256": "88fcd0103f5710001f90ff501cb1ccefaa178c0f60440f79bbbcb8133ddd4ae7",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\HEITMAN-G_djvu.txt",
+    "bytes": 2442652,
+    "sha256": "09e0bacadebfbfebd3c32ab1c2f49efe96e6b37da7efbbbb774f7c011a8138a4",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\HEITMAN-G_scandata.xml",
+    "bytes": 212538,
+    "sha256": "42f4d8237432aa768cad099c4e55e1fa1b9c7c88d47fbdb75ce2d86b755d374d",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-reading-1.txt",
+    "bytes": 10268,
+    "sha256": "1032173fb19ce4d1bde2dd2d7a7fe34aa1b0f6cda2a6bcac2805c51837ba565f",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-reading-2.txt",
+    "bytes": 9355,
+    "sha256": "034d93e41858adcfe7c6c4de94eee500319e31d3052b4509ff20fe57435d554f",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-reading-3.txt",
+    "bytes": 6733,
+    "sha256": "2aab34c66b8468439a10d82df327c4407149dc0bb3da7f2aabb78a156c457ddd",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-reading-4.txt",
+    "bytes": 8946,
+    "sha256": "8dbfa46c88685c5b37479e6d17c0b34125ceb99be3bb851c94c416e0f1101f67",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-reading-5.txt",
+    "bytes": 10605,
+    "sha256": "554a76d3a1d5129dd30a9a4017b7a801fbc50447eb982fe12fa5fd4972ef2884",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-reading-6.txt",
+    "bytes": 11340,
+    "sha256": "97b687f16c30a2a39256a9506665ff0a9c6a3205b842d5733396fabe3dcc3c16",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-reading-7.txt",
+    "bytes": 13109,
+    "sha256": "33f56f090eeef60d53dd12c2ecbd1b13b5de6635715b893d0cf3f3f64b3cbe18",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-reading-8.txt",
+    "bytes": 10528,
+    "sha256": "0f7ca4ab47808cab97d105ea35ca7de7912bd218ed4c8dddcbb2dd4521ec6a9d",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\heitman-reading-9.txt",
+    "bytes": 11581,
+    "sha256": "68973e159cf148a2e90b4d62e48d63618c337cf5062ee2de463da1245f2b56cb",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\HEITMAN.meta.json",
+    "bytes": 192321,
+    "sha256": "eca784e0e93c95385f9a44b4f28353f7bbed6c03d32ed416e14c030788f6a13e",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\HEITMAN.pages.json",
+    "bytes": 5681346,
+    "sha256": "208b2958ef2506b831f22baf76fe1a9439eb49d7f551be63b3325ba44b900d91",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\HEITMAN_djvu.txt",
+    "bytes": 5747666,
+    "sha256": "400865fc099317085fe986c20df9e8cf99f0bd031957d57d8c6010b99f9f5ec4",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\HEITMAN_hocr_pageindex.json.gz",
+    "bytes": 14134,
+    "sha256": "cfaf046856beb7598824cc06c4dc4e671c9027274c2989c07c0ef81fa6bc9023",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\HEITMAN_hocr_searchtext.txt.gz",
+    "bytes": 1451088,
+    "sha256": "431244cecee440b942f4e8d71924b1e5386015f35eecd54fdd13c38d14dc1712",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\HEITMAN_page_numbers.json",
+    "bytes": 182485,
+    "sha256": "f0abdf22a55bc7b33a8bb660ee0f45b05fd648c800dea5a258715c43319299c1",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\listofofficersof00unitrich.metadata.json",
+    "bytes": 81570,
+    "sha256": "f348f8ef0b709dc84e1982296293aff8427d290f4d370292bf02d6e133b9f12d",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\listofofficersof00unitrich_hocr_pageindex.json.gz",
+    "bytes": 9711,
+    "sha256": "21600d56dd05f40c66dc2c9f99fc008a006b334727656eab60813539ce442dd9",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\listofofficersof00unitrich_hocr_searchtext.txt.gz",
+    "bytes": 654893,
+    "sha256": "71b184c27b970a1076746e0608ffb472eb18a40a9419789dd70221b1bf4ffb42",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\listofofficersof00unitrich_page_numbers.json",
+    "bytes": 130202,
+    "sha256": "8c5659a580e0c4b4430073dca8122cd180ae4f815eccaae62c1904aa534eb0a0",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\make_service.py",
+    "bytes": 18020,
+    "sha256": "d4cc7460f42298618e4647587a8fd9e62a0b6b24b229d5ca63ac4392cc3a2bd0",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\naval-discovery.json",
+    "bytes": 2147,
+    "sha256": "2b31f12939577b9342ef4def08d7ad8ca3fadfaad4e8a80d19893b518945e22c",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\naval-entries.json",
+    "bytes": 4669238,
+    "sha256": "39d53067127c2698f5eee4de44893cf006136987c18877bf5f52e51afcf5b2f1",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\naval-reading-1.txt",
+    "bytes": 5427,
+    "sha256": "089c6817c6adcb96a6231bf0f048e4da0623b70b9811b3345ac080ed8be68862",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\naval-reading-2.txt",
+    "bytes": 3067,
+    "sha256": "1f4efea04dd43ca99e11c479c1edd7ff33881b33e27d7f044c2ee41044daa4c2",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\naval-selected.json",
+    "bytes": 14427,
+    "sha256": "4ca53eadd0dab296bb6602c1a16f25bccb303904a8619329e375a67277232d74",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\naval.py",
+    "bytes": 2817,
+    "sha256": "821c3a0b89c6d00856211f60c488f3848cbf05a4027e137295abe855a79f9406",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\officialarmyregi1860unit.metadata.json",
+    "bytes": 2,
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\officialarmyregi1861unit.metadata.json",
+    "bytes": 19436,
+    "sha256": "b1d1a5c688c5455f4ec9168790617147a46c07a9e013016fce056f6eaafa6c02",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\officialarmyregi1861unit_djvu.txt",
+    "bytes": 282539,
+    "sha256": "47056c1822f97d2f9078d18464a2548715a1d0336752bf724b2adef4265a8e5b",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\officialarmyregi1861unit_hocr_pageindex.json.gz",
+    "bytes": 1228,
+    "sha256": "99bf7090ac0e89760180d5871da707c12fd555bf44964d01afdbdd4d980f953a",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\officialarmyregi1861unit_hocr_searchtext.txt.gz",
+    "bytes": 82793,
+    "sha256": "9de1053dcbd616bfae694a6e905ba71a1035ab9a954c55a85aed40fcf9836d7f",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\officialarmyregi1861unit_page_numbers.json",
+    "bytes": 16910,
+    "sha256": "e59fbd9e854d9e9156ac10f00a525559de78b9613034bbe0f497994c897c3551",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\officialarmyregi1861unit_scandata.xml",
+    "bytes": 55405,
+    "sha256": "bd2c920ed9f2d7a932aaff0541a7022a720006c470f821173042dc184132e121",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\OR-I-10-1.pages.json",
+    "bytes": 3753427,
+    "sha256": "93ecbf4eb2edf0332645192a520e4c097d589f2c2411835a59a94ad15249dd62",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\OR-I-19-1.pages.json",
+    "bytes": 4545787,
+    "sha256": "0950f27bf617f4c73ac0eb3c11f4479b2763113f9d5f53f8d16c007e4b46a19c",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\prepare.py",
+    "bytes": 5024,
+    "sha256": "4de17cd6358dad594f4e4dd9d9296c909fec0e83667cdb5cd92333ace0924fa8",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\retain.py",
+    "bytes": 4423,
+    "sha256": "a017291ec8eee0351966fe32093464a82a6096b9db3c9b61cec687484e15ba80",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\select.py",
+    "bytes": 2424,
+    "sha256": "02f275c69082b5bd00dfca3485175258353bac295d4cafd892084254c6210f49",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\selected-heitman.json",
+    "bytes": 174754,
+    "sha256": "73dec2e31b0a4cf9dc767af2877a2390a811a1769d4095664701b12efb96ffbf",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\service-working.json",
+    "bytes": 1724408,
+    "sha256": "314d5e7698e114e10112d856930417bb6d3705449b71e8e5649927390b807a83",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\wright-reading.txt",
+    "bytes": 41640,
+    "sha256": "36e82ac9eb81a90a1297e6e5435e593b48425bd1a96a685520778b2413608f33",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\WRIGHT.meta.json",
+    "bytes": 44617,
+    "sha256": "502091e7ffad262c9065f5b9a7e01b3c5a359da6e23de515a1e65a9ffee0eb7b",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\WRIGHT.pages.json",
+    "bytes": 217590,
+    "sha256": "1d2b5d1039c2e079ae50ef2a4f609b26e3651683d3b169fdfb0f963e02bf18ee",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\WRIGHT_djvu.txt",
+    "bytes": 209525,
+    "sha256": "3fb62e63a312b7496909fe2dc20b1f2800776d90969af69b23a83adde3f8c3bb",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\WRIGHT_hocr_pageindex.json.gz",
+    "bytes": 2347,
+    "sha256": "55e62e2a0144c598e9a07fac60790b4edd25213c9e1ea1b50f1408c7f32ed575",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\WRIGHT_hocr_searchtext.txt.gz",
+    "bytes": 44454,
+    "sha256": "5c00a3fc12b6bf2c798384dbcb3757c3d07903632af51f837e67befb5973bf02",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\WRIGHT_page_numbers.json",
+    "bytes": 34014,
+    "sha256": "6b8b8bd5a3691721b136684b4a7a619457bbd594de3aeec0fa39af51ea5da3c4",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\WRIGHT_scandata.xml",
+    "bytes": 134432,
+    "sha256": "9fb31663737416f69a48ca40428b7933157451106ec481cc695a36d0fc27cfb0",
+    "role": "finding aid or retained derivation; historical authority only through the cited page scans"
+  }
+]

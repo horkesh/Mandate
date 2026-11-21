@@ -1,0 +1,33 @@
+{
+  "coverage": 392,
+  "pool": 239,
+  "cast_superset": 153,
+  "experience": {
+    "HOLD": 167,
+    "CHANGE": 225
+  },
+  "bands": {
+    "below": 33,
+    "average": 35,
+    "above": 65,
+    "high": 92
+  },
+  "by_cohort": {
+    "CAST_MILITARY_BUREAU_SUPERSET": {
+      "CHANGE": 125,
+      "HOLD": 28
+    },
+    "S22_POOL": {
+      "HOLD": 139,
+      "CHANGE": 100
+    }
+  },
+  "commissioned_intervals": 253,
+  "militia_intervals": 22,
+  "staff_intervals": 65,
+  "naval_entries": 44,
+  "later_commands": 252,
+  "later_confederate_events": 103,
+  "post_selection_rows": 136,
+  "field_command_sizes_established": 0
+}

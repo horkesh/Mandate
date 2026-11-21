@@ -1,0 +1,171 @@
+{
+  "branch": "sprint/research-cast",
+  "base": "4d475c2e0b4ac8682262d5fe031493aa211a9459",
+  "checks": [
+    {
+      "command_receipt": "npm-ci",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\npm-ci.log",
+        "bytes": 298,
+        "sha256": "9726cca0cf04e2584680a5c9eaa2330a2a4e34d66ce36797b2f276d016eef5b8"
+      }
+    },
+    {
+      "command_receipt": "typecheck",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\typecheck.log",
+        "bytes": 68,
+        "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+      }
+    },
+    {
+      "command_receipt": "preflight-opening",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\preflight-opening.log",
+        "bytes": 380,
+        "sha256": "d52364d96ac1c67a97ca5299817e3616aca2dbd2e2ad306ed37221ab91bcc54e"
+      }
+    },
+    {
+      "command_receipt": "no-git-check",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\no-git-check.log",
+        "bytes": 1812,
+        "sha256": "d05cbfc923d92d9aaae47b71814651625e35ff06fe2e517ea3942203d6453f55"
+      }
+    },
+    {
+      "command_receipt": "done-check",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\done-check.log",
+        "bytes": 22598,
+        "sha256": "bc7008d7836468309f5256fc045b0a277709eb088e38affd9d84d99261f81638"
+      }
+    },
+    {
+      "command_receipt": "audit-settled",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S38\\audit-settled.log",
+        "bytes": 438,
+        "sha256": "dba4d941232538ee9f276c0794a9d68cf0230caf587a363b79332b7573452a68"
+      }
+    }
+  ],
+  "phase0_passed": 6,
+  "phase0_failed": 0,
+  "phase1a_passed": 2,
+  "phase1a_failed": 4,
+  "phase1a_binding": false,
+  "phase1a_problems": [
+    "! union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 20957 men, below 100000",
+    "! union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1",
+    "! union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 0 planned operations, below 1",
+    "! union-1861 history run, 148 days to 1861-07-31: no operation fought a battle in the history run (2 operations, 0 battles)",
+    "! union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+    "! union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+    "! union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+    "! union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 44, above 9",
+    "! union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+    "! union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+  ],
+  "runtime": [
+    {
+      "pack": "union-1861",
+      "new": "C:\\Pyrrhic\\sprint-research-cast\\runs\\done-check\\20261121-032327-39524-e5b12d",
+      "comparison": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s22-done-check\\20261120-224420-38988-7c3a2e",
+      "non_timing_summary_identical": true,
+      "world_hash": "64ac5215ce5ed3c0a43765cbe7c6fe882f1405b3367a81759c9fc590db37dc4f",
+      "initial_hash": "98577cef45aeda0e0394f67a1c45e2bbfe13adc98a2683b31b28017e170c690d",
+      "final_hash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+      "checkpoint_hashes": [
+        "43a480d364942c4f62dba88463373157945c2d3ee597da15be04a7de81c54ff5",
+        "dd794c239b1b660747ae601ac94d998c83700b6027c27d2c805bfa4c57f434eb",
+        "b1dda4740c2b5a84d17eaec4fa19c832a4e5816e9e9ac46abe7d0c0ae952b8f9",
+        "84b8693e2a56a8508a8a88ac2a0b68b8c9df99e0a4e1a35f69b1ad08d0b1a6a7",
+        "0ac2fcf37cb41bd3e0d1aab5d0d910a735dc1ed25e66d1360b044ed5b05ba75d",
+        "87b395d50fc49583ac278851020fe8c235c5ddcff0c925172169ad6d71ba2a17",
+        "64b663782e1252b8cbc16ac2e12ce521c8a036f83b6b8db283e9f5c47ef3fa70",
+        "6015fb9518d394410f98f7035ac7ec720c73fe9af4c25e01501d57d4e762c7b0",
+        "c9e9413d77b68f18ba11ad1fd49d94cf63a8d0d0099874a4d394b59e9f763fcb",
+        "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006"
+      ],
+      "daily_activity_rows": 148,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "timing": null
+    },
+    {
+      "pack": "testbed",
+      "new": "C:\\Pyrrhic\\sprint-research-cast\\runs\\done-check\\20261121-032401-39524-d51169",
+      "comparison": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s22-done-check\\20261120-224521-38988-a4f886",
+      "non_timing_summary_identical": true,
+      "world_hash": "cf6f3b08b9ed40b5a54120e96a4ad8121a43f9a11857beb3e2558b621320d6e1",
+      "initial_hash": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b",
+      "final_hash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+      "checkpoint_hashes": [
+        "c04b6f0b5a910fd4f7ea8c17f4ed4c0806678977966b742ab0414140102826b5",
+        "9fdb61722da298968eb7ff33597e49cffa90eacc432c3cbf6132f64d79c73a09",
+        "0ab261d05f4b8a28fbbb94c5ac88c832b0c1f01d37976c8649c62fba82221094",
+        "7534ada3f51179dfbe5bec2fabb901b3672a08bfde87c8fc2e6e4476a34369a9",
+        "aedeb7787ec29da727e46899d6d711bec68dcc4684bb7f4881c8d15313230f57",
+        "d19f488099ed46d0b742f18b6804362b187c758090b778ed14931b74b1cf8ec8",
+        "162f2704f6b37d26801b80be6a4b5c852d521dd76857d02454a9486572489daa",
+        "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb"
+      ],
+      "daily_activity_rows": 120,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 40,
+        "finalHash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "timing": null
+    }
+  ],
+  "runtime_artifacts": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-cast\\runs\\done-check\\20261121-032327-39524-e5b12d\\save-day-60.json",
+      "bytes": 1355097,
+      "sha256": "4353dabed072d3cdf1b42528d4feec936350b700d459abc9e424132e81ecf0dd"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-cast\\runs\\done-check\\20261121-032327-39524-e5b12d\\summary.json",
+      "bytes": 109918,
+      "sha256": "8c5bf324c56c9eb9212a623c0ec9084426e1972502c3d61372b82e3c04349aa7"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-cast\\runs\\done-check\\20261121-032401-39524-d51169\\save-day-40.json",
+      "bytes": 320959,
+      "sha256": "a3e363b949df0e7a2284241453a16b175a434c7dc320bea913e1df5f9d417b1c"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-cast\\runs\\done-check\\20261121-032401-39524-d51169\\summary.json",
+      "bytes": 83266,
+      "sha256": "26c397e5c8ee0dbccda40ab8ed90205d980943f1332ab73e0f834fd31840360e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-cast\\runs\\done-check-drafting\\20261121-034634-39524-0d348a\\drafting.json",
+      "bytes": 4791,
+      "sha256": "7d6107406151f0fb5e108c425cdad4ced1efc5fd7c668b330400d3a1c761e7c8"
+    }
+  ],
+  "limits": "One default done check only; 1A results nonbinding at this pinned baseline. No changed bands, runtime, settings, timeout or historical inputs. No Linux CI claim. The retained summaries contain checkpoint hashes and daily activity, not an exported hash for every day."
+}
