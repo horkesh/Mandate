@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { gateContentHash, ManifestSchema, ProvenanceFileSchema, SituationSchema, StringTableSchema, stringsFile, generatedStringsFile, type LocaleStrings, type ProvenanceFile } from '@mandate/pack-format';
+import { gateContentHash, ManifestSchema, PROVENANCE_FILE, ProvenanceFileSchema, SituationSchema, StringTableSchema, stringsFile, generatedStringsFile, type LocaleStrings, type ProvenanceFile } from '@mandate/pack-format';
 import { jsonAt, type JsonItem } from './common.ts';
 
 export interface PackContent { strings: LocaleStrings; provenance: ProvenanceFile }
@@ -8,7 +8,7 @@ export interface PackContent { strings: LocaleStrings; provenance: ProvenanceFil
 export function packContent(root: string, pack: string): PackContent {
   const directory = `packs/${pack}`;
   const manifest = ManifestSchema.parse(jsonAt(root, `${directory}/pack.json`));
-  const provenance = ProvenanceFileSchema.parse(jsonAt(root, `${directory}/provenance.json`));
+  const provenance = ProvenanceFileSchema.parse(jsonAt(root, `${directory}/${PROVENANCE_FILE}`));
   const strings = new Map<string, ReadonlyMap<string, string>>();
   for (const locale of manifest.locales) {
     const table = new Map<string, string>();

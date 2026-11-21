@@ -1,6 +1,6 @@
 # Lane 1.14: the 1A done check and calibration
 
-## S34 integration in progress (2026-11-21)
+## S34 integrated candidate (2026-11-21): 1A remains unmet
 
 One candidate on `sprint/1a`, starting at `78eb7db`. Pinned remote inputs,
 in order: perf `3155d90`, people-data `637e1d4`, checks `39c279c`, playtest
@@ -8,15 +8,128 @@ in order: perf `3155d90`, people-data `637e1d4`, checks `39c279c`, playtest
 their later commits remain to merge. No push, other-worktree write or signature.
 Whole-branch and gate reviews remain deferred under 0106.
 
-Validation question: preserve the combined code and explain precisely which
-Phase 0 and 1A criteria hold. Typecheck and focused conflict/startup checks
-precede each real merge hook; use two Vitest workers and unchanged gates.
-Then run all four S18 checks, the full check, and one default eight-seed
-done check with drafting and `--milestone 1a`. Expected cost: minutes per
-hook and 25–45 minutes for the done check. Stop unexpected expensive retries,
-inspect every failure category, prove any correction cheaply and reuse
-unaffected evidence. No calibration campaign or acceptance-band change.
-Inventories and runtime diagnostics precede final-result documentation.
+For the lead: three items. One integrated candidate is ready for the deferred
+review, not for milestone clearance. Each merge has two parents and passed
+the actual hook, with the Codex footer. Nothing was pushed or signed.
+
+| Input | Merge commit | Hook tests passed |
+|---|---|---:|
+| perf `3155d90` | `cc41c52` | 1,669 |
+| people-data `637e1d4` | `2a95ed4` | 1,681 |
+| checks `39c279c` | `d617d6e` | 1,742 |
+| playtest `4bf2b8b` | `954dce6` | 1,744, plus nine expected failures |
+| desk `7db8c80` | `e13357a` | 1,761, plus nine expected failures |
+
+Every hook also runs typecheck, rules once installed, boundary, licences and
+the 106-record decision index; three inherited timing skips remain. The
+closing hook's exact result is in `runs/s34/commit-06-result.json` and the
+single final CODEX status. S25 was not yet published beyond `39c279c` at the
+closing remote read. Desk has since advanced to `9c820e4`; those later S33
+commits are deliberately not merged into this pinned candidate.
+
+### Default verification
+
+Exactly one default `npm run run:done-check -- --milestone 1a --label
+s34-integrated`, eight seeds, unchanged 400-day fork cap and drafting, exits
+**1** in **1,235.99 seconds**. **Phase 0 6/6 locally; 1A 4/6.** All seven
+problem statements are retained in `runs/s34/final-verdict.json` and the raw
+log. No parameter search, second default campaign or criterion waiver.
+
+| 1A criterion | Result |
+|---|---|
+| Checkpoints | Pass as scored; Union 92,089 known men and four unknown blocks. Its existing 95,000 floor is explicitly nonbinding, and is not established by this pass. Confederate 124,167 known men, 17 unknown blocks. |
+| Fought operation | Pass: the Charleston bombardment fights at Sumter; the Northeastern Virginia operation fights at Manassas. |
+| Pushback | Fail: five bands below or above their fixed bounds, listed below. |
+| Unknown strength | Pass for observed combat: each Union slot reads three battles/four battle-days; testbed reads four/four. This does not close the fourth Charleston source HOLD. |
+| Stand-ins | Pass as scanned; remaining labelled 1B work retains its owners. |
+| Lever sweep | Fail: grievance is unmeasured, and the strict border-governor levy chain is unexercised in all 24 moves. Return is best 0/8; 744 base-run calls do not establish D6 clearance. |
+
+| Timed slot | Median ms | p95 ms | Maximum ms |
+|---|---:|---:|---:|
+| Union war by decision | 26.48 | 47.42 | 60.44 |
+| Testbed | 3.46 | 5.07 | 8.44 |
+| Union history | 29.79 | 48.92 | 65.79 |
+
+These local Windows samples pass unchanged 40/160 ms limits. Linux CI and
+the unloaded 20 ms aim remain unestablished; comparisons with other loaded
+host samples are not causal saving estimates. Drafting is sound: capped-day
+worst 33.7 ms; all 23 drafts together median/p95/worst 46.0/49.9/55.4 ms.
+
+### Pushback and the proposed filter ruling
+
+| Counter | Observed | Fixed band | Result |
+|---|---:|---:|---|
+| Relay objections | 2 | 0–6 | Pass |
+| Relay holds | 1 | 2–6 | Fail |
+| Filter holds | 0 | 1–9 | Fail |
+| Trims | 0 | 1–4 | Fail |
+| Reservations | 16 | 1–9 | Fail |
+| Slow walks | 18 | 2–9 | Fail |
+| Plan objections | 38 | 10–42 | Pass |
+
+`seats/posts.ts:filterPostOf` requires a held filter-role post. Both filter
+and trim counters have their sole writer in `tick/deliver.ts:filterReport`,
+so their zero counts are structural in the vacant-role start. R92's sourced
+role distinction remains: caller/mail screening is not a sourced incoming
+wire filter. Also, the scorer's "filter holds" field counts
+`reports.filtered`, which fires on every filter visit regardless of
+`decision.holdDays`; `reports.trimmed` fires only when a claim is cut. The
+lead must clarify that proxy before using a new holder to certify literal
+holds. Relay objections and positive relay delays have separate writers
+in `tick/orders.ts:relayOrder`; one cannot substitute for the other.
+
+Proposed ruling [I]: hold enforcement of the filter-hold floor pending a
+sourced holder and the correct traffic/counting contract. Reject installing
+an unsourced holder, relabelling a caller screen, or tuning compliance to
+this proxy. **No band is changed here; its current failure remains binding
+until the lead changes the criterion.** Relay holds, trims, reservations
+and slow walks remain failed, with their existing owners; no ninth S1
+calibration comparison or additional S34 candidate was attempted.
+
+### Bands and preservation
+
+Relative to S1 at `78eb7db`, only two numerical mechanic bands move:
+
+| Band | Before → after | Cause |
+|---|---|---|
+| Union `seats.initiative` | `around(9)` (4–18) → `around(3)` (1–6) | Import S16's dated holds: Bates and Caleb Smith lose the late conciliation motives and their three cooldown firings each; Seward/Walker remain deferred. |
+| Union `planner.term.time` | Quiet 0–0 → `around(1)` (1–4) | The combined cast changes the judged candidate; dropping the existing time term changes one pick on day 136 [I]. |
+
+The retained preflight reference and fresh checked run have the same final
+hash. Thirty-one liveness rows differ from S1, including magnitude-only
+changes; every before/after row is retained in `final-verdict.json`. No
+additional band moves were needed after the default check. Historical
+checkpoint, pushback, victory and timing limits are unchanged. The 80
+pre-S18 changes and their individual causes are recorded below and in the
+tracked structured ledger.
+
+Inventories, runtime diagnostics and preservation checks preceded these
+final results. All **1,776 tracked files**, including **839 runtime/pack/
+prototype inputs**, have identical before/after measurement hashes. Four
+workspace aliases resolve here. All 268 daily hashes match their required
+repeat/replay variants; both mid-run resumes and saved-log replays pass,
+with zero rejections. Union ends
+`d2e9277f12d7b46dfb8ae48be469f8777f2c6b3f8e4d0f8f32adf091b0d9ee82`;
+testbed retains its earlier final hash. The branch audit proves all five
+pins are ancestors, no delivery is missing and no changed path is unexplained:
+1,647 of 1,699 S1 originals are unchanged, with 129 scoped changed/added paths.
+All 261 existing S16 World people are identical, plus S1's Saunders. Art,
+save fixtures, checkpoint bands and gate files are preserved; all 29 signed
+hashes pass. No build, server, browser or other-lane worktree was used.
+
+Evidence: `runs/s34/final-verdict.json`, `branch-content-audit.json`,
+`world-people-preservation.json`, both inventories, `runtime-diagnostics.json`,
+the five merge receipts and the final hook receipt. A final tooling-only
+correction uses `PROVENANCE_FILE` in two S18 readers that incorrectly used
+lowercase `provenance.json`. A case-sensitive filesystem control fails
+before the correction and passes afterward; nine focused tests, typecheck
+and all four static checks pass. It changes no measured simulation input.
+The closing hook supplies the fresh full engineering gate for that fix.
+
+The original plan estimated minutes per hook and 25–45 minutes for the
+default check, with cheap checks first, unchanged gates, two Vitest workers
+and no expensive retry without diagnosis. The failures/corrections below
+are retained; the only full default campaign took 20.6 minutes.
 
 Performance merged as `cc41c52`: retain both cached candidate derivation and
 dated appointments. Actual hook exits 0: 157 files, 1,669 passed, three skips.
@@ -54,7 +167,7 @@ is 73 tests. No historical checkpoint, pushback or tick-budget limit changed.
 
 The four S18 checks retain ten B2 findings and the three unresolved menu
 roots. A fourth root, `doctrineView`, reaches current post/department data
-through S1's dated appointment derivation; its player-visible classification
+through S1's dated concentration selection; its player-visible classification
 needs the lead, so it is an exact finding, not a new permitted derivation.
 Four existing kernel-only derivations have refreshed closure hashes with
 their original citations and scope. The signed inventory remains 29 paths;
@@ -611,3 +724,27 @@ Runtime checks, the complete failure list and five output artifacts were invento
 ## Findings outside my scope
 
 S1's calibration budget is spent and1A remains unmet. The lead must obtain the deferred independent/gate review, reconcile the unavailable review IDs and rule on the proposed partial calibration; no extra comparison is authorized here. S2 owns the current integrated tick budget with hashes preserved. The fourth Charleston strength, Patterson discharge lifecycle, correct wire-filter traffic/holder source and strict post-policy border-governor levy remain explicit bounded follow-ups.1 Bowns the missing grievance consequence channel and individual remuster consent/service work; transfers/remusters are not substitutes for the strict levy chain. The late-read Iowa July 9 cavalry order (OR III-1 p.324) concerns an already accepted regiment; without its prior identity/terms it is not entered as another levy. Earlier dated stop reports below their headings are retained as history and are superseded by this S1 delivery.
+
+## Findings outside my scope (S34)
+
+- Lead/reviewers: whole-branch, canon/history/realism/determinism and gate
+  review remain deferred under 0106. Nothing is signed or pushed. Rule on
+  the explicit inherited-band baseline, four unresolved projection roots,
+  named-merge fingerprint migration and proposed filter-floor hold.
+- Integrator: S25's later commits remain to merge when published. S33's
+  `70210da`, `68bcf90` and `9c820e4` are now on the remote but were not in
+  the requested starting snapshot; all three remain to merge. S32's packet
+  will need the lead's eventual push of this final local candidate.
+- Existing 1A owners: all five failed pushback bands and both D6 evidence
+  gaps remain open. The filter's traffic/holder source and counting contract
+  need a ruling; caller screening is not a substitute. The fourth Charleston
+  strength, Patterson's discharge lifecycle and strict new border levy
+  remain with their source/model owners. 1B retains the missing grievance
+  consequence channel; return best 0/8 is not clearance.
+- View/CI owners: the inherited same-day post-identity cache finding is
+  unchanged. Local timing passes; Linux CI and the unloaded aim are still
+  unestablished. Eight optional desk geography checks lack their ignored
+  map inputs here; no shipping-package or human-playthrough acceptance is
+  claimed. The unchanged desk lockfile's npm install reports one low and
+  one high audit finding (`runs/s34/npm-ci-desk.log`); dependency changes
+  were outside this integration and no automatic audit fix was run.

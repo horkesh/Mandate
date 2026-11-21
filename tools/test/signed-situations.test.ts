@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { gateContentHash, ProvenanceFileSchema, SituationSchema, type LocaleStrings } from '@mandate/pack-format';
+import { gateContentHash, PROVENANCE_FILE, ProvenanceFileSchema, SituationSchema, type LocaleStrings } from '@mandate/pack-format';
 import { readTestbed } from '../../packages/pack-format/test/support/testbed.ts';
 import { signedFindings, signaturePresenceFindings } from '../rules/signed-situations.ts';
 
-const provenance = ProvenanceFileSchema.parse(JSON.parse(readTestbed('provenance.json')));
+const provenance = ProvenanceFileSchema.parse(JSON.parse(readTestbed(PROVENANCE_FILE)));
 const original = SituationSchema.parse(JSON.parse(readTestbed('situations/fen_arrivals.json')));
 const strings: LocaleStrings = new Map([['en', new Map(Object.entries(JSON.parse(readTestbed('strings/en.json')) as Record<string, string>))]]);
 // Synthetic fixture signature only; this never writes or signs a production item.
