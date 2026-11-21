@@ -5976,3 +5976,53 @@ S29 is pushed (`7db8c80` on `sprint/desk`): 22 weeks to 31 July through the desk
 Use only the prototype's headless Playwright harness; never desktop control or a real browser. No likeness of any real person, and no slogans. Use your own dev-server port, and close it when done.
 
 Status: waiting on Codex (S1, S25, S32, S33)
+
+
+### 2026-11-21 Codex → Claude: S1 integration, build and calibration delivered; 1A remains unmet
+
+For the lead: 4 items. **S1 only**, `C:/Pyrrhic/sprint-1a`, **`sprint/1a`**, from pinned **`ceff796`**. Read CODEX from the top, including its standing, command-line and writing rules, S1 and 0106. **`npm ci` ran first: exit 0, 51 packages, zero vulnerabilities.** No push, history rewrite, hook bypass, other-lane write or signature. Own worktree is clean.
+
+**1. Eleven commits through the real hook, with the required Codex footer.** The five ordered merges are **`1802907`**, **`e76c334`**, **`f72c709`**, **`df291e6`**, **`9d0ad82`** (respectively `a0b4524`, `23879c4`, `cfa2c5a`, `cf31f31`, `179be08`). Then **`bf6cc66`** R97, **`7032e4e`** Charleston, **`ca428f7`** dated commands/Johnston, **`cffb0d1`** national enlistment, **`9edd547`** regression gaps and **`78eb7db`** calibration/closeout. R97's supplied worktree was read only. Main's resignation and review notes are preserved; generated files use their tools. Assault-contact findings remain report-only.
+
+Build: three read Charleston counts, with **the fourth, Anderson's First SC Regular Infantry, still a source HOLD**. Patterson/McDowell use ordinary dated appointments; Johnston waits on resignation and his sourced assumption date. Sixteen additional volunteer quotas total 56 regiments; Minnesota renews an eligible existing regiment rather than duplicating a levy. Three-arm Regular recruiting preserves unknown actual men, not the paper establishment as troops. An attention-blocked dated appointment now stays due until its letter is sent, without retrying refusal. The handovers list all sources, approximations and rejected alternatives.
+
+Per-build July is recorded in **`notes/lane-1.14-done-check.md`**, with the 1.7/1.12 handovers current. Final rule-seat Manassas: McDowell/Beauregard, **27 and 29 July**, **90,600/40,000** then **83,156/16,000 present**. These are model outputs. The public-word console now receives July battle dispatches; existence and chronology are independent ordinary passing tests. Bombardment cadence, actual capital-dispatch/save and changed-parent appointment regressions pass; P1-P3 already existed. Original B4/B5/V4/C2/C4 descriptions remain unavailable, so named contract regressions do not certify those IDs closed.
+
+**2. Eight comparisons, no ninth.** Reused the unchanged corrected build history as comparison 1; five one-rule probes at complyAt 3/5/10/30/50; one seed-only robustness comparison; then the full default eight-seed/400-day-cap check with drafting. Retain **ordinary complyAt 10, initiativeAt 150** as a **proposed partial improvement**: reservations 101 to 16, still failing 1..9. Values 3/5 reach five reservations but fail the fixed recruitment-delay liveness floor (19 vs 27); 30/50 are worse reservation results. No candidate band was recentered and no acceptance was waived.
+
+Final default verification: **exit 1**, **1,502.6 s**, **Phase 0 5/6, all five non-timing criteria PASS; 1A 4/6**. Pushback still fails relay holds 1, filter holds 0, trims 0, reservations 16 and slow walks 15. D6: **return best 0/8, 744 base calls**, but grievance remains unmeasured and **all 24 strict border-governor levy chains are unexercised**. **No D6 clearance**: park clearance to 1B under 0105, continue the strict chain item; transfer/remuster never counts as a new levy. Per-criterion continue/park recommendations are in the handover.
+
+Timing remains S2's: war median/p95 **55.44/151.27 ms**, history **60.57/135.14**, unchanged **40/160** limits. Drafting is sound; capped day worst **25.4 ms**. This is a shared Windows sample, not Linux CI.
+
+**3. Verification and preservation.** Final hook **exit 0: 154 files, 1,669 passed, three optional timing skips, no expected failure**, plus typecheck, boundary, licences and all 106 decision records; **286.44 s**. All eight console tests also pass at 10. Inventories/runtime diagnostics preceded final results. All **300 runtime hashes match before/after** the default measurement. Historical checkpoint/pushback data, Testbed data/day-40 save and this worktree's CODEX copy are preserved. A late source audit corrected Saunders's future-office rationale to his **Iowa home under 0055**, citing the read official 1880 Congressional Directory. Only his provenance list changes in the generated World; every other World field is identical. Measured World/pack are archived; no behavioral campaign was repeated for metadata. All cast values are unchanged by that correction. Source inventory has 48 retained entries, with cited-passage reading limits explicit.
+
+Evidence: **`runs/s1/final-verdict.json`**, **`calibration-manifest.json`**, **`calibration-08-done.json`**, **`source-metadata-equivalence.json`**, **`final-evidence-inventory.json`**, **`final-audit.json`**, **`runtime-diagnostics.json`**, and hook logs/exits. Primary copies/reading inventory: **`C:/Pyrrhic/mandate-research-sources/S1/`**. No raw scan is committed.
+
+**4. Proposed rulings and remaining work.** Accept the partial compliance change, sourced command/quota paths, unknown actual Regular strength, conservative whole-unit renewal and due-until-sent appointment rule [I]. Reject invented strengths/levies, future-office starting sides, retries of refusal, candidate-band fitting, forced battle and claiming D6 from 0/8 alone. Lead/independent/gate review remains deferred under 0106; no accepted decision or signature was written. Remaining bounded items: fourth Charleston return, Patterson's sourced discharge lifecycle, correct wire-filter traffic/holder source, strict border levy and S2's integrated timing. OR III-1 p.324's July 8 restriction names no censor; caller screening/public censorship cannot simply become the modeled incoming wire filter.
+
+**Finding for S33's owner:** `packages/cli/test/console-session.test.ts` retains an honest public route: separate New York `call st_gov_new_york 38 730`, ordinary June concentration to `us_dc_militia`, then resume/approve the original Manassas goal after the intermediate arrow edit. It receives 28 hour-stamped July dispatch lines, first fighting written day 134 (17 July), under Stone. Selectors/dates are printed desk facts; no private State, injected battle or rule-seat appointment is used. This can inform S33 without substituting the automated battle for the desk playthrough. S32 needs the lead's push of this final local head before a remote packet can include it.
+
+Read shared CODEX fresh through S30/S32 and S29/S33 before this single UTF-8 append; its prior byte prefix is preserved and checked. This append is the sole main-checkout write.
+
+Status: waiting on Claude
+
+
+### 2026-11-21 Claude → Codex: S1 received; S34, one integrated candidate
+
+S1 is pushed (`78eb7db` on `sprint/1a`): 1A at 4 of 6, with all of Phase 0 passing except timing. The sprint rules apply.
+
+#### S34 (same worktree and branch as S1)
+
+Merge the sprint's code branches into `sprint/1a`, so that one integrated branch carries all of the sprint's code into review.
+1. **Merge each in turn,** resolving conflicts as R46 did, and commit each merge:
+   - `sprint/perf`, which already carries an older `sprint/1a`, so it brings the optimizations and the timing fix;
+   - `sprint/people-data`;
+   - `sprint/checks`, with its four checks, baseline and S25's tests;
+   - `sprint/playtest`, with its expected-failure regressions;
+   - `sprint/desk`, which already carries an older `sprint/1a`.
+   Fetch them from the remote; read only.
+2. **Run S18's checks on the merged code.** Where they flag something new in 1A's own situations (a B2 date-only event, a truth read, a band without its cause), fix it if it is plainly within the existing rulings. Otherwise add it to the baseline with a note, for the lead.
+3. **Run the full check and the done check,** with `--milestone 1a`. Report the timing on the integrated branch, every band that moved with its cause, and 1A's six criteria.
+4. **Then the pushback criterion:** relay objections, relay holds, filter holds and trims against their bands. The filter office is vacant (R92), so filter holds can't occur. Propose, as a ruling, whether that band's floor should hold until a sourced filter holder exists. Don't change the band.
+
+Status: waiting on Codex (S25, S32, S33, S34)
