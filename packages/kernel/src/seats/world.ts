@@ -203,7 +203,7 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
     faction: (id: FactionId) => get(factions, 'faction', id),
     roleOf: (kind: string) => roles.get(kind) ?? null,
     courierDays: (from: RegionId, to: RegionId) => {
-      const d = courier.get(`${from}|${to}`);
+      const d = courier.get(from)?.get(to);
       if (d === undefined) throw new RangeError(`no courier path from ${from} to ${to}`);
       return d;
     },
@@ -252,8 +252,8 @@ export function courierEdgeDays(lengthDays: number, courierPermille: number): nu
 }
 
 /** Quickest courier days between every pair of regions (Dijkstra from each over every edge, off-map boxes included). */
-function courierTable(map: WorldIndex, ids: readonly RegionId[], courierPermille: number): Map<string, number> {
-  const out = new Map<string, number>();
+function courierTable(map: WorldIndex, ids: readonly RegionId[], courierPermille: number): Map<RegionId, ReadonlyMap<RegionId, number>> {
+  const out = new Map<RegionId, ReadonlyMap<RegionId, number>>();
   for (const source of ids) {
     const best = new Map<RegionId, number>([[source, 0]]);
     const done = new Set<RegionId>();
@@ -271,7 +271,7 @@ function courierTable(map: WorldIndex, ids: readonly RegionId[], courierPermille
         if (!best.has(to) || days < best.get(to)!) best.set(to, days);
       }
     }
-    for (const [to, d] of best) out.set(`${source}|${to}`, d);
+    out.set(source, best);
   }
   return out;
 }
