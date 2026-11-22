@@ -1,0 +1,630 @@
+{
+  "request": "S72 only",
+  "read_scope": "Selected cited passages, headings, table rows and index entries, plus explicitly bounded searches; not whole books or every word of retained pages. A page retained for context is not a claim of line-by-line reading.",
+  "historical_sources": [
+    {
+      "key": "OR I-II",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+      "bytes": 124529063,
+      "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+      "pages": [
+        {
+          "printed_page": 123,
+          "zero_based_pdf_page": 142,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p123.txt",
+          "sha256": "37e7a31487073891b45331ab8f6bac8c713e5a729f51bed34ab0e3c033595a98",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 125,
+          "zero_based_pdf_page": 144,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p125.txt",
+          "sha256": "959fc9912a5ae0b0b08ec64d6226b84b828c18af314647af7676252d4ba7f0da",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 126,
+          "zero_based_pdf_page": 145,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p126.txt",
+          "sha256": "7ab82f1084954087205039ab6839a09632096be83ede07f90febad2989725f00",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 187,
+          "zero_based_pdf_page": 206,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p187.txt",
+          "sha256": "97bcd9632d69e5c91a523548aebd5289130a2ae74e95d6a5c54d2a2e9c571783",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 309,
+          "zero_based_pdf_page": 328,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p309.txt",
+          "sha256": "58da5805d57c68cec04fb29a412f64457f3e49e8d15b654bf92f5fefaf75ef56",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 354,
+          "zero_based_pdf_page": 373,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p354.txt",
+          "sha256": "1aa77078ef7c2a3c07c063e5373567bbf5d381fda507375aa32fd30f29b9c649",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 355,
+          "zero_based_pdf_page": 374,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p355.txt",
+          "sha256": "cce465768766ba672d25babe2c42a984d75f5d66d21f87e2846916dbd843c0b0",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 371,
+          "zero_based_pdf_page": 390,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p371.txt",
+          "sha256": "63d64a8b23de6bd19b8481f900af35ecaa8aa9b267331ec3b1cef84520fd339d",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 394,
+          "zero_based_pdf_page": 413,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p394.txt",
+          "sha256": "ae6ff053468755853cc62fc40070435691647f132e0852e8dac6ad33286dbc80",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 411,
+          "zero_based_pdf_page": 430,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p411.txt",
+          "sha256": "5b043803350c437eb44e56ac4bd7ad56166b18a4bd96e27093dc2854b91c06c5",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 412,
+          "zero_based_pdf_page": 431,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p412.txt",
+          "sha256": "84d26002f74d78932805be0136b232bec9e28201b5945721a9c910cbe90dbf3e",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 470,
+          "zero_based_pdf_page": 489,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p470.txt",
+          "sha256": "2f6cc4f4bb581073f9c2ac573add5353b9c31657b81871fdc9d48aace0b8548c",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 472,
+          "zero_based_pdf_page": 491,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p472.txt",
+          "sha256": "376533e18e8aa740b0e3663ffb5df4e30adc42fadba8ee692a7805ecc96bf557",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 473,
+          "zero_based_pdf_page": 492,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p473.txt",
+          "sha256": "cb9c84c3d5b6389936f7bfca161f8e10eb6dea2274d66674dc2724a433e88476",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 486,
+          "zero_based_pdf_page": 505,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p486.txt",
+          "sha256": "868bf0cbbb620dea7543d84a37d81a562febade9a43b6d85e0e130dde726bdb6",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 515,
+          "zero_based_pdf_page": 534,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p515.txt",
+          "sha256": "18fe72d057a8cb12d11a741dfebd2db032d2bf137837ae2e782b6d188d8e5bdc",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 516,
+          "zero_based_pdf_page": 535,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p516.txt",
+          "sha256": "0e4cec688509a1f01c62a7e4ab4ddae8a2a3b31f5f987e2e1c50c98f54cfd577",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 551,
+          "zero_based_pdf_page": 570,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p551.txt",
+          "sha256": "3f7027fc0cf8f22494525e2ad6390dabd15b83f1935431de57218a3a8fc8db4e",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 552,
+          "zero_based_pdf_page": 571,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p552.txt",
+          "sha256": "914e29507dbb6f456bf5c62a4f3027dad98cb73c8a8b6a312c5d8a24bf77628e",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 555,
+          "zero_based_pdf_page": 574,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p555.txt",
+          "sha256": "287de790065f66a388368451b9699d75f6af4c789de7dea795fb5d3fe6b27e0f",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 556,
+          "zero_based_pdf_page": 575,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p556.txt",
+          "sha256": "7c3fa346161a0ea6f12c153d268ad1ae4418b38c342c7e6fe7715a1712498850",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 558,
+          "zero_based_pdf_page": 577,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p558.txt",
+          "sha256": "e48276fefa18f303084efe9449cd9f52d149e0a4c43e790d8399728fd7936da5",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 566,
+          "zero_based_pdf_page": 585,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p566.txt",
+          "sha256": "85ef78fe7880905672af09a45fa64aa583a7d997cf3eec8db8bd05cd93f60035",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 567,
+          "zero_based_pdf_page": 586,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p567.txt",
+          "sha256": "b4db4b12c5c5544286972c44d548305a4aaea08936ae8f4610df97e48f807ebd",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 568,
+          "zero_based_pdf_page": 587,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p568.txt",
+          "sha256": "c8bd554b55d4a1850f7b12351af589735dc705e31a0533f92036cbddfe6a8f61",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 715,
+          "zero_based_pdf_page": 734,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p715.txt",
+          "sha256": "18f831bb898e628f5a63610f33d3fcdd0288419419a947598f3e338283658696",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 716,
+          "zero_based_pdf_page": 735,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p716.txt",
+          "sha256": "6218fd9a5c6340189835ed16a8599b260123eac9f40b61f9cec1dafaaa94992b",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 726,
+          "zero_based_pdf_page": 745,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p726.txt",
+          "sha256": "427e715e6843ce1eb260a818c0cddecfef6cd5ebc70b3cf4a740c88571e7a412",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 746,
+          "zero_based_pdf_page": 765,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p746.txt",
+          "sha256": "4139c02867d8efd4a22516fc7d76d6d42cc91721457b5265b9e84f2346aac6b0",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 751,
+          "zero_based_pdf_page": 770,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p751.txt",
+          "sha256": "08bd2436b72de9bf4fa3b109bfd965f2cb93c547a20a3ddec85b839ac7c8ab91",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 772,
+          "zero_based_pdf_page": 791,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p772.txt",
+          "sha256": "dd1c690b30abbb9f3129ef8d3850990b5d2e9b41389c26101cf88651551592e2",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 773,
+          "zero_based_pdf_page": 792,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p773.txt",
+          "sha256": "df1ad9d28796d3cdbdf5495abd48fd2089001b2a3fd568a2394ad636a83e49bf",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 926,
+          "zero_based_pdf_page": 945,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p926.txt",
+          "sha256": "3111751a2177f6f1e15bd351280e30bb2adc50fe9566f6340f019d93494f364f",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 927,
+          "zero_based_pdf_page": 946,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p927.txt",
+          "sha256": "93fa30d394041aaf78f60746a2fa1a5c026d382a9f4fd9bd23be987eedd41519",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 948,
+          "zero_based_pdf_page": 967,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p948.txt",
+          "sha256": "89fba7cb92009f78f00c91d64a4e06ca66c4ed156271ca3cf71bb1c138369fc3",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 956,
+          "zero_based_pdf_page": 975,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p956.txt",
+          "sha256": "4e190ddbf0c6f99d49a259138d3a24732a19834e90fb670c32b8467040910800",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 982,
+          "zero_based_pdf_page": 1001,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p982.txt",
+          "sha256": "3700880aaa3f15b46b53f309f6dbbc01254dccb1641c117e9d0e3af3cce4285f",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 1028,
+          "zero_based_pdf_page": 1047,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p1028.txt",
+          "sha256": "35cecd1835d4cad4ab60986ea003c4e97c2f132ed4289a86d7b39a2839470a25",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 1095,
+          "zero_based_pdf_page": 1114,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p1095.txt",
+          "sha256": "ef305202f01fca55909685edb3a828c845c03571d1630ff436661951ba7313e6",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 1099,
+          "zero_based_pdf_page": 1118,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p1099.txt",
+          "sha256": "4e9d371ebbeb7865c46b9c78da833718327dd5d68c0b30370916b133c434e99f",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 1101,
+          "zero_based_pdf_page": 1120,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-2-p1101.txt",
+          "sha256": "28af23bf51bd24cf746fa93111d2a054156a2688c94d73d38aad087245df594e",
+          "kind": "page extract; selected passages"
+        }
+      ]
+    },
+    {
+      "key": "OR I-LI.1",
+      "url": "https://archive.org/details/warofrebellion511unit",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\warofrebellion511unit.pdf",
+      "bytes": 143150526,
+      "sha256": "8a9943b1a80fb110f31dd8ffc870d7695ffc8c8e1bc54146496f624e8ffb5bbd",
+      "pages": [
+        {
+          "printed_page": 343,
+          "zero_based_pdf_page": 348,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p343.txt",
+          "sha256": "5e3e88afda6836488c898a7db0f5f897c558b37cc5793c4e42f6e8d1f0b5c9cd",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 344,
+          "zero_based_pdf_page": 349,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p344.txt",
+          "sha256": "410cbab607cd31b855b4b2592a0efff3ddba2f86cc3a49a5d7e993582e39d1ae",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 366,
+          "zero_based_pdf_page": 371,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p366.txt",
+          "sha256": "d83909b9cf6ffa369fa37768a419e0284685e78b599165f55c770c07b1b29a20",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 397,
+          "zero_based_pdf_page": 402,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p397.txt",
+          "sha256": "72ea18ef4a1ab3d7cde883bc7e7b88ba40a8aa484196b9c736bf2ced5ebfb2fe",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 398,
+          "zero_based_pdf_page": 403,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p398.txt",
+          "sha256": "a7e1946733b0cfbc773fde1482eecd7dee446c14e76ce3009026229f0fbec692",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 399,
+          "zero_based_pdf_page": 404,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p399.txt",
+          "sha256": "570f4a376d76d8d8ea5ffca22c7b2e2a6bea7f94277cb3399ded5b1aa14861cd",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 405,
+          "zero_based_pdf_page": 410,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p405.txt",
+          "sha256": "780a8dd62972c58175cede51d02bc76ee88fc7dd6d5f9666068ac57b95650fb0",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 406,
+          "zero_based_pdf_page": 411,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p406.txt",
+          "sha256": "052511d39684f459602caece50cd29459e93f2f8216b4909a3e8b320fb477f84",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 413,
+          "zero_based_pdf_page": 418,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p413.txt",
+          "sha256": "6795eb222664af69e3a6bac220b3527da2eacbddfb99c995948b29fb38723186",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 414,
+          "zero_based_pdf_page": 419,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p414.txt",
+          "sha256": "7fb655dffe9501f0f67ade09c344ba7b1aebc3b89931e0941da404ac75bf784e",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 415,
+          "zero_based_pdf_page": 420,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p415.txt",
+          "sha256": "0525baec91b0fcdbd334af4744f250b06d7dd4703e90f1cbc50fc7be453e72b3",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 416,
+          "zero_based_pdf_page": 421,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p416.txt",
+          "sha256": "502fd93c7c90f44f913d070dd955022cb6ae66745d9321e25fb310b3d7630cb7",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 423,
+          "zero_based_pdf_page": 428,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p423.txt",
+          "sha256": "36c67c47c2f9819da981043f61d9936b50bee45210c9c695bd9108809c4229e4",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 425,
+          "zero_based_pdf_page": 430,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p425.txt",
+          "sha256": "346a32dc220465136f113a6087f83e2484de333991dc4e496292ed7e7156d2a3",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 1466,
+          "zero_based_pdf_page": 1473,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p1466.txt",
+          "sha256": "f59c87092dcf8ee630da46b05e10a625efdb564e7e6548ee29d96d8be8f48205",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 1469,
+          "zero_based_pdf_page": 1476,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-51.1-p1469.txt",
+          "sha256": "35f956d201c17f9fd32a8dd14d93051231826db2335e19afed03ec22add18f6a",
+          "kind": "page extract; selected passages"
+        }
+      ]
+    },
+    {
+      "key": "OR I-V",
+      "url": "https://archive.org/details/warofrebellion05unit",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion05unit\\warofrebellion05unit.pdf",
+      "bytes": 119747989,
+      "sha256": "c36ab1965afbb04c30a5dc7e9f3bff7bd39e9e17a5df3c4c9334f9275309c0e1",
+      "pages": [
+        {
+          "printed_page": 808,
+          "zero_based_pdf_page": 817,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-5-p808.txt",
+          "sha256": "a4de7561e6c6c71f38b4001c6c319207252945040f0f171bb228e06274194da3",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 810,
+          "zero_based_pdf_page": 819,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-5-p810.txt",
+          "sha256": "774048ff951d05c1d3d4cb86a47dbedf4ffeb4ad8ef38b88160496520ed5bb23",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 811,
+          "zero_based_pdf_page": 820,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-5-p811.txt",
+          "sha256": "e895f784fd549021a3c41fa7398cdf8d8f5069e0e347f03a4915c5ed25670d97",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 820,
+          "zero_based_pdf_page": 829,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-5-p820.txt",
+          "sha256": "0a195a3d8fc5ada6a1f28f1891c7326f5cf8cef07f47192f734a453671fec205",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 821,
+          "zero_based_pdf_page": 830,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-5-p821.txt",
+          "sha256": "ccaca8d9ba4f191973fa9770971121ce1cc3aeb9198e355111c9070fc287ba29",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 925,
+          "zero_based_pdf_page": 934,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-5-p925.txt",
+          "sha256": "3e519edd3ad7cc96f45327d721a4899808c2b8e5a21c31519ec5ba87f546d5d7",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 933,
+          "zero_based_pdf_page": 942,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-5-p933.txt",
+          "sha256": "48c5b435091f60759bb50968a1491872114b2dd47777ac2f651fb620665783c5",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 934,
+          "zero_based_pdf_page": 943,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\OR-I-5-p934.txt",
+          "sha256": "beabf536e23c28fd77e72ffdefb014548dee554edd285e6c291120c39f39a69e",
+          "kind": "page extract; selected passages"
+        }
+      ]
+    },
+    {
+      "key": "Dyer",
+      "url": "https://archive.org/details/08697590.3359.emory.edu",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\08697590.3359.emory.edu\\08697590_3359.pdf",
+      "bytes": 175232086,
+      "sha256": "9823db0a23ba90b5850c2457dae503864a10266dc4fa590a94fab16a5f0b3f88",
+      "pages": [
+        {
+          "printed_page": 270,
+          "zero_based_pdf_page": 276,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\Dyer-p270.txt",
+          "sha256": "cc583717ae439f318593c98d8372820c5eba68f1871c82deb9339ed66160ece0",
+          "kind": "page extract; selected passages"
+        }
+      ]
+    },
+    {
+      "key": "NY AG 1861",
+      "url": "https://museum.dmna.ny.gov/download_file/view/17183/3240",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S72\\NY-AG-1861.pdf",
+      "bytes": 35057122,
+      "sha256": "3794fb1e132141f45a5f58a49aae447f318d035e57fc22af7b77e5ff17177533",
+      "pages": [
+        {
+          "printed_page": 3,
+          "zero_based_pdf_page": 2,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\NY-AG-1861-p3.txt",
+          "sha256": "26cf92b1b30f399c484e354b7605065f6c2112d777dff46bfba44a0d1f70342d",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 5,
+          "zero_based_pdf_page": 4,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\NY-AG-1861-p5.txt",
+          "sha256": "262d36187c5eba1098f97ea5171f905070843046f961cb2af14bb20ee5c92a1d",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 8,
+          "zero_based_pdf_page": 7,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\NY-AG-1861-p8.txt",
+          "sha256": "f099793300c01a1acd6b7dafa176ee291b90a25a4f21f548259de8b9f048d7a5",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 9,
+          "zero_based_pdf_page": 8,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\NY-AG-1861-p9.txt",
+          "sha256": "28e5ec019f090be8aa560b2426838ab60648286f41c5d75e82cc0bebf7d717f5",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 10,
+          "zero_based_pdf_page": 9,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\NY-AG-1861-p10.txt",
+          "sha256": "69ea84da23add98f2ee004181530854d007be76456ca7a71a606534575f94cd6",
+          "kind": "page extract; selected passages"
+        },
+        {
+          "printed_page": 11,
+          "zero_based_pdf_page": 10,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\NY-AG-1861-p11.txt",
+          "sha256": "8f8d956d27aa9b4b46f6c940e23d9486bece8918b40622a8446ab0183dc759e2",
+          "kind": "page extract; selected passages"
+        }
+      ]
+    },
+    {
+      "key": "Bates I",
+      "url": "https://archive.org/details/historyofpennsyl01bate",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S72\\Bates1.pdf",
+      "bytes": 168557246,
+      "sha256": "96af430c5485689d1ec9332fc7996e6d15b725c8fa5cebd9f8dc2317de75244a",
+      "pages": [
+        {
+          "printed_page": 68,
+          "zero_based_pdf_page": 95,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\Bates1-p68.png",
+          "sha256": "09a689b142100b2ee203388a8d1da506dba90fb69c73b7922ef8bf5723090c3c",
+          "kind": "rendered page; visually read"
+        },
+        {
+          "printed_page": 69,
+          "zero_based_pdf_page": 96,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\Bates1-p69.png",
+          "sha256": "88e978f8fed151aec8ecc445973cd94c62c8f6cddcdc4a99225a4ef3c90d0031",
+          "kind": "rendered page; visually read"
+        },
+        {
+          "printed_page": 70,
+          "zero_based_pdf_page": 97,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\Bates1-p70.png",
+          "sha256": "65699f4c3067364702774c3f40f339949246bf01fce66f17f054f988e7cfb511",
+          "kind": "rendered page; visually read"
+        }
+      ]
+    },
+    {
+      "key": "PA survey",
+      "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/phmc/documents/archives/documents/phmc_civil_war_survey_2009_update.pdf",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S72\\PA-survey.pdf",
+      "bytes": 1214133,
+      "sha256": "0040e74539bf737e5fbe208f5fb48a36eb9d16090a34c2d7819c793bddcee4f4",
+      "pages": [
+        {
+          "printed_page": 113,
+          "zero_based_pdf_page": 112,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S72\\PA-survey-p113.txt",
+          "sha256": "bad95b3bd62b86157bf25fd65b7eb9bc00e6ab0d50ab81393802cef3cb937b56",
+          "kind": "page extract; selected passages"
+        }
+      ]
+    }
+  ],
+  "archival_search_aids": [
+    {
+      "file": "C:\\Pyrrhic\\mandate-research-sources\\S72\\NARA-RG94.html",
+      "sha256": "d7e0f15f9bd6be86680012ff3df258768158e5c80e5f3ce4c9abf8b865009f66",
+      "section": "94.2.2",
+      "scope": "Guide only, not an original July return; no July content or survival claim."
+    },
+    {
+      "file": "C:\\Pyrrhic\\mandate-research-sources\\S72\\NARA-RG393.html",
+      "sha256": "727cc8dd94bd6766eb5d3ba359eff3ecffad4dcedb9942f57e102146f480e046",
+      "section": "393.4",
+      "scope": "Guide only, not an original July return; no July content or survival claim."
+    }
+  ],
+  "retrieval_limits": "Stopped only PID22640, our redundant Bates1-us fetch, after the original Bates1 PDF completed and matched archive metadata length168557246. No source or other lane process was stopped. Firstbullrun HTTPS failed certificate validation; no TLS bypass. NJ bitstream returned a CrowdSec challenge HTML document under a .pdf filename; it is excluded as source evidence and was not bypassed. NY1862 report was inspected and rejected for the 1861 table; official NY1861 file contains it. Early Bates leaf-to-PDF and late OR supplement offsets were corrected by visible printed headings before citation. Retained search logs are discovery aids, not factual sources.\n",
+  "image_inspected": [
+    "OR I-II pp187309568927",
+    "OR I-V pp810821",
+    "OR I-LI.1 pp36614661469",
+    "Dyer p270",
+    "Bates I pp686970",
+    "NY AG 1861 p11"
+  ],
+  "reading_corrections": [
+    "Visible late supplement headings place Edward C. Williams on p1466 (PDF index1473) and George C. Wynkoop on p1469 (index1476); early1861 pages use offset5, late index offset7.",
+    "Bates p68 is PDF index95, p70 index97, not raw scandata leaf indices.",
+    "Meem Fourth field regiment petitioner is C.P.Horn in the scan; OCR O.P. corrected.",
+    "Williams interval downgraded to July HOLD after the opposing Alpheus index entries and Dyer p270 were read. No unseen succession invented."
+  ]
+}
