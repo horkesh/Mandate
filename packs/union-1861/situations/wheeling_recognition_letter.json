@@ -8,14 +8,20 @@
   "event": {
     "all": [
       {
-        "fired": "pierpont_elected"
+        "dayAtLeast": 112
       },
       {
-        "dayAtLeast": 112
+        "fired": "pierpont_aid_requested",
+        "forDays": 4
+      },
+      {
+        "knows": {
+          "subjectKind": "situation",
+          "subjectId": "pierpont_aid_requested"
+        }
       }
     ]
   },
-  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
   "effects": [],
   "report": {
     "authors": [
@@ -31,6 +37,10 @@
     {
       "source": "OR",
       "at": "I-2 pp. 723-724, Cameron to Pierpont, 25 June 1861; application at p. 713"
+    },
+    {
+      "source": "OR",
+      "at": "I-2 p. 713, Pierpont application of 21 June; pp. 723-724, Cameron reply of 25 June explicitly answers it; [I] four days after the actual application, and only after its news is held"
     }
   ],
   "speakers": [

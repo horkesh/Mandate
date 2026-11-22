@@ -17,7 +17,7 @@ const restored = ids.toId('department', 'st_virginia_restored');
 // just before June avoids replaying the unrelated opening in every pack test.
 function civicRun(seceded: boolean) {
   const loaded = seatsWorld('union-1861');
-  const included = new Set<string>([...dates.map(([id]) => id), 'western_virginia']);
+  const included = new Set<string>([...dates.map(([id]) => id), 'pierpont_aid_requested', 'western_virginia']);
   const world = { ...loaded.world, situations: loaded.world.situations.filter((s) => included.has(s.id)) };
   const order = ids.toId('message', 'r69-call');
   let state: phase0.State = {

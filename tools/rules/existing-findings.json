@@ -24,42 +24,6 @@
     "detail": "railroad label requires a cited premise/outside-model exemption"
   },
   {
-    "rule": "situation-cause",
-    "path": "packs/union-1861/situations/pickens_refused.json",
-    "hash": "f1eea7ecc5ace95ab2086b9ca9341f88621b05cd024985053412fc664ac98ec1",
-    "detail": "railroad label requires a cited premise/outside-model exemption"
-  },
-  {
-    "rule": "situation-cause",
-    "path": "packs/union-1861/situations/pierpont_elected.json",
-    "hash": "5e88c886bdbf4aab4778ee9267f33020e7749d8fe15391e8d44bc4400309a9cd",
-    "detail": "railroad label requires a cited premise/outside-model exemption"
-  },
-  {
-    "rule": "situation-cause",
-    "path": "packs/union-1861/situations/texas_governor_changed.json",
-    "hash": "bab3ee570059bc129c314fbdc8d796d376ebdd4defd79b357dc9ffc16c85d18c",
-    "detail": "event can hold with no positive cause in State; railroad label requires a cited premise/outside-model exemption"
-  },
-  {
-    "rule": "situation-cause",
-    "path": "packs/union-1861/situations/wheeling_legislature.json",
-    "hash": "ffe8803717f2b2e58234c6caffc3c5b1bc1a05655cf8569d2cf18605d7a92875",
-    "detail": "railroad label requires a cited premise/outside-model exemption"
-  },
-  {
-    "rule": "situation-cause",
-    "path": "packs/union-1861/situations/wheeling_ordinance.json",
-    "hash": "554f63910a68c45d4459972fb96422cc85b37f928d20ec9c8431761937a693ad",
-    "detail": "railroad label requires a cited premise/outside-model exemption"
-  },
-  {
-    "rule": "situation-cause",
-    "path": "packs/union-1861/situations/wheeling_recognition_letter.json",
-    "hash": "546520eaa14a635dbbd7ab77296bb9e087e8e234352b08b217e518120f82a7f0",
-    "detail": "railroad label requires a cited premise/outside-model exemption"
-  },
-  {
     "rule": "projection-truth",
     "path": "packages/kernel/src/seats/requests.ts",
     "hash": "a3ebc201f3d30c41e51b60225f5d0bc0f5e5f5651fc4490af33efdf65c6b6753",

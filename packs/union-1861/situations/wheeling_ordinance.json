@@ -8,14 +8,14 @@
   "event": {
     "all": [
       {
-        "fired": "wheeling_convention"
+        "dayAtLeast": 106
       },
       {
-        "dayAtLeast": 106
+        "fired": "wheeling_convention",
+        "forDays": 8
       }
     ]
   },
-  "railroad": "Dated institutional act; conventions and legislatures have no seats in 1A. This date is a stand-in owned by 1B.",
   "effects": [
     {
       "propose": {
@@ -43,6 +43,10 @@
     {
       "source": "WHEELING-ORDINANCES-1861",
       "at": "Ordinances pp. 6-7, passed 19 June 1861"
+    },
+    {
+      "source": "WHEELING-ORDINANCES-1861",
+      "at": "pp. 6-7, ordinance of 19 June; [I] eight days after the convention opens, retaining the elapsed interval if its State cause is late, not an independent calendar trigger"
     }
   ]
 }

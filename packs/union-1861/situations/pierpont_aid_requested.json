@@ -1,0 +1,38 @@
+{
+  "id": "pierpont_aid_requested",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.pierpont_aid_requested.title",
+  "text": "situation.pierpont_aid_requested.text",
+  "earliest": "1861-06-21",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 108
+      },
+      {
+        "fired": "pierpont_elected",
+        "forDays": 1
+      }
+    ]
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "us_secretary_war",
+      "us_secretary_state"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "none": "Administrative correspondence only; no secession-cause claim, security order or protected-population policy or effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p. 713, Pierpont to the President, Wheeling, 21 June 1861; [I] one day after the actual election when the chain is delayed"
+    }
+  ],
+  "namedOnly": "The War Department reports the application attributed to the elected governor in the cited letter; no new governor post or personal speech is invented."
+}

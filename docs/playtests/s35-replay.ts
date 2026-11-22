@@ -1,5 +1,7 @@
-/** Replay the retained S29 human submissions through public requests. No State
- * is injected into a desk. Private diagnostics are kept separate from papers. */
+/** Replay the retained S29 human submissions through public requests. S58's
+ * Pickens receipt can defer its one recorded decision until that paper arrives;
+ * the original fixture is preserved and each timing adjustment is returned.
+ * No State is injected into a desk. Diagnostics stay separate from papers. */
 import { readFileSync } from 'node:fs';
 import { canonicalHash, phase0, world as calendar } from '@mandate/kernel';
 import type { SeatCommand, SeatRequest } from '@mandate/kernel/seat-api';
@@ -38,15 +40,29 @@ export function replayS29(days = 148) {
   const principal = world.start.factions.find(f => f.playable)!.principal!;
   const seat = phase0.seatIdFor(principal), rules = createRuleSeat();
   const commands = s29Commands();
+  // Exact migration of the one submission whose premise S58 changes. This
+  // cannot silently defer another command, suppress a parser error, or choose
+  // an option that the current public menu does not offer.
+  const delayed = commands.find(c => c.day === 33 && c.line === 'decide pickens_refused courier_order special_expedition');
+  let submitted = false;
+  const deferredCommands: { recordedDay: number; submittedDay: number; line: string; cause: string }[] = [];
   const human: phase0.Seat = {driver:'human',respond:request => {
     const queue: SeatCommand[] = [];
+    const received = request.menu.menuKind === 'principal' && request.menu.situations.some(s => s.situation === 'pickens_refused');
+    const submitDelayed = () => {
+      queue.push(queuedCommand(delayed!.line, request)!);
+      submitted = true;
+      if (request.requestDay !== delayed!.day) deferredCommands.push({recordedDay:delayed!.day,submittedDay:request.requestDay,line:delayed!.line,cause:'S58: the refusal must be received before its decision is offered'});
+    };
     for (const r of commands.filter(c => c.day === request.requestDay)) {
       if (!r.ok) throw Error('S29 fixture contains an unsuccessful command');
+      if (r === delayed) { if (received) submitDelayed(); continue; }
       if (/^(end|preview)\b/.test(r.line)) continue;
       const cancel = /^cancel (\d+)$/.exec(r.line);
       if (cancel) { if (!queue.splice(Number(cancel[1])-1,1).length) throw Error('invalid recall'); continue; }
       queue.push(queuedCommand(r.line,request)!);
     }
+    if (delayed && !submitted && request.requestDay > delayed.day && received) submitDelayed();
     return {answerKind:'commands',commands:queue};
   }};
   const diagnostics: unknown[] = [], papers: phase0.ReportView[] = [], rejections: phase0.TickResult['rejections'][number][] = [];
@@ -63,8 +79,9 @@ export function replayS29(days = 148) {
       papers.push(...phase0.viewFor(world,r.state,seat).reports.filter(p => p.receivedDay === r.day));
     },
   });
+  if (delayed && delayed.day <= days && !submitted) throw Error('S58: recorded Pickens decision remained unoffered through the replay horizon');
   const date = (day:number) => calendar.formatIsoDate(calendar.dateOfDay(run.state.calendarStart!,day));
-  return {world,start,run,summary:{days,finalHash:canonicalHash(run.state),rejections,diagnostics,
+  return {world,start,run,summary:{days,finalHash:canonicalHash(run.state),rejections,diagnostics,deferredCommands,
     battles:Object.entries(run.state.battleRecords).map(([id,b]) => ({id,record:b})),
     fieldPapers:papers.filter(p => p.hour !== null).map(p => ({...p,writtenDate:date(p.day),receivedDate:date(p.receivedDay)}))}};
 }

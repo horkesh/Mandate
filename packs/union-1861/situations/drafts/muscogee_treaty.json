@@ -1,0 +1,65 @@
+{
+  "id": "muscogee_treaty",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.muscogee_treaty.title",
+  "text": "situation.muscogee_treaty.text",
+  "earliest": "1861-07-10",
+  "event": {
+    "all": [
+      {
+        "flag": "confederate_protection_act"
+      },
+      {
+        "dayAtLeast": 127
+      }
+    ]
+  },
+  "actingGovernment": "nation_muscogee",
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "department_side",
+        "subject": "nation_muscogee",
+        "delta": 1,
+        "reason": "agency:nation-treaty",
+        "side": "confederate"
+      }
+    },
+    {
+      "setFlag": "muscogee_treaty_signed"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_interior"
+    ],
+    "reportType": "informal",
+    "subtype": "cabinet-word"
+  },
+  "gate": {
+    "topics": [
+      "indian-territory-1861"
+    ],
+    "placement": "event",
+    "risks": [
+      "agency"
+    ],
+    "actingSide": null
+  },
+  "citations": [
+    {
+      "source": "CSA-STAT",
+      "at": "treaty with the Creek Nation, 10 July 1861: signatures p. 301 (Moty Kinniard, Principal Chief; Icho Hacho, Principal Chief Upper Creeks); the General Council's ratification of 20 July, p. 302 (\"Motey Kinnaird, Principal Chief, Icho Hacho, First Chief of the Upper Creeks\"); Opothleyahola appears nowhere among the signers, pp. 301 to 303"
+    },
+    {
+      "source": "NOTE-indian-territory-1861-sources",
+      "at": "the treaties of July"
+    },
+    {
+      "source": "CSA-STAT",
+      "at": "pp. 289-290, preamble and Article IV; the treaty names the act of 21 May as its prior public condition. [I] keep the existing State flag and dated lower bound; no presidential choice or troop-withdrawal route. This unsigned replacement awaits gate review."
+    }
+  ]
+}
