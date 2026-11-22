@@ -1,0 +1,56 @@
+[
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "allOriginalLinesPreservedInOrder": true
+  },
+  {
+    "path": "packages/kernel/src/seats/world.ts",
+    "allOriginalLinesPreservedInOrder": true
+  },
+  {
+    "path": "packages/kernel/src/situations/types.ts",
+    "allOriginalLinesPreservedInOrder": true
+  },
+  {
+    "path": "packages/pack-format/schemas/situation.schema.json",
+    "preservation": "Generated schema: additive advance predicate; original state-force contracts remain in the types and schema source."
+  },
+  {
+    "path": "packages/pack-format/src/situations.ts",
+    "allOriginalLinesPreservedInOrder": true
+  },
+  {
+    "path": "packs/union-1861/data/world.json",
+    "originalS46ValuesPreserved": true,
+    "onlyAddition": [
+      {
+        "fromDate": "1861-07-17",
+        "objective": "manassas",
+        "post": "cs_cmd_harpers_ferry",
+        "requiresNotice": "manassas_advance_received",
+        "source": "OR I-2 pp.473,980-982: Cooper telegram of 17 July and Johnston acknowledgement of 18 July. [I] Upon receipt of the caused advance notice, the principal issues an ordinary goal to Johnston; commander compliance, planning and movement determine whether and when he joins. No arrival, battle or outcome is scripted."
+      }
+    ]
+  },
+  {
+    "path": "packs/union-1861/pack.json",
+    "originalS46ValuesPreserved": true,
+    "onlyAddition": [
+      {
+        "post": "cs_cmd_harpers_ferry",
+        "objective": "manassas",
+        "fromDate": "1861-07-17",
+        "requiresNotice": "manassas_advance_received",
+        "source": "OR I-2 pp.473,980-982: Cooper telegram of 17 July and Johnston acknowledgement of 18 July. [I] Upon receipt of the caused advance notice, the principal issues an ordinary goal to Johnston; commander compliance, planning and movement determine whether and when he joins. No arrival, battle or outcome is scripted."
+      }
+    ]
+  },
+  {
+    "path": "packs/union-1861/strings/en.json",
+    "originalS46ValuesPreserved": true,
+    "newKeys": [
+      "situation.manassas_advance_received.title",
+      "situation.manassas_advance_received.text"
+    ]
+  }
+]

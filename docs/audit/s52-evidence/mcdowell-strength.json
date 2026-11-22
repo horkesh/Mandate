@@ -1,0 +1,141 @@
+{
+  "planner": "blocksOf selects all whole blocks assigned to the post when goalCommitted is empty. own excludes naval units. buildAxis sums their current known strength at drafting; no historical field-army cap exists.",
+  "battle": "commitAtDawn chooses by permission, believed ratio, demand and boldness. main commits floor(present * 700 / 1000); engaged is min(committed, frontageMen). Neither is a historical army return.",
+  "observations": [
+    {
+      "day": 139,
+      "knownAssigned": 102600,
+      "unknownAssigned": 0,
+      "blockCount": 16,
+      "planGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "draftAxes": [
+        {
+          "name": "main",
+          "strength": 135600,
+          "blocks": 24
+        }
+      ]
+    },
+    {
+      "day": 142,
+      "knownAssigned": 102600,
+      "unknownAssigned": 0,
+      "blockCount": 16,
+      "planGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "draftAxes": [
+        {
+          "name": "main",
+          "strength": 135600,
+          "blocks": 24
+        }
+      ]
+    },
+    {
+      "day": 144,
+      "knownAssigned": 102600,
+      "unknownAssigned": 0,
+      "blockCount": 16,
+      "planGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "draftAxes": [
+        {
+          "name": "main",
+          "strength": 135600,
+          "blocks": 24
+        }
+      ]
+    },
+    {
+      "day": 146,
+      "knownAssigned": 79080,
+      "unknownAssigned": 0,
+      "blockCount": 13,
+      "planGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "draftAxes": [
+        {
+          "name": "main",
+          "strength": 135600,
+          "blocks": 24
+        }
+      ]
+    },
+    {
+      "day": 148,
+      "knownAssigned": 79121,
+      "unknownAssigned": 0,
+      "blockCount": 13,
+      "planGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "draftAxes": [
+        {
+          "name": "main",
+          "strength": 135600,
+          "blocks": 24
+        }
+      ]
+    }
+  ],
+  "citations": {
+    "primaryDutyReturn": "OR I-2 p.309: 1,707 officers plus 35,614 men, [I] 37,321 departmental duty strength on 16-17 July.",
+    "crossingReport": "OR I-2 p.324: McDowell reports about 18,000 all arms crossing Bull Run, names troops not in main action."
+  },
+  "proposal": "[I] Resolve source-based army allocation/reserves and the force inclusion model before any global commitment or frontage calibration. Retain historical measure labels and unknowns; do not set the resolver directly to 18,000."
+}

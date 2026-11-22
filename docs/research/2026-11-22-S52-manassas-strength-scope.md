@@ -53,6 +53,39 @@ seven-company battalion (OR I-2 pp.824,826–827,846–847). That earlier note w
 read; this pass did not reread those primary pages. Its approximate garrison
 total must not become a headcount for each battalion.
 
+## Image follow-up: aggregate returns now checked
+
+During the binding check, the retained public-domain scan
+`warofrebellion02secrrich.pdf` was rendered headlessly and **pp.187,309,324,568**
+were inspected. Its SHA-256 is
+`e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e`.
+The scans remain read-only in the S4 source store; page images and their receipt
+are in `C:/Pyrrhic/mandate-research-sources/S52/`. These are additional primary
+observations, not quantities supplied by the S21/S31 registers.
+
+| Date and command | Read measure | Number | Printed source and limits |
+|---|---|---:|---|
+| 30 June, Johnston's Army of the Shenandoah | Aggregate present for duty | 10,654 | OR I-2 p.187, No.12: general staff 32; infantry 10,010; cavalry 334; artillery 278. An army total, not the Virginia contingent alone, not its July 21 arrivals. |
+| 28 June, Patterson's Department of Pennsylvania | Aggregate present for duty | 14,344 | OR I-2 p.187, No.13: infantry 13,691; cavalry 395; artillery 258. The image heading says **28 June**, where the Cornell OCR reads 26. |
+| 16-17 July, McDowell's department | Duty officers / duty men | 1,707 / 35,614 | OR I-2 p.309, image. **[I] 37,321 combined**, still a departmental scope; the omitted total/aggregate cells warning remains. |
+| 21 July, Confederate First Corps/Army of the Potomac | Printed aggregate return | 21,863 | OR I-2 p.568, No.117, dated 25 September: infantry 19,569; cavalry 1,468; artillery 826. Does not include Johnston's separate army. |
+| Same command and day | Printed aggregate engaged | 9,977 | OR I-2 p.568, No.118, also dated 25 September. A narrower measure of the same men, **not additive** with 21,863. |
+
+The p.324 image confirms McDowell's approximate **18,000 crossing Bull Run**.
+It does not call that his whole department, and it identifies troops outside
+the main action. The p.568 distinction likewise prevents treating every man
+available to Beauregard as a man engaged in the main action.
+
+**[I] Live use still needs inclusion accounting.** Neither p.187 army total
+identifies S46's single state contingent with the whole army. The simulation
+also has already-raised blocks assigned to the same commanders, sometimes still
+traveling from distant muster points. Adding a second army total, resetting
+those blocks to a historical total, or treating a June return as an unchanged
+July return would double-count or overwrite the run's actual history. The
+abstracts are useful inputs for a temporal force-organization apply; they do
+not solve it by assigning one number to every unknown block. No runtime input
+was changed after the frozen history run or during the done check.
+
 ## Proposed rulings [I]
 
 1. Retain S46's individual unknown strengths. Obtain matching local rolls, or

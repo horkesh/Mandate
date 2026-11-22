@@ -1,0 +1,377 @@
+{
+  "workspace": "C:\\Pyrrhic\\sprint-1a",
+  "branch": "sprint/1a",
+  "entryCommit": "f19b6f007267997a652d06d18497118977e46c69",
+  "originalPathCount": 1935,
+  "missingOriginalPaths": [],
+  "originalS46StagedBlobs": [
+    {
+      "path": "docs/audit/s46-evidence/advance-comparison.json",
+      "originalIndexedBlob": "4b6a7fb20fbb5984dbd5a98e288fbbe6fdc0bf2b",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/check-exits.json",
+      "originalIndexedBlob": "cb7080765d22aa0e51a61b64fbb1a1b57ff8721c",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/checkpoint-comparison.json",
+      "originalIndexedBlob": "6da039a0c37a928a5087bc0549fcb436333df935",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/checks.json",
+      "originalIndexedBlob": "279a02e8c0a63e21d3eb2bf7fcae9abad30f9e1d",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/command-differences.json",
+      "originalIndexedBlob": "85369e8082ecdbcd4ff20abb9142cddef698a06c",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/console-input-timing.json",
+      "originalIndexedBlob": "97d0a8f8223fc02b9a0fd4167ef5ca079476a2b3",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/console-replay.json",
+      "originalIndexedBlob": "102ad1bd15bab69ce9a03270f6a689191039c6fe",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/done-check.json",
+      "originalIndexedBlob": "f813528c2cceb18f295f82ade1939a35f1fcef77",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/initial-difference.json",
+      "originalIndexedBlob": "1d1818edc07eace95745c6165ede282b6e04ce0f",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/inventory.json",
+      "originalIndexedBlob": "cf7d43df26101216a4340a02ec5affd5a4df9be0",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/reference-comparison.json",
+      "originalIndexedBlob": "7297c5c1353b73019b173a34604317caee2e1abe",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/reference-trace.json",
+      "originalIndexedBlob": "01261d98a5ddc0b87278c1cc3fc3afb05f937a70",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/source-receipt.json",
+      "originalIndexedBlob": "5d31eb07a419cf12a70064c081093a95ceeae738",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/testbed-summary.json",
+      "originalIndexedBlob": "53e3f2308d399ee00d15749cb8a6a3c5fe861f97",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-evidence/union-1861-summary.json",
+      "originalIndexedBlob": "708d407c6f5653eccc37176e4ed82036783d3b74",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/audit/s46-virginia-forces.md",
+      "originalIndexedBlob": "2910dd43c8f58d276f954fd7a0d1d6948df47d46",
+      "sameBlob": true
+    },
+    {
+      "path": "docs/design/FOUNDATION.md",
+      "originalIndexedBlob": "e423c05b9a7ccc807652e575f9148e2c583168de",
+      "sameBlob": false
+    },
+    {
+      "path": "docs/research/2026-11-21-virginia-state-forces.md",
+      "originalIndexedBlob": "cfc69e5720d0e648736f4b36aabdb71154518392",
+      "sameBlob": true
+    },
+    {
+      "path": "notes/lane-s46-virginia-forces.md",
+      "originalIndexedBlob": "2226348435c0355115abcf4a380ef19ab6828ea0",
+      "sameBlob": true
+    },
+    {
+      "path": "packages/cli/test/state-forces.test.ts",
+      "originalIndexedBlob": "8b6f03bf67ae27acd7b034bd98e059f2b0ddfbbc",
+      "sameBlob": true
+    },
+    {
+      "path": "packages/kernel/src/command/command.ts",
+      "originalIndexedBlob": "a7a4158e8dbc25aeed104bdea8061df9905b801f",
+      "sameBlob": true
+    },
+    {
+      "path": "packages/kernel/src/forces/enlistment.ts",
+      "originalIndexedBlob": "3174facf93c860202373e191ec0f9c83b1a46109",
+      "sameBlob": true
+    },
+    {
+      "path": "packages/kernel/src/seats/world.ts",
+      "originalIndexedBlob": "c248dd5ae984d413f19e44aaa6d0b54238e02576",
+      "sameBlob": false
+    },
+    {
+      "path": "packages/kernel/src/situations/types.ts",
+      "originalIndexedBlob": "d799fe8fedaadb5c9b0988bbe758633003b59da6",
+      "sameBlob": false
+    },
+    {
+      "path": "packages/kernel/src/tick/recruitment.ts",
+      "originalIndexedBlob": "ee558a3324b8873a652e20bf2e0c28c053d999c9",
+      "sameBlob": true
+    },
+    {
+      "path": "packages/kernel/test/post-succession.test.ts",
+      "originalIndexedBlob": "00f6e788394c403044c26ed883abf23ddc19a129",
+      "sameBlob": true
+    },
+    {
+      "path": "packages/pack-format/schemas/situation.schema.json",
+      "originalIndexedBlob": "fc0c64b0a1cc5e450e97bc76a880bf81dd4e82f4",
+      "sameBlob": false
+    },
+    {
+      "path": "packages/pack-format/src/situations.ts",
+      "originalIndexedBlob": "08a44c27f7524469789cb199eabf5a9923626da2",
+      "sameBlob": false
+    },
+    {
+      "path": "packages/pack-format/test/state-forces.test.ts",
+      "originalIndexedBlob": "9fb25fa70737774690ebde981e389fe184faa722",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/data/scenarios/march_1861.json",
+      "originalIndexedBlob": "5955ccaeef56e80beb824a5c332893a3f47f952f",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/data/strings/en.json",
+      "originalIndexedBlob": "a83402a734c1626910c046eb706f6cb1f1390bee",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/data/world.json",
+      "originalIndexedBlob": "c8305e1577b8fe0c7bae2b82385b90623625ed93",
+      "sameBlob": false
+    },
+    {
+      "path": "packs/union-1861/pack.json",
+      "originalIndexedBlob": "39640ca193c51258fdab359855cc57e1c852f47c",
+      "sameBlob": false
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_forces_return.json",
+      "originalIndexedBlob": "9a90ed7e30a57f6fe5a607bc69dcfcf5f184f3b7",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_forces_transferred.json",
+      "originalIndexedBlob": "113f9ae9bbec69d2c6ea4c0050a46abe3ecfd7d9",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_harpers_jackson.json",
+      "originalIndexedBlob": "ab55588a0a7b02b9e8e9312a1106f75fee436a19",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_harpers_state_forces.json",
+      "originalIndexedBlob": "af1a35a1767805ef944d493173488a6ba245f71c",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_manassas_state_forces.json",
+      "originalIndexedBlob": "7d7113910fd0ea42c65fe6a60a218915acc4cef7",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_norfolk_gwynn.json",
+      "originalIndexedBlob": "3cf7cc5285f50f1f763d9718d344d702ab461f2a",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_norfolk_huger.json",
+      "originalIndexedBlob": "6b85f73296e9cf5aa87286e1bfd3e1c9351a50c3",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_norfolk_state_forces.json",
+      "originalIndexedBlob": "da005339b2559fe58c83644c4d8064d897fe12da",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_peninsula_state_forces.json",
+      "originalIndexedBlob": "a0e21f08e659a7358174ef0ea10083a45428a66a",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_potomac_command.json",
+      "originalIndexedBlob": "054341d885df2c4af9f3dc767cc1c047bccdf215",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_richmond_magruder.json",
+      "originalIndexedBlob": "904b8a3647649cdc2946b58f4afe077ec9686416",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_richmond_state_forces.json",
+      "originalIndexedBlob": "04f8abafb3c14c5d913cace59b91f19dba32716c",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/situations/virginia_state_calls.json",
+      "originalIndexedBlob": "69f307dacec3dd35c6e7b01da5077a3d5a0603c7",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/source/scenarios/march_1861/temporary_posts.csv",
+      "originalIndexedBlob": "c8707cb587e69b4e0167e538bb818541efe17d36",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/source/world/people.csv",
+      "originalIndexedBlob": "a7df77d6298d1f9f73eb2a20550c62413e249656",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/strings/en.json",
+      "originalIndexedBlob": "594f2e2dcb734b70b2aacbc8ec4b6dc8b80768a8",
+      "sameBlob": false
+    },
+    {
+      "path": "packs/union-1861/test/northern-concentration.test.ts",
+      "originalIndexedBlob": "68b9eca158518268d54272f6c6da227e0f9945ab",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/test/state-forces.test.ts",
+      "originalIndexedBlob": "c20556053c56733aad951e53760592d866824311",
+      "sameBlob": true
+    },
+    {
+      "path": "packs/union-1861/test/virginia-dated-forces.test.ts",
+      "originalIndexedBlob": "1e80669e69a56ef72a4176609fb51b8dd14bfaa5",
+      "sameBlob": true
+    }
+  ],
+  "frozenInputCount": 705,
+  "postMeasurementChangedInputs": [
+    "packages/pack-format/src/situations.ts"
+  ],
+  "postMeasurementAddedTest": "packages/pack-format/test/s52-source-guards.test.ts",
+  "worldProof": {
+    "worldHash": "c7c8c6dc8b5677c83fed0d932b7cbef428dd424e5f6da686785d439a6b05b76a",
+    "measuredWorldHash": "c7c8c6dc8b5677c83fed0d932b7cbef428dd424e5f6da686785d439a6b05b76a",
+    "sameWorld": true,
+    "initialHash": "39b8e93f26e9ce02b921671887277cb95f500e71414b0f73ee39468b46186604",
+    "measuredInitialHash": "39b8e93f26e9ce02b921671887277cb95f500e71414b0f73ee39468b46186604",
+    "sameInitial": true
+  },
+  "preservation": "44 original staged blobs unchanged; 8 overlaps are additive and described in s46-semantic-preservation.json. No original path removed.",
+  "artifacts": [
+    {
+      "path": "docs/audit/s52-evidence/checks.json",
+      "bytes": 2026,
+      "sha256": "ecbd0eba7a192099ee4a6daaf5779f837dfc343b4467780819e9de4c11b9a0a3"
+    },
+    {
+      "path": "docs/audit/s52-evidence/done-check-exit.json",
+      "bytes": 56,
+      "sha256": "2e6a8c0d15d842d6fb8eeb912153461db971d3d4570e0bb4bad7d84e29bbee94"
+    },
+    {
+      "path": "docs/audit/s52-evidence/done-check.txt",
+      "bytes": 24356,
+      "sha256": "ee2c821ea4d6f7dab232b6ccd5e89869673a45e5a250e17c15334bfda9bf346a"
+    },
+    {
+      "path": "docs/audit/s52-evidence/focused-tests-exit.json",
+      "bytes": 29,
+      "sha256": "43d8a86d7c57290808131a77e3034bf316c36e5bf41e888bcf393e85662085dd"
+    },
+    {
+      "path": "docs/audit/s52-evidence/focused-tests.txt",
+      "bytes": 364,
+      "sha256": "8943f1d6999f53d54645e691b042e0ea90a2d4c301bfc892c57b96a684d60b30"
+    },
+    {
+      "path": "docs/audit/s52-evidence/frozen-measurement-preservation.json",
+      "bytes": 96,
+      "sha256": "6b8c5bde3a51ef7dd4e7e262f75ea6ea2af6df1246597a6759d166595ef6f160"
+    },
+    {
+      "path": "docs/audit/s52-evidence/history-observations.json",
+      "bytes": 40459,
+      "sha256": "4fef10435399c545d03f087b067857551f0298e1846dacd902cea5136e6e2c73"
+    },
+    {
+      "path": "docs/audit/s52-evidence/mcdowell-strength.json",
+      "bytes": 4131,
+      "sha256": "4a8bfba3ccc42f6c2eccfc7e2d4d2192d5b21458f6308f549a83e1c793926548"
+    },
+    {
+      "path": "docs/audit/s52-evidence/post-guard-world-proof.json",
+      "bytes": 398,
+      "sha256": "bc490fecbf2417cace03f1fe75409ab7ec6a732c6d985760049219fe55c9c06c"
+    },
+    {
+      "path": "docs/audit/s52-evidence/primary-return-reading.json",
+      "bytes": 3174,
+      "sha256": "ec1025a295e45ea7acfa6e0c133f03bb9fee2023161b00ef0f621ec298344f42"
+    },
+    {
+      "path": "docs/audit/s52-evidence/reference-receipts.json",
+      "bytes": 1199,
+      "sha256": "080e368124d7f708cfe998a4932d75b1051642fac0a4a04d02acfd1a3229695f"
+    },
+    {
+      "path": "docs/audit/s52-evidence/required-check.txt",
+      "bytes": 6500,
+      "sha256": "60c8f4411da845397c5f19491d45cfefd5e8b12b491561486fc410da9b96a16c"
+    },
+    {
+      "path": "docs/audit/s52-evidence/s46-comparison.json",
+      "bytes": 18126,
+      "sha256": "8d2883378f01b06ab9ff350825b393e4650949774612b68a8090b4f93c2c7576"
+    },
+    {
+      "path": "docs/audit/s52-evidence/s46-semantic-preservation.json",
+      "bytes": 2172,
+      "sha256": "b2393a1ab37dbf4f071a22c8ac9334c69e51dd990a38eae072f0ce448c00d02e"
+    },
+    {
+      "path": "docs/audit/s52-evidence/s51-hook-exit.json",
+      "bytes": 50,
+      "sha256": "39489099aef166e7a4e25026d72e8c7953ad551ad3b9dd1ec58f8fa6d36cf513"
+    },
+    {
+      "path": "docs/audit/s52-evidence/source-scope.json",
+      "bytes": 2827,
+      "sha256": "92508ea7cf04a8d1b66f3aea5055a6751b6313665d57f86b90bebbb5a54e2d24"
+    }
+  ],
+  "runtime": {
+    "node": "v22.23.2",
+    "surface": "headless Windows command line; no browser, server or desktop control",
+    "workspaceAliases": "kernel, pack-format and rule-seats resolve to this worktree, verified before measurement",
+    "linuxCI": "not run or certified"
+  },
+  "rawEvidenceRoot": "runs/s52",
+  "sourceImages": "C:/Pyrrhic/mandate-research-sources/S52",
+  "originalPatch": {
+    "path": "runs/s52/original-s46-staged.patch",
+    "sha256": "fc7565ad8b122e462b68a1cdafbff436119b6c37d4193f278530087037c8ebb1"
+  }
+}

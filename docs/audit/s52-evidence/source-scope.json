@@ -1,0 +1,84 @@
+{
+  "researchRef": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+  "files": [
+    {
+      "path": "runs\\s52\\research\\2026-11-20-S14-oob-source-reading.md",
+      "sha256": "abce7f3bcf51bcc210c7966f7b6e0b60343ee3f84b617f7da840eb03e301b448",
+      "bytes": 10054
+    },
+    {
+      "path": "runs\\s52\\research\\2026-11-20-S21-source-inventory.json",
+      "sha256": "76ca44893dff82c362c425573235e3e3745c4748c92b69cd40ce908203870a5c",
+      "bytes": 141180
+    },
+    {
+      "path": "runs\\s52\\research\\2026-11-20-S21-strength-dispositions.csv",
+      "sha256": "04f72851f0ab06f2ddc03607ead55cc19f9c843324d1ce7f9bdc114d8bb4d208",
+      "bytes": 130265
+    },
+    {
+      "path": "runs\\s52\\research\\2026-11-20-S21-unknown-strengths.md",
+      "sha256": "826137e753f8985bacf005d6f02d0c074043982a9e06f36901b8c67c93c893f8",
+      "bytes": 18694
+    },
+    {
+      "path": "runs\\s52\\research\\2026-11-20-S4-military-strengths-and-losses.md",
+      "sha256": "b642afdfdaf07fbedb0d657d4b65d51d8e5841ba6d862ee63bf649f063becf7b",
+      "bytes": 21463
+    },
+    {
+      "path": "runs\\s52\\research\\2026-11-21-S31-next-strength-sources.md",
+      "sha256": "eacff3c153f29f1e1ef1e90373f0d33ed7097fb246e5fc9f31e60ad236ba1ee6",
+      "bytes": 12962
+    },
+    {
+      "path": "runs\\s52\\research\\2026-11-21-S31-source-inventory.json",
+      "sha256": "9208282c22184a5d1126f7028c57ab2da8622f3acc83f4c66c279217a346288a",
+      "bytes": 199238
+    },
+    {
+      "path": "runs\\s52\\research\\2026-11-21-S31-strength-dispositions.csv",
+      "sha256": "4b50ec36190651180af9f0e0e6f97fcd3273044aaf835021f0206ae0844a1f7b",
+      "bytes": 139043
+    },
+    {
+      "path": "runs\\s52\\research\\force_blocks.csv",
+      "sha256": "8414e00d0ac13522234dcced1ac702a1cc257f57244e7b0fe6922fc8e43cdfb6",
+      "bytes": 70035
+    },
+    {
+      "path": "runs\\s52\\research\\strengths-stores-1861.csv",
+      "sha256": "e5be2b295818a4ef86c21c061d1544f2b4006d6da612a96ffcd5b6f5104bd48b",
+      "bytes": 28760
+    }
+  ],
+  "registerCoverage": [
+    {
+      "file": "2026-11-20-S21-strength-dispositions.csv",
+      "rows": 203,
+      "earliestWindow": "1861-08-12",
+      "overlapsAprilJuly1861": 0,
+      "numericalMatches": 0
+    },
+    {
+      "file": "2026-11-21-S31-strength-dispositions.csv",
+      "rows": 163,
+      "earliestWindow": "1861-08-12",
+      "overlapsAprilJuly1861": 0,
+      "numericalMatches": 0
+    }
+  ],
+  "primaryReused": {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S46\\OR-I-2.txt",
+    "sha256": "66d9a89b843925389e1d2d5d9798dc4e0c66f9a0488bbfcc8705659e4b37ebbf",
+    "pagesRead": [
+      "309 (table OCR)",
+      "324",
+      "470-475",
+      "568 (partial table OCR)",
+      "895",
+      "934",
+      "980-982"
+    ]
+  }
+}

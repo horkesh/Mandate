@@ -1,0 +1,40 @@
+{
+  "union-1861": {
+    "path": "runs\\s52-done\\20261122-144945-33460-77642b\\summary.json",
+    "finalHash": "df2d068e6b660ab4b5c8ae8409acbef64e3ae0ebbe2a33cc35a663cb6f0d9341",
+    "sameFinalAsS46": false,
+    "sameDailyHashesAsS46": false,
+    "sameCountersAsS46": false,
+    "dailyHashes": 148,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "df2d068e6b660ab4b5c8ae8409acbef64e3ae0ebbe2a33cc35a663cb6f0d9341",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "timing": null
+  },
+  "testbed": {
+    "path": "runs\\s52-done\\20261122-145130-33460-23123c\\summary.json",
+    "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+    "sameFinalAsS46": true,
+    "sameDailyHashesAsS46": true,
+    "sameCountersAsS46": true,
+    "dailyHashes": 120,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "timing": null
+  }
+}

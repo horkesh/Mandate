@@ -1,0 +1,85 @@
+{
+  "pdf": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+  "pdfSHA256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+  "pages": [
+    {
+      "printed": 187,
+      "PDF_1_based": 207,
+      "image": "C:\\Pyrrhic\\mandate-research-sources\\S52\\OR-I-2-p187.png",
+      "imageSHA256": "e54875333a18cfe48204b9f20da3fd1ef03a35555bea91e340e13c67d846d5ae"
+    },
+    {
+      "printed": 309,
+      "PDF_1_based": 329,
+      "image": "C:\\Pyrrhic\\mandate-research-sources\\S52\\OR-I-2-p309.png",
+      "imageSHA256": "255b046fc8b386e60d6d0389103a70767bcf19752ed9ca37fd917a81540363be"
+    },
+    {
+      "printed": 324,
+      "PDF_1_based": 344,
+      "image": "C:\\Pyrrhic\\mandate-research-sources\\S52\\OR-I-2-p324.png",
+      "imageSHA256": "3979643829002b5cacf07f5678d0e0a162ac96735cc8f6a52723c53cd1d2ed83"
+    },
+    {
+      "printed": 568,
+      "PDF_1_based": 588,
+      "image": "C:\\Pyrrhic\\mandate-research-sources\\S52\\OR-I-2-p568.png",
+      "imageSHA256": "6eb81b638bdf73fffc3c4a86ddd93c68acbc8e90a654db52dbb54f9e050f94a1"
+    }
+  ],
+  "observations": [
+    {
+      "date": "1861-06-30",
+      "command": "Army of the Shenandoah",
+      "measure": "aggregate_present_for_duty",
+      "value": 10654,
+      "source": "OR I-2 p.187, No.12",
+      "scope": "Printed total includes 32 general staff, 10010 infantry, 334 cavalry, 278 artillery; distinct from July 21 arrivals and engaged."
+    },
+    {
+      "date": "1861-06-28",
+      "command": "Department of Pennsylvania",
+      "measure": "aggregate_present_for_duty",
+      "value": 14344,
+      "source": "OR I-2 p.187, No.13",
+      "scope": "13691 infantry, 395 cavalry, 258 artillery. Image heading is June 28, correcting this OCR copy's June 26."
+    },
+    {
+      "date": "1861-07-16/17",
+      "command": "Department of Northeastern Virginia",
+      "measure": "present_for_duty_officers",
+      "value": 1707,
+      "source": "OR I-2 p.309"
+    },
+    {
+      "date": "1861-07-16/17",
+      "command": "Department of Northeastern Virginia",
+      "measure": "present_for_duty_men",
+      "value": 35614,
+      "source": "OR I-2 p.309"
+    },
+    {
+      "date": "1861-07-21",
+      "command": "McDowell crossing Bull Run",
+      "measure": "reported_crossing_all_arms_approximate",
+      "value": 18000,
+      "source": "OR I-2 p.324"
+    },
+    {
+      "date": "1861-07-21",
+      "command": "First Corps Army of the Potomac (Confederate)",
+      "measure": "printed_aggregate_return",
+      "value": 21863,
+      "source": "OR I-2 p.568, No.117 (dated September 25)",
+      "scope": "Printed infantry 19569, cavalry 1468, artillery 826; not the adjacent table's engaged force and not all junction armies."
+    },
+    {
+      "date": "1861-07-21",
+      "command": "First Corps Army of the Potomac (Confederate)",
+      "measure": "printed_engaged_aggregate",
+      "value": 9977,
+      "source": "OR I-2 p.568, No.118 (dated September 25)",
+      "scope": "Not additive with No.117; the same command with narrower participation."
+    }
+  ]
+}

@@ -1,0 +1,1263 @@
+{
+  "finalHash": "df2d068e6b660ab4b5c8ae8409acbef64e3ae0ebbe2a33cc35a663cb6f0d9341",
+  "notice": [
+    {
+      "id": "m.142.walker_leroy_p.davis_jefferson.notice.manassas_advance_received",
+      "text": "situation.manassas_advance_received.text",
+      "type": "wire-dispatch",
+      "subtype": null,
+      "author": "walker_leroy_p",
+      "authorPost": "cs_secretary_war",
+      "subjectKind": "situation",
+      "subjectId": "manassas_advance_received",
+      "claims": [],
+      "reportedControl": [],
+      "day": 142,
+      "hour": null,
+      "advice": null,
+      "answers": null,
+      "receivedDay": 146,
+      "route": "wire",
+      "via": [],
+      "principal": "confederate"
+    }
+  ],
+  "junctionDispatches": [
+    {
+      "day": 147,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "order",
+        "to": "cs_cmd_harpers_ferry",
+        "goal": {
+          "objective": "manassas",
+          "posture": "take",
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "committed": [],
+          "awaitWord": false,
+          "approveAsDrafted": true
+        },
+        "route": "courier",
+        "bypass": false
+      }
+    }
+  ],
+  "battles": [
+    {
+      "day": 144,
+      "type": null,
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_va_potomac",
+          "bsideCommander": "cocke_philip_st_george",
+          "bsideCommit": "defend",
+          "bsideUnknown": [
+            "state-forces.va_manassas_garland",
+            "state-forces.va_manassas_preston"
+          ],
+          "bsidePresent": 0,
+          "bsideCommitted": 0,
+          "bsideEngaged": 0,
+          "bsideTerms": [
+            {
+              "btermKind": "competence",
+              "btermValue": 18,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "numbers",
+              "btermValue": 150,
+              "btermSource": null
+            },
+            {
+              "btermKind": "noise",
+              "btermValue": -20,
+              "btermSource": null
+            }
+          ],
+          "bsideResult": "withdrew",
+          "bsideRetreatTo": "fredericksburg",
+          "bsideMoraleBefore": 600,
+          "bsideMoraleAfter": 600,
+          "bsideMoraleTerms": [],
+          "bsideDecisions": [
+            {
+              "btermKind": "believed_ratio",
+              "btermValue": 0,
+              "btermSource": "cocke_philip_st_george"
+            },
+            {
+              "btermKind": "demand",
+              "btermValue": 1250,
+              "btermSource": "cocke_philip_st_george"
+            },
+            {
+              "btermKind": "probe_at",
+              "btermValue": 875,
+              "btermSource": "cocke_philip_st_george"
+            },
+            {
+              "btermKind": "night_believed_ratio",
+              "btermValue": 0,
+              "btermSource": "cocke_philip_st_george"
+            },
+            {
+              "btermKind": "hold_at",
+              "btermValue": 750,
+              "btermSource": "cocke_philip_st_george"
+            }
+          ],
+          "bsideKw": 0,
+          "bsideKilled": 0,
+          "bsideWounded": 0,
+          "bsideMissing": 0,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_northeastern_virginia",
+          "bsideCommander": "mcdowell_irvin",
+          "bsideCommit": "main",
+          "bsideUnknown": [],
+          "bsidePresent": 101600,
+          "bsideCommitted": 71120,
+          "bsideEngaged": 60000,
+          "bsideTerms": [
+            {
+              "btermKind": "competence",
+              "btermValue": -18,
+              "btermSource": "cocke_philip_st_george"
+            },
+            {
+              "btermKind": "numbers",
+              "btermValue": -150,
+              "btermSource": null
+            },
+            {
+              "btermKind": "noise",
+              "btermValue": -75,
+              "btermSource": null
+            }
+          ],
+          "bsideResult": "gained_ground",
+          "bsideRetreatTo": null,
+          "bsideMoraleBefore": 600,
+          "bsideMoraleAfter": 600,
+          "bsideMoraleTerms": [],
+          "bsideDecisions": [
+            {
+              "btermKind": "believed_ratio",
+              "btermValue": 1000000,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "demand",
+              "btermValue": 1116,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "boldness",
+              "btermValue": 442,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "night_believed_ratio",
+              "btermValue": 1000000,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "hold_at",
+              "btermValue": 669,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "pursue_believed_ratio",
+              "btermValue": 1000000,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "boldness",
+              "btermValue": 442,
+              "btermSource": "mcdowell_irvin"
+            }
+          ],
+          "bsideKw": 0,
+          "bsideKilled": 0,
+          "bsideWounded": 0,
+          "bsideMissing": 0,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "day": 146,
+      "type": null,
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_manassas",
+          "bsideCommander": "beauregard_pierre_g_t",
+          "bsideCommit": "defend",
+          "bsideUnknown": [],
+          "bsidePresent": 16000,
+          "bsideCommitted": 16000,
+          "bsideEngaged": 16000,
+          "bsideTerms": [
+            {
+              "btermKind": "competence",
+              "btermValue": -52,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "surprise",
+              "btermValue": 300,
+              "btermSource": null
+            },
+            {
+              "btermKind": "numbers",
+              "btermValue": 120,
+              "btermSource": null
+            },
+            {
+              "btermKind": "noise",
+              "btermValue": -88,
+              "btermSource": null
+            }
+          ],
+          "bsideResult": "routed",
+          "bsideRetreatTo": "fredericksburg",
+          "bsideMoraleBefore": 600,
+          "bsideMoraleAfter": 150,
+          "bsideMoraleTerms": [
+            {
+              "btermKind": "losses",
+              "btermValue": -306,
+              "btermSource": null
+            },
+            {
+              "btermKind": "nerve",
+              "btermValue": -38,
+              "btermSource": "beauregard_pierre_g_t"
+            },
+            {
+              "btermKind": "experience",
+              "btermValue": -30,
+              "btermSource": null
+            },
+            {
+              "btermKind": "rout_floor",
+              "btermValue": -76,
+              "btermSource": null
+            }
+          ],
+          "bsideDecisions": [
+            {
+              "btermKind": "believed_ratio",
+              "btermValue": 198,
+              "btermSource": "beauregard_pierre_g_t"
+            },
+            {
+              "btermKind": "demand",
+              "btermValue": 1000,
+              "btermSource": "beauregard_pierre_g_t"
+            },
+            {
+              "btermKind": "probe_at",
+              "btermValue": 700,
+              "btermSource": "beauregard_pierre_g_t"
+            }
+          ],
+          "bsideKw": 3276,
+          "bsideKilled": 491,
+          "bsideWounded": 2785,
+          "bsideMissing": 1147,
+          "bsideCaptured": 491
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_northeastern_virginia",
+          "bsideCommander": "mcdowell_irvin",
+          "bsideCommit": "main",
+          "bsideUnknown": [],
+          "bsidePresent": 80600,
+          "bsideCommitted": 56420,
+          "bsideEngaged": 56420,
+          "bsideTerms": [
+            {
+              "btermKind": "competence",
+              "btermValue": 52,
+              "btermSource": "beauregard_pierre_g_t"
+            },
+            {
+              "btermKind": "numbers",
+              "btermValue": -120,
+              "btermSource": null
+            },
+            {
+              "btermKind": "noise",
+              "btermValue": -20,
+              "btermSource": null
+            }
+          ],
+          "bsideResult": "gained_ground",
+          "bsideRetreatTo": null,
+          "bsideMoraleBefore": 600,
+          "bsideMoraleAfter": 542,
+          "bsideMoraleTerms": [
+            {
+              "btermKind": "losses",
+              "btermValue": -42,
+              "btermSource": null
+            },
+            {
+              "btermKind": "nerve",
+              "btermValue": 14,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "experience",
+              "btermValue": -30,
+              "btermSource": null
+            }
+          ],
+          "bsideDecisions": [
+            {
+              "btermKind": "believed_ratio",
+              "btermValue": 4290,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "demand",
+              "btermValue": 1116,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "boldness",
+              "btermValue": 442,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "night_believed_ratio",
+              "btermValue": 5239,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "hold_at",
+              "btermValue": 669,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "pursue_believed_ratio",
+              "btermValue": 5239,
+              "btermSource": "mcdowell_irvin"
+            },
+            {
+              "btermKind": "boldness",
+              "btermValue": 442,
+              "btermSource": "mcdowell_irvin"
+            }
+          ],
+          "bsideKw": 2334,
+          "bsideKilled": 350,
+          "bsideWounded": 1984,
+          "bsideMissing": 186,
+          "bsideCaptured": 0
+        }
+      ]
+    }
+  ],
+  "lastArmies": {
+    "cs_cmd_harpers_ferry": {
+      "holder": "johnston_joseph_e",
+      "known": 22115,
+      "unknownBlocks": 1,
+      "locations": [
+        {
+          "block": "fb_cs_charleston",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "fb_cs_charleston_castle_pinckney",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "fb_st_charleston_1st_artillery_battalion",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "fb_st_charleston_1st_infantry_regulars",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "fb_st_charleston_floating_battery",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "fb_st_charleston_fort_johnson",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "fb_st_charleston_fort_palmetto_stono",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "fb_st_charleston_moultrie_infantry_recruits",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "fb_st_charleston_regiment_of_rifles",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "fb_st_charleston_vigilant_rifles",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "fb_st_georgetown_coast_guard",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_georgia.d9",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_texas.d9",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_alabama.d9",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_mississippi.d9",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_south_carolina.d19",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_georgia.d53",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_alabama.d53",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_mississippi.d55",
+          "location": {
+            "locRegion": "loudoun_fauquier",
+            "locAboard": null,
+            "locSinceDay": 145,
+            "locMarch": {
+              "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+              "marchFrom": "loudoun_fauquier",
+              "marchTo": "harpers_ferry",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 3000,
+              "marchStartDay": 146
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_arkansas.d59",
+          "location": {
+            "locRegion": "danville",
+            "locAboard": null,
+            "locSinceDay": 146,
+            "locMarch": {
+              "marchEdge": "road:danville:lynchburg",
+              "marchFrom": "danville",
+              "marchTo": "lynchburg",
+              "marchNeedMilli": 7000,
+              "marchDoneMilli": 2000,
+              "marchStartDay": 147
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_arkansas.d60",
+          "location": {
+            "locRegion": "danville",
+            "locAboard": null,
+            "locSinceDay": 146,
+            "locMarch": {
+              "marchEdge": "road:danville:lynchburg",
+              "marchFrom": "danville",
+              "marchTo": "lynchburg",
+              "marchNeedMilli": 7000,
+              "marchDoneMilli": 2000,
+              "marchStartDay": 147
+            }
+          }
+        }
+      ]
+    },
+    "cs_cmd_manassas": {
+      "holder": "beauregard_pierre_g_t",
+      "known": 64086,
+      "unknownBlocks": 7,
+      "locations": [
+        {
+          "block": "state-forces.cs_nc_state_transfer_north_carolina",
+          "location": {
+            "locRegion": "fredericksburg",
+            "locAboard": null,
+            "locSinceDay": 146,
+            "locMarch": {
+              "marchEdge": "road:fredericksburg:manassas",
+              "marchFrom": "fredericksburg",
+              "marchTo": "manassas",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 2000,
+              "marchStartDay": 147
+            }
+          }
+        },
+        {
+          "block": "state-forces.cs_nc_volunteers_north_carolina",
+          "location": {
+            "locRegion": "fredericksburg",
+            "locAboard": null,
+            "locSinceDay": 146,
+            "locMarch": {
+              "marchEdge": "road:fredericksburg:manassas",
+              "marchFrom": "fredericksburg",
+              "marchTo": "manassas",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 2000,
+              "marchStartDay": 147
+            }
+          }
+        },
+        {
+          "block": "state-forces.cs_nc_additional_north_carolina",
+          "location": {
+            "locRegion": "fredericksburg",
+            "locAboard": null,
+            "locSinceDay": 146,
+            "locMarch": {
+              "marchEdge": "road:fredericksburg:manassas",
+              "marchFrom": "fredericksburg",
+              "marchTo": "manassas",
+              "marchNeedMilli": 4000,
+              "marchDoneMilli": 2000,
+              "marchStartDay": 147
+            }
+          }
+        },
+        {
+          "block": "state-forces.cs_tn_infantry_tennessee",
+          "location": {
+            "locRegion": "augusta",
+            "locAboard": null,
+            "locSinceDay": 148,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "state-forces.cs_tn_cavalry_tennessee",
+          "location": {
+            "locRegion": "augusta",
+            "locAboard": null,
+            "locSinceDay": 148,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "state-forces.cs_tn_artillery_tennessee",
+          "location": {
+            "locRegion": "augusta",
+            "locAboard": null,
+            "locSinceDay": 148,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_georgia.d127",
+          "location": {
+            "locRegion": "salisbury_charlotte",
+            "locAboard": null,
+            "locSinceDay": 140,
+            "locMarch": {
+              "marchEdge": "road:greensboro:salisbury_charlotte",
+              "marchFrom": "salisbury_charlotte",
+              "marchTo": "greensboro",
+              "marchNeedMilli": 10000,
+              "marchDoneMilli": 8000,
+              "marchStartDay": 141
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_georgia.d127.2",
+          "location": {
+            "locRegion": "salisbury_charlotte",
+            "locAboard": null,
+            "locSinceDay": 140,
+            "locMarch": {
+              "marchEdge": "road:greensboro:salisbury_charlotte",
+              "marchFrom": "salisbury_charlotte",
+              "marchTo": "greensboro",
+              "marchNeedMilli": 10000,
+              "marchDoneMilli": 8000,
+              "marchStartDay": 141
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_georgia.d129",
+          "location": {
+            "locRegion": "salisbury_charlotte",
+            "locAboard": null,
+            "locSinceDay": 140,
+            "locMarch": {
+              "marchEdge": "road:greensboro:salisbury_charlotte",
+              "marchFrom": "salisbury_charlotte",
+              "marchTo": "greensboro",
+              "marchNeedMilli": 10000,
+              "marchDoneMilli": 8000,
+              "marchStartDay": 141
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_alabama.d130",
+          "location": {
+            "locRegion": "salisbury_charlotte",
+            "locAboard": null,
+            "locSinceDay": 146,
+            "locMarch": {
+              "marchEdge": "road:greensboro:salisbury_charlotte",
+              "marchFrom": "salisbury_charlotte",
+              "marchTo": "greensboro",
+              "marchNeedMilli": 10000,
+              "marchDoneMilli": 2000,
+              "marchStartDay": 147
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_alabama.d130.2",
+          "location": {
+            "locRegion": "salisbury_charlotte",
+            "locAboard": null,
+            "locSinceDay": 146,
+            "locMarch": {
+              "marchEdge": "road:greensboro:salisbury_charlotte",
+              "marchFrom": "salisbury_charlotte",
+              "marchTo": "greensboro",
+              "marchNeedMilli": 10000,
+              "marchDoneMilli": 2000,
+              "marchStartDay": 147
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_alabama.d132",
+          "location": {
+            "locRegion": "salisbury_charlotte",
+            "locAboard": null,
+            "locSinceDay": 146,
+            "locMarch": {
+              "marchEdge": "road:greensboro:salisbury_charlotte",
+              "marchFrom": "salisbury_charlotte",
+              "marchTo": "greensboro",
+              "marchNeedMilli": 10000,
+              "marchDoneMilli": 2000,
+              "marchStartDay": 147
+            }
+          }
+        },
+        {
+          "block": "state-forces.cs_ar_infantry_arkansas",
+          "location": {
+            "locRegion": "ar_white_arkansas",
+            "locAboard": null,
+            "locSinceDay": 147,
+            "locMarch": {
+              "marchEdge": "road:ar_white_arkansas:north_louisiana",
+              "marchFrom": "ar_white_arkansas",
+              "marchTo": "north_louisiana",
+              "marchNeedMilli": 18000,
+              "marchDoneMilli": 1000,
+              "marchStartDay": 148
+            }
+          }
+        },
+        {
+          "block": "state-forces.cs_ar_cavalry_arkansas",
+          "location": {
+            "locRegion": "ar_white_arkansas",
+            "locAboard": null,
+            "locSinceDay": 147,
+            "locMarch": {
+              "marchEdge": "road:ar_white_arkansas:north_louisiana",
+              "marchFrom": "ar_white_arkansas",
+              "marchTo": "north_louisiana",
+              "marchNeedMilli": 18000,
+              "marchDoneMilli": 1000,
+              "marchStartDay": 148
+            }
+          }
+        },
+        {
+          "block": "state-forces.cs_ar_cavalry_battalion_arkansas",
+          "location": {
+            "locRegion": "ar_white_arkansas",
+            "locAboard": null,
+            "locSinceDay": 147,
+            "locMarch": {
+              "marchEdge": "road:ar_white_arkansas:north_louisiana",
+              "marchFrom": "ar_white_arkansas",
+              "marchTo": "north_louisiana",
+              "marchNeedMilli": 18000,
+              "marchDoneMilli": 1000,
+              "marchStartDay": 148
+            }
+          }
+        },
+        {
+          "block": "state-forces.cs_ar_artillery_arkansas",
+          "location": {
+            "locRegion": "ar_white_arkansas",
+            "locAboard": null,
+            "locSinceDay": 147,
+            "locMarch": {
+              "marchEdge": "road:ar_white_arkansas:north_louisiana",
+              "marchFrom": "ar_white_arkansas",
+              "marchTo": "north_louisiana",
+              "marchNeedMilli": 18000,
+              "marchDoneMilli": 1000,
+              "marchStartDay": 148
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_mississippi.d136",
+          "location": {
+            "locRegion": "al_valley_east",
+            "locAboard": null,
+            "locSinceDay": 147,
+            "locMarch": {
+              "marchEdge": "road:al_valley_east:ga_dalton",
+              "marchFrom": "al_valley_east",
+              "marchTo": "ga_dalton",
+              "marchNeedMilli": 9000,
+              "marchDoneMilli": 1000,
+              "marchStartDay": 148
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_mississippi.d137",
+          "location": {
+            "locRegion": "al_valley_east",
+            "locAboard": null,
+            "locSinceDay": 147,
+            "locMarch": {
+              "marchEdge": "road:al_valley_east:ga_dalton",
+              "marchFrom": "al_valley_east",
+              "marchTo": "ga_dalton",
+              "marchNeedMilli": 9000,
+              "marchDoneMilli": 1000,
+              "marchStartDay": 148
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_mississippi.d139",
+          "location": {
+            "locRegion": "al_valley_east",
+            "locAboard": null,
+            "locSinceDay": 147,
+            "locMarch": {
+              "marchEdge": "road:al_valley_east:ga_dalton",
+              "marchFrom": "al_valley_east",
+              "marchTo": "ga_dalton",
+              "marchNeedMilli": 9000,
+              "marchDoneMilli": 1000,
+              "marchStartDay": 148
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_south_carolina.d139",
+          "location": {
+            "locRegion": "sc_upstate_east",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": {
+              "marchEdge": "road:salisbury_charlotte:sc_upstate_east",
+              "marchFrom": "sc_upstate_east",
+              "marchTo": "salisbury_charlotte",
+              "marchNeedMilli": 5000,
+              "marchDoneMilli": 4000,
+              "marchStartDay": 145
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_arkansas.d140",
+          "location": {
+            "locRegion": "little_rock",
+            "locAboard": null,
+            "locSinceDay": 140,
+            "locMarch": {
+              "marchEdge": "road:ar_white_arkansas:little_rock",
+              "marchFrom": "little_rock",
+              "marchTo": "ar_white_arkansas",
+              "marchNeedMilli": 8000,
+              "marchDoneMilli": 4000,
+              "marchStartDay": 145
+            }
+          }
+        },
+        {
+          "block": "raised.st_gov_arkansas.d140.2",
+          "location": {
+            "locRegion": "little_rock",
+            "locAboard": null,
+            "locSinceDay": 140,
+            "locMarch": {
+              "marchEdge": "road:ar_white_arkansas:little_rock",
+              "marchFrom": "little_rock",
+              "marchTo": "ar_white_arkansas",
+              "marchNeedMilli": 8000,
+              "marchDoneMilli": 4000,
+              "marchStartDay": 145
+            }
+          }
+        }
+      ]
+    },
+    "st_va_harpers_ferry": {
+      "holder": "jackson_thomas_j",
+      "known": 0,
+      "unknownBlocks": 1,
+      "locations": [
+        {
+          "block": "state-forces.va_harpers_ferry",
+          "location": {
+            "locRegion": "harpers_ferry",
+            "locAboard": null,
+            "locSinceDay": 54,
+            "locMarch": null
+          }
+        }
+      ]
+    },
+    "st_va_potomac": {
+      "holder": "cocke_philip_st_george",
+      "known": 0,
+      "unknownBlocks": 2,
+      "locations": [
+        {
+          "block": "state-forces.va_manassas_garland",
+          "location": {
+            "locRegion": "fredericksburg",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "state-forces.va_manassas_preston",
+          "location": {
+            "locRegion": "fredericksburg",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        }
+      ]
+    },
+    "us_dept_northeastern_virginia": {
+      "holder": "mcdowell_irvin",
+      "known": 79121,
+      "unknownBlocks": 0,
+      "locations": [
+        {
+          "block": "fb_us_dc_militia",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_new_york.d67",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_massachusetts.d76",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_connecticut.d77",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_new_hampshire.d77",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_indiana.d77",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_rhode_island.d79",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_new_york.d86",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_wisconsin.d86",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_maine.d87",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_illinois.d87",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.tr_gov_nebraska.d93",
+          "location": {
+            "locRegion": "washington",
+            "locAboard": null,
+            "locSinceDay": 136,
+            "locMarch": null
+          }
+        },
+        {
+          "block": "raised.st_gov_indiana.d103",
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 144,
+            "locMarch": null
+          }
+        }
+      ]
+    },
+    "us_dept_pennsylvania": {
+      "holder": "patterson_robert",
+      "known": 0,
+      "unknownBlocks": 0,
+      "locations": []
+    }
+  },
+  "checkpoints": {
+    "problems": [
+      "men_confederate (1861-07-31, day 148): confederate has 90239 men, below 100000"
+    ],
+    "evidence": [
+      "seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+      "side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+      "side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+      "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+      "side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+      "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+      "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+      "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+      "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+      "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+      "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+      "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+      "men_union (1861-07-31, day 148): union 97207 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+      "men_confederate (1861-07-31, day 148): confederate 90239 men of known strength, 23 blocks of unknown strength (band 100000..200000)",
+      "operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+      "operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+      "confederate at war since day 36",
+      "union at war since day 41"
+    ]
+  },
+  "operations": {
+    "problems": [],
+    "evidence": [
+      "op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+      "op:us_dept_northeastern_virginia:137 (union, direct) fought battle battle:manassas:144"
+    ]
+  },
+  "rejections": [],
+  "refusals": []
+}

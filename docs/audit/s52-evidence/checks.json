@@ -1,0 +1,73 @@
+{
+  "sourceCommit": {
+    "id": "f2c11d39220dc1aca881cac8965fc86b2b1ac454",
+    "hook": {
+      "exit": 0,
+      "seconds": 330.00053570000455
+    },
+    "tests": {
+      "passed": 1950,
+      "skipped": 5
+    }
+  },
+  "s51SeparateCommitAttempt": {
+    "hook": {
+      "exit": 1,
+      "seconds": 424.6200697000022
+    },
+    "passed": 1967,
+    "failed": 1,
+    "skipped": 5,
+    "failure": "packages/cli/test/console-session.test.ts: R86 hour-stamped battle dispatch by 31 July",
+    "result": "not committed; no bypass"
+  },
+  "focusedCloseout": {
+    "exit": 0,
+    "files": 5,
+    "passed": 53,
+    "log": "runs/s52/focused-closeout.log"
+  },
+  "authoringGuards": {
+    "red": {
+      "validAccepted": 2,
+      "invalidIncorrectlyAccepted": 5
+    },
+    "green": {
+      "exit": 0,
+      "passed": 7
+    }
+  },
+  "generateCurrent": {
+    "exitCode": 0
+  },
+  "schemasCurrent": {
+    "exitCode": 0
+  },
+  "requiredCheck": {
+    "command": "MANDATE_NO_GIT=1 npm run check",
+    "exit": 1,
+    "typecheck": "pass",
+    "rules": "2 changed projection-truth fingerprints and 2 stale inherited entries; 4 findings",
+    "downstream": "not reached; prior independent boundary/licences/decisions checks exit 0"
+  },
+  "history": {
+    "exit": 0,
+    "days": 148,
+    "rejections": 0,
+    "refusals": 0,
+    "log": "runs/s52/history.log"
+  },
+  "binding": {
+    "command": "npm run run:done-check -- --milestone 1a --label s52-done",
+    "exit": 1,
+    "seconds": 3067.8904852,
+    "phase0": "4/6",
+    "milestone1a": "2/6"
+  },
+  "invalidInvocation": {
+    "command": "npm run pack:generate -- --check",
+    "exit": 2,
+    "correction": "supply union-1861; corrected check exits 0; no generated file changed"
+  },
+  "campaignReuse": "No second campaign. After measurement only the pack authoring validator changed and one guard test was added. Loaded world and initial state hashes match; runtime kernel, rule seats and pack data retain measured bytes."
+}
