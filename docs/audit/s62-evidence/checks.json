@@ -1,0 +1,100 @@
+{
+  "doneCheck": {
+    "command": "npm run run:done-check -- --milestone 1a --label s62-done",
+    "started": "2026-11-22T19:45:12.9178754+01:00",
+    "seconds": 3009.6387789,
+    "exit": 1
+  },
+  "rootCheckInitial": {
+    "command": "MANDATE_NO_GIT=1 npm run check",
+    "started": "2026-11-22T19:29:41.2959938+01:00",
+    "seconds": 196.6818583,
+    "exit": 1
+  },
+  "sourceHookBeforeGarrisonCorrection": {
+    "command": "git commit -F runs/s62/source-commit-message.txt",
+    "started": "2026-11-22T19:37:13.1426650+01:00",
+    "seconds": 344.817876,
+    "exit": 1
+  },
+  "criteria": [
+    {
+      "status": "PASS",
+      "id": "behaviour",
+      "text": "rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply\r"
+    },
+    {
+      "status": "PASS",
+      "id": "hash",
+      "text": "the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)\r"
+    },
+    {
+      "status": "PASS",
+      "id": "resume",
+      "text": "a mid-run save, loaded, resumes to the continuous run\u2019s final hash, and the log replays to every hash\r"
+    },
+    {
+      "status": "FAIL",
+      "id": "liveness",
+      "text": "every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason\r"
+    },
+    {
+      "status": "PASS",
+      "id": "section-ten",
+      "text": "the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite\u2019s)\r"
+    },
+    {
+      "status": "FAIL",
+      "id": "budget",
+      "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)\r"
+    },
+    {
+      "status": "FAIL",
+      "id": "checkpoints",
+      "text": "the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought\r"
+    },
+    {
+      "status": "PASS",
+      "id": "operation",
+      "text": "at least one operation drafted by the kernel planner, chosen by its commander\u2019s seat, approved, executed and fought with the battle model, with a breakdown\r"
+    },
+    {
+      "status": "FAIL",
+      "id": "pushback",
+      "text": "pushback fires inside its bands: lower bounds from the record\u2019s sourced cases (S01\u2013S21), upper bounds the lead\u2019s\r"
+    },
+    {
+      "status": "PASS",
+      "id": "unknown-strength",
+      "text": "no block fights with unknown strength: every battle record, in every run, lists none unknown\r"
+    },
+    {
+      "status": "PASS",
+      "id": "stand-ins",
+      "text": "the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane\r"
+    },
+    {
+      "status": "FAIL",
+      "id": "lever-sweep",
+      "text": "the lever sweep (D6): no watched option, nor an atrocity-class decision\u2019s inaction, is the victory-only bot\u2019s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active\r"
+    }
+  ],
+  "phase0Pass": 4,
+  "oneaPass": 3,
+  "finalTypecheck": 0,
+  "finalRules": 0,
+  "garrisonCorrection": {
+    "exit": 0,
+    "files": 4,
+    "tests": 55
+  },
+  "fieldCorrection": {
+    "exit": 0,
+    "files": 5,
+    "tests": 58
+  },
+  "boundary": 0,
+  "licences": 0,
+  "decisions": 0,
+  "finalSourceHookRepeated": false
+}

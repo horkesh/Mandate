@@ -1,0 +1,5 @@
+
+> check:boundary
+> node tools/check-pack-boundary.mjs
+
+Pack boundary clean: 390 files, 61 terms.

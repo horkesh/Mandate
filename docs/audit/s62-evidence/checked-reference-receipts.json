@@ -1,0 +1,36 @@
+[
+  {
+    "path": "runs/s62-done/20261122-184650-23756-4e91d1/summary.json",
+    "pack": "union-1861",
+    "finalHash": "d57634a17331310241b1b61044619c8093cc3c52b1ad831471a71cc350bbf0bf",
+    "traceMatches": true,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "d57634a17331310241b1b61044619c8093cc3c52b1ad831471a71cc350bbf0bf",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 22
+  },
+  {
+    "path": "runs/s62-done/20261122-184804-23756-ec8e1d/summary.json",
+    "pack": "testbed",
+    "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+    "traceMatches": true,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0
+  }
+]

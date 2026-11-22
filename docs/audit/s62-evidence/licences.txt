@@ -1,0 +1,5 @@
+
+> check:licences
+> tsx tools/check-licences.ts
+
+Dependency licences clean: package-lock.json (123 packages), prototypes/desk/package-lock.json (160 packages), prototypes/map-icons/package-lock.json (2 packages), prototypes/map-tripwire/package-lock.json (78 packages).

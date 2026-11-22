@@ -1,0 +1,643 @@
+[
+  {
+    "pack": "union-1861",
+    "baseline": "docs/audit/s42-evidence/union-1861-summary.json",
+    "worldHashUnchanged": true,
+    "initialHashUnchanged": true,
+    "beforeFinal": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+    "afterFinal": "d57634a17331310241b1b61044619c8093cc3c52b1ad831471a71cc350bbf0bf",
+    "changedDays": [
+      {
+        "day": 48,
+        "before": "f3a663f2c48d95794b49ad431b8aab28cd0bb2b7adaa6269cb39403943a64bd6",
+        "after": "8202b6bc73bb6cf000f24f1efebeb0653dc3e6c83b85f7ce9376d2fbe24a9b5d",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 49,
+        "before": "5427d6c4cfa12f242e5c0c98bbba5b590357d6bc6e701cedbeba28f9538015a8",
+        "after": "fd0a52a1ed32b4e6707a68b1fa69d89f768049256e01b8d0ea8a80974785e93b",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 50,
+        "before": "bb6a8d2b74acc5a68da6d3f1890ab3e874540cba661729be0aa9563af06c2e34",
+        "after": "799533e8a33325c90722e30b9701cfb742452aa9437dcf30650c7e062fc31f87",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 51,
+        "before": "9488c63257a9af6070a2314271f53e57d205599091c65329e9ce69d20c39f8a0",
+        "after": "92f976ecf7c677b26f244c254c7bc20cd1c66494e348da649c75c567a1ded047",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 52,
+        "before": "08e972d90109cd5916985e3ca3f85b4605fb9d2a45ad5e33c346997422ea5009",
+        "after": "1ecc9fbd0bc5b8f3fb8f43fbd0634e36ccb33cfce2d790678af82ffafa8f3828",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 53,
+        "before": "9f906d54f8913d683bb9ac862950f481c00841da73c9c62f2a319accc33f24cf",
+        "after": "84df889c31a2ae459ffd60c18dfeef471e0f61c8e76f3877e760ffd25c93a053",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 54,
+        "before": "f845fa36386e4e20d57c818154ed5362caeb455db2c0c2e603eb978a88814f4a",
+        "after": "9ef666678c62e2904a35c79b6642382e430e40fc05030da4b17212c58e4c0118",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 55,
+        "before": "66c82c142365ca5153b0b220fb1eb1a5dc9d879a8e8cb6081aa3d50e3275d011",
+        "after": "f1ac4a80c0115af2342d18ed03e61b0fbb1ed602f6cb16717382977143af2c49",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 56,
+        "before": "330f783770ba8a02eb0e1ba6cc25d1640ffdcc3690f6b010ee165d47f469a617",
+        "after": "74afc4da97d2675f61bfd922ecfae07cdf6e052928d93d2a5534c53e7244aeaa",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 57,
+        "before": "4d04df7696c97fbe6b1ed68082cd9bb09ccd4507fbbcb4bcf9f614b1fd195072",
+        "after": "a39c7e758a2fea1bab46bc7ae27039edb34b18d11c533fef5cfd05bedac29eec",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 58,
+        "before": "99e39ecf743ba31fe715346422ffc7e6fa61535c6da764283201fe1051045675",
+        "after": "196a02086521318c6b94aa3d59d774c77ff8589cea07c2b98301cd97f85b53c2",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 59,
+        "before": "594af142a70f7185a7697f2e02fd4e885d7919e3d70315df68f718f3e0ab8fdf",
+        "after": "dffdb352b6f144cc7c838b80fda061561ae492f06522947f9a9bdec2006ffada",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 60,
+        "before": "953da5096ba85f07439748e2b901bff271eabff7e12ebc06919776a68d19eb56",
+        "after": "f7e4be5a4a780d7baff5f1e726e7be083cf3ad44a778148f37f8f1798703dcd6",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 61,
+        "before": "09618eac26a499699043d7a375eb4e98b921773df4218424e177b60263938da9",
+        "after": "7b9a3546df414286ab2bf9e60e84e25bad606ea6d5e35fc65ec0d8bd5ac5d266",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 62,
+        "before": "ddaacbefbc4481e9094f7bfedd6a344284157efbda5247f52bf3c54b02cd54be",
+        "after": "5be50da7c793ccbad92c57c9248da74b519b1dbbb733c28653f260affcb06340",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 63,
+        "before": "8a614ae88dd045b6f2836c3043214cd326310cd0b76cc6a8ecf81119c5536b4b",
+        "after": "59ecc07af0e5890a1df545755d840d47c549646606e1e3465e196d56b96859e4",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 64,
+        "before": "77bd971661e93d696bf988ee798cad51da1662f27062d892ab3345d8fb25c946",
+        "after": "a8026ec6970970c3b5c9e8be3555836a535c0a29ec126c459f54b41e70e1a34d",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 65,
+        "before": "ef25962a863653b43d9280c94876397eec651f7ddb7d74cbf3be3f000f3a386a",
+        "after": "f77534d7e58e7008d136778c28c3e175ae2923aff84ab5d2d62a6e8c03c6366a",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 66,
+        "before": "77e846469284173a8444d5f4252e9ea46ecc18c9047dea96981a69ae2d69726a",
+        "after": "3284c7df2039ee251dba5d02a8f3168fe8ab6ccf4c184660db1f1e373b41aa5a",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 67,
+        "before": "1aaf83b35e6c0dce7abf4deb24895fa8c158c29018bb97cc332c17a42f5a1a77",
+        "after": "101fcf0227b2402031eb34a1ab1c566af8ebee8ddc09cbac5621cb345618b0ab",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 68,
+        "before": "28375d3b590171c047076b6e81879188ae5da87f67ca9fe233d9027292f6d874",
+        "after": "4be484b8af0d9e54522831106dc397767d0332d916c3036e65e3e3ff45ee125f",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 69,
+        "before": "9806b53138372452d51626b2e6a84aaba18f9707494ac269fea85aceb4fdd931",
+        "after": "881817387d234cc2c4052628eac1afdb917b16415032e1da9a61fa51fe289057",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 70,
+        "before": "6861ca9b7a75ab90d29001f31cfeb746252f74a33fb49d3b6ab39f05c800e504",
+        "after": "43000428b979ef70afce108433bb9cd0859c57f20d45dbef7828707083036391",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 71,
+        "before": "6bc03d41f98ac5c211d1d92bb96b70d895d06951fd4520cfbc5cd83d0c1671bb",
+        "after": "2d8f4562e2d2b0c81a7e9c99da1f4ce4394dff951288479f8fafdf4036e01932",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 72,
+        "before": "43d114d851f9243fb3030dea904977eed3d1343fa7ee557a76d4a6b09b2796da",
+        "after": "35cce1bfcc46e71705ca8d151a42ae889dc218023fd4da9f63477e2fc6c65f79",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 73,
+        "before": "24b02da62e4cde212ecaa243a43e5a92aa0bca10a813d2d4e173adf8c7b32c83",
+        "after": "4a870232e252bad70d233d9f7f7c2c2c19f0e57ff26b1b62865250193a2f4c40",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 74,
+        "before": "2597e99dee84f8cf5de27a601cc049424b2fd6dbae3006ccff997d0be346a673",
+        "after": "81304f82a6d6f14f3064e4a19190a38b911c4d793323617b9569f0842b9f946c",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 75,
+        "before": "0933baf9a110fe2e291673dba658cecf3726460d5c93dbf0bb9768294161b31f",
+        "after": "3e907c672dce7f16c9bab9e6151e4070ce418e62b3e92689f364331610f6c2ed",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 76,
+        "before": "f6f386284e300571d109d718a3f27eeb1403b1551ac690231f56c6c6220b36c3",
+        "after": "5703c70ccd1175b5e553d66e58684259e020fa4c6cee2b512d6edfa728e93ed3",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 77,
+        "before": "45122cf8f7e9c5dcd58418f451e7bcb5523c5d4893606d484dc0f317ae9700cb",
+        "after": "0ab532c58d76bb130adcc54ad1bf0bce041c87063788e2033d3314036225db63",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 78,
+        "before": "4e4f5c9ac805b7ae4098f522134c0ffc26c684441a89cc892d82cc32b33de066",
+        "after": "bdeaa50f3d96970f24c78872a4df9441906b76696c7f290cb105e9731ff5f801",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 79,
+        "before": "f8e993a08efd1a66d832401e194dfb009d6a04f9b2da5d114deb65ad4906ec1e",
+        "after": "e44cb72394bb5914ee39dd008daaa03811242e1761cfe6b4d60740245dd3519b",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 80,
+        "before": "602909361c13bbf0f757c743d39e7689db8908315e6bfb1a8e16c0514b90da61",
+        "after": "1018e88f724437cfc7a49f7411afd3c6f01d531f951119a3f5b0a0291ddbdeb3",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 81,
+        "before": "adfb4ff723d7a760b8628fbcdb6142544fceb8b11a7a8d72d55a0ad5d7d8107d",
+        "after": "ccf84e34c4a5af1ebbba776368e1eea24369b1d3e909dd6e20c3a96d726a1126",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 82,
+        "before": "ab4f65c347adee212eca141251e667ed9d3a2c5a70aeb3b8ee91c7ae66d3ea9e",
+        "after": "5e7253ade117b74d994c46d9e4ef6e9f05e3c7659a019fc333526f2b3d40c896",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 83,
+        "before": "bf45b73998b3ef724b18a5d78bba4290ac3c217f6fea324a297a00211a67c9fe",
+        "after": "4668d68047c10446879ebd6b1aa2e53a74d2ab2241857b18d5c2c1f12d6f3cf8",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 84,
+        "before": "13a03e3cebf82e318bb30c95035fde80ff6c09e94196f0523e5d6849b328c8c0",
+        "after": "2b6d3fc66aac15b4db22833b79994a326934e06f0ff8c16b8183a051615b36f5",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 85,
+        "before": "10de2be611e81610de841b1a66b8f20415e778edd0fb3ba85cfba5804dfb7a2e",
+        "after": "7bd96fb1b9bfafe6b9b1c03a750c4aafe6bcca4ea88f66557d2eb9a0ac13723f",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 86,
+        "before": "3a8b98c0051cda6f124977d1c1e74950d49731432bc2cd80ced20f375c09acb8",
+        "after": "92256dcc3d39270b8d7d1fa1ab7d6fe3f3b06c4b8bd31d82a87d85569a48ad38",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 87,
+        "before": "aa6608eb91851d27e6e05f65e24a2412aca074215ed5e32a88a477448fe5c201",
+        "after": "61b79fee1c9010e65e15385a88ce0669602caeec1bc27a6c1196525c4fecd778",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 88,
+        "before": "3c73ece6b78bfad01e0feb0f36ea12d5843857517341ab8b74e94812911a4cec",
+        "after": "0516c29c0df2cafea51c5f2450317bfc1b50f1ca6381e7ef905c16db73f950c4",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 89,
+        "before": "d7f7760c812ab656f3f7d5c98888ba97a203381f76d75c1bb74e0a1782701d43",
+        "after": "d1b0d117bfab271832ebae58a653744abbe7e63d2b8ea8b5c2b82ac843eb63ac",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 90,
+        "before": "f038f1b101af4690090e280850c01a116cf83cfef834ae6cf9c5833a714b2981",
+        "after": "cd14dbf97bd996cc56fde59cda4f994668644d303537336c5b725ed02ac098f3",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 91,
+        "before": "40830af7966b80394343b4d74f87ebab6ad97227dd8aac6dda2332364bfacb4f",
+        "after": "cc3b54251da9e90257b190310cac4312a50554663b68912d42ab0b707b67076d",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 92,
+        "before": "c7289b30f7eec43fa4f105f38deccedec5db38d90455d17c103a652c473517e0",
+        "after": "4e3eabe08c0163d0398dc51b2b512b80418f321eda23fab9443b3a69f011ba5c",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 93,
+        "before": "11d65453cdf14428885827af5e91e50f67bb22403406abe53ad261b5d72c1751",
+        "after": "5dd21a8eddb89b3a607b5413eb19ee28fe2e94863a97b25395d946f4d175d5a1",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 94,
+        "before": "71a00e950cf1500778a176e294f133b70081eb8c7c59077e7fd3d0d3260b012e",
+        "after": "50c364c1079543f02627387ea21e6d200cb2b332a3fdca1028859f2457ae47ac",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 95,
+        "before": "74858f0ea61b4afb8cbc15c5453563f0cb9f209806bc49002151574f9703aa66",
+        "after": "35919b6ba1e2e9301a42cd7655ce242fcd022d0f5e3dee801b58b793bddb4f93",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 96,
+        "before": "85643110ee33f46bb6b619ee2f37f7bd11fd61d595061556a921493360fe78cf",
+        "after": "69a98d486a1b20337d5560e217ff27bbe487ae5c8aec1e708d8bbd9087383200",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 97,
+        "before": "2234087e9d26ebd0b9aab3670dea243cd8098c61321f2a28a25a283f55acf679",
+        "after": "f97aa31293c0f143c76a3ce168c6ca7f8cc171f575f179e7e824ae8045fc0888",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 98,
+        "before": "252dd71577d66cab99edb36c187461e52548dd487ae0f983d3244fbd7c599977",
+        "after": "08855ff5b1ac61d90d8cb388a275d3731a5c07c23874fd2fa50753e0febcd745",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 99,
+        "before": "89805ad01ff32b3572b7f5f440d739747ac4420ab65488aa84e3d9fd86ac65a1",
+        "after": "ee7b2430068cb8a75e3b4553ca19bb018bdb438e662ed652b17e81332d727dcd",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 100,
+        "before": "536cc51c9d29eb342b1b63f03a2056c05213c54a721eb4160bb096912d0da252",
+        "after": "6d18bd2c9e0c0b73995fae332cbb2da06be49415fac600573c2a86b9f20a5797",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 101,
+        "before": "2805af719f744a0ba6f902d9d17a31a406bda3ff9603e318552c1fcde5175596",
+        "after": "5edd50ffc8c3ce021698b6d84f66825fde032fff97936962e9f7b1419df6d02d",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 102,
+        "before": "4f1b8491b5722564175f54177354639ff1d52f22ef277f50ccc7dc508b93e57d",
+        "after": "cb2b4caba306dc2721763649d0b6b2512939a913d94cc83356658a286611a929",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 103,
+        "before": "003c462027490a7ab86a7c27078401561fa7bb5c6737c6605db210c09496437c",
+        "after": "c93b7a2618c98c7442ddeaf677ccc83449d42687dcbaecf548cdd352d517e3eb",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 104,
+        "before": "221af86a8184d5fb255002761c5e28808f1b92b9dc34dc2502df922643b9df5b",
+        "after": "00ef5ecb866b998802c84ee72fd7344eaa476dd06811ebc6bf4d1179f4bc7a87",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 105,
+        "before": "caca1246f4f7ef018bf1853141e1d22df9488ab0f7918a762b9ae96b4455aaca",
+        "after": "099daa97dbc6a61b22d28a259b81ab30b829e1ec32d59e69500010fe3fefbb45",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 106,
+        "before": "49c22c78e8436dde12d25035750a887946cca37c3672b18475abd456d1e7f4b6",
+        "after": "7b18539d6005e76f424b198f0a9e80d259f4078be4eee9b267bb43c82c485564",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 107,
+        "before": "a6d2cbe11176627c4a22177e817cfcf643db8394e7de57cc555ab1f3fdbdbd36",
+        "after": "359d775c479454fa0510b140de2d38eca3eba3185799c2592f578aea40cd4c59",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 108,
+        "before": "5e7b7acb2b13b0445de38febb8f6c8bc74ea39e059922045c2accacce86dba1b",
+        "after": "a74f850b4e4c835ef01801d7ca2ce39809ed9f3280e2fcae9fcc1e4046ef8e48",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 109,
+        "before": "15b4a49448fea1c63617cc34b9ef356f9183b291e8788de28fc2b43237148586",
+        "after": "5487df0fd25b5c607ac57899baab1c747332c0843893877d8a5398dd1654198f",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 110,
+        "before": "58f7bb73703ed128ea149a56b00fcb74a6c7d31033945fd7e6b0090c3d576c7a",
+        "after": "ff7dd5025134103f5298b596f2ed9070a931d33a3f938981d66f723c388b169d",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 111,
+        "before": "cd787d1470650cc1cb6605fcba4a26ffba577f6e6a8ce79a5ea6a31adea493d8",
+        "after": "a9e65306dbd880f19a277cd53ecb132cb678209a5756f07e3e022074b434d336",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 112,
+        "before": "c1fcaa1d030adabce7f8d34d05a87ba1eb01346f678bb652bd671a093e40457a",
+        "after": "9f0f8628fe9d65f6f3072b3600e0399e1e64d435d9aa9c0080c3844bb6ea6450",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 113,
+        "before": "5f0d3bd35ed549e6e90e1825aae1d813fb2eb893ad996225b0dc4cab16618699",
+        "after": "ce8cc6faa6930faf5056f5efb0546a775b5c118cff35e1345ac56534e529b6a2",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 114,
+        "before": "95349afaf8f4560b2adb0e18cd956a2563d9b3b55682f523cf05bc4b841b1ef0",
+        "after": "f9fd35239a5340fead31e098a6eb14a67464ae8bd896bf9e6d81023fb608a698",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 115,
+        "before": "7d138a9fa145735c3abbea543ced9a083ccc94400fcb99a261a3a357f7bd6a7b",
+        "after": "036f52ac35be5d4a351831b694ba44f41d53e66739c03f82950b017c6519c6ae",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 116,
+        "before": "5eb325ffc86b7cbdf3b10b3fcca96c6ffa9bb1f02a5f3e58e33e9ac67c7428c5",
+        "after": "2ce0d046d628c57bdceaf160cadc47d5b3fdcfe05c794fe097589d7efad6edea",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 117,
+        "before": "f4e4e1cff7cd04cd69a33c3a7e279ad2872687bf28f50cd880c24efff3c19466",
+        "after": "381cfae8638e4dbc5161adfb8c15b65243b71aae18421b5f50f50b68d4db4fe8",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 118,
+        "before": "8a2a1789b08c15af4831c67868f773b791f18731d9657703f35d90e2a2e152a4",
+        "after": "049df976c64310502c85ccdf6fe588a151b7d492f3a9a5a457f355c193f66c76",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 119,
+        "before": "337a7fffec4ea5602710eac8f166d0255c925bdff57c415bb0749d94160eef66",
+        "after": "a731b232ec9a66439db92197110412691499b7c36fe1fc223ec53b72ca896933",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 120,
+        "before": "112478817643467344852b44f34e89d439706071de859ac5629446e144e1f27d",
+        "after": "6f9dc1548a6540e981c900355bc9ae028f8e082ce2e573f1268f962e2a2c5d72",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 121,
+        "before": "3c4e674cfd49a980e73ae8fcdd0383a24989afc4219fc5236aec750306576d2e",
+        "after": "73fe1a2948d623ead2c703a525b82d65e351128f61c23d7265b77a722eed862d",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 122,
+        "before": "4d51ca2e59a69063bd1da1b7f1c11db6145dd775921bc676e088b87984c1f1e2",
+        "after": "7c7a5f8705479ce6e0309137db402ffd8844874c220cda638f7fcb0954e35dfa",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 123,
+        "before": "15d1bc9fe6fc43dd77b35a7709c2cf4707a7c70f88ec9fae77f51cf12fc96d08",
+        "after": "0d53deeb04e3dfcbbd083fbd738082c719820cba02b70c192d5f9e2b7f986c9c",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 124,
+        "before": "3ced72fc300f4919d8e9dd52bb72cfbdbce8b0c407ea8cd76a9928e3a9871a31",
+        "after": "9971b0faf20061cfe82bd5f6292431c7a90e17df6fd4541cecb5132461b15154",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 125,
+        "before": "d05378a36a6b350cba17feb2ab2f0e13f10662e40a5cc2e75b11585f64095176",
+        "after": "cf254beae4d300f5750fa9c254e95e21d0923af8fb18edb98458e3142be24432",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 126,
+        "before": "03983385294666b9ae8e563cb36cc6fb208fbe10a20a39aaebc9bbabc6f16953",
+        "after": "38da8eb3e7177ea6cd3629cad964655911bbb40cbe5f4f641cf8cb65abb91a1d",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 127,
+        "before": "d6121293e72c06805f070d832f48b6288a6054867fe4c7800c3ee4166b33a26f",
+        "after": "09b38f75857ebac7609b3c09908c3a97799850cf41a5d343551af9b71ff6ff99",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 128,
+        "before": "420fd45829163c813960c96dae8508321d7a3c226c5336948349592d8939595f",
+        "after": "c20f48bfeb559249fb96bbd41133acc04887ba3665b50bc38d33368e16f36263",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 129,
+        "before": "146bcc77b38794118ae55f9ffd8434583d5ce87a5cc7e16c11d330e8ad79f04c",
+        "after": "a89d2d1ef5da97e5d394e3eb7b03f3a8898b3922810a2ca9e7dc2980fc02dbe7",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 130,
+        "before": "e02bfd38efd3ff958d90e26f86507186a48092deba558f2baf9c2cf75c02a551",
+        "after": "5c341b2e41d79e350c00202457b009b3042fc48edbf6e325fe94d63854c46b99",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 131,
+        "before": "ae3d9c5dccb57ee27afebb08dd4b334c432c6d5be9c36bafe10942c885086fd0",
+        "after": "ac29d5655a36818960dffd0f158bb28843fd255e865dae1d2d3623eff24bc630",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 132,
+        "before": "1b688590d2eda82bf6bac5cbb89e17728210060d59e705d682cc88d79ec4e0dc",
+        "after": "352653dbfb017ded7517c67e166b80a9446ca213added60a3d16e3e243d47dfd",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 133,
+        "before": "e43127eedacac653350eede33acc83cc5624cb9009d107222cf6772164ca8ba4",
+        "after": "a4d96042d60200fd257c93e1741ae51540dc1d3fe0ed623619690e29b490a8ab",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 134,
+        "before": "5df0c28fd71edbe546215adff5c05a7fac47ba769881fb3bff6534464b93bee6",
+        "after": "d32e8d6fca5e02c780b49aaadb348429604cae75042ca569cc9574e894112530",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 135,
+        "before": "bab6474900d8589541ae5d217c2b9b05c23b2eccc2375fd5e77e34fe8c41e820",
+        "after": "164dc0e87344550d8067fa6627351947958421fd5ea2a59622cb544b8ce5f2cd",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 136,
+        "before": "9e75da6a744acbaed057f57221f9fc09fb1cc41c77415455194d06ef446d4c6b",
+        "after": "42d273ad1dbb36d4a62dc78acd97caefd6f8af27fb17047e58fdf8aa3344933e",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 137,
+        "before": "1ee7d2afac131bf80ff8fcb50ec1ef591bee7d75fff0fa27016d65fd1b9f7a43",
+        "after": "82430daf50a05d4a7d1e49bb87c047a23bff3fc4c4118395cf2a32184bc7e1cd",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 138,
+        "before": "b8f44f0799a14685d186b48fb71699daba00febcd292919cb89a1940d4bdf5bb",
+        "after": "f49d93bd5eab39d0264fd6b2ba4180cc9f4f57af2a584047c056b36a47003c0d",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 139,
+        "before": "b014c0908200f2a34f4c4c7778d4002650b80d21c7663eaa70a23da0e028e1e2",
+        "after": "cc4daf1dc569cca9998b48032b5e597d38cf6d3a96754cdb3c8a5abd186843f9",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 140,
+        "before": "b873ccff6861d2f566d1d6e326842cc7d5880749d7a1c7c3a3e9b77f9b482547",
+        "after": "df82bd66d4ce097e6a9220dbabd3188769628bbfcf1fcf4b30a562c6128520b8",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 141,
+        "before": "4e58ac4507f31ab0508c4b244655013892301eb89cb71f5b840c86c1daf5c2f2",
+        "after": "84d73c2b4f20521e943f0e781056b9707e0677550e706ac8072f552dbe7afc3d",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 142,
+        "before": "c0bad56fbf6efe6655b6ca1a54623f3b2f96bf15a6048282203ae26da6b55e86",
+        "after": "5a1c188034433e4a7d23b04788951ab17505437016ca68c047044fa0bd817266",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 143,
+        "before": "c20d6dd3f370fd3f69f67cf689519e9758edf3dfe6d1d3880cae42fef4ba28a3",
+        "after": "a50b7430344f361c6460c8b1da953faf6948985a6bf54375ec3e6c2e7f0bd1dc",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 144,
+        "before": "a1428e3b6479fb7de1626b0d30ed963e31129b1d3151d223104096688049ba58",
+        "after": "8b9ff63263b46082f4e789dbbb4c98e2a8e60161b37f0f8cb485772b2b5f8ea3",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 145,
+        "before": "d93243dd472ef58e0a1f1d5c42f4508f9945a18d161521218af86c7344e23f85",
+        "after": "0684f04d7385d180574f250ded877e02d8787556af36bf2170aa383bd7e1857b",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 146,
+        "before": "f78744c633ee0da7e4642e2035f1cb38da0cb3f353c0470c23c646b965516fab",
+        "after": "681ec41a0b28838ba8deb66e08eab00bcf91cf73ceefd75ab9cd365aa66d683b",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 147,
+        "before": "5ddfeac7c5b37a60b3705ca49394dee068eb930aecdd214210aefaf7a95ba6c0",
+        "after": "db02c0a1cca52d90e8b2cbb3f45be5c61959362c373b812ca9812221548b6c75",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      },
+      {
+        "day": 148,
+        "before": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+        "after": "d57634a17331310241b1b61044619c8093cc3c52b1ad831471a71cc350bbf0bf",
+        "cause": "[I] Day 48 is the first command divergence: received-only raising withholds unreceived neutral offices, changing call priority within attention and all subsequent state. The per-day menu/answer ledger retains each direct change."
+      }
+    ],
+    "unchangedDays": 47,
+    "menuDifferences": 296,
+    "changedMenuFields": {
+      "raising": 286,
+      "commandable": 192,
+      "vacancies": 36
+    },
+    "answerDifferences": 181,
+    "rejections": 22,
+    "viewDifferences": 0
+  },
+  {
+    "pack": "testbed",
+    "baseline": "docs/audit/s42-evidence/testbed-summary.json",
+    "worldHashUnchanged": true,
+    "initialHashUnchanged": true,
+    "beforeFinal": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+    "afterFinal": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+    "changedDays": [],
+    "unchangedDays": 120,
+    "menuDifferences": 0,
+    "changedMenuFields": {},
+    "answerDifferences": 0,
+    "rejections": 0,
+    "viewDifferences": 0
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "originalPaths": 1926,
+  "missing": [],
+  "unchangedOriginalBlobs": 1918,
+  "changedOriginalPaths": [
+    "packages/kernel/src/seats/requests.ts",
+    "packages/kernel/src/tick/plans.ts",
+    "packages/kernel/src/view/view.ts",
+    "packages/kernel/test/department-sides.test.ts",
+    "packages/kernel/test/people-verbs.test.ts",
+    "packages/kernel/test/s25-seats.test.ts",
+    "tools/rules/existing-findings.json",
+    "tools/rules/projection-derivations.json"
+  ],
+  "protectedChanges": [],
+  "measuredInputs": 694,
+  "inputDrift": [],
+  "stagedTree": "2155ad5e65ae49bdab76550f0702e6a5bf8f643c",
+  "candidatePatchSha256": "a8cd8939dcc639517d8bc2779513fcc20a764d5d053734d2fddb1cac3baf0cb2",
+  "branch": "sprint/projection",
+  "base": "c3c52a489964ed64546fb535b39fa52689991efc"
+}

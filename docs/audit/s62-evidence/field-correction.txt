@@ -1,0 +1,13 @@
+
+> test
+> vitest run packages/kernel/test/menu-received.test.ts packages/kernel/test/people-verbs.test.ts packages/cli/test/concentration.test.ts packages/cli/test/war-gate.test.ts packages/cli/test/seats-run.test.ts
+
+
+ RUN  v5.1.0 C:/Pyrrhic/sprint-projection
+
+
+ Test Files  5 passed (5)
+      Tests  58 passed (58)
+   Start at  19:34:01
+   Duration  30.20s (tests 73%, import 25%, transform 2%)
+

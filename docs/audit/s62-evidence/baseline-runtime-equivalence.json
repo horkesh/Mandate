@@ -1,0 +1,19 @@
+{
+  "command": [
+    "git",
+    "diff",
+    "--exit-code",
+    "23b5d49",
+    "c3c52a48",
+    "--",
+    "packages",
+    "packs",
+    "tools",
+    "package.json",
+    "package-lock.json",
+    "vitest.config.ts"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": ""
+}

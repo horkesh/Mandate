@@ -1,0 +1,360 @@
+{
+  "rejectionsByReason": {
+    "post_held": 17,
+    "vacant_post": 5
+  },
+  "rejections": [
+    {
+      "day": 79,
+      "seat": "seat:lincoln_abraham",
+      "entry": 2,
+      "reason": "post_held"
+    },
+    {
+      "day": 80,
+      "seat": "seat:lincoln_abraham",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 81,
+      "seat": "seat:lincoln_abraham",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 82,
+      "seat": "seat:lincoln_abraham",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 83,
+      "seat": "seat:lincoln_abraham",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 85,
+      "seat": "seat:lincoln_abraham",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 86,
+      "seat": "seat:lincoln_abraham",
+      "entry": 1,
+      "reason": "post_held"
+    },
+    {
+      "day": 87,
+      "seat": "seat:lincoln_abraham",
+      "entry": 2,
+      "reason": "post_held"
+    },
+    {
+      "day": 88,
+      "seat": "seat:lincoln_abraham",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 89,
+      "seat": "seat:lincoln_abraham",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 90,
+      "seat": "seat:lincoln_abraham",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 91,
+      "seat": "seat:lincoln_abraham",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 93,
+      "seat": "seat:davis_jefferson",
+      "entry": 0,
+      "reason": "vacant_post"
+    },
+    {
+      "day": 94,
+      "seat": "seat:davis_jefferson",
+      "entry": 0,
+      "reason": "vacant_post"
+    },
+    {
+      "day": 95,
+      "seat": "seat:davis_jefferson",
+      "entry": 0,
+      "reason": "vacant_post"
+    },
+    {
+      "day": 96,
+      "seat": "seat:davis_jefferson",
+      "entry": 0,
+      "reason": "vacant_post"
+    },
+    {
+      "day": 97,
+      "seat": "seat:davis_jefferson",
+      "entry": 0,
+      "reason": "vacant_post"
+    },
+    {
+      "day": 99,
+      "seat": "seat:davis_jefferson",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 100,
+      "seat": "seat:davis_jefferson",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 101,
+      "seat": "seat:davis_jefferson",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 102,
+      "seat": "seat:davis_jefferson",
+      "entry": 0,
+      "reason": "post_held"
+    },
+    {
+      "day": 103,
+      "seat": "seat:davis_jefferson",
+      "entry": 0,
+      "reason": "post_held"
+    }
+  ],
+  "examples": [
+    {
+      "day": 79,
+      "request": "principal:union:79",
+      "post": "us_dept_pacific",
+      "oldTruthMenuCommand": {
+        "post": "us_dept_pacific",
+        "holder": "sumner_edwin_v",
+        "relays": [
+          "us_secretary_war",
+          "us_general_in_chief"
+        ],
+        "routes": [
+          {
+            "route": "courier",
+            "typicalDays": 15,
+            "price": 0
+          },
+          {
+            "route": "special-messenger",
+            "typicalDays": 7,
+            "price": 1
+          },
+          {
+            "route": "wire",
+            "typicalDays": 13,
+            "price": 0
+          }
+        ],
+        "men": null,
+        "strengthReport": null,
+        "raising": false,
+        "inTransit": []
+      },
+      "receivedMenuCommand": null,
+      "oldTruthVacancy": null,
+      "receivedVacancy": {
+        "post": "us_dept_pacific",
+        "arm": "land",
+        "routes": [
+          {
+            "route": "courier",
+            "typicalDays": 15,
+            "price": 0
+          },
+          {
+            "route": "special-messenger",
+            "typicalDays": 7,
+            "price": 1
+          },
+          {
+            "route": "wire",
+            "typicalDays": 13,
+            "price": 0
+          }
+        ],
+        "appointing": false
+      },
+      "issued": {
+        "answerKind": "commands",
+        "commands": [
+          {
+            "cmd": "appoint",
+            "post": "us_dept_pacific",
+            "person": "sumner_edwin_v",
+            "rank": null,
+            "route": "wire"
+          }
+        ]
+      }
+    },
+    {
+      "day": 93,
+      "request": "principal:confederate:93",
+      "post": "cs_cmd_charleston",
+      "oldTruthMenuCommand": null,
+      "receivedMenuCommand": {
+        "post": "cs_cmd_charleston",
+        "holder": "beauregard_pierre_g_t",
+        "relays": [
+          "cs_secretary_war"
+        ],
+        "routes": [
+          {
+            "route": "courier",
+            "typicalDays": 6,
+            "price": 0
+          },
+          {
+            "route": "special-messenger",
+            "typicalDays": 3,
+            "price": 1
+          },
+          {
+            "route": "wire",
+            "typicalDays": 5,
+            "price": 0
+          }
+        ],
+        "men": 23633,
+        "strengthReport": {
+          "source": "m.78.walker_leroy_p.davis_jefferson.word.cs_cmd_charleston",
+          "author": "walker_leroy_p",
+          "asOfDay": 78
+        },
+        "raising": false,
+        "inTransit": []
+      },
+      "oldTruthVacancy": {
+        "post": "cs_cmd_charleston",
+        "arm": "land",
+        "routes": [
+          {
+            "route": "courier",
+            "typicalDays": 6,
+            "price": 0
+          },
+          {
+            "route": "special-messenger",
+            "typicalDays": 3,
+            "price": 1
+          },
+          {
+            "route": "wire",
+            "typicalDays": 5,
+            "price": 0
+          }
+        ],
+        "appointing": false
+      },
+      "receivedVacancy": null,
+      "issued": {
+        "answerKind": "commands",
+        "commands": [
+          {
+            "cmd": "transfer",
+            "from": "cs_cmd_charleston",
+            "to": "cs_cmd_harpers_ferry",
+            "force": "blocks",
+            "amount": 999,
+            "route": "wire"
+          }
+        ]
+      }
+    },
+    {
+      "day": 99,
+      "request": "principal:confederate:99",
+      "post": "cs_cmd_charleston",
+      "oldTruthMenuCommand": {
+        "post": "cs_cmd_charleston",
+        "holder": "twiggs_david_e",
+        "relays": [
+          "cs_secretary_war"
+        ],
+        "routes": [
+          {
+            "route": "courier",
+            "typicalDays": 6,
+            "price": 0
+          },
+          {
+            "route": "special-messenger",
+            "typicalDays": 3,
+            "price": 1
+          },
+          {
+            "route": "wire",
+            "typicalDays": 5,
+            "price": 0
+          }
+        ],
+        "men": 23633,
+        "strengthReport": {
+          "source": "m.85.walker_leroy_p.davis_jefferson.word.cs_cmd_charleston",
+          "author": "walker_leroy_p",
+          "asOfDay": 85
+        },
+        "raising": false,
+        "inTransit": []
+      },
+      "receivedMenuCommand": null,
+      "oldTruthVacancy": null,
+      "receivedVacancy": {
+        "post": "cs_cmd_charleston",
+        "arm": "land",
+        "routes": [
+          {
+            "route": "courier",
+            "typicalDays": 6,
+            "price": 0
+          },
+          {
+            "route": "special-messenger",
+            "typicalDays": 3,
+            "price": 1
+          },
+          {
+            "route": "wire",
+            "typicalDays": 5,
+            "price": 0
+          }
+        ],
+        "appointing": false
+      },
+      "issued": {
+        "answerKind": "commands",
+        "commands": [
+          {
+            "cmd": "appoint",
+            "post": "cs_cmd_charleston",
+            "person": "twiggs_david_e",
+            "rank": null,
+            "route": "wire"
+          }
+        ]
+      }
+    }
+  ],
+  "proposedNextScope": "[I] Reconcile sender-side validation and outstanding sent-appointment records with received establishment. Preserve arrival-time checks and returned dispatches; do not hide the menu with live truth or widen the zero-rejection band. This is not implemented in S62."
+}

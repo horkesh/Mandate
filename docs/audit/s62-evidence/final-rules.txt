@@ -1,0 +1,5 @@
+
+> check:rules
+> tsx tools/check-rules.ts
+
+rules: 0 new, changed or stale findings

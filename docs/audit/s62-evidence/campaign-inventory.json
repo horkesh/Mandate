@@ -1,0 +1,27 @@
+[
+  {
+    "path": "runs/s62-done/20261122-184650-23756-4e91d1/save-day-60.json",
+    "bytes": 1484708,
+    "sha256": "b20aaaf5c30c02318578b751e9da6af438c77a35c04f2a61dd1192a91eccdddc"
+  },
+  {
+    "path": "runs/s62-done/20261122-184650-23756-4e91d1/summary.json",
+    "bytes": 133026,
+    "sha256": "0e3f134531d1c3e912844060ce0eaddb5945be3686999111e0883c88700f5e96"
+  },
+  {
+    "path": "runs/s62-done/20261122-184804-23756-ec8e1d/save-day-40.json",
+    "bytes": 321744,
+    "sha256": "e66b2dbdaeb8861408e3494f66fa607f47172aab7192421144b80fbadaacbec9"
+  },
+  {
+    "path": "runs/s62-done/20261122-184804-23756-ec8e1d/summary.json",
+    "bytes": 83359,
+    "sha256": "caa8cad33537c835261397a893efe8be8e077e64ace835a459af88dfbe4f39b5"
+  },
+  {
+    "path": "runs/s62-done-drafting/20261122-193522-23756-f48c95/drafting.json",
+    "bytes": 4778,
+    "sha256": "691119e564525384e5292645afcb7cecad3965b89302c5b38c8e46d4a6b98678"
+  }
+]

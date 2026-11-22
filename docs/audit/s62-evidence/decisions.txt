@@ -1,0 +1,5 @@
+
+> check:decisions
+> tsx tools/check-decisions-index.ts
+
+Decisions index clean: 106 records, 106 rows.

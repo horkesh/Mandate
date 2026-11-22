@@ -1,0 +1,13 @@
+
+> test
+> vitest run packages/kernel/test/menu-received.test.ts packages/kernel/test/bombard.test.ts packages/kernel/test/believed-posts.test.ts packages/kernel/test/principal-menu.test.ts
+
+
+ RUN  v5.1.0 C:/Pyrrhic/sprint-projection
+
+
+ Test Files  4 passed (4)
+      Tests  55 passed (55)
+   Start at  19:43:44
+   Duration  1.92s (transform 41%, tests 35%, import 23%, worker 1%)
+
