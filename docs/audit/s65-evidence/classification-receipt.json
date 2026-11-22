@@ -1,0 +1,23 @@
+[
+  {
+    "symbol": "principalMenu",
+    "before": "d07a058405bacf44961ba731b2eeda7485f443133161414cab258222217f71b3",
+    "after": "5fd36e296736c60a27c0a7389f31ca7620cdddea4b8785cfbbf22cf82d789872",
+    "protectedReads": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)",
+    "cause": "S65 changes received appointment-failure interpretation and bounded own sent-letter knowledge helpers in the approved closure; protected identities unchanged."
+  },
+  {
+    "symbol": "pendingRequests",
+    "before": "c811295872b8c56dc26416ca09399b35c46b71d1779e14d8a0e8925e4935c26b",
+    "after": "d7d930c89c9835d19673ab2d8bc6e4cce5972ae235c30763dd6d0b3d2be0dcd5",
+    "protectedReads": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)",
+    "cause": "S65 changes received appointment-failure interpretation and bounded own sent-letter knowledge helpers in the approved closure; protected identities unchanged."
+  },
+  {
+    "symbol": "viewFor",
+    "before": "cb2ae304f779b56545438c92494f6d2d74d3301507b8d3f99ce09b0db6d89a55",
+    "after": "84bc5a30f3170e3d17d54ac07c57af4a9205a7c6106245bf391aa484a7672657",
+    "protectedReads": "viewFor reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)",
+    "cause": "S65 changes received appointment-failure interpretation and bounded own sent-letter knowledge helpers in the approved closure; protected identities unchanged."
+  }
+]

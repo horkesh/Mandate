@@ -1,0 +1,279 @@
+git : lfs-check: 0 file(s) under art/, every binary an LFS pointer.
+At line:5 char:1
++ git commit --file runs/s65/source-commit-message.txt *> runs/s65/sour ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (lfs-check: 0 fi...an LFS pointer.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+pre-commit: the working tree equals the index; checking it in place.
+rules: 0 new, changed or stale findings
+
+ RUN  v5.1.0 C:/Pyrrhic/sprint-projection
+
+ ❯ packages/cli/test/console-session.test.ts (8 tests | 1 failed) 30370ms
+   ❯ R86: the history months through the player’s console (1A criterion 2) (6)
+     × receives at least one hour-stamped battle dispatch by 31 July 11ms
+ ❯ packages/cli/test/liveness-gate.test.ts (15 tests | 1 failed) 40303ms
+   ❯ the reference runs (5)
+     × union-1861, war by decision, 148 days: every mechanic fires within its band 23771ms
+ ❯ packs/union-1861/test/national-enlistment.test.ts (4 tests | 1 failed) 2449ms
+   ❯ S1 national volunteer allocations and Regular recruiting (4)
+     × opens the recruiting office normally and routes each request through Smith’s own answer 2208ms
+ ❯ packages/kernel/test/believed-posts.test.ts (16 tests | 1 failed) 147ms
+   ❯ posts as the principal believes them (lane 1.12; 0052) (16)
+     × audience accepts a believed holder, then returns undelivered without answering or applying effects 13ms
+ ❯ packs/union-1861/test/s35-scoring.test.ts (2 tests | 1 failed) 77606ms
+   × the same recorded human commands bring received hour-stamped Manassas papers by the July horizon 10ms
+ ❯ packages/cli/test/done-check.test.ts (15 tests | 2 failed | 1 skipped) 159921ms
+   ❯ the done check on union-1861 at war and the testbed (9)
+     × passes every Phase 0 criterion but the budget, which is a stopwatch 10ms
+   ❯ each criterion can fail (positive controls) (6)
+     × liveness: a planted dead mechanic in a reference run fails the check 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  packages/cli/test/console-session.test.ts > R86: the history months through the player’s console (1A criterion 2
+) > receives at least one hour-stamped battle dispatch by 31 July
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ packages/cli/test/console-session.test.ts:265:132
+    263|   // Existence and chronology are ordinary independent assertions.
+    264|   it('receives at least one hour-stamped battle dispatch by 31 July', …
+    265|     expect(throughJuly(played.player).some(line => /wire-dispatch .*wr…
+       |                                                                                                               
+                     ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/7]⎯
+
+ FAIL  packages/cli/test/done-check.test.ts > the done check on union-1861 at war and the testbed > passes every Phase 
+0 criterion but the budget, which is a stopwatch
+AssertionError: liveness: expected [ …(8) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "union-1861, war by decision, 148 days: combat.battle_closed is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.battle_opened is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.captured is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.killed_wounded is dead (0 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: combat.missing is dead (0 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: combat.routed is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: forces.stragglers_returned is dead (0 fires, band 12..48)",
++   "union-1861, war by decision, 148 days: reports.battle_dispatch is too_rare (2 fires, band 9..36)",
++ ]
+
+ ❯ packages/cli/test/done-check.test.ts:47:114
+     45| describe('the done check on union-1861 at war and the testbed', () => {
+     46|   it('passes every Phase 0 criterion but the budget, which is a stopwa…
+     47|     for (const c of result.criteria) if (c.milestone === 'phase0' && c…
+       |                                                                                                               
+   ^
+     48|     expect(result.criteria.filter((c) => c.milestone === 'phase0').map…
+     49|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/7]⎯
+
+ FAIL  packages/cli/test/done-check.test.ts > each criterion can fail (positive controls) > liveness: a planted dead me
+chanic in a reference run fails the check
+AssertionError: expected [ …(8) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "union-1861, war by decision, 148 days: combat.battle_closed is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.battle_opened is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.captured is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.killed_wounded is dead (0 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: combat.missing is dead (0 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: combat.routed is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: forces.stragglers_returned is dead (0 fires, band 12..48)",
++   "union-1861, war by decision, 148 days: reports.battle_dispatch is too_rare (2 fires, band 9..36)",
++ ]
+
+ ❯ packages/cli/test/done-check.test.ts:163:63
+    161|     const run = union();
+    162|     const reference = REFERENCE_RUNS.find((x) => x.name === 'union-186…
+    163|     expect(livenessProblems(reference, run.checked.liveness)).toEqual(…
+       |                                                               ^
+    164|     // Lane 1.12: a mechanic the Union doctrine drives (its run has no…
+    165|     const planted = run.checked.liveness.map((row) => (row.mechanic ==…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/7]⎯
+
+ FAIL  packages/cli/test/liveness-gate.test.ts > the reference runs > union-1861, war by decision, 148 days: every mech
+anic fires within its band
+AssertionError: expected [ { …(4) }, { …(4) }, { …(4) }, …(5) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   {
++     "band": {
++       "maxFires": 5,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "combat.battle_closed",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 5,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "combat.battle_opened",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 5,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "combat.captured",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 8,
++       "minFires": 2,
++     },
++     "fires": 0,
++     "mechanic": "combat.killed_wounded",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 8,
++       "minFires": 2,
++     },
++     "fires": 0,
++     "mechanic": "combat.missing",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 4,
++       "minFires": 1,
++       "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers 
+change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured o
+ne rout.",
++     },
++     "fires": 0,
++     "mechanic": "combat.routed",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 48,
++       "minFires": 12,
++       "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers 
+change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under t
+he unchanged resolver and return accounting.",
++     },
++     "fires": 0,
++     "mechanic": "forces.stragglers_returned",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 36,
++       "minFires": 9,
++     },
++     "fires": 2,
++     "mechanic": "reports.battle_dispatch",
++     "problem": "too_rare",
++   },
++ ]
+
+ ❯ packages/cli/test/liveness-gate.test.ts:81:48
+     79|   for (const run of REFERENCE_RUNS) {
+     80|     it(`${run.name}: every mechanic fires within its band`, () => {
+     81|       expect(gateFailures(run, liveness(run))).toEqual([]);
+       |                                                ^
+     82|     });
+     83|   }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/7]⎯
+
+ FAIL  packages/kernel/test/believed-posts.test.ts > posts as the principal believes them (lane 1.12; 0052) > audience 
+accepts a believed holder, then returns undelivered without answering or applying effects
+AssertionError: expected 'bad_counters' to be null
+
+- Expected:
+null
+
++ Received:
+"bad_counters"
+
+ ❯ packages/kernel/test/believed-posts.test.ts:140:25
+    138|     const ctx = ctxFor(world, state, state.stateDay + 1, [...TICK_MECH…
+    139|     const sent = applyVerb(ctx, state, B_SEAT, command);
+    140|     expect(sent.reason).toBeNull();
+       |                         ^
+    141|     expect(sent.state).toBe(state);
+    142|     const message = ctx.outbox.splice(0)[0]!;
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/7]⎯
+
+ FAIL  packs/union-1861/test/national-enlistment.test.ts > S1 national volunteer allocations and Regular recruiting > o
+pens the recruiting office normally and routes each request through Smith’s own answer
+AssertionError: expected [] to have a length of 3 but got +0
+
+- Expected
++ Received
+
+- 3
++ 0
+
+ ❯ packs/union-1861/test/national-enlistment.test.ts:61:21
+     59|     for (let day = 61; day <= 90; day++) state = phase0.tick(world, st…
+     60|     const answers = Object.values(state.orderResponses).filter(r => r.…
+     61|     expect(answers).toHaveLength(3);
+       |                     ^
+     62|     const accepted = answers.filter(r => ['exceed', 'comply', 'comply_…
+     63|     const enlistments = Object.entries(state.forceEnlistments).filter(…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/7]⎯
+
+ FAIL  packs/union-1861/test/s35-scoring.test.ts > the same recorded human commands bring received hour-stamped Manassa
+s papers by the July horizon
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ packs/union-1861/test/s35-scoring.test.ts:24:81
+     22|
+     23| it('the same recorded human commands bring received hour-stamped Manas…
+     24|   expect(replay.summary.battles.some(b => b.id.startsWith('battle:mana…
+       |                                                                                 ^
+     25|   expect(replay.summary.fieldPapers.some(p => p.claims.some(c => c.reg…
+     26| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/7]⎯
+
+
+ Test Files  6 failed | 202 passed (208)
+      Tests  7 failed | 1948 passed | 3 skipped (1958)
+   Start at  22:14:29
+   Duration  161.46s (tests 81%, import 18%, transform 1%)
+

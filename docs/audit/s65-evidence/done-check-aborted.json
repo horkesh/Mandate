@@ -1,0 +1,7 @@
+{
+  "command": "npm run run:done-check -- --milestone 1a --label s65-done",
+  "complete": false,
+  "stopped": "2026-11-22T21:47:16.257408+01:00",
+  "reason": "Stopped the unfinished sweep after identifying a received own-appointment chain defect. The two finished checked references remain in runs/s65-done; no finished done check is repeated.",
+  "processExit": 1
+}

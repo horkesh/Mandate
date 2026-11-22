@@ -1,0 +1,9 @@
+
+ RUN  v5.1.0 C:/Pyrrhic/sprint-projection
+
+
+ Test Files  3 passed (3)
+      Tests  87 passed (87)
+   Start at  21:50:33
+   Duration  5.39s (tests 90%, transform 5%, import 5%)
+

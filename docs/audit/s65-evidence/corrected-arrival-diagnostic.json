@@ -1,0 +1,3958 @@
+{
+  "savePath": "C:\\Pyrrhic\\sprint-projection\\runs\\s65-done-final\\20261122-205214-26700-9bffb8\\save-day-60.json",
+  "summaryPath": "C:\\Pyrrhic\\sprint-projection\\runs\\s65-done-final\\20261122-205214-26700-9bffb8\\summary.json",
+  "startedDay": 60,
+  "finishedDay": 148,
+  "hashesCompared": 88,
+  "mismatches": [],
+  "finalHash": "a184554655e29cac91495ea1ee3ea105042911f06d48d8e1da55863b442bb7d4",
+  "finalMatches": true,
+  "battles": [
+    {
+      "id": "battle:fort_sumter:38",
+      "region": "fort_sumter",
+      "start": 38,
+      "end": 39,
+      "days": [
+        38,
+        39
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "day": 125,
+      "forces": [
+        {
+          "post": "cs_cmd_charleston",
+          "holder": "twiggs_david_e",
+          "blocks": []
+        },
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "holder": "johnston_joseph_e",
+          "blocks": [
+            {
+              "id": "state-forces.cs_va_transfer_virginia",
+              "location": {
+                "locRegion": "harpers_ferry",
+                "locAboard": null,
+                "locSinceDay": 109,
+                "locMarch": null
+              },
+              "strength": 40000
+            }
+          ]
+        },
+        {
+          "post": "cs_cmd_manassas",
+          "holder": "beauregard_pierre_g_t",
+          "blocks": [
+            {
+              "id": "fb_cs_charleston",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "fb_cs_charleston_castle_pinckney",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 64
+            },
+            {
+              "id": "fb_st_charleston_1st_artillery_battalion",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 242
+            },
+            {
+              "id": "fb_st_charleston_1st_infantry_regulars",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "fb_st_charleston_floating_battery",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 74
+            },
+            {
+              "id": "fb_st_charleston_fort_johnson",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 100
+            },
+            {
+              "id": "fb_st_charleston_fort_palmetto_stono",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 146
+            },
+            {
+              "id": "fb_st_charleston_moultrie_infantry_recruits",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 318
+            },
+            {
+              "id": "fb_st_charleston_regiment_of_rifles",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 450
+            },
+            {
+              "id": "fb_st_charleston_vigilant_rifles",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 63
+            },
+            {
+              "id": "fb_st_georgetown_coast_guard",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 120,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 5000,
+                  "marchStartDay": 121
+                }
+              },
+              "strength": 158
+            },
+            {
+              "id": "raised.st_gov_alabama.d53",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_alabama.d9",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d53",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d9",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d53",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d9",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 1500
+            },
+            {
+              "id": "raised.st_gov_south_carolina.d19",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_texas.d9",
+              "location": {
+                "locRegion": "cape_fear",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": {
+                  "marchEdge": "road:cape_fear:raleigh",
+                  "marchFrom": "cape_fear",
+                  "marchTo": "raleigh",
+                  "marchNeedMilli": 7000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 123
+                }
+              },
+              "strength": 1000
+            }
+          ]
+        },
+        {
+          "post": "us_dept_northeastern_virginia",
+          "holder": "mcdowell_irvin",
+          "blocks": [
+            {
+              "id": "fb_us_dc_militia",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 600
+            },
+            {
+              "id": "raised.st_gov_connecticut.d46",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_illinois.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_indiana.d46",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_maine.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_maryland.d48",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 4000
+            },
+            {
+              "id": "raised.st_gov_massachusetts.d46",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_new_hampshire.d46",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d49",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 17000
+            },
+            {
+              "id": "raised.st_gov_pennsylvania.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_rhode_island.d49",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_wisconsin.d49",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d67",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 38000
+            },
+            {
+              "id": "raised.st_gov_massachusetts.d76",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_connecticut.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_hampshire.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 96,
+                "locMarch": null
+              },
+              "strength": 4000
+            },
+            {
+              "id": "raised.st_gov_rhode_island.d79",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 97,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d86",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 101,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_wisconsin.d86",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 107,
+                "locMarch": null
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_maine.d87",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 105,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_illinois.d87",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 108,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.tr_gov_nebraska.d93",
+              "location": {
+                "locRegion": "pennsylvania_north",
+                "locAboard": null,
+                "locSinceDay": 125,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d103",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": null
+              },
+              "strength": 6000
+            }
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "post": "cs_cmd_charleston",
+          "start": 38,
+          "end": 40,
+          "outcome": "objective_reached",
+          "axes": [
+            {
+              "stage": "end",
+              "arrived": 39
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 133,
+      "forces": [
+        {
+          "post": "cs_cmd_charleston",
+          "holder": "twiggs_david_e",
+          "blocks": []
+        },
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "holder": "johnston_joseph_e",
+          "blocks": [
+            {
+              "id": "state-forces.cs_va_transfer_virginia",
+              "location": {
+                "locRegion": "harpers_ferry",
+                "locAboard": null,
+                "locSinceDay": 109,
+                "locMarch": null
+              },
+              "strength": 40000
+            }
+          ]
+        },
+        {
+          "post": "cs_cmd_manassas",
+          "holder": "beauregard_pierre_g_t",
+          "blocks": [
+            {
+              "id": "fb_cs_charleston",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "fb_cs_charleston_castle_pinckney",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 64
+            },
+            {
+              "id": "fb_st_charleston_1st_artillery_battalion",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 242
+            },
+            {
+              "id": "fb_st_charleston_1st_infantry_regulars",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "fb_st_charleston_floating_battery",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 74
+            },
+            {
+              "id": "fb_st_charleston_fort_johnson",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 100
+            },
+            {
+              "id": "fb_st_charleston_fort_palmetto_stono",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 146
+            },
+            {
+              "id": "fb_st_charleston_moultrie_infantry_recruits",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 318
+            },
+            {
+              "id": "fb_st_charleston_regiment_of_rifles",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 450
+            },
+            {
+              "id": "fb_st_charleston_vigilant_rifles",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 63
+            },
+            {
+              "id": "fb_st_georgetown_coast_guard",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 127,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 6000,
+                  "marchStartDay": 128
+                }
+              },
+              "strength": 158
+            },
+            {
+              "id": "raised.st_gov_alabama.d53",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_alabama.d9",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d53",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d9",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d53",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d9",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 1500
+            },
+            {
+              "id": "raised.st_gov_south_carolina.d19",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_texas.d9",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_georgia.d127",
+              "location": {
+                "locRegion": "augusta",
+                "locAboard": null,
+                "locSinceDay": 133,
+                "locMarch": null
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_georgia.d127.2",
+              "location": {
+                "locRegion": "augusta",
+                "locAboard": null,
+                "locSinceDay": 133,
+                "locMarch": null
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_georgia.d129",
+              "location": {
+                "locRegion": "augusta",
+                "locAboard": null,
+                "locSinceDay": 133,
+                "locMarch": null
+              },
+              "strength": 2000
+            }
+          ]
+        },
+        {
+          "post": "us_dept_northeastern_virginia",
+          "holder": "mcdowell_irvin",
+          "blocks": [
+            {
+              "id": "fb_us_dc_militia",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 600
+            },
+            {
+              "id": "raised.st_gov_connecticut.d46",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_illinois.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_indiana.d46",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_maine.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_maryland.d48",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 4000
+            },
+            {
+              "id": "raised.st_gov_massachusetts.d46",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_new_hampshire.d46",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d49",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 17000
+            },
+            {
+              "id": "raised.st_gov_pennsylvania.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_rhode_island.d49",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_wisconsin.d49",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d67",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 38000
+            },
+            {
+              "id": "raised.st_gov_massachusetts.d76",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_connecticut.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_hampshire.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 96,
+                "locMarch": null
+              },
+              "strength": 4000
+            },
+            {
+              "id": "raised.st_gov_rhode_island.d79",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 97,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d86",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 101,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_wisconsin.d86",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 107,
+                "locMarch": null
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_maine.d87",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 105,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_illinois.d87",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 108,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.tr_gov_nebraska.d93",
+              "location": {
+                "locRegion": "frederick_md",
+                "locAboard": null,
+                "locSinceDay": 132,
+                "locMarch": {
+                  "marchEdge": "road:frederick_md:washington",
+                  "marchFrom": "frederick_md",
+                  "marchTo": "washington",
+                  "marchNeedMilli": 4000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 133
+                }
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d103",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": null
+              },
+              "strength": 6000
+            }
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "post": "cs_cmd_charleston",
+          "start": 38,
+          "end": 40,
+          "outcome": "objective_reached",
+          "axes": [
+            {
+              "stage": "end",
+              "arrived": 39
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 136,
+      "forces": [
+        {
+          "post": "cs_cmd_charleston",
+          "holder": "twiggs_david_e",
+          "blocks": []
+        },
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "holder": "johnston_joseph_e",
+          "blocks": [
+            {
+              "id": "state-forces.cs_va_transfer_virginia",
+              "location": {
+                "locRegion": "harpers_ferry",
+                "locAboard": null,
+                "locSinceDay": 109,
+                "locMarch": null
+              },
+              "strength": 40000
+            }
+          ]
+        },
+        {
+          "post": "cs_cmd_manassas",
+          "holder": "beauregard_pierre_g_t",
+          "blocks": [
+            {
+              "id": "fb_cs_charleston",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "fb_cs_charleston_castle_pinckney",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 64
+            },
+            {
+              "id": "fb_st_charleston_1st_artillery_battalion",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 242
+            },
+            {
+              "id": "fb_st_charleston_1st_infantry_regulars",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "fb_st_charleston_floating_battery",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 74
+            },
+            {
+              "id": "fb_st_charleston_fort_johnson",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 100
+            },
+            {
+              "id": "fb_st_charleston_fort_palmetto_stono",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 146
+            },
+            {
+              "id": "fb_st_charleston_moultrie_infantry_recruits",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 318
+            },
+            {
+              "id": "fb_st_charleston_regiment_of_rifles",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 450
+            },
+            {
+              "id": "fb_st_charleston_vigilant_rifles",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 63
+            },
+            {
+              "id": "fb_st_georgetown_coast_guard",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 127,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 9000,
+                  "marchStartDay": 128
+                }
+              },
+              "strength": 158
+            },
+            {
+              "id": "raised.st_gov_alabama.d53",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_alabama.d9",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d53",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d9",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d53",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d9",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 1500
+            },
+            {
+              "id": "raised.st_gov_south_carolina.d19",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_texas.d9",
+              "location": {
+                "locRegion": "raleigh",
+                "locAboard": null,
+                "locSinceDay": 129,
+                "locMarch": {
+                  "marchEdge": "road:raleigh:southside",
+                  "marchFrom": "raleigh",
+                  "marchTo": "southside",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 7000,
+                  "marchStartDay": 130
+                }
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_georgia.d127",
+              "location": {
+                "locRegion": "sc_upstate_east",
+                "locAboard": null,
+                "locSinceDay": 135,
+                "locMarch": {
+                  "marchEdge": "road:salisbury_charlotte:sc_upstate_east",
+                  "marchFrom": "sc_upstate_east",
+                  "marchTo": "salisbury_charlotte",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 136
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_georgia.d127.2",
+              "location": {
+                "locRegion": "sc_upstate_east",
+                "locAboard": null,
+                "locSinceDay": 135,
+                "locMarch": {
+                  "marchEdge": "road:salisbury_charlotte:sc_upstate_east",
+                  "marchFrom": "sc_upstate_east",
+                  "marchTo": "salisbury_charlotte",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 136
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_georgia.d129",
+              "location": {
+                "locRegion": "sc_upstate_east",
+                "locAboard": null,
+                "locSinceDay": 135,
+                "locMarch": {
+                  "marchEdge": "road:salisbury_charlotte:sc_upstate_east",
+                  "marchFrom": "sc_upstate_east",
+                  "marchTo": "salisbury_charlotte",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 136
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_alabama.d130",
+              "location": {
+                "locRegion": "ga_atlanta_west",
+                "locAboard": null,
+                "locSinceDay": 136,
+                "locMarch": null
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_alabama.d130.2",
+              "location": {
+                "locRegion": "ga_atlanta_west",
+                "locAboard": null,
+                "locSinceDay": 136,
+                "locMarch": null
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_alabama.d132",
+              "location": {
+                "locRegion": "ga_atlanta_west",
+                "locAboard": null,
+                "locSinceDay": 136,
+                "locMarch": null
+              },
+              "strength": 2000
+            }
+          ]
+        },
+        {
+          "post": "us_dept_northeastern_virginia",
+          "holder": "mcdowell_irvin",
+          "blocks": [
+            {
+              "id": "fb_us_dc_militia",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 600
+            },
+            {
+              "id": "raised.st_gov_illinois.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_maine.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_maryland.d48",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 4000
+            },
+            {
+              "id": "raised.st_gov_new_york.d49",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 17000
+            },
+            {
+              "id": "raised.st_gov_pennsylvania.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_rhode_island.d49",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_wisconsin.d49",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d67",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 38000
+            },
+            {
+              "id": "raised.st_gov_massachusetts.d76",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_connecticut.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_hampshire.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 96,
+                "locMarch": null
+              },
+              "strength": 4000
+            },
+            {
+              "id": "raised.st_gov_rhode_island.d79",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 97,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d86",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 101,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_wisconsin.d86",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 107,
+                "locMarch": null
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_maine.d87",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 105,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_illinois.d87",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 108,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.tr_gov_nebraska.d93",
+              "location": {
+                "locRegion": "washington",
+                "locAboard": null,
+                "locSinceDay": 136,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d103",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": null
+              },
+              "strength": 6000
+            }
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "post": "cs_cmd_charleston",
+          "start": 38,
+          "end": 40,
+          "outcome": "objective_reached",
+          "axes": [
+            {
+              "stage": "end",
+              "arrived": 39
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 140,
+      "forces": [
+        {
+          "post": "cs_cmd_charleston",
+          "holder": "twiggs_david_e",
+          "blocks": []
+        },
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "holder": "johnston_joseph_e",
+          "blocks": [
+            {
+              "id": "state-forces.cs_va_transfer_virginia",
+              "location": {
+                "locRegion": "harpers_ferry",
+                "locAboard": null,
+                "locSinceDay": 109,
+                "locMarch": null
+              },
+              "strength": 40000
+            }
+          ]
+        },
+        {
+          "post": "cs_cmd_manassas",
+          "holder": "beauregard_pierre_g_t",
+          "blocks": [
+            {
+              "id": "fb_cs_charleston",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "fb_cs_charleston_castle_pinckney",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 64
+            },
+            {
+              "id": "fb_st_charleston_1st_artillery_battalion",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 242
+            },
+            {
+              "id": "fb_st_charleston_1st_infantry_regulars",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "fb_st_charleston_floating_battery",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 74
+            },
+            {
+              "id": "fb_st_charleston_fort_johnson",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 100
+            },
+            {
+              "id": "fb_st_charleston_fort_palmetto_stono",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 146
+            },
+            {
+              "id": "fb_st_charleston_moultrie_infantry_recruits",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 318
+            },
+            {
+              "id": "fb_st_charleston_regiment_of_rifles",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 450
+            },
+            {
+              "id": "fb_st_charleston_vigilant_rifles",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 63
+            },
+            {
+              "id": "fb_st_georgetown_coast_guard",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 137,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 3000,
+                  "marchStartDay": 138
+                }
+              },
+              "strength": 158
+            },
+            {
+              "id": "raised.st_gov_alabama.d53",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_alabama.d9",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d53",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d9",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d53",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d9",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 1500
+            },
+            {
+              "id": "raised.st_gov_south_carolina.d19",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_texas.d9",
+              "location": {
+                "locRegion": "southside",
+                "locAboard": null,
+                "locSinceDay": 139,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:southside",
+                  "marchFrom": "southside",
+                  "marchTo": "chesterfield",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 140
+                }
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_georgia.d127",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": null
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_georgia.d127.2",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": null
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_georgia.d129",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": null
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_alabama.d130",
+              "location": {
+                "locRegion": "columbia_sc",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": null
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_alabama.d130.2",
+              "location": {
+                "locRegion": "columbia_sc",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": null
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_alabama.d132",
+              "location": {
+                "locRegion": "columbia_sc",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": null
+              },
+              "strength": 2000
+            }
+          ]
+        },
+        {
+          "post": "us_dept_northeastern_virginia",
+          "holder": "mcdowell_irvin",
+          "blocks": [
+            {
+              "id": "fb_us_dc_militia",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 600
+            },
+            {
+              "id": "raised.st_gov_illinois.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_maine.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_pennsylvania.d56",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_new_york.d67",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 87,
+                "locMarch": null
+              },
+              "strength": 38000
+            },
+            {
+              "id": "raised.st_gov_massachusetts.d76",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_connecticut.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_hampshire.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 95,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d77",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 96,
+                "locMarch": null
+              },
+              "strength": 4000
+            },
+            {
+              "id": "raised.st_gov_rhode_island.d79",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 97,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d86",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 101,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_wisconsin.d86",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 107,
+                "locMarch": null
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_maine.d87",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 105,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_illinois.d87",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 108,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.tr_gov_nebraska.d93",
+              "location": {
+                "locRegion": "washington",
+                "locAboard": null,
+                "locSinceDay": 136,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d103",
+              "location": {
+                "locRegion": "northern_virginia",
+                "locAboard": null,
+                "locSinceDay": 122,
+                "locMarch": null
+              },
+              "strength": 6000
+            }
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "post": "cs_cmd_charleston",
+          "start": 38,
+          "end": 40,
+          "outcome": "objective_reached",
+          "axes": [
+            {
+              "stage": "end",
+              "arrived": 39
+            }
+          ]
+        },
+        {
+          "post": "us_dept_northeastern_virginia",
+          "start": 137,
+          "end": null,
+          "outcome": null,
+          "axes": [
+            {
+              "stage": "assemble",
+              "arrived": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 145,
+      "forces": [
+        {
+          "post": "cs_cmd_charleston",
+          "holder": "twiggs_david_e",
+          "blocks": []
+        },
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "holder": "johnston_joseph_e",
+          "blocks": [
+            {
+              "id": "state-forces.cs_va_transfer_virginia",
+              "location": {
+                "locRegion": "harpers_ferry",
+                "locAboard": null,
+                "locSinceDay": 109,
+                "locMarch": null
+              },
+              "strength": 40000
+            }
+          ]
+        },
+        {
+          "post": "cs_cmd_manassas",
+          "holder": "beauregard_pierre_g_t",
+          "blocks": [
+            {
+              "id": "fb_cs_charleston",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "fb_cs_charleston_castle_pinckney",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 64
+            },
+            {
+              "id": "fb_st_charleston_1st_artillery_battalion",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 242
+            },
+            {
+              "id": "fb_st_charleston_1st_infantry_regulars",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "fb_st_charleston_floating_battery",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 74
+            },
+            {
+              "id": "fb_st_charleston_fort_johnson",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 100
+            },
+            {
+              "id": "fb_st_charleston_fort_palmetto_stono",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 146
+            },
+            {
+              "id": "fb_st_charleston_moultrie_infantry_recruits",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 318
+            },
+            {
+              "id": "fb_st_charleston_regiment_of_rifles",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 450
+            },
+            {
+              "id": "fb_st_charleston_vigilant_rifles",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 63
+            },
+            {
+              "id": "fb_st_georgetown_coast_guard",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 158
+            },
+            {
+              "id": "raised.st_gov_alabama.d53",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_alabama.d9",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d53",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d9",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d53",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d9",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 1500
+            },
+            {
+              "id": "raised.st_gov_south_carolina.d19",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_texas.d9",
+              "location": {
+                "locRegion": "chesterfield",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:chesterfield:richmond",
+                  "marchFrom": "chesterfield",
+                  "marchTo": "richmond",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_georgia.d127",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": {
+                  "marchEdge": "road:greensboro:salisbury_charlotte",
+                  "marchFrom": "salisbury_charlotte",
+                  "marchTo": "greensboro",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 5000,
+                  "marchStartDay": 141
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_georgia.d127.2",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": {
+                  "marchEdge": "road:greensboro:salisbury_charlotte",
+                  "marchFrom": "salisbury_charlotte",
+                  "marchTo": "greensboro",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 5000,
+                  "marchStartDay": 141
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_georgia.d129",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": {
+                  "marchEdge": "road:greensboro:salisbury_charlotte",
+                  "marchFrom": "salisbury_charlotte",
+                  "marchTo": "greensboro",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 5000,
+                  "marchStartDay": 141
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_alabama.d130",
+              "location": {
+                "locRegion": "sc_upstate_east",
+                "locAboard": null,
+                "locSinceDay": 141,
+                "locMarch": {
+                  "marchEdge": "road:salisbury_charlotte:sc_upstate_east",
+                  "marchFrom": "sc_upstate_east",
+                  "marchTo": "salisbury_charlotte",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 142
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_alabama.d130.2",
+              "location": {
+                "locRegion": "sc_upstate_east",
+                "locAboard": null,
+                "locSinceDay": 141,
+                "locMarch": {
+                  "marchEdge": "road:salisbury_charlotte:sc_upstate_east",
+                  "marchFrom": "sc_upstate_east",
+                  "marchTo": "salisbury_charlotte",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 142
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_alabama.d132",
+              "location": {
+                "locRegion": "sc_upstate_east",
+                "locAboard": null,
+                "locSinceDay": 141,
+                "locMarch": {
+                  "marchEdge": "road:salisbury_charlotte:sc_upstate_east",
+                  "marchFrom": "sc_upstate_east",
+                  "marchTo": "salisbury_charlotte",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 142
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d136",
+              "location": {
+                "locRegion": "corinth",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "rail:al_valley_west:corinth:memphis_and_charleston",
+                  "marchFrom": "corinth",
+                  "marchTo": "al_valley_west",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d137",
+              "location": {
+                "locRegion": "corinth",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "rail:al_valley_west:corinth:memphis_and_charleston",
+                  "marchFrom": "corinth",
+                  "marchTo": "al_valley_west",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_mississippi.d139",
+              "location": {
+                "locRegion": "corinth",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "rail:al_valley_west:corinth:memphis_and_charleston",
+                  "marchFrom": "corinth",
+                  "marchTo": "al_valley_west",
+                  "marchNeedMilli": 2000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_south_carolina.d139",
+              "location": {
+                "locRegion": "sc_upstate_east",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:salisbury_charlotte:sc_upstate_east",
+                  "marchFrom": "sc_upstate_east",
+                  "marchTo": "salisbury_charlotte",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 3000
+            }
+          ]
+        },
+        {
+          "post": "us_dept_northeastern_virginia",
+          "holder": "mcdowell_irvin",
+          "blocks": [
+            {
+              "id": "fb_us_dc_militia",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 600
+            },
+            {
+              "id": "raised.st_gov_illinois.d56",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_maine.d56",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_pennsylvania.d56",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_new_york.d67",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 38000
+            },
+            {
+              "id": "raised.st_gov_massachusetts.d76",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_connecticut.d77",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_hampshire.d77",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d77",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 4000
+            },
+            {
+              "id": "raised.st_gov_rhode_island.d79",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d86",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_wisconsin.d86",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_maine.d87",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_illinois.d87",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.tr_gov_nebraska.d93",
+              "location": {
+                "locRegion": "washington",
+                "locAboard": null,
+                "locSinceDay": 136,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d103",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 6000
+            }
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "post": "cs_cmd_charleston",
+          "start": 38,
+          "end": 40,
+          "outcome": "objective_reached",
+          "axes": [
+            {
+              "stage": "end",
+              "arrived": 39
+            }
+          ]
+        },
+        {
+          "post": "us_dept_northeastern_virginia",
+          "start": 137,
+          "end": null,
+          "outcome": null,
+          "axes": [
+            {
+              "stage": "works",
+              "arrived": 145
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 148,
+      "forces": [
+        {
+          "post": "cs_cmd_charleston",
+          "holder": "twiggs_david_e",
+          "blocks": []
+        },
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "holder": "johnston_joseph_e",
+          "blocks": [
+            {
+              "id": "state-forces.cs_va_transfer_virginia",
+              "location": {
+                "locRegion": "harpers_ferry",
+                "locAboard": null,
+                "locSinceDay": 109,
+                "locMarch": null
+              },
+              "strength": 40000
+            }
+          ]
+        },
+        {
+          "post": "cs_cmd_manassas",
+          "holder": "beauregard_pierre_g_t",
+          "blocks": [
+            {
+              "id": "fb_cs_charleston",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "fb_cs_charleston_castle_pinckney",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 64
+            },
+            {
+              "id": "fb_st_charleston_1st_artillery_battalion",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 242
+            },
+            {
+              "id": "fb_st_charleston_1st_infantry_regulars",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "fb_st_charleston_floating_battery",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 74
+            },
+            {
+              "id": "fb_st_charleston_fort_johnson",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 100
+            },
+            {
+              "id": "fb_st_charleston_fort_palmetto_stono",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 146
+            },
+            {
+              "id": "fb_st_charleston_moultrie_infantry_recruits",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 318
+            },
+            {
+              "id": "fb_st_charleston_regiment_of_rifles",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 450
+            },
+            {
+              "id": "fb_st_charleston_vigilant_rifles",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 63
+            },
+            {
+              "id": "fb_st_georgetown_coast_guard",
+              "location": {
+                "locRegion": "hanover",
+                "locAboard": null,
+                "locSinceDay": 147,
+                "locMarch": {
+                  "marchEdge": "road:fredericksburg:hanover",
+                  "marchFrom": "hanover",
+                  "marchTo": "fredericksburg",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 148
+                }
+              },
+              "strength": 158
+            },
+            {
+              "id": "raised.st_gov_alabama.d53",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_alabama.d9",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d53",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_georgia.d9",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d53",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d9",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 1500
+            },
+            {
+              "id": "raised.st_gov_south_carolina.d19",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_texas.d9",
+              "location": {
+                "locRegion": "richmond",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:hanover:richmond",
+                  "marchFrom": "richmond",
+                  "marchTo": "hanover",
+                  "marchNeedMilli": 3000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_georgia.d127",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": {
+                  "marchEdge": "road:greensboro:salisbury_charlotte",
+                  "marchFrom": "salisbury_charlotte",
+                  "marchTo": "greensboro",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 8000,
+                  "marchStartDay": 141
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_georgia.d127.2",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": {
+                  "marchEdge": "road:greensboro:salisbury_charlotte",
+                  "marchFrom": "salisbury_charlotte",
+                  "marchTo": "greensboro",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 8000,
+                  "marchStartDay": 141
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_georgia.d129",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 140,
+                "locMarch": {
+                  "marchEdge": "road:greensboro:salisbury_charlotte",
+                  "marchFrom": "salisbury_charlotte",
+                  "marchTo": "greensboro",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 8000,
+                  "marchStartDay": 141
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_alabama.d130",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:greensboro:salisbury_charlotte",
+                  "marchFrom": "salisbury_charlotte",
+                  "marchTo": "greensboro",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_alabama.d130.2",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:greensboro:salisbury_charlotte",
+                  "marchFrom": "salisbury_charlotte",
+                  "marchTo": "greensboro",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_alabama.d132",
+              "location": {
+                "locRegion": "salisbury_charlotte",
+                "locAboard": null,
+                "locSinceDay": 146,
+                "locMarch": {
+                  "marchEdge": "road:greensboro:salisbury_charlotte",
+                  "marchFrom": "salisbury_charlotte",
+                  "marchTo": "greensboro",
+                  "marchNeedMilli": 10000,
+                  "marchDoneMilli": 2000,
+                  "marchStartDay": 147
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d136",
+              "location": {
+                "locRegion": "al_valley_east",
+                "locAboard": null,
+                "locSinceDay": 147,
+                "locMarch": {
+                  "marchEdge": "road:al_valley_east:ga_dalton",
+                  "marchFrom": "al_valley_east",
+                  "marchTo": "ga_dalton",
+                  "marchNeedMilli": 9000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 148
+                }
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_mississippi.d137",
+              "location": {
+                "locRegion": "al_valley_east",
+                "locAboard": null,
+                "locSinceDay": 147,
+                "locMarch": {
+                  "marchEdge": "road:al_valley_east:ga_dalton",
+                  "marchFrom": "al_valley_east",
+                  "marchTo": "ga_dalton",
+                  "marchNeedMilli": 9000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 148
+                }
+              },
+              "strength": null
+            },
+            {
+              "id": "raised.st_gov_mississippi.d139",
+              "location": {
+                "locRegion": "al_valley_east",
+                "locAboard": null,
+                "locSinceDay": 147,
+                "locMarch": {
+                  "marchEdge": "road:al_valley_east:ga_dalton",
+                  "marchFrom": "al_valley_east",
+                  "marchTo": "ga_dalton",
+                  "marchNeedMilli": 9000,
+                  "marchDoneMilli": 1000,
+                  "marchStartDay": 148
+                }
+              },
+              "strength": 3000
+            },
+            {
+              "id": "raised.st_gov_south_carolina.d139",
+              "location": {
+                "locRegion": "sc_upstate_east",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": {
+                  "marchEdge": "road:salisbury_charlotte:sc_upstate_east",
+                  "marchFrom": "sc_upstate_east",
+                  "marchTo": "salisbury_charlotte",
+                  "marchNeedMilli": 5000,
+                  "marchDoneMilli": 4000,
+                  "marchStartDay": 145
+                }
+              },
+              "strength": 3000
+            }
+          ]
+        },
+        {
+          "post": "us_dept_northeastern_virginia",
+          "holder": "mcdowell_irvin",
+          "blocks": [
+            {
+              "id": "fb_us_dc_militia",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 600
+            },
+            {
+              "id": "raised.st_gov_new_york.d67",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 38000
+            },
+            {
+              "id": "raised.st_gov_massachusetts.d76",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.st_gov_connecticut.d77",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_hampshire.d77",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d77",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 4000
+            },
+            {
+              "id": "raised.st_gov_rhode_island.d79",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_new_york.d86",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 14000
+            },
+            {
+              "id": "raised.st_gov_wisconsin.d86",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 2000
+            },
+            {
+              "id": "raised.st_gov_maine.d87",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_illinois.d87",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 6000
+            },
+            {
+              "id": "raised.tr_gov_nebraska.d93",
+              "location": {
+                "locRegion": "washington",
+                "locAboard": null,
+                "locSinceDay": 136,
+                "locMarch": null
+              },
+              "strength": 1000
+            },
+            {
+              "id": "raised.st_gov_indiana.d103",
+              "location": {
+                "locRegion": "manassas",
+                "locAboard": null,
+                "locSinceDay": 144,
+                "locMarch": null
+              },
+              "strength": 6000
+            }
+          ]
+        }
+      ],
+      "operations": [
+        {
+          "post": "cs_cmd_charleston",
+          "start": 38,
+          "end": 40,
+          "outcome": "objective_reached",
+          "axes": [
+            {
+              "stage": "end",
+              "arrived": 39
+            }
+          ]
+        },
+        {
+          "post": "us_dept_northeastern_virginia",
+          "start": 137,
+          "end": null,
+          "outcome": null,
+          "axes": [
+            {
+              "stage": "works",
+              "arrived": 145
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

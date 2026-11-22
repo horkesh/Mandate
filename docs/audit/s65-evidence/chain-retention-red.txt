@@ -1,0 +1,50 @@
+
+ RUN  v5.1.0 C:/Pyrrhic/sprint-projection
+
+ ❯ packages/kernel/test/s65-sender-belief.test.ts (19 tests | 2 failed) 64ms
+   × S65: accepting an own declared appointment supplies its public parent without borrowing any live chain or holder 7ms
+   × S65: an institutional held-post refusal cannot fade and resurrect an older vacancy 2ms
+node.exe : 
+At line:1 char:1
++ & "C:\Users\User\AppData\Local\Volta\tools\image\node\22.23.2/node.ex ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  packages/kernel/test/s65-sender-belief.test.ts > S65: accepting an own declared appointment supplies its public 
+parent without borrowing any live chain or holder
+AssertionError: expected [ 'new_command' ] to deeply equal [ 'a_office', 'new_command' ]
+
+- Expected
++ Received
+
+  [
+-   "a_office",
+    "new_command",
+  ]
+
+ ❯ packages/kernel/test/s65-sender-belief.test.ts:207:55
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  packages/kernel/test/s65-sender-belief.test.ts > S65: an institutional held-post refusal cannot fade and resurre
+ct an older vacancy
+AssertionError: expected 'vacant' to be 'unknown' // Object.is equality
+
+Expected: "unknown"
+Received: "vacant"
+
+ ❯ packages/kernel/test/s65-sender-belief.test.ts:219:84
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 17 passed (19)
+   Start at  21:47:17
+   Duration  610ms (transform 54%, import 31%, tests 14%, worker 1%)
+

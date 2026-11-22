@@ -1,0 +1,23 @@
+[
+  {
+    "symbol": "principalMenu",
+    "before": "5fd36e296736c60a27c0a7389f31ca7620cdddea4b8785cfbbf22cf82d789872",
+    "after": "bde0d6a09240bbef7a66ec5b63265e3ef0087fc4a494edece2d61d1134e08b7d",
+    "protectedReads": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)",
+    "cause": "Received acceptance now supplies only the own declared temporary establishment parent. No live parent or holder is backfilled."
+  },
+  {
+    "symbol": "pendingRequests",
+    "before": "d7d930c89c9835d19673ab2d8bc6e4cce5972ae235c30763dd6d0b3d2be0dcd5",
+    "after": "6bf5f89abf1f2230df960e03adde890a464d21e410c1dd6ec284901e5576e597",
+    "protectedReads": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)",
+    "cause": "Received acceptance now supplies only the own declared temporary establishment parent. No live parent or holder is backfilled."
+  },
+  {
+    "symbol": "viewFor",
+    "before": "84bc5a30f3170e3d17d54ac07c57af4a9205a7c6106245bf391aa484a7672657",
+    "after": "16f9c9ce731294712ba832ac591053bc79110f9614b1f2c902fcf258afac057c",
+    "protectedReads": "viewFor reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)",
+    "cause": "Received acceptance now supplies only the own declared temporary establishment parent. No live parent or holder is backfilled."
+  }
+]

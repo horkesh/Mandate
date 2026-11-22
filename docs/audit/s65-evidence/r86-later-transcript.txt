@@ -1,0 +1,72 @@
+> end
+You send nothing, and wait.
+--- 1861-08-03 (day 151) ---
+  day 151  press from bennett_james_g (written day 140, mail): Public opinion on the opening of the war. The paper reports that the public holds the other side responsible for beginning the war.
+  day 151  press from raymond_henry_j (written day 140, mail): Public opinion on the opening of the war. The paper reports that the public holds the other side responsible for beginning the war.
+  day 151  strength-return from washburn_israel (written day 141, mail): present-for-duty 1000; present-and-absent 1400
+  day 151  strength-return from welles_gideon (written day 141, mail): present-for-duty 6317; present-and-absent 8843
+  day 151  wire-dispatch from bell_charles_h (written day 143, wire): headquarters at mediterranean; holding; enemy 0 at mediterranean; enemy 0 at north_atlantic
+  day 151  wire-dispatch from inman_william (written day 143, wire): headquarters at south_atlantic; holding; enemy 0 at eastern_seas; enemy 0 at north_atlantic; enemy 0 at south_atlantic
+  day 151  wire-dispatch from sands_joshua_r (written day 143, wire): headquarters at south_atlantic; holding; enemy 0 at eastern_seas; enemy 0 at north_atlantic; enemy 0 at south_atlantic
+  day 151  wire-dispatch from stribling_cornelius_k (written day 143, wire): headquarters at south_atlantic; holding; enemy 0 at eastern_seas; enemy 0 at north_atlantic; enemy 0 at south_atlantic
+  day 151  wire-dispatch from montgomery_john_b (written day 145, wire): headquarters at panama; holding; enemy 0 at pacific_coast; enemy 0 at panama; enemy 0 at western_atlantic
+--- 1861-08-04 (day 152) ---
+  day 152  wire-dispatch from waite_carlos_a (written day 147, wire): headquarters at tx_san_antonio_austin; holding; enemy 0 at tx_brazos; enemy 0 at tx_coastal_bend; enemy 0 at tx_north_central; enemy 0 at tx_san_antonio_austin; enemy 0 at tx_west
+  day 152  wire-dispatch from arnold_lewis_g (written day 151, wire): headquarters at key_west; holding; enemy 0 at florida_straits; enemy 0 at key_west
+  day 152  wire-dispatch from brannan_john_m (written day 151, wire): headquarters at key_west; holding; enemy 0 at florida_straits; enemy 0 at key_west
+  day 152  wire-dispatch from buchanan_franklin (written day 151, wire): headquarters at washington; holding; enemy 0 at frederick_md; enemy 0 at northern_virginia; enemy 0 at potomac; enemy 0 at southern_maryland; enemy 0 at washington
+  day 152  wire-dispatch from dimick_justin (written day 151, wire): headquarters at fort_monroe; holding; enemy 0 at fort_monroe; enemy 0 at hampton_roads; enemy 0 at peninsula
+  day 152  wire-dispatch from fauntleroy_thomas_t (written day 151, wire): headquarters at new_mexico; holding; enemy 0 at arizona; enemy 0 at colorado; enemy 0 at new_mexico
+  day 152  wire-dispatch from harris_john (written day 151, wire): headquarters at philadelphia; holding; enemy 0 at delaware_bay; enemy 0 at new_jersey; enemy 0 at philadelphia; enemy 0 at southeast_pa
+  day 152  wire-dispatch from pendergrast_garrett_j (written day 151, wire): headquarters at pensacola_coast; holding; enemy 0 at florida_gulf_coast; enemy 0 at fort_pickens; enemy 0 at gulf_of_mexico; enemy 0 at mississippi_sound; enemy 0 at mobile_bay; enemy 0 at pensacola; enemy 0 at pensacola_coast; enemy 0 at west_florida
+  day 152  wire-dispatch from scott_winfield (written day 151, wire): headquarters at washington; holding; enemy 0 at frederick_md; enemy 0 at northern_virginia; enemy 0 at potomac; enemy 0 at southern_maryland; enemy 0 at washington
+  day 152  wire-dispatch from slemmer_adam_j (written day 151, wire): headquarters at fort_pickens; holding; enemy 0 at fort_pickens; enemy 0 at pensacola; enemy 0 at pensacola_coast
+  day 152  wire-dispatch from stone_charles_p (written day 151, wire): headquarters at manassas; holding (objective manassas); enemy 158 at fredericksburg; enemy 0 at loudoun_fauquier; enemy 0 at manassas; enemy 0 at northern_virginia; enemy 0 at potomac
+  day 152  wire-dispatch from welles_gideon (written day 151, wire): headquarters at pennsylvania_north; holding; enemy 0 at cumberland_valley_pa; enemy 0 at harrisburg; enemy 0 at new_jersey; enemy 0 at new_york; enemy 0 at ohio_north; enemy 0 at pennsylvania_north; enemy 0 at pittsburgh; enemy 0 at southeast_pa; enemy 0 at western_maryland; enemy 0 at wheeling
+--- 1861-08-05 (day 153) ---
+  day 153  wire-dispatch from bell_charles_h (written day 145, wire): headquarters at mediterranean; holding; enemy 0 at mediterranean; enemy 0 at north_atlantic
+  day 153  wire-dispatch from inman_william (written day 145, wire): headquarters at south_atlantic; holding; enemy 0 at eastern_seas; enemy 0 at north_atlantic; enemy 0 at south_atlantic
+  day 153  wire-dispatch from sands_joshua_r (written day 145, wire): headquarters at south_atlantic; holding; enemy 0 at eastern_seas; enemy 0 at north_atlantic; enemy 0 at south_atlantic
+  day 153  wire-dispatch from stribling_cornelius_k (written day 145, wire): headquarters at south_atlantic; holding; enemy 0 at eastern_seas; enemy 0 at north_atlantic; enemy 0 at south_atlantic
+  day 153  wire-dispatch from montgomery_john_b (written day 147, wire): headquarters at panama; holding; enemy 0 at pacific_coast; enemy 0 at panama; enemy 0 at western_atlantic
+--- 1861-08-06 (day 154) ---
+  day 154  informal/cabinet-word from wool_john_e (written day 148, in-person): present-for-duty 377
+  day 154  wire-dispatch from waite_carlos_a (written day 149, wire): headquarters at tx_san_antonio_austin; holding; enemy 0 at tx_brazos; enemy 0 at tx_coastal_bend; enemy 0 at tx_north_central; enemy 0 at tx_san_antonio_austin; enemy 0 at tx_west
+  day 154  wire-dispatch from arnold_lewis_g (written day 153, wire): headquarters at key_west; holding; enemy 0 at florida_straits; enemy 0 at key_west
+  day 154  wire-dispatch from brannan_john_m (written day 153, wire): headquarters at key_west; holding; enemy 0 at florida_straits; enemy 0 at key_west
+  day 154  wire-dispatch from buchanan_franklin (written day 153, wire): headquarters at washington; holding; enemy 0 at frederick_md; enemy 0 at northern_virginia; enemy 0 at potomac; enemy 0 at southern_maryland; enemy 0 at washington
+  day 154  wire-dispatch from dimick_justin (written day 153, wire): headquarters at fort_monroe; holding; enemy 0 at fort_monroe; enemy 0 at hampton_roads; enemy 0 at peninsula
+  day 154  wire-dispatch from fauntleroy_thomas_t (written day 153, wire): headquarters at new_mexico; holding; enemy 0 at arizona; enemy 0 at colorado; enemy 0 at new_mexico
+  day 154  wire-dispatch from harris_john (written day 153, wire): headquarters at philadelphia; holding; enemy 0 at delaware_bay; enemy 0 at new_jersey; enemy 0 at philadelphia; enemy 0 at southeast_pa
+  day 154  wire-dispatch from pendergrast_garrett_j (written day 153, wire): headquarters at pensacola_coast; holding; enemy 0 at florida_gulf_coast; enemy 0 at fort_pickens; enemy 0 at gulf_of_mexico; enemy 0 at mississippi_sound; enemy 0 at mobile_bay; enemy 0 at pensacola; enemy 0 at pensacola_coast; enemy 0 at west_florida
+  day 154  wire-dispatch from scott_winfield (written day 153, wire): headquarters at washington; holding; enemy 0 at frederick_md; enemy 0 at northern_virginia; enemy 0 at potomac; enemy 0 at southern_maryland; enemy 0 at washington
+  day 154  wire-dispatch from slemmer_adam_j (written day 153, wire): headquarters at fort_pickens; holding; enemy 0 at fort_pickens; enemy 0 at pensacola; enemy 0 at pensacola_coast
+  day 154  wire-dispatch from stone_charles_p (written day 153, wire): headquarters at manassas; holding (objective manassas); enemy 20115 at fredericksburg; enemy 0 at loudoun_fauquier; enemy 0 at manassas; enemy 0 at northern_virginia; enemy 0 at potomac
+  day 154  wire-dispatch from welles_gideon (written day 153, wire): headquarters at pennsylvania_north; holding; enemy 0 at cumberland_valley_pa; enemy 0 at harrisburg; enemy 0 at new_jersey; enemy 0 at new_york; enemy 0 at ohio_north; enemy 0 at pennsylvania_north; enemy 0 at pittsburgh; enemy 0 at southeast_pa; enemy 0 at western_maryland; enemy 0 at wheeling
+--- 1861-08-07 (day 155) ---
+  day 155  wire-dispatch from bell_charles_h (written day 147, wire): headquarters at mediterranean; holding; enemy 0 at mediterranean; enemy 0 at north_atlantic
+  day 155  wire-dispatch from inman_william (written day 147, wire): headquarters at south_atlantic; holding; enemy 0 at eastern_seas; enemy 0 at north_atlantic; enemy 0 at south_atlantic
+  day 155  wire-dispatch from sands_joshua_r (written day 147, wire): headquarters at south_atlantic; holding; enemy 0 at eastern_seas; enemy 0 at north_atlantic; enemy 0 at south_atlantic
+  day 155  wire-dispatch from stribling_cornelius_k (written day 147, wire): headquarters at south_atlantic; holding; enemy 0 at eastern_seas; enemy 0 at north_atlantic; enemy 0 at south_atlantic
+  day 155  wire-dispatch from montgomery_john_b (written day 149, wire): headquarters at panama; holding; enemy 0 at pacific_coast; enemy 0 at panama; enemy 0 at western_atlantic
+  day 155  wire-dispatch from stone_charles_p (written day 154 at 08:00, wire): dawn at manassas: going well; enemy 158 at manassas
+  day 155  wire-dispatch from stone_charles_p (written day 154 at 12:00, wire): morning at manassas: going well; enemy 158 at manassas
+  day 155  wire-dispatch from stone_charles_p (written day 154 at 17:00, wire): afternoon at manassas: going badly; enemy 158 at manassas
+  day 155  wire-dispatch from stone_charles_p (written day 154 at 21:00, wire): evening at manassas: going well; enemy 158 at manassas
+--- 1861-08-08 (day 156) ---
+  day 156  wire-dispatch from waite_carlos_a (written day 151, wire): headquarters at tx_san_antonio_austin; holding; enemy 0 at tx_brazos; enemy 0 at tx_coastal_bend; enemy 0 at tx_north_central; enemy 0 at tx_san_antonio_austin; enemy 0 at tx_west
+  day 156  casualty-return from stone_charles_p (written day 154, courier): own killed and wounded 22 at manassas (first); missing 7 at manassas; enemy losses claimed 16 at manassas
+  day 156  wire-dispatch from arnold_lewis_g (written day 155, wire): headquarters at key_west; holding; enemy 0 at florida_straits; enemy 0 at key_west
+  day 156  wire-dispatch from brannan_john_m (written day 155, wire): headquarters at key_west; holding; enemy 0 at florida_straits; enemy 0 at key_west
+  day 156  wire-dispatch from buchanan_franklin (written day 155, wire): headquarters at washington; holding; enemy 0 at frederick_md; enemy 0 at northern_virginia; enemy 0 at potomac; enemy 0 at southern_maryland; enemy 0 at washington
+  day 156  informal/cabinet-word from cameron_simon (written day 155, in-person): present-for-duty 50369
+  day 156  wire-dispatch from dimick_justin (written day 155, wire): headquarters at fort_monroe; holding; enemy 0 at fort_monroe; enemy 0 at hampton_roads; enemy 0 at peninsula
+  day 156  wire-dispatch from fauntleroy_thomas_t (written day 155, wire): headquarters at new_mexico; holding; enemy 0 at arizona; enemy 0 at colorado; enemy 0 at new_mexico
+  day 156  wire-dispatch from harris_john (written day 155, wire): headquarters at philadelphia; holding; enemy 0 at delaware_bay; enemy 0 at new_jersey; enemy 0 at philadelphia; enemy 0 at southeast_pa
+  day 156  wire-dispatch from pendergrast_garrett_j (written day 155, wire): headquarters at pensacola_coast; holding; enemy 0 at florida_gulf_coast; enemy 0 at fort_pickens; enemy 0 at gulf_of_mexico; enemy 0 at mississippi_sound; enemy 0 at mobile_bay; enemy 0 at pensacola; enemy 0 at pensacola_coast; enemy 0 at west_florida
+  day 156  wire-dispatch from scott_winfield (written day 155, wire): headquarters at washington; holding; enemy 0 at frederick_md; enemy 0 at northern_virginia; enemy 0 at potomac; enemy 0 at southern_maryland; enemy 0 at washington
+  day 156  wire-dispatch from slemmer_adam_j (written day 155, wire): headquarters at fort_pickens; holding; enemy 0 at fort_pickens; enemy 0 at pensacola; enemy 0 at pensacola_coast
+  day 156  wire-dispatch from stone_charles_p (written day 155, wire): headquarters at manassas; holding (objective manassas); enemy 20095 at fredericksburg; enemy 0 at loudoun_fauquier; enemy 0 at manassas; enemy 0 at northern_virginia; enemy 0 at potomac
+  day 156  wire-dispatch from welles_gideon (written day 155, wire): headquarters at pennsylvania_north; holding; enemy 0 at cumberland_valley_pa; enemy 0 at harrisburg; enemy 0 at new_jersey; enemy 0 at new_york; enemy 0 at ohio_north; enemy 0 at pennsylvania_north; enemy 0 at pittsburgh; enemy 0 at southeast_pa; enemy 0 at western_maryland; enemy 0 at wheeling
+The turn stops: battle-report.
+=== 1861-08-08 (day 157): lincoln_abraham, union; 12 attention left this week ===

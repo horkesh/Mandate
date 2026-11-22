@@ -1,0 +1,276 @@
+[
+  {
+    "file": "C:\\Pyrrhic\\sprint-projection\\runs\\s62-done\\20261122-184650-23756-4e91d1\\save-day-60.json",
+    "commands": [
+      {
+        "command": {
+          "arm": "infantry",
+          "bypass": false,
+          "callId": "us_may04_regular_infantry",
+          "cmd": "call",
+          "men": null,
+          "regiments": 8,
+          "route": "wire",
+          "termDays": 1095,
+          "to": "us_recruiting_service"
+        },
+        "actualChain": [
+          {
+            "post": "us_secretary_war",
+            "holder": "cameron_simon"
+          },
+          {
+            "post": "us_war_adjutant_general",
+            "holder": null
+          },
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "knownChain": [
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "receivedTarget": {
+          "post": "us_recruiting_service",
+          "parent": null,
+          "placementKnown": false,
+          "holder": "smith_charles_f",
+          "status": "held",
+          "vacantSince": null,
+          "source": "m.53.smith_charles_f.lincoln_abraham.answer.appoint.us_recruiting_service",
+          "asOfDay": 53,
+          "observerReports": []
+        }
+      },
+      {
+        "command": {
+          "arm": "cavalry",
+          "bypass": false,
+          "callId": "us_may04_regular_cavalry",
+          "cmd": "call",
+          "men": null,
+          "regiments": 1,
+          "route": "wire",
+          "termDays": 1095,
+          "to": "us_recruiting_service"
+        },
+        "actualChain": [
+          {
+            "post": "us_secretary_war",
+            "holder": "cameron_simon"
+          },
+          {
+            "post": "us_war_adjutant_general",
+            "holder": null
+          },
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "knownChain": [
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "receivedTarget": {
+          "post": "us_recruiting_service",
+          "parent": null,
+          "placementKnown": false,
+          "holder": "smith_charles_f",
+          "status": "held",
+          "vacantSince": null,
+          "source": "m.53.smith_charles_f.lincoln_abraham.answer.appoint.us_recruiting_service",
+          "asOfDay": 53,
+          "observerReports": []
+        }
+      },
+      {
+        "command": {
+          "arm": "artillery",
+          "bypass": false,
+          "callId": "us_may04_regular_artillery",
+          "cmd": "call",
+          "men": null,
+          "regiments": 1,
+          "route": "wire",
+          "termDays": 1095,
+          "to": "us_recruiting_service"
+        },
+        "actualChain": [
+          {
+            "post": "us_secretary_war",
+            "holder": "cameron_simon"
+          },
+          {
+            "post": "us_war_adjutant_general",
+            "holder": null
+          },
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "knownChain": [
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "receivedTarget": {
+          "post": "us_recruiting_service",
+          "parent": null,
+          "placementKnown": false,
+          "holder": "smith_charles_f",
+          "status": "held",
+          "vacantSince": null,
+          "source": "m.53.smith_charles_f.lincoln_abraham.answer.appoint.us_recruiting_service",
+          "asOfDay": 53,
+          "observerReports": []
+        }
+      }
+    ]
+  },
+  {
+    "file": "C:\\Pyrrhic\\sprint-projection\\runs\\s65-done\\20261122-202916-17648-398532\\save-day-60.json",
+    "commands": [
+      {
+        "command": {
+          "arm": "infantry",
+          "bypass": false,
+          "callId": "us_may04_regular_infantry",
+          "cmd": "call",
+          "men": null,
+          "regiments": 8,
+          "route": "wire",
+          "termDays": 1095,
+          "to": "us_recruiting_service"
+        },
+        "actualChain": [
+          {
+            "post": "us_secretary_war",
+            "holder": "cameron_simon"
+          },
+          {
+            "post": "us_war_adjutant_general",
+            "holder": null
+          },
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "knownChain": [
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "receivedTarget": {
+          "post": "us_recruiting_service",
+          "parent": null,
+          "placementKnown": false,
+          "holder": "smith_charles_f",
+          "status": "held",
+          "vacantSince": null,
+          "source": "m.53.smith_charles_f.lincoln_abraham.answer.appoint.us_recruiting_service",
+          "asOfDay": 53,
+          "observerReports": []
+        }
+      },
+      {
+        "command": {
+          "arm": "cavalry",
+          "bypass": false,
+          "callId": "us_may04_regular_cavalry",
+          "cmd": "call",
+          "men": null,
+          "regiments": 1,
+          "route": "wire",
+          "termDays": 1095,
+          "to": "us_recruiting_service"
+        },
+        "actualChain": [
+          {
+            "post": "us_secretary_war",
+            "holder": "cameron_simon"
+          },
+          {
+            "post": "us_war_adjutant_general",
+            "holder": null
+          },
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "knownChain": [
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "receivedTarget": {
+          "post": "us_recruiting_service",
+          "parent": null,
+          "placementKnown": false,
+          "holder": "smith_charles_f",
+          "status": "held",
+          "vacantSince": null,
+          "source": "m.53.smith_charles_f.lincoln_abraham.answer.appoint.us_recruiting_service",
+          "asOfDay": 53,
+          "observerReports": []
+        }
+      },
+      {
+        "command": {
+          "arm": "artillery",
+          "bypass": false,
+          "callId": "us_may04_regular_artillery",
+          "cmd": "call",
+          "men": null,
+          "regiments": 1,
+          "route": "wire",
+          "termDays": 1095,
+          "to": "us_recruiting_service"
+        },
+        "actualChain": [
+          {
+            "post": "us_secretary_war",
+            "holder": "cameron_simon"
+          },
+          {
+            "post": "us_war_adjutant_general",
+            "holder": null
+          },
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "knownChain": [
+          {
+            "post": "us_recruiting_service",
+            "holder": "smith_charles_f"
+          }
+        ],
+        "receivedTarget": {
+          "post": "us_recruiting_service",
+          "parent": null,
+          "placementKnown": false,
+          "holder": "smith_charles_f",
+          "status": "held",
+          "vacantSince": null,
+          "source": "m.53.smith_charles_f.lincoln_abraham.answer.appoint.us_recruiting_service",
+          "asOfDay": 53,
+          "observerReports": []
+        }
+      }
+    ]
+  }
+]

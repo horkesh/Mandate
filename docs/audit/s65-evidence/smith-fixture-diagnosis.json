@@ -1,0 +1,198 @@
+{
+  "responses": [
+    {
+      "respOrder": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respRole": "relay",
+      "respKind": "call",
+      "respCallId": "us_may04_regular_infantry",
+      "respDay": 60,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 22,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -26
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 48
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    {
+      "respOrder": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.2",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respRole": "relay",
+      "respKind": "call",
+      "respCallId": "us_may04_regular_cavalry",
+      "respDay": 60,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 22,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -26
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 48
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    {
+      "respOrder": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.3",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respRole": "relay",
+      "respKind": "call",
+      "respCallId": "us_may04_regular_artillery",
+      "respDay": 60,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 22,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -26
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 48
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    }
+  ],
+  "returns": [
+    {
+      "day": 60,
+      "received": 60,
+      "subject": "us_war_adjutant_general",
+      "claims": [
+        {
+          "kind": "order-returned",
+          "region": null,
+          "value": 0,
+          "token": "vacant_post",
+          "confidence": 1000
+        }
+      ]
+    },
+    {
+      "day": 60,
+      "received": 60,
+      "subject": "us_war_adjutant_general",
+      "claims": [
+        {
+          "kind": "order-returned",
+          "region": null,
+          "value": 0,
+          "token": "vacant_post",
+          "confidence": 1000
+        }
+      ]
+    },
+    {
+      "day": 60,
+      "received": 60,
+      "subject": "us_war_adjutant_general",
+      "claims": [
+        {
+          "kind": "order-returned",
+          "region": null,
+          "value": 0,
+          "token": "vacant_post",
+          "confidence": 1000
+        }
+      ]
+    }
+  ],
+  "adjutant": {
+    "postName": "post.us_war_adjutant_general.name",
+    "postKind": "bureau",
+    "postDepartment": "us_war",
+    "postParent": "us_secretary_war",
+    "postHolder": null,
+    "postActing": false,
+    "postIntelChief": null,
+    "postSeat": "washington",
+    "postOperation": null,
+    "postInstallation": null,
+    "postLinks": [],
+    "postScheduled": [],
+    "postStandingOrders": []
+  }
+}

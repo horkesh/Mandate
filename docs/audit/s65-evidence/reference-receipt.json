@@ -1,0 +1,176 @@
+[
+  {
+    "pack": "union-1861",
+    "baseline": "S62",
+    "beforePath": "runs\\s62-done\\20261122-184650-23756-4e91d1\\summary.json",
+    "afterPath": "runs\\s65-done-final\\20261122-205214-26700-9bffb8\\summary.json",
+    "worldHashUnchanged": true,
+    "initialHashUnchanged": true,
+    "beforeFinal": "d57634a17331310241b1b61044619c8093cc3c52b1ad831471a71cc350bbf0bf",
+    "afterFinal": "a184554655e29cac91495ea1ee3ea105042911f06d48d8e1da55863b442bb7d4",
+    "rejections": {
+      "before": 22,
+      "after": 0
+    },
+    "unchangedHashes": 35,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "a184554655e29cac91495ea1ee3ea105042911f06d48d8e1da55863b442bb7d4",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "changedHashes": 113,
+    "changedCounters": 33,
+    "changedDailyCounters": 230,
+    "changedScores": 2
+  },
+  {
+    "pack": "union-1861",
+    "baseline": "S42",
+    "beforePath": "docs\\audit\\s42-evidence\\union-1861-summary.json",
+    "afterPath": "runs\\s65-done-final\\20261122-205214-26700-9bffb8\\summary.json",
+    "worldHashUnchanged": true,
+    "initialHashUnchanged": true,
+    "beforeFinal": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+    "afterFinal": "a184554655e29cac91495ea1ee3ea105042911f06d48d8e1da55863b442bb7d4",
+    "rejections": {
+      "before": 0,
+      "after": 0
+    },
+    "unchangedHashes": 35,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "a184554655e29cac91495ea1ee3ea105042911f06d48d8e1da55863b442bb7d4",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "changedHashes": 113,
+    "changedCounters": 42,
+    "changedDailyCounters": 916,
+    "changedScores": 7
+  },
+  {
+    "pack": "union-1861",
+    "baseline": "stopped attempt reference",
+    "beforePath": "runs\\s65-done\\20261122-202916-17648-398532\\summary.json",
+    "afterPath": "runs\\s65-done-final\\20261122-205214-26700-9bffb8\\summary.json",
+    "worldHashUnchanged": true,
+    "initialHashUnchanged": true,
+    "beforeFinal": "452f6755df9273ff738a110ce1a59efa2c8f4d0b1923f133c6c0c3cede18a93e",
+    "afterFinal": "a184554655e29cac91495ea1ee3ea105042911f06d48d8e1da55863b442bb7d4",
+    "rejections": {
+      "before": 0,
+      "after": 0
+    },
+    "unchangedHashes": 59,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "a184554655e29cac91495ea1ee3ea105042911f06d48d8e1da55863b442bb7d4",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "changedHashes": 89,
+    "changedCounters": 19,
+    "changedDailyCounters": 91,
+    "changedScores": 1
+  },
+  {
+    "pack": "testbed",
+    "baseline": "S62",
+    "beforePath": "runs\\s62-done\\20261122-184804-23756-ec8e1d\\summary.json",
+    "afterPath": "runs\\s65-done-final\\20261122-205251-26700-3f8286\\summary.json",
+    "worldHashUnchanged": true,
+    "initialHashUnchanged": true,
+    "beforeFinal": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+    "afterFinal": "911345b7cd7e740e8f9e723b345537a6b435768bd3ab1ac2e3299814903eb71f",
+    "rejections": {
+      "before": 0,
+      "after": 0
+    },
+    "unchangedHashes": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "911345b7cd7e740e8f9e723b345537a6b435768bd3ab1ac2e3299814903eb71f",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "changedHashes": 120,
+    "changedCounters": 0,
+    "changedDailyCounters": 0,
+    "changedScores": 0
+  },
+  {
+    "pack": "testbed",
+    "baseline": "S42",
+    "beforePath": "docs\\audit\\s42-evidence\\testbed-summary.json",
+    "afterPath": "runs\\s65-done-final\\20261122-205251-26700-3f8286\\summary.json",
+    "worldHashUnchanged": true,
+    "initialHashUnchanged": true,
+    "beforeFinal": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+    "afterFinal": "911345b7cd7e740e8f9e723b345537a6b435768bd3ab1ac2e3299814903eb71f",
+    "rejections": {
+      "before": 0,
+      "after": 0
+    },
+    "unchangedHashes": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "911345b7cd7e740e8f9e723b345537a6b435768bd3ab1ac2e3299814903eb71f",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "changedHashes": 120,
+    "changedCounters": 0,
+    "changedDailyCounters": 0,
+    "changedScores": 0
+  },
+  {
+    "pack": "testbed",
+    "baseline": "stopped attempt reference",
+    "beforePath": "runs\\s65-done\\20261122-202955-17648-b38787\\summary.json",
+    "afterPath": "runs\\s65-done-final\\20261122-205251-26700-3f8286\\summary.json",
+    "worldHashUnchanged": true,
+    "initialHashUnchanged": true,
+    "beforeFinal": "911345b7cd7e740e8f9e723b345537a6b435768bd3ab1ac2e3299814903eb71f",
+    "afterFinal": "911345b7cd7e740e8f9e723b345537a6b435768bd3ab1ac2e3299814903eb71f",
+    "rejections": {
+      "before": 0,
+      "after": 0
+    },
+    "unchangedHashes": 120,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "911345b7cd7e740e8f9e723b345537a6b435768bd3ab1ac2e3299814903eb71f",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "changedHashes": 0,
+    "changedCounters": 0,
+    "changedDailyCounters": 0,
+    "changedScores": 0
+  }
+]

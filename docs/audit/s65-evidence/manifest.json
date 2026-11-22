@@ -1,0 +1,127 @@
+[
+  {
+    "file": "campaign-inventory.json",
+    "bytes": 1742,
+    "sha256": "0f4c1b972a3b73832aa78a4a84cb2b0ea1e8f0992438b539ee7f1dc0e0406ed0"
+  },
+  {
+    "file": "chain-classification-receipt.json",
+    "bytes": 2602,
+    "sha256": "c583c04225723ced2c099ca2af6d2623dc2174db9efa296e897bdfd55daf562d"
+  },
+  {
+    "file": "chain-diagnostic.json",
+    "bytes": 7534,
+    "sha256": "afeb30ed3f7dc901ef19563de33a8ad423d297dc5f2da01057a0226a3863a0f5"
+  },
+  {
+    "file": "chain-retention-red.txt",
+    "bytes": 1825,
+    "sha256": "881506d2e23e27a19ccf573758502366fc82b45f35d62aea19dbc21c44676963"
+  },
+  {
+    "file": "checks.json",
+    "bytes": 2141,
+    "sha256": "aecdd52e39762e183484dcb7761ec3262513b847a820958fb65acaa69d186148"
+  },
+  {
+    "file": "classification-receipt.json",
+    "bytes": 2698,
+    "sha256": "29b9928b9a511873b1e06a844c58b4ec435d7906a483a68212a99ea67b140859"
+  },
+  {
+    "file": "corrected-arrival-diagnostic.json",
+    "bytes": 128299,
+    "sha256": "ef44c7b9c070a3362477710257243bbdd503a7eb1eb84c8dfbde42cb9e8aa65d"
+  },
+  {
+    "file": "done-check-aborted.json",
+    "bytes": 374,
+    "sha256": "964d74a2b506f3dfff320761db15ceea567867cd18d39016b8fa0dfe5994682c"
+  },
+  {
+    "file": "done-check-criteria.json",
+    "bytes": 13884,
+    "sha256": "d57388219e3dacf513a9cb2e3be5175464c42e81857aecfb43f6a19ed0592b85"
+  },
+  {
+    "file": "done-check.txt",
+    "bytes": 12058,
+    "sha256": "bcf9fa21110065de4bf4698b151a44f810c81a9655f98ccf1126aadb3fee4693"
+  },
+  {
+    "file": "fixture-correction.txt",
+    "bytes": 198,
+    "sha256": "596d40d459d9fe9de03f151364f02ab02411180b823996e1be6a5532ef3b1962"
+  },
+  {
+    "file": "freeze-attempt1.json",
+    "bytes": 1678,
+    "sha256": "61ca38b6e2582a05a31d77b3688cda8c154535e82e942f7fc84a0b80b4b4501a"
+  },
+  {
+    "file": "freeze.json",
+    "bytes": 615,
+    "sha256": "81bb99f2cce8f1210b8e2f46e21b88c6c3f0b70f2de9b445b5ae7e32dec7d42a"
+  },
+  {
+    "file": "paired-and-writer.txt",
+    "bytes": 196,
+    "sha256": "0eb07e11dc3c15189abacff1e0ff9de79105e9db79a65ba94ad2b8a945bda969"
+  },
+  {
+    "file": "preservation.json",
+    "bytes": 1834,
+    "sha256": "262ba6061ecd673335ff082146ce1e84ecbdec974d8e971f971a5d72a570d9ba"
+  },
+  {
+    "file": "r86-later-transcript.txt",
+    "bytes": 12768,
+    "sha256": "4cd6e53260fc82ebe51145c7863cb4275926b2e5cb172c6aab2221229017a70d"
+  },
+  {
+    "file": "reference-comparison.json",
+    "bytes": 891311,
+    "sha256": "192eb64bd4387782f4a96385e4c5935f7e5fa9047f26363a1e0728749c73f51f"
+  },
+  {
+    "file": "reference-receipt.json",
+    "bytes": 5714,
+    "sha256": "34ce4d507d918a8a14d5717ca712f0727837e06d5ddd0938cf9d2d5f5faf5aac"
+  },
+  {
+    "file": "save-shape-receipt.json",
+    "bytes": 305,
+    "sha256": "fba7f3b09f51253f53dc4cb60052a0baeee3de7a2e5c02754e10fe38c1325dcd"
+  },
+  {
+    "file": "smith-fixture-diagnosis.json",
+    "bytes": 4691,
+    "sha256": "e685ccfb2507c7d382463e9638bd1ee0972f013d33a4460ad38115da050b8626"
+  },
+  {
+    "file": "source-hook-final.txt",
+    "bytes": 11870,
+    "sha256": "71d1725b896c497b996e9711de8f05bbdecd4110a5b7ccd1716549d21b7420ac"
+  },
+  {
+    "file": "source-hook-first.txt",
+    "bytes": 16388,
+    "sha256": "dc201f25750db738456dd7d0d0c69e52de8356cbebdabe011fb3dc13f47f6ae2"
+  },
+  {
+    "file": "step-receipts.json",
+    "bytes": 372,
+    "sha256": "bde80daa48b6dc0ecaaff59b6f2bebd42ec892a1b9dcbe120b684cb785ecc36c"
+  },
+  {
+    "file": "testbed-summary.json",
+    "bytes": 83359,
+    "sha256": "19d4c6edad0fc12caa927d966d1d8ad48fa3d0a7827b09f8983e8721bc3256bc"
+  },
+  {
+    "file": "union-1861-summary.json",
+    "bytes": 132906,
+    "sha256": "c2dff50a3328673351ebccb2befb5b666b51c64e52141d9e487413aab02a68a5"
+  }
+]

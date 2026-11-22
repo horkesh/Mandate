@@ -1,0 +1,8 @@
+{
+  "oldStateHash": "415c3f7e2c2878609a5785a008f7c4df5711edebfc4a9c09db92ae204e2cd296",
+  "newStateHash": "3fcf0c8449e48aadc84868281013869ed7aa9dc497a2d01d830ed244c69f6372",
+  "worldUnchanged": true,
+  "logUnchanged": true,
+  "stateEqualAfterRemovingOwnGoalTerms": true,
+  "measuredInputs": 695
+}

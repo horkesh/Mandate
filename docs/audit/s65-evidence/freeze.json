@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-11-22T21:51:08.867004+01:00",
+  "tree": "2d0cd25be47079dab4b32e679dee45a3b1858583",
+  "patchSha256": "7b0265aa873e10a0317eb5453461e51a08afcb6e479ab3f701243a08843a79fe",
+  "measuredInputs": 695,
+  "changesSinceAbortedAttempt": [
+    "packages/kernel/src/knowledge/knowledge.ts",
+    "packages/kernel/src/view/people.ts",
+    "packages/kernel/test/s65-sender-belief.test.ts",
+    "tools/rules/projection-derivations.json"
+  ],
+  "reason": "Received own-establishment parent and institutional held-post refusal retention; paired red/green tests and bounded Union trace retained."
+}

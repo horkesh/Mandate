@@ -1,0 +1,73 @@
+{
+  "source-hook": {
+    "noGitFixtures": "1",
+    "seconds": 199.0593309,
+    "command": "git commit --file runs/s65/source-commit-message.txt",
+    "exit": 1
+  },
+  "source-hook-final": {
+    "noGitFixtures": "1",
+    "seconds": 167.2159069,
+    "command": "git commit --file runs/s65/source-commit-message.txt",
+    "transcripts": "C:\\Pyrrhic\\sprint-projection\\runs\\s65\\r86-final",
+    "exit": 1
+  },
+  "done-check": {
+    "earlierAttempt": "aborted before completion; checked reference evidence preserved",
+    "exit": 1,
+    "command": "npm run run:done-check -- --milestone 1a --label s65-done-final",
+    "seconds": 1262.7317996,
+    "started": "2026-11-22T21:51:08.9612509+01:00"
+  },
+  "chain-retention-green": {
+    "exit": 0,
+    "log": "runs/s65/chain-retention-green.log"
+  },
+  "chain-final-gate": {
+    "exit": 0,
+    "log": "runs/s65/chain-final-gate.log"
+  },
+  "hook-corrections": {
+    "exit": 0,
+    "log": "runs/s65/hook-corrections.log"
+  },
+  "audience-correction": {
+    "exit": 0,
+    "log": "runs/s65/audience-correction.log"
+  },
+  "final-fixture-correction": {
+    "exit": 0,
+    "log": "runs/s65/final-fixture-correction.log"
+  },
+  "typecheck-final-all": {
+    "exit": 0,
+    "log": "runs/s65/typecheck-final-all.log"
+  },
+  "rules-chain-final": {
+    "exit": 0,
+    "log": "runs/s65/rules-chain-final.log"
+  },
+  "boundary-final": {
+    "exit": 0,
+    "log": "runs/s65/boundary-final.log"
+  },
+  "licences": {
+    "exit": 0,
+    "log": "runs/s65/licences.log"
+  },
+  "decisions": {
+    "exit": 0,
+    "log": "runs/s65/decisions.log"
+  },
+  "corrected-arrivals": {
+    "exit": 0,
+    "log": "runs/s65/corrected-arrivals.log"
+  },
+  "source-clearance": {
+    "passed": false,
+    "lastFullHook": "7 failed, 1948 passed, 3 skipped; 6 failed files, 202 passed files",
+    "laterFixtureCorrection": "20 tests pass; production inputs unchanged; no third full source hook or finished done-check repeat",
+    "unresolved": "R86 and S35 July battle assertions; liveness gate and its two done-check assertions",
+    "sourceCommits": []
+  }
+}
