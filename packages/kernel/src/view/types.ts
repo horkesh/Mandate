@@ -22,10 +22,27 @@ export interface AttentionBudgetView {
  readonly allowance: number; readonly spent: number; readonly left: number;
  readonly refilledDay: number; readonly nextRefillDay: number;
 }
+/** Evidence of accounting for an act. It does not assert a legislative vote or assent. */
+export interface CongressAccountView {
+ readonly kind: 'principal-account' | 'received-account';
+ readonly day: number; readonly situation: SituationId; readonly option: string | null;
+ readonly text: string; readonly source: MessageId | null;
+}
 export interface CongressView {
  readonly chambers: readonly {readonly id:string; readonly name:string; readonly status:'adjourned'|'called'|'sitting'; readonly session:string|null; readonly opens:number|null; readonly closes:number|null; readonly composition?:{readonly on:string;readonly groups:readonly {readonly name:string;readonly seats:number}[];readonly cite:string}|null}[];
  readonly sessions: readonly {readonly id:string; readonly chambers:readonly string[]; readonly callable:boolean; readonly opens:string|null; readonly closes:string|null; readonly afterCallDays:number|null; readonly sitsDays:number|null}[];
- readonly ledger: readonly {readonly act:string; readonly day:number; readonly situation:SituationId|null; readonly option:string|null; readonly metDay:number|null; readonly answeredDay:number|null; readonly source:MessageId|null}[];
+ readonly ledger: readonly {readonly act:string; readonly day:number; readonly situation:SituationId|null; readonly option:string|null; readonly metDay:number|null; readonly answeredDay:number|null; readonly account?:CongressAccountView; readonly source:MessageId|null}[];
+}
+/** Public address targets and attributed evidence; never a support/mandate truth meter. */
+export interface PromiseView {
+ readonly person: PersonId; readonly kind: string; readonly day: number; readonly dueDay: number;
+ readonly source: MessageId; readonly status: 'pending' | 'kept' | 'expired';
+ readonly settledDay: number | null; readonly settlement: MessageId | null;
+}
+export interface PoliticsView {
+ readonly blocs: readonly { readonly id: string; readonly name: string }[];
+ readonly evidence: readonly { readonly source: MessageId; readonly author: PersonId; readonly day: number;
+   readonly receivedDay: number; readonly kind: 'framing'; readonly value: number; readonly confidence: number }[];
 }
 export interface AudienceView {
  readonly id:string; readonly status:'requested'|'granted'|'filed'|'declined';
@@ -209,6 +226,8 @@ export interface SeatView {
   /** Own budget and public legislature; absent only in older saved presentation fixtures. */
   readonly attentionBudget?: AttentionBudgetView | null;
   readonly congress?: CongressView;
+  readonly politics?: PoliticsView;
+  readonly promises?: readonly PromiseView[];
   /** Received requests and answers, and the principal's own invitations. No private compliance preview. */
   readonly audiences?: readonly AudienceView[];
   /** The last completed day: the view is the morning after it. */
