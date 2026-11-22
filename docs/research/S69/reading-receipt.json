@@ -1,0 +1,122 @@
+{
+  "scope": "S69; selected passages, not complete books. Local image viewing and PDF rendering only; no real browser or desktop control.",
+  "image_inspected": [
+    {
+      "key": "AP1",
+      "page": "216"
+    },
+    {
+      "key": "AP1",
+      "page": "292"
+    },
+    {
+      "key": "AP1",
+      "page": "493"
+    },
+    {
+      "key": "AP2",
+      "page": "90"
+    },
+    {
+      "key": "AP2",
+      "page": "289"
+    },
+    {
+      "key": "AP2",
+      "page": "290"
+    },
+    {
+      "key": "AP2",
+      "page": "340"
+    },
+    {
+      "key": "AP2",
+      "page": "383"
+    },
+    {
+      "key": "AP3",
+      "page": "70"
+    },
+    {
+      "key": "AP3",
+      "page": "278"
+    },
+    {
+      "key": "AP3",
+      "page": "465"
+    },
+    {
+      "key": "AP4",
+      "page": "487"
+    },
+    {
+      "key": "AP6",
+      "page": "516"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "205"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "404"
+    },
+    {
+      "key": "CALLAHAN",
+      "page": "699"
+    },
+    {
+      "key": "UA8",
+      "page": "201"
+    },
+    {
+      "key": "UA8",
+      "page": "278"
+    },
+    {
+      "key": "BARTOW-UGA",
+      "page": "299"
+    },
+    {
+      "key": "BARTOW-UGA",
+      "page": "300"
+    },
+    {
+      "key": "BARTOW-UGA",
+      "page": "301"
+    },
+    {
+      "key": "BARTOW-UGA",
+      "page": "302"
+    },
+    {
+      "key": "RUNYON-OBIT",
+      "page": "2"
+    }
+  ],
+  "ocr_corrections": [
+    {
+      "key": "AP1",
+      "page": "216",
+      "correction": "Approximately 1823, not OCR approximately 1828. Birth is held."
+    },
+    {
+      "key": "AP2",
+      "page": "90",
+      "correction": "Thomas Alfred Davies passage is on printed page 90; the discarded automatic label 97 was wrong."
+    },
+    {
+      "key": "AP6",
+      "page": "516",
+      "correction": "Printed heading is 516, not OCR 616."
+    },
+    {
+      "key": "AP2",
+      "page": "340",
+      "correction": "Printed heading is 340, not OCR 840."
+    }
+  ],
+  "source_count": 84,
+  "selected_passage_count": 84,
+  "source_policy": "0085 and 0087: later factual references allowed, later judgments excluded. 0101 departure kinds and opening-side boundary preserved."
+}
