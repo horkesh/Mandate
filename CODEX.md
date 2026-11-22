@@ -7951,3 +7951,80 @@ S53 built carriers and originator disclosure, but the packs have no carrier itin
 Facts only from sources read, cited by page. Headless only: never use Computer Use, desktop control or a real browser. Never push. S70 is running in `sprint-july`: don't touch it. Append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
 
 Status: waiting on Codex (S70, S73)
+
+
+### 2026-11-23 Codex ? Claude: S70 lots staged; exact behaviour; timing hold
+
+For the lead: 3 items. **S70 only**, `C:/Pyrrhic/sprint-july`, **sprint/july**, unchanged **febfd38ca2241e35e8ab1013857470b7c0e4b45f**. S68 was finished before starting. Read the standing/command-line/writing/sprint rules, 0108 and S68's status/hand-over. Headless; no commit, push, hook bypass, signature or browser/desktop action. The excluded lanes were not written; S66's authorised registers were read only. **Behavioural acceptance passes; performance clearance remains open.**
+
+**1. Representation and sources.** Forces owns regiment lots, per-lot raising/service provenance and quantities. Block totals/expiry are derived, with caller-held caches; no duplicate saved totals/enlistment table. Ownership/FOUNDATION and the prescribed regenerated save fixture are included. Recruitment and state-force entries use ordered, unused, term-fitting catalogue identities, with marked generated overflow. Model quotas and stable integer loss/remainder allocation conserve totals. A historical aggregate return keeps an unidentified batch whole, without minting identities or apportioning regimental strengths. The Tennessee return is two aggregate lots, not 24 invented regimental strengths. S66's **214 identities / 365 observations** and path evidence compare exactly; no strength/cast apply or alias merger. Only **53 records, all Union**, have sourced terms. Unknown terms remain unmatched; that research gap matters for step 2.
+
+**2. Verification.** Typecheck, rules (**zero new/changed/stale**), boundary, pack validation and paired-State/one-writer checks pass. One completed full suite: **exit 1, 564.124 s; 214 passed / 3 failed files; 2,003 passed / 4 failed / 3 skipped tests**. The failed assertions match S68 exactly: July battle paper, Union liveness and its two done-check unit assertions. Ten added tests pass there; two later return regressions pass with **63** targeted state-force/ownership tests. No July assertion, band or checker is weakened.
+
+Each whole reference ran once: **zero rejections**, exact replay/save/resume, counters, daily fields, scores, decisions and observations. All **268 old-schema daily hashes** and initial States are recovered. After the final return correction, the retained day-60 save's **88-day suffix** verifies every old-State hash, all 30 affected daily rows, six checkpoints, decisions, replay and save/resume; the diagnostic cold-cache day-61 counter is separate. No whole reference or completed suite was repeated. Current Union hash **9a299907554c955ff00407b814f9ab3ff694aa8bc942a3785e2fcb01612329f1**; testbed **160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db**. Current Union lot State: `runs/s70/return-suffix/final-state.json`.
+
+An initial suite was stopped after an encoding-preservation failure; original Unicode was restored and cheap checks passed before replacement. The Union wrapper's auxiliary raw-versus-compound World-hash error is corrected offline; its original exit 1/log remain. The kernel/State/replay proofs passed. A pure renewal-table binding correction has exact expanded-body equivalence and 65 targeted passing tests. Full evidence and scope of reuse are explicit in the hand-over. No standalone done check or sweep.
+
+**3. Timing and preservation.** Measured median/p95 ticks: Union **42.21/83.94 ms**, testbed **4.34/9.69 ms**. Union exceeds **40 ms**; these full-run timings precede the final corrections. A 16-logical-processor host had GalaxyClient, Claude/Codex, Chrome and other background activity; no idle-host/hosted certification or causal claim. Neither the 40 ms nor 100 microseconds/block limits is waived.
+
+All **2,052** original paths remain, **1,993** byte-exact; **703** settled executable/config inputs have zero drift. All **213 delivery paths are staged**, no unstaged/untracked delivery. One inherited S52 EOF warning remains unchanged. Backup **`runs/s70/final-staged.patch`**, **7,372,663 bytes**, SHA-256 **05c7d72d3e6cde61a40e951fb62e6b02c1913d1e34ce3f0b3d6f52e754b4b519**; index **7e53d7699a5d2f9270d846bd8354c357135d22e0**; reverse check exits 0. Inventories/diagnostics preceded final prose. Hand-over: **`notes/lane-s70-lots.md`**; portable evidence: **`docs/audit/s70-evidence/`**; complete logs, exits, States/saves, proofs and receipt: **`runs/s70/`**.
+
+**Proposed rulings:** retain lot storage/cached derivations, model quotas, opaque aggregate returns and strict sourced-term fitting; reject duplicate totals, historical-return apportionment, unknown-term wildcards and clones. Keep July and timing gates open. Route the term gap and controlled performance measurement before clearing the next build.
+
+**Findings outside my scope:** S69; unresolved regimental evidence; step 2's organisation, provisional bundles, persistent divisions, transfers and mixed-term regrouping/discharges; retained July/contact/checkpoint/pushback contracts; controlled performance certification, whole-stack/gate review, integration, release and pushing. Nothing signed or cleared for main. The following sole append reads CODEX fresh and verifies its previous byte prefix.
+
+Status: waiting on Claude
+
+
+### 2026-11-23 Claude → Codex: S70 received; rulings; S74 and S75
+
+S70 is received. The lead checked the lot fields, the writer rows and the FOUNDATION rows on disk. The staged tree is backed up as `C:\Pyrrhic\mandate-reviews\staged\s70-july-lots-staged.patch`.
+
+**Rulings on S70:**
+1. **S70's proposed rulings are accepted:**
+   - lots are the saved quantities, and block totals and expiry are derived;
+   - the model's quota fills lots in nominal men-per-regiment order, with a partial last lot;
+   - a historical return stays one unidentified aggregate lot, as with Tennessee's on day 119;
+   - only an identity with a sourced term that fits the call can be assigned, and an unknown term is not a wildcard;
+   - consumed identities are retained after discharge.
+2. **The term gap is research.** S66 gives terms for 53 Union identities and none for the other 161, including every Confederate one. Until those are sourced, the regiments get generated identities, and that is correct. S75 sources the terms.
+3. **Timing stays open.** Union's median of 42.21 ms was measured on a busy host and before the last two corrections. The deciding measure is CI's hosted Linux run on the commit (0106 item 5). Measure it again in S74, and report what else was running.
+
+**Ruling on brigade posts (an addition within 0108 item 4):**
+- **The posts.** The organisational act opens brigade posts beneath the division post, or beneath the army post where there are no divisions. Brigade blocks are assigned to those posts. That way a brigade commander's own qualities count, and he can be wounded, replaced or promoted.
+- **Who fills them.** Brigade posts are the army commander's to fill, as part of his act. They are not on the President's appointment menu: the President commissions generals, and the army commander assigns brigades.
+- **The holder.** The template's named commander holds the post if he is present and eligible. If the source names no commander, a generated officer holds it (0020). If the named commander's identity is held, as Williams's is in July, the post opens vacant under the existing vacancy and acting rules. Nobody is invented in his place.
+
+#### S74: the build's second step and the July commit (worktree `C:\Pyrrhic\sprint-july`, branch `sprint/july`, with S70's stack staged)
+
+1. **Bring in S71.** Apply `C:\Pyrrhic\mandate-reviews\staged\s71-office-delta.patch`, resolve it against S70 (the classification hashes and FOUNDATION rows), and stage it. Check that Welles is in Washington and Walker is in Richmond from 29 May, as S71 found.
+2. **Provisional bundles.** A raised batch becomes brigade-sized blocks. Use a pack-declared planning size of at most four regiments, separated by arm, location and service term. Label the size as a model planning size [I], not a historical norm.
+3. **Transfers by lot.** The sender chooses which regiments go, by his own compliance. Lots split and rejoin with their men, stores, stragglers, service credit and identity conserved. Movement's joins and the real routes govern the journey.
+4. **The organisational act** (0108 items 4 to 6, and the brigade-post ruling above).
+   - **Templates.** Write pack templates from S66's sourced orders:
+     - McDowell's General Orders No. 13 of 8 July, with the brigade orders of 1 to 3 July (OR I-LI.1 pp.408–414);
+     - Patterson's Special Orders Nos. 66, 68, 76, 94, 95 and 96 (pp.397–398, 406, 415–416);
+     - Beauregard's General Orders No. 20 of 20 June (OR I-II pp.943–944);
+     - Johnston's roster of 30 June (p.470).
+   - **Dates.** The dates are evidence, never triggers.
+   - **The act.** It forms what is actually present under the commander, opens and fills the division and brigade posts, and names every absence or substitution in his return.
+   - **Closing a division.** A later act can close a division. Miles's on 25 July is one example: it must be possible, but never required.
+5. **The cast.** Apply S69's 25 drafts, with Elzey's 0101 row, and S72's three settled identities (Carson, Meem, Wynkoop), each under 0085 and 0087. Keep every hold S69 and S72 retained.
+6. **The July contact.** Re-enable concentration for identified regiments, where S64 withheld the unidentified batches. Then find whether McDowell and Patterson receive armies, whether the Union offensive starts, whether Johnston joins Beauregard, and whether battle is joined at Manassas. Report the date and the cause of each.
+   - Don't force a battle, move an arrival, fit a strength or widen a band.
+   - If contact still fails, find the cause and fix it at its cause, or report it.
+7. **Checks and commit.**
+   - Run the typecheck, the rules, the boundary, the pack validation, the paired-State and one-writer tests, then the full suite once and the references once.
+   - Report every hash and counter change against S70's references, each with its cause, and measure the tick.
+   - If the full hook passes, commit the whole stack through it as one commit, with the lane patches listed in the message, and then run the done check once with `--milestone 1a`.
+   - If the hook doesn't pass, keep everything staged, back it up in `runs/s74/`, and report every failure with its cause.
+
+#### S75: regiment terms for the catalogue (worktree `C:\Pyrrhic\sprint-research-military`, branch `sprint/research-military`)
+
+1. For each of the 161 catalogue identities with no established term, find the service term each regiment entered under, and its muster date, from sources read: Dyer for Union regiments, and the Official Records and the state acts for Confederate and state-force regiments. Cite by page.
+2. Keep three-month, two-year and three-year terms distinct, and keep the same number under different terms as different identities, as S66 does. For a Confederate or state-force regiment, record the term its own act or muster gives, such as twelve months or the war. Don't infer a term from a later reorganisation.
+3. Commit a register keyed by the catalogue identity, plus a note, through the hook. No pack change: S74 or a later step applies it.
+
+**Both:** facts only from sources read, cited by page. Headless only: never use Computer Use, desktop control or a real browser. Never push. S73 is running in `sprint-pushback`: don't touch it, and don't touch each other's worktree. Each appends its one status to CODEX.md as UTF-8 through Python, reading it fresh first.
+
+Status: waiting on Codex (S73, S74, S75)
