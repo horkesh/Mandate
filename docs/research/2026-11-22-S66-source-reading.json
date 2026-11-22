@@ -1,0 +1,1558 @@
+{
+  "scope": "S66; selected text passages and unit-history openings read, not whole books or every word of every retained page",
+  "licence": "Public-domain Official Records and Dyer only; no prohibited compendium copied",
+  "image_inspected": [
+    {
+      "source": "OR I-II",
+      "printed_pages": [
+        303,
+        314,
+        315,
+        568,
+        982
+      ]
+    },
+    {
+      "source": "OR I-LI.1",
+      "printed_pages": [
+        414,
+        415
+      ]
+    },
+    {
+      "source": "Dyer",
+      "printed_pages": [
+        270,
+        1416
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "key": "OR I-II",
+      "source_url": "https://archive.org/details/warofrebellion02secrrich",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+      "bytes": 124529063,
+      "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+      "page_mapping": "zero-based PDF index = printed page + 19; sampled numbered pages checked",
+      "retained_cited_pages": [
+        {
+          "printed_page": 161,
+          "zero_based_pdf_page": 180,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p161.txt",
+          "sha256": "f5afd814dc19685f7149f1b6a735749220d5c6c662d0c829558d7f031462d252"
+        },
+        {
+          "printed_page": 162,
+          "zero_based_pdf_page": 181,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p162.txt",
+          "sha256": "1f56e7fcd0afab58ebefa6dffdc8efe295768d98cc55c5df508af3f6eb6e7bda"
+        },
+        {
+          "printed_page": 179,
+          "zero_based_pdf_page": 198,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p179.txt",
+          "sha256": "163f992b6db6e429037a445c56189bec89e1c4e3e9645919fa0a18dd345eb523"
+        },
+        {
+          "printed_page": 180,
+          "zero_based_pdf_page": 199,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p180.txt",
+          "sha256": "b1dac0f9676d36e3e6c7152b5b681d334be0e895fb283a6116575da388df6b0f"
+        },
+        {
+          "printed_page": 182,
+          "zero_based_pdf_page": 201,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p182.txt",
+          "sha256": "95ce0c01b2308622833f381346aa9fe4bbab206cb866825c0172d6be9e220e45"
+        },
+        {
+          "printed_page": 302,
+          "zero_based_pdf_page": 321,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p302.txt",
+          "sha256": "b8260118f6cfa9a7f9f73b8e78791cc1353ad5517211896d685c3f5e21bc3692"
+        },
+        {
+          "printed_page": 303,
+          "zero_based_pdf_page": 322,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p303.txt",
+          "sha256": "eb781ffd6156ad9579619a4c072103b69c5ac1a5d9b1183fbf25d2400abe2250"
+        },
+        {
+          "printed_page": 304,
+          "zero_based_pdf_page": 323,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p304.txt",
+          "sha256": "43a6037b25e41b9787c0817c9b807c2f1a2b9a4be6a4e3d5d374241f5ca4b59e"
+        },
+        {
+          "printed_page": 305,
+          "zero_based_pdf_page": 324,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p305.txt",
+          "sha256": "9a69b6620de754f8fe27ba9a2ceb23c3ebd7bd0c7bcb753023e8dae60ec3d4b5"
+        },
+        {
+          "printed_page": 309,
+          "zero_based_pdf_page": 328,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p309.txt",
+          "sha256": "58da5805d57c68cec04fb29a412f64457f3e49e8d15b654bf92f5fefaf75ef56"
+        },
+        {
+          "printed_page": 314,
+          "zero_based_pdf_page": 333,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p314.txt",
+          "sha256": "7b08e050fcc6ca0a86cb69bdb9398e6dc81f5ad781a9bdf364e17f726fa0427c"
+        },
+        {
+          "printed_page": 315,
+          "zero_based_pdf_page": 334,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p315.txt",
+          "sha256": "2f5a1683da5bdf2cd2248d2888d13cb5d9e6b00ea7d1c1e52ff7d664d4446414"
+        },
+        {
+          "printed_page": 469,
+          "zero_based_pdf_page": 488,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p469.txt",
+          "sha256": "68e90ce86a67c510e9cd1f4b2b7782bae4e38cc569c08d474d0e9da60aa5a614"
+        },
+        {
+          "printed_page": 470,
+          "zero_based_pdf_page": 489,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p470.txt",
+          "sha256": "2f6cc4f4bb581073f9c2ac573add5353b9c31657b81871fdc9d48aace0b8548c"
+        },
+        {
+          "printed_page": 471,
+          "zero_based_pdf_page": 490,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p471.txt",
+          "sha256": "a6cfd41bcaf5c9ec79bd103b432d254bb04a615d4bc72bfad06cd20ac1af5a61"
+        },
+        {
+          "printed_page": 472,
+          "zero_based_pdf_page": 491,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p472.txt",
+          "sha256": "376533e18e8aa740b0e3663ffb5df4e30adc42fadba8ee692a7805ecc96bf557"
+        },
+        {
+          "printed_page": 473,
+          "zero_based_pdf_page": 492,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p473.txt",
+          "sha256": "cb9c84c3d5b6389936f7bfca161f8e10eb6dea2274d66674dc2724a433e88476"
+        },
+        {
+          "printed_page": 478,
+          "zero_based_pdf_page": 497,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p478.txt",
+          "sha256": "79bacb1af1b96a6760bb758ea3e882b4c180a2370f584882ac93f5637602799d"
+        },
+        {
+          "printed_page": 479,
+          "zero_based_pdf_page": 498,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p479.txt",
+          "sha256": "ae4e9f36a790e00b83e879c22114a7fe515264fd96ad5782397bc0d4cc795260"
+        },
+        {
+          "printed_page": 480,
+          "zero_based_pdf_page": 499,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p480.txt",
+          "sha256": "ca79cdb52b5db3724d88162f06c6f1136bf703daa9aba69cf3b433135b6eb1fb"
+        },
+        {
+          "printed_page": 532,
+          "zero_based_pdf_page": 551,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p532.txt",
+          "sha256": "0425c84692f1e330036e1b571bc96815dd0948c106ccc03ce694118219a67ad9"
+        },
+        {
+          "printed_page": 533,
+          "zero_based_pdf_page": 552,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p533.txt",
+          "sha256": "dad5efab62f0300049b20e8a9bdb7d3b5b43bea8add939936d04e7bc0b0efe49"
+        },
+        {
+          "printed_page": 534,
+          "zero_based_pdf_page": 553,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p534.txt",
+          "sha256": "69dcf0d19ca3ca4726eac071caf7044683c5fff70e23b3a1cea24901e9fa3d8a"
+        },
+        {
+          "printed_page": 535,
+          "zero_based_pdf_page": 554,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p535.txt",
+          "sha256": "c1147bc6a45550d5bbd39e4c46e6c063b3e800a962c8cd147e822c4b4d159110"
+        },
+        {
+          "printed_page": 536,
+          "zero_based_pdf_page": 555,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p536.txt",
+          "sha256": "c0ef9e6962a0959bdf5bc25d2f9221e22560bcea58d6b37ca91eb30bd483c576"
+        },
+        {
+          "printed_page": 537,
+          "zero_based_pdf_page": 556,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p537.txt",
+          "sha256": "ac8acfae1c17e24ff8c44f13059bec25819484e6fd4519581e1865e6a55262e6"
+        },
+        {
+          "printed_page": 538,
+          "zero_based_pdf_page": 557,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p538.txt",
+          "sha256": "35f0de046ea22cc0affdd4ec646c3f639d3e8456f4b6e5ea04486e4d7220d2e3"
+        },
+        {
+          "printed_page": 543,
+          "zero_based_pdf_page": 562,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p543.txt",
+          "sha256": "c744b338633ca3a830d476f826b64cb7da9d37a7364dcc4b1add19d4ad477fd1"
+        },
+        {
+          "printed_page": 544,
+          "zero_based_pdf_page": 563,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p544.txt",
+          "sha256": "e9507591212d2a7af6b1b75e63350cd24869532ce81f51a51c66c0d48859d7e5"
+        },
+        {
+          "printed_page": 545,
+          "zero_based_pdf_page": 564,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p545.txt",
+          "sha256": "0ccacf29b58b499adf121a2e2a9734f957cb95908c0adba5a5e84e1726c6d862"
+        },
+        {
+          "printed_page": 555,
+          "zero_based_pdf_page": 574,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p555.txt",
+          "sha256": "287de790065f66a388368451b9699d75f6af4c789de7dea795fb5d3fe6b27e0f"
+        },
+        {
+          "printed_page": 556,
+          "zero_based_pdf_page": 575,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p556.txt",
+          "sha256": "7c3fa346161a0ea6f12c153d268ad1ae4418b38c342c7e6fe7715a1712498850"
+        },
+        {
+          "printed_page": 557,
+          "zero_based_pdf_page": 576,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p557.txt",
+          "sha256": "5d858526f740537057b71a981b4e0a5d4289d4907ae166880e82c8aacaee3b9f"
+        },
+        {
+          "printed_page": 558,
+          "zero_based_pdf_page": 577,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p558.txt",
+          "sha256": "e48276fefa18f303084efe9449cd9f52d149e0a4c43e790d8399728fd7936da5"
+        },
+        {
+          "printed_page": 559,
+          "zero_based_pdf_page": 578,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p559.txt",
+          "sha256": "6cd01497725cec5292309c440e146ce0b42f915021bf0bff4b4c5ee57d3e84ae"
+        },
+        {
+          "printed_page": 562,
+          "zero_based_pdf_page": 581,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p562.txt",
+          "sha256": "8ffaa645e3376353d573cbc194aeb1d035abd97fc75d7630d95b409ee286291b"
+        },
+        {
+          "printed_page": 563,
+          "zero_based_pdf_page": 582,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p563.txt",
+          "sha256": "ae81d719f73c8c93a2a35ce60d7d90a00431fab99bce7db0fdaf65710d33ae35"
+        },
+        {
+          "printed_page": 564,
+          "zero_based_pdf_page": 583,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p564.txt",
+          "sha256": "70deadfb17ca028a5ed0e9155ad6ba478d432d18ded5e1b85672796b947b585c"
+        },
+        {
+          "printed_page": 565,
+          "zero_based_pdf_page": 584,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p565.txt",
+          "sha256": "91204e29e67f5fef5118eb3af9899603a0aa40bb031ecc1758fe79dcdd3ce5f6"
+        },
+        {
+          "printed_page": 566,
+          "zero_based_pdf_page": 585,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p566.txt",
+          "sha256": "85ef78fe7880905672af09a45fa64aa583a7d997cf3eec8db8bd05cd93f60035"
+        },
+        {
+          "printed_page": 567,
+          "zero_based_pdf_page": 586,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p567.txt",
+          "sha256": "b4db4b12c5c5544286972c44d548305a4aaea08936ae8f4610df97e48f807ebd"
+        },
+        {
+          "printed_page": 568,
+          "zero_based_pdf_page": 587,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p568.txt",
+          "sha256": "c8bd554b55d4a1850f7b12351af589735dc705e31a0533f92036cbddfe6a8f61"
+        },
+        {
+          "printed_page": 569,
+          "zero_based_pdf_page": 588,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p569.txt",
+          "sha256": "3536331a6e46fc9d3efdd0d650b108f91b1f7b9af73bfcd0578239b74ee8246a"
+        },
+        {
+          "printed_page": 751,
+          "zero_based_pdf_page": 770,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p751.txt",
+          "sha256": "08bd2436b72de9bf4fa3b109bfd965f2cb93c547a20a3ddec85b839ac7c8ab91"
+        },
+        {
+          "printed_page": 754,
+          "zero_based_pdf_page": 773,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p754.txt",
+          "sha256": "f7030495bc024719db86889805d475c5397b8b586d0db95db268f451c162d97e"
+        },
+        {
+          "printed_page": 824,
+          "zero_based_pdf_page": 843,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p824.txt",
+          "sha256": "9e6dc7ad92b6ffb10a429e221397227d3289f8a481ab1b271136a5fcc224824d"
+        },
+        {
+          "printed_page": 826,
+          "zero_based_pdf_page": 845,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p826.txt",
+          "sha256": "4f7e4e2677108fac9cd23af02d35aca261428579b6c43886e130a1641bfdf8d3"
+        },
+        {
+          "printed_page": 827,
+          "zero_based_pdf_page": 846,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p827.txt",
+          "sha256": "6ba33635abc8957e1ffa41cc8444fdc11ffd5fbcddc34c856f4fa9154ac1fe1b"
+        },
+        {
+          "printed_page": 846,
+          "zero_based_pdf_page": 865,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p846.txt",
+          "sha256": "3252292ae9e2b71a6a1cd1b4f79c345ddcde3821d5523e123e4ddfb85678ac0c"
+        },
+        {
+          "printed_page": 847,
+          "zero_based_pdf_page": 866,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p847.txt",
+          "sha256": "be4e370c5a24d52853b826d051e4aafe7ebc8ba4eade29a7ffec25c3e4e5635e"
+        },
+        {
+          "printed_page": 901,
+          "zero_based_pdf_page": 920,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p901.txt",
+          "sha256": "d52419d2654c33e2b67ddc0a0904dfccebd1e8eb4c207dc3eca020a069409bf7"
+        },
+        {
+          "printed_page": 902,
+          "zero_based_pdf_page": 921,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p902.txt",
+          "sha256": "362640481717eba6574c4ef6548c875dc9d9c5ea06c4f42fdf89febc43e6ee15"
+        },
+        {
+          "printed_page": 943,
+          "zero_based_pdf_page": 962,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p943.txt",
+          "sha256": "b9ec52a3f18199f67ca32e70f1ad889413841fc72231c1c09c5dc6887cfc6b71"
+        },
+        {
+          "printed_page": 944,
+          "zero_based_pdf_page": 963,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p944.txt",
+          "sha256": "b13a4828b2fb15140a024769a903d4922ab7372f5ad28e9997e4cb5f5a53ba82"
+        },
+        {
+          "printed_page": 980,
+          "zero_based_pdf_page": 999,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p980.txt",
+          "sha256": "e107a6f54c9657b31ea3e6200c42cad41aeacfcb93b5539703b367f8292c275b"
+        },
+        {
+          "printed_page": 981,
+          "zero_based_pdf_page": 1000,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p981.txt",
+          "sha256": "f384cf1a356e1a5b3a765c8135960e05a5bab37c96d72e47c6862ed56b094617"
+        },
+        {
+          "printed_page": 982,
+          "zero_based_pdf_page": 1001,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-2-p982.txt",
+          "sha256": "3700880aaa3f15b46b53f309f6dbbc01254dccb1641c117e9d0e3af3cce4285f"
+        }
+      ]
+    },
+    {
+      "key": "OR I-LI.1",
+      "source_url": "https://archive.org/details/warofrebellion511unit",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\warofrebellion511unit.pdf",
+      "bytes": 143150526,
+      "sha256": "8a9943b1a80fb110f31dd8ffc870d7695ffc8c8e1bc54146496f624e8ffb5bbd",
+      "page_mapping": "zero-based PDF index = printed page + 5; sampled numbered pages checked",
+      "retained_cited_pages": [
+        {
+          "printed_page": 397,
+          "zero_based_pdf_page": 402,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p397.txt",
+          "sha256": "72ea18ef4a1ab3d7cde883bc7e7b88ba40a8aa484196b9c736bf2ced5ebfb2fe"
+        },
+        {
+          "printed_page": 398,
+          "zero_based_pdf_page": 403,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p398.txt",
+          "sha256": "a7e1946733b0cfbc773fde1482eecd7dee446c14e76ce3009026229f0fbec692"
+        },
+        {
+          "printed_page": 406,
+          "zero_based_pdf_page": 411,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p406.txt",
+          "sha256": "052511d39684f459602caece50cd29459e93f2f8216b4909a3e8b320fb477f84"
+        },
+        {
+          "printed_page": 408,
+          "zero_based_pdf_page": 413,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p408.txt",
+          "sha256": "9e9c202bd2d99494abed7fe1863b766953ae1d4885a9bb33d4419e9b970d73d2"
+        },
+        {
+          "printed_page": 409,
+          "zero_based_pdf_page": 414,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p409.txt",
+          "sha256": "8c6544d51137133e8e788002e06df0d6ea2306f235ef14b29719fb45425783ba"
+        },
+        {
+          "printed_page": 410,
+          "zero_based_pdf_page": 415,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p410.txt",
+          "sha256": "cab5c251d587cee71008008b0db3f45fef0e9ac44e160afae5f572ff810e09ff"
+        },
+        {
+          "printed_page": 413,
+          "zero_based_pdf_page": 418,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p413.txt",
+          "sha256": "6795eb222664af69e3a6bac220b3527da2eacbddfb99c995948b29fb38723186"
+        },
+        {
+          "printed_page": 414,
+          "zero_based_pdf_page": 419,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p414.txt",
+          "sha256": "7fb655dffe9501f0f67ade09c344ba7b1aebc3b89931e0941da404ac75bf784e"
+        },
+        {
+          "printed_page": 415,
+          "zero_based_pdf_page": 420,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p415.txt",
+          "sha256": "0525baec91b0fcdbd334af4744f250b06d7dd4703e90f1cbc50fc7be453e72b3"
+        },
+        {
+          "printed_page": 416,
+          "zero_based_pdf_page": 421,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p416.txt",
+          "sha256": "502fd93c7c90f44f913d070dd955022cb6ae66745d9321e25fb310b3d7630cb7"
+        },
+        {
+          "printed_page": 423,
+          "zero_based_pdf_page": 428,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p423.txt",
+          "sha256": "36c67c47c2f9819da981043f61d9936b50bee45210c9c695bd9108809c4229e4"
+        },
+        {
+          "printed_page": 425,
+          "zero_based_pdf_page": 430,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\OR-I-51.1-p425.txt",
+          "sha256": "346a32dc220465136f113a6087f83e2484de333991dc4e496292ed7e7156d2a3"
+        }
+      ]
+    },
+    {
+      "key": "Dyer",
+      "source_url": "https://archive.org/details/08697590.3359.emory.edu",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\08697590.3359.emory.edu\\08697590_3359.pdf",
+      "bytes": 175232086,
+      "sha256": "9823db0a23ba90b5850c2457dae503864a10266dc4fa590a94fab16a5f0b3f88",
+      "page_mapping": "zero-based PDF index = printed page + 6; sampled numbered pages checked",
+      "retained_cited_pages": [
+        {
+          "printed_page": 270,
+          "zero_based_pdf_page": 276,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p270.txt",
+          "sha256": "cc583717ae439f318593c98d8372820c5eba68f1871c82deb9339ed66160ece0"
+        },
+        {
+          "printed_page": 271,
+          "zero_based_pdf_page": 277,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p271.txt",
+          "sha256": "5007ee91a6e8e2d95cc529180d175b193335f5027a05619d71cd32f3c03869ce"
+        },
+        {
+          "printed_page": 272,
+          "zero_based_pdf_page": 278,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p272.txt",
+          "sha256": "f4d0884739261db45e9c34bac5a22640c34188fbe1cf5238ee16f6e03febd6a2"
+        },
+        {
+          "printed_page": 1008,
+          "zero_based_pdf_page": 1014,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1008.txt",
+          "sha256": "1c51266d13b9e66a97735fe70ad16d31feb19d78b1fe06a63705d2fe64829702"
+        },
+        {
+          "printed_page": 1122,
+          "zero_based_pdf_page": 1128,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1122.txt",
+          "sha256": "21ee57ea161b5a2e9548eec643ec30a7967f1a6a8f23af94c8c468652951d49d"
+        },
+        {
+          "printed_page": 1219,
+          "zero_based_pdf_page": 1225,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1219.txt",
+          "sha256": "3af3562284fbc921f59a79bbe2ff179031c658e6bb8ca01930acdb6dc826a6c9"
+        },
+        {
+          "printed_page": 1220,
+          "zero_based_pdf_page": 1226,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1220.txt",
+          "sha256": "7abf578bccb86374c040e7268899937c076f7670522e15e7066a667f543814b6"
+        },
+        {
+          "printed_page": 1248,
+          "zero_based_pdf_page": 1254,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1248.txt",
+          "sha256": "859767f89a2d924fd38f5cf5e1100823a4c65fbd822029ab3417dfaac02f635c"
+        },
+        {
+          "printed_page": 1249,
+          "zero_based_pdf_page": 1255,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1249.txt",
+          "sha256": "0da3da5f155b80e581831c6e49e051f557d5805d452e4ea49e9f612f52f0db25"
+        },
+        {
+          "printed_page": 1251,
+          "zero_based_pdf_page": 1257,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1251.txt",
+          "sha256": "a5fa97fdf40f19af99f473e6a9f3ba98a63c37fe46003462f2e7098e0c834c46"
+        },
+        {
+          "printed_page": 1281,
+          "zero_based_pdf_page": 1287,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1281.txt",
+          "sha256": "9bf53356d84d8cecf96b07418633fb441b3597359738a391be3085aaac955447"
+        },
+        {
+          "printed_page": 1282,
+          "zero_based_pdf_page": 1288,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1282.txt",
+          "sha256": "ab9b2ff074fac94ffaaaffc2cc6294103f98c5d962ee707af8a83c0e208f7581"
+        },
+        {
+          "printed_page": 1283,
+          "zero_based_pdf_page": 1289,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1283.txt",
+          "sha256": "821efd1aa6a2e3cc8639d4196e7269365b05d89447b20ae91b5ffbefbb120fd4"
+        },
+        {
+          "printed_page": 1296,
+          "zero_based_pdf_page": 1302,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1296.txt",
+          "sha256": "b2ffdd803eab37e16f1344633649eaf46b9d7f407a74f2b8805a0c2baa21e0bb"
+        },
+        {
+          "printed_page": 1347,
+          "zero_based_pdf_page": 1353,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1347.txt",
+          "sha256": "bc90c531579c9f25d55015259dd0a51eca822d319d42cdc61f343cb4e2f7f368"
+        },
+        {
+          "printed_page": 1356,
+          "zero_based_pdf_page": 1362,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1356.txt",
+          "sha256": "9e604462020264debe47beb5bb281dc80c39cc133326c135f354434ea6a5c5e1"
+        },
+        {
+          "printed_page": 1357,
+          "zero_based_pdf_page": 1363,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1357.txt",
+          "sha256": "aa9a41845b97786052840de28ca5df06f45f01d43033ac9f2a2f87e13e702ab1"
+        },
+        {
+          "printed_page": 1358,
+          "zero_based_pdf_page": 1364,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1358.txt",
+          "sha256": "6d76766598d87b138a617ea1b56f4dced18581e610807cccf144aaac39cf3eb8"
+        },
+        {
+          "printed_page": 1403,
+          "zero_based_pdf_page": 1409,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1403.txt",
+          "sha256": "9555ef5a4bf4748c9e7aaaad4bba7d95046a2986c077ef63b524494843d22761"
+        },
+        {
+          "printed_page": 1406,
+          "zero_based_pdf_page": 1412,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1406.txt",
+          "sha256": "c78dfe91fce534d3a38765d633b220961444e3c432721c22479df555b8aaf8e9"
+        },
+        {
+          "printed_page": 1408,
+          "zero_based_pdf_page": 1414,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1408.txt",
+          "sha256": "6062bbb4b691bde8e6a18d7e801eaf88851101c05e57d735698cbbe2e467ac4c"
+        },
+        {
+          "printed_page": 1409,
+          "zero_based_pdf_page": 1415,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1409.txt",
+          "sha256": "e77d7d01343a5db808d1422c2f6102f88988d026b45b1772cfba3a93dd2933a3"
+        },
+        {
+          "printed_page": 1410,
+          "zero_based_pdf_page": 1416,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1410.txt",
+          "sha256": "2d61e2c4f6e4f6cef9f4af19213706502e781116378313371cff9214824592de"
+        },
+        {
+          "printed_page": 1411,
+          "zero_based_pdf_page": 1417,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1411.txt",
+          "sha256": "fc50f0ef6d005260329dde3d4bac39b23f44100489b266162975b275746f04cb"
+        },
+        {
+          "printed_page": 1412,
+          "zero_based_pdf_page": 1418,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1412.txt",
+          "sha256": "cb3249bfb5886ab7b449e87c2d81cd7adaa280428f7fb73b75e585d5740cdd81"
+        },
+        {
+          "printed_page": 1413,
+          "zero_based_pdf_page": 1419,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1413.txt",
+          "sha256": "93678f2f16142899e0ffb1d193a6c0b490ffbc104e19c956c6218d2be9b6bb61"
+        },
+        {
+          "printed_page": 1414,
+          "zero_based_pdf_page": 1420,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1414.txt",
+          "sha256": "013d23eb12463d6e00da19310ae9cc511b6ecd65db3790a1370934741d5cd8bd"
+        },
+        {
+          "printed_page": 1415,
+          "zero_based_pdf_page": 1421,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1415.txt",
+          "sha256": "5671eeb1101915d80d15e4ef3454eddbdfc73cefacb49f9d4e8400b0aad04c1a"
+        },
+        {
+          "printed_page": 1416,
+          "zero_based_pdf_page": 1422,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1416.txt",
+          "sha256": "5d19f09927baa769f416ea6286deb78f8e5080130e3278e85ca38fd97e05106c"
+        },
+        {
+          "printed_page": 1417,
+          "zero_based_pdf_page": 1423,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1417.txt",
+          "sha256": "5a88cad7396c1b298a713d8e0dc45c773f9721d6bf72f5476ff32a06a5a9dc7e"
+        },
+        {
+          "printed_page": 1418,
+          "zero_based_pdf_page": 1424,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1418.txt",
+          "sha256": "fa28e345133810c2cb6f55a3c9a121813ab7ee827bcf0d431c1ed1ecd5de5503"
+        },
+        {
+          "printed_page": 1419,
+          "zero_based_pdf_page": 1425,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1419.txt",
+          "sha256": "12dde43397ea96a4ec745031b24285726f288934b4e22de1a49e9228cd254d7b"
+        },
+        {
+          "printed_page": 1431,
+          "zero_based_pdf_page": 1437,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1431.txt",
+          "sha256": "9404188f6677b50ceb39aeedb4c723c8a6040b2bc2992c2d7251e8518d6824f9"
+        },
+        {
+          "printed_page": 1432,
+          "zero_based_pdf_page": 1438,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1432.txt",
+          "sha256": "c040dd67e553410e03009d9d2049032232e38b7ef0d3c87d4e3c9d9bcc00ea31"
+        },
+        {
+          "printed_page": 1435,
+          "zero_based_pdf_page": 1441,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1435.txt",
+          "sha256": "d677da8532ca57df2ab9beec53fb38fbb928b27f329203447501f04395617a2a"
+        },
+        {
+          "printed_page": 1437,
+          "zero_based_pdf_page": 1443,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1437.txt",
+          "sha256": "a3297b4cdd302dfdb6077e4dea97ba9b55c8372f3c907ff3e4202fb86a97dac7"
+        },
+        {
+          "printed_page": 1438,
+          "zero_based_pdf_page": 1444,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1438.txt",
+          "sha256": "2ee59c1feaa70341d369b5ebf4d58a2ec2fab43fe45ba9e2728d367b17d24685"
+        },
+        {
+          "printed_page": 1496,
+          "zero_based_pdf_page": 1502,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1496.txt",
+          "sha256": "69123da8cdcf368124ac0fd5f018ded916b2fc4dce6bc25438da4c7110ce2028"
+        },
+        {
+          "printed_page": 1577,
+          "zero_based_pdf_page": 1583,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1577.txt",
+          "sha256": "9eac7880e78263607eb6e8fa507e142c1bdbb5f9551da899c600a02998fa5652"
+        },
+        {
+          "printed_page": 1578,
+          "zero_based_pdf_page": 1584,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1578.txt",
+          "sha256": "ab17c542f8466713033718a5dcb033199a9213a2f6ae23a577b52f97fcbf4727"
+        },
+        {
+          "printed_page": 1579,
+          "zero_based_pdf_page": 1585,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1579.txt",
+          "sha256": "5219404d0682504031796002510be0664c64ac37647600601dfe5ae4f808e062"
+        },
+        {
+          "printed_page": 1580,
+          "zero_based_pdf_page": 1586,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1580.txt",
+          "sha256": "43ea96f4f0ad06180154132cab8eb91711e252e5fbbfc8086f92ea178d4c149f"
+        },
+        {
+          "printed_page": 1581,
+          "zero_based_pdf_page": 1587,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1581.txt",
+          "sha256": "908cff6d13c70d80253ae9f03a2caec3b998bf0b0755ca495a9ebcc764027799"
+        },
+        {
+          "printed_page": 1582,
+          "zero_based_pdf_page": 1588,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1582.txt",
+          "sha256": "6893b77f68a44fdf0d21fea9e80fbb518a7f19ddbcb107a8cd4d0d727bbed927"
+        },
+        {
+          "printed_page": 1583,
+          "zero_based_pdf_page": 1589,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1583.txt",
+          "sha256": "94c83c71f7903d2566531b4c4b0bfd2b22c13cf73cfc826ff9c2ec59ac7be04a"
+        },
+        {
+          "printed_page": 1584,
+          "zero_based_pdf_page": 1590,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1584.txt",
+          "sha256": "e1d2954b41897517933f659ed6ac9bca4a0680a9a81ab24a419663e621cb1552"
+        },
+        {
+          "printed_page": 1585,
+          "zero_based_pdf_page": 1591,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1585.txt",
+          "sha256": "e4973f0c0edaa590db728ceca04ace0cc4c246d0bf1cb4237365b7ca0e835310"
+        },
+        {
+          "printed_page": 1634,
+          "zero_based_pdf_page": 1640,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1634.txt",
+          "sha256": "ee39c3b3d7cdb7b00f6b74766d4801b1154fa2303041a94964322c5a4a5980b4"
+        },
+        {
+          "printed_page": 1649,
+          "zero_based_pdf_page": 1655,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1649.txt",
+          "sha256": "fb4977363ee33622ff3456adaa334018f6b23ddcbd1611d2fdae86ee673e7f3a"
+        },
+        {
+          "printed_page": 1673,
+          "zero_based_pdf_page": 1679,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1673.txt",
+          "sha256": "020bf0e44f47501f942cfe9fed2720198b18cf8a1a6484ef0beef89ac3b37945"
+        },
+        {
+          "printed_page": 1674,
+          "zero_based_pdf_page": 1680,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1674.txt",
+          "sha256": "07048afbfd9b6a2e3b9a456a494567ef19209724b873adc2aaf6678159d5018d"
+        },
+        {
+          "printed_page": 1691,
+          "zero_based_pdf_page": 1697,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1691.txt",
+          "sha256": "7958416e19f5b1fcca4f1c5c112114fe3f60916d8fc76713fbb00853a19ae584"
+        },
+        {
+          "printed_page": 1694,
+          "zero_based_pdf_page": 1700,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1694.txt",
+          "sha256": "ba9632cc31f63a22ea59d21c35b76930b992c96f8b2880bbfe7b0e4142ff57df"
+        },
+        {
+          "printed_page": 1695,
+          "zero_based_pdf_page": 1701,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1695.txt",
+          "sha256": "712f856c0ce2477ac1ae917d8406b2b5c1307edcc626034ed762e674bea853a3"
+        },
+        {
+          "printed_page": 1697,
+          "zero_based_pdf_page": 1703,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1697.txt",
+          "sha256": "2bad014f17839b3ca9c4a724044c647a54936df056075aca432be70927bdcc33"
+        },
+        {
+          "printed_page": 1698,
+          "zero_based_pdf_page": 1704,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1698.txt",
+          "sha256": "592673410f87b8dbc2fea6290fce4e46d50675f0d66f7a1d317410eff44eff18"
+        },
+        {
+          "printed_page": 1699,
+          "zero_based_pdf_page": 1705,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1699.txt",
+          "sha256": "b10d16a787fe827bd8a6287e1bac5abe81bc72c7764548ef7265322e4095451a"
+        },
+        {
+          "printed_page": 1700,
+          "zero_based_pdf_page": 1706,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1700.txt",
+          "sha256": "4ac484d7432fa7beedee6011ce9638b8b87eda0c9e7d2deca3a69ca320fe1300"
+        },
+        {
+          "printed_page": 1701,
+          "zero_based_pdf_page": 1707,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1701.txt",
+          "sha256": "a635e3cec4403b9ca43ea1032a21b40d385d3cd8d0169a729a415f5184b31640"
+        },
+        {
+          "printed_page": 1704,
+          "zero_based_pdf_page": 1710,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1704.txt",
+          "sha256": "a322774b686d4cead27afb7fe07b71dabfe7b3ba643f2322e1c4f96d1e484914"
+        },
+        {
+          "printed_page": 1710,
+          "zero_based_pdf_page": 1716,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1710.txt",
+          "sha256": "58c12414d018b394d568d8db7c37be59b7f25e057d159ede9162b4d094a39bb2"
+        },
+        {
+          "printed_page": 1711,
+          "zero_based_pdf_page": 1717,
+          "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-p1711.txt",
+          "sha256": "2b265fde95a861be3d48ae46f8f6f68918b761bf38030ed1c1c8900a947a18c9"
+        }
+      ]
+    }
+  ],
+  "read_only_inputs": {
+    "C:\\Pyrrhic\\sprint-1a\\packages\\kernel\\src\\forces\\forces.ts": "a5eccb04e3c1282001c6e4947df581e273e992adb0b8c5a989bb6e2e50448b6b",
+    "C:\\Pyrrhic\\sprint-1a\\packages\\kernel\\src\\forces\\enlistment.ts": "639721ec093d78894eef8311a59b91dc7880da4305d7b5e7a2043dcded95097e",
+    "C:\\Pyrrhic\\sprint-1a\\packages\\kernel\\src\\forces\\detachments.ts": "7d10e403755f263e4669b5aecea831451f334f0fab59f35b26610a94f54a0d25",
+    "C:\\Pyrrhic\\sprint-1a\\packages\\kernel\\src\\tick\\recruitment.ts": "7e813853c48a94f3be22933d7c788145cff80756b94f40cbe280e9485a3134c3",
+    "C:\\Pyrrhic\\sprint-1a\\packages\\kernel\\src\\tick\\verbs.ts": "a69b64c3972c17b4e10c514ba5221fe08c078803dbf8665d6aa6ec4374c3d12e",
+    "C:\\Pyrrhic\\sprint-1a\\packages\\kernel\\src\\command\\command.ts": "855723b3fb3e984e404110fddb1d1f1a0e3a6a29ed033a9d60c50784d00b752d",
+    "C:\\Pyrrhic\\sprint-1a\\packages\\kernel\\src\\movement\\join.ts": "594265d35f0f452ef111543909762e4dfe1915e75000b0a1c2248aaf570fc0fd",
+    "C:\\Pyrrhic\\sprint-1a\\packages\\kernel\\src\\tick\\operations.ts": "f37e9f49e87cc171645c7a24ccba94a58dde9cdefc2b2dab7226441a3d0416e4",
+    "C:\\Pyrrhic\\sprint-1a\\packs\\union-1861\\source\\world\\people.csv": "46c6a0e5b6dd41ac59f4fdd62b7335bdae6a9c25e7b371f622353d30fbe3e488",
+    "C:\\Pyrrhic\\sprint-1a\\docs\\research\\2026-11-22-S64-command-inclusion.csv": "d1c207adf2843fd2d0d234bdb09b3c9836fed2adc1dac510c14e0e41e6cf5ca0",
+    "C:\\Pyrrhic\\sprint-1a\\docs\\research\\s64-cohort-crosswalk.json": "b360e500c1b4d649509708243b105b2188802025c6a950046008b90f625d7166",
+    "C:\\Pyrrhic\\sprint-1a\\runs\\s64\\history-final.save.json": "1e43ce41974fad4fd564fded5a96550a8b23fb260342236bf1538b5bdb4f1ceb"
+  },
+  "retrieval_notes": [
+    "Reused cached OR II and Dyer scans without modifying them.",
+    "Downloaded OR LI.1 metadata and OCR directly over HTTPS. Default PDF redirect to dn760109.eu.archive.org timed out during TLS; changed to metadata-listed US host ia800702.us.archive.org and downloaded the complete 143150526-byte PDF. No browser used.",
+    "Search results did not establish an organising order; no historical claim rests on a search summary."
+  ],
+  "selected_Dyer_openings": [
+    {
+      "unit_id": "ct_1_infantry",
+      "printed_pages": "1008",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ct_1_infantry.txt",
+      "sha256": "ffc037461914e77d684d439c4cb5b1ded1fb113e7470c14331cc17811cc3e8a3"
+    },
+    {
+      "unit_id": "ct_2_infantry",
+      "printed_pages": "1008",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ct_2_infantry.txt",
+      "sha256": "1ad18cb654755250b6573b91c895a01ad194fa9200f79b3d2786769ca8c927b7"
+    },
+    {
+      "unit_id": "ct_3_infantry",
+      "printed_pages": "1008",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ct_3_infantry.txt",
+      "sha256": "b2a5d995c8175ccba1e23a83740dff127a92b96a7fc5c40783cb0e89c1239f4b"
+    },
+    {
+      "unit_id": "ct_4_infantry",
+      "printed_pages": "1008",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ct_4_infantry.txt",
+      "sha256": "402455f616d0765b41b492413d16fce3faa5ca2f1410b9383ae37123bad1fee0"
+    },
+    {
+      "unit_id": "in_11_3m_infantry",
+      "printed_pages": "1122",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-in_11_3m_infantry.txt",
+      "sha256": "b5edbfdec872329d610396334f2af5810242cc09d76d8be869aeccbca6b23c52"
+    },
+    {
+      "unit_id": "ma_11_infantry",
+      "printed_pages": "1251",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ma_11_infantry.txt",
+      "sha256": "25f443cae1d1fa2a1810e0cacd8fe0184cb201d14b320acc880012cfc7850546"
+    },
+    {
+      "unit_id": "ma_1_infantry",
+      "printed_pages": "1248",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ma_1_infantry.txt",
+      "sha256": "6ddd043f73dab34a542e91e34cb3f32eba60bc8ce8f172f49fec5dec753ccf96"
+    },
+    {
+      "unit_id": "ma_2_infantry",
+      "printed_pages": "1248",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ma_2_infantry.txt",
+      "sha256": "f9b52fc039a193291c997553a73fb0f9d799282f30ff2cecb947bb80740f89e4"
+    },
+    {
+      "unit_id": "ma_5_militia_infantry",
+      "printed_pages": "1249",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ma_5_militia_infantry.txt",
+      "sha256": "336dbd78971feba505ac904cb778a1d53b4852a96624af9452dfb2d424523778"
+    },
+    {
+      "unit_id": "ma_9_infantry",
+      "printed_pages": "1251",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ma_9_infantry.txt",
+      "sha256": "a3b3a7d13029eaf05779ba62ea31a18cb6e65328811647e208117b7a3ef5e8b7"
+    },
+    {
+      "unit_id": "me_2_infantry",
+      "printed_pages": "1219",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-me_2_infantry.txt",
+      "sha256": "b2337d7c52d77a71c419957801a66d8e3cabb25cc25a704e60d82f349fab9311"
+    },
+    {
+      "unit_id": "me_3_infantry",
+      "printed_pages": "1219",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-me_3_infantry.txt",
+      "sha256": "4de12fd21dcfef2c58c780117c1c88f621a5255e7a015f560a416ebde28e3963"
+    },
+    {
+      "unit_id": "me_4_infantry",
+      "printed_pages": "1220",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-me_4_infantry.txt",
+      "sha256": "e852c4f405eda529f4c42d996fc5f793876d26446ef8c14182279bad552d7716"
+    },
+    {
+      "unit_id": "me_5_infantry",
+      "printed_pages": "1220",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-me_5_infantry.txt",
+      "sha256": "c550e941b0704bd5d900531e803ebd6093880ca93166b9eacf954c1cc5a77393"
+    },
+    {
+      "unit_id": "me_6_infantry",
+      "printed_pages": "1220",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-me_6_infantry.txt",
+      "sha256": "b034d18a0f52576288175b689871db259c91b53d9030ed3e162862b497af5abb"
+    },
+    {
+      "unit_id": "mi_1_3m_infantry",
+      "printed_pages": "1281",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-mi_1_3m_infantry.txt",
+      "sha256": "bcf7804b0394aafe70c743f7a52dfbbbc5a27b461b51a5b99771eec311e6e33a"
+    },
+    {
+      "unit_id": "mi_2_infantry",
+      "printed_pages": "1281",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-mi_2_infantry.txt",
+      "sha256": "3d20f6e2d0590039d033932cc661b3fc3ccaec047b8ef1a50ffb5614ad7ddfb9"
+    },
+    {
+      "unit_id": "mi_3_infantry",
+      "printed_pages": "1282",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-mi_3_infantry.txt",
+      "sha256": "304a2f0f9c938320fd932019121ad9c4120e33798ad371e8897e108b993296f7"
+    },
+    {
+      "unit_id": "mi_4_infantry",
+      "printed_pages": "1283",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-mi_4_infantry.txt",
+      "sha256": "22dd9d885a1ab3a35969ee80afcecfcbea88474ce3a54d8b61f1fd4b1db4062d"
+    },
+    {
+      "unit_id": "mn_1_infantry",
+      "printed_pages": "1296",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-mn_1_infantry.txt",
+      "sha256": "2902ee76a7a52ce1d18ef891097bbfa177a814b1801eabd4fef77af7070a532c"
+    },
+    {
+      "unit_id": "nh_1_infantry",
+      "printed_pages": "1347",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-nh_1_infantry.txt",
+      "sha256": "8780d9638e4584f7bc206c1aefbecac71a44f78f57cf72ca03cdf1439c0eb9dd"
+    },
+    {
+      "unit_id": "nh_2_infantry",
+      "printed_pages": "1347",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-nh_2_infantry.txt",
+      "sha256": "e0b68cd4f617e9a9e9ee3763394ddc497a7a5ac74a54a5513ebea307f4301427"
+    },
+    {
+      "unit_id": "nj_1_3m_infantry",
+      "printed_pages": "1356",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-nj_1_3m_infantry.txt",
+      "sha256": "1e83a15f34af0fa5ab4e23a635b318b0dcb12ad35b567459c00fd38e11c53744"
+    },
+    {
+      "unit_id": "nj_1_3y_infantry",
+      "printed_pages": "1356",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-nj_1_3y_infantry.txt",
+      "sha256": "31c5316baa81f86082fd9fd7bc781d47e2b10f49a26d1ab25a9bc71838c65fa7"
+    },
+    {
+      "unit_id": "nj_2_3m_infantry",
+      "printed_pages": "1356",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-nj_2_3m_infantry.txt",
+      "sha256": "08cc6167af0473e4f5355ef100484eb94216f8ba30318b67f90ddc97cbfafe4e"
+    },
+    {
+      "unit_id": "nj_2_3y_infantry",
+      "printed_pages": "1356",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-nj_2_3y_infantry.txt",
+      "sha256": "99b66a84aa500f00dcbeddd1c22fe83fb31c73415e87fdaae21885f1fed9b850"
+    },
+    {
+      "unit_id": "nj_3_3m_infantry",
+      "printed_pages": "1357",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-nj_3_3m_infantry.txt",
+      "sha256": "1c4178a101199f6aab552e20bca745ff769c48ee79c99d9c10c7f26c4b0f487f"
+    },
+    {
+      "unit_id": "nj_3_3y_infantry",
+      "printed_pages": "1357",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-nj_3_3y_infantry.txt",
+      "sha256": "12d6fd66e059bc372e009b1587a68c2201925abd08d9db08d05f140d92e44ec1"
+    },
+    {
+      "unit_id": "nj_4_3m_infantry",
+      "printed_pages": "1358",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-nj_4_3m_infantry.txt",
+      "sha256": "c436d9721dc98f583dedd99471a1f3e268a88db2d88ac31e93d30ec8b93142ca"
+    },
+    {
+      "unit_id": "ny_11_infantry",
+      "printed_pages": "1409",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_11_infantry.txt",
+      "sha256": "f0756a8ec4618bc2a7e3285a9a79c326e77bac3230baf768572e35ac5b55f219"
+    },
+    {
+      "unit_id": "ny_12_infantry",
+      "printed_pages": "1410",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_12_infantry.txt",
+      "sha256": "db1bf673b0b42edeea1f8be3a8f1aac301289567986d8c1b297372ff5d476fb9"
+    },
+    {
+      "unit_id": "ny_12_militia_infantry",
+      "printed_pages": "1409",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_12_militia_infantry.txt",
+      "sha256": "51d3f643075e4b3970a9e4643b55ac2eb2f33b7952fad67d86d46b0132962fd2"
+    },
+    {
+      "unit_id": "ny_13_infantry",
+      "printed_pages": "1410",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_13_infantry.txt",
+      "sha256": "92d07ee22ec8dd9466d29feb80c98d508ca5d4f5d4bea490af0b55c7039d0795"
+    },
+    {
+      "unit_id": "ny_14_militia_infantry",
+      "printed_pages": "1438",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_14_militia_infantry.txt",
+      "sha256": "66b08ea49a671b90beffb4ab2c0ddf50aec33b702ebab392c6a5fc1adb0c80d6"
+    },
+    {
+      "unit_id": "ny_15_infantry",
+      "printed_pages": "1411",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_15_infantry.txt",
+      "sha256": "1caf85f90d63c49b3c4aaee860e0137c6a5ad685a42c5a6fe7c9df5d7bc43950"
+    },
+    {
+      "unit_id": "ny_16_infantry",
+      "printed_pages": "1411",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_16_infantry.txt",
+      "sha256": "20046c8076c60bd39caaf6d659635fc3ab78400fcf5dcde497c5f55cd2a86b7e"
+    },
+    {
+      "unit_id": "ny_17_infantry",
+      "printed_pages": "1411",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_17_infantry.txt",
+      "sha256": "c899144621701cb86997e9e14b5df951b9a9971204c34f40f19a1a2a565e7ebd"
+    },
+    {
+      "unit_id": "ny_18_infantry",
+      "printed_pages": "1412",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_18_infantry.txt",
+      "sha256": "9853b41fb6b9fa1bbc65c5aa0ea68d5491450bf590cb1066afc5b45076d5849b"
+    },
+    {
+      "unit_id": "ny_19_infantry",
+      "printed_pages": "1412",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_19_infantry.txt",
+      "sha256": "e4a45bc506a1084ca692a85fefcee21f7aecd35908e2e76523505001d2012884"
+    },
+    {
+      "unit_id": "ny_21_infantry",
+      "printed_pages": "1413",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_21_infantry.txt",
+      "sha256": "03744a4612a714ca5f83360dca270e695e77b20e19c575e9a94d832671cd2e94"
+    },
+    {
+      "unit_id": "ny_22_infantry",
+      "printed_pages": "1413",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_22_infantry.txt",
+      "sha256": "cfe1d8af09bfe319424203a4606518dbcd2132195eb2a392eed90d5e213223d6"
+    },
+    {
+      "unit_id": "ny_23_infantry",
+      "printed_pages": "1413",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_23_infantry.txt",
+      "sha256": "58fa3522a20cc0ffae0f61817442d5cabb138fc6b78401e730b4fbcf6b8cdd02"
+    },
+    {
+      "unit_id": "ny_24_infantry",
+      "printed_pages": "1414",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_24_infantry.txt",
+      "sha256": "8bfa771a7ce05a3766cc90d1a7c365ad3f73b15b24060614d3362cad628c0d71"
+    },
+    {
+      "unit_id": "ny_25_infantry",
+      "printed_pages": "1414",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_25_infantry.txt",
+      "sha256": "758604e05fc0c21d6a604ae22406fe28fbcd670c858ad28f89ab68d8b9c9c371"
+    },
+    {
+      "unit_id": "ny_25_militia_infantry",
+      "printed_pages": "1414",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_25_militia_infantry.txt",
+      "sha256": "96d5b1fa945ff6b0e2411ac6fd75da3a5d76e75d9513d997cd8eb3ad80424286"
+    },
+    {
+      "unit_id": "ny_26_infantry",
+      "printed_pages": "1414",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_26_infantry.txt",
+      "sha256": "2bc339bd18352ade4c6078c573e6dd91127a6a2c8c24010ae4b45cad86bb1e21"
+    },
+    {
+      "unit_id": "ny_27_infantry",
+      "printed_pages": "1414",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_27_infantry.txt",
+      "sha256": "bbbc6416cf8276bf4830641edc80131ffb54aa326d16583dc2400a20f54735df"
+    },
+    {
+      "unit_id": "ny_28_infantry",
+      "printed_pages": "1415",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_28_infantry.txt",
+      "sha256": "14388054b105bccedd597320e3eb052d817beca0e34a61998285808377f127a6"
+    },
+    {
+      "unit_id": "ny_28_militia_infantry",
+      "printed_pages": "1415",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_28_militia_infantry.txt",
+      "sha256": "2f136a7f5e50c4c43e931a1059da1887bbc8b30bf2e60cdf38d1bcce456bb6ad"
+    },
+    {
+      "unit_id": "ny_29_infantry",
+      "printed_pages": "1415",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_29_infantry.txt",
+      "sha256": "8dbfa302a36f18d3c8440a80cbd8c5a5f63f7264fc04f65c3f8d55741be77336"
+    },
+    {
+      "unit_id": "ny_2_militia_infantry",
+      "printed_pages": "1437",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_2_militia_infantry.txt",
+      "sha256": "6a7a27dee05cb8eb928dd9d301bf665d3577ac2f94980b6fab3b4e6398ef61dd"
+    },
+    {
+      "unit_id": "ny_30_infantry",
+      "printed_pages": "1415",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_30_infantry.txt",
+      "sha256": "d9974aec41942bf1e420a80ac90aadb4d73537f5f97fc22c630eca7dac1cec55"
+    },
+    {
+      "unit_id": "ny_31_infantry",
+      "printed_pages": "1416",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_31_infantry.txt",
+      "sha256": "e0f1524002a93307bcd9df4250a97a3f01b32ec82e5cacd5f3917d09da2d8c0b"
+    },
+    {
+      "unit_id": "ny_32_infantry",
+      "printed_pages": "1416",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_32_infantry.txt",
+      "sha256": "91a0088d92f745ec6b34d0f9a728bf09362e0e9ce7f51f407d7f706cced10974"
+    },
+    {
+      "unit_id": "ny_33_infantry",
+      "printed_pages": "1416",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_33_infantry.txt",
+      "sha256": "328704b407396e48a244da2925fa8627b6fcaf3600b51411c1c8d77242b66e7b"
+    },
+    {
+      "unit_id": "ny_35_infantry",
+      "printed_pages": "1417",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_35_infantry.txt",
+      "sha256": "fbdb8d796803f2f632d7c36edbff0a2123629301b5383995bb225d2b5273bca1"
+    },
+    {
+      "unit_id": "ny_37_infantry",
+      "printed_pages": "1417",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_37_infantry.txt",
+      "sha256": "dc9bb6eda5ef77025201b0383646e37edf359dd93e0361267e9646218ee59124"
+    },
+    {
+      "unit_id": "ny_38_infantry",
+      "printed_pages": "1418",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_38_infantry.txt",
+      "sha256": "8cb9941bce711347f9b55a70398d9c03ba582c15bc4c92e66936401ea8d5e06b"
+    },
+    {
+      "unit_id": "ny_39_infantry",
+      "printed_pages": "1418",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_39_infantry.txt",
+      "sha256": "e8df96061e1fb4e9b5222ead3aa45ac8ad92792f364a16521995adfc12b5f8d7"
+    },
+    {
+      "unit_id": "ny_40_infantry",
+      "printed_pages": "1418",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_40_infantry.txt",
+      "sha256": "550af3ef2d6568d275faa33fb883d1051a83d5a935be0e2f330e9ee94279d147"
+    },
+    {
+      "unit_id": "ny_41_infantry",
+      "printed_pages": "1419",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_41_infantry.txt",
+      "sha256": "5273d9652651062026a7b667c17872d7e2e836827256a03489fd52811381fe78"
+    },
+    {
+      "unit_id": "ny_42_infantry",
+      "printed_pages": "1419",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_42_infantry.txt",
+      "sha256": "ef74ae2ff28815edf987260e0104d269375e4db56c77c1f0c93c0310781cf8c6"
+    },
+    {
+      "unit_id": "ny_5_militia_infantry",
+      "printed_pages": "1406",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_5_militia_infantry.txt",
+      "sha256": "9609ac2de54ac81cffecaad19764214d6241318739c317b3e19daa834d80dfcf"
+    },
+    {
+      "unit_id": "ny_69_militia_infantry",
+      "printed_pages": "1431",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_69_militia_infantry.txt",
+      "sha256": "46bbe6704d787c59e31427d3a5c3457fd0c9893d31f30d347bd1e3c468b27648"
+    },
+    {
+      "unit_id": "ny_71_militia_infantry",
+      "printed_pages": "1432",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_71_militia_infantry.txt",
+      "sha256": "68cdfce7d53b489dccba3bbcc215f7306ba6d1642b797d02d1a0f3bd55bdadd3"
+    },
+    {
+      "unit_id": "ny_79_infantry",
+      "printed_pages": "1435",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_79_infantry.txt",
+      "sha256": "01e362234e056573ece3d4cd22992d2be7b4f1a9afb38912d1111cea3cf1e1ff"
+    },
+    {
+      "unit_id": "ny_8_infantry",
+      "printed_pages": "1408",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_8_infantry.txt",
+      "sha256": "71c8729e775d7f75031cfeea568970f4c9ad70c85db00f734ad707e30d72f78c"
+    },
+    {
+      "unit_id": "ny_8_militia_infantry",
+      "printed_pages": "1408",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_8_militia_infantry.txt",
+      "sha256": "c63fd6a1718038f43442894b0ea71691290ebfabd1b4b12afa03a715b727d3b2"
+    },
+    {
+      "unit_id": "ny_9_militia_infantry",
+      "printed_pages": "1437",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ny_9_militia_infantry.txt",
+      "sha256": "34112f12938d512d72d1d52c981167b55a4b677f677c6e35e90f218b3dce335a"
+    },
+    {
+      "unit_id": "oh_1_3m_infantry",
+      "printed_pages": "1496",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-oh_1_3m_infantry.txt",
+      "sha256": "0b673b48e9e00d518a655f45a7348139072f7a91249f45cc925ca0b88b049b0c"
+    },
+    {
+      "unit_id": "oh_2_3m_infantry",
+      "printed_pages": "1496",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-oh_2_3m_infantry.txt",
+      "sha256": "1e0f04f86c572ade534c8952f0dea322ef9466af9a036c2864a31415583e1821"
+    },
+    {
+      "unit_id": "pa_10_infantry",
+      "printed_pages": "1581",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_10_infantry.txt",
+      "sha256": "b71fc94a7a0d9cf2edef35ea6647d6502f465f586e2a5ad94fe59b27140d86b0"
+    },
+    {
+      "unit_id": "pa_11_3m_infantry",
+      "printed_pages": "1581",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_11_3m_infantry.txt",
+      "sha256": "2a1f30e37fd28ab17eddc4b5b5955be0e3078d80f2592486fd1342769215b97f"
+    },
+    {
+      "unit_id": "pa_12_infantry",
+      "printed_pages": "1582",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_12_infantry.txt",
+      "sha256": "a7abfe034cdfba271173c29c56227f4c2887a697a2024937370db62f8ca9829b"
+    },
+    {
+      "unit_id": "pa_13_infantry",
+      "printed_pages": "1583",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_13_infantry.txt",
+      "sha256": "303bcade76b3399db84b66b91fd27d0eeba95e168d514ce1d8f8237eaa480ecd"
+    },
+    {
+      "unit_id": "pa_14_infantry",
+      "printed_pages": "1583",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_14_infantry.txt",
+      "sha256": "cddd388da711c664534a3e7f9f6008ed03148b511b894e9e965200e1532b394f"
+    },
+    {
+      "unit_id": "pa_15_infantry",
+      "printed_pages": "1583",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_15_infantry.txt",
+      "sha256": "4eb6e77ece86ae495e46d7719b3af9811de99aac2c8235443b24f535b78f6b56"
+    },
+    {
+      "unit_id": "pa_16_infantry",
+      "printed_pages": "1584",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_16_infantry.txt",
+      "sha256": "5187e20de9fc6ae934c5c4770e2bebc84bcb6970c17f0c72ba1149af8b20eb30"
+    },
+    {
+      "unit_id": "pa_17_infantry",
+      "printed_pages": "1584",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_17_infantry.txt",
+      "sha256": "5762e4395965f0db42752f6eb6b1d214eab66544441a76dc410ea6150e71f521"
+    },
+    {
+      "unit_id": "pa_1_infantry",
+      "printed_pages": "1577",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_1_infantry.txt",
+      "sha256": "5d49182faeb6d0c1817f424e1784409e39ea090f1c2edd77daebffe9569702c9"
+    },
+    {
+      "unit_id": "pa_20_infantry",
+      "printed_pages": "1584",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_20_infantry.txt",
+      "sha256": "d4eab9864b339ee911406877ed09c3dfbe1dd1f8907b5e1e849fdbc0b076aa77"
+    },
+    {
+      "unit_id": "pa_21_infantry",
+      "printed_pages": "1584",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_21_infantry.txt",
+      "sha256": "b46c611c530b66c838a7219f14a34ea480a649988fe895efe89c5e4bf748b333"
+    },
+    {
+      "unit_id": "pa_23_infantry",
+      "printed_pages": "1584",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_23_infantry.txt",
+      "sha256": "661a2a9474797c8e49abf61b1e1a1cac8d0632500b094ebeea7edb32f1e6dab3"
+    },
+    {
+      "unit_id": "pa_24_infantry",
+      "printed_pages": "1585",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_24_infantry.txt",
+      "sha256": "87f410fcfaff5cf5dfa94c5eafd55bf6143ff445411edae6527b5aae5d2e5ebf"
+    },
+    {
+      "unit_id": "pa_25_infantry",
+      "printed_pages": "1585",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_25_infantry.txt",
+      "sha256": "a25cf0721fe24925eae647943233a6e65ed34b66ae3f6a935d12ecab722250f0"
+    },
+    {
+      "unit_id": "pa_26_infantry",
+      "printed_pages": "1585",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_26_infantry.txt",
+      "sha256": "3adb5fe15a360ad922b151f48df8bbd551be3404a0e7c0426ce6fed03924bc42"
+    },
+    {
+      "unit_id": "pa_27_infantry",
+      "printed_pages": "1585",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_27_infantry.txt",
+      "sha256": "bb0b23bdebc118f766c9bffbfc0c4b16310558972b2efc2ad3c93d4a10f60abb"
+    },
+    {
+      "unit_id": "pa_2_infantry",
+      "printed_pages": "1577",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_2_infantry.txt",
+      "sha256": "cc2c42c4b556b27b1d35fcdd8e2e8a9a16ce36e5793e05c060c367a9f836ef68"
+    },
+    {
+      "unit_id": "pa_3_infantry",
+      "printed_pages": "1578",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_3_infantry.txt",
+      "sha256": "0a534c51cc35564b37e72cfa4ddc621bb486de03328391d89ae395bcade7f497"
+    },
+    {
+      "unit_id": "pa_4_3m_infantry",
+      "printed_pages": "1578",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_4_3m_infantry.txt",
+      "sha256": "af145c3fb345ec3e58d8a9a396f141992c1579b5b979bbc620d6d32c2fe27885"
+    },
+    {
+      "unit_id": "pa_6_infantry",
+      "printed_pages": "1579",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_6_infantry.txt",
+      "sha256": "b460e51fb78642c904255b481b906b27cdd0f00410df2540ae50cb509581c37d"
+    },
+    {
+      "unit_id": "pa_7_infantry",
+      "printed_pages": "1580",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_7_infantry.txt",
+      "sha256": "6dfdfd27ccda2fc9401997743d87f83138c6eb4cab39ba8f0905394671a97c27"
+    },
+    {
+      "unit_id": "pa_8_infantry",
+      "printed_pages": "1580",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_8_infantry.txt",
+      "sha256": "1b45d91a120b7a6f5789cc8f213389542ae5d35b7b9f436c2c3b15bc65ba8e90"
+    },
+    {
+      "unit_id": "pa_9_infantry",
+      "printed_pages": "1580",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-pa_9_infantry.txt",
+      "sha256": "06eabae259af20bfc37f9792451081571093225cf3319edcbe08fcbb06124826"
+    },
+    {
+      "unit_id": "ri_1_infantry",
+      "printed_pages": "1634",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ri_1_infantry.txt",
+      "sha256": "75b7d68bd4e722a6c43faa842b38f1df5ecee46be5aa91593a0078da90a8fe98"
+    },
+    {
+      "unit_id": "ri_2_infantry",
+      "printed_pages": "1634",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-ri_2_infantry.txt",
+      "sha256": "223110516928f725445a9323420fd2edbc8becaf1ca2c10ba2b9e9d0a07a8cd4"
+    },
+    {
+      "unit_id": "us_2_infantry",
+      "printed_pages": "1710",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_2_infantry.txt",
+      "sha256": "beb7edc2273826253453c45f0535e0090da8b4ed70f40ac7a5f04c81f89f16ff"
+    },
+    {
+      "unit_id": "us_3_infantry",
+      "printed_pages": "1710",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_3_infantry.txt",
+      "sha256": "05eeb530c105f7d88572c0dde9ead95708fc693752e89923ccd22d421e5158c1"
+    },
+    {
+      "unit_id": "us_8_infantry",
+      "printed_pages": "1711",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_8_infantry.txt",
+      "sha256": "9a140c859509e8e08880d32365f7d2ceb094fafcf7e904526c10524d830f6ea6"
+    },
+    {
+      "unit_id": "us_a_2_artillery",
+      "printed_pages": "1697",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_a_2_artillery.txt",
+      "sha256": "a26bcea74fbfc7c11451834c765109d7b1e9baa84cb98326ea57e9de5dac69f7"
+    },
+    {
+      "unit_id": "us_d_2_artillery",
+      "printed_pages": "1698",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_d_2_artillery.txt",
+      "sha256": "5140d01b0bc8d7bf0264a20b2dc034ce09c3d6e600ac778ea84def9a0d98e3bc"
+    },
+    {
+      "unit_id": "us_e_1_artillery",
+      "printed_pages": "1694",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_e_1_artillery.txt",
+      "sha256": "93c8a0b66c8e924241c95e2be3127c12c1ad4c56176f35fa98e2d688b2605a6d"
+    },
+    {
+      "unit_id": "us_e_2_artillery",
+      "printed_pages": "1698",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_e_2_artillery.txt",
+      "sha256": "d5c5e5e728c8f6fe411eb909415955e1423ce3495c961c1e1763a6dac4dc818b"
+    },
+    {
+      "unit_id": "us_e_3_artillery",
+      "printed_pages": "1701",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_e_3_artillery.txt",
+      "sha256": "5ba25e783baa0ef1da27c242bc4f073326cbea58f43f4fbb8e9aacbb6c0c562f"
+    },
+    {
+      "unit_id": "us_f_4_artillery",
+      "printed_pages": "1704",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_f_4_artillery.txt",
+      "sha256": "80cd48ee0dfdd2fa4104f99cda698bdb8811ce3b7688e3760ff2f649d6b22317"
+    },
+    {
+      "unit_id": "us_g_1_artillery",
+      "printed_pages": "1695",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_g_1_artillery.txt",
+      "sha256": "bae9f7055e06da88df7cd8e2ef222ccfaefa86dc11bd903e201f168f9cd35d47"
+    },
+    {
+      "unit_id": "us_g_2_artillery",
+      "printed_pages": "1699",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_g_2_artillery.txt",
+      "sha256": "5cf1e4b3d5d64188012e84bd681b161a15ea4d971dddc2cca91ea97389cd4d03"
+    },
+    {
+      "unit_id": "us_i_1_artillery",
+      "printed_pages": "1695",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_i_1_artillery.txt",
+      "sha256": "ef43538691e8f252478037d018ffe8e96bb31339cd5553171fa01d0de5c06fce"
+    },
+    {
+      "unit_id": "us_m_2_artillery",
+      "printed_pages": "1700",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-us_m_2_artillery.txt",
+      "sha256": "65104d125d3a0508a81f429baef985aeab076f23696af7a5a734954bdf47b1e7"
+    },
+    {
+      "unit_id": "vt_2_infantry",
+      "printed_pages": "1649",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-vt_2_infantry.txt",
+      "sha256": "1bacbf328672505a11814f53b7c3e9acefd780628cb0ba8e8140af97dfb0469d"
+    },
+    {
+      "unit_id": "wi_1_3m_infantry",
+      "printed_pages": "1673",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-wi_1_3m_infantry.txt",
+      "sha256": "796cffde3867d0ca8aea6681e2357a2c32b2b8757ec3809b1883f4d15a376f45"
+    },
+    {
+      "unit_id": "wi_2_infantry",
+      "printed_pages": "1674",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S66\\Dyer-entry-wi_2_infantry.txt",
+      "sha256": "ab84a446ba07c0e7e8aac3fb1e8385e38fc55ed9ac2cda65415ce71ec7f6da6a"
+    }
+  ],
+  "workload_calculation": {
+    "union": {
+      "existing_blocks": 72,
+      "enlisted_blocks": 12,
+      "provisional_four_regiment_bundles": 27,
+      "rebundled_total": 87,
+      "unknown_regiment_counts": 0
+    },
+    "confederate": {
+      "existing_blocks": 62,
+      "enlisted_blocks": 38,
+      "provisional_four_regiment_bundles": 46,
+      "rebundled_total": 70,
+      "unknown_regiment_counts": 13
+    }
+  },
+  "inventory_notes": "The OR p982 scan itself is physically overlaid/damaged. Only its visible text used; p473 independently supports retained Winchester militia. Extracts include unread surrounding matter."
+}
