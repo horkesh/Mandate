@@ -36,7 +36,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0030](0030-foundation-commitments.md) | Foundation commitments: scenario starts, packs as the modding format, string tables, playable at every phase, a planner spike | accepted; amended by 0041 |
 | [0031](0031-map-extent-size-sources.md) | The map covers the whole war at about 250 regions, built from licence-clean sources | accepted |
 | [0032](0032-reports-authors-routes-filters.md) | A report has an author, a route and filters; the telegraph office is a seat | accepted; amended by 0040, 0046 |
-| [0033](0033-forces-scale-and-data-sources.md) | Transfers name a force, not divisions one by one; force blocks fit the period; data comes from public-domain sources | accepted; amended by 0040 |
+| [0033](0033-forces-scale-and-data-sources.md) | Transfers name a force, not divisions one by one; force blocks fit the period; data comes from public-domain sources | accepted; amended by 0040; extended by 0108 |
 | [0034](0034-one-standing-steward.md) | One standing steward lane from Phase 0 | accepted; amended by 0045, 0047 |
 | [0035](0035-the-stack.md) | The stack, and a map-rendering tripwire | accepted; amended by 0043 |
 | [0036](0036-the-title.md) | The game is called By Order of the President; Mandate stays the engine's codename | accepted |
@@ -76,7 +76,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0070](0070-a-nations-act-is-its-own.md) | A nation's act must be its own, and must stay with its own people | accepted; amended by 0071 |
 | [0071](0071-cleared-flags-and-goals-are-routes.md) | A cleared flag is a route, and a standing goal is a choice | accepted |
 | [0072](0072-phase-0-closes-with-a-close-out.md) | Phase 0 closes after one close-out lane | accepted |
-| [0073](0073-phase-1-plan.md) | The Phase 1 plan: two milestones, starting with the road to Bull Run | accepted |
+| [0073](0073-phase-1-plan.md) | The Phase 1 plan: two milestones, starting with the road to Bull Run | accepted; extended by 0108 |
 | [0074](0074-the-gate-for-1a.md) | The gate for 1A: capture in battle, the values that touch slavery, and the leaders' own words | accepted; amended by 0082 |
 | [0075](0075-the-planner-as-built.md) | The planner in the kernel, as built | accepted |
 | [0076](0076-the-battle-model-as-built.md) | The battle model, as built | accepted |
@@ -109,4 +109,6 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0103](0103-the-press-carries-received-stories-into-the-seat-view.md) | The press carries received stories into the seat view | accepted |
 | [0104](0104-the-opening-of-the-war-follows-its-causes-and-its-news.md) | The opening of the war follows its causes and its news | accepted |
 | [0105](0105-1as-first-calibration-round-continue-or-park.md) | 1A's first calibration round: continue or park | accepted |
-| [0106](0106-the-codex-sprint-to-22-november.md) | The Codex sprint to 22 November | accepted |
+| [0106](0106-the-codex-sprint-to-22-november.md) | The Codex sprint to 22 November | accepted; amended by 0107 |
+| [0107](0107-the-sprint-continues-on-codexs-renewed-allowance.md) | The sprint continues on Codex's renewed allowance | accepted |
+| [0108](0108-the-july-armies-are-named-brigades-of-regiments.md) | The July armies are named brigades of regiments | accepted |

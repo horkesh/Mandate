@@ -1,6 +1,6 @@
 # 0073: The Phase 1 plan: two milestones, starting with the road to Bull Run
 
-Status: accepted (2026-11-16). From the lead's draft of FOUNDATION section 12's Phase 1 plan and a fresh review lane that reviewed none of Phase 0's lanes (`review-phase1-plan.md`: approve after fixes, nothing blocking, every fix taken). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION section 12 and 0072's hand-over.
+Status: accepted (2026-11-16). From the lead's draft of FOUNDATION section 12's Phase 1 plan and a fresh review lane that reviewed none of Phase 0's lanes (`review-phase1-plan.md`: approve after fixes, nothing blocking, every fix taken). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Carries out FOUNDATION section 12 and 0072's hand-over. Extended by 0108 (the July armies as named brigades of regiments).
 
 ## Context
 

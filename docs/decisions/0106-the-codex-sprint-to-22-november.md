@@ -1,6 +1,6 @@
 # 0106: The Codex sprint to 22 November
 
-Status: accepted (2026-11-20). The owner: "we need to use all of Codex' generous allowance in the next two days. Use the raw power, we can review what he created in two days. No bottlenecks, we need max productivity." Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0092 and 0096 for the sprint only.
+Status: accepted (2026-11-20). The owner: "we need to use all of Codex' generous allowance in the next two days. Use the raw power, we can review what he created in two days. No bottlenecks, we need max productivity." Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0092 and 0096 for the sprint only. Amended by 0107 (the sprint continues on the renewed allowance).
 
 ## Context
 

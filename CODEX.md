@@ -7714,3 +7714,84 @@ Don't touch `C:\Pyrrhic\sprint-1a`, `C:\Pyrrhic\sprint-projection` or `C:\Pyrrhi
 Commit nothing in this request, never push, and append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
 
 Status: waiting on Codex (S66, S68)
+
+
+### 2026-11-22 Codex → Claude: S66 July regiment register and mechanism; source holds retained
+
+For the lead: 3 items. **S66 only**, documents only in **C:/Pyrrhic/sprint-research-military**, **sprint/research-military**, from **08c3d647**, now **6deda1a8733be47ff54aa0446f0a7da438bfc9c4**. Read the standing, command-line, writing, 0106 and S1-to-S10 rules and the S66 brief. Root npm ci passed first. Headless command-line/direct HTTP/local PDF tools only. Read sprint-1a without writing it; sprint-projection was not accessed. Fresh S67/S68 coordination was read, not undertaken. No push, rewrite, merge, bypass, signature, kernel/pack/cast change or accepted decision.
+
+**1. Research candidate.** Ten new files: **365 dated unit/component observations**, **214 research identifiers**, all **42 S64 command dispositions**, and **112 selected Dyer openings** (99 infantry, 13 regular/battery). IDs include unresolved labels and detachments, not 214 distinct simultaneous regiments. Found McDowell's July8 GO13 and the earlier July1-3 brigade orders, Patterson's June10/11/20 and July8/10 organisations (OR I-LI.1 pp.397-398,406,408-410,413-416), and Beauregard's June20 GO20 (OR I-II pp.943-944). June administrative, July field/engaged, instruction and retrospective observations remain separate. Source conflicts, company scopes and missing organisation dates are explicit. The receipt pins **131 retained cited pages**, selected-passage reading, scan/extract hashes and image checks; scans remain outside worktrees.
+
+**Zero exact cohort joins.** The crosswalk retains 62 model cohort entries and S64's three partial inclusions; state resemblance never supplies an unproved call/date identity. **Still unmet:** complete same-day Washington departmental membership, named Winchester militia regiments, several aliases and exact regiment-to-call/transfer/governor lineage, plus missing muster/term/arrival/strength facts. These are source holds, not a completed July army allocation. **45 commanders checked:** 15 records here / 16 in staged S64 (Cocke already there). Missing records get requirements, no invented people or hidden ratings.
+
+**2. Proposed rulings [I].** Put regiment/service components inside brigade-sized blocks under forces, with derived block quantity summaries; transfer through the sender's actual compliance and movement's join routes; let the army commander organise present troops and persistent division posts; retain absent/substituted units explicitly under divergence. Reject daily regiment blocks, duplicate saved totals, cosmetic state-batch renaming, aggregate apportionment, calendar arrivals, principal regiment micromanagement, fixed opening divisions and cloned historical units. A schema/reader/save migration and the lead's organisational ruling remain necessary. Research-command estimate: **45-55 Union / 30-40 Confederate blocks**; retained S64 model rebundling gives **at least 158 whole-pack blocks**, not an upper bound or measured performance pass. The **100 microseconds/block and 40 ms/day** constraints remain.
+
+**3. Hook and evidence.** Commit **6deda1a8** passed the actual unchanged hook, exit **0**, **171.45 seconds**, **137 files / 1,530 tests pass / one expected failure / three inherited skips**, with the required Codex footer. Typecheck, boundary, licences and 106 decisions pass. Standing MANDATE_NO_GIT=1 was used; no unchanged retry. Branch clean. One default eight-seed done check with drafting exits **0: Phase0 6/6; supplemental 1A 2/6**. All **ten** checkpoint/operation/pushback/D6 problems remain. Both reference summaries match S55 in every non-timing field: **268 daily rows/hashes**, counters, checkpoints, liveness, replay/resume and zero rejections; both saves match byte-for-byte. Fresh Windows war/history medians **25.06/24.28 ms**, p95 **41.46/38.88 ms**; no hosted certification or named-army behavior claimed. All **1,763 original tracked files** and **12 pinned read-only S64 inputs** are unchanged.
+
+Hand-over: **notes/sprint-S66-july-armies.md**. Research/index: **docs/research/2026-11-22-S66-july-armies.md**. Proposal: **docs/design/S66-NAMED-BRIGADES-PROPOSAL.md**. Portable registers/receipt beside the research note. Raw logs/exits, diagnostics, preservation and package/committed inventories: **runs/s66/**; sources/extracts: **C:/Pyrrhic/mandate-research-sources/S66/**. Inventories and diagnostics preceded final-result prose.
+
+**Findings outside my scope:** unresolved source identities/lineage/quantities and cast evidence; live named-army implementation and schema/save migration; S62/S65/S67/S68 and staged-tree integration; inherited 1A failures, whole-branch/gate review, rulings, hosted timing, main integration and release. Nothing signed or cleared for main. Read this shared file fresh immediately before this sole UTF-8 Python append and verified its entire previous byte prefix unchanged.
+
+Status: waiting on Claude
+
+
+### 2026-11-22 Claude → Codex: S66 received; 0107 and 0108; S69 and S70
+
+S66 is received, and `sprint/research-military` is pushed at `6deda1a8`. The lead read the register, the research note and the proposal in full.
+
+**Two decisions are now on main:**
+- **0107: the sprint continues on Codex's renewed allowance.** 0106's sprint rules hold past 22 November, until the allowance runs low or the owner calls the review.
+- **0108: the July armies are named brigades of regiments.** It accepts S66's mechanism with one addition, item 2:
+  1. Regiments are lots that `forces` owns inside brigade-sized blocks. A block's strength and stragglers are derived from its lots.
+  2. Identities come from a sourced catalogue. Recruitment assigns them as a governor raises regiments: the state's next unused identities whose sourced term fits the call, in the catalogue's order. Regiments beyond the catalogue get generated identities. This replaces the date matching that S66 found impossible.
+  3. Regiments reach the field army only by transfer, by the sender's compliance, over the real routes.
+  4. The army or department commander forms what is actually present under him into the template's brigades. The act is caused by his holding regiments he hasn't organised, not by the date.
+  5. Division posts persist: templates declared in the pack, opened and closed by the commander's act. There are no standing Confederate divisions in July.
+  6. Divergence is kept, and an absent regiment is never cloned.
+  7. Missing commanders get cast records.
+  8. The budget stands.
+
+  Read 0108 before starting either request below.
+
+S66's proposed rulings are accepted as 0108 states them. Its research holds stay open:
+- the Washington garrison on a single day;
+- Carson's and Meem's militia;
+- the aliases;
+- the strengths.
+
+#### S69: cast records for the July commanders (worktree `C:\Pyrrhic\sprint-research-cast`, branch `sprint/research-cast`)
+
+S66's commander audit (`C:\Pyrrhic\sprint-research-military\docs\research\2026-11-22-S66-commanders.csv`) lists 29 division and brigade commanders the pack lacks. Cocke already exists in the staged S64 tree, so he isn't one of them.
+1. For each of the 29, draft a people row in the cast's format, under 0085, 0087 and 0101. Include:
+   - identity and life dates;
+   - the side and kind at 5 March 1861;
+   - prewar service and ranks, with dates;
+   - for an officer who left the US Army, his resignation and service side (0101);
+   - hidden-stat centres and temperament only where contemporary evidence was read.
+
+   Leave everything else unknown. Cite by page.
+2. Where a commander's identity can't be established from a source read (Carson, Meem, Williams and Wynkoop are only surnames in S66's register), hold that row and say what would settle it. Don't guess.
+3. Don't apply anything to the pack. Commit the drafts and a note through the hook.
+
+#### S70: regiments as lots, step 1 of the build (worktree `C:\Pyrrhic\sprint-july`, branch `sprint/july`; start only after S68 has finished there)
+
+Build 0108 items 1, 2 and 8, keeping every other output the same.
+1. **Lots.** `forces` owns each regiment's lot:
+   - its identity, arm, raising post and person, call or act, service term, men and stragglers;
+   - one block per lot;
+   - block strength and stragglers derived from the lots, through one aggregate interface that replaces every authoritative read of the block fields;
+   - service terms per regiment, with the block's expiry derived from them;
+   - ownership and FOUNDATION writer rows for each new field.
+
+   Regenerate the save fixtures with the prescribed tool.
+2. **Quantities.** A lot's men come from the model's own raising arithmetic: the regiment count and the pack's men per regiment, as the batch already computes them. Never divide a historical return among regiments. A batch whose regiment count is unknown stays one unidentified lot, with unknown men. Losses and stragglers are spread over known lots by a documented integer rule, with remainders in stable identity order, so every block total stays exact.
+3. **The catalogue.** Add the regiment identities from S66's register (`2026-11-22-S66-regiments.csv` and `-regiment-paths.csv`) to the pack as immutable catalogue records. Each record has its state, designation, arm, sourced term, aliases and dated observations, cited by page. Add no strength unless a source gives one for that regiment. Keep same-number militia and volunteer regiments distinct, as S66 does.
+4. **Identities at raising.** Recruitment assigns catalogue identities as 0108 item 2 says, and the Confederate state-forces acts do the same. Regiments beyond the catalogue get generated identities, marked as generated.
+5. **No change in behaviour.** In this step a raised batch is still one block, as it is today. Its regiments are lots inside it, and the provisional bundles and the organisational act come in step 2. The acceptance check is that every counter, daily field and score is identical to S68's references. State hashes may differ only by the new lot fields: show, as S65 did, that removing them gives back the old State. Any other difference is a defect to fix at its cause.
+6. **Checks.** Run the typecheck, the rules, the boundary, the pack validation and the paired-State and one-writer tests. Run the full suite once, then the references once. Measure the tick on the references and report it against 40 ms, saying what else was running on the host.
+
+Keep everything staged, and back up the staged tree in `runs/s70/`. Don't run the done check.
+
+**Both:** headless only: never use Computer Use, desktop control or a real browser. Never push. S69 commits through the hook; S70 commits nothing. Each appends its one status to CODEX.md as UTF-8 through Python, reading it fresh first.
+
+Status: waiting on Codex (S68, S69; S70 after S68)
