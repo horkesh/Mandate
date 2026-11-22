@@ -53,10 +53,14 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
   if ('not' in c) return !holds(c.not, ctx);
   if ('dayAtLeast' in c) return ctx.day >= c.dayAtLeast;
   if ('flag' in c) return ctx.state.situationFlags[c.flag] !== undefined;
-  if ('fired' in c) return ctx.state.situationStates[c.fired] !== undefined;
+  if ('fired' in c) {
+    const r = ctx.state.situationStates[c.fired];
+    return r !== undefined && (c.forDays === undefined || ctx.day - r.sitFiredDay >= c.forDays);
+  }
   if ('decided' in c) {
     const r = ctx.state.situationStates[c.decided];
     if (r === undefined || !isFinal(r)) return false;
+    if (c.forDays !== undefined && (r.sitDecidedDay === null || ctx.day - r.sitDecidedDay < c.forDays)) return false;
     return c.options === null || r.sitChosen.some((o) => c.options!.includes(o));
   }
   if ('knows' in c) return knowsMatch(ctx.knowledge, c.knows, ctx.since, ctx.day - (c.forDays ?? 0));

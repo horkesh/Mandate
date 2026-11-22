@@ -55,9 +55,10 @@ export type Condition =
   | { readonly dayAtLeast: number }
   /** A situation flag is set (flags are situation chain state, set and cleared by effects). */
   | { readonly flag: string }
-  | { readonly fired: SituationId }
+  /** Optional event interval runs from the actual event, never its nominal calendar date or the principal's receipt. */
+  | { readonly fired: SituationId; readonly forDays?: number }
   /** The situation was decided, with one of `options` among its choices (null: any decision). */
-  | { readonly decided: SituationId; readonly options: readonly string[] | null }
+  | { readonly decided: SituationId; readonly options: readonly string[] | null; readonly forDays?: number }
   /** `forDays`, if stated by the pack, measures deliberation from receipt, never the report's writing date. */
   | { readonly knows: KnowsPattern; readonly forDays?: number }
   /**
