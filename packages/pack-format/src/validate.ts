@@ -162,6 +162,9 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of phase0.templateProblems(world.rules.reportTemplates)) {
     err('rules-templates', W('rules', 0, 'reportTemplates'), problem, 'one template for each report type and subtype the kernel writes, keepSupersededDays at most maxAgeDays');
   }
+  for (const t of world.rules.reportTemplates) for (const value of t.templateDisclosure?.concealFor ?? []) {
+    if (!vocab.values.some(v => v.id === value)) err('rules-templates', W('rules', 0, 'reportTemplates'), `template disclosure: unknown value ${value}`);
+  }
   for (const problem of phase0.latencyProblems(world.rules.latency)) err('rules-latency', W('rules', 0, 'latency'), problem);
   for (const d of world.rules.latency.dispatches ?? []) {
     for (const scenario of scenarios) {

@@ -14,6 +14,8 @@ import { ROUTE_KINDS, type RouteKind } from '../messages/latency.ts';
 import { ADVICE_SUBTYPES, INFORMAL_SUBTYPES, REPORT_TYPES, templateKey, type ReportType } from './report.ts';
 
 export interface ReportTemplate {
+  /** An uncandid reauthor with a listed value may omit who originated a received paper. Absence preserves attribution. */
+  readonly templateDisclosure?: { readonly candidAt: number; readonly concealFor: readonly string[] };
   readonly templateType: ReportType;
   readonly templateSubtype: string | null;
   /** The usual route; an author off the wire falls back to courier (`messages/latency.ts`). */
@@ -65,6 +67,7 @@ export function templateProblems(templates: readonly ReportTemplate[]): string[]
     seen.add(key);
     if (!kinds.has(key)) problems.push(`template ${key} is for no report type and subtype the kernel writes`);
     if (!(ROUTE_KINDS as readonly string[]).includes(x.templateRoute)) problems.push(`template ${key}: route ${x.templateRoute} is not a route`);
+    if (x.templateDisclosure !== undefined && (!Number.isSafeInteger(x.templateDisclosure.candidAt) || x.templateDisclosure.candidAt < 0 || x.templateDisclosure.candidAt > 1000)) problems.push(`template ${key}: disclosure candidAt must be a permille`);
     for (const [name, v] of [['cadenceDays', x.cadenceDays], ['maxAgeDays', x.maxAgeDays], ['keepSupersededDays', x.keepSupersededDays]] as const) {
       if (!Number.isSafeInteger(v) || v < 0) problems.push(`template ${key}: ${name} must be a whole number of days`);
     }

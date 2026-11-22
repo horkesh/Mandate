@@ -161,7 +161,7 @@ function filterReport(ctx: TickContext, state: State, msg: TransitMessage): void
     msgVia: [...msg.msgVia, post],
     msgPending: msg.msgPending.slice(1),
     msgReport: cut.length === 0 ? body : { ...body, reportClaims: kept },
-    msgTruth: { truthTerms: [...truth.truthTerms, ...terms], truthTrimmed: [...truth.truthTrimmed, ...cut] },
+    msgTruth: { ...truth, truthTerms: [...truth.truthTerms, ...terms], truthTrimmed: [...truth.truthTrimmed, ...cut] },
   });
   fire(ctx, 'messages.sent');
 }

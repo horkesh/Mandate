@@ -332,6 +332,7 @@ export const RulesSchema = z.strictObject({
         templateType: z.enum(phase0.REPORT_TYPES),
         templateSubtype: termId.nullable().describe('The subtype for the informal and advice families; null for every other type.'),
         templateRoute: z.enum(phase0.ROUTE_KINDS).describe('The usual route; an author off the wire falls back to courier.'),
+        templateDisclosure: z.strictObject({ candidAt: permille, concealFor: z.array(termId) }).optional().describe('An uncandid reauthor holding a named value may omit a known originator; never recovers an unnamed origin from truth.'),
         cadenceDays: nonNegative.describe('Every this many days, for a report written on a cycle; 0 for one written on an event. A design parameter.'),
         maxAgeDays: positive.max(phase0.MAX_REPORT_AGE_DAYS, `at most ${phase0.MAX_REPORT_AGE_DAYS} days`).describe('A held report older than this is pruned. A design parameter.'),
         keepSupersededDays: nonNegative.describe('A report superseded by a newer one with the same template, author and subject is pruned once this old; at most maxAgeDays. A design parameter.'),

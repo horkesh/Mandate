@@ -14,7 +14,10 @@ import type { FactionId, ForceBlockId, MessageId, PersonId, PostId, RegionId, Se
 import type { Cut } from '../supply/supply.ts';
 import type { ReportBody } from '../knowledge/report.ts';
 import { templateFor } from '../knowledge/templates.ts';
-import type { BiasTerm, ReportTruth } from '../knowledge/truth.ts';
+import { term, type BiasTerm, type ReportTruth } from '../knowledge/truth.ts';
+import { knowledgeOf } from '../knowledge/knowledge.ts';
+import { traitsOf } from '../people/traits.ts';
+import { originatorDisclosure } from '../reading/disclosure.ts';
 import { routeLatency, type LatencyMap, type RouteKind } from '../messages/latency.ts';
 import { dispatchLatency } from '../messages/ship.ts';
 import { mintMessageId, type IdMint, type Hop, type TransitMessage } from '../messages/transit.ts';
@@ -24,6 +27,7 @@ import { recordFire, type Telemetry } from '../telemetry.ts';
 import { heldPost, sideOfPerson, type HeldPostCache, type SideChange } from '../command/command.ts';
 import { filterPostOf, whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
+import { seatIdFor } from '../seats/seats.ts';
 import type { TurnStopPoint } from '../seats/turn-stops.ts';
 
 export type RejectionReason =
@@ -276,6 +280,8 @@ export function sendReport(
   report: {
     readonly body: ReportBody;
     readonly truth: ReportTruth;
+    /** Reauthor a paper this author actually received; attribution is chosen at origination, never by a filter. */
+    readonly relayOf?: MessageId;
     readonly to: PersonId;
     readonly tag: string;
     readonly route?: RouteKind;
@@ -286,9 +292,30 @@ export function sendReport(
   },
 ): MessageId {
   const { world } = ctx;
-  const from = report.body.reportAuthor;
+  let body = report.body;
+  let truth = report.truth;
+  const from = body.reportAuthor;
+  if (report.relayOf !== undefined) {
+    const source = knowledgeOf(state, seatIdFor(from)).knownReports.find(r => r.id === report.relayOf);
+    if (source === undefined) throw new RangeError(`${from} has not received paper ${report.relayOf}`);
+    if (source.knownBody.reportPlan !== undefined) throw new RangeError('a submitted plan must retain its own author and enclosure');
+    const original = source.knownBody;
+    const attribution = original.reportClaims.find(c => c.claimKind === 'originator');
+    const knownOrigin = attribution === undefined ? original.reportAuthor : attribution.claimValue === 1 ? attribution.claimToken as PersonId : null;
+    const rule = templateFor(world.rules.templates, original.reportType, original.reportSubtype).templateDisclosure;
+    const disclosure = originatorDisclosure(traitsOf(world, state, from), knownOrigin, rule);
+    body = { ...original, reportClaims: [...original.reportClaims.filter(c => c.claimKind !== 'originator'), {
+      claimKind: 'originator', claimRegion: null, claimValue: disclosure.named === null ? 0 : 1, claimToken: disclosure.named, claimConfidence: 1000,
+    }], reportAuthor: from, reportAuthorPost: heldPost(state, from, ctx.postHolders),
+      reportDay: ctx.day, reportHour: null, reportAnswers: null };
+    // Only audit provenance reads private truth; the choice above used the received body alone.
+    const sourceTruth = state.reportTruth[source.id];
+    truth = { truthOriginator: sourceTruth?.truthOriginator ?? knownOrigin, truthSource: source.id,
+      truthTerms: [...(sourceTruth?.truthTerms ?? []), term('originator_disclosure', disclosure.named === null ? 0 : 1, { person: from, rule: disclosure.reason })],
+      truthTrimmed: sourceTruth?.truthTrimmed ?? [] };
+  }
   const fromRegion = report.fromRegion ?? whereIs(ctx, state, from);
-  const route = report.route ?? templateFor(world.rules.templates, report.body.reportType, report.body.reportSubtype).templateRoute;
+  const route = report.route ?? templateFor(world.rules.templates, body.reportType, body.reportSubtype).templateRoute;
   const faction = world.faction(sideOf(ctx, state, report.to));
   const filterId = filterPostOf(world, state, faction.id);
   const filterHolder = filterId === null ? null : state.postStates[filterId]!.postHolder;
@@ -318,8 +345,8 @@ export function sendReport(
     msgPending: itinerary.slice(1),
     msgOrder: null,
     msgVerb: null,
-    msgReport: report.body,
-    msgTruth: report.truth,
+    msgReport: body,
+    msgTruth: truth,
   });
   fire(ctx, 'messages.sent');
   return id;

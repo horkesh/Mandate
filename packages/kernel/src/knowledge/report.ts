@@ -89,6 +89,8 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  * - `control-government`: the named department governs the region, with value 1 for neutral and 0 for aligned.
  */
 export const CLAIM_KINDS = [
+  /** A reauthor names the originator (value 1, person token), or leaves it unnamed (0, null). */
+  'originator',
   // An explicit received request to see the principal; never inferred from an objection.
   'audience-request',
   'appointment-refused',
@@ -208,6 +210,7 @@ export function reportProblems(body: ReportBody): string[] {
   if (body.reportType !== 'advice' && body.reportAdvice !== null) problems.push('only advice carries an advice body');
   if (body.reportAdvice !== null && !isPermille(body.reportAdvice.adviceConfidence)) problems.push('advice confidence must be a permille');
   for (const c of body.reportClaims) {
+    if (c.claimKind === 'originator' && (c.claimRegion !== null || !((c.claimValue === 0 && c.claimToken === null) || (c.claimValue === 1 && c.claimToken !== null && isWellFormedId(c.claimToken))))) problems.push('originator claim must name a person (1) or be unnamed (0)');
     if (!isPermille(c.claimConfidence)) problems.push(`claim ${c.claimKind}: confidence must be a permille`);
     if (!Number.isSafeInteger(c.claimValue)) problems.push(`claim ${c.claimKind}: value must be an integer`);
     if (c.claimKind === 'control' || c.claimKind === 'control-government') {
@@ -216,6 +219,7 @@ export function reportProblems(body: ReportBody): string[] {
       if (c.claimKind === 'control-government' && c.claimValue !== 0 && c.claimValue !== 1) problems.push('claim control-government: value must be 0 or 1');
     }
   }
+  if (body.reportClaims.filter(c => c.claimKind === 'originator').length > 1) problems.push('a paper has at most one originator claim');
   if (body.reportHour !== null && (!Number.isSafeInteger(body.reportHour) || body.reportHour < 0 || body.reportHour > 23)) problems.push('hour must be 0..23');
   return problems;
 }

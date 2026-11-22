@@ -13,6 +13,8 @@ import type { ReportClaim } from './report.ts';
 import type { State } from '../root-state.ts';
 
 export const BIAS_TERM_KINDS = [
+  /** The reauthor's decision to name (1) or omit (0) a paper's known originator. Not an incoming trim. */
+  'originator_disclosure',
   'service_term',
   /** The raw value observed (an enemy strength seen by scouts, a strength on the rolls). */
   'observed',
@@ -66,6 +68,9 @@ export interface BiasTerm {
 
 /** The truth behind one report: every term, and the claims filters cut from it. */
 export interface ReportTruth {
+  /** Audit provenance only: never read to choose what a reauthor knows or says. */
+  readonly truthOriginator?: PersonId | null;
+  readonly truthSource?: MessageId;
   readonly truthTerms: readonly BiasTerm[];
   readonly truthTrimmed: readonly ReportClaim[];
   /** Observed terms are derived from State.openingControlClaims, never copied into each bulletin. */

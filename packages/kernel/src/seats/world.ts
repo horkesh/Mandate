@@ -126,6 +126,9 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
     // Lane 1.6: blocs, chambers, sessions and papers.
     ...politicsRulesProblems(map.world),
   ];
+  for (const t of rules.templates) for (const value of t.templateDisclosure?.concealFor ?? []) {
+    if (!map.world.vocabularies.values.some(v => v.id === value)) problems.push(`template disclosure: unknown value ${value}`);
+  }
 
   const people = new Map<PersonId, SeatPerson>();
   for (const p of map.world.people) people.set(p.id, { id: p.id, faction: p.faction });

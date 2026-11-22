@@ -73,7 +73,7 @@ function reportCopy(r: ReportView, t: DeskStrings): string {
   const control = r.claims.filter(c => c.kind === 'control').map(c => c.region);
   const regions = new Set(control);
   if (r.openingControl === true) return t('console.report.opening', { regions: String(regions.size - Number(regions.has(null))) });
-  if (r.claims.length === 0) return t('console.report.about', { kind: r.subjectKind, id: r.subjectId });
+  if (r.claims.every(c => c.kind === 'originator')) return t('console.report.about', { kind: r.subjectKind, id: r.subjectId });
   const holdings = (r.reportedControl ?? []).map(c => {
     const holding = c.holder === null
       ? t('console.report.no-holder', { region: c.region })
@@ -82,14 +82,18 @@ function reportCopy(r: ReportView, t: DeskStrings): string {
   });
   // Older presentation fixtures lack summaries. Keep their reports visible without guessing or showing shares.
   const controlFallback = holdings.length === 0 ? [...regions].map(region => t('console.claim.control', { where: atRegion(region, t) })) : [];
-  const otherClaims = r.claims.filter(c => c.kind !== 'control').map(c => claimText(c, t));
+  const otherClaims = r.claims.filter(c => c.kind !== 'control' && c.kind !== 'originator').map(c => claimText(c, t));
   return [...holdings, ...controlFallback, ...otherClaims].join('; ');
 }
 
 /** The received copy, shared with the browser's desk adapter. */
 export function reportBody(r: ReportView, t: DeskStrings): string {
   const base = reportCopy(r, t);
-  const copy = r.text === undefined || r.type === 'press' ? base : t('console.report.text', { copy: base, text: t(r.text) });
+  const text = r.text === undefined || r.type === 'press' ? base : t('console.report.text', { copy: base, text: t(r.text) });
+  const origin = r.claims.find(c => c.kind === 'originator');
+  const copy = origin === undefined ? text : origin.value === 0
+    ? t('console.report.originator-unnamed', { copy: text })
+    : t('console.report.originator', { copy: text, originator: t(`person.${origin.token}.name`) });
   return r.advice === null ? copy : t('console.report.advice', {
     copy, option: r.advice.recommends, reasons: r.advice.reasons.map(x => x.kind).join(', '),
   });

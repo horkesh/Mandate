@@ -417,5 +417,7 @@
   "console.command.counter-adjust": "adjust:{boldness}",
   "console.command.counter-frame": "frame:{value}",
   "console.command.counter-reinforce": "reinforce:{post}:{men}",
-  "console.report.text": "{copy}. {text}"
+  "console.report.text": "{copy}. {text}",
+  "console.report.originator": "{copy} Originator: {originator}.",
+  "console.report.originator-unnamed": "{copy} The originator is not named."
 }
