@@ -1,0 +1,169 @@
+{
+  "base": "f19b6f007267997a652d06d18497118977e46c69",
+  "optimizationCommit": "0873a08471de5952e2f475c004256d4a3ca9b16f",
+  "optimizationHook": {
+    "exit": 0,
+    "seconds": 1524.5475309000176,
+    "command": [
+      "git",
+      "commit",
+      "--file",
+      "runs/s59/courier-commit.txt"
+    ],
+    "testFilesPassed": 207,
+    "testsPassed": 1932,
+    "optionalTimingSkips": 3,
+    "allChainedGatesPassed": true
+  },
+  "linuxTimingTests": {
+    "exit": 1,
+    "seconds": 514.1223673000059,
+    "command": [
+      "wsl",
+      "-d",
+      "Ubuntu-22.04",
+      "--",
+      "sh",
+      "/mnt/c/Pyrrhic/sprint-perf2/runs/s59/linux-budget.sh"
+    ],
+    "filesPassed": 2,
+    "filesFailed": 1,
+    "testsPassed": 50,
+    "testsFailed": 1,
+    "skips": 0,
+    "failure": "tick budget: war median 71.7 ms and history median 67.2 ms exceed 40 ms",
+    "plannerAndMapTimingPassed": true,
+    "resolved": false
+  },
+  "completedDefaultDoneCheck": {
+    "exit": 0,
+    "seconds": 2605.8624926000193,
+    "command": [
+      "wsl",
+      "-d",
+      "Ubuntu-22.04",
+      "--",
+      "sh",
+      "/mnt/c/Pyrrhic/sprint-perf2/runs/s59/linux-resumed-done.sh"
+    ],
+    "seeds": 8,
+    "forkDayCap": 400,
+    "drafting": true,
+    "phase0": "6/6",
+    "supplemental1A": "4/6",
+    "criteria": [
+      {
+        "status": "PASS",
+        "id": "behaviour"
+      },
+      {
+        "status": "PASS",
+        "id": "hash"
+      },
+      {
+        "status": "PASS",
+        "id": "resume"
+      },
+      {
+        "status": "PASS",
+        "id": "liveness"
+      },
+      {
+        "status": "PASS",
+        "id": "section-ten"
+      },
+      {
+        "status": "PASS",
+        "id": "budget"
+      },
+      {
+        "status": "PASS",
+        "id": "checkpoints"
+      },
+      {
+        "status": "PASS",
+        "id": "operation"
+      },
+      {
+        "status": "FAIL",
+        "id": "pushback"
+      },
+      {
+        "status": "PASS",
+        "id": "unknown-strength"
+      },
+      {
+        "status": "PASS",
+        "id": "stand-ins"
+      },
+      {
+        "status": "FAIL",
+        "id": "lever-sweep"
+      }
+    ],
+    "problems": [
+      "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+      "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+      "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+      "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17, above 9",
+      "union-1861 history run, 148 days to 1861-07-31: slow walks: 18, above 9",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+    ],
+    "timings": {
+      "war": {
+        "medianMs": 38.72,
+        "p95Ms": 78.67,
+        "maxMs": 104.52
+      },
+      "history": {
+        "medianMs": 32.4,
+        "p95Ms": 88.35,
+        "maxMs": 145.0
+      },
+      "testbed": {
+        "medianMs": 4.55,
+        "p95Ms": 11.52,
+        "maxMs": 14.37
+      }
+    }
+  },
+  "interruptedDefaultDoneCheck": {
+    "cutOff": true,
+    "reason": "Host session ended about 17:06; no exit receipt, final report or drafting artifact",
+    "reusedPartialReferenceEvidence": {
+      "union": {
+        "days": 148,
+        "allComparableFieldsEqual": true,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 60,
+          "finalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "path": "runs/s59/linux-courier/runs/s59-final-done/20261122-154148-442-bb5c2a/summary.json"
+      },
+      "testbed": {
+        "days": 120,
+        "allComparableFieldsEqual": true,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 40,
+          "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "path": "runs/s59/linux-courier/runs/s59-final-done/20261122-154303-442-af89fc/summary.json"
+      }
+    }
+  },
+  "hostedCiCertified": false,
+  "earlierTimingFailureWaived": false
+}

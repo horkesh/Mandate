@@ -1,0 +1,63 @@
+{
+  "union": {
+    "summary": "runs/s59/linux-courier/runs/s59-resumed-done/20261122-182545-433-73f963/summary.json",
+    "summarySha256": "6d59b9bc9e157e7aee651c947c96162cd66d42fc979bae47887bdafba720de4f",
+    "dailyHashes": 148,
+    "livenessRows": 162,
+    "allComparableFieldsEqual": true,
+    "finalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0,
+    "saves": [
+      {
+        "file": "runs/s59/linux-courier/runs/s59-resumed-done/20261122-182545-433-73f963/save-day-60.json",
+        "bytes": 1499158,
+        "sha256": "e2097a039e79cb8821ff449466fb4dc5edbbf3533001721f7c11e6d8eeae7472"
+      }
+    ],
+    "s42Summary": "docs/audit/s42-evidence/union-1861-summary.json",
+    "s42SummarySha256": "6d59b9bc9e157e7aee651c947c96162cd66d42fc979bae47887bdafba720de4f",
+    "allFieldsEqualToS42": true,
+    "saveBytesMatchInterruptedReference": true
+  },
+  "testbed": {
+    "summary": "runs/s59/linux-courier/runs/s59-resumed-done/20261122-182626-433-0be6ca/summary.json",
+    "summarySha256": "caa8cad33537c835261397a893efe8be8e077e64ace835a459af88dfbe4f39b5",
+    "dailyHashes": 120,
+    "livenessRows": 162,
+    "allComparableFieldsEqual": true,
+    "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0,
+    "saves": [
+      {
+        "file": "runs/s59/linux-courier/runs/s59-resumed-done/20261122-182626-433-0be6ca/save-day-40.json",
+        "bytes": 321744,
+        "sha256": "e66b2dbdaeb8861408e3494f66fa607f47172aab7192421144b80fbadaacbec9"
+      }
+    ],
+    "s42Summary": "docs/audit/s42-evidence/testbed-summary.json",
+    "s42SummarySha256": "caa8cad33537c835261397a893efe8be8e077e64ace835a459af88dfbe4f39b5",
+    "allFieldsEqualToS42": true,
+    "saveBytesMatchInterruptedReference": true,
+    "saveMatchesTrackedFixture": true
+  }
+}

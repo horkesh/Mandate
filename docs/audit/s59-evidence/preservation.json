@@ -1,0 +1,64 @@
+{
+  "base": "f19b6f007267997a652d06d18497118977e46c69",
+  "originalPaths": 1906,
+  "missing": [],
+  "changedOriginalPaths": [
+    "packages/kernel/src/seats/world.ts"
+  ],
+  "unchangedOriginalPaths": 1905,
+  "runtimePackInputsCompared": 635,
+  "linuxSnapshotMatches": true,
+  "protectedLocksAndNodeRule": {
+    ".nvmrc": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56",
+    "package-lock.json": "82dbb02254bcc312709e8db78ae7ed7dd9fc26e0bdea4760c5549c956cc429d9",
+    "prototypes/desk/package-lock.json": "022041c25aabad6eba14931604acb543fd4d6abfa4524742c9d23008759f0337",
+    "prototypes/map-icons/package-lock.json": "3b544ca2b62d3af5fce4e9bfa681e7f87b2095b49e1e907a24aa5c8d8299df39",
+    "prototypes/map-tripwire/package-lock.json": "77137df775d047bd4f67b1ba3be6a387a930d9edd2e6a141c0578326d35b225c"
+  },
+  "linuxSnapshotByteMatches": true,
+  "windowsFinalRuntime": {
+    "node": "v22.23.2",
+    "platform": "win32",
+    "arch": "x64",
+    "release": "10.0.26200",
+    "cpus": 16,
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "aliases": {
+      "kernel": "C:\\Pyrrhic\\sprint-perf2\\packages\\kernel\\src\\index.ts",
+      "rule-seats": "C:\\Pyrrhic\\sprint-perf2\\packages\\rule-seats\\src\\index.ts",
+      "pack-format": "C:\\Pyrrhic\\sprint-perf2\\packages\\pack-format\\src\\index.ts"
+    }
+  },
+  "linuxRuntime": {
+    "node": "v22.23.5",
+    "platform": "linux",
+    "arch": "x64",
+    "release": "6.6.87.2-microsoft-standard-WSL2",
+    "cpus": 16,
+    "loadavg": [
+      0.08,
+      0.02,
+      0.01
+    ],
+    "aliases": {
+      "kernel": "/mnt/c/Pyrrhic/sprint-perf2/runs/s59/linux-courier/packages/kernel/src/index.ts",
+      "rule-seats": "/mnt/c/Pyrrhic/sprint-perf2/runs/s59/linux-courier/packages/rule-seats/src/index.ts",
+      "pack-format": "/mnt/c/Pyrrhic/sprint-perf2/runs/s59/linux-courier/packages/pack-format/src/index.ts"
+    }
+  },
+  "packageInventoryReceipt": {
+    "exit": 0,
+    "seconds": 2.9931756000150926,
+    "command": [
+      "npm.cmd",
+      "ls",
+      "--all",
+      "--json"
+    ]
+  },
+  "packageInventorySha256": "1c82d85799a89a99fcfafaa55a4243c7d9be568eb85211b0bba15e75e244f0e9"
+}

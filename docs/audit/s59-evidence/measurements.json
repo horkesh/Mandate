@@ -1,0 +1,501 @@
+{
+  "keepRule": "Positive median paired saving in both war and history; all non-timing values unchanged. Three alternating AB BA AB pairs of complete 148-day runs per slot. Independent source modules in one Linux Node 22 process after matching 3-day smokes. These slots currently have identical timed setup/options.",
+  "keptCourier": {
+    "protocol": "same process, independent source modules, AB BA AB per slot after matching 3-day smokes",
+    "rows": [
+      {
+        "slot": "war",
+        "pair": 0,
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 76.11080300000322,
+          "p95": 225.6830009999976,
+          "max": 319.16547600000195
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 52.87091900000814,
+          "p95": 98.45360899998923,
+          "max": 160.58296600000176
+        },
+        "savingMs": 23.239883999995072
+      },
+      {
+        "slot": "war",
+        "pair": 1,
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 60.18586100000539,
+          "p95": 101.84943799999019,
+          "max": 131.18778499998734
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 53.77920599999197,
+          "p95": 83.97523799999908,
+          "max": 134.12294299999485
+        },
+        "savingMs": 6.406655000013416
+      },
+      {
+        "slot": "war",
+        "pair": 2,
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 47.50641800000449,
+          "p95": 85.18705599999521,
+          "max": 138.33702200000698
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 58.93305399999372,
+          "p95": 103.50162000001,
+          "max": 129.60772899999574
+        },
+        "savingMs": -11.42663599998923
+      },
+      {
+        "slot": "history",
+        "pair": 0,
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 72.81497499998659,
+          "p95": 115.2374589999963,
+          "max": 146.74582900002133
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 76.73323099999106,
+          "p95": 124.74206499999855,
+          "max": 245.94461100001354
+        },
+        "savingMs": -3.918256000004476
+      },
+      {
+        "slot": "history",
+        "pair": 1,
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 63.18506800002069,
+          "p95": 104.6189440000162,
+          "max": 200.3355819999997
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 62.67802799999481,
+          "p95": 94.90678099999786,
+          "max": 175.12789699999848
+        },
+        "savingMs": 0.5070400000258815
+      },
+      {
+        "slot": "history",
+        "pair": 2,
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 62.9765179999813,
+          "p95": 109.75994099999662,
+          "max": 145.01419899999746
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 59.374748000002,
+          "p95": 95.5642419999931,
+          "max": 184.7811459999939
+        },
+        "savingMs": 3.6017699999792967
+      }
+    ],
+    "medianPairedSavingMs": {
+      "war": 6.406655000013416,
+      "history": 0.5070400000258815
+    }
+  },
+  "courierDirect": {
+    "queries": 71824,
+    "missing": 0,
+    "regions": 268,
+    "repetitions": 10,
+    "pairs": [
+      {
+        "before": 860.1994000000013,
+        "after": 102.09720000000016,
+        "savingMs": 758.1022000000012
+      },
+      {
+        "before": 539.6316000000006,
+        "after": 175.45969999999943,
+        "savingMs": 364.1719000000012
+      },
+      {
+        "before": 732.100199999999,
+        "after": 81.86209999999846,
+        "savingMs": 650.2381000000005
+      }
+    ]
+  },
+  "parkedMenuIndex": {
+    "decision": "Negative war estimator; no commit",
+    "pairs": {
+      "rows": [
+        {
+          "slot": "war",
+          "pair": 0,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 32.986133999998856,
+            "p95": 68.08458700000119,
+            "max": 167.36586400000306
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 28.27271699999983,
+            "p95": 53.15997299999981,
+            "max": 88.4659900000006
+          },
+          "savingMs": 4.713416999999026
+        },
+        {
+          "slot": "war",
+          "pair": 1,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 36.317386000000624,
+            "p95": 73.97275599999921,
+            "max": 91.31573299999945
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 49.002651999999216,
+            "p95": 102.27502699999968,
+            "max": 134.15609099999892
+          },
+          "savingMs": -12.685265999998592
+        },
+        {
+          "slot": "war",
+          "pair": 2,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 42.67206900000019,
+            "p95": 70.7816219999986,
+            "max": 89.57801300000028
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 52.25209900000118,
+            "p95": 99.63316599999962,
+            "max": 144.0773790000021
+          },
+          "savingMs": -9.580030000000988
+        }
+      ]
+    }
+  },
+  "parkedAppointmentIdentity": {
+    "decision": "Positive estimators, but actual hook fails two changed/two stale projection findings. Restored; no refresh/exemption. Re-evaluate only after S62 repairs the reads.",
+    "pairs": {
+      "protocol": "same process, independent source modules, AB BA AB per slot after matching 3-day smokes",
+      "rows": [
+        {
+          "slot": "war",
+          "pair": 0,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 42.34437899999466,
+            "p95": 70.91355199999816,
+            "max": 92.6888770000005
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 40.24825899999996,
+            "p95": 66.55871499999921,
+            "max": 106.434663
+          },
+          "savingMs": 2.0961199999946984
+        },
+        {
+          "slot": "war",
+          "pair": 1,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 35.186946000001626,
+            "p95": 57.352208000003884,
+            "max": 73.07069800000318
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 31.9619160000002,
+            "p95": 50.94229600000108,
+            "max": 91.10379500000272
+          },
+          "savingMs": 3.225030000001425
+        },
+        {
+          "slot": "war",
+          "pair": 2,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 27.6182919999992,
+            "p95": 47.05933000000368,
+            "max": 83.31187400000636
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 39.775093000003835,
+            "p95": 77.54550700000254,
+            "max": 124.76758099999279
+          },
+          "savingMs": -12.156801000004634
+        },
+        {
+          "slot": "history",
+          "pair": 0,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 34.57919099999708,
+            "p95": 56.28149100000155,
+            "max": 78.72643999999855
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 30.94728199999372,
+            "p95": 62.01016299999901,
+            "max": 124.01991600000474
+          },
+          "savingMs": 3.631909000003361
+        },
+        {
+          "slot": "history",
+          "pair": 1,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 27.179615000000922,
+            "p95": 40.48609999999462,
+            "max": 72.77609400000074
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 26.680251999991015,
+            "p95": 46.937705000003916,
+            "max": 88.26110800000606
+          },
+          "savingMs": 0.4993630000099074
+        },
+        {
+          "slot": "history",
+          "pair": 2,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 33.13065099999949,
+            "p95": 65.28497699998843,
+            "max": 91.16482299999916
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 23.449222000010195,
+            "p95": 38.677275999987614,
+            "max": 95.52093300000706
+          },
+          "savingMs": 9.681428999989294
+        }
+      ],
+      "medianPairedSavingMs": {
+        "war": 2.0961199999946984,
+        "history": 3.631909000003361
+      }
+    }
+  },
+  "parkedDelivery": {
+    "decision": "Negative war estimator; no commit",
+    "pairs": {
+      "rows": [
+        {
+          "slot": "war",
+          "pair": 0,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 58.03353900000366,
+            "p95": 93.64432099999976,
+            "max": 136.68391299999348
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 52.58335000000079,
+            "p95": 90.68894599999476,
+            "max": 149.0960999999952
+          },
+          "savingMs": 5.450189000002865
+        },
+        {
+          "slot": "war",
+          "pair": 1,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 43.94806800001243,
+            "p95": 74.34054900000046,
+            "max": 128.354370999994
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 46.18288200000097,
+            "p95": 69.41727499999979,
+            "max": 122.37118399999599
+          },
+          "savingMs": -2.234813999988546
+        },
+        {
+          "slot": "war",
+          "pair": 2,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 45.02671299999929,
+            "p95": 80.32017700000142,
+            "max": 174.2415980000078
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 47.50710299999628,
+            "p95": 85.05641600000672,
+            "max": 245.01427900001
+          },
+          "savingMs": -2.480389999996987
+        },
+        {
+          "slot": "history",
+          "pair": 0,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 46.18279999999504,
+            "p95": 69.17979000000923,
+            "max": 118.23786700000346
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 44.44142600000487,
+            "p95": 71.2593130000023,
+            "max": 98.35556800001359
+          },
+          "savingMs": 1.7413739999901736
+        },
+        {
+          "slot": "history",
+          "pair": 1,
+          "parent": {
+            "unit": "ms",
+            "days": 148,
+            "median": 62.12083299999358,
+            "p95": 127.00653199999942,
+            "max": 175.9123499999987
+          },
+          "candidate": {
+            "unit": "ms",
+            "days": 148,
+            "median": 55.45368299999973,
+            "p95": 95.51601300001494,
+            "max": 165.23717900001793
+          },
+          "savingMs": 6.667149999993853
+        }
+      ]
+    }
+  },
+  "parkedPruning": {
+    "decision": "Negative direct median; rejected before full runs",
+    "direct": {
+      "reports": 1500,
+      "iterationsPerSample": 100,
+      "pairs": [
+        {
+          "before": 474.6959000000006,
+          "after": 503.5779000000002,
+          "savingMs": -28.881999999999607
+        },
+        {
+          "before": 362.46149999999943,
+          "after": 434.96410000000105,
+          "savingMs": -72.50260000000162
+        },
+        {
+          "before": 612.9467000000004,
+          "after": 362.5517,
+          "savingMs": 250.39500000000044
+        }
+      ]
+    }
+  },
+  "s42DirectSpans": {
+    "war": {
+      "milliseconds": {
+        "retention": 106.92959999996674,
+        "sides": 94.82030000007217,
+        "concentration": 13.730899999922258,
+        "tick": 20037.146799999988
+      },
+      "percentOfTimedTick": {
+        "retention": 0.5336568178457763,
+        "sides": 0.47322256480185204,
+        "concentration": 0.06852722164975238
+      }
+    },
+    "history": {
+      "milliseconds": {
+        "retention": 55.86200000006738,
+        "sides": 73.297799999993,
+        "concentration": 9.36000000000331,
+        "tick": 10177.073800000006
+      },
+      "percentOfTimedTick": {
+        "retention": 0.5489004118263086,
+        "sides": 0.7202247074202505,
+        "concentration": 0.09197142699312356
+      }
+    }
+  },
+  "s42Limit": "Only direct institutional retention, received government-side derivation and concentration selection are timed. Indirect pressure from carrying more papers through general scans is not isolated. Wall-clock probe overhead and changing host load limit precision.",
+  "probeSourceSha256": {
+    "runs/s59/probe/packages/kernel/src/knowledge/knowledge.ts": "e7e5364136f1370cd06b3ddcc71e43620096cdf6a2943da2ec78fbef7def686b",
+    "runs/s59/probe/packages/kernel/src/seats/received.ts": "e1069bb65fce45d7288d4c1fa0dfb832adda223ff160a46e5954f766326b6a11",
+    "runs/s59/probe/packages/kernel/src/seats/requests.ts": "54612d3fec8d9b249f6abceca52bfe5e1773191e26d18c03df5121816acc9805",
+    "runs/s59/probe/packages/cli/src/phase0-run.ts": "c73623862bee84b547f1fcea575972f3cf1cef1bdc0f17a0ccd32bcb4967fc43",
+    "runs/s59/probe/s59-run.ts": "86a493f208d994516982c9a253555116553d7ac997144e31e4d24b8601ef19f4"
+  }
+}

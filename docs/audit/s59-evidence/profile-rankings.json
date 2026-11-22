@@ -1,0 +1,513 @@
+{
+  "method": "Self samples beneath playDays, including its final checkpoint hash; setup and unparented GC excluded. Absolute shared-host samples are descriptive, not causal savings.",
+  "rankings": {
+    "baseline-war": {
+      "profile": "runs/s59/baseline-war.cpuprofile",
+      "sha256": "ad6411f14bbaedf61259641d63e46d1b4149128fdf972006c1acfa01cc2be29f",
+      "stackMs": 7516.086,
+      "top20": [
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/seats/requests.ts",
+          "selfMs": 720.096,
+          "sharePercent": 9.580731247620104
+        },
+        {
+          "function": "deepFreeze",
+          "file": "packages/kernel/src/tick/freeze.ts",
+          "selfMs": 565.785,
+          "sharePercent": 7.527654686228976
+        },
+        {
+          "function": "heldPost",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 285.585,
+          "sharePercent": 3.7996505095870377
+        },
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/seats/world.ts",
+          "selfMs": 268.326,
+          "sharePercent": 3.570023014638204
+        },
+        {
+          "function": "deliverReports",
+          "file": "packages/kernel/src/knowledge/knowledge.ts",
+          "selfMs": 208.772,
+          "sharePercent": 2.777669121933943
+        },
+        {
+          "function": "mintMessageId",
+          "file": "packages/kernel/src/messages/transit.ts",
+          "selfMs": 182.3,
+          "sharePercent": 2.4254645303419893
+        },
+        {
+          "function": "isWellFormedId",
+          "file": "packages/kernel/src/ids.ts",
+          "selfMs": 164.718,
+          "sharePercent": 2.19153958589617
+        },
+        {
+          "function": "contactEdgesOf",
+          "file": "packages/kernel/src/control-index/control-index.ts",
+          "selfMs": 161.979,
+          "sharePercent": 2.1550977463536207
+        },
+        {
+          "function": "edgeLeg",
+          "file": "packages/kernel/src/supply/supply.ts",
+          "selfMs": 152.987,
+          "sharePercent": 2.035461009892649
+        },
+        {
+          "function": "set TextDecoder",
+          "file": "",
+          "selfMs": 151.02,
+          "sharePercent": 2.009290473791811
+        },
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/control-index/control-index.ts",
+          "selfMs": 150.118,
+          "sharePercent": 1.997289546713542
+        },
+        {
+          "function": "pruneKnowledge",
+          "file": "packages/kernel/src/knowledge/knowledge.ts",
+          "selfMs": 148.454,
+          "sharePercent": 1.9751503641656043
+        },
+        {
+          "function": "controlEvidence",
+          "file": "packages/kernel/src/knowledge/control-beliefs.ts",
+          "selfMs": 140.832,
+          "sharePercent": 1.873741199874509
+        },
+        {
+          "function": "postIdsOf",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 133.039,
+          "sharePercent": 1.7700569152614805
+        },
+        {
+          "function": "sideOfPerson",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 116.725,
+          "sharePercent": 1.5530024536707003
+        },
+        {
+          "function": "postStateOf",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 114.86,
+          "sharePercent": 1.5281890068847004
+        },
+        {
+          "function": "claimedControlView",
+          "file": "packages/kernel/src/view/claimed-control.ts",
+          "selfMs": 107.022,
+          "sharePercent": 1.4239060063974787
+        },
+        {
+          "function": "write",
+          "file": "packages/kernel/src/serialize/canonical.ts",
+          "selfMs": 105.571,
+          "sharePercent": 1.4046007456540546
+        },
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/view/people.ts",
+          "selfMs": 96.234,
+          "sharePercent": 1.2803738541576029
+        },
+        {
+          "function": "legOf",
+          "file": "packages/kernel/src/supply/supply.ts",
+          "selfMs": 94.839,
+          "sharePercent": 1.2618136620576188
+        }
+      ]
+    },
+    "baseline-history": {
+      "profile": "runs/s59/baseline-history.cpuprofile",
+      "sha256": "f4d8af2079457e7294a303236164f507ec378db776cc14eb3b5ed0c6861c7010",
+      "stackMs": 8043.915,
+      "top20": [
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/seats/requests.ts",
+          "selfMs": 759.253,
+          "sharePercent": 9.438849117624937
+        },
+        {
+          "function": "deepFreeze",
+          "file": "packages/kernel/src/tick/freeze.ts",
+          "selfMs": 623.12,
+          "sharePercent": 7.74647668454975
+        },
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/seats/world.ts",
+          "selfMs": 294.798,
+          "sharePercent": 3.6648572243739523
+        },
+        {
+          "function": "heldPost",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 261.501,
+          "sharePercent": 3.250916997506811
+        },
+        {
+          "function": "deliverReports",
+          "file": "packages/kernel/src/knowledge/knowledge.ts",
+          "selfMs": 251.627,
+          "sharePercent": 3.128165824725895
+        },
+        {
+          "function": "contactEdgesOf",
+          "file": "packages/kernel/src/control-index/control-index.ts",
+          "selfMs": 206.821,
+          "sharePercent": 2.571148501693516
+        },
+        {
+          "function": "mintMessageId",
+          "file": "packages/kernel/src/messages/transit.ts",
+          "selfMs": 201.131,
+          "sharePercent": 2.5004118019645905
+        },
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/control-index/control-index.ts",
+          "selfMs": 167.321,
+          "sharePercent": 2.0800940835401667
+        },
+        {
+          "function": "pruneKnowledge",
+          "file": "packages/kernel/src/knowledge/knowledge.ts",
+          "selfMs": 160.91,
+          "sharePercent": 2.0003940867102648
+        },
+        {
+          "function": "postIdsOf",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 158.017,
+          "sharePercent": 1.9644290124895651
+        },
+        {
+          "function": "isWellFormedId",
+          "file": "packages/kernel/src/ids.ts",
+          "selfMs": 157.474,
+          "sharePercent": 1.9576785682096343
+        },
+        {
+          "function": "set TextDecoder",
+          "file": "",
+          "selfMs": 154.854,
+          "sharePercent": 1.9251073637650322
+        },
+        {
+          "function": "edgeLeg",
+          "file": "packages/kernel/src/supply/supply.ts",
+          "selfMs": 142.327,
+          "sharePercent": 1.7693747385446017
+        },
+        {
+          "function": "controlEvidence",
+          "file": "packages/kernel/src/knowledge/control-beliefs.ts",
+          "selfMs": 131.938,
+          "sharePercent": 1.6402212106915601
+        },
+        {
+          "function": "sideOfPerson",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 127.641,
+          "sharePercent": 1.5868019490509286
+        },
+        {
+          "function": "tick",
+          "file": "packages/kernel/src/tick/tick.ts",
+          "selfMs": 126.066,
+          "sharePercent": 1.5672219311119027
+        },
+        {
+          "function": "calledOn",
+          "file": "packages/kernel/src/seats/requests.ts",
+          "selfMs": 120.246,
+          "sharePercent": 1.4948691029181687
+        },
+        {
+          "function": "buildControlIndex",
+          "file": "packages/kernel/src/control-index/control-index.ts",
+          "selfMs": 117.565,
+          "sharePercent": 1.4615395612708488
+        },
+        {
+          "function": "daysToGoal",
+          "file": "packages/kernel/src/movement/march.ts",
+          "selfMs": 105.542,
+          "sharePercent": 1.3120725417909065
+        },
+        {
+          "function": "claimedControlView",
+          "file": "packages/kernel/src/view/claimed-control.ts",
+          "selfMs": 102.514,
+          "sharePercent": 1.2744291803182903
+        }
+      ]
+    },
+    "final-war": {
+      "profile": "runs/s59/final-war.cpuprofile",
+      "sha256": "b752d0658bb1ebb5dcaf3b40ee70d6f07d3392a4015b082f25d414824d19af16",
+      "stackMs": 76166.103,
+      "top20": [
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/seats/requests.ts",
+          "selfMs": 5605.509,
+          "sharePercent": 7.35958487990386
+        },
+        {
+          "function": "heldPost",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 5588.322,
+          "sharePercent": 7.337019723852748
+        },
+        {
+          "function": "deepFreeze",
+          "file": "packages/kernel/src/tick/freeze.ts",
+          "selfMs": 4279.216,
+          "sharePercent": 5.618268273486435
+        },
+        {
+          "function": "contactEdgesOf",
+          "file": "packages/kernel/src/control-index/control-index.ts",
+          "selfMs": 3575.111,
+          "sharePercent": 4.693834736431244
+        },
+        {
+          "function": "deliverReports",
+          "file": "packages/kernel/src/knowledge/knowledge.ts",
+          "selfMs": 2456.374,
+          "sharePercent": 3.2250225536680013
+        },
+        {
+          "function": "pruneKnowledge",
+          "file": "packages/kernel/src/knowledge/knowledge.ts",
+          "selfMs": 2398.645,
+          "sharePercent": 3.1492289949506804
+        },
+        {
+          "function": "commandedBlocks",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 2273.528,
+          "sharePercent": 2.9849603832297946
+        },
+        {
+          "function": "sideOfPerson",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 2167.246,
+          "sharePercent": 2.845420619721085
+        },
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/control-index/control-index.ts",
+          "selfMs": 2092.998,
+          "sharePercent": 2.747938935513085
+        },
+        {
+          "function": "daysToGoal",
+          "file": "packages/kernel/src/movement/march.ts",
+          "selfMs": 2089.176,
+          "sharePercent": 2.7429209552706144
+        },
+        {
+          "function": "set TextDecoder",
+          "file": "",
+          "selfMs": 1834.068,
+          "sharePercent": 2.4079845597456915
+        },
+        {
+          "function": "edgeLeg",
+          "file": "packages/kernel/src/supply/supply.ts",
+          "selfMs": 1790.24,
+          "sharePercent": 2.3504419019573577
+        },
+        {
+          "function": "postIdsOf",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 1771.744,
+          "sharePercent": 2.3261581336254005
+        },
+        {
+          "function": "claimedControlView",
+          "file": "packages/kernel/src/view/claimed-control.ts",
+          "selfMs": 1420.375,
+          "sharePercent": 1.8648387459182465
+        },
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/view/people.ts",
+          "selfMs": 1396.652,
+          "sharePercent": 1.83369234474291
+        },
+        {
+          "function": "mintMessageId",
+          "file": "packages/kernel/src/messages/transit.ts",
+          "selfMs": 1334.057,
+          "sharePercent": 1.7515101173024437
+        },
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/seats/world.ts",
+          "selfMs": 1168.907,
+          "sharePercent": 1.534681379195677
+        },
+        {
+          "function": "search",
+          "file": "packages/kernel/src/supply/supply.ts",
+          "selfMs": 1107.015,
+          "sharePercent": 1.453422134515665
+        },
+        {
+          "function": "buildControlIndex",
+          "file": "packages/kernel/src/control-index/control-index.ts",
+          "selfMs": 988.099,
+          "sharePercent": 1.297294939718788
+        },
+        {
+          "function": "strictCompare",
+          "file": "packages/kernel/src/compare.ts",
+          "selfMs": 976.773,
+          "sharePercent": 1.282424807791466
+        }
+      ]
+    },
+    "final-history": {
+      "profile": "runs/s59/final-history.cpuprofile",
+      "sha256": "694dfc80a50f54dcf6fcb2cc3cf72549cf26009c2e50131514bf0bd64fa9109a",
+      "stackMs": 30745.661,
+      "top20": [
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/seats/requests.ts",
+          "selfMs": 2821.516,
+          "sharePercent": 9.17695670943617
+        },
+        {
+          "function": "deepFreeze",
+          "file": "packages/kernel/src/tick/freeze.ts",
+          "selfMs": 1842.771,
+          "sharePercent": 5.993596950151763
+        },
+        {
+          "function": "deliverReports",
+          "file": "packages/kernel/src/knowledge/knowledge.ts",
+          "selfMs": 1332.416,
+          "sharePercent": 4.3336716683372005
+        },
+        {
+          "function": "edgeLeg",
+          "file": "packages/kernel/src/supply/supply.ts",
+          "selfMs": 1122.465,
+          "sharePercent": 3.650807832688977
+        },
+        {
+          "function": "heldPost",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 1012.603,
+          "sharePercent": 3.2934826153192804
+        },
+        {
+          "function": "contactEdgesOf",
+          "file": "packages/kernel/src/control-index/control-index.ts",
+          "selfMs": 989.424,
+          "sharePercent": 3.2180931156432124
+        },
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/control-index/control-index.ts",
+          "selfMs": 880.473,
+          "sharePercent": 2.863730917998478
+        },
+        {
+          "function": "whereIsPerson",
+          "file": "packages/kernel/src/seats/posts.ts",
+          "selfMs": 729.752,
+          "sharePercent": 2.3735121518447757
+        },
+        {
+          "function": "claimedControlView",
+          "file": "packages/kernel/src/view/claimed-control.ts",
+          "selfMs": 672.06,
+          "sharePercent": 2.1858694142240105
+        },
+        {
+          "function": "mintMessageId",
+          "file": "packages/kernel/src/messages/transit.ts",
+          "selfMs": 643.845,
+          "sharePercent": 2.094100367528283
+        },
+        {
+          "function": "controlEvidence",
+          "file": "packages/kernel/src/knowledge/control-beliefs.ts",
+          "selfMs": 619.623,
+          "sharePercent": 2.0153185192538223
+        },
+        {
+          "function": "postStateOf",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 609.521,
+          "sharePercent": 1.982461850470543
+        },
+        {
+          "function": "tick",
+          "file": "packages/kernel/src/tick/tick.ts",
+          "selfMs": 596.388,
+          "sharePercent": 1.939746880055693
+        },
+        {
+          "function": "(anonymous)",
+          "file": "packages/kernel/src/seats/world.ts",
+          "selfMs": 594.882,
+          "sharePercent": 1.934848627908829
+        },
+        {
+          "function": "daysToGoal",
+          "file": "packages/kernel/src/movement/march.ts",
+          "selfMs": 538.673,
+          "sharePercent": 1.752029335131224
+        },
+        {
+          "function": "sideOf",
+          "file": "packages/kernel/src/tick/context.ts",
+          "selfMs": 525.233,
+          "sharePercent": 1.708315849836502
+        },
+        {
+          "function": "isWellFormedId",
+          "file": "packages/kernel/src/ids.ts",
+          "selfMs": 502.548,
+          "sharePercent": 1.6345330809443324
+        },
+        {
+          "function": "legOf",
+          "file": "packages/kernel/src/supply/supply.ts",
+          "selfMs": 490.004,
+          "sharePercent": 1.593733828002592
+        },
+        {
+          "function": "pruneKnowledge",
+          "file": "packages/kernel/src/knowledge/knowledge.ts",
+          "selfMs": 458.107,
+          "sharePercent": 1.4899891077313316
+        },
+        {
+          "function": "postIdsOf",
+          "file": "packages/kernel/src/command/command.ts",
+          "selfMs": 387.204,
+          "sharePercent": 1.2593777053614168
+        }
+      ]
+    }
+  }
+}
