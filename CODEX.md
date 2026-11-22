@@ -7009,3 +7009,46 @@ Bring the war and history medians back under 40 ms on CI's Linux, with no change
 **All eight:** commit through the hook, never push, and append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
 
 Status: waiting on Codex (S52 to S59)
+
+
+### 2026-11-22 Claude → Codex: S60, the desk's look
+
+The owner has seen the desk and says it is "pretty basic", and doesn't like it. It needs to be spruced up. This lane owns the desk's visual design. S56 owns its layout at laptop sizes, in parallel. The sprint rules apply.
+
+#### S60 (new worktree `C:\Pyrrhic\sprint-look`, new branch `sprint/desk-look`, at `3e7aad0`)
+
+The worktree has the generated map data. Run `npm ci` at the root and in `prototypes/desk` first. The desk's art is in the main checkout's untracked `C:\Pyrrhic\ByOrderOfThePresident\art`. Read it through `DESK_ART_ROOT`, read only, and never write into the main checkout.
+
+1. **Read the canon first:** `docs/design/PRESENTATION.md`, `docs/design/ASSETS.md`, 0053, 0089 and the desk README. The target is PRESENTATION's desk.
+2. **Say what reads as basic,** with captures. Some likely examples:
+   - grey text boxes for the org board, ledger, file, daybook, plans, orders, writing an order, the key card and sound;
+   - a generic bordered map legend;
+   - a strip of small buttons and selects under the map;
+   - the docket as a plain button;
+   - empty parchment around the map.
+
+   Then list the chrome art that exists but isn't used: the docket spike, calendar block, stamps, paper clip, pin, slips, the ledger's open spread and the attention tokens.
+3. **Give it a real design.** It is a working desk in the President's office in 1861:
+   - the staff map at the centre, as a period engraved map;
+   - the furniture as objects on the desk: the ledger, file drawer, daybook, org board frame, docket spike with its slips, the calendar block for the date, and the attention tokens;
+   - papers that look like what they are, such as telegraph forms, letters and printed orders, each with its author and route;
+   - the map key as a printed cartouche;
+   - the map controls as a restrained instrument strip;
+   - "Let the days run" as the one primary action.
+
+   For type, use the existing period faces (IM Fell, Old Standard, Libre Caslon) on a set scale. Allow motion only when something happens, such as a paper arriving or a stamp landing, and respect reduced motion.
+4. **Keep it playable and honest.** Every object stays a labelled control, with visible keyboard focus and AA contrast. Show nothing the seat hasn't received. Follow the image rules in 0053 and `CODEX.md`:
+   - no human figures or plantation motifs in decoration;
+   - no Confederate emblem outside a placed document;
+   - no likeness of any real person;
+   - no slogans, and no all-caps eyebrow labels.
+5. **New art.** Prefer CSS and SVG drawn by code. Any new raster image goes through the existing recipe pipeline, and under `art/` only as an LFS pointer, as the hook requires.
+6. **Coordinate with S56.** Keep the existing structure and controls where you can, and change their look rather than the layout grid, so that merging with S56's reflow stays mechanical.
+7. **Deliver:**
+   - before and after captures at 3440×1440, 1920×1080 and 1366×768 in `art-masters/S60/`, in your worktree;
+   - headless visual and accessibility tests;
+   - `docs/design/desk-look-S60.md`, listing each choice and its rejected alternatives, as proposals for the lead.
+
+Commit each step as it passes the hook, never push. Use only the prototype's headless Playwright harness on your own port, never 5290, 5291 or 5274. Append your one status to CODEX.md as UTF-8 through Python.
+
+Status: waiting on Codex (S52 to S60)
