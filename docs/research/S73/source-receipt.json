@@ -1,0 +1,133 @@
+{
+  "sources": [
+    {
+      "id": "OR-I-1",
+      "title": "Official Records, series I, volume I",
+      "url": "https://archive.org/details/cu31924077725913",
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/OR-I-1-correct_djvu.xml",
+      "bytes": 29193431,
+      "sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "OR-I-2",
+      "title": "Official Records, series I, volume II",
+      "url": "https://archive.org/details/cu31924077730186",
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/OR-I-2_djvu.xml",
+      "bytes": 44322389,
+      "sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "ORN-I-4",
+      "title": "Official Records of the Navies, series I, volume IV",
+      "url": "https://archive.org/details/cu31924079893859",
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/ORN-I-4_djvu.xml",
+      "bytes": 30100971,
+      "sha256": "b296398bd020f9c6ac2a7c6887fb2ec2d0a0ac771b59a9a873e19f350b18a2fd",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "OR-IV-1",
+      "title": "Official Records, series IV, volume I",
+      "url": "https://archive.org/details/cu31924079579524",
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/OR-IV-1_djvu.xml",
+      "bytes": 26219689,
+      "sha256": "4d1757fbfe19d20e918d48d9977f3623050e9b5ef8de5c5c9e0e8eb3d961796a",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "OR-III-1",
+      "title": "Official Records, series III, volume I",
+      "url": "https://archive.org/details/warofrebellion0301rootrich",
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/OR-III-1_djvu.xml",
+      "bytes": 38443517,
+      "sha256": "c02b84a52766f1ca05bc80996c34e3f1d1fd3c378794feabf6c972e6e32d3b3e",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "Bates",
+      "title": "David Homer Bates, Lincoln in the Telegraph Office (1907)",
+      "url": "https://archive.org/details/lincolnintelegra00bates",
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/Bates_djvu.xml",
+      "bytes": 6861036,
+      "sha256": "e2eb22e560d8a4064fa5c048f04ff3534b5b975f54d89ed094a524e30fd3eb93",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "Jones-I",
+      "title": "J. B. Jones, A Rebel War Clerk Diary, volume I (1866)",
+      "url": "https://archive.org/details/rebelwarclerksdi01joneuoft",
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/Jones_djvu.xml",
+      "bytes": 12091507,
+      "sha256": "8a5a35ebf10fdad24e993fa68b18084b9211c67e13a6fb42dd2aee0aae61798e",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "Herndon-II",
+      "title": "Herndon and Weik, Abraham Lincoln: The True Story of a Great Life, II, Hay1866 account",
+      "url": "https://archive.org/download/abrahamlincolntr02hernuoft/abrahamlincolntr02hernuoft_djvu.txt",
+      "path": "C:/Pyrrhic/mandate-research-sources/S37/hay.txt",
+      "bytes": 715404,
+      "sha256": "630e2415ac459c22cbe0b149c1f09679a1e8a75462456995f9d4325ee1d3e579",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "Richardson-I",
+      "title": "Richardson, Messages and Papers of the Confederacy, I, dated March-April documents",
+      "url": "https://archive.org/download/compmessages01richrich/compmessages01richrich_djvu.txt",
+      "path": "C:/Pyrrhic/mandate-research-sources/S37/confederacy-messages1.txt",
+      "bytes": 1668781,
+      "sha256": "a460466f113697f0df2df71bf865daff2fa0e421e35fa84e38b3f40bbdaf6dbc",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "Taney-Reports",
+      "title": "J. M. Campbell, Reports of Cases Decided by Roger Brooke Taney (1871), Ex parte Merryman",
+      "url": "https://archive.org/stream/cu31924068531247/cu31924068531247_djvu.txt",
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/Taney.txt",
+      "bytes": 1739887,
+      "sha256": "9a4119fd4d36f3090c1375678d386c26c9bed66df080626b70fb5708dbb46c30",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "OR-II-1",
+      "title": "Official Records, series II, volume I; selected paper passages753,760-761",
+      "url": "https://archive.org/details/warofrebellion0201rootrich",
+      "path": "C:/Pyrrhic/mandate-research-sources/S7/OR-II-1/warofrebellion0201rootrich_djvu.xml",
+      "bytes": 40744249,
+      "sha256": "d01a3b26096029c58708f595a030e704ed901baef0cd7fc8781b9e38604b2a16",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    },
+    {
+      "id": "Davis-index",
+      "title": "Rice University, Papers of Jefferson Davis, volume7 index; retrieval leads only",
+      "url": "https://jeffersondavis.rice.edu/volumes/volume-indexes/volume-7-1861-index",
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/Davis-index.html",
+      "bytes": 216453,
+      "sha256": "ca777874dc1a2ee8b4fe70473c316f6772f113dbfbff17d93326a3f84d34b5e3",
+      "readScope": "Selected page passages only; title/volume and page mapping inspected. Index is retrieval evidence only; underlying Josselyn pages unread."
+    }
+  ],
+  "externalRoot": "C:/Pyrrhic/mandate-research-sources/S73",
+  "pageReceipt": "pages-read.json",
+  "rejected": [
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1_djvu.xml",
+      "reason": "warofrebellion01unit is Union Authorities, wrong series; excluded as OR I-1"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-Cornell.pdf",
+      "reason": "403 response, not a PDF; excluded"
+    },
+    {
+      "url": "https://ehistory.osu.edu/books/official-records/001/0293",
+      "reason": "403 JavaScript/cookie challenge; excluded, no bypass"
+    }
+  ],
+  "corrections": [
+    "Preliminary scandata-to-object offset corrected using exact XML usemap filename/scan leaf. Preliminary duplicate page extractions excluded; corrected printed headers govern.",
+    "OR I-1 p59 is read from scan as59 despite OCR69.",
+    "No source original, scan or page extract is committed; all remain external."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "window": [
+    "1861-03-05",
+    "1861-07-31"
+  ],
+  "snapshotCount": 260,
+  "uniqueSituations": 70,
+  "noticeCount": 51,
+  "decisionCount": 19,
+  "carrierObservations": 29,
+  "partialDrafts": 38,
+  "filterRecords": 11,
+  "generatedFamilies": [
+    "Principal orders/go/reviews and delegate/relay answers",
+    "Recruitment requisitions, state adjutant referrals and governor replies",
+    "Recurring strength, intelligence, field, naval and press reports",
+    "Situation staff summaries and notifications",
+    "Operations/combat/transfer/appointment notices and returned dispatches"
+  ],
+  "generatedDisposition": "No finite authentic historical document is named for every possible generated message. No bearer assigned without a specific sourced paper. The date of a simulation message is not evidence for a historical itinerary.",
+  "outsideWindow": "No August1861 or later drafts inventoried as in-window papers. Later filter evidence is explicitly excluded.",
+  "noSeparateConfederatePack": "Both historical factions are in union-1861; testbed is fictional and supplies no1861 facts."
+}

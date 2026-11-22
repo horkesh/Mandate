@@ -1,0 +1,772 @@
+{
+  "status": "This is the read/cited subset; extraction alone is not reading.",
+  "pages": [
+    {
+      "source": "OR-I-1",
+      "printedPage": 13,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p13.txt",
+      "sha256": "5efbc769d15c5a6fbbf9f66e7b9d3ed9dfea31b4d99a731612e1aa94c237a6ad",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 14,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p14.txt",
+      "sha256": "6e5e7831c6d6f578beed0a1278b4b68c29a37b2d0cdacabcca58a908689edb1e",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 15,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p15.txt",
+      "sha256": "24e0fd2eee4704ec4ad2c799113515990333dd86c0b3a57c682870bca30c4516",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 18,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p18.txt",
+      "sha256": "1a0084ca09fc911c60fb491808efbb6def0cc2275ecf9d3a81ae7d9b39f67391",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 38,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p38.txt",
+      "sha256": "a258f6ef3c7d8ed87b039518fac1fb4f5ce54ddc1f189e0f16f3c20e35de09e3",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 59,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p59.txt",
+      "sha256": "9755cc5116fac94534085d173d6cd4ef562cf0e71e7b405c8af17be4a5ef9542",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 60,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p60.txt",
+      "sha256": "907622df6fd313c2a7eeaf7ffa59e9d7ae72187462531f5d0b1958ba2ed75a48",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 61,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p61.txt",
+      "sha256": "2386e027f5c06a3e372694e23326c91e8dec3a81660efefa095c4bc5a6b1373a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 62,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p62.txt",
+      "sha256": "9006191fd6ac4c1e33bc7847d94799e23bcc82d51591ef5d591ef8048251ba0a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 236,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p236.txt",
+      "sha256": "fc6c9c3fec430dcbbc722e3f8d99919117c357b07f352281de57e3be152464e9",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 237,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p237.txt",
+      "sha256": "dd7009aac484d024a11cde2a938d7393b2f79d24ac2df9589ab5f64af7fb106d",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 242,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p242.txt",
+      "sha256": "cc4942867ec35eefb402d9f8dc017d37d7fc252cef225746ffdd61ea1719901a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 243,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p243.txt",
+      "sha256": "1d203437f63c25b105e1e37373126bbb114a1c17a8ac2a43ad1982fc93032b08",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 245,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p245.txt",
+      "sha256": "dc7937f2b696533af3b471359df14b838fb35effe4a054a7d69feabd5cf7a35b",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 248,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p248.txt",
+      "sha256": "835b2b796f1b1b880e8b3b77ddb40da562f7584de216def6a154bcb93d7366a2",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 249,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p249.txt",
+      "sha256": "806d1f1ca6c88738b8aff609577ea3cb0cdc1269121a65aa9129737dd87a28b2",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 251,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p251.txt",
+      "sha256": "79a20ff3a6802bfa80cbff15166b44324bb82a15ede375e4163a963d72896f3c",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 252,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p252.txt",
+      "sha256": "5fab575ec69c6d7e1010e90b766afba1829e957e69d0e89d07bc8234e3a3006d",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 291,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p291.txt",
+      "sha256": "21450828d4905ab4103ed6a560a5ed34ec9aa2da52efec1286bf5ee6bb94768a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 292,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p292.txt",
+      "sha256": "781e7ae1cf83e6e5e5331716cd3b9c606745d2b4094de82bc6937067e0495287",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 293,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p293.txt",
+      "sha256": "af9ef897f8579197990fe0621aed2d6859ec0da290f1334036d8e6ac34e2e2d9",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-1",
+      "printedPage": 294,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-1-correct-p294.txt",
+      "sha256": "dbafed131c5be2c6fde24d1db8c12060854d91e01ea2471209dfb47c339dee5f",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 581,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p581.txt",
+      "sha256": "32aec5a815797e1c1b5392ccddfc1bc24dc3f80d567fb8ffaad114698421294a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 595,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p595.txt",
+      "sha256": "6e74903115841de07637a9c6d6780ee5d80d9c15dac7a6558145a4cbbda35556",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 608,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p608.txt",
+      "sha256": "764520525fe8f04cf74e658c88bee1de6cf93d065a94d0cc31fc189c8ccd7129",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 649,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p649.txt",
+      "sha256": "15171087459466f3d2c5a28dea2183c32dac2fd98ec99548972a6d6b4e2bbd7d",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 650,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p650.txt",
+      "sha256": "b5bba4ed1890d8d23a4dbe77dbe329cd65ab88c10efc0a45053e70c4b36c826d",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 676,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p676.txt",
+      "sha256": "fe5f6d68a9d5308b13415fab49d499a302041e976b5b71f5c27dcd1cd6101ad0",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 713,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p713.txt",
+      "sha256": "b26aa528dafea869614b4e027d18f581eb988b876c987f82a689bdfe291e5220",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 723,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p723.txt",
+      "sha256": "9649ccdde5947fcefcf516d24446a95251d2111445f58f41772e30afb37e9066",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 724,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p724.txt",
+      "sha256": "c94d079528621ea7623f56c874d66b45f874e91cff479ea866a3a69178d20656",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 738,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p738.txt",
+      "sha256": "37f496262259691b87bd61c4728a146aacb8c9cfc82f01deae44ca625301f707",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 844,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p844.txt",
+      "sha256": "5455d528280876c8fb480649c61cc4c87d7162660e5de197be10fd8016fb2426",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 845,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p845.txt",
+      "sha256": "8ac3ce62f33969e0fce9f8c07d0a46eeddb09edd2b3952dcbdb52b9434f1646e",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 901,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p901.txt",
+      "sha256": "7747359755f991a36f701d815e5d99537d822435e6ff4880da7679002af63b44",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-I-2",
+      "printedPage": 902,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-I-2-p902.txt",
+      "sha256": "8d9464edcd2d186584c7b38db6d37cd3748e048178670bc054e9958ce0f13f66",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 89,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p89.txt",
+      "sha256": "e462961eac2fa770e961e03e169193f69b4e63531d688462e21404c399912fa3",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 90,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p90.txt",
+      "sha256": "6366b371180f8bcadf746d04bd402dec1cbd012c3347df43ae12d4ed99f05c2d",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 102,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p102.txt",
+      "sha256": "75cd96177eabc2b9c8520cc20aeb598b14d75c2580ee15957b514b6e87446ea5",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 104,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p104.txt",
+      "sha256": "eeb613f892ca258ebb9cc67ddeaaad5ee36b5ac108edbf8fd516b3ee3af207e2",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 110,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p110.txt",
+      "sha256": "be189488f604fd2253faf17f55fd04e63a2a0040adf7f4232f64c692c7637dc2",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 111,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p111.txt",
+      "sha256": "4822c768f5640fe004d2a26b8c21f9f52c781b09def89bec06696c8ccbbd621c",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 115,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p115.txt",
+      "sha256": "5e2541deb7c25b1367ac3d4d77591a0f98830ad5b4a80dd1340674174341c5f4",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 118,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p118.txt",
+      "sha256": "5b5fa985b1362f1a87ea09cde466c212db4c4422008d131cce1c98ae1dd71abf",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 276,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p276.txt",
+      "sha256": "8c425a4ca60f951d9be105064aeec571b7dddaedef34ea686ddc9e149c0345b5",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 277,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p277.txt",
+      "sha256": "ffd8a55f5da3839edaf5c297e478cda02ccb6f82bd566f8c72ea8f0e4889aef6",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 278,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p278.txt",
+      "sha256": "35bb3e83ff6037be57dfbd6a75863336865a680b1b29b26f41e5e503262dadad",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 280,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p280.txt",
+      "sha256": "6cc3e700626681a179c63e16ea4393d9007bda4811e733e3c2acb0afc641dc32",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "ORN-I-4",
+      "printedPage": 281,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/ORN-I-4-p281.txt",
+      "sha256": "01204316ee67dab6fefdb2192e3a83000f1aeba3645ff0cea547617ac6e80b46",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-IV-1",
+      "printedPage": 396,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-IV-1-p396.txt",
+      "sha256": "617053bead1942f397d6c96b8510fca92f52fa043b51891c301b1b5be73f83e8",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-IV-1",
+      "printedPage": 402,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-IV-1-p402.txt",
+      "sha256": "26932d664b7a8cfc9c214983107e22c3e9e5cd1c7ddb0a4453cfc7e78f4a0870",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-IV-1",
+      "printedPage": 404,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-IV-1-p404.txt",
+      "sha256": "822ad28797ef18da37e5fe87cb30d047b485598efed11ca2b3a2af4d92ea7084",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-III-1",
+      "printedPage": 68,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-III-1-p68.txt",
+      "sha256": "c522182954e056f843a017f7b7086320718f941d964f521a0f3dad4bc378ce7e",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-III-1",
+      "printedPage": 76,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-III-1-p76.txt",
+      "sha256": "bf15a004839986eb41a08e952d8c9f033e5c9f9b4f533ac804cfb46a7eff4e97",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-III-1",
+      "printedPage": 324,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-III-1-p324.txt",
+      "sha256": "7f22bf0a2d42cb53693176dac4ad570505e58db3cc02dfb604e9bbd061e3abf2",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 25,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p25.txt",
+      "sha256": "7a204b75fa564cbb6d184818f883de32e2b2889034f20e184fd6ad0237471ef2",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 26,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p26.txt",
+      "sha256": "4315a79ba660b89d1ea87b9e4a3a17a9f8eda73cce52c00601e7c3d0a464062f",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 27,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p27.txt",
+      "sha256": "f7bd5ceae7cd55c6856d4f340e82f59ae13c6fef27009e18c38e6b91d65fdfb5",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 29,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p29.txt",
+      "sha256": "8baf27219f605a942da9136089d794decf45a3a00b60fce9b193306e2dd70b93",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 38,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p38.txt",
+      "sha256": "1cb00cd7ba9d3ff77db52e2802f0320e51b7c0b269847212069bcba3d035696d",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 39,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p39.txt",
+      "sha256": "2d5b95e4d49b36f8774acdf14b31c9bd77882e7a16a52b24f24c2f8fa9846d4e",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 40,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p40.txt",
+      "sha256": "2ca7cbede4b54c7dbc04bd978a9918bc7bca0b5d93230a21f97ede7d4c009e24",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 87,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p87.txt",
+      "sha256": "7778999af4f900a0cfe1ea53e280abd0c5498bcc3cb8ce0f36b5e64be84e99ab",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 88,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p88.txt",
+      "sha256": "e4f29a40f87ce30d4155b6becccd8c369abfa77be0af7ccb2278a572994d30db",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 91,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p91.txt",
+      "sha256": "b73129e0fc0e9de48f98d419a1e8864c32f22bc9b5f326a470842f1b5a854474",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 93,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p93.txt",
+      "sha256": "8e51f5b4a13ecf3747582b8e5195c037bc2fa2f809778b95178072c2dacd618a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 94,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p94.txt",
+      "sha256": "1c729a240239a773cac8e850da3be2bd670686794408e26285e29b96db9b4c68",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 95,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p95.txt",
+      "sha256": "ac10b37b4cb98395aa2e44e06a0cb1c5fdeca8b7bae2e2772ad9f7639a4cc158",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Bates",
+      "printedPage": 96,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Bates-p96.txt",
+      "sha256": "5c1a6639a462f7f53de3bd3f25a8232f085b0a25f3f447c639163f0040eaf886",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Jones-I",
+      "printedPage": 36,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Jones-I-p36.txt",
+      "sha256": "b5f4c0783d1378ff34297c1a7fa327aba14bb8503a0070a3c5c083ab7eae4c80",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Jones-I",
+      "printedPage": 37,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Jones-I-p37.txt",
+      "sha256": "3732effebd602ee600dfb24890ca1c188a5d211c8688635ceb68920ca2d97658",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Jones-I",
+      "printedPage": 48,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Jones-I-p48.txt",
+      "sha256": "de3c8625bed7cc23ba35d3774bcc46cc509ee8ccda819d55732f6fa24ee7fa37",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Jones-I",
+      "printedPage": 50,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Jones-I-p50.txt",
+      "sha256": "894d85242dd64a6e3bbe601059806d297f4500f1125731e94f554b836a52dbc9",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Jones-I",
+      "printedPage": 51,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Jones-I-p51.txt",
+      "sha256": "ea2136277646b598efa0b15fe16cf7594b165cfa7b32332a39d57f61808daad8",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Jones-I",
+      "printedPage": 54,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Jones-I-p54.txt",
+      "sha256": "289564db91490aa74474dc23414151cb0d6f5a135158335902eaad948718603c",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Jones-I",
+      "printedPage": 60,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Jones-I-p60.txt",
+      "sha256": "7bb1c63c3d90af1b133b80f90733516e8cc4beee27f5acdba23fe63b35be61c2",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Jones-I",
+      "printedPage": 61,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Jones-I-p61.txt",
+      "sha256": "c90f8787becc200b5b1ee34b0c1d2be5870cb4481da54b14ddd94beeca87d3c5",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Jones-I",
+      "printedPage": 62,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Jones-I-p62.txt",
+      "sha256": "13ca7ca5d9c26cde4517bf898e0dd8384d85db9939caf269fc9d4af73ac1c35c",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Herndon-II",
+      "printedPage": 224,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Herndon-II-pp224-226.txt",
+      "sha256": "8a17fe4346d2991f393221ab4c53662193a0fc88058bb1c1e6ea47fd53eae3e9",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Herndon-II",
+      "printedPage": 225,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Herndon-II-pp224-226.txt",
+      "sha256": "8a17fe4346d2991f393221ab4c53662193a0fc88058bb1c1e6ea47fd53eae3e9",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Herndon-II",
+      "printedPage": 226,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Herndon-II-pp224-226.txt",
+      "sha256": "8a17fe4346d2991f393221ab4c53662193a0fc88058bb1c1e6ea47fd53eae3e9",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Richardson-I",
+      "printedPage": 85,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Richardson-I-pp85-88.txt",
+      "sha256": "1d9a6b9e422258e9b067cf7465338eb0d0aed3b86b2d3a291597b4c9c3a8b0b9",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Richardson-I",
+      "printedPage": 87,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Richardson-I-pp85-88.txt",
+      "sha256": "1d9a6b9e422258e9b067cf7465338eb0d0aed3b86b2d3a291597b4c9c3a8b0b9",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Richardson-I",
+      "printedPage": 88,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Richardson-I-pp85-88.txt",
+      "sha256": "1d9a6b9e422258e9b067cf7465338eb0d0aed3b86b2d3a291597b4c9c3a8b0b9",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Taney-Reports",
+      "printedPage": 249,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Taney-pp249-253.txt",
+      "sha256": "fe3521b572aa51a19dbb4ca395fd7db4a71b5971eb0af052057f641339690f7a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Taney-Reports",
+      "printedPage": 250,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Taney-pp249-253.txt",
+      "sha256": "fe3521b572aa51a19dbb4ca395fd7db4a71b5971eb0af052057f641339690f7a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Taney-Reports",
+      "printedPage": 251,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Taney-pp249-253.txt",
+      "sha256": "fe3521b572aa51a19dbb4ca395fd7db4a71b5971eb0af052057f641339690f7a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Taney-Reports",
+      "printedPage": 252,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Taney-pp249-253.txt",
+      "sha256": "fe3521b572aa51a19dbb4ca395fd7db4a71b5971eb0af052057f641339690f7a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "Taney-Reports",
+      "printedPage": 253,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/Taney-pp249-253.txt",
+      "sha256": "fe3521b572aa51a19dbb4ca395fd7db4a71b5971eb0af052057f641339690f7a",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-II-1",
+      "printedPage": 753,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-II-1-p753.txt",
+      "sha256": "01ac5626ec91632380a9bacb123ab57758d121adf77d7f9a02893ec65f539ace",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-II-1",
+      "printedPage": 760,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-II-1-p760.txt",
+      "sha256": "b5d53056555c2aa9fc0ccba17d8f21c403a7bfd9983f60bdbcb4c893014c34f4",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    },
+    {
+      "source": "OR-II-1",
+      "printedPage": 761,
+      "path": "C:/Pyrrhic/mandate-research-sources/S73/reading/OR-II-1-p761.txt",
+      "sha256": "d2688eac8268983bfd35c108dc57cc1f7a6d59a903cc8d08a5f67c37df251501",
+      "scope": "Selected dispatch, carrier or office passages read; unrelated matter on the retained page is not adopted.",
+      "mapping": "Printed page/header and exact XML usemap leaf, or retained OCR printed-page markers; no assumed PDF offset."
+    }
+  ],
+  "images": [
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-p59.jpg",
+      "url": "https://ia903100.us.archive.org/BookReader/BookReaderImages.php?zip=/33/items/cu31924077725913/cu31924077725913_jp2.zip&file=cu31924077725913_jp2/cu31924077725913_0078.jp2&id=cu31924077725913&scale=2&rotate=0",
+      "sha256": "ee6a171a0df690f7db0111562586fc029b234e9aa8b0ca75a578911960fee20e",
+      "contentType": "image/jpeg",
+      "inspected": true,
+      "use": "Checked printed page and critical names/times against OCR; OR I-1 p59 OCR69 corrected by scan."
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\ORN-I-4-p111.jpg",
+      "url": "https://ia600900.us.archive.org/BookReader/BookReaderImages.php?zip=/16/items/cu31924079893859/cu31924079893859_jp2.zip&file=cu31924079893859_jp2/cu31924079893859_0140.jp2&id=cu31924079893859&scale=2&rotate=0",
+      "sha256": "07cf3281ce8cde590de98c8bccda0b6f46cb423075c9a81510c074bf974e8afa",
+      "contentType": "image/jpeg",
+      "inspected": true,
+      "use": "Checked printed page and critical names/times against OCR; OR I-1 p59 OCR69 corrected by scan."
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-p251.jpg",
+      "url": "https://ia903100.us.archive.org/BookReader/BookReaderImages.php?zip=/33/items/cu31924077725913/cu31924077725913_jp2.zip&file=cu31924077725913_jp2/cu31924077725913_0270.jp2&id=cu31924077725913&scale=2&rotate=0",
+      "sha256": "231a5a15fb8c733d88e21de45b6d6c9a3c1bb1df6fa624dfa4476b6a2c214089",
+      "contentType": "image/jpeg",
+      "inspected": true,
+      "use": "Checked printed page and critical names/times against OCR; OR I-1 p59 OCR69 corrected by scan."
+    }
+  ],
+  "indexRead": {
+    "source": "Davis-index",
+    "entry": "Josselyn, Robert: appointment55; E to330",
+    "underlyingPagesRead": false
+  }
+}

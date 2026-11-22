@@ -1,0 +1,1073 @@
+{
+  "scope": "S73 only; no apply tool; these objects cannot be loaded as pack data",
+  "drafts": [
+    {
+      "id": "C01-1",
+      "observation": "C01",
+      "bearer_label": "Captain Talbot",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_war_adjutant_general",
+        "carriers": [
+          {
+            "post": "s73_draft_c01_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.236;237;242;245; C01; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Receipt of paper is not an exact personal arrival. The 6 April order places Talbot in Washington by then. No named permanent carrier office."
+      ]
+    },
+    {
+      "id": "C02-1",
+      "observation": "C02",
+      "bearer_label": "Lieutenant Snyder",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "st_gov_south_carolina",
+        "carriers": [
+          {
+            "post": "s73_draft_c02_bearer_1",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.242;243; C02; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Date follows Foster letter of 5 April describing yesterday [I]. Local boat trip, not the onward Washington journey."
+      ]
+    },
+    {
+      "id": "C03-1",
+      "observation": "C03",
+      "bearer_label": "Capt. G. V. Fox",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": null,
+        "carriers": [
+          {
+            "post": "s73_draft_c03_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.236; C03; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Both papers expressly name Fox as bearer. Letter date is not proof of departure. Recipient posts absent."
+      ]
+    },
+    {
+      "id": "C04-1",
+      "observation": "C04",
+      "bearer_label": "R. S. Chew",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "st_gov_south_carolina",
+        "carriers": [
+          {
+            "post": "s73_draft_c04_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.245;251;252;291; C04; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Joint journey, not serial handoffs. Chew read and handed the notice; Pickens then read and handed it to Beauregard. Talbot was refused entry to Sumter. Return: Charleston 8 April 23:00 -> Washington 12 April morning."
+      ]
+    },
+    {
+      "id": "C04-2",
+      "observation": "C04",
+      "bearer_label": "Theo. Talbot",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "st_gov_south_carolina",
+        "carriers": [
+          {
+            "post": "s73_draft_c04_bearer_2",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.245;251;252;291; C04; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Joint journey, not serial handoffs. Chew read and handed the notice; Pickens then read and handed it to Beauregard. Talbot was refused entry to Sumter. Return: Charleston 8 April 23:00 -> Washington 12 April morning."
+      ]
+    },
+    {
+      "id": "C06-1",
+      "observation": "C06",
+      "bearer_label": "Colonel Hayne",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "cs_president",
+        "carriers": [
+          {
+            "post": "s73_draft_c06_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.292; C06; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Paper calls Hayne an aide and trustworthy return bearer. Neither actual departure nor receipt is dated. Surname not expanded."
+      ]
+    },
+    {
+      "id": "C07-1",
+      "observation": "C07",
+      "bearer_label": "James Chesnut, Jr.",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c07_bearer_1",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.13;59; C07; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Three joint bearers, not three successive offices. Same-day boat classification is [I] from the harbor journey; no exact vessel named in this report."
+      ]
+    },
+    {
+      "id": "C07-2",
+      "observation": "C07",
+      "bearer_label": "Stephen D. Lee",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c07_bearer_2",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.13;59; C07; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Three joint bearers, not three successive offices. Same-day boat classification is [I] from the harbor journey; no exact vessel named in this report."
+      ]
+    },
+    {
+      "id": "C07-3",
+      "observation": "C07",
+      "bearer_label": "A. R. Chisolm",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c07_bearer_3",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.13;59; C07; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Three joint bearers, not three successive offices. Same-day boat classification is [I] from the harbor journey; no exact vessel named in this report."
+      ]
+    },
+    {
+      "id": "C08-1",
+      "observation": "C08",
+      "bearer_label": "James Chesnut, Jr.",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c08_bearer_1",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.14;18;60; C08; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Chesnut/Lee sign the detailed report; Foster p.18 lists four visitors and rounds arrival to01:00. Preserve both observations; companions are not serial bearers. Reply received 03:15. Negotiation time is not a compliance hold."
+      ]
+    },
+    {
+      "id": "C08-2",
+      "observation": "C08",
+      "bearer_label": "Stephen D. Lee",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c08_bearer_2",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.14;18;60; C08; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Chesnut/Lee sign the detailed report; Foster p.18 lists four visitors and rounds arrival to01:00. Preserve both observations; companions are not serial bearers. Reply received 03:15. Negotiation time is not a compliance hold."
+      ]
+    },
+    {
+      "id": "C08-3",
+      "observation": "C08",
+      "bearer_label": "Colonel Chisolm",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c08_bearer_3",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.14;18;60; C08; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Chesnut/Lee sign the detailed report; Foster p.18 lists four visitors and rounds arrival to01:00. Preserve both observations; companions are not serial bearers. Reply received 03:15. Negotiation time is not a compliance hold."
+      ]
+    },
+    {
+      "id": "C08-4",
+      "observation": "C08",
+      "bearer_label": "Mr. Pryor",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c08_bearer_4",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.14;18;60; C08; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Chesnut/Lee sign the detailed report; Foster p.18 lists four visitors and rounds arrival to01:00. Preserve both observations; companions are not serial bearers. Reply received 03:15. Negotiation time is not a compliance hold."
+      ]
+    },
+    {
+      "id": "C09-1",
+      "observation": "C09",
+      "bearer_label": "James Chesnut, Jr.",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": null,
+        "carriers": [
+          {
+            "post": "s73_draft_c09_bearer_1",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.14;60; C09; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "03:20 is the notice time, not an independently timed boat departure. James is the recipient, not a bearer. Fort Johnson recipient post not declared."
+      ]
+    },
+    {
+      "id": "C09-2",
+      "observation": "C09",
+      "bearer_label": "Stephen D. Lee",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": null,
+        "carriers": [
+          {
+            "post": "s73_draft_c09_bearer_2",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.14;60; C09; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "03:20 is the notice time, not an independently timed boat departure. James is the recipient, not a bearer. Fort Johnson recipient post not declared."
+      ]
+    },
+    {
+      "id": "C10-1",
+      "observation": "C10",
+      "bearer_label": "Colonel Miles",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c10_bearer_1",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.15; C10; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Beauregard names these aides as the first group. Do not replace them with later visitors or infer a single continuous chain."
+      ]
+    },
+    {
+      "id": "C10-2",
+      "observation": "C10",
+      "bearer_label": "Colonel Pryor",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c10_bearer_2",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.15; C10; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Beauregard names these aides as the first group. Do not replace them with later visitors or infer a single continuous chain."
+      ]
+    },
+    {
+      "id": "C10-3",
+      "observation": "C10",
+      "bearer_label": "Captain Lee",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c10_bearer_3",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.15; C10; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Beauregard names these aides as the first group. Do not replace them with later visitors or infer a single continuous chain."
+      ]
+    },
+    {
+      "id": "C11-1",
+      "observation": "C11",
+      "bearer_label": "Colonel Allston",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c11_bearer_1",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.15; C11; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Second group named by Beauregard. Do not expand Allston or Jones into unsupported identities. Written confirmation dated 17:55; its own bearer is not named."
+      ]
+    },
+    {
+      "id": "C11-2",
+      "observation": "C11",
+      "bearer_label": "Major Jones",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c11_bearer_2",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.15; C11; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Second group named by Beauregard. Do not expand Allston or Jones into unsupported identities. Written confirmation dated 17:55; its own bearer is not named."
+      ]
+    },
+    {
+      "id": "C12-1",
+      "observation": "C12",
+      "bearer_label": "Colonel Wigfall",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c12_bearer_1",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.14;15;38;61; C12; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Simons says he sent Wigfall; do not call this a direct presidential or Beauregard instruction. His unconditional-surrender account conflicts with Anderson formal terms. No forced successful authority."
+      ]
+    },
+    {
+      "id": "C12-2",
+      "observation": "C12",
+      "bearer_label": "Private Gourdin Young",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c12_bearer_2",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.14;15;38;61; C12; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Simons says he sent Wigfall; do not call this a direct presidential or Beauregard instruction. His unconditional-surrender account conflicts with Anderson formal terms. No forced successful authority."
+      ]
+    },
+    {
+      "id": "C13-1",
+      "observation": "C13",
+      "bearer_label": "James Chesnut, Jr.",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c13_bearer_1",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.62; C13; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "A distinct later visit. The report is dated 15 April describing the 13th; no precise outward time."
+      ]
+    },
+    {
+      "id": "C13-2",
+      "observation": "C13",
+      "bearer_label": "John L. Manning",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c13_bearer_2",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.62; C13; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "A distinct later visit. The report is dated 15 April describing the 13th; no precise outward time."
+      ]
+    },
+    {
+      "id": "C13-3",
+      "observation": "C13",
+      "bearer_label": "A. R. Chisolm",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_fort_sumter",
+        "carriers": [
+          {
+            "post": "s73_draft_c13_bearer_3",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.62; C13; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "A distinct later visit. The report is dated 15 April describing the 13th; no precise outward time."
+      ]
+    },
+    {
+      "id": "C14-1",
+      "observation": "C14",
+      "bearer_label": "Lieutenant Marcy, U. S. Navy",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": null,
+        "carriers": [
+          {
+            "post": "s73_draft_c14_bearer_1",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.38; C14; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Oral inquiry; permission and an answer next day were discussed, not a completed journey to Fort Moultrie. Name not expanded."
+      ]
+    },
+    {
+      "id": "C15-1",
+      "observation": "C15",
+      "bearer_label": "Capt. Ben. Allston",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "cs_cmd_charleston",
+        "carriers": [
+          {
+            "post": "s73_draft_c15_bearer_1",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-1 pp.38; C15; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Exact identity join to Colonel Allston in C11 is held. Dispatch date is contextual, not a dated receipt."
+      ]
+    },
+    {
+      "id": "C16-1",
+      "observation": "C16",
+      "bearer_label": "T. A. M. Craven (Crusader); Captain Walker (Brooklyn)",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": null,
+        "carriers": [
+          {
+            "post": "us_ship_crusader",
+            "route": "ship"
+          },
+          {
+            "post": "us_ship_brooklyn",
+            "route": "ship"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "ORN-I-4 pp.89;90;102;104;110;111; C16; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "March 11 order promises an unnamed government bearer. Ward is expressly bearer of the Navy order to Craven, not established as bearer of the Army order. Do not invent the opening leg. Adams April1 refusal is a separate return paper. Addressee Vogdes is not the ship post holder Adams; destination-post binding is held."
+      ]
+    },
+    {
+      "id": "C17-1",
+      "observation": "C17",
+      "bearer_label": "Commander James H. Ward",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_ship_crusader",
+        "carriers": [
+          {
+            "post": "s73_draft_c17_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "ORN-I-4 pp.90; C17; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Welles says he sent it yesterday by Ward. Actual departure not equated to that statement. Separate from C16 Army paper."
+      ]
+    },
+    {
+      "id": "C18-1",
+      "observation": "C18",
+      "bearer_label": "John L. Worden",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_ship_sabine",
+        "carriers": [
+          {
+            "post": "s73_draft_c18_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "ORN-I-4 pp.110;111;115;118; C18; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "1865 retrospective journey account: destroyed written dispatches near Atlanta and delivered substance. Wind prevented offshore passage 11 April. Return began Pensacola evening12; arrested near Montgomery13, per April15 letter. Weather/capture are not resistance."
+      ]
+    },
+    {
+      "id": "C19-1",
+      "observation": "C19",
+      "bearer_label": "Commodore H. Paulding",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_navy_yard_norfolk",
+        "carriers": [
+          {
+            "post": "s73_draft_c19_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "ORN-I-4 pp.277;278; C19; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Two letters explicitly name Paulding bearer. Do not substitute his later Pawnee expedition for the first visit."
+      ]
+    },
+    {
+      "id": "C20-1",
+      "observation": "C20",
+      "bearer_label": "B. F. Isherwood",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_navy_yard_norfolk",
+        "carriers": [
+          {
+            "post": "s73_draft_c20_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "ORN-I-4 pp.276;280;281; C20; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Isherwood April18 report says he presented orders and letter to McCauley. Do not silently identify that letter as the separately dated 13 April version."
+      ]
+    },
+    {
+      "id": "C21-1",
+      "observation": "C21",
+      "bearer_label": "W. J. Palmer",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": null,
+        "carriers": [
+          {
+            "post": "s73_draft_c21_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-2 pp.595; C21; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Patterson describes a proposed troop route via Susquehanna and Annapolis; that is not evidence Palmer used it. Initials not expanded."
+      ]
+    },
+    {
+      "id": "C22-1",
+      "observation": "C22",
+      "bearer_label": "Major Porter",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": null,
+        "carriers": [
+          {
+            "post": "s73_draft_c22_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-2 pp.608; C22; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Scott April29 says he wrote by Porter on27; paper date is not proved departure. Full identity remains held."
+      ]
+    },
+    {
+      "id": "C23-1",
+      "observation": "C23",
+      "bearer_label": "Colonel Butler",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_general_in_chief",
+        "carriers": [
+          {
+            "post": "s73_draft_c23_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "OR-I-2 pp.608; C23; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Scott April29 acknowledgment. Do not merge bearer Colonel Butler with addressee Brigadier-General Butler or expand surname."
+      ]
+    },
+    {
+      "id": "C26-1",
+      "observation": "C26",
+      "bearer_label": "A. D. Banks",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": "us_secretary_state",
+        "carriers": [
+          {
+            "post": "s73_draft_c26_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "Richardson-I pp.85; C26; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Seward memorandum says intended personal delivery to Secretary, actually received by Assistant Secretary. It does not name that assistant. Initials not expanded."
+      ]
+    },
+    {
+      "id": "C27-1",
+      "observation": "C27",
+      "bearer_label": "J. T. Pickett",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": null,
+        "carriers": [
+          {
+            "post": "s73_draft_c27_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "Richardson-I pp.87;88; C27; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Commissioners April9 acknowledgment names their secretary Pickett. Memorandum says delayed external delivery was with commissioners consent; it had already been submitted to President. No presidential incoming hold or resistant carrier is proved."
+      ]
+    },
+    {
+      "id": "C28-1",
+      "observation": "C28",
+      "bearer_label": "Colonel Lee, military officer",
+      "status": "HELD UNAPPLIED PARTIAL DRAFT; not a valid live latency rule",
+      "latency.dispatches": {
+        "to": null,
+        "carriers": [
+          {
+            "post": "s73_draft_c28_bearer_1",
+            "route": "courier"
+          }
+        ],
+        "terms": {
+          "boldness": null,
+          "honours": [],
+          "offends": []
+        },
+        "source": "Taney-Reports pp.249;250;251;252; C28; see carriers.csv for dates and limitations"
+      },
+      "holds": [
+        "Carrier posts prefixed s73_draft are uncreated research identifiers; C16 instead names existing ship posts, whose actual locations/holders must still be checked.",
+        "terms.boldness is unknown; honours/offends empty mean unassessed, not evidence of absence.",
+        "Destination may be unknown; route courier/ship is an analyst mapping [I], not a sourced travel-time rule.",
+        "S53 is destination-wide, undated and serial; this evidence is a particular journey. Companions are alternative representations, never stack these rows. C16 alone records sequential vessel legs, with its opening leg unresolved.",
+        "Source says Lee appeared carrying return and had no instructions beyond delivery. No identity expansion to another Lee. Spicer issued writ, not established as its bearer. This is a paper to the court, not a proved delivery to Lincoln."
+      ]
+    }
+  ]
+}
