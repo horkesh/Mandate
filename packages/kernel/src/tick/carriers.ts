@@ -12,9 +12,12 @@ export function carryDispatch(ctx: TickContext, start: State, msg: TransitMessag
   const post = msg.msgToPost!;
   const failed = (state: State, why: string): State => {
     if (msg.msgOrder !== null || msg.msgVerb !== null) return returnDispatch(ctx, state, msg, why);
+    const carrierPresent = state.postStates[post]?.postHolder === msg.msgTo;
     sendReport(ctx, state, { to: msg.msgReport!.reportAuthor, tag: `undelivered.${msg.msgOrigin}`, deliveryFailure: true, route: 'courier',
-      body: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: msg.msgTo, reportAuthorPost: post,
-        reportSubjectKind: 'order', reportSubjectId: msg.msgOrigin, reportClaims: [{ claimKind: 'order-returned', claimRegion: null, claimValue: 0, claimToken: why, claimConfidence: 1000 }],
+      // As with an undelivered order, file the failure for its sender when no carrier can author it.
+      // Never turn a departed holder into fresh institutional evidence for his former post.
+      body: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: carrierPresent ? msg.msgTo : msg.msgReport!.reportAuthor, reportAuthorPost: carrierPresent ? post : null,
+        reportSubjectKind: 'post', reportSubjectId: post, reportClaims: [{ claimKind: 'order-returned', claimRegion: null, claimValue: 0, claimToken: why, claimConfidence: 1000 }],
         reportDay: ctx.day, reportHour: null, reportAdvice: null, reportAnswers: msg.msgOrigin },
       truth: { truthTerms: [], truthTrimmed: [] } });
     return state;

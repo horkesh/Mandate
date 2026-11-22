@@ -141,6 +141,24 @@ describe('S53 entrusted dispatch carriers', () => {
     const latency = shipLatencyMap(ground.latency, { ...ground.march, network: { ...ground.march.network, edgeCondition: { [water.id]: 0 } } });
     expect(routeLatency(latency, world.rules.latency, 'ship', R('a_cap'), R('a_front'), F('a'), null)).toEqual({ ok: false, reason: 'route_unavailable' });
   });
+  it('does not author a failed report under a carrier who has left the post', () => {
+    const world = worldFor();
+    const start = createState(world, { seed: 2 });
+    const ctx = ctxFor(world, start, 1, SEATS_MECHANICS);
+    const original = sendReport(ctx, start, { to: P('a_gen'), route: 'courier', tag: 'test.departed-carrier',
+      body: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: P('a_lead'), reportAuthorPost: null,
+        reportSubjectKind: 'post', reportSubjectId: 'a_army', reportClaims: [], reportDay: 1, reportHour: null, reportAdvice: null, reportAnswers: null },
+      truth: { truthTerms: [], truthTrimmed: [] } });
+    const sent = sendMessages(start, ctx.outbox.splice(0));
+    const changed = { ...sent, postStates: { ...sent.postStates, [POST('a_office')]: { ...sent.postStates[POST('a_office')]!, postHolder: null } } };
+    const next = deliverDue(ctxFor(world, changed, 1, SEATS_MECHANICS), changed);
+    const returned = knowledgeOf(next, lead).knownReports.find(r => r.knownBody.reportAnswers === original)!;
+    expect(returned).toBeDefined();
+    expect(returned.knownBody.reportAuthor).toBe(P('a_lead'));
+    expect(returned.knownBody.reportAuthorPost).toBeNull();
+    expect(returned.knownBody.reportSubjectId).toBe(POST('a_office'));
+    expect(knowledgeOf(next, seatIdFor(P('a_gen'))).knownReports.some(r => r.id === original)).toBe(false);
+  });
   it('rejects circular or unsourced dispatch rules without filling vacant posts', () => {
     const world = worldFor();
     const row = world.rules.latency.dispatches![0]!;
