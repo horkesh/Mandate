@@ -24,6 +24,7 @@ import {claimWords,controlColour,reportControlWords} from './control.ts';
 import {CONTROL_PALETTES,CONTROL_PALETTE_IDS,readControlPalette} from './control-palettes.ts';
 import { isTyping, SettingsContext } from '../settings.ts';
 import { S } from '../strings.ts';
+import { LOOK } from '../look.ts';
 import hq from './icons/hq-army.svg?raw';
 import enemy from './icons/enemy-point.svg?raw';
 import works from './icons/entrenchment.svg?raw';
@@ -66,6 +67,9 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
   const [place,setPlace]=useState(''),[active,setActive]=useState<string|null>(null);
   const [candidates,setCandidates]=useState<Record<string,string>>({});
   const [selectedHQ,setSelectedHQ]=useState<string|null>(null);
+  // S60: the printed key opens by itself on a roomy map and folds to its
+  // title on a small one, until the player chooses.
+  const [keyOpen,setKeyOpen]=useState<boolean|null>(null);
   const [look,setLook]=useState(()=>readLook(window.location.search));
   const [palette,setPalette]=useState(()=>readControlPalette(window.location.search));
   const colours=CONTROL_PALETTES[palette].colours;
@@ -150,16 +154,20 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
   const scaleBar=engine.current?.ready?engine.current.scaleBar():null;
   const degreeTicks=engine.current?.ready&&look==='A'?engine.current.degreeTicks():[];
   const frame=engine.current?.ready?engine.current.frameScreen():null;
+  const keyShown=keyOpen??((host.current?.clientWidth??0)>=1000&&(host.current?.clientHeight??0)>=640);
   const frameStyle:CSSProperties|undefined=frame?{left:frame[0],top:frame[1],width:frame[2]-frame[0],height:frame[3]-frame[1]}:undefined;
   const overlayStyle:CSSProperties|undefined=frame?{clipPath:`inset(${frame[1]}px ${Math.max(0,(host.current?.clientWidth??0)-frame[2])}px ${Math.max(0,(host.current?.clientHeight??0)-frame[3])}px ${frame[0]}px)`}:undefined;
 
   return <section className={`staff-map ${reviewPost?'review-map':''} ${study?'comparison-map':''}`} data-look={look} data-palette={palette} style={{'--correction-colour':`#${colours.correction.toString(16).padStart(6,'0')}`} as CSSProperties} aria-label={M.title} onKeyDown={key} data-testid="staff-map">
     <header className="map-header"><span className="map-date">{date}</span><button aria-pressed={text} onClick={()=>setText(v=>!v)}>{text?M.mapView:M.textTwin} <kbd>T</kbd></button></header>
     <div className="map-tools" aria-label={M.map}>
-      <button aria-label={M.zoomOut} onClick={()=>act(r=>r.zoom(.8))}>−</button><button aria-label={M.zoomIn} onClick={()=>act(r=>r.zoom(1.25))}>+</button><button onClick={()=>act(r=>r.fit())}>{M.fit}</button>{reviewPost&&<button onClick={()=>act(r=>r.fitPlan())}>{M.fitPlan}</button>}
-      <button aria-label={M.west} onClick={()=>act(r=>r.pan(100,0))}>{M.west}</button><button aria-label={M.north} onClick={()=>act(r=>r.pan(0,100))}>{M.north}</button><button aria-label={M.south} onClick={()=>act(r=>r.pan(0,-100))}>{M.south}</button><button aria-label={M.east} onClick={()=>act(r=>r.pan(-100,0))}>{M.east}</button>
+      <button className="tool-glyph" aria-label={M.zoomOut} title={M.zoomOut} onClick={()=>act(r=>r.zoom(.8))}>−</button><button className="tool-glyph" aria-label={M.zoomIn} title={M.zoomIn} onClick={()=>act(r=>r.zoom(1.25))}>+</button><button onClick={()=>act(r=>r.fit())}>{M.fit}</button>{reviewPost&&<button onClick={()=>act(r=>r.fitPlan())}>{M.fitPlan}</button>}
+      <span className="tool-sep" aria-hidden="true"/>
+      <button className="tool-glyph" aria-label={M.west} title={M.west} onClick={()=>act(r=>r.pan(100,0))}><span aria-hidden="true">←</span></button><button className="tool-glyph" aria-label={M.north} title={M.north} onClick={()=>act(r=>r.pan(0,100))}><span aria-hidden="true">↑</span></button><button className="tool-glyph" aria-label={M.south} title={M.south} onClick={()=>act(r=>r.pan(0,-100))}><span aria-hidden="true">↓</span></button><button className="tool-glyph" aria-label={M.east} title={M.east} onClick={()=>act(r=>r.pan(-100,0))}><span aria-hidden="true">→</span></button>
+      <span className="tool-sep" aria-hidden="true"/>
       <label><span className="sr-only">{M.places}</span><select aria-label={M.places} value={place} onChange={e=>setPlace(e.target.value)}><option value="">{M.places}</option>{regions.map(r=><option key={r.id} value={r.id}>{t(r.id,'region')}</option>)}</select></label><button disabled={!place} onClick={()=>act(r=>r.focusRegion(place))}>{M.go}</button>
       {pack==='union-1861'&&<button onClick={()=>act(r=>r.focusRegion('culpeper_orange',5))}>{M.virginia}</button>}
+      <span className="tool-sep" aria-hidden="true"/>
       <label className="map-look"><span className="sr-only">Map look</span><select aria-label="Map look" value={palette==='strong'?look:`${look}:research`} onChange={e=>{const [id,p]=e.target.value.split(':');setLook(readLook(`?look=${id}`));setPalette(p==='research'?'research':'strong');}}>{CONTROL_PALETTE_IDS.map(p=><optgroup key={p} label={M.paletteNames[p]}>{LOOKS.map(id=><option key={id} title={LOOK_NAMES[id]} value={p==='strong'?id:`${id}:research`}>{M.lookNames[id]} ({M.paletteNames[p]})</option>)}</optgroup>)}</select></label>
     </div>
     <div className="map-drawing" hidden={text}>
@@ -186,19 +194,22 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
       </div>
       {look==='A'&&<svg className="map-degree-ticks" aria-hidden="true">{degreeTicks.map((t,i)=><g key={i}><line x1={t.x} y1={t.y} x2={t.x+(t.side==='left'?9:t.side==='right'?-9:0)} y2={t.y+(t.side==='top'?9:t.side==='bottom'?-9:0)}/><text x={t.x+(t.side==='left'?15:t.side==='right'?-15:0)} y={t.y+(t.side==='top'?23:t.side==='bottom'?-13:4)} textAnchor={t.side==='left'?'start':t.side==='right'?'end':'middle'}>{t.text}</text></g>)}</svg>}
       {look==='A'&&<><span className="map-meridian top">{MERIDIAN_LABELS.top}</span><span className="map-meridian bottom">{MERIDIAN_LABELS.bottom}</span></>}
+      <div className="map-key" data-key-open={String(keyShown)}>
       {look==='A'&&!study&&!comparisonControl&&<aside className={`map-cartouche${signs?' drawn-cartouche':''}`}>
         {signs&&<span className="cartouche-line" aria-hidden="true" dangerouslySetInnerHTML={{__html:glyphSvg('cartouche','map-title').replace('viewBox="-40 -32 80 64"','viewBox="-36 -24 72 48" preserveAspectRatio="none"')}}/>}
         <h3>{M.title}</h3><p>{STUDY.compiled}</p><time>{date}</time></aside>}
-      {!study&&<aside className="control-legend" aria-label={M.controlLegend} data-testid="control-legend" style={{'--claim-blue':`#${colours.friendly.toString(16).padStart(6,'0')}`,'--claim-red':`#${colours.enemy.toString(16).padStart(6,'0')}`,'--claim-ochre':`#${colours.neutral.toString(16).padStart(6,'0')}`} as CSSProperties}>
+      {!study&&<button type="button" className="map-key-toggle" aria-expanded={keyShown} aria-controls="map-control-key" title={keyShown?LOOK.hideKey:LOOK.showKey} onClick={()=>setKeyOpen(!keyShown)}>{LOOK.mapKey}<span aria-hidden="true">{keyShown?'▾':'▸'}</span></button>}
+      {!study&&<aside id="map-control-key" className="control-legend" aria-label={M.controlLegend} data-testid="control-legend" style={{'--claim-blue':`#${colours.friendly.toString(16).padStart(6,'0')}`,'--claim-red':`#${colours.enemy.toString(16).padStart(6,'0')}`,'--claim-ochre':`#${colours.neutral.toString(16).padStart(6,'0')}`} as CSSProperties}>
         <ul>{(['union','enemy','neutral','contested','held','firm','single','old'] as const).map(kind=><li key={kind}><span className={`claim-swatch claim-${kind}`} aria-hidden="true">{kind==='contested'&&<svg viewBox="0 0 28 14"><path d="M0 0l14 14M10 0l14 14M20 0l8 8" stroke="var(--claim-blue)"/><path d="M0 14L14 0M10 14L24 0M20 14l8-8" stroke="var(--claim-red)"/></svg>}</span>{M.controlKey[kind]}</li>)}</ul><p className="wash-meaning">{M.washMeaning}</p>
       </aside>}
-      {frame&&<div className="map-neatline" aria-hidden="true" style={frameStyle}/>}
-      {active&&model&&<div className="map-note" role="status">{describe(model.marks.find(m=>m.id===active)!)}</div>}
-      {!active&&engine.current?.hoveredRegion()&&<div className="map-note" data-testid="control-hover" role="status">{describeControl(engine.current.hoveredRegion()!.id)}</div>}
       <div className="map-scale drawn-scale" aria-hidden="true">
         <span className="north-rose" style={{transform:`rotate(${engine.current?.ready?engine.current.northAngle():0}deg)`}}><span dangerouslySetInnerHTML={{__html:glyphSvg('compass','map-north')}}/></span>
         {scaleBar?<><span className="decorated-bar" style={{width:scaleBar.pixels*1.6}} dangerouslySetInnerHTML={{__html:glyphSvg('scale','map-miles')}}/><b style={{width:scaleBar.pixels}}><span>0</span><span>{scaleBar.miles} {M.miles}</span></b></>:<><i/>{geometry?.schematic?'':M.miles}</>}
       </div>
+      </div>
+      {frame&&<div className="map-neatline" aria-hidden="true" style={frameStyle}/>}
+      {active&&model&&<div className="map-note" role="status">{describe(model.marks.find(m=>m.id===active)!)}</div>}
+      {!active&&engine.current?.hoveredRegion()&&<div className="map-note" data-testid="control-hover" role="status">{describeControl(engine.current.hoveredRegion()!.id)}</div>}
     </div>
     {(text||failed)&&<div ref={twin} className="map-text" data-testid="map-text-twin" tabIndex={0}>
       {geometry&&<section><h3>{M.regionNames}</h3><ul>{geometry.regions.map(r=><li key={r.id}>{describeControl(r.id)}</li>)}</ul></section>}

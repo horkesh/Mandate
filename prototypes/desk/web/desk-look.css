@@ -1,0 +1,613 @@
+/*
+ * S60: the desk's look. A working desk in the President's office, 1861.
+ * Loaded last (main.tsx), scoped to the table desk, so earlier request styles
+ * stay intact underneath and this layer can be reviewed as one unit.
+ *
+ * Layout: the staff map lies on a green blotter at the centre; the calendar,
+ * attention and trays stand at the left edge; the board, books, file and
+ * folders at the right; the docket and "Let the days run" on the front edge.
+ * Nothing sits on the map except its own printed key and the open paper.
+ *
+ * Neutral textures (ASSETS 0.2: delivered at a mean value of 230, for the skin
+ * to tone) are toned here with soft-light over a stock colour, so paper reads
+ * as paper rather than grey.
+ */
+
+/* ------------------------------------------------------------------ tokens */
+.table-app{
+  --wood:#3a2314;--wood-lo:#1c1009;
+  --brass:#b48d4e;--brass-hi:#e9d29a;--brass-lo:#6c4f25;
+  --cream:#f1e4c6;--buff:#ead6a4;--stock:#f4ecda;--card:#efe3c4;--manila:#dcc58f;
+  --ink:#2a2118;--ink-2:#45392a;--ink-3:#5f5039;
+  --rule:#8a7350;--stamp-ink:#7a2c20;
+  --gilt:#f2dc9c;--morocco:#1c3828;--morocco-hi:#2a5039;
+  --focus-dark:#0f2a46;--focus-light:#f7de92;
+  --rail-l:clamp(148px,11.6vw,400px);
+  --rail-r:clamp(158px,12.4vw,430px);
+  --front:clamp(62px,9.4vh,136px);
+  --gap:clamp(8px,calc(.6vw + .3vh),22px);
+  --sheet:clamp(14px,1.9vh,30px);
+  --strip:clamp(34px,4.1vh,54px);
+  --chrome-scale:min(var(--text-scale),1.35);
+  --t-xs:calc(clamp(12px,1.22vh,17px) * var(--chrome-scale));
+  --t-s:calc(clamp(13px,1.42vh,20px) * var(--chrome-scale));
+  --t-m:calc(clamp(15px,1.8vh,25px) * var(--chrome-scale));
+  --t-l:calc(clamp(17px,2.3vh,32px) * var(--chrome-scale));
+  --t-xl:calc(clamp(27px,4vh,58px) * var(--chrome-scale));
+}
+
+/* One focus ring for every surface: a dark inner ring reads on paper, a pale
+   outer ring reads on wood and baize. */
+.table-app :is(button,select,input,textarea,[tabindex="0"]):focus-visible{
+  outline:3px solid var(--focus-light);outline-offset:3px;box-shadow:0 0 0 3px var(--focus-dark);
+}
+.table-app .pixi-map:focus-visible{outline:3px solid var(--focus-dark);outline-offset:-6px;box-shadow:inset 0 0 0 6px var(--focus-light)}
+
+/* ------------------------------------------------------------- the desk */
+.table-app .table-shell{
+  background:
+    radial-gradient(ellipse 60% 55% at 26% 12%,#ffd89a1f,transparent 62%),
+    radial-gradient(ellipse 120% 95% at 50% 42%,transparent 58%,#0a0502b8 100%),
+    url('/art/_pilot/desk-surface.png') center/cover,var(--wood);
+}
+/* The desk's front edge: a darker rail with a worn highlight. */
+.table-app .table-shell:before{
+  content:"";position:absolute;left:0;right:0;bottom:0;z-index:0;pointer-events:none;
+  height:calc(var(--front) + var(--gap));
+  background:linear-gradient(#0000,#0000001f 30%,#00000057),linear-gradient(90deg,#00000038,#0000 18%,#0000 82%,#00000038);
+  border-top:1px solid #ffffff12;box-shadow:inset 0 1px 0 #00000059;
+}
+.table-app .playable-table{
+  position:relative;z-index:1;box-sizing:border-box;
+  display:grid;gap:var(--gap);padding:var(--gap) var(--gap) 0;
+  grid-template-columns:var(--rail-l) minmax(0,1fr) var(--rail-r);
+  grid-template-rows:auto minmax(0,1fr) var(--front);
+  grid-template-areas:"cal map books" "trays map books" "front front run";
+}
+
+/* ------------------------------------------------------ map on the blotter */
+.table-app .playable-table>.table-map-layout{
+  grid-area:map;position:relative;inset:auto;display:block;min-width:0;min-height:0;
+  background:url('/art/app/textures/blotter.png') center/100% 100% no-repeat,var(--morocco);
+  border-radius:9px;box-shadow:0 1px 0 #ffffff14 inset,3px 9px 20px #000a,0 1px 3px #000c;
+}
+.table-app .table-map-layout>.staff-map{
+  position:absolute;inset:var(--sheet) var(--sheet) calc(var(--strip) + var(--sheet)) var(--sheet);
+  border:0;background:#e9dcbf;
+  box-shadow:0 0 0 1px #6c5434,0 0 0 5px #efe3c6,0 0 0 6px #7d6643,2px 5px 8px 4px #0009,0 16px 26px -6px #000b;
+}
+.table-app .table-map-layout .map-drawing{position:absolute;inset:0;min-height:0}
+.table-app .table-map-layout .map-footer{display:none}
+
+/* The instrument strip: one restrained ebony rule on the blotter, under the
+   sheet. Glyph buttons keep their spoken names. */
+.table-app .table-map-layout .map-tools{
+  position:absolute;left:-1px;right:auto;bottom:auto;top:calc(100% + 9px);
+  width:auto;max-width:calc(100% - 15em);height:calc(var(--strip) - 12px);min-height:30px;box-sizing:border-box;
+  display:flex;flex-wrap:nowrap;align-items:center;gap:2px;padding:2px 5px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;
+  font:var(--t-xs)/1 Standard,Georgia,serif;color:#f1e1b8;
+  background:linear-gradient(#2c1f15,#140c07);border:1px solid #8d6c3b;border-radius:3px;
+  box-shadow:inset 0 1px #ffffff1c,inset 0 -1px #0008,0 2px 5px #0009;
+}
+.table-app .table-map-layout .map-tools>*{flex:none}
+.table-app .table-map-layout .map-tools button{
+  height:100%;min-width:2.2em;padding:0 .7em;border:1px solid transparent;border-radius:2px;
+  background:transparent;color:#f1e1b8;font:inherit;line-height:1;white-space:nowrap;
+}
+.table-app .table-map-layout .map-tools button:hover:not(:disabled){background:#ffffff17;border-color:#b48d4e80}
+.table-app .table-map-layout .map-tools button:disabled{color:#b9a98a;opacity:1}
+.table-app .table-map-layout .map-tools .tool-glyph{min-width:2em;padding:0 .35em;font-size:1.2em}
+.table-app .table-map-layout .map-tools .tool-sep{width:1px;align-self:stretch;margin:3px 4px;background:linear-gradient(#0000,#b48d4e99,#0000)}
+.table-app .table-map-layout .map-tools label{margin:0;max-width:12em;flex:0 1 10em;height:100%}
+.table-app .table-map-layout .map-tools label.map-look{flex-basis:9.5em}
+.table-app .table-map-layout .map-tools select{
+  height:100%;width:100%;padding:0 .5em;font:inherit;color:#f1e1b8;background:#0f0905;
+  border:1px solid #6c4f25;border-radius:2px;
+}
+.table-app .table-map-layout .map-header{
+  position:absolute;right:-1px;left:auto;bottom:auto;top:calc(100% + 9px);z-index:20;
+  height:calc(var(--strip) - 12px);min-height:30px;box-sizing:border-box;padding:0;border:0;background:none;font-size:var(--t-xs);
+}
+.table-app .table-map-layout .map-header button{
+  height:100%;padding:0 .9em;font:var(--t-xs)/1 Standard,Georgia,serif;color:#f1e1b8;
+  background:linear-gradient(#2c1f15,#140c07);border:1px solid #8d6c3b;border-radius:3px;box-shadow:inset 0 1px #ffffff1c,0 2px 5px #0009;
+}
+.table-app .table-map-layout .map-header button:hover{background:#3a2a1d}
+.table-app .table-map-layout .map-header kbd{border-color:#5f4524;background:#2c1f15;color:inherit}
+
+/* The printed key: title, control key, compass and scale in one cartouche on
+   the sheet's lower right, collapsing to its title on a small map. */
+.table-app .table-map-layout .map-key{
+  position:absolute;right:calc(var(--sheet) + 4px);bottom:calc(var(--sheet) + 4px);z-index:9;
+  width:clamp(190px,20%,300px);box-sizing:border-box;padding:.65em .8em .6em;
+  display:flex;flex-direction:column;align-items:stretch;gap:.45em;
+  color:#4a3420;font:var(--t-xs)/1.3 Fell,Georgia,serif;
+  background:url('/art/app/textures/paper-linen-map.png') center/420px,#efe2c2;background-blend-mode:soft-light,normal;
+  box-shadow:0 0 0 1px #5d4527,0 0 0 4px #efe2c2,0 0 0 5px #5d4527,2px 4px 8px 4px #39260c40;
+}
+.table-app .table-map-layout .map-key:before,.table-app .table-map-layout .map-key:after{
+  content:"";position:absolute;width:14px;height:14px;border:1px solid #5d4527;pointer-events:none;
+}
+.table-app .table-map-layout .map-key:before{top:3px;left:3px;border-right:0;border-bottom:0}
+.table-app .table-map-layout .map-key:after{right:3px;bottom:3px;border-left:0;border-top:0}
+.table-app .table-map-layout .map-key>*{position:static!important;inset:auto!important;transform:none!important;margin:0!important}
+.table-app .table-map-layout .map-key .map-cartouche,
+.table-app .table-map-layout .map-key .map-cartouche.drawn-cartouche{
+  width:auto!important;max-width:none;padding:0!important;border:0;background:none;box-shadow:none;text-align:center;color:inherit;
+}
+.table-app .table-map-layout .map-key .map-cartouche:before{width:60%;height:9px;margin:0 auto 4px;opacity:.8}
+.table-app .table-map-layout .map-key .cartouche-line{display:none}
+.table-app .table-map-layout .map-key .map-cartouche h3{font:calc(var(--t-m) * 1.05)/1.1 Fell,Georgia,serif;letter-spacing:.14em;margin:0 0 .15em;font-variant:normal}
+.table-app .table-map-layout .map-key .map-cartouche p{font:italic var(--t-xs)/1.25 Fell,Georgia,serif;margin:0 0 .1em}
+.table-app .table-map-layout .map-key .map-cartouche time{font:var(--t-xs) Standard,Georgia,serif;letter-spacing:.04em}
+.table-app .table-map-layout .map-key .control-legend{
+  width:auto;padding:.45em 0 0;border:0;border-top:1px solid #5d452799;background:none;box-shadow:none;color:inherit;
+  font:italic var(--t-xs)/1.25 Fell,Georgia,serif;
+}
+.table-app .table-map-layout .map-key .control-legend ul{gap:4px 10px}
+.table-app .table-map-layout .map-key .claim-swatch{width:22px;height:11px}
+.table-app .table-map-layout .map-key .wash-meaning{font-size:.86em;margin-top:5px}
+.table-app .table-map-layout .map-key .map-scale,
+.table-app .table-map-layout .staff-map .map-key .map-scale{
+  position:static!important;right:auto!important;bottom:auto!important;width:auto!important;min-height:0!important;
+  padding:.3em 0 0!important;border:0!important;border-top:1px solid #5d452799!important;background:none!important;box-shadow:none!important;
+  flex-direction:row;justify-content:center;align-items:center;gap:.8em;color:inherit;
+}
+.table-app .table-map-layout .map-key .map-scale .north-rose{height:auto}
+.table-app .table-map-layout .map-key .map-scale .north-rose svg{width:clamp(34px,3.6vh,54px);height:clamp(28px,3vh,44px)}
+.table-app .table-map-layout .map-key .map-scale .decorated-bar{height:22px}
+/* Outside the table desk the key's parts keep their own places. */
+.map-key{display:contents}
+.map-key-toggle{display:none}
+.table-app .table-map-layout .map-key-toggle{
+  display:flex;align-items:center;justify-content:center;gap:.5em;align-self:center;
+  padding:.25em .9em;font:var(--t-xs)/1.2 Standard,Georgia,serif;color:var(--ink);
+  background:transparent;border:1px solid #5d4527aa;border-radius:2px;
+}
+.table-app .table-map-layout .map-key-toggle:hover{background:#5d45271a}
+.table-app .table-map-layout .map-key-toggle span[aria-hidden]{font-size:.8em}
+.table-app .table-map-layout .map-key[data-key-open=false] .control-legend,
+.table-app .table-map-layout .map-key[data-key-open=false] .map-scale{display:none!important}
+.table-app .table-map-layout .map-key[data-key-open=false]{width:auto;min-width:170px}
+
+/* Reported places, arrivals and cards on the map keep their own styles; the
+   card at a flag becomes a pinned card. */
+.table-app .holder-at-flag{background:url('/art/app/textures/card-stock.png') center/400px,var(--card);background-blend-mode:soft-light,normal;border:0;box-shadow:0 0 0 1px #a08a62,3px 7px 16px #2a1a0a66}
+
+/* ------------------------------------------------ left edge: calendar, trays */
+.table-app .table-calendar{
+  grid-area:cal;position:relative;left:auto;top:auto;z-index:2;
+  display:flex;flex-direction:column;align-items:stretch;gap:calc(var(--gap) * .9);min-width:0;
+}
+.table-app .table-calendar>button{transform:none;box-shadow:none;background:none;border:0;padding:0;color:var(--ink);font:inherit}
+/* The tear-off calendar block, its date set in type. */
+.table-app .table-calendar>.calendar-block{
+  display:block;width:100%;box-sizing:border-box;text-align:center;
+  border-style:solid;border-width:calc(var(--rail-l) * .16) calc(var(--rail-l) * .035) calc(var(--rail-l) * .05);
+  border-image:url('/art/app/chrome/calendar-block.png') 62 12 18 fill / calc(var(--rail-l) * .16) calc(var(--rail-l) * .035) calc(var(--rail-l) * .05) stretch;
+  padding:.35em .3em .45em;filter:drop-shadow(3px 6px 5px #000a);transition:transform .15s,filter .15s;
+}
+.table-app .table-calendar>.calendar-block:hover:not(:disabled){transform:translateY(-2px);filter:drop-shadow(4px 9px 7px #000a)}
+.table-app .calendar-face{display:flex;flex-direction:column;align-items:center;line-height:1.05}
+.table-app .calendar-face small{font:italic var(--t-s)/1.2 Fell,Georgia,serif;color:var(--ink-2)}
+.table-app .calendar-face strong{font:400 var(--t-xl)/1 Standard,Georgia,serif;color:#1f1912;margin:.04em 0 .02em}
+.table-app .calendar-face span{font:var(--t-s)/1.25 Fell,Georgia,serif;color:var(--ink)}
+.table-app .calendar-face em{margin-top:.35em;padding-top:.3em;border-top:1px solid #8a735066;font:italic var(--t-xs)/1.2 Fell,Georgia,serif;color:var(--ink-3)}
+.table-app .calendar-block time{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+/* Attention: brass tokens on a leather strip, with the count in type. */
+.table-app .attention-desk{
+  display:block;width:100%;box-sizing:border-box;padding:.45em .55em .5em!important;text-align:left;
+  background:linear-gradient(#2b1b11,#1a0f08)!important;border:1px solid #6c4f25!important;border-radius:4px;
+  box-shadow:inset 0 1px #ffffff14,0 3px 6px #0009!important;color:#f1e1b8!important;
+}
+.table-app .attention-desk:hover:not(:disabled){background:linear-gradient(#352317,#1f130a)!important}
+.table-app .attention-desk>span:first-child{display:block;font:var(--t-xs)/1.2 Standard,Georgia,serif;color:#e9d6a8;margin-bottom:.3em}
+.table-app .attention-desk .attention-budget{max-width:none;font:italic var(--t-xs)/1.25 Fell,Georgia,serif;gap:.3em}
+.table-app .attention-desk .attention-coins{max-width:none;gap:3px}
+.table-app .attention-desk .attention-coins i{
+  width:clamp(15px,2vh,27px);height:clamp(15px,2vh,27px);border:0;border-radius:50%;box-shadow:none;
+  background:url('/art/app/chrome/attention-token.png') center/contain no-repeat;filter:drop-shadow(0 1px 1px #000c);
+}
+.table-app .attention-desk .attention-coins i.proposed{outline:2px solid var(--focus-light);outline-offset:1px;background-image:url('/art/app/chrome/attention-token-spent.png')}
+.table-app .attention-desk .attention-price{color:var(--focus-light)}
+
+.table-app .table-trays{
+  grid-area:trays;position:relative;left:auto;top:auto;z-index:2;width:auto;min-height:0;
+  display:flex;flex-direction:column;gap:calc(var(--gap) * 1.2);align-content:start;
+}
+.table-app .tray-stack{
+  position:relative;display:block;width:100%;aspect-ratio:520/400;max-height:calc((100% - var(--gap)) / 2);
+  padding:0;transform:none;border:0;background:none;color:var(--ink);overflow:visible;
+  transition:transform .15s,filter .15s;filter:drop-shadow(4px 8px 6px #000b);
+}
+.table-app .tray-stack:hover:not(:disabled){transform:translateY(-3px);filter:drop-shadow(5px 11px 8px #000b)}
+.table-app .tray-stack>img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:0}
+/* Papers waiting in the tray, drawn only when there are some. */
+.table-app .tray-stack[data-count]:not([data-count="0"]):before,
+.table-app .tray-stack[data-count]:not([data-count="0"]):after{
+  content:"";position:absolute;z-index:1;left:16%;right:16%;top:13%;height:48%;
+  background:linear-gradient(#f4ead2,#e9dcbc);box-shadow:0 1px 2px #0006;border:1px solid #c8b58c;
+}
+.table-app .tray-stack[data-count]:not([data-count="0"]):before{transform:rotate(-3.5deg) translate(-3%,2%)}
+.table-app .tray-stack[data-count]:not([data-count="0"]):after{transform:rotate(1.5deg);background:repeating-linear-gradient(#0000 0 9px,#7d6a4924 9px 10px),linear-gradient(#f6eedb,#ecdfc2)}
+.table-app .tray-stack>span{
+  position:absolute;z-index:2;left:50%;bottom:9%;transform:translateX(-50%);
+  display:flex;align-items:baseline;gap:.45em;white-space:nowrap;
+  padding:.28em .75em;border:1px solid #6c4f25;box-shadow:0 0 0 2px #b48d4e,0 2px 3px 2px #0008;
+  background:linear-gradient(#f5ebd3,#e6d6b0);color:var(--ink);font:var(--t-s)/1.15 Standard,Georgia,serif;
+}
+.table-app .tray-stack>span b{font:700 1em Standard,Georgia,serif;margin:0;padding:0}
+.table-app .tray-stack>small{
+  position:absolute;z-index:2;left:0;right:0;top:calc(100% + 2px);text-align:center;
+  font:italic var(--t-xs)/1.2 Fell,Georgia,serif;color:#ead9b0;text-shadow:0 1px 2px #000;margin:0;
+}
+
+/* ------------------------------------------------ right edge: the objects */
+.table-app .table-books{
+  grid-area:books;position:relative;right:auto;top:auto;z-index:2;max-width:none;width:auto;min-height:0;
+  display:grid;gap:calc(var(--gap) * 1.1) calc(var(--gap) * .8);align-content:start;
+  grid-template-columns:1fr 1fr;
+  grid-template-areas:"board board" "ledger daybook" "file file" "plans plans" "progress progress" "orders help" "sound sound";
+}
+.table-app .table-books>button{
+  position:relative;display:block;max-width:none;width:100%;min-width:0;padding:0;margin:0;
+  background:none;border:0;box-shadow:none;color:var(--ink);font:var(--t-xs)/1.2 Standard,Georgia,serif;
+  transition:transform .15s,filter .15s;filter:drop-shadow(3px 7px 5px #000b);
+}
+.table-app .table-books>button:hover:not(:disabled){background:none;transform:translateY(-3px);filter:drop-shadow(4px 10px 7px #000b)}
+.table-app .table-books>button:disabled{opacity:.62}
+.table-app .table-books>button>img{display:block;width:100%;height:100%;object-fit:contain;margin:0;filter:none;vertical-align:top}
+.table-app .table-books .tool-label{
+  position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);
+  display:block;max-width:88%;box-sizing:border-box;padding:.3em .55em;text-align:center;
+  background:linear-gradient(#f6ecd4,#e8d8b3);color:var(--ink);border:1px solid #8a7350;box-shadow:0 1px 3px #0007;
+  font:var(--t-xs)/1.15 Standard,Georgia,serif;overflow-wrap:normal;
+}
+.table-app .tool-board{grid-area:board;height:clamp(78px,13vh,250px)}
+.table-app .tool-ledger{grid-area:ledger;height:clamp(84px,14vh,270px)}
+.table-app .tool-daybook{grid-area:daybook;height:clamp(84px,14vh,270px)}
+.table-app .tool-file{grid-area:file;height:clamp(56px,8.6vh,170px)}
+.table-app .tool-plans{grid-area:plans}.table-app .tool-progress{grid-area:progress}
+.table-app .tool-orders{grid-area:orders}.table-app .tool-help{grid-area:help}
+.table-app .tool-sound{grid-area:sound}
+/* The org board as a framed cork board with cards pinned on it. */
+.table-app .table-books>.tool-board{
+  border-style:solid;border-width:calc(var(--rail-r) * .045);
+  border-image:url('/art/app/chrome/board-frame.png') 52 fill / calc(var(--rail-r) * .045) stretch;
+}
+.table-app .tool-board>.tool-art{position:absolute;inset:0;pointer-events:none}
+.table-app .tool-board>.tool-art:before,.table-app .tool-board>.tool-art:after{
+  content:"";position:absolute;width:24%;height:30%;background:#efe4c8;box-shadow:1px 2px 2px #0007;
+}
+.table-app .tool-board>.tool-art:before{left:8%;top:10%;transform:rotate(-4deg)}
+.table-app .tool-board>.tool-art:after{right:8%;bottom:10%;transform:rotate(3deg)}
+.table-app .tool-board .tool-label:before{
+  content:"";position:absolute;left:50%;top:-.55em;width:1em;height:1em;transform:translateX(-50%);
+  background:url('/art/app/chrome/pin.png') center/contain no-repeat;
+}
+/* Paper labels pasted on the book covers and the drawer front. */
+.table-app .tool-ledger .tool-label,.table-app .tool-daybook .tool-label{top:38%;max-width:80%;padding:.35em .4em;font-size:calc(var(--t-xs) * .95)}
+.table-app .tool-file .tool-label{top:42%}
+/* Folders, the order pad and the key card are drawn in CSS. */
+.table-app .tool-plans,.table-app .tool-progress{min-height:clamp(36px,4.8vh,70px)}
+.table-app .tool-orders,.table-app .tool-help{min-height:clamp(44px,6.4vh,100px)}
+.table-app .tool-plans>.tool-art,.table-app .tool-progress>.tool-art{
+  position:absolute;inset:16% 0 0;border-radius:2px 2px 3px 3px;
+  background:linear-gradient(#e3cc93,#cdb277);border:1px solid #8c7442;box-shadow:inset 0 1px #fff5;
+}
+.table-app .tool-plans>.tool-art:before,.table-app .tool-progress>.tool-art:before{
+  content:"";position:absolute;left:5%;top:-17%;width:28%;height:18%;border-radius:4px 4px 0 0;
+  background:#d9c085;border:1px solid #8c7442;border-bottom:0;
+}
+.table-app .tool-progress>.tool-art{background:linear-gradient(#d8c18c,#c2a66c)}
+.table-app .tool-progress>.tool-art:before{left:auto;right:6%;background:#cfb57b}
+.table-app .tool-orders>.tool-art{
+  position:absolute;inset:4% 8% 0 4%;border:1px solid #b9a57d;
+  background:repeating-linear-gradient(#0000 0 8px,#7d6a4930 8px 9px) 0 26%/100% 70% no-repeat,linear-gradient(#f7efdc,#ece0c4);
+}
+.table-app .tool-orders>.tool-art:after{
+  content:"";position:absolute;right:-6%;top:-6%;width:16%;height:120%;transform:rotate(28deg);transform-origin:top;
+  background:linear-gradient(90deg,#1b1209,#4a3622 45%,#1b1209);border-radius:2px 2px 40% 40%;box-shadow:1px 2px 2px #0008;
+}
+.table-app .tool-help>.tool-art{
+  position:absolute;inset:8% 6%;border:1px solid #9b875f;box-shadow:inset 0 0 0 3px #efe3c4,inset 0 0 0 4px #9b875f;
+  background:url('/art/app/textures/card-stock.png') center/300px,var(--card);background-blend-mode:soft-light,normal;transform:rotate(-2deg);
+}
+.table-app .tool-plans .tool-label,.table-app .tool-progress .tool-label,.table-app .tool-orders .tool-label,.table-app .tool-help .tool-label{
+  top:58%;max-width:92%;padding:.25em .35em;background:none;border:0;box-shadow:none;font-size:calc(var(--t-xs) * .95);
+}
+.table-app .tool-orders .tool-label,.table-app .tool-help .tool-label{background:#f6eedbe6}
+.table-app .table-books .plan-pending-badge{
+  position:absolute;z-index:3;right:-4px;top:-4px;max-width:92%;padding:.15em .45em;
+  background:var(--stamp-ink);color:#fbefd5;font:var(--t-xs)/1.2 Standard,Georgia,serif;border-radius:2px;box-shadow:0 1px 3px #0009;
+}
+.table-app .table-books .plan-pending-badge:empty{display:none}
+.table-app .table-books>.tool-sound{
+  justify-self:center;width:auto;padding:.3em .9em;filter:none;font:var(--t-xs)/1.2 Standard,Georgia,serif;color:#ead9b0;
+  background:#00000040;border:1px solid #6c4f2599;border-radius:3px;
+}
+.table-app .table-books>.tool-sound:hover:not(:disabled){transform:none;background:#00000066;filter:none}
+.table-app .table-books>.tool-sound[aria-pressed=true]{color:var(--focus-light);border-color:var(--brass)}
+
+/* ---------------------------------------------- front edge: docket and run */
+.table-app .desk-front{
+  grid-area:front;position:relative;z-index:2;min-width:0;display:flex;align-items:center;gap:var(--gap);
+  padding:0 0 calc(var(--gap) * .6);
+}
+.table-app .table-docket{
+  position:relative;left:auto;bottom:auto;max-width:none;flex:1;min-width:0;height:100%;
+  display:flex;align-items:center;gap:calc(var(--gap) * 1.1);font:var(--t-xs)/1.3 Standard,Georgia,serif;
+}
+/* The spike: a brass base and its pin, with a slip on it while decisions wait. */
+.table-app .table-docket>button{
+  position:relative;flex:none;height:100%;aspect-ratio:1;max-height:calc(var(--front) - 10px);padding:0;
+  background:url('/art/app/chrome/docket-spike.png') center 62%/70% no-repeat;border:0;color:var(--ink);
+  filter:drop-shadow(2px 4px 3px #000a);transition:transform .15s;
+}
+.table-app .table-docket>button:hover:not(:disabled){transform:translateY(-2px);background-color:transparent}
+.table-app .table-docket>button:before{
+  content:"";position:absolute;left:calc(50% - 1px);top:8%;height:52%;width:2px;background:linear-gradient(90deg,#8f8a80,#f1ede4,#6b665d);border-radius:1px 1px 0 0;
+}
+.table-app .table-docket>button>.docket-count{
+  position:absolute;left:50%;bottom:2%;transform:translateX(-50%);white-space:nowrap;
+  padding:.15em .55em;background:linear-gradient(#f5ebd3,#e6d6b0);border:1px solid #6c4f25;box-shadow:0 1px 3px #0008;
+  font:var(--t-xs)/1.15 Standard,Georgia,serif;
+}
+.table-app .table-docket>div{display:flex;align-items:center;gap:calc(var(--gap) * .9);overflow-x:auto;overflow-y:hidden;max-width:none;flex:1;min-width:0;height:100%;padding:4px 6px;scrollbar-width:thin}
+.table-app .table-docket>div>span{color:#ead9b0;font:italic var(--t-s)/1.3 Fell,Georgia,serif;text-shadow:0 1px 2px #000}
+.table-app .docket-card{
+  position:relative;flex:none;min-width:0;width:clamp(170px,15vw,330px);max-height:100%;box-sizing:border-box;overflow:hidden;
+  padding:.45em .9em .45em 1.7em;text-align:left;color:var(--ink);border:0;border-radius:0;
+  background:url('/art/app/chrome/slip-why-stopped.png') center/100% 100%,var(--cream);
+  box-shadow:1px 3px 4px #000a;font:var(--t-xs)/1.25 Standard,Georgia,serif;transform:rotate(-.6deg);transition:transform .15s;
+}
+.table-app .docket-card:nth-child(even){transform:rotate(.7deg)}
+.table-app .docket-card:hover:not(:disabled){transform:translateY(-2px) rotate(0);background-color:var(--cream)}
+.table-app .docket-card:before{content:"";position:absolute;left:.6em;top:50%;width:.5em;height:.5em;border-radius:50%;transform:translateY(-50%);background:#3a2516;box-shadow:inset 0 1px 1px #000,0 1px #fff8}
+.table-app .docket-card strong{font:var(--t-s)/1.15 Fell,Georgia,serif;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.table-app .docket-card small{font:italic var(--t-xs)/1.2 Fell,Georgia,serif;color:var(--ink-3)}
+/* The first morning's note: a card on the front edge, never on the map. */
+.table-app .desk-front .first-morning-note{
+  position:relative;left:auto;top:auto;z-index:2;flex:0 1 32em;max-width:42%;width:auto;max-height:100%;overflow:auto;box-sizing:border-box;
+  padding:.4em .85em;margin:0;border:0;color:var(--ink);font:var(--t-xs)/1.4 Caslon,Georgia,serif;
+  background:url('/art/app/textures/card-stock.png') center/300px,var(--card);background-blend-mode:soft-light,normal;
+  box-shadow:0 0 0 1px #a08a62,2px 4px 5px #000a;transform:rotate(.4deg);
+}
+/* "Let the days run": the one primary act, a gilt-lettered morocco plate. */
+.table-app .table-run{
+  grid-area:run;position:relative;right:auto;bottom:auto;z-index:3;align-self:center;justify-self:stretch;
+  height:calc(var(--front) - var(--gap) * .8);min-height:48px;box-sizing:border-box;margin-bottom:calc(var(--gap) * .6);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15em;padding:.2em .7em;
+  color:var(--gilt);font:var(--t-l)/1.1 Fell,Georgia,serif;letter-spacing:.02em;text-align:center;
+  background:radial-gradient(ellipse at 50% 30%,#ffffff12,transparent 60%),url('/art/app/textures/blotter.png') center/100% 100%,var(--morocco);
+  border:1px solid #c9a865;border-radius:6px;
+  box-shadow:inset 0 0 0 3px #1c3828,inset 0 0 0 4px #c9a86599,0 3px 0 #0b1610,0 7px 14px #000c;
+  text-shadow:0 1px 0 #000a;transition:transform .12s,box-shadow .12s;
+}
+.table-app .table-run:hover:not(:disabled){transform:translateY(-2px);box-shadow:inset 0 0 0 3px #1c3828,inset 0 0 0 4px #e3c47f,0 5px 0 #0b1610,0 10px 18px #000c;background-color:var(--morocco-hi)}
+.table-app .table-run:active{transform:translateY(1px);box-shadow:inset 0 0 0 3px #1c3828,inset 0 0 0 4px #c9a86599,0 1px 0 #0b1610,0 3px 8px #000c}
+.table-app .table-run small{font:italic var(--t-xs)/1.2 Fell,Georgia,serif;color:#e9d6a8}
+/* While the days pass, their record stands at the right edge. */
+.table-app .table-playback{
+  grid-column:3;grid-row:2 / 4;position:absolute;right:0;left:0;bottom:calc(var(--gap) * .6);top:auto;width:auto;z-index:25;box-sizing:border-box;
+  padding:.8em .9em;color:var(--ink);font:var(--t-xs)/1.45 Standard,Georgia,serif;border:0;
+  background:url('/art/app/textures/paper-printed.png') center/400px,var(--stock);background-blend-mode:soft-light,normal;
+  box-shadow:0 0 0 1px #8a7350,3px 7px 14px #000c;
+}
+.table-app .table-playback time{display:block;font:var(--t-m)/1.2 Standard,Georgia,serif;border-bottom:3px double var(--rule);padding-bottom:.3em;margin-bottom:.3em}
+.table-app .table-playback button{display:block;width:100%;margin:.35em 0 0;font:var(--t-xs) Standard,Georgia,serif}
+
+/* --------------------------------------------- sheets that lie on the map */
+.table-app .table-paper,.table-app .table-stop{grid-area:map;position:absolute;z-index:28}
+.table-app .table-paper{
+  left:calc(var(--sheet) + 8px);top:calc(var(--sheet) + 8px);width:min(calc(680px * var(--text-scale)),50%);max-height:calc(100% - var(--strip) - var(--sheet) * 2 - 12px);
+  overflow:auto;padding:0;transform:rotate(-.35deg);color:var(--ink);
+  background:url('/art/app/textures/paper-letter-2.png') center/520px,var(--cream);background-blend-mode:soft-light,normal;
+  box-shadow:0 0 0 1px #0000002e,3px 8px 14px #0009,0 20px 34px -12px #000b;animation:paper-arrives .26s ease-out both;
+}
+.table-app .table-paper:has(.stock-telegraph){background-image:url('/art/app/textures/paper-telegraph-form.png');background-color:var(--buff)}
+.table-app .table-paper:has(.stock-printed){background-image:url('/art/app/textures/paper-printed.png');background-color:var(--stock)}
+.table-app .table-paper:has(.stock-newsprint){background-image:url('/art/app/textures/paper-newsprint-2.png');background-color:#e7dfc9}
+@keyframes paper-arrives{from{opacity:0;transform:translate(-18px,10px) rotate(-1.4deg)}to{opacity:1;transform:rotate(-.35deg)}}
+.table-app .table-paper .return-paper{
+  position:sticky;top:0;z-index:3;display:block;margin:0 0 0 auto;padding:.35em .9em;
+  font:var(--t-xs) Standard,Georgia,serif;color:var(--ink);background:#f6eedbf0;border:0;border-left:1px solid #8a735066;border-bottom:1px solid #8a735066;
+}
+.table-app .table-paper>.paper,.table-app .table-paper>.weekly-paper{background:none;box-shadow:none;margin:0}
+.table-app .table-paper>.actions{margin:0;padding:.6em 1.8em 1.3em;border-top:1px solid #8a735066;background:#00000008}
+.table-app .table-stop{
+  left:calc(var(--sheet) + 8px);top:calc(var(--sheet) + 8px);width:min(500px,46%);max-width:none;max-height:calc(100% - var(--strip) - var(--sheet) * 2 - 12px);
+  border:0;transform:rotate(-.5deg);
+  background:url('/art/app/chrome/slip-why-stopped.png') center/100% 100%,var(--cream);
+  box-shadow:3px 7px 16px #000a;animation:paper-arrives .26s ease-out both;
+}
+.table-app .map-plan-sheet{
+  left:calc(var(--sheet) + 6px)!important;top:calc(var(--sheet) + 6px)!important;bottom:calc(var(--strip) + var(--sheet) + 6px)!important;
+  width:min(calc(590px * var(--text-scale)),42%)!important;border:0;box-shadow:0 0 0 1px #8a7350,3px 7px 16px #000a!important;
+}
+.table-app .close-review{grid-area:map;position:absolute;left:auto;right:calc(var(--sheet) + 10px);top:calc(var(--sheet) + 10px);z-index:29}
+
+/* ------------------------------------------------------------- papers */
+.table-app .paper{background-blend-mode:soft-light}
+.table-app .paper.stock-letter{background-color:var(--cream);background-image:url('/art/app/textures/paper-letter-2.png')}
+.table-app .paper.stock-telegraph{background-color:var(--buff)}
+.table-app .paper.stock-printed{background-color:var(--stock)}
+.table-app .paper.stock-newsprint{background-color:#e7dfc9}
+.table-app .table-paper .paper{padding:1.6em 1.9em 1.2em}
+/* Laid letter paper shows faint chain lines. */
+.table-app .paper.stock-letter:before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:repeating-linear-gradient(90deg,#0000 0 23px,#6b583514 23px 24px);
+}
+.table-app .paper .paper-header .eyebrow{font:italic .72em/1.3 Fell,Georgia,serif;color:var(--ink-3);letter-spacing:.02em}
+.table-app .paper .paper-header h3{font:1.5em/1.15 Fell,Georgia,serif;letter-spacing:.01em}
+.table-app .stock-letter .paper-header h3{font-size:1.38em;letter-spacing:.06em}
+.table-app .paper .paper-meta{font:.76em/1.35 Standard,Georgia,serif;margin:1.2em 0 1.5em;gap:.3em}
+.table-app .paper .paper-meta>div{grid-template-columns:5.5em 1fr;border-bottom:1px solid #8a735080}
+.table-app .paper .paper-meta dt{font-style:italic;color:var(--ink-3)}
+/* A telegraph form's printed fields, filled in by the operator. */
+.table-app .stock-telegraph .paper-header{border:0;border-top:3px double #4b3c27;border-bottom:3px double #4b3c27;padding:.6em .4em .5em}
+.table-app .stock-telegraph .paper-meta{grid-template-columns:1fr 1fr;display:grid;column-gap:1.4em}
+.table-app .stock-telegraph .paper-meta dd{font-family:Fell,Georgia,serif;font-style:italic;font-size:1.08em}
+.table-app .stock-telegraph .paper-copy{font-size:1.06em;line-height:1.75;background:repeating-linear-gradient(#0000 0 calc(1.75em - 1px),#4b3c2733 calc(1.75em - 1px) 1.75em);background-position:0 .2em}
+.table-app .paper .paper-copy{color:#211a12}
+.table-app .paper .signature{font-size:1.25em}
+/* The received stamp is an ink impression, its word set in type. */
+.table-app .paper .received-stamp{
+  position:relative;border:0;padding:.55em 1.1em .5em;color:var(--stamp-ink);font:.72em/1.2 Standard,Georgia,serif;letter-spacing:.06em;transform:rotate(-5deg);
+}
+.table-app .paper .received-stamp:before{
+  content:"";position:absolute;inset:0;background:var(--stamp-ink);opacity:.92;
+  -webkit-mask:url('/art/app/chrome/stamp-decided.png') center/100% 100% no-repeat;mask:url('/art/app/chrome/stamp-decided.png') center/100% 100% no-repeat;
+}
+.table-app .paper .received-stamp small{letter-spacing:.01em}
+
+/* --------------------------------------------- sheets brought forward */
+.table-app dialog{
+  border:0;border-radius:1px;color:var(--ink);
+  background:url('/art/app/textures/paper-printed.png') center/520px,var(--stock);background-blend-mode:soft-light,normal;
+  box-shadow:0 0 0 1px #0000004d,0 10px 22px #000a,0 34px 70px -18px #000d;
+}
+.table-app dialog::backdrop{background:radial-gradient(ellipse at 50% 45%,#0c070333,#0c0703b8);backdrop-filter:none}
+.table-app dialog>.panel-header{position:relative;background:none;border:0;padding:1em 1.5em .75em;align-items:center}
+.table-app dialog>.panel-header:after{content:"";position:absolute;left:1.5em;right:1.5em;bottom:0;height:3px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.table-app dialog>.panel-header .eyebrow{display:none}
+.table-app dialog>.panel-header h2{font:1.7em/1.15 Fell,Georgia,serif;letter-spacing:.01em}
+.table-app dialog>.panel-header .close{
+  padding:.4em .9em;font:.74em/1.2 Standard,Georgia,serif;color:var(--ink);background:#00000008;border:1px solid #8a7350aa;border-radius:2px;
+}
+.table-app dialog>.panel-header .close:hover{background:#0000001a}
+:where(.table-app dialog) button{background:#f6eedb;border-color:#7d6a49;color:var(--ink)}
+:where(.table-app dialog) button:hover:not(:disabled){background:#fffaf0}
+.table-app dialog .primary,.table-app dialog [data-hotkey=run]{
+  background:linear-gradient(#2a5039,#1c3828);color:var(--gilt);border:1px solid #c9a865;box-shadow:inset 0 0 0 2px #1c3828,inset 0 0 0 3px #c9a86580;font-family:Fell,Georgia,serif;font-size:.95em;
+}
+.table-app dialog .primary:hover:not(:disabled),.table-app dialog [data-hotkey=run]:hover:not(:disabled){background:linear-gradient(#336147,#21422f);color:#fff2c8}
+.table-app dialog .margin-note{border-bottom-color:#8a735080}
+
+/* The org board: a framed cork board, every post a pinned card. */
+.table-app dialog[data-kind=board]{
+  border:clamp(14px,1.5vw,24px) solid transparent;
+  border-image:url('/art/app/chrome/board-frame.png') 52 fill / clamp(14px,1.5vw,24px) stretch;
+  background:none;box-shadow:0 12px 26px #000b,0 36px 70px -16px #000d;
+}
+.table-app dialog[data-kind=board]>.panel-header{margin:.6em .9em 0;padding:.6em 1.1em;background:url('/art/app/textures/card-stock.png') center/300px,var(--card);background-blend-mode:soft-light,normal;box-shadow:1px 3px 5px #0007}
+.table-app dialog[data-kind=board]>.panel-header:after{display:none}
+.table-app dialog[data-kind=board] .org-post,.table-app dialog[data-kind=board] .person-tile,.table-app dialog[data-kind=board] .org-caption{
+  background:url('/art/app/textures/card-stock.png') center/300px,var(--card);background-blend-mode:soft-light,normal;border:0;box-shadow:0 0 0 1px #a08a6280,1px 3px 5px #2a1a0a66;
+}
+.table-app dialog[data-kind=board] .org-pin{width:14px;height:14px;top:-5px;margin-left:-7px;background:url('/art/app/chrome/pin.png') center/contain no-repeat;box-shadow:none;border-radius:0}
+.table-app dialog[data-kind=board] .org-branch>ul{border-left-color:#3d2a17}
+.table-app dialog[data-kind=board] .org-branch>ul>.org-branch:before{border-top-color:#3d2a17}
+.table-app dialog[data-kind=board] .org-unplaced{border-top-color:#3d2a17}
+.table-app dialog[data-kind=board] :is(h3,h4,label,.board-search){color:var(--ink)}
+
+/* The ledger opens as its own bound spread. */
+.table-app dialog[data-kind=ledger]{
+  width:min(1500px,calc(100vw - 24px));height:min(946px,calc(100dvh - 24px));max-height:none;padding:2.6% 3.6% 3% 3.9%;overflow:hidden;
+  display:flex;flex-direction:column;background:url('/art/app/chrome/ledger-open-spread.png') center/100% 100% no-repeat;box-shadow:0 16px 34px #000c;
+}
+.table-app dialog[data-kind=ledger]:not([open]){display:none}
+.table-app dialog[data-kind=ledger]:before{
+  content:"";position:absolute;inset:2.4% 2.3% 2.6% 2.6%;pointer-events:none;
+  background:linear-gradient(90deg,#efe3c8d9 0 48.9%,#efe3c800 49.6% 50.4%,#efe3c8d9 51.1%);
+}
+.table-app dialog[data-kind=ledger]>*{position:relative;z-index:1}
+.table-app dialog[data-kind=ledger]>.panel-header{flex:none;width:47%;padding:.2em .4em .5em}
+.table-app dialog[data-kind=ledger]>.panel-header:after{left:.4em;right:.4em}
+.table-app dialog[data-kind=ledger]>.panel-body{flex:1;min-height:0;overflow:auto;padding:.8em .4em .4em}
+.table-app dialog[data-kind=ledger] .ledger-spread{background:none!important;column-gap:7.5%!important}
+.table-app dialog[data-kind=ledger]{border:0;border-radius:0}
+.table-app dialog[data-kind=ledger] .ledger-tabs{background:none;border:0;box-shadow:none;padding:0;margin:0 0 .6em;width:47%;display:flex;flex-wrap:wrap;gap:.4em}
+.table-app dialog[data-kind=ledger] .ledger-tabs button{font-size:.8em;padding:.3em .8em;background:#f6eedb;border:1px solid #8a7350aa;border-radius:0 0 3px 3px;box-shadow:0 2px 2px #0002}
+.table-app dialog[data-kind=ledger] .ledger-tabs button[aria-selected=true],.table-app dialog[data-kind=ledger] .ledger-tabs button[aria-pressed=true]{background:#7a2c20;color:#fbefd5;border-color:#5a1e15}
+
+/* The board's posts are cards pinned in rows; a post with its own chain of
+   posts takes a full row so the chain stays legible. */
+.table-app dialog[data-kind=board] :is(.org-roots,.board-results,.org-branch>ul,.org-unplaced>ul){
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,15.5em),1fr));gap:1.5em 1.1em;align-items:start;
+}
+.table-app dialog[data-kind=board] :is(.org-roots,.board-results,.org-branch>ul)>.org-branch:has(>ul){grid-column:1/-1}
+.table-app dialog[data-kind=board] .org-branch>ul{margin:1em 0 0 1em;padding:.9em 0 0 1.1em;border-left:2px solid #3d2a17aa}
+.table-app dialog[data-kind=board] .org-branch>ul>.org-branch{margin:0}
+.table-app dialog[data-kind=board] .org-branch>ul>.org-branch:before{display:none}
+.table-app dialog[data-kind=board] .org-branch:nth-child(3n+1)>.org-post{transform:rotate(-.7deg)}
+.table-app dialog[data-kind=board] .org-branch:nth-child(3n+2)>.org-post{transform:rotate(.5deg)}
+.table-app dialog[data-kind=board] .org-post{padding-top:1.3em;transition:transform .15s}
+.table-app dialog[data-kind=board] .org-post:hover{transform:translateY(-2px) rotate(0)}
+.table-app dialog[data-kind=board] .org-pin{top:-6px;width:16px;height:16px;margin-left:-8px}
+.table-app dialog[data-kind=board] :is(.audience-correspondence,.board-search,.org-board>p,.org-unplaced>h3){
+  padding:.7em 1em;margin-bottom:1.2em;background:url('/art/app/textures/card-stock.png') center/300px,var(--card);background-blend-mode:soft-light,normal;box-shadow:0 0 0 1px #a08a6280,1px 3px 5px #2a1a0a66;
+}
+.table-app dialog[data-kind=board] .audience-correspondence h3{font-size:1.25em;margin-bottom:.3em}
+.table-app dialog[data-kind=board] .audience-correspondence>p:last-child,.table-app dialog[data-kind=board] .audience-correspondence ul:empty{margin-bottom:0}
+
+/* The daybook: one bound journal page with its spine. */
+.table-app dialog[data-kind=daybook]{
+  width:min(calc(940px * var(--text-scale)),calc(100vw - 24px));border-left:26px solid #3e2414;border-image:none;border-radius:2px 1px 1px 2px;
+  background:repeating-linear-gradient(#0000 0 2.2em,#6b583524 2.2em calc(2.2em + 1px)),url('/art/app/textures/paper-letter-2.png') center/520px,var(--cream);
+  background-blend-mode:normal,soft-light,normal;
+  box-shadow:inset 10px 0 14px -8px #0007,-6px 0 0 -2px #1d1009,0 12px 26px #000b,0 34px 70px -18px #000d;
+}
+/* The file: a drawer of folders. */
+.table-app dialog[data-kind=file],.table-app dialog[data-kind=inbox],.table-app dialog[data-kind=outbox]{
+  border:clamp(10px,1vw,16px) solid #4a2d18;
+  border-image:linear-gradient(#6a4325,#3b2313) 1;
+  background:linear-gradient(#2c1a0e,#3a2414);color:var(--ink);
+}
+.table-app :is(dialog[data-kind=file],dialog[data-kind=inbox],dialog[data-kind=outbox])>.panel-header{background:url('/art/app/textures/card-stock.png') center/300px,var(--card);background-blend-mode:soft-light,normal}
+.table-app :is(dialog[data-kind=file],dialog[data-kind=inbox],dialog[data-kind=outbox])>.panel-body{color:#f1e4c6}
+.table-app :is(dialog[data-kind=file],dialog[data-kind=inbox],dialog[data-kind=outbox]) :is(.margin-note,.search,.tray-filters,.tray-count,.empty,.intray>p,.order-list,.feedback){color:#f1e4c6}
+.table-app :is(dialog[data-kind=file],dialog[data-kind=inbox],dialog[data-kind=outbox]) :is(input,select){background:#f6eedb;color:var(--ink)}
+.table-app :is(dialog[data-kind=file],dialog[data-kind=inbox]) .paper-link,.table-app dialog[data-kind=daybook] .paper-link{
+  position:relative;color:var(--ink);border:0;border-radius:0;
+  background:url('/art/app/textures/paper-letter-2.png') center/420px,var(--cream);background-blend-mode:soft-light,normal;box-shadow:0 0 0 1px #00000026,1px 3px 4px #0007;
+}
+.table-app dialog[data-kind=file] .paper-link{background-color:var(--manila);background-image:url('/art/app/textures/card-stock.png');margin-top:.9em}
+.table-app dialog[data-kind=file] .paper-link:before{content:"";position:absolute;left:0;top:-.85em;width:38%;height:.9em;background:var(--manila);border-radius:4px 4px 0 0;box-shadow:0 -1px 0 #00000026}
+.table-app dialog[data-kind] .paper-link[data-genre=wire-dispatch]{background-color:var(--buff);background-image:url('/art/app/textures/paper-telegraph-form.png')}
+.table-app dialog[data-kind] .paper-link[data-genre=wire-dispatch]>.eyebrow{border-bottom:3px double #4b3c2799;padding-bottom:.25em}
+.table-app dialog[data-kind] .paper-link[data-genre=press]{background-color:#e7dfc9;background-image:url('/art/app/textures/paper-newsprint-2.png')}
+.table-app dialog[data-kind] .paper-link:is([data-genre=strength-return],[data-genre=casualty-return],[data-genre=effective-strength]){background-color:var(--stock);background-image:url('/art/app/textures/paper-printed.png')}
+.table-app .paper-link:not(.read):after{content:"";position:absolute;right:0;top:0;width:1.2em;height:1.2em;background:linear-gradient(225deg,#3a2414 50%,#d9c9a3 50%);box-shadow:-1px 1px 2px #0005}
+.table-app .paper-link .eyebrow{font:italic .62em/1.3 Fell,Georgia,serif;color:var(--ink-3)}
+.table-app .paper-link .route-line{color:var(--ink-3)}
+.table-app dialog[data-kind=outbox] .order-list li{padding:.8em 1em;margin:.6em 0;border:0;color:var(--ink);background:url('/art/app/textures/paper-letter-2.png') center/420px,var(--cream);background-blend-mode:soft-light,normal;box-shadow:1px 3px 4px #0007}
+/* The key card: a printed card with its keys set in small frames. */
+.table-app dialog[data-kind=help]{background:url('/art/app/textures/card-stock.png') center/420px,var(--card);background-blend-mode:soft-light,normal;outline:1px solid #8a7350;outline-offset:-10px}
+.table-app dialog[data-kind=help] kbd{display:inline-block;padding:.12em .5em;font:.9em Standard,Georgia,serif;border:1px solid #6c5434;border-bottom-width:2px;border-radius:2px;background:#fbf4e3}
+/* Writing an order: a ruled order pad. */
+.table-app dialog[data-kind=orders] textarea{
+  background:repeating-linear-gradient(#0000 0 calc(1.6em - 1px),#6b583538 calc(1.6em - 1px) 1.6em),#fbf6ea;line-height:1.6;background-attachment:local;
+}
+/* The docket's cards: slips taken off the spike. */
+.table-app dialog[data-kind=docket] .situation{border:0;background:url('/art/app/textures/card-stock.png') center/420px,var(--card);background-blend-mode:soft-light,normal;box-shadow:0 0 0 1px #8a735080,1px 3px 5px #0004}
+.table-app dialog[data-kind=run] .stop-policy fieldset,.table-app dialog fieldset{border-color:#8a7350aa}
+
+/* -------------------------------------------------- sizes */
+@media (max-height:820px){
+  .table-app .tray-stack>small{display:none}
+  .table-app .calendar-face em{display:none}
+}
+@media (max-width:1400px){
+  .table-app .table-map-layout .map-tools .tool-text-long{display:none}
+}
+
+/* -------------------------------------------------- skins */
+.high-contrast.table-app .table-shell{background:#262626}
+.high-contrast.table-app .table-shell:before{background:none;border-top:2px solid #fff}
+.high-contrast.table-app .playable-table>.table-map-layout{background:#111;box-shadow:none;outline:2px solid #fff}
+.high-contrast.table-app :is(.calendar-block,.tray-stack>span,.tool-label,.docket-card,.desk-front .first-morning-note,.map-key){background:#fff!important;color:#111!important;border-image:none;border:2px solid #111;filter:none;text-shadow:none}
+.high-contrast.table-app :is(.attention-desk,.map-tools,.map-header button,.table-run,.tool-sound){background:#111!important;color:#fff!important;border:2px solid #fff!important}
+.high-contrast.table-app .table-run{color:#fff!important}
+.high-contrast.table-app .table-books>button>img,.high-contrast.table-app .tool-art{opacity:.35}
+.high-contrast.table-app .tray-stack>small,.high-contrast.table-app .table-docket>div>span{color:#fff;text-shadow:none}
+.high-contrast.table-app :is(button,select,input,textarea):focus-visible{outline:3px solid #fff!important;box-shadow:0 0 0 6px #111!important}
+.evening-lamp.table-app .table-shell{background-color:#4a2a16;background-blend-mode:normal,normal,multiply,normal}
+.evening-lamp.table-app :is(.table-paper,.map-key,.docket-card,.desk-front .first-morning-note){background-color:#d8c7a8}
+
+@media (prefers-reduced-motion:reduce){
+  .table-app :is(.table-paper,.table-stop){animation:none}
+  .table-app :is(.calendar-block,.tray-stack,.table-books>button,.docket-card,.table-run,.table-docket>button){transition:none}
+  .table-app .table-paper{transform:none}
+}

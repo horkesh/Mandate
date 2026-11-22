@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
 import type { CommandablePost, OptionView, PrincipalMenu, ReportView, SeatRequest, SituationView } from '@mandate/kernel/seat-api';
 import { deskApi } from './adapter.ts';
@@ -23,6 +23,7 @@ import type {Price} from './business.ts';
 import {commandPrice,outOfAttention,refusalText,slipText,subjectName,politicalPaperText} from './business.ts';
 import {deskDate} from './plan-business.ts';
 import type {Point} from './map/model.ts';
+import {calendarFace} from './look.ts';
 import './table.css';
 
 type Sheet = { panel: Panel; paper?: ReportView; person?: CommandablePost; post?:string; audience?:string; summary?:boolean; returnSource?:string };
@@ -59,6 +60,16 @@ export function App() {
   const room = useRef<HTMLDivElement>(null);
   const [paperPoint,setPaperPoint]=useState<Point|null>(null);
   const locate=useCallback((p:Point|null)=>setPaperPoint(old=>old&&p&&Math.abs(old[0]-p[0])<.5&&Math.abs(old[1]-p[1])<.5?old:p),[]);
+  // S60: the map lies on its own blotter, so an open paper is placed and
+  // clamped within that area (and the canvas inside it), not the window.
+  const [mapArea,setMapArea]=useState<{w:number;h:number;x:number;y:number;bottom:number}|null>(null);
+  useLayoutEffect(()=>{
+    const area=room.current?.querySelector<HTMLElement>('.table-map-layout');if(!area)return;
+    const measure=()=>{const a=area.getBoundingClientRect(),h=area.querySelector<HTMLElement>('.pixi-map')?.getBoundingClientRect();
+      const next={w:a.width,h:a.height,x:h?h.left-a.left:0,y:h?h.top-a.top:0,bottom:h?h.bottom-a.top:a.height};
+      setMapArea(old=>old&&(Object.keys(next) as (keyof typeof next)[]).every(k=>Math.abs(old[k]-next[k])<1)?old:next);};
+    measure();const observer=new ResizeObserver(measure);observer.observe(area);return()=>observer.disconnect();
+  },[!!data]);
   const ambient = useRef<HTMLAudioElement | null>(null);
   const effects = useRef<Set<HTMLAudioElement>>(new Set());
   const lock = useRef(false);
@@ -210,7 +221,7 @@ export function App() {
   const audience=(post:string)=>{setStack(previous=>[...previous,{panel:'board',audience:post}]);setNotice('');setError('');sound('door-audience');};
   const sourcePaper=(report:ReportView)=>{setRead(previous=>new Set(previous).add(report.id));setStack(previous=>[...previous,{panel:'inbox',paper:report,returnSource:report.id}]);sound('paper-draw');};
   const count = (id: Panel) => id === 'inbox' ? reports.filter(r => !read.has(r.id)).length : id === 'outbox' ? data.queue.length : id === 'docket' ? active.length : null;
-  const paperList = (items: readonly ReportView[]) => items.length ? <div className="paper-list">{[...items].reverse().map(r => <button data-testid="paper-link" className={`paper-link ${read.has(r.id) ? 'read' : ''}`} key={r.id} onClick={() => paper(r)}>
+  const paperList = (items: readonly ReportView[]) => items.length ? <div className="paper-list">{[...items].reverse().map(r => <button data-testid="paper-link" data-genre={r.type} className={`paper-link ${read.has(r.id) ? 'read' : ''}`} key={r.id} onClick={() => paper(r)}>
     <span className="eyebrow">{S.genres[r.type] ?? r.type}<span>{S.day} {r.receivedDay}</span></span><strong>{t(r.author, 'person')}</strong><span>{t(r.subjectId, r.subjectKind)}</span><span className="route-line">{r.route}, {S.written} {r.day}{r.hour !== null ? `, ${r.hour}:00` : ''}</span>
   </button>)}</div> : <p className="empty">{S.noPapers}</p>;
 
@@ -256,23 +267,23 @@ export function App() {
   return <SettingsContext.Provider value={settings}><div onFocusCapture={e=>previewPrice(e.target)} onMouseOver={e=>previewPrice(e.target)} className={`app table-app ${current?.audience?'audience-open':''} ${plain ? 'plain' : ''} ${settings.scale > 140 ? 'large-type' : ''} ${settings.contrast ? 'high-contrast' : ''} ${settings.lamp ? 'evening-lamp' : ''}`} style={{ '--text-scale': settings.scale / 100 } as CSSProperties}>
     <div ref={room} data-testid="desk" className="desk-shell table-shell" inert={modalDepth>0}>
       <main className="playable-table" aria-label={S.subtitle}>
-        {!current&&!playback&&<FirstMorningNote data={tableData}/>}
         <MapReview data={tableData} destination={destination} execute={execute} busy={busy} textEdit={order} table reviewOpen={planOpen} mapProps={{
           focusPaper:current?.paper?{id:current.paper.id,region:reportPlace(current.paper)}:undefined,
           arrival:frame?.phase==='mark'&&frame.report?{id:frame.report.id,region:reportPlace(frame.report),text:`${t(frame.report.author,'person')}, ${dateForReport(data,frame.report.day)}`} : undefined,
           onLocate:locate,
           holderCard:mark=>{const person=menu.commandable.find(p=>p.post===mark.post),report=reports.find(r=>r.id===mark.source);return <><h2>{t(person?.holder??mark.author,'person')}</h2><p>{t(mark.post??'', 'post')}</p><h3>{S.lastReport}</h3><time>{dateForReport(data,mark.day)}</time><p>{display(report?data.paperText[report.id]??'':S.unknown)}</p><div className="actions">{person&&<><button onClick={()=>{opener.current=document.activeElement as HTMLElement;setStack([{panel:'board',person}]);}}>{S.personPage}</button><button onClick={()=>order(`order ${person.post} hold`)}>{S.orders}</button></>}</div></>;}
         }}/>
-        <div className="table-calendar"><button disabled={!!playback} onClick={()=>open('calendar')} aria-label={S.calendar}><time>{date}</time><small>{menu.atWarSince===null?S.atPeace:S.atWar}</small></button><button disabled={!!playback} onClick={()=>open('attention')} aria-label={S.attention}><span>{S.attention}</span><AttentionTokens left={tableData.morning.view.attention} price={actionPrice}/></button></div>
-        <div className="table-trays">{(['inbox','outbox'] as const).map(id=><button key={id} className={`tray-stack ${id}`} onClick={()=>open(id)} aria-label={`${S[id]} ${count(id)}`}><img src={art(objects[id]!)} alt=""/><span>{S[id]} <b>{count(id)}</b></span><small>{id==='inbox'?S.freshCount:S.signedCount}</small></button>)}</div>
-        <nav className="table-books" aria-label={S.deskObjects}>{(['board','ledger','file','daybook','plans','progress','orders','help'] as const).map(id=><button disabled={!!playback} key={id} onClick={()=>open(id)} aria-label={id==='plans'?S.plans:undefined} aria-describedby={id==='plans'?'plan-pending-count':undefined}>{objects[id]&&<img src={art(objects[id]!)} alt=""/>}<span>{S[id]}</span>{id==='plans'&&<small id="plan-pending-count" className="plan-pending-badge">{menu.reviews.length>0?S.planReviewCount(menu.reviews.length):menu.awaiting.length>0?S.planGoCount(menu.awaiting.length):''}</small>}</button>)}<button aria-pressed={!muted} onClick={()=>setSettings(old=>({...old,muted:!old.muted}))}>{muted?S.soundOn:S.mute}</button></nav>
-        <section className="table-docket" aria-label={S.docket}><button onClick={()=>open('docket')}>{S.docket} {active.length}</button><div>{active.length?active.map(s=><button className="docket-card" key={s.id} onClick={()=>open('docket')}><strong>{t(s.title)}</strong><small>{S.beforeDate} {dateForReport(tableData,s.surfacedDay)}</small></button>):<span>{S.noDocket}</span>}</div></section>
+        <div className="table-calendar"><button className="calendar-block" disabled={!!playback} onClick={()=>open('calendar')} aria-label={S.calendar}><time dateTime={date}>{date}</time><CalendarFace date={date} status={menu.atWarSince===null?S.atPeace:S.atWar}/></button><button className="attention-desk" disabled={!!playback} onClick={()=>open('attention')} aria-label={S.attention}><span>{S.attention}</span><AttentionTokens left={tableData.morning.view.attention} price={actionPrice}/></button></div>
+        <div className="table-trays">{(['inbox','outbox'] as const).map(id=><button key={id} className={`tray-stack ${id}`} data-count={count(id)} onClick={()=>open(id)} aria-label={`${S[id]} ${count(id)}`}><img src={art(objects[id]!)} alt=""/><span>{S[id]} <b>{count(id)}</b></span><small>{id==='inbox'?S.freshCount:S.signedCount}</small></button>)}</div>
+        <nav className="table-books" aria-label={S.deskObjects}>{(['board','ledger','daybook','file','plans','progress','orders','help'] as const).map(id=><button className={`desk-tool tool-${id}`} disabled={!!playback} key={id} onClick={()=>open(id)} aria-label={id==='plans'?S.plans:undefined} aria-describedby={id==='plans'?'plan-pending-count':undefined}>{objects[id]&&id!=='board'?<img src={art(objects[id]!)} alt=""/>:<span className="tool-art" aria-hidden="true"/>}<span className="tool-label">{S[id]}</span>{id==='plans'&&<small id="plan-pending-count" className="plan-pending-badge">{menu.reviews.length>0?S.planReviewCount(menu.reviews.length):menu.awaiting.length>0?S.planGoCount(menu.awaiting.length):''}</small>}</button>)}<button className="desk-tool tool-sound" aria-pressed={!muted} onClick={()=>setSettings(old=>({...old,muted:!old.muted}))}>{muted?S.soundOn:S.mute}</button></nav>
+        <div className="desk-front"><section className="table-docket" aria-label={S.docket}><button onClick={()=>open('docket')}><span className="docket-count">{S.docket} {active.length}</span></button><div>{active.length?active.map(s=><button className="docket-card" key={s.id} onClick={()=>open('docket')}><strong>{t(s.title)}</strong><small>{S.beforeDate} {dateForReport(tableData,s.surfacedDay)}</small></button>):<span>{S.noDocket}</span>}</div></section>
+          {!current&&!playback&&<FirstMorningNote data={tableData}/>}</div>
         {!playback&&<button className="table-run" aria-label={S.run} aria-describedby="due-call-count" onClick={()=>open('run')}>{S.run}<span id="due-call-count"><CallsBadge data={tableData}/></span></button>}
         {playback&&<section className="table-playback" data-testid="turn-playback" aria-live="polite"><time>{date}</time><p>{frame?.report?`${t(frame.report.author,'person')}, ${S.genres[frame.report.type]??S.paper}`:S.noReports}</p>{frame?.day.refused.map((r,i)=><p className="refusal" key={i}>{S.refused}: {display(r.reason)}</p>)}
           {playback.index===frames.length-1?<><p>{S.stopped}: {playback.turn.stopped==='week'?S.stopLabels.week:playback.turn.stopped.map(p=>S.stopLabels[p]??S.stopUnknown).join(' ')}</p><button autoFocus onClick={()=>{setPlayback(null);setHeldMap(null);requestAnimationFrame(()=>document.querySelector<HTMLElement>('.table-stop button')?.focus());}}>{S.nextMorning}</button></>:<><button onClick={()=>setPaused(p=>!p)}>{paused?S.resumeDays:S.pauseDays}</button>{paused&&<p>{S.playbackPaused}</p>}<button onClick={skipDays}>{S.skipDays}</button><button onClick={()=>setPlayback(p=>{if(!p)return p;const next=frames.findIndex((f,i)=>i>p.index&&f.day.day!==frames[p.index]?.day.day);return {...p,index:next<0?frames.length-1:next};})}>{S.nextDay}</button></>}
         </section>}
         {!playback&&!current&&data.history.length>dismissedStop&&<aside className="table-stop"><StopSlip turn={data.history.at(-1)!} strings={data.strings} openPaper={r=>{opener.current=document.activeElement as HTMLElement;sourcePaper(r);}} onDocket={()=>open('docket')} onPlans={()=>open('plans')} onHistory={()=>open('daybook')} onClose={()=>{setDismissedStop(data.history.length);requestAnimationFrame(()=>document.querySelector<HTMLElement>('.tray-stack.inbox')?.focus());}}/></aside>}
-        {(current?.paper||current?.summary)&&<section className="table-paper" data-testid="paper-on-map" role="region" aria-label={S.paper} style={paperPoint?{left:Math.max(24,Math.min(window.innerWidth-Math.min(680*settings.scale/100,window.innerWidth*.43)-24,paperPoint[0]-Math.min(680*settings.scale/100,window.innerWidth*.43)-45)),top:Math.max(150,Math.min(window.innerHeight-650,paperPoint[1]-220))}:undefined} onKeyDown={e=>{if(e.key==='Escape'&&!isTyping(e.target)){e.preventDefault();e.stopPropagation();back();}}}><button autoFocus className="return-paper" onClick={back}>{stack.at(-2)&&stack.at(-2)?.panel!=='inbox'?S.back:S.returnPaper}</button>{content()}</section>}
+        {(current?.paper||current?.summary)&&<section className="table-paper" data-testid="paper-on-map" role="region" aria-label={S.paper} style={paperOnMap(paperPoint,mapArea,settings.scale)} onKeyDown={e=>{if(e.key==='Escape'&&!isTyping(e.target)){e.preventDefault();e.stopPropagation();back();}}}><button autoFocus className="return-paper" onClick={back}>{stack.at(-2)&&stack.at(-2)?.panel!=='inbox'?S.back:S.returnPaper}</button>{content()}</section>}
         {planOpen&&<button className="close-review" onClick={back}>{S.closeReview}</button>}
       </main>
       {data.closed&&<div className="ended" role="status">{S.ended}</div>}
@@ -286,6 +297,25 @@ export function App() {
 
 function dateForReport(data: DeskSnapshot, day: number): string {
   return deskDate(data,day);
+}
+
+/** The calendar block's face; the ISO date stays in the block's <time>. */
+function CalendarFace({date,status}:{date:string;status:string}){
+  const face=calendarFace(date);
+  return <span className="calendar-face" aria-hidden="true">{face?<><small>{face.weekday}</small><strong>{face.day}</strong><span>{face.month} {face.year}</span></>:<span>{date}</span>}<em>{status}</em></span>;
+}
+
+/**
+ * S60: an open paper lies beside the place it names, inside the map's blotter.
+ * It goes left of the place, or right of it when the left would cover it.
+ */
+function paperOnMap(point:Point|null,area:{w:number;h:number;x:number;y:number;bottom:number}|null,scale:number):CSSProperties|undefined{
+  if(!point||!area)return undefined;
+  const inset=24,width=Math.min(680*scale/100,area.w*.5),x=area.x+point[0];
+  const wanted=x-width-45<inset?x+45:x-width-45;
+  const left=Math.max(inset,Math.min(area.w-width-inset,wanted));
+  const top=Math.max(inset,Math.min(area.h*.18,area.y+point[1]-220));
+  return {left,top,maxHeight:Math.max(200,area.bottom-top-8)};
 }
 
 export function Paper({ report: r, text, t, dateOf, plain, display }: { display: (text: string) => string; report: ReportView; text: string; t: (key: string, kind?: string | number) => string; dateOf: (day: number) => string; plain: boolean }) {
