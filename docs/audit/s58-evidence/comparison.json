@@ -1,0 +1,872 @@
+[
+  {
+    "pack": "union-1861",
+    "baseline": "S42 retained reference; packages/ and packs/ unchanged between 23b5d491 and f19b6f0",
+    "worldHash": {
+      "before": "4b32adff541b87ead6e64b1112bf80c89ce6606cc73c4921be22bfc936756ff1",
+      "after": "35e682bfae7bff835b4ba0900389438c6c3394062ef8e9e083e194566ab3a5ff"
+    },
+    "initialHashUnchanged": true,
+    "finalHash": {
+      "before": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+      "after": "4fe4b3c2feeb4f96891cf1b9484610c69054c361fdce72a45c7017672df74c36"
+    },
+    "changedDays": [
+      {
+        "day": 32,
+        "before": "04d4f8a571fcaa34ef31a16a3bd23afca82f2ac0cd7273c268c4b5d7c888103c",
+        "after": "6d0365473c084eb9d3d841db3f6e6c35ea20b75b4e59454d9ff7dfbb7ebd2815",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 33,
+        "before": "67212a29942a17fda9e75e8ae029cac35b7008a59a4c0f395ee6529f4976854a",
+        "after": "972ab2bb6f0d260a026517551dfd96b5757c47f508b24662e58b237396033c9c",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 34,
+        "before": "e0bdda35a08f719f0d4cfe1957eeaf3d0eaddb565a54b78fe6e9b87eb7bea783",
+        "after": "fc1974c7be5f11962429fd92a6425095b5cfc59b38a92b6ec3b7e9b797185fbc",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 35,
+        "before": "d8c96f272aa6934d2357e7aa6999a1a52565b323123adb94c13c6f4e01d9606f",
+        "after": "d91b561fff62db22b37ad8194192366ccc9f028ad4a271317db51dad397d6c2e",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 36,
+        "before": "dc77b2fe5a71c211f5eeec35f5a1dde6cf1d868adcadf0766c79c290542f895f",
+        "after": "fbd0ae31552f93c39db528f560058ca2e3c1e5bdf6fec5b42f67d305540ac87b",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 37,
+        "before": "4981b5bb398c44b189b42f01c31b865872bd03ce29e82d793f4c116018cb4347",
+        "after": "96ee013ebc2a89ae35c473deddec1e723c1807753074ca94bbf4865b0fa83f99",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 38,
+        "before": "6d6f3210f7f4e7a74108733f6e8fd22907902abf23b9c5ba72528e6500e71811",
+        "after": "ff8137b99499440739540785a4a2249970cef45048e7b7536c9b56cd551e2ba0",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 39,
+        "before": "843fde22b424424e2c5b698e9e98cc88b8bd148a6b3b1c0493508b24436d3988",
+        "after": "45ea44fbd018ede46f41c9fcfad479d201e206ff72f126f880035b151debbea5",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 40,
+        "before": "1781132ceabf3558593072c85c982ed4f05bcf585452f0c33f32946ec944d381",
+        "after": "d705cae176a9b47881527bfb014f14f32af8598696efcce3e8bdbb9f7c2903ea",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 41,
+        "before": "aa99df7ea7717e0fddfae7e3620168d1eab1bc218ed79040145d7d4320a30937",
+        "after": "df0e5edcbde9a1e792e2acf26fc2180e2aab15258c5b9156707a98d1e200cb05",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 42,
+        "before": "4ea862f60153a6c2f499aca9af3da7c558657f10303a15e28e1300f665243e9c",
+        "after": "ddae1ac55f60142c791ae1ca7e26254a9a99744f4b07da29fda66d9402379830",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 43,
+        "before": "b4759d13807cb8b58c0c49b4538c638d61833e83f5593df06263b4e6623409f8",
+        "after": "a6a8c7b5869280e4b701988cbf34f3e82a617c4c5451c563e8f7bc4b2defabab",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 44,
+        "before": "6e2473e1a082b589e678eb09cb6d0fcc93a258d1907cfbcc4d3ecd437205e393",
+        "after": "308e6afdec60f82803c24ada838451cbd670783e6287a2673d4786cb99b27494",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 45,
+        "before": "b71bca8d0e504ab0ade32cbb6ce7c20560cb62bd7a7b9d627129feca395be98a",
+        "after": "a48a73328421704cb50addf76ac704c962b24a458323bfb7567ed5697a85ad3c",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 46,
+        "before": "748f46debe942fe44985fe5b694c50c5361e75ec47e3e4581dd9817ede92fc0a",
+        "after": "4a3b3f89ce3fbfe082452860d238ffa4553fe02dd89ef213f166a74658f37162",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 47,
+        "before": "dc2e3fd4bbb1b08020ca21b69a823a0a691260c8110239aaaf5383c331c3ae11",
+        "after": "76f10ab0b9890674f2a4b9eb494172edd36e004302bccf89c54654ce3d36beb0",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 48,
+        "before": "f3a663f2c48d95794b49ad431b8aab28cd0bb2b7adaa6269cb39403943a64bd6",
+        "after": "246594c8edbc8cd901e201966db9b6528a3621a335f34fc58eba371c864986cf",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 49,
+        "before": "5427d6c4cfa12f242e5c0c98bbba5b590357d6bc6e701cedbeba28f9538015a8",
+        "after": "beddf13e3d1150d8d6598f90cb3cb218892084903361efe890e066ba1ec4d533",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 50,
+        "before": "bb6a8d2b74acc5a68da6d3f1890ab3e874540cba661729be0aa9563af06c2e34",
+        "after": "26e2b8ccbe9c0676223e430d80f636c73a811e1dd16a0647c59e27c22199ecee",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 51,
+        "before": "9488c63257a9af6070a2314271f53e57d205599091c65329e9ce69d20c39f8a0",
+        "after": "5018d464ba999fa63e7a027fe2b1ba46b1c07b654bfdbb64c2280b65fa4a0e79",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 52,
+        "before": "08e972d90109cd5916985e3ca3f85b4605fb9d2a45ad5e33c346997422ea5009",
+        "after": "31ee9b7c57e6f397998d59f19df260d3fa01a7ae2481bf1b8dc2bbdd5d187eef",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 53,
+        "before": "9f906d54f8913d683bb9ac862950f481c00841da73c9c62f2a319accc33f24cf",
+        "after": "fd9d50b8ec7b256341f897cd474f549336f5e8c42b7a8e14a13715251aaba723",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 54,
+        "before": "f845fa36386e4e20d57c818154ed5362caeb455db2c0c2e603eb978a88814f4a",
+        "after": "fa2285f6db72b22dadf16c86812c241062e40f7b6e1bfd2346580444bdc1bd1b",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 55,
+        "before": "66c82c142365ca5153b0b220fb1eb1a5dc9d879a8e8cb6081aa3d50e3275d011",
+        "after": "0d657581f598255ecda33e520cbdcf1ef39dbd473a811fc9ef7defd94e493cae",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 56,
+        "before": "330f783770ba8a02eb0e1ba6cc25d1640ffdcc3690f6b010ee165d47f469a617",
+        "after": "b6aba8a0145293935d8a95ff3451b1b15fa7f6efa4844e3604ca9bea7b692828",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 57,
+        "before": "4d04df7696c97fbe6b1ed68082cd9bb09ccd4507fbbcb4bcf9f614b1fd195072",
+        "after": "a91712fb7a801e169c0f33ddefe17048cbcae99448c6b357094754fbf4cfce3b",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 58,
+        "before": "99e39ecf743ba31fe715346422ffc7e6fa61535c6da764283201fe1051045675",
+        "after": "d96600bbb50ab25280c7c029f661d0d6a526cd82887b2521698ce201baca89d4",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 59,
+        "before": "594af142a70f7185a7697f2e02fd4e885d7919e3d70315df68f718f3e0ab8fdf",
+        "after": "af763409387642966380b6321caf4233665240a674c96f8b6486b391159a328b",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 60,
+        "before": "953da5096ba85f07439748e2b901bff271eabff7e12ebc06919776a68d19eb56",
+        "after": "50982145c20999dec0259fea22f35893a39ffac271609191875e45d9dc14681d",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 61,
+        "before": "09618eac26a499699043d7a375eb4e98b921773df4218424e177b60263938da9",
+        "after": "ee0cb99b1e069e4b91a16985e9d7e8f6baba3d4e91d84fea8efc35910309d3be",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 62,
+        "before": "ddaacbefbc4481e9094f7bfedd6a344284157efbda5247f52bf3c54b02cd54be",
+        "after": "2c3233989b31a532f32babb4eb4363ecc2a368701b8340ee2dd378f2f884b945",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 63,
+        "before": "8a614ae88dd045b6f2836c3043214cd326310cd0b76cc6a8ecf81119c5536b4b",
+        "after": "296affc9dda803bd650a53b00c6c1453b7d35b65a5bbb58a16582569ddc8733a",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 64,
+        "before": "77bd971661e93d696bf988ee798cad51da1662f27062d892ab3345d8fb25c946",
+        "after": "642e171132e8a81aa5a646ad4ee75381777a2b87e959a56038df94121f61d777",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 65,
+        "before": "ef25962a863653b43d9280c94876397eec651f7ddb7d74cbf3be3f000f3a386a",
+        "after": "93d36fc77545350a9b500a4e04ad92c8747b19e798ed711960d6174d335c9361",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 66,
+        "before": "77e846469284173a8444d5f4252e9ea46ecc18c9047dea96981a69ae2d69726a",
+        "after": "0a953c4886b3b5285b06d6171a8812ab42c455ddd8c3a4d2685de756d6943b23",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 67,
+        "before": "1aaf83b35e6c0dce7abf4deb24895fa8c158c29018bb97cc332c17a42f5a1a77",
+        "after": "97ed44800f03d9541d6742a5804da729cc4d6d72438ff45fd968cf34faa08c07",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 68,
+        "before": "28375d3b590171c047076b6e81879188ae5da87f67ca9fe233d9027292f6d874",
+        "after": "d33072d5597373cf42ad0c3276a0ddd9b22e45ebe6eb2f25a65a9e601e7ec5f6",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 69,
+        "before": "9806b53138372452d51626b2e6a84aaba18f9707494ac269fea85aceb4fdd931",
+        "after": "747e904e5c259bbcd55e1c0fbf1860b528c2366a1f2c3485833e5b78fd3136f5",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 70,
+        "before": "6861ca9b7a75ab90d29001f31cfeb746252f74a33fb49d3b6ab39f05c800e504",
+        "after": "0e5213036e114f0a6b49450850db589ca746ae26806ab10a2f0b76c3fa5a380e",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 71,
+        "before": "6bc03d41f98ac5c211d1d92bb96b70d895d06951fd4520cfbc5cd83d0c1671bb",
+        "after": "0ac8b942620aafd7306dfa0d856703a31362f5793056de740aea5d2c723c12b5",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 72,
+        "before": "43d114d851f9243fb3030dea904977eed3d1343fa7ee557a76d4a6b09b2796da",
+        "after": "380355b2afe4800b3a3981e9e953230b77772e9eb1f44903181699f7dc86cc20",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 73,
+        "before": "24b02da62e4cde212ecaa243a43e5a92aa0bca10a813d2d4e173adf8c7b32c83",
+        "after": "bef6ccdf7b14f927c760343080a9d2be652206579f0ebb9a5a6c3905c9da3ee1",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 74,
+        "before": "2597e99dee84f8cf5de27a601cc049424b2fd6dbae3006ccff997d0be346a673",
+        "after": "45ffee22faea6506925c7c220520304b90cacb087c1f62566359e451f70250a8",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 75,
+        "before": "0933baf9a110fe2e291673dba658cecf3726460d5c93dbf0bb9768294161b31f",
+        "after": "da99718f9db9b42804a1120be1d6fb33cea40b60c8175aba4755902d0956ddd4",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 76,
+        "before": "f6f386284e300571d109d718a3f27eeb1403b1551ac690231f56c6c6220b36c3",
+        "after": "8af9e2e25882d1adca4985ac6f2be05080268754127ccc7fa70f35d62e97a1f2",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 77,
+        "before": "45122cf8f7e9c5dcd58418f451e7bcb5523c5d4893606d484dc0f317ae9700cb",
+        "after": "0c81b3457b70d3e0939d58b60c38038e676ef4382d3209f18f2630db8404f419",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 78,
+        "before": "4e4f5c9ac805b7ae4098f522134c0ffc26c684441a89cc892d82cc32b33de066",
+        "after": "5673a962204795612520e194a1287dc8a31aa0dba4ef14e386eeb4770de0db4f",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 79,
+        "before": "f8e993a08efd1a66d832401e194dfb009d6a04f9b2da5d114deb65ad4906ec1e",
+        "after": "c51ed8d937fab93a3bd40b2a6b83223932ad7cd40c445934eb3c75a1040c90e4",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 80,
+        "before": "602909361c13bbf0f757c743d39e7689db8908315e6bfb1a8e16c0514b90da61",
+        "after": "d38e49a4e6d1f76a2b6e42b08202de279a2267b62f1e59caaebafd3b0f5967f2",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 81,
+        "before": "adfb4ff723d7a760b8628fbcdb6142544fceb8b11a7a8d72d55a0ad5d7d8107d",
+        "after": "edf9351be25fda623477499547561b91787ead2dc609cbdfea0c19982f782bd7",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 82,
+        "before": "ab4f65c347adee212eca141251e667ed9d3a2c5a70aeb3b8ee91c7ae66d3ea9e",
+        "after": "6b90921490dbd2449011c6d8f55a661849e8d1cfd1f390852b60c9e1324da99f",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 83,
+        "before": "bf45b73998b3ef724b18a5d78bba4290ac3c217f6fea324a297a00211a67c9fe",
+        "after": "c983951eb8e502f183e298b53573b0f6d4b42db9156d6ad19590782daafbe380",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 84,
+        "before": "13a03e3cebf82e318bb30c95035fde80ff6c09e94196f0523e5d6849b328c8c0",
+        "after": "c7de2d82a67f4f73dabcf296aaa8ef1b4a2fca23990d51e32670d624fdc87a33",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 85,
+        "before": "10de2be611e81610de841b1a66b8f20415e778edd0fb3ba85cfba5804dfb7a2e",
+        "after": "875ac8d77ffe5ad33f0f88bf72b422606a4a9acf742659a7b711d2081f983fd3",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 86,
+        "before": "3a8b98c0051cda6f124977d1c1e74950d49731432bc2cd80ced20f375c09acb8",
+        "after": "3567be0e34d656e1f14a64d92577bbfab92477879e5a288b0b4d5634247d26b9",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 87,
+        "before": "aa6608eb91851d27e6e05f65e24a2412aca074215ed5e32a88a477448fe5c201",
+        "after": "8db4d77b303bc192e4146e6016bf679a6825d093fdc0a98ce80aa76867976e9f",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 88,
+        "before": "3c73ece6b78bfad01e0feb0f36ea12d5843857517341ab8b74e94812911a4cec",
+        "after": "a69b2ebb34dea117b49717f2fc154aff68b6f4f98a86dd2de9a374a79e108651",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 89,
+        "before": "d7f7760c812ab656f3f7d5c98888ba97a203381f76d75c1bb74e0a1782701d43",
+        "after": "1674828e18f8dc6e516972469591a3bfb44d2914a13396137a38d2c3d8f1e9c3",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 90,
+        "before": "f038f1b101af4690090e280850c01a116cf83cfef834ae6cf9c5833a714b2981",
+        "after": "9f21a4e34123b2237248986bb2a5d9dc885adb94642ab0db6b94dfb41177d554",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 91,
+        "before": "40830af7966b80394343b4d74f87ebab6ad97227dd8aac6dda2332364bfacb4f",
+        "after": "3dea6fc017e720a86ff20f36a9d72dfa640ba22f49b37f7ea65a64b88e4e524d",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 92,
+        "before": "c7289b30f7eec43fa4f105f38deccedec5db38d90455d17c103a652c473517e0",
+        "after": "004fabcdde633b97b31aac5bd1f113978762cda4e95cf9e6a117701cb8fcc91c",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 93,
+        "before": "11d65453cdf14428885827af5e91e50f67bb22403406abe53ad261b5d72c1751",
+        "after": "47eb5b436381b3ce5d58a5c51d88d4bb1b0da75378b7aa94279a7316bd802bc9",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 94,
+        "before": "71a00e950cf1500778a176e294f133b70081eb8c7c59077e7fd3d0d3260b012e",
+        "after": "c0dc55f1044e5d9c879d2592c82528fe7e62d046340ec91c05b8936946d98c7f",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 95,
+        "before": "74858f0ea61b4afb8cbc15c5453563f0cb9f209806bc49002151574f9703aa66",
+        "after": "c81b65d1f57fadcd470131d36f06a60a326acf563f2dd5ba40d3162a277d4ba2",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 96,
+        "before": "85643110ee33f46bb6b619ee2f37f7bd11fd61d595061556a921493360fe78cf",
+        "after": "9cf0f75764df9279fbe02ae714695e37f2223781f87db1e32f0de72cc5f64e62",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 97,
+        "before": "2234087e9d26ebd0b9aab3670dea243cd8098c61321f2a28a25a283f55acf679",
+        "after": "d1371faf34e505991c722d244d89c22136c66321ed39c9474577951377afb9ba",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 98,
+        "before": "252dd71577d66cab99edb36c187461e52548dd487ae0f983d3244fbd7c599977",
+        "after": "4de90119706e0a72d65b1d2042cc6e862b53d1fbe724599e845b52e718f9095c",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 99,
+        "before": "89805ad01ff32b3572b7f5f440d739747ac4420ab65488aa84e3d9fd86ac65a1",
+        "after": "6efe559943a26cd9451e751fd1d3dede44a15ef8916b3b8f9a77909a036fdc9a",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 100,
+        "before": "536cc51c9d29eb342b1b63f03a2056c05213c54a721eb4160bb096912d0da252",
+        "after": "98e1218c8f0df9d4f794fdbaadf3a77f41ed0a5498a6be96dd129da0803e5023",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 101,
+        "before": "2805af719f744a0ba6f902d9d17a31a406bda3ff9603e318552c1fcde5175596",
+        "after": "17d174253b7107ac7e9d38a3f9582ec7a5587a14cc881721c9ea5cfb67be483e",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 102,
+        "before": "4f1b8491b5722564175f54177354639ff1d52f22ef277f50ccc7dc508b93e57d",
+        "after": "6a95aa699bf45a0eae1f4495cab177a0902407e7bbbf91dcc95df24edfe438c2",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 103,
+        "before": "003c462027490a7ab86a7c27078401561fa7bb5c6737c6605db210c09496437c",
+        "after": "9c8ea17902cfae835478d89d3d442d82169d4bbc78f0e6a4aad3c2670395e62b",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 104,
+        "before": "221af86a8184d5fb255002761c5e28808f1b92b9dc34dc2502df922643b9df5b",
+        "after": "e9eefd068e5e5583415dda98dec0db3a158d1ff7ec2036379dfad99fe4a062fc",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 105,
+        "before": "caca1246f4f7ef018bf1853141e1d22df9488ab0f7918a762b9ae96b4455aaca",
+        "after": "a95b7b7f3d9893c39a24e40caaad9b449f5a7425536753ce838c091a31a54e97",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 106,
+        "before": "49c22c78e8436dde12d25035750a887946cca37c3672b18475abd456d1e7f4b6",
+        "after": "1cfa62a6c1b7c01ceef317a1cda9c77677ebc3ddf6412dc05b73aadb0d3b8448",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 107,
+        "before": "a6d2cbe11176627c4a22177e817cfcf643db8394e7de57cc555ab1f3fdbdbd36",
+        "after": "f7d9b0dc0d99b93f380d26812ecd1880af57cd82c3ed01ad5bdc31a241fb018a",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 108,
+        "before": "5e7b7acb2b13b0445de38febb8f6c8bc74ea39e059922045c2accacce86dba1b",
+        "after": "b1f00a4f4f3e926fbf9c48ff0b21cd6521e84c6b77a3adb296c17730239c9534",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 109,
+        "before": "15b4a49448fea1c63617cc34b9ef356f9183b291e8788de28fc2b43237148586",
+        "after": "ccd3a868dc4ef082929e29f46090e764522a40a5129df78f57f4c5004d4b9f85",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 110,
+        "before": "58f7bb73703ed128ea149a56b00fcb74a6c7d31033945fd7e6b0090c3d576c7a",
+        "after": "0571f1d382b8f0dcafa0f4992407594dce34983d92b6b3f733cb38ea930da9fc",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 111,
+        "before": "cd787d1470650cc1cb6605fcba4a26ffba577f6e6a8ce79a5ea6a31adea493d8",
+        "after": "ae3d3791ce882a69a7ba36703feba31165723bac26d064aaee903c0673a9f7ec",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 112,
+        "before": "c1fcaa1d030adabce7f8d34d05a87ba1eb01346f678bb652bd671a093e40457a",
+        "after": "325b598269b5598edaeef76027f669c60a6fd518189860d32507bdc2aeb041b1",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 113,
+        "before": "5f0d3bd35ed549e6e90e1825aae1d813fb2eb893ad996225b0dc4cab16618699",
+        "after": "93d82259270b2796e649a41c94b835f04dfd2324c0c00f7addabdb7a20fa3a60",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 114,
+        "before": "95349afaf8f4560b2adb0e18cd956a2563d9b3b55682f523cf05bc4b841b1ef0",
+        "after": "e514e34b2765bf4f7a6214e5e6d68b155a2e6e99fa336767f5399c0989ca2897",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 115,
+        "before": "7d138a9fa145735c3abbea543ced9a083ccc94400fcb99a261a3a357f7bd6a7b",
+        "after": "79001fd23ef32efaeba5156a504a9141a5df79dc8f7fc5b5908a3e0bd21f357f",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 116,
+        "before": "5eb325ffc86b7cbdf3b10b3fcca96c6ffa9bb1f02a5f3e58e33e9ac67c7428c5",
+        "after": "cdfaa779651990e9a8496f4e3e5f09b2c5fd31ab7b1a3f00fb2ca0f85b853caa",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 117,
+        "before": "f4e4e1cff7cd04cd69a33c3a7e279ad2872687bf28f50cd880c24efff3c19466",
+        "after": "cfd4d17753b39a237836439aa2fa51eb8580ff24b177a618c68ecb6fd47f58f9",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 118,
+        "before": "8a2a1789b08c15af4831c67868f773b791f18731d9657703f35d90e2a2e152a4",
+        "after": "7490cccd4f0be609330d465558a40877d64a2c17776049638ca2b145af76ac5e",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 119,
+        "before": "337a7fffec4ea5602710eac8f166d0255c925bdff57c415bb0749d94160eef66",
+        "after": "269ac002bed9963903ab5c8656fff83487995d90962a616ed0fac755ae1ae120",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 120,
+        "before": "112478817643467344852b44f34e89d439706071de859ac5629446e144e1f27d",
+        "after": "651f3eba05475dedc2d7f01f53518232588ce6fda867b60a1f980e7182b7400c",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 121,
+        "before": "3c4e674cfd49a980e73ae8fcdd0383a24989afc4219fc5236aec750306576d2e",
+        "after": "f4d87b30cfa8f4eee4bc9c541ce87d74b86f0b137c94be5a09ee8609350437ce",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 122,
+        "before": "4d51ca2e59a69063bd1da1b7f1c11db6145dd775921bc676e088b87984c1f1e2",
+        "after": "4133783082c0d70a2bede7890e00bb8a8c8b623ea5a8818c38c03fd2362c4deb",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 123,
+        "before": "15d1bc9fe6fc43dd77b35a7709c2cf4707a7c70f88ec9fae77f51cf12fc96d08",
+        "after": "06224d3062c7ff406740363365e090e40861cd7dcdb1b62b1cf992008360f709",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 124,
+        "before": "3ced72fc300f4919d8e9dd52bb72cfbdbce8b0c407ea8cd76a9928e3a9871a31",
+        "after": "bebed936ae0d74033e7d0dfc9c5a1753d31192b2845a236af8bea22032557c93",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 125,
+        "before": "d05378a36a6b350cba17feb2ab2f0e13f10662e40a5cc2e75b11585f64095176",
+        "after": "669869d13781d42f01ba018579ce59c0a5322961a6e4a144088aa726909885d3",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 126,
+        "before": "03983385294666b9ae8e563cb36cc6fb208fbe10a20a39aaebc9bbabc6f16953",
+        "after": "95050a7972d4a90d13cf492c00bda2ab3c6ae1b1ff7df7c415196e2784acfe23",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 127,
+        "before": "d6121293e72c06805f070d832f48b6288a6054867fe4c7800c3ee4166b33a26f",
+        "after": "23d2e91349c3c6455f07b64106e2ba7216324661fcacaea6d591258d9b4d9148",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 128,
+        "before": "420fd45829163c813960c96dae8508321d7a3c226c5336948349592d8939595f",
+        "after": "244a3e429b32d841b94f364529ffb61d647abbedbd4efd379e194cbde4f3020f",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 129,
+        "before": "146bcc77b38794118ae55f9ffd8434583d5ce87a5cc7e16c11d330e8ad79f04c",
+        "after": "3e3c6fc07bb69a3b92d71ec6c34641463b63d0457cb528a7f16be28bf8afe4d6",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 130,
+        "before": "e02bfd38efd3ff958d90e26f86507186a48092deba558f2baf9c2cf75c02a551",
+        "after": "5f422690bbd9af31d3f4986877d5039d657e87937b7a5394f50e8b5e4fb04bbd",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 131,
+        "before": "ae3d9c5dccb57ee27afebb08dd4b334c432c6d5be9c36bafe10942c885086fd0",
+        "after": "0fab2ea912bde629437f7d6f9a19771397a96e44389c8cd642cabdc0865d4a69",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 132,
+        "before": "1b688590d2eda82bf6bac5cbb89e17728210060d59e705d682cc88d79ec4e0dc",
+        "after": "4011fa8d15567409809e67755f7b34a6b74ffd33046ac45bc9106ea04c815152",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 133,
+        "before": "e43127eedacac653350eede33acc83cc5624cb9009d107222cf6772164ca8ba4",
+        "after": "201d90b297c3189642554cf23c614a11d356bbc4b737011a5793e7d4294457bc",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 134,
+        "before": "5df0c28fd71edbe546215adff5c05a7fac47ba769881fb3bff6534464b93bee6",
+        "after": "60aa395f32ace132f66ae1bd2e919554692efb7ae910ac87f4ff203a647838b1",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 135,
+        "before": "bab6474900d8589541ae5d217c2b9b05c23b2eccc2375fd5e77e34fe8c41e820",
+        "after": "44d3a4ac0bc925a92e922202da45b286e2ea3b4dfd4e7d35e583aa25fd00ba22",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 136,
+        "before": "9e75da6a744acbaed057f57221f9fc09fb1cc41c77415455194d06ef446d4c6b",
+        "after": "0d8ff7c714c5a5ae524aea52900c9456823f3dd929e60c0a28f10e6acc992e8e",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 137,
+        "before": "1ee7d2afac131bf80ff8fcb50ec1ef591bee7d75fff0fa27016d65fd1b9f7a43",
+        "after": "f0ff78c16f4a73fe6db43a4532a6af512e76deaafde16ca8b3fb6f11e9efa419",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 138,
+        "before": "b8f44f0799a14685d186b48fb71699daba00febcd292919cb89a1940d4bdf5bb",
+        "after": "163f6a13692aa5d0c699e76950a56c74fb0c880531fbc36e9511b750275b98df",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 139,
+        "before": "b014c0908200f2a34f4c4c7778d4002650b80d21c7663eaa70a23da0e028e1e2",
+        "after": "4fca18d9a1a29ef53e0639a49fb34ecf881c9d67dcfcb14f2779e5a9f77ee6a0",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 140,
+        "before": "b873ccff6861d2f566d1d6e326842cc7d5880749d7a1c7c3a3e9b77f9b482547",
+        "after": "c2862cb4ba49bccce4b0ff37deb17ce5a1025ca8e0fec3e912bf1cb9d0e978ff",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 141,
+        "before": "4e58ac4507f31ab0508c4b244655013892301eb89cb71f5b840c86c1daf5c2f2",
+        "after": "92a99a8e99479cd2d7b9a6817dd03d306268579e3f7ff3bdb76bff95b835a021",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 142,
+        "before": "c0bad56fbf6efe6655b6ca1a54623f3b2f96bf15a6048282203ae26da6b55e86",
+        "after": "3d94b22dad163d9b7142d7ff49ec19279d4906cefbf8f27df9d19fcb6b8b6b7a",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 143,
+        "before": "c20d6dd3f370fd3f69f67cf689519e9758edf3dfe6d1d3880cae42fef4ba28a3",
+        "after": "5bed2089ff8dc78a726657b9d1409a0b2dfa6c84975887900ac251413f58ce20",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 144,
+        "before": "a1428e3b6479fb7de1626b0d30ed963e31129b1d3151d223104096688049ba58",
+        "after": "1eee536ad6bee3f8fe474c88f8e91003016f2e7d09dfe9413dc8066b80a1f742",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 145,
+        "before": "d93243dd472ef58e0a1f1d5c42f4508f9945a18d161521218af86c7344e23f85",
+        "after": "16fdede1ce9df42164f4bf09f12839b14cf96cd34d99756174853931a3da6aa1",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 146,
+        "before": "f78744c633ee0da7e4642e2035f1cb38da0cb3f353c0470c23c646b965516fab",
+        "after": "ee6f365809d47b09a4878a86a5f1ea367a59bbc2cbeaa1b5d9f43ab5676380e9",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 147,
+        "before": "5ddfeac7c5b37a60b3705ca49394dee068eb930aecdd214210aefaf7a95ba6c0",
+        "after": "8d6832bce7b4c45f3ac06f74c26cd3d686b5dcc2b82c05fd77e28d5788a87cd5",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "day": 148,
+        "before": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+        "after": "4fe4b3c2feeb4f96891cf1b9484610c69054c361fdce72a45c7017672df74c36",
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      }
+    ],
+    "changedCounters": [
+      {
+        "mechanic": "knowledge.pruned_age",
+        "before": {
+          "mechanic": "knowledge.pruned_age",
+          "fires": 106,
+          "magnitude": 1399
+        },
+        "after": {
+          "mechanic": "knowledge.pruned_age",
+          "fires": 106,
+          "magnitude": 1401
+        },
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": {
+          "mechanic": "messages.courier_delay",
+          "fires": 102,
+          "magnitude": 102
+        },
+        "after": {
+          "mechanic": "messages.courier_delay",
+          "fires": 103,
+          "magnitude": 103
+        },
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": {
+          "mechanic": "messages.delivered",
+          "fires": 11164,
+          "magnitude": 11164
+        },
+        "after": {
+          "mechanic": "messages.delivered",
+          "fires": 11166,
+          "magnitude": 11166
+        },
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": {
+          "mechanic": "messages.sent",
+          "fires": 11839,
+          "magnitude": 11839
+        },
+        "after": {
+          "mechanic": "messages.sent",
+          "fires": 11841,
+          "magnitude": 11841
+        },
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "mechanic": "situations.fired",
+        "before": {
+          "mechanic": "situations.fired",
+          "fires": 65,
+          "magnitude": 65
+        },
+        "after": {
+          "mechanic": "situations.fired",
+          "fires": 67,
+          "magnitude": 67
+        },
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "mechanic": "situations.notice_reports",
+        "before": {
+          "mechanic": "situations.notice_reports",
+          "fires": 47,
+          "magnitude": 47
+        },
+        "after": {
+          "mechanic": "situations.notice_reports",
+          "fires": 49,
+          "magnitude": 49
+        },
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "mechanic": "situations.noticed",
+        "before": {
+          "mechanic": "situations.noticed",
+          "fires": 46,
+          "magnitude": 46
+        },
+        "after": {
+          "mechanic": "situations.noticed",
+          "fires": 48,
+          "magnitude": 48
+        },
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      },
+      {
+        "mechanic": "situations.surfaced",
+        "before": {
+          "mechanic": "situations.surfaced",
+          "fires": 64,
+          "magnitude": 64
+        },
+        "after": {
+          "mechanic": "situations.surfaced",
+          "fires": 66,
+          "magnitude": 66
+        },
+        "cause": "Two correspondence notices and actual receipt of the Pickens refusal; all downstream consequences are model inferences [I]."
+      }
+    ],
+    "changedCheckpoints": [],
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "4fe4b3c2feeb4f96891cf1b9484610c69054c361fdce72a45c7017672df74c36",
+      "matches": true,
+      "savedLogReplays": true
+    }
+  },
+  {
+    "pack": "testbed",
+    "baseline": "S42 retained reference; packages/ and packs/ unchanged between 23b5d491 and f19b6f0",
+    "worldHash": {
+      "before": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5",
+      "after": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5"
+    },
+    "initialHashUnchanged": true,
+    "finalHash": {
+      "before": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+      "after": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4"
+    },
+    "changedDays": [],
+    "changedCounters": [],
+    "changedCheckpoints": [],
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+      "matches": true,
+      "savedLogReplays": true
+    }
+  }
+]

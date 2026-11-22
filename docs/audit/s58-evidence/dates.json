@@ -1,0 +1,198 @@
+{
+  "houston_confederate_obligations": {
+    "fired": {
+      "day": 8,
+      "date": "1861-03-13"
+    },
+    "surfaced": {
+      "day": 9,
+      "date": "1861-03-14"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "texas_governor_changed": {
+    "fired": {
+      "day": 11,
+      "date": "1861-03-16"
+    },
+    "surfaced": {
+      "day": 12,
+      "date": "1861-03-17"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "pickens_refusal_received": {
+    "fired": {
+      "day": 32,
+      "date": "1861-04-06"
+    },
+    "surfaced": {
+      "day": 38,
+      "date": "1861-04-12"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "pickens_refused": {
+    "fired": {
+      "day": 32,
+      "date": "1861-04-06"
+    },
+    "surfaced": {
+      "day": 38,
+      "date": "1861-04-12"
+    },
+    "decided": {
+      "day": 38,
+      "date": "1861-04-12"
+    }
+  },
+  "indian_territory_posts_given_up": {
+    "fired": {
+      "day": 51,
+      "date": "1861-04-25"
+    },
+    "surfaced": {
+      "day": 52,
+      "date": "1861-04-26"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "wheeling_convention": {
+    "fired": {
+      "day": 98,
+      "date": "1861-06-11"
+    },
+    "surfaced": {
+      "day": 99,
+      "date": "1861-06-12"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "wheeling_ordinance": {
+    "fired": {
+      "day": 106,
+      "date": "1861-06-19"
+    },
+    "surfaced": {
+      "day": 107,
+      "date": "1861-06-20"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "pierpont_elected": {
+    "fired": {
+      "day": 107,
+      "date": "1861-06-20"
+    },
+    "surfaced": {
+      "day": 108,
+      "date": "1861-06-21"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "pierpont_aid_requested": {
+    "fired": {
+      "day": 108,
+      "date": "1861-06-21"
+    },
+    "surfaced": {
+      "day": 109,
+      "date": "1861-06-22"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "wheeling_recognition_letter": {
+    "fired": {
+      "day": 112,
+      "date": "1861-06-25"
+    },
+    "surfaced": {
+      "day": 113,
+      "date": "1861-06-26"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "wheeling_legislature": {
+    "fired": {
+      "day": 118,
+      "date": "1861-07-01"
+    },
+    "surfaced": {
+      "day": 119,
+      "date": "1861-07-02"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "muscogee_treaty": {
+    "fired": {
+      "day": 127,
+      "date": "1861-07-10"
+    },
+    "surfaced": {
+      "day": 128,
+      "date": "1861-07-11"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "chickasaw_treaty": {
+    "fired": {
+      "day": 129,
+      "date": "1861-07-12"
+    },
+    "surfaced": {
+      "day": 130,
+      "date": "1861-07-13"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  },
+  "choctaw_treaty": {
+    "fired": {
+      "day": 129,
+      "date": "1861-07-12"
+    },
+    "surfaced": {
+      "day": 130,
+      "date": "1861-07-13"
+    },
+    "decided": {
+      "day": null,
+      "date": null
+    }
+  }
+}

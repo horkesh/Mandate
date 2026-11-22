@@ -1,0 +1,26 @@
+[
+  {
+    "name": "@mandate/cli",
+    "actual": "C:\\Pyrrhic\\sprint-b2\\packages\\cli",
+    "expected": "C:\\Pyrrhic\\sprint-b2\\packages\\cli",
+    "matches": true
+  },
+  {
+    "name": "@mandate/kernel",
+    "actual": "C:\\Pyrrhic\\sprint-b2\\packages\\kernel",
+    "expected": "C:\\Pyrrhic\\sprint-b2\\packages\\kernel",
+    "matches": true
+  },
+  {
+    "name": "@mandate/pack-format",
+    "actual": "C:\\Pyrrhic\\sprint-b2\\packages\\pack-format",
+    "expected": "C:\\Pyrrhic\\sprint-b2\\packages\\pack-format",
+    "matches": true
+  },
+  {
+    "name": "@mandate/rule-seats",
+    "actual": "C:\\Pyrrhic\\sprint-b2\\packages\\rule-seats",
+    "expected": "C:\\Pyrrhic\\sprint-b2\\packages\\rule-seats",
+    "matches": true
+  }
+]
