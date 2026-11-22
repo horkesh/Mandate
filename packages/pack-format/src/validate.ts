@@ -162,6 +162,19 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
   for (const problem of phase0.templateProblems(world.rules.reportTemplates)) {
     err('rules-templates', W('rules', 0, 'reportTemplates'), problem, 'one template for each report type and subtype the kernel writes, keepSupersededDays at most maxAgeDays');
   }
+  for (const problem of phase0.latencyProblems(world.rules.latency)) err('rules-latency', W('rules', 0, 'latency'), problem);
+  for (const d of world.rules.latency.dispatches ?? []) {
+    for (const scenario of scenarios) {
+      const target = scenario.posts.find(p => p.id === d.to);
+      if (target === undefined) err('rules-dispatch', W('rules', 0, 'latency.dispatches'), `dispatch ${d.to}: target absent in scenario ${scenario.id}`);
+      const side = world.departments.find(x => x.id === target?.department)?.faction;
+      for (const c of d.carriers) {
+        const post = scenario.posts.find(p => p.id === c.post);
+        if (post === undefined || world.departments.find(x => x.id === post.department)?.faction !== side) err('rules-dispatch', W('rules', 0, 'latency.dispatches'), `dispatch ${d.to}: carrier ${c.post} must be a declared same-side post in ${scenario.id}`);
+      }
+    }
+    for (const value of [...d.terms.honours, ...d.terms.offends]) if (!vocab.values.some(v => v.id === value)) err('rules-dispatch', W('rules', 0, 'latency.dispatches'), `unknown delivery value ${value}`);
+  }
   // Lane 1.1: the people rules, by the kernel's own rule (it checks the same when it indexes a World): every value they name is in the vocabulary.
   // Lane 1.5: attention, the order-to-value map, the verbs, ladder, audience and initiatives.
   for (const problem of phase0.verbRulesProblems(world.rules.people.attention, world.rules.people.verbs, vocab.values.map((v) => v.id), vocab.personKinds.map((k) => k.id))) {

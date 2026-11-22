@@ -4,16 +4,15 @@
  * it arrives. The shell never computes an arrival, and a seat never sets one.
  *
  * Routes (0032, 0040): in person, wire, courier, a special messenger (a route
- * with a price), mail, rail and ship. Rail and ship routes for messages are not
- * built yet (the typed edges exist since lane 0.5; the routes wait for Phase 1),
- * so they are refused with a reason.
+ * with a price), mail, rail and ship. Ships use the directional water network's
+ * passage rules. Rail messages remain unavailable.
  *
  * Courier and mail carry exogenous noise (roads, weather: decision 0007 allows
  * dice for these, never for people). The draw comes from a stream keyed by
  * the message's own id (decision 0041's pattern), so no other message, report
  * or reading can shift it.
  */
-import type { FactionId, MessageId, RegionId } from '../ids.ts';
+import type { FactionId, MessageId, PostId, RegionId } from '../ids.ts';
 import { createStream, nextInt } from '../rng.ts';
 
 export const ROUTE_KINDS = ['courier', 'in-person', 'mail', 'rail', 'ship', 'special-messenger', 'wire'] as const;
@@ -29,6 +28,13 @@ export const ORDER_ROUTES: readonly RouteKind[] = Object.freeze(['courier', 'spe
 
 /** How long each route takes beside the map's courier days. Every pack states them (`WorldRules.latency`); the kernel has no default (0072). */
 export interface LatencyRules {
+  /** Entrusted delivery outside the ordinary command chain; no row invents a carrier or a journey. */
+  readonly dispatches?: readonly {
+    readonly to: PostId;
+    readonly carriers: readonly { readonly post: PostId; readonly route: 'courier' | 'ship' }[];
+    readonly terms: { readonly boldness: number; readonly honours: readonly string[]; readonly offends: readonly string[] };
+    readonly source: string;
+  }[];
   /** Documented access to public offices, apart from military ownership; absent permits no exception. */
   readonly publicWires?: readonly { readonly from: RegionId; readonly to: RegionId; readonly faction: FactionId; readonly fromDate: string; readonly throughDate: string; readonly source: string }[];
   /** Days for a message on the wire between two wired regions. */
@@ -47,6 +53,19 @@ const LATENCY_RULE_NAMES = ['wireDays', 'mailPermille', 'specialMessengerPermill
 
 export function latencyProblems(rules: LatencyRules): string[] {
   const problems: string[] = [];
+  const targets = new Set<string>();
+  for (const d of rules.dispatches ?? []) {
+    if (targets.has(d.to)) problems.push(`dispatch ${d.to}: duplicate target`);
+    targets.add(d.to);
+    if (!d.source.trim() || d.carriers.length === 0) problems.push(`dispatch ${d.to}: carriers and a source are required`);
+    if (!Number.isSafeInteger(d.terms.boldness) || d.terms.boldness < 0 || d.terms.boldness > 1000) problems.push(`dispatch ${d.to}: boldness must be a permille`);
+    const posts = new Set<string>([d.to]);
+    for (const c of d.carriers) {
+      if (posts.has(c.post)) problems.push(`dispatch ${d.to}: repeated carrier or target ${c.post}`);
+      posts.add(c.post);
+      if (c.route !== 'courier' && c.route !== 'ship') problems.push(`dispatch ${d.to}: unsupported carrier route`);
+    }
+  }
   for (const name of LATENCY_RULE_NAMES) {
     const v = rules[name];
     if (!Number.isSafeInteger(v) || v < 0) problems.push(`latency rule ${name} must be a whole number, not negative`);
@@ -57,6 +76,8 @@ export function latencyProblems(rules: LatencyRules): string[] {
 
 /** The map facts latency needs: courier days from the typed edges and the day's wire owners (`seats/world.ts`, `latencyMapFor`). */
 export interface LatencyMap {
+  /** A naval passage on today's network; absent or null means no water route. */
+  shipDays?(from: RegionId, to: RegionId, faction: FactionId): number | null;
   publicWire?(from: RegionId, to: RegionId, faction: FactionId): boolean;
   courierDays(from: RegionId, to: RegionId): number;
   daysToWire(from: RegionId, faction: FactionId): number | null;

@@ -28,7 +28,7 @@ import { answerOrder, goalTerms, relayAction, resolveOrderConflict } from '../re
 import { callTerms } from '../recruitment/rules.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { headquartersOf, isFieldPost, postFaction, relayChain } from '../seats/posts.ts';
-import { fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
+import { carrierHops, deliveryTerms, fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
 import { arriveSupport } from './support.ts';
 
 /** A goal as `plans` holds it, from a command's terms. */
@@ -91,6 +91,8 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   if (target.postHolder === null && believedHolder(state, issuer.id, cmd.to) === null && paper === undefined) return 'vacant_post';
   // Only the routes the principal's menu offers (review N1): an order "in person" would be a visit, a verb of its own.
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
+  const dispatch = world.rules.latency.dispatches?.find(d => d.to === cmd.to);
+  if (dispatch?.carriers.some(c => state.postStates[c.post]?.postHolder == null)) return 'vacant_post';
 
   let body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes'>;
   if (cmd.cmd === 'order') {
@@ -147,11 +149,13 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   const relays = chain.slice(0, -1).filter((p) => state.postStates[p]!.postHolder !== null);
   // The addressee is the man the issuer believes holds the post (lane 1.12): its holder, or the commander a battle took
   // whose loss has not been reported to him.
-  const hops: Hop[] = [...(cmd.bypass ? [] : relays), cmd.to].map((p, i, all) => ({
+  const chainHops: Hop[] = [...(cmd.bypass ? [] : relays), cmd.to].map((p, i, all) => ({
     hopPerson: i === all.length - 1 ? (believedHolder(state, issuer.id, p) ?? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === p)?.knownBody.reportAuthor)! : state.postStates[p]!.postHolder!,
     hopPost: p,
     hopRole: i === all.length - 1 ? 'addressee' : 'relay',
   }));
+  // An entrusted route supplements the command chain; bypass does not erase its carriers.
+  const hops = [...chainHops.slice(0, -1), ...carrierHops(ctx, state, cmd.to), chainHops[chainHops.length - 1]!];
   const first = hops[0]!;
   const tag = body.orderKind === 'goal' ? `order.${cmd.to}` : `${body.orderKind}.${cmd.to}`;
   const id = mintMessageId(ctx.mint, ctx.day, issuer.id, first.hopPerson, tag);
@@ -163,6 +167,8 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
     msgTo: first.hopPerson,
     msgToPost: first.hopPost,
     msgRole: first.hopRole,
+    ...(first.hopCarriage === undefined ? {} : { msgCarriage: first.hopCarriage }),
+    ...deliveryTerms(ctx, cmd.to),
     msgRoute: leg.route,
     msgSentDay: ctx.day,
     msgArriveDay: leg.arrive,
@@ -202,10 +208,10 @@ function hopRegion(ctx: TickContext, state: State, h: Hop): RegionId {
  * way it went, as a returned dispatch naming the post and why (`vacant_post` or `holder_changed`). The player reads it
  * in his reports, like any answer to an order.
  */
-export function returnDispatch(ctx: TickContext, state: State, msg: TransitMessage): State {
+export function returnDispatch(ctx: TickContext, state: State, msg: TransitMessage, failure?: string): State {
   const issuer = msg.msgOrder?.orderIssuer ?? msg.msgVerb!.verbIssuer;
   const post = msg.msgVerb?.verbPost ?? msg.msgToPost!;
-  const why = state.postStates[post]?.postHolder === null ? 'vacant_post' : 'holder_changed';
+  const why = failure ?? (state.postStates[post]?.postHolder === null ? 'vacant_post' : 'holder_changed');
   sendReport(ctx, state, {
     body: answerBody(issuer, null, ctx.day, {
       reportType: 'wire-dispatch',
@@ -218,7 +224,8 @@ export function returnDispatch(ctx: TickContext, state: State, msg: TransitMessa
     truth: { truthTerms: [term('observed', 0, { person: msg.msgTo, post, rule: why })], truthTrimmed: [] },
     to: issuer,
     tag: `returned.${post}`,
-    route: msg.msgRoute,
+    ...(msg.msgRole === 'carrier' ? { deliveryFailure: true as const } : {}),
+    route: msg.msgRole === 'carrier' ? 'courier' : msg.msgRoute,
     fromRegion: headquartersOf(ctx.world, state, post),
   });
   fire(ctx, 'orders.returned');
@@ -298,6 +305,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
     msgTo: next.hopPerson,
     msgToPost: next.hopPost,
     msgRole: next.hopRole,
+    ...(next.hopCarriage === undefined ? {} : { msgCarriage: next.hopCarriage }),
     msgRoute: leg.route,
     msgSentDay: ctx.day,
     msgArriveDay: leg.arrive,

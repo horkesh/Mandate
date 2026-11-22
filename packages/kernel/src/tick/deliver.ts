@@ -16,6 +16,7 @@ import { fire, hop, whereIs, type TickContext } from './context.ts';
 import { arriveOrder, relayOrder, returnDispatch } from './orders.ts';
 import { arriveVerb } from './verbs.ts';
 import { arriveCall } from './recruitment.ts';
+import { carryDispatch } from './carriers.ts';
 
 /** A day can chain same-day hops (a relay in the same town); more rounds than this means a loop, which is a bug. */
 const MAX_ROUNDS = 64;
@@ -74,11 +75,12 @@ export function deliverDue(ctx: TickContext, start: State): State {
 }
 
 function isReportArrival(msg: TransitMessage): boolean {
-  return msg.msgVerb === null && msg.msgOrder === null && msg.msgRole !== 'filter';
+  return msg.msgVerb === null && msg.msgOrder === null && msg.msgRole === 'addressee';
 }
 
 function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State {
   fire(ctx, 'messages.delivered');
+  if (msg.msgRole === 'carrier') return carryDispatch(ctx, state, msg);
   // Lane 1.5: a people verb's letter reaches its man.
   if (msg.msgVerb !== null) return arriveVerb(ctx, state, msg);
   if (msg.msgOrder !== null) {

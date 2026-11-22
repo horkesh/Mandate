@@ -16,6 +16,7 @@ import type { ReportBody } from '../knowledge/report.ts';
 import { templateFor } from '../knowledge/templates.ts';
 import type { BiasTerm, ReportTruth } from '../knowledge/truth.ts';
 import { routeLatency, type LatencyMap, type RouteKind } from '../messages/latency.ts';
+import { dispatchLatency } from '../messages/ship.ts';
 import { mintMessageId, type IdMint, type Hop, type TransitMessage } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
 import type { StateForces, EnlistmentRenewal } from '../situations/types.ts';
@@ -71,7 +72,7 @@ export interface Rejection {
 
 /** Something a mechanism decided, with its terms: the explanation trail (hard rule 6). */
 export interface TickEvent {
-  readonly event: 'service_choice' | 'audience' | 'conflict' | 'filtered' | 'initiative' | 'objected' | 'policy' | 'policy_unpaid' | 'relayed' | 'seat_defaulted';
+  readonly event: 'carried' | 'service_choice' | 'audience' | 'conflict' | 'filtered' | 'initiative' | 'objected' | 'policy' | 'policy_unpaid' | 'relayed' | 'seat_defaulted';
   readonly person: PersonId;
   readonly post: PostId | null;
   /** The order or report it concerns (null for a defaulted seat choice). */
@@ -241,12 +242,27 @@ export function takenRoute(ctx: TickContext, state: State, route: RouteKind, sen
 
 /** Arrival of one hop by `route`, sent by `sender`, and the route actually taken (a wire sent off his side's wire goes by courier). */
 export function hop(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId, id: MessageId, extraDays = 0, recipient: PersonId | null = null): { readonly arrive: number; readonly route: RouteKind } {
-  const l = routeLatency(ctx.latency, ctx.world.rules.latency, route, from, to, travelSide(ctx, state, sender, recipient), { seed: ctx.seed, message: id });
+  const l = dispatchLatency(ctx.latency, ctx.world.rules.latency, route, from, to, travelSide(ctx, state, sender, recipient), { seed: ctx.seed, message: id });
   if (!l.ok) throw new RangeError(`route ${route} is not available from ${from} to ${to}`);
   const weather = l.latency.parts.find((p) => p.part === 'weather');
   // Lane 1.6: the mail (the press's front pages) is counted apart, so the courier count keeps watching orders and reports.
   if (weather) fire(ctx, route === 'mail' ? 'messages.mail_delay' : 'messages.courier_delay', weather.days);
   return { arrive: ctx.day + l.latency.days + extraDays, route: takenRoute(ctx, state, route, sender, from, to, recipient) };
+}
+
+/** Explicit delivery agents, independent of command-chain relays. Missing holders are never silently skipped. */
+export function carrierHops(ctx: TickContext, state: State, target: PostId | null): readonly Hop[] {
+  const row = ctx.world.rules.latency.dispatches?.find(d => d.to === target);
+  return (row?.carriers ?? []).map(c => {
+    const person = state.postStates[c.post]?.postHolder;
+    if (person === null || person === undefined) throw new RangeError(`dispatch ${target}: vacant carrier ${c.post}`);
+    return { hopPerson: person, hopPost: c.post, hopRole: 'carrier', hopCarriage: c.route };
+  });
+}
+
+export function deliveryTerms(ctx: TickContext, target: PostId | null): Pick<TransitMessage, 'msgDeliveryTerms'> {
+  const row = ctx.world.rules.latency.dispatches?.find(d => d.to === target);
+  return row === undefined ? {} : { msgDeliveryTerms: { deliveryBoldness: row.terms.boldness, deliveryHonours: [...row.terms.honours], deliveryOffends: [...row.terms.offends] } };
 }
 
 /**
@@ -263,6 +279,8 @@ export function sendReport(
     readonly to: PersonId;
     readonly tag: string;
     readonly route?: RouteKind;
+    /** A delivery failure is returned directly, never re-entering the failed entrusted itinerary. */
+    readonly deliveryFailure?: true;
     /** Where it is written, if not where its author is posted (an intelligence chief writes at the headquarters he serves). */
     readonly fromRegion?: RegionId;
   },
@@ -277,9 +295,11 @@ export function sendReport(
   const filter = filterId !== null && filterHolder !== null && filterHolder !== from ? { id: filterId, holder: filterHolder } : undefined;
   const toPost = heldPost(state, report.to, ctx.postHolders);
   const addressee: Hop = { hopPerson: report.to, hopPost: toPost, hopRole: 'addressee' };
+  const carriers = report.deliveryFailure ? [] : carrierHops(ctx, state, toPost);
   // Only a report that really goes by wire meets the filter; one sent off the wire rides past it.
-  const throughFilter = filter !== undefined && report.to === faction.principal && takenRoute(ctx, state, route, from, fromRegion, whereIs(ctx, state, report.to), report.to) === 'wire';
-  const first: Hop = throughFilter ? { hopPerson: filter.holder, hopPost: filter.id, hopRole: 'filter' } : addressee;
+  const throughFilter = carriers.length === 0 && filter !== undefined && report.to === faction.principal && takenRoute(ctx, state, route, from, fromRegion, whereIs(ctx, state, report.to), report.to) === 'wire';
+  const itinerary: readonly Hop[] = [...carriers, ...(throughFilter ? [{ hopPerson: filter.holder, hopPost: filter.id, hopRole: 'filter' as const }] : []), addressee];
+  const first = itinerary[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, from, first.hopPerson, report.tag);
   const leg = hop(ctx, state, route, from, fromRegion, whereIs(ctx, state, first.hopPerson), id, 0, report.to);
   ctx.outbox.push({
@@ -289,11 +309,13 @@ export function sendReport(
     msgTo: first.hopPerson,
     msgToPost: first.hopPost,
     msgRole: first.hopRole,
+    ...(first.hopCarriage === undefined ? {} : { msgCarriage: first.hopCarriage }),
+    ...deliveryTerms(ctx, toPost),
     msgRoute: throughFilter ? 'wire' : leg.route,
     msgSentDay: ctx.day,
     msgArriveDay: leg.arrive,
     msgVia: [],
-    msgPending: throughFilter ? [addressee] : [],
+    msgPending: itinerary.slice(1),
     msgOrder: null,
     msgVerb: null,
     msgReport: report.body,

@@ -146,7 +146,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // Lane 1.4: approved plans in execution, each axis's stage, its support requests and its outcome.
   field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes', 'a support request answered'], [at('State', 'operationRecords')]),
   field('knowledge (reports per seat)', 'knowledge', ['opening bulletins', 'message delivery', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'openingControlReports'), at('State', 'openingControlClaims'), at('State', 'reportTruth')]),
-  field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
+  field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', 'entrusted staff and ship carriers', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
   field('economy stocks', 'economy', ['weekly step', 'verbs']),
   field('situations fired, live (open options, clocks) and decided', 'situations', ['cause evaluation', 'decisions', "delegated seats' choices"], [at('State', 'situationStates')]),
   // Lane 1.6 (`politics/politics.ts`): bloc support (the mandate is derived from it, never stored; elections are 1B's).
@@ -194,6 +194,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'SeatAssignment',
   // Messages in transit
   'TransitMessage',
+  'TransitMessage.msgDeliveryTerms',
   'Hop',
   'OrderBody',
   'VerbBody',

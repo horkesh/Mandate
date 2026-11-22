@@ -310,6 +310,12 @@ export const RulesSchema = z.strictObject({
   latency: z
     .strictObject({
       wireDays: nonNegative.describe('Days for a message on the wire between two wired regions. A design parameter.'),
+      dispatches: z.array(z.strictObject({
+        to: idOf('post'),
+        carriers: z.array(z.strictObject({ post: idOf('post'), route: z.enum(['courier', 'ship']) })).min(1),
+        terms: z.strictObject({ boldness: permille, honours: z.array(termId), offends: z.array(termId) }),
+        source: z.string().min(1),
+      })).optional().describe('Entrusted delivery through named same-side staff or ship posts, with outbound routes and delivery terms.'),
       publicWires: z.array(z.strictObject({ from: idOf('region'), to: idOf('region'), faction: idOf('faction'), fromDate: historicalDate, throughDate: historicalDate, source: z.string().min(1) })).optional().describe('Cited public-office access between these places on these dates, independent of military control; enemy-held endpoints close it. No entry means no public access.'),
       mailPermille: nonNegative.describe('The mail against a courier, permille (slower: above 1000). A design parameter.'),
       specialMessengerPermille: permille.describe('A special messenger against a courier, permille (faster: at most 1000). A design parameter.'),

@@ -27,7 +27,7 @@ export interface OrderResponse {
   readonly respPerson: PersonId;
   readonly respPost: PostId | null;
   /** He relayed it (0040) or it was addressed to him. */
-  readonly respRole: 'relay' | 'addressee';
+  readonly respRole: 'relay' | 'addressee' | 'carrier';
   /** What he answered: the order's kind (a goal, a call, an edit, ...) or the verb's (`verb:audience`); lane 1.11's `callReceived` reads it. */
   readonly respKind: string;
   /** The dated pack call this response answers; independent of message-id shortening. */
@@ -57,7 +57,7 @@ export function responseKey(order: MessageId, person: PersonId, note?: number): 
 /** A response as State, from compliance's answer. */
 export function responseOf(
   answer: DirectiveResponse,
-  at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee'; readonly day: number; readonly kind: string; readonly note?: number; readonly callId?: string },
+  at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee' | 'carrier'; readonly day: number; readonly kind: string; readonly note?: number; readonly callId?: string },
 ): OrderResponse {
   return {
     ...(at.note === undefined ? {} : { respNote: at.note }),
@@ -80,7 +80,8 @@ export function responseOf(
 
 /** The only writer of responses: record (or replace) a man's response to an order. */
 export function recordResponse(state: State, response: OrderResponse): State {
-  return { ...state, orderResponses: { ...state.orderResponses, [responseKey(response.respOrder, response.respPerson, response.respNote)]: response } };
+  const key = responseKey(response.respOrder, response.respPerson, response.respNote) + (response.respRole === 'carrier' ? '|carrier' : '');
+  return { ...state, orderResponses: { ...state.orderResponses, [key]: response } };
 }
 
 /**

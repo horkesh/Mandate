@@ -167,6 +167,15 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
     } catch { problems.push('latency.publicWires: invalid date'); }
     if (wire.source.trim().length === 0) problems.push('latency.publicWires: a public route needs a source');
   }
+  for (const d of rules.latency.dispatches ?? []) {
+    const target = postSides.get(d.to);
+    if (target === undefined) problems.push(`dispatch ${d.to}: unknown target post`);
+    for (const c of d.carriers) {
+      const carrier = postSides.get(c.post);
+      if (carrier === undefined || carrier.faction !== target?.faction) problems.push(`dispatch ${d.to}: carrier ${c.post} must be a declared same-side post`);
+    }
+    for (const v of [...d.terms.honours, ...d.terms.offends]) if (!map.world.vocabularies.values.some(x => x.id === v)) problems.push(`dispatch ${d.to}: unknown value ${v}`);
+  }
   // Lane 1.12 (G-1.12a): the forts the rules let be bombarded, and the record's terms, name regions of the map and sides.
   const bombardment = map.world.rules.combat.bombardment;
   for (const o of bombardment.objectives) if (!map.regions.has(o.region)) problems.push(`rules.combat.bombardment.objectives: ${o.region} is not a region`);

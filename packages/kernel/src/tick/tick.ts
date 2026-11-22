@@ -35,6 +35,7 @@ import type { PostId } from '../ids.ts';
 import { pruneKnowledge } from '../knowledge/knowledge.ts';
 import { entryProblems, type LogEntry } from '../log/log.ts';
 import { createIdMint, sendMessages } from '../messages/transit.ts';
+import { shipLatencyMap } from '../messages/ship.ts';
 import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
 import { applyPeopleChanges, type PeopleChange } from '../people/people.ts';
@@ -146,7 +147,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   const ctx: TickContext = {
     world,
     postHolders: createHeldPostCache(),
-    latency: ground.latency,
+    latency: shipLatencyMap(ground.latency, ground.march),
     day,
     seed: state.gameSeed,
     mint: createIdMint(state),

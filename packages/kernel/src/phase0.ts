@@ -14,6 +14,7 @@ export * from './knowledge/truth.ts';
 export * from './knowledge/knowledge.ts';
 export * from './knowledge/beliefs.ts';
 export * from './messages/latency.ts';
+export * from './messages/ship.ts';
 export * from './messages/transit.ts';
 export * from './plans/goal.ts';
 export * from './plans/plans.ts';

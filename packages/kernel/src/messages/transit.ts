@@ -29,7 +29,9 @@ export interface Hop {
   /** The post he receives it in (null: the principal, who holds no post). */
   readonly hopPost: PostId | null;
   /** `relay`: he passes an order down his chain; `filter`: he may hold or cut a wire; `addressee`: it ends with him. */
-  readonly hopRole: 'addressee' | 'filter' | 'relay';
+  readonly hopRole: 'addressee' | 'filter' | 'relay' | 'carrier';
+  /** Entrusted carrier's outbound leg. Absent on ordinary chain hops. */
+  readonly hopCarriage?: 'courier' | 'ship';
 }
 
 /**
@@ -108,7 +110,10 @@ export interface TransitMessage {
   /** The post the recipient receives it in, if any. */
   readonly msgToPost: PostId | null;
   /** `relay` / `filter` / `addressee`: what the recipient does with it. */
-  readonly msgRole: 'addressee' | 'filter' | 'relay';
+  readonly msgRole: 'addressee' | 'filter' | 'relay' | 'carrier';
+  /** The current entrusted carrier's outbound leg and delivery instructions. */
+  readonly msgCarriage?: 'courier' | 'ship';
+  readonly msgDeliveryTerms?: { readonly deliveryBoldness: number; readonly deliveryHonours: readonly string[]; readonly deliveryOffends: readonly string[] };
   readonly msgRoute: RouteKind;
   readonly msgSentDay: number;
   readonly msgArriveDay: number;

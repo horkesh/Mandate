@@ -7,6 +7,8 @@ import { createIdMint } from '../../src/messages/transit.ts';
 import type { State } from '../../src/root-state.ts';
 import { indexSeatsWorld, latencyMapFor, type SeatsWorld } from '../../src/seats/world.ts';
 import { createTelemetry } from '../../src/telemetry.ts';
+import { morningGround } from '../../src/seats/requests.ts';
+import { shipLatencyMap } from '../../src/messages/ship.ts';
 import type { TickContext } from '../../src/tick/context.ts';
 import type { WorldIndex } from '../../src/world/index.ts';
 import type { ScenarioStart } from '../../src/world/scenario.ts';
@@ -19,7 +21,7 @@ export function worldOf(map: WorldIndex, start: ScenarioStart): SeatsWorld {
 export function ctxFor(world: SeatsWorld, state: State, day: number, mechanics: readonly string[] = []): TickContext {
   return {
     world,
-    latency: latencyMapFor(world, buildControlIndex(world.map, state.regionControl)),
+    latency: shipLatencyMap(latencyMapFor(world, buildControlIndex(world.map, state.regionControl)), morningGround(world, state, day).march),
     day,
     seed: state.gameSeed,
     mint: createIdMint(state),
