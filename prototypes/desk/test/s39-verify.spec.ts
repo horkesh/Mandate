@@ -16,13 +16,13 @@ async function book(page:Page,name:string){await rest(page);await page.getByRole
 test('S39 live opening, receipt dates, readable decision dispatch and native appointment draft',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/');await expect(page.getByTestId('map-canvas-host')).toHaveAttribute('data-ready','ready',{timeout:30000});
- await expect(page.locator('.table-calendar time')).toHaveText('1861-03-05');await expect(page.getByTestId('first-morning-note')).toBeVisible();
+ await expect(page.locator('.table-calendar time')).toHaveText('Tuesday, 5 March 1861');await expect(page.getByTestId('first-morning-note')).toBeVisible();
  await page.getByRole('button',{name:'In-tray 1',exact:true}).click();await page.getByTestId('paper-link').first().click();
- await expect(page.getByTestId('paper')).toContainText('1861-03-05');await expect(page.getByTestId('paper')).not.toContainText('1861-03-04');
+ await expect(page.getByTestId('paper')).toContainText('5 March 1861');await expect(page.getByTestId('paper')).not.toContainText('4 March 1861');
  await capture(page,'live-opening-paper-3440','Live human-seat opening after desk corrections; no loaded State or snapshot substitution.');
  await rest(page);await page.getByRole('button',{name:S.run,exact:true}).click();await page.getByLabel(S.turnDays).selectOption('1');
  await page.getByRole('button',{name:S.sendRun,exact:true}).click();await page.getByRole('button',{name:S.nextMorning,exact:true}).click();
- await expect(page.getByTestId('first-morning-note')).toHaveCount(0);await expect(page.locator('.table-calendar time')).toHaveText('1861-03-06');
+ await expect(page.getByTestId('first-morning-note')).toHaveCount(0);await expect(page.locator('.table-calendar time')).toHaveText('Wednesday, 6 March 1861');
  await page.getByRole('button',{name:S.stopDocket,exact:true}).click();const pickens=page.locator('.situation').filter({has:page.getByRole('heading',{name:'Fort Pickens',exact:true})});
  await pickens.getByRole('checkbox').first().check();await pickens.getByRole('button',{name:S.signDecision,exact:true}).click();
  await rest(page);await page.getByRole('button',{name:'Out-tray 1',exact:true}).click();

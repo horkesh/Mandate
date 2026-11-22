@@ -23,7 +23,8 @@ import type {Price} from './business.ts';
 import {commandPrice,outOfAttention,refusalText,slipText,subjectName,politicalPaperText} from './business.ts';
 import {deskDate} from './plan-business.ts';
 import type {Point} from './map/model.ts';
-import {calendarFace,LOOK} from './look.ts';
+import {LOOK} from './look.ts';
+import {calendarFace,writtenDate} from './dates.ts';
 import './table.css';
 
 type Sheet = { panel: Panel; paper?: ReportView; person?: CommandablePost; post?:string; audience?:string; summary?:boolean; returnSource?:string };
@@ -236,7 +237,7 @@ export function App() {
     if(current.post||current.person)return <PostDetails key={current.post??current.person!.post} request={tableData.morning} strings={data!.strings} post={current.post??current.person!.post} order={order} openAudience={audience} openPaper={sourcePaper}/>;
     switch (current.panel) {
       case 'find': return <Find data={data!} region={id => { setDestination(id); open('map'); }} person={person => setStack(previous => [...previous, { panel: 'board', person }])}/>;
-      case 'calendar': return <div className="calendar-sheet"><p className="large-date">{date}</p><p>{S.day} {data!.morning.requestDay}</p><p>{menu.atWarSince === null ? S.atPeace : S.atWar}</p></div>;
+      case 'calendar': return <div className="calendar-sheet"><p className="large-date"><time dateTime={date}>{writtenDate(date,{weekday:true})}</time></p><p>{S.day} {data!.morning.requestDay}</p><p>{menu.atWarSince === null ? S.atPeace : S.atWar}</p></div>;
       case 'attention': return <AttentionSheet data={tableData} dateOf={day=>dateForReport(tableData,day)}/>;
       case 'inbox': return <InTray data={tableData} papers={reports.filter(r=>!filed.has(r.id))} read={read} filters={trayFilters} setFilters={setTrayFilters} openSummary={()=>setStack(previous=>[...previous,{panel:'inbox',summary:true}])}>{paperList}</InTray>;
       case 'file': return <><label className="search">{S.search}<input value={query} onChange={e => setQuery(e.target.value)} /></label>{paperList(reports.filter(r => filed.has(r.id) && `${t(r.author, 'person')} ${t(r.subjectId, r.subjectKind)} ${dateForReport(data!, r.day)} ${r.day}`.toLowerCase().includes(query.toLowerCase())))}</>;
@@ -253,7 +254,7 @@ export function App() {
       case 'orders': return <><OrderSheet request={data!.morning} menu={menu} t={t} line={line} setLine={value => { setLine(value); setPreview(undefined); }} help={data!.help} execute={execute} busy={busy} display={display} commandDisplay={presenter(data!.strings).commandDisplay} commandInput={presenter(data!.strings).commandInput} onPersonnel={()=>setStack(previous=>[...previous,{panel:'personnel'}])} onCalls={()=>open('run')}/>
         {preview && <section className="preview"><h3>{S.asSubmitted}</h3>{menu.reviews.find(r => r.post === line.split(/\s+/)[1]) && <Plan plan={menu.reviews.find(r => r.post === line.split(/\s+/)[1])!.plan} t={t} display={display} />}<h3>{S.asEdited}</h3><p>{S.previewNote}</p>{preview.ok ? <Plan plan={preview.plan} t={t} display={display} /> : <p role="alert">{display(preview.reason)}</p>}</section>}</>;
       case 'ledger': return <AccountabilityLedger data={tableData} tab={ledgerTab} setTab={setLedgerTab} openPaper={sourcePaper} dateOf={day=>dateForReport(tableData,day)}/>;
-      case 'daybook': return <><p className="margin-note">{S.readOnly}</p>{data!.history.length ? data!.history.map((turn, i) => <section className="day-record" key={i}><h3>{S.turn} {i + 1}</h3>{turn.days.map(day => <section key={day.day}><h4>{day.date}, {S.day} {day.day}</h4>{day.refused.map((r, n) => <p className="refusal" key={n}>{S.refused}: {display(turn.submitted?.find((_,index)=>index===r.commandIndex)?.text??S.orders)}. {refusalText(r.reason,data!.strings)}</p>)}{paperList(day.reports)}{day.points.length > 0 && <p>{S.stopped}: {[...new Set(day.points)].map(p=>S.stopLabels[p]??S.stopUnknown).join(' ')}</p>}</section>)}</section>) : <p className="empty">{S.noDays}</p>}</>;
+      case 'daybook': return <><p className="margin-note">{S.readOnly}</p>{data!.history.length ? data!.history.map((turn, i) => <section className="day-record" key={i}><h3>{S.turn} {i + 1}</h3>{turn.days.map(day => <section key={day.day}><h4><time dateTime={day.date}>{writtenDate(day.date)}</time>, {S.day} {day.day}</h4>{day.refused.map((r, n) => <p className="refusal" key={n}>{S.refused}: {display(turn.submitted?.find((_,index)=>index===r.commandIndex)?.text??S.orders)}. {refusalText(r.reason,data!.strings)}</p>)}{paperList(day.reports)}{day.points.length > 0 && <p>{S.stopped}: {[...new Set(day.points)].map(p=>S.stopLabels[p]??S.stopUnknown).join(' ')}</p>}</section>)}</section>) : <p className="empty">{S.noDays}</p>}</>;
       case 'run': return <TurnSheet data={data!} busy={busy} setStops={setStops} signCall={execute} onOrder={order} run={days=>void execute(`end ${days}`)} openPaper={sourcePaper} onDocket={()=>open('docket')} onPlans={()=>open('plans')} onHistory={()=>open('daybook')}/>;
       case 'help': return <><p>{S.typingNote}</p><table className="key-card"><tbody>{S.keys.map(([key, action]) => <tr key={key}><th scope="row"><kbd>{key}</kbd></th><td>{action}</td></tr>)}</tbody></table>
         <button onClick={() => open('find')}>{S.find}</button><button onClick={nextUnread}>{S.nextUnread}</button>
@@ -274,13 +275,13 @@ export function App() {
           onLocate:locate,
           holderCard:mark=>{const person=menu.commandable.find(p=>p.post===mark.post),report=reports.find(r=>r.id===mark.source);return <><h2>{t(person?.holder??mark.author,'person')}</h2><p>{t(mark.post??'', 'post')}</p><h3>{S.lastReport}</h3><time>{dateForReport(data,mark.day)}</time><p>{display(report?data.paperText[report.id]??'':S.unknown)}</p><div className="actions">{person&&<><button onClick={()=>{opener.current=document.activeElement as HTMLElement;setStack([{panel:'board',person}]);}}>{S.personPage}</button><button onClick={()=>order(`order ${person.post} hold`)}>{S.orders}</button></>}</div></>;}
         }}/>
-        <div className="table-calendar"><button className="calendar-block" disabled={!!playback} onClick={()=>open('calendar')} aria-label={S.calendar}><time dateTime={date}>{date}</time><CalendarFace date={date} status={menu.atWarSince===null?S.atPeace:S.atWar}/></button><button className="attention-desk" disabled={!!playback} onClick={()=>open('attention')} aria-label={S.attention}><span>{S.attention}</span><AttentionTokens left={tableData.morning.view.attention} price={actionPrice}/></button></div>
+        <div className="table-calendar"><button className="calendar-block" disabled={!!playback} onClick={()=>open('calendar')} aria-label={S.calendar}><time dateTime={date}>{writtenDate(date,{weekday:true})}</time><CalendarFace date={date} status={menu.atWarSince===null?S.atPeace:S.atWar}/></button><button className="attention-desk" disabled={!!playback} onClick={()=>open('attention')} aria-label={S.attention}><span>{S.attention}</span><AttentionTokens left={tableData.morning.view.attention} price={actionPrice}/></button></div>
         <div className="table-trays">{(['inbox','outbox'] as const).map(id=><button key={id} className={`tray-stack ${id}`} data-count={count(id)} onClick={()=>open(id)} aria-label={`${S[id]} ${count(id)}`}><img src={art(objects[id]!)} alt=""/><span>{S[id]} <b>{count(id)}</b></span><small>{id==='inbox'?S.freshCount:S.signedCount}</small></button>)}</div>
         <nav className="table-books" aria-label={S.deskObjects}>{(['board','ledger','daybook','file','plans','progress','orders','help'] as const).map(id=><button className={`desk-tool tool-${id}`} disabled={!!playback} key={id} onClick={()=>open(id)} aria-label={id==='plans'?S.plans:undefined} aria-describedby={id==='plans'?'plan-pending-count':undefined}>{objects[id]&&id!=='board'?<img src={art(objects[id]!)} alt=""/>:<span className="tool-art" aria-hidden="true"/>}<span className="tool-label">{S[id]}</span>{id==='plans'&&<small id="plan-pending-count" className="plan-pending-badge">{menu.reviews.length>0?S.planReviewCount(menu.reviews.length):menu.awaiting.length>0?S.planGoCount(menu.awaiting.length):''}</small>}</button>)}<button className="desk-tool tool-sound" aria-pressed={!muted} onClick={()=>setSettings(old=>({...old,muted:!old.muted}))}>{muted?S.soundOn:S.mute}</button></nav>
         <div className="desk-front"><section className="table-docket" aria-label={S.docket}><button onClick={()=>open('docket')}><span className="docket-count">{S.docket} {active.length}</span></button><div>{active.length?active.map(s=><button className="docket-card" key={s.id} onClick={()=>open('docket')}><strong>{t(s.title)}</strong><small>{S.beforeDate} {dateForReport(tableData,s.surfacedDay)}</small></button>):<span>{S.noDocket}</span>}</div></section>
           {!current&&!playback&&<FirstMorningNote data={tableData}/>}</div>
         {!playback&&<button className="table-run" aria-label={S.run} aria-describedby="due-call-count" onClick={()=>open('run')}>{S.run}<span id="due-call-count"><CallsBadge data={tableData}/></span></button>}
-        {playback&&<section className="table-playback" data-testid="turn-playback" aria-live="polite"><time>{date}</time><p>{frame?.report?`${t(frame.report.author,'person')}, ${S.genres[frame.report.type]??S.paper}`:S.noReports}</p>{frame?.day.refused.map((r,i)=><p className="refusal" key={i}>{S.refused}: {display(r.reason)}</p>)}
+        {playback&&<section className="table-playback" data-testid="turn-playback" aria-live="polite"><time dateTime={date}>{writtenDate(date)}</time><p>{frame?.report?`${t(frame.report.author,'person')}, ${S.genres[frame.report.type]??S.paper}`:S.noReports}</p>{frame?.day.refused.map((r,i)=><p className="refusal" key={i}>{S.refused}: {display(r.reason)}</p>)}
           {playback.index===frames.length-1?<><p>{S.stopped}: {playback.turn.stopped==='week'?S.stopLabels.week:playback.turn.stopped.map(p=>S.stopLabels[p]??S.stopUnknown).join(' ')}</p><button autoFocus onClick={()=>{setPlayback(null);setHeldMap(null);requestAnimationFrame(()=>document.querySelector<HTMLElement>('.table-stop button')?.focus());}}>{S.nextMorning}</button></>:<><button onClick={()=>setPaused(p=>!p)}>{paused?S.resumeDays:S.pauseDays}</button>{paused&&<p>{S.playbackPaused}</p>}<button onClick={skipDays}>{S.skipDays}</button><button onClick={()=>setPlayback(p=>{if(!p)return p;const next=frames.findIndex((f,i)=>i>p.index&&f.day.day!==frames[p.index]?.day.day);return {...p,index:next<0?frames.length-1:next};})}>{S.nextDay}</button></>}
         </section>}
         {!playback&&!current&&data.history.length>dismissedStop&&<aside className="table-stop"><StopSlip turn={data.history.at(-1)!} strings={data.strings} openPaper={r=>{opener.current=document.activeElement as HTMLElement;sourcePaper(r);}} onDocket={()=>open('docket')} onPlans={()=>open('plans')} onHistory={()=>open('daybook')} onClose={()=>{setDismissedStop(data.history.length);requestAnimationFrame(()=>document.querySelector<HTMLElement>('.tray-stack.inbox')?.focus());}}/></aside>}
@@ -296,14 +297,15 @@ export function App() {
 
 }
 
+/** A seat day as the player reads it: the written date (dates.ts). */
 function dateForReport(data: DeskSnapshot, day: number): string {
-  return deskDate(data,day);
+  return writtenDate(deskDate(data,day));
 }
 
-/** The calendar block's face; the ISO date stays in the block's <time>. */
+/** The calendar block's face; its <time> carries the written date for reading aloud. */
 function CalendarFace({date,status}:{date:string;status:string}){
   const face=calendarFace(date);
-  return <span className="calendar-face" aria-hidden="true">{face?<><small>{face.weekday}</small><strong>{face.day}</strong><span>{face.month} {face.year}</span></>:<span>{date}</span>}<em>{status}</em></span>;
+  return <span className="calendar-face" aria-hidden="true">{face?<><small>{face.weekday}</small><strong>{face.day}</strong><span>{face.month} {face.year}</span></>:<span>{writtenDate(date)}</span>}<em>{status}</em></span>;
 }
 
 /**

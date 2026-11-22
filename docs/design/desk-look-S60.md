@@ -55,7 +55,7 @@ Each choice below is a proposal, with the alternatives rejected.
 
 ### 2.5 Objects on the desk
 
-- **Calendar block:** `chrome/calendar-block.png` as a border image, its date set in type: weekday, day, month and year, and "At peace" or "At war". The weekday comes from integer arithmetic (Sakamoto's rule), never the browser's clock. The block's `<time>` still holds the ISO date for tests and assistive technology. *Rejected:* a period long form everywhere (papers, cartouche); the ISO date is checked by several existing tests and the console, so it stays outside the calendar.
+- **Calendar block:** `chrome/calendar-block.png` as a border image, its date set in type: weekday, day, month and year, and "At peace" or "At war". Its `<time>` reads "Tuesday, 5 March 1861" and keeps the ISO date only in its `datetime` attribute (section 2.9).
 - **Attention:** the `attention-token` art on a dark leather strip, with the count in type, and `attention-token-spent` for the tokens an act would strike. *Rejected:* drawing the tokens as CSS discs (what it was).
 - **Trays:** the existing tray art, with a brass-framed label holder, and sheets drawn in the tray only while it holds papers (`data-count`).
 - **Org board:** a framed cork board (`board-frame.png` as a border image) with two cards and its label pinned (`pin.png`).
@@ -85,7 +85,15 @@ Each choice below is a proposal, with the alternatives rejected.
 - **Writing an order:** a ruled order pad.
 - **Every sheet:** printed stock with the title over a double rule; the redundant "The president's desk" eyebrow is hidden. *Rejected:* restyling each sheet's internal layout; the structure, tests and keyboard behaviour stay as they were.
 
-### 2.9 Type
+### 2.9 Dates
+
+The lead amended this lane's third call: every date the player reads uses the written form. One formatter, `web/dates.ts`, writes "5 March 1861", and "Tuesday, 5 March 1861" on the calendar block, with integer arithmetic for the weekday. Data keeps ISO dates (snapshots, `deskDate`, `reportDate`, file names and tests); the view passes them through the formatter: paper datelines and stamps, the staff map's cartouche, header, captions, notes and text record, the daybook, the ledger and Congress leaf, the order slips and dispatch record, the stop slip, the days passing, the advance agenda and the week's papers. The presenter's text and name lookups write out any ISO date inside console prose or pack strings, so none leaks into the view. `<time>` elements keep the ISO date in `datetime`.
+
+- **Checked:** `test/s60-written-dates.spec.ts` reads every rendered line, spoken name and tooltip on the first morning, with each tool open, with a paper open, in the map's text record, and after signing a slip and running a turn (the days passing, the stop slip, the out-tray, the daybook, the ledger and the rest); none holds an ISO date. `test/dates.test.ts` checks the formatter.
+- **Desk tests updated** where they matched an ISO date in the view: `s39-verify`, `s47-verify`, `r19`, `r20`, `r29`, `s33`, `s33-papers`, `s19`, `s33-discovery` and S60's own decoration check. Tests on data (`deskDate`, `snapshot.date`) are unchanged.
+- **Not changed:** the map-style study page (`?study=1`), a review tool rather than the desk, still prints ISO dates.
+
+### 2.10 Type
 
 Old Standard for printed labels, forms and numbers; IM Fell English for titles, headings and hands; Libre Caslon for set text and notes; no new face. Chrome text sits on a scale tied to the screen's height (12–17, 13–20, 15–25, 17–32 and 27–58 pixels), so 3440×1440 and 1920×1080 read alike. The text-size setting scales chrome up to 1.35 times, and papers and sheets fully, to 200%. *Rejected:* scaling the edges' labels to 200%, which overflows the edges at 1280×720.
 
@@ -97,6 +105,7 @@ Old Standard for printed labels, forms and numbers; IM Fell English for titles, 
 - **Reduced motion:** the slide of a paper or stop slip and the lifts on hover are off; checked.
 - **Nothing the seat hasn't received:** decoration follows received data only: sheets in a tray only when it holds papers, one slip per live situation, the calendar face from the desk's date. Checked against `/api/desk`.
 - **Image rules (0053):** no human figure, plantation motif, flag, seal or emblem is drawn; the objects are stationery, wood, cork, leather and brass. No likeness of anyone.
+- **Written dates:** no rendered text, spoken name or tooltip holds an ISO date (section 2.9).
 - **No slogan copy and no all-caps labels:** checked in the DOM. (The map's region names on the canvas remain the renderer's lettering.)
 - **New raster art:** none.
 
@@ -111,12 +120,12 @@ The layout check (`s60-layout.spec.ts`) passes at all four sizes: nothing leaves
 - **The audience, battle night and study** were not restyled; nor was the plan sheet's inside, only its place on the map.
 - **Text at 200%:** the edges' labels stop at 1.35 times; the strip scrolls.
 
-## 6. For the lead
+## 6. The lead's rulings (2026-11-22)
 
-1. Accept or amend: the desk at all sizes, with no drawers (2.1).
-2. Accept or amend: the key folds by itself below a 1000×640 map (2.3).
-3. Accept or amend: ISO dates stay everywhere except the calendar block (2.5).
+1. **Accepted:** the desk keeps its objects at every size, with no 16:9 drawers (2.1). The lead records it as amending 0053's drawer clause.
+2. **Accepted:** the key opens by itself on a map of at least 1000×640 and folds below (2.3).
+3. **Amended and applied:** every date the player reads is written out (2.9).
 
 ## 7. Regression
 
-The existing desk specs that run without retained fixtures were rerun on this branch's port with `S60_SPECS` (`desk`, `keyboard`, `keyboard-actions`, `skins`, `s29-controls`, `s39-verify`, `s47-verify`, `sendback-notes`, `s45-map`). The same 15 fail before and after the change: they need retained fixtures under `art-masters/S29`, `S39` and `S47` that this worktree does not have, or they look for the room objects the R26 table replaced (`.run-object`, `.write-object`, every object inside the "Desk objects" bar). `s45-map` passes after its one assertion change (section 2.1). The prototype's unit suite (156 tests) and typecheck pass.
+The existing desk specs that run without retained fixtures were rerun on this branch's port with `S60_SPECS` (`desk`, `keyboard`, `keyboard-actions`, `skins`, `s29-controls`, `s39-verify`, `s47-verify`, `sendback-notes`, `s45-map`). The same 15 fail before and after the change: they need retained fixtures under `art-masters/S29`, `S39` and `S47` that this worktree does not have, or they look for the room objects the R26 table replaced (`.run-object`, `.write-object`, every object inside the "Desk objects" bar). `s45-map` passes after its one assertion change (section 2.1). After the written dates (2.9) the run is unchanged: 14 pass, the same 15 fail, 25 skip. The prototype's unit suite (160 tests, with the formatter's) and typecheck pass.

@@ -17,7 +17,7 @@ it('renders public sessions and only the seat-projected Congress entries with so
  const data=new DeskAdapter(new ConsoleGame({pack:'testbed'})).snapshot();
  Object.assign(data.morning.view,{congress:{chambers:[{id:'house',name:'house',status:'sitting',session:'regular',opens:1,closes:9}],sessions:[{id:'regular',chambers:['house'],callable:false,opens:'1900-06-02',closes:'1900-06-10',afterCallDays:null,sitsDays:null}],ledger:[{act:'recorded_act',day:2,situation:'act',option:'take',metDay:2,answeredDay:null,source:'paper-act'}]},reports:[{id:'paper-act',author:'clerk'}]});
  const html=renderToStaticMarkup(createElement(AccountabilityLedger,{data,openPaper:()=>{},dateOf:(n:number)=>`date ${n}`,tab:'congress',setTab:()=>{}}));
- expect(html).toContain('Accountable act');expect(html).toContain('1900-06-02');expect(html).toContain('data-source-paper="paper-act"');
+ expect(html).toContain('Accountable act');expect(html).toContain('2 June 1900');expect(html).toContain('data-source-paper="paper-act"');
  expect(html).toContain('No answer recorded');expect(html).not.toContain('Congressional accountability record is not available');
 });
 it('renders the driver’s actual enabled and disabled stop choices',()=>{

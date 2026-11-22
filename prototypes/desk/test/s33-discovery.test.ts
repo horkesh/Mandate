@@ -18,7 +18,7 @@ function fixture(){
 }
 it('shows the proposed advance date and distinguishes ordering from a scheduled march',()=>{
  const {data}=fixture(),html=render(data);
- expect(html).toContain('Proposed advances');expect(html).toContain('1900-06-05');
+ expect(html).toContain('Proposed advances');expect(html).toContain('5 June 1900');
  expect(html).toContain('This date proposes a goal; the commander still has to receive it and prepare a plan.');
  expect(html).toContain('Review a goal order');
 });

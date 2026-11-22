@@ -14,12 +14,12 @@ test('read-only observer opens the received Manassas paper',async({page,request}
  await page.setViewportSize({width:3440,height:1440});await page.goto('/');
  await expect(page.getByTestId('map-canvas-host')).toHaveAttribute('data-ready','ready',{timeout:30000});
  await page.getByRole('navigation',{name:S.deskObjects}).getByRole('button',{name:S.daybook,exact:true}).click();
- const day=page.locator('.day-record > section').filter({has:page.getByRole('heading',{name:'1861-07-29, Day 146',exact:true})});
+ const day=page.locator('.day-record > section').filter({has:page.getByRole('heading',{name:'29 July 1861, Day 146',exact:true})});
  const link=day.getByTestId('paper-link').filter({hasText:'Manassas Junction'}).filter({hasText:'8:00'}).first();
  await expect(link).toHaveCount(1);await link.click();
  await expect(page.getByTestId('paper')).toContainText('Manassas Junction');
- await expect(page.getByTestId('paper')).toContainText('1861-07-28, 08:00');
- await expect(page.getByTestId('paper').locator('.received-stamp')).toContainText('1861-07-29');
+ await expect(page.getByTestId('paper')).toContainText('28 July 1861, 08:00');
+ await expect(page.getByTestId('paper').locator('.received-stamp')).toContainText('29 July 1861');
  for(const size of [{width:3440,height:1440},{width:1920,height:1080}]){
   await page.setViewportSize(size);const name=`manassas-dawn-${size.width}`,file=`${out}/${name}.png`;
   writeFileSync(`${out}/${name}.json`,JSON.stringify(data!,null,2));await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:file});

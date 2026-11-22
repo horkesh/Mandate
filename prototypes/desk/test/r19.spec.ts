@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { writtenDate } from '../web/dates.ts';
 import type { Page } from '@playwright/test';
 import { writeFileSync } from 'node:fs';
 import { buildMapModel, reportDate } from '../web/map/model.ts';
@@ -65,7 +66,7 @@ test('Union names before and after a week, with report placement and attribution
     for(const description of markDescriptions)await expect(twin).toContainText(description!);
     for(const mark of model.marks){
       const author=snapshot.strings[`person.${mark.author}.name`]??snapshot.strings[mark.author]??'Not supplied';
-      await expect(twin).toContainText(author);await expect(twin).toContainText(reportDate(snapshot.morning.requestDay,snapshot.date,mark.day));
+      await expect(twin).toContainText(author);await expect(twin).toContainText(writtenDate(reportDate(snapshot.morning.requestDay,snapshot.date,mark.day)));
     }
     await page.screenshot({path:`${evidence}/text-${mode}-${stage}-1920x1080.png`});
     const missing=await page.evaluate(async()=>{const path='/web/presentation.ts';return (await import(path)).missingNameKeys();});
@@ -160,7 +161,7 @@ test('a located works claim retains its supplied author and date',async({page})=
   const works=map.locator('.map-mark.works');await expect(works).toHaveCount(1);
   const description=await works.getAttribute('aria-label');
   expect(description).toContain(snapshot.strings['person.anderson_robert.name']);
-  expect(description).toContain(reportDate(snapshot.morning.requestDay,snapshot.date,source.day));
+  expect(description).toContain(writtenDate(reportDate(snapshot.morning.requestDay,snapshot.date,source.day)));
   await works.hover({timeout:5000});await expect(map.locator('.map-note')).toHaveText(description!);
   await works.focus();await expect(map.locator('.map-note')).toHaveText(description!);
   await map.getByRole('button',{name:/Read the map as text/}).click();await expect(map.getByTestId('map-text-twin')).toContainText(description!);

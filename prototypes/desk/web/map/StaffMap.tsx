@@ -25,6 +25,7 @@ import {CONTROL_PALETTES,CONTROL_PALETTE_IDS,readControlPalette} from './control
 import { isTyping, SettingsContext } from '../settings.ts';
 import { S } from '../strings.ts';
 import { LOOK } from '../look.ts';
+import { writtenDate } from '../dates.ts';
 import hq from './icons/hq-army.svg?raw';
 import enemy from './icons/enemy-point.svg?raw';
 import works from './icons/entrenchment.svg?raw';
@@ -77,7 +78,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
   const host=useRef<HTMLDivElement>(null),engine=useRef<StaffRenderer|null>(null);
   const twin=useRef<HTMLDivElement>(null),previousText=useRef(false);
   const {name:t,text:display}=presenter(strings);
-  const dateOf=(day:number)=>reportDate(request.view.day,date,day);
+  const dateOf=(day:number)=>writtenDate(reportDate(request.view.day,date,day));
   const describeControl=(region:string)=>claimWords(t(region,'region'),(comparisonControl?.controlBeliefs??request.view.controlBeliefs)?.[region as keyof typeof request.view.controlBeliefs],t,dateOf);
   const model=useMemo(()=>{
     if(!geometry)return null;const result=buildMapModel(request,geometry);
@@ -159,7 +160,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
   const overlayStyle:CSSProperties|undefined=frame?{clipPath:`inset(${frame[1]}px ${Math.max(0,(host.current?.clientWidth??0)-frame[2])}px ${Math.max(0,(host.current?.clientHeight??0)-frame[3])}px ${frame[0]}px)`}:undefined;
 
   return <section className={`staff-map ${reviewPost?'review-map':''} ${study?'comparison-map':''}`} data-look={look} data-palette={palette} style={{'--correction-colour':`#${colours.correction.toString(16).padStart(6,'0')}`} as CSSProperties} aria-label={M.title} onKeyDown={key} data-testid="staff-map">
-    <header className="map-header"><span className="map-date">{date}</span><button aria-pressed={text} onClick={()=>setText(v=>!v)}>{text?M.mapView:M.textTwin} <kbd>T</kbd></button></header>
+    <header className="map-header"><span className="map-date">{writtenDate(date)}</span><button aria-pressed={text} onClick={()=>setText(v=>!v)}>{text?M.mapView:M.textTwin} <kbd>T</kbd></button></header>
     <div className="map-tools" aria-label={M.map}>
       <button className="tool-glyph" aria-label={M.zoomOut} title={M.zoomOut} onClick={()=>act(r=>r.zoom(.8))}>−</button><button className="tool-glyph" aria-label={M.zoomIn} title={M.zoomIn} onClick={()=>act(r=>r.zoom(1.25))}>+</button><button onClick={()=>act(r=>r.fit())}>{M.fit}</button>{reviewPost&&<button onClick={()=>act(r=>r.fitPlan())}>{M.fitPlan}</button>}
       <span className="tool-sep" aria-hidden="true"/>
@@ -197,7 +198,7 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
       <div className="map-key" data-key-open={String(keyShown)}>
       {look==='A'&&!study&&!comparisonControl&&<aside className={`map-cartouche${signs?' drawn-cartouche':''}`}>
         {signs&&<span className="cartouche-line" aria-hidden="true" dangerouslySetInnerHTML={{__html:glyphSvg('cartouche','map-title').replace('viewBox="-40 -32 80 64"','viewBox="-36 -24 72 48" preserveAspectRatio="none"')}}/>}
-        <h3>{M.title}</h3><p>{STUDY.compiled}</p><time>{date}</time></aside>}
+        <h3>{M.title}</h3><p>{STUDY.compiled}</p><time dateTime={date}>{writtenDate(date)}</time></aside>}
       {!study&&<button type="button" className="map-key-toggle" aria-expanded={keyShown} aria-controls="map-control-key" title={keyShown?LOOK.hideKey:LOOK.showKey} onClick={()=>setKeyOpen(!keyShown)}>{LOOK.mapKey}<span aria-hidden="true">{keyShown?'▾':'▸'}</span></button>}
       {!study&&<aside id="map-control-key" className="control-legend" aria-label={M.controlLegend} data-testid="control-legend" style={{'--claim-blue':`#${colours.friendly.toString(16).padStart(6,'0')}`,'--claim-red':`#${colours.enemy.toString(16).padStart(6,'0')}`,'--claim-ochre':`#${colours.neutral.toString(16).padStart(6,'0')}`} as CSSProperties}>
         <ul>{(['union','enemy','neutral','contested','held','firm','single','old'] as const).map(kind=><li key={kind}><span className={`claim-swatch claim-${kind}`} aria-hidden="true">{kind==='contested'&&<svg viewBox="0 0 28 14"><path d="M0 0l14 14M10 0l14 14M20 0l8 8" stroke="var(--claim-blue)"/><path d="M0 14L14 0M10 14L24 0M20 14l8-8" stroke="var(--claim-red)"/></svg>}</span>{M.controlKey[kind]}</li>)}</ul><p className="wash-meaning">{M.washMeaning}</p>
@@ -215,14 +216,14 @@ export function StaffMap({ request, pack, date, strings, destination="", reviewP
       {geometry&&<section><h3>{M.regionNames}</h3><ul>{geometry.regions.map(r=><li key={r.id}>{describeControl(r.id)}</li>)}</ul></section>}
       {model ? <><ul>{model.marks.map(m=><li key={m.id}>{describe(m)} {t(m.region,'region')}</li>)}</ul>{!model.marks.length&&<p>{M.noKnowledge}</p>}{model.plans.map(p=><section key={p.post}><h3>{t(p.holder,'person')}</h3><p>{M.written}: {dateOf(p.day)}. {M.source}: {sourceLabel(p.source)}</p>{p.plan.axes.map(a=><p key={a.name}>{M.axis} {display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' → ')}</p>)}</section>)}<ul>{marks.map(m=><li key={m.number}>{m.number}. {display(m.line)}. {t(m.author,'person')}, {dateOf(m.day)}</li>)}</ul>{model.unplaced.length>0&&<details><summary>{M.unplaced}</summary><ul>{model.unplaced.map((u,i)=><li key={i}>{sourceLabel(u.source)}: {M.unplacedMessages[u.reason]}</li>)}</ul></details>}</> : <MapFallback request={request} date={date} strings={strings}/>}
     </div>}
-    <footer className="map-footer"><span>{M.pencilLegend}</span><span>{M.inkLegend}</span><span className="map-age">{M.asOf} {date}</span></footer>
+    <footer className="map-footer"><span>{M.pencilLegend}</span><span>{M.inkLegend}</span><span className="map-age">{M.asOf} {writtenDate(date)}</span></footer>
     <output hidden data-testid="map-diagnostics">{JSON.stringify(engine.current?.ready?engine.current.diagnostics():{ready:false})}</output>
   </section>;
 }
 
 function MapFallback({request,date,strings}:{request:SeatRequest;date:string;strings:Readonly<Record<string,string>>}) {
   const {name:t,text:display}=presenter(strings);
-  return <><ul>{request.view.reports.map(r=><li key={r.id}>{t(r.author,'person')}, {reportDate(request.view.day,date,r.day)}: {[...reportControlWords(r,t),...r.claims.filter(c=>c.kind!=='control').map(c=>`${c.kind==='enemy-strength'&&c.value===0?S.noEnemySeen:S.claims[c.kind]??display(c.kind)}${c.region?M.claimAt.replace('{region}', () => t(c.region!, 'region')):''}${c.value?`: ${display(String(c.value))}`:''}`)].join('; ')}</li>)}</ul>{request.menu.menuKind==='principal'&&request.menu.reviews.map(r=><section key={r.post}><h3>{t(r.holder,'person')}</h3>{r.plan.axes.map(a=><p key={a.name}>{display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' → ')}</p>)}</section>)}</>;
+  return <><ul>{request.view.reports.map(r=><li key={r.id}>{t(r.author,'person')}, {writtenDate(reportDate(request.view.day,date,r.day))}: {[...reportControlWords(r,t),...r.claims.filter(c=>c.kind!=='control').map(c=>`${c.kind==='enemy-strength'&&c.value===0?S.noEnemySeen:S.claims[c.kind]??display(c.kind)}${c.region?M.claimAt.replace('{region}', () => t(c.region!, 'region')):''}${c.value?`: ${display(String(c.value))}`:''}`)].join('; ')}</li>)}</ul>{request.menu.menuKind==='principal'&&request.menu.reviews.map(r=><section key={r.post}><h3>{t(r.holder,'person')}</h3>{r.plan.axes.map(a=><p key={a.name}>{display(a.name)}: {a.regions.map(id=>t(id,'region')).join(' → ')}</p>)}</section>)}</>;
 }
 
 export function MapReview({destination="",data,execute,busy,textEdit,table=false,reviewOpen=true,mapProps={}}:{destination?:string;data:DeskSnapshot;execute:(line:string)=>Promise<DeskReply|undefined>;busy:boolean;textEdit?:(line:string)=>void;table?:boolean;reviewOpen?:boolean;mapProps?:TableMapProps}) {
@@ -277,7 +278,7 @@ export function MapReview({destination="",data,execute,busy,textEdit,table=false
   return <div className={`plan-map-layout ${review?'has-plan':'map-only'} ${table?'table-map-layout':''}`}>
     {review&&<aside className="map-plan-sheet">
       {reviews.length>1&&<label>{M.plan}<select aria-label={M.plan} value={review?.post??''} onChange={e=>{setPost(e.target.value);setAxis('');}}>{reviews.map(r=><option key={r.post} value={r.post}>{t(r.holder,'person')}</option>)}</select></label>}
-      {review?<><div className="plan-holder"><span className="likeness">{S.noLikeness}</span><div><h3>{t(review.holder,'person')}</h3><p className="plan-byline">{t(review.post,'post')}<br/>{paper&&reportDate(data.morning.view.day,data.date,paper.day)}</p></div></div><p>{display(review.plan.method)} / {display(review.plan.variant)}</p>
+      {review?<><div className="plan-holder"><span className="likeness">{S.noLikeness}</span><div><h3>{t(review.holder,'person')}</h3><p className="plan-byline">{t(review.post,'post')}<br/>{paper&&writtenDate(reportDate(data.morning.view.day,data.date,paper.day))}</p></div></div><p>{display(review.plan.method)} / {display(review.plan.variant)}</p>
         <p className="approval-meaning">{M.approvalMeaning}</p><p className="map-handle-note">{M.approvalAwait} {M.approvalDispatch} {M.approvalReply}</p>
         {recipient&&<fieldset disabled={busy||checking}><legend>{M.reviewDelivery}</legend><label>{M.deliveryRoute}<select aria-label={M.deliveryRoute} value={route} onChange={e=>setRoute(e.target.value)}><option value="">{M.usualRoute}</option>{recipient.routes.map(r=><option key={r.route} value={r.route}>{r.route}: {M.deliveryDays(r.typicalDays,r.price)}</option>)}</select></label>
          {recipient.relays.length>0&&<><p>{S.through}: {recipient.relays.map(p=>t(p,'post')).join(' → ')}</p><label><input type="checkbox" checked={bypass} onChange={e=>setBypass(e.target.checked)}/>{M.bypass}</label><p className="map-handle-note">{M.bypassRisk}</p></>}

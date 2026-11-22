@@ -8,6 +8,7 @@ import {stopEntries} from './table.ts';
 import {S} from './strings.ts';
 import './business.css';
 import {deskDate,ownGoalStatus,availableCalls} from './plan-business.ts';
+import {writtenDate} from './dates.ts';
 
 export function AttentionTokens({left,price=null}:{left:number|null;price?:Price|null}){
  return <span className="attention-budget" data-testid="attention-budget">
@@ -42,7 +43,7 @@ export function PriceNote({line,menu}:{line:string;menu:PrincipalMenu}){
 export function StopSlip({turn,strings,openPaper,onDocket,onPlans,onClose,onHistory}:{turn:DeskTurn;strings:DeskSnapshot['strings'];openPaper:(r:ReportView)=>void;onDocket:()=>void;onPlans:()=>void;onClose?:()=>void;onHistory:()=>void}){
  const {name}=presenter(strings);
  return <section className="business-stop" data-testid="stop-slip" aria-label={S.stopped}>
-  <header><h3>{S.stopped}</h3><time>{turn.days.at(-1)?.date??S.stopNoDay}</time></header>
+  <header><h3>{S.stopped}</h3><time>{writtenDate(turn.days.at(-1)?.date??S.stopNoDay)}</time></header>
   {turn.days.flatMap(day=>day.refused.map((r,i)=><p className="refusal" key={`${day.day}:${i}`}>{S.refused}: {presenter(strings).text(turn.submitted?.find((_,index)=>index===r.commandIndex)?.text??S.orders)}. {refusalText(r.reason,strings)}</p>))}
   <ul>{stopEntries(turn).map(({reason,papers})=><li key={reason}>
    <p>{S.stopLabels[reason]??S.stopUnknown}</p>
@@ -69,7 +70,7 @@ export function TurnSheet({data,busy,run,openPaper,onDocket,onPlans,onHistory,se
   </section>}
   {menu.menuKind==='principal'&&advances.length>0&&<section className="advance-agenda" data-testid="advance-agenda"><h3>{S.proposedAdvances}</h3><p>{S.advanceDateNote}</p>
    {advances.map(o=>{const status=ownGoalStatus(data,o.post,o.objective),post=menu.commandable.find(p=>p.post===o.post);
-    return <article key={`${o.post}:${o.day}:${o.objective}`}><h4>{name(o.post,'post')}</h4><p><time>{deskDate(data,o.day)}</time>: {name(o.objective,'region')}</p>
+    return <article key={`${o.post}:${o.day}:${o.objective}`}><h4>{name(o.post,'post')}</h4><p><time dateTime={deskDate(data,o.day)}>{writtenDate(deskDate(data,o.day))}</time>: {name(o.objective,'region')}</p>
      {status?<p role="status">{status==='queued'?S.goalQueued:S.goalDispatched}</p>:post?<button disabled={busy||!onOrder} onClick={()=>onOrder?.(`order ${o.post} take ${o.objective} review`)}>{S.reviewGoalOrder}</button>:<p>{S.advanceUnavailable}</p>}
     </article>;
    })}
@@ -100,7 +101,7 @@ export function FirstMorningNote({data}:{data:DeskSnapshot}){
 }
 
 /** The principal's own correspondence, with no access to operation State. */
-export function OperationsSheet({data,openPaper,dateOf=(day)=>deskDate(data,day)}:{data:DeskSnapshot;openPaper:(r:ReportView)=>void;dateOf?:(day:number)=>string}){
+export function OperationsSheet({data,openPaper,dateOf=(day)=>writtenDate(deskDate(data,day))}:{data:DeskSnapshot;openPaper:(r:ReportView)=>void;dateOf?:(day:number)=>string}){
  const records=operationRecords(data),{name,text}=presenter(data.strings),menu=data.morning.menu;
  function claimWords(r:ReportView){return r.claims.flatMap(c=>{
   const place=c.region?` — ${name(c.region,'region')}`:'';
@@ -123,7 +124,7 @@ export function OperationsSheet({data,openPaper,dateOf=(day)=>deskDate(data,day)
    return <article className="command-record" key={record.post}><h3>{name(record.post,'post')}</h3>
     {menu.menuKind==='principal'&&menu.awaiting.includes(record.post as typeof menu.awaiting[number])&&<p>{S.awaiting}</p>}
     {supplied&&<section className="received-clock"><h4>{S.progressPlanClock}</h4>{supplied.axes.map(a=><p key={a.name}>{text(a.name)}: {S.progressDuration(Math.ceil(a.arrival/1000))}</p>)}<p>{S.progressNoStart}</p><small>{S.progressClockNote}</small></section>}
-    {record.orders.length>0&&<details><summary>{S.progressOwn} ({record.orders.length})</summary><p>{S.ledgerOwnNote}</p><ol>{record.orders.map(o=><li key={o.id}><time>{o.date}</time><p>{text(slipText(data.morning,data.strings,o.line,o.text))}</p>{o.refusal&&<p className="refusal">{refusalText(o.refusal,data.strings)}</p>}</li>)}</ol></details>}
+    {record.orders.length>0&&<details><summary>{S.progressOwn} ({record.orders.length})</summary><p>{S.ledgerOwnNote}</p><ol>{record.orders.map(o=><li key={o.id}><time>{writtenDate(o.date)}</time><p>{text(slipText(data.morning,data.strings,o.line,o.text))}</p>{o.refusal&&<p className="refusal">{refusalText(o.refusal,data.strings)}</p>}</li>)}</ol></details>}
     <h4>{S.progressPapers}</h4>{!papers.length&&<p>{S.progressNoReplies}</p>}
     {papers.map(r=><section className="progress-paper" key={r.id}><strong>{name(r.author,'person')}</strong><p>{S.progressAsOf(`${dateOf(r.day)}${r.hour===null?'':`, ${String(r.hour).padStart(2,'0')}:00`}`,dateOf(r.receivedDay))}</p><small>{S.progressAge(Math.max(0,data.morning.view.day-r.day))}</small>
      {claimWords(r).map((line,i)=><p key={i}>{line}</p>)}{r.claims.some(c=>['order-obeyed','plan-answer','verb-answered','call-answer'].includes(c.kind))&&<small>{S.progressAnswerNote}</small>}
@@ -147,7 +148,7 @@ export function AccountabilityLedger({data,openPaper,dateOf,tab,setTab}:{data:De
   {tab==='acts'?<div className="ledger-spread">
    <section className="ledger-leaf"><h3>{S.ledgerOrders}</h3><p className="hand">{S.ledgerOwnNote}</p>
     {!rows.length&&<p>{S.ledgerNoOrders}</p>}{data.history.some(t=>!t.submitted)&&<p>{S.ledgerBefore}</p>}
-    <ol className="act-entries">{rows.map(row=><li key={row.id}><time>{row.date}</time><p>{text(row.text)}</p><span className={row.refusal?'refusal':'record-status'}>{row.refusal?`${S.refused}: ${text(row.refusal)}`:S.ledgerSent}</span></li>)}</ol>
+    <ol className="act-entries">{rows.map(row=><li key={row.id}><time>{writtenDate(row.date)}</time><p>{text(row.text)}</p><span className={row.refusal?'refusal':'record-status'}>{row.refusal?`${S.refused}: ${text(row.refusal)}`:S.ledgerSent}</span></li>)}</ol>
    </section>
    <section className="ledger-leaf"><h3>{S.ledgerSituations}</h3>
     {!decisions.length&&<p>{S.ledgerNoDecisions}</p>}{decisions.map(s=><article className="decision-entry" key={s.id}>
@@ -171,8 +172,8 @@ function CongressLeaf({data,dateOf,openPaper}:{data:DeskSnapshot;dateOf:(day:num
  const congress=data.morning.view.congress,{name,text}=presenter(data.strings);
  if(!congress)return <p>{S.ledgerCongressMissing}</p>;
  return <section className="congress-sheet" data-testid="congress-sheet"><h3>{S.congressChambers}</h3>
-  {!congress.chambers.length&&<p>{S.congressNoChambers}</p>}{congress.chambers.map(c=><article key={c.id}><h4>{name(c.name)}</h4><p>{S.congressStates[c.status]}{c.opens!==null&&c.closes!==null?`, ${dateOf(c.opens)} — ${dateOf(c.closes)}`:''}</p>{c.composition?<><time>{c.composition.on}</time><dl>{c.composition.groups.map(g=><div key={g.name}><dt>{name(g.name)}</dt><dd>{g.seats}</dd></div>)}</dl><small>{c.composition.cite}</small></>:<p className="hand">{S.congressCompositionMissing}</p>}</article>)}
-  <h3>{S.congressSessions}</h3>{congress.sessions.map(s=><article key={s.id}><h4>{s.callable?S.congressCallable:S.congressRegular}</h4><p>{s.chambers.map(id=>name(congress.chambers.find(c=>c.id===id)?.name??id)).join(', ')}</p><p>{s.opens??(s.afterCallDays===null?S.unknown:S.congressAfterCall(s.afterCallDays))} — {s.closes??(s.sitsDays===null?S.unknown:S.congressSits(s.sitsDays))}</p></article>)}
+  {!congress.chambers.length&&<p>{S.congressNoChambers}</p>}{congress.chambers.map(c=><article key={c.id}><h4>{name(c.name)}</h4><p>{S.congressStates[c.status]}{c.opens!==null&&c.closes!==null?`, ${dateOf(c.opens)} — ${dateOf(c.closes)}`:''}</p>{c.composition?<><time>{writtenDate(c.composition.on)}</time><dl>{c.composition.groups.map(g=><div key={g.name}><dt>{name(g.name)}</dt><dd>{g.seats}</dd></div>)}</dl><small>{c.composition.cite}</small></>:<p className="hand">{S.congressCompositionMissing}</p>}</article>)}
+  <h3>{S.congressSessions}</h3>{congress.sessions.map(s=><article key={s.id}><h4>{s.callable?S.congressCallable:S.congressRegular}</h4><p>{s.chambers.map(id=>name(congress.chambers.find(c=>c.id===id)?.name??id)).join(', ')}</p><p>{s.opens!==null?writtenDate(s.opens):(s.afterCallDays===null?S.unknown:S.congressAfterCall(s.afterCallDays))} — {s.closes!==null?writtenDate(s.closes):(s.sitsDays===null?S.unknown:S.congressSits(s.sitsDays))}</p></article>)}
   <h3>{S.congressActs}</h3>{!congress.ledger.length&&<p>{S.congressNoActs}</p>}{congress.ledger.map((e,i)=>{const source=data.morning.view.reports.find(r=>r.id===e.source),situation=data.morning.view.situations.find(s=>s.id===e.situation);return <article key={`${e.act}:${e.day}:${i}`}><h4>{Object.hasOwn(data.strings,e.act)?name(e.act):situation?name(situation.title):S.congressAct}</h4><time>{dateOf(e.day)}</time><p>{e.metDay===null?S.congressAway:`${S.congressMet}: ${dateOf(e.metDay)}`}</p><p>{e.answeredDay===null?S.congressNoAnswer:`${S.congressAnswered}: ${dateOf(e.answeredDay)}`}</p>{source?<button data-source-paper={source.id} onClick={()=>openPaper(source)}>{S.boardOpenPaper}: {name(source.author,'person')}</button>:<p className="hand">{S.congressOwn}</p>}</article>;})}
  </section>;
 }

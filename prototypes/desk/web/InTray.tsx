@@ -5,6 +5,7 @@ import {clearFilters,dateOfPaper,filterPapers,paperPlaces,weeklyPapers} from './
 import type {TrayFilters,SenderGroup,SummarySection} from './intray.ts';
 import {presenter} from './presentation.ts';
 import {S} from './strings.ts';
+import {writtenDate} from './dates.ts';
 import './intray.css';
 
 export function InTray({data,papers,read,filters,setFilters,openSummary,children}:{
@@ -37,7 +38,7 @@ export function WeeklyPaper({data,openPaper}:{data:DeskSnapshot;openPaper:(paper
     {(Object.keys(S.weeklySections) as SummarySection[]).map(section=>{
       const lines=summary.lines.filter(line=>line.section===section);
       return lines.length>0&&<section key={section}><h3>{S.weeklySections[section]}</h3><ul>{lines.map((line,index)=><li key={`${line.paper.id}:${index}`}>
-        <button className="summary-source" onClick={()=>openPaper(line.paper)} data-source-paper={line.paper.id}><span>{line.text}</span><small>{line.source}, <time>{line.date}</time></small></button>
+        <button className="summary-source" onClick={()=>openPaper(line.paper)} data-source-paper={line.paper.id}><span>{line.text}</span><small>{line.source}, <time>{writtenDate(line.date)}</time></small></button>
       </li>)}</ul></section>;
     })}
     {!summary.lines.length&&<p>{S.weeklyEmpty}</p>}

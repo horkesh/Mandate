@@ -41,7 +41,7 @@ test('R29 requested views and contested comparison proof at both sizes',async({p
   await expect(page.getByText('Contested claim example; not part of this game.',{exact:true})).toBeVisible();
   const d=JSON.parse((await page.getByTestId('map-canvas-host').getAttribute('data-control'))!),p=d.points.find((r:any)=>r.id==='northern_virginia');expect(p).toBeDefined();
   const host=await page.getByTestId('map-canvas-host').boundingBox();await page.mouse.move(host!.x+p.point[0],host!.y+p.point[1]);await expect(page.getByTestId('control-hover')).toContainText('Contested ground');
-  await expect(page.getByTestId('control-hover')).toContainText('1861-03-06');await expect(page.getByTestId('control-hover')).toContainText('Cameron');
+  await expect(page.getByTestId('control-hover')).toContainText('6 March 1861');await expect(page.getByTestId('control-hover')).toContainText('Cameron');
   await page.screenshot({path:`${out}/contested-hover-${size.width}x${size.height}.png`});
   records.push({name:'contested-hover',size,synthetic:true,hover:await page.getByTestId('control-hover').textContent()});
  }

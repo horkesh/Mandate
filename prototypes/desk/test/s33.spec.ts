@@ -44,7 +44,7 @@ test('S33 press the advance through goal, arrow edit and approval',async({page,r
  await capture(page,'advance-morning',data);
  if(discovery){
   await page.getByRole('button',{name:S.run,exact:true}).click();
-  await expect(page.getByTestId('advance-agenda')).toContainText('1861-07-16');
+  await expect(page.getByTestId('advance-agenda')).toContainText('16 July 1861');
   for(const size of [{width:3440,height:1440},{width:1920,height:1080}]){await page.setViewportSize(size);await capture(page,`advance-agenda-${size.width}`,data);}
   await page.getByRole('button',{name:S.reviewGoalOrder,exact:true}).click();
   const goal=await act(()=>page.getByRole('button',{name:S.sign,exact:true}).click());

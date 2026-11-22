@@ -1,4 +1,5 @@
 import { S } from './strings.ts';
+import { writtenDates } from './dates.ts';
 
 const unresolved = new Set<string>();
 export const missingNameKeys = () => [...unresolved].sort();
@@ -12,7 +13,8 @@ function makePresenter(strings: Readonly<Record<string, string>>) {
     if (match) names.set(match[2]!, [...(names.get(match[2]!) ?? []), key]);
     else if(key.startsWith('faction.'))names.set(key.slice(8),[key]);
   }
-  const name = (id: string, kind?: string | number): string => {
+  const name = (id: string, kind?: string | number): string => writtenDates(lookup(id, kind));
+  const lookup = (id: string, kind?: string | number): string => {
     if (Object.hasOwn(strings, id)) return strings[id]!;
     // Factions use `faction.<id>` in the supplied catalogue, unlike people/posts.
     if(kind==='faction'&&Object.hasOwn(strings,`faction.${id}`))return strings[`faction.${id}`]!;
@@ -25,7 +27,9 @@ function makePresenter(strings: Readonly<Record<string, string>>) {
   // The console's prose carries identifiers too. Preserve its wording around
   // those tokens; grammar keywords are desk vocabulary rather than pack names.
   const tokens = /\b[a-z0-9]+(?:[_.][a-z0-9]+)*\b/g;
-  const text = (value: string): string => value.replace(/\b1 regiments\b/g,'1 regiment').replace(/\benemy(?:-strength)?\s+0\s+at\b/gi, 'no enemy seen at').replace(tokens, token => {
+  // Dates in the console's prose are written out like every other date the
+  // player reads (dates.ts); identifiers are then resolved as before.
+  const text = (value: string): string => writtenDates(value).replace(/\b1 regiments\b/g,'1 regiment').replace(/\benemy(?:-strength)?\s+0\s+at\b/gi, 'no enemy seen at').replace(tokens, token => {
     if (Object.hasOwn(strings, token)) return name(token);
     if (Object.hasOwn(S.reasonLabels, token)) return S.reasonLabels[token as keyof typeof S.reasonLabels];
     if (Object.hasOwn(S.commandTerms, token)) return S.commandTerms[token]!;

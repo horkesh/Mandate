@@ -23,7 +23,7 @@ test('live cabinet consultation retains its received decision and queues only th
  await pickens.getByRole('button',{name:S.consult,exact:true}).click();
  await expect(recipients.getByRole('checkbox',{name:'Secretary of State',exact:true})).toHaveCount(0);
  await expect(recipients.getByRole('checkbox',{name:'Secretary of the Treasury',exact:true})).toBeVisible();
- await expect(page.locator('.table-calendar time')).toHaveText('1861-03-06');
+ await expect(page.locator('.table-calendar time')).toHaveText('Wednesday, 6 March 1861');
  await capture(page,'consultation-selected-3440','Live received Pickens consultation; only the selected adviser queued.');
  await rest(page);await page.getByRole('button',{name:'Out-tray 1',exact:true}).click();
  await expect(page.locator('.order-list p')).toContainText('Ask in writing: Fort Pickens');
@@ -62,7 +62,7 @@ test('retained July receipt renders its received recommendation at both sizes wi
  await expect(paper).not.toContainText('Not supplied');await expect(paper).not.toContainText('ask_war_footing');
  for(const size of [{width:3440,height:1440},{width:1920,height:1080}]){await page.setViewportSize(size);await capture(page,`received-chase-${size.width}`,`Read-only presentation replay of completed political run: ${source}`);}
  await book(page,S.ledger);await page.getByRole('button',{name:S.ledgerCongress,exact:true}).first().click();
- await expect(page.getByTestId('congress-sheet')).toContainText('1861-07-07');
+ await expect(page.getByTestId('congress-sheet')).toContainText('7 July 1861');
  expect(posts).toBe(0);expect(errors).toEqual([]);
  writeFileSync(`${out}/public-replay.json`,JSON.stringify({source,sourceSha256:createHash('sha256').update(readFileSync(source)).digest('hex'),posts,errors,mode:'Public presentation replay only; no State loaded or new game played'},null,2));
 });

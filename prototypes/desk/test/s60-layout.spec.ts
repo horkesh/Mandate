@@ -198,7 +198,7 @@ test('S60 decoration shows only what the seat has received', async ({ page }) =>
   // The docket shows a slip for each live situation and nothing else.
   await expect(page.locator('.docket-card')).toHaveCount(live);
   // The calendar block's face is the desk's own date.
-  const iso = await page.locator('.table-calendar time').textContent();
+  const iso = await page.locator('.table-calendar time').getAttribute('datetime');
   expect(iso).toBe(snapshot.date);
   const face = await page.locator('.calendar-face').innerText();
   const [y, m, d] = iso!.split('-').map(Number);

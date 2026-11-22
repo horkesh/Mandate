@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { writtenDate } from '../web/dates.ts';
 import type { Page } from '@playwright/test';
 import { readFileSync, writeFileSync } from 'node:fs';
 
@@ -17,7 +18,7 @@ test('the sheet has one map title, its date and its text record',async({page})=>
   await open(page);
   const dialog=page.getByRole('dialog');
   await expect(dialog.getByRole('heading',{name:'Staff map',exact:true})).toHaveCount(1);
-  await expect(dialog.locator('.map-date')).toHaveText(week.date);
+  await expect(dialog.locator('.map-date')).toHaveText(writtenDate(week.date));
   await dialog.getByRole('button',{name:/Read the map as text/}).click();
   await expect(dialog.getByTestId('map-text-twin')).toBeVisible();
   await expect(dialog.getByTestId('map-text-twin')).toContainText('Headquarters reported');
