@@ -1,0 +1,496 @@
+{
+  "branch": "sprint/research-cast",
+  "base": "ddc5cb7b0fd5f19cb3d1c963370e6b84328707e9",
+  "scope": "S57 only; documents; no existing CSV row, original tracked file, runtime source, pack, band, timeout, accepted decision or gate signature changed.",
+  "checks": [
+    {
+      "name": "npm-ci",
+      "command": "npm ci",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\npm-ci.log",
+        "bytes": 298,
+        "sha256": "a368e50874dc2ccf98c3d8404221bc7601fdd801249899e0c2f8ce10758b4b5e"
+      }
+    },
+    {
+      "name": "preflight-typecheck",
+      "command": "npm run typecheck",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\preflight-typecheck.log",
+        "bytes": 68,
+        "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+      }
+    },
+    {
+      "name": "preflight-opening",
+      "command": "Opening preflight: two selected files, ten tests (retained condensed log does not list the selected filenames)",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\preflight-opening.log",
+        "bytes": 386,
+        "sha256": "50fc3d85be2c4b33ba1bac7d0150ad94eedbbfeb2360924ad575b2155746d395"
+      }
+    },
+    {
+      "name": "required-check",
+      "command": "MANDATE_NO_GIT=1 npm run check (initial default-worker attempt)",
+      "exit": 1,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\required-check.log",
+        "bytes": 2860,
+        "sha256": "527076fdb57e9288a083f2abec7c8778b3395c11b97948544a8f0b7ce596fb38"
+      }
+    },
+    {
+      "name": "timeout-targeted",
+      "command": "MANDATE_NO_GIT=1 VITEST_MAX_WORKERS=1 npx vitest run packages/cli/test/done-check.test.ts",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\timeout-targeted.log",
+        "bytes": 362,
+        "sha256": "76058fcec3ad4c279fb87125cec94397999b360ad509d88e0887d0d695defa43"
+      }
+    },
+    {
+      "name": "boundary",
+      "command": "npm run check:boundary",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\boundary.log",
+        "bytes": 208,
+        "sha256": "c9791360b9f19ab540c77680035f810d4463e9be54fd4e8af95658a497b2c478"
+      }
+    },
+    {
+      "name": "licences",
+      "command": "npm run check:licences",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\licences.log",
+        "bytes": 552,
+        "sha256": "7d41e5e4301849c17b27df3bd2c2419572a252cda182cce22ec6d0c7f828e1c5"
+      }
+    },
+    {
+      "name": "decisions",
+      "command": "npm run check:decisions",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\decisions.log",
+        "bytes": 218,
+        "sha256": "b6977128c3f966f4e3600519cff54e352e7aa8166c6717cc4064e119e808890d"
+      }
+    },
+    {
+      "name": "commit-civil",
+      "command": "MANDATE_NO_GIT=1 VITEST_MAX_WORKERS=1 git commit -F external commit-civil.txt (actual hook)",
+      "exit": 0,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\commit-civil.log",
+        "bytes": 3238,
+        "sha256": "395b9294b24980fab6baf53a51640241df3e049b441340440057f485da6b8ba8"
+      }
+    },
+    {
+      "name": "done-check",
+      "command": "MANDATE_NO_GIT=1 VITEST_MAX_WORKERS=1 npm run run:done-check -- --label s57-done",
+      "exit": 1,
+      "log": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\done-check.log",
+        "bytes": 23032,
+        "sha256": "a770e86a627c3720d508113c568387cbc7502e74f825e02bb3ebdab1dc73347d"
+      }
+    }
+  ],
+  "initial_failure": {
+    "category": "unchanged beforeAll timeout at 300000ms with default concurrent workers",
+    "file": "packages/cli/test/done-check.test.ts",
+    "duration_seconds": 371.65,
+    "files_passed": 136,
+    "files_failed": 1,
+    "tests_passed": 1516,
+    "expected_failures": 1,
+    "skipped": 17,
+    "correction": "Run the affected file and all actual hooks with VITEST_MAX_WORKERS=1; no timeout or assertion changed.",
+    "targeted_result": "14 passed, one skipped, 229.14s",
+    "unaffected_evidence": "The other 136 files passed initially; no separate reassurance rerun. Chain stages not reached after the timeout passed separately; actual hooks still required."
+  },
+  "civil_commit": {
+    "commit": "c6cd2040dde72e65603c45812b44c90393c28058",
+    "civil_sha256": "432ae6aa4ea68657d64f986b6eec55cfed86e627c8ec7cd895f3bb999011ad3f"
+  },
+  "civil_hook": {
+    "exit": 0,
+    "files_passed": 137,
+    "tests_passed": 1530,
+    "expected_failures": 1,
+    "skipped": 3,
+    "duration_seconds": 837.13,
+    "checks": [
+      "LFS",
+      "typecheck",
+      "tests",
+      "boundary",
+      "licences",
+      "106 decisions"
+    ]
+  },
+  "done_check": {
+    "exit": 1,
+    "elapsed_seconds": 2917.6742716,
+    "milestone_1a_binding": false,
+    "default_seed_count": 8,
+    "fork_day_cap": 400,
+    "drafting": true,
+    "criteria": [
+      {
+        "milestone": "phase0",
+        "status": "PASS",
+        "id": "behaviour",
+        "text": "rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+        "evidence": [
+          "union-1861, war by decision, 148 days: 124 arrivals, 2 battle-days, 20 control changes, confederate 2 front segments 73 supplied 0 pockets; union 2 front segments 36 supplied 0 pockets",
+          "testbed, 120 days: 27 arrivals, 4 battle-days, 35 control changes, north 13 front segments 13 supplied 1 pockets; south 13 front segments 1 supplied 1 pockets"
+        ],
+        "problems": []
+      },
+      {
+        "milestone": "phase0",
+        "status": "PASS",
+        "id": "hash",
+        "text": "the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+        "evidence": [
+          "union-1861, war by decision, 148 days: 148 daily hashes, final 55a35b1034c19b09",
+          "testbed, 120 days: 120 daily hashes, final 69d8759b02cfa93f"
+        ],
+        "problems": []
+      },
+      {
+        "milestone": "phase0",
+        "status": "PASS",
+        "id": "resume",
+        "text": "a mid-run save, loaded, resumes to the continuous run\u2019s final hash, and the log replays to every hash",
+        "evidence": [
+          "union-1861, war by decision, 148 days: from day 60, matches",
+          "testbed, 120 days: from day 40, matches"
+        ],
+        "problems": []
+      },
+      {
+        "milestone": "phase0",
+        "status": "PASS",
+        "id": "liveness",
+        "text": "every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+        "evidence": [
+          "union-1861, war by decision, 148 days: 161 mechanics inside their bands",
+          "testbed, 120 days: 161 mechanics inside their bands",
+          "testbed, commanders silent, 120 days: 1 mechanics inside their bands",
+          "testbed, the principal edits every plan, 120 days: 6 mechanics inside their bands",
+          "union-1861 before the opening decisions, 30 days (the war gate, 0064): 9 mechanics inside their bands"
+        ],
+        "problems": []
+      },
+      {
+        "milestone": "phase0",
+        "status": "PASS",
+        "id": "section-ten",
+        "text": "the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite\u2019s)",
+        "evidence": [
+          "packages/kernel/test/compliance.test.ts",
+          "packages/kernel/test/rng.test.ts",
+          "packages/kernel/test/banned-apis.test.ts",
+          "packages/kernel/test/people-verbs.test.ts"
+        ],
+        "problems": []
+      },
+      {
+        "milestone": "phase0",
+        "status": "FAIL",
+        "id": "budget",
+        "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+        "evidence": [
+          "union-1861, war by decision, 148 days: median 57.75 ms, p95 122.19 ms, max 353.14 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 56)",
+          "testbed, 120 days: median 4.28 ms, p95 5.99 ms, max 6.95 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+          "union-1861 history run, 148 days to 1861-07-31: median 51.65 ms, p95 115.43 ms, max 170.62 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 56)"
+        ],
+        "problems": [
+          "union-1861, war by decision, 148 days: median 57.8 ms a day, over the 40 ms budget",
+          "union-1861 history run, 148 days to 1861-07-31: median 51.7 ms a day, over the 40 ms budget"
+        ]
+      },
+      {
+        "milestone": "1A",
+        "status": "FAIL",
+        "id": "checkpoints",
+        "text": "the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+        "evidence": [
+          "union-1861 history run, 148 days to 1861-07-31: seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+          "union-1861 history run, 148 days to 1861-07-31: side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+          "union-1861 history run, 148 days to 1861-07-31: side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+          "union-1861 history run, 148 days to 1861-07-31: side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+          "union-1861 history run, 148 days to 1861-07-31: side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+          "union-1861 history run, 148 days to 1861-07-31: side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+          "union-1861 history run, 148 days to 1861-07-31: side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+          "union-1861 history run, 148 days to 1861-07-31: side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+          "union-1861 history run, 148 days to 1861-07-31: side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+          "union-1861 history run, 148 days to 1861-07-31: side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+          "union-1861 history run, 148 days to 1861-07-31: side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+          "union-1861 history run, 148 days to 1861-07-31: washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+          "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): union 18686 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+          "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): below the lower edge, reported and not failed (the band's floor is not binding: no primary return bounds it)",
+          "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate 20957 men of known strength, 13 blocks of unknown strength (band 100000..200000)",
+          "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations (band 1..26)",
+          "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 0 planned operations (band 1..4)",
+          "union-1861 history run, 148 days to 1861-07-31: confederate at war since day 36",
+          "union-1861 history run, 148 days to 1861-07-31: union at war since day 41"
+        ],
+        "problems": [
+          "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 20957 men, below 100000",
+          "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1",
+          "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 0 planned operations, below 1"
+        ]
+      },
+      {
+        "milestone": "1A",
+        "status": "FAIL",
+        "id": "operation",
+        "text": "at least one operation drafted by the kernel planner, chosen by its commander\u2019s seat, approved, executed and fought with the battle model, with a breakdown",
+        "evidence": [],
+        "problems": [
+          "union-1861 history run, 148 days to 1861-07-31: no operation fought a battle in the history run (2 operations, 0 battles)"
+        ]
+      },
+      {
+        "milestone": "1A",
+        "status": "FAIL",
+        "id": "pushback",
+        "text": "pushback fires inside its bands: lower bounds from the record\u2019s sourced cases (S01\u2013S21), upper bounds the lead\u2019s",
+        "evidence": [
+          "union-1861 history run, 148 days to 1861-07-31: relay objections: 2 (band 0..6)",
+          "union-1861 history run, 148 days to 1861-07-31: relay holds: 1 (band 2..6)",
+          "union-1861 history run, 148 days to 1861-07-31: filter holds: 0 (band 1..9)",
+          "union-1861 history run, 148 days to 1861-07-31: trims: 0 (band 1..4)",
+          "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 44 (band 1..9)",
+          "union-1861 history run, 148 days to 1861-07-31: slow walks: 5 (band 2..9)",
+          "union-1861 history run, 148 days to 1861-07-31: objections to a plan: 11 (band 10..42)"
+        ],
+        "problems": [
+          "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+          "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+          "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+          "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 44, above 9"
+        ]
+      },
+      {
+        "milestone": "1A",
+        "status": "PASS",
+        "id": "unknown-strength",
+        "text": "no block fights with unknown strength: every battle record, in every run, lists none unknown",
+        "evidence": [
+          "union-1861, war by decision, 148 days: 0 battles, 0 battle-days read",
+          "testbed, 120 days: 4 battles, 4 battle-days read",
+          "union-1861 history run, 148 days to 1861-07-31: 0 battles, 0 battle-days read"
+        ],
+        "problems": []
+      },
+      {
+        "milestone": "1A",
+        "status": "PASS",
+        "id": "stand-ins",
+        "text": "the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+        "evidence": [
+          "standing goals: gone (lane 1.4\u2019s operations (4a64082))",
+          "the consistency judgement: gone (lane 1.2\u2019s planner (0062))",
+          "the trait adapter: gone (lane 1.1\u2019s people recast (`standin/traits.ts` deleted))",
+          "weakest-first transfers: gone (lane 1.5\u2019s people verbs (0079: the sender\u2019s answer picks the blocks))",
+          "conflicts resolved by department: gone (lane 1.1\u2019s compliance (`resolveConflict`))",
+          "the simple contest: gone (lane 1.3\u2019s battle model (0076))",
+          "the generic rule-seat principal: no label names it, so it is gone",
+          "the capital as objective: no label names it, so it is gone",
+          "other stand-ins: packages/kernel/src/forces/stores.ts:74 (owner 1B, ships' stores), packages/kernel/src/planner/route.ts:127 (owner 1B, ships' stores), packages/kernel/src/situations/types.ts:74 (owner 1B, conventions and legislatures), packages/pack-format/src/situations.ts:63 (owner 1B, conventions and legislatures)",
+          "pack values carried from M2, for calibration: union-1861 rules.politics.drift, union-1861 rules.politics.address, union-1861 rules.politics.ladder, union-1861 rules.politics.credibility, union-1861 rules.politics.press.standing"
+        ],
+        "problems": []
+      },
+      {
+        "milestone": "1A",
+        "status": "FAIL",
+        "id": "lever-sweep",
+        "text": "the lever sweep (D6): no watched option, nor an atrocity-class decision\u2019s inaction, is the victory-only bot\u2019s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active",
+        "evidence": [
+          "union-1861 history run, 148 days to 1861-07-31: 8 seeds, 8 gated decisions weighed, 248 calls for regiments in the base runs",
+          "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: return best in 0 of 8 seeds weighed"
+        ],
+        "problems": [
+          "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+          "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+        ]
+      }
+    ],
+    "phase0_passed": 5,
+    "phase1a_passed": 2,
+    "timing_lines": [
+      "union-1861, war by decision, 148 days: median 57.75 ms, p95 122.19 ms, max 353.14 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 56)",
+      "testbed, 120 days: median 4.28 ms, p95 5.99 ms, max 6.95 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+      "union-1861 history run, 148 days to 1861-07-31: median 51.65 ms, p95 115.43 ms, max 170.62 ms over 148 days (plans.drafted 2, ladder.moved 10, situations.fired 56)",
+      "! union-1861, war by decision, 148 days: median 57.8 ms a day, over the 40 ms budget",
+      "! union-1861 history run, 148 days to 1861-07-31: median 51.7 ms a day, over the 40 ms budget",
+      "union-1861, war by decision, 148 days: median 57.75 ms, p95 122.19 ms, max 353.14 ms over 148 days",
+      "testbed, 120 days: median 4.28 ms, p95 5.99 ms, max 6.95 ms over 120 days",
+      "union-1861 history run, 148 days to 1861-07-31: median 51.65 ms, p95 115.43 ms, max 170.62 ms over 148 days",
+      "one day of all 23 drafts back to back: median 53.3 ms, p95 66.7 ms, worst 74.2 ms over 20 days; slowest single draft 9.8 ms; a capped day (the pack's 3 slowest drafts for each of 2 sides, together) at worst 61.4 ms"
+    ],
+    "prior_S38_problem_set_identical": true,
+    "added_problems_vs_S38": [],
+    "absent_problems_vs_S38": [],
+    "run_count": 1,
+    "no_retry": true
+  },
+  "reference_comparison": [
+    {
+      "pack": "union-1861",
+      "current": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s57-done\\20261122-145331-29292-936c87\\summary.json",
+      "comparison": "C:\\Pyrrhic\\sprint-research-cast\\runs\\done-check\\20261121-032327-39524-e5b12d\\summary.json",
+      "current_sha256": "8c5bf324c56c9eb9212a623c0ec9084426e1972502c3d61372b82e3c04349aa7",
+      "comparison_sha256": "8c5bf324c56c9eb9212a623c0ec9084426e1972502c3d61372b82e3c04349aa7",
+      "non_timing_summary_identical": true,
+      "changed_top_level_fields": [],
+      "daily_hash_count": 148,
+      "changed_daily_hashes": 0,
+      "changed_liveness_rows": 0,
+      "final_hash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "rejections": 0
+    },
+    {
+      "pack": "testbed",
+      "current": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s57-done\\20261122-145427-29292-075cb8\\summary.json",
+      "comparison": "C:\\Pyrrhic\\sprint-research-cast\\runs\\done-check\\20261121-032401-39524-d51169\\summary.json",
+      "current_sha256": "26c397e5c8ee0dbccda40ab8ed90205d980943f1332ab73e0f834fd31840360e",
+      "comparison_sha256": "26c397e5c8ee0dbccda40ab8ed90205d980943f1332ab73e0f834fd31840360e",
+      "non_timing_summary_identical": true,
+      "changed_top_level_fields": [],
+      "daily_hash_count": 120,
+      "changed_daily_hashes": 0,
+      "changed_liveness_rows": 0,
+      "final_hash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 40,
+        "finalHash": "69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "rejections": 0
+    }
+  ],
+  "runtime_artifacts": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s57-done\\20261122-145331-29292-936c87\\save-day-60.json",
+      "bytes": 1355097,
+      "sha256": "4353dabed072d3cdf1b42528d4feec936350b700d459abc9e424132e81ecf0dd",
+      "retained_copy": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\runtime\\s57-done\\20261122-145331-29292-936c87\\save-day-60.json",
+        "bytes": 1355097,
+        "sha256": "4353dabed072d3cdf1b42528d4feec936350b700d459abc9e424132e81ecf0dd"
+      }
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s57-done\\20261122-145331-29292-936c87\\summary.json",
+      "bytes": 109918,
+      "sha256": "8c5bf324c56c9eb9212a623c0ec9084426e1972502c3d61372b82e3c04349aa7",
+      "retained_copy": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\runtime\\s57-done\\20261122-145331-29292-936c87\\summary.json",
+        "bytes": 109918,
+        "sha256": "8c5bf324c56c9eb9212a623c0ec9084426e1972502c3d61372b82e3c04349aa7"
+      }
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s57-done\\20261122-145427-29292-075cb8\\save-day-40.json",
+      "bytes": 320959,
+      "sha256": "a3e363b949df0e7a2284241453a16b175a434c7dc320bea913e1df5f9d417b1c",
+      "retained_copy": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\runtime\\s57-done\\20261122-145427-29292-075cb8\\save-day-40.json",
+        "bytes": 320959,
+        "sha256": "a3e363b949df0e7a2284241453a16b175a434c7dc320bea913e1df5f9d417b1c"
+      }
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s57-done\\20261122-145427-29292-075cb8\\summary.json",
+      "bytes": 83266,
+      "sha256": "26c397e5c8ee0dbccda40ab8ed90205d980943f1332ab73e0f834fd31840360e",
+      "retained_copy": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\runtime\\s57-done\\20261122-145427-29292-075cb8\\summary.json",
+        "bytes": 83266,
+        "sha256": "26c397e5c8ee0dbccda40ab8ed90205d980943f1332ab73e0f834fd31840360e"
+      }
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s57-done-drafting\\20261122-154036-29292-ea258e\\drafting.json",
+      "bytes": 4764,
+      "sha256": "8405f040d49743b1f3097f4a406a476c25abbfa6f84a5143267270f68de50bc7",
+      "retained_copy": {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\runtime\\s57-done-drafting\\20261122-154036-29292-ea258e\\drafting.json",
+        "bytes": 4764,
+        "sha256": "8405f040d49743b1f3097f4a406a476c25abbfa6f84a5143267270f68de50bc7"
+      }
+    }
+  ],
+  "research_audit": {
+    "status": "pass",
+    "baseline_head": "ddc5cb7b0fd5f19cb3d1c963370e6b84328707e9",
+    "preserved_original_paths": 1743,
+    "preserved_civil_rows": 55,
+    "civil_manifest_entries_unchanged": 25,
+    "civil_manifest_entries_corrected_with_original_retained": 4,
+    "tables": {
+      "civil-offices.csv": 55,
+      "commands.csv": 161,
+      "rank-availability.csv": 164,
+      "war-offices.csv": 17
+    },
+    "rows": 397,
+    "cited_pages": 196,
+    "source_editions": 30,
+    "source_bytes": 188401287,
+    "distinct_name_labels": 146,
+    "label_count_limit": "Includes institutional labels, initials and unmerged aliases; not a distinct-person count.",
+    "checks": [
+      "CSV shape and unique event IDs",
+      "Gregorian day validity",
+      "each table/note citation resolves",
+      "every cited scan hash matches",
+      "all original tracked bytes preserved",
+      "first civil table unchanged; corrected locators retain original metadata and scan bytes",
+      "every source key has a bibliography entry",
+      "local Markdown links resolve",
+      "UTF-8 decoding",
+      "S57-only added paths"
+    ]
+  },
+  "closing_hook_receipt": {
+    "log": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\commit-final.log",
+    "exit": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\commit-final.exit",
+    "elapsed_seconds": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\logs\\commit-final.seconds",
+    "limit": "The actual closing commit must pass its hook after this document is written. Its measured receipt is external and is reported in the sole CODEX status; this document does not claim an unobserved result."
+  },
+  "limits": [
+    "Local Windows evidence only; no Linux CI certification.",
+    "The nonbinding 1A failures remain unmet; an exit-zero default campaign does not clear them.",
+    "Source admission, identities, post execution, whole-branch review and gate review remain deferred to the lead under 0106."
+  ]
+}

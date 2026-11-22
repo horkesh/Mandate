@@ -1,0 +1,1537 @@
+{
+  "scope": "Printed-page/locator inspection only, not full-page transcription or a claim to have read every neighboring entry. The 16 initial contact sheets cover the first 190 cited scans; the final Lincoln sheet verifies the four later corrected civil locators as well as the other Lincoln pages. OR I IV p566 was additionally inspected in full because its number lies low on the page. The six later Seven Pines report pages were all viewed directly as full images; their factual passages were also checked. Selected factual body/column checks are recorded separately in image-checks.json.",
+  "pages_inspected": 196,
+  "contact_sheets": [
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-01.jpg",
+      "bytes": 562351,
+      "sha256": "9f0d52cbe8300ea0a4d653e4530257d854f8e9dcf86e079b1ba3f9aa2db01059"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-02.jpg",
+      "bytes": 517529,
+      "sha256": "59c95ca6f5dad6500df0ec457e6a0b01ec424dac38c7e9a627180a67ce4e0b36"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-03.jpg",
+      "bytes": 513356,
+      "sha256": "7cf1bd992a78ac2cbff14a216d5c3cc8b3df669e6f03413d9c9ca88cdcce7b98"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-04.jpg",
+      "bytes": 600773,
+      "sha256": "22bda23196f9b0a5f95c158555cff09bf1b71b0e13ba932eb078020874b9bb17"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-05.jpg",
+      "bytes": 596628,
+      "sha256": "b91c9b0a77ef82d6cf47d0f0549fa5bce0026c20e75d388dddc15f3647b4207e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-06.jpg",
+      "bytes": 628448,
+      "sha256": "3cdeeb95801885af07397b619ed26e8c720eaa97d16192d82e3927b03ba492c9"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-07.jpg",
+      "bytes": 536130,
+      "sha256": "12ec03f8fa2f67d890111e9cbfec4bb3295e55378e76843e0d92b0081b1d88f7"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-08.jpg",
+      "bytes": 553722,
+      "sha256": "95ae89802311315084596aa83cc4e24b0debd5de753c221bfa89e9942c7dd945"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-09.jpg",
+      "bytes": 631933,
+      "sha256": "755814a89ce658cc3e1b7a1e6e6e41b184371d23f0255be94b4811cf7ceb69f7"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-10.jpg",
+      "bytes": 716273,
+      "sha256": "c8ad728bc2010829e4e52f52a8d393364b1bf419af671e347459831a6503628a"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-11.jpg",
+      "bytes": 663806,
+      "sha256": "52cc21ee4b3aeaff6a13fd95e07d9278e4c80e6ae7433a9df95fe23c8ebbe278"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-12.jpg",
+      "bytes": 670846,
+      "sha256": "85bb94ab188a660f3e9b18e4c25c5d7fea48dcddf52fd815c227f341d69e0162"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-13.jpg",
+      "bytes": 599904,
+      "sha256": "da87250e577342c4c6de2f68b48b6c27897ee26adb8b21135664d9a2d3227d51"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-14.jpg",
+      "bytes": 674233,
+      "sha256": "79f8d95a82893d1fd5d457819323eef227c5946270bccc53ad0d575ebffcd865"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-15.jpg",
+      "bytes": 515212,
+      "sha256": "85d3ddf907f94975cd0b8ab78fbd97b9a475d6cd92a707150d1031c9a182e309"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\all-pages-16.jpg",
+      "bytes": 433843,
+      "sha256": "4a98c0833bc2726283b7c4d1eb63fd70b34feffe59735ac42b15c35d1e8710b6"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\correction-lincoln-01.jpg",
+      "bytes": 392341,
+      "sha256": "b1ba364d75ad1816ce83d0dc0f974e6cc6109361692efd292f6cdd8a8a2a5915"
+    }
+  ],
+  "later_direct_views": [
+    {
+      "key": "OR-I-11-1",
+      "page": "933",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\scans\\OR-I-11-1-p933.jpg",
+      "sha256": "eb1d1486f4f5b4b7b4684690a1a90955e53efaff43f621049b26b903789c224a"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "934",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\scans\\OR-I-11-1-p934.jpg",
+      "sha256": "23400eca3c533466777c54ac26030fbffdfd483551767c7a705003d35a9c6464"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "935",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\scans\\OR-I-11-1-p935.jpg",
+      "sha256": "fe6f9ee3596d1ba2ef2923e59bc8a4c46143087a6e74d858da7de6f75c957c50"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "989",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\scans\\OR-I-11-1-p989.jpg",
+      "sha256": "eedc96c070aaf84d9bf12d02b38f1d3fbc1c118012dba558d6dac0006439708f"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "992",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\scans\\OR-I-11-1-p992.jpg",
+      "sha256": "1b18774d9ed9d4b07375e82cdeeb54e0c9b8df9d0ce6cc160af2da108f74be10"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "993",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\scans\\OR-I-11-1-p993.jpg",
+      "sha256": "4739cf2b5124866599748cec1fe5a0d77a4ad8190ab8fc9d32271700589b56fa"
+    }
+  ],
+  "locator_corrections": [
+    {
+      "key": "LINCOLN",
+      "page": "114",
+      "old_image_index": 130,
+      "image_index": 129,
+      "old_url": "https://archive.org/download/completeworksofa02linc_0/page/n130.jpg",
+      "url": "https://archive.org/download/completeworksofa02linc_0/page/n129.jpg",
+      "old_sha256": "12e44b06ce67f977adbaf2fcf66bd0123a33fea8b909e1b7f0a7ec5491bbde14",
+      "sha256": "2cdc6312da617176c04a31b557bd264a7339aeda9f42007e18953bd05f37f439",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-LINCOLN-p114-n130.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "LINCOLN",
+      "page": "115",
+      "old_image_index": 131,
+      "image_index": 130,
+      "old_url": "https://archive.org/download/completeworksofa02linc_0/page/n131.jpg",
+      "url": "https://archive.org/download/completeworksofa02linc_0/page/n130.jpg",
+      "old_sha256": "71f3b76112472ed519139ab291796d9b5a13ad97a98fb5d47e79601742eb83a0",
+      "sha256": "12e44b06ce67f977adbaf2fcf66bd0123a33fea8b909e1b7f0a7ec5491bbde14",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-LINCOLN-p115-n131.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "LINCOLN",
+      "page": "137",
+      "old_image_index": 153,
+      "image_index": 152,
+      "old_url": "https://archive.org/download/completeworksofa02linc_0/page/n153.jpg",
+      "url": "https://archive.org/download/completeworksofa02linc_0/page/n152.jpg",
+      "old_sha256": "a452523a39eef441eaa7f6bd2c5a4ff20a542d85ccc4212f0fbff0ae67e3d48f",
+      "sha256": "18b0789d59daed206eefe438546deda9e84fa9d8caf1c99c2716a1cdbc39217c",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-LINCOLN-p137-n153.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "LINCOLN",
+      "page": "203",
+      "old_image_index": 219,
+      "image_index": 218,
+      "old_url": "https://archive.org/download/completeworksofa02linc_0/page/n219.jpg",
+      "url": "https://archive.org/download/completeworksofa02linc_0/page/n218.jpg",
+      "old_sha256": "e6abe88228440b67b54e1d6fb00593c75508b0a2b44c73b157c8bcf5e1f4e993",
+      "sha256": "0fe18ab2698d240e9e01253f92f3b02e1e78e8f8ca79349ef2e56e855ee6fc4b",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-LINCOLN-p203-n219.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "LINCOLN",
+      "page": "252",
+      "old_image_index": 268,
+      "image_index": 267,
+      "old_url": "https://archive.org/download/completeworksofa02linc_0/page/n268.jpg",
+      "url": "https://archive.org/download/completeworksofa02linc_0/page/n267.jpg",
+      "old_sha256": "a73641358a00fde73b054b92c2360da394650cec8887e05d0a1d33f651ed41b4",
+      "sha256": "7bc5a3195222893cf9dbcd6c8ccb02a94e6a9547905762749ddee06904aa5071",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-LINCOLN-p252-n268.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "278",
+      "old_image_index": 286,
+      "image_index": 283,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n286.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n283.jpg",
+      "old_sha256": "14972ea4941535a167183ad6e26871bde0d71f217887fae6b527cd1843008825",
+      "sha256": "6690c11f496674be2974b969ad110dfeff0bd774501724a83e8eb2a4a3ec7023",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p278-n286.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "294",
+      "old_image_index": 302,
+      "image_index": 299,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n302.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n299.jpg",
+      "old_sha256": "2c06a65a400680ed5f373a3bc91351ad03316f2534a233e5f6fd027ae89e55c2",
+      "sha256": "12172e88b89dab25688f82a79d48a5d3e5bc104cf2ed30bab2713714535de78f",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p294-n302.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "297",
+      "old_image_index": 305,
+      "image_index": 302,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n305.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n302.jpg",
+      "old_sha256": "cc363db1cc191f544cba2ef600f9b5f4dd5a840be0cdacd5b822eb593478187a",
+      "sha256": "2c06a65a400680ed5f373a3bc91351ad03316f2534a233e5f6fd027ae89e55c2",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p297-n305.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "606",
+      "old_image_index": 614,
+      "image_index": 611,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n614.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n611.jpg",
+      "old_sha256": "906388d88417fba3a409dd97431333a197b51bacad58af74d403c9df00564996",
+      "sha256": "d61a8cfaaf8e7aae70a057efebf43e424590a6ddf5d1a82c658ec58b541952bd",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p606-n614.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "614",
+      "old_image_index": 622,
+      "image_index": 619,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n622.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n619.jpg",
+      "old_sha256": "fed43d2971da5b9644e13383ef2a9e2f01c321bcd4d074f7c6738640f2a165aa",
+      "sha256": "16ddea4cccba82b83e379166b4bffac020a2278de79c35d40d5764ef04d6cd3d",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p614-n622.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "616",
+      "old_image_index": 624,
+      "image_index": 621,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n624.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n621.jpg",
+      "old_sha256": "69d799817968ce32f1f5a084b7878eeb71ce25571c3072d04318a66b3b0ecf62",
+      "sha256": "22ef8bb2b6696d3a686562d661b411fd1c5513e0ef56e235b6291303d25b7f60",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p616-n624.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "626",
+      "old_image_index": 634,
+      "image_index": 631,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n634.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n631.jpg",
+      "old_sha256": "553fbb078d8122b6b4d1ba9c6443577c1a36d517e21ed5f973c50184783b6e76",
+      "sha256": "f99b416124e5d3ab2393d609cec390dcc7d6db1f079a787aace3aab91ac161dc",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p626-n634.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "653",
+      "old_image_index": 661,
+      "image_index": 658,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n661.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n658.jpg",
+      "old_sha256": "8d031e0c6632b4594a63a6a118afce467fd14a4c7a845694801cc21a39ab6871",
+      "sha256": "acc9ff537b35b5881c5053e6f0e43dd50c1743b4a51ea35c693d2c94adfea867",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p653-n661.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "655",
+      "old_image_index": 663,
+      "image_index": 660,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n663.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n660.jpg",
+      "old_sha256": "f4c8886eac3ad7e00492e40ce38d742a2ecceb3b93824112000a4e57686e1f4d",
+      "sha256": "0d870021eb27e025a9d94efa637d4a37b92cefbadc13ce40042503924f65323a",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p655-n663.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "718",
+      "old_image_index": 726,
+      "image_index": 723,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n726.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n723.jpg",
+      "old_sha256": "ac95dde001211f09e962e7df13fb0e54e6b8d8db0e4f11c011d75927b69d5342",
+      "sha256": "32dcfc0914094c3e885ef5f3df66fe9880620a70ac28f072e4e48be6912bb468",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p718-n726.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "728",
+      "old_image_index": 736,
+      "image_index": 733,
+      "old_url": "https://archive.org/download/warofrebellion172unit/page/n736.jpg",
+      "url": "https://archive.org/download/warofrebellion172unit/page/n733.jpg",
+      "old_sha256": "441bed82705bfdd84228e44921da11a5bd5fa8dc7ee79d038093c9f918c7e4fc",
+      "sha256": "da5619432f3e557c492a455b1b89611096ef882db2cb1aa0c45253a72f160fbf",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-17-2-p728-n736.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-21",
+      "page": "82",
+      "old_image_index": 84,
+      "image_index": 83,
+      "old_url": "https://archive.org/download/warofrebellion21unit/page/n84.jpg",
+      "url": "https://archive.org/download/warofrebellion21unit/page/n83.jpg",
+      "old_sha256": "5df42c6dd49d68be1023d18cc66f8c00d91faedf69dc76f1715af174a7aed09d",
+      "sha256": "04684402282ee57064e56987d5908a2a461c39b7cf7963b7bbfcca6ddb065596",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-21-p82-n84.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-I-21",
+      "page": "83",
+      "old_image_index": 85,
+      "image_index": 84,
+      "old_url": "https://archive.org/download/warofrebellion21unit/page/n85.jpg",
+      "url": "https://archive.org/download/warofrebellion21unit/page/n84.jpg",
+      "old_sha256": "f0e419ef4e0dfec0930f35c5bb2a20b391fe63beb727a7b4fc843f0e25ad75ca",
+      "sha256": "5df42c6dd49d68be1023d18cc66f8c00d91faedf69dc76f1715af174a7aed09d",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-I-21-p83-n85.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    },
+    {
+      "key": "OR-III-1",
+      "page": "823",
+      "old_image_index": 837,
+      "image_index": 838,
+      "old_url": "https://archive.org/download/cu31924079622175/page/n837.jpg",
+      "url": "https://archive.org/download/cu31924079622175/page/n838.jpg",
+      "old_sha256": "90822159d42835aabcc929b927f505c8b61c1f568665340464baaa6522d75a7c",
+      "sha256": "950d3fd9d805ace3515c9b4278a4930f28eedf303c578d75d2c8231ac59981b7",
+      "preserved_incorrect_scan": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\inspection\\incorrect-OR-III-1-p823-n837.jpg",
+      "scope": "S57 copy only; no earlier sprint file, citation text, or CSV row changed."
+    }
+  ],
+  "current_pages": [
+    {
+      "key": "CALLAHAN",
+      "page": "1",
+      "image_index": 8,
+      "sha256": "68be27936c702b4482f08319d3155a5f760efe7dedb94ce0bd9e1ec772c024f7"
+    },
+    {
+      "key": "CALLAHAN",
+      "page": "2",
+      "image_index": 9,
+      "sha256": "994f0e6a33a674c2cca54b06289555b36ab1e0d2e8313b196bedba6d4071f0c2"
+    },
+    {
+      "key": "CALLAHAN",
+      "page": "3",
+      "image_index": 10,
+      "sha256": "31a78976fe10b43625722db2f31a4218878e7ee8ef8322d78dbda73741cdd616"
+    },
+    {
+      "key": "CALLAHAN",
+      "page": "4",
+      "image_index": 11,
+      "sha256": "120aaeb4989980e15cec79d751e1993179b3baa8e7d77e4f1a3174e059d5178e"
+    },
+    {
+      "key": "CALLAHAN",
+      "page": "5",
+      "image_index": 12,
+      "sha256": "ba17c06502c7a175889884eebb1693dd9ff8a0cdebd7ad338c93d6220e9786d2"
+    },
+    {
+      "key": "CONGRESS",
+      "page": "803",
+      "image_index": 814,
+      "sha256": "e6778cb6a361eca39a275c715b1211b64165540163cffecf710b89c84397ae15"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "17",
+      "image_index": 24,
+      "sha256": "845d137d135d8d179b1778cca7f8082f4ab5a9b40e4570e9b1d5d6f116546bde"
+    },
+    {
+      "key": "JCCS-II",
+      "page": "72",
+      "image_index": 77,
+      "sha256": "7691597b763dcb9741b178bb58e6c22cdcb0c994a913672f98bf78456a3c1899"
+    },
+    {
+      "key": "JCCS-II",
+      "page": "73",
+      "image_index": 78,
+      "sha256": "56e6625c4e314029da31d352d538f76d5af13eb61552af427e5391789986bb93"
+    },
+    {
+      "key": "JCCS-II",
+      "page": "74",
+      "image_index": 79,
+      "sha256": "5079d749763a8361c7fefe33aad75ab222374b98338fab0f537ea9d5db1ac47c"
+    },
+    {
+      "key": "LINCOLN",
+      "page": "114",
+      "image_index": 129,
+      "sha256": "2cdc6312da617176c04a31b557bd264a7339aeda9f42007e18953bd05f37f439"
+    },
+    {
+      "key": "LINCOLN",
+      "page": "115",
+      "image_index": 130,
+      "sha256": "12e44b06ce67f977adbaf2fcf66bd0123a33fea8b909e1b7f0a7ec5491bbde14"
+    },
+    {
+      "key": "LINCOLN",
+      "page": "137",
+      "image_index": 152,
+      "sha256": "18b0789d59daed206eefe438546deda9e84fa9d8caf1c99c2716a1cdbc39217c"
+    },
+    {
+      "key": "LINCOLN",
+      "page": "203",
+      "image_index": 218,
+      "sha256": "0fe18ab2698d240e9e01253f92f3b02e1e78e8f8ca79349ef2e56e855ee6fc4b"
+    },
+    {
+      "key": "LINCOLN",
+      "page": "87",
+      "image_index": 103,
+      "sha256": "f373c431db04c4de7efe62f7e5ac2028b578e62a394b46a91364eaa25240fec4"
+    },
+    {
+      "key": "LINCOLN",
+      "page": "88",
+      "image_index": 104,
+      "sha256": "f2c47762a07f7ecad4f429d1f3485fc341f7a5892d7a9b90d3ecf749efbecf5a"
+    },
+    {
+      "key": "NATIONAL",
+      "page": "68",
+      "image_index": 72,
+      "sha256": "59d1cf90d5243108cab254506f1ce8009491a20a9d0917e2d0baf76cf116b39b"
+    },
+    {
+      "key": "NATIONAL",
+      "page": "69",
+      "image_index": 73,
+      "sha256": "ede149b203717683c2953abb665066ade31e5f7832b3d2848ad072153f9a584a"
+    },
+    {
+      "key": "NATIONAL",
+      "page": "70",
+      "image_index": 74,
+      "sha256": "32471761ae599374986b0d03212b841dc39d83c418ca82f1e94efe139bc48bf2"
+    },
+    {
+      "key": "OR-IV-1",
+      "page": "602",
+      "image_index": 617,
+      "sha256": "0c95568d16ca77e8712acaeecc15a45492d05aba336ef6cb60503d12934de428"
+    },
+    {
+      "key": "OR-IV-1",
+      "page": "603",
+      "image_index": 618,
+      "sha256": "fdced090e3db1fb1f5f6740fa6ad5bcc1784dc341cac9d2ff6d65fa4c8753719"
+    },
+    {
+      "key": "OR-IV-1",
+      "page": "613",
+      "image_index": 628,
+      "sha256": "ba246047788ff2738c76a6a3dc0d331d2410482e9f51017a9f814e0e4d560af1"
+    },
+    {
+      "key": "OR-IV-2",
+      "page": "178",
+      "image_index": 192,
+      "sha256": "c770d1886557aa06981f2f9b0a53c68e3d17dcf5cc1f18102120edecfd8da846"
+    },
+    {
+      "key": "OR-IV-2",
+      "page": "179",
+      "image_index": 193,
+      "sha256": "2cf7b413676cd0a1bd832141f5deedf64d471ef6e9b2c44f4b84db3c803314ec"
+    },
+    {
+      "key": "OR-IV-2",
+      "page": "196",
+      "image_index": 210,
+      "sha256": "e0b3d28252337ba26c1dce99d8128e7c9ed5bd55cb1cb2fc4ad3faa4b260e18e"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "151",
+      "image_index": 154,
+      "sha256": "6a408b43c5fd9bc837beb474523c4993cf65044f04ba0fe64cf925abdd8b4bc6"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "152",
+      "image_index": 155,
+      "sha256": "1aa86a8418008c29f1b16a97b4db6f6b3dcc6c8bec01206615cfe5d620822d12"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "153",
+      "image_index": 156,
+      "sha256": "8604e32cb42fd55d4e87889d03239e3ba9983b3e75a0e19937fb17b95dc2c2a0"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "154",
+      "image_index": 157,
+      "sha256": "e3d52e3d5c417c6c9ca14243e0b7508ceaa0f8d633887b87cd2eb0950bc9a99b"
+    },
+    {
+      "key": "CALLAHAN",
+      "page": "189",
+      "image_index": 196,
+      "sha256": "de6835260ac33d0f56471499bdb543e72a788bf47070bba91af8c1741bc70979"
+    },
+    {
+      "key": "CALLAHAN",
+      "page": "199",
+      "image_index": 206,
+      "sha256": "edddaec4131187ba26d03516b1e92f78cbf495afc8c72f24a5779501a0fcd9bd"
+    },
+    {
+      "key": "CAPERS",
+      "page": "404",
+      "image_index": 425,
+      "sha256": "3464008bb3f223383966a3bcd90a132cbfde5791be63f7287230e9d2df765216"
+    },
+    {
+      "key": "CULLUM-I",
+      "page": "289",
+      "image_index": 294,
+      "sha256": "a205e2eb1d5cc908b1ec17f0fb879a90d971dbc968b18816ef8e090869b7cdcd"
+    },
+    {
+      "key": "CULLUM-I",
+      "page": "291",
+      "image_index": 296,
+      "sha256": "8c03f6426831c1d0ecf17ac349961e8e994d8b7e33f7ba8693ed98c6dbdbb283"
+    },
+    {
+      "key": "CULLUM-I",
+      "page": "349",
+      "image_index": 354,
+      "sha256": "fe8865a1614aa2eca1f1800d2e69550c95b06e363fc9814dbd3c9f01ed583a99"
+    },
+    {
+      "key": "CULLUM-I",
+      "page": "492",
+      "image_index": 497,
+      "sha256": "1fff3be10519e40d454b6a15176df2ac6458afbd01d6a00ca9b5b5e1f0be08c4"
+    },
+    {
+      "key": "CULLUM-I",
+      "page": "734",
+      "image_index": 739,
+      "sha256": "1d93274fdb03a4df15c64648a87f8b609a9f184290a883090b89c31a7b180c4b"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "115",
+      "image_index": 122,
+      "sha256": "2d2d90f164b1b9934dff8b1580295d57cbf6a6b742601f1ef4ffdb8a4a1a9e8c"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "127",
+      "image_index": 134,
+      "sha256": "7f2001a2388180c4dfd5f0a6a94da09ef8640f27e6a6ba79b73d9852e3aac693"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "171",
+      "image_index": 178,
+      "sha256": "1a51899b003b90849a3c0e1ae96eaa1f060838ea0534824aa3947152efb48ed9"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "18",
+      "image_index": 25,
+      "sha256": "c47095920de9c3a5b88fdfc32459811dec5e97d4ca41087446ed8741644a71bd"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "248",
+      "image_index": 255,
+      "sha256": "52a65aec052ac9db00e77169456a4ce44c43ed63bb2e09acf95b95facccd00d9"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "251",
+      "image_index": 258,
+      "sha256": "e3b2f4a16330202286840ca71656f14535025dfe5f2400807573bf8d7eb4d728"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "257",
+      "image_index": 264,
+      "sha256": "c013fc6d2baa80531c292b08ccceb0c0d72c0717c44c5bf5bc03f0f9f7fad3aa"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "28",
+      "image_index": 35,
+      "sha256": "4b5c736cf66b9771c9558c67820c35e08ea719e10357e9866fdca3adac486991"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "319",
+      "image_index": 326,
+      "sha256": "d8f0e0a6c80509152ee5d8c976ba38247d324c358c24ccf620cd977c5485e99d"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "525",
+      "image_index": 532,
+      "sha256": "30411faab02ac91205b5643f247526d37ded993d1d1d52a22f8aac5eba10a2e8"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "62",
+      "image_index": 69,
+      "sha256": "74a62c6945396844af4b75af976288c7827b9d986f829a79a1cf4150adbdf528"
+    },
+    {
+      "key": "CULLUM-II",
+      "page": "95",
+      "image_index": 102,
+      "sha256": "4d0024125701179d21ba975038031f8ff6e3496cb41d6080013847ead11627be"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "183",
+      "image_index": 190,
+      "sha256": "6254a36db48b0b864174170e45ff3b61eb583a02c2a20b97b8da4fef572dd284"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "259",
+      "image_index": 266,
+      "sha256": "b0c8031ed8ad61f28cd67a7bdf37aa3fa7c8c6d3e21d1adcf26abfb99991b131"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "266",
+      "image_index": 273,
+      "sha256": "64b3789eb77fc39752e7829900bc977206aa7222fbe127d08e4944fcd3e39d15"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "37",
+      "image_index": 44,
+      "sha256": "75044537b65a41a6d99ccc33adc5e0cd3dcc854b3270021fb662d1619295eca8"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "38",
+      "image_index": 45,
+      "sha256": "ab53e38ccbb5d3f999841f634d19d30bbae0a17bf25cebf4dc6b8692ef3469be"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "39",
+      "image_index": 46,
+      "sha256": "1133490bd0116d7b4834d127a8906464073e35f187b9584d374e9857d124dd13"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "40",
+      "image_index": 47,
+      "sha256": "8197d82b2b8a939efddcf95de14d82904a9c6980b95fa6a421c58285403194ce"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "42",
+      "image_index": 49,
+      "sha256": "065b4e7ed1ac6cea06e8cec4729dc3157ae42de0a6e45c5efcce36dd96527af9"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "43",
+      "image_index": 50,
+      "sha256": "9c3d18ea03f0fdecf73f5fe8e2e8b309000bda6f37c81db59dd2cc38b61f23d0"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "44",
+      "image_index": 51,
+      "sha256": "cd08c23ba94b0ffdf18ca448510f98e2f9a4dea6b55237c5d1ec79e2beedb29f"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "470",
+      "image_index": 477,
+      "sha256": "46b300fcb51b10b4cfea7293938bfeba28ae4c9175c0398035aac3227422d528"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "491",
+      "image_index": 498,
+      "sha256": "4d344cc5ac859ed6efc7e68f5914896fc378cdaee3135570793adaed024d7f87"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "540",
+      "image_index": 547,
+      "sha256": "7912bf250c896bc9f878b37957e422256468f541caae3d8ce1c42e7cc15b2121"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "546",
+      "image_index": 553,
+      "sha256": "1e8e2747618cfb40751d4f714491013c8ee89437819085c268853056c78644c9"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "547",
+      "image_index": 554,
+      "sha256": "0fa27f8fa13579591b259e7b3f4527914492c22f80e37c1089f8411b3e0d5b6f"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "586",
+      "image_index": 593,
+      "sha256": "a13e77ac2aa70b88bd93650a1216957020fcfa6ed60e5aa2d7c9e141b9ffa8c5"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "613",
+      "image_index": 620,
+      "sha256": "69b2cfb8b29a748dc36e55c5a1798480a33d967837e1e2959d5d7b273fce4ac5"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "650",
+      "image_index": 657,
+      "sha256": "33246805e34ba15caf6ec4b2a5204986b02296d698dd9108f6693fabafff8089"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "659",
+      "image_index": 666,
+      "sha256": "12f3c4bf4d52d64f7899d7868da09e889945e7a86aeedf5039d80a62b8738453"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "688",
+      "image_index": 695,
+      "sha256": "c7460a1be5dc8df52f38a28c95f7d069d3717258afe33b4e279f30b5dc2ea2d6"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "715",
+      "image_index": 722,
+      "sha256": "90423b0bfd75ca6410b73738d6b48f7080737f03b59cd56d0c7d1513b1d31154"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "743",
+      "image_index": 750,
+      "sha256": "fd5283572b0a40378b913d65e0ff5e0c64aa2539808b7d97fcd461d62c7a9e20"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "798",
+      "image_index": 805,
+      "sha256": "9d929ce86852d1b62efe10785119a1d66dcf4fa697735038a695740d69339b63"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "799",
+      "image_index": 806,
+      "sha256": "be0b88382c43388ecf398df4a0851fe6732856d322f1ff9904674c1a26b00ab9"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "823",
+      "image_index": 830,
+      "sha256": "d5a22bd38113acb74abbc559e27ce78f3911ed430e74ae22b54bf9594c66d25e"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "824",
+      "image_index": 831,
+      "sha256": "d0a14fcc2dcfc06ae18f86918ba5823c1bfeb942f9239481e0e4ef1910fcbe2c"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "828",
+      "image_index": 835,
+      "sha256": "886b6a1505261232a84b314d9e7d86574814f7df4207139c75309413daf6938d"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "872",
+      "image_index": 879,
+      "sha256": "5dee886a89cff11a1ac77633310621f26d0febcb092863632a65e8a3cd48cce9"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "882",
+      "image_index": 889,
+      "sha256": "c0675ea08d6e01081d2fb3e2ecb0fc60a5a29c54c0f054708bc6c6434663f3c1"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "883",
+      "image_index": 890,
+      "sha256": "2ff1769b527cdb6bbdf8ae990d57ab43b64b7802f9f9c984b8f4d6afea5d573a"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "895",
+      "image_index": 902,
+      "sha256": "bbddbe3d0078d06c7125b9f87bca6dd9d0fcbae4b5e19054b7d7578ebb78653a"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "923",
+      "image_index": 930,
+      "sha256": "d94e4219da770a7a288dcf73e9b1b9960c88de348e83b787f298121538c6366e"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "953",
+      "image_index": 960,
+      "sha256": "f55fc616eaa0e0c37a4032cf0c518840a4b27eff5670b2cf92bf219c55977204"
+    },
+    {
+      "key": "HEITMAN",
+      "page": "954",
+      "image_index": 961,
+      "sha256": "ae4bcd84be69426b8c1a1be039c3ad7dc89176abc5eace77a5bcd5d1f3ed8a27"
+    },
+    {
+      "key": "LINCOLN",
+      "page": "252",
+      "image_index": 267,
+      "sha256": "7bc5a3195222893cf9dbcd6c8ccb02a94e6a9547905762749ddee06904aa5071"
+    },
+    {
+      "key": "NATIONAL",
+      "page": "67",
+      "image_index": 71,
+      "sha256": "8fc436e1b15f6d36315e69baf9c2432c17f1eb4ce76c548676d2e6dc6b678490"
+    },
+    {
+      "key": "OR-I-10-2",
+      "page": "17",
+      "image_index": 20,
+      "sha256": "2b1744032f3b65d9814ee016d40a3826edb760d2df7124c3f7f73bc21a359aaf"
+    },
+    {
+      "key": "OR-I-10-2",
+      "page": "303",
+      "image_index": 306,
+      "sha256": "328d6ef3641a3f05d2ea05369162a724c4f7394bce3b87be8d8abcb9fbb27279"
+    },
+    {
+      "key": "OR-I-10-2",
+      "page": "32",
+      "image_index": 35,
+      "sha256": "2dc7ab52743cb6faaa8398d668d07d3ddb4fd23640951f9e434effd24eac9410"
+    },
+    {
+      "key": "OR-I-10-2",
+      "page": "33",
+      "image_index": 36,
+      "sha256": "10ef93fccdd22aec3060ebb096549331aaf4c4e6316a36bed7e01d8a54aac2d2"
+    },
+    {
+      "key": "OR-I-10-2",
+      "page": "354",
+      "image_index": 357,
+      "sha256": "2aee64eaa5d62ff9589085f2ff767d3f5cde4f9518583822855c3d35768eb5c3"
+    },
+    {
+      "key": "OR-I-10-2",
+      "page": "370",
+      "image_index": 373,
+      "sha256": "5a074368dbd2d1dd29216cddb4de645f0e2045e1150556ffdb97612e89dc1d21"
+    },
+    {
+      "key": "OR-I-10-2",
+      "page": "371",
+      "image_index": 374,
+      "sha256": "ae0af4db14221f4b6b555fc9eca8b5f79b24140c6cff7314fbfed7e9a309a192"
+    },
+    {
+      "key": "OR-I-10-2",
+      "page": "5",
+      "image_index": 8,
+      "sha256": "50a300c78c92d7e94d86d734fa7622cd4038e36c684f55fc33be5f0a4b5f72cf"
+    },
+    {
+      "key": "OR-I-10-2",
+      "page": "6",
+      "image_index": 9,
+      "sha256": "d864f5bacc4d844b274e23c48bd106f48d6c0efd905e63d31423554dd35c0492"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "933",
+      "image_index": 946,
+      "sha256": "eb1d1486f4f5b4b7b4684690a1a90955e53efaff43f621049b26b903789c224a"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "934",
+      "image_index": 947,
+      "sha256": "23400eca3c533466777c54ac26030fbffdfd483551767c7a705003d35a9c6464"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "935",
+      "image_index": 948,
+      "sha256": "fe6f9ee3596d1ba2ef2923e59bc8a4c46143087a6e74d858da7de6f75c957c50"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "989",
+      "image_index": 1002,
+      "sha256": "eedc96c070aaf84d9bf12d02b38f1d3fbc1c118012dba558d6dac0006439708f"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "992",
+      "image_index": 1005,
+      "sha256": "1b18774d9ed9d4b07375e82cdeeb54e0c9b8df9d0ce6cc160af2da108f74be10"
+    },
+    {
+      "key": "OR-I-11-1",
+      "page": "993",
+      "image_index": 1006,
+      "sha256": "4739cf2b5124866599748cec1fe5a0d77a4ad8190ab8fc9d32271700589b56fa"
+    },
+    {
+      "key": "OR-I-11-3",
+      "page": "205",
+      "image_index": 210,
+      "sha256": "0e102fef2876aa96e7f95beb40269ae5b955a9177f3d5c45e14e5a2a71786248"
+    },
+    {
+      "key": "OR-I-11-3",
+      "page": "568",
+      "image_index": 573,
+      "sha256": "dc58b20ed36d5e65d540e3f325a822ec38cd23a8e2e36192628d9abfa3b1fe37"
+    },
+    {
+      "key": "OR-I-11-3",
+      "page": "569",
+      "image_index": 574,
+      "sha256": "b8f63644b097599b4cffaf0760832e2c6da56700f3bb0e6053a3a2097fede431"
+    },
+    {
+      "key": "OR-I-12-3",
+      "page": "43",
+      "image_index": 48,
+      "sha256": "096a379fcc32b001ea93546dde81f5d1ad4e9c883bbb7009d7531678ef3756f5"
+    },
+    {
+      "key": "OR-I-12-3",
+      "page": "435",
+      "image_index": 440,
+      "sha256": "0611015bae0a9c776cec04f1b5f244fb484dd227f677019e6f7e7876f40332ed"
+    },
+    {
+      "key": "OR-I-12-3",
+      "page": "436",
+      "image_index": 441,
+      "sha256": "fd2fed1286d1b9227e798805ed8c63d0c01aba0a66641f033410867026ca9198"
+    },
+    {
+      "key": "OR-I-12-3",
+      "page": "437",
+      "image_index": 442,
+      "sha256": "2d09da88b5fdc0f99cbc7434f83a9bb902a67c85f9ffad9024f87d58fcf3c58b"
+    },
+    {
+      "key": "OR-I-12-3",
+      "page": "438",
+      "image_index": 443,
+      "sha256": "f265ec3fe3539fe16b0a4bd24c87bb36ed0fd503fa20557dff57a21049bdb69c"
+    },
+    {
+      "key": "OR-I-12-3",
+      "page": "811",
+      "image_index": 816,
+      "sha256": "bdc0ea2705909b943146eec37abc79e28a0a1cee9df7639abd195459f4b16b38"
+    },
+    {
+      "key": "OR-I-12-3",
+      "page": "813",
+      "image_index": 818,
+      "sha256": "b6dfce02aa07e048308770a57286a04f6378cbc263ffade6e0a8202616c41e6b"
+    },
+    {
+      "key": "OR-I-13",
+      "page": "370",
+      "image_index": 383,
+      "sha256": "0e7b85710d7530ac1ec1c4f2abcdb35620090f8ec8c050349f6cb661ca73537c"
+    },
+    {
+      "key": "OR-I-13",
+      "page": "656",
+      "image_index": 669,
+      "sha256": "9ef89585a294777033e6b4a13a7a8a866ea2cf8ff65d1ef6937c5e26b53bfba9"
+    },
+    {
+      "key": "OR-I-13",
+      "page": "855",
+      "image_index": 868,
+      "sha256": "a52a56b57d85f979b2acc90ffde23df4bdd17f245130373679d21f94348f98dd"
+    },
+    {
+      "key": "OR-I-13",
+      "page": "876",
+      "image_index": 889,
+      "sha256": "0f06842b4b156a848865d29fbb3ea7023d1e1ac8f3abc1af711b543e3e8c0628"
+    },
+    {
+      "key": "OR-I-13",
+      "page": "877",
+      "image_index": 890,
+      "sha256": "8fce1c71a2bfdf1a546fbdd3ceb0200c210505ad47fccc352528b01b17353b43"
+    },
+    {
+      "key": "OR-I-14",
+      "page": "380",
+      "image_index": 395,
+      "sha256": "8074e61930780709d3f9556a302f22dfdb1deb82b66078acbcbfdc787d3b8366"
+    },
+    {
+      "key": "OR-I-14",
+      "page": "382",
+      "image_index": 397,
+      "sha256": "778260bffb83f30175f7aa83ce615d34ccb01d94caa4ea6b24e8b660a0db9b18"
+    },
+    {
+      "key": "OR-I-14",
+      "page": "387",
+      "image_index": 402,
+      "sha256": "d862e1633e013de07c0bce9f7d0790b090af940ae6983ed4067b9e524e789680"
+    },
+    {
+      "key": "OR-I-14",
+      "page": "608",
+      "image_index": 623,
+      "sha256": "733878ce33c87c7a6ede3444f55c07008169da7d7ace9242ba575cc57e707570"
+    },
+    {
+      "key": "OR-I-14",
+      "page": "609",
+      "image_index": 624,
+      "sha256": "b447f0bf7d43eb1879fdf33f711ed4755d2d6979807f13b68d65f56fdd334bda"
+    },
+    {
+      "key": "OR-I-16-2",
+      "page": "641",
+      "image_index": 646,
+      "sha256": "aeecdff1efde2a69129cf95f6685546b895e90ff9d7714a0f60f4f01553c54e6"
+    },
+    {
+      "key": "OR-I-16-2",
+      "page": "642",
+      "image_index": 647,
+      "sha256": "f5bfae98cad1d2ba6442a5f3c17c72d00780f728baa4dbaec69dee401debbb03"
+    },
+    {
+      "key": "OR-I-16-2",
+      "page": "654",
+      "image_index": 659,
+      "sha256": "eb159d895799f402f211e0b9a8652dfd63497c332d26e10a76ab5767f5c3738d"
+    },
+    {
+      "key": "OR-I-16-2",
+      "page": "759",
+      "image_index": 764,
+      "sha256": "7f566c4717bef9947c31c2f0c6eaeac4c349a63c63b2301d487bbd785faf91c7"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "278",
+      "image_index": 283,
+      "sha256": "6690c11f496674be2974b969ad110dfeff0bd774501724a83e8eb2a4a3ec7023"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "294",
+      "image_index": 299,
+      "sha256": "12172e88b89dab25688f82a79d48a5d3e5bc104cf2ed30bab2713714535de78f"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "297",
+      "image_index": 302,
+      "sha256": "2c06a65a400680ed5f373a3bc91351ad03316f2534a233e5f6fd027ae89e55c2"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "606",
+      "image_index": 611,
+      "sha256": "d61a8cfaaf8e7aae70a057efebf43e424590a6ddf5d1a82c658ec58b541952bd"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "614",
+      "image_index": 619,
+      "sha256": "16ddea4cccba82b83e379166b4bffac020a2278de79c35d40d5764ef04d6cd3d"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "616",
+      "image_index": 621,
+      "sha256": "22ef8bb2b6696d3a686562d661b411fd1c5513e0ef56e235b6291303d25b7f60"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "626",
+      "image_index": 631,
+      "sha256": "f99b416124e5d3ab2393d609cec390dcc7d6db1f079a787aace3aab91ac161dc"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "653",
+      "image_index": 658,
+      "sha256": "acc9ff537b35b5881c5053e6f0e43dd50c1743b4a51ea35c693d2c94adfea867"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "655",
+      "image_index": 660,
+      "sha256": "0d870021eb27e025a9d94efa637d4a37b92cefbadc13ce40042503924f65323a"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "718",
+      "image_index": 723,
+      "sha256": "32dcfc0914094c3e885ef5f3df66fe9880620a70ac28f072e4e48be6912bb468"
+    },
+    {
+      "key": "OR-I-17-2",
+      "page": "728",
+      "image_index": 733,
+      "sha256": "da5619432f3e557c492a455b1b89611096ef882db2cb1aa0c45253a72f160fbf"
+    },
+    {
+      "key": "OR-I-20-2",
+      "page": "411",
+      "image_index": 416,
+      "sha256": "1d4dfe858e9c2d5854b85784ff756b32559930efee8aadc87d3d858cc3ccdc97"
+    },
+    {
+      "key": "OR-I-20-2",
+      "page": "412",
+      "image_index": 417,
+      "sha256": "6fbd6624d7f11b00080f7f405eef6ca511c7bf5218e13f47f124cf806b239c8f"
+    },
+    {
+      "key": "OR-I-20-2",
+      "page": "423",
+      "image_index": 428,
+      "sha256": "a3d940f91a9ebb6aa2aee4f6c161577696a9ea177a997a5a4533cdcf225c1be8"
+    },
+    {
+      "key": "OR-I-20-2",
+      "page": "424",
+      "image_index": 429,
+      "sha256": "1dda3e39dda4a13ecf353ceb9bc551499e1334b63620a657a4cf7ce5a5903917"
+    },
+    {
+      "key": "OR-I-21",
+      "page": "82",
+      "image_index": 83,
+      "sha256": "04684402282ee57064e56987d5908a2a461c39b7cf7963b7bbfcca6ddb065596"
+    },
+    {
+      "key": "OR-I-21",
+      "page": "83",
+      "image_index": 84,
+      "sha256": "5df42c6dd49d68be1023d18cc66f8c00d91faedf69dc76f1715af174a7aed09d"
+    },
+    {
+      "key": "OR-I-3",
+      "page": "57",
+      "image_index": 68,
+      "sha256": "683237f10e14b72c9d2aa20746f21bc25c97bec0dd91aaf65282ae5bb89dcfbd"
+    },
+    {
+      "key": "OR-I-3",
+      "page": "62",
+      "image_index": 73,
+      "sha256": "c4ef1038c62fc7a1013d1605ee2c6a6bdabc2edbdfa1d00bb6ff41255387e39a"
+    },
+    {
+      "key": "OR-I-3",
+      "page": "63",
+      "image_index": 74,
+      "sha256": "a40ce9a75bc56c3a257e7066bf1bb51b313d967a369fb7ba57a22d126730c3e7"
+    },
+    {
+      "key": "OR-I-3",
+      "page": "64",
+      "image_index": 75,
+      "sha256": "400fb7476915cdc8241effad9dcb072e1fce1496c5fc87c60c3f793f13c73b8e"
+    },
+    {
+      "key": "OR-I-4",
+      "page": "405",
+      "image_index": 410,
+      "sha256": "3e626ccc2f92f3b172b928516b1af957cb5b295dd83e20a7e7c00a5fb5164885"
+    },
+    {
+      "key": "OR-I-4",
+      "page": "407",
+      "image_index": 412,
+      "sha256": "1ffb7fe0577862b5b54122ddb2c35bd81d8d134bb3a9f95839cd78ffea748387"
+    },
+    {
+      "key": "OR-I-4",
+      "page": "566",
+      "image_index": 571,
+      "sha256": "5e05115f8445218f9febec5d5ffa6071920f478e4847e431df4304296fd63417"
+    },
+    {
+      "key": "OR-I-4",
+      "page": "573",
+      "image_index": 578,
+      "sha256": "47f8f57627fc8b3b42d912647cae525be869017b766560e9ca52fdd26b866ce0"
+    },
+    {
+      "key": "OR-I-4",
+      "page": "574",
+      "image_index": 579,
+      "sha256": "cb62c10c64e57a4140214adcca3e63bca1b5d75c886bd9bb37e177e6d0e49c7e"
+    },
+    {
+      "key": "OR-I-4",
+      "page": "578",
+      "image_index": 583,
+      "sha256": "b3252438e1ba86c4a8a0dd4fb7cc696b3beeda284ce8e052a9c73a65a7642829"
+    },
+    {
+      "key": "OR-I-4",
+      "page": "600",
+      "image_index": 605,
+      "sha256": "163d3344c1e9775967a6bbfb7d68d8a163c32c91112adb6040f405528ff8eba0"
+    },
+    {
+      "key": "OR-I-5",
+      "page": "1053",
+      "image_index": 1072,
+      "sha256": "5343f192b8e323594d8a56192d182f65d9047a7fd0750841d8938bc230822dcb"
+    },
+    {
+      "key": "OR-I-5",
+      "page": "1099",
+      "image_index": 1118,
+      "sha256": "19f9f1b1b452799df36268b71b6e9286635aa0e39726aa2f343282da93b88f5a"
+    },
+    {
+      "key": "OR-I-5",
+      "page": "913",
+      "image_index": 932,
+      "sha256": "6023c80b1d6db14461a58a128b921db6eadf892c1872f7518812c9ef89b6aaca"
+    },
+    {
+      "key": "OR-I-5",
+      "page": "914",
+      "image_index": 933,
+      "sha256": "ca4e203e7c8077e92940360835fa536a13ec88587c6607b6bf54836911c19b0d"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "288",
+      "image_index": 299,
+      "sha256": "8af12b46fa7e58657f2c89b732fb4f6d99ce75d8166327068fa02fb85a6faa91"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "293",
+      "image_index": 304,
+      "sha256": "4bc8eab0a5d7f90aadf5be1408082b6f0cd23204e815e0e39c180645bfb53d1e"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "309",
+      "image_index": 320,
+      "sha256": "a5fbdecb87b43de380e903cafef935ff511a6e05f794dfde37dad3dbb4494d1d"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "312",
+      "image_index": 323,
+      "sha256": "4212ce8b7f975efa9d6c34f6795c120f9cda722be75a27252cdfae7392d1ad7c"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "407",
+      "image_index": 418,
+      "sha256": "eba1a66e971a46dce64883f4f9c55d3e3d8210731ebed9eecc0a971537607b2c"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "694",
+      "image_index": 705,
+      "sha256": "b9ebe6d1e88330fbcd05aeac87140f809ec85174f2aefeca1042e101cdbf468c"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "695",
+      "image_index": 706,
+      "sha256": "4abc782c59f9f8da0ea00d7e370b22e840ca7c97930a807aee131864adbd485d"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "696",
+      "image_index": 707,
+      "sha256": "2938b7a6fd31d1ba42d75314571f9aa8f35bedf6681749fc3a0b8fe873b2f57a"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "704",
+      "image_index": 715,
+      "sha256": "f88cf03dd07f6e996c014cee6428f371162b7b800e68b3075eaa26240bfde501"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "879",
+      "image_index": 890,
+      "sha256": "b775b6deeca6ff13a53c57885b6f969425159c3ea0496987e488c9f2af8eac3a"
+    },
+    {
+      "key": "OR-I-6",
+      "page": "880",
+      "image_index": 891,
+      "sha256": "1731dbd1c295d6cdb4fbc7ba442ae6648b49168cddfd6423f653f91ed29243e9"
+    },
+    {
+      "key": "OR-I-7",
+      "page": "254",
+      "image_index": 271,
+      "sha256": "96fe1f7adb0e8b4985c25cbc8fdf3b6d22e10c1bafdc237609ec396907567f47"
+    },
+    {
+      "key": "OR-I-7",
+      "page": "629",
+      "image_index": 646,
+      "sha256": "d3e91f117d59e5bf263293eb3a03673edbe1f2891d40170643f9db0393bc1169"
+    },
+    {
+      "key": "OR-I-7",
+      "page": "737",
+      "image_index": 754,
+      "sha256": "4b916dcbf15dcc290c1c6d7deaef244cfe09f2bdc8bbbc3348d63e49564cfcc6"
+    },
+    {
+      "key": "OR-I-7",
+      "page": "763",
+      "image_index": 780,
+      "sha256": "b0827cc745aef3fc56c75775adee582d0261189707cc53d8a0ac6e5ab4d5c11d"
+    },
+    {
+      "key": "OR-I-7",
+      "page": "764",
+      "image_index": 781,
+      "sha256": "97bae1eba7f2476ea3a0996d98e597e39930450939fa95e514349e2b9e2a066f"
+    },
+    {
+      "key": "OR-I-7",
+      "page": "908",
+      "image_index": 925,
+      "sha256": "9652aef448d3ff848e72877a81ff9316a76e417adbbe11e3f7c083c0c1e25eac"
+    },
+    {
+      "key": "OR-I-8",
+      "page": "555",
+      "image_index": 566,
+      "sha256": "f21313aa9a03680ae0cb8df01ed5f1e412ca88974ad8f9d691ddf7a94bea9999"
+    },
+    {
+      "key": "OR-I-8",
+      "page": "745",
+      "image_index": 756,
+      "sha256": "751b9b3349f936390c9417bdb2b45df347ac7b4b717a294eac84a15b8f70630c"
+    },
+    {
+      "key": "OR-I-8",
+      "page": "746",
+      "image_index": 757,
+      "sha256": "52a76fed6297540fa446e196c6727092edc9e3ad2ce3e2a1efcfe142ec3f1cf8"
+    },
+    {
+      "key": "OR-I-9",
+      "page": "452",
+      "image_index": 463,
+      "sha256": "1bc0e066f8130728a263a4adc6c216cb2702c556faac971f693ba28a20ebdb14"
+    },
+    {
+      "key": "OR-I-9",
+      "page": "582",
+      "image_index": 593,
+      "sha256": "35a7272e2ca6a1d75721e4a857782f93d9e5924ab98687031d0f53b3fde18545"
+    },
+    {
+      "key": "OR-III-1",
+      "page": "823",
+      "image_index": 838,
+      "sha256": "950d3fd9d805ace3515c9b4278a4930f28eedf303c578d75d2c8231ac59981b7"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "10",
+      "image_index": 13,
+      "sha256": "6038b6e7155334e00173eadeca0f6b1bfa90fe203e552d99eb533348469bba0c"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "11",
+      "image_index": 14,
+      "sha256": "5ba1db02e02e6289897b02f0c23d3ce554016552c450105149182ca6c0396e97"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "14",
+      "image_index": 17,
+      "sha256": "eec9a5cd8306bf36b6f15ba0555eeb9fa090576cc645eff4f726e0649febca7a"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "15",
+      "image_index": 18,
+      "sha256": "5c01406b1ad917d33fee0b245c90f43ce9d1da0ec3a4a2d45c1f3f95af4a16d1"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "16",
+      "image_index": 19,
+      "sha256": "8bcb8c0b6c0abedefb662e919a4d5ff4e74f9ef1a05ae8dba82434adac5d626e"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "21",
+      "image_index": 24,
+      "sha256": "747eda9de5328124a96505d29d41c9e53aa90723e5791389e5f8410aa0788d81"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "22",
+      "image_index": 25,
+      "sha256": "6754b487b5c0e4fd1cd828a2be6688500776c7c78481a85d097223416def8f2e"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "23",
+      "image_index": 26,
+      "sha256": "1b1dbe11f013ea69d3cab09e04aeaaecfa121bd8109b0261d1cfb6f5d3c6a2e0"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "24",
+      "image_index": 27,
+      "sha256": "cd37b8d00deca1d426a3e4340175f4aeb0b4d5a2d27ecf453ac77de3539e5343"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "25",
+      "image_index": 28,
+      "sha256": "64d3f5fd3958a7538b0103fb8803a2515c67f58304b1b2c08f1a2253e7822cdc"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "26",
+      "image_index": 29,
+      "sha256": "c3ed21380caa4c581b7ba9bb59e78ed6cd4c97b98bcf622037fcd71d6d7e041e"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "49",
+      "image_index": 52,
+      "sha256": "b8b72185dcb8ec675bac2127fe2b290d607c704220e2e87cbbe5b9062dbdadfd"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "55",
+      "image_index": 58,
+      "sha256": "c46d2909087c9df44a43f0070fbc502386155d5cde119ecd1014766fdd3d8caa"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "82",
+      "image_index": 85,
+      "sha256": "8e46203ac801733161c1e68517f6247c1c3766be2f3583c3a5d4be688d416bd1"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "87",
+      "image_index": 90,
+      "sha256": "84d3ba058fc7847e914f68ba8e36f674209f9b7f86505bfa65adad0d51e807f8"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "88",
+      "image_index": 91,
+      "sha256": "a12548bc8b950cefd2e6b4bb3cd0d969931c39abe6f8215c376bbdd64b18acf6"
+    },
+    {
+      "key": "WRIGHT",
+      "page": "9",
+      "image_index": 12,
+      "sha256": "e1806c425fde20b52443ee470f579067895b01c398b00512392eeb154777a83c"
+    }
+  ]
+}
