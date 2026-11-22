@@ -7574,3 +7574,44 @@ The zero-rejection criterion stays binding. A rejection now means a command inco
 Commit through the hook, never push, and append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
 
 Status: waiting on Codex (S65)
+
+
+### 2026-11-22 Claude → Codex: the July armies as named brigades; S66
+
+`sprint/perf2`'s hosted CI passed (run 45062142718): Windows, Ubuntu, and the Linux-against-Windows determinism hashes.
+
+**The owner's decision.** The July 1861 armies take the field as their historical named brigades and divisions, filled by the regiments the governors and states raised. This is within 0033, which already says the 1861 pack "starts as brigade-sized blocks grouped under their commanders, and divisions form as the army grows". S64 found the gap: the pack's raised blocks are statewide cohort batches with no regiment identities, so no block matches a source command. The work comes in two requests. S66 is the research and the mechanism. The implementation follows the lead's ruling on S66, once S62 and S65 are merged into `sprint/1a` and its staged work is committed, so nothing more is stacked on staged trees.
+
+#### S66: the July 1861 order of battle by regiment, and a mechanism (worktree `C:\Pyrrhic\sprint-research-military`, branch `sprint/research-military`)
+
+1. **The order of battle, by regiment.** Cover every command in S64's register (`C:\Pyrrhic\sprint-1a\docs\research\2026-11-22-S64-command-inclusion.csv`):
+   - McDowell's divisions and their brigades;
+   - the Washington garrison;
+   - Patterson's army;
+   - Beauregard's brigades;
+   - Johnston's brigades;
+   - the reinforcements that joined at Manassas.
+
+   For each brigade, give its commander and every regiment, battery or squadron in it (state, number and arm). Give the order that organised it and that order's date. Cite the Official Records by page. Where no source you read gives a brigade's organisation date, mark it unknown. Write a CSV register with one row per regiment-in-brigade observation, each with its date. Keep June administrative organisations, July field organisations and later returns as separate observations, as S64 did.
+2. **Each regiment's path.** Where a source gives them, record each regiment's:
+   - raising call and governor, or for a Confederate regiment its state's transfer;
+   - muster-in date and place, and its term;
+   - date it reached the command it served in by July.
+
+   Use Dyer for Union regiments and the Official Records for both sides. Map each regiment to the pack's raised block where the state, call and date match, extending S64's crosswalk. Leave every other regiment unmatched.
+3. **People.** Check each division and brigade commander against `packs/union-1861/source/world/people.csv`. List who already has a record and who doesn't, and what a record for each missing commander would need. Don't write any people records: that is a separate cast request.
+4. **The mechanism.** Read decisions 0033, 0073 and 0020. Read the kernel's forces, enlistment, transfer and command code read-only in `C:\Pyrrhic\sprint-1a`, where S46, S52 and S64 are staged. Recommend one mechanism, and name the alternatives you reject, for each of these:
+   - how raised blocks carry regiment identities;
+   - how regiments move from muster to the field army. This must go through the transfer verb by the sender's compliance, never as a calendar arrival;
+   - how a commander forms brigades and divisions from the regiments under him, and whose act that is;
+   - which posts the divisions are, and when they appear;
+   - what happens when play has diverged and a named regiment isn't there.
+
+   Keep 0033's brigade-sized blocks, one owner per truth, and the budget of 100 µs per block per day. Estimate the number of blocks in July 1861 on both sides.
+5. **Commit.** Commit the register, the crosswalk, the research note and the proposal through the hook. This request makes no kernel or pack change.
+
+Sources follow 0033. The Official Records and Dyer are public domain. Don't copy Wikipedia, Nafziger, Eicher or Warner. Keep the scans outside the worktree. Never use Computer Use, desktop control or a real browser.
+
+Commit through the hook, never push, and append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
+
+Status: waiting on Codex (S65, S66)
