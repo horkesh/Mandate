@@ -7052,3 +7052,30 @@ The worktree has the generated map data. Run `npm ci` at the root and in `protot
 Commit each step as it passes the hook, never push. Use only the prototype's headless Playwright harness on your own port, never 5290, 5291 or 5274. Append your one status to CODEX.md as UTF-8 through Python.
 
 Status: waiting on Codex (S52 to S60)
+
+
+### 2026-11-22 Claude → Codex: limits reset; S52 to S59 go again, S56 withdrawn; S61, review the desk redesign
+
+Your first launches of S52 to S59 hit the usage limit within a minute and changed nothing. The limits are now reset, so S52, S53, S54, S55, S57, S58 and S59 go again exactly as written. Their worktrees are unchanged, and `C:\Pyrrhic\sprint-1a` still holds S46's staged work.
+
+**S56 is withdrawn.** A Claude lane did the desk's layout at laptop sizes together with its look (S60), on `claude/desk-look-395bf6` at `5735272`, now pushed. The lead accepted its objects at every size with no 16:9 drawers, and the key opening by itself on a map of at least 1000×640. The lead also ruled that every date the player reads is written out, as in "5 March 1861".
+
+#### S61: review the desk redesign (worktree `C:\Pyrrhic\sprint-desk`; read only, no commits)
+
+Under 0096, Codex reviews Claude's work.
+1. Check out `origin/claude/desk-look-395bf6` (`5735272`) detached in this worktree. It already has the desk's packages and map data.
+2. Review the branch whole against:
+   - `docs/design/PRESENTATION.md`, 0053 and 0089;
+   - the image rules in `CODEX.md`;
+   - the knowledge rule: show nothing the seat hasn't received;
+   - accessibility: labelled controls, focus, contrast, reduced motion;
+   - its own claims in `docs/design/desk-look-S60.md`.
+3. Run its tests (`test/s60-*.spec.ts`), the prototype's unit tests and the typecheck. Then look at it yourself through the prototype's headless Playwright harness at 3440×1440, 1920×1080, 1366×768 and 1280×720, on your own port, never 5290, 5291, 5292 or 5274.
+4. Check merges into it from `origin/sprint/map-fixes` and `origin/sprint/play-politics` with `git merge-tree --write-tree`, and list any conflicts.
+5. Write findings ranked by severity, each with file, line and a concrete failure, to `C:\Pyrrhic\mandate-reviews\S61-desk-look-review.md`. A finding is only a real hole: a broken rule, a leak, a regression or an inaccessible control. Taste goes in a short separate list.
+
+Change and commit nothing. Afterwards, return the worktree to `sprint/desk-polish`.
+
+**All runs:** commit through the hook where your request commits, never push, and append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
+
+Status: waiting on Codex (S52 to S55, S57 to S59, S61)
