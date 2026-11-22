@@ -3,25 +3,31 @@ import { writtenDate } from '../web/dates.ts';
 
 // Lead's ruling on S60: every date the player reads is written out
 // ("5 March 1861"; "Tuesday, 5 March 1861" on the calendar block). No rendered
-// text, and no spoken name or tooltip, may contain an ISO date. This test runs
-// one turn on its own server, so it runs after the read-only S60 checks.
+// text, and no spoken name or tooltip, may contain an ISO date, or a raw seat
+// day standing in for a date ("Day 0", "written 0", "as of day 3"). This test
+// runs one turn on its own server, so it runs after the read-only S60 checks.
 const ISO = /\b\d{4}-\d{2}-\d{2}\b/;
+// A number after "day", "written" or "since" that does not begin a written
+// date ("since 5 March 1861") or a quantity ("written 3 days ago").
+const MONTHS = 'January|February|March|April|May|June|July|August|September|October|November|December';
+const RAW_DAY = new RegExp(`\\b(?:day|written|since)\\s+\\d+\\b(?!\\s*(?:${MONTHS}|days?|men|regiments?|attention|%))`, 'i');
 
 async function leaks(page: Page, where: string) {
-  const found = await page.evaluate(source => {
-    const iso = new RegExp(source);
+  const found = await page.evaluate(({ iso, raw }) => {
+    const patterns = [new RegExp(iso), new RegExp(raw, 'i')];
+    const bad = (value: string) => patterns.some(p => p.test(value));
     const hits: string[] = [];
     const text = document.body.innerText;
-    for (const line of text.split('\n')) if (iso.test(line)) hits.push(`text: ${line.trim().slice(0, 90)}`);
+    for (const line of text.split('\n')) if (bad(line)) hits.push(`text: ${line.trim().slice(0, 90)}`);
     for (const el of document.querySelectorAll<HTMLElement>('[aria-label],[title],[placeholder],img[alt]')) {
       if (!el.getClientRects().length) continue;
       for (const attr of ['aria-label', 'title', 'placeholder', 'alt']) {
         const value = el.getAttribute(attr);
-        if (value && iso.test(value)) hits.push(`${attr}: ${value.slice(0, 90)}`);
+        if (value && bad(value)) hits.push(`${attr}: ${value.slice(0, 90)}`);
       }
     }
     return hits;
-  }, ISO.source);
+  }, { iso: ISO.source, raw: RAW_DAY.source });
   expect(found, where).toEqual([]);
 }
 async function settle(page: Page) { await page.waitForTimeout(300); }
@@ -30,7 +36,7 @@ async function putDown(page: Page) {
 }
 const book = (page: Page, name: string) => page.getByRole('navigation', { name: 'Desk objects' }).getByRole('button', { name, exact: true });
 
-test('S60 no rendered text shows an ISO date, before and after a turn', async ({ page }) => {
+test('S60 no rendered text shows an ISO date or a raw day number, before and after a turn', async ({ page }) => {
   test.setTimeout(240_000);
   await page.setViewportSize({ width: 1920, height: 1080 });
   await page.emulateMedia({ reducedMotion: 'reduce' });
@@ -58,10 +64,20 @@ test('S60 no rendered text shows an ISO date, before and after a turn', async ({
     ['plans', () => page.locator('.tool-plans').click()],
     ['orders and progress', () => book(page, 'Orders & progress').click()],
     ['key card', () => book(page, 'Key card').click()],
+    ['order sheet', () => book(page, 'Write an order').click()],
     ['turn sheet', () => page.locator('.table-run').click()],
     ['docket', () => page.keyboard.press('d')],
+    // A person's page and the appointments sheet, reached through the board.
+    ['person page', async () => { await book(page, 'Org board').click(); await page.locator('dialog[open] .org-post').first().click(); }],
+    ['appointments', async () => { await book(page, 'Org board').click(); await page.getByRole('button', { name: 'Appointments & establishment' }).click(); }],
   ];
   for (const [where, open] of opens) { await open(); await settle(page); await leaks(page, where); await putDown(page); }
+  // The in-tray's paper card carries its received and written dates, written out.
+  await page.locator('.tray-stack.inbox').click();
+  const card = page.getByTestId('paper-link').first();
+  await expect(card).toContainText(writtenDate(snapshot.date));
+  await expect(card).not.toContainText(/\bDay \d/);
+  await putDown(page);
   await page.locator('.tray-stack.inbox').click();
   await page.getByTestId('paper-link').first().click();
   await expect(page.getByTestId('paper')).toBeVisible();
@@ -90,6 +106,17 @@ test('S60 no rendered text shows an ISO date, before and after a turn', async ({
   await leaks(page, 'days passing');
   await page.getByRole('button', { name: 'To the next morning', exact: true }).click(); await settle(page);
   await leaks(page, 'stop slip');
+  // A stop slip lies on the map's drawing, never over its instrument strip
+  // (the strip can wrap into more rows; the slip follows the drawing).
+  if (await page.locator('.table-stop').count()) {
+    const rect = (selector: string) => page.locator(selector).first().evaluate(el => { const r = el.getBoundingClientRect(); return { l: r.left, t: r.top, r: r.right, b: r.bottom }; });
+    const slip = await rect('.table-stop'), drawing = await rect('.table-map-layout .map-drawing');
+    expect(slip.b, 'stop slip bottom within the drawing').toBeLessThanOrEqual(drawing.b + 1);
+    for (const strip of ['.table-map-layout .map-tools', '.table-map-layout .map-header']) {
+      const s = await rect(strip);
+      expect(Math.max(0, Math.min(slip.r, s.r) - Math.max(slip.l, s.l)) * Math.max(0, Math.min(slip.b, s.b) - Math.max(slip.t, s.t)), `stop slip over ${strip}`).toBe(0);
+    }
+  }
   const stop = page.getByRole('button', { name: 'Put down the stop slip' });
   if (await stop.count()) await stop.click();
   for (const [where, open] of opens) { await open(); await settle(page); await leaks(page, `${where} after a turn`); await putDown(page); }

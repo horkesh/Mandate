@@ -4,6 +4,7 @@ import {audienceCommand, audienceRecord, buildOrgBoard} from './people.ts';
 import type {CounterDraft, PostCard} from './people.ts';
 import {presenter} from './presentation.ts';
 import {S} from './strings.ts';
+import {useDeskDate} from './desk-date.ts';
 import './people.css';
 import {PriceNote} from './DeskViews.tsx';
 import {commandPrice,outOfAttention,recommendationText} from './business.ts';
@@ -40,7 +41,8 @@ export function OrgBoard({request,strings,openPost,openPaper,dateOf,onPersonnel}
 }
 
 /** A nomination based on received identities, never the live eligible-candidate catalogue. */
-export function PersonnelSheet({request,strings,order,openPaper,dateOf=(day)=>`${S.day} ${day}`} : Common&PaperOpener&{order:(line:string)=>void;dateOf?:(day:number)=>string}){
+export function PersonnelSheet({request,strings,order,openPaper,dateOf:givenDate} : Common&PaperOpener&{order:(line:string)=>void;dateOf?:(day:number)=>string}){
+ const fallbackDate=useDeskDate(),dateOf=givenDate??fallbackDate;
  const {name}=presenter(strings),vacancies=request.view.posts.filter(p=>p.status==='vacant');
  const people=request.view.people.filter(p=>p.person!==request.view.person);
  const [post,setPost]=useState(''),[person,setPerson]=useState('');
@@ -61,9 +63,9 @@ export function PersonnelSheet({request,strings,order,openPaper,dateOf=(day)=>`$
 }
 
 function Source({report,strings,openPaper}:PaperOpener&{report:ReportView;strings:Common['strings']}) {
-  const {name}=presenter(strings);
+  const {name}=presenter(strings),dateOf=useDeskDate();
   return <button className="people-source" data-source-paper={report.id} onClick={()=>openPaper(report)}>
-    {name(report.author,'person')}, {S.day} {report.day} — {S.boardOpenPaper}
+    {name(report.author,'person')}, {dateOf(report.day)} — {S.boardOpenPaper}
   </button>;
 }
 
@@ -84,14 +86,15 @@ function PersonKnowledge({request,strings,person,post,openPaper}:Common&PaperOpe
 export function PostDetails({request,strings,post,openPaper,order,openAudience}:Common&PaperOpener&{post:string;order:(line:string)=>void;openAudience:(post:string)=>void}) {
   const node=buildOrgBoard(request).nodes.find(n=>n.post===post),{name,text}=presenter(strings);
   const [transferring,setTransferring]=useState(false),[target,setTarget]=useState(''),[amount,setAmount]=useState(''),[unit,setUnit]=useState('men');
+  const dateOf=useDeskDate();
   if(!node)return <p>{S.boardNoPost}</p>;
   const last=node.reports.at(-1),menu=request.menu.menuKind==='principal'?request.menu:null;
   return <section className="post-details" data-testid="person-card">
     <header className="post-person"><div className="post-name-card"><p>{S.noLikeness}</p><h3>{node.holder?name(node.holder,'person'):node.status==='vacant'?S.boardVacant:S.boardUnknown}</h3><p>{name(post,'post')}</p></div>
       <div><h3>{name(post,'post')}</h3>{node.parent&&<p>{S.through}: {name(node.parent,'post')}</p>}
-        <p>{S.boardHolderAsOf(node.asOfDay)}</p>
+        <p>{S.boardHolderAsOf(dateOf(node.asOfDay))}</p>
         {node.source&&request.view.reports.find(r=>r.id===node.source)&&<><h4>{S.boardSource}</h4><Source report={request.view.reports.find(r=>r.id===node.source)!} strings={strings} openPaper={openPaper}/></>}
-        {node.status==='vacant'&&<p className="vacancy-note">{node.vacantSince===null?S.boardVacant:S.boardVacantSince(`${S.day} ${node.vacantSince}`)}</p>}
+        {node.status==='vacant'&&<p className="vacancy-note">{node.vacantSince===null?S.boardVacant:S.boardVacantSince(dateOf(node.vacantSince))}</p>}
         <PersonKnowledge request={request} strings={strings} person={node.holder} post={post} openPaper={openPaper}/>
         {node.commandable&&<><p>{S.through}: {node.commandable.relays.map(id=>name(id,'post')).join(' → ')||name(post,'post')}</p><ul>{node.commandable.routes.map(route=><li key={route.route}>{route.route}, {route.typicalDays} {S.typicalDays}, {route.price} {S.routePrice}</li>)}</ul></>}
       </div></header>
@@ -107,7 +110,7 @@ export function PostDetails({request,strings,post,openPaper,order,openAudience}:
       <p>{S.peopleTransferNote}</p><button disabled={!target||!Number.isSafeInteger(Number(amount))||Number(amount)<=0}>{S.peopleDraftTransfer}</button>
     </form>}
     <section className="post-papers"><h3>{S.boardKnowledge}</h3>
-      {last?<p>{S.boardLastHeard}: {name(last.author,'person')}, {S.day} {last.day}</p>:<p>{S.boardNoReports}</p>}
+      {last?<p>{S.boardLastHeard}: {name(last.author,'person')}, {dateOf(last.day)}</p>:<p>{S.boardNoReports}</p>}
       {[...node.reports].reverse().map(report=><article key={report.id}>
         <Source report={report} strings={strings} openPaper={openPaper}/>
         {report.advice&&<><p>{S.recommends}: {recommendationText(request,strings,report)??S.recommendationMissing}</p><ol>{report.advice.reasons.map((reason,i)=><li key={i}>{(S.reasonLabels as Record<string,string>)[reason.kind]??text(reason.kind.replaceAll('_',' '))}</li>)}</ol></>}
@@ -161,7 +164,8 @@ export function AudienceScene({request,strings,post,busy,queue,execute,openPaper
     </section>
   </section>;
 }
-function AudienceCorrespondence({request,strings,openPaper,openPost,post,dateOf=(day)=>`${S.day} ${day}`} : Common & {openPaper?:(r:ReportView)=>void;openPost?:(post:string)=>void;post?:string;dateOf?:(day:number)=>string}){
+function AudienceCorrespondence({request,strings,openPaper,openPost,post,dateOf:givenDate} : Common & {openPaper?:(r:ReportView)=>void;openPost?:(post:string)=>void;post?:string;dateOf?:(day:number)=>string}){
+ const fallbackDate=useDeskDate(),dateOf=givenDate??fallbackDate;
  const entries=(request.view.audiences??[]).filter(a=>post===undefined||a.post===post),{name,text}=presenter(strings);
  return <section className="audience-correspondence" data-testid="audience-correspondence">
   <h3>{S.audienceAppointments}</h3>

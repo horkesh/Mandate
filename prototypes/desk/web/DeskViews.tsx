@@ -6,6 +6,7 @@ import type {Price} from './business.ts';
 import {presenter} from './presentation.ts';
 import {stopEntries} from './table.ts';
 import {S} from './strings.ts';
+import {useDeskDate} from './desk-date.ts';
 import './business.css';
 import {deskDate,ownGoalStatus,availableCalls} from './plan-business.ts';
 import {writtenDate} from './dates.ts';
@@ -17,7 +18,8 @@ export function AttentionTokens({left,price=null}:{left:number|null;price?:Price
   {price&&<span className="attention-price" role="status">{priceLabel(price)}</span>}
  </span>;
 }
-export function AttentionSheet({data,dateOf=(day)=>`${S.day} ${day}`}:{data:DeskSnapshot;dateOf?:(day:number)=>string}){
+export function AttentionSheet({data,dateOf:givenDate}:{data:DeskSnapshot;dateOf?:(day:number)=>string}){
+ const fallbackDate=useDeskDate(),dateOf=givenDate??fallbackDate;
  const menu=data.morning.menu;
  const [hover,setHover]=useState<Price|null>(null);
  if(menu.menuKind!=='principal')return <p>{S.priceMissing}</p>;

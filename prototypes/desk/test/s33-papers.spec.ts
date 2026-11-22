@@ -14,7 +14,7 @@ test('read-only observer opens the received Manassas paper',async({page,request}
  await page.setViewportSize({width:3440,height:1440});await page.goto('/');
  await expect(page.getByTestId('map-canvas-host')).toHaveAttribute('data-ready','ready',{timeout:30000});
  await page.getByRole('navigation',{name:S.deskObjects}).getByRole('button',{name:S.daybook,exact:true}).click();
- const day=page.locator('.day-record > section').filter({has:page.getByRole('heading',{name:'29 July 1861, Day 146',exact:true})});
+ const day=page.locator('.day-record > section').filter({has:page.getByRole('heading',{name:'29 July 1861',exact:true})});
  const link=day.getByTestId('paper-link').filter({hasText:'Manassas Junction'}).filter({hasText:'8:00'}).first();
  await expect(link).toHaveCount(1);await link.click();
  await expect(page.getByTestId('paper')).toContainText('Manassas Junction');

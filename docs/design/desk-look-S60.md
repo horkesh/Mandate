@@ -89,19 +89,22 @@ Each choice below is a proposal, with the alternatives rejected.
 
 The lead amended this lane's third call: every date the player reads uses the written form. One formatter, `web/dates.ts`, writes "5 March 1861", and "Tuesday, 5 March 1861" on the calendar block, with integer arithmetic for the weekday. Data keeps ISO dates (snapshots, `deskDate`, `reportDate`, file names and tests); the view passes them through the formatter: paper datelines and stamps, the staff map's cartouche, header, captions, notes and text record, the daybook, the ledger and Congress leaf, the order slips and dispatch record, the stop slip, the days passing, the advance agenda and the week's papers. The presenter's text and name lookups write out any ISO date inside console prose or pack strings, so none leaks into the view. `<time>` elements keep the ISO date in `datetime`.
 
-- **Checked:** `test/s60-written-dates.spec.ts` reads every rendered line, spoken name and tooltip on the first morning, with each tool open, with a paper open, in the map's text record, and after signing a slip and running a turn (the days passing, the stop slip, the out-tray, the daybook, the ledger and the rest); none holds an ISO date. `test/dates.test.ts` checks the formatter.
-- **Desk tests updated** where they matched an ISO date in the view: `s39-verify`, `s47-verify`, `r19`, `r20`, `r29`, `s33`, `s33-papers`, `s19`, `s33-discovery` and S60's own decoration check. Tests on data (`deskDate`, `snapshot.date`) are unchanged.
+- **Raw day numbers too** (the lead's follow-up): a seat day never stands in for a date. The paper cards in the in-tray, file and daybook read "5 March 1861" and "written 5 March 1861" (they read "Day 0" and "Written 0"); the board's sources, a person's "Holder recorded as of …", "Vacant since …" and "Last heard from …", and the enemy table's "As of …" are written dates; the calendar sheet and the daybook's day headings no longer add the seat's day count. App supplies the written date once, through a context (`web/desk-date.ts`), so a card deep in the board or the audience cannot fall back to a day number.
+- **Checked:** `test/s60-written-dates.spec.ts` reads every rendered line, spoken name and tooltip on the first morning, with each tool open (including the order sheet, a person's page and the appointments sheet), with a paper open, in the map's text record, and after signing a slip and running a turn (the days passing, the stop slip, the out-tray, the daybook, the ledger and the rest); none holds an ISO date or a raw day number ("Day 0", "written 0", "as of day 3"). It also reads the in-tray's paper card for its written date. `test/dates.test.ts` checks the formatter.
+- **Desk tests updated** where they matched an ISO date in the view: `s39-verify`, `s47-verify`, `r19`, `r20`, `r29`, `s33`, `s33-papers` (whose daybook heading also loses its day count), `s19`, `s33-discovery` and S60's own decoration check. Tests on data (`deskDate`, `snapshot.date`) are unchanged.
 - **Not changed:** the map-style study page (`?study=1`), a review tool rather than the desk, still prints ISO dates.
 
 ### 2.10 Type
 
-Old Standard for printed labels, forms and numbers; IM Fell English for titles, headings and hands; Libre Caslon for set text and notes; no new face. Chrome text sits on a scale tied to the screen's height (12–17, 13–20, 15–25, 17–32 and 27–58 pixels), so 3440×1440 and 1920×1080 read alike. The text-size setting scales chrome up to 1.35 times, and papers and sheets fully, to 200%. *Rejected:* scaling the edges' labels to 200%, which overflows the edges at 1280×720.
+Old Standard for printed labels, forms and numbers; IM Fell English for titles, headings and hands; Libre Caslon for set text and notes; no new face. Chrome text sits on a scale tied to the screen's height (12–17, 13–20, 15–25, 17–32 and 27–58 pixels), so 3440×1440 and 1920×1080 read alike. The text-size setting scales chrome and papers alike, from 80% to 200% (`PRESENTATION.md` section 5; S61 found an earlier 135% cap on chrome, now removed).
+
+**Enlarged type reflows rather than squeezes.** The edges widen with the text, up to 1.55 times, and the front edge deepens, up to twice. Above 140% (the existing large-type setting) the right edge's objects become labelled rows, each with its object drawn small beside its name, so every tool stays in view at full size. The instrument strip wraps into as many rows as its type needs, with its two selects held at a readable width, and its switch for the text record takes a row of its own; the map gives up the height, not the strip. Trays give up height before anything overlaps, and a folded key shows only its title and switch. The map stays the largest object: 43.6–45.4% of the screen at 135% and 26.8–33.6% at 200%, at 1920×1080 and 1280×720. *Rejected:* letting an edge scroll at 200%, which would hide tools the way drawers would (ruling 1); keeping the full-size objects with labels shrunk to fit, which defeats the setting.
 
 ## 3. The rules kept
 
 - **Labelled controls:** every object is a button named by its text or label; decorative art is `alt=""` or `aria-hidden`. Checked: every visible control in the desk is named, and no image lacks an empty `alt`.
 - **Keyboard focus:** one two-tone ring for every surface (a dark inner ring for paper, a pale outer ring for wood and baize). Checked by tabbing 26 controls. DOM order follows the visual order.
-- **Contrast:** each desk label is measured against the actual pixels behind its text, with the text hidden, at the worst 1% of those pixels. The lowest is 5.78:1 ("Org board" at 1280×720); every one passes 4.5:1. High contrast and evening lamp have their own rules.
+- **Contrast:** each text is measured against the actual pixels behind it, with the text hidden, at the worst 1% of those pixels: the desk's labels at 1920×1080 and 1280×720, and every text in eight sheets (the trays, the file, the ledger, the daybook, the board, the docket and the key card) in the plain, high-contrast and evening-lamp skins. Text scrolled out of a sheet's view is not counted. Of 313 texts the lowest is 5.69:1; every one passes 4.5:1. Each sheet must also have an opaque surface. In high contrast every sheet is plain white with black type: S61 found the trays and the file had lost their surface in that skin (their only background was a gradient, which the skin strips), and the ledger had the same fault; with the rule disabled the check fails at about 1:1, as S61 measured.
 - **Reduced motion:** the slide of a paper or stop slip and the lifts on hover are off; checked.
 - **Nothing the seat hasn't received:** decoration follows received data only: sheets in a tray only when it holds papers, one slip per live situation, the calendar face from the desk's date. Checked against `/api/desk`.
 - **Image rules (0053):** no human figure, plantation motif, flag, seal or emblem is drawn; the objects are stationery, wood, cork, leather and brass. No likeness of anyone.
@@ -111,14 +114,13 @@ Old Standard for printed labels, forms and numbers; IM Fell English for titles, 
 
 ## 4. Layout at each size (S56)
 
-The layout check (`s60-layout.spec.ts`) passes at all four sizes: nothing leaves the screen; no desk object covers another, the map's sheet or its strip; the map is the largest object (56.0–57.5% of the screen); the key stays on the sheet; no label is clipped. An open paper stays inside the blotter and clear of every object at 1920×1080 and 1280×720.
+The layout check (`s60-layout.spec.ts`) passes at all four sizes: nothing leaves the screen; no desk object covers another, the map's sheet or its strip; the map is the largest object (55.6–57.8% of the screen); the key stays on the sheet; no label is clipped. An open paper stays inside the blotter and clear of every object at 1920×1080 and 1280×720.
 
 ## 5. Not done, and limits
 
 - **Docket slips and plan review** were checked by hand on the lane's own servers (a Union run to 30 March; the R26 plan fixture), not in the S60 harness, which stays read-only on the first morning.
 - **Four stamps** are still unused: there is no honest place for "decided", "referred", "closed" or "let it take its course" until the docket keeps decided cards.
 - **The audience, battle night and study** were not restyled; nor was the plan sheet's inside, only its place on the map.
-- **Text at 200%:** the edges' labels stop at 1.35 times; the strip scrolls.
 
 ## 6. The lead's rulings (2026-11-22)
 
@@ -126,6 +128,14 @@ The layout check (`s60-layout.spec.ts`) passes at all four sizes: nothing leaves
 2. **Accepted:** the key opens by itself on a map of at least 1000×640 and folds below (2.3).
 3. **Amended and applied:** every date the player reads is written out (2.9).
 
-## 7. Regression
+## 7. S61 review fixes
+
+Codex's review (S61, `C:\Pyrrhic\mandate-reviews\S61-desk-look-review.md`) approved the redesign after two accessibility fixes, both applied: an opaque high-contrast surface for every sheet (section 3), and chrome scaling to 200% with reflow (section 2.10). The checks for both are in `s60-layout.spec.ts`: the sheets in three skins, and the layout and type size at 135% and 200% at 1920×1080 and 1280×720. The map-look select's names, which the review called taste, are unchanged.
+
+Found while verifying the fixes: once the strip can wrap, a sheet laid on the map (an open paper, the stop slip, the plan sheet) could no longer be sized from a fixed allowance for the strip; at 800×600 the stop slip covered "Fit the map". The app now publishes the measured drawing as `--drawing-top`, `--drawing-left` and `--drawing-bottom-gap` on the table, and those sheets take their box from it. The turn played in `s60-written-dates.spec.ts` checks that the stop slip stays on the drawing and clear of the strip.
+
+## 8. Regression
 
 The existing desk specs that run without retained fixtures were rerun on this branch's port with `S60_SPECS` (`desk`, `keyboard`, `keyboard-actions`, `skins`, `s29-controls`, `s39-verify`, `s47-verify`, `sendback-notes`, `s45-map`). The same 15 fail before and after the change: they need retained fixtures under `art-masters/S29`, `S39` and `S47` that this worktree does not have, or they look for the room objects the R26 table replaced (`.run-object`, `.write-object`, every object inside the "Desk objects" bar). `s45-map` passes after its one assertion change (section 2.1). After the written dates (2.9) the run is unchanged: 14 pass, the same 15 fail, 25 skip. The prototype's unit suite (160 tests, with the formatter's) and typecheck pass.
+
+After the S61 fixes and the day-number fix the run has the same 15 pre-existing failures and one more: `s45-map`'s region-name audit stops at its 240-second budget. That is load on this shared machine, not the layout: with a longer budget it passes (no misplaced name) in 7.3 minutes on this branch and in 8.6 minutes on the committed code before these fixes, measured back to back. Its budget may want raising for this machine; that is outside this lane.

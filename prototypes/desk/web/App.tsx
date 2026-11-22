@@ -25,6 +25,7 @@ import {deskDate} from './plan-business.ts';
 import type {Point} from './map/model.ts';
 import {LOOK} from './look.ts';
 import {calendarFace,writtenDate} from './dates.ts';
+import {DeskDateContext,useDeskDate} from './desk-date.ts';
 import './table.css';
 
 type Sheet = { panel: Panel; paper?: ReportView; person?: CommandablePost; post?:string; audience?:string; summary?:boolean; returnSource?:string };
@@ -69,7 +70,11 @@ export function App() {
     const measure=()=>{const a=area.getBoundingClientRect(),h=area.querySelector<HTMLElement>('.pixi-map')?.getBoundingClientRect();
       const next={w:a.width,h:a.height,x:h?h.left-a.left:0,y:h?h.top-a.top:0,bottom:h?h.bottom-a.top:a.height};
       setMapArea(old=>old&&(Object.keys(next) as (keyof typeof next)[]).every(k=>Math.abs(old[k]-next[k])<1)?old:next);};
-    measure();const observer=new ResizeObserver(measure);observer.observe(area);return()=>observer.disconnect();
+    // The drawing changes size without the blotter when the strip rewraps, so
+    // both are watched.
+    measure();const observer=new ResizeObserver(measure);observer.observe(area);
+    const drawing=area.querySelector<HTMLElement>('.pixi-map');if(drawing)observer.observe(drawing);
+    return()=>observer.disconnect();
   },[!!data]);
   const ambient = useRef<HTMLAudioElement | null>(null);
   const effects = useRef<Set<HTMLAudioElement>>(new Set());
@@ -223,7 +228,7 @@ export function App() {
   const sourcePaper=(report:ReportView)=>{setRead(previous=>new Set(previous).add(report.id));setStack(previous=>[...previous,{panel:'inbox',paper:report,returnSource:report.id}]);sound('paper-draw');};
   const count = (id: Panel) => id === 'inbox' ? reports.filter(r => !read.has(r.id)).length : id === 'outbox' ? data.queue.length : id === 'docket' ? active.length : null;
   const paperList = (items: readonly ReportView[]) => items.length ? <div className="paper-list">{[...items].reverse().map(r => <button data-testid="paper-link" data-genre={r.type} className={`paper-link ${read.has(r.id) ? 'read' : ''}`} key={r.id} onClick={() => paper(r)}>
-    <span className="eyebrow">{S.genres[r.type] ?? r.type}<span>{S.day} {r.receivedDay}</span></span><strong>{t(r.author, 'person')}</strong><span>{t(r.subjectId, r.subjectKind)}</span><span className="route-line">{r.route}, {S.written} {r.day}{r.hour !== null ? `, ${r.hour}:00` : ''}</span>
+    <span className="eyebrow">{S.genres[r.type] ?? r.type}<span>{dateForReport(tableData, r.receivedDay)}</span></span><strong>{t(r.author, 'person')}</strong><span>{t(r.subjectId, r.subjectKind)}</span><span className="route-line">{r.route}, {S.writtenOn} {dateForReport(tableData, r.day)}{r.hour !== null ? `, ${String(r.hour).padStart(2, '0')}:00` : ''}</span>
     {filed.has(r.id)&&<span className="filed-stamp">{LOOK.filed}</span>}
   </button>)}</div> : <p className="empty">{S.noPapers}</p>;
 
@@ -237,7 +242,7 @@ export function App() {
     if(current.post||current.person)return <PostDetails key={current.post??current.person!.post} request={tableData.morning} strings={data!.strings} post={current.post??current.person!.post} order={order} openAudience={audience} openPaper={sourcePaper}/>;
     switch (current.panel) {
       case 'find': return <Find data={data!} region={id => { setDestination(id); open('map'); }} person={person => setStack(previous => [...previous, { panel: 'board', person }])}/>;
-      case 'calendar': return <div className="calendar-sheet"><p className="large-date"><time dateTime={date}>{writtenDate(date,{weekday:true})}</time></p><p>{S.day} {data!.morning.requestDay}</p><p>{menu.atWarSince === null ? S.atPeace : S.atWar}</p></div>;
+      case 'calendar': return <div className="calendar-sheet"><p className="large-date"><time dateTime={date}>{writtenDate(date,{weekday:true})}</time></p><p>{menu.atWarSince === null ? S.atPeace : S.atWar}</p></div>;
       case 'attention': return <AttentionSheet data={tableData} dateOf={day=>dateForReport(tableData,day)}/>;
       case 'inbox': return <InTray data={tableData} papers={reports.filter(r=>!filed.has(r.id))} read={read} filters={trayFilters} setFilters={setTrayFilters} openSummary={()=>setStack(previous=>[...previous,{panel:'inbox',summary:true}])}>{paperList}</InTray>;
       case 'file': return <><label className="search">{S.search}<input value={query} onChange={e => setQuery(e.target.value)} /></label>{paperList(reports.filter(r => filed.has(r.id) && `${t(r.author, 'person')} ${t(r.subjectId, r.subjectKind)} ${dateForReport(data!, r.day)} ${r.day}`.toLowerCase().includes(query.toLowerCase())))}</>;
@@ -254,7 +259,7 @@ export function App() {
       case 'orders': return <><OrderSheet request={data!.morning} menu={menu} t={t} line={line} setLine={value => { setLine(value); setPreview(undefined); }} help={data!.help} execute={execute} busy={busy} display={display} commandDisplay={presenter(data!.strings).commandDisplay} commandInput={presenter(data!.strings).commandInput} onPersonnel={()=>setStack(previous=>[...previous,{panel:'personnel'}])} onCalls={()=>open('run')}/>
         {preview && <section className="preview"><h3>{S.asSubmitted}</h3>{menu.reviews.find(r => r.post === line.split(/\s+/)[1]) && <Plan plan={menu.reviews.find(r => r.post === line.split(/\s+/)[1])!.plan} t={t} display={display} />}<h3>{S.asEdited}</h3><p>{S.previewNote}</p>{preview.ok ? <Plan plan={preview.plan} t={t} display={display} /> : <p role="alert">{display(preview.reason)}</p>}</section>}</>;
       case 'ledger': return <AccountabilityLedger data={tableData} tab={ledgerTab} setTab={setLedgerTab} openPaper={sourcePaper} dateOf={day=>dateForReport(tableData,day)}/>;
-      case 'daybook': return <><p className="margin-note">{S.readOnly}</p>{data!.history.length ? data!.history.map((turn, i) => <section className="day-record" key={i}><h3>{S.turn} {i + 1}</h3>{turn.days.map(day => <section key={day.day}><h4><time dateTime={day.date}>{writtenDate(day.date)}</time>, {S.day} {day.day}</h4>{day.refused.map((r, n) => <p className="refusal" key={n}>{S.refused}: {display(turn.submitted?.find((_,index)=>index===r.commandIndex)?.text??S.orders)}. {refusalText(r.reason,data!.strings)}</p>)}{paperList(day.reports)}{day.points.length > 0 && <p>{S.stopped}: {[...new Set(day.points)].map(p=>S.stopLabels[p]??S.stopUnknown).join(' ')}</p>}</section>)}</section>) : <p className="empty">{S.noDays}</p>}</>;
+      case 'daybook': return <><p className="margin-note">{S.readOnly}</p>{data!.history.length ? data!.history.map((turn, i) => <section className="day-record" key={i}><h3>{S.turn} {i + 1}</h3>{turn.days.map(day => <section key={day.day}><h4><time dateTime={day.date}>{writtenDate(day.date)}</time></h4>{day.refused.map((r, n) => <p className="refusal" key={n}>{S.refused}: {display(turn.submitted?.find((_,index)=>index===r.commandIndex)?.text??S.orders)}. {refusalText(r.reason,data!.strings)}</p>)}{paperList(day.reports)}{day.points.length > 0 && <p>{S.stopped}: {[...new Set(day.points)].map(p=>S.stopLabels[p]??S.stopUnknown).join(' ')}</p>}</section>)}</section>) : <p className="empty">{S.noDays}</p>}</>;
       case 'run': return <TurnSheet data={data!} busy={busy} setStops={setStops} signCall={execute} onOrder={order} run={days=>void execute(`end ${days}`)} openPaper={sourcePaper} onDocket={()=>open('docket')} onPlans={()=>open('plans')} onHistory={()=>open('daybook')}/>;
       case 'help': return <><p>{S.typingNote}</p><table className="key-card"><tbody>{S.keys.map(([key, action]) => <tr key={key}><th scope="row"><kbd>{key}</kbd></th><td>{action}</td></tr>)}</tbody></table>
         <button onClick={() => open('find')}>{S.find}</button><button onClick={nextUnread}>{S.nextUnread}</button>
@@ -266,9 +271,9 @@ export function App() {
   }
 
   const previewPrice=(target:EventTarget|null)=>{const key=target instanceof Element?target.closest('[data-attention-key]')?.getAttribute('data-attention-key'):null;const cost=key==='free'?0:key?menu.attention.costs[key]:undefined;setActionPrice(cost===undefined?null:{min:cost,max:cost});};
-  return <SettingsContext.Provider value={settings}><div onFocusCapture={e=>previewPrice(e.target)} onMouseOver={e=>previewPrice(e.target)} className={`app table-app ${current?.audience?'audience-open':''} ${plain ? 'plain' : ''} ${settings.scale > 140 ? 'large-type' : ''} ${settings.contrast ? 'high-contrast' : ''} ${settings.lamp ? 'evening-lamp' : ''}`} style={{ '--text-scale': settings.scale / 100 } as CSSProperties}>
+  return <SettingsContext.Provider value={settings}><DeskDateContext.Provider value={day=>dateForReport(tableData,day)}><div onFocusCapture={e=>previewPrice(e.target)} onMouseOver={e=>previewPrice(e.target)} className={`app table-app ${current?.audience?'audience-open':''} ${plain ? 'plain' : ''} ${settings.scale > 140 ? 'large-type' : ''} ${settings.contrast ? 'high-contrast' : ''} ${settings.lamp ? 'evening-lamp' : ''}`} style={{ '--text-scale': settings.scale / 100 } as CSSProperties}>
     <div ref={room} data-testid="desk" className="desk-shell table-shell" inert={modalDepth>0}>
-      <main className="playable-table" aria-label={S.subtitle}>
+      <main className="playable-table" aria-label={S.subtitle} style={mapArea?{'--drawing-top':`${mapArea.y}px`,'--drawing-left':`${mapArea.x}px`,'--drawing-bottom-gap':`${Math.max(0,mapArea.h-mapArea.bottom)}px`} as CSSProperties:undefined}>
         <MapReview data={tableData} destination={destination} execute={execute} busy={busy} textEdit={order} table reviewOpen={planOpen} mapProps={{
           focusPaper:current?.paper?{id:current.paper.id,region:reportPlace(current.paper)}:undefined,
           arrival:frame?.phase==='mark'&&frame.report?{id:frame.report.id,region:reportPlace(frame.report),text:`${t(frame.report.author,'person')}, ${dateForReport(data,frame.report.day)}`} : undefined,
@@ -293,7 +298,7 @@ export function App() {
     <Modal depth={modalDepth} title={current?.audience?S.audienceTitle:current?.post?t(current.post,'post'):current?.person?t(current.person.holder,'person'):current?S[current.panel]:''} back={back} opener={opener.current} reading={false} kind={current?.audience?'audience':current?.panel}>
       <div className="feedback" aria-live="polite">{notice&&<p role="status">{notice}</p>}{error&&<p role="alert">{display(error)}</p>}{data.closed&&<p>{S.ended}</p>}</div>{!onTable&&content()}
     </Modal>
-  </div></SettingsContext.Provider>;
+  </div></DeskDateContext.Provider></SettingsContext.Provider>;
 
 }
 
@@ -335,7 +340,8 @@ export function Paper({ report: r, text, t, dateOf, plain, display }: { display:
   </article>;
 }
 
-export function Situation({ situation: s, menu, t, execute, order, busy,queue=[],dateOf=(d)=>`${S.day} ${d}` }: { situation: SituationView; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean;queue?:readonly {line:string}[];dateOf?:(day:number)=>string }) {
+export function Situation({ situation: s, menu, t, execute, order, busy,queue=[],dateOf: givenDate }: { situation: SituationView; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; execute: (line: string) => Promise<unknown>; order: (line: string) => void; busy: boolean;queue?:readonly {line:string}[];dateOf?:(day:number)=>string }) {
+  const deskDate = useDeskDate(), dateOf = givenDate ?? deskDate;
   const [referring, setReferring] = useState(false);
   const [advisers, setAdvisers] = useState<string[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
@@ -362,7 +368,7 @@ function Plan({ plan, t, display }: { display: (text: string) => string; plan: O
 }
 function Enemy({ data, t }: { data: DeskSnapshot; t: (key: string, kind?: string | number) => string }) {
   const beliefs = Object.entries(data.morning.view.enemyBeliefs).sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0);
-  return <section className="enemy"><h3>{S.enemy}</h3>{beliefs.length ? <dl>{beliefs.map(([region, b]) => { const source = data.morning.view.reports.find(r => r.id === b.source); return <div key={region}><dt>{t(region, 'region')}</dt><dd>{b.value===0?S.noEnemySeen:b.value}, {S.aboutDay} {b.asOfDay}<small>{source ? `${t(source.author, 'person')}, ${dateForReport(data, source.day)}` : `${S.source}: ${S.unknown}`}</small></dd></div>; })}</dl> : <p>{S.noEnemy}</p>}</section>;
+  return <section className="enemy"><h3>{S.enemy}</h3>{beliefs.length ? <dl>{beliefs.map(([region, b]) => { const source = data.morning.view.reports.find(r => r.id === b.source); return <div key={region}><dt>{t(region, 'region')}</dt><dd>{b.value===0?S.noEnemySeen:b.value}, {S.aboutDay} {dateForReport(data, b.asOfDay)}<small>{source ? `${t(source.author, 'person')}, ${dateForReport(data, source.day)}` : `${S.source}: ${S.unknown}`}</small></dd></div>; })}</dl> : <p>{S.noEnemy}</p>}</section>;
 }
 
 export function OrderSheet({ request, menu, t, line, setLine, help, execute, busy, display, commandDisplay, commandInput,onPersonnel,onCalls }: { commandDisplay: (line: string) => string; commandInput: (value: string, original: string) => string; display: (text: string) => string; request?:SeatRequest; menu: PrincipalMenu; t: (key: string, kind?: string | number) => string; line: string; setLine: (line: string) => void; help: readonly string[]; execute: (line: string) => Promise<unknown>; busy: boolean;onPersonnel?:()=>void;onCalls?:()=>void }) {

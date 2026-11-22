@@ -22,13 +22,20 @@
   --rule:#8a7350;--stamp-ink:#7a2c20;
   --gilt:#f2dc9c;--morocco:#1c3828;--morocco-hi:#2a5039;
   --focus-dark:#0f2a46;--focus-light:#f7de92;
-  --rail-l:clamp(148px,11.6vw,400px);
-  --rail-r:clamp(158px,12.4vw,430px);
-  --front:clamp(62px,9.4vh,136px);
+  /* Chrome follows the text-size setting all the way, 80% to 200%
+     (PRESENTATION section 5). Enlarged type widens the edges and the front
+     edge rather than squeezing their labels (see "Enlarged type" below). */
+  --chrome-scale:var(--text-scale);
+  --edge-scale:clamp(1,var(--text-scale),1.55);
+  --front-scale:clamp(1,var(--text-scale),2);
+  --rail-l:calc(clamp(148px,11.6vw,400px) * var(--edge-scale));
+  --rail-r:calc(clamp(158px,12.4vw,430px) * var(--edge-scale));
+  --front:calc(clamp(62px,9.4vh,136px) * var(--front-scale));
   --gap:clamp(8px,calc(.6vw + .3vh),22px);
   --sheet:clamp(14px,1.9vh,30px);
-  --strip:clamp(34px,4.1vh,54px);
-  --chrome-scale:min(var(--text-scale),1.35);
+  /* An allowance for the instrument strip, used only to keep a sheet laid on
+     the map clear of it; the strip itself takes the height its rows need. */
+  --strip:calc(clamp(34px,4.1vh,54px) * var(--edge-scale));
   --t-xs:calc(clamp(12px,1.22vh,17px) * var(--chrome-scale));
   --t-s:calc(clamp(13px,1.42vh,20px) * var(--chrome-scale));
   --t-m:calc(clamp(15px,1.8vh,25px) * var(--chrome-scale));
@@ -41,14 +48,15 @@
    sharp. Browsers without round() keep the unrounded values above. */
 @supports (width:round(1.5px,1px)){
   .table-app{
-    --rail-l:round(clamp(148px,11.6vw,400px),1px);
-    --rail-r:round(clamp(158px,12.4vw,430px),1px);
-    --front:round(clamp(62px,9.4vh,136px),1px);
+    --rail-l:round(calc(clamp(148px,11.6vw,400px) * var(--edge-scale)),1px);
+    --rail-r:round(calc(clamp(158px,12.4vw,430px) * var(--edge-scale)),1px);
+    --front:round(calc(clamp(62px,9.4vh,136px) * var(--front-scale)),1px);
     --gap:round(clamp(8px,calc(.6vw + .3vh),22px),1px);
     --sheet:round(clamp(14px,1.9vh,30px),1px);
-    --strip:round(clamp(34px,4.1vh,54px),1px);
   }
 }
+/* Enlarged type widens the edges with the text (up to 1.55 times) and deepens
+   the front edge (up to twice), so their labels keep their full size. */
 
 /* One focus ring for every surface: a dark inner ring reads on paper, a pale
    outer ring reads on wood and baize. */
@@ -85,45 +93,55 @@
   background:url('/art/app/textures/blotter.png') center/100% 100% no-repeat,var(--morocco);
   border-radius:9px;box-shadow:0 1px 0 #ffffff14 inset,3px 9px 20px #000a,0 1px 3px #000c;
 }
+/* The sheet and its instrument strip share a grid on the blotter: the map
+   takes what the strip leaves, and the strip wraps into as many rows as its
+   type needs, so enlarged text never clips it or squeezes its fields. */
 .table-app .table-map-layout>.staff-map{
-  position:absolute;inset:var(--sheet) var(--sheet) calc(var(--strip) + var(--sheet)) var(--sheet);
-  border:0;background:#e9dcbf;
+  position:absolute;inset:var(--sheet) var(--sheet) calc(var(--sheet) * .75) var(--sheet);
+  display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:minmax(0,1fr) auto;
+  grid-template-areas:"drawing drawing" "tools header";gap:calc(var(--sheet) * .6) 10px;
+  border:0;background:none;box-shadow:none;
+}
+.table-app .table-map-layout :is(.map-drawing,.map-text){
+  grid-area:drawing;position:relative;inset:auto;min-height:0;min-width:0;border:0;
+  background-color:#e9dcbf;
   box-shadow:0 0 0 1px #6c5434,0 0 0 5px #efe3c6,0 0 0 6px #7d6643,2px 5px 8px 4px #0009,0 16px 26px -6px #000b;
 }
-.table-app .table-map-layout .map-drawing{position:absolute;inset:0;min-height:0}
 .table-app .table-map-layout .map-footer{display:none}
 
 /* The instrument strip: one restrained ebony rule on the blotter, under the
    sheet. Glyph buttons keep their spoken names. */
 .table-app .table-map-layout .map-tools{
-  position:absolute;left:-1px;right:auto;bottom:auto;top:calc(100% + 9px);
-  width:auto;max-width:calc(100% - 15em);height:calc(var(--strip) - 12px);min-height:30px;box-sizing:border-box;
-  display:flex;flex-wrap:nowrap;align-items:center;gap:2px;padding:2px 5px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;
+  grid-area:tools;position:static;align-self:start;justify-self:start;
+  width:auto;max-width:100%;min-height:calc(var(--t-xs) * 1.4 + 16px);box-sizing:border-box;
+  display:flex;flex-wrap:wrap;align-items:center;gap:3px 2px;padding:3px 5px;overflow:visible;
   font:var(--t-xs)/1 Standard,Georgia,serif;color:#f1e1b8;
   background:linear-gradient(#2c1f15,#140c07);border:1px solid #8d6c3b;border-radius:3px;
   box-shadow:inset 0 1px #ffffff1c,inset 0 -1px #0008,0 2px 5px #0009;
 }
 .table-app .table-map-layout .map-tools>*{flex:none}
 .table-app .table-map-layout .map-tools button{
-  height:100%;min-width:2.2em;padding:0 .7em;border:1px solid transparent;border-radius:2px;
+  height:calc(var(--t-xs) * 1.4 + 8px);min-width:2.2em;padding:0 .7em;border:1px solid transparent;border-radius:2px;
   background:transparent;color:#f1e1b8;font:inherit;line-height:1;white-space:nowrap;
 }
 .table-app .table-map-layout .map-tools button:hover:not(:disabled){background:#ffffff17;border-color:#b48d4e80}
 .table-app .table-map-layout .map-tools button:disabled{color:#b9a98a;opacity:1}
 .table-app .table-map-layout .map-tools .tool-glyph{min-width:2em;padding:0 .35em;font-size:1.2em}
 .table-app .table-map-layout .map-tools .tool-sep{width:1px;align-self:stretch;margin:3px 4px;background:linear-gradient(#0000,#b48d4e99,#0000)}
-.table-app .table-map-layout .map-tools label{margin:0;max-width:12em;flex:0 1 10em;height:100%}
-.table-app .table-map-layout .map-tools label.map-look{flex-basis:9.5em}
+/* The two selects keep a readable width at every text size; the strip wraps
+   rather than shrink them. */
+.table-app .table-map-layout .map-tools label{margin:0;flex:0 0 auto;width:9.5em;max-width:100%}
+.table-app .table-map-layout .map-tools label.map-look{width:10em}
 .table-app .table-map-layout .map-tools select{
-  height:100%;width:100%;padding:0 .5em;font:inherit;color:#f1e1b8;background:#0f0905;
+  height:calc(var(--t-xs) * 1.4 + 8px);width:100%;padding:0 .5em;font:inherit;color:#f1e1b8;background:#0f0905;
   border:1px solid #6c4f25;border-radius:2px;
 }
 .table-app .table-map-layout .map-header{
-  position:absolute;right:-1px;left:auto;bottom:auto;top:calc(100% + 9px);z-index:20;
-  height:calc(var(--strip) - 12px);min-height:30px;box-sizing:border-box;padding:0;border:0;background:none;font-size:var(--t-xs);
+  grid-area:header;position:static;align-self:start;z-index:20;
+  box-sizing:border-box;padding:0;border:0;background:none;font-size:var(--t-xs);
 }
 .table-app .table-map-layout .map-header button{
-  height:100%;padding:0 .9em;font:var(--t-xs)/1 Standard,Georgia,serif;color:#f1e1b8;
+  height:calc(var(--t-xs) * 1.4 + 16px);padding:0 .9em;font:var(--t-xs)/1 Standard,Georgia,serif;color:#f1e1b8;white-space:nowrap;
   background:linear-gradient(#2c1f15,#140c07);border:1px solid #8d6c3b;border-radius:3px;box-shadow:inset 0 1px #ffffff1c,0 2px 5px #0009;
 }
 .table-app .table-map-layout .map-header button:hover{background:#3a2a1d}
@@ -300,7 +318,7 @@
   background:url('/art/app/chrome/pin.png') center/contain no-repeat;
 }
 /* Paper labels pasted on the book covers and the drawer front. */
-.table-app .tool-ledger .tool-label,.table-app .tool-daybook .tool-label{top:38%;max-width:80%;padding:.35em .4em;font-size:calc(var(--t-xs) * .95)}
+.table-app .tool-ledger .tool-label,.table-app .tool-daybook .tool-label{top:38%;max-width:94%;padding:.35em .2em;font-size:calc(var(--t-xs) * .95)}
 .table-app .tool-file .tool-label{top:42%}
 /* Folders, the order pad and the key card are drawn in CSS. */
 .table-app .tool-plans,.table-app .tool-progress{min-height:clamp(36px,4.8vh,70px)}
@@ -359,16 +377,17 @@
 }
 /* The spike: a brass base and its pin, with a slip on it while decisions wait. */
 .table-app .table-docket>button{
-  position:relative;flex:none;height:100%;aspect-ratio:1;max-height:calc(var(--front) - 10px);padding:0;
-  background:url('/art/app/chrome/docket-spike.png') center 62%/70% no-repeat;border:0;color:var(--ink);
+  position:relative;flex:none;height:100%;width:auto;min-width:calc(var(--front) - 10px);max-height:calc(var(--front) - 10px);padding:0 2px;
+  display:flex;flex-direction:column;justify-content:flex-end;align-items:center;
+  background:url('/art/app/chrome/docket-spike.png') center 38%/auto 58% no-repeat;border:0;color:var(--ink);
   filter:drop-shadow(2px 4px 3px #000a);transition:transform .15s;
 }
 .table-app .table-docket>button:hover:not(:disabled){transform:translateY(-2px);background-color:transparent}
 .table-app .table-docket>button:before{
-  content:"";position:absolute;left:calc(50% - 1px);top:8%;height:52%;width:2px;background:linear-gradient(90deg,#8f8a80,#f1ede4,#6b665d);border-radius:1px 1px 0 0;
+  content:"";position:absolute;left:calc(50% - 1px);top:2%;height:36%;width:2px;background:linear-gradient(90deg,#8f8a80,#f1ede4,#6b665d);border-radius:1px 1px 0 0;
 }
 .table-app .table-docket>button>.docket-count{
-  position:absolute;left:50%;bottom:2%;transform:translateX(-50%);white-space:nowrap;
+  position:relative;white-space:nowrap;margin-bottom:2%;
   padding:.15em .55em;background:linear-gradient(#f5ebd3,#e6d6b0);border:1px solid #6c4f25;box-shadow:0 1px 3px #0008;
   font:var(--t-xs)/1.15 Standard,Georgia,serif;
 }
@@ -419,7 +438,7 @@
 /* --------------------------------------------- sheets that lie on the map */
 .table-app .table-paper,.table-app .table-stop{grid-area:map;position:absolute;z-index:28}
 .table-app .table-paper{
-  left:calc(var(--sheet) + 8px);top:calc(var(--sheet) + 8px);width:min(calc(680px * var(--text-scale)),50%);max-height:calc(100% - var(--strip) - var(--sheet) * 2 - 12px);
+  left:calc(var(--drawing-left,var(--sheet)) + 8px);top:calc(var(--drawing-top,var(--sheet)) + 8px);width:min(calc(680px * var(--text-scale)),50%);max-height:calc(100% - var(--drawing-top,var(--sheet)) - var(--drawing-bottom-gap,calc(var(--strip) + var(--sheet))) - 16px);
   overflow:auto;padding:0;transform:rotate(-.35deg);color:var(--ink);
   background:url('/art/app/textures/paper-letter-2.png') center/520px,var(--cream);background-blend-mode:soft-light,normal;
   box-shadow:0 0 0 1px #0000002e,3px 8px 14px #0009,0 20px 34px -12px #000b;animation:paper-arrives .26s ease-out both;
@@ -435,16 +454,16 @@
 .table-app .table-paper>.paper,.table-app .table-paper>.weekly-paper{background:none;box-shadow:none;margin:0}
 .table-app .table-paper>.actions{margin:0;padding:.6em 1.8em 1.3em;border-top:1px solid #8a735066;background:#00000008}
 .table-app .table-stop{
-  left:calc(var(--sheet) + 8px);top:calc(var(--sheet) + 8px);width:min(500px,46%);max-width:none;max-height:calc(100% - var(--strip) - var(--sheet) * 2 - 12px);
+  left:calc(var(--drawing-left,var(--sheet)) + 8px);top:calc(var(--drawing-top,var(--sheet)) + 8px);width:min(500px,46%);max-width:none;max-height:calc(100% - var(--drawing-top,var(--sheet)) - var(--drawing-bottom-gap,calc(var(--strip) + var(--sheet))) - 16px);overflow:auto;
   border:0;transform:rotate(-.5deg);
   background:url('/art/app/chrome/slip-why-stopped.png') center/100% 100%,var(--cream);
   box-shadow:3px 7px 16px #000a;animation:paper-arrives .26s ease-out both;
 }
 .table-app .map-plan-sheet{
-  left:calc(var(--sheet) + 6px)!important;top:calc(var(--sheet) + 6px)!important;bottom:calc(var(--strip) + var(--sheet) + 6px)!important;
+  left:calc(var(--drawing-left,var(--sheet)) + 6px)!important;top:calc(var(--drawing-top,var(--sheet)) + 6px)!important;bottom:calc(var(--drawing-bottom-gap,calc(var(--strip) + var(--sheet))) + 6px)!important;
   width:min(calc(590px * var(--text-scale)),42%)!important;border:0;box-shadow:0 0 0 1px #8a7350,3px 7px 16px #000a!important;
 }
-.table-app .close-review{grid-area:map;position:absolute;left:auto;right:calc(var(--sheet) + 10px);top:calc(var(--sheet) + 10px);z-index:29}
+.table-app .close-review{grid-area:map;position:absolute;left:auto;right:calc(var(--drawing-left,var(--sheet)) + 10px);top:calc(var(--drawing-top,var(--sheet)) + 10px);z-index:29}
 
 /* ------------------------------------------------------------- papers */
 .table-app .paper{background-blend-mode:soft-light}
@@ -589,7 +608,7 @@
 .table-app dialog[data-kind] .paper-link[data-genre=press]{background-color:#e7dfc9;background-image:url('/art/app/textures/paper-newsprint-2.png')}
 .table-app dialog[data-kind] .paper-link:is([data-genre=strength-return],[data-genre=casualty-return],[data-genre=effective-strength]){background-color:var(--stock);background-image:url('/art/app/textures/paper-printed.png')}
 .table-app .paper-link:not(.read):after{content:"";position:absolute;right:0;top:0;width:1.2em;height:1.2em;background:linear-gradient(225deg,#3a2414 50%,#d9c9a3 50%);box-shadow:-1px 1px 2px #0005}
-.table-app .paper-link .eyebrow{font:italic .62em/1.3 Fell,Georgia,serif;color:var(--ink-3)}
+.table-app .paper-link .eyebrow{font:italic .62em/1.3 Fell,Georgia,serif;color:var(--ink-2)}
 /* A filed paper carries the file's stamp, its word set in type. */
 .table-app .paper-link .filed-stamp{
   position:absolute;right:1.6em;bottom:.8em;padding:.35em .9em;transform:rotate(-6deg);
@@ -621,13 +640,65 @@
 /* -------------------------------------------------- sizes */
 @media (max-height:820px){
   .table-app .tray-stack>small{display:none}
-  .table-app .calendar-face em{display:none}
 }
 @media (max-width:1400px){
   .table-app .table-map-layout .map-tools .tool-text-long{display:none}
 }
 
+/* -------------------------------------------------- enlarged type */
+/* Above 140% (the existing large-type class) the right edge's objects become
+   labelled rows, each with its object drawn small beside its name, so every
+   tool stays in view at full size; the edges and front edge have widened. */
+.table-app.large-type .table-books{
+  grid-template-columns:1fr;gap:calc(var(--gap) * .55);
+  grid-template-areas:"board" "ledger" "daybook" "file" "plans" "progress" "orders" "help" "sound";
+}
+.table-app.large-type .table-books>button,
+.table-app.large-type .table-books>:is(.tool-board,.tool-plans,.tool-progress){
+  display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:.2em .55em;
+  height:auto;min-height:0;padding:.28em .6em .28em .35em;text-align:left;
+  background:linear-gradient(#f5ebd3,#e6d6b0);background-color:#efe2c4;color:var(--ink);
+  border:1px solid #6c4f25;border-image:none;border-radius:2px;box-shadow:0 0 0 2px #b48d4e66,0 2px 4px #000a;filter:none;
+}
+.table-app.large-type .table-books>button>img{flex:none;width:auto;height:1.8em;object-fit:contain}
+.table-app.large-type .table-books>button>.tool-art{position:relative;inset:auto;flex:none;width:2.1em;height:1.6em;transform:none}
+.table-app.large-type .tool-board>.tool-art{background:#b07a46;border:2px solid #4d311c}
+.table-app.large-type .table-books .tool-label,
+.table-app.large-type .table-books>:is(.tool-plans,.tool-progress)>.tool-label{
+  position:static;left:auto;top:auto;transform:none;max-width:none;padding:0;text-align:left;
+  background:none;border:0;box-shadow:none;font-size:var(--t-xs);
+}
+.table-app.large-type .tool-board .tool-label:before{display:none}
+.table-app.large-type .table-books .tool-label{flex:1 1 5em;min-width:0}
+.table-app.large-type .table-books .plan-pending-badge{flex:1 1 100%}
+/* The strip's switch for the text record takes its own row, so the tools
+   keep the strip's full width for their rows. */
+.table-app.large-type .table-map-layout>.staff-map{grid-template-columns:minmax(0,1fr);grid-template-areas:"drawing" "header" "tools"}
+.table-app.large-type .table-map-layout .map-header{justify-self:start}
+/* A folded key shows only its title and its switch. */
+.table-app.large-type .table-map-layout .map-key[data-key-open=false]{width:auto;min-width:0;padding:.4em .7em}
+.table-app.large-type .table-map-layout .map-key[data-key-open=false] .map-cartouche :is(p,time),
+.table-app.large-type .table-map-layout .map-key[data-key-open=false] .map-cartouche:before{display:none}
+.table-app.large-type .table-books>.tool-sound{justify-self:stretch;justify-content:center;color:var(--ink)}
+.table-app.large-type .tray-stack>small{display:none}
+.table-app.large-type .docket-card{width:calc(clamp(170px,15vw,330px) * var(--edge-scale))}
+.table-app.large-type .docket-card strong{-webkit-line-clamp:1}
+.table-app.large-type .desk-front .first-morning-note{flex:0 1 66%;max-width:66%;line-height:1.3}
+/* Trays give up height before anything overlaps (an aspect-ratio box would
+   otherwise refuse to shrink below its ratio). */
+.table-app .tray-stack{min-height:0}
+.table-app .table-map-layout .map-key{width:clamp(calc(190px * min(var(--chrome-scale),1.3)),20%,calc(300px * var(--chrome-scale)))}
+
 /* -------------------------------------------------- skins */
+/* High contrast: every sheet brought forward is plain white with black type.
+   The skin strips background images, so a sheet whose surface was an image or
+   a gradient (the trays, the file, the ledger, the board) needs this surface. */
+.high-contrast.table-app dialog,.high-contrast.table-app dialog[data-kind]{
+  background:#fff!important;border:2px solid #111!important;border-image:none!important;box-shadow:0 10px 30px #000c;
+}
+.high-contrast.table-app dialog[data-kind]>.panel-header{background:#fff!important;margin:0}
+.high-contrast.table-app dialog[data-kind=ledger]:before{display:none}
+.high-contrast.table-app.large-type .table-books>button{background:#fff!important;color:#111!important;border:2px solid #111}
 .high-contrast.table-app .table-shell{background:#262626}
 .high-contrast.table-app .table-shell:before{background:none;border-top:2px solid #fff}
 .high-contrast.table-app .playable-table>.table-map-layout{background:#111;box-shadow:none;outline:2px solid #fff}
