@@ -1,11 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { buildControlIndex } from '../src/control-index/control-index.ts';
 import { knowledgeOf } from '../src/knowledge/knowledge.ts';
 import { dispatchLatency as routeLatency } from '../src/messages/ship.ts';
 import { sendMessages } from '../src/messages/transit.ts';
 import type { State } from '../src/root-state.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
-import { indexSeatsWorld, latencyMapFor } from '../src/seats/world.ts';
+import { indexSeatsWorld } from '../src/seats/world.ts';
 import { decodeSave, encodeSave } from '../src/serialize/save.ts';
 import { canonicalHash } from '../src/serialize/hash.ts';
 import { deliverDue } from '../src/tick/deliver.ts';
@@ -16,7 +15,9 @@ import { indexWorld } from '../src/world/index.ts';
 import { edge } from './support/map-fixture.ts';
 import { fixtureMap, fixtureStart, P, POST, R, F } from './support/seats-fixture.ts';
 import { ctxFor } from './support/tick-context.ts';
-import { SEATS_MECHANICS } from '../src/tick/tick.ts';
+import { SEATS_MECHANICS, tick } from '../src/tick/tick.ts';
+import type { LogEntry } from '../src/log/log.ts';
+import { order } from './support/test-seats.ts';
 import { morningGround } from '../src/seats/requests.ts';
 import { shipLatencyMap } from '../src/messages/ship.ts';
 import { latencyProblems } from '../src/messages/latency.ts';
@@ -147,4 +148,40 @@ describe('S53 entrusted dispatch carriers', () => {
     expect(() => indexSeatsWorld(indexWorld({ ...world.map.world, rules: { ...world.map.world.rules,
       latency: { ...world.rules.latency, dispatches: [{ ...row, carriers: [{ post: POST('b_office'), route: 'ship' }] }] } } }), fixtureStart())).toThrow('same-side');
   });
+});
+
+it('S53 replays a logged order through distinct staff and ship carriers without overwriting the ordinary relay response', () => {
+  const original = worldFor();
+  const map = fixtureMap({ persons: {
+    a_sec: { boldness: 'average', candour: 'high', values: ['duty'], regard: 'high' },
+    a_bold: { boldness: 'average', candour: 'high', values: ['duty'], regard: 'high' },
+  } });
+  const dispatch = original.rules.latency.dispatches![0]!;
+  const world = indexSeatsWorld(indexWorld({ ...map.world, edges: [...map.world.edges, edge('a_mid', 'a_front', { type: 'sea', days: 4 })],
+    rules: { ...map.world.rules, latency: { ...map.world.rules.latency, courierNoiseMaxDays: 0,
+      dispatches: [{ ...dispatch, carriers: [{ post: POST('a_office'), route: 'courier' }, { post: POST('a_reserve'), route: 'ship' }] }] } },
+  }), fixtureStart());
+  const entry: LogEntry = { day: 1, seat: lead, command: { ...order('a_army', 'hold', null), route: 'courier', bypass: false } };
+  const initial = createState(world, { seed: 2 });
+  let continuous = initial;
+  let midway: State | undefined;
+  const hashes: { day: number; hash: string }[] = [];
+  for (let day = 1; day <= 8; day++) {
+    const r = tick(world, continuous, day === 1 ? [entry] : [], { freeze: true });
+    expect(r.rejections).toEqual([]);
+    continuous = r.state;
+    hashes.push({ day, hash: canonicalHash(continuous) });
+    if (day === 2) {
+      midway = continuous;
+      const message = continuous.messagesInTransit.find(m => m.msgOrder !== null)!;
+      expect(message.msgRoute).toBe('ship');
+      expect(message.msgArriveDay).toBe(6);
+      expect(message.msgVia).toEqual([POST('a_office'), POST('a_office'), POST('a_reserve')]);
+      const staff = Object.values(continuous.orderResponses).filter(r => r.respPerson === P('a_sec'));
+      expect(staff.map(r => r.respRole).sort()).toEqual(['carrier', 'relay']);
+    }
+  }
+  expect(replay(world, initial, [entry], 8, { freeze: true }).hashes).toEqual(hashes);
+  const restored = decodeSave(encodeSave({ worldHash: canonicalHash(world.map.world), state: midway!, log: [entry] })).state as unknown as State;
+  expect(canonicalHash(replay(world, restored, [entry], 8).state)).toBe(canonicalHash(continuous));
 });
