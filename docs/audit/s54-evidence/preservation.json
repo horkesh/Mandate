@@ -1,0 +1,13 @@
+{
+  "base": "f19b6f007267997a652d06d18497118977e46c69",
+  "headAfterProjectionCommit": "d139118da8f2fed5646ea768389d36a678dbf7fb",
+  "originalTrackedPaths": 1906,
+  "missingOriginalPaths": [],
+  "measuredInputs": 681,
+  "changedMeasuredInputs": [],
+  "postMeasurementTestAddition": "packages/kernel/test/s54-public-records.test.ts",
+  "changedProtectedPaths": [],
+  "kernelWorkspaceTarget": "C:\\Pyrrhic\\sprint-politics\\packages\\kernel",
+  "builtPackage": false,
+  "browserOrServerStarted": false
+}

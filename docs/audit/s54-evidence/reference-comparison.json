@@ -1,0 +1,58 @@
+[
+  {
+    "pack": "union-1861",
+    "baseline": "docs/audit/s42-evidence/union-1861-summary.json",
+    "summary": "runs/s54-done/20261122-144532-8604-36a0fa/summary.json",
+    "summarySHA256": "6d59b9bc9e157e7aee651c947c96162cd66d42fc979bae47887bdafba720de4f",
+    "worldHash": "4b32adff541b87ead6e64b1112bf80c89ce6606cc73c4921be22bfc936756ff1",
+    "initialHash": "cf2b9c789c8782bebd9d911714d898c4c17970982ccd264f3b776857aacc86c2",
+    "sameWorld": true,
+    "sameInitial": true,
+    "dailyHashCount": 148,
+    "changedDailyHashes": [],
+    "sameDailyCounters": true,
+    "sameLiveness": true,
+    "sameCheckpoints": true,
+    "finalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+    "baselineFinalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0
+  },
+  {
+    "pack": "testbed",
+    "baseline": "docs/audit/s42-evidence/testbed-summary.json",
+    "summary": "runs/s54-done/20261122-144622-8604-d3fea5/summary.json",
+    "summarySHA256": "caa8cad33537c835261397a893efe8be8e077e64ace835a459af88dfbe4f39b5",
+    "worldHash": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5",
+    "initialHash": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b",
+    "sameWorld": true,
+    "sameInitial": true,
+    "dailyHashCount": 120,
+    "changedDailyHashes": [],
+    "sameDailyCounters": true,
+    "sameLiveness": true,
+    "sameCheckpoints": true,
+    "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+    "baselineFinalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0
+  }
+]

@@ -1,0 +1,123 @@
+{
+  "npmCi": {
+    "exit": 0,
+    "log": "runs/s54/npm-ci.log"
+  },
+  "initialIntegrationCommit": {
+    "exit": 1,
+    "stage": "check:rules",
+    "problems": 5,
+    "log": "runs/s54/step1-hook.log",
+    "commitCreated": false
+  },
+  "focusedPreflight": {
+    "exit": 0,
+    "files": 6,
+    "passed": 81,
+    "log": "runs/s54/preflight-tests.log"
+  },
+  "workingTreeSuite": {
+    "command": [
+      "npm.cmd",
+      "test"
+    ],
+    "exit": 1,
+    "seconds": 212.16,
+    "log": "runs/s54/suite.log",
+    "filesPassed": 208,
+    "filesFailed": 1,
+    "testsPassed": 1942,
+    "testsFailed": 1,
+    "skipped": 3,
+    "failure": "Published situation schema stale after adding claim vocabulary"
+  },
+  "schemaCorrection": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:schemas"
+    ],
+    "exit": 0,
+    "seconds": 27.82,
+    "log": "runs/s54/schemas.log"
+  },
+  "schemaVerification": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/pack-format/test/schemas.test.ts",
+      "packages/kernel/test/s54-promises.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 6.39,
+    "log": "runs/s54/schema-verification.log",
+    "passed": 13
+  },
+  "directProjectionTests": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s54-public-records.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 5.02,
+    "log": "runs/s54/direct-projections.log",
+    "passed": 6
+  },
+  "finalTypecheck": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 15.71,
+    "log": "runs/s54/final-typecheck.log"
+  },
+  "boundary": {
+    "exit": 0,
+    "log": "runs/s54/boundary.log"
+  },
+  "licences": {
+    "exit": 0,
+    "log": "runs/s54/licences.log"
+  },
+  "decisions": {
+    "exit": 0,
+    "log": "runs/s54/decisions.log"
+  },
+  "integratedRules": {
+    "exit": 1,
+    "problems": 5,
+    "evidence": "rules-problems.json"
+  },
+  "isolatedRulesPreflight": {
+    "exit": 0,
+    "problems": 0,
+    "evidence": "runs/s54/isolated-rules.json"
+  },
+  "projectionCommit": {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "Add received political record projections and promise claim vocabulary",
+      "-m",
+      "Co-Authored-By: Codex <noreply@openai.com>"
+    ],
+    "exit": 0,
+    "seconds": 471.93,
+    "log": "runs/s54/projection-commit.log",
+    "hash": "d139118da8f2fed5646ea768389d36a678dbf7fb",
+    "files": 6,
+    "testFiles": 207,
+    "passed": 1936,
+    "skipped": 4,
+    "scope": "Claim vocabulary, types, pure projections and direct tests; no active integration wiring"
+  },
+  "skipExplanation": "Unchanged three optional timing tests; the private snapshot also lacks .git for the existing LFS executable-bit test (tools/test/lfs.test.ts:81). The working-tree suite exercised that read-only check. No test was changed or skipped by S54. MANDATE_NO_GIT=1 is the standing run configuration.",
+  "doneCheck": "done-check.json",
+  "unchangedEvidenceReuse": "Retain the other 208 passing full-suite files after the generated-schema-only correction; retain S42 reference summaries because World/initial hashes, every daily hash/counter and checkpoint match; no unchanged full-suite or done-check retry."
+}
