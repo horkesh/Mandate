@@ -1,0 +1,10 @@
+{
+  "label": "s53-final",
+  "ownedProcessIds": [
+    41892,
+    25048
+  ],
+  "reason": "A final source review found that failed report carriage could invent a fresh authored return under a departed carrier. Stop before changing runtime; add a regression and correct notice authorship.",
+  "completedDoneCheck": false,
+  "rerunContract": "One completed default binding done check on the corrected final branch, preserving the stopped attempt and its evidence. No repeated unchanged campaign."
+}

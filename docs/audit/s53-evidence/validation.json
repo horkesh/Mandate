@@ -1,0 +1,70 @@
+{
+  "implementationHooks": [
+    {
+      "commit": "f71614fd1c53e2eeb5e8f1aeeff8a00acd9f5e6a",
+      "exit": 0,
+      "files": 207,
+      "passed": 1940,
+      "inheritedSkips": 3,
+      "log": "runs/s53/commit-step1.log",
+      "logSha256": "77ad5ded2cfd952bcfa33e417c1883e866b9879f76b5b79894251aedd777413d"
+    },
+    {
+      "commit": "8714ec93bb4c9b4f1619616549002fe6bdd7a060",
+      "exit": 0,
+      "files": 209,
+      "passed": 1948,
+      "inheritedSkips": 3,
+      "log": "runs/s53/commit-step2.log",
+      "logSha256": "14af46cc328a4e1b1f09832444ebf9ca5adc45513cca6aec0f39eb8d95d6c8cd"
+    },
+    {
+      "commit": "b0a4f9c24aa0416d4cb66fdeb9b7d0be9391a9c5",
+      "exit": 0,
+      "files": 209,
+      "passed": 1948,
+      "inheritedSkips": 3,
+      "log": "runs/s53/commit-step4.log",
+      "logSha256": "ba7f0f9c4dfe696c72de301a31a5997ad47e9a9cf247b218aecefa6c93a9a86e"
+    },
+    {
+      "commit": "15a876a7a659a1f3360d71b4a3d8f0ecb2f987e8",
+      "exit": 0,
+      "files": 209,
+      "passed": 1949,
+      "inheritedSkips": 3,
+      "log": "runs/s53/commit-step3.log",
+      "logSha256": "b605d61f0314b3660ede0053f6c2f81e31bcded4919ed0fc03eda95be3a94638"
+    },
+    {
+      "commit": "3a003a830d8597907ffb246a08496510a290b29a",
+      "exit": 0,
+      "files": 209,
+      "passed": 1950,
+      "inheritedSkips": 3,
+      "log": "runs/s53/commit-carrier-correction.log",
+      "logSha256": "163a8e90d8872f7e856c312eb872f721f4f1664d41be9bd21e8c9374a5f9b633"
+    }
+  ],
+  "npmCi": {
+    "exit": 0,
+    "addedPackages": 51,
+    "auditedPackages": 56,
+    "vulnerabilities": 0,
+    "evidence": "initial tool result, npm ci executed before rule reads or git; no duplicate installation"
+  },
+  "correctionFocused": {
+    "exit": 0,
+    "files": 4,
+    "passed": 73,
+    "typecheck": 0,
+    "rules": 0
+  },
+  "carrierTests": 11,
+  "disclosureTests": 7,
+  "presentationTests": 1,
+  "review": "maker verification only; whole-branch and gate reviews deferred under 0106",
+  "completedDefaultDoneChecks": 1,
+  "stoppedAttempts": 1,
+  "headAtCompletedCheck": "3a003a830d8597907ffb246a08496510a290b29a"
+}

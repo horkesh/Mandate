@@ -1,0 +1,504 @@
+{
+  "branch": "sprint/pushback",
+  "headBeforeCloseout": "3a003a830d8597907ffb246a08496510a290b29a",
+  "base": "f19b6f007267997a652d06d18497118977e46c69",
+  "originalTrackedPaths": 1906,
+  "missingOriginalPaths": [],
+  "protectedInputCount": 226,
+  "protectedChanges": [
+    "packs/testbed/strings/en.json",
+    "packs/union-1861/strings/en.json"
+  ],
+  "allOriginalStringValuesPreserved": true,
+  "runtimeInputs": 434,
+  "runtimeChangeAfterStudy": [
+    "packages/kernel/src/tick/carriers.ts"
+  ],
+  "studyEvidenceReuse": "correction-evidence-reuse.json",
+  "doneCheck": {
+    "command": "npm run run:done-check -- --milestone 1a --label s53-final-corrected",
+    "elapsedSeconds": 2483.9368194999997,
+    "exit": 1
+  },
+  "criteria": [
+    {
+      "phase": "phase0",
+      "status": "PASS",
+      "id": "behaviour",
+      "text": "rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 601 arrivals, 3 battle-days, 89 control changes, confederate 3 front segments 75 supplied 3 pockets; union 3 front segments 38 supplied 0 pockets",
+        "testbed, 120 days: 27 arrivals, 4 battle-days, 35 control changes, north 13 front segments 13 supplied 1 pockets; south 13 front segments 1 supplied 1 pockets"
+      ]
+    },
+    {
+      "phase": "phase0",
+      "status": "PASS",
+      "id": "hash",
+      "text": "the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 148 daily hashes, final 73721980e915ae2e",
+        "testbed, 120 days: 120 daily hashes, final 9480a41da773d3d5"
+      ]
+    },
+    {
+      "phase": "phase0",
+      "status": "PASS",
+      "id": "resume",
+      "text": "a mid-run save, loaded, resumes to the continuous run\u2019s final hash, and the log replays to every hash",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: from day 60, matches",
+        "testbed, 120 days: from day 40, matches"
+      ]
+    },
+    {
+      "phase": "phase0",
+      "status": "PASS",
+      "id": "liveness",
+      "text": "every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 162 mechanics inside their bands",
+        "testbed, 120 days: 162 mechanics inside their bands",
+        "testbed, commanders silent, 120 days: 1 mechanics inside their bands",
+        "testbed, the principal edits every plan, 120 days: 6 mechanics inside their bands",
+        "union-1861 before the opening decisions, 30 days (the war gate, 0064): 9 mechanics inside their bands"
+      ]
+    },
+    {
+      "phase": "phase0",
+      "status": "PASS",
+      "id": "section-ten",
+      "text": "the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite\u2019s)",
+      "problems": [],
+      "evidence": [
+        "packages/kernel/test/compliance.test.ts",
+        "packages/kernel/test/rng.test.ts",
+        "packages/kernel/test/banned-apis.test.ts",
+        "packages/kernel/test/people-verbs.test.ts"
+      ]
+    },
+    {
+      "phase": "phase0",
+      "status": "FAIL",
+      "id": "budget",
+      "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+      "problems": [
+        "union-1861, war by decision, 148 days: median 67.7 ms a day, over the 40 ms budget",
+        "union-1861 history run, 148 days to 1861-07-31: median 70.6 ms a day, over the 40 ms budget"
+      ],
+      "evidence": [
+        "union-1861, war by decision, 148 days: median 67.72 ms, p95 120.91 ms, max 168.87 ms over 148 days (plans.drafted 2, ladder.moved 9, situations.fired 65)",
+        "testbed, 120 days: median 6.17 ms, p95 11.39 ms, max 33.20 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+        "union-1861 history run, 148 days to 1861-07-31: median 70.55 ms, p95 117.99 ms, max 174.89 ms over 148 days (plans.drafted 2, ladder.moved 9, situations.fired 65)"
+      ]
+    },
+    {
+      "phase": "1a",
+      "status": "PASS",
+      "id": "checkpoints",
+      "text": "the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+      "problems": [],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "union-1861 history run, 148 days to 1861-07-31: side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): union 97207 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate 130239 men of known strength, 17 blocks of unknown strength (band 100000..200000)",
+        "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+        "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+        "union-1861 history run, 148 days to 1861-07-31: confederate at war since day 36",
+        "union-1861 history run, 148 days to 1861-07-31: union at war since day 41"
+      ]
+    },
+    {
+      "phase": "1a",
+      "status": "PASS",
+      "id": "operation",
+      "text": "at least one operation drafted by the kernel planner, chosen by its commander\u2019s seat, approved, executed and fought with the battle model, with a breakdown",
+      "problems": [],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+        "union-1861 history run, 148 days to 1861-07-31: op:us_dept_northeastern_virginia:137 (union, direct) fought battle battle:manassas:146"
+      ]
+    },
+    {
+      "phase": "1a",
+      "status": "FAIL",
+      "id": "pushback",
+      "text": "pushback fires inside its bands: lower bounds from the record\u2019s sourced cases (S01\u2013S21), upper bounds the lead\u2019s",
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17, above 9",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 18, above 9"
+      ],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: relay objections: 2 (band 0..6)",
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 1 (band 2..6)",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0 (band 1..4)",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 18 (band 2..9)",
+        "union-1861 history run, 148 days to 1861-07-31: objections to a plan: 38 (band 10..42)"
+      ]
+    },
+    {
+      "phase": "1a",
+      "status": "PASS",
+      "id": "unknown-strength",
+      "text": "no block fights with unknown strength: every battle record, in every run, lists none unknown",
+      "problems": [],
+      "evidence": [
+        "union-1861, war by decision, 148 days: 2 battles, 3 battle-days read",
+        "testbed, 120 days: 4 battles, 4 battle-days read",
+        "union-1861 history run, 148 days to 1861-07-31: 2 battles, 3 battle-days read"
+      ]
+    },
+    {
+      "phase": "1a",
+      "status": "PASS",
+      "id": "stand-ins",
+      "text": "the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+      "problems": [],
+      "evidence": [
+        "standing goals: gone (lane 1.4\u2019s operations (4a64082))",
+        "the consistency judgement: gone (lane 1.2\u2019s planner (0062))",
+        "the trait adapter: gone (lane 1.1\u2019s people recast (`standin/traits.ts` deleted))",
+        "weakest-first transfers: gone (lane 1.5\u2019s people verbs (0079: the sender\u2019s answer picks the blocks))",
+        "conflicts resolved by department: gone (lane 1.1\u2019s compliance (`resolveConflict`))",
+        "the simple contest: gone (lane 1.3\u2019s battle model (0076))",
+        "the generic rule-seat principal: no label names it, so it is gone",
+        "the capital as objective: no label names it, so it is gone",
+        "other stand-ins: packages/kernel/src/forces/stores.ts:74 (owner 1B, ships' stores), packages/kernel/src/planner/route.ts:127 (owner 1B, ships' stores), packages/kernel/src/recruitment/renewal.ts:3 (owner 1B, recruitment and service), packages/kernel/src/situations/types.ts:74 (owner 1B, conventions and legislatures), packages/pack-format/src/situations.ts:68 (owner 1B, conventions and legislatures)",
+        "pack values carried from M2, for calibration: union-1861 rules.politics.drift, union-1861 rules.politics.address, union-1861 rules.politics.ladder, union-1861 rules.politics.credibility, union-1861 rules.politics.press.standing"
+      ]
+    },
+    {
+      "phase": "1a",
+      "status": "FAIL",
+      "id": "lever-sweep",
+      "text": "the lever sweep (D6): no watched option, nor an atrocity-class decision\u2019s inaction, is the victory-only bot\u2019s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active",
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+      ],
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: 8 seeds, 8 gated decisions weighed, 744 calls for regiments in the base runs",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: return best in 1 of 8 seeds weighed"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "pack": "union-1861",
+      "path": "runs/s53-final-corrected/20261122-152144-27284-21f2c5/summary.json",
+      "reference": "docs/audit/s42-evidence/union-1861-summary.json",
+      "dailyHashCount": 148,
+      "allNonTimingFieldsMatch": true,
+      "finalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+        "matches": true,
+        "savedLogReplays": true
+      }
+    },
+    {
+      "pack": "testbed",
+      "path": "runs/s53-final-corrected/20261122-152302-27284-b85b2a/summary.json",
+      "reference": "docs/audit/s42-evidence/testbed-summary.json",
+      "dailyHashCount": 120,
+      "allNonTimingFieldsMatch": true,
+      "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 40,
+        "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+        "matches": true,
+        "savedLogReplays": true
+      }
+    }
+  ],
+  "artifactInventory": [
+    {
+      "path": "runs/s53-final/20261122-151053-25048-884d3c/save-day-60.json",
+      "bytes": 1499158,
+      "sha256": "e2097a039e79cb8821ff449466fb4dc5edbbf3533001721f7c11e6d8eeae7472"
+    },
+    {
+      "path": "runs/s53-final/20261122-151053-25048-884d3c/summary.json",
+      "bytes": 129394,
+      "sha256": "6d59b9bc9e157e7aee651c947c96162cd66d42fc979bae47887bdafba720de4f"
+    },
+    {
+      "path": "runs/s53-final-corrected/20261122-152144-27284-21f2c5/save-day-60.json",
+      "bytes": 1499158,
+      "sha256": "e2097a039e79cb8821ff449466fb4dc5edbbf3533001721f7c11e6d8eeae7472"
+    },
+    {
+      "path": "runs/s53-final-corrected/20261122-152144-27284-21f2c5/summary.json",
+      "bytes": 129394,
+      "sha256": "6d59b9bc9e157e7aee651c947c96162cd66d42fc979bae47887bdafba720de4f"
+    },
+    {
+      "path": "runs/s53-final-corrected/20261122-152302-27284-b85b2a/save-day-40.json",
+      "bytes": 321744,
+      "sha256": "e66b2dbdaeb8861408e3494f66fa607f47172aab7192421144b80fbadaacbec9"
+    },
+    {
+      "path": "runs/s53-final-corrected/20261122-152302-27284-b85b2a/summary.json",
+      "bytes": 83359,
+      "sha256": "caa8cad33537c835261397a893efe8be8e077e64ace835a459af88dfbe4f39b5"
+    },
+    {
+      "path": "runs/s53-final-corrected-drafting/20261122-160054-27284-7de175/drafting.json",
+      "bytes": 4782,
+      "sha256": "0243b69533b3a45c25ca621877226bfa0355d99caa32c6f9dd3137ac22b766b4"
+    }
+  ],
+  "deliveryPaths": [
+    "docs/design/FOUNDATION.md",
+    "docs/research/2026-11-22-S53-deterrence-proposal.md",
+    "docs/research/2026-11-22-S53-proposed-0099-amendment.md",
+    "docs/research/_pushback/s53-build-evidence.py",
+    "docs/research/_pushback/s53-calibrate.ts",
+    "docs/research/_pushback/s53-calibration.json",
+    "notes/lane-S53-pushback.md",
+    "packages/cli/src/desk/dispatches.ts",
+    "packages/cli/test/s53-disclosure-words.test.ts",
+    "packages/kernel/src/knowledge/report.ts",
+    "packages/kernel/src/knowledge/templates.ts",
+    "packages/kernel/src/knowledge/truth.ts",
+    "packages/kernel/src/messages/latency.ts",
+    "packages/kernel/src/messages/ship.ts",
+    "packages/kernel/src/messages/transit.ts",
+    "packages/kernel/src/ownership.ts",
+    "packages/kernel/src/phase0.ts",
+    "packages/kernel/src/proxy/responses.ts",
+    "packages/kernel/src/reading/disclosure.ts",
+    "packages/kernel/src/seats/world.ts",
+    "packages/kernel/src/tick/carriers.ts",
+    "packages/kernel/src/tick/context.ts",
+    "packages/kernel/src/tick/deliver.ts",
+    "packages/kernel/src/tick/orders.ts",
+    "packages/kernel/src/tick/tick.ts",
+    "packages/kernel/test/s53-carriers.test.ts",
+    "packages/kernel/test/s53-disclosure.test.ts",
+    "packages/kernel/test/support/tick-context.ts",
+    "packages/pack-format/schemas/pack.schema.json",
+    "packages/pack-format/schemas/situation.schema.json",
+    "packages/pack-format/schemas/world.schema.json",
+    "packages/pack-format/src/schemas.ts",
+    "packages/pack-format/src/validate.ts",
+    "packs/testbed/strings/en.json",
+    "packs/union-1861/strings/en.json"
+  ],
+  "deliveryInventory": [
+    {
+      "path": "docs/design/FOUNDATION.md",
+      "bytes": 84961,
+      "sha256": "3dff75ed38fe0e6683ce3ebdc7bf089cd7793c999002128baaa592db9da3dd16"
+    },
+    {
+      "path": "docs/research/2026-11-22-S53-deterrence-proposal.md",
+      "bytes": 8102,
+      "sha256": "2997d3b80f6464767441dbfef0d9d83d67358d8f285af5e56929e87952570668"
+    },
+    {
+      "path": "docs/research/2026-11-22-S53-proposed-0099-amendment.md",
+      "bytes": 5201,
+      "sha256": "abbe1b9d153aab6f3ac0478bd84399defc3e69a0a3a56f10539e36a4eaa92a96"
+    },
+    {
+      "path": "docs/research/_pushback/s53-build-evidence.py",
+      "bytes": 5481,
+      "sha256": "3521080fd84f8770648ff06f71e0edcea9fd64e08cdffb2fd49e85c8a768c521"
+    },
+    {
+      "path": "docs/research/_pushback/s53-calibrate.ts",
+      "bytes": 5557,
+      "sha256": "e677ff2f3e86fcf5fe6aeb04c49f2d9047e5977e1606672dd5c5f80517304f4f"
+    },
+    {
+      "path": "docs/research/_pushback/s53-calibration.json",
+      "bytes": 1809215,
+      "sha256": "5257a81900a6821d30b2871f30d8c7580be25d7fa93a45d982ae081ad5ba2e2a"
+    },
+    {
+      "path": "notes/lane-S53-pushback.md",
+      "bytes": 8156,
+      "sha256": "55bac8cc3928dd66601d0ec5b50e0ee18a158c9686a97fd8e9740e7037f806d1"
+    },
+    {
+      "path": "packages/cli/src/desk/dispatches.ts",
+      "bytes": 7187,
+      "sha256": "8a4f2b69fbcac20a98832a2399e07474d72b85d8019ff399e027c3f1886e0fdb"
+    },
+    {
+      "path": "packages/cli/test/s53-disclosure-words.test.ts",
+      "bytes": 1173,
+      "sha256": "eeda6ef4b0a541a1bbf9f1bb111504920f395df130d87e9b20d343d1eaeee023"
+    },
+    {
+      "path": "packages/kernel/src/knowledge/report.ts",
+      "bytes": 12513,
+      "sha256": "d71c83b0700cf246044078234851651b26902c825de1dac06b2ed6fb08359327"
+    },
+    {
+      "path": "packages/kernel/src/knowledge/templates.ts",
+      "bytes": 5078,
+      "sha256": "a854246b79b51724f8ce8eb266aef166ff4ad43ab6546c9b40a4b2e74ea75444"
+    },
+    {
+      "path": "packages/kernel/src/knowledge/truth.ts",
+      "bytes": 4941,
+      "sha256": "3ba73b81a0c017fa0be83404028738b5b4fb9e612c805e37dcc9345972f4dd0c"
+    },
+    {
+      "path": "packages/kernel/src/messages/latency.ts",
+      "bytes": 7873,
+      "sha256": "0915715de23c84e648e94d8627aa04247dcb922c7c58256d8254c5f1118cf295"
+    },
+    {
+      "path": "packages/kernel/src/messages/ship.ts",
+      "bytes": 1081,
+      "sha256": "bd475f46eb3b150251f0987ef06d6b8dac0f0effdf7b79c5f36c47eeb6297f97"
+    },
+    {
+      "path": "packages/kernel/src/messages/transit.ts",
+      "bytes": 8822,
+      "sha256": "d8a3920a7f2483cb08af23f6da3dff852ddb30a59fe69510c4d39b071080771e"
+    },
+    {
+      "path": "packages/kernel/src/ownership.ts",
+      "bytes": 20966,
+      "sha256": "68c132b61f82a3fc8f9a7c63ff232bd0964bd222a85c8b1410ccc13c209df31a"
+    },
+    {
+      "path": "packages/kernel/src/phase0.ts",
+      "bytes": 4403,
+      "sha256": "62c6f08af1ba204b948009b15ba04e805fb1a4a2c966ce7356683969156b1b76"
+    },
+    {
+      "path": "packages/kernel/src/proxy/responses.ts",
+      "bytes": 6885,
+      "sha256": "5a5a9f52933e650e852b5158acb6425dd3b7fff5e7ebb7aee28aa108e5d8f47b"
+    },
+    {
+      "path": "packages/kernel/src/reading/disclosure.ts",
+      "bytes": 860,
+      "sha256": "b4285eecf0ad516fca1532123dea93b418546f5c56b58970091273f7c6610d40"
+    },
+    {
+      "path": "packages/kernel/src/seats/world.ts",
+      "bytes": 28532,
+      "sha256": "bf9d621d2442083427bbb4c4ddfb32a4b94345642f97f020879b8ff2e71cfdee"
+    },
+    {
+      "path": "packages/kernel/src/tick/carriers.ts",
+      "bytes": 4374,
+      "sha256": "823d53b422bf56640992d26d91923da987c52b1f0bf9ce104f0b94d8b9c9b1c2"
+    },
+    {
+      "path": "packages/kernel/src/tick/context.ts",
+      "bytes": 20603,
+      "sha256": "3bf6cfc6c3608fa84b28ea66404b0cd5929d5a73366b9b2c14a65fce6ceda2f8"
+    },
+    {
+      "path": "packages/kernel/src/tick/deliver.ts",
+      "bytes": 9175,
+      "sha256": "c96e1b974badb988bd28650ceb65fd70f1443a133682858ecb094ada8987328c"
+    },
+    {
+      "path": "packages/kernel/src/tick/orders.ts",
+      "bytes": 24392,
+      "sha256": "8045df915f4a452e77903a78696f62da83540f814fd8ce0025d5e45d3b732ae7"
+    },
+    {
+      "path": "packages/kernel/src/tick/tick.ts",
+      "bytes": 19336,
+      "sha256": "6b44c3e4049b9c5f5cb76510db8db79b1e1ccd49b04fed0749faade716db2e38"
+    },
+    {
+      "path": "packages/kernel/test/s53-carriers.test.ts",
+      "bytes": 14667,
+      "sha256": "e83b2821c9fabf1ba48f98b11072c1a50910a4a1c07977c44cd5b2c0c61b1078"
+    },
+    {
+      "path": "packages/kernel/test/s53-disclosure.test.ts",
+      "bytes": 7680,
+      "sha256": "580d843ec616aea8f6f85af1a4d2862eb10f6fef0591a12cc5a570228e213f93"
+    },
+    {
+      "path": "packages/kernel/test/support/tick-context.ts",
+      "bytes": 1606,
+      "sha256": "f689f7fc54c555c86f0ba2089d8d2b54bb227a9d59a5f8fa3513318d89b74ef4"
+    },
+    {
+      "path": "packages/pack-format/schemas/pack.schema.json",
+      "bytes": 84675,
+      "sha256": "30c4768c4c9571e10c70012d0596553e1087cbe072cd9c8fe8ca972747358914"
+    },
+    {
+      "path": "packages/pack-format/schemas/situation.schema.json",
+      "bytes": 34551,
+      "sha256": "f466e2d6b3f3d5b9092180b4544bd3e7ba641cd299e0df6b0b40bc783300debb"
+    },
+    {
+      "path": "packages/pack-format/schemas/world.schema.json",
+      "bytes": 100919,
+      "sha256": "19669edb521f19493f334caf95c1ce16af864d4dc7116aa67c72b9baf26d5a07"
+    },
+    {
+      "path": "packages/pack-format/src/schemas.ts",
+      "bytes": 60993,
+      "sha256": "4e27e4b063fa1fd5d6033408c7b928d4abda8850f960b3634090e39c41fbdc3b"
+    },
+    {
+      "path": "packages/pack-format/src/validate.ts",
+      "bytes": 70831,
+      "sha256": "5ed20aecb272bca6cff4d1a8a90932ebcdbd9909474396e64a8cbfb90c78d451"
+    },
+    {
+      "path": "packs/testbed/strings/en.json",
+      "bytes": 28881,
+      "sha256": "754d1eaca45feac7a898274d94d574d63465f655d53c697651639ac3baab9262"
+    },
+    {
+      "path": "packs/union-1861/strings/en.json",
+      "bytes": 59677,
+      "sha256": "42d77412774c6d9ffe577a72b552fa405de52e9f168c86933492fe762a885eff"
+    }
+  ],
+  "stoppedAttempt": {
+    "label": "s53-final",
+    "ownedProcessIds": [
+      41892,
+      25048
+    ],
+    "reason": "A final source review found that failed report carriage could invent a fresh authored return under a departed carrier. Stop before changing runtime; add a regression and correct notice authorship.",
+    "completedDoneCheck": false,
+    "rerunContract": "One completed default binding done check on the corrected final branch, preserving the stopped attempt and its evidence. No repeated unchanged campaign."
+  }
+}

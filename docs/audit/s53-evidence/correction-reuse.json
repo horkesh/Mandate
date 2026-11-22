@@ -1,0 +1,24 @@
+{
+  "unchangedEvidence": "All sixteen paired histories remain applicable: the only subsequent runtime edit is the failed-report branch of carryDispatch; all measured packs have zero dispatch itineraries, so no measured tick can call that branch.",
+  "packRows": [
+    {
+      "path": "packs/union-1861/pack.json",
+      "configuredDispatches": 0
+    },
+    {
+      "path": "packs/union-1861/data/world.json",
+      "configuredDispatches": 0
+    },
+    {
+      "path": "packs/testbed/pack.json",
+      "configuredDispatches": 0
+    },
+    {
+      "path": "packs/testbed/data/world.json",
+      "configuredDispatches": 0
+    }
+  ],
+  "newQuestion": "A missing configured carrier must not author fresh institutional evidence under his former post.",
+  "regression": "packages/kernel/test/s53-carriers.test.ts: does not author a failed report under a carrier who has left the post",
+  "stoppedAttempt": "runs/s53/stopped-attempt.json"
+}

@@ -1,0 +1,8 @@
+{
+  "reference": "docs/audit/s42-evidence/union-1861-summary.json",
+  "compared": "calibration/1861-baseline.json",
+  "changedDays": [],
+  "allDailyHashesMatch": true,
+  "referenceFinalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+  "measuredFinalHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8"
+}

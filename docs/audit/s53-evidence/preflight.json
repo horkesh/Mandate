@@ -1,0 +1,23 @@
+{
+  "node": "v22.23.2",
+  "workspaceKernel": "C:\\Pyrrhic\\sprint-pushback\\packages\\kernel",
+  "records": [
+    {
+      "pack": "union-1861",
+      "days": 2,
+      "rejected": 0,
+      "hash": "d7c30745400fa70a7e134533c7535825288b6b094d0c3e33858e3e53dfdfcfe8",
+      "worldHash": "4b32adff541b87ead6e64b1112bf80c89ce6606cc73c4921be22bfc936756ff1"
+    },
+    {
+      "pack": "testbed",
+      "days": 2,
+      "rejected": 0,
+      "hash": "6f6e444f7a9ce27b83ece36cdadf2e37ba4114e7f7b3734261eb32d7c995f527",
+      "worldHash": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5"
+    }
+  ],
+  "historyDays": 148,
+  "command": "npm run run:done-check -- --milestone 1a --label s53-final",
+  "labelUnused": true
+}

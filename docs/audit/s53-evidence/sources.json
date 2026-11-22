@@ -1,0 +1,43 @@
+[
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\galaxy-1871-01.xml",
+    "sha256": "61a5e17c887aa81a0c589f480eeccdb790bafeaeca1c0e77b9ef1774854c96d9",
+    "verified": true,
+    "matchesCatalog": true,
+    "url": "https://archive.org/download/sim_galaxy_1871-01_11_1/sim_galaxy_1871-01_11_1_djvu.xml",
+    "catalogPages": "95-97"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\or-i3.xml",
+    "sha256": "a5639bae848dc9dd06a1eaf861a58cf30abf8e06ea4a3f678f63d3a621b98d43",
+    "verified": true,
+    "matchesCatalog": true,
+    "url": "https://archive.org/download/warofrebellionco03unit/warofrebellionco03unit_djvu.xml",
+    "catalogPages": "374,381"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\lincoln-works2.txt",
+    "sha256": "0aa94ec41fab888f027af48c6491f31c92ad65c432c817141a7bbfba8160eb5f",
+    "verified": true,
+    "matchesCatalog": true,
+    "url": "https://archive.org/download/abrahamlincolnco02linco/abrahamlincolnco02linco_djvu.txt",
+    "catalogPages": "47-48"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\confederacy-messages1.txt",
+    "sha256": "a460466f113697f0df2df71bf865daff2fa0e421e35fa84e38b3f40bbdaf6dbc",
+    "verified": true,
+    "matchesCatalog": true,
+    "url": "https://archive.org/download/compmessages01richrich/compmessages01richrich_djvu.txt",
+    "catalogPages": "85-88"
+  },
+  {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\or-iii1-correct.txt",
+    "sha256": "db2df410494a49bee01c6a683a129abfed05a7aaccc61a068363b9aa8cbf6bff",
+    "verified": true,
+    "readScope": "selected Morgan correspondence, printed pp. 72, 86",
+    "matchesCatalog": true,
+    "url": "https://archive.org/download/warofrebellion0301rootrich/warofrebellion0301rootrich_djvu.txt",
+    "catalogPages": "87,964"
+  }
+]

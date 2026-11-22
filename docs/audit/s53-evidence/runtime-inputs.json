@@ -1,0 +1,1738 @@
+[
+  {
+    "path": "packages/cli/src/console/game.ts",
+    "sha256": "36ce13edbb1b75cdb9fdfe87d12b0bf7f524532bb16624f4131e7913d9bf800b"
+  },
+  {
+    "path": "packages/cli/src/console/preview-text.ts",
+    "sha256": "ac41448c15575af55b69def47bba69552322af6b556d8bb173ffe6413cfb4c2c"
+  },
+  {
+    "path": "packages/cli/src/console/session.ts",
+    "sha256": "4398f131855bbf0dcb03541726ac3b6b349b767a061a4ec948ca069fb70adb8c"
+  },
+  {
+    "path": "packages/cli/src/demo.ts",
+    "sha256": "36c9819cdd7403b07c9bc295186ac831ee14d1da126c1ea212952d58e1dd4b67"
+  },
+  {
+    "path": "packages/cli/src/desk/commands.ts",
+    "sha256": "44d3ce0d3240c4eee904eeff11197d48729fc8def80371a6bf19a8d0ee211ca2"
+  },
+  {
+    "path": "packages/cli/src/desk/dispatches.ts",
+    "sha256": "8a4f2b69fbcac20a98832a2399e07474d72b85d8019ff399e027c3f1886e0fdb"
+  },
+  {
+    "path": "packages/cli/src/desk/notes.ts",
+    "sha256": "4a9d72d5b6aa73e6769c3e8dcc420074f8480444873fb5e10d8b98461c20da2d"
+  },
+  {
+    "path": "packages/cli/src/desk/press.ts",
+    "sha256": "39ad17cbb74af40decd2b8675a22eb6efd9fb2dddc37a93b32fa3fade1ee238d"
+  },
+  {
+    "path": "packages/cli/src/desk/render.ts",
+    "sha256": "498b74bb2c0fc37b8cd932ef2e73688c5d179b1cfb783d44819d16ab72fb4d6b"
+  },
+  {
+    "path": "packages/cli/src/desk/strings.ts",
+    "sha256": "52dbcd027821bad93a438c52a150b3c27ab2ffbade7785bf7982150a6acd3e31"
+  },
+  {
+    "path": "packages/cli/src/done-check.ts",
+    "sha256": "dbde1e317ff0693a6ae66dbcec45bff4e5f0915eb4792a2451913a87722cae01"
+  },
+  {
+    "path": "packages/cli/src/drafting-measure.ts",
+    "sha256": "29d50bb2e5b4f2f053d23d0c23c2a371b42a50312e2b2766a1623eeb4dee86eb"
+  },
+  {
+    "path": "packages/cli/src/history-run.ts",
+    "sha256": "c9dd7502891a354f379deb05ea60c72c0eb8a39c5e42033ef5c7b88472423528"
+  },
+  {
+    "path": "packages/cli/src/io/atomic.ts",
+    "sha256": "dd246031f3e65b19a71c4aa8b3e6c4700165fc3631fd395e6a61a51089c88e22"
+  },
+  {
+    "path": "packages/cli/src/io/packs.ts",
+    "sha256": "7c7af7c0c3e0f2bf46b39d7fbc86195f5a42f0950f1ad23516f17e336e2b390f"
+  },
+  {
+    "path": "packages/cli/src/io/runs.ts",
+    "sha256": "8c3dc6e9515db1c7d8adea580d71d93b60ea4365d1052380818eeebef0c0bf4b"
+  },
+  {
+    "path": "packages/cli/src/io/saves.ts",
+    "sha256": "930f1111948fb66fef104d73f4659b89ba79250d30785993a79afacdabb64c76"
+  },
+  {
+    "path": "packages/cli/src/lever-moves.ts",
+    "sha256": "bc0105eff41b2f40408a62a1b2fc0c2d414f4761c49ad26b244e673a0f50b135"
+  },
+  {
+    "path": "packages/cli/src/lever-sweep.ts",
+    "sha256": "638691798364fdbbd0841e8402844968a201498336b6357b5e397554dfc016c0"
+  },
+  {
+    "path": "packages/cli/src/liveness-gate.ts",
+    "sha256": "d795b16f5859c5e80386304067c7382619f8bdfbceb75e03b43306d230c70583"
+  },
+  {
+    "path": "packages/cli/src/pack-files.ts",
+    "sha256": "036a3a0087fc7a33e09c9d2eb3a9c00214da24185e4d2a9216e7b9df04585c19"
+  },
+  {
+    "path": "packages/cli/src/pack-text.ts",
+    "sha256": "9dbb3a9623695415d5e1d84ce7e799923f606cb4da328a6e62a8a1efe2ed4479"
+  },
+  {
+    "path": "packages/cli/src/pack.ts",
+    "sha256": "e05c0f59ed62b0378c852a0aec6d11d303be80a4e5938b5cd70ade1e83fe61a5"
+  },
+  {
+    "path": "packages/cli/src/phase0-run.ts",
+    "sha256": "764b1b1a29cde3f49c5ed22aa3458a226fed46a57bc4118659bd626c757ca56c"
+  },
+  {
+    "path": "packages/cli/src/phase0-scores.ts",
+    "sha256": "9eba9d4ab7c1c9847ce0257aec1792f6ebaa470bdc96d160539447d14efffb62"
+  },
+  {
+    "path": "packages/cli/src/planner-cases.ts",
+    "sha256": "e30371f42dc407fa44828364f696cbe809b1e181fa12a37884959193932bad70"
+  },
+  {
+    "path": "packages/cli/src/play.ts",
+    "sha256": "3cb678e1585366f294b5d630535ed8b423207e037e62e39c01bc20d4774d36d8"
+  },
+  {
+    "path": "packages/cli/src/register-coverage.ts",
+    "sha256": "247c1edb05184619247e2483db49d78d47ed4d1f5e04c2f52c8e88ce149668e4"
+  },
+  {
+    "path": "packages/cli/src/run-done-check.ts",
+    "sha256": "42c28f91eade51132266b4089fb25541bc7ee548c3faac3d61394db050c8f20c"
+  },
+  {
+    "path": "packages/cli/src/run-phase0.ts",
+    "sha256": "36ea91dea2c465f2fc7c04f2b1f00b86ef135907814a685e09b9b7425d736f6b"
+  },
+  {
+    "path": "packages/cli/src/run-planner-cases.ts",
+    "sha256": "bc9b7d05c7727f42558fa4ca0258630dbd6a2975bdd68f0a9d9fd51a6ec515ad"
+  },
+  {
+    "path": "packages/cli/src/run-seats.ts",
+    "sha256": "a122ab407ae8304a3e6fec1feeab42855606421b17535afb90f03c60cee74411"
+  },
+  {
+    "path": "packages/cli/src/seats-run.ts",
+    "sha256": "e76ab459943ed1b72513c66ac30d3b9556c6471451d308aa09aab560534cb2be"
+  },
+  {
+    "path": "packages/cli/src/seats-world.ts",
+    "sha256": "376cec0b46179801372a3b90eb2a77620df6ecd85aa1b2f76bad23522a53c6ff"
+  },
+  {
+    "path": "packages/cli/src/stand-ins.ts",
+    "sha256": "2013da54c20159969c2d90f47d02e6469f6f42774f8f5e8da026014bf7dd475c"
+  },
+  {
+    "path": "packages/cli/src/victory.ts",
+    "sha256": "e31ecb364f5c6f243519a179178c7b5c8b57a86b1045ac7a96e7f2e45bae3458"
+  },
+  {
+    "path": "packages/kernel/src/audience/audience.ts",
+    "sha256": "56fd622296a3ea9b693a645b1df767d0f19be9ecb83bf6b2800306f0fe7f650c"
+  },
+  {
+    "path": "packages/kernel/src/audience/counters.ts",
+    "sha256": "9b71a835dce6d62190e91ea121727708beb60afdf9e65422cb6fc10c4757cb0f"
+  },
+  {
+    "path": "packages/kernel/src/combat/battle.ts",
+    "sha256": "0a2c27969f55fa8b893f087286c902f58052519196bfccc587231fa788644927"
+  },
+  {
+    "path": "packages/kernel/src/combat/bombard.ts",
+    "sha256": "dd8b7755441ccadbdacc431ca875f7ec09a88a044619e836910fa718b72a00c2"
+  },
+  {
+    "path": "packages/kernel/src/combat/decide.ts",
+    "sha256": "7f9c3b160a4c8c02aa5336f6fd6d77c4ab2ac2d3ac80ec3c2226085791d9a0ac"
+  },
+  {
+    "path": "packages/kernel/src/combat/order-kinds.ts",
+    "sha256": "bc97c140f577667e4fc6848f28ae9bca7c4573d87a813846889b4fdc253bce32"
+  },
+  {
+    "path": "packages/kernel/src/combat/orders.ts",
+    "sha256": "8a4eb26c12be4384ba617900e65eb590c6cd781f011c040772441af644f52844"
+  },
+  {
+    "path": "packages/kernel/src/combat/records.ts",
+    "sha256": "74463568a1d769df667727d378338d77b3725886a2daa00ae0f9c896059bc9a1"
+  },
+  {
+    "path": "packages/kernel/src/combat/resolve.ts",
+    "sha256": "1c958c3e65c89dc28ec0e7f7e70b2fd2f6d3d64bece6753e86b29f128a7f6b80"
+  },
+  {
+    "path": "packages/kernel/src/combat/rules.ts",
+    "sha256": "493fda166977d70edbf015aaeb16a53e8ca65c8609e2291a6cc31998cfdac351"
+  },
+  {
+    "path": "packages/kernel/src/combat/shape.ts",
+    "sha256": "9c045382363c6dfbb23dbf68f558f941ad804eb80ea718c8e2be049fed26befd"
+  },
+  {
+    "path": "packages/kernel/src/command/capitals.ts",
+    "sha256": "ef24ec8221d6f4e5034e387160452af6629eb42667f876bd56d88a82a9ce7d72"
+  },
+  {
+    "path": "packages/kernel/src/command/command.ts",
+    "sha256": "3c5d450f252a64ea846527b731acf05d136ca6da077feb463f6a189bee90015c"
+  },
+  {
+    "path": "packages/kernel/src/command/levies.ts",
+    "sha256": "1014655f2e13d501a30b295996166bf9a8fec6a61af5de562512bdd9d1b0280a"
+  },
+  {
+    "path": "packages/kernel/src/command/observers.ts",
+    "sha256": "5ff01d8fa1204e9a818ed22c5284efcbb01efa00d847004ebf871558e8151251"
+  },
+  {
+    "path": "packages/kernel/src/compare.ts",
+    "sha256": "baa99c5a780105008186d197f5d95097082bd24d9f596193dc5d983f12289808"
+  },
+  {
+    "path": "packages/kernel/src/compliance.ts",
+    "sha256": "a9fa1421835af6c2950cce4c0624222e3ce64325819a8c17c6775f52f244296f"
+  },
+  {
+    "path": "packages/kernel/src/control-index/control-index.ts",
+    "sha256": "a97052895b544caf26d5b771602993f910accdfd9fbf1d9903e29e3652fbe0d5"
+  },
+  {
+    "path": "packages/kernel/src/control-index/derived.ts",
+    "sha256": "0454fa2f73d5c457697d697f5b8358706dc5ca8eda00f8f824967ed497d53cf2"
+  },
+  {
+    "path": "packages/kernel/src/control/control.ts",
+    "sha256": "feb5743486dd242025797b385b58a67c0e5861319cf97debcc052a844eab6fa1"
+  },
+  {
+    "path": "packages/kernel/src/control/vocabulary.ts",
+    "sha256": "27ce0c624957d314249c97d4ebb0d1978a218e7e558af9b2f04c5af75874499b"
+  },
+  {
+    "path": "packages/kernel/src/directive.ts",
+    "sha256": "ce8998286cc4aa41fc843d786fc43d57b253e195dab3de175b74419bdfa8309b"
+  },
+  {
+    "path": "packages/kernel/src/forces/detachments.ts",
+    "sha256": "7d10e403755f263e4669b5aecea831451f334f0fab59f35b26610a94f54a0d25"
+  },
+  {
+    "path": "packages/kernel/src/forces/enlistment.ts",
+    "sha256": "4ce16d269ceb26b53d37729c14bccdc89c9d4783aa435b7310942585446abe63"
+  },
+  {
+    "path": "packages/kernel/src/forces/forces.ts",
+    "sha256": "a5eccb04e3c1282001c6e4947df581e273e992adb0b8c5a989bb6e2e50448b6b"
+  },
+  {
+    "path": "packages/kernel/src/forces/stores.ts",
+    "sha256": "f27a1dee244976856449e77a2cc8e66f194cd2ac8bf3744d370af68abecfa875"
+  },
+  {
+    "path": "packages/kernel/src/forces/stragglers.ts",
+    "sha256": "4eb54e0cc78a1e728e794c5645bdf7a502daa883fcabb7bf15cb05961e9e803f"
+  },
+  {
+    "path": "packages/kernel/src/heap.ts",
+    "sha256": "6b1da4062619ca3b8dec867852da36c2b4841c70e015c6ad9838b2f9d8c2b3c5"
+  },
+  {
+    "path": "packages/kernel/src/ids.ts",
+    "sha256": "05da24194d7e7959b38578f7a16071814302828f484d1b122093c1f242b3fdb8"
+  },
+  {
+    "path": "packages/kernel/src/index.ts",
+    "sha256": "4e3a9438d64b757f3aa4001606a5b6d47c4bc28ad9f2c16e73df490875702cb9"
+  },
+  {
+    "path": "packages/kernel/src/infrastructure/infrastructure.ts",
+    "sha256": "477738d11e682e3e4d9e440b6d72810c53c14847bc18697d6babf8a000e183b7"
+  },
+  {
+    "path": "packages/kernel/src/invariants/map.ts",
+    "sha256": "8cf893a1bd343af2a3d99f5e5c9f0eb8bf20284f10ffe9003b8bc928c10b8965"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/beliefs.ts",
+    "sha256": "be7a595e977a3182f6eea83622a59c568deb22bb7eb284495f92dbcdb736a882"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/confidence.ts",
+    "sha256": "76f9dec62f609036ea5e6126c547b3adffecb45d37f1b2d28b9a0ece4f2bba22"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/control-beliefs.ts",
+    "sha256": "a9114cd92f75568ce2d1409b2fe3396955362df0a14079a70a6f740b5dc7bb3b"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/control-claims.ts",
+    "sha256": "4cd5136f0173e55b8d0065a078c9de220244dab33338be676a18c5b0e37294d7"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/knowledge.ts",
+    "sha256": "40f2ac9a6ae2c90be06c7dbdcbefb5bd7b404109d2b1cffed8ecee0446313f62"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/opening-control.ts",
+    "sha256": "67dc35ad2c1d4d641a755b157e7bc7410b7ecd229b7eeba971e98ba18a4de7ff"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/plan-paper.ts",
+    "sha256": "ededaa0ae882ea8e44c598e329e32c9567dc8afad83175a0f7d92753af0124d6"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/records.ts",
+    "sha256": "cb11cdfd3b3806117fddb77c262027926eb34a8c83ee56ef117ba8e283a8fa11"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/report.ts",
+    "sha256": "d71c83b0700cf246044078234851651b26902c825de1dac06b2ed6fb08359327"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/templates.ts",
+    "sha256": "a854246b79b51724f8ce8eb266aef166ff4ad43ab6546c9b40a4b2e74ea75444"
+  },
+  {
+    "path": "packages/kernel/src/knowledge/truth.ts",
+    "sha256": "3ba73b81a0c017fa0be83404028738b5b4fb9e612c805e37dcc9345972f4dd0c"
+  },
+  {
+    "path": "packages/kernel/src/ladder/ladder.ts",
+    "sha256": "49b231243ba4fa6a1892af3c097145a81ab3b376596e1fa94ee54deffd7a9faf"
+  },
+  {
+    "path": "packages/kernel/src/log/commands.ts",
+    "sha256": "9ea00d1fcf6e70a05cdcdc392cbfd921cae341f2b54566dd1978e7205567d908"
+  },
+  {
+    "path": "packages/kernel/src/log/log.ts",
+    "sha256": "b3c6db396fde74c2f6dae528e51c621194dddb9f37aefc3718f74c66b03a97e1"
+  },
+  {
+    "path": "packages/kernel/src/log/session.ts",
+    "sha256": "71d090e9c4f1982fa5f76fbb20043b65ec5d10549a640b6cdcdd4589a446a7b5"
+  },
+  {
+    "path": "packages/kernel/src/messages/latency.ts",
+    "sha256": "0915715de23c84e648e94d8627aa04247dcb922c7c58256d8254c5f1118cf295"
+  },
+  {
+    "path": "packages/kernel/src/messages/ship.ts",
+    "sha256": "bd475f46eb3b150251f0987ef06d6b8dac0f0effdf7b79c5f36c47eeb6297f97"
+  },
+  {
+    "path": "packages/kernel/src/messages/transit.ts",
+    "sha256": "d8a3920a7f2483cb08af23f6da3dff852ddb30a59fe69510c4d39b071080771e"
+  },
+  {
+    "path": "packages/kernel/src/movement/join.ts",
+    "sha256": "594265d35f0f452ef111543909762e4dfe1915e75000b0a1c2248aaf570fc0fd"
+  },
+  {
+    "path": "packages/kernel/src/movement/march.ts",
+    "sha256": "04b08d302b4f8c1b47510100a8539cfe9e14edbf78a9f75229358204c3a46f59"
+  },
+  {
+    "path": "packages/kernel/src/movement/movement.ts",
+    "sha256": "bea6c221bf5ed28d4636e0fd2b83f7a6ec85cb6539b560846fe6889012eeb005"
+  },
+  {
+    "path": "packages/kernel/src/operations/operations.ts",
+    "sha256": "6cd8db966ccae2e04a373200bf5682b1c181014191181f452e69117036172920"
+  },
+  {
+    "path": "packages/kernel/src/operations/rules.ts",
+    "sha256": "72b12ad7e5a6f9cf900e6f768a8a19fdf7eefadff23382588a83aa3b61277d1d"
+  },
+  {
+    "path": "packages/kernel/src/ownership.ts",
+    "sha256": "68c132b61f82a3fc8f9a7c63ff232bd0964bd222a85c8b1410ccc13c209df31a"
+  },
+  {
+    "path": "packages/kernel/src/people.ts",
+    "sha256": "975a9c814c8bf99bd4e8937d57dc582856d5e06183eed8fc96edf97a69e46069"
+  },
+  {
+    "path": "packages/kernel/src/people/people.ts",
+    "sha256": "9def059d43fa83b8b217856854930af7225368b7a4abfa51c97079bad92ee3e9"
+  },
+  {
+    "path": "packages/kernel/src/people/ranks.ts",
+    "sha256": "27eca63d1e94dd17e225fcab3e93176a7f28a0af19012f3385d2be41819277b6"
+  },
+  {
+    "path": "packages/kernel/src/people/resignation.ts",
+    "sha256": "5d725aa58b1f2b45c55590cebc0c8c024e12784307fe93c5bede287c396e4a27"
+  },
+  {
+    "path": "packages/kernel/src/people/rules.ts",
+    "sha256": "48c7f700392d5d0e77bec6d3d83eee0035ad551c18aa27e9f75f6873c3a9ace2"
+  },
+  {
+    "path": "packages/kernel/src/people/traits.ts",
+    "sha256": "855a8b4769f4ea912d3066a9ff608b93a06b2053c56daafd3b7d8d163b174f8c"
+  },
+  {
+    "path": "packages/kernel/src/people/verb-rules.ts",
+    "sha256": "e07a90119745600745c5ec195cba20aafc46534a53b8b196b4aadf0648b22ae6"
+  },
+  {
+    "path": "packages/kernel/src/permille.ts",
+    "sha256": "511f62b3f502d0abb07300d09835700ac4d00357d0f17cd5eefa9dd06da25331"
+  },
+  {
+    "path": "packages/kernel/src/phase0.ts",
+    "sha256": "62c6f08af1ba204b948009b15ba04e805fb1a4a2c966ce7356683969156b1b76"
+  },
+  {
+    "path": "packages/kernel/src/planner/axes.ts",
+    "sha256": "2b59454b6069c0fb9c92fd990c01bb8ea6bd1f9c8170c83bce424c2f1f630a90"
+  },
+  {
+    "path": "packages/kernel/src/planner/context.ts",
+    "sha256": "49b3bb0db2ef4f393d9d66b68a879ee57ceea7191ea731d94b6c535981966667"
+  },
+  {
+    "path": "packages/kernel/src/planner/draft.ts",
+    "sha256": "265bb5408106891dce2976f54482df18ff85a7843082331e202067d99e157be7"
+  },
+  {
+    "path": "packages/kernel/src/planner/edits.ts",
+    "sha256": "b57d0607021b1485c7061fc5a9cdc368d4f9b3356914109f31daf39705dd0a49"
+  },
+  {
+    "path": "packages/kernel/src/planner/index.ts",
+    "sha256": "5c86d329423c0d0218b3d13f0612a126c9f788087bcb4352b92480a91a394f74"
+  },
+  {
+    "path": "packages/kernel/src/planner/input.ts",
+    "sha256": "0efcbec202f7e8ecceb276cd3a9ff4559e4eab3e613a6e824943448e95831dd9"
+  },
+  {
+    "path": "packages/kernel/src/planner/methods.ts",
+    "sha256": "8e70995fae01783619c5eee0956f5007ee2c4567840eb4fc0ae2ab87f37eb63d"
+  },
+  {
+    "path": "packages/kernel/src/planner/notes.ts",
+    "sha256": "2058c55e7c3b6486595888cb837a2370e2bc0e866bbc59005398fb46a45370d8"
+  },
+  {
+    "path": "packages/kernel/src/planner/paper.ts",
+    "sha256": "f52f56e4577e97e9d4d7ed0b917210952e6b3038906e3dfc95456a9158db7e23"
+  },
+  {
+    "path": "packages/kernel/src/planner/profile.ts",
+    "sha256": "6fd2307349315033fd0e0f0885dd21b2d6e6608351f14bf40300a28da79747e1"
+  },
+  {
+    "path": "packages/kernel/src/planner/route.ts",
+    "sha256": "b2d641f2a9752dd982c36e7146a58ab56972dfac67b39fa217c46ed6d1867f9d"
+  },
+  {
+    "path": "packages/kernel/src/planner/score.ts",
+    "sha256": "dbd719f387b6574d205c66b60f742cf3d70fb9a84e81e88f8d2d61c0f312b9f0"
+  },
+  {
+    "path": "packages/kernel/src/planner/types.ts",
+    "sha256": "8a9ed06d810e97eb006ed09927dd2583d03990f6052ef39919b41873ce42a7de"
+  },
+  {
+    "path": "packages/kernel/src/plans/goal.ts",
+    "sha256": "ae8f5e577b176f962e95711699b68128f76eea6f00d13131682bc6a361376f7e"
+  },
+  {
+    "path": "packages/kernel/src/plans/note-rules.ts",
+    "sha256": "0d9197aecbc0f85f15c8cb15d616bdb7129b1de31b70884e30de58b2455b37d7"
+  },
+  {
+    "path": "packages/kernel/src/plans/notes.ts",
+    "sha256": "cda8297efdc99a4aa8518547bdc87f7b88b9cb455c959d710b2993d5afcb2fb8"
+  },
+  {
+    "path": "packages/kernel/src/plans/plans.ts",
+    "sha256": "172f230590fd495f547861c22cddfdeff11aaf738609611836529a66940fb04a"
+  },
+  {
+    "path": "packages/kernel/src/politics/politics.ts",
+    "sha256": "16b4892205e88f5f87ecc91f6a32d421e5c1790309fb65a55431b0ce76d611b2"
+  },
+  {
+    "path": "packages/kernel/src/politics/press.ts",
+    "sha256": "7356de5b4cc4e3e441685ad7fac42ae784545f2b828c7d466185f2c9fbebe777"
+  },
+  {
+    "path": "packages/kernel/src/politics/rules.ts",
+    "sha256": "5cca4792a63e0562ed65910dd332fd0f9151d1c9d5dbb5f94b9684dee834fe2f"
+  },
+  {
+    "path": "packages/kernel/src/proxy/responses.ts",
+    "sha256": "5a5a9f52933e650e852b5158acb6425dd3b7fff5e7ebb7aee28aa108e5d8f47b"
+  },
+  {
+    "path": "packages/kernel/src/reading/disclosure.ts",
+    "sha256": "b4285eecf0ad516fca1532123dea93b418546f5c56b58970091273f7c6610d40"
+  },
+  {
+    "path": "packages/kernel/src/reading/orders.ts",
+    "sha256": "54f69a741a7b1d8f7ad0e76ecc287c5c608a2c96263c70a89fca1c995dc2dd29"
+  },
+  {
+    "path": "packages/kernel/src/recruitment/renewal.ts",
+    "sha256": "4121f602648bd94fd304ae5ea71f20c2bdbef5a2a1a70b1cb4249f41f6f0cbb3"
+  },
+  {
+    "path": "packages/kernel/src/recruitment/rules.ts",
+    "sha256": "93fed3c90c7975fa2d225f3f38a38327af456d7d3c17bd2adcee91a780529dda"
+  },
+  {
+    "path": "packages/kernel/src/regions/regions.ts",
+    "sha256": "a138a2fafd882ec98e70b0787ddfe606e4dce8091250eb938340756df661a47b"
+  },
+  {
+    "path": "packages/kernel/src/regions/self-emancipation.ts",
+    "sha256": "3230d495eb7aee5e52be3815e3ad193e13057956afb864a926d185c28c35e0bc"
+  },
+  {
+    "path": "packages/kernel/src/rng.ts",
+    "sha256": "3698c90f3387d32fa70febbbd71dc466528f71193ec8bea8cf2c420dc2863217"
+  },
+  {
+    "path": "packages/kernel/src/root-state.ts",
+    "sha256": "a8881ba6bd35d5bd9464ac6f7baebb0bd9992cf2e5567aeb092010630ef1b931"
+  },
+  {
+    "path": "packages/kernel/src/seat-api.ts",
+    "sha256": "0f4867204e8af21d1eeca59c6342afbca98cae677ed43a714a4898a369e4d485"
+  },
+  {
+    "path": "packages/kernel/src/seats/api.ts",
+    "sha256": "7b3ab964ff0176880ec3b762e61726bc652bf94fc2bf34983423e63334d5a94c"
+  },
+  {
+    "path": "packages/kernel/src/seats/attention.ts",
+    "sha256": "5c9ef196655164a846b3de80cf460a9d360836c5f8a5a87a089657c091d9ddab"
+  },
+  {
+    "path": "packages/kernel/src/seats/believed.ts",
+    "sha256": "8c1436e3ea14396041f6e1895e8fcd996c6eeffcb27722d3312d6780a0f82340"
+  },
+  {
+    "path": "packages/kernel/src/seats/posts.ts",
+    "sha256": "e23e63eecf73119016234cd0b62f17972e093e2bfdd515493d482df1a67ab605"
+  },
+  {
+    "path": "packages/kernel/src/seats/received.ts",
+    "sha256": "2851370406759ebb3217f741f90e8298a0275d9d6e9937ca10457bb82d9987c1"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "sha256": "ea28a695b50841b5cdb060a51315db9f6973e7e0c258e1a35303aa6ffcc9e394"
+  },
+  {
+    "path": "packages/kernel/src/seats/seats.ts",
+    "sha256": "ab887b5a4d506f1e7403845dc3b9d4e5749b499227159699c0b350ce005cbb8a"
+  },
+  {
+    "path": "packages/kernel/src/seats/turn-stops.ts",
+    "sha256": "b507d0217b5d39bce9071eb1a731b5ff9bb0e821b07de7129d75f1c7b2e5e0d6"
+  },
+  {
+    "path": "packages/kernel/src/seats/world.ts",
+    "sha256": "bf9d621d2442083427bbb4c4ddfb32a4b94345642f97f020879b8ff2e71cfdee"
+  },
+  {
+    "path": "packages/kernel/src/serialize/canonical.ts",
+    "sha256": "02fc54d941cbd3a1327c57f1e430338e8a86811dda4c089b6ef431a046ae37b9"
+  },
+  {
+    "path": "packages/kernel/src/serialize/hash.ts",
+    "sha256": "a3a4da78fbd4ea3a6f9c1f136ac83bb23c08d2a8c1ea7bf264e0a2aa06a2a133"
+  },
+  {
+    "path": "packages/kernel/src/serialize/save.ts",
+    "sha256": "de9ea424b826b659372fa48785ed914060e143e03655479b515f807c4a551807"
+  },
+  {
+    "path": "packages/kernel/src/serialize/sha256.ts",
+    "sha256": "70c0d2f549d862ef2eb888a789237a48450f7d62d0d178b890e98c71c749eea2"
+  },
+  {
+    "path": "packages/kernel/src/situations/conditions.ts",
+    "sha256": "970ef5f9180b00e0fdd5bb76d1be903b91e20dbeb874fcef789db3503c3f65dd"
+  },
+  {
+    "path": "packages/kernel/src/situations/references.ts",
+    "sha256": "575d9cce3ed664c96fbf022b43d23f9fe64dc6bfd2038f12070662f55a25f9c5"
+  },
+  {
+    "path": "packages/kernel/src/situations/situations.ts",
+    "sha256": "a31d8ea0d884eed1f1fff08ef50ccd9385796af2bd97a5cfda229d6d4e4c7200"
+  },
+  {
+    "path": "packages/kernel/src/situations/types.ts",
+    "sha256": "45737ef824f92b170333b59937e755fb02b19cb57ce6c2883520224a62e67270"
+  },
+  {
+    "path": "packages/kernel/src/supply/supply.ts",
+    "sha256": "235c8ae624e9ddd4d28e7337d6275287bafdcc9e74222696d629a56e4e9d10f8"
+  },
+  {
+    "path": "packages/kernel/src/telemetry.ts",
+    "sha256": "0099052c6b2005db37fae9c97a7b1bb711d1cc50e0d0a591ca27043911fae405"
+  },
+  {
+    "path": "packages/kernel/src/tick/attention.ts",
+    "sha256": "ab8072f5d5b26e58cf6bf7d64a89d4baa666d696c66c6e5975f75f26a03b2d64"
+  },
+  {
+    "path": "packages/kernel/src/tick/audience-plan.ts",
+    "sha256": "5677b3d626e7b566c9ac2e52d8c4130e23f7157615b745ee83e1cb46752036ed"
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "sha256": "65310c276e116e6c4a0bd7eb02016fc49504707a4707f521d863fd11aec89684"
+  },
+  {
+    "path": "packages/kernel/src/tick/bombard.ts",
+    "sha256": "e8f35fd7fba979f6d4cd441261875c846f95ec9787584f9819e7c95699b2aee1"
+  },
+  {
+    "path": "packages/kernel/src/tick/carriers.ts",
+    "sha256": "823d53b422bf56640992d26d91923da987c52b1f0bf9ce104f0b94d8b9c9b1c2"
+  },
+  {
+    "path": "packages/kernel/src/tick/commander-losses.ts",
+    "sha256": "6fd23cf82356df3b6cea9013be361e02d06fb4ec1b2495d2f75e2cf87635b72d"
+  },
+  {
+    "path": "packages/kernel/src/tick/context.ts",
+    "sha256": "3bf6cfc6c3608fa84b28ea66404b0cd5929d5a73366b9b2c14a65fce6ceda2f8"
+  },
+  {
+    "path": "packages/kernel/src/tick/control-reports.ts",
+    "sha256": "cc318698f9d7d85698d6be797edef71838cc49bc82b3ed2ee34aff7ed3e927ee"
+  },
+  {
+    "path": "packages/kernel/src/tick/deliver.ts",
+    "sha256": "c96e1b974badb988bd28650ceb65fd70f1443a133682858ecb094ada8987328c"
+  },
+  {
+    "path": "packages/kernel/src/tick/detachments.ts",
+    "sha256": "733945786bb6c28656c8911724633d50d0f009d3f5dd89f49d3062c00158b026"
+  },
+  {
+    "path": "packages/kernel/src/tick/edit-preview.ts",
+    "sha256": "d5c6c19361362a80f1d4a12e60bd93de175e2e04d11f3bc0e767dceac5425630"
+  },
+  {
+    "path": "packages/kernel/src/tick/forces.ts",
+    "sha256": "d77c1aa7921962af8edc67ef90bafb24b02919979a11d572088506c21249d2c5"
+  },
+  {
+    "path": "packages/kernel/src/tick/freeze.ts",
+    "sha256": "5945c7ac8b6edcdebcbdc0b45317242dcf32c69398d6da3b3f04fc0970a0ea7d"
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "sha256": "c0eb01a19acc2b743962f82bbc23b40c9d1147920b4c3f8eed974e7c6407e9db"
+  },
+  {
+    "path": "packages/kernel/src/tick/map.ts",
+    "sha256": "29629312348e42258b0cdc94eaa1966961a459caf5ba1c564421fb4bed0e4857"
+  },
+  {
+    "path": "packages/kernel/src/tick/operations.ts",
+    "sha256": "f37e9f49e87cc171645c7a24ccba94a58dde9cdefc2b2dab7226441a3d0416e4"
+  },
+  {
+    "path": "packages/kernel/src/tick/orders.ts",
+    "sha256": "8045df915f4a452e77903a78696f62da83540f814fd8ce0025d5e45d3b732ae7"
+  },
+  {
+    "path": "packages/kernel/src/tick/passage.ts",
+    "sha256": "bb3e4581e4f775424d19a5d4c15488839106d821ce6f28de64313db712fc7877"
+  },
+  {
+    "path": "packages/kernel/src/tick/people-week.ts",
+    "sha256": "65ad1b20e105662b2840aeff82554a4c7dd9421a5dda581e66268ea822d2da1a"
+  },
+  {
+    "path": "packages/kernel/src/tick/plans.ts",
+    "sha256": "2deea08166901c26a5926940eabac721405a10c9b8ee49cd04ff1ad042796d75"
+  },
+  {
+    "path": "packages/kernel/src/tick/policy.ts",
+    "sha256": "dab689ae33ada2b6ff0972916893d497340a81b6b7654499b97c939cdb96833d"
+  },
+  {
+    "path": "packages/kernel/src/tick/politics.ts",
+    "sha256": "b822d62f0da19d420903bccfd3f62d27d2217fda467ccbaa58dd797ac0ffc8ef"
+  },
+  {
+    "path": "packages/kernel/src/tick/recruitment.ts",
+    "sha256": "a5c9a0fdb44301f832e12f2139531cbe291ed8c791d44cd6042d2b7613f4206f"
+  },
+  {
+    "path": "packages/kernel/src/tick/regions.ts",
+    "sha256": "e2d54d4f8adb7d5cc578f8b529a60a837fa7a638728fb179af16f5c2ef4b08da"
+  },
+  {
+    "path": "packages/kernel/src/tick/setup.ts",
+    "sha256": "77b5f2e4d381f50788eff1fe767a4f6e70726dfd8067128a93df8c4148fecdc4"
+  },
+  {
+    "path": "packages/kernel/src/tick/situations.ts",
+    "sha256": "200fb8138ef2267761d83c449e6653b7a5d0afb340a7f2fd0f1a449c2c04375b"
+  },
+  {
+    "path": "packages/kernel/src/tick/support.ts",
+    "sha256": "3a4a73c133bb7a18c1d2ffdf88c6b5877dd439c271c133250e106ce417ec9a7d"
+  },
+  {
+    "path": "packages/kernel/src/tick/tick.ts",
+    "sha256": "6b44c3e4049b9c5f5cb76510db8db79b1e1ccd49b04fed0749faade716db2e38"
+  },
+  {
+    "path": "packages/kernel/src/tick/verbs.ts",
+    "sha256": "a69b64c3972c17b4e10c514ba5221fe08c078803dbf8665d6aa6ec4374c3d12e"
+  },
+  {
+    "path": "packages/kernel/src/view/claimed-control.ts",
+    "sha256": "1070d4c506526c998b57690a2d7bfcee42f2eafdd3f43730c0eafe1a271f25c0"
+  },
+  {
+    "path": "packages/kernel/src/view/desk.ts",
+    "sha256": "968307b6b6befff3a86fcbb43eefd42e23723de7b659093d7322cd7fb86569e1"
+  },
+  {
+    "path": "packages/kernel/src/view/people.ts",
+    "sha256": "a7e366a3d8ece503f76a65cee6f6dd54ed8922d7e3b74b24c83a3874ca65fe98"
+  },
+  {
+    "path": "packages/kernel/src/view/types.ts",
+    "sha256": "a820c031ef9bcabb4d836cf3a0ab1bf260790212176ed711070ce2a4b6989b36"
+  },
+  {
+    "path": "packages/kernel/src/view/view.ts",
+    "sha256": "4cd4a0cba779427366b1ca39299a089c53bb8ba29399b232f41593ede21957d1"
+  },
+  {
+    "path": "packages/kernel/src/world/calendar.ts",
+    "sha256": "59c93944c80d4a4f6e4f075cec0a31fac97e4ae5dfef6cbc984d5b30525aaf1f"
+  },
+  {
+    "path": "packages/kernel/src/world/graph.ts",
+    "sha256": "89b530eee9e31c1900a8e2313d34121da31b0d9d05c77de7cd1ad211e3307743"
+  },
+  {
+    "path": "packages/kernel/src/world/index.ts",
+    "sha256": "47b5106c69f1f82628aec789de83b137b95d033997ee2cfe9590a0fd45c5424f"
+  },
+  {
+    "path": "packages/kernel/src/world/people.ts",
+    "sha256": "6262bdd36667c85aad382858f2bf56393804e621435eb7ed84b00316796ddb70"
+  },
+  {
+    "path": "packages/kernel/src/world/scenario.ts",
+    "sha256": "92796fec5499a006de1f6368d328304e2ee91b131fb5f729e751d6f84aa3f17e"
+  },
+  {
+    "path": "packages/kernel/src/world/world.ts",
+    "sha256": "0e77d55887399f4cf7ef06e751e093844613471e2b1d500324509f3d6e6d1046"
+  },
+  {
+    "path": "packages/pack-format/src/banned-sources.ts",
+    "sha256": "cde47956d0aad3bb51e3306783085bbeecce37205fcd5ee9004f5f22ca16289a"
+  },
+  {
+    "path": "packages/pack-format/src/cells.ts",
+    "sha256": "53675d7e46228b534db1bdc7d15b1827925b5f46d9026032289bb474699b98ba"
+  },
+  {
+    "path": "packages/pack-format/src/checkpoints.ts",
+    "sha256": "734175df5edb4b30eec4a95035ac48e492736ca5d2ec64229d2246d30eecc5cf"
+  },
+  {
+    "path": "packages/pack-format/src/csv.ts",
+    "sha256": "dd195b827a69df0228303bc19c7e860d725e76864b3eb85fe9eefc77e4b380df"
+  },
+  {
+    "path": "packages/pack-format/src/format.ts",
+    "sha256": "7abac222a396cba916b71b89f5ba2a110bc22737d603a8ef44581ca75e346500"
+  },
+  {
+    "path": "packages/pack-format/src/gate.ts",
+    "sha256": "4e7ddd4eb6c795ea019746153172317552e5c218144301ecccad9c538a5a8e31"
+  },
+  {
+    "path": "packages/pack-format/src/generate.ts",
+    "sha256": "e9db336d8316d81f42a2ff578fa08cd52416ee97ccef6e5f80b694aea3581544"
+  },
+  {
+    "path": "packages/pack-format/src/index.ts",
+    "sha256": "919a686b1e907749416a7cc0a0f8167e109453b2bc8459d968f32c54cd0d69b1"
+  },
+  {
+    "path": "packages/pack-format/src/issues.ts",
+    "sha256": "d402ab532ddff82fee173df5627619d2905cf90869ef360a2f994c1d6f73ed6c"
+  },
+  {
+    "path": "packages/pack-format/src/layout.ts",
+    "sha256": "bda7fa8237979526d06ba291f2f03b766d6c4d46aba43ff28431526614410a83"
+  },
+  {
+    "path": "packages/pack-format/src/licences.ts",
+    "sha256": "bbd4f62f63486177b94e293aad067f0e9665287744b24347c1ef232180d16093"
+  },
+  {
+    "path": "packages/pack-format/src/load.ts",
+    "sha256": "4876b61a1cee843c336316af18e7cf615b398f915765bbae827692cb1332c18e"
+  },
+  {
+    "path": "packages/pack-format/src/published.ts",
+    "sha256": "130975228121afee5ee8021180405ffd21236151c049f04f26808bffee30b653"
+  },
+  {
+    "path": "packages/pack-format/src/schemas.ts",
+    "sha256": "4e27e4b063fa1fd5d6033408c7b928d4abda8850f960b3634090e39c41fbdc3b"
+  },
+  {
+    "path": "packages/pack-format/src/situation-layer.ts",
+    "sha256": "67d4b5427352d9ca8c149c63f38b44626250a3cdcf61655a00da4bb14083b6ce"
+  },
+  {
+    "path": "packages/pack-format/src/situations.ts",
+    "sha256": "38d54a0942581af69a50342c56bd799d1072782bf22e2724e8c2ff32ae8cb7b6"
+  },
+  {
+    "path": "packages/pack-format/src/strings.ts",
+    "sha256": "491d5d1485949c82508bacdefc22720a553b3bfae078e227c9176dcf188737fa"
+  },
+  {
+    "path": "packages/pack-format/src/validate.ts",
+    "sha256": "5ed20aecb272bca6cff4d1a8a90932ebcdbd9909474396e64a8cbfb90c78d451"
+  },
+  {
+    "path": "packages/rule-seats/src/index.ts",
+    "sha256": "ef5ad971362402ed3f766420e5100e571e29c714dc75fde72dc25feac141d4cf"
+  },
+  {
+    "path": "packs/README.md",
+    "sha256": "52c4130c1a186a97a13fa9bb49ee5f61ee76e827efb0ce75b2c01877a21728d1"
+  },
+  {
+    "path": "packs/testbed/PROVENANCE.json",
+    "sha256": "2c57f17bfad2a10aae8af5e6429d908beaf01bce5d0cc8d6f0516075e68bf252"
+  },
+  {
+    "path": "packs/testbed/README.md",
+    "sha256": "d3245648c8ad162f37151f3cabc082135ff24dc29bd60f18bf2ff88d81c0f575"
+  },
+  {
+    "path": "packs/testbed/data/GENERATED.md",
+    "sha256": "51593e36d133d507e7a5d69e49d4477a1fc8e584910908a7b755a2c3e5d254ae"
+  },
+  {
+    "path": "packs/testbed/data/scenarios/opening.json",
+    "sha256": "c75f07feabd391fbf198f29275d17bba2bd04ec4569476cdf030bc52337f5db1"
+  },
+  {
+    "path": "packs/testbed/data/scenarios/summer_front.json",
+    "sha256": "09e5c812cb8584cc051c2dc4d45868279cef914cf963725d475bb7e83b050fe9"
+  },
+  {
+    "path": "packs/testbed/data/strings/en.json",
+    "sha256": "77ba5333ef7ad272aaed508d4efeb4e16247191f63434821df17ff0b78bf008e"
+  },
+  {
+    "path": "packs/testbed/data/world.json",
+    "sha256": "7938364140a352113ca91bf94875f7b7ace37b1d6cbf435f1c701233e8f18927"
+  },
+  {
+    "path": "packs/testbed/gate/anachronisms.json",
+    "sha256": "bdf2030d7f72de5c4e184b059f2f3d59b5c120aa3169b0de87f5daab83a33d1e"
+  },
+  {
+    "path": "packs/testbed/gate/checklist.json",
+    "sha256": "75fa8649ad26baa129c3b0ceee94d35e9c8c142b58ea3aa9dcc7d46d14924c0a"
+  },
+  {
+    "path": "packs/testbed/gate/classes.json",
+    "sha256": "f115ed874cd4cd9269e2f7c8692f120beb6d239702681daf461095158a117eba"
+  },
+  {
+    "path": "packs/testbed/gate/forbidden.json",
+    "sha256": "7ae42aa1d62c73622b57186049681c64f6fa081974e1f8c9bfbb2659597ae6fc"
+  },
+  {
+    "path": "packs/testbed/gate/register.json",
+    "sha256": "1ec795f9497997ebfd52d5b188c8e1a9a247deb329f1039505a9893cf01cac9e"
+  },
+  {
+    "path": "packs/testbed/gate/release.json",
+    "sha256": "a601be0009cf289f19b0e7e26bfe8daafca47e2641cff07f889b768e3ade1cb9"
+  },
+  {
+    "path": "packs/testbed/gate/reviewers.json",
+    "sha256": "a287e3d5c5de8fd3b1a2dc7e8249fdf42e1368bec4cef6bc6400b1a1219452fc"
+  },
+  {
+    "path": "packs/testbed/gate/source-policy.json",
+    "sha256": "5b282f86b6703464a9bd2544c8009d9fcfce7e475f3942cf8e06a570374a5a7c"
+  },
+  {
+    "path": "packs/testbed/gate/triggers.json",
+    "sha256": "c2cd27e50f1182e47de2f1748d6294a1d84fd31985b668282f3ad5ad9922d7fe"
+  },
+  {
+    "path": "packs/testbed/pack.json",
+    "sha256": "736cd72fff2c4d59bfd7a58dcb3585ad6a8f9794449e6cd197b997640829b943"
+  },
+  {
+    "path": "packs/testbed/situations/eastwatch_followup.json",
+    "sha256": "9fefeee20ebab402d481b4dcd58b81d293983fb9b75a69fce297af1b88a4e7e0"
+  },
+  {
+    "path": "packs/testbed/situations/eastwatch_stalls.json",
+    "sha256": "9ef5170f7f4d6dda0d094184b2685a15e5d65c247d0273e4cfd3cfc81285e769"
+  },
+  {
+    "path": "packs/testbed/situations/fen_arrivals.json",
+    "sha256": "2aa3499c7a6a660adccd4a0145eb7da0eda678bd53f903a881a9375134abb9c4"
+  },
+  {
+    "path": "packs/testbed/situations/fen_crossing.json",
+    "sha256": "a7e5e8b179974bdac616b7f9a88ac2ab2eace09212e55afc5be6ec44ec247035"
+  },
+  {
+    "path": "packs/testbed/situations/harbour_burning.json",
+    "sha256": "7d0bf9cadb9b2b0e6dfb5522c94e5c0e2e2a7945884c2c616566e99b45dd8588"
+  },
+  {
+    "path": "packs/testbed/situations/sanctuary_act.json",
+    "sha256": "8ad270285e84f46bb34b1ee4e47bda2bb581dd1f5575d4a600ae1816ff192001"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/control.csv",
+    "sha256": "33762c78570148cde02fca0b233bd56212b155c471d23dac7752405ffd7f5a91"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/department_changes.csv",
+    "sha256": "07b83b00c4297fc40199aa7c7f6b15fe6d465e407054fc2e47478f0d143df3c4"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/depot_conditions.csv",
+    "sha256": "3241c6695705d01c0929a7ba87b1da851754e88244bb092fe1a0e39257a4e1cd"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/edge_conditions.csv",
+    "sha256": "f8cb01faeaf505d82bf58b05c3822fed06c5eb6281c9f15ad31893abe0a140fb"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/force_blocks.csv",
+    "sha256": "ecb7d2293ffee28f27fce08408c87ddeb1d9e767fbbf1d4475bbac4b2de048df"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/fortification.csv",
+    "sha256": "6040dedb3c150155372b1d28bd87f73d3163767676d9cb283a7763ea875877e0"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/governments.csv",
+    "sha256": "e581c19a25027eccefe319f0623c3a25411d589f8987e9e661e6e26274042f7a"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/holders.csv",
+    "sha256": "ec32c201693f05ca18380b26a33ff88f0f991379db9389a65d2fb4f0462c7b5f"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/loyalty.csv",
+    "sha256": "3b1bed7ff9340553eb5b8da3de4fa08fa8b2f969aae046ade72569996ccff0f8"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/obstructions.csv",
+    "sha256": "3c6c9c382bdcaa70cefd4ee405bf92dd2bf8556a0bc6ed6a4727f620493b1e05"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/post_links.csv",
+    "sha256": "a366aa5a3d2f815fc34ef2fd7cb6e8e38ca4e2c74054ffcc7e3744e85b8bc681"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/posts.csv",
+    "sha256": "038653478ee3df4323594bcfb0c57d864eeaffb26124fc013377b35b2e538831"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/scenario.json",
+    "sha256": "852aab3227350509de6c07330deb67a2f74fa40637102b820b3ceb9e579e33cc"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/standing_orders.csv",
+    "sha256": "55c2369277843f95d3058219c228459ea80356fd1516403fbd3080b3dcf3736f"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/control.csv",
+    "sha256": "728ebe1f62460f18cd67abba77c0d39fa0f86648d74cfd9af880e68d13cc790f"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/force_blocks.csv",
+    "sha256": "94b877e5935673d69fefead05ae7001bb4bcc17d302600d932d11e434ddc35a9"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/fortification.csv",
+    "sha256": "536a401d5895dcddec9979ca9734b0da9bc5aacae3aee5ada63d65164e14b703"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/governments.csv",
+    "sha256": "aa2df08078d672268e9c5d5bee5517161b1fd2b84126291511b64a59f109d7df"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/holders.csv",
+    "sha256": "602bd851b88a287fe173d1d4d7ed85a89eba0f1c76fea62d298f2a542b5351dc"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/obstructions.csv",
+    "sha256": "f03d49a8d20b59ee50bc872f78a797129f8cd76f3588a9185d0fd018b26fd3a1"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/posts.csv",
+    "sha256": "be81838299b585a1c50e9515cafe6f9cf342c2bc90ade5f0000fdb7e03587c61"
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/scenario.json",
+    "sha256": "faec5bb3fc7863a078a4d7f91542e8c07a48c076d69439939f67aa917ae4da67"
+  },
+  {
+    "path": "packs/testbed/source/world/census.csv",
+    "sha256": "46c6510d755561c6d1b81b1ecc6db0721b289861e46948454a11ca50cc7187e7"
+  },
+  {
+    "path": "packs/testbed/source/world/departments.csv",
+    "sha256": "32318427d538296d4e78e067dfb48f662d5ffa5d1eab77bb618d12e45082798b"
+  },
+  {
+    "path": "packs/testbed/source/world/depots.csv",
+    "sha256": "2948bec2852bc195efb2d92dad3c13d73062069df6482e52104da2da3dba9f91"
+  },
+  {
+    "path": "packs/testbed/source/world/edges.csv",
+    "sha256": "e8e125cf1bc70f36d374ec7107c06cee2e42bb54f5b73ee47cfb6fbfd0c84fe7"
+  },
+  {
+    "path": "packs/testbed/source/world/installations.csv",
+    "sha256": "b4fb46701534fa16ce4524d99e9f966b037400c39bbee947fde4de7f59be9bed"
+  },
+  {
+    "path": "packs/testbed/source/world/people.csv",
+    "sha256": "1e4aeff84d619d3ef2f10aeceea293b097a57e278fff56c6d1bc86430efcf30f"
+  },
+  {
+    "path": "packs/testbed/source/world/rail_lines.csv",
+    "sha256": "8e98ba341b1b8c2a22e39327275385b95225eaaf3c8c7afc906a8ad1bf4f4535"
+  },
+  {
+    "path": "packs/testbed/source/world/regions.csv",
+    "sha256": "f66a0d8d63ad9209ac4b2aa49d294b843ce299eb52ee568731cbe99893e7b5cd"
+  },
+  {
+    "path": "packs/testbed/source/world/weather_zones.csv",
+    "sha256": "b2a4a416e3f5a2976135c2133beee8db0b56215229d38d79332641658b062e5f"
+  },
+  {
+    "path": "packs/testbed/strings/en.json",
+    "sha256": "754d1eaca45feac7a898274d94d574d63465f655d53c697651639ac3baab9262"
+  },
+  {
+    "path": "packs/testbed/test/control.test.ts",
+    "sha256": "66c659540ef75fcdefdf7fec60d4a789cb3bdbbab5b9e020cc68078663c75c30"
+  },
+  {
+    "path": "packs/testbed/test/forces.test.ts",
+    "sha256": "d93477515a1b026e2b6c7969849cb5ce7ba833ce823502996499c2c40b404851"
+  },
+  {
+    "path": "packs/testbed/test/seat-people.test.ts",
+    "sha256": "f1711c1c988b04b39d480f6ad6232a5037d1f8858491e0685d0f6e02d01359c9"
+  },
+  {
+    "path": "packs/testbed/test/world-v2.test.ts",
+    "sha256": "fa3d5ca41647074ed7cf2e56cdd6d017815cf6c6afd09dd88d9d84fcad716095"
+  },
+  {
+    "path": "packs/union-1861/PROVENANCE.json",
+    "sha256": "bf052ecab147ee344400f0eeec7976872ec68e1be9fde06b6cef21bb1c2cc1ad"
+  },
+  {
+    "path": "packs/union-1861/README.md",
+    "sha256": "83aa9d9cd61909f3da30473ac9c3315ab9a03c8190ecb2b06e05b5094d68ac6f"
+  },
+  {
+    "path": "packs/union-1861/calls-1861.json",
+    "sha256": "634b20276e8dfafe0ce9afecffdf00cf87c2991d740ddcece744832b80e3cff9"
+  },
+  {
+    "path": "packs/union-1861/checkpoints.json",
+    "sha256": "a45b94342892cd8954cdf72ca11478ae77b7026b1239300125fbade34cc42b9f"
+  },
+  {
+    "path": "packs/union-1861/data/GENERATED.md",
+    "sha256": "803e5173f49d5223354046ee94b7f05c714c50137c6886780389a853a0e8b805"
+  },
+  {
+    "path": "packs/union-1861/data/scenarios/march_1861.json",
+    "sha256": "ba029ad82aadbd53f43d0e643b36afae88f9f2c8cff341c942311f651bf68552"
+  },
+  {
+    "path": "packs/union-1861/data/strings/en.json",
+    "sha256": "a96d99d198f158d35ddd5f05bda29b1d8ec38d35b80c4cfe500b4c18cc867816"
+  },
+  {
+    "path": "packs/union-1861/data/world.json",
+    "sha256": "e2244915d92f89a90edf549e240c79b0329ed5f87400352613954368c2c6caf8"
+  },
+  {
+    "path": "packs/union-1861/gate/anachronisms.json",
+    "sha256": "6815417aca239ff2c1d78755fc6734f3e5eb73bc58afccc9cb457ae8f9c3ce44"
+  },
+  {
+    "path": "packs/union-1861/gate/checklist.json",
+    "sha256": "75fa8649ad26baa129c3b0ceee94d35e9c8c142b58ea3aa9dcc7d46d14924c0a"
+  },
+  {
+    "path": "packs/union-1861/gate/classes.json",
+    "sha256": "8f6633af861a289b9eb96999e69bf2ea6b35f93c7b9ce62179875f2d0a766461"
+  },
+  {
+    "path": "packs/union-1861/gate/forbidden.json",
+    "sha256": "f6e1e7221377004ee8ce624a185a534b6442a04243b8aa3cad304e6a486d83d2"
+  },
+  {
+    "path": "packs/union-1861/gate/register.json",
+    "sha256": "11587c14e1cc40aa33fd3dca5bf3289d8d4a26f335ee6ba503dbc8cbe3eabb95"
+  },
+  {
+    "path": "packs/union-1861/gate/reviewers.json",
+    "sha256": "a287e3d5c5de8fd3b1a2dc7e8249fdf42e1368bec4cef6bc6400b1a1219452fc"
+  },
+  {
+    "path": "packs/union-1861/gate/source-policy.json",
+    "sha256": "3044c446843d5db58ec2bbfd2a3da96e53c504efa4ef14a3bfeca4612455808c"
+  },
+  {
+    "path": "packs/union-1861/gate/triggers.json",
+    "sha256": "cc15707d4fe2fa20317183a434da3f1ca418da793843f8ee6ddf1e2a8ae9d6e9"
+  },
+  {
+    "path": "packs/union-1861/pack.json",
+    "sha256": "410c9bbb2ab8a67559f8f525f7e1ac78a5ad68793fa774246727e1c42a47d795"
+  },
+  {
+    "path": "packs/union-1861/situations/arkansas_forces_transferred.json",
+    "sha256": "4640620f555bf55dc232cf780ad8117d17911cf34fae9ec285b4654e83a05a05"
+  },
+  {
+    "path": "packs/union-1861/situations/arkansas_secedes.json",
+    "sha256": "4b25073e53205ca7536553ff2abc7d0935cead80ed6f2c406f194fb67a04fa10"
+  },
+  {
+    "path": "packs/union-1861/situations/baltimore_route_closed.json",
+    "sha256": "8ca8a9a37f8b86aa24358d9f0f627c18646d15de236298143bb4c3e0fa7d88f3"
+  },
+  {
+    "path": "packs/union-1861/situations/bates_fugitive_law_opinion.json",
+    "sha256": "704540c2aa47854006c1eaae6bc5ddf5acb63c657f0a4b7a9592944c2a368a16"
+  },
+  {
+    "path": "packs/union-1861/situations/black_volunteer_offers.json",
+    "sha256": "b1cc139e07bff97385b2cd7d2c946ab794d761d02762759fc0dfd1b569c82ede"
+  },
+  {
+    "path": "packs/union-1861/situations/blockade_or_closure.json",
+    "sha256": "8b95ed78c15accc251396c7f5a2076d788824f6027f1cf98c6cf86480648f0c9"
+  },
+  {
+    "path": "packs/union-1861/situations/call_for_troops.json",
+    "sha256": "ee36fd6dd300b3fba2c5a2177e7b97e198e1086c8e60f1335dc814eb1acb5df6"
+  },
+  {
+    "path": "packs/union-1861/situations/camp_jackson_deaths.json",
+    "sha256": "80bae2612b449b041a2e012822cdbe4434ec2f52c0bf338fb566c9976f00c867"
+  },
+  {
+    "path": "packs/union-1861/situations/cherokee_neutrality.json",
+    "sha256": "6fc6b23600221f414afabfb7b9d613f7e63ee7e1424bf807ded4da1820a1d24b"
+  },
+  {
+    "path": "packs/union-1861/situations/chickasaw_treaty.json",
+    "sha256": "c6288db9dab9a346382a452919d4e70228d92dde15b364b5c23654579515baca"
+  },
+  {
+    "path": "packs/union-1861/situations/choctaw_treaty.json",
+    "sha256": "dcf21dedb00b992e27607d6ae3e0f2e1817114223e8e559ac39525c19dc4f4a9"
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_capital_moved.json",
+    "sha256": "52f469e80f72ac96c2f4b6b1ac81b66458a8e83523cd65f0784a19cb6c68bcd8"
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_commissioners.json",
+    "sha256": "0345707ec3052d3f6013f4deda730fe1b9c938f190d12f41d7c8637dcb0b6ae1"
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_opening.json",
+    "sha256": "80909b7a68db3628041dac1528e419b5c70526bfb74b575587ba2d11d47b3eeb"
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_protection_act.json",
+    "sha256": "40bd7d93c82de5458280ab5a058c3ce823db3fd4bdc9adc2d1ff65209ddfeda4"
+  },
+  {
+    "path": "packs/union-1861/situations/drafts/merryman_answer.json",
+    "sha256": "c15862591643dca18be932366ecb8be5a3781ab143ec39d932569658df5824ce"
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_arrivals.json",
+    "sha256": "8168b73f2c70b952adaa98bf6b6524e96b1c27e89dfffb980b11c6d5336d5b3f"
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_escape.json",
+    "sha256": "99aa7c1f3f1196bca900f584b1bf937de4fdc773b1370eb9aacffe1f4e39e67e"
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_escape_asked.json",
+    "sha256": "93d7e40fa7aedf79f757ed6f6d8b704d77e3795c67ccc6bc456c382da01513a3"
+  },
+  {
+    "path": "packs/union-1861/situations/gosport_yard.json",
+    "sha256": "cf021f179cc1533a82d85987514efc7cd0abe11ecdc94363a02835f8d58973c6"
+  },
+  {
+    "path": "packs/union-1861/situations/habeas_on_the_line.json",
+    "sha256": "87ec35d47de726691f43b247aadd5edf3d7b21ab431820abee6f2c1bd3bdcd4c"
+  },
+  {
+    "path": "packs/union-1861/situations/harpers_ferry_assignment_notice.json",
+    "sha256": "eea0c3a0cca5266fb911c089fbf58abcff7f00b3d37d55854744dae1e0869f65"
+  },
+  {
+    "path": "packs/union-1861/situations/houston_confederate_obligations.json",
+    "sha256": "5236931c98b05411b23a21f57191b1a18b5e928065ac252d8796d0f855032947"
+  },
+  {
+    "path": "packs/union-1861/situations/indian_territory_posts_given_up.json",
+    "sha256": "bf20ddcda7f25965ad9829882bedb7910a58cacb32a48e438d62888696f368cc"
+  },
+  {
+    "path": "packs/union-1861/situations/kentucky_neutrality.json",
+    "sha256": "236344d7da7fb37987a85412df87e4bf8201a5177e0bb1f4bf4f59c04cefdb16"
+  },
+  {
+    "path": "packs/union-1861/situations/kentucky_neutrality_proclaimed.json",
+    "sha256": "b7cd3bee2898a427c467c0cfcd55581c8323948fd67fce57ab5f320787832fa0"
+  },
+  {
+    "path": "packs/union-1861/situations/lamon_promise.json",
+    "sha256": "00bcb47652aa4f67bf8189e4f14c358d997534ccc37543d45a00e596c6a170dd"
+  },
+  {
+    "path": "packs/union-1861/situations/manassas_reinforcement_notice.json",
+    "sha256": "2ff37628c8a38b8602134361797c2d9cec4a6e1f3aca282cbc9f88cca1d8ac8f"
+  },
+  {
+    "path": "packs/union-1861/situations/maryland_legislature.json",
+    "sha256": "a11e2ad5363658f886510756b2e3b52373e3c646a5b51bc7bfe014e5ee7bbc0a"
+  },
+  {
+    "path": "packs/union-1861/situations/mcclellan_proclamation.json",
+    "sha256": "6d308fdc2bfd7f1f3c3f41642bbcda6c385c0fd9d0d9928fc6ebab16bb7d7347"
+  },
+  {
+    "path": "packs/union-1861/situations/mcdowell_advance.json",
+    "sha256": "70aad9ae701322baf25c32562045542220067a5642dc0231b6c55297a0fcc1e4"
+  },
+  {
+    "path": "packs/union-1861/situations/merryman_writ.json",
+    "sha256": "33de8607f4d9dc505ff6898c88bc355f1e649b92be92b24702c920c9f0410fb1"
+  },
+  {
+    "path": "packs/union-1861/situations/minnesota_first_remuster.json",
+    "sha256": "a27bf3035d3b9f596aada30c5ecb2bd31381912b44467bef9795dc60a00b513d"
+  },
+  {
+    "path": "packs/union-1861/situations/missouri_arsenal.json",
+    "sha256": "608841144589f1c203adc14e5d474afbda2a73c51e02427f07bc772a964c6d70"
+  },
+  {
+    "path": "packs/union-1861/situations/missouri_provisional_government.json",
+    "sha256": "42e6f4f7f463648d800a9ef23560f823318c16eeb86b80bd6a52c2317fe2de96"
+  },
+  {
+    "path": "packs/union-1861/situations/muscogee_treaty.json",
+    "sha256": "f9dc9a73c0b3be37118c7aa88a06fa86a5824f382350472dc90709663d04b6a1"
+  },
+  {
+    "path": "packs/union-1861/situations/nelson_arrest_power.json",
+    "sha256": "b06055aa9c8891f0ad8bfd25b322213886f9c5ebd25237b3be162c14b9b6c7e7"
+  },
+  {
+    "path": "packs/union-1861/situations/north_carolina_forces_transferred.json",
+    "sha256": "971ccf86bf3458e1831274235fa94d37d53d565bff54d80698b1dec40089166e"
+  },
+  {
+    "path": "packs/union-1861/situations/north_carolina_secedes.json",
+    "sha256": "0415cc429cbb1e9b28990092dcae5970ee52504def73c241e2c859b7f361205b"
+  },
+  {
+    "path": "packs/union-1861/situations/officer_resignation.json",
+    "sha256": "991741466c1fc2c4a165b3fe16e8dd090d0466bd6a9497b2ce3b3d5f2afce36e"
+  },
+  {
+    "path": "packs/union-1861/situations/patterson_martial_law.json",
+    "sha256": "e993d0d942a6d9b13356b90ce6d547079e27ad61df2e4a7ad32263018e149439"
+  },
+  {
+    "path": "packs/union-1861/situations/pickens_refused.json",
+    "sha256": "c66eaf47f7bcf0304b51811be7bfc1c291b90f05c99061ff1e891dbdec5be7ad"
+  },
+  {
+    "path": "packs/union-1861/situations/pickens_reinforcement.json",
+    "sha256": "c1bcfc6b01d3876873946a0ee36dacef041edb7596cf013862071a211263fd31"
+  },
+  {
+    "path": "packs/union-1861/situations/pierpont_elected.json",
+    "sha256": "407ded76eb27d2af29170b1c3fefa55024ad4b95866f8a98144e32bb7a2968b9"
+  },
+  {
+    "path": "packs/union-1861/situations/pratt_street_deaths.json",
+    "sha256": "dde10a77c01f648a63373fb2804ee45d397c68323e4e43b99770fa641b357a27"
+  },
+  {
+    "path": "packs/union-1861/situations/seward_memorandum.json",
+    "sha256": "f4758685496e04c305265785e35e4dc633a2f91a8feeec95ebfe361d9bccdc02"
+  },
+  {
+    "path": "packs/union-1861/situations/special_session.json",
+    "sha256": "a1ba2a3d3ddbcf545b31e4a0eeeaa06ff77645627138985deb80b55fefbae501"
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_evacuated.json",
+    "sha256": "269b2a002a89711bd263ceca8af7df65b3a04e8f5878de96e39b36565421424b"
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_fired_upon.json",
+    "sha256": "539090473588ee957b21bb81e780c6df456b5c4064e80aa5fd01f6c20c49e711"
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_garrison.json",
+    "sha256": "25f3646dec87f805ba296eebb60ac8d3689bdade5969717bf47671a02c0e380e"
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_forces_return.json",
+    "sha256": "7189d253fd8dcedfa311e13db3d91ef5f259c067401a3705d356f7e7b33f2e95"
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_forces_transferred.json",
+    "sha256": "b66d34906a4633c665ea024eba9f9ae326dd7a80991ec85313d6773b3b85e447"
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_military_league.json",
+    "sha256": "83687cad32d7384f948121e0eb8819e5c9a55e01da2375c546042af62c925068"
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_secedes.json",
+    "sha256": "13110b0fe3a50797e6e987f377ff90eecad21b382c006308904e655cd027bd13"
+  },
+  {
+    "path": "packs/union-1861/situations/texas_governor_changed.json",
+    "sha256": "af6a73ec2bdb1ddcc103d642b78006a50f2108d9623a80d6d4d240ac655ed810"
+  },
+  {
+    "path": "packs/union-1861/situations/thomson_martial_law.json",
+    "sha256": "93b507cbf26dd64832472896a18e081dc0e558a543c4be67952b635140544cf0"
+  },
+  {
+    "path": "packs/union-1861/situations/townsend_fugitive_order.json",
+    "sha256": "08e1dedd80ecd325f7bfc98a13625d0a971b8ff7dfd34513444e124d72d29d35"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_forces_return.json",
+    "sha256": "b2c971f028b187c971f51b78e5b67f2a019aa791ea52ead29e4c02d0cf316d8f"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_forces_transferred.json",
+    "sha256": "5a9879377724823ba442713dc19fa2ab35413c25ba5862e46684057f6a466b59"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_military_convention.json",
+    "sha256": "cee51268e08d64d3225f7c03202e4c57a29f3b8041d57c4221811cc25e0283d2"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_secedes.json",
+    "sha256": "10733065e6b11ca2a0cacdd616cab147e67ccd2fdd8bb4790b0200cfce517a6a"
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_unionists.json",
+    "sha256": "7218c40e08d030d83de7b3689a2fb559e8b2bae38f472a6d8c5831dd2a76acd4"
+  },
+  {
+    "path": "packs/union-1861/situations/washington_cut_off.json",
+    "sha256": "3c67db5e9c02acb831a75cc455672dc292c4b412abb0ca123dce484385a26e34"
+  },
+  {
+    "path": "packs/union-1861/situations/western_virginia.json",
+    "sha256": "dad2020d3333a6c99609f01cde876e5030491dbe0afd24a379be82d538dc43ca"
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_convention.json",
+    "sha256": "ff5a24bb536f1e24c53d467ba9743ee9d9088deb58a18505bd2bf73d8db9630d"
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_legislature.json",
+    "sha256": "ba22466e793fe07fd3657cdc9e0196ed7b3bbe68470fdec6e5229ce4275ab2b3"
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_ordinance.json",
+    "sha256": "d16297b30697daad84d0255727bff23f21e1e09df7d6de1496e43296b107790c"
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_recognition_letter.json",
+    "sha256": "af352509eaa871caf866e80e1b44b9c605e47f9bc599b7e4bd8169fb9f5a6eff"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/calls/README.md",
+    "sha256": "4a5bbff34df90fa24eb7a0f54861a3e548ddee9bea3aa8c4ac4b3409ab0579d0"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/calls/union-calls-1861.csv",
+    "sha256": "9a6365ae8eb0d576f6c995649faa8029ad1da260ff3e8a8b48208bf3593f9322"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/README.md",
+    "sha256": "d3f6a67d83120ae7bff8de220af3e68752d239fe5faf15896061c1b2f77a2d4e"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/aggregate-report.txt",
+    "sha256": "3bd27d64be3c7411daef8b97d434a600d8c12255a0403bd7b5ac223e93a84303"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/aggregate.mjs",
+    "sha256": "b894591bf22bdeaeab736bc9ced625bad30b6bc25dca0c3bfba22041c2f8e538"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/enslaved-1860-by-region.csv",
+    "sha256": "906b7e2cb6a66c604405c705c5243cc2e5240bc6bf166e46f0374357418b3ffe"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/kennedy-baltimore-split-1860.csv",
+    "sha256": "12a3803376dcc0252cbae69e1d2347ef588feb3096bd42defb0f3f5cef7b8cc9"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/kennedy-county-1860.csv",
+    "sha256": "5541b65965f0f0e2bd3995aa0b1e0736a69f14e0d65f5d92b768ac9a23ddb8fa"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/kennedy-state-summary-1860.csv",
+    "sha256": "2ed96181278a2796acc7f069247f8956070c99e2088bbfcbf7482c59ed977b7a"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/map/README.md",
+    "sha256": "044425f3c41a494cda5b6ca0429b8eaf8e023aa371346441ea5643798adb4654"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/map/edges.csv",
+    "sha256": "3df69008f1ff48dd2a34c56d354667fd3177b801cf104c847760b2b5a13af991"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/map/regions.csv",
+    "sha256": "96fd635eb6a8a6936a07bf8c2a95955c3c85f92b496844a78df883c9eaf97fef"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/README.md",
+    "sha256": "ca603b43b5511d92304e1ac587efd843c14ce26eb5a8cb01b842531dc6625c66"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/force_blocks.csv",
+    "sha256": "a6dd384b3376dabd0157fbd55249f134b4ad258139d61a8ac7e6ae6837916b23"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/people_in_posts.csv",
+    "sha256": "b70feba63d4700c0c8f1352caf0501d409d74dc4cc8f8c69f59531e97a690e08"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/posts.csv",
+    "sha256": "91b5fa49236b81de2d524f6276fb250856910d7137711ab88b94c9141bbc2e97"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/strengths-stores-1861.csv",
+    "sha256": "ae50f8669a1effb60ddd8274cc40c11ffb2e778d3482c4573e6d9247dc514f7a"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/README.md",
+    "sha256": "018156057a420f6095fec0051280772bb130b91942718420cfbda7685150e90b"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/cast-1861.csv",
+    "sha256": "35222a8dd934a1088415a52e6ea78051304df8f0ecf989356ba3dd08a54c649b"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/held-back-blocs-1861.csv",
+    "sha256": "10e9fc07e5f4e115b631eb31dd3552d557c90a4de87c145ebf875723d4bd21e4"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/held-back-judgments-1861.csv",
+    "sha256": "ce88d80b5455d5ed9778b1ccb17e11d5f9044a20c3670976dc45f7e5199cf5ea"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/held-back-resourced-1861.csv",
+    "sha256": "6257938a9eff6f04103a04a7751f70b9d963e0a0c06e1630d813206370c64c94"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/people-sources.md",
+    "sha256": "8e43b6786db0cb2c412d07471bdbf8ebfae8541366f461b3eb27b0225ac334ea"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/people.csv",
+    "sha256": "39002d114be871b8f4a34c83ff2975bd7e3087c9eec3f1f7113861f5449ede06"
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/s9-people-gate.json",
+    "sha256": "c4a333e4c41791cf707cb49cf30c428d26982972d3ac720f3fa42de24687c00f"
+  },
+  {
+    "path": "packs/union-1861/source/import/import-drafts.mjs",
+    "sha256": "fc4836c4ba5760abcd66f3c331cd96bfe5bf0adaef836a77b07953cf96aa1d2a"
+  },
+  {
+    "path": "packs/union-1861/source/import/import-people-oob.mjs",
+    "sha256": "4d831bac57d886075d4bdead052c896a76095f9513bf5cd1953ee9e776ab8b40"
+  },
+  {
+    "path": "packs/union-1861/source/import/places.mjs",
+    "sha256": "1f4ac3f4939b2236433984bea2bc36aa6047e3ca90e62a31f916370538ded7ba"
+  },
+  {
+    "path": "packs/union-1861/source/import/registry.mjs",
+    "sha256": "0822e8b1ed5ed9e77f65bfcc40be7a232212bbe3a928629189e95dabe9d27223"
+  },
+  {
+    "path": "packs/union-1861/source/import/vocab.mjs",
+    "sha256": "5dc72f53ab27604225b0fadf0acd44e9e664701f036778135381bec505075e02"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/control.csv",
+    "sha256": "f2b45598b35a2047b4f23cd5d5a874ec8a44b12892f194ecf08834bed484d4e1"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/declared_governments.csv",
+    "sha256": "d80e321989ae6ef8e2daec6e595c61eadcd3b5b5d9b52a016383e26d905a3734"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/force_blocks.csv",
+    "sha256": "dcb15b589e8eeef6a827c23dd7b764afe4d802dc08b32b8c40529b584059c1df"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/governments.csv",
+    "sha256": "4affa4cd894b5a3cfc3edc9783e53714ce5f295b3e33783fe40b084aabdf495e"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/holders.csv",
+    "sha256": "b0a12b266223eef8e1d26af9f77e1ebd6e75786d7e42cd40a76576d1444c4bca"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/loyalty.csv",
+    "sha256": "67f0b034b32e832b9c26719fc72e7f075bc224d6926797346a4958b776b9a44c"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/obstructions.csv",
+    "sha256": "13dda28df9127daf53ecb2ef751006d85be1d9ad2eee34a6b9dc064443ccd8ea"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/posts.csv",
+    "sha256": "0248ce7cb212777335fc18588056eba3263d62d11ef4a6c7076653e3ddd9f2d8"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/scenario.json",
+    "sha256": "978e08f81c1e28f34ac1beab2d0f76d6bdddd2c8bdc56cc9d9ae53df40be1879"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/standing_orders.csv",
+    "sha256": "1063fe70ac447b436fcd83e625f49a1564fbd6e087f89ca4a6a3ab4a69a069f7"
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/temporary_posts.csv",
+    "sha256": "2100a9a401af4e21ea584356dd75d16de60b0fedff8e326acaaaa8ad070f3634"
+  },
+  {
+    "path": "packs/union-1861/source/world/census.csv",
+    "sha256": "b7396af608d21a3fc384da80408a584faea1137dc6db01e43e8e628ed5bcd5cf"
+  },
+  {
+    "path": "packs/union-1861/source/world/departments.csv",
+    "sha256": "8647370157244340a552c84bcc950a3dfaf23d2c64b1283c924ba31b6557b21d"
+  },
+  {
+    "path": "packs/union-1861/source/world/depots.csv",
+    "sha256": "0ba1846320f7c138e42f04ca5c8b32852eae8623cad5bd0d629ce1592b436170"
+  },
+  {
+    "path": "packs/union-1861/source/world/edges.csv",
+    "sha256": "03a60cdc6da6770e13d095df6f7f03403a8198d3d0f97188d0a322b2d33fbe28"
+  },
+  {
+    "path": "packs/union-1861/source/world/installations.csv",
+    "sha256": "609a29b736e56249df6b528c7d2512ceb5d029b177fbad0c6a296d5db93c4f7b"
+  },
+  {
+    "path": "packs/union-1861/source/world/people.csv",
+    "sha256": "4da4dfd7205797ba00de5107cee6fc4c081d37c364c8703ae1e11d8c85fe2931"
+  },
+  {
+    "path": "packs/union-1861/source/world/rail_lines.csv",
+    "sha256": "70c3119450e804b2cc25c649a50b11877e142bca3005a31e2493e8152b06f60f"
+  },
+  {
+    "path": "packs/union-1861/source/world/regions.csv",
+    "sha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8"
+  },
+  {
+    "path": "packs/union-1861/strings/en.json",
+    "sha256": "42d77412774c6d9ffe577a72b552fa405de52e9f168c86933492fe762a885eff"
+  },
+  {
+    "path": "packs/union-1861/test/butler-appointment.test.ts",
+    "sha256": "39fda1454452f9bcef0e610a9f1298bfd4c82395e940e41122473445f66b6793"
+  },
+  {
+    "path": "packs/union-1861/test/calls-1861.test.ts",
+    "sha256": "6a32d76f28d2b91d58b8db1576a1d0c655dfe0ff511e151842f9705dc12fd02f"
+  },
+  {
+    "path": "packs/union-1861/test/capital-move.test.ts",
+    "sha256": "dea344c5589c3c0b97a31c91abd83353b3fe521c4f9748ddf0bdea6100b1307d"
+  },
+  {
+    "path": "packs/union-1861/test/charleston-strengths.test.ts",
+    "sha256": "5408c7d3c2350d453f033a831fe997ce79960c1cd35ad13e6c2214575f289a3c"
+  },
+  {
+    "path": "packs/union-1861/test/cost-only.test.ts",
+    "sha256": "d25da21f8558137e7186c87da926d1269cfafebd6a89c82dec8a181ed4956873"
+  },
+  {
+    "path": "packs/union-1861/test/dated-appointments.test.ts",
+    "sha256": "d0515c5ad88b1da3fe21cc694c5263acd4876769572d01434a4e08514fb65a9b"
+  },
+  {
+    "path": "packs/union-1861/test/desk-scheduled-calls.test.ts",
+    "sha256": "aa558d97823f3891094170e2adcce50e818b3fc2f42fb4777bb1ae1142813cb6"
+  },
+  {
+    "path": "packs/union-1861/test/gate-register.test.ts",
+    "sha256": "3345186c6ff7ed1b9322cd2eafbc6191ad3b503bc4728e992fe79ff0efdb29e9"
+  },
+  {
+    "path": "packs/union-1861/test/gated-blocs.test.ts",
+    "sha256": "476463bffe9dc3171de57374e385cd346834a1e26b8e534b250bfab6c87a0893"
+  },
+  {
+    "path": "packs/union-1861/test/gated-rows.test.ts",
+    "sha256": "3b8da27e3b88ee3519c1788a0f949f1f2401b0f3b704b78f4458ec8aee3c5b6e"
+  },
+  {
+    "path": "packs/union-1861/test/livermore.test.ts",
+    "sha256": "ae92d65d88610ee6a597fe9fe48d4f748343d9868073072e669a83a463c71fff"
+  },
+  {
+    "path": "packs/union-1861/test/livermore/README.md",
+    "sha256": "fb5b94840ecc76606b43db28392b4b6bdb7918b49615e2710fd349dc4f98691c"
+  },
+  {
+    "path": "packs/union-1861/test/livermore/livermore-1900.csv",
+    "sha256": "348467f0e1b07d1ca3da25afe7c96429dfa21199b41ca5a19d1ef433b78bf12e"
+  },
+  {
+    "path": "packs/union-1861/test/nation-calls.test.ts",
+    "sha256": "79cfe1aa14ad9a16b4542bb673289014a88e505b7eb44953c832551ff9b6cb92"
+  },
+  {
+    "path": "packs/union-1861/test/national-enlistment.test.ts",
+    "sha256": "15421353852998eb4cb9c165c182d02da9e0b5200c3b5ca681129d68ba8665b6"
+  },
+  {
+    "path": "packs/union-1861/test/northern-concentration.test.ts",
+    "sha256": "a24f059549a3bbc46700821377c32526e46c0e602e8561a4246df393a8cdb0c2"
+  },
+  {
+    "path": "packs/union-1861/test/opening-cause.test.ts",
+    "sha256": "1530cc1a4d6da4775c25adf6bbcbb1ff0bec484fefc01509e6c9fc084e7731d3"
+  },
+  {
+    "path": "packs/union-1861/test/passage.test.ts",
+    "sha256": "ea8a997be70a588f4b9cd1393e438763da2547d328d81fbe458e10a9adacd5d8"
+  },
+  {
+    "path": "packs/union-1861/test/r47-authoring.test.ts",
+    "sha256": "aa8281a108a6bde442fe5dc1ad46b6b151777f350dc4335ce739d4d16d4ef434"
+  },
+  {
+    "path": "packs/union-1861/test/r69-wheeling.test.ts",
+    "sha256": "b43cda82b033a4b0c297abd1295b2d3b19c24aef1701f04b484937711ec353db"
+  },
+  {
+    "path": "packs/union-1861/test/r94-missouri.test.ts",
+    "sha256": "29c736ad2fb69a034632916fa5a00c299591464eacaf1cd49b5985b4f857f325"
+  },
+  {
+    "path": "packs/union-1861/test/received-papers.test.ts",
+    "sha256": "feb38e6a87399457593ac45e09a339bacbbfbd415e6d627d680b5730ef3a07ff"
+  },
+  {
+    "path": "packs/union-1861/test/record-terms.test.ts",
+    "sha256": "61c721d93749ef1a04b10d0346a131c055eb065851315db4a6dc5331a44c0f1d"
+  },
+  {
+    "path": "packs/union-1861/test/resignation.test.ts",
+    "sha256": "4a7ba53ceb4e2a147af913671ce870e738f1856af9f12d1c88605605e2da3b34"
+  },
+  {
+    "path": "packs/union-1861/test/resource-apply.test.ts",
+    "sha256": "817158dbc0edf120e42a5506aec04937bede4eba66060565036849e1519b4dc9"
+  },
+  {
+    "path": "packs/union-1861/test/s27-console-playtests.test.ts",
+    "sha256": "3484caa634bf32b0ab5fc34469dc2f014a3469d5b320a7f64e24a4b91be6b4c9"
+  },
+  {
+    "path": "packs/union-1861/test/s35-scoring.test.ts",
+    "sha256": "3f679f00860aed626d35745086ceda2589e8671a839d1cb63aedce4d96e17ca9"
+  },
+  {
+    "path": "packs/union-1861/test/s9-people-apply.test.ts",
+    "sha256": "caefafd926cc429f31996f8a32ed114a1f1c9a317063d6f6e4f11be1d7424881"
+  },
+  {
+    "path": "packs/union-1861/test/state-forces.test.ts",
+    "sha256": "f60b61dd8b544666a80bcde2a2fe0064f0bfe3720c3bccbb93e8b70dd100c623"
+  },
+  {
+    "path": "packs/union-1861/test/world-v2.test.ts",
+    "sha256": "4d1f198ec3bcf8e6787d0c3e730937407d4f6bc453793c52ad2fc983bd74ad71"
+  }
+]
