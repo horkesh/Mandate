@@ -1,0 +1,741 @@
+{
+  "sprint": "S55",
+  "base": "7fbd1082c061094fa0fca7fd0e2f68f2b083b994",
+  "sources": [
+    {
+      "label": "OR I-III",
+      "title": "Official Records, series I, volume III (1881)",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\S55\\scans\\warofrebellion03secrrich.pdf",
+      "bytes": 90648614,
+      "sha256": "c817fe6eabd4d462f25127ca84fe550476b0534711f56eb066acec7066d3b312",
+      "scan_url": "https://archive.org/download/warofrebellion03secrrich/warofrebellion03secrrich.pdf",
+      "archive_url": "https://archive.org/details/warofrebellion03secrrich",
+      "copied_from": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion03secrrich\\warofrebellion03secrrich.pdf",
+      "pages": [
+        {
+          "printed": 57,
+          "pdf": 79,
+          "extract": "readings\\3-p57.txt",
+          "sha256": "cad1d1a70d5eb05a905d01d762c3fd692a58d75ebc355db8b2f3c91377fcaef5",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 60,
+          "pdf": 82,
+          "extract": "readings\\3-p60.txt",
+          "sha256": "7732906549882d738ecf87c1f4ce0b91a2038e1a0f46cd92806f0de56d29e8b0",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 62,
+          "pdf": 84,
+          "extract": "readings\\3-p62.txt",
+          "sha256": "0e489feae5050cc535e61d5547764c7c06d4e4e471d7e74266f269a0f079a9f9",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 65,
+          "pdf": 87,
+          "extract": "readings\\3-p65.txt",
+          "sha256": "eb3be6d6bbcae24c4143f3dcf7fe449850c05701c864d2fc01b0a44847c775b1",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 69,
+          "pdf": 91,
+          "extract": "readings\\3-p69.txt",
+          "sha256": "333ea090089fe26cbb9cc0082b923f8d9e6ff0c8fd598d58c802bb7e43e59bf5",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 86,
+          "pdf": 108,
+          "extract": "readings\\3-p86.txt",
+          "sha256": "45cad3a0e4fc176a74d9bc49f8bc8ba16632551f344530bda291602f9f3a72a4",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 100,
+          "pdf": 122,
+          "extract": "readings\\3-p100.txt",
+          "sha256": "4b690d2a2d0e99b4bddeffd1dcf8e94012b0b466ef1e0a376c0450c8be3bc666",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 101,
+          "pdf": 123,
+          "extract": "readings\\3-p101.txt",
+          "sha256": "3c01c5189e8eb5f7a10ec4b0b4e1e0da05ac86e139ea68210d7c69806d80c031",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 104,
+          "pdf": 126,
+          "extract": "readings\\3-p104.txt",
+          "sha256": "c5ab777ca7b4f9208e8af2e3b48b3979fa4c17dc7dc56545c0bc8a414dcc0edc",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 105,
+          "pdf": 127,
+          "extract": "readings\\3-p105.txt",
+          "sha256": "6b8c1125f8f602015ae1686c14ca643fe83e084d252bdc88070da1cdd15c8cc5",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 106,
+          "pdf": 128,
+          "extract": "readings\\3-p106.txt",
+          "sha256": "8daa64ca442fe3663bc9a9c61af1c21e860ad1822bb0e42e46f560229e338707",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 123,
+          "pdf": 145,
+          "extract": "readings\\3-p123.txt",
+          "sha256": "6c2d662aa404d64e61b9a2006efebd9e2a1ad215eac1f58a891b55959cabfacc",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 124,
+          "pdf": 146,
+          "extract": "readings\\3-p124.txt",
+          "sha256": "5ab16de689ede3896018f67667c741e9c30272c7063dc69fffd63ddbf303f27a",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 127,
+          "pdf": 149,
+          "extract": "readings\\3-p127.txt",
+          "sha256": "d0840a7a758c8e4f13e3edfb7fad41436e2780e3e4335e815bf65eccea34233f",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        }
+      ]
+    },
+    {
+      "label": "OR I-V",
+      "title": "Official Records, series I, volume V (1881)",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\S55\\scans\\warofrebellion05unit.pdf",
+      "bytes": 119747989,
+      "sha256": "c36ab1965afbb04c30a5dc7e9f3bff7bd39e9e17a5df3c4c9334f9275309c0e1",
+      "scan_url": "https://archive.org/download/warofrebellion05unit/warofrebellion05unit.pdf",
+      "archive_url": "https://archive.org/details/warofrebellion05unit",
+      "copied_from": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion05unit\\warofrebellion05unit.pdf",
+      "pages": [
+        {
+          "printed": 289,
+          "pdf": 299,
+          "extract": "readings\\5-p289.txt",
+          "sha256": "9e1c134464669d7d64798c74c1fd61175f6a6965dd201e4e23c0f59d0ce92a42",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 293,
+          "pdf": 303,
+          "extract": "readings\\5-p293.txt",
+          "sha256": "f54e28946ecbbc286a425e7f635c782fd163514506f3da812b33e60bdd298603",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 294,
+          "pdf": 304,
+          "extract": "readings\\5-p294.txt",
+          "sha256": "8e4bc84949e7989ac247ade62f11b56d77b02a1205eb33e65a5e5921d7d56e3b",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 295,
+          "pdf": 305,
+          "extract": "readings\\5-p295.txt",
+          "sha256": "866ca625f2d21489138e59ab3892d6cffacdffaed5a2c2ad1faf4d291131488d",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 296,
+          "pdf": 306,
+          "extract": "readings\\5-p296.txt",
+          "sha256": "e888cbca13aa9a19c294ff43e7a6c5e0eec0cf8ae1aa2386aee44632d112c11b",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 347,
+          "pdf": 357,
+          "extract": "readings\\5-p347.txt",
+          "sha256": "ce06eb97fba5239604a3dc5577bfed9625ba3912a90360654cf47bba796f3714",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 348,
+          "pdf": 358,
+          "extract": "readings\\5-p348.txt",
+          "sha256": "342614a199e75734bd1fb357a290e359e433d5987b3addd5d3709524d53e4235",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 349,
+          "pdf": 359,
+          "extract": "readings\\5-p349.txt",
+          "sha256": "1868abaf89a352d819c01adc326cbfeabe76660c7142d92df0524b407ad673ac",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 350,
+          "pdf": 360,
+          "extract": "readings\\5-p350.txt",
+          "sha256": "41179a8b441074634854ae61bc0c4f0c2e64f5cac1a0092cb10199e01b1baa22",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        }
+      ]
+    },
+    {
+      "label": "OR I-VII",
+      "title": "Official Records, series I, volume VII (1882)",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\S55\\scans\\warofrebellion07unit.pdf",
+      "bytes": 102409570,
+      "sha256": "4e430999ad6aa131916f94b32cb09b15e2c040abb2445c9ebb4642244702e089",
+      "scan_url": "https://archive.org/download/warofrebellion07unit/warofrebellion07unit.pdf",
+      "archive_url": "https://archive.org/details/warofrebellion07unit",
+      "copied_from": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion07unit\\warofrebellion07unit.pdf",
+      "pages": [
+        {
+          "printed": 121,
+          "pdf": 133,
+          "extract": "readings\\7-p121.txt",
+          "sha256": "53c4ecffae4007a03284e8393451898d6ac8f0f04ed5c7c6707d1a65ce39e618",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 125,
+          "pdf": 137,
+          "extract": "readings\\7-p125.txt",
+          "sha256": "f6ae74fa35e4c5c160f8c9a75f3deae723d2763ffe19e64f144ea3c74bbf8b63",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 126,
+          "pdf": 138,
+          "extract": "readings\\7-p126.txt",
+          "sha256": "cfc29b6ce5bdb206dffaca8ccdc355eebe3986526758d0a420e1e846bb9c33ae",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 128,
+          "pdf": 140,
+          "extract": "readings\\7-p128.txt",
+          "sha256": "0fe014d0f2a0b07d190e121768ed6068c95c69d5ef10578eaa6da6f44d10816b",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 129,
+          "pdf": 141,
+          "extract": "readings\\7-p129.txt",
+          "sha256": "c0bcaa39d25f3579623dfcc9ac49ebfa21585e0a1fe87b82f2dff1dc558c2d4d",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 135,
+          "pdf": 147,
+          "extract": "readings\\7-p135.txt",
+          "sha256": "d2c2e1a610a5c518cc56e9b6c1b5222e43a7f446b0ba6cee4e4b7fbc56ce278c",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 137,
+          "pdf": 149,
+          "extract": "readings\\7-p137.txt",
+          "sha256": "36519e7482f2d0089f75f3881010746326bae9ca9373f4fbeb51eb6e23bf26d0",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 140,
+          "pdf": 152,
+          "extract": "readings\\7-p140.txt",
+          "sha256": "ff354202a67e857d90ebe7df91babe56d45ae86838639991a3e17878d3f796be",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 159,
+          "pdf": 171,
+          "extract": "readings\\7-p159.txt",
+          "sha256": "46d4f1935a4334807511c74fd1ddbcc70567f4d67d968a379733526dccd9299b",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 160,
+          "pdf": 172,
+          "extract": "readings\\7-p160.txt",
+          "sha256": "72e2032024d24f7b9172a12ca91af441d706a159ef4cb74e9062094dd7267bd9",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 168,
+          "pdf": 180,
+          "extract": "readings\\7-p168.txt",
+          "sha256": "f8f13ada369466b049d81dce5b66f5770d53ec9f64143e7071e1b5c893e9c40b",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 170,
+          "pdf": 182,
+          "extract": "readings\\7-p170.txt",
+          "sha256": "072af23ffd37b30a50364c7d25a9f845af1ee42e99ee30af7ee2c98ab3c276aa",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 171,
+          "pdf": 183,
+          "extract": "readings\\7-p171.txt",
+          "sha256": "0ad6f83a1503f3124f9956fcb43294c1401ad6bdba4daee3feb4cf422bbdc429",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 192,
+          "pdf": 204,
+          "extract": "readings\\7-p192.txt",
+          "sha256": "a85a0590f7a527aed29c02b211c88791b404da6ed437310f7174a210e8b96d79",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 219,
+          "pdf": 231,
+          "extract": "readings\\7-p219.txt",
+          "sha256": "0eb29b23163b0eb8a116351efef337949e5d2df9e7a88d30a885e848c313c4ed",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 236,
+          "pdf": 248,
+          "extract": "readings\\7-p236.txt",
+          "sha256": "6e95fddbe1bc831a4f60d1ea5199253a279e7e9da84b451af9a6f43615832058",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 256,
+          "pdf": 268,
+          "extract": "readings\\7-p256.txt",
+          "sha256": "147d08930e3549b28be2301e69012823786f0a1ee798b9f054fa2ea7b08e4026",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 270,
+          "pdf": 282,
+          "extract": "readings\\7-p270.txt",
+          "sha256": "d58c2281ab4e064f05be5b1db9ee8494a70c99b87c6f0f84a45c91cb919ae1bb",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 275,
+          "pdf": 287,
+          "extract": "readings\\7-p275.txt",
+          "sha256": "610c095cdffe6bb81cfda958b0e21309ed6cab038b536538202f2371eac4dd5b",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 276,
+          "pdf": 288,
+          "extract": "readings\\7-p276.txt",
+          "sha256": "7647e7f866ba5a0c7c635c827e132bec45cf00782a6df7cacb13533a12da47be",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 277,
+          "pdf": 289,
+          "extract": "readings\\7-p277.txt",
+          "sha256": "ca4dbe71c52b4451306847d3e05999cd9e477e72b966319530f825c084c83cfc",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 278,
+          "pdf": 290,
+          "extract": "readings\\7-p278.txt",
+          "sha256": "8030bf2fc44dad7041b5a683385825c4d3a8b78e42f3e0e19cec84956afd58c8",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 284,
+          "pdf": 296,
+          "extract": "readings\\7-p284.txt",
+          "sha256": "2f85034da4702766d86523bf99ddf4b8965b2e69b5241b8c6b3c50985b2eab88",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 328,
+          "pdf": 340,
+          "extract": "readings\\7-p328.txt",
+          "sha256": "bf38e9c2a984b407e763cc4f44393682ef0ed553b585fe61d580191da8417f4e",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 329,
+          "pdf": 341,
+          "extract": "readings\\7-p329.txt",
+          "sha256": "233c8b6b9ffdcd44ca5c81196c52a77738656d4e6005770dc81f3d29cd91eaa0",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 335,
+          "pdf": 347,
+          "extract": "readings\\7-p335.txt",
+          "sha256": "8f2a17e7b4732893442eadb60deba787cb7e6ae9fe6c2c39729f6fc56e7aa5f3",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 336,
+          "pdf": 348,
+          "extract": "readings\\7-p336.txt",
+          "sha256": "6c0faad125e398e778f948d48e0ba887bdef590a02fa1bd794d06e63b25e9e57",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 338,
+          "pdf": 350,
+          "extract": "readings\\7-p338.txt",
+          "sha256": "98fbdb686d3567d418fb950ec026b656eb2561b03c8f093ecc5eeea34b31011e",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 339,
+          "pdf": 351,
+          "extract": "readings\\7-p339.txt",
+          "sha256": "8db3e8e6ca5d8a6e6b5b9b66c1f62dbb3c2922ed9627610a81c9a4e9c62bb82e",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 342,
+          "pdf": 354,
+          "extract": "readings\\7-p342.txt",
+          "sha256": "8240ff5375cde641bd87d2958e9c2730697ece70c6e426b6dceb30a24394c257",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 364,
+          "pdf": 376,
+          "extract": "readings\\7-p364.txt",
+          "sha256": "9a05be960ec427c38dc5333bcfab64d8bad4f54f6c1aff0da6d9ba26e75f9353",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 366,
+          "pdf": 378,
+          "extract": "readings\\7-p366.txt",
+          "sha256": "0c01152e45cef709b4f47a582635dbe6e560046a79490d58ce5c99106b5df484",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 372,
+          "pdf": 384,
+          "extract": "readings\\7-p372.txt",
+          "sha256": "3782ceaf5883875512a3e6787eec5efd43c05c607434f1afc46dd47c9befb547",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 374,
+          "pdf": 386,
+          "extract": "readings\\7-p374.txt",
+          "sha256": "d8c2470c12d38fa319650c65cd872dc49daaffd4d5b1ba83225cee90413d9275",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        }
+      ]
+    },
+    {
+      "label": "OR I-VIII",
+      "title": "Official Records, series I, volume VIII (1883)",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\S55\\scans\\warofrebellion08unit.pdf",
+      "bytes": 88512743,
+      "sha256": "0cadfc289bcadfc22272dbe917f591d7d993616e463c83cf7257c8c21f501d33",
+      "scan_url": "https://archive.org/download/warofrebellion08unit/warofrebellion08unit.pdf",
+      "archive_url": "https://archive.org/details/warofrebellion08unit",
+      "copied_from": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion08unit\\warofrebellion08unit.pdf",
+      "pages": [
+        {
+          "printed": 195,
+          "pdf": 207,
+          "extract": "readings\\8-p195.txt",
+          "sha256": "7a3891449d79625348c287c7cb75e5a73bd140220815ea36612e8f75495247c9",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 208,
+          "pdf": 220,
+          "extract": "readings\\8-p208.txt",
+          "sha256": "227853ea09ed1e03257993b4811c77a6b143bbf911a3f8eea31fb83d127efbc0",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 209,
+          "pdf": 221,
+          "extract": "readings\\8-p209.txt",
+          "sha256": "2507836feeb588a97218da6145bb56acc94939258c7e06538e583fb7e35bf01d",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 221,
+          "pdf": 233,
+          "extract": "readings\\8-p221.txt",
+          "sha256": "16d8f4c8d6d444f2b4ebe078c9f412de7c50f0ed06bb42914e8a35f66afc6f25",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 226,
+          "pdf": 238,
+          "extract": "readings\\8-p226.txt",
+          "sha256": "192c21cf3870563b9de5d5f9a4c8b4538d9cc37cf86e718cc75820fed95a1dcd",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 240,
+          "pdf": 252,
+          "extract": "readings\\8-p240.txt",
+          "sha256": "bc52ba7e140c614c64ce6b980359f18dff185c32e4498cbe21d17c10d11eb86e",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 245,
+          "pdf": 257,
+          "extract": "readings\\8-p245.txt",
+          "sha256": "eaec4076dc50666ae107f161b1af886f1e7a290e89e02d54bd12e20ad123b520",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 246,
+          "pdf": 258,
+          "extract": "readings\\8-p246.txt",
+          "sha256": "5a3350900617322e1bdd41af43231cc44ce7fa91afabafc51e7cefe3eec764b8",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 252,
+          "pdf": 264,
+          "extract": "readings\\8-p252.txt",
+          "sha256": "792b5aad421883775acac1a8ac58783e48f39b0e6a79d395537ee2115694bb1b",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 253,
+          "pdf": 265,
+          "extract": "readings\\8-p253.txt",
+          "sha256": "4a8eb195b5027f24956189865df0c1609898e0b2b634eeecd1fec1a0adbb6fad",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 256,
+          "pdf": 268,
+          "extract": "readings\\8-p256.txt",
+          "sha256": "b11abbb3c771232efa132ec3e11a9681bbabf9f5e7fb47bf276e66e860e24a51",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 261,
+          "pdf": 273,
+          "extract": "readings\\8-p261.txt",
+          "sha256": "ecf8cdf214eba9ee7b86b442171ead9933f979e15bc28fd6acf560c70acd3f0c",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 263,
+          "pdf": 275,
+          "extract": "readings\\8-p263.txt",
+          "sha256": "8c36793e18be7daedc0088c6e7ccc8fe6d2377d991c81af408a9ce0ad5a0b32c",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 266,
+          "pdf": 278,
+          "extract": "readings\\8-p266.txt",
+          "sha256": "8422eb1c9c80f4377a21603233692a42543974e7ea7192afbacc317106b779fc",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 283,
+          "pdf": 295,
+          "extract": "readings\\8-p283.txt",
+          "sha256": "758616455aab09421c3739b0267a44ab9ac602c2d7ef3ac3c2f84a2011081455",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 284,
+          "pdf": 296,
+          "extract": "readings\\8-p284.txt",
+          "sha256": "fc3ace77612f717e9b3dcfdde8bb8d1707edeea1e7c6a6ce2b6180f3d0356580",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 285,
+          "pdf": 297,
+          "extract": "readings\\8-p285.txt",
+          "sha256": "92ba1d8b868d2bbd1bfc5e91069504198f0b8ae4cc4f55d560e4362340e58776",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 294,
+          "pdf": 306,
+          "extract": "readings\\8-p294.txt",
+          "sha256": "279f756b13d6d83e628ece35a15cc0cafb2a93a5065b5e61f737b9427077c671",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 297,
+          "pdf": 309,
+          "extract": "readings\\8-p297.txt",
+          "sha256": "81dc05aaf5d60836121557b8aed077baa27002ff344912c4a8c71b7fe11346a1",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 305,
+          "pdf": 317,
+          "extract": "readings\\8-p305.txt",
+          "sha256": "4bc385b07b2a34af94993c466c8a7eb5ba48177ad05e19d18ace789ddc6e5f9e",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 306,
+          "pdf": 318,
+          "extract": "readings\\8-p306.txt",
+          "sha256": "5fdb85a8099c0a011d027e583c8c61f8cb9dcfa7f9fa6a3fe0204dee0497fdef",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 312,
+          "pdf": 324,
+          "extract": "readings\\8-p312.txt",
+          "sha256": "e728113b54fde3b2a70b7274bf933109cc66cc86abb1c945d7b96784ad29ed4f",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 313,
+          "pdf": 325,
+          "extract": "readings\\8-p313.txt",
+          "sha256": "7476ddd97f335f6da973c0150a3794ce89e845563d8623573f8aec9860ca80db",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 314,
+          "pdf": 326,
+          "extract": "readings\\8-p314.txt",
+          "sha256": "e9d59ca0271955c172d038e1ea0234731f8c0ae5d08a124bc013da901ad17ce4",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 325,
+          "pdf": 337,
+          "extract": "readings\\8-p325.txt",
+          "sha256": "f1c007f0b522d3b8de4f9ab5747d24df4cdefdfe69c9cbf5ba1ffda8b8370adf",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        }
+      ]
+    },
+    {
+      "label": "OR I-X.1",
+      "title": "Official Records, series I, volume X, part I (1884)",
+      "scan_path": "C:\\Pyrrhic\\mandate-research-sources\\S4\\S55\\scans\\warofrebellion101unit.pdf",
+      "bytes": 116205347,
+      "sha256": "08aea2cabaface9893c5ae68928a1bdbcd4a10152f28db575970a48b46c1abfc",
+      "scan_url": "https://archive.org/download/warofrebellion101unit/warofrebellion101unit.pdf",
+      "archive_url": "https://archive.org/details/warofrebellion101unit",
+      "copied_from": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion101unit\\warofrebellion101unit.pdf",
+      "pages": [
+        {
+          "printed": 100,
+          "pdf": 114,
+          "extract": "readings\\10a-p100.txt",
+          "sha256": "ecc743d0fe2569501d8bf8164b4d4fa66a3b670c293e2f4f3dc029340d66f96b",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 101,
+          "pdf": 115,
+          "extract": "readings\\10a-p101.txt",
+          "sha256": "7818fa8ae6e148535e6f63282cb6d58a1211104d7140c61fcc3f4f5d311e21a7",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 102,
+          "pdf": 116,
+          "extract": "readings\\10a-p102.txt",
+          "sha256": "caffd3ce46265af0a12510929bc019f065f4c2c35e1c269536aea8c847c70ca9",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 103,
+          "pdf": 117,
+          "extract": "readings\\10a-p103.txt",
+          "sha256": "f20d0dc57adadf190872821a013fe15e546b349239446294e15b15066bae566a",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 104,
+          "pdf": 118,
+          "extract": "readings\\10a-p104.txt",
+          "sha256": "e085d6afdf66a691bfe259b93c14fc452b5b1b769e41cc3b816ab96555bde934",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 105,
+          "pdf": 119,
+          "extract": "readings\\10a-p105.txt",
+          "sha256": "1f6ac872a6a54397ba5d9e1c77997735a3f8afc404ab2a1c3969ca24be550d5f",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 106,
+          "pdf": 120,
+          "extract": "readings\\10a-p106.txt",
+          "sha256": "12614793d9d92f7ac03a249114876a18af38a5537179741bc70e7c91e19c52f6",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 107,
+          "pdf": 121,
+          "extract": "readings\\10a-p107.txt",
+          "sha256": "81561e3edb9c4733090252902b64bb4da0d287cbf25bd2058c3bef84e3e694ec",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 112,
+          "pdf": 126,
+          "extract": "readings\\10a-p112.txt",
+          "sha256": "8b54d4d9c6bf1cebd8fef6afb5ccd73ca663f906912e1c2ac1255c01c224091e",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 382,
+          "pdf": 396,
+          "extract": "readings\\10a-p382.txt",
+          "sha256": "ce8ef3268ebff50e7feb345fca81342f882b9f76e969a580dc06ace44e6e0852",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 383,
+          "pdf": 397,
+          "extract": "readings\\10a-p383.txt",
+          "sha256": "4bcbf10fccb328da4cb6349bd5e3988f4388c2c0cc840da25b38e22b09f3f15f",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 384,
+          "pdf": 398,
+          "extract": "readings\\10a-p384.txt",
+          "sha256": "d414562cab9da42ba6d68a1bf441605140186cb09564e163d883ab3808d0681d",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 396,
+          "pdf": 410,
+          "extract": "readings\\10a-p396.txt",
+          "sha256": "6f2eab6ce3453c45c9737e24189505b77c0e7512d97cb700707f50550de7d1a0",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        },
+        {
+          "printed": 398,
+          "pdf": 412,
+          "extract": "readings\\10a-p398.txt",
+          "sha256": "b641c86ce1b02fef0deb24b816dcfed0e363ebc5f7fb201c62ea40ffee9c2f75",
+          "read_scope": "Selected roster/return/report passages, not whole-page or whole-volume reading."
+        }
+      ]
+    }
+  ],
+  "exclusions": [
+    "10b requested pp.377-378 at obsolete offset12 reached pp.383-384; retained in excluded-offsets, no fact relies on them."
+  ]
+}
