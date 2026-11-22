@@ -36,6 +36,20 @@
   --t-xl:calc(clamp(27px,4vh,58px) * var(--chrome-scale));
 }
 
+/* Whole-pixel columns, gaps and margins give the map's canvas a whole-pixel
+   size, so a resize and a fresh load frame it identically, and art edges stay
+   sharp. Browsers without round() keep the unrounded values above. */
+@supports (width:round(1.5px,1px)){
+  .table-app{
+    --rail-l:round(clamp(148px,11.6vw,400px),1px);
+    --rail-r:round(clamp(158px,12.4vw,430px),1px);
+    --front:round(clamp(62px,9.4vh,136px),1px);
+    --gap:round(clamp(8px,calc(.6vw + .3vh),22px),1px);
+    --sheet:round(clamp(14px,1.9vh,30px),1px);
+    --strip:round(clamp(34px,4.1vh,54px),1px);
+  }
+}
+
 /* One focus ring for every surface: a dark inner ring reads on paper, a pale
    outer ring reads on wood and baize. */
 .table-app :is(button,select,input,textarea,[tabindex="0"]):focus-visible{
@@ -317,9 +331,14 @@
   top:58%;max-width:92%;padding:.25em .35em;background:none;border:0;box-shadow:none;font-size:calc(var(--t-xs) * .95);
 }
 .table-app .tool-orders .tool-label,.table-app .tool-help .tool-label{background:#f6eedbe6}
+.table-app .tool-orders .tool-label{left:44%;max-width:78%}
+.table-app .tool-orders>.tool-art:after{width:11%;right:-3%}
+/* A folder's label and its waiting count stand together inside the folder. */
+.table-app .table-books>:is(.tool-plans,.tool-progress){display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2em;padding:calc(var(--t-xs) * .9) .4em .3em}
+.table-app .table-books>:is(.tool-plans,.tool-progress)>.tool-label{position:relative;left:auto;top:auto;transform:none}
 .table-app .table-books .plan-pending-badge{
-  position:absolute;z-index:3;right:-4px;top:-4px;max-width:92%;padding:.15em .45em;
-  background:var(--stamp-ink);color:#fbefd5;font:var(--t-xs)/1.2 Standard,Georgia,serif;border-radius:2px;box-shadow:0 1px 3px #0009;
+  position:relative;z-index:3;max-width:96%;padding:.1em .5em;text-align:center;
+  background:var(--stamp-ink);color:#fbefd5;font:calc(var(--t-xs) * .92)/1.2 Standard,Georgia,serif;border-radius:2px;box-shadow:0 1px 2px #0008;
 }
 .table-app .table-books .plan-pending-badge:empty{display:none}
 .table-app .table-books>.tool-sound{
@@ -571,6 +590,21 @@
 .table-app dialog[data-kind] .paper-link:is([data-genre=strength-return],[data-genre=casualty-return],[data-genre=effective-strength]){background-color:var(--stock);background-image:url('/art/app/textures/paper-printed.png')}
 .table-app .paper-link:not(.read):after{content:"";position:absolute;right:0;top:0;width:1.2em;height:1.2em;background:linear-gradient(225deg,#3a2414 50%,#d9c9a3 50%);box-shadow:-1px 1px 2px #0005}
 .table-app .paper-link .eyebrow{font:italic .62em/1.3 Fell,Georgia,serif;color:var(--ink-3)}
+/* A filed paper carries the file's stamp, its word set in type. */
+.table-app .paper-link .filed-stamp{
+  position:absolute;right:1.6em;bottom:.8em;padding:.35em .9em;transform:rotate(-6deg);
+  color:var(--stamp-ink);font:.7em/1 Standard,Georgia,serif;letter-spacing:.08em;
+}
+.table-app .paper-link .filed-stamp:before{
+  content:"";position:absolute;inset:0;background:var(--stamp-ink);opacity:.9;
+  -webkit-mask:url('/art/app/chrome/stamp-filed.png') center/100% 100% no-repeat;mask:url('/art/app/chrome/stamp-filed.png') center/100% 100% no-repeat;
+}
+/* The open paper is held by a clip at its head. */
+.table-app .table-paper:before{
+  content:"";position:absolute;z-index:4;left:20px;top:2px;width:26px;height:52px;pointer-events:none;
+  background:url('/art/app/chrome/paper-clip.png') center/contain no-repeat;transform:rotate(-8deg);filter:drop-shadow(1px 2px 1px #0006);
+}
+.high-contrast.table-app .table-paper:before{display:none}
 .table-app .paper-link .route-line{color:var(--ink-3)}
 .table-app dialog[data-kind=outbox] .order-list li{padding:.8em 1em;margin:.6em 0;border:0;color:var(--ink);background:url('/art/app/textures/paper-letter-2.png') center/420px,var(--cream);background-blend-mode:soft-light,normal;box-shadow:1px 3px 4px #0007}
 /* The key card: a printed card with its keys set in small frames. */
@@ -600,6 +634,14 @@
 .high-contrast.table-app :is(.calendar-block,.tray-stack>span,.tool-label,.docket-card,.desk-front .first-morning-note,.map-key){background:#fff!important;color:#111!important;border-image:none;border:2px solid #111;filter:none;text-shadow:none}
 .high-contrast.table-app :is(.attention-desk,.map-tools,.map-header button,.table-run,.tool-sound){background:#111!important;color:#fff!important;border:2px solid #fff!important}
 .high-contrast.table-app .table-run{color:#fff!important}
+.high-contrast.table-app :is(.map-tools button,.map-tools select){color:#fff;background-color:#111}
+.high-contrast.table-app .attention-desk .attention-coins i{background-color:#fff!important;border:2px solid #fff;filter:none}
+.high-contrast.table-app .attention-desk .attention-coins i.proposed{background-color:#111!important}
+.high-contrast.table-app .table-docket>button{border:2px solid #fff;background-color:#111;width:auto;aspect-ratio:auto;padding:0 .4em}
+.high-contrast.table-app .table-docket>button:before{display:none}
+.high-contrast.table-app .table-docket>button>.docket-count{position:static;transform:none;background:#fff!important;color:#111;border:2px solid #111;box-shadow:none}
+.high-contrast.table-app .tray-stack:before,.high-contrast.table-app .tray-stack:after{background:#fff!important;border-color:#111}
+.high-contrast.table-app .table-paper,.high-contrast.table-app .table-stop{background:#fff!important;color:#111}
 .high-contrast.table-app .table-books>button>img,.high-contrast.table-app .tool-art{opacity:.35}
 .high-contrast.table-app .tray-stack>small,.high-contrast.table-app .table-docket>div>span{color:#fff;text-shadow:none}
 .high-contrast.table-app :is(button,select,input,textarea):focus-visible{outline:3px solid #fff!important;box-shadow:0 0 0 6px #111!important}

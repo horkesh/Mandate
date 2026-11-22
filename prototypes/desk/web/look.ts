@@ -9,8 +9,6 @@ export const LOOK = {
   showKey: 'Show the map key',
   hideKey: 'Hide the map key',
   filed: 'Filed',
-  unread: (n: number) => `${n} unread`,
-  noneWaiting: 'Empty',
 } as const;
 
 export type CalendarFace = { weekday: string; day: number; month: string; year: number };

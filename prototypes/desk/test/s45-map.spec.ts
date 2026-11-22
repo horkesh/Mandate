@@ -65,7 +65,10 @@ for(const size of sizes)test(`first morning and resize match Fit the map at ${si
   await capture(page,`fitted-${size.width}x${size.height}`);
   await page.getByRole('button',{name:'Pan east',exact:true}).click();await ready(page);
   await page.setViewportSize({width:size.width+120,height:size.height+80});await ready(page);
-  await expect.poll(async()=> (await diagnostics(page)).frame[2]).toBe(size.width+120);
+  // S60: the canvas is the map's sheet, not the whole window; its frame
+  // reaches the canvas's own right edge once the resize has been applied.
+  const canvasWidth=()=>page.getByTestId('map-canvas-host').evaluate(el=>el.getBoundingClientRect().width);
+  await expect.poll(async()=> Math.abs((await diagnostics(page)).frame[2]-await canvasWidth())<1.5).toBe(true);
   await page.setViewportSize(size);
   await expect.poll(async()=> (await diagnostics(page)).frame[2]).toBe(first.frame[2]);await ready(page);
   const resized=await diagnostics(page);

@@ -23,7 +23,7 @@ import type {Price} from './business.ts';
 import {commandPrice,outOfAttention,refusalText,slipText,subjectName,politicalPaperText} from './business.ts';
 import {deskDate} from './plan-business.ts';
 import type {Point} from './map/model.ts';
-import {calendarFace} from './look.ts';
+import {calendarFace,LOOK} from './look.ts';
 import './table.css';
 
 type Sheet = { panel: Panel; paper?: ReportView; person?: CommandablePost; post?:string; audience?:string; summary?:boolean; returnSource?:string };
@@ -223,6 +223,7 @@ export function App() {
   const count = (id: Panel) => id === 'inbox' ? reports.filter(r => !read.has(r.id)).length : id === 'outbox' ? data.queue.length : id === 'docket' ? active.length : null;
   const paperList = (items: readonly ReportView[]) => items.length ? <div className="paper-list">{[...items].reverse().map(r => <button data-testid="paper-link" data-genre={r.type} className={`paper-link ${read.has(r.id) ? 'read' : ''}`} key={r.id} onClick={() => paper(r)}>
     <span className="eyebrow">{S.genres[r.type] ?? r.type}<span>{S.day} {r.receivedDay}</span></span><strong>{t(r.author, 'person')}</strong><span>{t(r.subjectId, r.subjectKind)}</span><span className="route-line">{r.route}, {S.written} {r.day}{r.hour !== null ? `, ${r.hour}:00` : ''}</span>
+    {filed.has(r.id)&&<span className="filed-stamp">{LOOK.filed}</span>}
   </button>)}</div> : <p className="empty">{S.noPapers}</p>;
 
   function content(): ReactNode {

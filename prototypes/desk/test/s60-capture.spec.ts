@@ -41,10 +41,10 @@ const tools: { name: string; open: (page: Page) => Promise<void> }[] = [
   { name: 'org-board', open: async page => { await page.keyboard.press('b'); } },
   { name: 'ledger', open: async page => { await page.keyboard.press('l'); } },
   { name: 'file', open: async page => { await page.keyboard.press('g'); } },
-  { name: 'daybook', open: async page => { await page.getByRole('button', { name: 'Daybook' }).click(); } },
+  { name: 'daybook', open: async page => { await page.getByRole('navigation', { name: 'Desk objects' }).getByRole('button', { name: 'Daybook', exact: true }).click(); } },
   { name: 'key-card', open: async page => { await page.keyboard.press('?'); } },
-  { name: 'turn-sheet', open: async page => { await page.getByRole('button', { name: /Let the days run/ }).click(); } },
-  { name: 'order-sheet', open: async page => { await page.getByRole('button', { name: 'Write an order' }).click(); } },
+  { name: 'turn-sheet', open: async page => { await page.locator('.table-run').click(); } },
+  { name: 'order-sheet', open: async page => { await page.getByRole('navigation', { name: 'Desk objects' }).getByRole('button', { name: 'Write an order', exact: true }).click(); } },
   { name: 'docket', open: async page => { await page.keyboard.press('d'); } },
 ];
 
