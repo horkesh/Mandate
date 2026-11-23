@@ -145,7 +145,8 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   const routeTo = (post: string, urgent = false) => (urgent ? fastest : quickest)(menu.commandable.find((c) => c.post === post)?.routes ?? [])?.route ?? 'courier';
   for (const r of menu.reviews) {
     const around = withheld.has(r.post);
-    send({ cmd: 'review', to: r.post, action: 'approve', edit: null, route: routeTo(r.post, around), bypass: around });
+    send({ cmd: 'review', to: r.post, action: 'approve', edit: null, route: routeTo(r.post, around), bypass: around,
+      ...(r.authoredPaper === undefined ? {} : { paper: r.authoredPaper }) });
   }
   for (const post of menu.awaiting) {
     const around = withheld.has(post);
@@ -202,13 +203,15 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   // 2. Each offensive goal on its day: the doctrine's dated row, or the opening morning if its date has passed.
   for (const o of doctrine.offensives) {
     if (o.ready === undefined ? day !== Math.max(o.day, opening) : !o.ready || o.issued === true || day < Math.max(o.day, opening)) continue;
+    if (o.letter !== undefined && answered.has(o.post)) continue;
     const target = menu.commandable.find((c) => c.post === o.post);
     const route = target === undefined ? undefined : quickest(target.routes);
     if (target === undefined || route === undefined) continue;
     const primary = { ...takeGoal(menu, o.objective), posture: o.posture ?? 'take' };
     const goal = o.discretion === undefined ? primary : withDiscretion(primary, o.discretion);
-    send({ cmd: 'order', to: target.post, goal, route: route.route, bypass: false, ...(o.id === undefined ? {} : { doctrine: o.id }) });
-    answered.add(target.post);
+    const sent = send({ cmd: 'order', to: target.post, goal, route: route.route, bypass: false,
+      ...(o.id === undefined ? {} : { doctrine: o.id }), ...(o.letter === undefined ? {} : { letter: o.letter }) });
+    if (sent || o.letter === undefined) answered.add(target.post);
   }
   // An order an office withheld is sent again around it, to the objective it named (a fresh goal is never invented).
   if (policy.goAroundObjections) {
@@ -220,7 +223,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
       const copy = menu.sentGoals?.find(s => s.post === target.post && s.message === memo.answers);
       // A late objection to a superseded letter cannot replace the newer goal.
       // Older menus lacked sender copies; keep their legacy objective-only fallback.
-      if ((menu.sentGoals !== undefined && copy === undefined) || copy?.proposalReply === true) continue;
+      if ((menu.sentGoals !== undefined && copy === undefined) || copy?.proposalReply === true || copy?.letter !== undefined) continue;
       send({ cmd: 'order', to: target.post, goal: copy?.goal ?? takeGoal(menu, region), route: routeTo(target.post, true), bypass: true,
         ...(copy?.doctrine === undefined ? {} : { doctrine: copy.doctrine }) });
     }

@@ -19,6 +19,7 @@ import { templateKey, type ReportBody, type ReportClaim } from './report.ts';
 import { templateFor, type ReportTemplate } from './templates.ts';
 import type { ReportTruth } from './truth.ts';
 import { sameGoal } from '../plans/goal.ts';
+import { letterKey, type LetterIdentity } from '../world/letters.ts';
 
 export type { KnownReport } from './records.ts';
 
@@ -34,6 +35,10 @@ export interface SeatKnowledge {
   readonly knownSentAppointments?: readonly KnownSentAppointment[];
   /** At most the last independent goal, goal-proposal answer and plan-review reply per post. */
   readonly knownSentOrders?: readonly KnownSentOrder[];
+  /** One entry per declared authored letter, with its first and latest dispatch. */
+  readonly knownDoctrineDispatches?: readonly KnownDoctrineDispatch[];
+  /** Received authored letters, durable independently of ordinary reports. */
+  readonly knownPaperReceipts?: readonly KnownPaperReceipt[];
   /** In (received day, id) order. */
   readonly knownReports: readonly KnownReport[];
   /** Control excerpts of expired reports still supporting the map, in the same order. */
@@ -42,11 +47,42 @@ export interface SeatKnowledge {
   readonly knownOpeningControl?: MessageId;
 }
 
+export interface KnownDoctrineDispatch {
+  readonly dispatchLetter: LetterIdentity;
+  readonly dispatchOrigin: MessageId;
+  readonly dispatchDay: number;
+  readonly dispatchLatest?: MessageId;
+}
+
+export interface KnownPaperReceipt {
+  readonly receiptOrigin: MessageId;
+  readonly receiptPerson: PersonId;
+  readonly receiptPost: PostId | null;
+  readonly receiptRole: 'relay' | 'addressee';
+  readonly receiptDay: number;
+  readonly receiptLetter: LetterIdentity;
+  readonly receiptIssuer: PersonId;
+}
+
+/** Record the first actual arrival for a named paper, person, post and role. */
+export function rememberLetterReceipt(state: State, message: TransitMessage, day: number): State {
+  const letter = message.msgOrder?.orderLetter;
+  if (letter === undefined || message.msgRole === 'filter') return state;
+  const seat = seatIdFor(message.msgTo);
+  const held = storedKnowledgeOf(state, seat);
+  const receipts = held.knownPaperReceipts ?? [];
+  if (receipts.some(r => r.receiptRole === message.msgRole && r.receiptPost === message.msgToPost && letterKey(r.receiptLetter) === letterKey(letter))) return state;
+  const receipt: KnownPaperReceipt = { receiptOrigin: message.msgOrigin, receiptPerson: message.msgTo, receiptPost: message.msgToPost,
+    receiptRole: message.msgRole, receiptDay: day, receiptLetter: letter, receiptIssuer: message.msgOrder!.orderIssuer };
+  return { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownPaperReceipts: [...receipts, receipt] } } };
+}
+
 export interface KnownSentOrder {
   readonly sentPost: PostId;
   readonly sentMessage: MessageId;
   readonly sentKind: 'goal' | 'approve' | 'send_back' | 'edit' | 'decline_proposal' | 'go';
   readonly sentDoctrine?: string;
+  readonly sentLetter?: LetterIdentity;
   readonly sentProposal?: NonNullable<TransitMessage['msgOrder']>['orderProposal'];
   readonly sentPlan?: MessageId;
   readonly sentReaffirms?: MessageId;
@@ -82,13 +118,16 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
     if (old.some(o => o.sentMessage === message.msgOrigin)) continue;
     const paper = [...held.knownReports].filter(r => r.knownBody.reportPlan?.paperPost === order.orderTarget).sort((a,b) => b.knownBody.reportDay - a.knownBody.reportDay || strictCompare(b.id,a.id))[0];
     const previous = old.filter(o => o.sentPost === order.orderTarget && o.sentKind === 'goal').at(-1);
-    const reaffirms = order.orderKind === 'goal' && order.orderProposal === undefined && order.orderGoal !== null &&
+    const sameInstruction = order.orderLetter === undefined ? previous?.sentLetter === undefined : previous?.sentLetter !== undefined &&
+      order.orderPriorDispatch === previous.sentMessage && letterKey(order.orderLetter) === letterKey(previous.sentLetter);
+    const reaffirms = sameInstruction && order.orderKind === 'goal' && order.orderProposal === undefined && order.orderGoal !== null &&
       previous?.sentGoal !== undefined && sameGoal(previous.sentGoal, order.orderGoal) ? previous.sentReaffirms ?? previous.sentMessage : undefined;
     const doctrine = order.orderDoctrine ?? (reaffirms === undefined ? undefined : previous?.sentDoctrine);
     const row: KnownSentOrder = { sentPost: order.orderTarget, sentMessage: message.msgOrigin, sentKind: order.orderKind as KnownSentOrder['sentKind'], sentDay: order.orderIssuedDay,
       sentPaper: order.orderProposal === undefined ? paper?.id ?? null : null,
       ...(order.orderGoal === null ? {} : { sentGoal: order.orderGoal }),
       ...(doctrine === undefined ? {} : { sentDoctrine: doctrine }),
+      ...(order.orderLetter === undefined ? {} : { sentLetter: order.orderLetter }),
       ...(order.orderProposal === undefined ? {} : { sentProposal: order.orderProposal }),
       ...(order.orderPlan === undefined ? {} : { sentPlan: order.orderPlan }),
       ...(reaffirms === undefined ? {} : { sentReaffirms: reaffirms }),
@@ -103,7 +142,18 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
       if (row.sentKind === 'decline_proposal' || row.sentKind === 'go') return o.sentKind !== row.sentKind;
       return o.sentKind === 'goal' || o.sentKind === 'decline_proposal' || o.sentKind === 'go';
     });
-    state = { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownSentOrders: [...kept,row].sort((a,b) => strictCompare(a.sentPost,b.sentPost) || strictCompare(a.sentKind,b.sentKind)) } } };
+    let dispatches = held.knownDoctrineDispatches;
+    if (order.orderLetter !== undefined && message.id === message.msgOrigin) {
+      const key = letterKey(order.orderLetter);
+      const previous = dispatches?.find(d => letterKey(d.dispatchLetter) === key);
+      if (previous === undefined || (order.orderPriorDispatch === (previous.dispatchLatest ?? previous.dispatchOrigin) && previous.dispatchOrigin !== message.msgOrigin)) {
+        const dispatch = previous === undefined ? { dispatchLetter: order.orderLetter, dispatchOrigin: message.msgOrigin, dispatchDay: order.orderIssuedDay }
+          : { ...previous, dispatchLatest: message.msgOrigin };
+        dispatches = [...(dispatches ?? []).filter(d => d !== previous), dispatch].sort((a, b) => strictCompare(letterKey(a.dispatchLetter), letterKey(b.dispatchLetter)));
+      }
+    }
+    state = { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownSentOrders: [...kept,row].sort((a,b) => strictCompare(a.sentPost,b.sentPost) || strictCompare(a.sentKind,b.sentKind)),
+      ...(dispatches === undefined ? {} : { knownDoctrineDispatches: dispatches }) } } };
   }
   return state;
 }

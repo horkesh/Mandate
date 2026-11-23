@@ -64,6 +64,8 @@ const citation = z.strictObject({
 const provenance = z.array(citation).min(1, 'at least one citation of a source in PROVENANCE.json (decisions 0031, 0033)');
 
 const doctrineGoal = z.strictObject({ objective: idOf('region').nullable(), posture: z.enum(['hold', 'relieve', 'take']) });
+const letterToken = z.string().max(ids.ID_MAX_LENGTH).regex(/^[a-z][a-z0-9_]*$/);
+const letterIdentity = z.strictObject({ namespace: letterToken, key: letterToken, revision: positive });
 const doctrineDiscretion = z.strictObject({ condition: z.enum(DISCRETION_CONDITIONS), fallback: doctrineGoal });
 const nestedDiscretion = doctrineDiscretion.extend({ fallback: doctrineGoal.extend({ discretion: doctrineDiscretion.optional() }) });
 const boundedDiscretion = doctrineDiscretion.extend({ fallback: doctrineGoal.extend({ discretion: nestedDiscretion.optional() }) });
@@ -300,6 +302,7 @@ export const RulesSchema = z.strictObject({
         .array(
           z.strictObject({
             faction: idOf('faction'),
+            letterNamespace: letterToken.optional(),
             crossNeutral: z.boolean().describe('Whether his goals may cross a neutral government’s open ground: a political act (lane 1.12).'),
             concentrateAt: idOf('post').nullable().describe('The post his raised regiments are transferred to; null leaves them with the governors.'),
             concentrateSource: z.string().min(1).nullable().describe('Why that post: the research it rests on, the choice of post labelled [I]; null exactly when concentrateAt is.'),
@@ -309,7 +312,7 @@ export const RulesSchema = z.strictObject({
               .array(z.strictObject({ termsId: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), id: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), post: idOf('post'), regiments: positive.nullable().describe('Regiments requested; null when only an unquantified sub-regimental unit is documented.'), men: positive.nullable().optional().describe('Exact headcount; null preserves an unquantified unit, absent uses menPerRegiment.'), arm: termId.optional(), readiness: z.boolean().optional(), termDays: positive.nullable().describe('Days from muster, or null for the war.'), fromDate: historicalDate, atPeace: z.boolean().optional(), source: z.string().min(1) }))
               .describe('Each identified dated requisition goes once; distinct IDs allow repeats to a governor. atPeace permits a cited pre-war call. readiness records an answer without muster. Remove a row when a situation owns the same requisition.'),
             offensives: z
-              .array(z.strictObject({ id: termId.optional(), post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, posture: doctrineGoal.shape.posture.optional(), discretion: boundedDiscretion.optional(), requiresNotice: idOf('situation').optional(), source: z.string().min(1) }))
+              .array(z.strictObject({ id: termId.optional(), letter: letterIdentity.optional(), supersedes: letterIdentity.optional(), dependsOn: z.array(letterIdentity).optional(), repeats: letterIdentity.optional(), post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, posture: doctrineGoal.shape.posture.optional(), discretion: boundedDiscretion.optional(), requiresNotice: idOf('situation').optional(), source: z.string().min(1) }))
               .describe('The dated goals he gives (take unless a posture is specified), each from its date (or the day after war, if later); each cites its source.'),
             proposalAnswers: z.array(doctrineProposalAnswer).optional()
               .describe('Sourced replies from their written date, once the commander’s proposal answering the named goal has reached this principal.'),

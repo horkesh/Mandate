@@ -18,7 +18,7 @@ import { canonicalHash } from './hash.ts';
 export const SAVE_FORMAT = 'mandate-save';
 
 /** Bump this, and add a migration and a fixture, whenever the saved shape changes. */
-export const CURRENT_SAVE_SCHEMA = 1;
+export const CURRENT_SAVE_SCHEMA = 2;
 
 export interface SaveEnvelope {
   readonly format: typeof SAVE_FORMAT;
@@ -55,8 +55,12 @@ export interface SaveMigration {
   };
 }
 
-/** The registry. Empty while schema 1 is the only schema; append, never edit or remove. */
-export const SAVE_MIGRATIONS: readonly SaveMigration[] = [];
+/** Append new steps. The absent receipt and dispatch collections are their canonical empty form. */
+export const SAVE_MIGRATIONS: readonly SaveMigration[] = [{
+  from: 1, to: 2,
+  change: 'Introduce optional authored dispatch and receipt collections; older saves retain implicit empty collections and their original state hash.',
+  migrate: save => save,
+}];
 
 export type SaveProblem =
   | 'not_json'

@@ -58,6 +58,15 @@ const menu: PrincipalMenu = {
 };
 const doctrine = (over: Partial<PrincipalMenu['doctrine']>): PrincipalMenu => ({ ...menu, doctrine: { ...menu.doctrine, ...over } });
 
+it('dispatches only the first ready authored field goal per post in a morning', () => {
+  const first = { post: post('near'), objective: region('r9'), day: 1, ready: true, issued: false, letter: { namespace: 'desk', key: 'a', revision: 1 } };
+  const second = { ...first, letter: { ...first.letter, key: 'b' } };
+  const orders = (offensives: readonly (typeof first)[], day: number) =>
+    principalOrders(doctrine({ offensives }), [], day).filter(c => c.cmd === 'order').map(c => c.letter);
+  expect(orders([first, second], 1)).toEqual([first.letter]);
+  expect(orders([{ ...first, issued: true }, second], 2)).toEqual([second.letter]);
+});
+
 describe('dated command establishments', () => {
   const appointment = { post: post('new_army'), person: person('near_holder'), from: post('near'), ready: true, issued: false, routes: army('near', 2).routes };
   it('issues a ready assignment through the appointment verb, with the old post named', () => {

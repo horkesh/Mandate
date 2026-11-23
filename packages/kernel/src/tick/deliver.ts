@@ -5,7 +5,7 @@
  * today too, so the phase repeats until nothing more is due.
  */
 import { sideOfPerson } from '../command/command.ts';
-import { deliverReport, deliverReports, type ReportDelivery } from '../knowledge/knowledge.ts';
+import { deliverReport, deliverReports, rememberLetterReceipt, type ReportDelivery } from '../knowledge/knowledge.ts';
 import { term } from '../knowledge/truth.ts';
 import { mintMessageId, sendMessages, takeDue, type TransitMessage } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
@@ -91,6 +91,7 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
       const failure = destinationFailure(ctx,state,msg.msgToPost,msg.msgTo,msg.msgOrder!.orderIssuer,msg.msgOrder!.orderKind === 'call');
       if (failure !== null) return returnDispatch(ctx,state,msg,failure);
     }
+    state = rememberLetterReceipt(state, msg, ctx.day);
     if (msg.msgRole === 'relay') return relayOrder(ctx, state, msg);
     if (msg.msgOrder?.orderKind === 'call') return arriveCall(ctx, state, msg);
     return arriveOrder(ctx, state, msg);

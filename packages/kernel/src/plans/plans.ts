@@ -19,6 +19,7 @@ import type { PlanCandidate, DraftSet, TermKind } from '../planner/types.ts';
 import type { State } from '../root-state.ts';
 import type { EditSpec, PlanGoal, PlanStatus } from './goal.ts';
 import type { PlanNote } from './notes.ts';
+import type { LetterIdentity } from '../world/letters.ts';
 
 /** Only the mark and the reference to proxy's response persist here. */
 export interface NoteReading {
@@ -56,6 +57,7 @@ export interface PendingCounter {
 
 /** A received goal the holder challenged while retaining the plan he already held. */
 export interface PlanChallenge {
+  readonly challengeLetter?: PlanRecord['planLetter'];
   readonly challengeOrder: MessageId;
   readonly challengeIssuer: PersonId;
   readonly challengeGoal: PlanGoal;
@@ -65,6 +67,7 @@ export interface PlanChallenge {
 
 /** A post's goal and its plan. Immutable: `plans` replaces it whole. */
 export interface PlanRecord {
+  readonly planLetter?: LetterIdentity;
   /** The delivered authority behind a fallback; its local switch report identifies the replacement plan. */
   readonly planDiscretionOrder?: MessageId;
   readonly planProposalPending?: true;
@@ -126,7 +129,7 @@ export function candidateOf(record: PlanRecord, id: string): PlanCandidate | und
 export function setGoal(
   state: State,
   post: PostId,
-  order: { readonly id: MessageId; readonly issuer: PersonId; readonly goal: PlanGoal; readonly viaChain: boolean; readonly issuedDay: number; readonly response: string; readonly propose?: boolean },
+  order: { readonly id: MessageId; readonly issuer: PersonId; readonly goal: PlanGoal; readonly viaChain: boolean; readonly issuedDay: number; readonly response: string; readonly propose?: boolean; readonly letter?: PlanRecord['planLetter'] },
   day: number,
 ): State {
   const holdHere = order.goal.goalObjective === null;
@@ -145,6 +148,7 @@ export function setGoal(
     planSubmitted: null,
     planCounters: [],
     planPending: null,
+    ...(order.letter === undefined ? {} : { planLetter: order.letter }),
     ...(order.propose ? { planProposalPending: true } : {}),
   });
 }
@@ -153,7 +157,7 @@ export function setGoal(
 export function switchGoal(state: State, post: PostId, report: MessageId, day: number): State {
   const current = state.planRecords[post]!;
   const next = setGoal(state, post, { id: report, issuer: current.planIssuer, goal: current.planGoal.goalDiscretion!.fallback,
-    viaChain: current.planViaChain, issuedDay: current.planIssuedDay, response: current.planResponse }, day);
+    viaChain: current.planViaChain, issuedDay: current.planIssuedDay, response: current.planResponse, ...(current.planLetter === undefined ? {} : { letter: current.planLetter }) }, day);
   return put(next, post, { ...next.planRecords[post]!, planDiscretionOrder: current.planDiscretionOrder ?? current.planOrder });
 }
 

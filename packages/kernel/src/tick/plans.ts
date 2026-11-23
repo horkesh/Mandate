@@ -117,6 +117,8 @@ export function choosingMenus(state: State, day: number) {
 /** A report from a commander to the goal's issuer, answering the goal's order. */
 function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanRecord, claims: readonly ReportClaim[], options: Pick<ReportBody, 'reportQualification'> & { readonly plan?: PlanPaper; readonly notes?: readonly NoteAccount[]; readonly objection?: readonly StatedReason[]; readonly proposal?: GoalProposal; readonly discretion?: DiscretionReport; readonly truth?: ReturnType<typeof term>[]; readonly answers: MessageId; readonly issuer?: PersonId; readonly tag: string }): MessageId {
   const holder = state.postStates[post]!.postHolder!;
+  const letter = options.answers === record.planOrder || options.answers === record.planDiscretionOrder ? record.planLetter
+    : record.planChallenge?.challengeOrder === options.answers ? record.planChallenge.challengeLetter : undefined;
   return sendReport(ctx, state, {
     body: answerBody(holder, post, ctx.day, {
       reportType: options.objection === undefined ? 'wire-dispatch' : 'advice',
@@ -128,6 +130,7 @@ function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanReco
       ...(options.proposal === undefined ? {} : { reportProposal: options.proposal }),
       ...(options.discretion === undefined ? {} : { reportDiscretion: options.discretion }),
       ...(options.reportQualification === undefined ? {} : { reportQualification: options.reportQualification }),
+      ...(letter === undefined ? {} : { reportLetter: letter }),
       answers: options.answers,
       about: post,
     }),

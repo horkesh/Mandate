@@ -36,6 +36,7 @@ import type { CombatRules } from '../combat/rules.ts';
 import type { OperationsRules, PruningRules } from '../operations/rules.ts';
 import type { PoliticsRules } from '../politics/rules.ts';
 import type { RegimentRecord } from './regiments.ts';
+import type { LetterIdentity } from './letters.ts';
 
 export const WORLD_FORMAT_VERSION = 2;
 
@@ -113,8 +114,26 @@ export interface RuleSeatRules {
 }
 
 /** A rule-seat principal's doctrine. Martial actions wait for war; a cited call may explicitly permit peacetime issue. */
+export type { LetterIdentity } from './letters.ts';
+
+export interface DoctrineOffensive {
+  readonly id?: string;
+  readonly letter?: LetterIdentity;
+  readonly supersedes?: LetterIdentity;
+  readonly dependsOn?: readonly LetterIdentity[];
+  readonly repeats?: LetterIdentity;
+  readonly post: PostId;
+  readonly objective: RegionId;
+  readonly fromDate: string;
+  readonly posture?: Posture;
+  readonly discretion?: DoctrineDiscretion;
+  readonly requiresNotice?: SituationId;
+  readonly source: string;
+}
+
 export interface PrincipalDoctrine {
   readonly faction: FactionId;
+  readonly letterNamespace?: string;
   /** Whether his goals may cross a neutral government's open ground: a political act, decided per side. */
   readonly crossNeutral: boolean;
   /** The initial concentration post, before any eligible dated change; null leaves regiments with governors. */
@@ -133,7 +152,7 @@ export interface PrincipalDoctrine {
    */
   readonly calls: readonly { readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly fromDate: string; readonly atPeace?: boolean; readonly source: string }[];
   /** The offensive goals he gives, each on its day (or the day after war, if later): a post to take a region. */
-  readonly offensives: readonly { readonly id?: string; readonly post: PostId; readonly objective: RegionId; readonly fromDate: string; readonly posture?: Posture; readonly discretion?: DoctrineDiscretion; readonly requiresNotice?: SituationId; readonly source: string }[];
+  readonly offensives: readonly DoctrineOffensive[];
   readonly proposalAnswers?: readonly DoctrineProposalAnswer[];
   /** How often he asks each army where it stands and what it faces (an inquiry costs no attention), in days. */
   readonly inquireEveryDays: number;

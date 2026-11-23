@@ -1,7 +1,7 @@
 /** Men and appointment availability as the principal has been told, never current service or force tables. */
 import { strictCompare } from '../compare.ts';
 import type { DepartmentId, FactionId, MessageId, PersonId, PostId } from '../ids.ts';
-import { knowledgeOf, unansweredAppointments, type KnownSentOrder } from '../knowledge/knowledge.ts';
+import { knowledgeOf, unansweredAppointments, type KnownSentOrder, type SeatKnowledge } from '../knowledge/knowledge.ts';
 import type { KnownReport } from '../knowledge/records.ts';
 import { ranksOn } from '../people/ranks.ts';
 import { sameGoal, type Discretion, type PlanGoal } from '../plans/goal.ts';
@@ -13,6 +13,27 @@ import type { SeatView } from '../view/types.ts';
 import { seatIdFor } from './seats.ts';
 import type { SeatsWorld } from './world.ts';
 import { dateOfDay, formatIsoDate } from '../world/calendar.ts';
+import { letterKey } from '../world/letters.ts';
+
+/** A received answer names one of the seat's own authored dispatches, including compacted goal copies. */
+export function authoredAnswer(knowledge: SeatKnowledge, report: KnownReport) {
+  const { reportLetter, reportAnswers } = report.knownBody;
+  if (reportLetter === undefined || reportAnswers === null) return undefined;
+  return knowledge.knownDoctrineDispatches?.find(d => letterKey(d.dispatchLetter) === letterKey(reportLetter) &&
+    [d.dispatchOrigin, d.dispatchLatest].includes(reportAnswers));
+}
+
+/** Readiness for an authored goal comes in a report answering its exact dispatch. */
+export function receivedAuthoredGo(state: State, principal: PersonId, post: PostId, holder: PersonId | null): MessageId | undefined {
+  const knowledge = knowledgeOf(state, seatIdFor(principal));
+  const reports = knowledge.knownReports.filter(r => r.knownReceivedDay <= state.stateDay && r.knownBody.reportDay <= state.stateDay);
+  const goal = latestSentGoal(knowledge.knownSentOrders ?? [], reports, post);
+  if (goal?.sentLetter === undefined || goal.sentGoal?.goalAwaitWord !== true || holder === null) return undefined;
+  const ready = reports.some(r => r.knownBody.reportAuthor === holder && r.knownBody.reportAuthorPost === post && r.knownBody.reportAnswers === goal.sentMessage &&
+    authoredAnswer(knowledge, r) !== undefined && r.knownBody.reportClaims.some(c => c.claimKind === 'goal-status' && c.claimToken === 'ready'));
+  if (!ready || (knowledge.knownSentOrders ?? []).some(o => o.sentKind === 'go' && o.sentPlan === goal.sentMessage && !dispatchFailed(reports, o.sentMessage))) return undefined;
+  return goal.sentMessage;
+}
 
 /** Public opening sides, superseded only by matching government notices in this seat's received papers. */
 export function receivedDepartmentSides(world: SeatsWorld, view: SeatView): ReadonlyMap<DepartmentId, FactionId | null> {
@@ -101,7 +122,9 @@ export function receivedPlanPapers(state: State, principal: PersonId): KnownRepo
       const effective = receivedConditionalGoal(state, principal, post, r.knownBody.reportAuthor);
       if (effective !== undefined && r.knownBody.reportAnswers !== effective.order) return false;
     }
-    if (sent.some(o => o.sentPost === post && o.sentKind === 'goal' && o.sentDay >= r.knownBody.reportDay && o.sentMessage !== r.knownBody.reportAnswers)) return false;
+    if (r.knownBody.reportLetter !== undefined) {
+      if (authoredAnswer(knowledge, r) === undefined && receivedConditionalGoal(state, principal, post, r.knownBody.reportAuthor)?.order !== r.knownBody.reportAnswers) return false;
+    } else if (sent.some(o => o.sentPost === post && o.sentKind === 'goal' && o.sentDay >= r.knownBody.reportDay && o.sentMessage !== r.knownBody.reportAnswers)) return false;
     const answer = sent.find(o => o.sentPaper === r.id && o.sentKind !== 'goal');
     return answer === undefined || received.some(k => k.knownBody.reportAnswers === answer.sentMessage && k.knownBody.reportClaims.some(c => c.claimKind === 'order-objected' || c.claimKind === 'order-returned'));
   }).sort(([a],[b]) => strictCompare(a,b)).map(([,r]) => r);
@@ -117,10 +140,10 @@ export function receivedProposalPapers(state: State, principal: PersonId): Known
     const body = paper.knownBody;
     if (body.reportProposal === undefined || body.reportSubjectKind !== 'post' || body.reportAuthorPost !== body.reportSubjectId) continue;
     const ordered = latestSentGoal(orders, reports, body.reportAuthorPost);
-    if (ordered === undefined || !answersGoal(ordered, body.reportAnswers)) continue;
-    const prior = latest.get(ordered.sentPost);
+    if (body.reportLetter === undefined ? ordered === undefined || !answersGoal(ordered, body.reportAnswers) : authoredAnswer(knowledge, paper) === undefined) continue;
+    const prior = latest.get(body.reportAuthorPost);
     if (prior === undefined || prior.knownBody.reportDay < body.reportDay ||
-      (prior.knownBody.reportDay === body.reportDay && body.reportAnswers === ordered.sentMessage)) latest.set(ordered.sentPost, paper);
+      (prior.knownBody.reportDay === body.reportDay && body.reportAnswers === ordered?.sentMessage)) latest.set(body.reportAuthorPost, paper);
   }
   return [...latest.values()].filter(paper => {
     const reply = orders.find(o => o.sentProposal?.replyPaper === paper.id);

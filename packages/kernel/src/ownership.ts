@@ -196,6 +196,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'TransitMessage',
   'Hop',
   'OrderBody',
+  'LetterIdentity',
   'ProposalReply',
   'VerbBody',
   // Plans (lane 1.2): goals, edits, plan records and the draft sets saved in them, each replaced whole by `plans`
@@ -247,6 +248,8 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'PlanPaper.paperNoteBasis',
   'PlanPaper.paperNoteBasis.notes',
   'KnownSentOrder',
+  'KnownDoctrineDispatch',
+  'KnownPaperReceipt',
   'KnownSentAppointment',
   'ReportClaim', // Includes claimBattle, claimBattleDays and claimCommander: authored once, filed only by knowledge.
   'AdviceBody',
