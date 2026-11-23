@@ -15,6 +15,7 @@ import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
 import { term } from '../knowledge/truth.ts';
 import { senderFor } from '../seats/sender.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
+import { hasRequiredPapers } from '../knowledge/papers.ts';
 import { seatIdFor } from '../seats/seats.ts';
 import { latestSentGoal, receivedAuthoredGo, receivedConditionalGoal, receivedPlanPapers, receivedProposalPapers } from '../seats/received.ts';
 import { reportQualificationOf, type ReportBody, type ReportClaim } from '../knowledge/report.ts';
@@ -123,6 +124,8 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
       const doctrine = world.map.world.rules.ruleSeats.principals.find(r => r.faction === sender.faction);
       const rows = cmd.cmd === 'order' ? doctrine?.offensives : doctrine?.proposalAnswers;
       if (!rows?.some(r => r.id === cmd.doctrine && r.post === cmd.to)) return 'bad_goal';
+      const paperGate = rows.find(r => r.id === cmd.doctrine && r.post === cmd.to)?.requiresPapers;
+      if (paperGate !== undefined && !hasRequiredPapers(paperGate, knowledgeOf(state, seatIdFor(issuer.id)), state.stateDay, world.rules.templates)) return 'bad_goal';
     }
     let authored: Pick<OrderBody, 'orderLetter' | 'orderSupersedes' | 'orderPriorDispatch'> = {};
     if (cmd.cmd === 'order' && cmd.letter !== undefined) {
@@ -141,6 +144,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
       if (since === null || ctx.day <= since || ctx.day < daysFromCivil(parseIsoDate(row.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart))) return 'bad_goal';
       if (row.requiresNotice !== undefined && !knowledge.knownReports.some(r => r.knownReceivedDay <= state.stateDay && r.knownBody.reportDay <= state.stateDay &&
         r.knownBody.reportSubjectKind === 'situation' && r.knownBody.reportSubjectId === row.requiresNotice)) return 'bad_goal';
+      if (prior === undefined && !hasRequiredPapers(row.requiresPapers, knowledge, state.stateDay, world.rules.templates)) return 'bad_goal';
       if (!sameGoal(goal, goalOf(authoredGoal(row, world.map.world.rules.plans.goalDefaults, doctrine.crossNeutral)))) return 'bad_goal';
       const repeat = row.repeats === undefined ? undefined : lookup(letterKey(row.repeats))?.dispatchOrigin;
       authored = { orderLetter: row.letter!, ...(row.supersedes === undefined ? {} : { orderSupersedes: row.supersedes }),
@@ -514,7 +518,7 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
     let next = recordResponse(state, responseOf(answer, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day, kind: order.orderKind }));
     const response = responseKey(msg.msgOrigin, msg.msgTo);
     if (letter !== undefined) {
-      const obsolete = knowledgeOf(state, seatIdFor(msg.msgTo)).knownPaperReceipts?.some(r => r.receiptRole === 'addressee' && r.receiptPost === post &&
+      const obsolete = knowledgeOf(state, seatIdFor(msg.msgTo)).knownPaperReceipts?.some(r => r.receiptLetter !== undefined && r.receiptRole === 'addressee' && r.receiptPost === post &&
         r.receiptIssuer === order.orderIssuer && sameLetterFamily(r.receiptLetter, letter) && r.receiptLetter.revision > letter.revision);
       if (obsolete) {
         acknowledge(ctx, next, msg, 'obsolete', false, answer);

@@ -43,7 +43,7 @@ import type { OptionView } from '../seats/api.ts';
 import { applyPeopleChanges, type PeopleChange } from '../people/people.ts';
 import { morningGround } from '../seats/requests.ts';
 import { createHeldPostCache, heldPost, sideOfPerson } from '../command/command.ts';
-import type { SeatsWorld } from '../seats/world.ts';
+import { paperDoctrines, type SeatsWorld } from '../seats/world.ts';
 import type { Telemetry } from '../telemetry.ts';
 import { createViewCache, type ViewCache } from '../view/view.ts';
 import { applyPlanChoices, choosingPosts, planKey, planOptions, plansPhase, PLANS_MECHANICS } from './plans.ts';
@@ -340,7 +340,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = applyPhase(sendMessages(state, ctx.outbox.splice(0)));
 
   // 6. Pruning.
-  const pruned = pruneKnowledge(state, world.rules.templates, day, world.map.world.rules.supplyControlPermille);
+  const pruned = pruneKnowledge(state, world.rules.templates, day, world.map.world.rules.supplyControlPermille, paperDoctrines(world));
   if (pruned.counts.byAge > 0) fire(ctx, 'knowledge.pruned_age', pruned.counts.byAge);
   if (pruned.counts.bySupersession > 0) fire(ctx, 'knowledge.pruned_superseded', pruned.counts.bySupersession);
   // Lane 1.4: ended operations, closed battles and answered orders are kept the pack's days, as knowledge is.

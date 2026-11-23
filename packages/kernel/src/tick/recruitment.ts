@@ -28,6 +28,8 @@ import type { TransitMessage } from '../messages/transit.ts';
 import { placeAndRemove, type MusterPlacement } from '../movement/movement.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { reportQualificationOf } from '../knowledge/report.ts';
+import { knowledgeOf } from '../knowledge/knowledge.ts';
+import { hasRequiredPapers } from '../knowledge/papers.ts';
 import { term } from '../knowledge/truth.ts';
 import { answerOrder } from '../reading/orders.ts';
 import { callDirective, type RecruitmentRules } from '../recruitment/rules.ts';
@@ -74,7 +76,13 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
   if (cmd.termDays !== null && cmd.termDays > world.map.world.rules.recruitment.maxTermDays) return 'bad_call';
   if (cmd.arm !== undefined && !world.map.world.vocabularies.arms.some(a => a.id === cmd.arm && !a.naval)) return 'bad_call';
   const rules = world.map.world.rules.recruitment;
-  const registered = cmd.callId === undefined ? undefined : world.map.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === cmd.callId)?.termsId;
+  const declared = cmd.callId === undefined ? undefined : world.map.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === cmd.callId);
+  const registered = declared?.termsId;
+  if (declared?.requiresPapers !== undefined) {
+    const own = world.map.world.rules.ruleSeats.principals.find(p => p.faction === sender.faction);
+    if (declared.post !== cmd.to || !own?.calls.includes(declared) ||
+      !hasRequiredPapers(declared.requiresPapers, knowledgeOf(state, seat), state.stateDay, world.rules.templates)) return 'bad_call';
+  }
   if (registered !== undefined && cmd.termsId !== undefined && registered !== cmd.termsId) return 'bad_call';
   const termsId = cmd.termsId ?? registered;
   const profile = termsId === undefined ? undefined : rules.callProfiles?.find(p => p.id === termsId);

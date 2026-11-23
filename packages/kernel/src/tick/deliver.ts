@@ -16,6 +16,7 @@ import { fire, hop, whereIs, type TickContext } from './context.ts';
 import { arriveOrder, destinationFailure, relayOrder, returnDispatch } from './orders.ts';
 import { arriveVerb } from './verbs.ts';
 import { arriveCall } from './recruitment.ts';
+import { paperDoctrines } from '../seats/world.ts';
 
 /** A day can chain same-day hops (a relay in the same town); more rounds than this means a loop, which is a bug. */
 const MAX_ROUNDS = 64;
@@ -42,6 +43,7 @@ export function deliverSituationOrders(ctx: TickContext, start: State, outboxSta
 
 export function deliverDue(ctx: TickContext, start: State): State {
   let state = start;
+  const doctrines = paperDoctrines(ctx.world);
   for (let round = 0; ; round++) {
     if (round >= MAX_ROUNDS) throw new Error(`day ${ctx.day}: deliveries did not settle after ${MAX_ROUNDS} rounds`);
     const taken = takeDue(state, ctx.day);
@@ -58,10 +60,13 @@ export function deliverDue(ctx: TickContext, start: State): State {
       const deliveries: ReportDelivery[] = [];
       while (i < taken.due.length && isReportArrival(taken.due[i]!)) {
         const msg = taken.due[i++]!;
+        const seat = seatIdFor(msg.msgTo);
+        const doctrine = doctrines?.get(seat);
         arrivals.push(msg);
-        deliveries.push({ seat: seatIdFor(msg.msgTo), report: {
+        deliveries.push({ seat, report: {
           id: msg.msgOrigin, knownReceivedDay: ctx.day, knownRoute: msg.msgRoute, knownVia: msg.msgVia, knownBody: msg.msgReport!,
-        }, truth: msg.msgTruth ?? { truthTerms: [], truthTrimmed: [] } });
+        }, truth: msg.msgTruth ?? { truthTerms: [], truthTrimmed: [] },
+        ...(doctrine === undefined ? {} : { paper: { doctrine, person: msg.msgTo, post: msg.msgToPost } }) });
       }
       state = deliverReports(state, deliveries);
       for (const msg of arrivals) {

@@ -32,6 +32,32 @@ it('validates bounded conditional goals and the earlier letter a sourced reply a
   }
 });
 
+it('parses bounded positive receipt selectors on each identified doctrine action', () => {
+  const schema = WorldSchema.shape.rules.shape.ruleSeats.shape.principals.element;
+  const identity = { namespace: 'desk', key: 'initial', revision: 1 };
+  const named = { kind: 'letter', issuer: 'leader', letter: identity, post: 'army', role: 'addressee' };
+  const report = { kind: 'report', author: 'commander', authorPost: 'army', subjectKind: 'post', subjectId: 'army',
+    reportType: 'wire-dispatch', reportSubtype: null, answers: identity,
+    claims: [{ kind: 'order-obeyed', region: 'front', token: 'new', min: 1 }] };
+  const row = {
+    faction: 'a', letterNamespace: 'desk', maxPaperSelectors: 2, crossNeutral: false, concentrateAt: null, concentrateSource: null,
+    calls: [{ id: 'call', post: 'governor', regiments: 1, termDays: 90, fromDate: '1900-06-01', source: 'test paper', requiresPapers: [named] }],
+    concentrations: [{ id: 'gather', post: 'army', fromDate: '1900-06-01', requiresDepartment: 'war', fromPosts: ['governor'], source: 'test paper', requiresPapers: [report] }],
+    offensives: [
+      { letter: identity, post: 'army', objective: 'front', fromDate: '1900-06-01', source: 'test paper' },
+      { id: 'conditional', post: 'army', objective: 'front', fromDate: '1900-06-01', source: 'test paper', requiresPapers: [named, report] },
+    ],
+    proposalAnswers: [{ id: 'reply', post: 'army', action: 'accept', answers: 'conditional', fromDate: '1900-06-02', source: 'test paper', requiresPapers: [named] }],
+    inquireEveryDays: 7, appointKinds: { land: [], naval: [] },
+  };
+  const parsed = schema.parse(row);
+  expect(conditionalDoctrineProblems(parsed, r => r === 'front')).toEqual([]);
+  expect(conditionalDoctrineProblems({ ...parsed, maxPaperSelectors: 1 }, r => r === 'front')).toContainEqual(expect.objectContaining({
+    field: 'offensives[1].requiresPapers',
+  }));
+  expect(schema.safeParse({ ...row, calls: [{ ...row.calls[0], requiresPapers: [{ ...named, not: true }] }] }).success).toBe(false);
+});
+
 describe('published schemas (decision 0030)', () => {
   it('are up to date with the Zod schemas: run npm run pack:schemas if not', () => {
     const disk = new Map(existsSync(schemasDir) ? readdirSync(schemasDir).map((f) => [f, readFileSync(new URL(f, schemasDir), 'utf8')] as const) : []);

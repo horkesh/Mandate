@@ -21,6 +21,7 @@ import type { DoctrineDiscretion, DoctrineProposalAnswer } from '../plans/goal.t
 import type { RouteKind } from '../messages/latency.ts';
 import type { GoalView, SeatView } from '../view/types.ts';
 import type { LetterIdentity } from '../world/letters.ts';
+import type { PaperDecision } from '../world/paper-selectors.ts';
 import type { TurnStopsView } from './turn-stops.ts';
 
 export const SEAT_DRIVERS = ['ai', 'human', 'rules'] as const;
@@ -140,6 +141,7 @@ export interface Candidate {
 
 /** His doctrine as the pack states it (lane 1.12; `rules.ruleSeats.principals`), with each offensive's date as a day. */
 export interface DoctrineView {
+  readonly paperReadiness?: readonly { readonly action: string; readonly results: readonly PaperDecision[] }[];
   /** 0 for a side with no doctrine: he never inquires. */
   readonly crossNeutral: boolean;
   readonly concentrateAt: PostId | null;
@@ -149,7 +151,7 @@ export interface DoctrineView {
   /** Independent sourced command inclusions, newest destination per sending post. */
   readonly concentrationTransfers?: readonly { readonly from: PostId; readonly to: PostId }[];
   readonly appointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly from: PostId | null; readonly ready: boolean; readonly issued: boolean; readonly routes: readonly RouteOption[] }[];
-  readonly calls: readonly { readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly day: number; readonly atPeace?: boolean; readonly issued?: boolean }[];
+  readonly calls: readonly { readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly day: number; readonly atPeace?: boolean; readonly issued?: boolean; readonly ready?: boolean }[];
   readonly offensives: readonly { readonly id?: string; readonly letter?: LetterIdentity; readonly post: PostId; readonly objective: RegionId; readonly day: number; readonly posture?: 'hold' | 'relieve' | 'take'; readonly discretion?: DoctrineDiscretion; readonly ready?: boolean; readonly issued?: boolean }[];
   readonly proposalAnswers?: readonly (DoctrineProposalAnswer & { readonly day: number; readonly paper: MessageId; readonly ordered: GoalTerms })[];
   readonly inquireEveryDays: number;

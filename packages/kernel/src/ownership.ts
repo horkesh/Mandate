@@ -250,6 +250,8 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'KnownSentOrder',
   'KnownDoctrineDispatch',
   'KnownPaperReceipt',
+  'ReceivedPaperReport',
+  'ReceivedPaperClaim',
   'KnownSentAppointment',
   'ReportClaim', // Includes claimBattle, claimBattleDays and claimCommander: authored once, filed only by knowledge.
   'AdviceBody',
