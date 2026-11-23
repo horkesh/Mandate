@@ -1,0 +1,267 @@
+[
+  {
+    "id": "C02",
+    "source": "S102 after",
+    "call": "cs_apr22_absolute_georgia",
+    "actor": "brown_joseph_e",
+    "order": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+    "day": 48,
+    "recorded_rung": "object",
+    "recorded_willingness": -73,
+    "removed_temperament": -118,
+    "proposed_willingness": 45,
+    "terms": {
+      "values": 0,
+      "temperament": -118,
+      "regard": 0,
+      "deterrence": 45,
+      "capacity": 0,
+      "disposition": 0,
+      "grievances": 0
+    },
+    "recorded_reasons": [],
+    "provenance": "Recorded response arithmetic only; no resolver or simulation executed."
+  },
+  {
+    "id": "C03",
+    "source": "S102 after",
+    "call": "cs_apr08_louisiana",
+    "actor": "moore_thomas_o",
+    "order": "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "day": 34,
+    "recorded_rung": "comply",
+    "recorded_willingness": 144,
+    "removed_temperament": -96,
+    "proposed_willingness": 240,
+    "terms": {
+      "values": 200,
+      "temperament": -96,
+      "regard": 0,
+      "deterrence": 40,
+      "capacity": 0,
+      "disposition": 0,
+      "grievances": 0
+    },
+    "recorded_reasons": [
+      {
+        "kind": "values_honoured",
+        "value": "state_autonomy"
+      }
+    ],
+    "provenance": "Recorded response arithmetic only; no resolver or simulation executed."
+  },
+  {
+    "id": "C03",
+    "source": "S102 after",
+    "call": "cs_apr16_louisiana",
+    "actor": "moore_thomas_o",
+    "order": "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "day": 42,
+    "recorded_rung": "comply",
+    "recorded_willingness": 144,
+    "removed_temperament": -96,
+    "proposed_willingness": 240,
+    "terms": {
+      "values": 200,
+      "temperament": -96,
+      "regard": 0,
+      "deterrence": 40,
+      "capacity": 0,
+      "disposition": 0,
+      "grievances": 0
+    },
+    "recorded_reasons": [
+      {
+        "kind": "values_honoured",
+        "value": "state_autonomy"
+      }
+    ],
+    "provenance": "Recorded response arithmetic only; no resolver or simulation executed."
+  },
+  {
+    "id": "C03",
+    "source": "S102 after",
+    "call": "cs_apr22_absolute_louisiana",
+    "actor": "moore_thomas_o",
+    "order": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "day": 48,
+    "recorded_rung": "object",
+    "recorded_willingness": -56,
+    "removed_temperament": -96,
+    "proposed_willingness": 40,
+    "terms": {
+      "values": 0,
+      "temperament": -96,
+      "regard": 0,
+      "deterrence": 40,
+      "capacity": 0,
+      "disposition": 0,
+      "grievances": 0
+    },
+    "recorded_reasons": [],
+    "provenance": "Recorded response arithmetic only; no resolver or simulation executed."
+  },
+  {
+    "id": "C10",
+    "source": "S102 after",
+    "call": "cs_jun30_cavalry_georgia",
+    "actor": "brown_joseph_e",
+    "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+    "day": 117,
+    "recorded_rung": "object",
+    "recorded_willingness": -96,
+    "removed_temperament": -118,
+    "proposed_willingness": 22,
+    "terms": {
+      "values": 0,
+      "temperament": -118,
+      "regard": 0,
+      "deterrence": 22,
+      "capacity": 0,
+      "disposition": 0,
+      "grievances": 0
+    },
+    "recorded_reasons": [],
+    "provenance": "Recorded response arithmetic only; no resolver or simulation executed."
+  },
+  {
+    "id": "C10",
+    "source": "S102 after",
+    "call": "cs_jun30_reserve_georgia",
+    "actor": "brown_joseph_e",
+    "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+    "day": 117,
+    "recorded_rung": "object",
+    "recorded_willingness": -296,
+    "removed_temperament": -118,
+    "proposed_willingness": -178,
+    "terms": {
+      "values": -200,
+      "temperament": -118,
+      "regard": 0,
+      "deterrence": 22,
+      "capacity": 0,
+      "disposition": 0,
+      "grievances": 0
+    },
+    "recorded_reasons": [
+      {
+        "kind": "values_offended",
+        "value": "state_autonomy"
+      }
+    ],
+    "provenance": "Recorded response arithmetic only; no resolver or simulation executed."
+  },
+  {
+    "id": "C11",
+    "source": "S102 after",
+    "call": "cs_jun29_extra_louisiana",
+    "actor": "moore_thomas_o",
+    "order": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "day": 116,
+    "recorded_rung": "object",
+    "recorded_willingness": -83,
+    "removed_temperament": -96,
+    "proposed_willingness": 13,
+    "terms": {
+      "values": 0,
+      "temperament": -96,
+      "regard": 0,
+      "deterrence": 13,
+      "capacity": 0,
+      "disposition": 0,
+      "grievances": 0
+    },
+    "recorded_reasons": [],
+    "provenance": "Recorded response arithmetic only; no resolver or simulation executed."
+  },
+  {
+    "id": "C11",
+    "source": "S102 after",
+    "call": "cs_jun30_reserve_louisiana",
+    "actor": "moore_thomas_o",
+    "order": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "day": 117,
+    "recorded_rung": "object",
+    "recorded_willingness": -283,
+    "removed_temperament": -96,
+    "proposed_willingness": -187,
+    "terms": {
+      "values": -200,
+      "temperament": -96,
+      "regard": 0,
+      "deterrence": 13,
+      "capacity": 0,
+      "disposition": 0,
+      "grievances": 0
+    },
+    "recorded_reasons": [
+      {
+        "kind": "values_offended",
+        "value": "state_autonomy"
+      }
+    ],
+    "provenance": "Recorded response arithmetic only; no resolver or simulation executed."
+  },
+  {
+    "id": "outside register",
+    "source": "S105 retained reference",
+    "call": "day41:m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+    "actor": "andrew_john_a",
+    "order": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+    "day": 41,
+    "recorded_rung": "object",
+    "recorded_willingness": -11,
+    "removed_temperament": -134,
+    "proposed_willingness": 123,
+    "terms": {
+      "values": 0,
+      "temperament": -134,
+      "regard": 90,
+      "deterrence": 33,
+      "capacity": 0,
+      "disposition": 0,
+      "grievances": 0
+    },
+    "recorded_reasons": [
+      {
+        "kind": "values_honoured",
+        "value": "union"
+      },
+      {
+        "kind": "values_offended",
+        "value": "state_autonomy"
+      },
+      {
+        "kind": "too_timid",
+        "gap": 336
+      },
+      {
+        "kind": "trusts_leader"
+      }
+    ],
+    "provenance": "Recorded response arithmetic only; no resolver or simulation executed."
+  },
+  {
+    "id": "outside register",
+    "source": "S105 retained reference",
+    "call": "day41:m.41.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+    "actor": "buckingham_william_a",
+    "order": "m.41.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+    "day": 41,
+    "recorded_rung": "comply",
+    "recorded_willingness": 51,
+    "removed_temperament": 0,
+    "proposed_willingness": 51,
+    "terms": {
+      "values": 0,
+      "regard": 0,
+      "deterrence": 51,
+      "capacity": 0,
+      "disposition": 0,
+      "grievances": 0
+    },
+    "recorded_reasons": [],
+    "provenance": "Recorded response arithmetic only; no resolver or simulation executed."
+  }
+]

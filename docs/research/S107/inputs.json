@@ -1,0 +1,183 @@
+{
+  "base": "a403817c0df3563689b9f9e44a0ed35fe9a91687",
+  "sibling_head": "8672b4fc8a7f84650a72454ee85547de2b7eda91",
+  "sibling_policy": "Read only; S106 in progress. Hashes pin consulted bytes, not a claim that its working tree is static.",
+  "inputs": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\CLAUDE.md",
+      "bytes": 6627,
+      "sha256": "8444009f244f310ceb2c59a616f97cc2d294bfe5e4e616d6acbd01d672ed4a7d"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\LANES.md",
+      "bytes": 14090,
+      "sha256": "a80e6a8b1ef9e828fd41047972b9308ba95b76fb5becb30b81e41f0e755fae0e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\FOUNDATION.md",
+      "bytes": 84961,
+      "sha256": "3dff75ed38fe0e6683ce3ebdc7bf089cd7793c999002128baaa592db9da3dd16"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S104\\replies.md",
+      "bytes": 18594,
+      "sha256": "671fec158e96ae37320766c990d4d89a63687b1bce711c4add94546c85c54770"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S104\\source-pages.csv",
+      "bytes": 52226,
+      "sha256": "3806bfe895b4e4da36978a0718477513df12dc251a845a164660ed2079aaaddd"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\decisions\\0007-no-dice-for-people.md",
+      "bytes": 1213,
+      "sha256": "5192e8a331409a98ca5f934e0b8c5c60a723ecb817d4cfd669394285fee0b234"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\decisions\\0020-people-hidden-stats-and-assessment.md",
+      "bytes": 2552,
+      "sha256": "0a2d6d6e9315c4443d95ec1ba16d61d6971f57ec32e52c863035f913de709f47"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\decisions\\0062-the-planner-shape.md",
+      "bytes": 4752,
+      "sha256": "2dea99c43975966c4fa957f4ad03b85f74eccc86c0ca3ac8f187b0d1132e02fe"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\decisions\\0075-the-planner-as-built.md",
+      "bytes": 4000,
+      "sha256": "11e0c43b3f3195030d8652132ac3175feb32f6dc5a445692f46e5fc4ad938c2d"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\decisions\\0079-the-people-verbs-as-built.md",
+      "bytes": 4935,
+      "sha256": "facb0427e0980ffeb44d867c5278c384f78c90a56838b60a212975203c775095"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\decisions\\0106-the-codex-sprint-to-22-november.md",
+      "bytes": 3226,
+      "sha256": "46a0745d0129d2adea42cc4f8d85874294812beb612fb4898d3d94abed81ee22"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S87\\0107-the-sprint-continues-on-codexs-renewed-allowance.md",
+      "bytes": 2097,
+      "sha256": "a6db84cbb26fb9457a1067c2c7444d544f63d52221bc86c6b408bcaa715ceb3f"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\.githooks\\pre-commit",
+      "bytes": 659,
+      "sha256": "6de1446ba999b82153413ebf1a07b2fefe3fcb6b1bd50881bfdce55ef6160d70"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\tools\\staged-check.ts",
+      "bytes": 10610,
+      "sha256": "b338776583ebf96c5a36cb9c25dfd9a2cb3713f65267089f45befd18bda3a3d7"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\package.json",
+      "bytes": 1464,
+      "sha256": "bc019b9d2445a17e4dcaaf98f331a57676cfab29f86bd49356b50ccce114a729"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\docs\\decisions\\0111-pushback-is-measured-by-named-acts.md",
+      "bytes": 5551,
+      "sha256": "f8050c00a7e52cd44179b5fa208d3915704cf6ddd9489618f10cc4291989f049"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\docs\\decisions\\0112-the-pushback-registers-and-what-1a-requires.md",
+      "bytes": 4782,
+      "sha256": "36364435f3694386354b80a225341ad182ca16765a72c7848a0a86bca02f69c7"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\docs\\decisions\\0113-a-judgment-without-evidence-adds-no-term.md",
+      "bytes": 4697,
+      "sha256": "4369ee50dc3a3bc34c42a29fabb0b92044d3084d5573bb1d60dc5c8373cbdad3"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\packages\\kernel\\src\\compliance.ts",
+      "bytes": 18259,
+      "sha256": "f10a9c6b001450dd9dff10712149494978690c499697258288bc518c00c07ecb"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\packages\\kernel\\src\\directive.ts",
+      "bytes": 7986,
+      "sha256": "ce8998286cc4aa41fc843d786fc43d57b253e195dab3de175b74419bdfa8309b"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\packages\\kernel\\src\\reading\\orders.ts",
+      "bytes": 17327,
+      "sha256": "d46e58e2d11380e7304a06993bea210aeacbbfee4142d0e36a0ffe4ca6a5630c"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\packages\\kernel\\src\\recruitment\\rules.ts",
+      "bytes": 10018,
+      "sha256": "3f46b05ab6973da5bb9d8c0f0373fb96952bb396db87126a242da88dcad78c1a"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\packages\\kernel\\src\\tick\\recruitment.ts",
+      "bytes": 26076,
+      "sha256": "96e368041c808c1bf37c300bd5514ee47f9d4f73ee53a1ce8e49c38f1f7ec6cc"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\packages\\kernel\\src\\tick\\verbs.ts",
+      "bytes": 33771,
+      "sha256": "a4549c857640cbdd81cd25ecac2b51b2ca57bf9d3299e23d1478e92c9a65c166"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\packages\\kernel\\src\\planner\\edits.ts",
+      "bytes": 12940,
+      "sha256": "b57d0607021b1485c7061fc5a9cdc368d4f9b3356914109f31daf39705dd0a49"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\packages\\kernel\\src\\people\\verb-rules.ts",
+      "bytes": 11564,
+      "sha256": "e07a90119745600745c5ec195cba20aafc46534a53b8b196b4aadf0648b22ae6"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\packs\\union-1861\\data\\world.json",
+      "bytes": 1914820,
+      "sha256": "2578f3bad26d0dd664822bf8ceecd4b523794f263a4f9579015431c4eac745dc"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\docs\\audit\\s102-evidence\\governor-answers.json",
+      "bytes": 198353,
+      "sha256": "90e524a147fe1d9e13643c5a970fa881259e821dbe5cd6d66dd4adf7dab5d9bb"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-july\\runs\\s105\\references\\union-1861-responses.json",
+      "bytes": 276740,
+      "sha256": "a6e9467824afd5fb75a0ec3d2fa0c4ecec9854d902bad9838410a0eb94318467"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0118-an-undertaking-carries-typed-reservations.md",
+      "bytes": 6062,
+      "sha256": "46d8f5215d23f5d5e5e0c54fe7faca9560b41a3160531c0d66ba8fde5dabcee5"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\packages\\kernel\\src\\tick\\plans.ts",
+      "bytes": 17041,
+      "sha256": "2deea08166901c26a5926940eabac721405a10c9b8ee49cd04ff1ad042796d75"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\packages\\kernel\\src\\tick\\audience-plan.ts",
+      "bytes": 2427,
+      "sha256": "5677b3d626e7b566c9ac2e52d8c4130e23f7157615b745ee83e1cb46752036ed"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\packages\\kernel\\src\\permille.ts",
+      "bytes": 1470,
+      "sha256": "511f62b3f502d0abb07300d09835700ac4d00357d0f17cd5eefa9dd06da25331"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\packages\\kernel\\src\\plans\\goal.ts",
+      "bytes": 6942,
+      "sha256": "ae8f5e577b176f962e95711699b68128f76eea6f00d13131682bc6a361376f7e"
+    }
+  ],
+  "pages": 37,
+  "limits": [
+    "Retained primary-compilation OCR reread; no new network or individual page-image verification.",
+    "No new historical traits, call boldness, means balance, reference run or coverage verdict.",
+    "Historical facts use printed pages; code/model facts use pinned paths and symbols."
+  ]
+}
