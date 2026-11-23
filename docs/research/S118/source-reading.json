@@ -1,0 +1,1564 @@
+{
+  "request": "S118",
+  "base": "03ebb249d2569dc46d1efae92179ffde6ea1286b",
+  "pack_commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+  "policy": "Facts from read passages only; [M] frozen model; [R] retrospective witness; [I] proposed comparison. Blank quantities mean unknown, never zero.",
+  "read": [
+    {
+      "work": "Bevens, Reminiscences of a Private (1913)",
+      "page": 10,
+      "leaves": [
+        14
+      ],
+      "path": "docs\\research\\S118\\read\\BEVENS-p10.txt",
+      "sha256": "bfdf735a3a0794f2404d07f09016647bc89a2c437257924774a0fdc1f95cf5dd",
+      "urls": [
+        "https://archive.org/details/reminiscencesofp00beve/page/n14/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "BEVENS:10",
+      "raw_extract_sha256": "9675ae5d9842fa721bc540d252be024d236499b23735245dbf274ca6d7940f45",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "Bevens, Reminiscences of a Private (1913)",
+      "page": 7,
+      "leaves": [
+        11
+      ],
+      "path": "docs\\research\\S118\\read\\BEVENS-p7.txt",
+      "sha256": "16a0e713a986d191e29d5582391ce5e406ec34028db961500bbce1d41626fce2",
+      "urls": [
+        "https://archive.org/details/reminiscencesofp00beve/page/n11/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "BEVENS:7",
+      "raw_extract_sha256": "46bb680134bb968d922ddd7659f9121a3f9c4238d283c2451a85a9bd0134f314",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "Bevens, Reminiscences of a Private (1913)",
+      "page": 8,
+      "leaves": [
+        12
+      ],
+      "path": "docs\\research\\S118\\read\\BEVENS-p8.txt",
+      "sha256": "60ab6702cc3fb30f1e7d795d03154113cc53f2d360e05ae207c7429662666ec3",
+      "urls": [
+        "https://archive.org/details/reminiscencesofp00beve/page/n12/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "BEVENS:8",
+      "raw_extract_sha256": "6f4e147a6d214c02e98cd15d61b7da03e839a08967ef17a93b0a8404ad8e255b",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "Head, Campaigns and Battles",
+      "page": 23,
+      "leaf": 31,
+      "path": "docs\\research\\S118\\read\\HEAD-p23.txt",
+      "sha256": "d113acf92bedbe41acdac553192da658118ccb034f5d167583e7e47645f987fe",
+      "url": "https://archive.org/details/campaignsandbatt00headiala/page/n31/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "HEAD:23",
+      "raw_extract_sha256": "9b52539806c625c57a072da9d64663348a5e343175749b297eb53e5064a3b7d8",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Head, Campaigns and Battles",
+      "page": 24,
+      "leaf": 32,
+      "path": "docs\\research\\S118\\read\\HEAD-p24.txt",
+      "sha256": "d71874df8d326fc7967a8d809567ebcd755212b6010cab68ecb1bb561e23ca19",
+      "url": "https://archive.org/details/campaignsandbatt00headiala/page/n32/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "HEAD:24",
+      "raw_extract_sha256": "083427e43c17b899b250366840283a9b5afba6b545830ce2458e9fc5a098801f",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Head, Campaigns and Battles",
+      "page": 25,
+      "leaf": 33,
+      "path": "docs\\research\\S118\\read\\HEAD-p25.txt",
+      "sha256": "849dbe4c670cfac5b704abed62d3bf83f537240e0a45d3e1df43c20381b94edb",
+      "url": "https://archive.org/details/campaignsandbatt00headiala/page/n33/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "HEAD:25",
+      "raw_extract_sha256": "9c7a44881f11b493e87ff4db3707ce0f8d2dbc603dff2863f4c8a32b2d16137a",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "OR I-I",
+      "page": 687,
+      "leaves": [
+        706
+      ],
+      "path": "docs\\research\\S118\\read\\I-p687.txt",
+      "sha256": "87281a952a474f13b99636a2ab34f475db73e6d1ee5e7af00277dce5f306d36c",
+      "urls": [
+        "https://archive.org/details/cu31924077725913/page/n706/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "I:687",
+      "raw_extract_sha256": "f2561f6c827399ac64ef4cc515eac735680eda3847a641f722a277473c1443b3",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-I",
+      "page": 688,
+      "leaves": [
+        707
+      ],
+      "path": "docs\\research\\S118\\read\\I-p688.txt",
+      "sha256": "8f3dba2107cfb17a29b70db117943be43f02d0045606ee49b1b3825b15295f1f",
+      "urls": [
+        "https://archive.org/details/cu31924077725913/page/n707/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "I:688",
+      "raw_extract_sha256": "ea0dea6342df2433f5a95729da9f536e308252a1e3188e652d1f8fd124c44039",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 1005,
+      "leaf": 1024,
+      "path": "docs\\research\\S118\\read\\II-p1005.txt",
+      "sha256": "bd351a324aff6b75f6b3fc401a7cd6180c58e7bab9b80106bd8f3aaa6e7581c0",
+      "url": "https://archive.org/details/cu31924077730186/page/n1024/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:1005",
+      "raw_extract_sha256": "c3082a0bcb76e5c197b46d71d32a6d65dbe32571ed2dfdcdacf8ca601a9154eb",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 42,
+      "leaf": 61,
+      "path": "docs\\research\\S118\\read\\II-p42.txt",
+      "sha256": "8837c321260f4d615df109e55c0e5f2fad2437271d0919676549e088eb028edd",
+      "url": "https://archive.org/details/cu31924077730186/page/n61/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:42",
+      "raw_extract_sha256": "7af0d532a4f83c11ebde30dd3b4a4f731ee83b6fdc45bea706f0195849929283",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 470,
+      "leaf": 489,
+      "path": "docs\\research\\S118\\read\\II-p470.txt",
+      "sha256": "406ba603ad0734e419bc29418b13ad1b00111be763a12ebff1d356cbe55d1127",
+      "url": "https://archive.org/details/cu31924077730186/page/n489/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:470",
+      "raw_extract_sha256": "834005692a9fabba8fc6a873e4e3c9cb78f6fbd8eeefed90a395877468a010ae",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 472,
+      "leaf": 491,
+      "path": "docs\\research\\S118\\read\\II-p472.txt",
+      "sha256": "0ea8c4b3f29204a277241d82f9b7785b4237ffca5d15ccf3bec070996d520c89",
+      "url": "https://archive.org/details/cu31924077730186/page/n491/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:472",
+      "raw_extract_sha256": "7b4151ae9a7d2b99031c87e62a2a5b85d17e86fc7127ab85c3aa3cdd6d3d44f0",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 480,
+      "leaf": 499,
+      "path": "docs\\research\\S118\\read\\II-p480.txt",
+      "sha256": "1a09cb28dc6fbaf2e63a8d4a79cc772ed1ae5862d0c824e60bc026f0919ffb2b",
+      "url": "https://archive.org/details/cu31924077730186/page/n499/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:480",
+      "raw_extract_sha256": "1dfc40de7d6be549ce2afb05ff1992937a169df492275ac86f66731e5a731748",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 486,
+      "leaf": 505,
+      "path": "docs\\research\\S118\\read\\II-p486.txt",
+      "sha256": "07eeb9cb5c896d7b91060de8486446c3b73573151aed95049db599718af019ec",
+      "url": "https://archive.org/details/cu31924077730186/page/n505/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:486",
+      "raw_extract_sha256": "ba3e306eab13918ace775fcbaaf24245574e57aebc252a5b5467f68d1c1d9a24",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 549,
+      "leaves": [
+        568
+      ],
+      "path": "docs\\research\\S118\\read\\II-p549.txt",
+      "sha256": "bb7e0b7fbf7f7a394acb2246c09518b29b94e7f87baa7da25e7c70a217276782",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n568/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "II:549",
+      "raw_extract_sha256": "f04cc7228fe280fcb9a8991d8674e735eecd43208702b71ef3c3b32143927326",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 551,
+      "leaves": [
+        570
+      ],
+      "path": "docs\\research\\S118\\read\\II-p551.txt",
+      "sha256": "0624759e19f902de39f8aa790acff8a0cf0843450e6d793ad87c99c0cc98db76",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n570/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "II:551",
+      "raw_extract_sha256": "0b245670f33028735abd1c166ee628c9960b87847979aa3943f8cea2f314fb18",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 56,
+      "leaf": 75,
+      "path": "docs\\research\\S118\\read\\II-p56.txt",
+      "sha256": "21afc878869d35036e1f6ed165517fa6a1a1cb2e8f453629a1f051b594733f5e",
+      "url": "https://archive.org/details/cu31924077730186/page/n75/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:56",
+      "raw_extract_sha256": "41bcd66a7d87f52f07e130c8a51ed07c22381ffa75d2022ef176ac7ebed37a84",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 565,
+      "leaf": 584,
+      "path": "docs\\research\\S118\\read\\II-p565.txt",
+      "sha256": "c24dbf8512d9098c9ec9642e2cfb53874447f8e9a426a33e67314a8a3147cd4b",
+      "url": "https://archive.org/details/cu31924077730186/page/n584/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:565",
+      "raw_extract_sha256": "17d4104b900b13f9658b3945ad70a888419095fa4eeb9432b9a6d0eddeea6a6e",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 57,
+      "leaf": 76,
+      "path": "docs\\research\\S118\\read\\II-p57.txt",
+      "sha256": "856e459da07ae1c6103b6a239a1250b82fb071cc4cdc2c6cb75f80962c1785fb",
+      "url": "https://archive.org/details/cu31924077730186/page/n76/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:57",
+      "raw_extract_sha256": "98954494d1b2fe39d059693b376fd63bdf2417264cf9c5d8eb0187c96cf54e7c",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 58,
+      "leaf": 77,
+      "path": "docs\\research\\S118\\read\\II-p58.txt",
+      "sha256": "43cae5fc5c643f3eb84f48906c1b640378cb82ff3e0a0f26543c53e92f0dc3d7",
+      "url": "https://archive.org/details/cu31924077730186/page/n77/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:58",
+      "raw_extract_sha256": "52e40e1bdab0b7ed5815084a2e91488a000c61c793836e9fb7fc56279885e524",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 59,
+      "leaf": 78,
+      "path": "docs\\research\\S118\\read\\II-p59.txt",
+      "sha256": "83ba528dafc8f26175d140fc6e7513516574b72164e5e55606f0bc0541c61e96",
+      "url": "https://archive.org/details/cu31924077730186/page/n78/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:59",
+      "raw_extract_sha256": "2199d411fdbcd6cb0de948587b53276d964e76b46c6cd8c49f0eed910a6c9a83",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 826,
+      "leaves": [
+        845
+      ],
+      "path": "docs\\research\\S118\\read\\II-p826.txt",
+      "sha256": "7f697ca9e59b224d9cc73fc20c973981eee37e28d57e986dd1fe57a9f713dacb",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n845/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "II:826",
+      "raw_extract_sha256": "b3343be7961263297d57822cda8ee6ee53563e89e7d579917c15aa23d37f0c92",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 828,
+      "leaf": 847,
+      "path": "docs\\research\\S118\\read\\II-p828.txt",
+      "sha256": "ffb44e09fa36c78f71499e640ced2bb484b32a8e745a7734114620258bded153",
+      "url": "https://archive.org/details/cu31924077730186/page/n847/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:828",
+      "raw_extract_sha256": "6ac80491ad4fe936ada089b90f9dd040f6948e26b6af06bb3e20619c1648371a",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 879,
+      "leaf": 898,
+      "path": "docs\\research\\S118\\read\\II-p879.txt",
+      "sha256": "aa85cebbf522c5cd53409882d564362d0cd7297b8b29bf522d7c06f9c506ce34",
+      "url": "https://archive.org/details/cu31924077730186/page/n898/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:879",
+      "raw_extract_sha256": "216437dc4c4b2c6ba0c8296e73442904aeb03ba85b62a36ec2c786472ae4e165",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 880,
+      "leaf": 899,
+      "path": "docs\\research\\S118\\read\\II-p880.txt",
+      "sha256": "2f58d659fa223d4796749789e73c4f855fd4c15d2ddea0cfd3dfc6bacc9f55fe",
+      "url": "https://archive.org/details/cu31924077730186/page/n899/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:880",
+      "raw_extract_sha256": "f00edb3f8d8bea6d2ac1c8179e86d3ddde7bd6df699f15c9cdfda1192d47034c",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 897,
+      "leaves": [
+        916
+      ],
+      "path": "docs\\research\\S118\\read\\II-p897.txt",
+      "sha256": "59fcb9555eaff2b9a05d0ba5c80d8e587b2d951bcbca10e73149113f7927c1e5",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n916/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "II:897",
+      "raw_extract_sha256": "50573d5b8922996cbabc6aebb795bd42f866fd0c2feca0f567ce1fe37a18a16b",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 898,
+      "leaf": 917,
+      "path": "docs\\research\\S118\\read\\II-p898.txt",
+      "sha256": "f44bcfaa90fc5dde4cd6b3b44f38b74fd30d00beecf944369aa5dff80a22c311",
+      "url": "https://archive.org/details/cu31924077730186/page/n917/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:898",
+      "raw_extract_sha256": "17beaae798129ae98a2232a859375e7bcf3eb9f9d89c6ee2467c7240ba0613ef",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 907,
+      "leaf": 926,
+      "path": "docs\\research\\S118\\read\\II-p907.txt",
+      "sha256": "8e06ebbdf531c35babf69dff64c669c1e3b9b1d82db5e9770c8fe1cdf39016a0",
+      "url": "https://archive.org/details/cu31924077730186/page/n926/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:907",
+      "raw_extract_sha256": "80a91fd1dbe9baea69c9793d2f6e50e9bd62a053eeb96445c58e2afd3284e1c3",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 908,
+      "leaf": 927,
+      "path": "docs\\research\\S118\\read\\II-p908.txt",
+      "sha256": "5774354085c6ae3041fc0ccc0709ad3d520c74582ebb2c114db1fdcb0f014990",
+      "url": "https://archive.org/details/cu31924077730186/page/n927/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:908",
+      "raw_extract_sha256": "62a2ed79b2fe27cc9715cfbe9c54d16582068cfa6ca71310fa8ddee65319cdad",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 928,
+      "leaf": 947,
+      "path": "docs\\research\\S118\\read\\II-p928.txt",
+      "sha256": "d3c03d69541e12645d84e2dee2d6f7959e96c956a5104f3856e6beeac49fb01a",
+      "url": "https://archive.org/details/cu31924077730186/page/n947/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:928",
+      "raw_extract_sha256": "445f23795f9dcbe9e599ba5e771f98110d8e5e4f772683fdae0c85026d1d844b",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 929,
+      "leaf": 948,
+      "path": "docs\\research\\S118\\read\\II-p929.txt",
+      "sha256": "a930e41cd545002fd14081539ee95edbb5536dd43456711eb06221a50eff52c1",
+      "url": "https://archive.org/details/cu31924077730186/page/n948/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:929",
+      "raw_extract_sha256": "cb51fae342bfa24981fddb3f9b633d49c4e69589f242a8eb695545cd1237a060",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 932,
+      "leaf": 951,
+      "path": "docs\\research\\S118\\read\\II-p932.txt",
+      "sha256": "e6c0b241153ecf63be54a7f592f67047eadc89f1f0eda6196946c108cb1e7a13",
+      "url": "https://archive.org/details/cu31924077730186/page/n951/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:932",
+      "raw_extract_sha256": "049e66aeb2c5d929aeef903d2b72b1f82003943c84529d72b6a4755eb4cfe27e",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 944,
+      "leaves": [
+        963
+      ],
+      "path": "docs\\research\\S118\\read\\II-p944.txt",
+      "sha256": "d369113fee4849375c6378313513593afc95859ed332fbde8be313c1424773f5",
+      "urls": [
+        "https://archive.org/details/cu31924077730186/page/n963/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "II:944",
+      "raw_extract_sha256": "341c6b858934888ff77316fcc180e76d7d835689e41e7b83ac49e732e2768695",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 963,
+      "leaf": 982,
+      "path": "docs\\research\\S118\\read\\II-p963.txt",
+      "sha256": "1d33110c4cf6a343e053edbd54eba33aad0e0ad9fcbb517524f03d3f61b8a8de",
+      "url": "https://archive.org/details/cu31924077730186/page/n982/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:963",
+      "raw_extract_sha256": "383f1f4c3f5526b1c65187a435d06a7156122f044ed700273ca5f63f00a81dfc",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 964,
+      "leaf": 983,
+      "path": "docs\\research\\S118\\read\\II-p964.txt",
+      "sha256": "530caa8c309903f29339479f755c2b33d70022245ac9532c90ebc21806583968",
+      "url": "https://archive.org/details/cu31924077730186/page/n983/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:964",
+      "raw_extract_sha256": "00dd2d35066b4ed92bce1d60aecf1e30f5157de9f46f264cf4057995cb941259",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 973,
+      "leaf": 992,
+      "path": "docs\\research\\S118\\read\\II-p973.txt",
+      "sha256": "b1f0ed708a04b1e31342a69f7f4d53677de1fd1526891aed5436612a7790f3fd",
+      "url": "https://archive.org/details/cu31924077730186/page/n992/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:973",
+      "raw_extract_sha256": "3b1c0dd4877ef3b2b6796e8ad7ce5ca36f7a0fdadcf95ea29714ac911bc68bfe",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 980,
+      "leaf": 999,
+      "path": "docs\\research\\S118\\read\\II-p980.txt",
+      "sha256": "8b019c55f63c0a876555b70293aeadc8c0587dfa68c54ad46e8fb60fbe92ddc1",
+      "url": "https://archive.org/details/cu31924077730186/page/n999/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:980",
+      "raw_extract_sha256": "7be8371332c6786e827358c59b08698dc2b175a56154636f4367688ed2aaa4b3",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-II",
+      "page": 981,
+      "leaf": 1000,
+      "path": "docs\\research\\S118\\read\\II-p981.txt",
+      "sha256": "53beca77bc03e61e1d7b828412638287a92c9cb7e5deb4c8b23823e75af88dbc",
+      "url": "https://archive.org/details/cu31924077730186/page/n1000/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "II:981",
+      "raw_extract_sha256": "67cba5ef3c7499ac9d5e26ef8a5b44ffa7dcc1621d6dfa2cdaa5abf1b67169a9",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-III",
+      "page": 609,
+      "leaf": 637,
+      "path": "docs\\research\\S118\\read\\III-p609.txt",
+      "sha256": "8eae38db63f88228760d101bc2fa9014c2ef43fe97a14eb4411ef8a7fc4c150f",
+      "url": "https://archive.org/details/warofrebellionco03unit/page/n637/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "III:609",
+      "raw_extract_sha256": "62ff825228806d109d599bf1bd846341c3f4fc9ac88985267e7f154138ec4555",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-III",
+      "page": 610,
+      "leaf": 638,
+      "path": "docs\\research\\S118\\read\\III-p610.txt",
+      "sha256": "17677573b08b739b52995948a922c7a23f39b7f6b8e5e17cb913aac9d970f462",
+      "url": "https://archive.org/details/warofrebellionco03unit/page/n638/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "III:610",
+      "raw_extract_sha256": "1189faf5c8d2b49d45156e6e5ccf7b26e57901d1bad79445c18569f038476c27",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-III",
+      "page": 612,
+      "leaf": 640,
+      "path": "docs\\research\\S118\\read\\III-p612.txt",
+      "sha256": "93b784b385d4e2bcd6b27054cd95f48beef55b5f29bdd030cceff0890f41a817",
+      "url": "https://archive.org/details/warofrebellionco03unit/page/n640/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "III:612",
+      "raw_extract_sha256": "ee1f50838f9b91a379a35561bf0d5549a574ee4a787541cb7476b6ca87e0f5e0",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR IV-I",
+      "page": 272,
+      "leaf": 287,
+      "path": "docs\\research\\S118\\read\\IV1-p272.txt",
+      "sha256": "f41abacd89ce5cdd62a3a5bda64532821161f982fdad5f847a529aec828ce078",
+      "url": "https://archive.org/details/cu31924079579524/page/n287/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV1:272",
+      "raw_extract_sha256": "60c0b7f46edea39cd1345a5937c22da10003e6979f159e2a2101aa128b08369f",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR IV-I",
+      "page": 275,
+      "leaf": 290,
+      "path": "docs\\research\\S118\\read\\IV1-p275.txt",
+      "sha256": "66aa992a7c81bb22797b0e6cdb4eec3f61e8c2939fe9c344ec015b3fab0b633d",
+      "url": "https://archive.org/details/cu31924079579524/page/n290/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV1:275",
+      "raw_extract_sha256": "15e83d7be4c589f9243fd2ac148d3dbfcfa85e7b70855ad3fa11d25de7e27d6d",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR IV-I",
+      "page": 411,
+      "leaf": 426,
+      "path": "docs\\research\\S118\\read\\IV1-p411.txt",
+      "sha256": "8bf9c9ec855e949236bdec0d3a4a621db241988f03cf342281ba24d68403ec15",
+      "url": "https://archive.org/details/cu31924079579524/page/n426/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV1:411",
+      "raw_extract_sha256": "6ec98a4d374120730e01be3fcba433c9fb94552cc307c0bc43a22cd6399fe153",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR IV-I",
+      "page": 417,
+      "leaf": 432,
+      "path": "docs\\research\\S118\\read\\IV1-p417.txt",
+      "sha256": "53a417ad5cfe96c346b91718098106ad914ac60f9ffb46eaaea66388886d07e3",
+      "url": "https://archive.org/details/cu31924079579524/page/n432/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV1:417",
+      "raw_extract_sha256": "daf3ee80f4a05cc9e8937a5fffe96121308a8aa640531375c8b497edf6b070c9",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-IV",
+      "page": 362,
+      "leaf": 367,
+      "path": "docs\\research\\S118\\read\\IV-p362.txt",
+      "sha256": "4f822110fa79b9a79031b5ce0d0ad59a590c2a5938e3c79322b2911533b76211",
+      "url": "https://archive.org/details/warofrebellionco0004vari/page/n367/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV:362",
+      "raw_extract_sha256": "bc5942d9fccac2349bb38098130c8c242343e770ee3a1ff3d70c34b1cfc7bfee",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-IV",
+      "page": 363,
+      "leaf": 368,
+      "path": "docs\\research\\S118\\read\\IV-p363.txt",
+      "sha256": "d97f3123bdb46e9433f1a3c39b5a743acc1e92783be69cc9719a57494be6a6ca",
+      "url": "https://archive.org/details/warofrebellionco0004vari/page/n368/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV:363",
+      "raw_extract_sha256": "5f40b86c68ce8e9c7479d0a4233544f8b221cb8455aed75c7b40e4f713c12e47",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-IV",
+      "page": 371,
+      "leaf": 376,
+      "path": "docs\\research\\S118\\read\\IV-p371.txt",
+      "sha256": "4cbb06ead44b4fd0f904422334dee5b551ca6a74cfc6748febd9424006a3263e",
+      "url": "https://archive.org/details/warofrebellionco0004vari/page/n376/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV:371",
+      "raw_extract_sha256": "efdc27b8b8699d789290b21e2ed9154a852eb8dabb58b1eb5ea7ee2960e447c8",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-IV",
+      "page": 375,
+      "leaf": 380,
+      "path": "docs\\research\\S118\\read\\IV-p375.txt",
+      "sha256": "677639f99bcf1ce4f2352f7bc452fc6974fb1f127a55df97557cf3ee2c2c1283",
+      "url": "https://archive.org/details/warofrebellionco0004vari/page/n380/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV:375",
+      "raw_extract_sha256": "a60becdf8b92033021d7cc82b2b1145073779990a34fa55cd59933af60e277fa",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-IV",
+      "page": 377,
+      "leaf": 382,
+      "path": "docs\\research\\S118\\read\\IV-p377.txt",
+      "sha256": "f890b6851c3e36463b46bba650471bd6aec93e2d1caf9b22b76e0b43831ea3f6",
+      "url": "https://archive.org/details/warofrebellionco0004vari/page/n382/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV:377",
+      "raw_extract_sha256": "84bdab333f09cd9b15eca23316c6adaa8fe8242c334ce97f66f9133cba100925",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-IV",
+      "page": 378,
+      "leaf": 383,
+      "path": "docs\\research\\S118\\read\\IV-p378.txt",
+      "sha256": "28adc9aaac58d9fe4424456e74add349c1fae06377a6621a1e21de3b59c8b6d1",
+      "url": "https://archive.org/details/warofrebellionco0004vari/page/n383/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV:378",
+      "raw_extract_sha256": "67846e4b2987c02e4f7ae169a19509132d99b140a1623c6e3193acb55b932bc6",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-IV",
+      "page": 431,
+      "leaf": 436,
+      "path": "docs\\research\\S118\\read\\IV-p431.txt",
+      "sha256": "a16ad4ee81461382995c724d6a73d230c12fba437a2e2f66307644fbd1f0948b",
+      "url": "https://archive.org/details/warofrebellionco0004vari/page/n436/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV:431",
+      "raw_extract_sha256": "e29a0def0dc790e2a0118720fad0d33d633067c4fe5ac6180ffe7a148e7b50e7",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-IV",
+      "page": 436,
+      "leaf": 441,
+      "path": "docs\\research\\S118\\read\\IV-p436.txt",
+      "sha256": "cf9b4a6f9297830ac2a463fe18168d1a2938e33ced376b9153c95cb81da4fad9",
+      "url": "https://archive.org/details/warofrebellionco0004vari/page/n441/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "IV:436",
+      "raw_extract_sha256": "b7e279e457bb3601f536961c434d51809af830347c5a9840b6408a7283872c16",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-LI.2",
+      "page": 107,
+      "leaf": 115,
+      "path": "docs\\research\\S118\\read\\LI2-p107.txt",
+      "sha256": "0d0085d75c1a47839241483ec3f3d44c3375e22fc2a695514e4981ff050307b3",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n115/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "LI2:107",
+      "raw_extract_sha256": "8cdd49de31aca4b46dffe36fd802120b2f64270114e0ab2481b7faaafacd03bc",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-LI.2",
+      "page": 111,
+      "leaves": [
+        119
+      ],
+      "path": "docs\\research\\S118\\read\\LI2-p111.txt",
+      "sha256": "5e308dc101eee53e7000ba6c33d1e844b56a88dff8f657b8a5b6f955446f7c3d",
+      "urls": [
+        "https://archive.org/details/warofrebellion512unit/page/n119/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LI2:111",
+      "raw_extract_sha256": "77bad28968219741e5b7647c55656a75acc8f6e784600a78fc3ca1f257a01a04",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-LI.2",
+      "page": 112,
+      "leaves": [
+        120
+      ],
+      "path": "docs\\research\\S118\\read\\LI2-p112.txt",
+      "sha256": "54bc0584d75269d0a952bfd7432e029f1b766b7157585eeea408623b3a8b7515",
+      "urls": [
+        "https://archive.org/details/warofrebellion512unit/page/n120/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LI2:112",
+      "raw_extract_sha256": "b7b247e2cc1d006459e474c839fe93da4f74d665a2730880c2bcfd1a1d9284a7",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-LI.2",
+      "page": 115,
+      "leaf": 123,
+      "path": "docs\\research\\S118\\read\\LI2-p115.txt",
+      "sha256": "5df53ee52fde25946f0bfb82bb791a410ed4f8a1ad28551eb505304426daa8a4",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n123/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "LI2:115",
+      "raw_extract_sha256": "e57946f63b1f2b47b6889ef374f3549c1ff62fbbe9e44ba1ec474972391e23da",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-LI.2",
+      "page": 123,
+      "leaf": 131,
+      "path": "docs\\research\\S118\\read\\LI2-p123.txt",
+      "sha256": "a2344cbb81d277dcd681836036af767b94ea3f98ef8d93525c8b19f46efcd5b9",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n131/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "LI2:123",
+      "raw_extract_sha256": "0ec9650151c86a407bfc5d6c210a506c50146a978e70f5aa4bbbfa42beaa7df3",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "OR I-LI.2",
+      "page": 26,
+      "leaf": 34,
+      "path": "docs\\research\\S118\\read\\LI2-p26.txt",
+      "sha256": "cac64e22a8230cb1c335e367a2db66bbe800f7a228327770eeaf15f2507e4432",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n34/mode/1up",
+      "scope": "Retained OCR, printed head and relevant instrument read; not whole-volume reading.",
+      "key": "LI2:26",
+      "raw_extract_sha256": "75f312e1b51a9f608876e4b82940f98f36e374f5b60b12f0a46a5460bddb484c",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "OR official printing; individual paper date retained"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 129,
+      "leaves": [
+        265
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p129.txt",
+      "sha256": "2da044b63e187d18d0b952280194fabf8cb1fb1b9686c1ce621d1e916c10ce99",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n265/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:129",
+      "raw_extract_sha256": "5658c7744d65d1725efef5a99dd02be64135a453aa00054608c906e54d967d64",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 132,
+      "leaves": [
+        273
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p132.txt",
+      "sha256": "0639540b2f09e44edaa9d1fecc9f4310250d9b56c74dcf4409dda21aa2bb4d24",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n273/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:132",
+      "raw_extract_sha256": "ff5ca85d53ae2506f1073388364fe38105cdd4e77c9cde627a7a24db08a83a8f",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 137,
+      "leaves": [
+        283
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p137.txt",
+      "sha256": "ca337766dfc8798d1c93e90055f73ba65d2d87d39215620773dc9d2e1e4615c1",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n283/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:137",
+      "raw_extract_sha256": "9eae5d78157d79d4f58f3bf2453d8a9ec2ff9a53f094fc4d6c6c37693661ecd4",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 146,
+      "leaves": [
+        301
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p146.txt",
+      "sha256": "003ca1c350aeb8d6cc70906df886a745584e6059eb756c9cb08bdc81303cf88d",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n301/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:146",
+      "raw_extract_sha256": "a0b201b7a337a22006678dde8fc1ee79539ab389154e2b14f81ef9b518b401e7",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 156,
+      "leaves": [
+        327
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p156.txt",
+      "sha256": "f4d8ace55ed951689f8c2398339542162bc97f80227f9112d793aa4020c1ce2f",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n327/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:156",
+      "raw_extract_sha256": "9f0c070254e6301b97e5083b70e1ea4ac44248aaf422abacb5ef7196a8ff0d6e",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 173,
+      "leaves": [
+        361
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p173.txt",
+      "sha256": "f0dc0160215f4dd505b90a187133d6c55ee8194c16df418f933e7ef53be896fe",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n361/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:173",
+      "raw_extract_sha256": "85598a9822f5400efd625b080ead1c4b0cfb4c9023457b053afbfca74669b837",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 175,
+      "leaves": [
+        367
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p175.txt",
+      "sha256": "2e66349c194c1e4caf1b79c77831989fd43f0b6a132278a97778e2081fea38c1",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n367/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:175",
+      "raw_extract_sha256": "b88c4d164a9c80154facf48ccf94576cbc6cb281938ad36dbafc13fdfa8c1af5",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 176,
+      "leaves": [
+        369
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p176.txt",
+      "sha256": "3811b509d994f146f4b19e0e3062e626004df39b7ae19a1b12cc2fd8c538ae87",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n369/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:176",
+      "raw_extract_sha256": "8c11b991dd55bc2d67fc958c37838285cc85b53409748483725d1e61e69b1cfd",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 183,
+      "leaves": [
+        385
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p183.txt",
+      "sha256": "28985b12fd70b91f6aa5a1f46be48f05a25585be69bbacda74de557c894118cc",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n385/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:183",
+      "raw_extract_sha256": "c27369f536a7dc03367668fde2b457641cc65e9c793487544df8da69cf7c0fe9",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 184,
+      "leaves": [
+        387
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p184.txt",
+      "sha256": "ee6250840139968a22c31550708fc8d5922ad91231529fa625e86e1661faf29e",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n387/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:184",
+      "raw_extract_sha256": "ab36b6ab9cff385d953a74ad48d98c4ed6f4ecaf93ab2ce2e766fb5d2c68e5cd",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 195,
+      "leaves": [
+        409
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p195.txt",
+      "sha256": "1e4f78f7d96435abcd7b6692e1cac698a4f3bf1908c05744e8f0a29c9d51032f",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n409/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:195",
+      "raw_extract_sha256": "001ae9af1c06a274ab607675dec736edc783914dffb0707d748e5455e11ee80d",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 196,
+      "leaves": [
+        411
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p196.txt",
+      "sha256": "9a7cd33c473ddd659707776c0d9baed0d6d5986d4a6ac7b5ff91597eb8b4fd3c",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n411/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:196",
+      "raw_extract_sha256": "5b698f8e4f2ee5fdd832bcbbb933879c086bcfe5387c2812e0f5273d3282c2c3",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 204,
+      "leaves": [
+        427
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p204.txt",
+      "sha256": "b023c5abf004ea7f1340d5087b4c506bf09c8683daf877bb0a6088ce7ec89a13",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n427/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:204",
+      "raw_extract_sha256": "61af049a803de86f4537144be5ada1086c59c50d892339cbe6e45a647469d61b",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 205,
+      "leaves": [
+        431
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p205.txt",
+      "sha256": "0ec33569f9bbc2d62b34133d9a40fe8271b21885fe7b1c055946312e6dc9ab74",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n431/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:205",
+      "raw_extract_sha256": "db4bf94ffd9300100285fccc3712b652468106deadd6f9a225e1b30e3a02af8a",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 206,
+      "leaves": [
+        433
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p206.txt",
+      "sha256": "7debc321dceb3980ff740958c7ff66e968c04367e405ecd4cc160a79f0e28e61",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n433/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:206",
+      "raw_extract_sha256": "738d285eea52730842d0c7358bfee588d9a084ad87e55fffd0ecd0749abaa2b1",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 227,
+      "leaves": [
+        477
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p227.txt",
+      "sha256": "afa68a1259b552bcc3cdb44fc820aad47a8d7e28442c9548fdee954f40d92ac7",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n477/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:227",
+      "raw_extract_sha256": "c04a847f2cd62670d42ea5abf52d7c0fb1c1ba25d89af4cbd394dcf7af56beef",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 228,
+      "leaves": [
+        479
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p228.txt",
+      "sha256": "348b359ec3b9a534c7d5af283905efc1244d5658afb21269de8d9280422a210d",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n479/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:228",
+      "raw_extract_sha256": "e8bd06569bee4d09d2479f7d4f690614382d06386b5c14c4a540daec5c8458cf",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 265,
+      "leaves": [
+        553
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p265.txt",
+      "sha256": "510329b5bc559c2152863051afe59460f2cdc93411e5017edf072a1a93511a91",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n553/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:265",
+      "raw_extract_sha256": "c77ef5194b4ca58dd559d4ddc2cfbc94da49e56fc91027bb6f0d9fd640d8e525",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 267,
+      "leaves": [
+        559
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p267.txt",
+      "sha256": "788ba8dbfcf90ed210349c65b1a7304c6969a9a1041e8ee6dffc48fa2baf50a8",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n559/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:267",
+      "raw_extract_sha256": "9392907b178270d560ae6f347560d67c4a2fa74dcd4acca4097afd571e7fcd9e",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 273,
+      "leaves": [
+        571
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p273.txt",
+      "sha256": "73f60cd0da404f839b0076b2417160fecc51155e346d722fa010c9279b7f9da5",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n571/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:273",
+      "raw_extract_sha256": "351878faa693b6ec1214c4ded794e27fbf4dd3afcfb604330b8645382b7e0ac7",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 282,
+      "leaves": [
+        589
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p282.txt",
+      "sha256": "72b194ff3376a118ca4b53280284dadd2bec9ed48f525c82d3c0830c8da02f7d",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n589/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:282",
+      "raw_extract_sha256": "e367c8d85250b500717a5a22235ec67d880c728977ec883f976393c26bc73d31",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 283,
+      "leaves": [
+        593
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p283.txt",
+      "sha256": "4bde39ece6fea0dc700dbd711876eea2923ce117ffd7ae878afc4688532ad6eb",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n593/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:283",
+      "raw_extract_sha256": "497efe82f9173590d70c1821cb55e72b75153fe9823b334249b49af4a706b7c4",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 292,
+      "leaves": [
+        613
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p292.txt",
+      "sha256": "86735e121cd37707f279061701bbdbe5bb5e6220cead8fc56cee3c9d73c441ec",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n613/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:292",
+      "raw_extract_sha256": "0f893ea36096d595fb0c119c9f4cd934cb6bb6573488e99baa499deb6aca17aa",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 293,
+      "leaves": [
+        615
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p293.txt",
+      "sha256": "e14d0021e309b6d96f26b526583c553233e9cf4f69b6cbbe869b51864947c90b",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n615/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:293",
+      "raw_extract_sha256": "56561a7a01a9df60750ca5ab12ebd55879e3e1205743325ce41524fc4cdedb0a",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 307,
+      "leaves": [
+        643
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p307.txt",
+      "sha256": "396919c2eac4723d6952dcd31e6cef59763cc37644ed7ef0fbd8501d19b9a345",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n643/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:307",
+      "raw_extract_sha256": "cc092d17267ac269b2940ed7e148c6f0ef00a811c2ff87c7e4cc2ad3e0fdcee2",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 313,
+      "leaves": [
+        657
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p313.txt",
+      "sha256": "c24b5b11ea3d029e6e0f19bca1279b1b8e06178bb965f1f25b8cfc4807a5d8be",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n657/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:313",
+      "raw_extract_sha256": "658d8f49ad9b84097899abd04343fd36fb3c9fb67b52d2cf7c5a0e02ef2d01a9",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 314,
+      "leaves": [
+        659
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p314.txt",
+      "sha256": "1a3a2f37f2704072178d3278499f8b9763e6a5af54233a26fcbd52be45cbcb9a",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n659/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:314",
+      "raw_extract_sha256": "e4484242ca71a47ae2a05a5e265f2aa018f6229624bdf5d05dd57c178481a4ba",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 323,
+      "leaves": [
+        677
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p323.txt",
+      "sha256": "50248420cd9936872bf5c550f739bbc312fb93cf1b6e88a6f9b27b816dd45247",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n677/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:323",
+      "raw_extract_sha256": "9f1d7d44f57a9f31a80da0038d8a404630c8fb1f7e0a4dfe91f6204f87ed7451",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 332,
+      "leaves": [
+        695
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p332.txt",
+      "sha256": "e1c2a5699836bb018b181f6edc3c74c73f0bc68a5d4c2f5b71e1e986d9ad1328",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n695/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:332",
+      "raw_extract_sha256": "901dc4a66f20fae588abdda3e7288cdf18f1d6726dd1cf2676a2b6cf50c4b69d",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 335,
+      "leaves": [
+        701
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p335.txt",
+      "sha256": "0a2e86f271ec07f25fed3b689f20c04f335b9b519362bfd30c6868f1dceef1cc",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n701/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:335",
+      "raw_extract_sha256": "d0d8cce9d64651c44962e061e86a6114170b3ee99027dc5f130fefcaefcdd11c",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 347,
+      "leaves": [
+        725
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p347.txt",
+      "sha256": "206dd0137da86b82a8d0be44222b655081339c76768664777acb5a69eacb8fb7",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n725/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:347",
+      "raw_extract_sha256": "e6c5b429de2e016c964b01ac4a395b876818488023c25a78078002b32e22fb19",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 348,
+      "leaves": [
+        727
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p348.txt",
+      "sha256": "1f59d96bb9bd0ca52ff1580b0170b8e2b9e84b145b0f6a228197ecde539ded93",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n727/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:348",
+      "raw_extract_sha256": "e2fab5cf6c10e68b691633537a6e18ad66bd35e39851e0f46e91fd00a403176d",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 360,
+      "leaves": [
+        753
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p360.txt",
+      "sha256": "ac443e835ca2a62201c9cdd5187e2c85ee07cab0a8b4e36062d7a67eb0d403fd",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n753/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:360",
+      "raw_extract_sha256": "93318837760a5c38981d418962d167cdbd6cbd2f251fd08211998342eff007bd",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 361,
+      "leaves": [
+        755
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p361.txt",
+      "sha256": "96257f7ad30c45935e567bb09f39b900ef8f045fd5074b3b5382c7732245585c",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n755/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:361",
+      "raw_extract_sha256": "bff6d6dee127270138eadefe70ea7b215ba24b28327e363c3abe5d737976dbf3",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 372,
+      "leaves": [
+        777
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p372.txt",
+      "sha256": "e8e023b5cf0bc6040d16b47ee9721b07e0156e3bc43d9e6947b316b11d4d789c",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n777/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:372",
+      "raw_extract_sha256": "9988d93444e905b29d30e266799bbb157094852d05ad8e976b5a75da01271cff",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 373,
+      "leaves": [
+        779
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p373.txt",
+      "sha256": "c24b101f6c2fa08a4cd07b445a68d83ea6ac19dba5a37a858cb5b68448942931",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n779/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:373",
+      "raw_extract_sha256": "328c3909805fe798440f13003f276f82083ed8a500ab5727a032ab1e8c14efa0",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 382,
+      "leaves": [
+        797
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p382.txt",
+      "sha256": "37452692e34cf95e1580ff3833485d2d419ac8045a0876cc9307941f57a982ef",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n797/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:382",
+      "raw_extract_sha256": "6a98fc67c54a43a46107318d5890d650cacb7dae848b60160c64db110c19106e",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    },
+    {
+      "work": "Lindsley, Military Annals (1886)",
+      "page": 384,
+      "leaves": [
+        803
+      ],
+      "path": "docs\\research\\S118\\read\\LINDSLEY-p384.txt",
+      "sha256": "f7fc508e9cb3206b51cc01a9990dfa04ba10d9a37d3650988d623f550772c41c",
+      "urls": [
+        "https://archive.org/details/militaryannalsof00lind/page/n803/mode/1up"
+      ],
+      "scope": "Retained OCR, relevant printed head and instrument inspected where cited; not whole-volume reading.",
+      "key": "LINDSLEY:384",
+      "raw_extract_sha256": "67bece3207c8e867ec24d527b27bdd9968faf4ee8c966aeb66f4664871ac0423",
+      "normalisation": "UTF-8 LF and one final newline; no wording edits",
+      "evidence_class": "retrospective veteran account"
+    }
+  ],
+  "volumes": [
+    {
+      "key": "BEVENS",
+      "title": "Bevens, Reminiscences of a Private (1913)",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s118\\downloads\\Bevens.xml",
+      "sha256": "c9cfec797438e4dc04c523ee0787123813c7b512565da01e0ccb9d17aadd9272",
+      "archive_identifier": "reminiscencesofp00beve",
+      "method": "Selective retained OCR plus named scan inspections; no whole-volume reading claimed"
+    },
+    {
+      "key": "HEAD",
+      "title": "Head, Campaigns and Battles",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s118\\downloads\\Head.xml",
+      "sha256": "c80a0ac1dc8fb00a09d63e8695cd417dc31fc6649d935b7fd262e3adcf7e7f41",
+      "archive_identifier": "campaignsandbatt00headiala",
+      "method": "Selective retained OCR plus named scan inspections; no whole-volume reading claimed"
+    },
+    {
+      "key": "I",
+      "title": "OR I-I",
+      "source_artifact": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+      "sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+      "archive_identifier": "cu31924077725913",
+      "method": "Selective retained OCR plus named scan inspections; no whole-volume reading claimed"
+    },
+    {
+      "key": "II",
+      "title": "OR I-II",
+      "source_artifact": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_djvu.xml",
+      "sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+      "archive_identifier": "cu31924077730186",
+      "method": "Selective retained OCR plus named scan inspections; no whole-volume reading claimed"
+    },
+    {
+      "key": "III",
+      "title": "OR I-III",
+      "source_artifact": "C:\\Pyrrhic\\mandate-research-sources\\S37\\or-i3.xml",
+      "sha256": "a5639bae848dc9dd06a1eaf861a58cf30abf8e06ea4a3f678f63d3a621b98d43",
+      "archive_identifier": "warofrebellionco03unit",
+      "method": "Selective retained OCR plus named scan inspections; no whole-volume reading claimed"
+    },
+    {
+      "key": "IV",
+      "title": "OR I-IV",
+      "source_artifact": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S57\\OR-I-4-CORRECTED.pages.json",
+      "sha256": "5a481c8e84361d8eba5177f70b2476bfc3db15a09c46c6921d559ac9c17bae29",
+      "archive_identifier": "warofrebellionco0004vari",
+      "method": "Selective retained OCR plus named scan inspections; no whole-volume reading claimed"
+    },
+    {
+      "key": "IV1",
+      "title": "OR IV-I",
+      "source_artifact": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-IV-1_djvu.xml",
+      "sha256": "4d1757fbfe19d20e918d48d9977f3623050e9b5ef8de5c5c9e0e8eb3d961796a",
+      "archive_identifier": "cu31924079579524",
+      "method": "Selective retained OCR plus named scan inspections; no whole-volume reading claimed"
+    },
+    {
+      "key": "LI2",
+      "title": "OR I-LI.2",
+      "source_artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2_djvu.xml",
+      "sha256": "067be3c0ff567ac369bdc997086fd18489bc12d5e0be217c0eb3b57b4bb1ca8f",
+      "archive_identifier": "warofrebellion512unit",
+      "method": "Selective retained OCR plus named scan inspections; no whole-volume reading claimed"
+    },
+    {
+      "key": "LINDSLEY",
+      "title": "Lindsley, Military Annals (1886)",
+      "source_artifact": "C:\\Pyrrhic\\sprint-research-military\\runs\\s118\\downloads\\Lindsley.xml",
+      "sha256": "1b249b4fd3dc6e98efcc46d0e0616a86aa725a3909966128762624af1bccb577",
+      "archive_identifier": "militaryannalsof00lind",
+      "method": "Selective retained OCR plus named scan inspections; no whole-volume reading claimed"
+    }
+  ],
+  "scan_inspections": [
+    {
+      "work": "LINDSLEY",
+      "page": 132,
+      "path": "runs/s118/downloads/militaryannalsof00lind-leaf273.jpg",
+      "sha256": "d4203db33c53fd43d513690fdfbc74c18964c7651ad08d3815b77428371d3eee",
+      "finding": "Printed132; organisation May5; Confederate muster about May12. Later Holmes/June1 chronology conflicts with contemporary June5 assignment, not used as earlier command proof."
+    },
+    {
+      "work": "HEAD",
+      "page": 24,
+      "path": "runs/s118/downloads/campaignsandbatt00headiala-leaf32.jpg",
+      "sha256": "7da80fc324f09a4eed5459884d56a13c249acb6278d7b29c2e19d316742690e7",
+      "finding": "Printed24, Lynchburg29th, July1861; OCR2pth resolved by scan."
+    }
+  ],
+  "limits": [
+    "Internet Archive redirect download timed out; metadata returned direct US archive hosts, acquired from those. Unread search summaries never evidence.",
+    "Initial OR I-I and I-LII.2 offsets and Lindsley automatic page metadata rejected on printed heads; corrected extracts only enter this packet.",
+    "No complete22-regiment company-roll crosswalk or actual July31 general-order original recovered. Recipient groupings are evidence-bounded proposals, not a closed balance sheet."
+  ]
+}
