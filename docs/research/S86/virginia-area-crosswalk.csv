@@ -1,0 +1,15 @@
+observation_id,date,place,reported_text,candidate_existing_lots,citation,source_keys,disposition,limitation
+VA-AREA-01,1861-05-30,Norfolk,7000 conjectured,state-forces.va_norfolk,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No return; Virginia-only component not separated
+VA-AREA-02,1861-05-30,Jamestown Island,1050; fifteen companies,,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No return; separate from Williamsburg/Yorktown
+VA-AREA-03,1861-05-30,Williamsburg and Yorktown,3500,state-forces.va_peninsula,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No return; mixed State command
+VA-AREA-04,1861-05-30,Gloucester Point,600,,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No return; separate local scope
+VA-AREA-05,1861-05-30,West Point,250,,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No regiment names or own return
+VA-AREA-06,1861-05-30,"Richmond, Ashland and Confederate States troops",5500,state-forces.va_richmond,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,Mixed geography and out-of-State service
+VA-AREA-07,1861-05-30,Fredericksburg and lower Rappahannock/Potomac,2700,,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,Number not known; no distinct local pack lot in S84 Virginia list
+VA-AREA-08,1861-05-30,Manassas Gap,6000,state-forces.va_manassas_garland;state-forces.va_manassas_preston,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No return; larger force than the two original battalions
+VA-AREA-09,1861-05-30,Leesburg,500,,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No return; not automatically a new cohort beside Manassas
+VA-AREA-10,1861-05-30,Harpers Ferry excluding Maryland and Point of Rocks,5500,state-forces.va_harpers_ferry,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,Not known; exclusion does not isolate Virginia from all other States
+VA-AREA-11,1861-05-30,Grafton,1000 conjectured,,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No return; western coverage gap
+VA-AREA-12,1861-05-30,Kanawha Valley,1100,,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No return; May31 letter on same page reports only500 in service; keep dates/scopes distinct
+VA-AREA-13,1861-05-30,Abingdon,500 conjectured,,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No return; planned totals not musters
+VA-AREA-14,1861-05-30,Lynchburg,1000 conjectured,,OR I-II p.895,OR-I-II:895,context only; never add these estimates to unit rows or the June17 aggregate,No return; rendezvous may overlap later field commands

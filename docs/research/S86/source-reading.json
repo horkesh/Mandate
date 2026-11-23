@@ -1,0 +1,762 @@
+{
+  "request": "S86 only; no pack change",
+  "sources": [
+    {
+      "key": "OR-IV-I:388",
+      "work": "OR IV-I",
+      "printed_page": "388",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p388.txt",
+      "sha256": "4b5b284dee9c066159bb92963b13b21a778960357ca730f3e044e70255094230",
+      "url": "https://archive.org/details/cu31924079579524/page/n403/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:392",
+      "work": "OR IV-I",
+      "printed_page": "392",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p392.txt",
+      "sha256": "16f67c03d6708c92f8e549c9d981896a26626ade2106fe7c29729ecaacd136f1",
+      "url": "https://archive.org/details/cu31924079579524/page/n407/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:393",
+      "work": "OR IV-I",
+      "printed_page": "393",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p393.txt",
+      "sha256": "35920161df2983d6b1108886dff738df1d2f00118be3eee650b8508a8f69878b",
+      "url": "https://archive.org/details/cu31924079579524/page/n408/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:408",
+      "work": "OR IV-I",
+      "printed_page": "408",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p408.txt",
+      "sha256": "d6431b445641e20ae7f45b9f667e60fc881c399b8355f6d52d86834a9499e808",
+      "url": "https://archive.org/details/cu31924079579524/page/n423/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:409",
+      "work": "OR IV-I",
+      "printed_page": "409",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p409.txt",
+      "sha256": "0fdf6ca4dcbbe4fd84790dd980f28a2ec57ec080534dc33c19fb650c1821fc41",
+      "url": "https://archive.org/details/cu31924079579524/page/n424/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:416",
+      "work": "OR IV-I",
+      "printed_page": "416",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p416.txt",
+      "sha256": "b0cee67a861de6c782cad969b5ae2f3585016b5cd6587bfab24d6073d00d6548",
+      "url": "https://archive.org/details/cu31924079579524/page/n431/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:417",
+      "work": "OR IV-I",
+      "printed_page": "417",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p417.txt",
+      "sha256": "48004a1a2d2cccff6b00d468b31684a9f0d935d04ba2617714fc1644b70c15ab",
+      "url": "https://archive.org/details/cu31924079579524/page/n432/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:424",
+      "work": "OR IV-I",
+      "printed_page": "424",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p424.txt",
+      "sha256": "79511bb15018d3a7b7638478cf694914b7cdd44190d47620ea98db6e682684fd",
+      "url": "https://archive.org/details/cu31924079579524/page/n439/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:444",
+      "work": "OR IV-I",
+      "printed_page": "444",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p444.txt",
+      "sha256": "320667c694785e92d8724d09ef6bab3953a729771c25b5830f982e6e2fd1d17e",
+      "url": "https://archive.org/details/cu31924079579524/page/n459/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:445",
+      "work": "OR IV-I",
+      "printed_page": "445",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p445.txt",
+      "sha256": "58b31c219605b8e3e46c79b13b8f6967e56211c4b99e21a92277bdbebaa33be3",
+      "url": "https://archive.org/details/cu31924079579524/page/n460/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:477",
+      "work": "OR IV-I",
+      "printed_page": "477",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p477.txt",
+      "sha256": "83a273d54e0b41e8f1a7f7681cde50c54ba8f73d4a0dc961f4ed1501979ac88f",
+      "url": "https://archive.org/details/cu31924079579524/page/n492/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:478",
+      "work": "OR IV-I",
+      "printed_page": "478",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p478.txt",
+      "sha256": "37675e068e00588a4d936d5a31b79f7abc97a4d882a548ec3024b6e72e916ed7",
+      "url": "https://archive.org/details/cu31924079579524/page/n493/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:479",
+      "work": "OR IV-I",
+      "printed_page": "479",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p479.txt",
+      "sha256": "b90a1b4dbfb2cdc2b188cd16c6b1e0d11dd1be6a5ae7397baac32ee4a9f019ea",
+      "url": "https://archive.org/details/cu31924079579524/page/n494/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:480",
+      "work": "OR IV-I",
+      "printed_page": "480",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p480.txt",
+      "sha256": "d39c5961204d41e307948cb3d8c88507ee907a89808609ca99c80bb3ad4d084c",
+      "url": "https://archive.org/details/cu31924079579524/page/n495/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:495",
+      "work": "OR IV-I",
+      "printed_page": "495",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p495.txt",
+      "sha256": "3d7a4a8c114f8ceb7f858c65cbbdea6eb40ccd05584e9372ee5e137d056052b5",
+      "url": "https://archive.org/details/cu31924079579524/page/n510/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:496",
+      "work": "OR IV-I",
+      "printed_page": "496",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p496.txt",
+      "sha256": "21ad767f46e51ff6922f84fecc1c23108648fe9157ec1cfdb1848fd357a874b8",
+      "url": "https://archive.org/details/cu31924079579524/page/n511/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:626",
+      "work": "OR IV-I",
+      "printed_page": "626",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p626.txt",
+      "sha256": "047b0693e4eeaaa8ab39df68c6cbc10c8dc6c3a93d67d572e8a2d5717d6eb41c",
+      "url": "https://archive.org/details/cu31924079579532/page/n19/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:627",
+      "work": "OR IV-I",
+      "printed_page": "627",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p627.txt",
+      "sha256": "de90ea48e6bafd955be4e1f718b76108541e708ea0eceeaad1912a0059e679e5",
+      "url": "https://archive.org/details/cu31924079579532/page/n20/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:628",
+      "work": "OR IV-I",
+      "printed_page": "628",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p628.txt",
+      "sha256": "c206361945e115056e1be86efb482041e3306e35bbcc800dff426e0ef5b3c633",
+      "url": "https://archive.org/details/cu31924079579532/page/n21/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:629",
+      "work": "OR IV-I",
+      "printed_page": "629",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p629.txt",
+      "sha256": "d25aed25b71f0592ce8ff35a30dfdcc861a85eb20fdd904055942073288c5b7d",
+      "url": "https://archive.org/details/cu31924079579532/page/n22/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:630",
+      "work": "OR IV-I",
+      "printed_page": "630",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p630.txt",
+      "sha256": "e70fcef124594f42570a103889b4ff5e4b9a918c9a227cb5084c54494bb207e8",
+      "url": "https://archive.org/details/cu31924079579532/page/n23/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:747",
+      "work": "OR IV-I",
+      "printed_page": "747",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p747.txt",
+      "sha256": "52a08574b3ae8fee669279d9187da3688bcfee459d9f6f0d03ca02f3df380c02",
+      "url": "https://archive.org/details/cu31924079579532/page/n140/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:748",
+      "work": "OR IV-I",
+      "printed_page": "748",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p748.txt",
+      "sha256": "d01bf34cc663ee10b4d89893016d8a79f982eae6e8cf3992ae172146f3f38161",
+      "url": "https://archive.org/details/cu31924079579532/page/n141/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:749",
+      "work": "OR IV-I",
+      "printed_page": "749",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p749.txt",
+      "sha256": "77f03a50faa8d7382b8f24ab2f13c43236f3f7ef1daf84e9f858ceecf16f53ac",
+      "url": "https://archive.org/details/cu31924079579532/page/n142/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:750",
+      "work": "OR IV-I",
+      "printed_page": "750",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p750.txt",
+      "sha256": "b436d42f3dcb66a2cb2f382bc24efa826270d7785e5049763b51d364884dbc1f",
+      "url": "https://archive.org/details/cu31924079579532/page/n143/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:751",
+      "work": "OR IV-I",
+      "printed_page": "751",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p751.txt",
+      "sha256": "38e83f89bde94623497988673d58da50f0ebac20fe6636243f25f52f271e3aec",
+      "url": "https://archive.org/details/cu31924079579532/page/n144/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-IV-I:752",
+      "work": "OR IV-I",
+      "printed_page": "752",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p752.txt",
+      "sha256": "8d4b3cd6fa4a07d2614d4d95a33903d1fabad5ee0ce6ec817b1a3ac9510c492d",
+      "url": "https://archive.org/details/cu31924079579532/page/n145/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-LI2:123",
+      "work": "OR I-LI.2",
+      "printed_page": "123",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2-p123.txt",
+      "sha256": "1f0286d6ca69bfb9610549ae2e8f8f0134b4d8c63ac04352334561c444219f7d",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n130/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-LI2:138",
+      "work": "OR I-LI.2",
+      "printed_page": "138",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2-p138.txt",
+      "sha256": "d060a66c6dedd8cdaa8c63236fd6bdeb99fca3ced86e23bac842c87146c3b312",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n145/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-LI2:151",
+      "work": "OR I-LI.2",
+      "printed_page": "151",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2-p151.txt",
+      "sha256": "e582eb03c3401a8aa5dbee3dad0fbe96a3bebfe486f7fdf7541ff87f5983aa3a",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n158/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-LI2:159",
+      "work": "OR I-LI.2",
+      "printed_page": "159",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2-p159.txt",
+      "sha256": "9fa6418fa53c6234979217e223a3f456d9027a609816c1657abe80c72623edb0",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n166/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-LI2:172",
+      "work": "OR I-LI.2",
+      "printed_page": "172",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2-p172.txt",
+      "sha256": "486470d20b00caa4542b358c5fe74d21578cffcf41e6695210b7172b0b549c51",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n179/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-LI2:190",
+      "work": "OR I-LI.2",
+      "printed_page": "190",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2-p190.txt",
+      "sha256": "c09d866424a76a476ed6be2bcb47fd8d3e71a8e2ec7ef0f51cd914ee83287d65",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n197/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-LI2:195",
+      "work": "OR I-LI.2",
+      "printed_page": "195",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2-p195.txt",
+      "sha256": "de814166434a80f21c281fd5e9380a8d68bcad4d7e18bafee7e3920e48c79e03",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n202/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-LI2:197",
+      "work": "OR I-LI.2",
+      "printed_page": "197",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2-p197.txt",
+      "sha256": "90d06ac245bac484c47ed8786c6a46a99d206dd0f77c475ecb374dc4e206e56e",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n204/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-LI2:198",
+      "work": "OR I-LI.2",
+      "printed_page": "198",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2-p198.txt",
+      "sha256": "bb8d617ca674cf1a137b72e0bad98784f6cdc6b831ec5e15110a5e890fa80898",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n205/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:826",
+      "work": "OR I-II",
+      "printed_page": "826",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p826.txt",
+      "sha256": "4f7e4e2677108fac9cd23af02d35aca261428579b6c43886e130a1641bfdf8d3",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n845/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:827",
+      "work": "OR I-II",
+      "printed_page": "827",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p827.txt",
+      "sha256": "6ba33635abc8957e1ffa41cc8444fdc11ffd5fbcddc34c856f4fa9154ac1fe1b",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n846/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:841",
+      "work": "OR I-II",
+      "printed_page": "841",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p841.txt",
+      "sha256": "42a18d9adfe32ad9d14d848e6cbd40f4ca14f693b24e8ff8ae1fcd1092c4eaf7",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n860/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:847",
+      "work": "OR I-II",
+      "printed_page": "847",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p847.txt",
+      "sha256": "be4e370c5a24d52853b826d051e4aafe7ebc8ba4eade29a7ffec25c3e4e5635e",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n866/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:865",
+      "work": "OR I-II",
+      "printed_page": "865",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p865.txt",
+      "sha256": "9a100c6c84636da9b9e89d25ec5613fe566e70190b1954729ca4d4202015c55b",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n884/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:895",
+      "work": "OR I-II",
+      "printed_page": "895",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p895.txt",
+      "sha256": "9163d1661a23711c5955bd30162081e864a00770af3cf9d3e97d7a50008923d8",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n914/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:901",
+      "work": "OR I-II",
+      "printed_page": "901",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p901.txt",
+      "sha256": "d52419d2654c33e2b67ddc0a0904dfccebd1e8eb4c207dc3eca020a069409bf7",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n920/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:902",
+      "work": "OR I-II",
+      "printed_page": "902",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p902.txt",
+      "sha256": "362640481717eba6574c4ef6548c875dc9d9c5ea06c4f42fdf89febc43e6ee15",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n921/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:927",
+      "work": "OR I-II",
+      "printed_page": "927",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p927.txt",
+      "sha256": "93fa30d394041aaf78f60746a2fa1a5c026d382a9f4fd9bd23be987eedd41519",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n946/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:928",
+      "work": "OR I-II",
+      "printed_page": "928",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p928.txt",
+      "sha256": "ca5bb03372d5dc88ffc94e7492c87c4c957f8239e241f15862cbf7e2ace8461c",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n947/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:940",
+      "work": "OR I-II",
+      "printed_page": "940",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p940.txt",
+      "sha256": "b8605311ac753ac578d181f36a0275518cb8e087a9ea9ef639a91a580eb0d969",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n959/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:943",
+      "work": "OR I-II",
+      "printed_page": "943",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p943.txt",
+      "sha256": "b9ec52a3f18199f67ca32e70f1ad889413841fc72231c1c09c5dc6887cfc6b71",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n962/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-III:584",
+      "work": "OR I-III",
+      "printed_page": "584",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-III-p584.txt",
+      "sha256": "dc25dfecdd33afb1efabc4fefbe30fac191e999964252c0c8b243b457d8572e5",
+      "url": "https://archive.org/details/warofrebellion03secrrich/page/n605/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-III:585",
+      "work": "OR I-III",
+      "printed_page": "585",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-III-p585.txt",
+      "sha256": "e5ebb51a69467802e0894d6c77a2d25f51fbb782e2e02117eef382fbb7e3a5b5",
+      "url": "https://archive.org/details/warofrebellion03secrrich/page/n606/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-III:595",
+      "work": "OR I-III",
+      "printed_page": "595",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-III-p595.txt",
+      "sha256": "8df3a8214b1f9ebf9af735ac1aa52f8a620198dd32ab4330b0ade1435e4eb7d8",
+      "url": "https://archive.org/details/warofrebellion03secrrich/page/n616/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-III:597",
+      "work": "OR I-III",
+      "printed_page": "597",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-III-p597.txt",
+      "sha256": "023e79e9d867ad780d593e63786dcbd0c90df1235f4c0ad0ef68bef67b50369a",
+      "url": "https://archive.org/details/warofrebellion03secrrich/page/n618/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-III:609",
+      "work": "OR I-III",
+      "printed_page": "609",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-III-p609.txt",
+      "sha256": "f6d5bc0c2824212c90e6a94290ea0ae35bde62606a73a3d48bdec2301d774182",
+      "url": "https://archive.org/details/warofrebellion03secrrich/page/n630/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-III:610",
+      "work": "OR I-III",
+      "printed_page": "610",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-III-p610.txt",
+      "sha256": "bbb9a568f19c1205c8d21c218313e490b9263d0a6cca02aa0ac7cf098485b179",
+      "url": "https://archive.org/details/warofrebellion03secrrich/page/n631/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-IV:91",
+      "work": "OR I-IV",
+      "printed_page": "91",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-IV-p91.txt",
+      "sha256": "b876e3bd3a230c3558bc494cc1c01ff0464b25bb7b8e48f7728c0ef754c0e286",
+      "url": "https://archive.org/details/warofrebellion04secrrich/page/n110/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-IV:92",
+      "work": "OR I-IV",
+      "printed_page": "92",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-IV-p92.txt",
+      "sha256": "0c6fc092eb4ee02515cec22d371f4e08c8d2aa7491331d6296cb7c21fef6b8ca",
+      "url": "https://archive.org/details/warofrebellion04secrrich/page/n111/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-IV:93",
+      "work": "OR I-IV",
+      "printed_page": "93",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-IV-p93.txt",
+      "sha256": "918ec85b2746a4e26795f88d87db8a3dc75f91b2e0e49ad99fe9c2aa59f4b64b",
+      "url": "https://archive.org/details/warofrebellion04secrrich/page/n112/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-IV:94",
+      "work": "OR I-IV",
+      "printed_page": "94",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-IV-p94.txt",
+      "sha256": "19b8f9a598a52c855abc7fc1a60d420222b54ca25d7121119235792a5aa157c1",
+      "url": "https://archive.org/details/warofrebellion04secrrich/page/n113/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-IV:98",
+      "work": "OR I-IV",
+      "printed_page": "98",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-IV-p98.txt",
+      "sha256": "3e01d18752e39e7b7f399bce276e15f1e5f5700c627bfce2f66c97f7fb237365",
+      "url": "https://archive.org/details/warofrebellion04secrrich/page/n117/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-IV:99",
+      "work": "OR I-IV",
+      "printed_page": "99",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-IV-p99.txt",
+      "sha256": "bda07ab0173dd6844ae9bda0975351f7632cd180dfdc79ea8efeeb5fc614904d",
+      "url": "https://archive.org/details/warofrebellion04secrrich/page/n118/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-IV:100",
+      "work": "OR I-IV",
+      "printed_page": "100",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-IV-p100.txt",
+      "sha256": "a08770a1635b64b12a7f3d8f12344bc643719f13bb841e04899ce3affe6ed1e4",
+      "url": "https://archive.org/details/warofrebellion04secrrich/page/n119/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-IV:366",
+      "work": "OR I-IV",
+      "printed_page": "366",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-IV-p366.txt",
+      "sha256": "a203ec2212bfdcb88f10ee165c4bd713f498819707506f3a18e88b12c3474893",
+      "url": "https://archive.org/details/warofrebellion04secrrich/page/n385/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-IV:370",
+      "work": "OR I-IV",
+      "printed_page": "370",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-IV-p370.txt",
+      "sha256": "4cd6d95e92bbe1f1ea2013b9da996279103a6fb5fd184f10773c228bb36b4cff",
+      "url": "https://archive.org/details/warofrebellion04secrrich/page/n389/mode/1up",
+      "read_scope": "Heading and relevant cited passages read; OCR evidence; not an entire-volume reading claim."
+    },
+    {
+      "key": "OR-I-II:470",
+      "work": "OR I-II",
+      "printed_page": "470",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-II-p470.txt",
+      "sha256": "2f6cc4f4bb581073f9c2ac573add5353b9c31657b81871fdc9d48aace0b8548c",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n489/mode/1up",
+      "read_scope": "June30 Virginia membership and surrounding list read; source footnote and date retained."
+    },
+    {
+      "key": "FOLSOM:13",
+      "work": "James M. Folsom, Heroes and Martyrs of Georgia (1864)",
+      "printed_page": "13",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\Folsom-printed13.jpg",
+      "sha256": "3503c76edf8a5fdf9190a229843a942cc6d3c1e961559a158f95346a05b887d6",
+      "url": "https://archive.org/details/heroesmartyrsofg00fols/page/n22/mode/1up",
+      "read_scope": "Printed page image inspected; unit identity, organization/muster and departure passages only used. Wartime celebratory compilation; no valor or casualty claims adopted."
+    },
+    {
+      "key": "FOLSOM:14",
+      "work": "James M. Folsom, Heroes and Martyrs of Georgia (1864)",
+      "printed_page": "14",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\Folsom-printed14.jpg",
+      "sha256": "4183af288ba2622cd3ce05e92be0b43909fbfadb75ba226c9ccffa135b4e59e6",
+      "url": "https://archive.org/details/heroesmartyrsofg00fols/page/n23/mode/1up",
+      "read_scope": "Printed page image inspected; unit identity, organization/muster and departure passages only used. Wartime celebratory compilation; no valor or casualty claims adopted."
+    },
+    {
+      "key": "FOLSOM:33",
+      "work": "James M. Folsom, Heroes and Martyrs of Georgia (1864)",
+      "printed_page": "33",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\Folsom-printed33.jpg",
+      "sha256": "22e625f5aea5cc2ab1eaf75b74d2e57971ec46b2c1f300b33012899fabe7b66f",
+      "url": "https://archive.org/details/heroesmartyrsofg00fols/page/n42/mode/1up",
+      "read_scope": "Printed page image inspected; unit identity, organization/muster and departure passages only used. Wartime celebratory compilation; no valor or casualty claims adopted."
+    },
+    {
+      "key": "FOLSOM:34",
+      "work": "James M. Folsom, Heroes and Martyrs of Georgia (1864)",
+      "printed_page": "34",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\Folsom-printed34.jpg",
+      "sha256": "7dabdcf77fbe3d2a3855a36eea074ac8d82d4c4f4d7330ca9feb559988ad58ed",
+      "url": "https://archive.org/details/heroesmartyrsofg00fols/page/n43/mode/1up",
+      "read_scope": "Printed page image inspected; unit identity, organization/muster and departure passages only used. Wartime celebratory compilation; no valor or casualty claims adopted."
+    },
+    {
+      "key": "FOLSOM:107",
+      "work": "James M. Folsom, Heroes and Martyrs of Georgia (1864)",
+      "printed_page": "107",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\Folsom-printed107.jpg",
+      "sha256": "d55b796ba80845046239582a1fad89b12eb6b0b919935ca2d23a064e7c968356",
+      "url": "https://archive.org/details/heroesmartyrsofg00fols/page/n116/mode/1up",
+      "read_scope": "Printed page image inspected; unit identity, organization/muster and departure passages only used. Wartime celebratory compilation; no valor or casualty claims adopted."
+    },
+    {
+      "key": "OR-IV-I:629:image",
+      "work": "Official Records page image",
+      "printed_page": "629",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p629.jpg",
+      "sha256": "507752f25423e9289e1aad2ecf2c7b61391232d26bd270bde527b53af8021f7b",
+      "url": "https://archive.org/details/cu31924079579532/page/n22/mode/1up",
+      "read_scope": "Image inspected: column relationships / totals / numbering-order language verified."
+    },
+    {
+      "key": "OR-IV-I:749:image",
+      "work": "Official Records page image",
+      "printed_page": "749",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p749.jpg",
+      "sha256": "626a9c2174fa0a32eedd198b2be3c0869f54c7199005e9c8b7d8773e7c8c0ce8",
+      "url": "https://archive.org/details/cu31924079579532/page/n142/mode/1up",
+      "read_scope": "Image inspected: column relationships / totals / numbering-order language verified."
+    },
+    {
+      "key": "OR-IV-I:750:image",
+      "work": "Official Records page image",
+      "printed_page": "750",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p750.jpg",
+      "sha256": "4ef23c9b6bebdc27604c4454479113b9f5cd3d65fda3dfee76d56164cb618db4",
+      "url": "https://archive.org/details/cu31924079579532/page/n143/mode/1up",
+      "read_scope": "Image inspected: column relationships / totals / numbering-order language verified."
+    },
+    {
+      "key": "OR-IV-I:751:image",
+      "work": "Official Records page image",
+      "printed_page": "751",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p751.jpg",
+      "sha256": "c322356eb18165e29dc10a993d54782d433a4dc339d97cc46e025bb1b6fd37bf",
+      "url": "https://archive.org/details/cu31924079579532/page/n144/mode/1up",
+      "read_scope": "Image inspected: column relationships / totals / numbering-order language verified."
+    },
+    {
+      "key": "OR-IV-I:752:image",
+      "work": "Official Records page image",
+      "printed_page": "752",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-IV-I-p752.jpg",
+      "sha256": "d979001b5f60f7e4139680f472fa283d6fd811feafe90ce393a504c30d0f6ca5",
+      "url": "https://archive.org/details/cu31924079579532/page/n145/mode/1up",
+      "read_scope": "Image inspected: column relationships / totals / numbering-order language verified."
+    },
+    {
+      "key": "OR-I-LI2:123:image",
+      "work": "Official Records page image",
+      "printed_page": "123",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2-printed123.jpg",
+      "sha256": "4c4be555f89d024f653a9e03b18326fdec2d9aba23337c4aa555f55858a568d5",
+      "url": "https://archive.org/details/warofrebellion512unit/page/n130/mode/1up",
+      "read_scope": "Image inspected: column relationships / totals / numbering-order language verified."
+    }
+  ],
+  "excluded_or_corrected": [
+    {
+      "item": "initial I-IV n=printed+16 extraction",
+      "reason": "Running heads showed pages363/364, corrected cheaply to+19 before citation; no facts taken under wrong locators."
+    },
+    {
+      "item": "LI.2 XML ordinal mapping",
+      "reason": "XML OBJECT names are one-based; initial extracted labels were one page high. Corrected by OBJECT leaf ID, then running heads and printed123 image. IA viewer n is leafNum-1."
+    },
+    {
+      "item": "initial Folsom n=page+10 images",
+      "reason": "Displayed page14 under intended13; corrected to n=page+9 and printed headings inspected. Old wrongly named images excluded."
+    },
+    {
+      "item": "Gutenberg Capers request",
+      "reason": "362-character non-book response; no historical content relied on."
+    },
+    {
+      "item": "web summaries, finding aids and later secondary candidate names",
+      "reason": "Search leads only; not unit return or acceptance proof. TARO catalogue describes documents, not their unread contents."
+    },
+    {
+      "item": "S75 file named OR-IV-1.pdf / OR-IV-1-djvu.txt",
+      "reason": "Not used here for this report; reuse exact cu31924079579532 text/XML and verified printed pages instead."
+    },
+    {
+      "item": "Arkansas supplementary-volume lookup: warofrebellion53secrrich OCR endpoint",
+      "reason": "HTTP503; indexed searches did not retrieve the excluded-pair requisition. Not treated as evidence that no original exists; no unchanged retry."
+    }
+  ],
+  "policy": "[I] marks joins/proposals. Unknown is not zero. A call is not a muster; a company is not additive to its regiment; a transfer is not new raising; a later roster is not an earlier return.",
+  "upstream_artifacts": [
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-IV-1_djvu.xml",
+      "sha256": "4d1757fbfe19d20e918d48d9977f3623050e9b5ef8de5c5c9e0e8eb3d961796a",
+      "bytes": 26219689,
+      "url": "https://archive.org/download/cu31924079579524/cu31924079579524_djvu.xml",
+      "scope": "Selected pages only; download/extraction is not a whole-work reading claim."
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S6\\OR-IV-1b_djvu.xml",
+      "sha256": "75947c7ba68dd54a30a7cdff4d84ea598b67e50f7278e2707e9558b88444c1d3",
+      "bytes": 27034233,
+      "url": "https://archive.org/download/cu31924079579532/cu31924079579532_djvu.xml",
+      "scope": "Selected pages only; download/extraction is not a whole-work reading claim."
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\OR-I-LI2_djvu.xml",
+      "sha256": "067be3c0ff567ac369bdc997086fd18489bc12d5e0be217c0eb3b57b4bb1ca8f",
+      "bytes": 45229079,
+      "url": "https://archive.org/download/warofrebellion512unit/warofrebellion512unit_djvu.xml",
+      "scope": "Selected pages only; download/extraction is not a whole-work reading claim."
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S86\\Folsom_djvu.txt",
+      "sha256": "6739fc15bd50711e61696c57e8b1a64c231a68509b0e233b8bddde2ecafd9bed",
+      "bytes": 425981,
+      "url": "https://archive.org/download/heroesmartyrsofg00fols/heroesmartyrsofg00fols_djvu.txt",
+      "scope": "Selected pages only; download/extraction is not a whole-work reading claim."
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+      "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+      "bytes": 124529063,
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "scope": "Selected pages only; download/extraction is not a whole-work reading claim."
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion03secrrich\\warofrebellion03secrrich.pdf",
+      "sha256": "c817fe6eabd4d462f25127ca84fe550476b0534711f56eb066acec7066d3b312",
+      "bytes": 90648614,
+      "url": "https://archive.org/details/warofrebellion03secrrich",
+      "scope": "Selected pages only; download/extraction is not a whole-work reading claim."
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion04secrrich\\warofrebellion04secrrich.pdf",
+      "sha256": "886e69a1cf4e6b187012a8bffb72f860aa20c0fb6e52dc7a9e883381e2bd29cc",
+      "bytes": 86460275,
+      "url": "https://archive.org/details/warofrebellion04secrrich",
+      "scope": "Selected pages only; download/extraction is not a whole-work reading claim."
+    }
+  ]
+}

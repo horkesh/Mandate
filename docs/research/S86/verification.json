@@ -1,0 +1,157 @@
+{
+  "request": "S86 research only; this checkout runtime is older than frozen S82 comparison input",
+  "done_check": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "run:done-check",
+      "--",
+      "--out",
+      "runs/s86-done"
+    ],
+    "exit": 0,
+    "seconds": 1381.166
+  },
+  "command_note": "--out is not a supported CLI flag and was ignored. The default eight-seed check with drafting ran once in fresh runs/done-check/<stamp-pid-random> directories. No second campaign.",
+  "phase0_pass": 6,
+  "phase0_total": 6,
+  "supplemental_1a_pass": 2,
+  "supplemental_1a_total": 6,
+  "criteria": [
+    [
+      "PASS",
+      "behaviour"
+    ],
+    [
+      "PASS",
+      "hash"
+    ],
+    [
+      "PASS",
+      "resume"
+    ],
+    [
+      "PASS",
+      "liveness"
+    ],
+    [
+      "PASS",
+      "section-ten"
+    ],
+    [
+      "PASS",
+      "budget"
+    ],
+    [
+      "FAIL",
+      "checkpoints"
+    ],
+    [
+      "FAIL",
+      "operation"
+    ],
+    [
+      "FAIL",
+      "pushback"
+    ],
+    [
+      "PASS",
+      "unknown-strength"
+    ],
+    [
+      "PASS",
+      "stand-ins"
+    ],
+    [
+      "FAIL",
+      "lever-sweep"
+    ]
+  ],
+  "problems": [
+    "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 20957 men, below 100000",
+    "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1",
+    "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 0 planned operations, below 1",
+    "union-1861 history run, 148 days to 1861-07-31: no operation fought a battle in the history run (2 operations, 0 battles)",
+    "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+    "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+    "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+    "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 44, above 9",
+    "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+    "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+  ],
+  "all_ten_problems_exact_to_s76": true,
+  "phase0_reference_comparison": [
+    {
+      "new": "C:\\Pyrrhic\\sprint-research-military\\runs\\done-check\\20261123-042640-4492-c495ff\\summary.json",
+      "baseline": "C:\\Pyrrhic\\sprint-research-military\\runs\\s76-done\\20261123-003007-47236-8f2d14\\summary.json",
+      "new_sha256": "8c5bf324c56c9eb9212a623c0ec9084426e1972502c3d61372b82e3c04349aa7",
+      "baseline_sha256": "8c5bf324c56c9eb9212a623c0ec9084426e1972502c3d61372b82e3c04349aa7",
+      "different_root_keys": [],
+      "daily_equal": true,
+      "daily_count": 148,
+      "final_equal": true
+    },
+    {
+      "new": "C:\\Pyrrhic\\sprint-research-military\\runs\\done-check\\20261123-042711-4492-c162fa\\summary.json",
+      "baseline": "C:\\Pyrrhic\\sprint-research-military\\runs\\s76-done\\20261123-003031-47236-fd0c61\\summary.json",
+      "new_sha256": "26c397e5c8ee0dbccda40ab8ed90205d980943f1332ab73e0f834fd31840360e",
+      "baseline_sha256": "26c397e5c8ee0dbccda40ab8ed90205d980943f1332ab73e0f834fd31840360e",
+      "different_root_keys": [],
+      "daily_equal": true,
+      "daily_count": 120,
+      "final_equal": true
+    }
+  ],
+  "local_timing_ms": {
+    "union_war": {
+      "median": 33.85,
+      "p95": 58.76,
+      "max": 65.91
+    },
+    "union_history": {
+      "median": 34.77,
+      "p95": 60.18,
+      "max": 149.69
+    },
+    "testbed": {
+      "median": 3.62,
+      "p95": 4.72,
+      "max": 5.23
+    }
+  },
+  "timing_limit": "shared Windows host; not controlled or hosted CI certification; not S85",
+  "preflight": {
+    "preflight": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 3.943
+    },
+    "opening": {
+      "command": [
+        "npm.cmd",
+        "test",
+        "--",
+        "packages/cli/test/union-opening.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 38.654
+    },
+    "boundary": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.577
+    }
+  },
+  "source_audit": "python docs/research/S86/verify.py; final fresh result retained in runs/s86/source-audit.json",
+  "tracked_preservation": "all 1825 starting tracked paths byte-identical; no pack/runtime/config/hook edits",
+  "commit_hook": "required actual gate follows; its actual result is recorded in runs/s86/commit.exit.json and the sole CODEX status",
+  "review": "deferred to Claude under0096/0106/0107; no signature"
+}
