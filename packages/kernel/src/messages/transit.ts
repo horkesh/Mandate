@@ -18,6 +18,7 @@ import type { ReportTruth } from '../knowledge/truth.ts';
 import type { EditSpec, PlanGoal } from '../plans/goal.ts';
 import type { PlanNote } from '../plans/notes.ts';
 import type { CounterKind } from '../audience/counters.ts';
+import type { ProposalAction } from '../log/commands.ts';
 import type { State } from '../root-state.ts';
 import { rememberSentOrders } from '../knowledge/knowledge.ts';
 import { sha256OfText } from '../serialize/sha256.ts';
@@ -39,7 +40,7 @@ export interface Hop {
  * section 5: a support request is a directive to that holder, who answers with his own compliance). It carries the goal
  * the axis serves.
  */
-export const ORDER_KINDS = ['approve', 'call', 'edit', 'go', 'goal', 'send_back', 'support'] as const;
+export const ORDER_KINDS = ['approve', 'call', 'decline_proposal', 'edit', 'go', 'goal', 'send_back', 'support'] as const;
 export type OrderKind = (typeof ORDER_KINDS)[number];
 
 /** A call for regiments, as an order carries it (lane 1.7). */
@@ -53,6 +54,9 @@ export interface CallSpec {
 }
 
 export interface OrderBody {
+  readonly orderDoctrine?: string;
+  readonly orderPlan?: MessageId;
+  readonly orderProposal?: ProposalReply;
   readonly orderNotes?: readonly PlanNote[];
   readonly orderKind: OrderKind;
   readonly orderIssuer: PersonId;
@@ -66,6 +70,13 @@ export interface OrderBody {
   /** Whether it was sent around the chain of posts that should relay it (0040). */
   readonly orderBypass: boolean;
   readonly orderIssuedDay: number;
+}
+
+export interface ProposalReply {
+  readonly replyPaper: MessageId;
+  readonly replyOrder: MessageId;
+  readonly replyAction: ProposalAction;
+  readonly replyBasis?: MessageId;
 }
 
 /**

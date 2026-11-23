@@ -1,0 +1,10 @@
+{
+  "exit": 1,
+  "seconds": 205.694,
+  "args": [
+    "git",
+    "commit",
+    "-F",
+    "runs/s100/commit-merge.txt"
+  ]
+}

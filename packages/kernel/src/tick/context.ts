@@ -31,6 +31,7 @@ export type RejectionReason =
   | 'bad_review'
   | 'bad_selection'
   | 'no_plan'
+  | 'no_proposal'
   | 'not_delegable'
   | 'not_the_decider'
   | 'situation_not_open'

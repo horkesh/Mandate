@@ -155,7 +155,7 @@
   "console.help.inbox": "  inbox [all]            reports received since the last turn (all: every report you hold)",
   "console.help.influence": "  promise '<person>' | pressure '<person>' | address '<bloc>'",
   "console.help.look": "Look (free):",
-  "console.help.order": "  order '<post>' '<hold|take|relieve>' [objective] [risk=N] [deadline=N] [rail|norail] [river] [sea] [neutral] [await] [review] [by='<route>'] [bypass]",
+  "console.help.order": "  order '<post>' '<hold|take|relieve>' [objective] [risk=N] [deadline=N] [rail|norail] [river] [sea] [neutral] [await] [review] [fallback='<condition>,<posture>,<objective>'] [by='<route>'] [bypass]",
   "console.help.orders": "Orders to people (each answered by the man, through his own judgement):",
   "console.help.people": "  appoint '<post>' '<person>' [rank] | relieve '<post>' '<own_request|outright|quiet_department>' [to-post]",
   "console.help.plans": "  plans                  plans submitted for your review, and operations waiting for your word",
@@ -801,5 +801,15 @@
   "value.slavery_noninterference": "non-interference with slavery",
   "value.state_autonomy": "state autonomy",
   "value.union": "union",
-  "reason.texas_original_deployment_ended": "The original contingent?s deployment in Texas has ended under the existing departure agreement."
+  "reason.texas_original_deployment_ended": "The original contingent?s deployment in Texas has ended under the existing departure agreement.",
+  "console.help.proposal": "  proposal '<post>' '<paper>' '<accept|decline|discretion>' [fallback='<condition>,<posture>,<objective>'] [by='<route>'] [bypass]. Conditions are turned or outmatched. Use - to hold in place and / between successive fallbacks.",
+  "console.error.proposal": "No received proposal with that paper ID awaits an answer from this post.",
+  "console.error.proposal-action": "Use accept, decline, or discretion with a fallback.",
+  "console.error.fallback": "Use condition,posture,objective with turned or outmatched. Use - to hold in place and / between up to {max} fallbacks.",
+  "console.command.proposal": "{action} proposal {paper} from {post} by {route}{bypass}",
+  "console.command.fallback": " | if {condition}, {posture} {objective}",
+  "console.goal.here": "in place",
+  "console.report.proposal": "{post} proposes to {posture} {objective} ({reasons}). Reply to paper {paper}.",
+  "console.report.discretion": "{post} judged the position {condition} and will {posture} {objective}. He estimates {estimate} men near {region}.",
+  "console.refusal.no_proposal": "There is no received proposal awaiting that answer."
 }

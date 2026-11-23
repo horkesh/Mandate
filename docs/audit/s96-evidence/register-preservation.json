@@ -1,0 +1,42 @@
+[
+  {
+    "side": "union",
+    "rows": 47,
+    "originalSourceColumnsExact": true,
+    "eligibilityAndActsExact": true,
+    "changes": [
+      {
+        "id": "U33",
+        "changedFields": [
+          "gap"
+        ]
+      },
+      {
+        "id": "U34",
+        "changedFields": [
+          "gap"
+        ]
+      }
+    ]
+  },
+  {
+    "side": "confederate",
+    "rows": 27,
+    "originalSourceColumnsExact": true,
+    "eligibilityAndActsExact": true,
+    "changes": [
+      {
+        "id": "C15",
+        "changedFields": [
+          "match"
+        ]
+      },
+      {
+        "id": "C16",
+        "changedFields": [
+          "gap"
+        ]
+      }
+    ]
+  }
+]

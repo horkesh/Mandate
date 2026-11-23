@@ -10,15 +10,16 @@
  * - `decide`, `delegate`: a situation's decision, or handing it to a holder (lane 0.7).
  * The Phase 1 verbs join this union; the verb-list test then lists them.
  */
-import type { ForceBlockId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
+import type { ForceBlockId, MessageId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { CounterTerms } from '../audience/counters.ts';
 import type { BattleOrders } from '../combat/order-kinds.ts';
 import type { RouteKind } from '../messages/latency.ts';
-import type { EditKind, Posture } from '../plans/goal.ts';
+import type { Discretion, EditKind, Posture } from '../plans/goal.ts';
 import type { PlanNote } from '../plans/notes.ts';
 
 /** A goal as a command carries it (the plans record's `PlanGoal`, unprefixed). */
 export interface GoalTerms {
+  readonly discretion?: Discretion<GoalTerms>;
   /** Null only for "hold where he stands". */
   readonly objective: RegionId | null;
   readonly posture: Posture;
@@ -39,10 +40,27 @@ export interface OrderCommand {
   readonly cmd: 'order';
   readonly to: PostId;
   readonly goal: GoalTerms;
+  /** Correlation key of an authored doctrine letter. */
+  readonly doctrine?: string;
   readonly route: RouteKind;
   /** Send it straight to the holder, around the posts that should relay it (0040). */
   readonly bypass: boolean;
 }
+
+export const PROPOSAL_ACTIONS = ['accept', 'decline', 'discretion'] as const;
+export type ProposalAction = (typeof PROPOSAL_ACTIONS)[number];
+
+export type AnswerProposalCommand = {
+  readonly cmd: 'answer_proposal';
+  readonly to: PostId;
+  readonly proposal: MessageId;
+  readonly route: RouteKind;
+  readonly bypass: boolean;
+  readonly doctrine?: string;
+} & ({ readonly action: 'accept' | 'decline'; readonly goal?: never } | {
+  readonly action: 'discretion';
+  readonly goal: GoalTerms & { readonly discretion: Discretion<GoalTerms> };
+});
 
 /** One arrow edit as a command carries it (the plans record's `EditSpec`, unprefixed). */
 export interface EditTerms {
@@ -227,8 +245,8 @@ export interface AddressCommand {
 export type VerbCommand = AppointCommand | RelieveCommand | TransferCommand | InquireCommand | ConsultCommand | AudienceCommand | ObserverCommand | PromiseCommand | PressureCommand | AddressCommand;
 
 /** What a seat may send in a `commands` answer. */
-export type SeatCommand = OrderCommand | ReviewCommand | GoCommand | CallCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
+export type SeatCommand = OrderCommand | AnswerProposalCommand | ReviewCommand | GoCommand | CallCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
 
-export type Command = OrderCommand | ReviewCommand | GoCommand | CallCommand | ChooseCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
+export type Command = SeatCommand | ChooseCommand;
 
-export const COMMAND_KINDS = ['address', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer'] as const;
+export const COMMAND_KINDS = ['address', 'answer_proposal', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer'] as const;

@@ -13,10 +13,11 @@
  * command log; replay and resume read the log and never ask a seat again.
  */
 import type { BATTLE_ORDER_OPTIONS, CutOffChoice, NightChoice, Pursuit } from '../combat/order-kinds.ts';
-import type { NoteAccount } from '../knowledge/report.ts';
+import type { GoalProposalReason, NoteAccount } from '../knowledge/report.ts';
 import type { Commit } from '../combat/rules.ts';
 import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { GoalTerms, SeatCommand } from '../log/commands.ts';
+import type { DoctrineDiscretion, DoctrineProposalAnswer } from '../plans/goal.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { GoalView, SeatView } from '../view/types.ts';
 import type { TurnStopsView } from './turn-stops.ts';
@@ -147,9 +148,21 @@ export interface DoctrineView {
   readonly concentrationTransfers?: readonly { readonly from: PostId; readonly to: PostId }[];
   readonly appointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly from: PostId | null; readonly ready: boolean; readonly issued: boolean; readonly routes: readonly RouteOption[] }[];
   readonly calls: readonly { readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly day: number; readonly atPeace?: boolean; readonly issued?: boolean }[];
-  readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly day: number; readonly posture?: 'hold' | 'relieve' | 'take'; readonly ready?: boolean; readonly issued?: boolean }[];
+  readonly offensives: readonly { readonly id?: string; readonly post: PostId; readonly objective: RegionId; readonly day: number; readonly posture?: 'hold' | 'relieve' | 'take'; readonly discretion?: DoctrineDiscretion; readonly ready?: boolean; readonly issued?: boolean }[];
+  readonly proposalAnswers?: readonly (DoctrineProposalAnswer & { readonly day: number; readonly paper: MessageId; readonly ordered: GoalTerms })[];
   readonly inquireEveryDays: number;
   readonly appointKinds: { readonly land: readonly string[]; readonly naval: readonly string[] };
+}
+
+/** A received proposal the principal may now answer. */
+export interface ProposalOffer {
+  readonly paper: MessageId;
+  readonly order: MessageId;
+  readonly post: PostId;
+  readonly author: PersonId;
+  readonly goal: GoalTerms;
+  readonly ordered: GoalTerms;
+  readonly reasons: readonly GoalProposalReason[];
 }
 
 /** An option of an open situation as a seat may weigh it (never the historical default). */
@@ -200,12 +213,13 @@ export interface PrincipalMenu {
   readonly situations: readonly SituationChoice[];
   /** Plans his commanders submitted that have reached him and wait for his review (approve, send back, edit). */
   readonly reviews: readonly PlanReview[];
+  readonly proposals?: readonly ProposalOffer[];
   /** Posts whose operation he approved under "prepare, await my word": each waits for his "go". */
   readonly awaiting: readonly PostId[];
   /** The goal terms the pack gives an order that names only an objective and a posture (`WorldRules.plans.goalDefaults`). */
   readonly goalDefaults: Omit<GoalTerms, 'objective' | 'posture' | 'committed'>;
   /** Copies of his own sent goals, keyed by the letter a relay's answer names. Never a live commander's plan. */
-  readonly sentGoals?: readonly { readonly post: PostId; readonly message: MessageId; readonly goal: GoalTerms }[];
+  readonly sentGoals?: readonly { readonly post: PostId; readonly message: MessageId; readonly goal: GoalTerms; readonly proposalReply?: true; readonly doctrine?: string }[];
 }
 
 /** A holder deciding a situation handed to him: the same options as the principal (0040, gate B7). */

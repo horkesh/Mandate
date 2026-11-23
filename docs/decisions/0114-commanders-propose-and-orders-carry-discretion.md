@@ -1,6 +1,6 @@
 # 0114: A commander may propose another goal, and a goal may carry conditional discretion
 
-Status: accepted (2026-11-23). From S94's research and grammar proposal (`docs/research/2026-11-23-S94-johnston-withdrawal.md` and `docs/research/S94/` on `sprint/research-military` at `c7aa662d`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Extends 0016.
+Status: accepted (2026-11-23). From S94's research and grammar proposal (`docs/research/2026-11-23-S94-johnston-withdrawal.md` and `docs/research/S94/` on `sprint/research-military` at `c7aa662d`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Extends 0016. Amended by 0116 (a proposal may accompany compliance).
 
 ## Context
 

@@ -1,0 +1,211 @@
+{
+  "allHookFailures": "Three failed assertions in two files, all caused by these seven positive band breaches; 2198 other tests pass and three expected timing tests skip. No runtime/code/fixture failure; later chained gates checked separately.",
+  "policy": "around(observed), append-only; no quiet or historical criterion changed",
+  "rows": [
+    {
+      "mechanic": "operations.stage",
+      "S98Fires": 17,
+      "mergedFires": 19,
+      "before": {
+        "minFires": 4,
+        "maxFires": 18
+      },
+      "after": {
+        "minFires": 9,
+        "maxFires": 38
+      },
+      "cause": "S100 integration [I]: the additional received hold and the subsequent goal execute through the normal operation lifecycle, adding staging transitions to the retained July path.",
+      "observation": "Unchanged hook: both reference-gate and done-check tests independently report this exact count; no dedicated reference capture yet. Detailed events follow in the one authorized post-trigger capture."
+    },
+    {
+      "mechanic": "planner.candidates",
+      "S98Fires": 5,
+      "mergedFires": 6,
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "observation": "Unchanged hook: both reference-gate and done-check tests independently report this exact count; no dedicated reference capture yet. Detailed events follow in the one authorized post-trigger capture."
+    },
+    {
+      "mechanic": "planner.searches",
+      "S98Fires": 5,
+      "mergedFires": 6,
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "observation": "Unchanged hook: both reference-gate and done-check tests independently report this exact count; no dedicated reference capture yet. Detailed events follow in the one authorized post-trigger capture."
+    },
+    {
+      "mechanic": "plans.chosen",
+      "S98Fires": 5,
+      "mergedFires": 6,
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "observation": "Unchanged hook: both reference-gate and done-check tests independently report this exact count; no dedicated reference capture yet. Detailed events follow in the one authorized post-trigger capture."
+    },
+    {
+      "mechanic": "plans.drafted",
+      "S98Fires": 5,
+      "mergedFires": 6,
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "observation": "Unchanged hook: both reference-gate and done-check tests independently report this exact count; no dedicated reference capture yet. Detailed events follow in the one authorized post-trigger capture."
+    },
+    {
+      "mechanic": "plans.went_ahead",
+      "S98Fires": 5,
+      "mergedFires": 6,
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "observation": "Unchanged hook: both reference-gate and done-check tests independently report this exact count; no dedicated reference capture yet. Detailed events follow in the one authorized post-trigger capture."
+    },
+    {
+      "mechanic": "seats.choices",
+      "S98Fires": 5,
+      "mergedFires": 6,
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "observation": "Unchanged hook: both reference-gate and done-check tests independently report this exact count; no dedicated reference capture yet. Detailed events follow in the one authorized post-trigger capture."
+    }
+  ],
+  "records": [
+    {
+      "key": "union-1861, war by decision, 148 days/operations.stage",
+      "before": {
+        "minFires": 4,
+        "maxFires": 18
+      },
+      "after": {
+        "minFires": 9,
+        "maxFires": 38
+      },
+      "observed": 19,
+      "cause": "S100 integration [I]: the additional received hold and the subsequent goal execute through the normal operation lifecycle, adding staging transitions to the retained July path.",
+      "evidence": "docs/audit/s100-evidence/merge-band-review.json#operations.stage"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.candidates",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": 6,
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "evidence": "docs/audit/s100-evidence/merge-band-review.json#planner.candidates"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.searches",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": 6,
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "evidence": "docs/audit/s100-evidence/merge-band-review.json#planner.searches"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.chosen",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": 6,
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "evidence": "docs/audit/s100-evidence/merge-band-review.json#plans.chosen"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.drafted",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": 6,
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "evidence": "docs/audit/s100-evidence/merge-band-review.json#plans.drafted"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.went_ahead",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": 6,
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "evidence": "docs/audit/s100-evidence/merge-band-review.json#plans.went_ahead"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/seats.choices",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "observed": 6,
+      "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+      "evidence": "docs/audit/s100-evidence/merge-band-review.json#seats.choices"
+    }
+  ]
+}

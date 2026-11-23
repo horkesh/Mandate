@@ -13,7 +13,9 @@
  */
 import type { EdgeId, FactionId, ForceBlockId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { ControlShares, FrontSegment } from '../control/vocabulary.ts';
-import type { ClaimKind, ReportType, SubjectKind, NoteAccount } from '../knowledge/report.ts';
+import type { ClaimKind, ReportType, SubjectKind, NoteAccount, GoalProposal, DiscretionReport } from '../knowledge/report.ts';
+import type { GoalTerms } from '../log/commands.ts';
+import type { Discretion } from '../plans/goal.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { PlanStatus, Posture } from '../plans/goal.ts';
 import type { CounterTerms } from '../audience/counters.ts';
@@ -69,6 +71,8 @@ export interface AdviceView {
 }
 
 export interface ReportView {
+  readonly proposal?: GoalProposal;
+  readonly discretion?: DiscretionReport;
   /** Authored body key of this received notice, matched by subject, type and subtype. */
   readonly text?: string;
   readonly notes?: readonly NoteAccount[];
@@ -144,6 +148,7 @@ export interface ClaimedFrontView extends FrontSegment {
 
 /** The goal he was given (lane 1.2: the full goal, FOUNDATION section 5), and where its plan stands. */
 export interface GoalView {
+  readonly discretion?: Discretion<GoalTerms>;
   readonly posture: Posture;
   readonly objective: RegionId | null;
   readonly risk: number;

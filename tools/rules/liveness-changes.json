@@ -2270,5 +2270,151 @@
     "observed": 0,
     "cause": "S98 wording correction: this testbed mechanic remains quiet. No testbed draft pick depends on force ratio alone; the Union reference now fires it once.",
     "evidence": "docs/audit/s98-evidence/liveness-review.json#planner.term.force_ratio"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/plans.goal_proposed",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+    },
+    "observed": 0,
+    "cause": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted.",
+    "evidence": "docs/audit/s96-evidence/liveness-review.json#plans.goal_proposed"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/plans.discretion_exercised",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+    },
+    "observed": 0,
+    "cause": "S96 /0114: no received conditional authority is exercised in either normal reference. Johnston fully complies with his June hold, so no proposal enables the sourced grant; the July goal remains in transit past July. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert.",
+    "evidence": "docs/audit/s96-evidence/liveness-review.json#plans.discretion_exercised"
+  },
+  {
+    "key": "testbed, 120 days/plans.goal_proposed",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+    },
+    "observed": 0,
+    "cause": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted.",
+    "evidence": "docs/audit/s96-evidence/liveness-review.json#plans.goal_proposed"
+  },
+  {
+    "key": "testbed, 120 days/plans.discretion_exercised",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+    },
+    "observed": 0,
+    "cause": "S96 /0114: no received conditional authority is exercised in either normal reference. Johnston fully complies with his June hold, so no proposal enables the sourced grant; the July goal remains in transit past July. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert.",
+    "evidence": "docs/audit/s96-evidence/liveness-review.json#plans.discretion_exercised"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/operations.stage",
+    "before": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "after": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "observed": 19,
+    "cause": "S100 integration [I]: the additional received hold and the subsequent goal execute through the normal operation lifecycle, adding staging transitions to the retained July path.",
+    "evidence": "docs/audit/s100-evidence/merge-band-review.json#operations.stage"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.candidates",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "observed": 6,
+    "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+    "evidence": "docs/audit/s100-evidence/merge-band-review.json#planner.candidates"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.searches",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "observed": 6,
+    "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+    "evidence": "docs/audit/s100-evidence/merge-band-review.json#planner.searches"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/plans.chosen",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "observed": 6,
+    "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+    "evidence": "docs/audit/s100-evidence/merge-band-review.json#plans.chosen"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/plans.drafted",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "observed": 6,
+    "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+    "evidence": "docs/audit/s100-evidence/merge-band-review.json#plans.drafted"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/plans.went_ahead",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "observed": 6,
+    "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+    "evidence": "docs/audit/s100-evidence/merge-band-review.json#plans.went_ahead"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/seats.choices",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "observed": 6,
+    "cause": "S100 integration [I]: the received additional hold goal creates a sixth ordered planning/choice cycle alongside the retained cast and July doctrine.",
+    "evidence": "docs/audit/s100-evidence/merge-band-review.json#seats.choices"
   }
 ]

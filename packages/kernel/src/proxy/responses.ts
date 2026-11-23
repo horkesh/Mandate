@@ -92,6 +92,7 @@ export function pruneResponses(state: State, day: number, keepDays: number): { r
   const named = new Set<string>();
   for (const r of Object.values(state.planRecords)) {
     named.add(r.planResponse);
+    if (r.planChallenge !== undefined) named.add(r.planChallenge.challengeResponse);
     for (const n of r.planNotes ?? []) named.add(n.readingResponse);
     for (const c of r.planCounters) if (c.counterResponse !== null) named.add(c.counterResponse);
   }

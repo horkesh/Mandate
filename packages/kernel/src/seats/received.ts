@@ -1,9 +1,10 @@
 /** Men and appointment availability as the principal has been told, never current service or force tables. */
 import { strictCompare } from '../compare.ts';
-import type { DepartmentId, FactionId, PersonId, PostId } from '../ids.ts';
-import { knowledgeOf, unansweredAppointments } from '../knowledge/knowledge.ts';
+import type { DepartmentId, FactionId, MessageId, PersonId, PostId } from '../ids.ts';
+import { knowledgeOf, unansweredAppointments, type KnownSentOrder } from '../knowledge/knowledge.ts';
 import type { KnownReport } from '../knowledge/records.ts';
 import { ranksOn } from '../people/ranks.ts';
+import { sameGoal, type Discretion, type PlanGoal } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 import { peopleProjection } from '../view/people.ts';
 import { createViewCache, viewFor } from '../view/view.ts';
@@ -96,8 +97,77 @@ export function receivedPlanPapers(state: State, principal: PersonId): KnownRepo
   return [...latest].filter(([post,r]) => {
     if (received.some(k => k.knownBody.reportSubjectKind === 'post' && k.knownBody.reportSubjectId === post && k.knownBody.reportDay >= r.knownBody.reportDay && k.knownBody.reportClaims.some(c => c.claimKind === 'commander-lost' || (c.claimKind === 'order-returned' && c.claimToken === 'vacant_post')))) return false;
     const sent = knowledge.knownSentOrders ?? [];
+    if (sent.some(o => o.sentPost === post && o.sentGoal?.goalDiscretion !== undefined)) {
+      const effective = receivedConditionalGoal(state, principal, post, r.knownBody.reportAuthor);
+      if (effective !== undefined && r.knownBody.reportAnswers !== effective.order) return false;
+    }
     if (sent.some(o => o.sentPost === post && o.sentKind === 'goal' && o.sentDay >= r.knownBody.reportDay && o.sentMessage !== r.knownBody.reportAnswers)) return false;
     const answer = sent.find(o => o.sentPaper === r.id && o.sentKind !== 'goal');
     return answer === undefined || received.some(k => k.knownBody.reportAnswers === answer.sentMessage && k.knownBody.reportClaims.some(c => c.claimKind === 'order-objected' || c.claimKind === 'order-returned'));
   }).sort(([a],[b]) => strictCompare(a,b)).map(([,r]) => r);
+}
+
+/** Proposals answer one of the principal's own letters. Only its received paper can open a reply. */
+export function receivedProposalPapers(state: State, principal: PersonId): KnownReport[] {
+  const knowledge = knowledgeOf(state, seatIdFor(principal));
+  const reports = knowledge.knownReports.filter(r => r.knownReceivedDay <= state.stateDay && r.knownBody.reportDay <= state.stateDay);
+  const orders = knowledge.knownSentOrders ?? [];
+  const latest = new Map<PostId, KnownReport>();
+  for (const paper of reports) {
+    const body = paper.knownBody;
+    if (body.reportProposal === undefined || body.reportSubjectKind !== 'post' || body.reportAuthorPost !== body.reportSubjectId) continue;
+    const ordered = latestSentGoal(orders, reports, body.reportAuthorPost);
+    if (ordered === undefined || !answersGoal(ordered, body.reportAnswers)) continue;
+    const prior = latest.get(ordered.sentPost);
+    if (prior === undefined || prior.knownBody.reportDay < body.reportDay ||
+      (prior.knownBody.reportDay === body.reportDay && body.reportAnswers === ordered.sentMessage)) latest.set(ordered.sentPost, paper);
+  }
+  return [...latest.values()].filter(paper => {
+    const reply = orders.find(o => o.sentProposal?.replyPaper === paper.id);
+    return reply === undefined || (dispatchFailed(reports, reply.sentMessage) && !reports.some(r =>
+      r.knownBody.reportAnswers === reply.sentMessage && r.knownBody.reportClaims.some(c => c.claimKind === 'order-obeyed' && c.claimToken === 'stale')));
+  });
+}
+
+export function answersGoal(goal: KnownSentOrder, letter: MessageId | null): boolean {
+  return goal.sentMessage === letter || goal.sentReaffirms === letter;
+}
+
+function dispatchFailed(reports: readonly KnownReport[], letter: MessageId): boolean {
+  return reports.some(r => r.knownBody.reportAnswers === letter && r.knownBody.reportClaims.some(c =>
+    c.claimKind === 'order-objected' || c.claimKind === 'order-returned' || (c.claimKind === 'order-obeyed' && c.claimValue === 0)));
+}
+
+/** An unreceived objection, return or refusal cannot retire the sender's own letter. */
+export function latestSentGoal(orders: readonly KnownSentOrder[], reports: readonly KnownReport[], post: PostId): KnownSentOrder | undefined {
+  return orders.filter(o => o.sentPost === post && o.sentKind === 'goal' &&
+    (o.sentProposal === undefined || !dispatchFailed(reports, o.sentMessage))).at(-1);
+}
+
+/** Conditional plan replies read the effective authority and readiness only from correlated received papers. */
+export function receivedConditionalGoal(state: State, principal: PersonId, post: PostId, holder: PersonId | null):
+  { goal: PlanGoal; order: MessageId; ready: boolean } | undefined {
+  const knowledge = knowledgeOf(state, seatIdFor(principal));
+  const reports = knowledge.knownReports.filter(r => r.knownReceivedDay <= state.stateDay && r.knownBody.reportDay <= state.stateDay);
+  const sent = latestSentGoal(knowledge.knownSentOrders ?? [], reports, post);
+  if (sent?.sentGoal?.goalDiscretion === undefined || holder === null) return undefined;
+  const papers = reports.filter(r => r.knownBody.reportAuthor === holder && r.knownBody.reportAuthorPost === post &&
+    r.knownBody.reportSubjectKind === 'post' && r.knownBody.reportSubjectId === post);
+  let goal = sent.sentGoal;
+  let order = sent.sentReaffirms ?? sent.sentMessage;
+  // A later switch can arrive before an earlier switch. Match the whole stated fallback goal against the grant.
+  for (let grant: Discretion<PlanGoal> | undefined = goal.goalDiscretion; grant !== undefined; grant = grant.fallback.goalDiscretion) {
+    const paper = papers.find(r => answersGoal(sent, r.knownBody.reportAnswers) &&
+      r.knownBody.reportDiscretion?.switchCondition === grant!.condition && sameGoal(r.knownBody.reportDiscretion.switchGoal, grant!.fallback));
+    if (paper === undefined) continue;
+    goal = grant.fallback;
+    order = paper.id;
+  }
+  const readiness = goal.goalAwaitWord ? papers.filter(r => (r.knownBody.reportAnswers === order ||
+    (order === sent.sentReaffirms && r.knownBody.reportAnswers === sent.sentMessage)) &&
+    r.knownBody.reportClaims.some(c => c.claimKind === 'goal-status' && c.claimToken === 'ready')).at(-1) : undefined;
+  order = readiness?.knownBody.reportAnswers ?? order;
+  const ready = readiness !== undefined &&
+    !(knowledge.knownSentOrders ?? []).some(o => o.sentPost === post && o.sentKind === 'go' && o.sentPlan === order && !dispatchFailed(reports, o.sentMessage));
+  return { goal, order, ready };
 }

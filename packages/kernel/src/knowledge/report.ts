@@ -15,6 +15,8 @@
 import { isWellFormedId, type MessageId, type PersonId, type PostId, type RegionId } from '../ids.ts';
 import type { PlanNote } from '../plans/notes.ts';
 import type { PlanPaper } from './plan-paper.ts';
+import type { Reason } from '../directive.ts';
+import type { DiscretionCondition, PlanGoal } from '../plans/goal.ts';
 
 /** The report types of 0032, plus advice (0040). Each is a pack-tunable template (`ReportTemplate`). */
 export const REPORT_TYPES = [
@@ -174,8 +176,31 @@ export interface AdviceBody {
   readonly adviceConfidence: number;
 }
 
+export type GoalProposalReason = Reason
+  | { readonly kind: 'hold_preferred'; readonly orderedScore: number | null; readonly preferredScore: number }
+  | { readonly kind: 'safer_position'; readonly heldThreat: number; readonly preferredThreat: number };
+
+export interface GoalProposal {
+  /** The held order the author kept while answering a different letter. */
+  readonly proposalBasis?: MessageId;
+  readonly goal: PlanGoal;
+  readonly reasons: readonly GoalProposalReason[];
+}
+
+export interface DiscretionReport {
+  readonly switchCondition: DiscretionCondition;
+  readonly switchGoal: PlanGoal;
+  readonly switchRegion: RegionId;
+  readonly switchEstimate: number;
+  readonly switchStrength: number;
+  readonly switchThreshold: number;
+  readonly switchEvidence: MessageId;
+}
+
 /** What a report says. Shared by a message in transit and the report as a seat holds it. */
 export interface ReportBody {
+  readonly reportProposal?: GoalProposal;
+  readonly reportDiscretion?: DiscretionReport;
   /** Sealed plan enclosure; public projections expose only its OptionView, never the planner's private inputs. */
   readonly reportPlan?: PlanPaper;
   readonly reportNotes?: readonly NoteAccount[];

@@ -1,0 +1,2416 @@
+{
+  "testbed": {
+    "base": "0e7078cb4baf7cd8d47621f3908f07f64232108e",
+    "hashes": [
+      {
+        "day": 1,
+        "before": "5d9481d05d67b75b1f8381ba70eba25bce9644c0a632cdb0ae5b4db8f07a07e0",
+        "after": "5d9481d05d67b75b1f8381ba70eba25bce9644c0a632cdb0ae5b4db8f07a07e0",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 2,
+        "before": "7893554de8d9741b1d9a66a6e9d1cd3ec3dd9e922c44a282c4ec1bd947fcecde",
+        "after": "7893554de8d9741b1d9a66a6e9d1cd3ec3dd9e922c44a282c4ec1bd947fcecde",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 3,
+        "before": "b60c02d121ca1e6e5ba3871e932a4db64000c8c186a48d2af1beb291939b6b8e",
+        "after": "b60c02d121ca1e6e5ba3871e932a4db64000c8c186a48d2af1beb291939b6b8e",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 4,
+        "before": "e39afeaffd0004e9bc4bebf2e4414b095af2a16ee7f9b40bb0445a66774981b2",
+        "after": "e39afeaffd0004e9bc4bebf2e4414b095af2a16ee7f9b40bb0445a66774981b2",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 5,
+        "before": "d4e8d5ece69a4a581b68fa17c7616e7a02e8aa636514be524268d3ff8f90cfdb",
+        "after": "d4e8d5ece69a4a581b68fa17c7616e7a02e8aa636514be524268d3ff8f90cfdb",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 6,
+        "before": "2317f8fd0b8bc025bc1cfcbc877f7477256f1e6520996d735a854349ac1219c7",
+        "after": "2317f8fd0b8bc025bc1cfcbc877f7477256f1e6520996d735a854349ac1219c7",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 7,
+        "before": "5926d8d058c53483616562fb53b9bfbeb576ae54d6ecec4c01fc044cf0360597",
+        "after": "5926d8d058c53483616562fb53b9bfbeb576ae54d6ecec4c01fc044cf0360597",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 8,
+        "before": "8089e6d2731b7be6b3bf998da4c1c76d2fb0f9ed12d9ae47809f094eb5133212",
+        "after": "8089e6d2731b7be6b3bf998da4c1c76d2fb0f9ed12d9ae47809f094eb5133212",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 9,
+        "before": "d6d5f2557d3ea18af5a3cbbcfbadf234921bff3423f53922f9d512e34e735f63",
+        "after": "d6d5f2557d3ea18af5a3cbbcfbadf234921bff3423f53922f9d512e34e735f63",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 10,
+        "before": "e6f01cbe5ab8c69367e12b13a20aedea671c8ed491e99eb1bcf6ada6a737397e",
+        "after": "e6f01cbe5ab8c69367e12b13a20aedea671c8ed491e99eb1bcf6ada6a737397e",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 11,
+        "before": "5365d16d91b214db1cd074c226910bf53f4996b5c2553a71c7f98798b7c38b96",
+        "after": "5365d16d91b214db1cd074c226910bf53f4996b5c2553a71c7f98798b7c38b96",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 12,
+        "before": "4843e491a2ac068fab2128d41e9a28afd2fd696eb4d0413df311f28bd953bcac",
+        "after": "4843e491a2ac068fab2128d41e9a28afd2fd696eb4d0413df311f28bd953bcac",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 13,
+        "before": "24d1e1ee0bf30cf755e9d5a428bad4aee166fdd6b1a7cda7aa9f18805c4689aa",
+        "after": "24d1e1ee0bf30cf755e9d5a428bad4aee166fdd6b1a7cda7aa9f18805c4689aa",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 14,
+        "before": "687042b6b9929cc1581e5fcce193c3f34497d1e79774cf4057705411536c8828",
+        "after": "687042b6b9929cc1581e5fcce193c3f34497d1e79774cf4057705411536c8828",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 15,
+        "before": "34ec3e830cb8d35e5af3da656a86616288c65552f042d386bc0e355a2bd2ae25",
+        "after": "34ec3e830cb8d35e5af3da656a86616288c65552f042d386bc0e355a2bd2ae25",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 16,
+        "before": "fa83b9742b9d1109b2ccde4987083f84b1f00ce6021fe098c637542e80f7202d",
+        "after": "fa83b9742b9d1109b2ccde4987083f84b1f00ce6021fe098c637542e80f7202d",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 17,
+        "before": "4e7b29efbef1ceb3bf0850f3f19094b574e9d649e06952018e8d5c2ad9ba005d",
+        "after": "4e7b29efbef1ceb3bf0850f3f19094b574e9d649e06952018e8d5c2ad9ba005d",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 18,
+        "before": "431444b7e05a26265e86e68db768aaf32ba9459074defa619636f16d7ba3c580",
+        "after": "431444b7e05a26265e86e68db768aaf32ba9459074defa619636f16d7ba3c580",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 19,
+        "before": "ae6abeebb8161d03ed7e5e822305397969fbdee4d657269a384116bab1adf266",
+        "after": "ae6abeebb8161d03ed7e5e822305397969fbdee4d657269a384116bab1adf266",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 20,
+        "before": "ecb3128d1729a15619b4459aff8714f8a47ecb7ea91f630c9992881b951c7379",
+        "after": "ecb3128d1729a15619b4459aff8714f8a47ecb7ea91f630c9992881b951c7379",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 21,
+        "before": "5c5c96297290d97b11976b78b6f72f6f229340eea2eb612148cb08045cb112fa",
+        "after": "5c5c96297290d97b11976b78b6f72f6f229340eea2eb612148cb08045cb112fa",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 22,
+        "before": "27a7a183fa010d326eb638f8679edc2daed1c7403efbea3de32d8385148324af",
+        "after": "27a7a183fa010d326eb638f8679edc2daed1c7403efbea3de32d8385148324af",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 23,
+        "before": "256365fa9f3747c5fc5715ff4641cb460fef2e9fcc121aee97e08e4f4c2c496b",
+        "after": "256365fa9f3747c5fc5715ff4641cb460fef2e9fcc121aee97e08e4f4c2c496b",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 24,
+        "before": "385719f865e530604c6710ddf6214cfa82b7817c237c56bd5c9ce0c342e998d0",
+        "after": "385719f865e530604c6710ddf6214cfa82b7817c237c56bd5c9ce0c342e998d0",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 25,
+        "before": "7274916fb42f901d33090b8e93cce059aaef6f715d723b928d947774bf6074ee",
+        "after": "7274916fb42f901d33090b8e93cce059aaef6f715d723b928d947774bf6074ee",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 26,
+        "before": "367e1d1e3220f7edd9daea57ca78f1ee7103963ee8965fc2a2ab73e4fbf46853",
+        "after": "367e1d1e3220f7edd9daea57ca78f1ee7103963ee8965fc2a2ab73e4fbf46853",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 27,
+        "before": "4beee11e353479023d246ede6714db7e7394135ec4566a3b96ad3253a3a8cef7",
+        "after": "4beee11e353479023d246ede6714db7e7394135ec4566a3b96ad3253a3a8cef7",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 28,
+        "before": "be4240d0fd8451e667acbd319b9f18e03babacaecfad9dfeabc3eb0c866550f4",
+        "after": "be4240d0fd8451e667acbd319b9f18e03babacaecfad9dfeabc3eb0c866550f4",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 29,
+        "before": "a70db97b618f61662b03d605ababba543dd27d2ed562c1a50909537089148dfc",
+        "after": "a70db97b618f61662b03d605ababba543dd27d2ed562c1a50909537089148dfc",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 30,
+        "before": "770ea893545090c87bc37cf7baab0498bb3eac0cba9009f7525af0b8ed626f89",
+        "after": "770ea893545090c87bc37cf7baab0498bb3eac0cba9009f7525af0b8ed626f89",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 31,
+        "before": "2f3155e4a84492fd93e9e11daec6b177f5b4e823f17eb34937ed15d02e066c29",
+        "after": "2f3155e4a84492fd93e9e11daec6b177f5b4e823f17eb34937ed15d02e066c29",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 32,
+        "before": "acbc17a9931d743df704b27a500ccc263bb65ae1906e472f395fe70e8e2426cf",
+        "after": "acbc17a9931d743df704b27a500ccc263bb65ae1906e472f395fe70e8e2426cf",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 33,
+        "before": "e3043fb04bfc91a974683b1bde2a8cd81826c4566f7b7a87bd5fad4aefcca132",
+        "after": "e3043fb04bfc91a974683b1bde2a8cd81826c4566f7b7a87bd5fad4aefcca132",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 34,
+        "before": "12ae4308900bf72fe8ccd423bed5c3b37585c2d7da47d2e982009ee586255a1d",
+        "after": "12ae4308900bf72fe8ccd423bed5c3b37585c2d7da47d2e982009ee586255a1d",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 35,
+        "before": "ecd03b02f43b374b22fd933d89611e03be7e464c550f4d84aab11a6ba0ba995e",
+        "after": "ecd03b02f43b374b22fd933d89611e03be7e464c550f4d84aab11a6ba0ba995e",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 36,
+        "before": "dae1c4a2539918fc771fd76d0b8dafda9727c3aaf43c41efad449bdfb2c83cae",
+        "after": "dae1c4a2539918fc771fd76d0b8dafda9727c3aaf43c41efad449bdfb2c83cae",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 37,
+        "before": "ca64062bff8aa45fd8473405b0b37256737edbc1e021f1139bee6c6248e50c34",
+        "after": "ca64062bff8aa45fd8473405b0b37256737edbc1e021f1139bee6c6248e50c34",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 38,
+        "before": "6e387ff0397c73e5430423870e1e2fc4b23f5aa85fed5390c6ab27d2065f0202",
+        "after": "6e387ff0397c73e5430423870e1e2fc4b23f5aa85fed5390c6ab27d2065f0202",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 39,
+        "before": "60a3f0d79e7cc6f02f9863ccbcb0dce8684bf151f1411fd88c21d58e96c6d400",
+        "after": "60a3f0d79e7cc6f02f9863ccbcb0dce8684bf151f1411fd88c21d58e96c6d400",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 40,
+        "before": "0b95e796a2f12e9d051873c2c3aadf09d4a4d7de44e2afd33a857f686a91810a",
+        "after": "0b95e796a2f12e9d051873c2c3aadf09d4a4d7de44e2afd33a857f686a91810a",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 41,
+        "before": "a5fdcad08db1bec3230dc06c51c56be022f22fd5c62cc952f6a5be3172fe6496",
+        "after": "a5fdcad08db1bec3230dc06c51c56be022f22fd5c62cc952f6a5be3172fe6496",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 42,
+        "before": "14558663e3ef3694116f09a3e3886ffdc0249e93f94f2f261d366146f767c848",
+        "after": "14558663e3ef3694116f09a3e3886ffdc0249e93f94f2f261d366146f767c848",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 43,
+        "before": "76ed1706db20c2d0f679e2b13dc64d5170e6d55e9b0f74058eeaca66f73c9814",
+        "after": "76ed1706db20c2d0f679e2b13dc64d5170e6d55e9b0f74058eeaca66f73c9814",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 44,
+        "before": "ffb4172aa27a39830207fc3803350064f54d3ed72ae5ee5f5503b66f7367a6f4",
+        "after": "ffb4172aa27a39830207fc3803350064f54d3ed72ae5ee5f5503b66f7367a6f4",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 45,
+        "before": "e2f5ea983883786817d2cbb8cc525d37f29701e3805cd3279228e4e2cc1f0280",
+        "after": "e2f5ea983883786817d2cbb8cc525d37f29701e3805cd3279228e4e2cc1f0280",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 46,
+        "before": "b4b750c7fa87791bbea22f3b701c76a55472da0d8f6ca5c240a56ef914e08bf9",
+        "after": "b4b750c7fa87791bbea22f3b701c76a55472da0d8f6ca5c240a56ef914e08bf9",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 47,
+        "before": "80812f6fa2f199e1010cdc3ed9d5bcddf2e3a5c44667e3426ed57ec773826ca9",
+        "after": "80812f6fa2f199e1010cdc3ed9d5bcddf2e3a5c44667e3426ed57ec773826ca9",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 48,
+        "before": "7e2aceddda62a1b362c443e60c86b9ec8b6b5f7951ec14937a5ff2c247a05e84",
+        "after": "7e2aceddda62a1b362c443e60c86b9ec8b6b5f7951ec14937a5ff2c247a05e84",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 49,
+        "before": "03e64d4df974c1448d9825a9a2afe404f689483d663671ebedbe313aa0f3812d",
+        "after": "03e64d4df974c1448d9825a9a2afe404f689483d663671ebedbe313aa0f3812d",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 50,
+        "before": "92b9013f608bc7dfcfd5f231cd8342ba555eb6c9b15400d7f8210bc96fc4b34a",
+        "after": "92b9013f608bc7dfcfd5f231cd8342ba555eb6c9b15400d7f8210bc96fc4b34a",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 51,
+        "before": "d482f134d630296741977bfb967dc1a4e84f7f79b137a459f3c29365f0607237",
+        "after": "d482f134d630296741977bfb967dc1a4e84f7f79b137a459f3c29365f0607237",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 52,
+        "before": "0d407a8e81e56828df903b3e81d3d61192b6a9ac9b576f1ead23795dc0cefa20",
+        "after": "0d407a8e81e56828df903b3e81d3d61192b6a9ac9b576f1ead23795dc0cefa20",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 53,
+        "before": "5ff2f0b033cb784e107adbf41cd91220e171953966d056f7632507ca097f2471",
+        "after": "5ff2f0b033cb784e107adbf41cd91220e171953966d056f7632507ca097f2471",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 54,
+        "before": "792d5c54adac3b33859952a29d0488392a3e42005f357d421ea9a3e8de2138e3",
+        "after": "792d5c54adac3b33859952a29d0488392a3e42005f357d421ea9a3e8de2138e3",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 55,
+        "before": "6a056fb16001d642d7e671ad97101418fdcca2126060b383b3cf848db3ccd19c",
+        "after": "6a056fb16001d642d7e671ad97101418fdcca2126060b383b3cf848db3ccd19c",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 56,
+        "before": "bc08b8cde1157c373f23947b54d08168cdb76e7d8b4431b3ea8766f1cca8349c",
+        "after": "bc08b8cde1157c373f23947b54d08168cdb76e7d8b4431b3ea8766f1cca8349c",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 57,
+        "before": "4aab16133a0d82b6d9f40f389ee855c9928270d84d9a5b4462f4f02b8ee081e9",
+        "after": "4aab16133a0d82b6d9f40f389ee855c9928270d84d9a5b4462f4f02b8ee081e9",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 58,
+        "before": "eea0f1a20e7f2815e03182c1777810a245fdc24df748afa5bf0b0f7b459d6157",
+        "after": "eea0f1a20e7f2815e03182c1777810a245fdc24df748afa5bf0b0f7b459d6157",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 59,
+        "before": "ffcd0ffd5f585d60e8d2026ef6dc14ce0d58565b09cefdb8b1359bedb223035c",
+        "after": "ffcd0ffd5f585d60e8d2026ef6dc14ce0d58565b09cefdb8b1359bedb223035c",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 60,
+        "before": "34314874f47a43baf02176ce58dbcb5471eb51a28d0d7db943717bccee963033",
+        "after": "34314874f47a43baf02176ce58dbcb5471eb51a28d0d7db943717bccee963033",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 61,
+        "before": "f0028513732d58e47f1eb6cc628924694b112ae5afadd921ca5d939ce7708d6f",
+        "after": "f0028513732d58e47f1eb6cc628924694b112ae5afadd921ca5d939ce7708d6f",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 62,
+        "before": "35ab1361109f1723c589e7f8de815cb73dcb8722a3c14b37483888fcf2a3ab60",
+        "after": "35ab1361109f1723c589e7f8de815cb73dcb8722a3c14b37483888fcf2a3ab60",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 63,
+        "before": "defe5fe8c0c010d1e88a24b386de50ca4ec2353b74f0b52ba55677c7adbbeb6a",
+        "after": "defe5fe8c0c010d1e88a24b386de50ca4ec2353b74f0b52ba55677c7adbbeb6a",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 64,
+        "before": "f097c8ea0fbb5c001f49cc5faa6323992b10f05293e255a54cdf5d25f0cbf9ed",
+        "after": "f097c8ea0fbb5c001f49cc5faa6323992b10f05293e255a54cdf5d25f0cbf9ed",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 65,
+        "before": "f64988ac0f4d405b190be731ef24af6ab5c4a11d7a68ab86556e7e3d869e8198",
+        "after": "f64988ac0f4d405b190be731ef24af6ab5c4a11d7a68ab86556e7e3d869e8198",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 66,
+        "before": "c6d24eea270c1709a760415d6b4801e66bb3885ca518ec1583e00fbffb07d718",
+        "after": "c6d24eea270c1709a760415d6b4801e66bb3885ca518ec1583e00fbffb07d718",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 67,
+        "before": "a5ce24c91504d5b852451afe375e0192bcb10b9b7ae9d540ba239283fa7cc3f5",
+        "after": "a5ce24c91504d5b852451afe375e0192bcb10b9b7ae9d540ba239283fa7cc3f5",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 68,
+        "before": "2271902b333ddbb2a067f220cd3c42ba2e2f9db33ffe9af0706f02c61deca659",
+        "after": "2271902b333ddbb2a067f220cd3c42ba2e2f9db33ffe9af0706f02c61deca659",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 69,
+        "before": "754d462e1ca2cc2bbed93007c4b06dd8206b9e55275d7344137fe40b2d3c0e86",
+        "after": "754d462e1ca2cc2bbed93007c4b06dd8206b9e55275d7344137fe40b2d3c0e86",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 70,
+        "before": "8719aa14f25a52e3c167bf3095f4670b0ed0df92f723a91a5be7d6ae4713aad8",
+        "after": "8719aa14f25a52e3c167bf3095f4670b0ed0df92f723a91a5be7d6ae4713aad8",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 71,
+        "before": "aa8eca745b10e77ded5bb466440fe4c68d3c430ab3147736d362b7a3889c4296",
+        "after": "aa8eca745b10e77ded5bb466440fe4c68d3c430ab3147736d362b7a3889c4296",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 72,
+        "before": "b2a1c7b892115e6ad3d68effd23bc88a749ebfdb2361831fbf30f5fa0aff7646",
+        "after": "b2a1c7b892115e6ad3d68effd23bc88a749ebfdb2361831fbf30f5fa0aff7646",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 73,
+        "before": "e66f630e4d3847290f4809a61c68f2a10badc978cc6d9180dd1111b1915c1b4c",
+        "after": "e66f630e4d3847290f4809a61c68f2a10badc978cc6d9180dd1111b1915c1b4c",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 74,
+        "before": "1f10ba2072c84437d27069b3e5bc0397d3523043d81bb1cadced11ed3c9c669a",
+        "after": "1f10ba2072c84437d27069b3e5bc0397d3523043d81bb1cadced11ed3c9c669a",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 75,
+        "before": "528d68c43aa7af5943b96574954f4b8f4e8ce905e4d8c5c5440e6b512bdb9f59",
+        "after": "528d68c43aa7af5943b96574954f4b8f4e8ce905e4d8c5c5440e6b512bdb9f59",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 76,
+        "before": "5e7fac29b52c2bc5f497a6b4e429587e026b040eea27f1e8fe85ab2ef678c416",
+        "after": "5e7fac29b52c2bc5f497a6b4e429587e026b040eea27f1e8fe85ab2ef678c416",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 77,
+        "before": "bc500e2a072e760a8da2c020a85a850126520a14af0ee8739231f3e7fb1b8e37",
+        "after": "bc500e2a072e760a8da2c020a85a850126520a14af0ee8739231f3e7fb1b8e37",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 78,
+        "before": "9801be95787e9b64812072322afdd9903dd50c4076a2c053b50f2ee06ca4d49c",
+        "after": "9801be95787e9b64812072322afdd9903dd50c4076a2c053b50f2ee06ca4d49c",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 79,
+        "before": "137c993c9522df59c6b49b0ae63ebe630991bb55bd98695f8b8c6d6c40c201a0",
+        "after": "137c993c9522df59c6b49b0ae63ebe630991bb55bd98695f8b8c6d6c40c201a0",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 80,
+        "before": "8b84c2e5ef4759ea42767d4a3d5b1d28b388d3c2d816a6116c23b01754698d54",
+        "after": "8b84c2e5ef4759ea42767d4a3d5b1d28b388d3c2d816a6116c23b01754698d54",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 81,
+        "before": "1d86b7e878a31dc9b471fd07d04bafb88b09c1ca69d94c842a0bd3d41d07fae9",
+        "after": "1d86b7e878a31dc9b471fd07d04bafb88b09c1ca69d94c842a0bd3d41d07fae9",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 82,
+        "before": "dff8126481ec0f28d0a6ec5e285f3662defc5ae2ca92d7e88f3d506ee284d6cc",
+        "after": "dff8126481ec0f28d0a6ec5e285f3662defc5ae2ca92d7e88f3d506ee284d6cc",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 83,
+        "before": "85d7e190a2ca69cc41dccc7094c1993917aa81ba7ab21369caee7e7ba17ce1e1",
+        "after": "85d7e190a2ca69cc41dccc7094c1993917aa81ba7ab21369caee7e7ba17ce1e1",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 84,
+        "before": "d56a830431880a24504d69472e4a9187b3d4d82cbe4c3dbbb4e4278218da2488",
+        "after": "d56a830431880a24504d69472e4a9187b3d4d82cbe4c3dbbb4e4278218da2488",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 85,
+        "before": "ffd70fb4c118ea3d47b94e5709be8f93a2220036a8a9627fe2f80c1ea27971fb",
+        "after": "ffd70fb4c118ea3d47b94e5709be8f93a2220036a8a9627fe2f80c1ea27971fb",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 86,
+        "before": "d9e91a3f71a9c22bfa32eb561148b10a03da060d79da6b95a45860bb37d3a9e8",
+        "after": "d9e91a3f71a9c22bfa32eb561148b10a03da060d79da6b95a45860bb37d3a9e8",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 87,
+        "before": "d4c9d0a9d63dbf0aa28ee488c39f2a39b4b234ad823dff0776e366cc526e03e4",
+        "after": "d4c9d0a9d63dbf0aa28ee488c39f2a39b4b234ad823dff0776e366cc526e03e4",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 88,
+        "before": "880f3247e46f017cb9da2842120b668730c82a1140361da20ffe8b85593e6319",
+        "after": "880f3247e46f017cb9da2842120b668730c82a1140361da20ffe8b85593e6319",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 89,
+        "before": "d793ca1e11e18c540e275297f923347ebdcaa1af759f39ab57f35c33bfdce58d",
+        "after": "d793ca1e11e18c540e275297f923347ebdcaa1af759f39ab57f35c33bfdce58d",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 90,
+        "before": "d6cff3bef255da07e45e6ef29b20e9cb3b0bcd76c8a06cadb845313f347b0ef1",
+        "after": "d6cff3bef255da07e45e6ef29b20e9cb3b0bcd76c8a06cadb845313f347b0ef1",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 91,
+        "before": "c76cb5cab046c57a2a329c75763d47f0bfca4bd99ed45542de43c5a8e93640be",
+        "after": "c76cb5cab046c57a2a329c75763d47f0bfca4bd99ed45542de43c5a8e93640be",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 92,
+        "before": "2ecad70ad8c2ece4d5115d4af4b84865c80e4df374b9563a208c6ebac12fd6ae",
+        "after": "2ecad70ad8c2ece4d5115d4af4b84865c80e4df374b9563a208c6ebac12fd6ae",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 93,
+        "before": "e5aa50500fe63187c7057904ec61771852a396830ec6dbcff7242e7930307af4",
+        "after": "e5aa50500fe63187c7057904ec61771852a396830ec6dbcff7242e7930307af4",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 94,
+        "before": "b5c4f883d43ba90619a203db9526c8afcd218a50fc9675325658f88f05a695d1",
+        "after": "b5c4f883d43ba90619a203db9526c8afcd218a50fc9675325658f88f05a695d1",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 95,
+        "before": "72fac1dba81a3948077dc7ec16f6c16a52cd89643fc57c811105f27be7ffe3bf",
+        "after": "72fac1dba81a3948077dc7ec16f6c16a52cd89643fc57c811105f27be7ffe3bf",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 96,
+        "before": "b18bfe6123c7f31ce26e3773db06e8bd590784d07fd2202e9175392fa02f99ac",
+        "after": "b18bfe6123c7f31ce26e3773db06e8bd590784d07fd2202e9175392fa02f99ac",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 97,
+        "before": "d4470f548bb8603f0b5842dc306af4901e95e56d2dc7cc0722e1d6bd2c716289",
+        "after": "d4470f548bb8603f0b5842dc306af4901e95e56d2dc7cc0722e1d6bd2c716289",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 98,
+        "before": "8f3b92e00b1b75e08f611e65aa0960b81d2b99027af1051eae91e88e38dc0389",
+        "after": "8f3b92e00b1b75e08f611e65aa0960b81d2b99027af1051eae91e88e38dc0389",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 99,
+        "before": "6bb6b468ae1e9b16efd3f9afbadfbe62994d8aa8317ba51354dab4734d64b5b2",
+        "after": "6bb6b468ae1e9b16efd3f9afbadfbe62994d8aa8317ba51354dab4734d64b5b2",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 100,
+        "before": "d81b127eb56e94833cca03b6eaa3a3509cd740ae849f83a98b877c73b76f0ae7",
+        "after": "d81b127eb56e94833cca03b6eaa3a3509cd740ae849f83a98b877c73b76f0ae7",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 101,
+        "before": "5b876b2786952631641a68dcd3fd77878caf52bd8c26dce793416806e2a77e7e",
+        "after": "5b876b2786952631641a68dcd3fd77878caf52bd8c26dce793416806e2a77e7e",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 102,
+        "before": "26a441882d25a4b20795ec58b9b8f73e7af70c22b494fca43241f858ad70f54a",
+        "after": "26a441882d25a4b20795ec58b9b8f73e7af70c22b494fca43241f858ad70f54a",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 103,
+        "before": "1a76ac59d423b902ec6ee0c30fb5b1171513194007b1bb1b7a4c778a28ac65f1",
+        "after": "1a76ac59d423b902ec6ee0c30fb5b1171513194007b1bb1b7a4c778a28ac65f1",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 104,
+        "before": "02722a9361d80ad6d7b7b8d68040b4f71828f0959e938946698d13f02c8944b7",
+        "after": "02722a9361d80ad6d7b7b8d68040b4f71828f0959e938946698d13f02c8944b7",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 105,
+        "before": "b3e5c574d8c787424c61e2fece7a64cc163b12cf622d4d7fccf7cbe2d7b0e919",
+        "after": "b3e5c574d8c787424c61e2fece7a64cc163b12cf622d4d7fccf7cbe2d7b0e919",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 106,
+        "before": "e3dfab8d3c2c7b6c1f8df8a294af52d7d20d4bf5cc67b89b06ae84712846c3b4",
+        "after": "e3dfab8d3c2c7b6c1f8df8a294af52d7d20d4bf5cc67b89b06ae84712846c3b4",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 107,
+        "before": "fc962289675694f2b1f20fb40978da6a583d35751e4dc0b85246397d19d77d1f",
+        "after": "fc962289675694f2b1f20fb40978da6a583d35751e4dc0b85246397d19d77d1f",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 108,
+        "before": "07a3d260f02727bce59e011edb1d8605a5375f8652fc0a24edf783e2270b0715",
+        "after": "07a3d260f02727bce59e011edb1d8605a5375f8652fc0a24edf783e2270b0715",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 109,
+        "before": "343492d3f2e3100a8f6738a32380bbc6bcfc9e315906cfa233d4f7e5341145a9",
+        "after": "343492d3f2e3100a8f6738a32380bbc6bcfc9e315906cfa233d4f7e5341145a9",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 110,
+        "before": "3cf9d11cdde4fd5075d9356365effeb4b0337a17a16ff4e41bc9561fedbb7113",
+        "after": "3cf9d11cdde4fd5075d9356365effeb4b0337a17a16ff4e41bc9561fedbb7113",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 111,
+        "before": "3cb76f0e78a0c73f05187b3c96db52add1fc489f11b6fb614e3fe2357a632c9b",
+        "after": "3cb76f0e78a0c73f05187b3c96db52add1fc489f11b6fb614e3fe2357a632c9b",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 112,
+        "before": "1c3dd208b19682cfd51e560add8d37723fd13a037ca8b34e350fbb472a167f2f",
+        "after": "1c3dd208b19682cfd51e560add8d37723fd13a037ca8b34e350fbb472a167f2f",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 113,
+        "before": "96c69dddd084266e833d7a811984b41d3788adfa5cec3f0b915a34db3551305f",
+        "after": "96c69dddd084266e833d7a811984b41d3788adfa5cec3f0b915a34db3551305f",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 114,
+        "before": "0bf6346503fde80bc706890e0613fb45d78724c1971a7eb45cd7f9e66006aff4",
+        "after": "0bf6346503fde80bc706890e0613fb45d78724c1971a7eb45cd7f9e66006aff4",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 115,
+        "before": "687d984a760840de318efd29b9234b181f6cfa154ac549c10bff877d173fe65b",
+        "after": "687d984a760840de318efd29b9234b181f6cfa154ac549c10bff877d173fe65b",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 116,
+        "before": "c0f4c4dc5739ff6e9d0d8eff52b529c4272901c1c16a8bb2afe00c9e11dfb012",
+        "after": "c0f4c4dc5739ff6e9d0d8eff52b529c4272901c1c16a8bb2afe00c9e11dfb012",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 117,
+        "before": "cbb63acd4989e2a22fbcf6e591e375be1e96bef2fc204526a9f3aa56946a5b8b",
+        "after": "cbb63acd4989e2a22fbcf6e591e375be1e96bef2fc204526a9f3aa56946a5b8b",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 118,
+        "before": "b537e32175fae1ed269aab208e384886953536fb21881031ac455f82cfe9fead",
+        "after": "b537e32175fae1ed269aab208e384886953536fb21881031ac455f82cfe9fead",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 119,
+        "before": "c58b5fc5036cd068031411b23f59bc3a9f34cca109439641700b787e19e15539",
+        "after": "c58b5fc5036cd068031411b23f59bc3a9f34cca109439641700b787e19e15539",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 120,
+        "before": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "after": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "changed": false,
+        "cause": "Exact baseline State."
+      }
+    ],
+    "dailyCounters": [],
+    "livenessCounters": [
+      {
+        "mechanic": "plans.discretion_exercised",
+        "before": null,
+        "after": {
+          "mechanic": "plans.discretion_exercised",
+          "fires": 0,
+          "magnitude": 0
+        },
+        "cause": "New S96 declared diagnostic, quiet in this reference; no event is credited."
+      },
+      {
+        "mechanic": "plans.goal_proposed",
+        "before": null,
+        "after": {
+          "mechanic": "plans.goal_proposed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        "cause": "New S96 declared diagnostic, quiet in this reference; no event is credited."
+      }
+    ],
+    "checkpointScores": [],
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0,
+    "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db"
+  },
+  "union-1861": {
+    "base": "0e7078cb4baf7cd8d47621f3908f07f64232108e",
+    "hashes": [
+      {
+        "day": 1,
+        "before": "c12dbe95cd8e6859ed69c09ef3c8eb524aaaedf5fdeddf92f7b48707901142d6",
+        "after": "c12dbe95cd8e6859ed69c09ef3c8eb524aaaedf5fdeddf92f7b48707901142d6",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 2,
+        "before": "2835d5675c46e06b5c54b26f2ff112163c3012225d9310469acc34404c5c2369",
+        "after": "2835d5675c46e06b5c54b26f2ff112163c3012225d9310469acc34404c5c2369",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 3,
+        "before": "b8b065ef19931ba0f27d9e5d8bec63ddf71a8626de4006fcbf34944ff488f942",
+        "after": "b8b065ef19931ba0f27d9e5d8bec63ddf71a8626de4006fcbf34944ff488f942",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 4,
+        "before": "ad0f8593c7eb6c61ecdd893d7781da6a1f62330162f14c073bf9253b2ee85969",
+        "after": "ad0f8593c7eb6c61ecdd893d7781da6a1f62330162f14c073bf9253b2ee85969",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 5,
+        "before": "6236cde8ff3b944097266b800556a011402c11d04a37d3368a00d780f7122119",
+        "after": "6236cde8ff3b944097266b800556a011402c11d04a37d3368a00d780f7122119",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 6,
+        "before": "191973962ebb28178025354c56c6c40c605f8d48870ebbb629e30a4893d5664b",
+        "after": "191973962ebb28178025354c56c6c40c605f8d48870ebbb629e30a4893d5664b",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 7,
+        "before": "db92626265e28c5183c99b78413269cd3eafc9f195481d78abc6d2d0dc5a8f09",
+        "after": "db92626265e28c5183c99b78413269cd3eafc9f195481d78abc6d2d0dc5a8f09",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 8,
+        "before": "0cea8b499af099307197e3428a006518fd02a98205240cd6f8c235e92f31b609",
+        "after": "0cea8b499af099307197e3428a006518fd02a98205240cd6f8c235e92f31b609",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 9,
+        "before": "a84d83f411024ea5d8b73be6502f6c0bf8d04aa268877c56155af56f6f5f0396",
+        "after": "a84d83f411024ea5d8b73be6502f6c0bf8d04aa268877c56155af56f6f5f0396",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 10,
+        "before": "4d45a33278711f616e928e95b29db5a6d607d095428cf20178fcc0e755ecd6a1",
+        "after": "4d45a33278711f616e928e95b29db5a6d607d095428cf20178fcc0e755ecd6a1",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 11,
+        "before": "ad26c90e14577bc0cc710cf2ae68a5b4020e31c15d23ce39e88906140bf6160d",
+        "after": "ad26c90e14577bc0cc710cf2ae68a5b4020e31c15d23ce39e88906140bf6160d",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 12,
+        "before": "23506f87b53f28b14a27c0ba9d0b1ad778e1f2a20f391dcd788f127e9f53bee4",
+        "after": "23506f87b53f28b14a27c0ba9d0b1ad778e1f2a20f391dcd788f127e9f53bee4",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 13,
+        "before": "b2a122023643708b6fb790539da7090f8b5d14184406ad58723058e3544fcc91",
+        "after": "b2a122023643708b6fb790539da7090f8b5d14184406ad58723058e3544fcc91",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 14,
+        "before": "2c2c326f7233b8bddddbbe69614690a063eb2e4dc4684ec5bfe6493696732b70",
+        "after": "2c2c326f7233b8bddddbbe69614690a063eb2e4dc4684ec5bfe6493696732b70",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 15,
+        "before": "a642f9690d3942ccd0476abbca3afaa8451194416e6e2e0741581252e372a804",
+        "after": "a642f9690d3942ccd0476abbca3afaa8451194416e6e2e0741581252e372a804",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 16,
+        "before": "7c1912d59ce34edc6372e3c679390a59aee06450c357a401db2d15aea0f1870d",
+        "after": "7c1912d59ce34edc6372e3c679390a59aee06450c357a401db2d15aea0f1870d",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 17,
+        "before": "370eb40fa7ef21df5d975e68386f607c937f00000394d234e88826ff3ddaa1cb",
+        "after": "370eb40fa7ef21df5d975e68386f607c937f00000394d234e88826ff3ddaa1cb",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 18,
+        "before": "d6e4a24c99c27cbff5cf48b8fdbc600cdd8475fac300a661682ee7bd9dcb5040",
+        "after": "d6e4a24c99c27cbff5cf48b8fdbc600cdd8475fac300a661682ee7bd9dcb5040",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 19,
+        "before": "38d908b1efdb983f49a421c52998c1f660ca6b4af839f0199ef1a821c04d12d8",
+        "after": "38d908b1efdb983f49a421c52998c1f660ca6b4af839f0199ef1a821c04d12d8",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 20,
+        "before": "d4002d40f9ff09b7010f65393ba0c909d405a0ff1c6251c2b7718ec2e156f33d",
+        "after": "d4002d40f9ff09b7010f65393ba0c909d405a0ff1c6251c2b7718ec2e156f33d",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 21,
+        "before": "e1f98fd94ab3bf3d5ee118a6f988dbd90a09755874ff83e502364c826b4cc632",
+        "after": "e1f98fd94ab3bf3d5ee118a6f988dbd90a09755874ff83e502364c826b4cc632",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 22,
+        "before": "b1080dc88492d5783925c35f2d856de82dd74b463a286a1d3f94e0155959429e",
+        "after": "b1080dc88492d5783925c35f2d856de82dd74b463a286a1d3f94e0155959429e",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 23,
+        "before": "12ccc508baa2307add76eeb8ae142255a6a47603850150a6b8f6114d7e468d24",
+        "after": "12ccc508baa2307add76eeb8ae142255a6a47603850150a6b8f6114d7e468d24",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 24,
+        "before": "1768b7d01af1c02c8d460283bae8a8a833c97cc62cbfb37cb295ea36a3f6eaef",
+        "after": "1768b7d01af1c02c8d460283bae8a8a833c97cc62cbfb37cb295ea36a3f6eaef",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 25,
+        "before": "8e374de9bd136f0e37b8cbdfcf55608b47baac8bb165ebf1047b2e8d4e343d10",
+        "after": "8e374de9bd136f0e37b8cbdfcf55608b47baac8bb165ebf1047b2e8d4e343d10",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 26,
+        "before": "b0bbb0fba5b95a283f776c8924625a1039b0c4846fc3e87d516d996188e69017",
+        "after": "b0bbb0fba5b95a283f776c8924625a1039b0c4846fc3e87d516d996188e69017",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 27,
+        "before": "00590ec84e860a89d333a0afcf4d4165b9a6236243695d28ae12126bbc40265e",
+        "after": "00590ec84e860a89d333a0afcf4d4165b9a6236243695d28ae12126bbc40265e",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 28,
+        "before": "c52c08fa2e37f40a92faa37855844651756c1ee964507d64443437b10c9e5ecf",
+        "after": "c52c08fa2e37f40a92faa37855844651756c1ee964507d64443437b10c9e5ecf",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 29,
+        "before": "727f7cbea7cbaa479c1e68d50e61c2d5c268fd59e16d3dc9a1ab683a0e3c5508",
+        "after": "727f7cbea7cbaa479c1e68d50e61c2d5c268fd59e16d3dc9a1ab683a0e3c5508",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 30,
+        "before": "28787357164aa893c9646af0ad028e75d7974bb17c1c0bba1ac58fdd322a3c09",
+        "after": "28787357164aa893c9646af0ad028e75d7974bb17c1c0bba1ac58fdd322a3c09",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 31,
+        "before": "1c8bdfadd0f7361bd744be51772e5f1a57958fdbcf8be986a205aa1c2f1d8fc0",
+        "after": "1c8bdfadd0f7361bd744be51772e5f1a57958fdbcf8be986a205aa1c2f1d8fc0",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 32,
+        "before": "0da67a90014bccfc593465810ac15ed29cf48fbfc38c1df3c693957bdc4d3922",
+        "after": "0da67a90014bccfc593465810ac15ed29cf48fbfc38c1df3c693957bdc4d3922",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 33,
+        "before": "2013fb30531a72e1a8b80dd9142b54f96a76cb825c8d8c150756fc1e021d85bf",
+        "after": "2013fb30531a72e1a8b80dd9142b54f96a76cb825c8d8c150756fc1e021d85bf",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 34,
+        "before": "8c2a646b67f2973c6d6506db3c0a41483b61a10a14125b582647f2567a08ff57",
+        "after": "8c2a646b67f2973c6d6506db3c0a41483b61a10a14125b582647f2567a08ff57",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 35,
+        "before": "55d8fae95f0883f43d3672affd75cb6686f9032d192703e5b400ef90ec3220c6",
+        "after": "55d8fae95f0883f43d3672affd75cb6686f9032d192703e5b400ef90ec3220c6",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 36,
+        "before": "29e11a042a82be102fac92fe745553363691ac50cf5d597290b1ff0ca133e431",
+        "after": "29e11a042a82be102fac92fe745553363691ac50cf5d597290b1ff0ca133e431",
+        "changed": false,
+        "cause": "Exact baseline State."
+      },
+      {
+        "day": 37,
+        "before": "4fe7770ab490c0fd3d89be18ae5b9daa6f9792da606f2b737779b0dde5fa2f7d",
+        "after": "a5772cc22b88c8a0f418c9591e84635f75c94b9bb0582efcfb1703854108c6bc",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 38,
+        "before": "0e90fa979bf63911a3381069e801c6b66125208ff0ed178c1ad71859d04140b5",
+        "after": "9c45bda034b067c41d5a1f34a4e873441f3b8c30c40c70bcc74fdd2de40c229b",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 39,
+        "before": "e604d10f5f2d743dcac4dae14bd14cad6532aa0cffdb61eb72cc37f3d4c64b09",
+        "after": "a5779b764fa796d767c98c0b7d9bada774dd4f15f7189161f2681b2f5378de38",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 40,
+        "before": "ccbff6fb1d16080975973eabeca59178356c2cdc5763c4308cfb8208d52c53bf",
+        "after": "ae55cf348208505aa1d34230d51599d78cbb4f71762adbcbb183f0f026ac001f",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 41,
+        "before": "7eb96b05d7fe548000edbf61cacbe0c3a95967b9129bd5da037ca03d62ef0b40",
+        "after": "52d98cb57622046d0708383013593fd20168796b44f5e5b5036e91b89f12de7d",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 42,
+        "before": "984f9f1c86342d38f96f1d3f999dcc1faf1106ab057bec1c566158a89220108c",
+        "after": "1a0c573db29bc5e2a2080dd34cd922e2d7ddd07cf1e6ec51ec1659cc2d444f3c",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 43,
+        "before": "b74c980fa2d216c076ba44b931b45232edc83634db4d4957de7b8ee5b41429ad",
+        "after": "92206a930002e372e140578df75d9dd0c08cebf88bcd36246884a7d2a2c96d10",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 44,
+        "before": "53eb5079983760e30fada94cb5539c30a1654bb04a8fe456876f6118d13dc439",
+        "after": "3e0d31e2f715e906da8e06b7bc938065cfdf7b76d87f56210942f1a6ff578d79",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 45,
+        "before": "0eadca572f1d7dfc8e91f85c6298674638d14c57fe7502630d7de653bf20ec46",
+        "after": "c0ec959b4155e91b8308c22444aeb795224e2562d947df1f64a01243b2dc4d88",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 46,
+        "before": "d639cc9d0e07234a1b22530b882318198b119370d6eb363758aad967e1c5cb88",
+        "after": "3bd11ed3c090b0afcec2a2b1eee52e78cae4f7f2f32b0c7dc53b9e2d3405c0e2",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 47,
+        "before": "1c7935aec41ed34ee291f375584bdb0b342815483c734a1a4f09e39f90b545f9",
+        "after": "914892b9ee5a61362f542eba6ef31cc41ae0da521da788993b047b26d3933725",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 48,
+        "before": "325565f184e3ab9e0d0d3d37f95f609d1dea2f78d7b34652fee9f2b7beb43972",
+        "after": "8889799663e5feb9302046f097d818a45e7cf10eca47d4e97b22a088bf33dfcc",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 49,
+        "before": "382bc1edf4ad7f4effd813c5834ec2ac9399c98a250cef200e3b03ff640a462c",
+        "after": "f0531ead5e700f567eeac17754a9d88356dfbbf96e8bb0f406f605db4d1c3bea",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 50,
+        "before": "8edeeb9c36918866e224068581d495d96bd33356594676b3bc2045cfd1251134",
+        "after": "475da78d40840b0839a30b0a9db8e73abddfa220af74fd95e308e040a6c1c3ef",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 51,
+        "before": "4d9514557a8ae5be2fda60acde4d728d4e8a0b963e4185a26da003f7d55406f2",
+        "after": "6fb9b69a3acbce73469207a1dccdce0658a5c7206da574cacd3da68ed03c1b90",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 52,
+        "before": "8b4f1c3aa81de40e5fbcac0c40774461af6facd9250d201341e338225637f283",
+        "after": "a6626e84246bd7b362840a527ed56fa8793849400874cbcea5bbb2a7479bf686",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 53,
+        "before": "f189b92c222920e9df9f3789fb69bea5edd5f15d8ffec52f3499fd3e3a7bb869",
+        "after": "089b694f8c4735bb3ad6460c6ccf6a39c38fb039caa452bc65903c0d209f31e8",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 54,
+        "before": "84721047ac209d2563d26fed363e07c1b75a1e5418c71896f9c899c6feefc279",
+        "after": "7f46266e3a8530ee3ada082e7c33cc0ab602aae490f6bd2787770087f6328358",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 55,
+        "before": "3cdb784b73460655821f0a267d2b18df4e2bb49ff9aead7284b243ced09c7ca5",
+        "after": "46752dcb0b30e79d5c9a0df180beb1dd9b18d54f4cac00812169a0dc620fda73",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 56,
+        "before": "615864eed3eee7994e003afa5b1c49254a60f82f188c2a718df5af9b2fe9fcab",
+        "after": "167adc48f7fda1682ea1606b0e65e2757fa249f62d86b578879d82b942e3b950",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 57,
+        "before": "77aeef2302ee3864ded7994c445dfaee7aa927680aab02c3925f7431ffcabdb9",
+        "after": "23caba9649df6a0ede0535e35513d46f8dd17d73b2d502e89e0d5d9afab7924f",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 58,
+        "before": "dda1a8cb793041f4dd5c2fd7f801f08dc863c1dbc1abbc922a7c32ac4d43db64",
+        "after": "25e810154af26b7bcc445d52cd57f733ce5c1001b5b63c4b3e0560b8088df251",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 59,
+        "before": "67c9b75c8e4a383a9614bdfbd3be395bd29173a9651b8347ff65cefe762180cc",
+        "after": "132d6514efd981d4d53aaaf6a52e78817746bcfdd485b29b9088e95c16691efe",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 60,
+        "before": "43972f0eb80dc48c6453b3ca446117bcc0301178eb91257c5cf2f4e79683bc66",
+        "after": "73a5fd3384499fbbeb760a1c57035af8bb5b32d03bf3d50ef674754db8f72e9a",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 61,
+        "before": "cfe15818ecb85f6725cf989ba3be308df45ba7d80abdb7dde1f3826c88775dd0",
+        "after": "62da1bc6f13bd3e1aeb23858d7edf38b8c438ba3f764d9631a1cac4b97cdccec",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 62,
+        "before": "ad4507dc3087241b52a9d86f68f2905ebf3119e7d3ec52e17923c36223deaa9f",
+        "after": "89c12657a888c75a7f9ff2441457f7e917ac5faf5ed0d31859b6b16fa10d37fa",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 63,
+        "before": "48115a23c55e579901894f6aee8b0fc80c612e948065204122b099db70f55219",
+        "after": "334d68da27eecc41bf5b9b22932fcfb1a76a7fea0054db2b4d8e9cacc4ca08f4",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 64,
+        "before": "7aedc0f9dfbf8e52c487bdc31481508a12c8be31400a6e4e8fa646ae72970147",
+        "after": "3bf38f20e7cc33f9688db6a5dc0d5ef9890f630822a3f5e857fa13dee41629e4",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 65,
+        "before": "0577d613ec00216dce1ad8d5dccf37729f3c65ac16a14159d0869760705b4c2a",
+        "after": "763011d6c846bc0cfb54340fdbf5fa3adfc03a8173ca35f04a27ac692965acfc",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 66,
+        "before": "2228764b884b66e98f236c04a7b1d2d306d6f47b34054d9f4ec6aa0e3b1a9fb3",
+        "after": "00bced7d6c446a60a9dead67e2054670af5578a29f179da14501555a84d63b4e",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 67,
+        "before": "0e33e2a735ed23b74a8cb84ef9d7a327c037810c05bfd8119cd99666fd89d77a",
+        "after": "d9745ec6113ca417da24ea93160fdb111d2ed1a94214f1046fd4af087a39de5f",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 68,
+        "before": "af827d5f2d39e4ce57a2710a2db7f0c16219c87e1bbbb2eb73285dba559f644d",
+        "after": "cf3ea14d46c1029bff3f91bb76ba4b8c48444f5c19903472e499c88792a74aca",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 69,
+        "before": "c8dcd7f25a7c714ae0dedbee5e4f7c67dbd2af70527f101556e5a6e19921d898",
+        "after": "b780216658c8eac09078de9dabb012c917f3bc5adf9ea7c4d095065efed51c4a",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 70,
+        "before": "6ca505b3e77395184c890f2c1820f71ce61cc58aa32531264e3adc293e3e2ff2",
+        "after": "2fa9ddf6cd73acff36e077bf5848414885eb1e8e396727daee9a0041590bb8f8",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 71,
+        "before": "a423f0ed8c5abc489f9f405c9add0dd2aa427242934019f5bf5a26eb8f4144a8",
+        "after": "618ece62ad3a7adefcff1daf959070b554eed3f35712162c5a1f50b3b3c42921",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 72,
+        "before": "1cdbae7a0a5c7c87a8f69ccfc1a59d7b4f032ec8467a21ecf486dc1c64557bf0",
+        "after": "39fd1d7173862b9fecb7d615d98677641ef0ae4a7289b8d8c0bb85b374c7d23e",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 73,
+        "before": "a9ea94d5c02411d5fdbd4c10c08ede538a7d4ebc124fa8e44e7ce385c6999f6f",
+        "after": "db47e273b3f32f8eaa7c34de9d68eb4dc4c5be930566e9297cb1e868e19c0d1a",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 74,
+        "before": "2dfd551aaf1b5e36031bdd031ea2cda90fb1dc92ba5c2c6ec62d7eec3062baaa",
+        "after": "758b3f57a3d4b77446ac7255175587b45b007f4befd18f7360d1a1056feae8e0",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 75,
+        "before": "5b8bbd565912bddc22c4a4371cef3c856fb6f375fc0c004dd686c1404556f38f",
+        "after": "206a17cbb6b7383258ef9897314fbb032979b3fc07b9a771229b1abd611d21e1",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 76,
+        "before": "9f34eb546a14f36abdc8289b51c5c11a095ecd3b56f0c1e980c9a6b839aa8fb7",
+        "after": "05de9cfeb72766676df0956daedea0f92c9170a5deaae4fe43142ac9216fce7c",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 77,
+        "before": "8248d08cd792ae9aa79033c1196be30b7980a344aa9e1b2727f775279f1db8c4",
+        "after": "1300364060b513930ec13de7e33fb56975ef3d010613ecd691aa6aaa93816013",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 78,
+        "before": "8b942fdf80feda514a5cf9e97318781656ab30dd3d00d8edefe11c486ca17638",
+        "after": "0fa61f57799377fdc0f3f35a6837924f30ca51dafe197f7e797305f45e2f7be6",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 79,
+        "before": "4fb67afcb9c3c6bd0e7274bc2fd1e18686a2647796f5cd62bff9492424c4f346",
+        "after": "db18c914d61e5782ad912dfacba4ee78389f201b3ba752e340cd64b284c92bf1",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 80,
+        "before": "acde9b83e0be29e707121ea50fdb3d84e5742af8b68a0ce66ae331da757b6a85",
+        "after": "39cd2022db3feeb73e2d1d75d0d2aff3b252f2144c41f8ca97467f0a0ce8477b",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 81,
+        "before": "3bfa44ee1b55e4302ff4bd0ecb3ef074bf20caf0deee7add13a86eb87a9269fd",
+        "after": "d04088a6da4fc96d8ab04f9158bc0925c199bb9bd96b9091da76c6f49e928130",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 82,
+        "before": "5529255df30d9f7b59de929c0acfa3d0d2d2741a7a3f1b8f9adbcb36438a43e7",
+        "after": "d1f3a00908f2fcb3d3f7e721be77dbe7dd33eec3ee134e00e7430212772a2fc8",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 83,
+        "before": "a613432c28feacce97a29a8b75870cc7aac6d2eede7f2feb28aaeb97e50eaa52",
+        "after": "9c705c8d05e7a790472cf411f0872af51a1036ecb9069c13b0cca087c03ec2b9",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 84,
+        "before": "3d6bae99949ca62bef7581838b24c5b0a32c8fbe89b72b109ad461b4bb2a1bf9",
+        "after": "3d50877f0682bb3ccedc9c94240dbdc7c165ebaf6a1212bca36a76a7b00e0e35",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 85,
+        "before": "83f7ac6aa0f659e3decd496291a56119beb29cf263d3b0c9f45a340a4d9237d9",
+        "after": "f2de7654f83a92bd0c6de5f8df4ffae9a3fcdcbd73edbdf840e4875aae71a723",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 86,
+        "before": "e6691b077636044aaf3a23ae04036a0b7c321a3a059ccdaff5d18ae93a9632ab",
+        "after": "530f8d913fb07d9fb44148d4663c9602e7f5c466bc1bf142e6bcc94c50a52421",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 87,
+        "before": "24e368d28d6cb2bb0d0bf8b5679dbe7f3c1b8c7c3b52d770f40836a11de0af89",
+        "after": "a294f223211321eb8c7d55cd1d2bbbb4a02bdcb2a3d32ffb4185be944c876943",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 88,
+        "before": "b9f6bdbdb2a6f7882bc6a95b7a238cc4cb8fa48ec0139105d00087686481f911",
+        "after": "31875b099187669137e5b798aace7d27bdd2460908ee3eac4553a12b8d6753f7",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 89,
+        "before": "f891ae7f84440a377ca2323343e015aacd9c9c5ca1d6a84813128f2fb1a888e2",
+        "after": "8d1595f87a55b52cbb0d824b5d5bb93ffdfc0910614b6f13d6d0b724bb6a1711",
+        "changed": true,
+        "cause": "S96 sender-owned sentReaffirms preserves the day36 Charleston letter when its unchanged day37 copy is sent around the relay. No counter or checkpoint score changes in this interval."
+      },
+      {
+        "day": 90,
+        "before": "508e3b4860511bec531870afbd7e67145cbe2b862517e2997e2736527591f1a7",
+        "after": "1bad2707274b8ee8dce307f300679fcc826c243cb985d1f81c7ccb9c621cb638",
+        "changed": true,
+        "cause": "S96 sourced June hold dispatched through Cooper on day90; the extra order and sender doctrine correlation now travel to Johnston."
+      },
+      {
+        "day": 91,
+        "before": "c2b7cd1c2ab9afe5a6b5b5c863666a358b4f6d6555f8f74526ac9924a4fa0676",
+        "after": "5e3d7f75b3fa1d7bf975aa7adea8d53deb7bf3d590beade3875126d3734753cb",
+        "changed": true,
+        "cause": "S96 sourced June hold dispatched through Cooper on day90; the extra order and sender doctrine correlation now travel to Johnston."
+      },
+      {
+        "day": 92,
+        "before": "2eac3f73bae4406b01a95d212628f8108fb3a99caa014ef3f5d0ecafaec64526",
+        "after": "b75d39cbea3e87d3b70f13130bcd60f4d902c0abe51cbea04a3a5d45c9bd6429",
+        "changed": true,
+        "cause": "S96 sourced June hold dispatched through Cooper on day90; the extra order and sender doctrine correlation now travel to Johnston."
+      },
+      {
+        "day": 93,
+        "before": "fdc499b073d6315b273ae3318a21df6ca0bfb530414a54b149f18269db671f6c",
+        "after": "3912ff456ea7965a5a301824ca6c070d7968c12c0b0fe14666dc74a94b59a525",
+        "changed": true,
+        "cause": "S96 sourced June hold dispatched through Cooper on day90; the extra order and sender doctrine correlation now travel to Johnston."
+      },
+      {
+        "day": 94,
+        "before": "e830aaaabf2bc68d6a8961b8ddcbd3b350bc8ef82776579bd867f1067a52fe2f",
+        "after": "da945d74f51cb4ff8295227816ad2d9892315410d89ee2a9f6a874640f5a9cd4",
+        "changed": true,
+        "cause": "S96 sourced June hold dispatched through Cooper on day90; the extra order and sender doctrine correlation now travel to Johnston."
+      },
+      {
+        "day": 95,
+        "before": "9ebd3fd6a2a371c0756244aae82e15b925d814486accc2c986de117121f3252d",
+        "after": "df972e27fa9067e55d3d568e0dec719c258103ef48a920194f6480ad4f697f9c",
+        "changed": true,
+        "cause": "S96 sourced June hold dispatched through Cooper on day90; the extra order and sender doctrine correlation now travel to Johnston."
+      },
+      {
+        "day": 96,
+        "before": "e4bdd26bc3c2bf4884aaca2d4c25baa7c7ea5b4e4ebd7044636ba1dcb98288c8",
+        "after": "6968d9cd820de352fb848aee72ebbd06b096da184226e26d8965643951aa7737",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 97,
+        "before": "4465832ce67a7c0213464564a5a92b35501d54511733e71ad601fd9e332ef19a",
+        "after": "6e32b43f9fde514a43c04823ecc0780292ee550f142b5c375123168aded8adbe",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 98,
+        "before": "cdd648fe6b7c591b5b1c4ae73766db59e1d87c2def94e0a0865b415643c7293b",
+        "after": "9a85753a94530c6d8134b29794a8c5ece289ffe76bf22a691fef1e1848447aab",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 99,
+        "before": "7e60dedf2f158bfd0fe2188d38d91d53fe2fb18908df816ca1af712a5cf5da3a",
+        "after": "a7e6569cf3ab3063a0a5bc91235db3080fceba8d725d96f3d45b362c4035a025",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 100,
+        "before": "97c570fbb982e514c5856b41840251700f1ce390c90ab1a6d828422dcaeded62",
+        "after": "67b09689bcfe3204f973648f0b8b8e6ac511715d85a784fc2ca18592de638385",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 101,
+        "before": "c609d223858128b10e151cdcb6e43312d40baee19f64f3f4972394e18b968a0d",
+        "after": "466f9c2b42b0819babf2396f24df07c398c55c06a54464aaddef5833f9ebe10f",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 102,
+        "before": "bd16beffc759da2db2b2f3efd53b0d3887413f2f0fd4781b0953c5ea710d2f6b",
+        "after": "c363f3a712caa2aff346004e4334e5c068269e8389ad0940bc0ae56d52268306",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 103,
+        "before": "00f34f8ba5cf592d0af30e56bdafdef9913c8c53468ffdbf23eb229b5e42ddd9",
+        "after": "ffe33a6fe109f0bf1e3fd9e670ef8e1fb5b206784df097087cd537a9b1e7cd78",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 104,
+        "before": "4d8f7ac70c1067381b7ffacd64ed1a1a069a8dbb78faeb9e2763ebf8d5f20da4",
+        "after": "35261c12e7a2af871169c5c2f4a62950ceb9e7b88e9e45a391ed5a63880426cd",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 105,
+        "before": "b6fea5232adb4accb012ad471e3e567d4172020ae5ca2da35f42ba42a136a471",
+        "after": "723bb33774917541baa73e5fa54789675d31291ba98e6e180a0ec1550379ce6d",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 106,
+        "before": "00fc56cdb2b9ba083e0e5b1073cf05cbd18db8e82507f4bd040928da05e10725",
+        "after": "0a0b9f119612339dd0cb462a3c8384648cea58f33accb86bbce3cd82a6c901cc",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 107,
+        "before": "1d5294b4e3705911c55bab366596a99c9960332a253380055a51c781c8ee33cc",
+        "after": "04664b5e47522cd327da8dbc083ea7d5e1ee508ea151110112ea952795056234",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 108,
+        "before": "8b09a50d10b7d4f13ecfbd64fd7b68213461aa100695241503fccb3df076c80f",
+        "after": "627ef86d9f6e03d3563591d2e386414f3761964eee8e767c7d0fd46c901b6078",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 109,
+        "before": "3bb4564ce7243ea0ca40a7ed39b4ac79be3332d0ad1cb21cf27d504108eea7d7",
+        "after": "03e848a4f82bd0c7b525afd42fd940ab36c3d7235d639ba5fcac80287767006b",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 110,
+        "before": "e5bf5b28bb5a65f7b4ef87b646d125e97a3bdee7cba804d5cbb381b335e9c144",
+        "after": "551db6fb5631656554477e95047cd1f1cba04cc68f94ee22bac621f9f99b7db0",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 111,
+        "before": "3b8e30cd21c42129ad115205e73e9fd312dc7ede13e56c17fdbdeb77e4ab0f2e",
+        "after": "5f8d1b71fa4ea4585af09e8c3714989388a169c235e56e0c39fcc1f9d7bb767e",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 112,
+        "before": "afafa383df9c1bfed851b755ccd0212a98a3039ef0622ab695daf27b988f5a40",
+        "after": "081df7a7497c39723f87d9b502408f485325ee141b6f6298ac494ebd92ad1b73",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 113,
+        "before": "e7c0429658650cb9fe1abd93ea95f1e5024c13acdd18ef90b6244afb5029423d",
+        "after": "c834cc2c9802a804509f6ce837a6d454654aa7d41c5be2813bebc5cd4a5ebe4d",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 114,
+        "before": "5a3771ebacbbef7d210d33ed0b475f9b83d4bfede7e2c37d4fb7474514467a38",
+        "after": "60128d96f8588537c17c420e6a8555d33f4ec5a947cf1bafb5cf7f50bb57f2b2",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 115,
+        "before": "7fa43cce9e44575632b4b16387c95950c341527edbee25ccb544c02178109220",
+        "after": "c0b04af0f1a6878d9356e0668edad0cac77ad8a14e7cf6042c45e021ab59bd4f",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 116,
+        "before": "de79f2bd1bd5fa9695f42b0847fc52cdb45f20dffe074ec5df4dd4725d612100",
+        "after": "8ec5b4d443aae1966b80be94361e2a29e5e156d3935c67e251798003d81ec65f",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 117,
+        "before": "a1275cd19e633d85f546f645a98226272ce61a8cd21e68afc4a8d678daee7451",
+        "after": "b558a0d74b2eacfe80f3036d95429c458457de75264b44e94f6ac0eaf166bc31",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 118,
+        "before": "e8e04797badca43d5607189fc7e6ef7f00607a0636b4ba09fa2468eef320e579",
+        "after": "1afe07a48c6a1063277e5d55d0ed9804395d816e36de6fb45d84068688caea9d",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 119,
+        "before": "2f5e27fe70a33ce41a168a07fbaf7791aed5486f4c9b51d40b553451a4db2c53",
+        "after": "b21e9cf556dc37244ab1fed9a5ded977f162227538da7b3dc1b2e2c905060f86",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 120,
+        "before": "9e089e4c958258ff4f29c798946b2e48cf0773156fa7a27b1c9b76842b8014c4",
+        "after": "152a7364ecd4d7f8e91b94fd77d205343ea141930efdb5af82c159e433cb9a6d",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 121,
+        "before": "e7dbe07f57b27282dbbdd5e6bc0d7f87dbeeafe64d1703d5bdfbb8265bc44c36",
+        "after": "cd28c36776019cd9f14565a0b1759b7f5552361c7598e0dc1b810e97e20f9872",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 122,
+        "before": "0c3a1548fd26c6eb7854b4bb5dbe7586a9657a1a6ee4dbc6f3215bced02aa2ae",
+        "after": "5cae997e009fb2f8bc80a2be15f7465bddbe7affc2de8d0ea3df61c7a0eb5ce1",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 123,
+        "before": "224241c9ec6af28e5f22073e8989ed36f5be7a425d33716dfad518edd3ecbcb2",
+        "after": "1e9b8caad57a488177a5f2696ee80fff65217e3b84ef44c8637161956811ed3f",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 124,
+        "before": "ce9e6d1a72a771223f6501eff0a76ee199cd8b2faff081b394935953f765f307",
+        "after": "90ec7e5c7d1700d6ead5b14e4656b6f83de3615d26be44b65e314fa6d7c2d89c",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 125,
+        "before": "d0af1c6c0799bd10acc97a937ccc1c890c171f96fb6e1beec956f2c01ec1a0d3",
+        "after": "ca36be4dc8a8ea5a83cd4fb88d7e214cd628e7d1dcf5fe8b48013e66c353e610",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 126,
+        "before": "a0eaac4b81ed9e82ca4e71038289fa1433e8177339b4f9b4194c360e9dc4c44d",
+        "after": "708e5c407a04d51e7ca6181ed61c34d7f9cda790496fa400625f82ffb6d89d60",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 127,
+        "before": "234d4c0a35c29472da056bb9e071e7ec4886e1176ac5d2c5cc88b993d4d1cacb",
+        "after": "7bfdad3cea7afe4cc4791192a0939bf28e3bf32d81a58693af871a0267425efb",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 128,
+        "before": "55fc4229976fa2a17c70936c7aa5eff4c06e87041c29c1e508720592350795f8",
+        "after": "779d57455b553a94a8bf7e5745ce1e49485e4676e122af7e0911f865f6573e6b",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 129,
+        "before": "1b43d434cbbee9e9882561923b29d9967e4d9d1d55c562a4d2657114d066a208",
+        "after": "92230a6d0a2320fd0184873fa842254fe2f0042d61cdea966da1afb4a3095156",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 130,
+        "before": "20d093f370cb3a837467a3abe65442ecd94835ab671bfaf45db65f70ad070977",
+        "after": "44e4d3c4651de09a9faa94ff9fedd1e56f7a8dbde697db050ead8f67d30f2677",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 131,
+        "before": "5b59b78df1255a81ba65390c1a34ce66c9d4c1d55019a73f95bd53b2214c3bac",
+        "after": "151437983f72f09266a82951335cfd77f83db710514001c3c9074b38086fb56a",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 132,
+        "before": "5ff2e652d67e33352b71148a5187487af4486091bac827114dc0d8eeeb955079",
+        "after": "bc8d603b7e2f103b3e1c78d06393bcd7bf0950d4d59e41a3d0fae9a0ac0ab787",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 133,
+        "before": "6fc658cda9539de8fa38c5b9c0c38ddd4bdab25ee8cf6f8e10a9b92ac340b356",
+        "after": "f429b15a8d0360a373dd0d23dc8a50ae7d061c8962dafd20fd86507cce84ac2e",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 134,
+        "before": "f2e51cc9b60b943367dbf1d4246804c18aaa7d7e02fc22f739e27aee9106d232",
+        "after": "5f368432a19f4857175a39dfd54104e95c6ddfa0f66ec93bd24f90ce758b1c7c",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 135,
+        "before": "bbf294652c65c4e61f87289c8f9a1d351e506f1c29ed4b23334c5cc4457e7747",
+        "after": "81bcab1742323ac974e9153cf3a10f9df916e65ed297243d3f14fa65abf5b062",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 136,
+        "before": "8af161ef219fdda273b45d9282a99978b2a902263de78bf7837403e609877cb1",
+        "after": "971d81ca17ba18fca440ac949baad8cf546ab414014a4fe53a0c9dab1dc085e7",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 137,
+        "before": "8b1341f2c988f339e97008bcc591d6575fc1b73eded975537accda79e31a390d",
+        "after": "ceaf9d467381ded5227090234f63be8316ebaf232bba34d0069fa31f2a411731",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 138,
+        "before": "8ebc787f640fbc5621051cdcca2900df8acf4903fcf91898f1ada089ab7e6733",
+        "after": "1b67f0923ee7f4b9a3d2380aadd71cb3809202ecc0e02543a99cf7808a18674e",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 139,
+        "before": "898b65f8e5cefa4c95e5a755e901e0368a5c00a4ae3959fa688ac3c216c9352b",
+        "after": "6f297f2908150e1007e923ae592035d394d5694ad73aa7f70fbcd820423dbc2d",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 140,
+        "before": "6fb327bd254be867d2d9550a82c60065d357112f5ecd46b8135b1c28556fe971",
+        "after": "724914a4b674a4581bdba75663d44637ccde5dfdd6ec554f78f1821f21446409",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 141,
+        "before": "67aa1c30673c7bb2a8b97ec7a17c8c7a7c7d13374653b8e696ef540463b1cdd7",
+        "after": "eba2f3234b2ada8fb15a98699b1bc77fd535e5a709139dc19fdd5122bfcac0d4",
+        "changed": true,
+        "cause": "The day96 received hold creates Johnston's own draft and day97 hold operation, day102-107 works and ordinary acknowledgments/reports/pruning; his physical headquarters stays at Harpers Ferry."
+      },
+      {
+        "day": 142,
+        "before": "ebfbe18d6f32381c39d0f86109386e4a44db74ce157a54cb786c504697f2daac",
+        "after": "170c6c176250a673c4468b30586b8163b345b99219a90a250fa5d1a69ab22aa2",
+        "changed": true,
+        "cause": "The earlier received hold remains active while the day142 junction order carries the new if-practicable fallback and doctrine correlation in transit to day151. No July junction receipt or withdrawal occurs."
+      },
+      {
+        "day": 143,
+        "before": "5d6ba890f921a78bc5db29fe9354c5acfb86ad8151e86669a6cdf0ab5a5629e5",
+        "after": "8eebad981bd6b0dd21c5001fec298f929592d5e4235e9a2e90623a34301e5769",
+        "changed": true,
+        "cause": "The earlier received hold remains active while the day142 junction order carries the new if-practicable fallback and doctrine correlation in transit to day151. No July junction receipt or withdrawal occurs."
+      },
+      {
+        "day": 144,
+        "before": "dc7234fbf85420b60d1032e419b95c0ad4cdeb2ed8b302dc843cd26224a5878c",
+        "after": "41d0e644dab60852e6c330ff8c9feea63b0d70b257fe2219be8068b5e1ad6e06",
+        "changed": true,
+        "cause": "The earlier received hold remains active while the day142 junction order carries the new if-practicable fallback and doctrine correlation in transit to day151. No July junction receipt or withdrawal occurs."
+      },
+      {
+        "day": 145,
+        "before": "fb1f3fdf751a003056460e5278cf4c7bd5876c29b6efa62a735d87cde83a4782",
+        "after": "e5a40b8cdb30c1dc971caae9c117aab4e7751b5357abb77bb7a165a315521c1a",
+        "changed": true,
+        "cause": "The earlier received hold remains active while the day142 junction order carries the new if-practicable fallback and doctrine correlation in transit to day151. No July junction receipt or withdrawal occurs."
+      },
+      {
+        "day": 146,
+        "before": "07969af7f09356ba15192e2de0d8739a79f69b30062838d3153329c47c99d282",
+        "after": "70b47d59a975548f9d666cd1fbb46e20381df5443796a666942c9cfca85f8b82",
+        "changed": true,
+        "cause": "The earlier received hold remains active while the day142 junction order carries the new if-practicable fallback and doctrine correlation in transit to day151. No July junction receipt or withdrawal occurs."
+      },
+      {
+        "day": 147,
+        "before": "8528d72f4b86eddc3fd44c970ddc6a0fc8bbb56e475f40f4a958e71c3803b92d",
+        "after": "02f45b7011eeb287c918448c5abb37f9ea91ea7edc1caedf9538d01c3465fbe5",
+        "changed": true,
+        "cause": "The earlier received hold remains active while the day142 junction order carries the new if-practicable fallback and doctrine correlation in transit to day151. No July junction receipt or withdrawal occurs."
+      },
+      {
+        "day": 148,
+        "before": "8a1e85a32d1c6db18c7dfc6fcc5bb6301aff8c2d8e2d4a8e5e918ec8ea3b8002",
+        "after": "f1811a7f1a9177ec8dc62de98e56d1219d050c263797bac7934d1fe4810a8e75",
+        "changed": true,
+        "cause": "The earlier received hold remains active while the day142 junction order carries the new if-practicable fallback and doctrine correlation in transit to day151. No July junction receipt or withdrawal occurs."
+      }
+    ],
+    "dailyCounters": [
+      {
+        "day": 90,
+        "mechanic": "messages.delivered",
+        "before": 79,
+        "after": 80,
+        "cause": "The new June hold costs one attention, enters the ordinary government channel and is forwarded by Cooper the same day, creating two messages and one delivered relay hop."
+      },
+      {
+        "day": 90,
+        "mechanic": "messages.sent",
+        "before": 37,
+        "after": 39,
+        "cause": "The new June hold costs one attention, enters the ordinary government channel and is forwarded by Cooper the same day, creating two messages and one delivered relay hop."
+      },
+      {
+        "day": 90,
+        "mechanic": "orders.relayed",
+        "before": 0,
+        "after": 1,
+        "cause": "The new June hold costs one attention, enters the ordinary government channel and is forwarded by Cooper the same day, creating two messages and one delivered relay hop."
+      },
+      {
+        "day": 90,
+        "mechanic": "seats.attention_spent",
+        "before": 0,
+        "after": 1,
+        "cause": "The new June hold costs one attention, enters the ordinary government channel and is forwarded by Cooper the same day, creating two messages and one delivered relay hop."
+      },
+      {
+        "day": 96,
+        "mechanic": "messages.courier_delay",
+        "before": 0,
+        "after": 1,
+        "cause": "Johnston receives the June hold after the six-day courier journey, complies, acknowledges and drafts it. This is one additional goal/draft, two candidates and six searches in magnitude."
+      },
+      {
+        "day": 96,
+        "mechanic": "messages.delivered",
+        "before": 97,
+        "after": 98,
+        "cause": "Johnston receives the June hold after the six-day courier journey, complies, acknowledges and drafts it. This is one additional goal/draft, two candidates and six searches in magnitude."
+      },
+      {
+        "day": 96,
+        "mechanic": "messages.sent",
+        "before": 39,
+        "after": 40,
+        "cause": "Johnston receives the June hold after the six-day courier journey, complies, acknowledges and drafts it. This is one additional goal/draft, two candidates and six searches in magnitude."
+      },
+      {
+        "day": 96,
+        "mechanic": "orders.obeyed",
+        "before": 0,
+        "after": 1,
+        "cause": "Johnston receives the June hold after the six-day courier journey, complies, acknowledges and drafts it. This is one additional goal/draft, two candidates and six searches in magnitude."
+      },
+      {
+        "day": 96,
+        "mechanic": "planner.candidates",
+        "before": 0,
+        "after": 1,
+        "cause": "Johnston receives the June hold after the six-day courier journey, complies, acknowledges and drafts it. This is one additional goal/draft, two candidates and six searches in magnitude."
+      },
+      {
+        "day": 96,
+        "mechanic": "planner.searches",
+        "before": 0,
+        "after": 1,
+        "cause": "Johnston receives the June hold after the six-day courier journey, complies, acknowledges and drafts it. This is one additional goal/draft, two candidates and six searches in magnitude."
+      },
+      {
+        "day": 96,
+        "mechanic": "plans.drafted",
+        "before": 0,
+        "after": 1,
+        "cause": "Johnston receives the June hold after the six-day courier journey, complies, acknowledges and drafts it. This is one additional goal/draft, two candidates and six searches in magnitude."
+      },
+      {
+        "day": 96,
+        "mechanic": "plans.goal_set",
+        "before": 0,
+        "after": 1,
+        "cause": "Johnston receives the June hold after the six-day courier journey, complies, acknowledges and drafts it. This is one additional goal/draft, two candidates and six searches in magnitude."
+      },
+      {
+        "day": 97,
+        "mechanic": "operations.opened",
+        "before": 0,
+        "after": 1,
+        "cause": "His seat selects the drafted hold; a fourth reference operation opens at Harpers Ferry."
+      },
+      {
+        "day": 97,
+        "mechanic": "plans.chosen",
+        "before": 0,
+        "after": 1,
+        "cause": "His seat selects the drafted hold; a fourth reference operation opens at Harpers Ferry."
+      },
+      {
+        "day": 97,
+        "mechanic": "plans.went_ahead",
+        "before": 0,
+        "after": 1,
+        "cause": "His seat selects the drafted hold; a fourth reference operation opens at Harpers Ferry."
+      },
+      {
+        "day": 97,
+        "mechanic": "seats.choices",
+        "before": 0,
+        "after": 1,
+        "cause": "His seat selects the drafted hold; a fourth reference operation opens at Harpers Ferry."
+      },
+      {
+        "day": 100,
+        "mechanic": "operations.stage",
+        "before": 0,
+        "after": 1,
+        "cause": "The new hold operation finishes concentration and enters its holding stage; its ordinary status report and courier delay add correspondence."
+      },
+      {
+        "day": 101,
+        "mechanic": "messages.courier_delay",
+        "before": 1,
+        "after": 2,
+        "cause": "The new hold operation finishes concentration and enters its holding stage; its ordinary status report and courier delay add correspondence."
+      },
+      {
+        "day": 101,
+        "mechanic": "messages.sent",
+        "before": 138,
+        "after": 139,
+        "cause": "The new hold operation finishes concentration and enters its holding stage; its ordinary status report and courier delay add correspondence."
+      },
+      {
+        "day": 101,
+        "mechanic": "operations.stage",
+        "before": 0,
+        "after": 1,
+        "cause": "The new hold operation finishes concentration and enters its holding stage; its ordinary status report and courier delay add correspondence."
+      },
+      {
+        "day": 102,
+        "mechanic": "operations.works",
+        "before": 0,
+        "after": 1,
+        "cause": "The received hold operation constructs six nights of works at Harpers Ferry, fifty permille each, without moving headquarters."
+      },
+      {
+        "day": 103,
+        "mechanic": "messages.delivered",
+        "before": 101,
+        "after": 102,
+        "cause": "The extra hold-operation report and acknowledgment complete their ordinary hops, including the day108 principal decision point; no new dispatch date is fitted."
+      },
+      {
+        "day": 103,
+        "mechanic": "operations.works",
+        "before": 0,
+        "after": 1,
+        "cause": "The received hold operation constructs six nights of works at Harpers Ferry, fifty permille each, without moving headquarters."
+      },
+      {
+        "day": 104,
+        "mechanic": "operations.works",
+        "before": 0,
+        "after": 1,
+        "cause": "The received hold operation constructs six nights of works at Harpers Ferry, fifty permille each, without moving headquarters."
+      },
+      {
+        "day": 105,
+        "mechanic": "operations.works",
+        "before": 0,
+        "after": 1,
+        "cause": "The received hold operation constructs six nights of works at Harpers Ferry, fifty permille each, without moving headquarters."
+      },
+      {
+        "day": 106,
+        "mechanic": "operations.works",
+        "before": 0,
+        "after": 1,
+        "cause": "The received hold operation constructs six nights of works at Harpers Ferry, fifty permille each, without moving headquarters."
+      },
+      {
+        "day": 107,
+        "mechanic": "operations.works",
+        "before": 0,
+        "after": 1,
+        "cause": "The received hold operation constructs six nights of works at Harpers Ferry, fifty permille each, without moving headquarters."
+      },
+      {
+        "day": 108,
+        "mechanic": "messages.delivered",
+        "before": 166,
+        "after": 167,
+        "cause": "The extra hold-operation report and acknowledgment complete their ordinary hops, including the day108 principal decision point; no new dispatch date is fitted."
+      },
+      {
+        "day": 108,
+        "mechanic": "decisionPoints",
+        "before": 0,
+        "after": 1,
+        "cause": "The extra hold-operation report and acknowledgment complete their ordinary hops, including the day108 principal decision point; no new dispatch date is fitted."
+      }
+    ],
+    "livenessCounters": [
+      {
+        "mechanic": "knowledge.pruned_age",
+        "before": {
+          "mechanic": "knowledge.pruned_age",
+          "fires": 105,
+          "magnitude": 1410
+        },
+        "after": {
+          "mechanic": "knowledge.pruned_age",
+          "fires": 105,
+          "magnitude": 1411
+        },
+        "cause": "Ordinary age/supersession pruning removes the extra hold acknowledgment/status paper; fire-day counts are exact and only the removed-paper magnitude rises by one."
+      },
+      {
+        "mechanic": "knowledge.pruned_superseded",
+        "before": {
+          "mechanic": "knowledge.pruned_superseded",
+          "fires": 146,
+          "magnitude": 12308
+        },
+        "after": {
+          "mechanic": "knowledge.pruned_superseded",
+          "fires": 146,
+          "magnitude": 12309
+        },
+        "cause": "Ordinary age/supersession pruning removes the extra hold acknowledgment/status paper; fire-day counts are exact and only the removed-paper magnitude rises by one."
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": {
+          "mechanic": "messages.courier_delay",
+          "fires": 168,
+          "magnitude": 168
+        },
+        "after": {
+          "mechanic": "messages.courier_delay",
+          "fires": 170,
+          "magnitude": 170
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": {
+          "mechanic": "messages.delivered",
+          "fires": 14590,
+          "magnitude": 14590
+        },
+        "after": {
+          "mechanic": "messages.delivered",
+          "fires": 14594,
+          "magnitude": 14594
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": {
+          "mechanic": "messages.sent",
+          "fires": 15399,
+          "magnitude": 15399
+        },
+        "after": {
+          "mechanic": "messages.sent",
+          "fires": 15403,
+          "magnitude": 15403
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "operations.opened",
+        "before": {
+          "mechanic": "operations.opened",
+          "fires": 3,
+          "magnitude": 3
+        },
+        "after": {
+          "mechanic": "operations.opened",
+          "fires": 4,
+          "magnitude": 4
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": {
+          "mechanic": "operations.stage",
+          "fires": 16,
+          "magnitude": 16
+        },
+        "after": {
+          "mechanic": "operations.stage",
+          "fires": 18,
+          "magnitude": 18
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "operations.works",
+        "before": {
+          "mechanic": "operations.works",
+          "fires": 7,
+          "magnitude": 350
+        },
+        "after": {
+          "mechanic": "operations.works",
+          "fires": 13,
+          "magnitude": 650
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "orders.obeyed",
+        "before": {
+          "mechanic": "orders.obeyed",
+          "fires": 4,
+          "magnitude": 4
+        },
+        "after": {
+          "mechanic": "orders.obeyed",
+          "fires": 5,
+          "magnitude": 5
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "orders.relayed",
+        "before": {
+          "mechanic": "orders.relayed",
+          "fires": 9,
+          "magnitude": 9
+        },
+        "after": {
+          "mechanic": "orders.relayed",
+          "fires": 10,
+          "magnitude": 10
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "planner.candidates",
+        "before": {
+          "mechanic": "planner.candidates",
+          "fires": 4,
+          "magnitude": 9
+        },
+        "after": {
+          "mechanic": "planner.candidates",
+          "fires": 5,
+          "magnitude": 11
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "planner.searches",
+        "before": {
+          "mechanic": "planner.searches",
+          "fires": 4,
+          "magnitude": 20
+        },
+        "after": {
+          "mechanic": "planner.searches",
+          "fires": 5,
+          "magnitude": 26
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "plans.chosen",
+        "before": {
+          "mechanic": "plans.chosen",
+          "fires": 4,
+          "magnitude": 4
+        },
+        "after": {
+          "mechanic": "plans.chosen",
+          "fires": 5,
+          "magnitude": 5
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "plans.discretion_exercised",
+        "before": null,
+        "after": {
+          "mechanic": "plans.discretion_exercised",
+          "fires": 0,
+          "magnitude": 0
+        },
+        "cause": "New S96 declared diagnostic, quiet in this reference; no event is credited."
+      },
+      {
+        "mechanic": "plans.drafted",
+        "before": {
+          "mechanic": "plans.drafted",
+          "fires": 4,
+          "magnitude": 4
+        },
+        "after": {
+          "mechanic": "plans.drafted",
+          "fires": 5,
+          "magnitude": 5
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "plans.goal_proposed",
+        "before": null,
+        "after": {
+          "mechanic": "plans.goal_proposed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        "cause": "New S96 declared diagnostic, quiet in this reference; no event is credited."
+      },
+      {
+        "mechanic": "plans.goal_set",
+        "before": {
+          "mechanic": "plans.goal_set",
+          "fires": 4,
+          "magnitude": 4
+        },
+        "after": {
+          "mechanic": "plans.goal_set",
+          "fires": 5,
+          "magnitude": 5
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "plans.went_ahead",
+        "before": {
+          "mechanic": "plans.went_ahead",
+          "fires": 4,
+          "magnitude": 4
+        },
+        "after": {
+          "mechanic": "plans.went_ahead",
+          "fires": 5,
+          "magnitude": 5
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": {
+          "mechanic": "seats.attention_spent",
+          "fires": 136,
+          "magnitude": 136
+        },
+        "after": {
+          "mechanic": "seats.attention_spent",
+          "fires": 137,
+          "magnitude": 137
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      },
+      {
+        "mechanic": "seats.choices",
+        "before": {
+          "mechanic": "seats.choices",
+          "fires": 4,
+          "magnitude": 4
+        },
+        "after": {
+          "mechanic": "seats.choices",
+          "fires": 5,
+          "magnitude": 5
+        },
+        "cause": "The new June hold adds its received draft, seat selection, hold operation, six nights of works and ordinary correspondence, as enumerated in dailyCounters. The old mechanics and all bounds are retained."
+      }
+    ],
+    "checkpointScores": [],
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "f1811a7f1a9177ec8dc62de98e56d1219d050c263797bac7934d1fe4810a8e75",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0,
+    "finalHash": "f1811a7f1a9177ec8dc62de98e56d1219d050c263797bac7934d1fe4810a8e75"
+  }
+}

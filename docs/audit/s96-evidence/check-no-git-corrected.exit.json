@@ -1,0 +1,10 @@
+{
+  "command": [
+    "npm.cmd",
+    "run",
+    "check"
+  ],
+  "exit": 0,
+  "seconds": 189.012,
+  "log": "C:\\Pyrrhic\\sprint-discretion\\runs\\s96\\check-no-git-corrected.log"
+}

@@ -1,0 +1,2712 @@
+{
+  "throughDay": 148,
+  "calendarStart": "1861-03-05",
+  "julyHeadquarters": [
+    "harpers_ferry"
+  ],
+  "orders": [
+    {
+      "id": "m.90.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "msgOrigin": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "msgFrom": "cooper_samuel",
+      "msgTo": "johnston_joseph_e",
+      "msgToPost": "cs_cmd_harpers_ferry",
+      "msgRole": "addressee",
+      "msgRoute": "courier",
+      "msgSentDay": 90,
+      "msgArriveDay": 96,
+      "msgVia": [
+        "cs_war_adjutant_inspector_general"
+      ],
+      "msgPending": [],
+      "msgOrder": {
+        "orderKind": "goal",
+        "orderGoal": {
+          "goalObjective": "harpers_ferry",
+          "goalPosture": "hold",
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "orderEdit": null,
+        "orderCall": null,
+        "orderDoctrine": "johnston_harpers_hold",
+        "orderIssuer": "davis_jefferson",
+        "orderTarget": "cs_cmd_harpers_ferry",
+        "orderBypass": false,
+        "orderIssuedDay": 90
+      },
+      "msgVerb": null,
+      "msgReport": null,
+      "msgTruth": null
+    },
+    {
+      "id": "m.142.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "msgOrigin": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "msgFrom": "cooper_samuel",
+      "msgTo": "johnston_joseph_e",
+      "msgToPost": "cs_cmd_harpers_ferry",
+      "msgRole": "addressee",
+      "msgRoute": "courier",
+      "msgSentDay": 142,
+      "msgArriveDay": 151,
+      "msgVia": [
+        "cs_war_adjutant_inspector_general"
+      ],
+      "msgPending": [],
+      "msgOrder": {
+        "orderKind": "goal",
+        "orderGoal": {
+          "goalObjective": "manassas",
+          "goalPosture": "relieve",
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true,
+          "goalDiscretion": {
+            "condition": "outmatched",
+            "fallback": {
+              "goalObjective": null,
+              "goalPosture": "hold",
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            }
+          }
+        },
+        "orderEdit": null,
+        "orderCall": null,
+        "orderDoctrine": "johnston_junction",
+        "orderIssuer": "davis_jefferson",
+        "orderTarget": "cs_cmd_harpers_ferry",
+        "orderBypass": false,
+        "orderIssuedDay": 142
+      },
+      "msgVerb": null,
+      "msgReport": null,
+      "msgTruth": null
+    }
+  ],
+  "finalPlan": {
+    "planGoal": {
+      "goalObjective": "harpers_ferry",
+      "goalPosture": "hold",
+      "goalRisk": 500,
+      "goalDeadlineDays": 30,
+      "goalRail": true,
+      "goalRiver": false,
+      "goalSea": false,
+      "goalNeutral": false,
+      "goalCommitted": [],
+      "goalAwaitWord": false,
+      "goalApproveAsDrafted": true
+    },
+    "planIssuer": "davis_jefferson",
+    "planViaChain": true,
+    "planSetDay": 96,
+    "planIssuedDay": 90,
+    "planOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+    "planResponse": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+    "planStatus": "approved",
+    "planDraft": {
+      "draftCommander": "johnston_joseph_e",
+      "draftPost": "cs_cmd_harpers_ferry",
+      "draftFaction": "confederate",
+      "draftDay": 96,
+      "draftCandidates": [
+        {
+          "id": "direct:least_cost:harpers_ferry",
+          "candMethod": "direct",
+          "candVariant": "least_cost",
+          "candAxes": [
+            {
+              "axisName": "main",
+              "axisPost": "cs_cmd_harpers_ferry",
+              "axisMode": "land",
+              "axisRoute": {
+                "routeFrom": "harpers_ferry",
+                "routeTo": "harpers_ferry",
+                "routeLegs": [],
+                "routeCost": 0,
+                "routeDays": 0
+              },
+              "axisBlocks": [
+                "state-forces.va_harpers_ferry"
+              ],
+              "axisStrength": 0,
+              "axisPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 3000,
+                  "phaseRegion": "harpers_ferry"
+                }
+              ],
+              "axisArrival": 3000,
+              "axisOutOfSupply": 0,
+              "axisStoresDays": 10,
+              "axisStoresAssumed": false
+            }
+          ],
+          "candRequests": [],
+          "candConditions": [],
+          "candTerms": [
+            {
+              "contribTerm": "goal_fit",
+              "contribAmount": 400,
+              "contribWhy": "reaches harpers_ferry"
+            },
+            {
+              "contribTerm": "force_ratio",
+              "contribAmount": 300,
+              "contribWhy": "ratio 10000 over his demand 1056"
+            },
+            {
+              "contribTerm": "time",
+              "contribAmount": 300,
+              "contribWhy": "arrives 27000 permille days early"
+            },
+            {
+              "contribTerm": "haste",
+              "contribAmount": 0,
+              "contribWhy": "concentrated as he wants"
+            },
+            {
+              "contribTerm": "supply",
+              "contribAmount": 0,
+              "contribWhy": "0 permille days outside supply"
+            },
+            {
+              "contribTerm": "exposure",
+              "contribAmount": 0,
+              "contribWhy": "0 perceived men along the route"
+            },
+            {
+              "contribTerm": "coordination",
+              "contribAmount": 0,
+              "contribWhy": "one axis"
+            },
+            {
+              "contribTerm": "dependence",
+              "contribAmount": 0,
+              "contribWhy": "0 support request(s) to other holders"
+            },
+            {
+              "contribTerm": "glory",
+              "contribAmount": 94,
+              "contribWhy": "his name on the objective"
+            },
+            {
+              "contribTerm": "caution",
+              "contribAmount": 0,
+              "contribWhy": "commits the force"
+            }
+          ],
+          "candScore": 1094,
+          "candPerceived": 0,
+          "candRatio": 10000
+        },
+        {
+          "id": "holding:hold:harpers_ferry",
+          "candMethod": "holding",
+          "candVariant": "hold",
+          "candAxes": [
+            {
+              "axisName": "hold",
+              "axisPost": "cs_cmd_harpers_ferry",
+              "axisMode": "land",
+              "axisRoute": {
+                "routeFrom": "harpers_ferry",
+                "routeTo": "harpers_ferry",
+                "routeLegs": [],
+                "routeCost": 0,
+                "routeDays": 0
+              },
+              "axisBlocks": [
+                "state-forces.va_harpers_ferry"
+              ],
+              "axisStrength": 0,
+              "axisPhases": [
+                {
+                  "phaseKind": "hold",
+                  "phaseStart": 0,
+                  "phaseDays": 30000,
+                  "phaseRegion": "harpers_ferry"
+                }
+              ],
+              "axisArrival": 0,
+              "axisOutOfSupply": 0,
+              "axisStoresDays": 10,
+              "axisStoresAssumed": false
+            }
+          ],
+          "candRequests": [],
+          "candConditions": [],
+          "candTerms": [
+            {
+              "contribTerm": "goal_fit",
+              "contribAmount": 0,
+              "contribWhy": "does not move on the objective"
+            },
+            {
+              "contribTerm": "time",
+              "contribAmount": -300,
+              "contribWhy": "the deadline passes with nothing attempted"
+            },
+            {
+              "contribTerm": "caution",
+              "contribAmount": 264,
+              "contribWhy": "keeps the force whole"
+            }
+          ],
+          "candScore": -36,
+          "candPerceived": 0,
+          "candRatio": 10000
+        }
+      ],
+      "draftRejected": [
+        {
+          "rejMethod": "flank",
+          "rejVariant": "penalty",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "alternative shares 1000 permille of the direct route"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "with_partner",
+          "rejGates": [
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "no partner whose holder would answer stages beside harpers_ferry"
+            },
+            {
+              "gateKind": "staging_not_adjacent",
+              "gateHard": true,
+              "gateDetail": "his own staging harpers_ferry is not beside harpers_ferry"
+            }
+          ]
+        },
+        {
+          "rejMethod": "pincer",
+          "rejVariant": "two_axis",
+          "rejGates": [
+            {
+              "gateKind": "no_forces",
+              "gateHard": true,
+              "gateDetail": "fewer than two blocks to split"
+            },
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "second route repeats the first"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "clear_first",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "by_water",
+          "rejVariant": "run_in",
+          "rejGates": [
+            {
+              "gateKind": "needs_permission",
+              "gateHard": true,
+              "gateDetail": "neither river nor sea is permitted"
+            },
+            {
+              "gateKind": "no_carrier",
+              "gateHard": true,
+              "gateDetail": "no ship or boat to carry his troops"
+            }
+          ]
+        },
+        {
+          "rejMethod": "supply_line",
+          "rejVariant": "depot_steps",
+          "rejGates": [
+            {
+              "gateKind": "duplicate",
+              "gateHard": true,
+              "gateDetail": "repeats direct:least_cost:harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "draftSearches": 6,
+      "draftGenerated": 3,
+      "draftDeduplicated": 1
+    },
+    "planChosen": "direct:least_cost:harpers_ferry",
+    "planApproved": {
+      "id": "direct:least_cost:harpers_ferry",
+      "candMethod": "direct",
+      "candVariant": "least_cost",
+      "candAxes": [
+        {
+          "axisName": "main",
+          "axisPost": "cs_cmd_harpers_ferry",
+          "axisMode": "land",
+          "axisRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "harpers_ferry",
+            "routeLegs": [],
+            "routeCost": 0,
+            "routeDays": 0
+          },
+          "axisBlocks": [
+            "state-forces.va_harpers_ferry"
+          ],
+          "axisStrength": 0,
+          "axisPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 3000,
+              "phaseRegion": "harpers_ferry"
+            }
+          ],
+          "axisArrival": 3000,
+          "axisOutOfSupply": 0,
+          "axisStoresDays": 10,
+          "axisStoresAssumed": false
+        }
+      ],
+      "candRequests": [],
+      "candConditions": [],
+      "candTerms": [
+        {
+          "contribTerm": "goal_fit",
+          "contribAmount": 400,
+          "contribWhy": "reaches harpers_ferry"
+        },
+        {
+          "contribTerm": "force_ratio",
+          "contribAmount": 300,
+          "contribWhy": "ratio 10000 over his demand 1056"
+        },
+        {
+          "contribTerm": "time",
+          "contribAmount": 300,
+          "contribWhy": "arrives 27000 permille days early"
+        },
+        {
+          "contribTerm": "haste",
+          "contribAmount": 0,
+          "contribWhy": "concentrated as he wants"
+        },
+        {
+          "contribTerm": "supply",
+          "contribAmount": 0,
+          "contribWhy": "0 permille days outside supply"
+        },
+        {
+          "contribTerm": "exposure",
+          "contribAmount": 0,
+          "contribWhy": "0 perceived men along the route"
+        },
+        {
+          "contribTerm": "coordination",
+          "contribAmount": 0,
+          "contribWhy": "one axis"
+        },
+        {
+          "contribTerm": "dependence",
+          "contribAmount": 0,
+          "contribWhy": "0 support request(s) to other holders"
+        },
+        {
+          "contribTerm": "glory",
+          "contribAmount": 94,
+          "contribWhy": "his name on the objective"
+        },
+        {
+          "contribTerm": "caution",
+          "contribAmount": 0,
+          "contribWhy": "commits the force"
+        }
+      ],
+      "candScore": 1094,
+      "candPerceived": 0,
+      "candRatio": 10000
+    },
+    "planSubmitted": null,
+    "planCounters": [],
+    "planPending": null
+  },
+  "operations": [
+    {
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "opPlan": "direct:least_cost:harpers_ferry",
+      "opMethod": "direct",
+      "opPosture": "hold",
+      "opObjective": "harpers_ferry",
+      "opStartDay": 97,
+      "opEndDay": null,
+      "opOutcome": null,
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "harpers_ferry",
+            "routeLegs": [],
+            "routeCost": 0,
+            "routeDays": 0
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 3000,
+              "phaseRegion": "harpers_ferry"
+            }
+          ],
+          "oaxObjective": "harpers_ferry",
+          "oaxStage": "works",
+          "oaxSince": 101,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": 101,
+          "oaxLog": [
+            {
+              "axevDay": 97,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 100,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 101,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    }
+  ],
+  "proposalPapers": 0,
+  "discretionSwitches": 0,
+  "julyJunctionOpened": false,
+  "joinedBeauregardByJuly31": false,
+  "cause": "Johnston fully complies with the June hold and has no supported alternate goal. No proposal reaches the government, hence no conditional authority is issued. His command remains beyond the wire at Harpers Ferry; actual advance news enables the July order only day142, forwarded then by Cooper, with courier arrival scheduled day151 (after July31/day148). The opened day97 operation is the earlier Harpers Ferry hold, not the junction. The retained three-day saved-State continuation observes actual receipt and objection on151/August3, outside the July scoring horizon.",
+  "firstShapeDifference": "Day37 sentReaffirms alias for the existing Charleston order; no gameplay counter changes beforeday90.",
+  "arrivalSuffix": {
+    "from": 148,
+    "to": 151,
+    "purpose": "Observed pending paper receipt only, outside the July scoring horizon",
+    "days": [
+      {
+        "day": 149,
+        "rejections": [],
+        "headquarters": "harpers_ferry",
+        "plan": {
+          "planGoal": {
+            "goalObjective": "harpers_ferry",
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "planIssuer": "davis_jefferson",
+          "planViaChain": true,
+          "planSetDay": 96,
+          "planIssuedDay": 90,
+          "planOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "planResponse": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+          "planStatus": "approved",
+          "planDraft": {
+            "draftCommander": "johnston_joseph_e",
+            "draftPost": "cs_cmd_harpers_ferry",
+            "draftFaction": "confederate",
+            "draftDay": 96,
+            "draftCandidates": [
+              {
+                "id": "direct:least_cost:harpers_ferry",
+                "candMethod": "direct",
+                "candVariant": "least_cost",
+                "candAxes": [
+                  {
+                    "axisName": "main",
+                    "axisPost": "cs_cmd_harpers_ferry",
+                    "axisMode": "land",
+                    "axisRoute": {
+                      "routeFrom": "harpers_ferry",
+                      "routeTo": "harpers_ferry",
+                      "routeLegs": [],
+                      "routeCost": 0,
+                      "routeDays": 0
+                    },
+                    "axisBlocks": [
+                      "state-forces.va_harpers_ferry"
+                    ],
+                    "axisStrength": 0,
+                    "axisPhases": [
+                      {
+                        "phaseKind": "concentrate",
+                        "phaseStart": 0,
+                        "phaseDays": 3000,
+                        "phaseRegion": "harpers_ferry"
+                      }
+                    ],
+                    "axisArrival": 3000,
+                    "axisOutOfSupply": 0,
+                    "axisStoresDays": 10,
+                    "axisStoresAssumed": false
+                  }
+                ],
+                "candRequests": [],
+                "candConditions": [],
+                "candTerms": [
+                  {
+                    "contribTerm": "goal_fit",
+                    "contribAmount": 400,
+                    "contribWhy": "reaches harpers_ferry"
+                  },
+                  {
+                    "contribTerm": "force_ratio",
+                    "contribAmount": 300,
+                    "contribWhy": "ratio 10000 over his demand 1056"
+                  },
+                  {
+                    "contribTerm": "time",
+                    "contribAmount": 300,
+                    "contribWhy": "arrives 27000 permille days early"
+                  },
+                  {
+                    "contribTerm": "haste",
+                    "contribAmount": 0,
+                    "contribWhy": "concentrated as he wants"
+                  },
+                  {
+                    "contribTerm": "supply",
+                    "contribAmount": 0,
+                    "contribWhy": "0 permille days outside supply"
+                  },
+                  {
+                    "contribTerm": "exposure",
+                    "contribAmount": 0,
+                    "contribWhy": "0 perceived men along the route"
+                  },
+                  {
+                    "contribTerm": "coordination",
+                    "contribAmount": 0,
+                    "contribWhy": "one axis"
+                  },
+                  {
+                    "contribTerm": "dependence",
+                    "contribAmount": 0,
+                    "contribWhy": "0 support request(s) to other holders"
+                  },
+                  {
+                    "contribTerm": "glory",
+                    "contribAmount": 94,
+                    "contribWhy": "his name on the objective"
+                  },
+                  {
+                    "contribTerm": "caution",
+                    "contribAmount": 0,
+                    "contribWhy": "commits the force"
+                  }
+                ],
+                "candScore": 1094,
+                "candPerceived": 0,
+                "candRatio": 10000
+              },
+              {
+                "id": "holding:hold:harpers_ferry",
+                "candMethod": "holding",
+                "candVariant": "hold",
+                "candAxes": [
+                  {
+                    "axisName": "hold",
+                    "axisPost": "cs_cmd_harpers_ferry",
+                    "axisMode": "land",
+                    "axisRoute": {
+                      "routeFrom": "harpers_ferry",
+                      "routeTo": "harpers_ferry",
+                      "routeLegs": [],
+                      "routeCost": 0,
+                      "routeDays": 0
+                    },
+                    "axisBlocks": [
+                      "state-forces.va_harpers_ferry"
+                    ],
+                    "axisStrength": 0,
+                    "axisPhases": [
+                      {
+                        "phaseKind": "hold",
+                        "phaseStart": 0,
+                        "phaseDays": 30000,
+                        "phaseRegion": "harpers_ferry"
+                      }
+                    ],
+                    "axisArrival": 0,
+                    "axisOutOfSupply": 0,
+                    "axisStoresDays": 10,
+                    "axisStoresAssumed": false
+                  }
+                ],
+                "candRequests": [],
+                "candConditions": [],
+                "candTerms": [
+                  {
+                    "contribTerm": "goal_fit",
+                    "contribAmount": 0,
+                    "contribWhy": "does not move on the objective"
+                  },
+                  {
+                    "contribTerm": "time",
+                    "contribAmount": -300,
+                    "contribWhy": "the deadline passes with nothing attempted"
+                  },
+                  {
+                    "contribTerm": "caution",
+                    "contribAmount": 264,
+                    "contribWhy": "keeps the force whole"
+                  }
+                ],
+                "candScore": -36,
+                "candPerceived": 0,
+                "candRatio": 10000
+              }
+            ],
+            "draftRejected": [
+              {
+                "rejMethod": "flank",
+                "rejVariant": "penalty",
+                "rejGates": [
+                  {
+                    "gateKind": "duplicate",
+                    "gateHard": true,
+                    "gateDetail": "alternative shares 1000 permille of the direct route"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "pincer",
+                "rejVariant": "with_partner",
+                "rejGates": [
+                  {
+                    "gateKind": "staging_not_adjacent",
+                    "gateHard": true,
+                    "gateDetail": "no partner whose holder would answer stages beside harpers_ferry"
+                  },
+                  {
+                    "gateKind": "staging_not_adjacent",
+                    "gateHard": true,
+                    "gateDetail": "his own staging harpers_ferry is not beside harpers_ferry"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "pincer",
+                "rejVariant": "two_axis",
+                "rejGates": [
+                  {
+                    "gateKind": "no_forces",
+                    "gateHard": true,
+                    "gateDetail": "fewer than two blocks to split"
+                  },
+                  {
+                    "gateKind": "duplicate",
+                    "gateHard": true,
+                    "gateDetail": "second route repeats the first"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "by_water",
+                "rejVariant": "clear_first",
+                "rejGates": [
+                  {
+                    "gateKind": "needs_permission",
+                    "gateHard": true,
+                    "gateDetail": "neither river nor sea is permitted"
+                  },
+                  {
+                    "gateKind": "no_carrier",
+                    "gateHard": true,
+                    "gateDetail": "no ship or boat to carry his troops"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "by_water",
+                "rejVariant": "run_in",
+                "rejGates": [
+                  {
+                    "gateKind": "needs_permission",
+                    "gateHard": true,
+                    "gateDetail": "neither river nor sea is permitted"
+                  },
+                  {
+                    "gateKind": "no_carrier",
+                    "gateHard": true,
+                    "gateDetail": "no ship or boat to carry his troops"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "supply_line",
+                "rejVariant": "depot_steps",
+                "rejGates": [
+                  {
+                    "gateKind": "duplicate",
+                    "gateHard": true,
+                    "gateDetail": "repeats direct:least_cost:harpers_ferry"
+                  }
+                ]
+              }
+            ],
+            "draftSearches": 6,
+            "draftGenerated": 3,
+            "draftDeduplicated": 1
+          },
+          "planChosen": "direct:least_cost:harpers_ferry",
+          "planApproved": {
+            "id": "direct:least_cost:harpers_ferry",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "cs_cmd_harpers_ferry",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "state-forces.va_harpers_ferry"
+                ],
+                "axisStrength": 0,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 3000,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 10,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches harpers_ferry"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1056"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 27000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 94,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 1094,
+            "candPerceived": 0,
+            "candRatio": 10000
+          },
+          "planSubmitted": null,
+          "planCounters": [],
+          "planPending": null
+        },
+        "responses": [],
+        "operations": [
+          {
+            "opPost": "cs_cmd_harpers_ferry",
+            "opCommander": "johnston_joseph_e",
+            "opOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "opPlan": "direct:least_cost:harpers_ferry",
+            "opMethod": "direct",
+            "opPosture": "hold",
+            "opObjective": "harpers_ferry",
+            "opStartDay": 97,
+            "opEndDay": null,
+            "opOutcome": null,
+            "opAxes": [
+              {
+                "oaxName": "main",
+                "oaxPost": "cs_cmd_harpers_ferry",
+                "oaxBlocks": [
+                  "state-forces.va_harpers_ferry"
+                ],
+                "oaxRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "oaxPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "oaxObjective": "harpers_ferry",
+                "oaxStage": "works",
+                "oaxSince": 101,
+                "oaxUntil": null,
+                "oaxRepulses": 0,
+                "oaxPursuit": null,
+                "oaxSteps": [],
+                "oaxArrived": 101,
+                "oaxLog": [
+                  {
+                    "axevDay": 97,
+                    "axevStage": "assemble",
+                    "axevReason": "opened",
+                    "axevRegion": "harpers_ferry"
+                  },
+                  {
+                    "axevDay": 100,
+                    "axevStage": "march",
+                    "axevReason": "concentrated",
+                    "axevRegion": "harpers_ferry"
+                  },
+                  {
+                    "axevDay": 101,
+                    "axevStage": "works",
+                    "axevReason": "objective_reached",
+                    "axevRegion": "harpers_ferry"
+                  }
+                ]
+              }
+            ],
+            "opRequests": [],
+            "opEncirclement": null,
+            "opEncirclementWhy": null
+          }
+        ],
+        "pending": [
+          {
+            "id": "m.149.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.149.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+            "msgFrom": "johnston_joseph_e",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 149,
+            "msgArriveDay": 149,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "johnston_joseph_e",
+              "reportAuthorPost": "cs_cmd_harpers_ferry",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "cs_cmd_harpers_ferry",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "frederick_md",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "harpers_ferry",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "harpers_ferry",
+                  "claimValue": 300,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "loudoun_fauquier",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "lower_valley",
+                  "claimValue": 2000,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "lower_valley",
+                  "claimValue": 200,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "western_maryland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                }
+              ],
+              "reportDay": 149,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "frederick_md",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "harpers_ferry",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "harpers_ferry",
+                  "termValue": 300,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "loudoun_fauquier",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "lower_valley",
+                  "termValue": 2000,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "lower_valley",
+                  "termValue": 200,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "western_maryland",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.142.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "msgFrom": "cooper_samuel",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "courier",
+            "msgSentDay": 142,
+            "msgArriveDay": 151,
+            "msgVia": [
+              "cs_war_adjutant_inspector_general"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "relieve",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true,
+                "goalDiscretion": {
+                  "condition": "outmatched",
+                  "fallback": {
+                    "goalObjective": null,
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": false,
+                    "goalSea": false,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": true
+                  }
+                }
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderDoctrine": "johnston_junction",
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": false,
+              "orderIssuedDay": 142
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          },
+          {
+            "id": "m.149.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.149.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+            "msgFrom": "davis_jefferson",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "wire",
+            "msgSentDay": 149,
+            "msgArriveDay": 151,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": {
+              "verbKind": "inquire",
+              "verbPost": "cs_cmd_harpers_ferry",
+              "verbTo": null,
+              "verbMode": null,
+              "verbAmount": null,
+              "verbRank": null,
+              "verbSubject": null,
+              "verbIssuer": "davis_jefferson",
+              "verbIssuedDay": 149
+            },
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ]
+      },
+      {
+        "day": 150,
+        "rejections": [],
+        "headquarters": "harpers_ferry",
+        "plan": {
+          "planGoal": {
+            "goalObjective": "harpers_ferry",
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          },
+          "planIssuer": "davis_jefferson",
+          "planViaChain": true,
+          "planSetDay": 96,
+          "planIssuedDay": 90,
+          "planOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "planResponse": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+          "planStatus": "approved",
+          "planDraft": {
+            "draftCommander": "johnston_joseph_e",
+            "draftPost": "cs_cmd_harpers_ferry",
+            "draftFaction": "confederate",
+            "draftDay": 96,
+            "draftCandidates": [
+              {
+                "id": "direct:least_cost:harpers_ferry",
+                "candMethod": "direct",
+                "candVariant": "least_cost",
+                "candAxes": [
+                  {
+                    "axisName": "main",
+                    "axisPost": "cs_cmd_harpers_ferry",
+                    "axisMode": "land",
+                    "axisRoute": {
+                      "routeFrom": "harpers_ferry",
+                      "routeTo": "harpers_ferry",
+                      "routeLegs": [],
+                      "routeCost": 0,
+                      "routeDays": 0
+                    },
+                    "axisBlocks": [
+                      "state-forces.va_harpers_ferry"
+                    ],
+                    "axisStrength": 0,
+                    "axisPhases": [
+                      {
+                        "phaseKind": "concentrate",
+                        "phaseStart": 0,
+                        "phaseDays": 3000,
+                        "phaseRegion": "harpers_ferry"
+                      }
+                    ],
+                    "axisArrival": 3000,
+                    "axisOutOfSupply": 0,
+                    "axisStoresDays": 10,
+                    "axisStoresAssumed": false
+                  }
+                ],
+                "candRequests": [],
+                "candConditions": [],
+                "candTerms": [
+                  {
+                    "contribTerm": "goal_fit",
+                    "contribAmount": 400,
+                    "contribWhy": "reaches harpers_ferry"
+                  },
+                  {
+                    "contribTerm": "force_ratio",
+                    "contribAmount": 300,
+                    "contribWhy": "ratio 10000 over his demand 1056"
+                  },
+                  {
+                    "contribTerm": "time",
+                    "contribAmount": 300,
+                    "contribWhy": "arrives 27000 permille days early"
+                  },
+                  {
+                    "contribTerm": "haste",
+                    "contribAmount": 0,
+                    "contribWhy": "concentrated as he wants"
+                  },
+                  {
+                    "contribTerm": "supply",
+                    "contribAmount": 0,
+                    "contribWhy": "0 permille days outside supply"
+                  },
+                  {
+                    "contribTerm": "exposure",
+                    "contribAmount": 0,
+                    "contribWhy": "0 perceived men along the route"
+                  },
+                  {
+                    "contribTerm": "coordination",
+                    "contribAmount": 0,
+                    "contribWhy": "one axis"
+                  },
+                  {
+                    "contribTerm": "dependence",
+                    "contribAmount": 0,
+                    "contribWhy": "0 support request(s) to other holders"
+                  },
+                  {
+                    "contribTerm": "glory",
+                    "contribAmount": 94,
+                    "contribWhy": "his name on the objective"
+                  },
+                  {
+                    "contribTerm": "caution",
+                    "contribAmount": 0,
+                    "contribWhy": "commits the force"
+                  }
+                ],
+                "candScore": 1094,
+                "candPerceived": 0,
+                "candRatio": 10000
+              },
+              {
+                "id": "holding:hold:harpers_ferry",
+                "candMethod": "holding",
+                "candVariant": "hold",
+                "candAxes": [
+                  {
+                    "axisName": "hold",
+                    "axisPost": "cs_cmd_harpers_ferry",
+                    "axisMode": "land",
+                    "axisRoute": {
+                      "routeFrom": "harpers_ferry",
+                      "routeTo": "harpers_ferry",
+                      "routeLegs": [],
+                      "routeCost": 0,
+                      "routeDays": 0
+                    },
+                    "axisBlocks": [
+                      "state-forces.va_harpers_ferry"
+                    ],
+                    "axisStrength": 0,
+                    "axisPhases": [
+                      {
+                        "phaseKind": "hold",
+                        "phaseStart": 0,
+                        "phaseDays": 30000,
+                        "phaseRegion": "harpers_ferry"
+                      }
+                    ],
+                    "axisArrival": 0,
+                    "axisOutOfSupply": 0,
+                    "axisStoresDays": 10,
+                    "axisStoresAssumed": false
+                  }
+                ],
+                "candRequests": [],
+                "candConditions": [],
+                "candTerms": [
+                  {
+                    "contribTerm": "goal_fit",
+                    "contribAmount": 0,
+                    "contribWhy": "does not move on the objective"
+                  },
+                  {
+                    "contribTerm": "time",
+                    "contribAmount": -300,
+                    "contribWhy": "the deadline passes with nothing attempted"
+                  },
+                  {
+                    "contribTerm": "caution",
+                    "contribAmount": 264,
+                    "contribWhy": "keeps the force whole"
+                  }
+                ],
+                "candScore": -36,
+                "candPerceived": 0,
+                "candRatio": 10000
+              }
+            ],
+            "draftRejected": [
+              {
+                "rejMethod": "flank",
+                "rejVariant": "penalty",
+                "rejGates": [
+                  {
+                    "gateKind": "duplicate",
+                    "gateHard": true,
+                    "gateDetail": "alternative shares 1000 permille of the direct route"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "pincer",
+                "rejVariant": "with_partner",
+                "rejGates": [
+                  {
+                    "gateKind": "staging_not_adjacent",
+                    "gateHard": true,
+                    "gateDetail": "no partner whose holder would answer stages beside harpers_ferry"
+                  },
+                  {
+                    "gateKind": "staging_not_adjacent",
+                    "gateHard": true,
+                    "gateDetail": "his own staging harpers_ferry is not beside harpers_ferry"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "pincer",
+                "rejVariant": "two_axis",
+                "rejGates": [
+                  {
+                    "gateKind": "no_forces",
+                    "gateHard": true,
+                    "gateDetail": "fewer than two blocks to split"
+                  },
+                  {
+                    "gateKind": "duplicate",
+                    "gateHard": true,
+                    "gateDetail": "second route repeats the first"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "by_water",
+                "rejVariant": "clear_first",
+                "rejGates": [
+                  {
+                    "gateKind": "needs_permission",
+                    "gateHard": true,
+                    "gateDetail": "neither river nor sea is permitted"
+                  },
+                  {
+                    "gateKind": "no_carrier",
+                    "gateHard": true,
+                    "gateDetail": "no ship or boat to carry his troops"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "by_water",
+                "rejVariant": "run_in",
+                "rejGates": [
+                  {
+                    "gateKind": "needs_permission",
+                    "gateHard": true,
+                    "gateDetail": "neither river nor sea is permitted"
+                  },
+                  {
+                    "gateKind": "no_carrier",
+                    "gateHard": true,
+                    "gateDetail": "no ship or boat to carry his troops"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "supply_line",
+                "rejVariant": "depot_steps",
+                "rejGates": [
+                  {
+                    "gateKind": "duplicate",
+                    "gateHard": true,
+                    "gateDetail": "repeats direct:least_cost:harpers_ferry"
+                  }
+                ]
+              }
+            ],
+            "draftSearches": 6,
+            "draftGenerated": 3,
+            "draftDeduplicated": 1
+          },
+          "planChosen": "direct:least_cost:harpers_ferry",
+          "planApproved": {
+            "id": "direct:least_cost:harpers_ferry",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "cs_cmd_harpers_ferry",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "state-forces.va_harpers_ferry"
+                ],
+                "axisStrength": 0,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 3000,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 10,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches harpers_ferry"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1056"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 27000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 94,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 1094,
+            "candPerceived": 0,
+            "candRatio": 10000
+          },
+          "planSubmitted": null,
+          "planCounters": [],
+          "planPending": null
+        },
+        "responses": [],
+        "operations": [
+          {
+            "opPost": "cs_cmd_harpers_ferry",
+            "opCommander": "johnston_joseph_e",
+            "opOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "opPlan": "direct:least_cost:harpers_ferry",
+            "opMethod": "direct",
+            "opPosture": "hold",
+            "opObjective": "harpers_ferry",
+            "opStartDay": 97,
+            "opEndDay": 150,
+            "opOutcome": "objective_reached",
+            "opAxes": [
+              {
+                "oaxName": "main",
+                "oaxPost": "cs_cmd_harpers_ferry",
+                "oaxBlocks": [
+                  "state-forces.va_harpers_ferry"
+                ],
+                "oaxRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "oaxPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "oaxObjective": "harpers_ferry",
+                "oaxStage": "end",
+                "oaxSince": 150,
+                "oaxUntil": null,
+                "oaxRepulses": 0,
+                "oaxPursuit": null,
+                "oaxSteps": [],
+                "oaxArrived": 101,
+                "oaxLog": [
+                  {
+                    "axevDay": 97,
+                    "axevStage": "assemble",
+                    "axevReason": "opened",
+                    "axevRegion": "harpers_ferry"
+                  },
+                  {
+                    "axevDay": 100,
+                    "axevStage": "march",
+                    "axevReason": "concentrated",
+                    "axevRegion": "harpers_ferry"
+                  },
+                  {
+                    "axevDay": 101,
+                    "axevStage": "works",
+                    "axevReason": "objective_reached",
+                    "axevRegion": "harpers_ferry"
+                  },
+                  {
+                    "axevDay": 150,
+                    "axevStage": "end",
+                    "axevReason": "objective_held",
+                    "axevRegion": "harpers_ferry"
+                  }
+                ]
+              }
+            ],
+            "opRequests": [],
+            "opEncirclement": null,
+            "opEncirclementWhy": null
+          }
+        ],
+        "pending": [
+          {
+            "id": "m.150.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.150.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+            "msgFrom": "johnston_joseph_e",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 150,
+            "msgArriveDay": 150,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "johnston_joseph_e",
+              "reportAuthorPost": "cs_cmd_harpers_ferry",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "cs_cmd_harpers_ferry",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "frederick_md",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "harpers_ferry",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "harpers_ferry",
+                  "claimValue": 300,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "loudoun_fauquier",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "lower_valley",
+                  "claimValue": 2000,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "lower_valley",
+                  "claimValue": 200,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "western_maryland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                }
+              ],
+              "reportDay": 150,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "frederick_md",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "harpers_ferry",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "harpers_ferry",
+                  "termValue": 300,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "loudoun_fauquier",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "lower_valley",
+                  "termValue": 2000,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "lower_valley",
+                  "termValue": 200,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "western_maryland",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          },
+          {
+            "id": "m.142.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "msgFrom": "cooper_samuel",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "courier",
+            "msgSentDay": 142,
+            "msgArriveDay": 151,
+            "msgVia": [
+              "cs_war_adjutant_inspector_general"
+            ],
+            "msgPending": [],
+            "msgOrder": {
+              "orderKind": "goal",
+              "orderGoal": {
+                "goalObjective": "manassas",
+                "goalPosture": "relieve",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true,
+                "goalDiscretion": {
+                  "condition": "outmatched",
+                  "fallback": {
+                    "goalObjective": null,
+                    "goalPosture": "hold",
+                    "goalRisk": 500,
+                    "goalDeadlineDays": 30,
+                    "goalRail": true,
+                    "goalRiver": false,
+                    "goalSea": false,
+                    "goalNeutral": false,
+                    "goalCommitted": [],
+                    "goalAwaitWord": false,
+                    "goalApproveAsDrafted": true
+                  }
+                }
+              },
+              "orderEdit": null,
+              "orderCall": null,
+              "orderDoctrine": "johnston_junction",
+              "orderIssuer": "davis_jefferson",
+              "orderTarget": "cs_cmd_harpers_ferry",
+              "orderBypass": false,
+              "orderIssuedDay": 142
+            },
+            "msgVerb": null,
+            "msgReport": null,
+            "msgTruth": null
+          },
+          {
+            "id": "m.149.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.149.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+            "msgFrom": "davis_jefferson",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "wire",
+            "msgSentDay": 149,
+            "msgArriveDay": 151,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": {
+              "verbKind": "inquire",
+              "verbPost": "cs_cmd_harpers_ferry",
+              "verbTo": null,
+              "verbMode": null,
+              "verbAmount": null,
+              "verbRank": null,
+              "verbSubject": null,
+              "verbIssuer": "davis_jefferson",
+              "verbIssuedDay": 149
+            },
+            "msgReport": null,
+            "msgTruth": null
+          }
+        ]
+      },
+      {
+        "day": 151,
+        "rejections": [],
+        "headquarters": "harpers_ferry",
+        "plan": {
+          "planGoal": {
+            "goalObjective": "manassas",
+            "goalPosture": "relieve",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true,
+            "goalDiscretion": {
+              "condition": "outmatched",
+              "fallback": {
+                "goalObjective": null,
+                "goalPosture": "hold",
+                "goalRisk": 500,
+                "goalDeadlineDays": 30,
+                "goalRail": true,
+                "goalRiver": false,
+                "goalSea": false,
+                "goalNeutral": false,
+                "goalCommitted": [],
+                "goalAwaitWord": false,
+                "goalApproveAsDrafted": true
+              }
+            }
+          },
+          "planIssuer": "davis_jefferson",
+          "planViaChain": true,
+          "planSetDay": 151,
+          "planIssuedDay": 142,
+          "planOrder": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "planResponse": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+          "planStatus": "choosing",
+          "planDraft": {
+            "draftCommander": "johnston_joseph_e",
+            "draftPost": "cs_cmd_harpers_ferry",
+            "draftFaction": "confederate",
+            "draftDay": 151,
+            "draftCandidates": [
+              {
+                "id": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>manassas",
+                "candMethod": "supply_line",
+                "candVariant": "depot_steps",
+                "candAxes": [
+                  {
+                    "axisName": "main",
+                    "axisPost": "cs_cmd_harpers_ferry",
+                    "axisMode": "land",
+                    "axisRoute": {
+                      "routeFrom": "harpers_ferry",
+                      "routeTo": "manassas",
+                      "routeLegs": [
+                        {
+                          "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                          "legFrom": "harpers_ferry",
+                          "legTo": "loudoun_fauquier",
+                          "legType": "road",
+                          "legDays": 4000,
+                          "legThreat": 576,
+                          "legSupply": 4000,
+                          "legObstacleDays": 0,
+                          "legObstacle": null,
+                          "legHeld": false
+                        },
+                        {
+                          "legEdge": "road:loudoun_fauquier:manassas",
+                          "legFrom": "loudoun_fauquier",
+                          "legTo": "manassas",
+                          "legType": "road",
+                          "legDays": 3000,
+                          "legThreat": 0,
+                          "legSupply": 3000,
+                          "legObstacleDays": 0,
+                          "legObstacle": null,
+                          "legHeld": false
+                        }
+                      ],
+                      "routeCost": 14576,
+                      "routeDays": 7000
+                    },
+                    "axisBlocks": [
+                      "state-forces.cs_tn_infantry_tennessee",
+                      "raised.st_gov_georgia.d126.2",
+                      "raised.st_gov_georgia.d129",
+                      "state-forces.cs_tn_cavalry_tennessee",
+                      "state-forces.va_harpers_ferry"
+                    ],
+                    "axisStrength": 29000,
+                    "axisPhases": [
+                      {
+                        "phaseKind": "concentrate",
+                        "phaseStart": 0,
+                        "phaseDays": 3000,
+                        "phaseRegion": "harpers_ferry"
+                      },
+                      {
+                        "phaseKind": "march",
+                        "phaseStart": 3000,
+                        "phaseDays": 4000,
+                        "phaseRegion": "loudoun_fauquier"
+                      },
+                      {
+                        "phaseKind": "depot_step",
+                        "phaseStart": 7000,
+                        "phaseDays": 2000,
+                        "phaseRegion": "loudoun_fauquier"
+                      },
+                      {
+                        "phaseKind": "march",
+                        "phaseStart": 9000,
+                        "phaseDays": 3000,
+                        "phaseRegion": "manassas"
+                      }
+                    ],
+                    "axisArrival": 12000,
+                    "axisOutOfSupply": 4000,
+                    "axisStoresDays": 0,
+                    "axisStoresAssumed": false
+                  }
+                ],
+                "candRequests": [],
+                "candConditions": [],
+                "candTerms": [
+                  {
+                    "contribTerm": "goal_fit",
+                    "contribAmount": 400,
+                    "contribWhy": "reaches manassas"
+                  },
+                  {
+                    "contribTerm": "force_ratio",
+                    "contribAmount": 300,
+                    "contribWhy": "ratio 10000 over his demand 1056"
+                  },
+                  {
+                    "contribTerm": "time",
+                    "contribAmount": 300,
+                    "contribWhy": "arrives 18000 permille days early"
+                  },
+                  {
+                    "contribTerm": "haste",
+                    "contribAmount": 0,
+                    "contribWhy": "concentrated as he wants"
+                  },
+                  {
+                    "contribTerm": "supply",
+                    "contribAmount": -408,
+                    "contribWhy": "4000 permille days outside supply; outruns his stores"
+                  },
+                  {
+                    "contribTerm": "exposure",
+                    "contribAmount": -21,
+                    "contribWhy": "792 perceived men along the route"
+                  },
+                  {
+                    "contribTerm": "coordination",
+                    "contribAmount": 0,
+                    "contribWhy": "one axis"
+                  },
+                  {
+                    "contribTerm": "dependence",
+                    "contribAmount": 0,
+                    "contribWhy": "0 support request(s) to other holders"
+                  },
+                  {
+                    "contribTerm": "glory",
+                    "contribAmount": 94,
+                    "contribWhy": "his name on the objective"
+                  },
+                  {
+                    "contribTerm": "caution",
+                    "contribAmount": 0,
+                    "contribWhy": "commits the force"
+                  }
+                ],
+                "candScore": 665,
+                "candPerceived": 0,
+                "candRatio": 10000
+              },
+              {
+                "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+                "candMethod": "direct",
+                "candVariant": "least_cost",
+                "candAxes": [
+                  {
+                    "axisName": "main",
+                    "axisPost": "cs_cmd_harpers_ferry",
+                    "axisMode": "land",
+                    "axisRoute": {
+                      "routeFrom": "harpers_ferry",
+                      "routeTo": "manassas",
+                      "routeLegs": [
+                        {
+                          "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                          "legFrom": "harpers_ferry",
+                          "legTo": "loudoun_fauquier",
+                          "legType": "road",
+                          "legDays": 4000,
+                          "legThreat": 576,
+                          "legSupply": 2512,
+                          "legObstacleDays": 0,
+                          "legObstacle": null,
+                          "legHeld": false
+                        },
+                        {
+                          "legEdge": "road:loudoun_fauquier:manassas",
+                          "legFrom": "loudoun_fauquier",
+                          "legTo": "manassas",
+                          "legType": "road",
+                          "legDays": 3000,
+                          "legThreat": 0,
+                          "legSupply": 1884,
+                          "legObstacleDays": 0,
+                          "legObstacle": null,
+                          "legHeld": false
+                        }
+                      ],
+                      "routeCost": 11972,
+                      "routeDays": 7000
+                    },
+                    "axisBlocks": [
+                      "state-forces.cs_tn_infantry_tennessee",
+                      "raised.st_gov_georgia.d126.2",
+                      "raised.st_gov_georgia.d129",
+                      "state-forces.cs_tn_cavalry_tennessee",
+                      "state-forces.va_harpers_ferry"
+                    ],
+                    "axisStrength": 29000,
+                    "axisPhases": [
+                      {
+                        "phaseKind": "concentrate",
+                        "phaseStart": 0,
+                        "phaseDays": 3000,
+                        "phaseRegion": "harpers_ferry"
+                      },
+                      {
+                        "phaseKind": "march",
+                        "phaseStart": 3000,
+                        "phaseDays": 4000,
+                        "phaseRegion": "loudoun_fauquier"
+                      },
+                      {
+                        "phaseKind": "march",
+                        "phaseStart": 7000,
+                        "phaseDays": 3000,
+                        "phaseRegion": "manassas"
+                      }
+                    ],
+                    "axisArrival": 10000,
+                    "axisOutOfSupply": 7000,
+                    "axisStoresDays": 0,
+                    "axisStoresAssumed": false
+                  }
+                ],
+                "candRequests": [],
+                "candConditions": [],
+                "candTerms": [
+                  {
+                    "contribTerm": "goal_fit",
+                    "contribAmount": 400,
+                    "contribWhy": "reaches manassas"
+                  },
+                  {
+                    "contribTerm": "force_ratio",
+                    "contribAmount": 300,
+                    "contribWhy": "ratio 10000 over his demand 1056"
+                  },
+                  {
+                    "contribTerm": "time",
+                    "contribAmount": 300,
+                    "contribWhy": "arrives 20000 permille days early"
+                  },
+                  {
+                    "contribTerm": "haste",
+                    "contribAmount": 0,
+                    "contribWhy": "concentrated as he wants"
+                  },
+                  {
+                    "contribTerm": "supply",
+                    "contribAmount": -596,
+                    "contribWhy": "7000 permille days outside supply; outruns his stores"
+                  },
+                  {
+                    "contribTerm": "exposure",
+                    "contribAmount": -21,
+                    "contribWhy": "792 perceived men along the route"
+                  },
+                  {
+                    "contribTerm": "coordination",
+                    "contribAmount": 0,
+                    "contribWhy": "one axis"
+                  },
+                  {
+                    "contribTerm": "dependence",
+                    "contribAmount": 0,
+                    "contribWhy": "0 support request(s) to other holders"
+                  },
+                  {
+                    "contribTerm": "glory",
+                    "contribAmount": 94,
+                    "contribWhy": "his name on the objective"
+                  },
+                  {
+                    "contribTerm": "caution",
+                    "contribAmount": 0,
+                    "contribWhy": "commits the force"
+                  }
+                ],
+                "candScore": 477,
+                "candPerceived": 0,
+                "candRatio": 10000
+              },
+              {
+                "id": "holding:await:harpers_ferry",
+                "candMethod": "holding",
+                "candVariant": "await",
+                "candAxes": [
+                  {
+                    "axisName": "await",
+                    "axisPost": "cs_cmd_harpers_ferry",
+                    "axisMode": "land",
+                    "axisRoute": {
+                      "routeFrom": "harpers_ferry",
+                      "routeTo": "harpers_ferry",
+                      "routeLegs": [],
+                      "routeCost": 0,
+                      "routeDays": 0
+                    },
+                    "axisBlocks": [
+                      "state-forces.cs_tn_infantry_tennessee",
+                      "raised.st_gov_georgia.d126.2",
+                      "raised.st_gov_georgia.d129",
+                      "state-forces.cs_tn_cavalry_tennessee",
+                      "state-forces.va_harpers_ferry"
+                    ],
+                    "axisStrength": 29000,
+                    "axisPhases": [
+                      {
+                        "phaseKind": "await",
+                        "phaseStart": 0,
+                        "phaseDays": 30000,
+                        "phaseRegion": "harpers_ferry"
+                      }
+                    ],
+                    "axisArrival": 0,
+                    "axisOutOfSupply": 0,
+                    "axisStoresDays": 0,
+                    "axisStoresAssumed": false
+                  }
+                ],
+                "candRequests": [],
+                "candConditions": [],
+                "candTerms": [
+                  {
+                    "contribTerm": "goal_fit",
+                    "contribAmount": 0,
+                    "contribWhy": "does not move on the objective"
+                  },
+                  {
+                    "contribTerm": "time",
+                    "contribAmount": -300,
+                    "contribWhy": "the deadline passes with nothing attempted"
+                  },
+                  {
+                    "contribTerm": "caution",
+                    "contribAmount": 264,
+                    "contribWhy": "keeps the force whole"
+                  }
+                ],
+                "candScore": -36,
+                "candPerceived": 0,
+                "candRatio": 10000
+              }
+            ],
+            "draftRejected": [
+              {
+                "rejMethod": "flank",
+                "rejVariant": "penalty",
+                "rejGates": [
+                  {
+                    "gateKind": "duplicate",
+                    "gateHard": true,
+                    "gateDetail": "alternative shares 1000 permille of the direct route"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "pincer",
+                "rejVariant": "with_partner",
+                "rejGates": [
+                  {
+                    "gateKind": "staging_not_adjacent",
+                    "gateHard": true,
+                    "gateDetail": "his own staging harpers_ferry is not beside manassas"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "pincer",
+                "rejVariant": "two_axis",
+                "rejGates": [
+                  {
+                    "gateKind": "duplicate",
+                    "gateHard": true,
+                    "gateDetail": "second route repeats the first"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "by_water",
+                "rejVariant": "clear_first",
+                "rejGates": [
+                  {
+                    "gateKind": "needs_permission",
+                    "gateHard": true,
+                    "gateDetail": "neither river nor sea is permitted"
+                  },
+                  {
+                    "gateKind": "no_carrier",
+                    "gateHard": true,
+                    "gateDetail": "no ship or boat to carry his troops"
+                  }
+                ]
+              },
+              {
+                "rejMethod": "by_water",
+                "rejVariant": "run_in",
+                "rejGates": [
+                  {
+                    "gateKind": "needs_permission",
+                    "gateHard": true,
+                    "gateDetail": "neither river nor sea is permitted"
+                  },
+                  {
+                    "gateKind": "no_carrier",
+                    "gateHard": true,
+                    "gateDetail": "no ship or boat to carry his troops"
+                  }
+                ]
+              }
+            ],
+            "draftSearches": 6,
+            "draftGenerated": 3,
+            "draftDeduplicated": 0
+          },
+          "planChosen": null,
+          "planApproved": null,
+          "planSubmitted": null,
+          "planCounters": [],
+          "planPending": null
+        },
+        "responses": [
+          {
+            "respOrder": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "respPerson": "johnston_joseph_e",
+            "respPost": "cs_cmd_harpers_ferry",
+            "respRole": "addressee",
+            "respKind": "goal",
+            "respDay": 151,
+            "respActual": "object",
+            "respDeclared": "object",
+            "respWillingness": -224,
+            "respTerms": [
+              {
+                "respTermName": "values",
+                "respTermAmount": -200
+              },
+              {
+                "respTermName": "temperament",
+                "respTermAmount": -51
+              },
+              {
+                "respTermName": "regard",
+                "respTermAmount": 0
+              },
+              {
+                "respTermName": "deterrence",
+                "respTermAmount": 27
+              },
+              {
+                "respTermName": "capacity",
+                "respTermAmount": 0
+              },
+              {
+                "respTermName": "disposition",
+                "respTermAmount": 0
+              },
+              {
+                "respTermName": "grievances",
+                "respTermAmount": 0
+              }
+            ],
+            "respReasons": [
+              {
+                "kind": "values_offended",
+                "value": "caution"
+              },
+              {
+                "kind": "shielded_by_standing"
+              }
+            ],
+            "respStated": [
+              {
+                "kind": "values_offended",
+                "value": "caution"
+              },
+              {
+                "kind": "shielded_by_standing"
+              }
+            ],
+            "respConditions": []
+          },
+          {
+            "respOrder": "m.149.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+            "respPerson": "johnston_joseph_e",
+            "respPost": "cs_cmd_harpers_ferry",
+            "respRole": "addressee",
+            "respKind": "verb:inquire",
+            "respDay": 151,
+            "respActual": "comply",
+            "respDeclared": "comply",
+            "respWillingness": 227,
+            "respTerms": [
+              {
+                "respTermName": "values",
+                "respTermAmount": 200
+              },
+              {
+                "respTermName": "temperament",
+                "respTermAmount": 0
+              },
+              {
+                "respTermName": "regard",
+                "respTermAmount": 0
+              },
+              {
+                "respTermName": "deterrence",
+                "respTermAmount": 27
+              },
+              {
+                "respTermName": "capacity",
+                "respTermAmount": 0
+              },
+              {
+                "respTermName": "disposition",
+                "respTermAmount": 0
+              },
+              {
+                "respTermName": "grievances",
+                "respTermAmount": 0
+              }
+            ],
+            "respReasons": [
+              {
+                "kind": "values_honoured",
+                "value": "duty"
+              },
+              {
+                "kind": "shielded_by_standing"
+              }
+            ],
+            "respStated": [
+              {
+                "kind": "values_honoured",
+                "value": "duty"
+              },
+              {
+                "kind": "shielded_by_standing"
+              }
+            ],
+            "respConditions": []
+          }
+        ],
+        "operations": [
+          {
+            "opPost": "cs_cmd_harpers_ferry",
+            "opCommander": "johnston_joseph_e",
+            "opOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+            "opPlan": "direct:least_cost:harpers_ferry",
+            "opMethod": "direct",
+            "opPosture": "hold",
+            "opObjective": "harpers_ferry",
+            "opStartDay": 97,
+            "opEndDay": 150,
+            "opOutcome": "objective_reached",
+            "opAxes": [
+              {
+                "oaxName": "main",
+                "oaxPost": "cs_cmd_harpers_ferry",
+                "oaxBlocks": [
+                  "state-forces.va_harpers_ferry"
+                ],
+                "oaxRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "oaxPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "oaxObjective": "harpers_ferry",
+                "oaxStage": "end",
+                "oaxSince": 150,
+                "oaxUntil": null,
+                "oaxRepulses": 0,
+                "oaxPursuit": null,
+                "oaxSteps": [],
+                "oaxArrived": 101,
+                "oaxLog": [
+                  {
+                    "axevDay": 97,
+                    "axevStage": "assemble",
+                    "axevReason": "opened",
+                    "axevRegion": "harpers_ferry"
+                  },
+                  {
+                    "axevDay": 100,
+                    "axevStage": "march",
+                    "axevReason": "concentrated",
+                    "axevRegion": "harpers_ferry"
+                  },
+                  {
+                    "axevDay": 101,
+                    "axevStage": "works",
+                    "axevReason": "objective_reached",
+                    "axevRegion": "harpers_ferry"
+                  },
+                  {
+                    "axevDay": 150,
+                    "axevStage": "end",
+                    "axevReason": "objective_held",
+                    "axevRegion": "harpers_ferry"
+                  }
+                ]
+              }
+            ],
+            "opRequests": [],
+            "opEncirclement": null,
+            "opEncirclementWhy": null
+          }
+        ],
+        "pending": [
+          {
+            "id": "m.151.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+            "msgOrigin": "m.151.johnston_joseph_e.johnston_joseph_e.estimate.cs_cmd_harpers_ferry",
+            "msgFrom": "johnston_joseph_e",
+            "msgTo": "johnston_joseph_e",
+            "msgToPost": "cs_cmd_harpers_ferry",
+            "msgRole": "addressee",
+            "msgRoute": "in-person",
+            "msgSentDay": 151,
+            "msgArriveDay": 151,
+            "msgVia": [],
+            "msgPending": [],
+            "msgOrder": null,
+            "msgVerb": null,
+            "msgReport": {
+              "reportType": "enemy-estimate",
+              "reportSubtype": null,
+              "reportAuthor": "johnston_joseph_e",
+              "reportAuthorPost": "cs_cmd_harpers_ferry",
+              "reportSubjectKind": "enemy",
+              "reportSubjectId": "cs_cmd_harpers_ferry",
+              "reportClaims": [
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "frederick_md",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "harpers_ferry",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "harpers_ferry",
+                  "claimValue": 300,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "loudoun_fauquier",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "lower_valley",
+                  "claimValue": 2000,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "works",
+                  "claimRegion": "lower_valley",
+                  "claimValue": 200,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                },
+                {
+                  "claimKind": "enemy-strength",
+                  "claimRegion": "western_maryland",
+                  "claimValue": 0,
+                  "claimToken": null,
+                  "claimConfidence": 700
+                }
+              ],
+              "reportDay": 151,
+              "reportHour": null,
+              "reportAdvice": null,
+              "reportAnswers": null
+            },
+            "msgTruth": {
+              "truthTerms": [
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "frederick_md",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "harpers_ferry",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "harpers_ferry",
+                  "termValue": 300,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "loudoun_fauquier",
+                  "termValue": 0,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "lower_valley",
+                  "termValue": 2000,
+                  "termRule": null
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "lower_valley",
+                  "termValue": 200,
+                  "termRule": "works"
+                },
+                {
+                  "termKind": "observed",
+                  "termPerson": null,
+                  "termPost": "cs_cmd_harpers_ferry",
+                  "termRegion": "western_maryland",
+                  "termValue": 0,
+                  "termRule": null
+                }
+              ],
+              "truthTrimmed": []
+            }
+          }
+        ]
+      }
+    ],
+    "hashes": [
+      {
+        "day": 150,
+        "hash": "c8b0b5c03c92be6bc1f7923932563198fb396459aeb666d85c46bd82a9ccb664"
+      },
+      {
+        "day": 151,
+        "hash": "3b34b7ff33b03c57c09144f162b8dc807bef643c8175ae11c59c04186bfa8727"
+      }
+    ]
+  },
+  "observedJunctionReceipt": {
+    "day": 151,
+    "date": "1861-08-03",
+    "route": "courier",
+    "dispatchDay": 142,
+    "dispatchDate": "1861-07-25",
+    "issuerEarliestDate": "1861-07-17",
+    "relay": "Cooper at Richmond",
+    "destination": "Harpers Ferry",
+    "observed": true,
+    "outsideJulyScore": true
+  }
+}

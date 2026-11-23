@@ -128,6 +128,8 @@ const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (two bo
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
+  'plans.goal_proposed': { why: "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted.", test: 'packages/kernel/test/s96-discretion.test.ts', needle: 'complete proposal back along the wire' },
+  'plans.discretion_exercised': { why: "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert.", test: 'packages/kernel/test/s96-discretion.test.ts', needle: 'applies the full fallback only after delivery' },
   // R73: doctrine retires the generic Washington attack; the editing exercise edits every reviewed plan.
   'plans.approved': { why: 'ordinary reference plans go ahead as drafted; the editing exercise edits every reviewed plan instead of approving it', test: 'packages/kernel/test/plans.test.ts', needle: 'asks to review: his pick goes to the issuer by dispatch, who approves it' },
   'command.government_reopened': { why: 'no pack situation reopens one yet', test: 'packages/kernel/test/governments.test.ts', needle: 'reopening and repeats are plain' },
@@ -262,7 +264,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'combat.works_stormed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'operations.ended': around(2), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
   'operations.opened': around(2),
-  'operations.stage': around(9), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
+  "operations.stage": {"minFires": 9, "maxFires": 38},
   'operations.works': { ...around(7), why: "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works." },
   'orders.responses_pruned': around(27), // S1 national [I]: new command and transfer responses alter the ordinary retained/pruned response set.
   "reports.battle_dispatch": around(42),
@@ -293,13 +295,13 @@ const UNION_BANDS: Record<string, GateBand> = {
   'politics.opened': around(2),
   'regions.self_emancipation': around(3097), // S1 national [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.
   'regions.reached_lines': around(274), // S1 national [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.
-  'seats.choices': around(2),
-  'planner.candidates': around(2),
-  'planner.searches': around(2),
-  'plans.drafted': around(2),
-  'plans.chosen': around(2),
+  "seats.choices": {"minFires": 3, "maxFires": 12},
+  "planner.candidates": {"minFires": 3, "maxFires": 12},
+  "planner.searches": {"minFires": 3, "maxFires": 12},
+  "plans.drafted": {"minFires": 3, "maxFires": 12},
+  "plans.chosen": {"minFires": 3, "maxFires": 12},
   'plans.goal_set': around(3),
-  'plans.went_ahead': around(2),
+  "plans.went_ahead": {"minFires": 3, "maxFires": 12},
   'plans.approved': notHere("both chosen plans go ahead as drafted without review; the editing exercise drives plan review"),
   'plans.submitted': notHere("both chosen plans go ahead as drafted without review; the editing exercise drives plan review"),
   'planner.term.goal_fit': notHere("dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"),

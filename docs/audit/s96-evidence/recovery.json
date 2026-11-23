@@ -1,0 +1,12 @@
+{
+  "base": "0e7078cb",
+  "stagedTree": "a96f6bd4aa840d2f0edf2adc861b427df7e76ecc",
+  "restoredTree": "aa7114e8e81f119312e031e8d108acc0d6332e30",
+  "baseTree": "aa7114e8e81f119312e031e8d108acc0d6332e30",
+  "exact": true,
+  "bytes": 1584692,
+  "sha256": "b2b4954326da3691200d0ab918997011421956cb53127cf86f5077e46ba5b4ef",
+  "scratchIndex": "C:\\Pyrrhic\\sprint-discretion\\runs\\s96\\recovery.index",
+  "realIndexUnmodified": true,
+  "realIndexSha256": "9551daaaa96ce8af215d655b2603abd7b1ee79c0afeb15461b3b577abdbe5e02"
+}

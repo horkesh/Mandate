@@ -1201,7 +1201,7 @@
       "gap": {
         "mechanism": "an attack-or-demonstrate instruction and its answer",
         "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
-        "reason": "The goal grammar has hold, take and relieve, with no demonstrate-or-attack direction. The observed hold goals do not expose that demand."
+        "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination."
       }
     },
     {
@@ -1235,7 +1235,7 @@
       "gap": {
         "mechanism": "an attack-or-demonstrate instruction and its answer",
         "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
-        "reason": "The goal grammar has hold, take and relieve, with no demonstrate-or-attack direction. The observed hold goals do not expose that demand."
+        "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination."
       }
     },
     {

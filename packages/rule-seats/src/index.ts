@@ -35,6 +35,7 @@ import type {
   BattleMenu,
   DelegatedMenu,
   GoalTerms,
+  Discretion,
   OptionView,
   PlanMenu,
   PrincipalMenu,
@@ -69,6 +70,17 @@ export function choosePlan(menu: PlanMenu): OptionView {
 /** A goal to take `objective` with every block the post commands, on the pack's goal terms and his doctrine's neutral ground. */
 export function takeGoal(menu: PrincipalMenu, objective: GoalTerms['objective']): GoalTerms {
   return { ...menu.goalDefaults, objective, posture: 'take', committed: [], neutral: menu.goalDefaults.neutral || menu.doctrine.crossNeutral };
+}
+
+type FallbackTerms = Pick<GoalTerms, 'objective' | 'posture'> & {
+  readonly discretion?: Discretion<FallbackTerms>;
+};
+
+function withDiscretion(goal: GoalTerms, grant: Discretion<FallbackTerms>): GoalTerms & { readonly discretion: Discretion<GoalTerms> } {
+  const { discretion: _old, ...terms } = goal;
+  const { discretion, ...fallback } = grant.fallback;
+  const next = { ...terms, ...fallback };
+  return { ...terms, discretion: { condition: grant.condition, fallback: discretion === undefined ? next : withDiscretion(next, discretion) } };
 }
 
 /** A delegate's choice: the option that honours his values most, ties to the earlier in display order. */
@@ -107,6 +119,7 @@ function price(menu: PrincipalMenu, c: SeatCommand): number {
   // The cost table's keys (the pack's `rules.people.attention.costs`): a call is priced as an order (lane 1.4c).
   let key: string | null = null;
   if (c.cmd === 'order' || c.cmd === 'call') key = 'order';
+  else if (c.cmd === 'answer_proposal') key = c.action === 'decline' ? 'review_send_back' : 'order';
   else if (c.cmd === 'review') key = c.action === 'approve' ? 'review_approve' : c.action === 'edit' ? 'review_edit' : 'review_send_back';
   else if (c.cmd === 'go' || c.cmd === 'appoint' || c.cmd === 'relieve' || c.cmd === 'transfer' || c.cmd === 'inquire' || c.cmd === 'consult' || c.cmd === 'audience' || c.cmd === 'observer' || c.cmd === 'promise' || c.cmd === 'pressure' || c.cmd === 'address') key = c.cmd;
   const base = key === null ? 0 : (menu.attention.costs[key] ?? 0);
@@ -163,6 +176,21 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   const appointed = new Set((doctrine.appointments ?? []).filter(a => a.ready || a.issued).map(a => a.person));
   const appointedPosts = new Set<string>();
 
+  for (const reply of doctrine.proposalAnswers ?? []) {
+    if (day < reply.day || answered.has(reply.post) && orders.some(c => c.cmd === 'answer_proposal' && c.to === reply.post)) continue;
+    const target = menu.commandable.find(c => c.post === reply.post);
+    const around = withheld.has(reply.post);
+    const route = target === undefined ? undefined : (around ? fastest : quickest)(target.routes);
+    if (route === undefined) continue;
+    const address = { cmd: 'answer_proposal' as const, to: reply.post, proposal: reply.paper, route: route.route, bypass: around, doctrine: reply.id };
+    const command: SeatCommand = reply.action === 'discretion'
+      ? { ...address, action: reply.action, goal: withDiscretion({
+        ...reply.ordered, objective: reply.objective === undefined ? reply.ordered.objective : reply.objective, posture: reply.posture ?? reply.ordered.posture,
+      }, reply.discretion) }
+      : { ...address, action: reply.action };
+    if (send(command)) answered.add(reply.post);
+  }
+
   // Sourced establishments wait for their date, their government's side and an eligible serving commander.
   // The appointment letter carries the expected old post; command alone changes both holder links on arrival.
   for (const a of doctrine.appointments ?? []) {
@@ -177,7 +205,9 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
     const target = menu.commandable.find((c) => c.post === o.post);
     const route = target === undefined ? undefined : quickest(target.routes);
     if (target === undefined || route === undefined) continue;
-    send({ cmd: 'order', to: target.post, goal: { ...takeGoal(menu, o.objective), posture: o.posture ?? 'take' }, route: route.route, bypass: false });
+    const primary = { ...takeGoal(menu, o.objective), posture: o.posture ?? 'take' };
+    const goal = o.discretion === undefined ? primary : withDiscretion(primary, o.discretion);
+    send({ cmd: 'order', to: target.post, goal, route: route.route, bypass: false, ...(o.id === undefined ? {} : { doctrine: o.id }) });
     answered.add(target.post);
   }
   // An order an office withheld is sent again around it, to the objective it named (a fresh goal is never invented).
@@ -190,8 +220,9 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
       const copy = menu.sentGoals?.find(s => s.post === target.post && s.message === memo.answers);
       // A late objection to a superseded letter cannot replace the newer goal.
       // Older menus lacked sender copies; keep their legacy objective-only fallback.
-      if (menu.sentGoals !== undefined && copy === undefined) continue;
-      send({ cmd: 'order', to: target.post, goal: copy?.goal ?? takeGoal(menu, region), route: routeTo(target.post, true), bypass: true });
+      if ((menu.sentGoals !== undefined && copy === undefined) || copy?.proposalReply === true) continue;
+      send({ cmd: 'order', to: target.post, goal: copy?.goal ?? takeGoal(menu, region), route: routeTo(target.post, true), bypass: true,
+        ...(copy?.doctrine === undefined ? {} : { doctrine: copy.doctrine }) });
     }
   }
   // The history driver alone is offered sourced appointments due today. These use the same letter and compliance

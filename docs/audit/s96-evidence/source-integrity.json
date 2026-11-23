@@ -1,0 +1,64 @@
+{
+  "s94Pages": [
+    {
+      "page": 472,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 473,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 478,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 897,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 898,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 901,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 907,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 908,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 910,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 923,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 924,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 925,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 895,
+      "s94ReceiptExact": true
+    },
+    {
+      "page": 896,
+      "s94ReceiptExact": true
+    }
+  ],
+  "additionalPdfPages": 9,
+  "upstreamPdfExact": true,
+  "s94RegisterSha256": "d374c70cdc26db655745eeb9f47eabe68c26686b0f31f03eb2ffe22abbc6c03e",
+  "headless": true
+}

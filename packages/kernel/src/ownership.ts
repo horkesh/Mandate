@@ -142,10 +142,10 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   field('audience state', 'audience', ['the audience verb'], [at('State', 'audienceHeld')]),
   // Lane 1.2: each post's goal and plan record (`plans/plans.ts`): its draft set, saved on the request day, the seat's
   // pick, approval or send-back, and edits as counter-orders. Lane 1.4 retired the standing-goal execution adapter.
-  field('goals, plans, approvals, edits', 'plans', ['verbs', 'seat selections', 'order arrival', 'the planner (draft sets, on request)'], [at('State', 'planRecords')]),
+  field('goals, plans, approvals, edits, pending proposals and received discretion', 'plans', ['verbs', 'seat selections', 'order arrival', 'the planner (draft sets and alternatives, on request)', 'commander knowledge (conditional fallback judgment)'], [at('State', 'planRecords')]),
   // Lane 1.4: approved plans in execution, each axis's stage, its support requests and its outcome.
   field('operations and their lifecycles', 'operations', ['plan approval', 'movement and combat outcomes', 'a support request answered'], [at('State', 'operationRecords')]),
-  field('knowledge (reports per seat)', 'knowledge', ['opening bulletins', 'message delivery', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'openingControlReports'), at('State', 'openingControlClaims'), at('State', 'reportTruth')]),
+  field('knowledge (reports and own sent-letter correlations per seat)', 'knowledge', ['opening bulletins', 'message delivery', 'own issued papers', 'pruning'], [at('State', 'knowledgeBySeat'), at('State', 'openingControlReports'), at('State', 'openingControlClaims'), at('State', 'reportTruth')]),
   field('messages in transit', 'messages', ['commands', 'reports', 'relay links forwarding an order', "the kernel's latency rules"], [at('State', 'messagesInTransit')]),
   field('economy stocks', 'economy', ['weekly step', 'verbs']),
   field('situations fired, live (open options, clocks) and decided', 'situations', ['cause evaluation', 'decisions', "delegated seats' choices"], [at('State', 'situationStates')]),
@@ -196,11 +196,14 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'TransitMessage',
   'Hop',
   'OrderBody',
+  'ProposalReply',
   'VerbBody',
   // Plans (lane 1.2): goals, edits, plan records and the draft sets saved in them, each replaced whole by `plans`
   'PlanGoal',
+  'Discretion',
   'EditSpec',
   'PlanRecord',
+  'PlanChallenge',
   'PlanNote',
   'NoteReading',
   'NoteDisposition',
@@ -230,6 +233,8 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'OpRequest',
   // Reports and knowledge
   'ReportBody',
+  'GoalProposal',
+  'DiscretionReport',
   'PlanPaper',
   'PlanPaper.paperNetwork',
   'PlanPaper.paperNoteBasis',

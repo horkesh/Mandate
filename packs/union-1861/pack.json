@@ -1127,12 +1127,28 @@
           ],
           "offensives": [
             {
+              "id": "johnston_harpers_hold",
+              "post": "cs_cmd_harpers_ferry",
+              "objective": "harpers_ferry",
+              "posture": "hold",
+              "fromDate": "1861-06-03",
+              "source": "OR I-II pp.898,901, Lee to Johnston, June3, preference for retaining Harpers Ferry; pp.907-908, Johnston June6 challenges garrison duty and proposes useful mobile employment; p.910, Lee June7 retains preference while permitting retirement when opposition cannot succeed. [I] The ordinary government principal issues a hold through its existing Cooper channel on the sourced June3 lower bound. This is a bounded mission representation, not a claim that Cooper authored Lee's letter. No authored proposal or June6 action date; his planner and own response must produce his proposal."
+            },
+            {
               "post": "cs_cmd_harpers_ferry",
               "objective": "manassas",
               "fromDate": "1861-07-17",
               "requiresNotice": "manassas_advance_received",
-              "source": "OR I-II p.478, Cooper telegram, Richmond to Johnston at Winchester, July 17: reinforce Beauregard if practicable, with discretion over the sick, baggage and arrangements; pp.473,982, Johnston's receipt and decision to assist, retaining the sick at Winchester for lack of transport. [I] The existing relieve goal asks him to reach and hold in support of Beauregard, not take Manassas. The unchanged approve-as-drafted grammar leaves practicability and arrangements to his compliance and plan, including the holding candidate. The grammar has no separate sick/baggage evacuation directive; no sick headcount, Culpeper movement, forced junction or arrival is invented. Only a received advance notice enables the order; the source date never dispatches it by itself.",
-              "posture": "relieve"
+              "source": "OR I-II p.478, Cooper telegram, Richmond to Johnston at Winchester, July 17: junction if practicable, with arrangements left to his discretion; p.473 gives Johnston's reported receipt about 1 a.m. July18 and decision to march. Read S94 page extracts OR-I-II-p478.txt and OR-I-II-p473.txt, SHA-256 in docs/audit/s96-evidence/source-reading.json. [I] Relieve Manassas with outmatched discretion to remain represents the conditional junction in 0114; ordinary received enemy knowledge, compliance, planning, routing and arrival decide it. The received advance notice still gates dispatch. No sick or baggage force, location, exact arrival or historical receipt is manufactured.",
+              "posture": "relieve",
+              "id": "johnston_junction",
+              "discretion": {
+                "condition": "outmatched",
+                "fallback": {
+                  "objective": null,
+                  "posture": "hold"
+                }
+              }
             }
           ],
           "inquireEveryDays": 7,
@@ -1216,6 +1232,30 @@
               ],
               "receiveLevies": false,
               "source": "OR I-II pp.980-981, Cooper/Davis dispatches and SO224, 17-18 July: McRae North Carolina regiment directed to Manassas. S77 [I]: a source-guided request to the raising command through ordinary compliance; no named arrival or headcount is created, and generated lots retain their identities."
+            }
+          ],
+          "proposalAnswers": [
+            {
+              "id": "johnston_valley_discretion",
+              "post": "cs_cmd_harpers_ferry",
+              "answers": "johnston_harpers_hold",
+              "fromDate": "1861-06-13",
+              "action": "discretion",
+              "discretion": {
+                "condition": "turned",
+                "fallback": {
+                  "objective": "lower_valley",
+                  "posture": "hold",
+                  "discretion": {
+                    "condition": "outmatched",
+                    "fallback": {
+                      "objective": "middle_valley",
+                      "posture": "hold"
+                    }
+                  }
+                }
+              },
+              "source": "OR I-II pp.923-925, Cooper to Johnston June13, authority to retire towards Winchester when he judges he is about to be turned; further retirement towards the Manassas railroad passes if unable to turn on the enemy. [I] lower_valley is the existing coarse Winchester/Martinsburg region; middle_valley is the existing Strasburg/Front Royal rail approach to the passes. Turned and then outmatched encode the bounded two-stage permission in 0114, not exact civilian support, demolition, baggage or a prescribed route. Issuance waits for his matching proposal actually received, and authority waits for delivery to him. No June15 departure or exact Winchester arrival is fitted; the contemporary/retrospective receipt conflict remains open (pp.472,929-930)."
             }
           ]
         }

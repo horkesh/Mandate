@@ -57,7 +57,16 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
         '4fa865169228dbab8f3d90ea90fb379afed80e97ae181e8469785fe0c9e5f045',
         '629dcb749c4a4a0cb3ac02098eb628369b3cffe7df4bee452ca2a092a0df1f33',
       ].includes(fingerprint(r));
-      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet) {
+      // S96 adds only four new exact quiet diagnostics under0114, each
+      // with the independent live driver in its retained band review.
+      // Bind the whole records so no other zero transition is admitted.
+      const s96Quiet = [
+        'f87e2732d638e4c3d9c77361ff76b156cababe6f52358a0ee5ba798f6b959ebd',
+        '3c08c2839304b1ba5c585acc0ef09907836a9c9f81fc275954b66d847ae78bb7',
+        'de0a4fef9d2c273238bc429e3e140d228f0432d7a701854758afb7649dd9dfa4',
+        '3b6c6f35b534739ecdf43873f23123175738980d0a042719e268695f4fd97c33',
+      ].includes(fingerprint(r));
+      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet && !s96Quiet) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
         else if (fingerprint({ minFires: r.after.minFires, maxFires: r.after.maxFires }) !== fingerprint({ minFires: Math.max(1, Math.floor(n / 2)), maxFires: Math.max(n * 2, n + 3) })) problems.push(`${where}: after band is not around(observed)`);
       }

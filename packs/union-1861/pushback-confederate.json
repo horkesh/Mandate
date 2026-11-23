@@ -499,10 +499,10 @@
         "model_matter": "johnston_harpers_ferry"
       },
       "match": {
-        "kind": "goal",
+        "kind": "goal-proposal",
         "objective": "harpers_ferry",
         "posture": "hold",
-        "actual": "object"
+        "actual": "propose"
       }
     },
     {
@@ -536,7 +536,7 @@
       "gap": {
         "mechanism": "conditional withdrawal tied to an enemy landing, with commander responsibility",
         "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
-        "reason": "Hold/take/relieve goals and generic transfers do not carry the stated conditional withdrawal and responsibility terms."
+        "reason": "0114 adds received conditional goals and commander proposals, but its turned/outmatched conditions do not express a duty to prevent an enemy landing after withdrawal. OR I-II p.976 makes that responsibility the disputed condition; p.959 supplies battery-site context. No landing condition or Mathias Point mission is authored by S96, so generic fallback permission does not cover this act."
       }
     },
     {

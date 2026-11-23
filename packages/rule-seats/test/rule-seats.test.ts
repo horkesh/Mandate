@@ -101,6 +101,27 @@ const memo = (receivedDay: number, about: string): ReportView => ({
   via: [],
 });
 
+it('issues the sourced answer from its date with full inherited fallback terms', () => {
+  const paper = ids.toId('message', 'm.proposal');
+  const ordered = { ...take('r5'), posture: 'hold' as const };
+  const reply = {
+    id: 'permit_departure', post: post('near'), action: 'discretion' as const, fromDate: '1900-06-05', day: 5, answers: 'ordered_hold', source: 'record 2', paper, ordered,
+    discretion: { condition: 'turned' as const, fallback: { objective: region('r9'), posture: 'hold' as const, discretion: {
+      condition: 'outmatched' as const, fallback: { objective: null, posture: 'hold' as const },
+    } } },
+  };
+  const answers = (m: PrincipalMenu, day: number) => principalOrders(m, [], day).filter(c => c.cmd === 'answer_proposal');
+  expect(answers(menu, 5)).toEqual([]);
+  const given = doctrine({ proposalAnswers: [reply] });
+  expect(answers(given, 4)).toEqual([]);
+  expect(answers(given, 5)).toEqual([{
+    cmd: 'answer_proposal', to: post('near'), action: 'discretion', proposal: paper, route: 'courier', bypass: false, doctrine: reply.id,
+    goal: { ...ordered, discretion: { condition: 'turned', fallback: { ...ordered, objective: region('r9'), discretion: {
+      condition: 'outmatched', fallback: { ...ordered, objective: null },
+    } } } },
+  }]);
+});
+
 describe('a commander choosing among the planner’s candidates (lane 1.2)', () => {
   it('takes the candidate his scorer ranked highest, ties to the lower id', () => {
     expect(choosePlan(plans([option('holding:hold', 100), option('direct:x', 400)])).optionId).toBe('direct:x');

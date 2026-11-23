@@ -221,7 +221,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
       else pay();
       return;
     }
-    if (c.cmd === 'order' || c.cmd === 'review' || c.cmd === 'go') {
+    if (c.cmd === 'order' || c.cmd === 'answer_proposal' || c.cmd === 'review' || c.cmd === 'go') {
       const reason = issueOrder(ctx, state, entry.seat, c);
       if (reason !== null) reject(reason);
       else pay();

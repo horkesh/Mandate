@@ -9,8 +9,8 @@
  *   share scaled by his caution, never for any shortfall at all;
  * - a support request costs `dependence` less the cooperation he expects of its holder (finding 7: his regard, the holder's standing).
  */
-import { enemyHeld, willingness, type Ctx } from './context.ts';
 import type { PlanAxis, PlanCandidate, PlanTerm, PlanGate, Method, PlanRequest, TermKind } from './types.ts';
+import { enemyHeld, willingness, type Ctx, type PlannerInput } from './context.ts';
 
 export interface Scored {
   readonly terms: readonly PlanTerm[];
@@ -38,9 +38,9 @@ export function demandFor(ctx: Ctx): number {
 }
 
 /** The shortfall share, permille of the men he needs, past which he waits: compliance's rule, scaled by his boldness (one rule, lane 1.1's). */
-export function shortfallShare(ctx: Ctx): number {
-  const r = ctx.input.reinforceShare;
-  return r.timid + Math.trunc((Math.max(0, r.bold - r.timid) * ctx.input.profile.boldness) / 1000);
+export function shortfallShare(input: Pick<PlannerInput, 'reinforceShare' | 'profile'>): number {
+  const r = input.reinforceShare;
+  return r.timid + Math.trunc((Math.max(0, r.bold - r.timid) * input.profile.boldness) / 1000);
 }
 
 function term(c: PlanTerm[], kind: TermKind, amount: number, why: string): void {
@@ -58,7 +58,7 @@ export function scoreAxes(ctx: Ctx, method: Method, axes: readonly PlanAxis[], r
   const ratio = enemy === 0 ? 10000 : Math.trunc((strength * 1000) / enemy);
   const needed = Math.trunc((enemy * demand) / 1000);
   const shortfall = Math.max(0, needed - strength);
-  const waits = shortfall > 0 && shortfall * 1000 > needed * shortfallShare(ctx);
+  const waits = shortfall > 0 && shortfall * 1000 > needed * shortfallShare(ctx.input);
 
   if (method === 'holding') {
     term(c, 'goal_fit', 0, 'does not move on the objective');

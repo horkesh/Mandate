@@ -112,7 +112,11 @@ export function commandText(c: SeatCommand, t: DeskStrings): string {
         post: c.to, posture: c.goal.posture, objective: c.goal.objective === null ? '' : ' ' + c.goal.objective,
         risk: String(c.goal.risk), days: String(c.goal.deadlineDays), route: c.route,
         bypass: c.bypass ? t('console.command.bypass') : '',
-      });
+      }) + fallbackText(c.goal, t);
+    case 'answer_proposal':
+      return t('console.command.proposal', { action: c.action, post: c.to, paper: c.proposal, route: c.route,
+        bypass: c.bypass ? t('console.command.bypass') : '',
+      }) + (c.goal === undefined ? '' : fallbackText(c.goal, t));
     case 'review': {
       const routed = (command: string) => t('console.command.review-route', {
         command, route: c.route, bypass: t(c.bypass ? 'console.command.bypass' : 'console.command.through-chain'),
@@ -178,4 +182,11 @@ export function commandText(c: SeatCommand, t: DeskStrings): string {
     case 'battle':
       return t('console.command.battle', { post: c.post, commit: String(c.commit), night: String(c.night), cutOff: String(c.cutOff), pursue: String(c.pursue) });
   }
+}
+
+function fallbackText(goal: import('@mandate/kernel/seat-api').GoalTerms, t: DeskStrings): string {
+  const grant = goal.discretion;
+  return grant === undefined ? '' : t('console.command.fallback', {
+    condition: grant.condition, posture: grant.fallback.posture, objective: grant.fallback.objective ?? t('console.goal.here'),
+  }) + fallbackText(grant.fallback, t);
 }

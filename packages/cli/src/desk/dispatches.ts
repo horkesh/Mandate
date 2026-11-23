@@ -70,6 +70,15 @@ function reportCopy(r: ReportView, t: DeskStrings): string {
     const stories = pressStories(r, t);
     return stories.length === 0 ? t('press.empty') : stories.map(s => t('console.report.story', { headline: s.headline, body: s.body })).join('; ');
   }
+  if (r.proposal !== undefined) return t('console.report.proposal', { paper: r.id, post: r.subjectId,
+    posture: r.proposal.goal.goalPosture, objective: r.proposal.goal.goalObjective ?? t('console.goal.here'),
+    reasons: r.proposal.reasons.map(reason => reason.kind).join(', '),
+  });
+  if (r.discretion !== undefined) return t('console.report.discretion', { post: r.subjectId,
+    condition: r.discretion.switchCondition, posture: r.discretion.switchGoal.goalPosture,
+    objective: r.discretion.switchGoal.goalObjective ?? t('console.goal.here'), region: r.discretion.switchRegion,
+    estimate: String(r.discretion.switchEstimate),
+  });
   const control = r.claims.filter(c => c.kind === 'control').map(c => c.region);
   const regions = new Set(control);
   if (r.openingControl === true) return t('console.report.opening', { regions: String(regions.size - Number(regions.has(null))) });

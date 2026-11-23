@@ -110,6 +110,22 @@ A field post's headquarters follow its strongest joined block; incoming blocks a
 
 **Proposals.** Any person can submit a candidate plan nobody ordered; the kernel drafts it from his traits and the map. The player adopts it by attaching it to a goal for a holder, who reads it like any order and may resent an outsider's plan. Seats still never invent a plan the kernel has not validated (0026, 0040).
 
+**Commander goal proposals and discretion (0114).** An objection or reservation
+may carry a complete alternative goal drafted by the commander's planner, with
+typed reasons and the identity of the order it answers. The principal may
+accept, decline, or answer with a goal carrying discretion; each answer is an
+ordinary paper and confers authority only on receipt. A conditional goal names
+`turned` or `outmatched` and a complete fallback goal. The commander evaluates
+it from his own received enemy knowledge and his joined main body, switches
+under that received authority, and reports the switch. The principal learns
+through the received report. Doctrine may answer a received proposal from a
+sourced row; it never authors the commander's proposal. The validation grammar
+admits at most three nested fallbacks to bound input traversal; this is a
+syntax limit, not a timing, strength or compliance default. The headless
+console exposes `proposal <post> <paper> accept|decline|discretion` and
+`fallback=<condition>,<posture>,<region-or->[/...]` on goals and discretion
+answers. A player's command always addresses a person through a post.
+
 The plan appears as arrows. The player can:
 - **approve** it as drafted (free: 0025);
 - **send it back** with notes, which the commander reads like any order (`reading`);
@@ -292,6 +308,15 @@ These three changes reconcile the prose with the implemented writers and `owners
 | responses to orders (declared and actual rungs, reasons, and optional dated-call identity `respCallId`) | `proxy` | message arrival, a policy's carriers answering it (0082); computed by `compliance` and `reading`, which are pure and write nothing |
 | audience state (`audienceHeld`: the last audience's day and the counters used) | `audience` | the audience verb |
 | each post's goal and plan record (`planRecords`): the goal, its draft set saved on the request day, the seat's pick, approval or send-back, edits as counter-orders, and a reference to his response (`proxy` writes the response itself) | `plans` | verbs (order, review, go), seat selections, order arrival, the planner's draft sets on request (0062, 0073) |
+| conditional goal authority (`PlanGoal.goalDiscretion`, immutable `Discretion.condition` and `Discretion.fallback`); pending planner proposal (`PlanRecord.planProposalPending`); original received grant identity (`PlanRecord.planDiscretionOrder`) | `plans` | the delivered goal, own planner alternative, and knowledge-based fallback judgment (0114); the same goal value is copied into an order by `messages` and filed on receipt by `knowledge` |
+| newest still-relevant challenge to a reaffirmed or conflicting incoming goal (`PlanRecord.planChallenge`, immutable `PlanChallenge.challengeOrder`, `challengeIssuer`, `challengeGoal`, `challengeResponse`, optional `challengePending`) | `plans` | a received objection/reservation queues a planner request without replacing the active plan or resetting its clock; the existing daily draft cap bounds the work (0114) |
+| immutable proposal enclosure (`ReportBody.reportProposal`, `GoalProposal.goal`, `GoalProposal.reasons`), with existing typed response reasons or `hold_preferred` (`orderedScore`, `preferredScore`) and `safer_position` (`heldThreat`, `preferredThreat`) reasons | `knowledge` | planner-authored report delivered through `messages`; correlated by the existing `reportAnswers`, never by a date or inferred destination (0114) |
+| immutable switch account (`ReportBody.reportDiscretion`, `DiscretionReport.switchCondition`, `switchGoal`, `switchRegion`, `switchEstimate`, `switchStrength`, `switchThreshold`, `switchEvidence`) | `knowledge` | the commander's report of exercising received authority, filed only on message delivery; the transit body is owned by `messages` (0114) |
+| immutable proposal reply correlation (`OrderBody.orderProposal`, `ProposalReply.replyPaper`, `replyOrder`, `replyAction`); sourced doctrine identity (`OrderBody.orderDoctrine`); local-plan release correlation (`OrderBody.orderPlan`) | `messages` | validated accept, decline, discretion and go commands, then ordinary relay and delivery (0114) |
+| optional explicit active-authority correlation for a non-adopted challenge (`GoalProposal.proposalBasis`, `ProposalReply.replyBasis`) | `knowledge` for received papers; `messages` in transit | the commander's own report states which active order he retained while challenging another; reply arrival checks that authority and the challenged order are still current (0114) |
+| sender-owned reply, doctrine, plan and reaffirmation copies (`KnownSentOrder.sentProposal`, `sentDoctrine`, `sentPlan`, `sentReaffirms`, and the extended `sentKind`); bounded goal/reply history in `SeatKnowledge.knownSentOrders` | `knowledge` | the principal's own issued papers; received proposal and switch reports select actionable terms, never a private commander plan (0114) |
+| conditional doctrine (`PrincipalDoctrine.offensives[].id` and `.discretion`, with `condition` and fallback `objective`, `posture`, optional nested `discretion`); `proposalAnswers` rows (`id`, `post`, `fromDate`, `answers`, `action`, optional replacement `objective`/`posture`, `discretion`, `source`) | immutable World pack data | pack authors cite the government's answer; rule seats see only rows enabled by received correlated proposal papers (0114) |
+| proposal/discretion command and view terms (`GoalTerms.discretion`, `OrderCommand.doctrine`, `AnswerProposalCommand`; `ReportView.proposal`/`.discretion`, `GoalView.discretion`, `PrincipalMenu.proposals`, correlated `sentGoals` metadata and `DoctrineView.proposalAnswers`) | derived or command-log data, never additional State | validated player/rule-seat input and received knowledge projections; a proposed or fallback goal carries the existing full goal grammar (0114) |
 | a delivered send-back's nonbinding marks and response references (`PlanRecord.planNotes`, immutable `NoteReading` and `PlanNote`); each candidate's note disposition and scoring contribution (`PlanCandidate.candNotes`, immutable `NoteDisposition`), saved with its request-day draft | `plans` | order arrival, compliance's answer through `proxy`, the planner's scored alternatives; R56 implementation proposal awaiting the lead's ruling |
 | each note's index within its order (`OrderResponse.respNote`), alongside its actual and declared response and contributing terms | `proxy` | a send-back's arrival; one response per note per recipient, retained while its plan names it |
 | immutable notes carried by an order (`OrderBody.orderNotes`) | `messages` | the principal's validated send-back command, relayed and returned on the ordinary order route (0052, 0098) |

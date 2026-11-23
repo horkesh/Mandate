@@ -18,6 +18,7 @@ import type { KnownReport } from './records.ts';
 import { templateKey, type ReportBody, type ReportClaim } from './report.ts';
 import { templateFor, type ReportTemplate } from './templates.ts';
 import type { ReportTruth } from './truth.ts';
+import { sameGoal } from '../plans/goal.ts';
 
 export type { KnownReport } from './records.ts';
 
@@ -31,7 +32,7 @@ export interface KnownSentAppointment {
 export interface SeatKnowledge {
   /** The sender's unanswered appointment copies; never reconstructed from a private response. */
   readonly knownSentAppointments?: readonly KnownSentAppointment[];
-  /** At most the last goal and last review reply per post: copies of the principal's own sent letters. */
+  /** At most the last independent goal, goal-proposal answer and plan-review reply per post. */
   readonly knownSentOrders?: readonly KnownSentOrder[];
   /** In (received day, id) order. */
   readonly knownReports: readonly KnownReport[];
@@ -44,7 +45,11 @@ export interface SeatKnowledge {
 export interface KnownSentOrder {
   readonly sentPost: PostId;
   readonly sentMessage: MessageId;
-  readonly sentKind: 'goal' | 'approve' | 'send_back' | 'edit';
+  readonly sentKind: 'goal' | 'approve' | 'send_back' | 'edit' | 'decline_proposal' | 'go';
+  readonly sentDoctrine?: string;
+  readonly sentProposal?: NonNullable<TransitMessage['msgOrder']>['orderProposal'];
+  readonly sentPlan?: MessageId;
+  readonly sentReaffirms?: MessageId;
   readonly sentDay: number;
   readonly sentPaper: MessageId | null;
   /** The principal's own goal terms, copied at sending; never a live commander plan. */
@@ -68,15 +73,36 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
       }
     }
     const order = message.msgOrder;
-    if (order === null || message.msgFrom !== order.orderIssuer || message.msgSentDay !== order.orderIssuedDay || !(['goal','approve','send_back','edit'] as const).some(k => k === order.orderKind)) continue;
+    if (order === null || message.msgFrom !== order.orderIssuer || message.msgSentDay !== order.orderIssuedDay ||
+      (!(['goal','approve','send_back','edit','decline_proposal'] as const).some(k => k === order.orderKind) && !(order.orderKind === 'go' && order.orderPlan !== undefined))) continue;
     const seat = seatIdFor(order.orderIssuer);
     if (state.seatAssignments[seat] === undefined) continue;
     const held = storedKnowledgeOf(state, seat);
     const old = held.knownSentOrders ?? [];
     if (old.some(o => o.sentMessage === message.msgOrigin)) continue;
     const paper = [...held.knownReports].filter(r => r.knownBody.reportPlan?.paperPost === order.orderTarget).sort((a,b) => b.knownBody.reportDay - a.knownBody.reportDay || strictCompare(b.id,a.id))[0];
-    const row: KnownSentOrder = { sentPost: order.orderTarget, sentMessage: message.msgOrigin, sentKind: order.orderKind as KnownSentOrder['sentKind'], sentDay: order.orderIssuedDay, sentPaper: paper?.id ?? null, ...(order.orderGoal === null ? {} : { sentGoal: order.orderGoal }) };
-    const kept = old.filter(o => o.sentPost !== row.sentPost || (o.sentKind === 'goal') !== (row.sentKind === 'goal'));
+    const previous = old.filter(o => o.sentPost === order.orderTarget && o.sentKind === 'goal').at(-1);
+    const reaffirms = order.orderKind === 'goal' && order.orderProposal === undefined && order.orderGoal !== null &&
+      previous?.sentGoal !== undefined && sameGoal(previous.sentGoal, order.orderGoal) ? previous.sentReaffirms ?? previous.sentMessage : undefined;
+    const doctrine = order.orderDoctrine ?? (reaffirms === undefined ? undefined : previous?.sentDoctrine);
+    const row: KnownSentOrder = { sentPost: order.orderTarget, sentMessage: message.msgOrigin, sentKind: order.orderKind as KnownSentOrder['sentKind'], sentDay: order.orderIssuedDay,
+      sentPaper: order.orderProposal === undefined ? paper?.id ?? null : null,
+      ...(order.orderGoal === null ? {} : { sentGoal: order.orderGoal }),
+      ...(doctrine === undefined ? {} : { sentDoctrine: doctrine }),
+      ...(order.orderProposal === undefined ? {} : { sentProposal: order.orderProposal }),
+      ...(order.orderPlan === undefined ? {} : { sentPlan: order.orderPlan }),
+      ...(reaffirms === undefined ? {} : { sentReaffirms: reaffirms }),
+    };
+    const kept = old.filter(o => {
+      if (o.sentPost !== row.sentPost) return true;
+      if (row.sentKind === 'goal') {
+        if (o.sentKind === 'goal') return row.sentProposal !== undefined &&
+          (row.sentProposal.replyOrder === o.sentMessage || row.sentProposal.replyOrder === o.sentReaffirms);
+        return o.sentKind !== 'decline_proposal' || reaffirms !== undefined;
+      }
+      if (row.sentKind === 'decline_proposal' || row.sentKind === 'go') return o.sentKind !== row.sentKind;
+      return o.sentKind === 'goal' || o.sentKind === 'decline_proposal' || o.sentKind === 'go';
+    });
     state = { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownSentOrders: [...kept,row].sort((a,b) => strictCompare(a.sentPost,b.sentPost) || strictCompare(a.sentKind,b.sentKind)) } } };
   }
   return state;
@@ -280,11 +306,39 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
       const prior = pendingPapers.get(post);
       if (prior === undefined || stampOrder(r) > stampOrder(prior)) pendingPapers.set(post,r);
     }
+    const sent = new Set((held.knownSentOrders ?? []).filter(o => o.sentKind === 'goal').flatMap(o =>
+      o.sentReaffirms === undefined ? [o.sentMessage] : [o.sentMessage, o.sentReaffirms]));
+    const proposals = new Map<MessageId, KnownReport>();
+    const switches = new Map<MessageId, KnownReport>();
+    const keepLatest = (byLetter: Map<MessageId, KnownReport>, letter: MessageId, paper: KnownReport): void => {
+      const prior = byLetter.get(letter);
+      if (prior === undefined || stampOrder(paper) > stampOrder(prior) ||
+        (stampOrder(paper) === stampOrder(prior) && strictCompare(paper.id, prior.id) > 0)) byLetter.set(letter, paper);
+    };
+    for (const r of held.knownReports) {
+      const b = r.knownBody;
+      if (b.reportAnswers === null || !sent.has(b.reportAnswers)) continue;
+      if (b.reportProposal !== undefined) keepLatest(proposals, b.reportAnswers, r);
+      if (b.reportDiscretion !== undefined) keepLatest(switches, b.reportAnswers, r);
+    }
+    const readyFor = new Set([...sent, ...[...switches.values()].map(r => r.id)]);
+    const readiness = new Map<MessageId, KnownReport>();
+    const failureFor = new Set((held.knownSentOrders ?? []).filter(o => o.sentProposal !== undefined || o.sentKind === 'go').map(o => o.sentMessage));
+    const failures = new Map<MessageId, KnownReport>();
+    for (const r of held.knownReports) {
+      const letter = r.knownBody.reportAnswers;
+      if (letter === null) continue;
+      if (readyFor.has(letter) && r.knownBody.reportClaims.some(c => c.claimKind === 'goal-status' && c.claimToken === 'ready')) keepLatest(readiness, letter, r);
+      if (failureFor.has(letter) && r.knownBody.reportClaims.some(c => c.claimKind === 'order-returned' || c.claimKind === 'order-objected' ||
+        (c.claimKind === 'order-obeyed' && c.claimValue === 0))) keepLatest(failures, letter, r);
+    }
+    const goalPapers = new Set([...proposals.values(), ...switches.values(), ...readiness.values(), ...failures.values()]);
     const kept = held.knownReports.filter((r) => {
       if (institutionalPapers.has(r)) return true;
       // Keep only the latest enclosure per post beyond ordinary dispatch pruning. A late refusal can reopen it;
       // the sender's bounded order copies still prevent an answered paper from becoming actionable again.
       if (r.knownBody.reportPlan !== undefined && pendingPapers.get(r.knownBody.reportPlan.paperPost) === r) return true;
+      if (goalPapers.has(r)) return true;
       const tpl = templateFor(templates, r.knownBody.reportType, r.knownBody.reportSubtype);
       const age = day - r.knownBody.reportDay;
       const aged = age > tpl.maxAgeDays;

@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
-import { phase0 } from '@mandate/kernel';
+import { ids, phase0 } from '@mandate/kernel';
+import { commandText } from '../src/desk/render.ts';
 import { describe, expect, it } from 'vitest';
 import { DESK_COMMANDS, parseLine, VERB_COMMANDS } from '../src/desk/commands.ts';
 import { ConsoleGame } from '../src/console/game.ts';
@@ -39,7 +40,7 @@ export function verbListMismatch(commands: Readonly<Record<string, string>>, ver
 
 describe('the console commands are the kernel verb list (lane 1.13: the new kernel)', () => {
   it('maps commands onto the kernel’s verbs exactly, one command per verb', () => {
-    expect(kernelVerbs()).toEqual(['address', 'appoint', 'audience', 'call', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review:approve', 'review:edit', 'review:send_back', 'transfer']);
+    expect(kernelVerbs()).toEqual(['address', 'answer_proposal', 'appoint', 'audience', 'call', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review:approve', 'review:edit', 'review:send_back', 'transfer']);
     expect(verbListMismatch(VERB_COMMANDS, kernelVerbs())).toEqual([]);
   });
 
@@ -76,4 +77,34 @@ describe('the console commands are the kernel verb list (lane 1.13: the new kern
       'command move names move_division, which is not a kernel verb',
     ]);
   });
+});
+
+it('the console answers a received proposal and can write a nested conditional order', () => {
+  const game = new ConsoleGame({ pack: 'testbed' });
+  const request = game.morning();
+  const t = deskStrings(game.strings, game.locale);
+  if (request.menu.menuKind !== 'principal') throw Error('expected the principal');
+  const { post, holder } = request.menu.commandable[0]!;
+  const paper = ids.toId('message', 'm.example.proposal');
+  const region = ids.toId('region', 'rear_region');
+  const goal = { ...request.menu.goalDefaults, objective: null, posture: 'hold' as const, committed: [] };
+  const proposal = { paper, post, author: holder!, order: ids.toId('message', 'm.example.order'), ordered: goal, goal, reasons: [] };
+  const heard = { ...request, menu: { ...request.menu, proposals: [proposal] } };
+  expect(parseLine(`proposal ${post} ${paper} accept`, request, t)).toMatchObject({ kind: 'error' });
+  for (const action of ['accept', 'decline']) {
+    expect(parseLine(`proposal ${post} ${paper} ${action}`, heard, t)).toMatchObject({
+      kind: 'command', command: { cmd: 'answer_proposal', to: post, proposal: paper, action },
+    });
+  }
+  const fallback = `fallback=turned,hold,${region}/outmatched,hold,-`;
+  for (const input of [`proposal ${post} ${paper} discretion`, `order ${post} hold`]) {
+    const parsed = parseLine(`${input} ${fallback}`, heard, t);
+    expect(parsed).toMatchObject({ kind: 'command', command: { goal: { discretion: {
+      condition: 'turned', fallback: { objective: region, posture: 'hold', discretion: {
+        condition: 'outmatched', fallback: { objective: null, posture: 'hold' },
+      } },
+    } } } });
+    if (parsed.kind === 'command') expect(commandText(parsed.command, t)).toContain(`if turned, hold ${region} | if outmatched, hold in place`);
+  }
+  expect(parseLine(`order ${post} hold fallback=unknown,hold,-`, heard, t)).toMatchObject({ kind: 'error' });
 });

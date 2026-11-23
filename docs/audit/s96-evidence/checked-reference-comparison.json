@@ -1,0 +1,24 @@
+[
+  {
+    "pack": "union-1861",
+    "hashes": 148,
+    "differences": [],
+    "dailyAndLivenessCountersExact": true,
+    "sharedCheckpointScoresExact": true,
+    "cadences": [
+      30,
+      15
+    ]
+  },
+  {
+    "pack": "testbed",
+    "hashes": 120,
+    "differences": [],
+    "dailyAndLivenessCountersExact": true,
+    "sharedCheckpointScoresExact": true,
+    "cadences": [
+      30,
+      15
+    ]
+  }
+]

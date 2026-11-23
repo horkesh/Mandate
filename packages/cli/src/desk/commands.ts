@@ -6,14 +6,15 @@
  * Every verb is an order to a person (hard rule 1, 0016). A place appears only inside one: an order's objective, an
  * arrow edit's region or waypoints, or an inquiry's subject (0040). There is no word that moves a force.
  */
-import { COUNTER_KINDS, EDIT_KINDS, POSTURES, RELIEF_MODES, NOTE_KINDS } from '@mandate/kernel/seat-api';
+import { COUNTER_KINDS, DISCRETION_CONDITIONS, EDIT_KINDS, MAX_FALLBACKS, POSTURES, RELIEF_MODES, NOTE_KINDS } from '@mandate/kernel/seat-api';
 import type { DeskStrings } from './strings.ts';
 import type { PlanNote } from '@mandate/kernel/seat-api';
-import type { CounterKind, CounterTerms, EditKind, EditTerms, PersonId, PostId, Posture, PrincipalMenu, RegionId, ReliefMode, RouteKind, SeatCommand, SeatRequest, SituationId } from '@mandate/kernel/seat-api';
+import type { CounterKind, CounterTerms, Discretion, EditKind, EditTerms, GoalTerms, PersonId, PostId, Posture, PrincipalMenu, RegionId, ReliefMode, RouteKind, SeatCommand, SeatRequest, SituationId } from '@mandate/kernel/seat-api';
 
 /** Each console word that changes the game, and the kernel command it sends: `review` splits by its action. */
 export const VERB_COMMANDS = {
   order: 'order',
+  proposal: 'answer_proposal',
   approve: 'review:approve',
   sendback: 'review:send_back',
   edit: 'review:edit',
@@ -61,6 +62,7 @@ const HELP_KEYS = [
   'console.help.quit',
   'console.help.orders',
   'console.help.order',
+  'console.help.proposal',
   'console.help.review',
   'console.help.edit',
   'console.help.go',
@@ -95,6 +97,27 @@ function split(tokens: readonly string[]): { readonly words: string[]; readonly 
 }
 
 const whole = (s: string | undefined): number | null => (s !== undefined && /^-?\d+$/.test(s) ? Number(s) : null);
+
+function withFallback(goal: GoalTerms, raw: string, t: DeskStrings): (GoalTerms & { readonly discretion: Discretion<GoalTerms> }) | string {
+  const entries = raw.split('/');
+  const error = t('console.error.fallback', { max: String(MAX_FALLBACKS) });
+  if (entries.length > MAX_FALLBACKS) return error;
+  const { discretion: _old, ...terms } = goal;
+  const goals: { condition: Discretion<GoalTerms>['condition']; goal: GoalTerms }[] = [];
+  for (const entry of entries) {
+    const [condition, posture, encoded, ...extra] = entry.split(',');
+    if (extra.length || encoded === undefined || encoded.length === 0 ||
+      !DISCRETION_CONDITIONS.some(c => c === condition) || !POSTURES.some(p => p === posture) ||
+      (encoded === '-' && posture !== 'hold')) return error;
+    let region: string;
+    try { region = decodeURIComponent(encoded); } catch { return error; }
+    goals.push({ condition: condition as Discretion<GoalTerms>['condition'],
+      goal: { ...terms, objective: encoded === '-' ? null : region as RegionId, posture: posture as Posture } });
+  }
+  let fallback = goals.at(-1)!.goal;
+  for (let i = goals.length - 2; i >= 0; i--) fallback = { ...goals[i]!.goal, discretion: { condition: goals[i + 1]!.condition, fallback } };
+  return { ...terms, discretion: { condition: goals[0]!.condition, fallback } };
+}
 
 function noteFrom(token: string, t: DeskStrings): PlanNote | string {
   // Axes and regions can contain colons (notably added:<region>). Encode those as %3A in a note token.
@@ -216,7 +239,28 @@ export function parseLine(line: string, request: SeatRequest, t: DeskStrings): D
         awaitWord: flags.has('await') || d.awaitWord,
         approveAsDrafted: flags.has('review') ? false : d.approveAsDrafted,
       };
-      return { kind: 'command', word: 'order', command: { cmd: 'order', to: post!, goal, route: route as RouteKind, bypass: flags.has('bypass') } };
+      const fallback = opts.get('fallback');
+      const drafted = fallback === undefined ? goal : withFallback(goal, fallback, t);
+      return typeof drafted === 'string' ? fail(drafted) : { kind: 'command', word: 'order', command: { cmd: 'order', to: post!, goal: drafted, route: route as RouteKind, bypass: flags.has('bypass') } };
+    }
+    case 'proposal': {
+      const problem = commandable(post);
+      if (problem !== null) return fail(problem);
+      const [, paper, action] = words;
+      const proposal = menu.proposals?.find(p => p.post === post && p.paper === paper);
+      if (proposal === undefined) return fail(t('console.error.proposal'));
+      const route = routeTo(menu, post!, opts.get('by'));
+      const bad = knownRoute(menu, post!, route, t);
+      if (bad !== null) return fail(bad);
+      if (words.slice(3).some(w => w !== 'bypass')) return fail(t('console.error.proposal-action'));
+      const routing = { cmd: 'answer_proposal' as const, to: post!, proposal: proposal.paper, route: route as RouteKind, bypass: flags.has('bypass') };
+      if ((action === 'accept' || action === 'decline') && [...opts.keys()].every(k => k === 'by')) {
+        return { kind: 'command', word, command: { ...routing, action } };
+      }
+      const fallback = opts.get('fallback');
+      if (action !== 'discretion' || fallback === undefined || [...opts.keys()].some(k => k !== 'by' && k !== 'fallback')) return fail(t('console.error.proposal-action'));
+      const goal = withFallback(proposal.ordered, fallback, t);
+      return typeof goal === 'string' ? fail(goal) : { kind: 'command', word, command: { ...routing, action, goal } };
     }
     case 'approve':
     case 'sendback':

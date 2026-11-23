@@ -117,5 +117,6 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0111](0111-pushback-is-measured-by-named-acts.md) | Pushback is measured by named acts, not by every response | accepted |
 | [0112](0112-the-pushback-registers-and-what-1a-requires.md) | The pushback registers, and what 1A requires of them | accepted |
 | [0113](0113-a-judgment-without-evidence-adds-no-term.md) | A judgment nobody has evidence for adds no term to a response | accepted; clarifies 0020 |
-| [0114](0114-commanders-propose-and-orders-carry-discretion.md) | A commander may propose another goal, and a goal may carry conditional discretion | accepted |
+| [0114](0114-commanders-propose-and-orders-carry-discretion.md) | A commander may propose another goal, and a goal may carry conditional discretion | accepted; amended by 0116 |
 | [0115](0115-the-tick-budget-is-measured-on-its-own.md) | The tick budget is measured on its own | accepted; amends 0106 |
+| [0116](0116-a-commander-may-propose-while-he-complies.md) | A commander may propose while he complies | accepted; amends 0114 |

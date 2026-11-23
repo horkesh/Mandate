@@ -25,7 +25,7 @@ it('the received July notice asks Johnston to relieve Beauregard with his own ar
   const received = deliverReport(initial, seat, notice, NO_TRUTH);
   const request = phase0.pendingRequests(world, received).find(r => r.requestSeat === seat)!;
   if(request.menu.menuKind !== 'principal') throw Error('principal required');
-  const row = request.menu.doctrine.offensives.find(o => o.post === army)!;
+  const row = request.menu.doctrine.offensives.find(o => o.post === army && o.objective === 'manassas')!;
   expect(row).toMatchObject({ posture: 'relieve', ready: true, issued: false });
   // Isolate the issued goal from unrelated doctrine attention and appointments.
   const target = {post:army,holder:id('person','johnston_joseph_e'),relays:[aig],routes:[{route:'courier' as const,typicalDays:3,price:0}],men:1000,raising:false,inTransit:[]};
@@ -36,7 +36,8 @@ it('the received July notice asks Johnston to relieve Beauregard with his own ar
   if(answer.answerKind!=='commands')throw Error('commands required');
   const orders=answer.commands.filter(c=>c.cmd==='order');
   expect(orders).toHaveLength(1);
-  expect(orders[0]).toMatchObject({cmd:'order',to:army,goal:{objective:'manassas',posture:'relieve',rail:true,approveAsDrafted:true,awaitWord:false},bypass:false});
+  expect(orders[0]).toMatchObject({cmd:'order',to:army,goal:{objective:'manassas',posture:'relieve',rail:true,approveAsDrafted:true,awaitWord:false,
+    discretion:{condition:'outmatched',fallback:{objective:null,posture:'hold'}}},bypass:false});
 });
 
 it('a retry menu projects the own sent letter and excludes future copies',()=>{

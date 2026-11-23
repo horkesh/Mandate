@@ -12,10 +12,10 @@ import { battleOrdersProblems } from '../combat/order-kinds.ts';
 import { strictCompare } from '../compare.ts';
 import { isWellFormedId, type SeatId } from '../ids.ts';
 import { ROUTE_KINDS } from '../messages/latency.ts';
-import { EDIT_KINDS, POSTURES } from '../plans/goal.ts';
+import { DISCRETION_CONDITIONS, EDIT_KINDS, MAX_FALLBACKS, POSTURES } from '../plans/goal.ts';
 import { noteProblems } from '../plans/notes.ts';
 import { COUNTER_KINDS } from '../audience/counters.ts';
-import { COMMAND_KINDS, RELIEF_MODES, REVIEW_ACTIONS, type Command } from './commands.ts';
+import { COMMAND_KINDS, PROPOSAL_ACTIONS, RELIEF_MODES, REVIEW_ACTIONS, type Command } from './commands.ts';
 
 export interface LogEntry {
   /** The day the command applies to. */
@@ -55,6 +55,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
   if (typeof c !== 'object' || c === null || !(COMMAND_KINDS as readonly unknown[]).includes(c.cmd)) return [...problems, `${at}: unknown command`];
   const FIELDS: Readonly<Record<string, readonly string[]>> = {
     order: ['bypass', 'cmd', 'goal', 'route', 'to'],
+    answer_proposal: ['action', 'bypass', 'cmd', 'proposal', 'route', 'to'],
     review: ['action', 'bypass', 'cmd', 'edit', 'route', 'to'],
     go: ['bypass', 'cmd', 'route', 'to'],
     call: ['bypass', 'cmd', 'regiments', 'route', 'termDays', 'to'],
@@ -75,6 +76,8 @@ export function entryProblems(raw: unknown, i: number): string[] {
     address: ['bloc', 'cmd'],
   };
   const fields = [...FIELDS[c.cmd as string]!,
+    ...((c.cmd === 'order' || c.cmd === 'answer_proposal') && Object.hasOwn(c, 'doctrine') ? ['doctrine'] : []),
+    ...(c.cmd === 'answer_proposal' && c.action === 'discretion' ? ['goal'] : []),
     ...(c.cmd === 'review' && Object.hasOwn(c, 'notes') ? ['notes'] : []),
     ...(c.cmd === 'call' ? ['men', 'callId', 'arm', 'readiness'].filter(k => Object.hasOwn(c, k)) : []),
     ...(c.cmd === 'appoint' && Object.hasOwn(c, 'from') ? ['from'] : []),
@@ -87,9 +90,18 @@ export function entryProblems(raw: unknown, i: number): string[] {
     if (!(ROUTE_KINDS as readonly unknown[]).includes(c.route)) problems.push(`${at}: ${String(c.cmd)}.route must be one of ${ROUTE_KINDS.join(', ')}`);
     if (typeof c.bypass !== 'boolean') problems.push(`${at}: ${String(c.cmd)}.bypass must be true or false`);
   };
+  if (Object.hasOwn(c, 'doctrine') && !id(c.doctrine)) problems.push(`${at}: doctrine must name a doctrine row`);
   if (c.cmd === 'order') {
     routed();
     problems.push(...goalTermsProblems(c.goal).map((p) => `${at}: order.goal ${p}`));
+  } else if (c.cmd === 'answer_proposal') {
+    routed();
+    if (!id(c.proposal)) problems.push(`${at}: proposal must be a message id`);
+    if (!(PROPOSAL_ACTIONS as readonly unknown[]).includes(c.action)) problems.push(`${at}: unknown proposal answer`);
+    if (c.action === 'discretion') {
+      if (typeof c.goal === 'object' && c.goal !== null && !Object.hasOwn(c.goal, 'discretion')) problems.push(`${at}: the answer must grant discretion`);
+      problems.push(...goalTermsProblems(c.goal).map(p => `${at}: answer_proposal.goal ${p}`));
+    }
   } else if (c.cmd === 'review') {
     routed();
     if (Object.hasOwn(c, 'notes')) {
@@ -205,10 +217,10 @@ function counterShaped(raw: unknown): boolean {
 }
 
 /** Problems with a goal's shape as a command carries it: exactly its fields, each of its type and vocabulary. */
-export function goalTermsProblems(raw: unknown): string[] {
+export function goalTermsProblems(raw: unknown, depth = 0): string[] {
   const g = raw as Partial<Record<string, unknown>> | null;
   if (typeof g !== 'object' || g === null || Array.isArray(g)) return ['must be an object'];
-  const fields = ['approveAsDrafted', 'awaitWord', 'committed', 'deadlineDays', 'neutral', 'objective', 'posture', 'rail', 'risk', 'river', 'sea'];
+  const fields = ['approveAsDrafted', 'awaitWord', 'committed', 'deadlineDays', ...(Object.hasOwn(g, 'discretion') ? ['discretion'] : []), 'neutral', 'objective', 'posture', 'rail', 'risk', 'river', 'sea'];
   const keys = Object.keys(g).sort(strictCompare);
   if (keys.join() !== fields.join()) return [`has fields [${keys.join(', ')}], expected [${fields.join(', ')}]`];
   const problems: string[] = [];
@@ -217,6 +229,15 @@ export function goalTermsProblems(raw: unknown): string[] {
   for (const k of ['risk', 'deadlineDays'] as const) if (typeof g[k] !== 'number' || !Number.isSafeInteger(g[k])) problems.push(`${k} must be an integer`);
   for (const k of ['rail', 'river', 'sea', 'neutral', 'awaitWord', 'approveAsDrafted'] as const) if (typeof g[k] !== 'boolean') problems.push(`${k} must be true or false`);
   if (!Array.isArray(g.committed) || !g.committed.every(ID)) problems.push('committed must be force block ids');
+  if (Object.hasOwn(g, 'discretion')) {
+    const d = g.discretion as { condition?: unknown; fallback?: unknown } | null;
+    if (depth >= MAX_FALLBACKS) problems.push(`allows at most ${MAX_FALLBACKS} fallbacks`);
+    else if (typeof d !== 'object' || d === null || Object.keys(d).sort(strictCompare).join() !== 'condition,fallback') problems.push('discretion needs a condition and a fallback goal');
+    else {
+      if (!(DISCRETION_CONDITIONS as readonly unknown[]).includes(d.condition)) problems.push('unknown discretion condition');
+      problems.push(...goalTermsProblems(d.fallback, depth + 1).map(p => `fallback ${p}`));
+    }
+  }
   return problems;
 }
 

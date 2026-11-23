@@ -1,10 +1,36 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
-import type { world as w } from '@mandate/kernel';
+import { conditionalDoctrineProblems, type world as w } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
 import { z } from 'zod';
 import { licenceVerdict, publishedSchemas, RegionSchema, SCHEMAS_MATCH_KERNEL, staleFiles, WorldSchema } from '../src/index.ts';
 
 const schemasDir = new URL('../schemas/', import.meta.url);
+
+it('validates bounded conditional goals and the earlier letter a sourced reply answers', () => {
+  const schema = WorldSchema.shape.rules.shape.ruleSeats.shape.principals.element;
+  const fallback = { objective: null, posture: 'hold' };
+  const grant = { condition: 'outmatched', fallback };
+  const outer = { condition: 'turned', fallback: { objective: 'front', posture: 'hold', discretion: grant } };
+  const row = {
+    faction: 'a', crossNeutral: false, concentrateAt: null, concentrateSource: null, calls: [],
+    offensives: [{ id: 'hold_goal', post: 'army', objective: 'front', posture: 'hold', fromDate: '1900-06-01', source: 'record 1' }],
+    proposalAnswers: [{ id: 'answer', post: 'army', action: 'discretion', answers: 'hold_goal', fromDate: '1900-06-02', discretion: outer, source: 'record 2' }],
+    inquireEveryDays: 7, appointKinds: { land: [], naval: [] },
+  };
+  const parsed = schema.parse(row);
+  expect(conditionalDoctrineProblems(parsed, r => r === 'front')).toEqual([]);
+  expect(conditionalDoctrineProblems(parsed, () => false)).toEqual(expect.arrayContaining([expect.objectContaining({
+    field: 'proposalAnswers[0].discretion.fallback',
+  })]));
+  expect(conditionalDoctrineProblems({ ...parsed, offensives: [] }, () => true)).toEqual(expect.arrayContaining([expect.objectContaining({
+    field: 'proposalAnswers[0].answers',
+  })]));
+  const cyclic = { condition: 'turned', fallback: { objective: 'front', posture: 'hold' } };
+  Object.assign(cyclic.fallback, { discretion: cyclic });
+  for (const discretion of [cyclic, { ...outer, condition: 'when_advantageous' }]) {
+    expect(schema.safeParse({ ...row, proposalAnswers: [{ ...row.proposalAnswers[0], discretion }] }).success).toBe(false);
+  }
+});
 
 describe('published schemas (decision 0030)', () => {
   it('are up to date with the Zod schemas: run npm run pack:schemas if not', () => {

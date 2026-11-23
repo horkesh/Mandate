@@ -10,7 +10,7 @@
  */
 import { ids, phase0, world as w } from '@mandate/kernel';
 import { z } from 'zod';
-import { COMPLIANCE_RUNGS } from '@mandate/kernel';
+import { COMPLIANCE_RUNGS, DISCRETION_CONDITIONS } from '@mandate/kernel';
 
 type IdKind = ids.IdKind;
 
@@ -61,6 +61,17 @@ const citation = z.strictObject({
   at: z.string().min(1).nullable(),
 });
 const provenance = z.array(citation).min(1, 'at least one citation of a source in PROVENANCE.json (decisions 0031, 0033)');
+
+const doctrineGoal = z.strictObject({ objective: idOf('region').nullable(), posture: z.enum(['hold', 'relieve', 'take']) });
+const doctrineDiscretion = z.strictObject({ condition: z.enum(DISCRETION_CONDITIONS), fallback: doctrineGoal });
+const nestedDiscretion = doctrineDiscretion.extend({ fallback: doctrineGoal.extend({ discretion: doctrineDiscretion.optional() }) });
+const boundedDiscretion = doctrineDiscretion.extend({ fallback: doctrineGoal.extend({ discretion: nestedDiscretion.optional() }) });
+const proposalReply = z.strictObject({ id: termId, post: idOf('post'), fromDate: historicalDate, answers: termId, source: z.string().min(1) });
+const doctrineProposalAnswer = z.union([
+  proposalReply.extend({ action: z.enum(['accept', 'decline']) }),
+  proposalReply.extend({ action: z.literal('discretion'), objective: doctrineGoal.shape.objective.optional(),
+    posture: doctrineGoal.shape.posture.optional(), discretion: boundedDiscretion }),
+]);
 
 const geoPoint = z.strictObject({
   lonE6: int.min(-180_000_000).max(180_000_000),
@@ -297,8 +308,10 @@ export const RulesSchema = z.strictObject({
               .array(z.strictObject({ id: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), post: idOf('post'), regiments: positive.nullable().describe('Regiments requested; null when only an unquantified sub-regimental unit is documented.'), men: positive.nullable().optional().describe('Exact headcount; null preserves an unquantified unit, absent uses menPerRegiment.'), arm: termId.optional(), readiness: z.boolean().optional(), termDays: positive.nullable().describe('Days from muster, or null for the war.'), fromDate: historicalDate, atPeace: z.boolean().optional(), source: z.string().min(1) }))
               .describe('Each identified dated requisition goes once; distinct IDs allow repeats to a governor. atPeace permits a cited pre-war call. readiness records an answer without muster. Remove a row when a situation owns the same requisition.'),
             offensives: z
-              .array(z.strictObject({ post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, posture: z.enum(['hold', 'relieve', 'take']).optional(), requiresNotice: idOf('situation').optional(), source: z.string().min(1) }))
+              .array(z.strictObject({ id: termId.optional(), post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, posture: doctrineGoal.shape.posture.optional(), discretion: boundedDiscretion.optional(), requiresNotice: idOf('situation').optional(), source: z.string().min(1) }))
               .describe('The dated goals he gives (take unless a posture is specified), each from its date (or the day after war, if later); each cites its source.'),
+            proposalAnswers: z.array(doctrineProposalAnswer).optional()
+              .describe('Sourced replies from their written date, once the commander’s proposal answering the named goal has reached this principal.'),
             inquireEveryDays: positive.describe('How often he asks each army where it stands, in days (an inquiry costs no attention).'),
             appointKinds: z
               .strictObject({ land: z.array(termId), naval: z.array(termId) })

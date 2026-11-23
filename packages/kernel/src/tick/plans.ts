@@ -13,31 +13,32 @@
 import { strictCompare } from '../compare.ts';
 import { deriveMap, type DerivedMap } from '../control-index/derived.ts';
 import type { ComplianceRung, Reason } from '../directive.ts';
-import type { MessageId, PostId } from '../ids.ts';
-import type { ReportClaim, StatedReason, NoteAccount } from '../knowledge/report.ts';
+import type { MessageId, PersonId, PostId } from '../ids.ts';
+import type { DiscretionReport, ReportClaim, StatedReason, NoteAccount, GoalProposal } from '../knowledge/report.ts';
 import { followsNote } from '../planner/notes.ts';
 import { term } from '../knowledge/truth.ts';
 import { liveTerms, draft } from '../planner/draft.ts';
+import { discretionThreat, preferableGoal } from '../planner/discretion.ts';
 import { applyEdit, concretePlan, editDirective, editFailureDiagnostic, PLAN_HOLDS } from '../planner/edits.ts';
 import { plannerInputFor } from '../planner/input.ts';
 import { enclosePlan } from '../planner/paper.ts';
 import { createViewCache } from '../view/view.ts';
 import type { PlanPaper } from '../knowledge/plan-paper.ts';
 import type { PlannerInput } from '../planner/context.ts';
-import type { PlanCandidate, TermKind } from '../planner/types.ts';
+import type { DraftSet, PlanCandidate, TermKind } from '../planner/types.ts';
 import { goalKindOf } from '../plans/goal.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { answerOrder, goalTerms } from '../reading/orders.ts';
-import { candidateOf, choose, postsInStatus, saveDraft, settleCounter, submitted, type PlanCounter, type PlanRecord } from '../plans/plans.ts';
+import { candidateOf, choose, finishChallenge, finishProposal, planOf, plannedPosts, postsInStatus, saveDraft, settleCounter, submitted, switchGoal, type PlanCounter, type PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
-import { postFaction } from '../seats/posts.ts';
+import { headquartersOf, postFaction } from '../seats/posts.ts';
 import { seatIdFor } from '../seats/seats.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import { viewFor, type ViewCache } from '../view/view.ts';
 import { fire, sendReport, type TickContext, oversightOf } from './context.ts';
 import { monthOf } from './map.ts';
-import { answerBody } from './orders.ts';
+import { answerBody, reportConditionalReady } from './orders.ts';
 import { passageOf } from './passage.ts';
 
 /** Every mechanic the plan cycle counts (FOUNDATION section 11.5), the planner's scoring terms among them. */
@@ -55,6 +56,8 @@ export const PLANS_MECHANICS = [
   'plans.edit_received',
   'plans.edit_shirked',
   'plans.goal_set',
+  'plans.goal_proposed',
+  'plans.discretion_exercised',
   'plans.released',
   'plans.sent_back',
   'plans.submitted',
@@ -111,7 +114,7 @@ export function choosingMenus(state: State, day: number) {
 }
 
 /** A report from a commander to the goal's issuer, answering the goal's order. */
-function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanRecord, claims: readonly ReportClaim[], options: { readonly plan?: PlanPaper; readonly notes?: readonly NoteAccount[]; readonly objection?: readonly StatedReason[]; readonly truth?: ReturnType<typeof term>[]; readonly answers: MessageId; readonly tag: string }): MessageId {
+function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanRecord, claims: readonly ReportClaim[], options: { readonly plan?: PlanPaper; readonly notes?: readonly NoteAccount[]; readonly objection?: readonly StatedReason[]; readonly proposal?: GoalProposal; readonly discretion?: DiscretionReport; readonly truth?: ReturnType<typeof term>[]; readonly answers: MessageId; readonly issuer?: PersonId; readonly tag: string }): MessageId {
   const holder = state.postStates[post]!.postHolder!;
   return sendReport(ctx, state, {
     body: answerBody(holder, post, ctx.day, {
@@ -121,11 +124,13 @@ function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanReco
       reportAdvice: options.objection === undefined ? null : { adviceRecommends: 'keep-own-plan', adviceReasons: options.objection, adviceConfidence: ctx.world.map.world.rules.reportConfidence.planObjection },
       ...(options.notes === undefined ? {} : { reportNotes: options.notes }),
       ...(options.plan === undefined ? {} : { reportPlan: options.plan }),
+      ...(options.proposal === undefined ? {} : { reportProposal: options.proposal }),
+      ...(options.discretion === undefined ? {} : { reportDiscretion: options.discretion }),
       answers: options.answers,
       about: post,
     }),
     truth: { truthTerms: options.truth ?? [], truthTrimmed: [] },
-    to: record.planIssuer,
+    to: options.issuer ?? record.planIssuer,
     tag: options.tag,
   });
 }
@@ -169,6 +174,7 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
       fire(ctx, 'plans.submitted');
     } else {
       fire(ctx, 'plans.went_ahead');
+      if (chosen.status === 'ready') reportConditionalReady(ctx, state, post);
     }
   }
   return state;
@@ -199,12 +205,45 @@ function statedWeight(r: Reason): number {
   return 1000;
 }
 
+function draftFor(ctx: TickContext, input: PlannerInput): DraftSet {
+  const set = draft(input);
+  fire(ctx, 'plans.drafted');
+  fire(ctx, 'planner.candidates', set.draftCandidates.length);
+  fire(ctx, 'planner.searches', set.draftSearches);
+  for (const t of liveTerms(set)) fire(ctx, `planner.term.${t}`);
+  return set;
+}
+
+function draftProposal(ctx: TickContext, state: State, post: PostId, record: PlanRecord, input: PlannerInput, set: DraftSet,
+  letter: { readonly answers: MessageId; readonly response: string; readonly issuer: PersonId; readonly basis?: MessageId }): boolean {
+  const response = state.orderResponses[letter.response];
+  if (response?.respPerson !== input.profile.person) return false;
+  const { searches, choice } = preferableGoal(input, set);
+  if (searches > 0) fire(ctx, 'planner.searches', searches);
+  if (choice === null) return false;
+  toIssuer(ctx, state, post, record, [], {
+    proposal: { goal: choice.goal, reasons: [...response.respStated, choice.reason],
+      ...(letter.basis === undefined ? {} : { proposalBasis: letter.basis }) },
+    answers: letter.answers,
+    issuer: letter.issuer,
+    tag: `goal-proposal.${post}`,
+  });
+  fire(ctx, 'plans.goal_proposed');
+  return true;
+}
+
 /** The day's edits and drafts, on the morning's map (one derivation, only when there is plan work today). */
 export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): State {
   const { world, day } = ctx;
-  const pending = (Object.keys(start.planRecords) as PostId[]).filter((p) => start.planRecords[p]!.planPending !== null).sort(strictCompare);
-  const drafting = postsInStatus(start, 'drafting');
-  if (pending.length === 0 && drafting.length === 0) return start;
+  const posts = plannedPosts(start);
+  const pending = posts.filter(p => planOf(start, p)!.planPending !== null);
+  const granted = posts.filter(p => planOf(start, p)!.planGoal.goalDiscretion !== undefined);
+  const needsDraft = (record: PlanRecord) => record.planStatus === 'drafting' || record.planProposalPending === true;
+  const hasChallenge = (record: PlanRecord) => record.planChallenge?.challengePending === true;
+  if (pending.length === 0 && granted.length === 0 && !posts.some(p => {
+    const record = planOf(start, p)!;
+    return needsDraft(record) || hasChallenge(record);
+  })) return start;
   const network = passageOf(world.map, start);
   const month = monthOf(start, day);
   const derived: DerivedMap = deriveMap(world.map, { control: start.regionControl, month, network });
@@ -212,13 +251,44 @@ export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): St
 
   for (const post of pending) state = answerEdit(ctx, state, post, derived, network, month, cache);
 
+  for (const post of granted) {
+    const record = state.planRecords[post]!;
+    const grant = record.planGoal.goalDiscretion!;
+    const holder = state.postStates[post]?.postHolder;
+    if (holder == null || state.orderResponses[record.planResponse]?.respPerson !== holder || postFaction(world, state, post) === null) continue;
+    const view = viewFor(world, state, seatIdFor(holder), cache);
+    if (Object.keys(view.enemyBeliefs).length === 0) continue;
+    const input = plannerInputFor(world, state, derived, network, month, view, post, record.planGoal, day);
+    const joined = input.forces.filter(b => state.forceJoins[b.id] === undefined);
+    const threat = discretionThreat({ ...input, forces: joined }, headquartersOf(world, state, post), grant);
+    if (threat === null) continue;
+    const report: DiscretionReport = {
+      switchCondition: grant.condition, switchGoal: grant.fallback, switchRegion: threat.region, switchEstimate: threat.estimate,
+      switchStrength: threat.strength, switchThreshold: threat.threshold, switchEvidence: view.enemyBeliefs[threat.region]!.source,
+    };
+    const id = toIssuer(ctx, state, post, record, [], {
+      discretion: report, answers: record.planDiscretionOrder ?? record.planOrder, tag: `discretion.${post}`,
+    });
+    state = switchGoal(state, post, id, day);
+    fire(ctx, 'plans.discretion_exercised');
+  }
+
   // Drafts, oldest goal first, within the day's cap for each side (0062; lane 0.8 measured it as a day's whole cost); the rest wait.
   // Counted per faction: one side's requests never defer the other's (the player would see the enemy's activity in a delay).
   const cap = world.map.world.rules.planner.dailyDraftCap;
   const used: Record<string, number> = {};
-  const order = [...drafting].sort((a, b) => state.planRecords[a]!.planSetDay - state.planRecords[b]!.planSetDay || strictCompare(a, b));
-  for (const post of order) {
+  const work = posts.flatMap(post => {
+    const record = planOf(state, post)!;
+    const incoming = record.planChallenge;
+    return [
+      ...(needsDraft(record) ? [{ post, since: record.planSetDay, separate: false }] : []),
+      ...(incoming?.challengePending === true
+        ? [{ post, since: state.orderResponses[incoming.challengeResponse]?.respDay ?? day, separate: true }] : []),
+    ];
+  }).sort((a, b) => a.since - b.since || strictCompare(a.post, b.post) || Number(a.separate) - Number(b.separate));
+  for (const { post, separate } of work) {
     const record = state.planRecords[post]!;
+    const incoming = separate ? record.planChallenge : undefined;
     const holder = state.postStates[post]?.postHolder ?? null;
     const faction = postFaction(world, state, post);
     if (holder === null || faction === null) continue;
@@ -228,13 +298,21 @@ export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): St
     }
     used[faction] = (used[faction] ?? 0) + 1;
     const view = viewFor(world, state, seatIdFor(holder), cache);
-    const input = withNotePreferences(plannerInputFor(world, state, derived, network, month, view, post, record.planGoal, day), world, state, record);
-    const set = draft(input);
-    fire(ctx, 'plans.drafted');
-    fire(ctx, 'planner.candidates', set.draftCandidates.length);
-    fire(ctx, 'planner.searches', set.draftSearches);
-    for (const t of liveTerms(set)) fire(ctx, `planner.term.${t}`);
-    state = saveDraft(state, post, set);
+    const ground = plannerInputFor(world, state, derived, network, month, view, post, incoming?.challengeGoal ?? record.planGoal, day);
+    if (incoming !== undefined) {
+      const proposed = draftProposal(ctx, state, post, record, ground, draftFor(ctx, ground), {
+        answers: incoming.challengeOrder, response: incoming.challengeResponse, issuer: incoming.challengeIssuer, basis: record.planOrder,
+      });
+      state = finishChallenge(state, post, proposed);
+      continue;
+    }
+    const input = withNotePreferences(ground, world, state, record);
+    const set = draftFor(ctx, input);
+    if (record.planProposalPending === true) {
+      draftProposal(ctx, state, post, record, input, set, { answers: record.planOrder, response: record.planResponse, issuer: record.planIssuer });
+      state = finishProposal(state, post);
+    }
+    if (record.planStatus === 'drafting') state = saveDraft(state, post, set);
   }
   return state;
 }
@@ -293,5 +371,7 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
     counterInvalid: null,
     counterResponse: responseKey(pending.pendingOrder, holder),
   };
-  return settleCounter(state, post, counter, objects ? null : executes);
+  const next = settleCounter(state, post, counter, objects ? null : executes);
+  if (record.planStatus !== 'ready') reportConditionalReady(ctx, next, post);
+  return next;
 }
