@@ -1,6 +1,6 @@
 # 0123: Attack or demonstrate is a duty to detain
 
-Status: accepted (2026-11-23). From S115's design (`docs/design/S115-ATTACK-OR-DEMONSTRATE.md` and `docs/design/S115/` on `sprint/pushback` at `429a073f`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0120 (the first of its four goal forms).
+Status: accepted (2026-11-23). From S115's design (`docs/design/S115-ATTACK-OR-DEMONSTRATE.md` and `docs/design/S115/` on `sprint/pushback` at `429a073f`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0120 (the first of its four goal forms). Clarified by 0128 (the demonstration's limits).
 
 ## Context
 
