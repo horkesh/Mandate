@@ -77,7 +77,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0071](0071-cleared-flags-and-goals-are-routes.md) | A cleared flag is a route, and a standing goal is a choice | accepted |
 | [0072](0072-phase-0-closes-with-a-close-out.md) | Phase 0 closes after one close-out lane | accepted |
 | [0073](0073-phase-1-plan.md) | The Phase 1 plan: two milestones, starting with the road to Bull Run | accepted; extended by 0108 |
-| [0074](0074-the-gate-for-1a.md) | The gate for 1A: capture in battle, the values that touch slavery, and the leaders' own words | accepted; amended by 0082 |
+| [0074](0074-the-gate-for-1a.md) | The gate for 1A: capture in battle, the values that touch slavery, and the leaders' own words | accepted; amended by 0082; clarified by 0122 |
 | [0075](0075-the-planner-as-built.md) | The planner in the kernel, as built | accepted |
 | [0076](0076-the-battle-model-as-built.md) | The battle model, as built | accepted; amended by 0110 |
 | [0077](0077-portraits-get-a-procedural-engraving.md) | Portraits of real people get a procedural engraving finish | accepted |
@@ -123,5 +123,6 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0117](0117-the-budget-binds-on-linux.md) | The tick budget binds on Linux; Windows reports it | accepted |
 | [0118](0118-an-undertaking-carries-typed-reservations.md) | An undertaking carries typed reservations | accepted; clarified by 0119, 0120 |
 | [0119](0119-a-call-for-troops-asks-no-temperament.md) | A call for troops asks no temperament | accepted |
-| [0120](0120-what-the-pushback-plan-builds-first.md) | What the pushback plan builds first, and what waits | accepted |
+| [0120](0120-what-the-pushback-plan-builds-first.md) | What the pushback plan builds first, and what waits | accepted; clarified by 0122 |
 | [0121](0121-letters-receipts-and-authority-a-commander-receives.md) | Authored letters, their receipt, and the authority a commander receives | accepted |
+| [0122](0122-the-confederate-cause-is-a-value.md) | The Confederate cause is a value, and a signed undertaking shows who held it | accepted |
