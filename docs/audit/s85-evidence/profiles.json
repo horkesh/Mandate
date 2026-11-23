@@ -1,0 +1,581 @@
+{
+  "scope": "Cold serial Node CPU samples below playDays, including final checkpoint hash; setup/unparented GC excluded. Inclusive samples overlap. Shared host; no causal subtraction or hosted certification.",
+  "after": [
+    {
+      "slot": "war",
+      "stackTotal": 5919.146,
+      "topSelf": [
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/seats/requests.ts",
+          "line": 1,
+          "ms": 509.535,
+          "share": 8.61
+        },
+        {
+          "func": "deepFreeze",
+          "file": "kernel/src/tick/freeze.ts",
+          "line": 1,
+          "ms": 423.372,
+          "share": 7.15
+        },
+        {
+          "func": "deliverReports",
+          "file": "kernel/src/knowledge/knowledge.ts",
+          "line": 1,
+          "ms": 249.02,
+          "share": 4.21
+        },
+        {
+          "func": "heldPost",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 242.394,
+          "share": 4.1
+        },
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/seats/world.ts",
+          "line": 2,
+          "ms": 150.076,
+          "share": 2.54
+        },
+        {
+          "func": "mintMessageId",
+          "file": "kernel/src/messages/transit.ts",
+          "line": 1,
+          "ms": 144.378,
+          "share": 2.44
+        },
+        {
+          "func": "allCommandedBlocks",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 128.602,
+          "share": 2.17
+        },
+        {
+          "func": "pruneKnowledge",
+          "file": "kernel/src/knowledge/knowledge.ts",
+          "line": 1,
+          "ms": 127.507,
+          "share": 2.15
+        },
+        {
+          "func": "set TextDecoder",
+          "file": "(runtime)",
+          "line": 0,
+          "ms": 121.444,
+          "share": 2.05
+        },
+        {
+          "func": "isWellFormedId",
+          "file": "kernel/src/ids.ts",
+          "line": 1,
+          "ms": 118.476,
+          "share": 2.0
+        },
+        {
+          "func": "contactEdgesOf",
+          "file": "kernel/src/control-index/control-index.ts",
+          "line": 1,
+          "ms": 106.307,
+          "share": 1.8
+        },
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/control-index/control-index.ts",
+          "line": 1,
+          "ms": 96.279,
+          "share": 1.63
+        },
+        {
+          "func": "sideOfPerson",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 93.943,
+          "share": 1.59
+        },
+        {
+          "func": "commandedBlocks",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 89.794,
+          "share": 1.52
+        },
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/view/people.ts",
+          "line": 1,
+          "ms": 82.664,
+          "share": 1.4
+        },
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 81.277,
+          "share": 1.37
+        },
+        {
+          "func": "controlEvidence",
+          "file": "kernel/src/knowledge/control-beliefs.ts",
+          "line": 1,
+          "ms": 81.269,
+          "share": 1.37
+        },
+        {
+          "func": "__name",
+          "file": "kernel/src/control-index/control-index.ts",
+          "line": 1,
+          "ms": 79.869,
+          "share": 1.35
+        },
+        {
+          "func": "receivedCandidates",
+          "file": "kernel/src/seats/received.ts",
+          "line": 1,
+          "ms": 78.753,
+          "share": 1.33
+        },
+        {
+          "func": "postIdsOf",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 77.789,
+          "share": 1.31
+        }
+      ],
+      "topInclusive": [
+        {
+          "func": "phase0Run",
+          "file": "cli/src/phase0-run.ts",
+          "line": 1,
+          "ms": 5919.146,
+          "share": 100.0
+        },
+        {
+          "func": "(root)",
+          "file": "(runtime)",
+          "line": 0,
+          "ms": 5919.146,
+          "share": 100.0
+        },
+        {
+          "func": "playDays",
+          "file": "kernel/src/log/session.ts",
+          "line": 1,
+          "ms": 5919.146,
+          "share": 100.0
+        },
+        {
+          "func": "evaluate",
+          "file": "(runtime)",
+          "line": 0,
+          "ms": 5919.146,
+          "share": 100.0
+        },
+        {
+          "func": "(anonymous)",
+          "file": "(runtime)",
+          "line": 1,
+          "ms": 5919.146,
+          "share": 100.0
+        },
+        {
+          "func": "run",
+          "file": "(runtime)",
+          "line": 332,
+          "ms": 5919.146,
+          "share": 100.0
+        },
+        {
+          "func": "tick",
+          "file": "kernel/src/tick/tick.ts",
+          "line": 1,
+          "ms": 3466.001,
+          "share": 58.56
+        },
+        {
+          "func": "pendingRequests",
+          "file": "kernel/src/seats/requests.ts",
+          "line": 1,
+          "ms": 2269.093,
+          "share": 38.33
+        },
+        {
+          "func": "principalMenu",
+          "file": "kernel/src/seats/requests.ts",
+          "line": 1,
+          "ms": 1194.472,
+          "share": 20.18
+        },
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/seats/requests.ts",
+          "line": 1,
+          "ms": 976.874,
+          "share": 16.5
+        },
+        {
+          "func": "generateReports",
+          "file": "kernel/src/tick/generate.ts",
+          "line": 1,
+          "ms": 915.313,
+          "share": 15.46
+        },
+        {
+          "func": "viewFor",
+          "file": "kernel/src/view/view.ts",
+          "line": 1,
+          "ms": 593.677,
+          "share": 10.03
+        },
+        {
+          "func": "sendReport",
+          "file": "kernel/src/tick/context.ts",
+          "line": 1,
+          "ms": 516.924,
+          "share": 8.73
+        },
+        {
+          "func": "deliverDue",
+          "file": "kernel/src/tick/deliver.ts",
+          "line": 1,
+          "ms": 495.933,
+          "share": 8.38
+        },
+        {
+          "func": "buildControlIndex",
+          "file": "kernel/src/control-index/control-index.ts",
+          "line": 1,
+          "ms": 434.501,
+          "share": 7.34
+        },
+        {
+          "func": "freezeDeep",
+          "file": "kernel/src/seats/requests.ts",
+          "line": 1,
+          "ms": 423.372,
+          "share": 7.15
+        },
+        {
+          "func": "deepFreeze",
+          "file": "kernel/src/tick/freeze.ts",
+          "line": 1,
+          "ms": 423.372,
+          "share": 7.15
+        },
+        {
+          "func": "sideOfPerson",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 379.826,
+          "share": 6.42
+        },
+        {
+          "func": "deriveMap",
+          "file": "kernel/src/control-index/derived.ts",
+          "line": 1,
+          "ms": 365.947,
+          "share": 6.18
+        },
+        {
+          "func": "mapPhase",
+          "file": "kernel/src/tick/map.ts",
+          "line": 1,
+          "ms": 317.402,
+          "share": 5.36
+        }
+      ]
+    },
+    {
+      "slot": "history",
+      "stackTotal": 5706.035,
+      "topSelf": [
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/seats/requests.ts",
+          "line": 1,
+          "ms": 484.932,
+          "share": 8.5
+        },
+        {
+          "func": "deepFreeze",
+          "file": "kernel/src/tick/freeze.ts",
+          "line": 1,
+          "ms": 356.109,
+          "share": 6.24
+        },
+        {
+          "func": "deliverReports",
+          "file": "kernel/src/knowledge/knowledge.ts",
+          "line": 1,
+          "ms": 221.585,
+          "share": 3.88
+        },
+        {
+          "func": "heldPost",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 219.626,
+          "share": 3.85
+        },
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/seats/world.ts",
+          "line": 2,
+          "ms": 170.937,
+          "share": 3.0
+        },
+        {
+          "func": "allCommandedBlocks",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 145.642,
+          "share": 2.55
+        },
+        {
+          "func": "isWellFormedId",
+          "file": "kernel/src/ids.ts",
+          "line": 1,
+          "ms": 139.174,
+          "share": 2.44
+        },
+        {
+          "func": "mintMessageId",
+          "file": "kernel/src/messages/transit.ts",
+          "line": 1,
+          "ms": 130.456,
+          "share": 2.29
+        },
+        {
+          "func": "pruneKnowledge",
+          "file": "kernel/src/knowledge/knowledge.ts",
+          "line": 1,
+          "ms": 125.732,
+          "share": 2.2
+        },
+        {
+          "func": "contactEdgesOf",
+          "file": "kernel/src/control-index/control-index.ts",
+          "line": 1,
+          "ms": 117.88,
+          "share": 2.07
+        },
+        {
+          "func": "commandedBlocks",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 110.703,
+          "share": 1.94
+        },
+        {
+          "func": "sideOfPerson",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 109.053,
+          "share": 1.91
+        },
+        {
+          "func": "set TextDecoder",
+          "file": "(runtime)",
+          "line": 0,
+          "ms": 107.47,
+          "share": 1.88
+        },
+        {
+          "func": "__name",
+          "file": "kernel/src/control-index/control-index.ts",
+          "line": 1,
+          "ms": 99.175,
+          "share": 1.74
+        },
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 90.543,
+          "share": 1.59
+        },
+        {
+          "func": "postIdsOf",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 87.239,
+          "share": 1.53
+        },
+        {
+          "func": "controlEvidence",
+          "file": "kernel/src/knowledge/control-beliefs.ts",
+          "line": 1,
+          "ms": 86.229,
+          "share": 1.51
+        },
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/view/people.ts",
+          "line": 1,
+          "ms": 77.941,
+          "share": 1.37
+        },
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/control-index/control-index.ts",
+          "line": 1,
+          "ms": 74.655,
+          "share": 1.31
+        },
+        {
+          "func": "receivedCandidates",
+          "file": "kernel/src/seats/received.ts",
+          "line": 1,
+          "ms": 68.026,
+          "share": 1.19
+        }
+      ],
+      "topInclusive": [
+        {
+          "func": "phase0Run",
+          "file": "cli/src/phase0-run.ts",
+          "line": 1,
+          "ms": 5706.035,
+          "share": 100.0
+        },
+        {
+          "func": "(root)",
+          "file": "(runtime)",
+          "line": 0,
+          "ms": 5706.035,
+          "share": 100.0
+        },
+        {
+          "func": "evaluate",
+          "file": "(runtime)",
+          "line": 0,
+          "ms": 5706.035,
+          "share": 100.0
+        },
+        {
+          "func": "run",
+          "file": "(runtime)",
+          "line": 332,
+          "ms": 5706.035,
+          "share": 100.0
+        },
+        {
+          "func": "(anonymous)",
+          "file": "(runtime)",
+          "line": 1,
+          "ms": 5706.035,
+          "share": 100.0
+        },
+        {
+          "func": "playDays",
+          "file": "kernel/src/log/session.ts",
+          "line": 1,
+          "ms": 5706.035,
+          "share": 100.0
+        },
+        {
+          "func": "tick",
+          "file": "kernel/src/tick/tick.ts",
+          "line": 1,
+          "ms": 3374.696,
+          "share": 59.14
+        },
+        {
+          "func": "pendingRequests",
+          "file": "kernel/src/seats/requests.ts",
+          "line": 1,
+          "ms": 2149.921,
+          "share": 37.68
+        },
+        {
+          "func": "principalMenu",
+          "file": "kernel/src/seats/requests.ts",
+          "line": 1,
+          "ms": 1171.306,
+          "share": 20.53
+        },
+        {
+          "func": "(anonymous)",
+          "file": "kernel/src/seats/requests.ts",
+          "line": 1,
+          "ms": 979.223,
+          "share": 17.16
+        },
+        {
+          "func": "generateReports",
+          "file": "kernel/src/tick/generate.ts",
+          "line": 1,
+          "ms": 897.081,
+          "share": 15.72
+        },
+        {
+          "func": "viewFor",
+          "file": "kernel/src/view/view.ts",
+          "line": 1,
+          "ms": 543.806,
+          "share": 9.53
+        },
+        {
+          "func": "sendReport",
+          "file": "kernel/src/tick/context.ts",
+          "line": 1,
+          "ms": 521.342,
+          "share": 9.14
+        },
+        {
+          "func": "deliverDue",
+          "file": "kernel/src/tick/deliver.ts",
+          "line": 1,
+          "ms": 468.291,
+          "share": 8.21
+        },
+        {
+          "func": "buildControlIndex",
+          "file": "kernel/src/control-index/control-index.ts",
+          "line": 1,
+          "ms": 451.5,
+          "share": 7.91
+        },
+        {
+          "func": "deriveMap",
+          "file": "kernel/src/control-index/derived.ts",
+          "line": 1,
+          "ms": 356.868,
+          "share": 6.25
+        },
+        {
+          "func": "freezeDeep",
+          "file": "kernel/src/seats/requests.ts",
+          "line": 1,
+          "ms": 356.109,
+          "share": 6.24
+        },
+        {
+          "func": "deepFreeze",
+          "file": "kernel/src/tick/freeze.ts",
+          "line": 1,
+          "ms": 356.109,
+          "share": 6.24
+        },
+        {
+          "func": "sideOfPerson",
+          "file": "kernel/src/command/command.ts",
+          "line": 2,
+          "ms": 342.933,
+          "share": 6.01
+        },
+        {
+          "func": "headquartersOf",
+          "file": "kernel/src/seats/posts.ts",
+          "line": 1,
+          "ms": 335.85,
+          "share": 5.89
+        }
+      ]
+    }
+  ]
+}

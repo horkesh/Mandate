@@ -26,6 +26,8 @@ import { createTelemetry } from '../src/telemetry.ts';
 import { viewFor } from '../src/view/view.ts';
 import { F, indexedFixture, P, POST, R } from './support/seats-fixture.ts';
 import { order, scriptedSeats } from './support/test-seats.ts';
+import { report } from './support/s25-fixture.ts';
+import { ctxFor } from './support/tick-context.ts';
 
 const lead = seatIdFor(P('a_lead'));
 
@@ -209,6 +211,33 @@ describe('orders through chains (0040)', () => {
 });
 
 describe('filters on the wire (0032)', () => {
+  it('looks up the filter only for a principal-bound report', () => {
+    const base = indexedFixture();
+    let filterReads = 0;
+    const world = {
+      ...base,
+      roleOf(kind: string) {
+        if (kind === 'filter') filterReads++;
+        return base.roleOf(kind);
+      },
+    };
+    const state = createState(world, { seed: 17 });
+    const ctx = ctxFor(world, state, 1, TICK_MECHANICS);
+    const wire = {
+      body: report('m.filter-probe', {
+        reportAuthor: P('a_bold'), reportAuthorPost: POST('a_reserve'), reportDay: 1,
+      }).knownBody,
+      fromRegion: R('a_mid'), route: 'wire' as const, tag: 'filter-probe', truth: NO_TRUTH,
+    };
+    sendReport(ctx, state, { ...wire, to: P('a_gen') });
+    expect(ctx.outbox[0]).toMatchObject({ msgRole: 'addressee', msgTo: P('a_gen') });
+    expect(filterReads).toBe(0);
+
+    sendReport(ctx, state, { ...wire, to: P('a_lead') });
+    expect(ctx.outbox[1]).toMatchObject({ msgRole: 'filter', msgTo: P('a_clerk') });
+    expect(filterReads).toBeGreaterThan(0);
+  });
+
   it.each([
     { holdDays: 0, cut: false },
     { holdDays: 0, cut: true },
