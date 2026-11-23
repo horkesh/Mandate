@@ -1,0 +1,17 @@
+{
+  "actors": 20,
+  "live_actors": 19,
+  "eligible_rows": 33,
+  "entered": 98,
+  "dispositions": {
+    "KEEP": 26,
+    "HOLD": 72
+  },
+  "citation_legs": 159,
+  "drafts": 12,
+  "draft_kinds": {
+    "alternative evidence for held cell": 5,
+    "new": 7
+  },
+  "read_locators": 70
+}

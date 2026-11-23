@@ -1,0 +1,1249 @@
+[
+  {
+    "key": "OR-I-I-7",
+    "work": "OR I-I",
+    "page": "7",
+    "path": "docs/research/S97/read/OR-I-I-7.txt",
+    "sha256": "9f0e90ef1692434838fdce0303ef04a0dfc1f2960dd63bd86d9e77e1bda5646f",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+    "upstream_sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+    "url": "https://ehistory.osu.edu/books/official-records/001/0007",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 26,
+    "scandata_sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+    "used_by": [
+      "pickens_francis_w/nerve",
+      "pickens_francis_w/trait:makes_policy",
+      "pickens_francis_w/boldness"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-I-113",
+    "work": "OR I-I",
+    "page": "113",
+    "path": "docs/research/S97/read/OR-I-I-113.txt",
+    "sha256": "7bfd73b15ea43cdddcbb6c3ac64a2873aecc2d3da76fecad5f6b43f4d36457da",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+    "upstream_sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+    "url": "https://ehistory.osu.edu/books/official-records/001/0113",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 132,
+    "scandata_sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+    "used_by": [
+      "pickens_francis_w/competence"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-I-166",
+    "work": "OR I-I",
+    "page": "166",
+    "path": "docs/research/S97/read/OR-I-I-166.txt",
+    "sha256": "185f4c048f02a6c0d5d72cb92dd9a6cced1ac89e1989d3fe2b60f462ed227d65",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+    "upstream_sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+    "url": "https://ehistory.osu.edu/books/official-records/001/0166",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 185,
+    "scandata_sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+    "used_by": [
+      "pickens_francis_w/nerve",
+      "pickens_francis_w/trait:makes_policy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-I-177",
+    "work": "OR I-I",
+    "page": "177",
+    "path": "docs/research/S97/read/OR-I-I-177.txt",
+    "sha256": "0acbdeba6263becc050d3280ab8e589da2aa217d7cda5f7220dd2470ae8b45d2",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+    "upstream_sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+    "url": "https://ehistory.osu.edu/books/official-records/001/0177",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 196,
+    "scandata_sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+    "used_by": [
+      "scott_winfield/value:duty"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-I-200",
+    "work": "OR I-I",
+    "page": "200",
+    "path": "docs/research/S97/read/OR-I-I-200.txt",
+    "sha256": "6ac38b5ee7f499abdef3e13253bc15d13ab0b7971630056517701bf83356cea0",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+    "upstream_sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+    "url": "https://ehistory.osu.edu/books/official-records/001/0200",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 219,
+    "scandata_sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+    "used_by": [
+      "scott_winfield/boldness",
+      "scott_winfield/value:caution"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-I-201",
+    "work": "OR I-I",
+    "page": "201",
+    "path": "docs/research/S97/read/OR-I-I-201.txt",
+    "sha256": "e3e04b592faeab9c69d8bead250ce7c50da83eac97371584c05d019402dff84f",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+    "upstream_sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+    "url": "https://ehistory.osu.edu/books/official-records/001/0201",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 220,
+    "scandata_sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+    "used_by": [
+      "scott_winfield/boldness",
+      "scott_winfield/value:caution"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-I-493",
+    "work": "OR I-I",
+    "page": "493",
+    "path": "docs/research/S97/read/OR-I-I-493.txt",
+    "sha256": "ff98a04e6cc62e36f2f00d22011577bb792999ded5bf3b44af30dfe2e0ce58a6",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+    "upstream_sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+    "url": "https://ehistory.osu.edu/books/official-records/001/0493",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 512,
+    "scandata_sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+    "used_by": [
+      "moore_thomas_o/boldness",
+      "moore_thomas_o/value:duty",
+      "moore_thomas_o/value:state_autonomy",
+      "moore_thomas_o/trait:makes_policy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-I-494",
+    "work": "OR I-I",
+    "page": "494",
+    "path": "docs/research/S97/read/OR-I-I-494.txt",
+    "sha256": "49ece77a3717e57a21c4a7e3b91b20a6c27e14e2609627b6b16b3c0721822999",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+    "upstream_sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+    "url": "https://ehistory.osu.edu/books/official-records/001/0494",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 513,
+    "scandata_sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+    "used_by": [
+      "moore_thomas_o/boldness",
+      "moore_thomas_o/value:duty",
+      "moore_thomas_o/value:state_autonomy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-I-495",
+    "work": "OR I-I",
+    "page": "495",
+    "path": "docs/research/S97/read/OR-I-I-495.txt",
+    "sha256": "20d21ae884d00088f4b1d4d368cdff052cb06dd8f6b42f17f4c2b665b29278f2",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+    "upstream_sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+    "url": "https://ehistory.osu.edu/books/official-records/001/0495",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 514,
+    "scandata_sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+    "used_by": [
+      "moore_thomas_o/boldness",
+      "moore_thomas_o/value:duty",
+      "moore_thomas_o/value:state_autonomy",
+      "moore_thomas_o/trait:makes_policy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-I-496",
+    "work": "OR I-I",
+    "page": "496",
+    "path": "docs/research/S97/read/OR-I-I-496.txt",
+    "sha256": "94d54c15169249f00a2e3dd62452e60fc45d78bcb69d3ea781aaf93955211320",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+    "upstream_sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+    "url": "https://ehistory.osu.edu/books/official-records/001/0496",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 515,
+    "scandata_sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+    "used_by": [
+      "moore_thomas_o/boldness",
+      "moore_thomas_o/value:duty",
+      "moore_thomas_o/value:state_autonomy",
+      "moore_thomas_o/trait:makes_policy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-II-1007",
+    "work": "OR I-II",
+    "page": "1007",
+    "path": "docs/research/S97/read/OR-I-II-1007.txt",
+    "sha256": "8d518b6a47e571220fcdc466152bbcda500e2ab1dfb729b81d70bc09e7b8d74c",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_djvu.xml",
+    "upstream_sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+    "url": "https://ehistory.osu.edu/books/official-records/002/1007",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 1026,
+    "scandata_sha256": "0e7b33ec02bc822abc182816364c0d8f3b3ba0e1841fe73061fac43c3e20068a",
+    "used_by": [
+      "johnston_joseph_e/trait:rank_proud"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-IV-I-18",
+    "work": "OR IV-I",
+    "page": "18",
+    "path": "docs/research/S97/read/OR-IV-I-18.txt",
+    "sha256": "6d208c0edf2368d0669f547b2ebc786622e51d1bd1b8ac10c0658e69e561646f",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-IV-1_djvu.xml",
+    "upstream_sha256": "4d1757fbfe19d20e918d48d9977f3623050e9b5ef8de5c5c9e0e8eb3d961796a",
+    "url": "https://ehistory.osu.edu/books/official-records/127/0018",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 33,
+    "scandata_sha256": "4c9e7652ffdce187bff18d2ff7149921be7c202bf1a399e5f7e467ce801ba312",
+    "used_by": [
+      "brown_joseph_e/nerve",
+      "brown_joseph_e/boldness",
+      "brown_joseph_e/candour",
+      "brown_joseph_e/regard",
+      "brown_joseph_e/value:duty",
+      "brown_joseph_e/value:state_autonomy",
+      "brown_joseph_e/value:slavery_defence",
+      "brown_joseph_e/regard_others:walker_leroy_p",
+      "brown_joseph_e/regard_others:letcher_john"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-IV-I-19",
+    "work": "OR IV-I",
+    "page": "19",
+    "path": "docs/research/S97/read/OR-IV-I-19.txt",
+    "sha256": "0a3a83d3d2c58b34970bc4c0b0a778546fe51e19bf9d5ba9ac6dd3d972f7c0da",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-IV-1_djvu.xml",
+    "upstream_sha256": "4d1757fbfe19d20e918d48d9977f3623050e9b5ef8de5c5c9e0e8eb3d961796a",
+    "url": "https://ehistory.osu.edu/books/official-records/127/0019",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 34,
+    "scandata_sha256": "4c9e7652ffdce187bff18d2ff7149921be7c202bf1a399e5f7e467ce801ba312",
+    "used_by": [
+      "brown_joseph_e/nerve",
+      "brown_joseph_e/boldness",
+      "brown_joseph_e/candour",
+      "brown_joseph_e/regard",
+      "brown_joseph_e/value:duty",
+      "brown_joseph_e/value:state_autonomy",
+      "brown_joseph_e/value:slavery_defence",
+      "brown_joseph_e/trait:makes_policy",
+      "brown_joseph_e/regard_others:walker_leroy_p",
+      "brown_joseph_e/regard_others:letcher_john"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-IV-I-535",
+    "work": "OR IV-I",
+    "page": "535",
+    "path": "docs/research/S97/read/OR-IV-I-535.txt",
+    "sha256": "1c0ab32895ffbcc96b8451efb909a61bbe7f79586089df551d40c02270d182dd",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-IV-1_djvu.xml",
+    "upstream_sha256": "4d1757fbfe19d20e918d48d9977f3623050e9b5ef8de5c5c9e0e8eb3d961796a",
+    "url": "https://ehistory.osu.edu/books/official-records/127/0535",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 550,
+    "scandata_sha256": "4c9e7652ffdce187bff18d2ff7149921be7c202bf1a399e5f7e467ce801ba312",
+    "used_by": [
+      "brown_joseph_e/competence",
+      "brown_joseph_e/trait:quarrelsome"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-III-I-76",
+    "work": "OR III-I",
+    "page": "76",
+    "path": "docs/research/S97/read/OR-III-I-76.txt",
+    "sha256": "9ed8ee573991e3be68165112c2e2a303fb310306e67b5e74053d09175be8ec59",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-III-1-pages.json",
+    "upstream_sha256": "8fac64ca8d9b9d3bc2ca19180de475dc7a37b31fb9da2987baff4be3084701a6",
+    "url": "https://ehistory.osu.edu/books/official-records/122/0076",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 91,
+    "used_by": [
+      "letcher_john/competence",
+      "letcher_john/nerve",
+      "letcher_john/boldness",
+      "letcher_john/regard"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-III-I-79",
+    "work": "OR III-I",
+    "page": "79",
+    "path": "docs/research/S97/read/OR-III-I-79.txt",
+    "sha256": "1e578a9fa78acfff0522ff967feb226799475afa5fbf8dc3fcfc82e48e69f1f6",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-III-1-pages.json",
+    "upstream_sha256": "8fac64ca8d9b9d3bc2ca19180de475dc7a37b31fb9da2987baff4be3084701a6",
+    "url": "https://ehistory.osu.edu/books/official-records/122/0079",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 94,
+    "used_by": [
+      "hicks_thomas_h/competence",
+      "hicks_thomas_h/value:union",
+      "hicks_thomas_h/value:state_autonomy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-III-I-80",
+    "work": "OR III-I",
+    "page": "80",
+    "path": "docs/research/S97/read/OR-III-I-80.txt",
+    "sha256": "77ccda777965c47f35f171e50a0e663fe66677e9de0aa79f852df9d75aa2a1c4",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-III-1-pages.json",
+    "upstream_sha256": "8fac64ca8d9b9d3bc2ca19180de475dc7a37b31fb9da2987baff4be3084701a6",
+    "url": "https://ehistory.osu.edu/books/official-records/122/0080",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 95,
+    "used_by": [
+      "hicks_thomas_h/competence",
+      "hicks_thomas_h/value:union",
+      "hicks_thomas_h/value:state_autonomy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-III-I-81",
+    "work": "OR III-I",
+    "page": "81",
+    "path": "docs/research/S97/read/OR-III-I-81.txt",
+    "sha256": "0fcd812cfef3c8b1ba9f40be88f4fb1c77c8b8a687341841642afea88042423e",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-III-1-pages.json",
+    "upstream_sha256": "8fac64ca8d9b9d3bc2ca19180de475dc7a37b31fb9da2987baff4be3084701a6",
+    "url": "https://ehistory.osu.edu/books/official-records/122/0081",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 96,
+    "used_by": [
+      "harris_isham_g/nerve",
+      "harris_isham_g/boldness"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-III-I-83",
+    "work": "OR III-I",
+    "page": "83",
+    "path": "docs/research/S97/read/OR-III-I-83.txt",
+    "sha256": "c489dea659e88383baa78f48214e5cd1bc9237b4b88a8362476b6ae8aacc0783",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-III-1-pages.json",
+    "upstream_sha256": "8fac64ca8d9b9d3bc2ca19180de475dc7a37b31fb9da2987baff4be3084701a6",
+    "url": "https://ehistory.osu.edu/books/official-records/122/0083",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 98,
+    "used_by": [
+      "morgan_edwin_d/competence",
+      "morgan_edwin_d/boldness",
+      "morgan_edwin_d/regard_others:cameron_simon"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-III-I-190",
+    "work": "OR III-I",
+    "page": "190",
+    "path": "docs/research/S97/read/OR-III-I-190.txt",
+    "sha256": "d4c569c7377be5e193e329afff9db52f27f6e75dd6697fac91b7e4ca39386f26",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-III-1-pages.json",
+    "upstream_sha256": "8fac64ca8d9b9d3bc2ca19180de475dc7a37b31fb9da2987baff4be3084701a6",
+    "url": "https://ehistory.osu.edu/books/official-records/122/0190",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 205,
+    "used_by": [
+      "hicks_thomas_h/competence"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "NH-III-370",
+    "work": "Nicolay and Hay, History III",
+    "page": "370",
+    "path": "docs/research/S97/read/NH-III-370.txt",
+    "sha256": "5e57b4801265190bd7d366dcca80a1946c286ca9a405acf9fd785fb7b4685d93",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nh3.txt",
+    "upstream_sha256": "7a00536cb99a8067fbf6da499ee9774cea14ee409ee574f15afad0ca9519928b",
+    "url": "https://archive.org/details/abrahamlincolnhi03nico",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "seward_william_h/boldness",
+      "seward_william_h/regard",
+      "seward_william_h/value:conciliation",
+      "seward_william_h/value:union",
+      "seward_william_h/regard_others:lincoln_abraham"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "NH-III-388",
+    "work": "Nicolay and Hay, History III",
+    "page": "388",
+    "path": "docs/research/S97/read/NH-III-388.txt",
+    "sha256": "c47025f794e991e72abe1160d5a57ac06fc985b8d325c1e4dd414465db5abc1b",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nh3.txt",
+    "upstream_sha256": "7a00536cb99a8067fbf6da499ee9774cea14ee409ee574f15afad0ca9519928b",
+    "url": "https://archive.org/details/abrahamlincolnhi03nico",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "bates_edward/nerve"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "NH-III-432",
+    "work": "Nicolay and Hay, History III",
+    "page": "432",
+    "path": "docs/research/S97/read/NH-III-432.txt",
+    "sha256": "2fa1b4a9f20765b35397de41dd6b88c403a112f47e73e5f8bd1e998c934bd0ba",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nh3.txt",
+    "upstream_sha256": "7a00536cb99a8067fbf6da499ee9774cea14ee409ee574f15afad0ca9519928b",
+    "url": "https://archive.org/details/abrahamlincolnhi03nico",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "seward_william_h/regard_others:blair_montgomery",
+      "bates_edward/nerve",
+      "blair_montgomery/competence",
+      "blair_montgomery/nerve"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "SEWARD-191",
+    "work": "Seward at Washington I",
+    "page": "191",
+    "path": "docs/research/S97/read/SEWARD-191.txt",
+    "sha256": "003f5102137e158399f697f9a38701b780b31f9a2ac7992388931657633b11d7",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs6\\sewardatwashingt01sewa.txt",
+    "upstream_sha256": "fcb6d1c6fcbba72aa5241d011e67dc616deec2f3e863b55b5b941ba590ff780b",
+    "url": "https://archive.org/details/sewardatwashingt01sewa",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "seward_william_h/regard_others:chase_salmon_p"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "SEWARD-447",
+    "work": "Seward at Washington I",
+    "page": "447",
+    "path": "docs/research/S97/read/SEWARD-447.txt",
+    "sha256": "10df6e8622ade2e755dc5f0b49ff2cd6ca7468457fa203c0a08182d4d5ac9e6a",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs6\\sewardatwashingt01sewa.txt",
+    "upstream_sha256": "fcb6d1c6fcbba72aa5241d011e67dc616deec2f3e863b55b5b941ba590ff780b",
+    "url": "https://archive.org/details/sewardatwashingt01sewa",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "seward_william_h/regard_others:chase_salmon_p"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "SEWARD-481",
+    "work": "Seward at Washington I",
+    "page": "481",
+    "path": "docs/research/S97/read/SEWARD-481.txt",
+    "sha256": "6861bb9f9a7c6ec6cbf4c5f5deab390c02bc7c952e0d44ff1d101e525b436577",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs6\\sewardatwashingt01sewa.txt",
+    "upstream_sha256": "fcb6d1c6fcbba72aa5241d011e67dc616deec2f3e863b55b5b941ba590ff780b",
+    "url": "https://archive.org/details/sewardatwashingt01sewa",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "seward_william_h/trait:secretive",
+      "seward_william_h/value:union",
+      "seward_william_h/value:conciliation"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "SEWARD-482",
+    "work": "Seward at Washington I",
+    "page": "482",
+    "path": "docs/research/S97/read/SEWARD-482.txt",
+    "sha256": "2c2ec967f4b252ea4a8795b1a3e61dd05440ea5988cec7f3178c2bc5522d1ac0",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs6\\sewardatwashingt01sewa.txt",
+    "upstream_sha256": "fcb6d1c6fcbba72aa5241d011e67dc616deec2f3e863b55b5b941ba590ff780b",
+    "url": "https://archive.org/details/sewardatwashingt01sewa",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "seward_william_h/regard",
+      "seward_william_h/regard_others:lincoln_abraham"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "SEWARD-492",
+    "work": "Seward at Washington I",
+    "page": "492",
+    "path": "docs/research/S97/read/SEWARD-492.txt",
+    "sha256": "785a9f45dbc5b2239322c3a782aa9b86f67a8df20c49f1dd1939f0422c6a8140",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs6\\sewardatwashingt01sewa.txt",
+    "upstream_sha256": "fcb6d1c6fcbba72aa5241d011e67dc616deec2f3e863b55b5b941ba590ff780b",
+    "url": "https://archive.org/details/sewardatwashingt01sewa",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "seward_william_h/trait:secretive"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "SEWARD-493",
+    "work": "Seward at Washington I",
+    "page": "493",
+    "path": "docs/research/S97/read/SEWARD-493.txt",
+    "sha256": "fa80da9f1c1a870260cccdc6e90f3060812250be368d5f8b53b1ac77bec70f42",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs6\\sewardatwashingt01sewa.txt",
+    "upstream_sha256": "fcb6d1c6fcbba72aa5241d011e67dc616deec2f3e863b55b5b941ba590ff780b",
+    "url": "https://archive.org/details/sewardatwashingt01sewa",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "seward_william_h/regard",
+      "seward_william_h/regard_others:lincoln_abraham"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "CHI-109",
+    "work": "Chicago Convention Proceedings (1860)",
+    "page": "109",
+    "path": "docs/research/S97/read/CHI-109.txt",
+    "sha256": "cbca4801a494a9f65908abcf2e5ec30ad463d02a962d858ab7bbe772fe358037",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\chi1860.txt",
+    "upstream_sha256": "5acfbd1545fe527d3255934bd4cea619a36909ef6a339ac5238de17718dfdc3c",
+    "url": "https://archive.org/details/proceedingsofrep00repu",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "seward_william_h/reputation",
+      "smith_caleb_b/regard",
+      "bates_edward/reputation"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "CHI-113",
+    "work": "Chicago Convention Proceedings (1860)",
+    "page": "113",
+    "path": "docs/research/S97/read/CHI-113.txt",
+    "sha256": "3676673190fe0d5a8ef2ac559ae04b5798b3abf9367bb0d82d1d41319e31b68f",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\chi1860.txt",
+    "upstream_sha256": "5acfbd1545fe527d3255934bd4cea619a36909ef6a339ac5238de17718dfdc3c",
+    "url": "https://archive.org/details/proceedingsofrep00repu",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "seward_william_h/reputation",
+      "bates_edward/reputation"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "CHASE-489",
+    "work": "Chase correspondence (AHA 1902 II)",
+    "page": "489",
+    "path": "docs/research/S97/read/CHASE-489.txt",
+    "sha256": "fcc015832232c8f2e328948713058454c1a7572c5a6e790444367d6fb8b23c92",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S12\\CHASE.pages.json",
+    "upstream_sha256": "e7aa857b700d5c8b642e5575fe437a2ab78e61227af5020de179915db67891b9",
+    "url": "https://archive.org/details/diaryandcorrespo00chasrich",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 495,
+    "used_by": [
+      "cameron_simon/reputation"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "CHASE-490",
+    "work": "Chase correspondence (AHA 1902 II)",
+    "page": "490",
+    "path": "docs/research/S97/read/CHASE-490.txt",
+    "sha256": "fd54e609a177f300fa09513cb39cfc1583caa455272226f3d8005df133631da0",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S12\\CHASE.pages.json",
+    "upstream_sha256": "e7aa857b700d5c8b642e5575fe437a2ab78e61227af5020de179915db67891b9",
+    "url": "https://archive.org/details/diaryandcorrespo00chasrich",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 496,
+    "used_by": [
+      "cameron_simon/reputation"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "CHASE-491",
+    "work": "Chase correspondence (AHA 1902 II)",
+    "page": "491",
+    "path": "docs/research/S97/read/CHASE-491.txt",
+    "sha256": "444bbe92994b92848c36b4a98b5bdd70ac3bae795e104e2ddd70da57a9112e4a",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S6\\S12\\CHASE.pages.json",
+    "upstream_sha256": "e7aa857b700d5c8b642e5575fe437a2ab78e61227af5020de179915db67891b9",
+    "url": "https://archive.org/details/diaryandcorrespo00chasrich",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 497,
+    "used_by": [
+      "cameron_simon/reputation"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "STAT9-333",
+    "work": "US Statutes at Large IX",
+    "page": "333",
+    "path": "docs/research/S97/read/STAT9-333.txt",
+    "sha256": "ccb20dc863d8dcf34b6517765b7da82ab566231787bf6908d26f886b8eeb7949",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\r59-sources\\stat9-p333-scrape.md",
+    "upstream_sha256": "ccb20dc863d8dcf34b6517765b7da82ab566231787bf6908d26f886b8eeb7949",
+    "url": "https://en.wikisource.org/wiki/Page:United_States_Statutes_at_Large_Volume_9.djvu/359",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "scott_winfield/competence",
+      "scott_winfield/reputation"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-XVI-I-1087",
+    "work": "OR I-XVI-I",
+    "page": "1087",
+    "path": "docs/research/S97/read/OR-I-XVI-I-1087.txt",
+    "sha256": "1054b42ab6f2ac246da2a247629f9c035fd337896a150d889135e477a9b849d6",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S6\\read\\OR-I-16-1-p1087.txt",
+    "upstream_sha256": "c1c7ce98416943ae2c1cde9dd7ab370805c7584609a6bc4c85dcea7a0c8155e5",
+    "url": "https://archive.org/details/warofrebellion161unit",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "bragg_braxton/competence",
+      "bragg_braxton/nerve",
+      "bragg_braxton/trait:shifts_blame"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-XVI-I-1109",
+    "work": "OR I-XVI-I",
+    "page": "1109",
+    "path": "docs/research/S97/read/OR-I-XVI-I-1109.txt",
+    "sha256": "4eefb632a23e563b4be5dfbadb77a2017b88e7ce8d41cbee31ce518c79504f6c",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S6\\read\\OR-I-16-1-p1109.txt",
+    "upstream_sha256": "1583780b0e24d4eaae99da48f9711aa63773dfeb560595fd0074a02431a76ee0",
+    "url": "https://archive.org/details/warofrebellion161unit",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "bragg_braxton/competence",
+      "bragg_braxton/nerve",
+      "bragg_braxton/trait:shifts_blame"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "NH-III-371",
+    "work": "Nicolay and Hay, History III",
+    "page": "371",
+    "path": "docs/research/S97/read/NH-III-371.txt",
+    "sha256": "4f44518ab367cda14417579b865362b8640f4cb61ac2d3795ad10b7087a90550",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nh3.txt",
+    "upstream_sha256": "7a00536cb99a8067fbf6da499ee9774cea14ee409ee574f15afad0ca9519928b",
+    "url": "https://archive.org/details/abrahamlincolnhi03nico",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative.",
+    "used_by": [
+      "seward_william_h/competence",
+      "seward_william_h/boldness"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "NH-III-372",
+    "work": "Nicolay and Hay, History III",
+    "page": "372",
+    "path": "docs/research/S97/read/NH-III-372.txt",
+    "sha256": "2d295e49ac0131544e36c89c3966ca1ea7fd87900afdef0e90c431e37e9917d2",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nh3.txt",
+    "upstream_sha256": "7a00536cb99a8067fbf6da499ee9774cea14ee409ee574f15afad0ca9519928b",
+    "url": "https://archive.org/details/abrahamlincolnhi03nico",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative.",
+    "used_by": [
+      "seward_william_h/boldness",
+      "seward_william_h/candour",
+      "seward_william_h/value:reputation"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "NH-III-431",
+    "work": "Nicolay and Hay, History III",
+    "page": "431",
+    "path": "docs/research/S97/read/NH-III-431.txt",
+    "sha256": "80f529362450248dcc39d745fec9ac50d9c0c2e517adda9e00f574152f3c7804",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs2\\nh3.txt",
+    "upstream_sha256": "7a00536cb99a8067fbf6da499ee9774cea14ee409ee574f15afad0ca9519928b",
+    "url": "https://archive.org/details/abrahamlincolnhi03nico",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative.",
+    "used_by": [
+      "welles_gideon/nerve"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "CHI-108",
+    "work": "Chicago Convention Proceedings (1860)",
+    "page": "108",
+    "path": "docs/research/S97/read/CHI-108.txt",
+    "sha256": "ab06cc25a306c8a583c8edb692e5af010eb420582a5ce43957b34bbd36ba7ef2",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs1\\chi1860.txt",
+    "upstream_sha256": "5acfbd1545fe527d3255934bd4cea619a36909ef6a339ac5238de17718dfdc3c",
+    "url": "https://archive.org/details/proceedingsofrep00repu",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative.",
+    "used_by": [
+      "seward_william_h/reputation",
+      "smith_caleb_b/regard"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "LYONS-30",
+    "work": "Newton, Lord Lyons I",
+    "page": "30",
+    "path": "docs/research/S97/read/LYONS-30.txt",
+    "sha256": "fd113ae2488ae0fe98d12a8d7d9bffff4415f030b198ef51dd3d714a9f1d4611",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs6\\lordlyonsrecordo01newtuoft.txt",
+    "upstream_sha256": "bbc4314dc95ec843e7ef626ef6725f77db65bd77a80964827921722b47d17339",
+    "url": "https://archive.org/details/lordlyonsrecordo01newtuoft",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative.",
+    "used_by": [
+      "seward_william_h/competence"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "LYONS-31",
+    "work": "Newton, Lord Lyons I",
+    "page": "31",
+    "path": "docs/research/S97/read/LYONS-31.txt",
+    "sha256": "25714c84b4fa79c2e3b712689da6367e692e3c0448ff52a9283999fc0768a056",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs6\\lordlyonsrecordo01newtuoft.txt",
+    "upstream_sha256": "bbc4314dc95ec843e7ef626ef6725f77db65bd77a80964827921722b47d17339",
+    "url": "https://archive.org/details/lordlyonsrecordo01newtuoft",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative.",
+    "used_by": [
+      "seward_william_h/competence",
+      "seward_william_h/value:conciliation",
+      "seward_william_h/value:union"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "LYONS-32",
+    "work": "Newton, Lord Lyons I",
+    "page": "32",
+    "path": "docs/research/S97/read/LYONS-32.txt",
+    "sha256": "f20e1f6475d8acddc741447a54826e86d2dcc10902ca9d43f90603563fff4f23",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs6\\lordlyonsrecordo01newtuoft.txt",
+    "upstream_sha256": "bbc4314dc95ec843e7ef626ef6725f77db65bd77a80964827921722b47d17339",
+    "url": "https://archive.org/details/lordlyonsrecordo01newtuoft",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative.",
+    "used_by": [
+      "seward_william_h/competence"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "LYONS-33",
+    "work": "Newton, Lord Lyons I",
+    "page": "33",
+    "path": "docs/research/S97/read/LYONS-33.txt",
+    "sha256": "967a6cf3e082ace22c59dafd8d809208c7e1e3c3762f81396b9e0c7ebb00763a",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs6\\lordlyonsrecordo01newtuoft.txt",
+    "upstream_sha256": "bbc4314dc95ec843e7ef626ef6725f77db65bd77a80964827921722b47d17339",
+    "url": "https://archive.org/details/lordlyonsrecordo01newtuoft",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative.",
+    "used_by": [
+      "seward_william_h/competence"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-III-I-72",
+    "work": "OR III-I",
+    "page": "72",
+    "path": "docs/research/S97/read/OR-III-I-72.txt",
+    "sha256": "62c5728f5d632154a2cf50b713afe771d52dd28c07b9fd558ad40f92f784b92d",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-III-1-pages.json",
+    "upstream_sha256": "8fac64ca8d9b9d3bc2ca19180de475dc7a37b31fb9da2987baff4be3084701a6",
+    "url": "https://ehistory.osu.edu/books/official-records/122/0072",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 87,
+    "used_by": [
+      "morgan_edwin_d/competence",
+      "morgan_edwin_d/boldness",
+      "morgan_edwin_d/regard_others:cameron_simon"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "RR-DOC16",
+    "work": "Rebellion Record I, Documents",
+    "page": "17-18",
+    "path": "docs/research/S97/read/RR-DOC16.txt",
+    "sha256": "1bd012ae615cecfcabe55f6a4c7e291ffd673800c2de4dea6a55bb174869d534",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs3\\rebellrecord01moorrich.txt",
+    "upstream_sha256": "d42acfbe52bf9eafc55589b72d3e69128d0f4325c724f66e64150ce2b7799d19",
+    "url": "https://archive.org/details/rebellrecord01moorrich",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Bounded excerpt; quoted period documents distinguished from surrounding later narrative.",
+    "used_by": [
+      "hicks_thomas_h/competence",
+      "hicks_thomas_h/value:conciliation",
+      "hicks_thomas_h/value:union",
+      "hicks_thomas_h/value:state_autonomy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "HARRIS-JAN7",
+    "work": "Tennessee Senate Journal, extra session (1861), Harris message",
+    "page": "6-18",
+    "path": "docs/research/S97/read/HARRIS-JAN7.txt",
+    "sha256": "4e32801fa432e40206f028c37455eca7820c442dcf15a4e5ff57d8562ae4044c",
+    "upstream": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s97\\harris-web-reading.json",
+    "upstream_sha256": "23bc0c02c9a8312913102a3de115b3df82d4818c32009fd2d352d9cfa4a35623",
+    "url": "https://civilwarcauses.org/harris.htm",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Full web-tool transcription read, lines 8-88. Printed range pp6-18 is the transcriber attribution; original page breaks not independently verified. Surrounding site biography is excluded.",
+    "used_by": [
+      "harris_isham_g/boldness",
+      "harris_isham_g/candour",
+      "harris_isham_g/regard",
+      "harris_isham_g/value:conciliation",
+      "harris_isham_g/value:slavery_defence",
+      "harris_isham_g/value:state_autonomy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "SCOTT-MAR3",
+    "work": "Scott to Seward, March 3 1861",
+    "page": "manuscript 1-4",
+    "path": "docs/research/S97/read/SCOTT-MAR3.txt",
+    "sha256": "a039c424e08a78e00b6c144a6a42cab10ddff8e30039d70f923c00bf49ce5625",
+    "upstream": "C:\\Pyrrhic\\sprint-research-cast\\runs\\s97\\SCOTT-MAR3.html",
+    "upstream_sha256": "a0d5b9457fe0ef4b5ac574f44015df002a8a52fdbb7c1abbd1c10358993796cf",
+    "url": "https://hd.housedivided.dickinson.edu/index.php/node/35246",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Full transcription read. Printed page range is the transcriber’s attribution; original page breaks not supplied or independently verified.",
+    "used_by": [
+      "scott_winfield/boldness",
+      "scott_winfield/candour",
+      "scott_winfield/regard",
+      "scott_winfield/value:union",
+      "scott_winfield/value:conciliation",
+      "scott_winfield/value:caution",
+      "scott_winfield/regard_others:seward_william_h",
+      "scott_winfield/value:caution"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-XI-I-933",
+    "work": "OR I-XI-I",
+    "page": "933",
+    "path": "docs/research/S97/read/OR-I-XI-I-933.txt",
+    "sha256": "96232578d3586b1a283cd1028f5e9a18680dec35124e390a487118e7ee298573",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S4\\readings\\warofrebellion111unit-933-935.json",
+    "upstream_sha256": "8911202fa589c4827afe6bba1c196652fdabc01852e95ae325685edbf3febbbe",
+    "url": "https://archive.org/details/warofrebellion111unit",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected primary page text; later dates are used for exclusion, never backdated.",
+    "used_by": [
+      "johnston_joseph_e/competence",
+      "johnston_joseph_e/nerve",
+      "johnston_joseph_e/trait:shifts_blame",
+      "johnston_joseph_e/trait:infirm"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-XI-I-934",
+    "work": "OR I-XI-I",
+    "page": "934",
+    "path": "docs/research/S97/read/OR-I-XI-I-934.txt",
+    "sha256": "f9c1996842d3de3d157d690e46916357e6b07ebf690489a4dcca0d85f08d81df",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S4\\readings\\warofrebellion111unit-933-935.json",
+    "upstream_sha256": "8911202fa589c4827afe6bba1c196652fdabc01852e95ae325685edbf3febbbe",
+    "url": "https://archive.org/details/warofrebellion111unit",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected primary page text; later dates are used for exclusion, never backdated.",
+    "used_by": [
+      "johnston_joseph_e/competence",
+      "johnston_joseph_e/nerve",
+      "johnston_joseph_e/trait:shifts_blame",
+      "johnston_joseph_e/trait:infirm"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-XI-I-935",
+    "work": "OR I-XI-I",
+    "page": "935",
+    "path": "docs/research/S97/read/OR-I-XI-I-935.txt",
+    "sha256": "abb19ac9f6487e9dd26553bba8457a513d71020a648616d5d905b581b8165062",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S4\\readings\\warofrebellion111unit-933-935.json",
+    "upstream_sha256": "8911202fa589c4827afe6bba1c196652fdabc01852e95ae325685edbf3febbbe",
+    "url": "https://archive.org/details/warofrebellion111unit",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected primary page text; later dates are used for exclusion, never backdated.",
+    "used_by": [
+      "johnston_joseph_e/competence",
+      "johnston_joseph_e/nerve",
+      "johnston_joseph_e/trait:shifts_blame",
+      "johnston_joseph_e/trait:candid",
+      "johnston_joseph_e/trait:infirm"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-5-p639",
+    "work": "OR I-5",
+    "page": "639",
+    "path": "docs/research/S97/read/OR-I-5-p639.txt",
+    "sha256": "a9c2d39956df87b420eccbfb1d13361132a300322dc5560e3e552b7fc77b501f",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-D1-confed\\warofrebellionco0005vari.txt",
+    "upstream_sha256": "578c584b3e3fb664f4f73e0be22ba0814b7bbc77813e17e422c49c35c371bc7b",
+    "url": "https://archive.org",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Retained primary-text range, including neighboring page/date context; original extraction is verified against its upstream text below.",
+    "used_by": [
+      "scott_winfield/trait:infirm"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-5-p1090",
+    "work": "OR I-5",
+    "page": "1090",
+    "path": "docs/research/S97/read/OR-I-5-p1090.txt",
+    "sha256": "d4e0082a96473cc36405d54395d6d1c22c413795403780ee2dab8c8904c44b79",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-D1-confed\\warofrebellionco0005vari.txt",
+    "upstream_sha256": "578c584b3e3fb664f4f73e0be22ba0814b7bbc77813e17e422c49c35c371bc7b",
+    "url": "https://archive.org",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Retained primary-text range, including neighboring page/date context; original extraction is verified against its upstream text below.",
+    "used_by": [
+      "johnston_joseph_e/trait:secretive"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "FOX-I-2-4",
+    "work": "Fox, Confidential Correspondence I",
+    "page": "2-4",
+    "path": "docs/research/S97/read/FOX-I-2-4.txt",
+    "sha256": "4cf6ed2cec7b6974aa7badfe504d950c09705048fd28aa5adc8d620c09342e5c",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs3\\confidentialcorr01foxg.txt",
+    "upstream_sha256": "fee9ae066728b7ef039b8e93023f3047097a3e8ee179456b36f30e2716df6bbb",
+    "url": "https://archive.org/details/confidentialcorr01foxg",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Complete Blair Jan31 letter; no following February letter or later editorial appraisal supplies a leg.",
+    "used_by": [
+      "blair_montgomery/regard_others:fox_gustavus_v",
+      "blair_montgomery/value:union",
+      "blair_montgomery/value:order",
+      "blair_montgomery/boldness"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "S94-I-II-880",
+    "work": "OR I-II",
+    "page": "880",
+    "path": "docs/research/S97/read/S94-I-II-880.txt",
+    "sha256": "3abe72db82789c84c2cf8b6087455d01a43f06fd4ce9a1ee3f56019ceea8df89",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p880.txt",
+    "upstream_sha256": "d51c203be5621091a1f7768ba1a6658e900094c90ac0e9beef330312b9658e29",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0880",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "johnston_joseph_e/boldness",
+      "johnston_joseph_e/candour",
+      "johnston_joseph_e/value:caution"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "S94-I-II-881",
+    "work": "OR I-II",
+    "page": "881",
+    "path": "docs/research/S97/read/S94-I-II-881.txt",
+    "sha256": "45781d1ae768692858f76860f5fff940c6d23afba8c9a6a7646c5b4172407948",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p881.txt",
+    "upstream_sha256": "3b74d0abb2d105379a522378d7c74eb7b794d3b1dad56f11c2a6ba0e86325220",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0881",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "johnston_joseph_e/boldness",
+      "johnston_joseph_e/candour",
+      "johnston_joseph_e/value:caution"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "S94-I-II-473",
+    "work": "OR I-II",
+    "page": "473",
+    "path": "docs/research/S97/read/S94-I-II-473.txt",
+    "sha256": "8ba7bf473b81ce0b3e722887faa9e201c8d80293bac528eea03998e6375c1734",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p473.txt",
+    "upstream_sha256": "cb9c84c3d5b6389936f7bfca161f8e10eb6dea2274d66674dc2724a433e88476",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0473",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "johnston_joseph_e/value:duty",
+      "johnston_joseph_e/regard_others:beauregard_pierre_g_t",
+      "johnston_joseph_e/regard_others:cooper_samuel"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "S94-I-II-478",
+    "work": "OR I-II",
+    "page": "478",
+    "path": "docs/research/S97/read/S94-I-II-478.txt",
+    "sha256": "837b11cc5d51872ee147cff48e53fe50901f3429a257535679f25151f2c721c4",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p478.txt",
+    "upstream_sha256": "79bacb1af1b96a6760bb758ea3e882b4c180a2370f584882ac93f5637602799d",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0478",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "johnston_joseph_e/value:duty",
+      "johnston_joseph_e/regard_others:beauregard_pierre_g_t",
+      "johnston_joseph_e/regard_others:cooper_samuel"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "S94-I-II-897",
+    "work": "OR I-II",
+    "page": "897",
+    "path": "docs/research/S97/read/S94-I-II-897.txt",
+    "sha256": "f4d41b8818845fa6ebd8c87f6e077e436e9479912f845dba51096acf899d92d8",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p897.txt",
+    "upstream_sha256": "9b6302b5d857fdca6af455b945c1d378e200ef47d699cafc87c468f20c5bfa13",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0897",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "johnston_joseph_e/regard_others:lee_robert_e"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "S94-I-II-898",
+    "work": "OR I-II",
+    "page": "898",
+    "path": "docs/research/S97/read/S94-I-II-898.txt",
+    "sha256": "fa075af8064d8ecd39d97ed50da94b0bde001fe8e072154aa01119c9c3b2ae4f",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p898.txt",
+    "upstream_sha256": "b04b6914740eca1d75248f89233f28c4413c762c3b63270d480bbe51b5a93103",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0898",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "used_by": [
+      "johnston_joseph_e/regard_others:lee_robert_e"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-II-166",
+    "work": "OR I-II",
+    "page": "166",
+    "path": "docs/research/S97/read/OR-I-II-166.txt",
+    "sha256": "2997620887c01beb6bd80b2ea8056836b90d346dec6d6e3cba23411a91f25c3a",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_djvu.xml",
+    "upstream_sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0166",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 185,
+    "scandata_sha256": "0e7b33ec02bc822abc182816364c0d8f3b3ba0e1841fe73061fac43c3e20068a",
+    "used_by": [
+      "scott_winfield/regard_others:patterson_robert",
+      "patterson_robert/boldness",
+      "patterson_robert/candour",
+      "patterson_robert/value:caution",
+      "patterson_robert/value:duty",
+      "patterson_robert/value:reputation",
+      "patterson_robert/regard_others:scott_winfield",
+      "patterson_robert/regard_others:mcclellan_george_b"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-II-167",
+    "work": "OR I-II",
+    "page": "167",
+    "path": "docs/research/S97/read/OR-I-II-167.txt",
+    "sha256": "0124afb5d1e397015636585b48082adfa2bf2e873196975bf6a18a18fc47bd49",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_djvu.xml",
+    "upstream_sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0167",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 186,
+    "scandata_sha256": "0e7b33ec02bc822abc182816364c0d8f3b3ba0e1841fe73061fac43c3e20068a",
+    "used_by": [
+      "patterson_robert/boldness",
+      "patterson_robert/candour",
+      "patterson_robert/value:caution",
+      "patterson_robert/value:duty",
+      "patterson_robert/value:reputation",
+      "patterson_robert/regard_others:scott_winfield",
+      "patterson_robert/regard_others:mcclellan_george_b"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-II-168",
+    "work": "OR I-II",
+    "page": "168",
+    "path": "docs/research/S97/read/OR-I-II-168.txt",
+    "sha256": "c8e3f3e59582b1827d1b76d2b24600cfb6f5506e41179a9b5fdd0aa7167b0652",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_djvu.xml",
+    "upstream_sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0168",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 187,
+    "scandata_sha256": "0e7b33ec02bc822abc182816364c0d8f3b3ba0e1841fe73061fac43c3e20068a",
+    "used_by": [
+      "scott_winfield/regard_others:patterson_robert",
+      "patterson_robert/boldness",
+      "patterson_robert/candour",
+      "patterson_robert/value:caution",
+      "patterson_robert/value:duty",
+      "patterson_robert/value:reputation",
+      "patterson_robert/regard_others:scott_winfield",
+      "patterson_robert/regard_others:mcclellan_george_b"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-II-169",
+    "work": "OR I-II",
+    "page": "169",
+    "path": "docs/research/S97/read/OR-I-II-169.txt",
+    "sha256": "07a609db9987c321638db9c8b557353df7e8aea09a7b82a1769d5a29ca20e4e0",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_djvu.xml",
+    "upstream_sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0169",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 188,
+    "scandata_sha256": "0e7b33ec02bc822abc182816364c0d8f3b3ba0e1841fe73061fac43c3e20068a",
+    "used_by": [
+      "patterson_robert/boldness",
+      "patterson_robert/candour",
+      "patterson_robert/value:caution",
+      "patterson_robert/value:duty",
+      "patterson_robert/value:reputation",
+      "patterson_robert/regard_others:scott_winfield",
+      "patterson_robert/regard_others:mcclellan_george_b"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-II-470",
+    "work": "OR I-II",
+    "page": "470",
+    "path": "docs/research/S97/read/OR-I-II-470.txt",
+    "sha256": "e3b4cb36d7f104b6d6528966a09117cd707f2b44399515b7bc94b0570a516509",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_djvu.xml",
+    "upstream_sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0470",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 489,
+    "scandata_sha256": "0e7b33ec02bc822abc182816364c0d8f3b3ba0e1841fe73061fac43c3e20068a",
+    "used_by": [
+      "johnston_joseph_e/value:duty",
+      "johnston_joseph_e/regard_others:beauregard_pierre_g_t",
+      "johnston_joseph_e/regard_others:cooper_samuel"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "OR-I-II-734",
+    "work": "OR I-II",
+    "page": "734",
+    "path": "docs/research/S97/read/OR-I-II-734.txt",
+    "sha256": "123467bdaa5dce0011b94da546bc0752ee80ac1f2bcfc7945b76a68ccd06a359",
+    "upstream": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_djvu.xml",
+    "upstream_sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+    "url": "https://ehistory.osu.edu/books/official-records/002/0734",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Selected page text; only passages discussed in the audit are evidence.",
+    "leaf": 753,
+    "scandata_sha256": "0e7b33ec02bc822abc182816364c0d8f3b3ba0e1841fe73061fac43c3e20068a",
+    "used_by": [
+      "patterson_robert/boldness",
+      "patterson_robert/candour",
+      "patterson_robert/value:caution",
+      "patterson_robert/value:duty",
+      "patterson_robert/value:reputation",
+      "patterson_robert/regard_others:scott_winfield",
+      "patterson_robert/regard_others:mcclellan_george_b"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "JCCW-5",
+    "work": "Joint Committee on the Conduct of the War (1863 report), Bull Run section",
+    "page": "5",
+    "path": "docs/research/S97/read/JCCW-5.txt",
+    "sha256": "a0593551659adf1febee5437503b493b0ddf82806a4063c15f029de4a303d67e",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\gaps-C-mcdowell-s13\\reportjointcomm01wargoog.txt",
+    "upstream_sha256": "e27d937d36dd5499c03b5913bb0aa87a6bd46073ead84292de061a9a8ef7572c",
+    "url": "https://archive.org/details/reportjointcomm01wargoog",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Committee assessment, not a verbatim pre-July1861 judgment. The title and March2 1863 printing resolutions were also read for exclusion.",
+    "used_by": [
+      "patterson_robert/competence",
+      "patterson_robert/nerve",
+      "patterson_robert/trait:overestimates_enemy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "RR-DIARY11",
+    "work": "Rebellion Record I, Diary",
+    "page": "11",
+    "path": "docs/research/S97/read/RR-DIARY11.txt",
+    "sha256": "6bd1184e199b85954a27b3a93bba7ed95b9d6f1bcee5ae8ba90a896b87967c79",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs3\\rebellrecord01moorrich.txt",
+    "upstream_sha256": "d42acfbe52bf9eafc55589b72d3e69128d0f4325c724f66e64150ce2b7799d19",
+    "url": "https://archive.org/details/rebellrecord01moorrich",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Date heading and selected report read; surrounding running heads bound the printed page. Original address day is not manufactured from a locator.",
+    "used_by": [
+      "hicks_thomas_h/value:conciliation",
+      "hicks_thomas_h/value:union",
+      "hicks_thomas_h/value:state_autonomy"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  },
+  {
+    "key": "RR-DIARY15",
+    "work": "Rebellion Record I, Diary",
+    "page": "15",
+    "path": "docs/research/S97/read/RR-DIARY15.txt",
+    "sha256": "cfc49cd64d3139f0d31b126c54692fd7994f357b43f7686ce799128fd25edd9f",
+    "upstream": "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\4d87ab6d8ae0089a\\9b5270b2-8d26-4ceb-8899-4a7cb8486063\\scratchpad\\gaps\\rs3\\rebellrecord01moorrich.txt",
+    "upstream_sha256": "d42acfbe52bf9eafc55589b72d3e69128d0f4325c724f66e64150ce2b7799d19",
+    "url": "https://archive.org/details/rebellrecord01moorrich",
+    "read_scope": "Only the dated paper/selected passages identified in audit.json or drafts.json were read and used; no whole-volume or blanket page certification. Date heading and selected report read; surrounding running heads bound the printed page. Original address day is not manufactured from a locator.",
+    "used_by": [
+      "brown_joseph_e/nerve",
+      "brown_joseph_e/trait:makes_policy",
+      "brown_joseph_e/reputation"
+    ],
+    "normalization": "UTF-8, LF; trailing whitespace removed. Upstream raw hash is retained separately. No spelling or substantive OCR correction."
+  }
+]

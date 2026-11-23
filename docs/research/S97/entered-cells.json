@@ -1,0 +1,1324 @@
+[
+  {
+    "actor": "scott_winfield",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "p333 section 2 dated 1848-03-09",
+        "source": "STAT9-SCOTT-1848"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "reputation",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "p333 sections 1-2 dated 1848-03-09",
+        "source": "STAT9-SCOTT-1848"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "boldness",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-12-lincoln",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "I-2 (Scott to Patterson 13-18 Jul)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "candour",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-03-seward",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "I-51-1 p339 (2 May indorsement)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "regard",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "JFEPPERSON SumterScottAL0312",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "value:union",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-03-seward",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "I-1 p200-201",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "value:conciliation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-03-seward",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "I-1 p200-201",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "value:caution",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-12-lincoln",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "I-51-1 p369",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "value:duty",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "SCOTT 1861-04-19-wright",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "trait:infirm",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-5-p639 dated 1861-10..1861-11",
+        "source": "OR"
+      },
+      {
+        "at": "1861-11-01",
+        "source": "HAY-D"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "regard_others:seward_william_h",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "SCOTT 1861-03-03-seward",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "regard_others:cameron_simon",
+    "entered": "below",
+    "citations": [
+      {
+        "at": "1 p241",
+        "source": "WELLES-D"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "regard_others:mcclellan_george_b",
+    "entered": "below",
+    "citations": [
+      {
+        "at": "I-51-1 p339",
+        "source": "OR"
+      },
+      {
+        "at": "I-51-1 p369",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "scott_winfield",
+    "cell": "regard_others:patterson_robert",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-2 (telegrams 13-18 Jul)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "vol1 p80 dated 1861-03 (entry date not printed in the OCR, Russell reached Washington 27 March 1861)",
+        "source": "RUSSELL-DIARY"
+      },
+      {
+        "at": "vol1 p30-33 dated 1861-03-26",
+        "source": "NEWTON-LYONS-DOCS"
+      },
+      {
+        "at": "3-p371 dated 1861-03-04",
+        "source": "NH-DOCS"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "reputation",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "p108-109,p113 dated 1860-05-18",
+        "source": "CHI-1860"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "boldness",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "6 p192-201",
+        "source": "NH-CW"
+      },
+      {
+        "at": "SEWARD 1861-04-01-thoughts",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "3-p370-372",
+        "source": "NH"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "candour",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "SEWARD 1861-04-01-thoughts (frank to his president, to the point of presumption; the Confederate-commissioners channel is candour toward an adversary and is not coded)",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "regard",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "p482 dated 1860-12-16",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "p493 dated 1861-01-08",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "3-p370 dated 1861-03-02",
+        "source": "NH-DOCS"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "value:conciliation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "3-p365-366",
+        "source": "NH"
+      },
+      {
+        "at": "6 p192-201",
+        "source": "NH-CW"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "value:union",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "6 p192-201",
+        "source": "NH-CW"
+      },
+      {
+        "at": "1861-04-01-seward",
+        "source": "LINCOLN"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "value:reputation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "SEWARD 1861-04-01-thoughts",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "trait:secretive",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "p481 dated 1860-12-13",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "p492 dated 1861-01-03",
+        "source": "SEWARD-WASH"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "regard_others:chase_salmon_p",
+    "entered": "low",
+    "citations": [
+      {
+        "at": "p191 dated 1852-08-05",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "p447 dated 1860-04-27",
+        "source": "SEWARD-WASH"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "regard_others:blair_montgomery",
+    "entered": "low",
+    "citations": [
+      {
+        "at": "6 p230",
+        "source": "NH-CW"
+      }
+    ]
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "regard_others:lincoln_abraham",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "p482 dated 1860-12-16",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "p493 dated 1861-01-08",
+        "source": "SEWARD-WASH"
+      },
+      {
+        "at": "3-p370 dated 1861-03-02",
+        "source": "NH-DOCS"
+      }
+    ]
+  },
+  {
+    "actor": "cameron_simon",
+    "cell": "reputation",
+    "entered": "below",
+    "citations": [
+      {
+        "at": "p489-490 dated 1861-01-07",
+        "source": "CHASE-D"
+      },
+      {
+        "at": "p491 dated 1861-01-10",
+        "source": "CHASE-D"
+      }
+    ]
+  },
+  {
+    "actor": "welles_gideon",
+    "cell": "nerve",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "3-p431",
+        "source": "NH"
+      },
+      {
+        "at": "1 p62",
+        "source": "WELLES-D"
+      }
+    ]
+  },
+  {
+    "actor": "smith_caleb_b",
+    "cell": "regard",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "p108-109 dated 1860-05",
+        "source": "CHI-1860"
+      }
+    ]
+  },
+  {
+    "actor": "bates_edward",
+    "cell": "nerve",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "3 p388 dated 1861-03-16",
+        "source": "NH-DOCS"
+      },
+      {
+        "at": "3 p432 dated 1861-03-29",
+        "source": "NH-DOCS"
+      }
+    ]
+  },
+  {
+    "actor": "bates_edward",
+    "cell": "reputation",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "p108-109,p113 dated 1860-05-18",
+        "source": "CHI-1860"
+      }
+    ]
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "blair_montgomery",
+        "source": "APPLETONS"
+      },
+      {
+        "at": "1862-09-02",
+        "source": "CHASE-D"
+      }
+    ]
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "nerve",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "3 p432 dated 1861-03-29",
+        "source": "NH-DOCS"
+      }
+    ]
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "regard_others:fox_gustavus_v",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "1:2-3 dated 1861-01-31",
+        "source": "FOX-CC"
+      }
+    ]
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "competence",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "p159-160 dated 1861-04-27",
+        "source": "REBREC1"
+      },
+      {
+        "at": "III-1 p190 dated 1861-05-13",
+        "source": "OR"
+      },
+      {
+        "at": "III-1 p79-80 dated 1861-04-17",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "value:conciliation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "p1-2 dated 1860-12-19",
+        "source": "REBREC1"
+      },
+      {
+        "at": "p17-18 dated 1861-01-05",
+        "source": "REBREC1"
+      }
+    ]
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "value:union",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "4 p93-94",
+        "source": "NH"
+      },
+      {
+        "at": "III-1 p80",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "value:state_autonomy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "III-1 p80",
+        "source": "OR"
+      },
+      {
+        "at": "4 p95 (asked that Maryland troops stay in the state except to defend the capital)",
+        "source": "NH"
+      }
+    ]
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "competence",
+    "entered": "below",
+    "citations": [
+      {
+        "at": "2-p5",
+        "source": "JCCW"
+      }
+    ]
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "nerve",
+    "entered": "below",
+    "citations": [
+      {
+        "at": "2-p5",
+        "source": "JCCW"
+      }
+    ]
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "boldness",
+    "entered": "low",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-06-12-townsend",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "PATTERSON 1861-07-09-townsend",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "PATTERSON 1861-07-18-report",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "candour",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-07-16/18 (candid on volunteers' mood; defensive after Scott's telegram)",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "value:caution",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-06-12-townsend",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "PATTERSON 1861-07-09-townsend",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "PATTERSON 1861-07-16/18",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "value:duty",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-07-14",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "value:reputation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-07-18-report",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "trait:overestimates_enemy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "2-p5",
+        "source": "JCCW"
+      }
+    ]
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "regard_others:scott_winfield",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-07-18-report",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "patterson_robert",
+    "cell": "regard_others:mcclellan_george_b",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "PATTERSON 1861-06-29-mcclellan",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "morgan_edwin_d",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "III-1-p72 dated 1861-04",
+        "source": "OR"
+      },
+      {
+        "at": "III-1-p83 dated 1861-04",
+        "source": "OR"
+      },
+      {
+        "at": "III-2-p881 dated 1862-11",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "morgan_edwin_d",
+    "cell": "boldness",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "III-1 p72,p83 (asks questions, accepts quota; no risk-taking shown)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "morgan_edwin_d",
+    "cell": "regard_others:cameron_simon",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "III-1 p72,p83",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "IV-1-p535",
+        "source": "OR"
+      },
+      {
+        "at": "brown_joseph_e",
+        "source": "APPLETONS"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "nerve",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "chronology entry 3 Jan 1861 dated 1861-01-03",
+        "source": "REBREC1"
+      },
+      {
+        "at": "Diary p15 (Georgia Convention resolution) dated 1861-01-21",
+        "source": "REBREC1"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "boldness",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19)",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "candour",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "BROWN 1861-01-05-alabama-commissioner",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "regard",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "IV-1 (1861-04-19 compliance; later wariness is outside window)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "value:duty",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "IV-1 (Walker-Brown wire 1861-04-19, weak)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "value:state_autonomy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19)",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "value:slavery_defence",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "BROWN 1861-01-05-alabama-commissioner (OR IV-1 p18-19: calls Southern states \"pro-slavery States\")",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "trait:makes_policy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "chronology entry 3 Jan 1861 dated 1861-01-03",
+        "source": "REBREC1"
+      },
+      {
+        "at": "Diary p15 (Georgia Convention resolution) dated 1861-01-21",
+        "source": "REBREC1"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "trait:quarrelsome",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "IV-1-p535",
+        "source": "OR"
+      },
+      {
+        "at": "brown_joseph_e",
+        "source": "APPLETONS"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "regard_others:walker_leroy_p",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "IV-1 (1861-04-19)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "regard_others:letcher_john",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "IV-1 (1861-04-19)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "moore_thomas_o",
+    "cell": "boldness",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "p494 dated 1861-01-22",
+        "source": "S89-OR-I-I"
+      },
+      {
+        "at": "p495 dated 1861-01-22",
+        "source": "S89-OR-I-I"
+      }
+    ]
+  },
+  {
+    "actor": "moore_thomas_o",
+    "cell": "value:duty",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "p495 dated 1861-01-22",
+        "source": "S89-OR-I-I"
+      }
+    ]
+  },
+  {
+    "actor": "moore_thomas_o",
+    "cell": "value:state_autonomy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "p494 dated 1861-01-22",
+        "source": "S89-OR-I-I"
+      },
+      {
+        "at": "p496 dated 1861-01-22",
+        "source": "S89-OR-I-I"
+      }
+    ]
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "nerve",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "III-1-p81 dated 1861-04",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "boldness",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "HARRIS 1861-04-25-message",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "III-1 p81 dated 1861-04",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "candour",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "HARRIS 1861-04-25-message",
+        "source": "DOC-1861"
+      },
+      {
+        "at": "HARRIS 1861-01-07-message",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "regard",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "HARRIS 1861-05-07-military-league (action; own words of regard NOT FOUND)",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "value:conciliation",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "HARRIS 1861-01-07-message (conditional: \"equality in the Union, or independence out of it\")",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "value:slavery_defence",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "HARRIS 1861-01-07-message (slavery protected property \"interwoven with our wealth\")",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "letcher_john",
+    "cell": "competence",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "IV-1-p969",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "letcher_john",
+    "cell": "nerve",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "III-1-p76 dated 1861-04",
+        "source": "OR"
+      },
+      {
+        "at": "letcher_john",
+        "source": "APPLETONS"
+      }
+    ]
+  },
+  {
+    "actor": "letcher_john",
+    "cell": "boldness",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "IV-1 (Letcher to Davis 1861-04-18)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "letcher_john",
+    "cell": "regard",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "IV-1 (Letcher to Davis 1861-04-18; his own words of regard NOT FOUND)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "pickens_francis_w",
+    "cell": "competence",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-1-p113",
+        "source": "OR"
+      },
+      {
+        "at": "IV-1",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "pickens_francis_w",
+    "cell": "nerve",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "I-1-p7",
+        "source": "OR"
+      },
+      {
+        "at": "I-1-p166 dated 1861-02-06",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "pickens_francis_w",
+    "cell": "trait:makes_policy",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-1-p7",
+        "source": "OR"
+      },
+      {
+        "at": "I-1-p166 dated 1861-02-06",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "bragg_braxton",
+    "cell": "competence",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-10-1-p389",
+        "source": "OR"
+      },
+      {
+        "at": "I-16-1-p1087 dated 1862-10",
+        "source": "OR"
+      },
+      {
+        "at": "I-16-1-p1088",
+        "source": "OR"
+      },
+      {
+        "at": "I-16-1-p1109 dated 1862-11",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "bragg_braxton",
+    "cell": "nerve",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-10-1-p466",
+        "source": "OR"
+      },
+      {
+        "at": "I-10-1-p467",
+        "source": "OR"
+      },
+      {
+        "at": "I-10-1-p389",
+        "source": "OR"
+      },
+      {
+        "at": "I-16-1-p1087 dated 1862-10",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "bragg_braxton",
+    "cell": "trait:shifts_blame",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-16-1-p1088",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "holmes_theophilus_h",
+    "cell": "reputation",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "1 holmes_theophilus_h",
+        "source": "Heitman"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "competence",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "ch62",
+        "source": "GRANT-PM"
+      },
+      {
+        "at": "I-11-1-p936-938",
+        "source": "OR"
+      },
+      {
+        "at": "I-11-1-p933-935",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "nerve",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-11-1-p933-935",
+        "source": "OR"
+      },
+      {
+        "at": "I-11-1-p275-276",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "reputation",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "1 johnston_joseph_e",
+        "source": "Heitman"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "boldness",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-2 p881 (withdrawal)",
+        "source": "OR"
+      },
+      {
+        "at": "I-2 p473,p478 (18 Jul junction)",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "candour",
+    "entered": "high",
+    "citations": [
+      {
+        "at": "I-2 p881",
+        "source": "OR"
+      },
+      {
+        "at": "JOHNSTON 1861-06-12-report",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "value:caution",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-2 p881",
+        "source": "OR"
+      },
+      {
+        "at": "JOHNSTON 1861-06-12-report",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "value:duty",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-2 p473 [self-report]",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "trait:shifts_blame",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-11-1-p933-935",
+        "source": "OR"
+      },
+      {
+        "at": "I-11-1-p936-938",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "trait:secretive",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-5-p1090",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "trait:candid",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-11-3-p455-456",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "trait:infirm",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-11-1-p934-935",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "trait:rank_proud",
+    "entered": "present",
+    "citations": [
+      {
+        "at": "I-2 p1007 dated 1861-07-29",
+        "source": "OR"
+      },
+      {
+        "at": "I-p464 dated 1861-08-31",
+        "source": "JCCS"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "regard_others:lee_robert_e",
+    "entered": "above",
+    "citations": [
+      {
+        "at": "I-2 p897-898",
+        "source": "OR"
+      },
+      {
+        "at": "LEE 1861-06-07-johnston",
+        "source": "DOC-1861"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "regard_others:beauregard_pierre_g_t",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-2 p473",
+        "source": "OR"
+      }
+    ]
+  },
+  {
+    "actor": "johnston_joseph_e",
+    "cell": "regard_others:cooper_samuel",
+    "entered": "average",
+    "citations": [
+      {
+        "at": "I-2 p478",
+        "source": "OR"
+      }
+    ]
+  }
+]

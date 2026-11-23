@@ -1,0 +1,162 @@
+[
+  {
+    "actor": "scott_winfield",
+    "cell": "value:caution",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-03-03",
+    "kind": "alternative evidence for held cell",
+    "read_keys": [
+      "SCOTT-MAR3"
+    ],
+    "basis": "His own estimates emphasize the immense lives, expense, garrisons and political damage of conquest. This is an expressed priority, not a new numerical boldness band.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "value:union",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1860-12-10",
+    "kind": "alternative evidence for held cell",
+    "read_keys": [
+      "SEWARD-481"
+    ],
+    "basis": "His dated letter describes the task of reconciling men bent on disunion to the incoming administration. Uses only the verbatim December10 paragraph, not his son’s later narrative.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "seward_william_h",
+    "cell": "value:conciliation",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1860-12-10",
+    "kind": "alternative evidence for held cell",
+    "read_keys": [
+      "SEWARD-481"
+    ],
+    "basis": "The same paragraph explicitly makes reconciliation rather than civil war his task. This is conditional political conciliation, not a finding of universal tolerance.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "value:union",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-31",
+    "kind": "new",
+    "read_keys": [
+      "FOX-I-2-4"
+    ],
+    "basis": "His letter explicitly commits to preserving the Union, including enforcement at the cost of blood. Do not replace his coercive conception of reunion with unconditional pacifism.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "value:order",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-31",
+    "kind": "new",
+    "read_keys": [
+      "FOX-I-2-4"
+    ],
+    "basis": "He expressly prioritizes enforcing and vindicating the laws against rebellion. The letter’s derogatory sectional and Mexican comparisons remain his claims, never adopted as facts.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "blair_montgomery",
+    "cell": "boldness",
+    "decision": "DRAFT",
+    "proposed_direction": "above",
+    "document_date": "1861-01-31",
+    "kind": "new",
+    "read_keys": [
+      "FOX-I-2-4"
+    ],
+    "basis": "He accepts the possible necessity of a decisive armed confrontation and loss of life, while favoring an unobtrusive relief method first. Above rather than high is a bounded interpretive direction, without numerical fitting.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "value:union",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-06 latest publication bound",
+    "kind": "alternative evidence for held cell",
+    "read_keys": [
+      "RR-DOC16",
+      "RR-DIARY11"
+    ],
+    "basis": "He explicitly wishes to die a citizen of the Union and refuses to hasten its disruption. The January6 diary reports publication and identifies Doc16; the original address day is not manufactured. This early passage is separate from the held April citation chain.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "hicks_thomas_h",
+    "cell": "value:state_autonomy",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-06 latest publication bound",
+    "kind": "alternative evidence for held cell",
+    "read_keys": [
+      "RR-DOC16",
+      "RR-DIARY11"
+    ],
+    "basis": "His argument asks whether Maryland must obey South Carolina after forming its own judgment. The January6 publication entry bounds the text before start. This is Maryland’s independent decision, with conditional Southern sympathy retained; no birth-state loyalty is inferred.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "brown_joseph_e",
+    "cell": "reputation",
+    "decision": "DRAFT",
+    "proposed_direction": "above",
+    "document_date": "1861-01-21",
+    "kind": "new",
+    "read_keys": [
+      "RR-DIARY15"
+    ],
+    "basis": "The printed convention resolution explicitly and unanimously approves his conduct at Pulaski. This is other people’s early esteem in that political body, not a countrywide popularity rating.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "moore_thomas_o",
+    "cell": "trait:makes_policy",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-22",
+    "kind": "new",
+    "read_keys": [
+      "OR-I-I-493",
+      "OR-I-I-495",
+      "OR-I-I-496"
+    ],
+    "basis": "He reports deciding upon the seizure of federal posts before the State convention and submits the responsibility to the legislature. This is observable policy on his own State authority, not technical organizing ability.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "harris_isham_g",
+    "cell": "value:state_autonomy",
+    "decision": "DRAFT",
+    "proposed_direction": "present",
+    "document_date": "1861-01-07",
+    "kind": "new",
+    "read_keys": [
+      "HARRIS-JAN7"
+    ],
+    "basis": "The read message explicitly reserves Tennessee’s sovereign choice and rejects military coercion of a State. Keep its simultaneous defence of slavery explicit; do not relabel it as a neutral generic rights dispute.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  },
+  {
+    "actor": "pickens_francis_w",
+    "cell": "boldness",
+    "decision": "DRAFT",
+    "proposed_direction": "above",
+    "document_date": "1860-12-29",
+    "kind": "new",
+    "read_keys": [
+      "OR-I-I-7"
+    ],
+    "basis": "The signed order directs taking the arsenal with force if refused, with forbearance and minimum force. The executed demand/protest corroborates conduct. Above is proposed with those restraints, not a blanket appetite for attack.",
+    "interpretation": "[I]; unsigned proposal, never an outcome fit"
+  }
+]
