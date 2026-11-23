@@ -180,9 +180,9 @@
       "name": "trims",
       "count": { "mechanic": "reports.trimmed" },
       "through": "1861-07-31",
-      "min": 1,
-      "max": 4,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-07 (Seward's assurances to Campbell not passed up, verified secondary), the record's only trim; upper bound that one case plus three, as three times one is below the floor of plus three (the lead's ruling)"
+      "min": 0,
+      "max": 3,
+      "cite": "Decision 0111 item 6, amending 0099 item 6 under 0109's recount rule: Appendix C N3-07 is excluded as a verified incoming-report trim. Richardson I pp.85-88,93-97 describe outward assurances, not an incoming report with a claim removed; disclosure to Lincoln remains unresolved (Burlingame II ch.22 pp.2349-2351 n.87). Floor 0; upper floor+3=3 [I]. Zero required cases does not mean none occurred."
     },
     {
       "id": "reservations",

@@ -49,11 +49,11 @@ it('S77: S75 applies only federal contracts, preserves muster conflicts, and doe
  }
 });
 
-it('S77: 0109 changes only the two authorised pushback bands',()=>{
+it('S77/S90: 0109 and 0111 retain their authorised pushback bands',()=>{
  const checkpoints=JSON.parse(readFileSync('packs/union-1861/checkpoints.json','utf8'));
  expect(checkpoints.pushback.find((r:any)=>r.id==='relay_holds')).toMatchObject({min:1,max:4});
  expect(checkpoints.pushback.find((r:any)=>r.id==='filter_holds')).toMatchObject({min:0,max:6});
- expect(checkpoints.pushback.find((r:any)=>r.id==='trims')).toMatchObject({min:1,max:4});
+ expect(checkpoints.pushback.find((r:any)=>r.id==='trims')).toMatchObject({min:0,max:3,cite:expect.stringContaining('0111')});
 });
 
 it('S77: the documented Winchester wire does not invent wire access at Harpers Ferry or an earlier opening',()=>{
