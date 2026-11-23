@@ -1,0 +1,37 @@
+{
+  "base": "117b8ac8",
+  "originalTrackedPaths": 2268,
+  "preservedPaths": 2268,
+  "byteExactOriginalPaths": 2256,
+  "changedOriginalPaths": [
+    "docs/decisions/0020-people-hidden-stats-and-assessment.md",
+    "docs/decisions/0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md",
+    "docs/decisions/README.md",
+    "docs/design/FOUNDATION.md",
+    "packages/kernel/src/compliance.ts",
+    "packages/kernel/src/people.ts",
+    "packages/kernel/src/reading/orders.ts",
+    "packages/kernel/test/compliance.test.ts",
+    "packages/kernel/test/seats-orders.test.ts",
+    "packs/union-1861/PROVENANCE.json",
+    "packs/union-1861/data/world.json",
+    "packs/union-1861/source/world/people.csv"
+  ],
+  "missingPaths": [],
+  "signedLivePathsByteExact": 29,
+  "addedPaths": [
+    "docs/decisions/0111-pushback-is-measured-by-named-acts.md",
+    "docs/decisions/0112-the-pushback-registers-and-what-1a-requires.md",
+    "docs/decisions/0113-a-judgment-without-evidence-adds-no-term.md",
+    "notes/lane-s92-unknowns.md",
+    "packages/kernel/test/unknown-compliance.test.ts"
+  ],
+  "acceptedDecisionsByteExact": [
+    "0111",
+    "0112",
+    "0113"
+  ],
+  "nodeVersion": "v22.23.2",
+  "workspaceKernel": "C:\\Pyrrhic\\sprint-unknowns\\packages\\kernel\\src\\index.ts",
+  "note": "Only this worktree and the explicitly authorized final main CODEX append are written; no other sprint worktree is inspected or changed. Every inherited path survives; changed files are limited to the S92 build, two test arithmetic corrections, and required decision/design links."
+}

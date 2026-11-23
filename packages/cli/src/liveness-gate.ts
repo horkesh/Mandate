@@ -128,10 +128,7 @@ const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (two bo
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
-  'orders.returned': { why: "S82 ruling 2 [I]: the accepted dated command/headquarters and received correspondence path has no dispatch arriving at a changed or vacant post in S81. The separate believed-posts test drives a typed return for an order sent before the vacancy report arrives. Zero stays exact, never an unbounded floor.", test: 'packages/kernel/test/believed-posts.test.ts', needle: 'an order sent before the report arrives is accepted, and bounces on arrival as a returned dispatch, typed' },
-  'recruitment.renewed': { why: 'S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal.', test: 'packages/cli/test/enlistment-renewal.test.ts', needle: 'changes only the term and renewal source' },
   // R73: doctrine retires the generic Washington attack; the editing exercise edits every reviewed plan.
-  'operations.repulsed': { why: 'no reference operation meets a field battle that drives its axis back; the kernel test drives repeated repulses', test: 'packages/kernel/test/operations.test.ts', needle: 'driven back, an axis withdraws, pauses and tries again' },
   'plans.approved': { why: 'ordinary reference plans go ahead as drafted; the editing exercise edits every reviewed plan instead of approving it', test: 'packages/kernel/test/plans.test.ts', needle: 'asks to review: his pick goes to the issuer by dispatch, who approves it' },
   'command.government_reopened': { why: 'no pack situation reopens one yet', test: 'packages/kernel/test/governments.test.ts', needle: 'reopening and repeats are plain' },
   'command.proposal_refused': { why: 'a refusal needs a proposal that cannot be applied; honest situations propose none', test: 'packages/kernel/test/governments.test.ts', needle: 'refuses what it cannot be' },
@@ -147,7 +144,6 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'combat.destroyed': { why: `a force is destroyed only when the breakout its commander chose fails; ${FEW_BATTLE_DAYS}, and no force breaks out`, test: 'packages/kernel/test/combat.test.ts', needle: 'its breakout failed, and the force is destroyed' },
   // Lane 1.12: these fired only in the Union run's march on Washington, which the generic principal ordered and the
   // doctrine retires that march; current reference field losers have a way back and no general is hit.
-  'combat.cut_off': { why: 'a side is cut off only with no legal retreat (0019) in a field battle; the retained reference field losers have legal retreats, while the separate trapped-garrison test drives it', test: 'packages/kernel/test/combat.test.ts', needle: 'a trapped garrison with nowhere to go surrenders' },
   // Lane 1.12: the Charleston commander's bombardment goes ahead as drafted (lane 1.12 retired the Washington garrison's reviewed hold),
   // and the editing exercise edits every reviewed plan rather than approving it.
   'movement.join_blocked': { why: 'every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait', test: 'packages/kernel/test/join.test.ts', needle: 'waits, typed no_route, when no route reaches the seat' },
@@ -187,6 +183,8 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   'politics.refused': { why: 'a refusal needs a proposal politics cannot apply; honest situations propose none', test: POL, needle: 'refuses a call while one stands' },
   'politics.press_silent': { why: 'every paper’s editor serves on his paper’s side throughout both runs', test: POL, needle: 'a paper whose editor no longer serves prints nothing' },
   'forces.landing_refused': { why: 'the one situation landing in the reference runs is made', test: 'packages/cli/test/situation-landing.test.ts', needle: 'refuses a landing from a block that is not aboard' },
+  "planner.term.caution": {"why": "0113: changed compliance and available levies leave no reference draft whose top pick depends on caution alone. The separate score-term control still changes rankings when a live term is removed.", "test": "packages/cli/test/planner.test.ts", "needle": "liveTerms(set)"},
+  "planner.term.force_ratio": {"why": "0113: changed compliance and available levies leave no reference draft whose top pick depends on force ratio alone. The separate score-term control still drives every declared term.", "test": "packages/cli/test/planner.test.ts", "needle": "expect([...live].sort()).toEqual([...planner.TERMS].sort())"},
 };
 
 /** What a pack at peace never does: no order is given and no governor called, so no force marches, no ground is contested. */
@@ -233,30 +231,30 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  * (each pack's checkpoints.json) are independent and unchanged; these are mechanic liveness counts only.
  */
 const UNION_BANDS: Record<string, GateBand> = {
-  'orders.returned': quiet("S82 ruling 2 [I]: the accepted dated command/headquarters and received correspondence path has no dispatch arriving at a changed or vacant post in S81. The separate believed-posts test drives a typed return for an order sent before the vacancy report arrives. Zero stays exact, never an unbounded floor."),
+  "orders.returned": around(1),
   'planner.term.time': { ...around(1), why: "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.time 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.time." },
   'people.resigned': { ...around(15), why: "S77 lead ruling 3 (CODEX.md, 2026-11-23): S74 adds Elzey's sourced departure under S69/0101 to the fourteen existing resignations; recentre only this band with around(15). No other quiet band is changed." },
   // R82: an integrated government notice offers one officer his choice; he stays.
   'people.stayed': around(1),
   // The bombardment of Fort Sumter: two days of fire, then Anderson's surrender, evacuated under the record's terms.
-  'combat.battle_closed': around(2), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
+  "combat.battle_closed": around(5),
   'verbs.consulted': around(5),
-  'combat.battle_day': around(4), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
-  'combat.battle_opened': around(2), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
-  'combat.captured': around(2), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
-  'combat.killed_wounded': around(4), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
-  'combat.missing': around(4), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
+  "combat.battle_day": around(7),
+  "combat.battle_opened": around(5),
+  "combat.captured": around(5),
+  "combat.killed_wounded": around(10),
+  "combat.missing": around(9),
   'combat.occupation': around(124), // S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses.
   'combat.pursuit_chosen': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'combat.surrendered': around(1),
-  'combat.withdrew': quiet("S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal."),
+  "combat.withdrew": around(1),
   'control.changed': around(128), // S1 national [I]: the command concentration and emerged field movements change occupation through the existing control owner.
   'control.threshold_crossed': around(39), // S1 effective-date [I]: the command concentration and emerged field movements change occupation through the existing control owner.
   'forces.stores_fell': around(1443), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
-  'forces.stores_low': { ...around(13), why: "S82 ruling 2: the accepted sourced command/concentration path fires forces.stores_low 13 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#forces.stores_low." },
-  'forces.stores_refilled': around(1090), // S1 national [I]: changed concentration journeys and field duration change ordinary supply consumption and refills.
+  "forces.stores_low": around(103),
+  "forces.stores_refilled": around(2400),
   'forces.stragglers_returned': { ...around(64), why: "S82 ruling 2: the accepted sourced command/concentration path fires forces.stragglers_returned 64 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#forces.stragglers_returned." },
-  'combat.flank_broken': { ...around(3), why: "S82 ruling 2: the accepted sourced command/concentration path fires combat.flank_broken 3 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#combat.flank_broken." },
+  "combat.flank_broken": around(3),
   'combat.routed': { ...around(1), why: "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured one rout." },
   'combat.works_stormed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'operations.ended': around(2), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
@@ -264,25 +262,25 @@ const UNION_BANDS: Record<string, GateBand> = {
   'operations.stage': around(9), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
   'operations.works': { ...around(7), why: "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works." },
   'orders.responses_pruned': around(27), // S1 national [I]: new command and transfer responses alter the ordinary retained/pruned response set.
-  'reports.battle_dispatch': around(18), // S1 national [I]: new command locations, field phases and routed traffic change reports through existing senders.
-  'reports.casualty_return': around(12), // S1 national [I]: new command locations, field phases and routed traffic change reports through existing senders.
-  'reports.governor_wire': around(4), // S1 national [I]: new command locations, field phases and routed traffic change reports through existing senders.
+  "reports.battle_dispatch": around(42),
+  "reports.casualty_return": around(20),
+  "reports.governor_wire": around(6),
   'reports.pocket': { ...around(3), why: "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports." },
   'map.pocket_closed': { ...around(8), why: "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_closed 8 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_closed." },
   'knowledge.pruned_age': around(107), // S1 national [I]: additional command letters and changed field reports alter ordinary received traffic and age pruning.
   'knowledge.pruned_superseded': around(146),
   'map.pocket_relieved': { ...around(1), why: "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved." },
   'map.recomputed': around(52), // S1 national [I]: changed command journeys, occupation and retreat require the existing map owner to recompute.
-  'messages.courier_delay': around(126), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
-  'messages.mail_delay': around(2703), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
-  'messages.delivered': around(11226), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
-  'messages.sent': around(11894), // S1 national [I]: new appointments, transfers and field phases alter the ordinary routed traffic, not latency rules.
+  'messages.courier_delay': around(154),
+  'messages.mail_delay': around(2856),
+  'messages.delivered': around(14240),
+  'messages.sent': around(15047),
   'messages.special_messenger': quiet("S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."),
   'orders.bypassed': around(4),
   'movement.arrived': around(638), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
   'movement.leg_started': around(310), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
   'orders.obeyed': around(3),
-  'orders.relay_held': around(1),
+  "orders.relay_held": quiet("0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."),
   'orders.relay_objected': around(3),
   'orders.relayed': around(9), // S90 continuation ruling 4: Cooper forwards the junction letter; eight existing relays remain.
   'plans.goal_reached': around(2), // S1 national [I]: the integrated sourced build changes this existing counter through its normal owner.
@@ -311,12 +309,12 @@ const UNION_BANDS: Record<string, GateBand> = {
   'seats.defaulted': notHere("every request is answered in this run; the silent-seats exercise run fires it"),
   'situations.decided': around(19),
   'situations.delegated': notHere("no authored Union situation in this window names a delegate as its historical default; the testbed run fires it"),
-  'situations.fired': { ...around(62), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
-  'situations.notice_reports': { ...around(44), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
-  'situations.noticed': { ...around(43), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
+  "situations.fired": around(88),
+  "situations.notice_reports": around(70),
+  "situations.noticed": around(69),
   'situations.options_changed': around(4),
   'situations.orders': around(25),
-  'situations.proposals': { ...around(41), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
+  "situations.proposals": around(73),
   'command.side_changed': around(10),
   'command.government_established': around(1),
   'command.post_succeeded': { ...around(5), why: "S68 lead ruling 4 (CODEX.md, 2026-11-22): S46 adds four sourced institutional successions to the existing one. S67 observes five on days 11, 52, 54, 64 and 79; around(5). Each source and page is checked in notes/lane-s68-residuals.md#sourced-successions and the append-only liveness cause record." },
@@ -324,11 +322,11 @@ const UNION_BANDS: Record<string, GateBand> = {
   'command.temporary_post_opened': around(7), // S1 national [I]: accepted dated appointments open the declared commands through the ordinary verb, without creating forces.
   'situations.resurfaced': around(2),
   'situations.staff_lines': around(18),
-  'situations.surfaced': { ...around(61), why: "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle." },
+  "situations.surfaced": around(87),
   'recruitment.called': around(97), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
   'recruitment.answered': around(61), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
-  'recruitment.slow_walked': around(55), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
-  'recruitment.refused': around(36), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
+  "recruitment.slow_walked": quiet("0113: uncited candour cannot turn disagreement into a covert delay. No Union reference call is slow-walked; the fictional home-rule governor still delays an actual muster."),
+  "recruitment.refused": around(12),
   'recruitment.mustered': around(50), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
   'recruitment.men': around(46), // S1 national [I]: sourced additional requisitions and the separate voluntary remuster use their normal owners, changing calls, musters or expiry counts.
   'recruitment.disbanded': around(15),
@@ -336,9 +334,9 @@ const UNION_BANDS: Record<string, GateBand> = {
   'ladder.rival': notHere("no holder reaches a rival rung with the required standing in the merged 148-day history run; the testbed run fires it"),
   'people.grievances_faded': around(30),
   'seats.attention_refilled': around(21),
-  'seats.attention_spent': around(130), // S1 national [I]: appointments, normal transfers and changed battle days consume attention and decision requests.
+  "seats.attention_spent": around(153),
   'seats.initiative': { ...around(3), why: 'S16 dating holds remove two cabinet officers\' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json.' },
-  'operations.repulsed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
+  'operations.repulsed': around(1),
   'forces.landed_by_situation': around(1),
   'politics.act': around(2),
   'politics.answered': around(2),
@@ -347,16 +345,18 @@ const UNION_BANDS: Record<string, GateBand> = {
   'politics.met': around(2),
   'situations.policy': around(1),
   'combat.bombardment': around(2),
-  'reports.commander_lost': { ...around(1), why: "S82 ruling 2: the accepted sourced command/concentration path fires reports.commander_lost 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#reports.commander_lost." },
+  "reports.commander_lost": around(1),
   'combat.evacuated': { minFires: 1, maxFires: 1 },
   'map.pocket_lost': around(1),
-  'seats.battle_orders': around(60), // S1 national [I]: appointments, normal transfers and changed battle days consume attention and decision requests.
+  "seats.battle_orders": around(10),
   'movement.joined': around(64), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
-  'verbs.answered': around(88), // S1 national [I]: dated appointments and ordinary concentration transfers add their normal answers.
+  "verbs.answered": around(123),
   'verbs.declined': notHere("every army asked in the merged history run answers; recruitment refusals are counted separately; the testbed run fires it"),
-  'combat.general_hit': { ...around(1), why: "S82 ruling 2: the accepted sourced command/concentration path fires combat.general_hit 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#combat.general_hit." },
-  'planner.term.caution': { ...around(1), why: "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.caution 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.caution." },
-  'planner.term.force_ratio': { ...around(1), why: "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.force_ratio 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.force_ratio." },
+  "combat.general_hit": around(1),
+  "planner.term.caution": quiet("0113: changed compliance and available levies leave no reference draft whose top pick depends on caution alone. The separate score-term control still changes rankings when a live term is removed."),
+  "planner.term.force_ratio": quiet("0113: changed compliance and available levies leave no reference draft whose top pick depends on force ratio alone. The separate score-term control still drives every declared term."),
+  "combat.cut_off": around(1),
+  "recruitment.renewed": around(1),
 };
 
 /** The testbed reference run: 120 days from day 1, at war from the start (the testbed names no war chain). */
@@ -488,6 +488,7 @@ const TESTBED_BANDS: Record<string, GateBand> = {
   'politics.framing': notHere('no testbed situation acts on the legislature or frames the war; the Union run fires it'),
   'politics.met': notHere('no testbed situation acts on the legislature or frames the war; the Union run fires it'),
   'situations.policy': notHere('no testbed decision names a policy row in this run; the Union run fires it'),
+  "recruitment.renewed": {"minFires": 0, "maxFires": 0, "why": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal."},
 };
 
 /** Mechanics that only a mechanic-specific run can fire: each band is the same in every run that does not. */

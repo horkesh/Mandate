@@ -2090,6 +2090,36 @@
       "copyUsed": "https://archive.org/download/generalofficers00wrigrich/page/n31.jpg; selected page/hash receipts: docs/audit/s82-evidence/source-reading.json",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "S89-OR-I-I",
+      "title": "Official Records, Series I, volume I (GPO, 1880), contemporary documents on pp.444,493–496",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org cu31924077725913; selected page OCR retained under C:/Pyrrhic/mandate-research-sources/S89/; https://ehistory.osu.edu/books/official-records/001/0444 and /0493–/0496; Andrew B. Moore report dated 1861-01-08 and Thomas O. Moore message dated 1861-01-22",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S89-OR-IV-I",
+      "title": "Official Records, Series IV, volume I (GPO, 1900), Madison S. Perry message, pp.85–88",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "Selected page OCR retained under C:/Pyrrhic/mandate-research-sources/S89/; https://ehistory.osu.edu/books/official-records/127/0085 through /0088; message dated 1861-02-02 begins below the separate Georgia declaration on p.85; only Perry’s words support these judgments",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S92-OR-I-I",
+      "title": "Official Records, Series I, volume I (GPO, 1880), Texas reports",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "archive.org cu31924077725913; printed pp.502-504,514,523-524,552,561-564,567-569,572 read from retained page OCR C:/Pyrrhic/mandate-research-sources/S92/. Source receipts and limitations in docs/audit/s92-evidence/README.md.",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

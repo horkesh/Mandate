@@ -1,0 +1,87 @@
+{
+  "situationChanges": [
+    {
+      "id": "minnesota_first_remuster",
+      "before": null,
+      "after": {
+        "sitStatus": "noticed",
+        "sitFiredDay": 67,
+        "sitSurfacedDay": 68,
+        "sitOpenOptions": [],
+        "sitResurfaced": [],
+        "sitDecidedDay": null,
+        "sitChosen": [],
+        "sitDecidedBy": null,
+        "sitDelegate": null,
+        "sitWaitingOn": null,
+        "sitStaffAuthor": "ramsey_alexander"
+      }
+    },
+    {
+      "id": "manassas_advance_received",
+      "before": {
+        "sitStatus": "noticed",
+        "sitFiredDay": 140,
+        "sitSurfacedDay": 141,
+        "sitOpenOptions": [],
+        "sitResurfaced": [],
+        "sitDecidedDay": null,
+        "sitChosen": [],
+        "sitDecidedBy": null,
+        "sitDelegate": null,
+        "sitWaitingOn": null,
+        "sitStaffAuthor": "walker_leroy_p"
+      },
+      "after": {
+        "sitStatus": "noticed",
+        "sitFiredDay": 138,
+        "sitSurfacedDay": 139,
+        "sitOpenOptions": [],
+        "sitResurfaced": [],
+        "sitDecidedDay": null,
+        "sitChosen": [],
+        "sitDecidedBy": null,
+        "sitDelegate": null,
+        "sitWaitingOn": null,
+        "sitStaffAuthor": "walker_leroy_p"
+      }
+    }
+  ],
+  "personStatusChanges": [
+    {
+      "person": "beauregard_pierre_g_t",
+      "before": {
+        "statusKind": "wounded",
+        "statusDay": 145
+      },
+      "after": {
+        "statusKind": "wounded",
+        "statusDay": 140
+      }
+    },
+    {
+      "person": "clark_edward",
+      "before": {
+        "statusKind": "serving",
+        "statusDay": 0
+      },
+      "after": {
+        "statusKind": "killed",
+        "statusDay": 137
+      }
+    },
+    {
+      "person": "waite_carlos_a",
+      "before": {
+        "statusKind": "serving",
+        "statusDay": 0
+      },
+      "after": {
+        "statusKind": "wounded",
+        "statusDay": 137
+      }
+    }
+  ],
+  "texasCause": "Clark now accepts the absolute cs_jun30_reserve_texas call, mustering 2000 men on day 129 in tx_san_antonio_austin. The unchanged combat rule meets existing Union troops there: battles at days 129,136,143. Clark is killed and Waite wounded on day 137. These are model consequences needing lead review, never newly sourced historical claims or fitted targets.",
+  "manassasNotice": "The unchanged manassas_advance_received notice fires on day 138 rather than 140, surfacing on 139 rather than 141. This is a downstream S92 result relative to 117b8ac8, without S90 integration or a fitted firing date."
+}

@@ -1,0 +1,17 @@
+{
+  "beforeHash": "512d0fa11c1ac9eb0cac3fe25c5714f473b832f59af8ed37fbe4b7edaebf79cc",
+  "afterHash": "292221a72e52f9aeb9e6b40a4c3a95a0b07604abc5d84db20ab63e66cb4ecd74",
+  "differences": [
+    {
+      "path": "/personTrue/moore_thomas_o/trueBoldness",
+      "before": 690,
+      "after": 740
+    },
+    {
+      "path": "/personTrue/perry_madison_s/trueBoldness",
+      "before": 594,
+      "after": 622
+    }
+  ],
+  "stateKeysPreserved": true
+}

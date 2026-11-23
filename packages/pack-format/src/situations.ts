@@ -52,6 +52,7 @@ const renewal = z.strictObject({
   post: idOf('post'), arm: termId, regiments: positive, fromTermDays: positive, termDays: positive,
   musteredBy: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
 });
+const withdrawal = z.strictObject({ block: idOf('forceBlock'), regions: z.array(idOf('region')).min(1) });
 export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
   z.union([
     z.strictObject({ all: z.array(ConditionSchema).min(1, 'at least one condition') }),
@@ -66,6 +67,7 @@ export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
     z.strictObject({ headquartersAt: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
     z.strictObject({ advancingOn: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
     z.strictObject({ renewableEnlistment: renewal }),
+    z.strictObject({ withdrawableForce: withdrawal }),
     z.strictObject({ callReceived: z.strictObject({ post: idOf('post'), days: int.min(0) }) }).describe('A call for regiments reached the holder of a post at least this many days ago (lane 1.11): a state’s act a pack-set delay after the call arrives. STAND-IN(call-received-delay; owner: 1B, conventions and legislatures).'),
     z.strictObject({ holds: z.strictObject({ post: idOf('post'), person: idOf('person') }) }).describe('The post is held today by this person (lane 1.11).'),
     z.strictObject({ holderPractice: z.strictObject({ post: idOf('post'), practice: termId }) }).describe('The post’s holder today carries this cited practice (lane 1.11, on lane 1.5b’s practices).'),
@@ -93,6 +95,7 @@ export const EffectSchema = z.union([
       reason: termId,
       succession: z.strictObject({ from: idOf('person'), to: idOf('person') }).optional(),
       renewal: renewal.optional(),
+      withdrawal: withdrawal.optional(),
       stateForces: z.strictObject({
         id: z.string().regex(/^[a-z][a-z0-9_]*$/), regiments: positive.nullable(), men: nonNegative.nullable(),
         arm: termId, termDays: positive.nullable(), termUnknown: z.boolean().optional(), includesCalls: z.array(termId).optional(),
@@ -583,6 +586,11 @@ export function validateSituations(items: readonly { readonly file: string; read
           else if ('decided' in c) for (const o of c.options ?? []) if (!other.options.some((x) => x.id === o)) err('unknown-reference', at, `"${o}" is not an option of ${id}`);
         }
         if ('goal' in c) ref(posts, 'post in any scenario', c.goal.post, at);
+        if ('withdrawableForce' in c) {
+          ref(forceBlocks, 'force block in any scenario', c.withdrawableForce.block, at);
+          for (const r of c.withdrawableForce.regions) ref(regions, 'region', r, at);
+          if (at !== 'event' || def.kind !== 'notice') err('situation-withdrawal', at, 'withdrawal eligibility is event-only for a notice');
+        }
         if ('renewableEnlistment' in c) {
           const r = c.renewableEnlistment;
           ref(posts, 'post in any scenario', r.post, at);
@@ -632,6 +640,17 @@ export function validateSituations(items: readonly { readonly file: string; read
             const prior = pack.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === id);
             if (prior === undefined || prior.post !== p.subject || (prior.arm ?? pack.world.rules.recruitment.arm) !== entry.arm) fail('an included call must name a pack requisition for the same post and arm');
           }
+        }
+      }
+      if ('propose' in effect && (effect.propose.withdrawal !== undefined || (effect.propose.owner === 'forces' && effect.propose.field === 'withdraw_from_theatre'))) {
+        const p = effect.propose; const w = p.withdrawal;
+        const fail = (message: string) => err('situation-withdrawal', `${at}.propose`, message);
+        if (p.owner !== 'forces' || p.field !== 'withdraw_from_theatre' || w === undefined || def.kind !== 'notice' || def.citations.length === 0 || p.delta !== 1 || p.side !== def.faction || p.subject !== w.block) fail('a cited notice withdraws only its own named contingent with delta +1');
+        if (w !== undefined) {
+          ref(forceBlocks, 'force block in any scenario', w.block, at);
+          for (const r of w.regions) ref(regions, 'region', r, at);
+          const required = (c: Condition): boolean => 'withdrawableForce' in c ? JSON.stringify(c.withdrawableForce) === JSON.stringify(w) : 'all' in c && c.all.some(required);
+          if (!required(def.event)) fail('withdrawal requires the identical contingent still in its theatre');
         }
       }
       if ('propose' in effect && (effect.propose.renewal !== undefined || (effect.propose.owner === 'recruitment' && effect.propose.field === 'renew_enlistment'))) {

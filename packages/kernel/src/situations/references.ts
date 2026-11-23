@@ -108,6 +108,14 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
     });
     for (const { at: where, condition } of conditionsOf(d)) {
       walk(condition, (c) => {
+        if ('withdrawableForce' in c) {
+          for (const r of c.withdrawableForce.regions) if (!refs.regions.has(r)) at(where, `${r} is not a region`);
+          if (where !== 'event' || d.kind !== 'notice') at(where, 'withdrawal eligibility is event-only for a notice');
+        }
+        if ('withdrawableForce' in c) {
+          for (const r of c.withdrawableForce.regions) if (!refs.regions.has(r)) at(where, `${r} is not a region`);
+          if (where !== 'event' || d.kind !== 'notice') at(where, 'withdrawal eligibility is event-only for a notice');
+        }
         if ('renewableEnlistment' in c) {
           if (!refs.posts.has(c.renewableEnlistment.post)) at(where, `${c.renewableEnlistment.post} is not a post`);
           if (where !== 'event' || d.kind !== 'notice') at(where, 'renewal eligibility is event-only for a notice');

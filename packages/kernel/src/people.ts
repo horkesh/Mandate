@@ -17,6 +17,13 @@ export type ValueId = string;
  */
 export interface ProxyProfile {
   readonly id: PersonId;
+  /** 0113: the cast has a cited centre for each judgment. Numeric profiles supplied directly by a caller are known;
+   * the World adapter always supplies this mask. Derived input only, never State. */
+  readonly evidence?: {
+    readonly boldness: boolean;
+    readonly candour: boolean;
+    readonly standing: boolean;
+  };
   /** The few values this person cares most about (Starfleet Career uses two). */
   readonly values: readonly ValueId[];
   /** 0..1000: how bold this person likes action to be (0 = never risk, 1000 = always attack). */

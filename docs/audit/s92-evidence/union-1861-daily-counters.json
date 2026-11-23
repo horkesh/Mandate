@@ -1,0 +1,8416 @@
+[
+  {
+    "day": 4,
+    "fires": [
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 50,
+        "after": 52
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 7,
+    "fires": [
+      {
+        "mechanic": "messages.sent",
+        "before": 300,
+        "after": 301
+      },
+      {
+        "mechanic": "seats.initiative",
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 8,
+    "fires": [
+      {
+        "mechanic": "messages.delivered",
+        "before": 56,
+        "after": 57
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 9,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 52,
+        "after": 58
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 4,
+        "after": 7
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 10,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 63,
+        "after": 69
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 27,
+        "after": 30
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 11,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 39,
+        "after": 41
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 13,
+        "after": 14
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 79,
+        "after": 88
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 12,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 58,
+        "after": 63
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 26,
+        "after": 29
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 13,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 38,
+        "after": 41
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 52,
+        "after": 58
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 14,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 50,
+        "after": 56
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 281,
+        "after": 284
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 15,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 49,
+        "after": 52
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 57,
+        "after": 63
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 16,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 70,
+        "after": 76
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 26,
+        "after": 29
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 17,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 98,
+        "after": 101
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 52,
+        "after": 58
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 18,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 97,
+        "after": 103
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 26,
+        "after": 29
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 19,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 50,
+        "after": 53
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 54,
+        "after": 58
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 20,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 62,
+        "after": 66
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 27,
+        "after": 29
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 21,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 55,
+        "after": 58
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 133,
+        "after": 134
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 336,
+        "after": 342
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 22,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 84,
+        "after": 88
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 34,
+        "after": 36
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 23,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 64,
+        "after": 67
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 54,
+        "after": 58
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 24,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 132,
+        "after": 136
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 27,
+        "after": 29
+      }
+    ],
+    "decisionPoints": [
+      2,
+      2
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 25,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 81,
+        "after": 83
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 55,
+        "after": 59
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 26,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 69,
+        "after": 74
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 27,
+        "after": 29
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 27,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 46,
+        "after": 48
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 54,
+        "after": 58
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 28,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 80,
+        "after": 84
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 282,
+        "after": 284
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 29,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 60,
+        "after": 62
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 67,
+        "after": 71
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 30,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 92,
+        "after": 96
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 28,
+        "after": 30
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 31,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 112,
+        "after": 114
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 12,
+        "after": 13
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 81,
+        "after": 87
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 32,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 102,
+        "after": 106
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 30,
+        "after": 32
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 33,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 51,
+        "after": 54
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 56,
+        "after": 60
+      }
+    ],
+    "decisionPoints": [
+      2,
+      2
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 34,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 80,
+        "after": 87
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 41,
+        "after": 43
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 3,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 35,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 62,
+        "after": 64
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 312,
+        "after": 316
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 36,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 93,
+        "after": 98
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 40,
+        "after": 42
+      }
+    ],
+    "decisionPoints": [
+      2,
+      2
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 37,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 83,
+        "after": 89
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 58,
+        "after": 62
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 6,
+        "after": 8
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 6,
+        "after": 8
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 38,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 4,
+        "after": 5
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 39,
+    "fires": [
+      {
+        "mechanic": "movement.arrived",
+        "before": 4,
+        "after": 5
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 4
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 40,
+    "fires": [
+      {
+        "mechanic": "messages.delivered",
+        "before": 62,
+        "after": 61
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 4,
+        "after": 5
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 4,
+        "after": 5
+      }
+    ],
+    "decisionPoints": [
+      3,
+      2
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 41,
+    "fires": [
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 83,
+        "after": 86
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 4,
+        "after": 5
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 10,
+        "after": 14
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 8,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 6,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      2,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 42,
+    "fires": [
+      {
+        "mechanic": "messages.delivered",
+        "before": 84,
+        "after": 82
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 290,
+        "after": 286
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.called",
+        "before": 6,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 6,
+        "after": 4
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 43,
+    "fires": [
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 4,
+        "after": 5
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 68,
+        "after": 73
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 61,
+        "after": 65
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.called",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 3
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 44,
+    "fires": [
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      2,
+      2
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 45,
+    "fires": [
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 115,
+        "after": 113
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 46,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 6,
+        "after": 23
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 90,
+        "after": 91
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 31,
+        "after": 41
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 4,
+        "after": 14
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 4,
+        "after": 14
+      }
+    ],
+    "decisionPoints": [
+      4,
+      4
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 47,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 6,
+        "after": 23
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 72,
+        "after": 96
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 53,
+        "after": 73
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 7
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 10
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 4,
+        "after": 12
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 4,
+        "after": 12
+      }
+    ],
+    "decisionPoints": [
+      2,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 48,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 5,
+        "after": 18
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 56,
+        "after": 60
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 34,
+        "after": 36
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 8
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      2,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 49,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 12,
+        "after": 18
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 69,
+        "after": 71
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 309,
+        "after": 307
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 6,
+        "after": 21
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 5
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 3,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 3,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 50,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 12,
+        "after": 22
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 93,
+        "after": 90
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 44,
+        "after": 42
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 13
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 5,
+        "after": 11
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 11,
+        "after": 12
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 3,
+        "after": 2
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 3,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 51,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 12,
+        "after": 21
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 78,
+        "after": 77
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 3,
+        "after": 12
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 0,
+        "after": 5
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 4
+      }
+    ],
+    "decisionPoints": [
+      2,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 52,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 0,
+        "after": 6
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 12,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 122,
+        "after": 120
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 10,
+        "after": 14
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 7
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      2,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 53,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 0,
+        "after": 5
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 15,
+        "after": 22
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 59,
+        "after": 61
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 11,
+        "after": 16
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 6
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 3,
+        "after": 4
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 54,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 0,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 15,
+        "after": 24
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 72,
+        "after": 77
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 31,
+        "after": 33
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 14,
+        "after": 18
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 6,
+        "after": 10
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 3,
+        "after": 4
+      }
+    ],
+    "decisionPoints": [
+      0,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 55,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 8,
+        "after": 7
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 7,
+        "after": 20
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 52,
+        "after": 51
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 14,
+        "after": 13
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 1,
+        "after": 6
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 5,
+        "after": 6
+      }
+    ],
+    "decisionPoints": [
+      2,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 56,
+    "fires": [
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 12,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 287,
+        "after": 284
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 15,
+        "after": 16
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 6,
+        "after": 7
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 3,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 3,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 57,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 2,
+        "after": 6
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 90,
+        "after": 85
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 74,
+        "after": 66
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 19,
+        "after": 15
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 8,
+        "after": 9
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 58,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 2,
+        "after": 11
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 21,
+        "after": 16
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 98,
+        "after": 92
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 31,
+        "after": 28
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 8,
+        "after": 5
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 7,
+        "after": 8
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 59,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 2,
+        "after": 9
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 21,
+        "after": 18
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 113,
+        "after": 110
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 59,
+        "after": 53
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 5,
+        "after": 8
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 7,
+        "after": 3
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 4,
+        "after": 6
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 60,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 2,
+        "after": 11
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 25,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 107,
+        "after": 103
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 52,
+        "after": 34
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 5,
+        "after": 9
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 5,
+        "after": 6
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 0,
+        "after": 3
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 3,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 61,
+    "fires": [
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 4,
+        "after": 12
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 24,
+        "after": 15
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 68,
+        "after": 50
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 12,
+        "after": 11
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 96,
+        "after": 73
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 4,
+        "after": 5
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 62,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 3,
+        "after": 14
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 25,
+        "after": 14
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 86,
+        "after": 66
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 32,
+        "after": 24
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 3,
+        "after": 5
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 63,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 3,
+        "after": 11
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 24,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 70,
+        "after": 62
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 111,
+        "after": 106
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 341,
+        "after": 310
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 4
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 64,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 2,
+        "after": 11
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 107,
+        "after": 91
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 51,
+        "after": 44
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 65,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 3,
+        "after": 13
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 86,
+        "after": 78
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 67,
+        "after": 55
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 0,
+        "after": 3
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 66,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 3,
+        "after": 11
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 25,
+        "after": 26
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 137,
+        "after": 123
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 35,
+        "after": 29
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 3
+      }
+    ],
+    "decisionPoints": [
+      2,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 67,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 4,
+        "after": 15
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 35,
+        "after": 23
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 104,
+        "after": 88
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 69,
+        "after": 56
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.renewed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "situations.fired",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "situations.notice_reports",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "situations.noticed",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "situations.proposals",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 68,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 2,
+        "after": 12
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 37,
+        "after": 26
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 87,
+        "after": 69
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 36,
+        "after": 29
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "situations.surfaced",
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 69,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 4,
+        "after": 15
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 37,
+        "after": 25
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 57,
+        "after": 50
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 74,
+        "after": 60
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 3
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 70,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 4,
+        "after": 13
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 37,
+        "after": 27
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 98,
+        "after": 84
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 116,
+        "after": 109
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 313,
+        "after": 292
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "seats.initiative",
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 71,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 3,
+        "after": 14
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 38,
+        "after": 26
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 97,
+        "after": 90
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 17,
+        "after": 16
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 133,
+        "after": 112
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 72,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 3,
+        "after": 11
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 38,
+        "after": 29
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 132,
+        "after": 115
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 53,
+        "after": 46
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 3,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 2,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 73,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 4,
+        "after": 15
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 34,
+        "after": 22
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 126,
+        "after": 119
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 71,
+        "after": 57
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 74,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 5,
+        "after": 9
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 33,
+        "after": 28
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 126,
+        "after": 104
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 37,
+        "after": 30
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 75,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 2,
+        "after": 16
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 28,
+        "after": 21
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 71,
+        "after": 57
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 70,
+        "after": 56
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 76,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 2,
+        "after": 9
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 15,
+        "after": 32
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 86,
+        "after": 71
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 36,
+        "after": 31
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 1,
+        "after": 3
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 77,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 1,
+        "after": 14
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 31
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 71,
+        "after": 66
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 129,
+        "after": 122
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 361,
+        "after": 344
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 3,
+        "after": 7
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 3,
+        "after": 7
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 78,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 1,
+        "after": 10
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 35
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 135,
+        "after": 133
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 72,
+        "after": 71
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 3,
+        "after": 0
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 12,
+        "after": 11
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 79,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 0,
+        "after": 12
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 17,
+        "after": 33
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 102,
+        "after": 100
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 93,
+        "after": 89
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 80,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 0,
+        "after": 12
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 17,
+        "after": 33
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 154,
+        "after": 151
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 47,
+        "after": 46
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      2,
+      3
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 81,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 0,
+        "after": 13
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 17,
+        "after": 33
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 104,
+        "after": 95
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 11,
+        "after": 13
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 126,
+        "after": 123
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 82,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 1,
+        "after": 13
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 33
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 122,
+        "after": 105
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      2,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 83,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 1,
+        "after": 13
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 42
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 75,
+        "after": 72
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 83,
+        "after": 87
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 0,
+        "after": 4
+      }
+    ],
+    "decisionPoints": [
+      2,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 84,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 1,
+        "after": 14
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 33
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 108,
+        "after": 114
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 128,
+        "after": 119
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 330,
+        "after": 319
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 2,
+        "after": 3
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 85,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 1,
+        "after": 12
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 31
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 5,
+        "after": 6
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 93,
+        "after": 96
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 102,
+        "after": 107
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.called",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 12,
+        "after": 11
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 86,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 4,
+        "after": 14
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 20,
+        "after": 29
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 131,
+        "after": 135
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 43,
+        "after": 44
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 2,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 87,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 1,
+        "after": 10
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 18,
+        "after": 33
+      },
+      {
+        "mechanic": "map.pocket_closed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 6,
+        "after": 7
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 131,
+        "after": 135
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 91,
+        "after": 93
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.pocket",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 9,
+        "after": 11
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 8,
+        "after": 10
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 88,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 1,
+        "after": 15
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 14,
+        "after": 27
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 129,
+        "after": 117
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 40,
+        "after": 38
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 89,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 1,
+        "after": 9
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 14,
+        "after": 33
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 81,
+        "after": 72
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 72,
+        "after": 70
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 20,
+        "after": 23
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 0,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 90,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 1,
+        "after": 15
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 14,
+        "after": 27
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 79,
+        "after": 77
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 37,
+        "after": 36
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 15,
+        "after": 17
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 4
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 91,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 3,
+        "after": 11
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 14,
+        "after": 32
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 78,
+        "after": 79
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 151,
+        "after": 144
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 397,
+        "after": 379
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 15,
+        "after": 17
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 4
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 92,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 14,
+        "after": 30
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 10,
+        "after": 22
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 122,
+        "after": 116
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 56,
+        "after": 54
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 20,
+        "after": 24
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 13,
+        "after": 12
+      }
+    ],
+    "decisionPoints": [
+      0,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 93,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 19,
+        "after": 25
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 19,
+        "after": 28
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 100,
+        "after": 104
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 79,
+        "after": 75
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 22,
+        "after": 25
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 5
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 94,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 20,
+        "after": 31
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 19,
+        "after": 21
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 152,
+        "after": 143
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 38,
+        "after": 37
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 21,
+        "after": 24
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 4,
+        "after": 6
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 95,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 4,
+        "after": 5
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 4,
+        "after": 5
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 23,
+        "after": 33
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 17,
+        "after": 20
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 108,
+        "after": 106
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 75,
+        "after": 71
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 22,
+        "after": 23
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 0,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 96,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 19,
+        "after": 36
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 22,
+        "after": 16
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 97,
+        "after": 79
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 39,
+        "after": 40
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 14,
+        "after": 15
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 97,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 28,
+        "after": 44
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 19,
+        "after": 13
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 9,
+        "after": 2
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 67,
+        "after": 72
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 98,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 27,
+        "after": 40
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 20,
+        "after": 18
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 121,
+        "after": 123
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 147,
+        "after": 142
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 354,
+        "after": 345
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 99,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 26,
+        "after": 40
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 21,
+        "after": 18
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 101,
+        "after": 102
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 12,
+        "after": 11
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 100,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 28,
+        "after": 41
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 19,
+        "after": 18
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 132,
+        "after": 127
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 52,
+        "after": 51
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 101,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 29,
+        "after": 44
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 19,
+        "after": 15
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 147,
+        "after": 148
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 11,
+        "after": 12
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 138,
+        "after": 135
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 102,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 27,
+        "after": 42
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 21,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 151,
+        "after": 138
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 46,
+        "after": 45
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 103,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 30,
+        "after": 42
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 20,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 101,
+        "after": 93
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 92,
+        "after": 91
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 104,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 26,
+        "after": 46
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 24,
+        "after": 13
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 103,
+        "after": 101
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 48,
+        "after": 47
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 105,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 31,
+        "after": 41
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 19,
+        "after": 18
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 87,
+        "after": 86
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 145,
+        "after": 141
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 408,
+        "after": 394
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 106,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 27,
+        "after": 43
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 22,
+        "after": 15
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 122,
+        "after": 120
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 66,
+        "after": 65
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 13,
+        "after": 12
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 107,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 34,
+        "after": 42
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 13,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 109,
+        "after": 108
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 95,
+        "after": 93
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 108,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 27,
+        "after": 45
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 20,
+        "after": 14
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 166,
+        "after": 165
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 47,
+        "after": 46
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 109,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 28,
+        "after": 41
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 19,
+        "after": 18
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 142,
+        "after": 138
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 92,
+        "after": 90
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 110,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 32,
+        "after": 43
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 14,
+        "after": 16
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 113,
+        "after": 105
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 46,
+        "after": 45
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 111,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 27,
+        "after": 43
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 20,
+        "after": 16
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 139,
+        "after": 136
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 112,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 30,
+        "after": 45
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 17,
+        "after": 14
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 137,
+        "after": 131
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 138,
+        "after": 135
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 367,
+        "after": 354
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 113,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 31,
+        "after": 40
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 15,
+        "after": 19
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 104,
+        "after": 103
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 113,
+        "after": 111
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 13,
+        "after": 12
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 114,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 27,
+        "after": 42
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 19,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 129,
+        "after": 128
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 51,
+        "after": 49
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 115,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 34,
+        "after": 47
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 158,
+        "after": 157
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 95,
+        "after": 90
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 116,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 32,
+        "after": 47
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 17,
+        "after": 15
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 162,
+        "after": 154
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 52,
+        "after": 50
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 117,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 31,
+        "after": 43
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 18,
+        "after": 19
+      },
+      {
+        "mechanic": "map.pocket_closed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 6,
+        "after": 5
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 88,
+        "after": 80
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 108,
+        "after": 102
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 9,
+        "after": 1
+      },
+      {
+        "mechanic": "reports.pocket",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 118,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 36,
+        "after": 45
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 13,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 108,
+        "after": 103
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 50,
+        "after": 48
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 9,
+        "after": 1
+      },
+      {
+        "mechanic": "orders.responses_pruned",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 119,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 30,
+        "after": 49
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 18,
+        "after": 13
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 93,
+        "after": 92
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 137,
+        "after": 133
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 413,
+        "after": 397
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 9,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 120,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 44,
+        "after": 48
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 134,
+        "after": 130
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 81,
+        "after": 77
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 9,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.called",
+        "before": 7,
+        "after": 6
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 13,
+        "after": 12
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 7,
+        "after": 6
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 121,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 44,
+        "after": 50
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 15
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 123,
+        "after": 120
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 156,
+        "after": 151
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 8,
+        "after": 10
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 6,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 122,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 32,
+        "after": 43
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 28,
+        "after": 22
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 198,
+        "after": 189
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 51,
+        "after": 48
+      }
+    ],
+    "decisionPoints": [
+      2,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 123,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 37,
+        "after": 52
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 21,
+        "after": 10
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 140,
+        "after": 142
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 96,
+        "after": 92
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 124,
+    "fires": [
+      {
+        "mechanic": "combat.occupation",
+        "before": 3,
+        "after": 2
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 3,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 34,
+        "after": 47
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 0,
+        "after": 15
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 15,
+        "after": 16
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 110,
+        "after": 106
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 57,
+        "after": 54
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 2,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 125,
+    "fires": [
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 30,
+        "after": 45
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 0,
+        "after": 28
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 17
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 101,
+        "after": 91
+      },
+      {
+        "mechanic": "recruitment.answered",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "recruitment.refused",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 126,
+    "fires": [
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 0,
+        "after": 26
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 12,
+        "after": 24
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 119,
+        "after": 110
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 159,
+        "after": 153
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 366,
+        "after": 356
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 9,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 6
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 2,
+        "after": 10
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 2,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 127,
+    "fires": [
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 37,
+        "after": 50
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 1,
+        "after": 17
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 18,
+        "after": 17
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 114,
+        "after": 116
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 122,
+        "after": 129
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 13,
+        "after": 12
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 128,
+    "fires": [
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 33,
+        "after": 45
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 147,
+        "after": 143
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 57,
+        "after": 58
+      }
+    ],
+    "decisionPoints": [
+      3,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 129,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.battle_opened",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 31,
+        "after": 47
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 25,
+        "after": 24
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 161,
+        "after": 171
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 104,
+        "after": 121
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 8
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 130,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 30,
+        "after": 43
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 18,
+        "after": 29
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 160,
+        "after": 163
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 52,
+        "after": 67
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 8
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 0,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 131,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 35,
+        "after": 52
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 13,
+        "after": 20
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 89,
+        "after": 97
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 13,
+        "after": 15
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 152,
+        "after": 171
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "operations.ended",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.goal_reached",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 8
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 132,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 29,
+        "after": 47
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 20,
+        "after": 25
+      },
+      {
+        "mechanic": "map.pocket_closed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 119,
+        "after": 114
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 54,
+        "after": 70
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 4,
+        "after": 10
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "operations.works",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 8
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "reports.pocket",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 133,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 33,
+        "after": 54
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 18,
+        "after": 20
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 5,
+        "after": 6
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 110,
+        "after": 124
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 132,
+        "after": 130
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 422,
+        "after": 427
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 4,
+        "after": 10
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 2,
+        "after": 5
+      },
+      {
+        "mechanic": "operations.works",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "orders.relay_held",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "orders.relay_objected",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 8
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.initiative",
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      1,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 134,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 35,
+        "after": 43
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 15,
+        "after": 31
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 5,
+        "after": 4
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 135,
+        "after": 152
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 76,
+        "after": 87
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 6,
+        "after": 9
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 6
+      },
+      {
+        "mechanic": "orders.bypassed",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "orders.obeyed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "planner.candidates",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "planner.searches",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.drafted",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.goal_set",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 14,
+        "after": 12
+      },
+      {
+        "mechanic": "regions.self_emancipation",
+        "before": 146,
+        "after": 142
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 8
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 135,
+    "fires": [
+      {
+        "mechanic": "combat.battle_closed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 30,
+        "after": 50
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 21,
+        "after": 23
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 133,
+        "after": 147
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 107,
+        "after": 120
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 6,
+        "after": 9
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "mechanic": "operations.opened",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "orders.relay_objected",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.chosen",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.went_ahead",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 8
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.choices",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "verbs.declined",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 136,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.battle_opened",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 32,
+        "after": 29
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 15,
+        "after": 20
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 173,
+        "after": 172
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 57,
+        "after": 69
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 6,
+        "after": 11
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "mechanic": "orders.bypassed",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "orders.obeyed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "planner.candidates",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "planner.searches",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.drafted",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.goal_set",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.disbanded",
+        "before": 5,
+        "after": 21
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 4,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 8
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "verbs.declined",
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      1,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 137,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.general_hit",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 5
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 2,
+        "after": 5
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 17,
+        "after": 20
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 156,
+        "after": 163
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 104,
+        "after": 109
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 6
+      },
+      {
+        "mechanic": "operations.opened",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.chosen",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.went_ahead",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "reports.commander_lost",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.choices",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      0
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 138,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.captured",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.flank_broken",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 3,
+        "after": 6
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 3,
+        "after": 6
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 26,
+        "after": 31
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 20,
+        "after": 18
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 112,
+        "after": 122
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 52,
+        "after": 58
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 7,
+        "after": 14
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 6
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "situations.fired",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "situations.notice_reports",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "situations.noticed",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 139,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 4,
+        "after": 6
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 4,
+        "after": 6
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 24,
+        "after": 28
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 21
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 4,
+        "after": 5
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 88,
+        "after": 106
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 105,
+        "after": 108
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 6,
+        "after": 11
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "mechanic": "operations.ended",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.goal_reached",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.disbanded",
+        "before": 7,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "situations.surfaced",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "verbs.declined",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      0,
+      1
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 140,
+    "fires": [
+      {
+        "mechanic": "combat.battle_closed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.battle_opened",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.captured",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.cut_off",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.flank_broken",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.general_hit",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 3
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 5,
+        "after": 6
+      },
+      {
+        "mechanic": "combat.routed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.surrendered",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 21,
+        "after": 35
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 19,
+        "after": 8
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 128,
+        "after": 148
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 151,
+        "after": 141
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 374,
+        "after": 381
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 11,
+        "after": 46
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 5,
+        "after": 6
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "orders.obeyed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "orders.relay_held",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "orders.relay_objected",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "orders.relayed",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "planner.candidates",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "planner.searches",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "planner.term.time",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.drafted",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.goal_set",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.disbanded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 12
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "reports.commander_lost",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 3,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "situations.fired",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "situations.notice_reports",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "situations.noticed",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "verbs.declined",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      0,
+      2
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 141,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 5,
+        "after": 7
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 24,
+        "after": 22
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 16,
+        "after": 22
+      },
+      {
+        "mechanic": "forces.stragglers_returned",
+        "before": 0,
+        "after": 5
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 122,
+        "after": 149
+      },
+      {
+        "mechanic": "messages.special_messenger",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 9,
+        "after": 16
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 5,
+        "after": 6
+      },
+      {
+        "mechanic": "operations.opened",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "orders.bypassed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.chosen",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.went_ahead",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 14,
+        "after": 12
+      },
+      {
+        "mechanic": "regions.self_emancipation",
+        "before": 145,
+        "after": 143
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "seats.choices",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "situations.surfaced",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "verbs.declined",
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      3,
+      7
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 142,
+    "fires": [
+      {
+        "mechanic": "combat.battle_opened",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "combat.captured",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "combat.flank_broken",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "mechanic": "combat.routed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 4,
+        "after": 5
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 37,
+        "after": 25
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 4,
+        "after": 20
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 163,
+        "after": 166
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 76,
+        "after": 74
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 38,
+        "after": 12
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "operations.works",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "orders.obeyed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "orders.relay_objected",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "orders.relayed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "planner.candidates",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "planner.searches",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "planner.term.caution",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "planner.term.force_ratio",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "planner.term.supply",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.drafted",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.goal_set",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.disbanded",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      1,
+      6
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 143,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.battle_opened",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 4,
+        "after": 7
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 18,
+        "after": 22
+      },
+      {
+        "mechanic": "forces.stragglers_returned",
+        "before": 6,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 187,
+        "after": 176
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 106,
+        "after": 119
+      },
+      {
+        "mechanic": "messages.special_messenger",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 9,
+        "after": 14
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 4,
+        "after": 5
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "operations.works",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "orders.bypassed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.chosen",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.went_ahead",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 8
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "seats.choices",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "decisionPoints": [
+      0,
+      3
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 144,
+    "fires": [
+      {
+        "mechanic": "combat.battle_closed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.battle_opened",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.captured",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "mechanic": "combat.routed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 3,
+        "after": 6
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 25,
+        "after": 22
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 20,
+        "after": 26
+      },
+      {
+        "mechanic": "forces.stragglers_returned",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 172,
+        "after": 168
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 53,
+        "after": 82
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 6,
+        "after": 12
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 5,
+        "after": 6
+      },
+      {
+        "mechanic": "operations.ended",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "orders.obeyed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "planner.candidates",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "planner.searches",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.drafted",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.goal_reached",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.goal_set",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 16
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 6
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 2,
+        "after": 1
+      }
+    ],
+    "decisionPoints": [
+      2,
+      2
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 145,
+    "fires": [
+      {
+        "mechanic": "combat.battle_day",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.flank_broken",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "combat.general_hit",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 3,
+        "after": 4
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 19,
+        "after": 17
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 26,
+        "after": 30
+      },
+      {
+        "mechanic": "forces.stragglers_returned",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 99,
+        "after": 133
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 116,
+        "after": 133
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 8,
+        "after": 12
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "mechanic": "operations.opened",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "operations.works",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "orders.returned",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.chosen",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "plans.went_ahead",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 8,
+        "after": 16
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 2,
+        "after": 6
+      },
+      {
+        "mechanic": "reports.commander_lost",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.choices",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "verbs.declined",
+        "before": 2,
+        "after": 3
+      }
+    ],
+    "decisionPoints": [
+      0,
+      3
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 146,
+    "fires": [
+      {
+        "mechanic": "combat.battle_closed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "combat.battle_opened",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "combat.captured",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 4,
+        "after": 5
+      },
+      {
+        "mechanic": "combat.routed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 23,
+        "after": 18
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 17,
+        "after": 28
+      },
+      {
+        "mechanic": "forces.stragglers_returned",
+        "before": 0,
+        "after": 38
+      },
+      {
+        "mechanic": "map.pocket_closed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 125,
+        "after": 126
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 63,
+        "after": 68
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 8,
+        "after": 6
+      },
+      {
+        "mechanic": "movement.joined",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "orders.obeyed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "planner.candidates",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "planner.searches",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.drafted",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.goal_set",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.disbanded",
+        "before": 11,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 4
+      }
+    ],
+    "decisionPoints": [
+      2,
+      4
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 147,
+    "fires": [
+      {
+        "mechanic": "combat.battle_closed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.battle_opened",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.captured",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.flank_broken",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 6,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.withdrew",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 6,
+        "after": 3
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 23,
+        "after": 29
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 17,
+        "after": 26
+      },
+      {
+        "mechanic": "forces.stragglers_returned",
+        "before": 28,
+        "after": 38
+      },
+      {
+        "mechanic": "map.pocket_closed",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 124,
+        "after": 127
+      },
+      {
+        "mechanic": "messages.mail_delay",
+        "before": 166,
+        "after": 162
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 410,
+        "after": 437
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "mechanic": "operations.opened",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "operations.stage",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.chosen",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.went_ahead",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.men",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.mustered",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "recruitment.slow_walked",
+        "before": 2,
+        "after": 0
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 16
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 8
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "reports.pocket",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 3,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 0,
+        "after": 5
+      },
+      {
+        "mechanic": "seats.choices",
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "decisionPoints": [
+      3,
+      2
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  },
+  {
+    "day": 148,
+    "fires": [
+      {
+        "mechanic": "combat.battle_closed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.battle_day",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "combat.battle_opened",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.captured",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "combat.missing",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "mechanic": "combat.occupation",
+        "before": 5,
+        "after": 4
+      },
+      {
+        "mechanic": "combat.routed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "control.changed",
+        "before": 5,
+        "after": 4
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "forces.stores_fell",
+        "before": 24,
+        "after": 30
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "forces.stores_refilled",
+        "before": 13,
+        "after": 25
+      },
+      {
+        "mechanic": "forces.stragglers_returned",
+        "before": 28,
+        "after": 4
+      },
+      {
+        "mechanic": "map.recomputed",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "messages.courier_delay",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "mechanic": "messages.delivered",
+        "before": 118,
+        "after": 151
+      },
+      {
+        "mechanic": "messages.sent",
+        "before": 69,
+        "after": 101
+      },
+      {
+        "mechanic": "movement.arrived",
+        "before": 4,
+        "after": 10
+      },
+      {
+        "mechanic": "operations.ended",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "operations.repulsed",
+        "before": 0,
+        "after": 1
+      },
+      {
+        "mechanic": "operations.works",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "plans.goal_reached",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "recruitment.disbanded",
+        "before": 1,
+        "after": 0
+      },
+      {
+        "mechanic": "regions.reached_lines",
+        "before": 14,
+        "after": 13
+      },
+      {
+        "mechanic": "reports.battle_dispatch",
+        "before": 0,
+        "after": 16
+      },
+      {
+        "mechanic": "reports.casualty_return",
+        "before": 0,
+        "after": 6
+      },
+      {
+        "mechanic": "reports.governor_wire",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.attention_spent",
+        "before": 1,
+        "after": 2
+      },
+      {
+        "mechanic": "seats.battle_orders",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "mechanic": "verbs.answered",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "mechanic": "verbs.declined",
+        "before": 2,
+        "after": 3
+      }
+    ],
+    "decisionPoints": [
+      1,
+      2
+    ],
+    "rejections": [
+      0,
+      0
+    ]
+  }
+]

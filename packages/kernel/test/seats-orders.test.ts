@@ -85,11 +85,12 @@ describe('orders through chains (0040)', () => {
     // His objection's terms: the rung, then each term of his willingness (lane 1.1: compliance on the new State).
     expect(objected[0]!.terms.map((t) => `${t.termKind}:${t.termRule}:${t.termValue}`)).toEqual([
       // A candid man: an advance offends his caution and is 400 bolder than he likes; his regard and the oversight do not make up for it.
-      'relay_objection:object:-227',
+      'relay_objection:object:-208',
       'relay_term:values:-200',
       'relay_term:temperament:-160',
       'relay_term:regard:90',
-      'relay_term:deterrence:43',
+      // 0113: the fixture has no cited reputation centre, so standing supplies no shield.
+      'relay_term:deterrence:62',
       'relay_term:capacity:0',
       'relay_term:disposition:0',
       'relay_term:grievances:0',
@@ -129,9 +130,9 @@ describe('orders through chains (0040)', () => {
     // mild covert unwillingness, a slow walk, which a relay turns into the pack's two days' hold.
     expect(relayed).toHaveLength(1);
     expect(relayed[0]!.terms[0]).toEqual({ termKind: 'relay_hold', termPerson: P('a_sec'), termPost: POST('a_office'), termRegion: null, termValue: 2, termRule: 'slow_walk' });
-    expect(relayed[0]!.terms.slice(1).map((t) => `${t.termRule}:${t.termValue}`)).toEqual(['values:0', 'temperament:-40', 'regard:-90', 'deterrence:43', 'capacity:0', 'disposition:0', 'grievances:0']);
+    expect(relayed[0]!.terms.slice(1).map((t) => `${t.termRule}:${t.termValue}`)).toEqual(['values:0', 'temperament:-40', 'regard:-90', 'deterrence:62', 'capacity:0', 'disposition:0', 'grievances:0']);
     const response = state.orderResponses[responseKey(relayed[0]!.message!, P('a_sec'))]!;
-    expect([response.respActual, response.respDeclared, response.respWillingness, response.respRole]).toEqual(['slow_walk', 'comply', -87, 'relay']);
+    expect([response.respActual, response.respDeclared, response.respWillingness, response.respRole]).toEqual(['slow_walk', 'comply', -68, 'relay']);
     // Wired from the capital to the office at once, held two days, then two days to the front by wire and horse.
     expect(state.planRecords[POST('a_army')]!.planSetDay).toBe(5);
     expect(state.planRecords[POST('a_army')]!.planViaChain).toBe(true);

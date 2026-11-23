@@ -1,0 +1,1760 @@
+{
+  "stagedBattleDays": [
+    {
+      "region": "fort_sumter",
+      "day": 38,
+      "date": "1861-04-12",
+      "type": "bombard",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_charleston",
+          "bsideCommander": "beauregard_pierre_g_t",
+          "bsideBlocks": [
+            "fb_st_charleston_1st_artillery_battalion",
+            "fb_st_charleston_floating_battery",
+            "fb_st_charleston_fort_johnson"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 416,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 0,
+          "bsideWounded": 0,
+          "bsideMissing": 0,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_fort_sumter",
+          "bsideCommander": "anderson_robert",
+          "bsideBlocks": [
+            "fb_us_sumter_garrison"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 85,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 0,
+          "bsideWounded": 0,
+          "bsideMissing": 0,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "fort_sumter",
+      "day": 39,
+      "date": "1861-04-13",
+      "type": "bombard",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_charleston",
+          "bsideCommander": "beauregard_pierre_g_t",
+          "bsideBlocks": [
+            "fb_st_charleston_1st_artillery_battalion",
+            "fb_st_charleston_floating_battery",
+            "fb_st_charleston_fort_johnson"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 416,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 0,
+          "bsideWounded": 0,
+          "bsideMissing": 0,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_fort_sumter",
+          "bsideCommander": "anderson_robert",
+          "bsideBlocks": [
+            "fb_us_sumter_garrison"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 85,
+          "bsideResult": "held",
+          "bsideCutOff": "surrender",
+          "bsideRetreatTo": null,
+          "bsideKilled": 0,
+          "bsideWounded": 0,
+          "bsideMissing": 0,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 129,
+      "date": "1861-07-12",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "clark_edward",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2000,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 7,
+          "bsideWounded": 45,
+          "bsideMissing": 5,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "waite_carlos_a",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2445,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 8,
+          "bsideWounded": 46,
+          "bsideMissing": 5,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 130,
+      "date": "1861-07-13",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "clark_edward",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1943,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 6,
+          "bsideWounded": 34,
+          "bsideMissing": 4,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "waite_carlos_a",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2386,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 6,
+          "bsideWounded": 34,
+          "bsideMissing": 4,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 131,
+      "date": "1861-07-14",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "clark_edward",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1899,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 5,
+          "bsideWounded": 33,
+          "bsideMissing": 3,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "waite_carlos_a",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2342,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 23,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 132,
+      "date": "1861-07-15",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "clark_edward",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1858,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 4,
+          "bsideWounded": 23,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "waite_carlos_a",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2314,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 19,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 133,
+      "date": "1861-07-16",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "clark_edward",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1829,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 20,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "waite_carlos_a",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2290,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 18,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 134,
+      "date": "1861-07-17",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "clark_edward",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1804,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 19,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "waite_carlos_a",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2267,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 18,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 135,
+      "date": "1861-07-18",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "clark_edward",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1780,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 19,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "waite_carlos_a",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2244,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 18,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 136,
+      "date": "1861-07-19",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "clark_edward",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1756,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 7,
+          "bsideWounded": 42,
+          "bsideMissing": 4,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "waite_carlos_a",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2221,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 5,
+          "bsideWounded": 31,
+          "bsideMissing": 3,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 137,
+      "date": "1861-07-20",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "clark_edward",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1703,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 6,
+          "bsideWounded": 34,
+          "bsideMissing": 4,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "waite_carlos_a",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2182,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 19,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 138,
+      "date": "1861-07-21",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1659,
+          "bsideResult": "fell_back",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 4,
+          "bsideWounded": 29,
+          "bsideMissing": 14,
+          "bsideCaptured": 1
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2158,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 17,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 139,
+      "date": "1861-07-22",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1611,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 4,
+          "bsideWounded": 25,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2136,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 17,
+          "bsideMissing": 1,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 140,
+      "date": "1861-07-23",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1580,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 23,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2116,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 16,
+          "bsideMissing": 1,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 141,
+      "date": "1861-07-24",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1552,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 3,
+          "bsideWounded": 17,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2097,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 16,
+          "bsideMissing": 1,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 142,
+      "date": "1861-07-25",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "twiggs_david_e",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1530,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 17,
+          "bsideMissing": 1,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2078,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 16,
+          "bsideMissing": 1,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "manassas",
+      "day": 140,
+      "date": "1861-07-23",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_manassas",
+          "bsideCommander": "beauregard_pierre_g_t",
+          "bsideBlocks": [
+            "state-forces.va_manassas_garland",
+            "state-forces.va_manassas_preston"
+          ],
+          "bsideUnknown": [
+            "state-forces.va_manassas_preston"
+          ],
+          "bsidePresent": 490,
+          "bsideResult": "routed",
+          "bsideCutOff": "surrender",
+          "bsideRetreatTo": null,
+          "bsideKilled": 12,
+          "bsideWounded": 73,
+          "bsideMissing": 0,
+          "bsideCaptured": 405
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_northeastern_virginia",
+          "bsideCommander": "mcdowell_irvin",
+          "bsideBlocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 69000,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 9,
+          "bsideWounded": 55,
+          "bsideMissing": 5,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 143,
+      "date": "1861-07-26",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "twiggs_david_e",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1510,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 6,
+          "bsideWounded": 40,
+          "bsideMissing": 4,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "abercrombie_john_j",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2059,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 5,
+          "bsideWounded": 34,
+          "bsideMissing": 3,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 144,
+      "date": "1861-07-27",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "twiggs_david_e",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1460,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 5,
+          "bsideWounded": 29,
+          "bsideMissing": 3,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "abercrombie_john_j",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2017,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 4,
+          "bsideWounded": 23,
+          "bsideMissing": 2,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 145,
+      "date": "1861-07-28",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "twiggs_david_e",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1423,
+          "bsideResult": "fell_back",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 16,
+          "bsideMissing": 8,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "abercrombie_john_j",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1988,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 15,
+          "bsideMissing": 1,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 146,
+      "date": "1861-07-29",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "twiggs_david_e",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1397,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 17,
+          "bsideMissing": 1,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "abercrombie_john_j",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1970,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 14,
+          "bsideMissing": 1,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 147,
+      "date": "1861-07-30",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "twiggs_david_e",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1377,
+          "bsideResult": "fell_back",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 15,
+          "bsideMissing": 8,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "abercrombie_john_j",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1953,
+          "bsideResult": "fell_back",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 14,
+          "bsideMissing": 7,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "tx_san_antonio_austin",
+      "day": 148,
+      "date": "1861-07-31",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "st_gov_texas",
+          "bsideCommander": "twiggs_david_e",
+          "bsideBlocks": [
+            "raised.st_gov_texas.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1352,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 15,
+          "bsideMissing": 1,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_texas",
+          "bsideCommander": "abercrombie_john_j",
+          "bsideBlocks": [
+            "fb_us_texas_troops"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 1930,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 2,
+          "bsideWounded": 14,
+          "bsideMissing": 1,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "manassas",
+      "day": 144,
+      "date": "1861-07-27",
+      "type": "meeting",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_manassas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "raised.st_gov_south_carolina.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 3000,
+          "bsideResult": "routed",
+          "bsideCutOff": null,
+          "bsideRetreatTo": "loudoun_fauquier",
+          "bsideKilled": 104,
+          "bsideWounded": 593,
+          "bsideMissing": 244,
+          "bsideCaptured": 104
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_northeastern_virginia",
+          "bsideCommander": "mcdowell_irvin",
+          "bsideBlocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 68936,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 54,
+          "bsideWounded": 306,
+          "bsideMissing": 28,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "manassas",
+      "day": 145,
+      "date": "1861-07-28",
+      "type": "meeting",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_manassas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "raised.st_gov_north_carolina.d130",
+            "raised.st_gov_north_carolina.d93",
+            "raised.st_gov_south_carolina.d129",
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina.transfer.138.1"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 20955,
+          "bsideResult": "routed",
+          "bsideCutOff": null,
+          "bsideRetreatTo": "loudoun_fauquier",
+          "bsideKilled": 743,
+          "bsideWounded": 4212,
+          "bsideMissing": 2428,
+          "bsideCaptured": 1040
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_northeastern_virginia",
+          "bsideCommander": "mcdowell_irvin",
+          "bsideBlocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 68548,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 424,
+          "bsideWounded": 2409,
+          "bsideMissing": 792,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "harpers_ferry",
+      "day": 147,
+      "date": "1861-07-30",
+      "type": "meeting",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_harpers_ferry",
+          "bsideCommander": "johnston_joseph_e",
+          "bsideBlocks": [
+            "raised.st_gov_georgia.d126.2",
+            "raised.st_gov_georgia.d129",
+            "state-forces.cs_tn_cavalry_tennessee",
+            "state-forces.cs_tn_infantry_tennessee",
+            "state-forces.va_harpers_ferry"
+          ],
+          "bsideUnknown": [
+            "state-forces.va_harpers_ferry"
+          ],
+          "bsidePresent": 29000,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 36,
+          "bsideWounded": 204,
+          "bsideMissing": 19,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_pennsylvania",
+          "bsideCommander": "patterson_robert",
+          "bsideBlocks": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2000,
+          "bsideResult": "withdrew",
+          "bsideCutOff": null,
+          "bsideRetreatTo": "lower_valley",
+          "bsideKilled": 57,
+          "bsideWounded": 323,
+          "bsideMissing": 97,
+          "bsideCaptured": 17
+        }
+      ]
+    },
+    {
+      "region": "manassas",
+      "day": 148,
+      "date": "1861-07-31",
+      "type": "meeting",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_manassas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "raised.st_gov_north_carolina.d130",
+            "raised.st_gov_north_carolina.d93",
+            "raised.st_gov_south_carolina.d129",
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina.transfer.138.1"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 13034,
+          "bsideResult": "routed",
+          "bsideCutOff": null,
+          "bsideRetreatTo": "loudoun_fauquier",
+          "bsideKilled": 475,
+          "bsideWounded": 2696,
+          "bsideMissing": 1110,
+          "bsideCaptured": 475
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_northeastern_virginia",
+          "bsideCommander": "mcdowell_irvin",
+          "bsideBlocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 65061,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 258,
+          "bsideWounded": 1466,
+          "bsideMissing": 137,
+          "bsideCaptured": 0
+        }
+      ]
+    }
+  ],
+  "finalBattleDays": [
+    {
+      "region": "fort_sumter",
+      "day": 38,
+      "date": "1861-04-12",
+      "type": "bombard",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_charleston",
+          "bsideCommander": "beauregard_pierre_g_t",
+          "bsideBlocks": [
+            "fb_st_charleston_1st_artillery_battalion",
+            "fb_st_charleston_floating_battery",
+            "fb_st_charleston_fort_johnson"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 416,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 0,
+          "bsideWounded": 0,
+          "bsideMissing": 0,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_fort_sumter",
+          "bsideCommander": "anderson_robert",
+          "bsideBlocks": [
+            "fb_us_sumter_garrison"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 85,
+          "bsideResult": "held",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 0,
+          "bsideWounded": 0,
+          "bsideMissing": 0,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "fort_sumter",
+      "day": 39,
+      "date": "1861-04-13",
+      "type": "bombard",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_charleston",
+          "bsideCommander": "beauregard_pierre_g_t",
+          "bsideBlocks": [
+            "fb_st_charleston_1st_artillery_battalion",
+            "fb_st_charleston_floating_battery",
+            "fb_st_charleston_fort_johnson"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 416,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 0,
+          "bsideWounded": 0,
+          "bsideMissing": 0,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_fort_sumter",
+          "bsideCommander": "anderson_robert",
+          "bsideBlocks": [
+            "fb_us_sumter_garrison"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 85,
+          "bsideResult": "held",
+          "bsideCutOff": "surrender",
+          "bsideRetreatTo": null,
+          "bsideKilled": 0,
+          "bsideWounded": 0,
+          "bsideMissing": 0,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "manassas",
+      "day": 140,
+      "date": "1861-07-23",
+      "type": "attack_open",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_manassas",
+          "bsideCommander": "beauregard_pierre_g_t",
+          "bsideBlocks": [
+            "state-forces.va_manassas_garland",
+            "state-forces.va_manassas_preston"
+          ],
+          "bsideUnknown": [
+            "state-forces.va_manassas_preston"
+          ],
+          "bsidePresent": 490,
+          "bsideResult": "routed",
+          "bsideCutOff": "surrender",
+          "bsideRetreatTo": null,
+          "bsideKilled": 12,
+          "bsideWounded": 73,
+          "bsideMissing": 0,
+          "bsideCaptured": 405
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_northeastern_virginia",
+          "bsideCommander": "mcdowell_irvin",
+          "bsideBlocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 69000,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 9,
+          "bsideWounded": 55,
+          "bsideMissing": 5,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "manassas",
+      "day": 144,
+      "date": "1861-07-27",
+      "type": "meeting",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_manassas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "raised.st_gov_south_carolina.d129"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 3000,
+          "bsideResult": "routed",
+          "bsideCutOff": null,
+          "bsideRetreatTo": "loudoun_fauquier",
+          "bsideKilled": 104,
+          "bsideWounded": 593,
+          "bsideMissing": 244,
+          "bsideCaptured": 104
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_northeastern_virginia",
+          "bsideCommander": "mcdowell_irvin",
+          "bsideBlocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 68936,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 54,
+          "bsideWounded": 306,
+          "bsideMissing": 28,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "manassas",
+      "day": 145,
+      "date": "1861-07-28",
+      "type": "meeting",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_manassas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "raised.st_gov_north_carolina.d130",
+            "raised.st_gov_north_carolina.d93",
+            "raised.st_gov_south_carolina.d129",
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina.transfer.138.1"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 20955,
+          "bsideResult": "routed",
+          "bsideCutOff": null,
+          "bsideRetreatTo": "loudoun_fauquier",
+          "bsideKilled": 743,
+          "bsideWounded": 4212,
+          "bsideMissing": 2428,
+          "bsideCaptured": 1040
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_northeastern_virginia",
+          "bsideCommander": "mcdowell_irvin",
+          "bsideBlocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 68548,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 424,
+          "bsideWounded": 2409,
+          "bsideMissing": 792,
+          "bsideCaptured": 0
+        }
+      ]
+    },
+    {
+      "region": "harpers_ferry",
+      "day": 147,
+      "date": "1861-07-30",
+      "type": "meeting",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_harpers_ferry",
+          "bsideCommander": "johnston_joseph_e",
+          "bsideBlocks": [
+            "raised.st_gov_georgia.d126.2",
+            "raised.st_gov_georgia.d129",
+            "state-forces.cs_tn_cavalry_tennessee",
+            "state-forces.cs_tn_infantry_tennessee",
+            "state-forces.va_harpers_ferry"
+          ],
+          "bsideUnknown": [
+            "state-forces.va_harpers_ferry"
+          ],
+          "bsidePresent": 29000,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 36,
+          "bsideWounded": 204,
+          "bsideMissing": 19,
+          "bsideCaptured": 0
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_pennsylvania",
+          "bsideCommander": "patterson_robert",
+          "bsideBlocks": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 2000,
+          "bsideResult": "withdrew",
+          "bsideCutOff": null,
+          "bsideRetreatTo": "lower_valley",
+          "bsideKilled": 57,
+          "bsideWounded": 323,
+          "bsideMissing": 97,
+          "bsideCaptured": 17
+        }
+      ]
+    },
+    {
+      "region": "manassas",
+      "day": 148,
+      "date": "1861-07-31",
+      "type": "meeting",
+      "sides": [
+        {
+          "bsideFaction": "confederate",
+          "bsidePost": "cs_cmd_manassas",
+          "bsideCommander": null,
+          "bsideBlocks": [
+            "raised.st_gov_north_carolina.d130",
+            "raised.st_gov_north_carolina.d93",
+            "raised.st_gov_south_carolina.d129",
+            "state-forces.cs_nc_additional_north_carolina",
+            "state-forces.cs_nc_state_transfer_north_carolina",
+            "state-forces.cs_nc_volunteers_north_carolina.transfer.138.1"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 13034,
+          "bsideResult": "routed",
+          "bsideCutOff": null,
+          "bsideRetreatTo": "loudoun_fauquier",
+          "bsideKilled": 475,
+          "bsideWounded": 2696,
+          "bsideMissing": 1110,
+          "bsideCaptured": 475
+        },
+        {
+          "bsideFaction": "union",
+          "bsidePost": "us_dept_northeastern_virginia",
+          "bsideCommander": "mcdowell_irvin",
+          "bsideBlocks": [
+            "organised.s74_mcdowell_division_1_brigade_2.1",
+            "organised.s74_mcdowell_division_1_brigade_3.1",
+            "organised.s74_mcdowell_division_1_brigade_4.1",
+            "organised.s74_mcdowell_division_1_brigade_4.2",
+            "organised.s74_mcdowell_division_2_brigade_1.1",
+            "organised.s74_mcdowell_division_2_brigade_2.1",
+            "organised.s74_mcdowell_division_2_brigade_2.2",
+            "organised.s74_mcdowell_division_3_brigade_2.1",
+            "organised.s74_mcdowell_division_3_brigade_3.1",
+            "organised.s74_mcdowell_division_4_reserve.1",
+            "organised.s74_mcdowell_division_5_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_1.2",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d77",
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_michigan.d77",
+            "raised.st_gov_new_york.d64",
+            "raised.st_gov_new_york.d64.bundle.10",
+            "raised.st_gov_new_york.d64.bundle.2",
+            "raised.st_gov_new_york.d64.bundle.3",
+            "raised.st_gov_new_york.d64.bundle.4",
+            "raised.st_gov_new_york.d64.bundle.5",
+            "raised.st_gov_new_york.d64.bundle.6",
+            "raised.st_gov_new_york.d64.bundle.7",
+            "raised.st_gov_new_york.d64.bundle.8",
+            "raised.st_gov_new_york.d64.bundle.9",
+            "raised.st_gov_new_york.d83",
+            "raised.st_gov_new_york.d83.bundle.2",
+            "raised.st_gov_new_york.d83.bundle.3",
+            "raised.st_gov_new_york.d83.bundle.4"
+          ],
+          "bsideUnknown": [],
+          "bsidePresent": 65061,
+          "bsideResult": "gained_ground",
+          "bsideCutOff": null,
+          "bsideRetreatTo": null,
+          "bsideKilled": 258,
+          "bsideWounded": 1466,
+          "bsideMissing": 137,
+          "bsideCaptured": 0
+        }
+      ]
+    }
+  ],
+  "removedTexasDays": [
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148
+  ],
+  "unchangedNonTexasBattleRecords": [
+    "battle:fort_sumter:38",
+    "battle:manassas:140",
+    "battle:manassas:144",
+    "battle:manassas:145",
+    "battle:harpers_ferry:147",
+    "battle:manassas:148"
+  ],
+  "allNonTexasRecordsExact": true,
+  "assessment": "The demonstrated duplicate Texas aggregate and missing theatre completion caused the twenty July Texas days. No other S92-introduced force duplication or expired Texas force remains in these retained battles. The existing McDowell operation/advance-notice three-day seam remains assigned to S90; the Preston unknown-strength hold remains too. These seven model days are not certification of historical Manassas or the Johnston junction. No other-lane change is applied."
+}

@@ -1,0 +1,912 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "before": {
+      "mechanic": "combat.battle_closed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "combat.battle_closed",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.battle_day",
+    "before": {
+      "mechanic": "combat.battle_day",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.battle_day",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "before": {
+      "mechanic": "combat.battle_opened",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "combat.battle_opened",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.captured",
+    "before": {
+      "mechanic": "combat.captured",
+      "fires": 3,
+      "magnitude": 989
+    },
+    "after": {
+      "mechanic": "combat.captured",
+      "fires": 6,
+      "magnitude": 2042
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.cut_off",
+    "before": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.cut_off",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "before": {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "combat.flank_broken",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "before": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.general_hit",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "before": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 6,
+      "magnitude": 9284
+    },
+    "after": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 50,
+      "magnitude": 15587
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.missing",
+    "before": {
+      "mechanic": "combat.missing",
+      "fires": 6,
+      "magnitude": 3094
+    },
+    "after": {
+      "mechanic": "combat.missing",
+      "fires": 49,
+      "magnitude": 4979
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.occupation",
+    "before": {
+      "mechanic": "combat.occupation",
+      "fires": 218,
+      "magnitude": 11804
+    },
+    "after": {
+      "mechanic": "combat.occupation",
+      "fires": 248,
+      "magnitude": 12869
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.routed",
+    "before": {
+      "mechanic": "combat.routed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "combat.routed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.surrendered",
+    "before": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.surrendered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "combat.withdrew",
+    "before": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.withdrew",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "cause": "Downstream changed compliance, force availability, movement and operations produce different battle participation/duration/outcomes. Combat rules, strengths and thresholds are byte-preserved; the retained battle inventory names every resulting contact."
+  },
+  {
+    "mechanic": "control.changed",
+    "before": {
+      "mechanic": "control.changed",
+      "fires": 223,
+      "magnitude": 14404
+    },
+    "after": {
+      "mechanic": "control.changed",
+      "fires": 254,
+      "magnitude": 15669
+    },
+    "cause": "The unchanged control/map derivation reads different force locations, occupations and battles after the compliance change."
+  },
+  {
+    "mechanic": "control.threshold_crossed",
+    "before": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 49,
+      "magnitude": 49
+    },
+    "after": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 55,
+      "magnitude": 55
+    },
+    "cause": "The unchanged control/map derivation reads different force locations, occupations and battles after the compliance change."
+  },
+  {
+    "mechanic": "forces.stores_fell",
+    "before": {
+      "mechanic": "forces.stores_fell",
+      "fires": 1762,
+      "magnitude": 1745493
+    },
+    "after": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2722,
+      "magnitude": 2695873
+    },
+    "cause": "The unchanged forces/supply rules read different numbers, locations, combat losses and stores demands after accepted levies and changed operations."
+  },
+  {
+    "mechanic": "forces.stores_low",
+    "before": {
+      "mechanic": "forces.stores_low",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "forces.stores_low",
+      "fires": 103,
+      "magnitude": 103
+    },
+    "cause": "The unchanged forces/supply rules read different numbers, locations, combat losses and stores demands after accepted levies and changed operations."
+  },
+  {
+    "mechanic": "forces.stores_refilled",
+    "before": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2044,
+      "magnitude": 2030959
+    },
+    "after": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2400,
+      "magnitude": 2389256
+    },
+    "cause": "The unchanged forces/supply rules read different numbers, locations, combat losses and stores demands after accepted levies and changed operations."
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "before": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 64,
+      "magnitude": 137
+    },
+    "after": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 85,
+      "magnitude": 649
+    },
+    "cause": "The unchanged forces/supply rules read different numbers, locations, combat losses and stores demands after accepted levies and changed operations."
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "before": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1410
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1442
+    },
+    "cause": "Changed responses, transit timing, battles and notices change the set/timing of records sent, delivered and pruned under unchanged message/retention rules."
+  },
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "before": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12307
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12099
+    },
+    "cause": "Changed responses, transit timing, battles and notices change the set/timing of records sent, delivered and pruned under unchanged message/retention rules."
+  },
+  {
+    "mechanic": "map.pocket_closed",
+    "before": {
+      "mechanic": "map.pocket_closed",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "after": {
+      "mechanic": "map.pocket_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "cause": "The unchanged control/map derivation reads different force locations, occupations and battles after the compliance change."
+  },
+  {
+    "mechanic": "map.recomputed",
+    "before": {
+      "mechanic": "map.recomputed",
+      "fires": 49,
+      "magnitude": 54
+    },
+    "after": {
+      "mechanic": "map.recomputed",
+      "fires": 50,
+      "magnitude": 56
+    },
+    "cause": "The unchanged control/map derivation reads different force locations, occupations and battles after the compliance change."
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "before": {
+      "mechanic": "messages.courier_delay",
+      "fires": 167,
+      "magnitude": 167
+    },
+    "after": {
+      "mechanic": "messages.courier_delay",
+      "fires": 176,
+      "magnitude": 176
+    },
+    "cause": "Changed responses, transit timing, battles and notices change the set/timing of records sent, delivered and pruned under unchanged message/retention rules."
+  },
+  {
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 14589,
+      "magnitude": 14589
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 14512,
+      "magnitude": 14512
+    },
+    "cause": "Changed responses, transit timing, battles and notices change the set/timing of records sent, delivered and pruned under unchanged message/retention rules."
+  },
+  {
+    "mechanic": "messages.mail_delay",
+    "before": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2924,
+      "magnitude": 2924
+    },
+    "after": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2857,
+      "magnitude": 2857
+    },
+    "cause": "Changed responses, transit timing, battles and notices change the set/timing of records sent, delivered and pruned under unchanged message/retention rules."
+  },
+  {
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 15398,
+      "magnitude": 15398
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 15376,
+      "magnitude": 15376
+    },
+    "cause": "Changed responses, transit timing, battles and notices change the set/timing of records sent, delivered and pruned under unchanged message/retention rules."
+  },
+  {
+    "mechanic": "movement.arrived",
+    "before": {
+      "mechanic": "movement.arrived",
+      "fires": 528,
+      "magnitude": 528
+    },
+    "after": {
+      "mechanic": "movement.arrived",
+      "fires": 683,
+      "magnitude": 683
+    },
+    "cause": "The unchanged planner/movement/operation code reads changed compliance, orders, force availability and battlefield context; daily changes and named operations/battles are retained."
+  },
+  {
+    "mechanic": "movement.joined",
+    "before": {
+      "mechanic": "movement.joined",
+      "fires": 51,
+      "magnitude": 51
+    },
+    "after": {
+      "mechanic": "movement.joined",
+      "fires": 60,
+      "magnitude": 60
+    },
+    "cause": "Newly raised and available troops take the unchanged received transfer/join paths; nine additional joining completions occur."
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "before": {
+      "mechanic": "movement.leg_started",
+      "fires": 210,
+      "magnitude": 210
+    },
+    "after": {
+      "mechanic": "movement.leg_started",
+      "fires": 325,
+      "magnitude": 325
+    },
+    "cause": "The unchanged planner/movement/operation code reads changed compliance, orders, force availability and battlefield context; daily changes and named operations/battles are retained."
+  },
+  {
+    "mechanic": "operations.opened",
+    "before": {
+      "mechanic": "operations.opened",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "operations.opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "cause": "The unchanged planner/movement/operation code reads changed compliance, orders, force availability and battlefield context; daily changes and named operations/battles are retained."
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "before": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.repulsed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "cause": "The unchanged planner/movement/operation code reads changed compliance, orders, force availability and battlefield context; daily changes and named operations/battles are retained."
+  },
+  {
+    "mechanic": "operations.stage",
+    "before": {
+      "mechanic": "operations.stage",
+      "fires": 16,
+      "magnitude": 16
+    },
+    "after": {
+      "mechanic": "operations.stage",
+      "fires": 14,
+      "magnitude": 14
+    },
+    "cause": "The unchanged planner/movement/operation code reads changed compliance, orders, force availability and battlefield context; daily changes and named operations/battles are retained."
+  },
+  {
+    "mechanic": "operations.works",
+    "before": {
+      "mechanic": "operations.works",
+      "fires": 7,
+      "magnitude": 350
+    },
+    "after": {
+      "mechanic": "operations.works",
+      "fires": 9,
+      "magnitude": 450
+    },
+    "cause": "The unchanged planner/movement/operation code reads changed compliance, orders, force availability and battlefield context; daily changes and named operations/battles are retained."
+  },
+  {
+    "mechanic": "orders.relay_held",
+    "before": {
+      "mechanic": "orders.relay_held",
+      "fires": 2,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "cause": "Cameron no longer covertly slow-walks the two relayed orders: unknown candour is open and unknown boldness adds no resistance. The final relay reservation forwards without the old two-day holds."
+  },
+  {
+    "mechanic": "orders.responses_pruned",
+    "before": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 24,
+      "magnitude": 46
+    },
+    "after": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 23,
+      "magnitude": 58
+    },
+    "cause": "Changed responses, transit timing, battles and notices change the set/timing of records sent, delivered and pruned under unchanged message/retention rules."
+  },
+  {
+    "mechanic": "orders.returned",
+    "before": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.returned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "cause": "Beauregard is wounded on day 140 instead of 145, leaving cs_cmd_manassas vacant. On day 145 the unchanged address-return rule sends Davis a vacant_post receipt (m.145.davis_jefferson.davis_jefferson.returned.cs_cmd_manassas)."
+  },
+  {
+    "mechanic": "planner.searches",
+    "before": {
+      "mechanic": "planner.searches",
+      "fires": 5,
+      "magnitude": 30
+    },
+    "after": {
+      "mechanic": "planner.searches",
+      "fires": 5,
+      "magnitude": 28
+    },
+    "cause": "The unchanged planner/movement/operation code reads changed compliance, orders, force availability and battlefield context; daily changes and named operations/battles are retained."
+  },
+  {
+    "mechanic": "planner.term.caution",
+    "before": {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "cause": "Changed responses and their downstream drafting context select different candidates; the original once-selected caution term disappears. Planner scoring rules are byte-preserved."
+  },
+  {
+    "mechanic": "planner.term.force_ratio",
+    "before": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "cause": "Changed responses and force availability alter selected candidates; the old selected force-ratio term disappears. Planner scoring rules are byte-preserved."
+  },
+  {
+    "mechanic": "planner.term.supply",
+    "before": {
+      "mechanic": "planner.term.supply",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "planner.term.supply",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "cause": "The unchanged planner/movement/operation code reads changed compliance, orders, force availability and battlefield context; daily changes and named operations/battles are retained."
+  },
+  {
+    "mechanic": "planner.term.time",
+    "before": {
+      "mechanic": "planner.term.time",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.time",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "cause": "The unchanged planner/movement/operation code reads changed compliance, orders, force availability and battlefield context; daily changes and named operations/battles are retained."
+  },
+  {
+    "mechanic": "recruitment.answered",
+    "before": {
+      "mechanic": "recruitment.answered",
+      "fires": 58,
+      "magnitude": 58
+    },
+    "after": {
+      "mechanic": "recruitment.answered",
+      "fires": 84,
+      "magnitude": 84
+    },
+    "cause": "Twenty-six additional calls receive a raising response; quotas, terms, loyalty and muster rules remain unchanged."
+  },
+  {
+    "mechanic": "recruitment.disbanded",
+    "before": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 26,
+      "magnitude": 26
+    },
+    "after": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "cause": "Changed levy/rung timing, renewals and combat change which finite-service blocks leave by the horizon; service contracts remain byte-preserved."
+  },
+  {
+    "mechanic": "recruitment.men",
+    "before": {
+      "mechanic": "recruitment.men",
+      "fires": 43,
+      "magnitude": 181500
+    },
+    "after": {
+      "mechanic": "recruitment.men",
+      "fires": 61,
+      "magnitude": 225700
+    },
+    "cause": "Accepted levies yield 61 known-strength muster events rather than 43, for aggregate known recruits 225700 rather than 181500; unknown levies remain unknown."
+  },
+  {
+    "mechanic": "recruitment.mustered",
+    "before": {
+      "mechanic": "recruitment.mustered",
+      "fires": 47,
+      "magnitude": 47
+    },
+    "after": {
+      "mechanic": "recruitment.mustered",
+      "fires": 68,
+      "magnitude": 68
+    },
+    "cause": "Additional accepted absolute calls and earlier musters yield 68 levy musters rather than 47; 70 levies are recorded, two fall after the horizon."
+  },
+  {
+    "mechanic": "recruitment.refused",
+    "before": {
+      "mechanic": "recruitment.refused",
+      "fires": 38,
+      "magnitude": 38
+    },
+    "after": {
+      "mechanic": "recruitment.refused",
+      "fires": 12,
+      "magnitude": 12
+    },
+    "cause": "Unsupported temperament resistance disappears and deterrence loses uncited standing discounts: 38 non-raising answers become 12. Readiness answers still create no levy."
+  },
+  {
+    "mechanic": "recruitment.renewed",
+    "before": {
+      "mechanic": "recruitment.renewed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "cause": "A formerly refused Union levy now exists at voluntary remuster notice, so the existing renewal mechanism has an eligible unit once."
+  },
+  {
+    "mechanic": "recruitment.slow_walked",
+    "before": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "after": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "cause": "All 18 addressee slow walks become open objections or compliance; formerly reserved levy responses also change, removing all 32 delayed raising answers. Unknown candour cannot assert covert delay. No muster-delay rule changed."
+  },
+  {
+    "mechanic": "regions.reached_lines",
+    "before": {
+      "mechanic": "regions.reached_lines",
+      "fires": 273,
+      "magnitude": 273
+    },
+    "after": {
+      "mechanic": "regions.reached_lines",
+      "fires": 261,
+      "magnitude": 261
+    },
+    "cause": "Changed territorial reach alters the existing reached-lines input (261 versus 273)."
+  },
+  {
+    "mechanic": "regions.self_emancipation",
+    "before": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3110,
+      "magnitude": 3110
+    },
+    "after": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3104,
+      "magnitude": 3104
+    },
+    "cause": "Changed territorial reach and combat alter the inputs to the unchanged physical arrivals mechanism (3104 versus 3110). No policy/grievance calibration is inferred."
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "before": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 26,
+      "magnitude": 26
+    },
+    "after": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 182,
+      "magnitude": 182
+    },
+    "cause": "Changed compliance, movement, troop availability and longer/more numerous combats cause 182 battle dispatches rather than 26; reporting rules remain unchanged."
+  },
+  {
+    "mechanic": "reports.casualty_return",
+    "before": {
+      "mechanic": "reports.casualty_return",
+      "fires": 14,
+      "magnitude": 14
+    },
+    "after": {
+      "mechanic": "reports.casualty_return",
+      "fires": 76,
+      "magnitude": 76
+    },
+    "cause": "Changed combat participation/casualties yield 76 casualty returns rather than 14; the return mechanism is unchanged."
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "before": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "reports.commander_lost",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "cause": "Changed combats hit three commanders rather than one; the existing commander-loss reporting rule produces the corresponding reports."
+  },
+  {
+    "mechanic": "reports.governor_wire",
+    "before": {
+      "mechanic": "reports.governor_wire",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "reports.governor_wire",
+      "fires": 21,
+      "magnitude": 21
+    },
+    "cause": "Governors with more supplied, mustered regiments report sixteen additional existing wires through unchanged reporting rules."
+  },
+  {
+    "mechanic": "seats.attention_spent",
+    "before": {
+      "mechanic": "seats.attention_spent",
+      "fires": 136,
+      "magnitude": 137
+    },
+    "after": {
+      "mechanic": "seats.attention_spent",
+      "fires": 155,
+      "magnitude": 156
+    },
+    "cause": "Changed compliance and battlefield/available-force context change the principal/holder requests and actions taken by the unchanged rule seats and verb machinery."
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "before": {
+      "mechanic": "seats.battle_orders",
+      "fires": 61,
+      "magnitude": 61
+    },
+    "after": {
+      "mechanic": "seats.battle_orders",
+      "fires": 93,
+      "magnitude": 93
+    },
+    "cause": "Changed compliance and battlefield/available-force context change the principal/holder requests and actions taken by the unchanged rule seats and verb machinery."
+  },
+  {
+    "mechanic": "seats.initiative",
+    "before": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "seats.initiative",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "cause": "Changed compliance and battlefield/available-force context change the principal/holder requests and actions taken by the unchanged rule seats and verb machinery."
+  },
+  {
+    "mechanic": "situations.fired",
+    "before": {
+      "mechanic": "situations.fired",
+      "fires": 81,
+      "magnitude": 81
+    },
+    "after": {
+      "mechanic": "situations.fired",
+      "fires": 82,
+      "magnitude": 82
+    },
+    "cause": "The existing remuster notice now meets its model conditions once an eligible levy exists; it is not a new dated trigger."
+  },
+  {
+    "mechanic": "situations.notice_reports",
+    "before": {
+      "mechanic": "situations.notice_reports",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "after": {
+      "mechanic": "situations.notice_reports",
+      "fires": 64,
+      "magnitude": 64
+    },
+    "cause": "The newly eligible existing remuster notice produces one additional sourced notice report."
+  },
+  {
+    "mechanic": "situations.noticed",
+    "before": {
+      "mechanic": "situations.noticed",
+      "fires": 62,
+      "magnitude": 62
+    },
+    "after": {
+      "mechanic": "situations.noticed",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "cause": "The newly eligible existing remuster notice is noticed once more."
+  },
+  {
+    "mechanic": "situations.proposals",
+    "before": {
+      "mechanic": "situations.proposals",
+      "fires": 67,
+      "magnitude": 631
+    },
+    "after": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "cause": "One additional existing situation firing contributes its existing proposal; no situation file or source rule changed."
+  },
+  {
+    "mechanic": "situations.surfaced",
+    "before": {
+      "mechanic": "situations.surfaced",
+      "fires": 80,
+      "magnitude": 80
+    },
+    "after": {
+      "mechanic": "situations.surfaced",
+      "fires": 81,
+      "magnitude": 81
+    },
+    "cause": "The newly eligible existing remuster notice is surfaced once more."
+  },
+  {
+    "mechanic": "verbs.answered",
+    "before": {
+      "mechanic": "verbs.answered",
+      "fires": 106,
+      "magnitude": 106
+    },
+    "after": {
+      "mechanic": "verbs.answered",
+      "fires": 125,
+      "magnitude": 125
+    },
+    "cause": "Changed compliance and battlefield/available-force context change the principal/holder requests and actions taken by the unchanged rule seats and verb machinery."
+  },
+  {
+    "mechanic": "verbs.declined",
+    "before": {
+      "mechanic": "verbs.declined",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "verbs.declined",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "cause": "Changed compliance and battlefield/available-force context change the principal/holder requests and actions taken by the unchanged rule seats and verb machinery."
+  }
+]

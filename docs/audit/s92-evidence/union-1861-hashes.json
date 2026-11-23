@@ -1,0 +1,1038 @@
+[
+  {
+    "day": 1,
+    "before": "36bb3005ca78143250cc19c7c36ad736ddc4eb65264049df0607361cfcaff14d",
+    "after": "5967168c6da9bd1c42f82fa72c7d98085d896bde9579e65e9fd4778fda5c2201",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 2,
+    "before": "c23df2dd346269108e0e88da032a76352742b4bfe7029f1ef8b0ed842cfd8843",
+    "after": "48bdff79aa4c78874101a9c0479b9d33e746f2e1f2a404c43b725f160f1781c0",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 3,
+    "before": "7300892deb4e2971bdfb4b4908e5967105df8c91f839c4638a10afcc32e0b0a4",
+    "after": "6734705d429db5e6ff19ad0dd15101e3bfd42f050e8445911714ff010886d6a0",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 4,
+    "before": "f71be327d80436b3b2c0206ab9fbb352b236e265f21162567418c53c8c48adb4",
+    "after": "a034f8ce7fc17545f39d2c29736b144c4e0a6d61118b8c2621dc88d3e01a2635",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 5,
+    "before": "3ad70876bf6cd94f69f764bdfcb6692358429021f6ca2c991ec7734e04444af4",
+    "after": "3d6afe2cfd7a6a84dacadf52c2713d7d286572584349ab92b90033126f33a30c",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 6,
+    "before": "c97b774273edef6b067eac679a70396cf7a7f34859d1508cbc222d2d0ed44018",
+    "after": "9a6260900dd826ce9956b012b274f07435384eaf6493a4f331a4f2590f7854ef",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 7,
+    "before": "a3f2ba40dd18736c9ef1bc49867c4e970d0fc01a4aa25dc8d3839a7d076616b1",
+    "after": "48d146f0be63e39e8c522c7af9f03d005ada6b0fc9fbbae61d0b8bc8041d4826",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 8,
+    "before": "48fc015dda1f6ee932288fb0ab36c576637c093e2a8634a99893914bd4a54909",
+    "after": "2392434cf8e1bf79846fb26ff9413eee66385c06cada08daca4c89428c1a8b8b",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 9,
+    "before": "385e7484d6157ce79e4c46ca7c7b1195639cb60d445a76757222332f8c5e326c",
+    "after": "861f74d6bd29d77848e1ae841e0d282278db8bfa1995ceaab60a247b4983926c",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 10,
+    "before": "4f60ec6ea8022a8585402f5c6d408fd7fe1ed9d91f58f06ac12bcc23840471d0",
+    "after": "5232ab20d2db51c8cbbcaaab1a1cbe570848c0d3cb8a5e3896300727cd1a62d7",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 11,
+    "before": "f6990c6fb53ea346134ed2ae629db270c8a3aea21367143e1085d9363784ad05",
+    "after": "269e6826d91952a60fd5b27e793beaf47a7c0f3d286ad165ce8951ac91cde45e",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 12,
+    "before": "0caa24803c140dfa89e6427de3e7b04258867525ffda270bf0ef1cc3ad350765",
+    "after": "e320b66cfe49ae6c59dc7d0a49084140002a5b21f9f58a773eeb78bad7b36f81",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 13,
+    "before": "450608a9d77cc3b5fca01708c80e8f36ceaff6fd4b18e1459ec2e423f1588d76",
+    "after": "f77dcda3095f43f7a0f5186f1e9363d6190ba8840b923b4fa2a43b8b1559c05e",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 14,
+    "before": "64832d620a472b7c4000e844e11e9e10f4f5057fd1eacb5523f6bf069c5bd166",
+    "after": "56270627363caa5324139fbe106ad1b391cf072b6f15b43552e2c445a1d69f0a",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 15,
+    "before": "e6538e5efa2c53eb3ec7b3200b2abd04391769e746a6ee6bcbf8bae8fdc38bc8",
+    "after": "8ecda5b8a83ba1c70c75c1602362d6118795ec37c03d18d3a493bcdae3c65d9e",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 16,
+    "before": "8a25cfccef99919969afaaadacd28acc607e1136e482a5bad66f4dd083ea9fcd",
+    "after": "2645c5ea4fa8a8d45a1a72c010796461756192acf82342fbf28e7409e24fdfc9",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 17,
+    "before": "2a32818c640ba7b3c6ace5be962018593fbaf9ddfdc27a3fabdb6c976f320788",
+    "after": "96daa9d784df4c1040899d991b28be0cc98df8780141ac596059b421200e30f8",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 18,
+    "before": "dd3f4ce9a7cc0260f4deaa21b5653fee8bc2f81fe42ed244a6c9ba44a94cc07c",
+    "after": "3f6e642cd2e613daee420d3a9fe23d2c4249429c6db28979e129a35c4e7dfbf7",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 19,
+    "before": "b0abf3c918b0db32a10e67fde480bdcf29bd78e3e66f99dbcecc21f3d9f4c2ae",
+    "after": "a1603ccce20ebe62f231b05a2c8bd9024313026e2a438f1da6d7eb3786fa1bf1",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 20,
+    "before": "e69bbdab1d034fd0d1c4a89527d007479b2ae0ef3bb065275ebc6c53c789fa49",
+    "after": "3eab10e4fd0dec386a620c7cad87909b2edc3506ca3a0880468a9c1379b44ffb",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 21,
+    "before": "3c9cb377567071803a157bdae90565a47c10db13a9176170ec0768208afdad00",
+    "after": "2b89471a0d8e57abac71f8ca4e09aaaeeabbed16814fda79ca3f8010a0d5691f",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 22,
+    "before": "d3d7c23ca82cbb8390937e136341995da7aff171f4077f8f37e2a2b27ed91ae9",
+    "after": "f12c3354d5c4223559a6bb09f622770d62d4525419003c0f3143fc93d382092d",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 23,
+    "before": "6800416e0e6ec0dfb039939bacce3103f98ca6f778067cb502bbd8597a107290",
+    "after": "beae0482c4b6f82f2021ab56f91f5812a16da192ea078290709b3ed82cd205e4",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 24,
+    "before": "d46f7ada0488a2dade462981e39d8adbd4b5b4fd0f740b893248a887bc2cb30d",
+    "after": "d760bb070fc427b90df64bf53a1202520e557c1c51bedf81e6a941c267141d3c",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 25,
+    "before": "6f61830bf7e45882974ec7db619127ae2408cfbcf6b2d11d42940f3b1130870a",
+    "after": "05411218b5502a7df27d87ca37951994ee5c5c0525d2820b6fe282c43c9bc8d2",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 26,
+    "before": "62ec6b9b4b83b7bfd7eac05c4b88640dfdcca7296627eba076e2a36281aacd0c",
+    "after": "ee3a8f98611b8be1ad4d590e0b4660e670e8b280b2275a313d6bf0474b271086",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 27,
+    "before": "a5d8f4789b39f835bf40dd6a96529bb8c16576b66a7b0870a3b29b8fd19afa68",
+    "after": "7b35043a1525860524abd56cb3298e66c9810c42cfb8b58ff0c0a34aa4759f9c",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 28,
+    "before": "92d82f5dc40c11703bce432e86cf2a788b536de1d8d6d88ef31591ed5b131b72",
+    "after": "8b8c83fa1572f9c329281d86a251d8eb5d7ae03085ab15ec5d3982710e9802a9",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 29,
+    "before": "a12421b35a29320aec312c86939c62c5c3de1748a2c1e745cb4dd8cac33601c8",
+    "after": "7e6f6ede037b8d92ce471a2cfa6423b48b5b688d94bf695e0cfb452827c57abc",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 30,
+    "before": "993d8838dabeafee3c2bc9f0aedd9ad7ada12dc5ce425d5fea141a81d4b06fee",
+    "after": "92abbeec701b5c0c1949a100d7a8a5ea88bb49f52ab18e680ccd7d514ad818f3",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 31,
+    "before": "b7445105d0d34cb27b479d7f551856f3a9182d7e97f6abce631715be4f479e04",
+    "after": "a1d4a5dec737169a3f0ad4e4f5f575c683cfefc9d096fc947c65312890721c23",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 32,
+    "before": "9e9cdb4bf08ccadc3549697ce731de1fff75dd81fbf75c98cf47ecb3ccd0e7ae",
+    "after": "74c72a7ecd78cf449c1e5f01cb75afbd58efcd5cf6f0f020b72fe6ecb2d66bcc",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 33,
+    "before": "1a8ed1bb43cf2748925ec0f6bb9e94f408695f38a952b5e5898c2f6dc397b359",
+    "after": "d9e6825df0ade8639af49d47504a291318e4035cbb614ba283ddfee18c152ffd",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 34,
+    "before": "600359a699173a63f7be5af31d497a26c1e762ce30ce154e021d6a8257d2cc83",
+    "after": "87b3c2e4cc0da6115583e08eaa94cde62ef8e35769ee8af1d6239b4f51bdaca3",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 35,
+    "before": "e9c102d02e94b4c44123b96764cbc50cbde585aa47b5287ac60b5e2221843ca9",
+    "after": "b3ba4f0ced252d54e94af98851efa88c2a67d7f56c922a95c534cba26c84c8fe",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 36,
+    "before": "a2bbda3076a8d08e1b9f3a9435a184f9ed3afb7de8b71c8df0b1be8631be9b58",
+    "after": "db1982e128391130ddced94b61765524d9b2e1f81e7799e3d53f72f6442b2e0e",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 37,
+    "before": "a6fddff449463d2d08c7b0082c566b15e1089778213cb42f2a1de669ba9220ed",
+    "after": "1a22df0cbb6cab5a3154315568e7a961ea61ac1cd5294c97a38536fd581858aa",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 38,
+    "before": "d96967f580c4095a40949038b53289e84e6166d645eceb2a3c493cc987682155",
+    "after": "7caf7e0814e0408f9cf6b62f28c2b8332015df98376e2cfa9f4fa6206df44201",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 39,
+    "before": "932221e3f6e94c3f899feb348d86d070c22278d91eb9815e0e647ab1d98b2482",
+    "after": "1d650abfe79491a71caf177126d43706745d5f03831a52fe90960a976619a0d2",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 40,
+    "before": "1ff15a2e60f140e778d7a04eeecebdf7010f5ff485a01b0851cbd7d71a743122",
+    "after": "558677ed5c3a4e22dab034583e69e943130e7bbabd20a20095d26f8bfe09e324",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 41,
+    "before": "1dde8a2a18be57d114aa3fa9da402da053fdbf2e51f95d5f57acfb83a4695f4c",
+    "after": "86093757995f6769d203c77c741ebd7141a1ab9c58ab5a66b17006972f4a7112",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 42,
+    "before": "5048babb884bea3c3c54393b26e18891f5010d6042b279b0812e2019fcf004be",
+    "after": "c5df2d4897ec3de33b3d1e628257efb5b108c52b6feb45977cf738e3e2208c47",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 43,
+    "before": "412eb173e5b5cc3e91d4ca813fd1306d4a4c31b94e7a5c8063c62dd1f1c45434",
+    "after": "bd6c0a400928c4376fabd4267804f45cc0d1ebbe31b524ea304f9763a3b5e0ad",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 44,
+    "before": "003f7bdc6792058659fcc5333fb698e6ca9d76fb4138785593c64506532caf19",
+    "after": "e3826bdbc7783d761c23171e8fe426f33900dd0ed7b3c8829f421bb55c06ab18",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 45,
+    "before": "1779938b7cd0014da54e76a1596c4899baeccfd5c0204842f833a243260c8d5c",
+    "after": "8fd79ad11f11b3d433d570aef3a440fc72627ae8d9e26d2662ffbb9e5e78b1df",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 46,
+    "before": "2a469e24c6a5b491268f2d30d59d9876d2df0ec197efdaff91c49c2612fccc91",
+    "after": "31758adbb0bdebef08dc91454bfbb0af638f8cb9583529fa65ccabce32c3b90a",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 47,
+    "before": "498731e357c7e19d4036ac58aca7c08e34f3ea3e9b4354979986edee8b082821",
+    "after": "1b75e6edb1ae0058bd8717baf4d8600f377ec4486a2fc57222e5e222d9f7adea",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 48,
+    "before": "89da2cfe89d6ef27e58df653de8a4469a3deba9015bd4d8786ab3999c28c532e",
+    "after": "0103f164b9317924121d2bba784153a1bb9dce033b5b02c4727eb5c9b8dd8a6e",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 49,
+    "before": "137aee0df84efcf089065830cbb655f9596cf8290675145fc41482793bd0f56e",
+    "after": "efcff21dc41232e2b257c763915c0aac51ce51c30d25afb9f66d3d9ca3a31924",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 50,
+    "before": "625e269f0e307bb2edc91cae99276e893de1531b616195d011c7d9fe02d91ce5",
+    "after": "0dcaf3c5223fbd2e1f395b0423ebafeaedaa0425f99e6f3d1b33fee8519b0e2b",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 51,
+    "before": "ca43bb0c3113da857f7287bd99288507e1e2629d58b9d0cd2fea155c55ea2a82",
+    "after": "0c06586f3e47d3f6a6746e1e39b5f9cc2c202250e886552916cddc05c3b29573",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 52,
+    "before": "90778df071319964a6f855ec9ed94bd8c9b217392a46f1c9f215c67c39a694e5",
+    "after": "615bac1d0f6366806b1fbb9a16efef4abde9b08537be9caec5ed6e27705b98ec",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 53,
+    "before": "eea494427de72efa69f295c6eda06397fcac286b379ec49f6ee5f9d89293e61d",
+    "after": "40e7a70b8cc70f8f8ac28af5081374b3e34d6eafa5dabf597cbb971712d29e71",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 54,
+    "before": "3f08197a7281b42f06629a7f8a61a8fff64897cab3d16d092dc4ee9c2005e948",
+    "after": "ff1b63fab4d6456c54530d84da1eb9dc1e2864ff80addbe34fe3d38471e5ed7d",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 55,
+    "before": "0688fdc52e76a0e14166c9c22958b1978a068dcb639f46483bb7d5d74317afda",
+    "after": "c7a3c401670feaec2e234ab30f0940b4b5508a84401f56307c1de9fffbbfb4a3",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 56,
+    "before": "76855d9ffe8f7073b6516342c8fa909b06acea950e03330419ba66a94e870b76",
+    "after": "1d737752f5dca9de5fac193d882f1b95ddac3e489ece5627934668296dba9f91",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 57,
+    "before": "2eea0d005d37daa74500baf63f377f42f4dabd16390e9af31c8167fcf9b964f4",
+    "after": "2148cfd1de65307acf4ba7c02c083ea68dc448b7cabc3425d51e22ebb65e3f38",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 58,
+    "before": "726020ebe46394904b7b044702c1f45245aa054ea865e202f56106b1a840f9ba",
+    "after": "0f7949ca4d208b3c5b79f1d3e100ffe3bee6b8b4de6358fb71ed1be33f61b3f6",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 59,
+    "before": "2169d5cf0c2176673110d7cff3412863b821f3b75424ba327e8197518305b9d0",
+    "after": "732db16122c80465db3b5b1bdd7886a9754b402ea787b27a01979b6778304fd7",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 60,
+    "before": "42d9d0887e8ed8e7e9c69deedacd08ff6ec05ef65f8682b5510d10fe98b5ea88",
+    "after": "b3995200a8e08edd7a531e61932c592df3cebc15b6501d792c68c5c35f91a3e0",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 61,
+    "before": "6fa0ad052f221859d2a573446a433837cb47e50c7d6c36f949e140f912696051",
+    "after": "b95f680e4c4a64defea6ee49ea6f1649dfba6fb6d6b8adb31e4342fea9529ea2",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 62,
+    "before": "00a7003ad0d6a3d54ab97feb2fc49fe6f608dfaa5297c93e1dd746b08c5001fa",
+    "after": "a923c538073eb861e5eaa6d18b731631b2c623868f0bdebe7fa38132c7beafaa",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 63,
+    "before": "0c6abafd900afed65080eec162e752f2afc13cee10c44833851c5f5181d48493",
+    "after": "aa3976a9386ff291973d4a003d5358dc33329a5e2081412507bb174bf8bc40a3",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 64,
+    "before": "45c1481eb58819f1d22bde4c936428bda394c558811bc6673aaa0334ee958851",
+    "after": "cbcebe5158af3669f933021ccb2f49d69430e0bfa7241693f5524b59bdc9114c",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 65,
+    "before": "75acd4dec238e69ade8902563ae460b202daf29b153119511d61c889af9a6cec",
+    "after": "7b8b2580796ee3674d1b9f8a3336727fb7deec93bfc558d60bdca075942a459f",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 66,
+    "before": "46a56310af846bef020d13e18f60bff5cc4582d988b807805dcd1205086a79b8",
+    "after": "005d9e3e951c516faaf3a963b92a98e5687353db5a39ecd432f6c47b900c2375",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 67,
+    "before": "3d48fcb709cf029a291b88f747b9ce1e5db7b846403156aaefb204f6abab725b",
+    "after": "4c92993ef71e4ac9654b375e6f014e0573bfcbd0064f393fdb3dbd8b3a4d7500",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 68,
+    "before": "e1318589829d12c0591f00a72a6e0f6cd92e38bd5477b59f777d79510a4c92c4",
+    "after": "e3c6756806d378c6ea5b7420b10c520874ed873a552a97412db015c1fa4ad6f1",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 69,
+    "before": "7203ad4aaac828b36fbb8a19853bbf85c5916d8e383d91d2916f2c0b1d367944",
+    "after": "2053841bc983a7bb2cb1f5e4be32be93f34ddd2f26be55b28ca1849e0c5a9412",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 70,
+    "before": "f64b7c929629e95eb7be08573178f76cf0749a2ee4ff726b46f6228144ecae9e",
+    "after": "3f7b16e1decfdbd350c78698e0593ae84863d9127e2636b65ff421afce0d608d",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 71,
+    "before": "f393ac9b749b11d56bb4e6e84f076ff0bd108b45d0781b0cdc89b2e9aceee8d9",
+    "after": "7bc2d2fabd19f01ae43bba7dafe8f3f2cf8280c2b76c0af5e38f37cf2013ee6c",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 72,
+    "before": "675df8e08e88e1fd4694d51a7ba77cc66e757750155d0352c24f18a3aa7fd83d",
+    "after": "ed57f0cb274f75c357dc30f823b98a88f7714104303ea61e989578622b6dffd0",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 73,
+    "before": "1480aa893851e60c805a5e28df82143affce2773f3592a6c703aeed8871bf548",
+    "after": "c0a42e95407324a5ab0872821000269e76211671cdff78977fc4a86769feeb06",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 74,
+    "before": "9b926b12f29bdc026b09d6053c52aa0d5811f7a0a71d9805a5eac58ab341e849",
+    "after": "dfd14a2e66c45177d657d775ff2b826338e5599bb1d42d4bafec4acc2873e0fa",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 75,
+    "before": "1a0c759715a236174a9193356655a3abe4c72c414eb644ff82f7ebdf622678ba",
+    "after": "0e4f5584f7a0d3872530643edd7eb26658301fd956613dbd4362f46ca0e32fb8",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 76,
+    "before": "29b9086f82693a1b9ca95a5940f021caf34b560cf3a69e1f0e19eb78548e987f",
+    "after": "f252b6e9e3f17decb84f48d9da034e270dd9be661cafce6aac9ac33c18206ff9",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 77,
+    "before": "14b564be5969252e8194c9d3a85d90a55cd7ee63659d1c17b5a7a0de25e557be",
+    "after": "2792c65714f84fbec8a4ea1275d3c9b2ed2146335bb8f8f412965fb3d07caacf",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 78,
+    "before": "cdacf52fed72be4db8f595dd3324e35976867191e8d3a2d138e967d0b46dafb7",
+    "after": "61c4e4711e48bfa116dc2e80120a23ea1bd92239ef473500b13312b5daee2d8c",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 79,
+    "before": "ab58b40980eaea7654f8e296bfe4256e4e28cabb8abcd8f162afd3fb4b6d9df8",
+    "after": "47f75b0e9ebd7edd3dceee05e6f003a75b9463c53fb9e1923a5452543696a787",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 80,
+    "before": "1c503158de9df5fb83e1ef93be7c63829b6ab7ab59176e132b730971cf687185",
+    "after": "864b98d04aec4c8a0a093b0733c47418c782ac6975198493f9bfcc6fec67185f",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 81,
+    "before": "ddb0145df79e0b1cb7b622180ed29f1a946ceb45800871e8052c6864fec8dab4",
+    "after": "cbe13a3e7d2385ac995b42c33772894d139ab6caeb10fdfd9ced878c503a262e",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 82,
+    "before": "fac48a7f56ba2f819bfebb1d877d1d3452c09731aa58553a936f76f774a8ee86",
+    "after": "931288af6da897cdbe65edd1311cc59aa084d3ed75510f9a65ee4cb289b5a0ae",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 83,
+    "before": "18e1e198b1816b4ea22dd11a3b19b5e16ef2e0c14f311278c2d5a628ef060050",
+    "after": "59726f3acb917a4b3a8fe17e2453a8d32e728ca1f8b3df5f8100bd0f2cf26a6d",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 84,
+    "before": "3c2f4f6500318738d9ee81ecff3762ed60485bb1b94c37918c851aa23518b383",
+    "after": "c18f7f00c34df1b5664287840c868036e596ca2745519692b736de8aa5233a35",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 85,
+    "before": "eeca00de0fdc8d7873b3e76f6cf4b3c6391029cef899e99967d2dcf292d32f6d",
+    "after": "ee7a7c4f390c542327747b90b4b778537f3b0747e0cc69ec7d90a37d23103507",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 86,
+    "before": "3daecee3088a6310ff3a9ea39af8375274d160f2ae40171f707643f921d3b8ab",
+    "after": "63b6902605d3755ccef413981558c083e3856c5c35d04a7158178992a150a77c",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 87,
+    "before": "89d698a3af07e1c8f9b96406ac572f42932a4b0eccbda57b2f7f862225295fc1",
+    "after": "835754e70eae971fb6c9bf01fa83528ff8a6b55bc02ec1a2fa22540d8a0e9b3a",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 88,
+    "before": "81046833aaf070b13a692a2634d6ddce46dcefed79fbf84ca3c1b7ae56d1fada",
+    "after": "533aecaba13dcb4d01179416e9926ca990952d9309a6d542482f2b2c9f84d6c2",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 89,
+    "before": "e53d9f34a36102a622bbedd84d01a6607b451352413bd4fc0df43a475703008e",
+    "after": "591c9c33fc164571d8bdaaed55ce75c1f9f6b45c660614a0db3b3cccc6c29312",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 90,
+    "before": "db65830abf0d1e928226b04eb645bab87676bea17b39740fba7de61cffa475c4",
+    "after": "b2c2bb8ff97b84a2edf49649a671cdec273dfe3435b60eacef8829176d77c5b0",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 91,
+    "before": "7f24f1ad640b31dd260be0a4b5dc88c5023d1c620ce45fc2fa765ddbfc32de44",
+    "after": "6df3f3293e11b9ffab9e11db265e600ecd506e8fa3b5bd0a5095e47197c17396",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 92,
+    "before": "1ced5e42bd569cf1b2e12b518ea6d1d1fb3bb596c6fcd45584389d5644f13d06",
+    "after": "d899cc4064e201c95960f8657f1fdbf0e5c23c018db9f3b40477183e3267299f",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 93,
+    "before": "3ba9c6ff241a799f52eec39b0bcd12232dce98a9a915d008fbc14ead2db7e01b",
+    "after": "98b790ee5d6694798ee092b95a10714e1ca9522cc084ea52220cfe055d441f73",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 94,
+    "before": "22791549af9f7b320227d703d3b2e969c7de392854cd11f13e379991934a1efc",
+    "after": "05cd9852f1033d2670cca832845146142f2b5a262f37e06e4fb297b68d4b6379",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 95,
+    "before": "8392c8305f300eb182990a95e22f9dd6448a0b030597fd5d3fb7b8b6e26a52f6",
+    "after": "4a9c8fd19c12820f745a919c413994ef573cea80b5ed2974357bef716113d670",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 96,
+    "before": "40709c46843b2f0d22e86b0f48c4d68e6d6906c3c92af1e218a94f65cd7bbb2a",
+    "after": "df87c65d31c4abf4941fa0b5ced8a5f428ebc7c3187907331c9233dfbf51926d",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 97,
+    "before": "bda6ed2e953356d0d686e6197a7747c2c0eba602d60e3175178ffbc11c8ef092",
+    "after": "aaae00ddd4fc8cd4b4fa78e04c8fe05373f8d440210b63b3dfc4f97850fcf3c0",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 98,
+    "before": "72729c13456389c0a8f74eb777081d2f02c78cd8f35dbef49dad940a7db64cd8",
+    "after": "c502553a2ced768e83f8e950acc25ce0b3210e612a58e6d8326036cb2e965a01",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 99,
+    "before": "e1e174704c72d2668e33a1e490b9886784e2705d55f7b7526bfa338f0c453365",
+    "after": "edcc34834ddf83115696e6c6cb621d912ebd6bc6218051ab3ce02d91c94a5f46",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 100,
+    "before": "54b07900b5ea5a69c0fb6b7d91181b7bbe9b0de84b746fac555278f5bf7fb9f4",
+    "after": "c80f8c11c2e84984455fdaf206198e97d655702d9613906ed1d8d06459ba8408",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 101,
+    "before": "459dc253c0ca07d34eb193a543b6ff0c783699e367f3c71da0422f5c8b691f8e",
+    "after": "243633e816f9b1c6fbdc42cc038ee5fa5a4d9ddfc09800dd0aaf1f502f9b1985",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 102,
+    "before": "a8980de701dcb29e87c0428341e0297aa787fb57dc82b8e619e2b8dca62d1a82",
+    "after": "3a5290429dd7c55f290dda3d42f3e7eb191caaa4f64361d51a1d8621148023f4",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 103,
+    "before": "5c9028e46bbafc13ce6665818b441f2ac7be0fa89cf9b4c00afa0c4bdcc904fb",
+    "after": "215987c3a52dcaa49d3a20456a2ee519fc37f33e2e3d6d00259d07a484b01d17",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 104,
+    "before": "ab7fed1ab32b244c9664f81ba4810d41d00b5a839fbd2204ebf19fa6e511bffd",
+    "after": "bbb2be88a2facf762d3759bc5ebb516cf88231b10d74930c8d4427254bdeba58",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 105,
+    "before": "3f01223fcbd615cde6caf0b11606e0fa4d31d7bb60d16dc1ebf96b9d159937c0",
+    "after": "b02d645443d48591098c542cd19aefefd032c28925d2d2eee6d6c4cdf76648c8",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 106,
+    "before": "cab7f9f998cc717753408cf816c81167c1f05cfc2acf4ef604374a5990848278",
+    "after": "da128643712e42f56627fa7e04f696327605f7222750e3cbbe1ada286e5437b9",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 107,
+    "before": "a274c37fa7a0776577a04b4764257f5f0d643dae8c92b9e048fcfee0c548f13b",
+    "after": "4973f9d47ad1571062480a5fe856688be26983e374cef751966b9808702a96b9",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 108,
+    "before": "abe7f5f8c3113c84c002e129aede9aa6224407e458a80722e55afe5ea7a73263",
+    "after": "95753cf40747dbf5dbef6c6ec1ca90ec1184bac25895961b6bd5a4488bcf109f",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 109,
+    "before": "de406927a263da8eed2987c3f890e257ff4f09433ef58421abb60c8dc2bdfd23",
+    "after": "ee9a58551c91576cf4aa42a869a8e8b233dc189397cbf6324868f34190b00a15",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 110,
+    "before": "17e5fbcf4f98e45ce1cf97e05ae582646fc0813af87350d1c58f66981a18a1bb",
+    "after": "1ab42f1a6ae38af64d1ecbeba7f9656b306a65f214cfd999cdd1f60d30aaecdc",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 111,
+    "before": "51dc0856a00365094d1ba7ce410e54de2b4e388fa7c33db31d30675413360c28",
+    "after": "1ab7cce757675719811118c8dabcf704e8a3e2f53e43db1de46175c32df70a05",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 112,
+    "before": "5e100c8fbde805a3b05337ce5f0fdf88408d66bff108c82d700655ddf648dcfa",
+    "after": "5d7c661ec531e419168822dfd14ae83c5d140e8971ba8c07779e01aef4e52969",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 113,
+    "before": "6cd200ce7847092295ef388a5bad9b5f14933e5b0330be6ef12f221766fc4755",
+    "after": "20df852a7347cd7566d88c7c34df1c985afb2bbe24efe8d3d390eaa701d06c3c",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 114,
+    "before": "cc114a9a311eaf89e9b5de8a4bd49f3eff2c9532143e519c1ac393e5aa927b78",
+    "after": "031e5e9d34f8424a918b2b9d40a4466190fc276f3a6565b12f6a5d3d6d9bae38",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 115,
+    "before": "e1b9d942f39fdcbd0fdac0bd674dcdd60f5af2585cb1163a0e18bca3e4db04f3",
+    "after": "e693f5a43eb0cbc26c7b31cbd4753e374ee2e18b0a0f65fd8098569b02432c50",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 116,
+    "before": "6f704e0eae1d0f062cd3e849ff636484566d44dbcb496b0a92824427ae474f83",
+    "after": "48b294198ee98751ddd7aabe07e11bbef9b3ce1ec38543bd2093996977eed2ac",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 117,
+    "before": "eaac4ee5a8f7bd94e314ca34ff7badc45e5a0b4387efbde1a4350f02d549619e",
+    "after": "6710d872c36089f562f4a1273fee7c7c71d595199b9dfb96dc396059616fcff2",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 118,
+    "before": "3620839399b4167c941ee1385686f0b5e45d27a537e49a70c4e623d16e04da24",
+    "after": "de8cc125ead603103b88a017909bdb144ac154d03aebb9cbe09d48e92b349bf2",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 119,
+    "before": "cb8b4bee020124f22a286462104ee2f864bd3631eb25a3847accc4474d0e5eea",
+    "after": "c85e83d8cef8c60ce9df32fea5bee8f7eadb39ac136b5e8539f50099f582aa62",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 120,
+    "before": "8f7a512f85c76d8b88ea76b3564852d8fd734da82a83db5145915d81c405aafe",
+    "after": "0d8df9cd4dec85c46097c21799ecc8c8914880fc54ae81f726263736925b6e8b",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 121,
+    "before": "6261067c1cef8e9ac45911ee0c55406f5940a6a2b600474676627f8790ac1f74",
+    "after": "6473cdc73e788a0694c797c464e790d7b3e19fe7106cf6e9399d1cf6efa8e27c",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 122,
+    "before": "4c037aaf314fc304842b589f18eab96b55fab148efc751ad24291992206e2ef1",
+    "after": "4f08ba052fdced5f660d6939b0e9997fbae5a7ca6e7be92ff80b0b440cb542fb",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 123,
+    "before": "d2b465e09f2d7ac3dafe403664530176dab752059241f410409491e74806d26f",
+    "after": "ea3fd6d72dfb3ee81d04da4fc537b7b8ddc3d0f48d5bd3dea7a93522ccf97287",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 124,
+    "before": "4bfe7795b8b8bd87d50dab6f5815b0031c938d1781dc480f9dd1b93a8c5b5b87",
+    "after": "34c647ad86b203556ef45759953a6a48c96827733266863f575af9b6fc3307a2",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 125,
+    "before": "9a3feadfcb6af65588918672da6da8a6b076a527e9395367185b323e2fdbc3c1",
+    "after": "8e604ec92e64c078985d6fa8c523a3ae17cf2cf23bb3ee1529508760fa9fcfff",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 126,
+    "before": "a01f9bcbe5bd1c2b1c691d204634f9773bf7f05c55b3fe03818e7821e62c81b1",
+    "after": "76f97ff73e6ba6a4d8bed149fe83d98346157a4df54fbd570d3ecfb31af73497",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 127,
+    "before": "d71cbe6d8f6f11f0d129aa6d832fcb70ca8cd586777b13c704fe806244c50313",
+    "after": "c7922b6d42bf8eb665386f3fcbf2a5d785615d107c88d85141452a63560d63b7",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 128,
+    "before": "d9bb67f9635355175f469c5b27d4c8426a70ba99e8bf604aec51782f97675863",
+    "after": "73432e8c1ee100e32a329011a55c877fd123cbba96849eb1e7ba05996e5498f7",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 129,
+    "before": "f33f89de278163e5d10c6ca4ea297ec9fd41526b45bb241b7a73bb08dd69a1a6",
+    "after": "1ab426dd6023901b59334be2766286c38eea51c1c9ab6db3c0132d5d1a123595",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 130,
+    "before": "d338bbaf025926121f54ed1461b8d46ab242532f274f82a17de5e6a147362a06",
+    "after": "846ef910fc408314050ac47f7bcabfceb6622eac0823ce7a4a9c71e1daefba2d",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 131,
+    "before": "7e8d8b4e1d72cfd464426b438e33ebcf74d6fa9e4d8a1baaf7363146d1c9d780",
+    "after": "c25572df1cc89cd76bdc850889bfca350c8ff73bcfb6850de1e533e61ae1c230",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 132,
+    "before": "95d4802b216b1fd25e53c2778b7dc87aff0305dee9c7c91aa7ba17a65425b6ca",
+    "after": "2a2e2d7ed5a9e6dd33e3c2f9e4c29b8f3c61c6a6589e6dbd8afe00fb70c5a159",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 133,
+    "before": "5f65db83c892a1a077a8be9f5d313a87588bd527775823adfbb27b2eb23dc801",
+    "after": "d4b996d3111ccff00f04152f2fffa064c79e5a994e76c021d95de2d3c82243c0",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 134,
+    "before": "017fea13dea4692ff9b3ddc00dad4ac8730c651d6e32ff947a1d37ff2f4b9bcb",
+    "after": "6741b5328dd93025d8036a93b27157e6fa6c078d06b1918945355ce2f75a6b10",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 135,
+    "before": "1d25df6516c94f7db2311becaae7554920cc697cc82556bc228f7aeebf4b25fa",
+    "after": "00ff8e8a7c7d269bf2452d73684f2866e2a2b3b1e4512d50da6224e90560f6bf",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 136,
+    "before": "189187e7fb5a756393db3fd4531eb23201f79e3f5b4ca62a1f3411d871afc923",
+    "after": "e2f3a48770f50f4f6f028795af9fa46f0eddf564f13f360d2dc7919c28f05e3b",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 137,
+    "before": "4f9042a565442675e92d19de076d20039fec83161578536c80037952d4cdd679",
+    "after": "0631055ed934820e4c4e00d578277b5ccd3a642c0d32fdf9bcc56400addfcd9f",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 138,
+    "before": "7b8332b6d7fa8caf655dae78758b78aeee24f134f6be82b2b9664483b8a7583d",
+    "after": "2de7f9204e2ed7b09876bb293d5bbf5c4dcc4ce1c22f53e1ed3c33dea3122ea7",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 139,
+    "before": "31e2fefebfe3a845858bbe471c9cc8312ae57bc595e7b4de4d8f03e1bd23edcc",
+    "after": "c986015c4cb40a5c2fbdaf81e17175767f8f7dc74a25527e284b6c635ed591a7",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 140,
+    "before": "dc6e199d8d32ef76679d43836021ca70e3ffa7670d4ed413b292547934f32043",
+    "after": "28b42d9162d5038cf7faa839cd84a7e93bcf108fe455387074400dd82e8b43ce",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 141,
+    "before": "c792de27e1b659350152a942dc6dc17e208c8fd8eeffea0d680ef5f20ae891e2",
+    "after": "2fa4bedd72b60b7ce27ed2e838bae547d2ae5ea5448dac9f92b69f248a40a5de",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 142,
+    "before": "fa75a54b7c60139ac2c146d1a3c37e723307e421a75cdacdf30d329ff2dfc776",
+    "after": "dc871dbc97fe0ca199a33ffd658dd077475c5e83aea56e9b62a20d22027e8511",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 143,
+    "before": "b224da7081640cb1330bb103bc2ead17651c850e37fb0a786a75797ae704f9e5",
+    "after": "f850d851fda26f2887ee2d4c3e270fbafaaf08704d7e1277da8db6e55ec8d2bb",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 144,
+    "before": "057b267e29ef81654287849e2a895bb62e3f2b331832fc38953d8380ecb8b02b",
+    "after": "4bb8724e3e1e729667ca117752645e2f7c79e3a891d2192d432e87241b368583",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 145,
+    "before": "f44b4422c11b53e346780c401ca37140149458c0e31f8754f43bbb7d7524f623",
+    "after": "9fd4e115ed8c0e3bbfab4b416a9b95f54794375699f280c13234638029b21220",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 146,
+    "before": "1b30d3088ec72b0593b167c50726d5a55947d4766651e7c8739beef4db3a0639",
+    "after": "11da1cd1a4de4c6a632be23bf10523a5f5d67204ad5f34c003a602febd9a1aa2",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 147,
+    "before": "8ce0aab14b7fc87386a29dc754a7a4fa13a2f8c48bd6223f6c7681fa47d30faf",
+    "after": "f965691958acd5cb2fb81f82d17ae3f982d0da174ab9697262271f55581cefee",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  },
+  {
+    "day": 148,
+    "before": "03a3ccdbe82abc296e01457cef68ba250d9c7ff6b4aac01af69647e658f35245",
+    "after": "0d2bc6fc48808ca27d1dead127406d03478a229f6f5dfd34e3447fc88ff9bbb9",
+    "changed": true,
+    "cause": "The six approved cast cells change only the two opening trueBoldness values (Moore 690→740, Perry 594→622), so State already differs before day 1. From day 2 onward the general 0113 mask changes order responses and their downstream orders/levies; daily counter and response differences are retained separately. A daily hash identifies the whole changed State, not a separate fitted cause."
+  }
+]

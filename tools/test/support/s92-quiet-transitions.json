@@ -1,0 +1,88 @@
+[
+  {
+    "record": {
+      "key": "union-1861, war by decision, 148 days/orders.relay_held",
+      "before": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."
+      },
+      "observed": 0,
+      "cause": "0113 removes unsupported covert delay. Beauregard is wounded at Manassas on day 140; the day-145 arrival at his vacant command returns. Cameron retains a reservation without a relay hold. 0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold.",
+      "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#orders.relay_held"
+    },
+    "driver": {
+      "test": "packages/kernel/test/seats-orders.test.ts",
+      "needle": "relays a forwarded order with the relayer’s own delay"
+    }
+  },
+  {
+    "record": {
+      "key": "union-1861, war by decision, 148 days/planner.term.caution",
+      "before": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.caution 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.caution."
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "0113: changed compliance and available levies leave no reference draft whose top pick depends on caution alone. The separate score-term control still changes rankings when a live term is removed."
+      },
+      "observed": 0,
+      "cause": "0113 changes order responses and the forces available to the northern advance. McDowell opens day 135, the advance notice day 138, and drafts select differently; the existing three-day seam remains for the S90 lane. 0113: changed compliance and available levies leave no reference draft whose top pick depends on caution alone. The separate score-term control still changes rankings when a live term is removed.",
+      "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#planner.term.caution"
+    },
+    "driver": {
+      "test": "packages/cli/test/planner.test.ts",
+      "needle": "liveTerms(set)"
+    }
+  },
+  {
+    "record": {
+      "key": "union-1861, war by decision, 148 days/planner.term.force_ratio",
+      "before": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.force_ratio 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.force_ratio."
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "0113: changed compliance and available levies leave no reference draft whose top pick depends on force ratio alone. The separate score-term control still drives every declared term."
+      },
+      "observed": 0,
+      "cause": "0113 changes order responses and the forces available to the northern advance. McDowell opens day 135, the advance notice day 138, and drafts select differently; the existing three-day seam remains for the S90 lane. 0113: changed compliance and available levies leave no reference draft whose top pick depends on force ratio alone. The separate score-term control still drives every declared term.",
+      "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#planner.term.force_ratio"
+    },
+    "driver": {
+      "test": "packages/cli/test/planner.test.ts",
+      "needle": "expect([...live].sort()).toEqual([...planner.TERMS].sort())"
+    }
+  },
+  {
+    "record": {
+      "key": "union-1861, war by decision, 148 days/recruitment.slow_walked",
+      "before": {
+        "minFires": 27,
+        "maxFires": 110
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "0113: uncited candour cannot turn disagreement into a covert delay. No Union reference call is slow-walked; the fictional home-rule governor still delays an actual muster."
+      },
+      "observed": 0,
+      "cause": "0113 removes draw-only willingness terms: Moore, Perry and Clark comply with thirteen formerly objected-to calls. The Minnesota original levy exists and voluntarily renews on day 67. Ninety-day expiries, 68 completed musters and actual governor answers produce these counts; no checkpoint or historical pushback threshold changes. 0113: uncited candour cannot turn disagreement into a covert delay. No Union reference call is slow-walked; the fictional home-rule governor still delays an actual muster.",
+      "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#recruitment.slow_walked"
+    },
+    "driver": {
+      "test": "packages/cli/test/men-regions.test.ts",
+      "needle": "a governor who values home rule slow-walks the call"
+    }
+  }
+]

@@ -12,6 +12,18 @@ describe('liveness changes require a cause and around(observed)', () => {
   it('accepts an unchanged band without inventing a new observation', () => {
     expect(livenessProblems(original, original, [])).toEqual([]);
   });
+  it('S92 permits only its four exact quiet transitions and preserves each live control', () => {
+    const receipts = JSON.parse(readFileSync(new URL('./support/s92-quiet-transitions.json', import.meta.url), 'utf8'));
+    expect(receipts).toHaveLength(4);
+    for (const { record: r, driver } of receipts) {
+      expect(readFileSync(new URL('../../' + driver.test, import.meta.url), 'utf8')).toContain(driver.needle);
+      expect(livenessProblems({ [r.key]: r.before }, { [r.key]: r.after }, [r])).toEqual([]);
+      for (const changed of [{ ...r, cause: 'another cause' }, { ...r, key: 'testbed, 120 days/orders.relay_held' },
+        { ...r, evidence: 'elsewhere' }, { ...r, observed: 1 }, { ...r, after: { ...r.after, maxFires: 1 } }]) {
+        expect(livenessProblems({ [changed.key]: changed.before }, { [changed.key]: changed.after }, [changed])).not.toEqual([]);
+      }
+    }
+  });
   it('accepts the exact around formula with its observation and recorded cause', () => {
     expect(livenessProblems(original, current, [record])).toEqual([]);
   });

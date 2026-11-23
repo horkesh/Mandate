@@ -71,9 +71,10 @@ const closeWatch: CommandContext = { available: 400, oversight: 900, leaderCredi
 
 describe('the proxies are people State', () => {
   it('reads each proxy from people State: drawn temperament, cited values, standing and regard as moved', () => {
-    expect(proxy('eager')).toEqual({ id: PR('eager'), values: ['career', 'glory'], boldness: 800, candour: 600, standing: 200, regard: 800 });
-    expect(proxy('grandee')).toEqual({ id: PR('grandee'), values: ['caution', 'reputation'], boldness: 200, candour: 600, standing: 800, regard: -400 });
-    expect(proxy('functionary')).toEqual({ id: PR('functionary'), values: ['career', 'caution'], boldness: 200, candour: 200, standing: 100, regard: -400 });
+    const evidence = { boldness: true, candour: true, standing: true };
+    expect(proxy('eager')).toEqual({ id: PR('eager'), evidence, values: ['career', 'glory'], boldness: 800, candour: 600, standing: 200, regard: 800 });
+    expect(proxy('grandee')).toEqual({ id: PR('grandee'), evidence, values: ['caution', 'reputation'], boldness: 200, candour: 600, standing: 800, regard: -400 });
+    expect(proxy('functionary')).toEqual({ id: PR('functionary'), evidence, values: ['career', 'caution'], boldness: 200, candour: 200, standing: 100, regard: -400 });
   });
 });
 

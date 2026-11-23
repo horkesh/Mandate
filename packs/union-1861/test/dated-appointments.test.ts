@@ -31,7 +31,10 @@ describe('S1 dated Union department appointments', () => {
     const result = phase0.tick(world, state, [{ day, seat: lincoln, command }], { freeze: true });
     expect(result.rejections).toEqual([]);
     expect(result.state.postStates[post(where)]).toMatchObject({ postHolder: person(who), postSeat: ids.toId('region', region) });
-    expect(Object.keys(result.state.forceBlockStates)).toEqual(Object.keys(state.forceBlockStates));
+    // Compare the appointment with the same day's ordinary tick: sourced theatre exits
+    // may remove original troops independently of this appointment.
+    const control = phase0.tick(world, state, [], { freeze: true });
+    expect(result.state.forceBlockStates).toEqual(control.state.forceBlockStates);
   });
 
   it('reserves future appointees from generic vacancies without appointing them before their date', () => {

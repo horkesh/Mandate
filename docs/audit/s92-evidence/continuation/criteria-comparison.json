@@ -1,0 +1,141 @@
+[
+  {
+    "id": "behaviour",
+    "milestone": "phase0",
+    "beforePass": true,
+    "afterPass": true,
+    "addedProblems": [],
+    "removedProblems": [],
+    "allProblemsExact": true
+  },
+  {
+    "id": "hash",
+    "milestone": "phase0",
+    "beforePass": true,
+    "afterPass": true,
+    "addedProblems": [],
+    "removedProblems": [],
+    "allProblemsExact": true
+  },
+  {
+    "id": "resume",
+    "milestone": "phase0",
+    "beforePass": true,
+    "afterPass": true,
+    "addedProblems": [],
+    "removedProblems": [],
+    "allProblemsExact": true
+  },
+  {
+    "id": "liveness",
+    "milestone": "phase0",
+    "beforePass": false,
+    "afterPass": true,
+    "addedProblems": [],
+    "removedProblems": [
+      "union-1861, war by decision, 148 days: combat.battle_closed is too_frequent (7 fires, band 1..5)",
+      "union-1861, war by decision, 148 days: combat.battle_day is too_frequent (27 fires, band 2..8)",
+      "union-1861, war by decision, 148 days: combat.battle_opened is too_frequent (8 fires, band 1..5)",
+      "union-1861, war by decision, 148 days: combat.captured is too_frequent (6 fires, band 1..5)",
+      "union-1861, war by decision, 148 days: combat.cut_off is too_frequent (1 fires, band 0..0)",
+      "union-1861, war by decision, 148 days: combat.flank_broken is too_frequent (7 fires, band 1..6)",
+      "union-1861, war by decision, 148 days: combat.killed_wounded is too_frequent (50 fires, band 2..8)",
+      "union-1861, war by decision, 148 days: combat.missing is too_frequent (49 fires, band 2..8)",
+      "union-1861, war by decision, 148 days: combat.withdrew is too_frequent (1 fires, band 0..0)",
+      "union-1861, war by decision, 148 days: forces.stores_low is too_frequent (103 fires, band 6..26)",
+      "union-1861, war by decision, 148 days: forces.stores_refilled is too_frequent (2400 fires, band 545..2180)",
+      "union-1861, war by decision, 148 days: orders.relay_held is dead (0 fires, band 1..4)",
+      "union-1861, war by decision, 148 days: orders.returned is too_frequent (1 fires, band 0..0)",
+      "union-1861, war by decision, 148 days: planner.term.caution is dead (0 fires, band 1..4)",
+      "union-1861, war by decision, 148 days: planner.term.force_ratio is dead (0 fires, band 1..4)",
+      "union-1861, war by decision, 148 days: recruitment.refused is too_rare (12 fires, band 18..72)",
+      "union-1861, war by decision, 148 days: recruitment.renewed is too_frequent (1 fires, band 0..0)",
+      "union-1861, war by decision, 148 days: recruitment.slow_walked is dead (0 fires, band 27..110)",
+      "union-1861, war by decision, 148 days: reports.battle_dispatch is too_frequent (182 fires, band 9..36)",
+      "union-1861, war by decision, 148 days: reports.casualty_return is too_frequent (76 fires, band 6..24)",
+      "union-1861, war by decision, 148 days: reports.governor_wire is too_frequent (21 fires, band 2..8)"
+    ],
+    "allProblemsExact": false
+  },
+  {
+    "id": "section-ten",
+    "milestone": "phase0",
+    "beforePass": true,
+    "afterPass": true,
+    "addedProblems": [],
+    "removedProblems": [],
+    "allProblemsExact": true
+  },
+  {
+    "id": "budget",
+    "milestone": "phase0",
+    "beforePass": false,
+    "afterPass": true,
+    "addedProblems": [],
+    "removedProblems": [
+      "union-1861, war by decision, 148 days: median 47.5 ms a day, over the 40 ms budget",
+      "union-1861 history run, 148 days to 1861-07-31: median 48.5 ms a day, over the 40 ms budget"
+    ],
+    "allProblemsExact": false
+  },
+  {
+    "id": "checkpoints",
+    "milestone": "1A",
+    "beforePass": false,
+    "afterPass": false,
+    "addedProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 94376 men, below 100000"
+    ],
+    "removedProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 93710 men, below 100000"
+    ],
+    "allProblemsExact": false
+  },
+  {
+    "id": "operation",
+    "milestone": "1A",
+    "beforePass": true,
+    "afterPass": true,
+    "addedProblems": [],
+    "removedProblems": [],
+    "allProblemsExact": true
+  },
+  {
+    "id": "pushback",
+    "milestone": "1A",
+    "beforePass": false,
+    "afterPass": false,
+    "addedProblems": [],
+    "removedProblems": [],
+    "allProblemsExact": true
+  },
+  {
+    "id": "unknown-strength",
+    "milestone": "1A",
+    "beforePass": false,
+    "afterPass": false,
+    "addedProblems": [],
+    "removedProblems": [],
+    "allProblemsExact": true
+  },
+  {
+    "id": "stand-ins",
+    "milestone": "1A",
+    "beforePass": true,
+    "afterPass": true,
+    "addedProblems": [],
+    "removedProblems": [],
+    "allProblemsExact": true
+  },
+  {
+    "id": "lever-sweep",
+    "milestone": "1A",
+    "beforePass": false,
+    "afterPass": false,
+    "addedProblems": [],
+    "removedProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: watched option return is the union bot’s best choice in 3 of 8 seeds, more than a quarter"
+    ],
+    "allProblemsExact": false
+  }
+]

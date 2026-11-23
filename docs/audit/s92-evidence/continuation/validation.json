@@ -1,0 +1,40 @@
+{
+  "buildCommit": "724eea840726bfc68f0625369aa9eb28d6dd7e18",
+  "firstHook": {
+    "exit": 1,
+    "seconds": 746.98,
+    "tests": {
+      "passed": 2143,
+      "failed": 2,
+      "skipped": 3
+    },
+    "log": "runs/s92c/commit-build.log",
+    "correction": "Static type import instead of an inline import rejected by the scanner; appointment fixture compares same-day no-command control. Both reproduced cheaply; 48 targeted tests, typecheck and rules pass before the mandatory retry."
+  },
+  "passingBuildHook": {
+    "exit": 0,
+    "seconds": 748.4066891
+  },
+  "fullCheck": {
+    "seconds": 691.1063603,
+    "mode": "MANDATE_NO_GIT=1; VITEST_MAX_WORKERS=1; Git fixture evidence retained from actual corrected hook",
+    "exit": 0
+  },
+  "references": {
+    "exit": 0,
+    "seconds": 72.8907059
+  },
+  "doneCheck": {
+    "start": "2026-11-23T08:27:39.6073091+01:00",
+    "seconds": 1760.2016234,
+    "observer": "Existing CLI process 9848; no second done-check run",
+    "exit": 1
+  },
+  "logs": [
+    "runs/s92c/commit-corrected.log",
+    "runs/s92c/check-final.log",
+    "runs/s92c/references-final.log",
+    "runs/s92c/done.log"
+  ],
+  "probeLimit": "First probe exposed missing runtime date guard and an empty aggregate still creating contact. Corrected cheaply; one corrected count probe. An accidentally checked probe launch was stopped before producing a completed reference; no baseline or completed reference campaign was repeated. Final source arithmetic correction is independently exercised by the passing hook, full suite and references."
+}

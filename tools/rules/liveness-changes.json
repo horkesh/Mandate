@@ -1521,5 +1521,528 @@
     "observed": 9,
     "cause": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted operational channel adds Cooper forwarding Davis's junction letter on day142, message m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry. The eight existing Cameron/Scott relays remain; recentre only this reference band with around(9).",
     "evidence": "docs/audit/s90-evidence/liveness-ruling.json#ordersRelayed"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.battle_closed",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "observed": 5,
+    "cause": "0113 permits the evidenced governor calls to raise forces. Retained contacts are Sumter days 38-39, Manassas 140/144/145/148 and Harpers Ferry 147; removal of the duplicate Texas aggregate and sourced completion remove Texas days 129-148. Counts are model outcomes, not historical battle targets.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#combat.battle_closed"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.battle_day",
+    "before": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "observed": 7,
+    "cause": "0113 permits the evidenced governor calls to raise forces. Retained contacts are Sumter days 38-39, Manassas 140/144/145/148 and Harpers Ferry 147; removal of the duplicate Texas aggregate and sourced completion remove Texas days 129-148. Counts are model outcomes, not historical battle targets.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#combat.battle_day"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.battle_opened",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "observed": 5,
+    "cause": "0113 permits the evidenced governor calls to raise forces. Retained contacts are Sumter days 38-39, Manassas 140/144/145/148 and Harpers Ferry 147; removal of the duplicate Texas aggregate and sourced completion remove Texas days 129-148. Counts are model outcomes, not historical battle targets.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#combat.battle_opened"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.captured",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "observed": 5,
+    "cause": "0113 permits the evidenced governor calls to raise forces. Retained contacts are Sumter days 38-39, Manassas 140/144/145/148 and Harpers Ferry 147; removal of the duplicate Texas aggregate and sourced completion remove Texas days 129-148. Counts are model outcomes, not historical battle targets.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#combat.captured"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.cut_off",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a side is cut off only with no legal retreat (0019) in a field battle; the retained reference field losers have legal retreats, while the separate trapped-garrison test drives it"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "observed": 1,
+    "cause": "0113 permits the evidenced governor calls to raise forces. Retained contacts are Sumter days 38-39, Manassas 140/144/145/148 and Harpers Ferry 147; removal of the duplicate Texas aggregate and sourced completion remove Texas days 129-148. Counts are model outcomes, not historical battle targets.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#combat.cut_off"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.flank_broken",
+    "before": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires combat.flank_broken 3 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#combat.flank_broken."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "observed": 3,
+    "cause": "0113 permits the evidenced governor calls to raise forces. Retained contacts are Sumter days 38-39, Manassas 140/144/145/148 and Harpers Ferry 147; removal of the duplicate Texas aggregate and sourced completion remove Texas days 129-148. Counts are model outcomes, not historical battle targets.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#combat.flank_broken"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.general_hit",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires combat.general_hit 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#combat.general_hit."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "observed": 1,
+    "cause": "0113 permits the evidenced governor calls to raise forces. Retained contacts are Sumter days 38-39, Manassas 140/144/145/148 and Harpers Ferry 147; removal of the duplicate Texas aggregate and sourced completion remove Texas days 129-148. Counts are model outcomes, not historical battle targets.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#combat.general_hit"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.killed_wounded",
+    "before": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "after": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "observed": 10,
+    "cause": "0113 permits the evidenced governor calls to raise forces. Retained contacts are Sumter days 38-39, Manassas 140/144/145/148 and Harpers Ferry 147; removal of the duplicate Texas aggregate and sourced completion remove Texas days 129-148. Counts are model outcomes, not historical battle targets.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#combat.killed_wounded"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.missing",
+    "before": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "after": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "observed": 9,
+    "cause": "0113 permits the evidenced governor calls to raise forces. Retained contacts are Sumter days 38-39, Manassas 140/144/145/148 and Harpers Ferry 147; removal of the duplicate Texas aggregate and sourced completion remove Texas days 129-148. Counts are model outcomes, not historical battle targets.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#combat.missing"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.withdrew",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "observed": 1,
+    "cause": "0113 permits the evidenced governor calls to raise forces. Retained contacts are Sumter days 38-39, Manassas 140/144/145/148 and Harpers Ferry 147; removal of the duplicate Texas aggregate and sourced completion remove Texas days 129-148. Counts are model outcomes, not historical battle targets.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#combat.withdrew"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/forces.stores_low",
+    "before": {
+      "minFires": 6,
+      "maxFires": 26,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires forces.stores_low 13 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#forces.stores_low."
+    },
+    "after": {
+      "minFires": 51,
+      "maxFires": 206
+    },
+    "observed": 103,
+    "cause": "0113 changes actual compliance and muster: 68 mustered levies rather than 47 before the build, including the northern concentration and Confederate state calls. Their marches and depot refills produce the recorded store crossings and straggler returns. Texas original contingents now leave play on day 65 after the departure agreement; no replacement or captive total is invented.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#forces.stores_low"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/forces.stores_refilled",
+    "before": {
+      "minFires": 545,
+      "maxFires": 2180
+    },
+    "after": {
+      "minFires": 1200,
+      "maxFires": 4800
+    },
+    "observed": 2400,
+    "cause": "0113 changes actual compliance and muster: 68 mustered levies rather than 47 before the build, including the northern concentration and Confederate state calls. Their marches and depot refills produce the recorded store crossings and straggler returns. Texas original contingents now leave play on day 65 after the departure agreement; no replacement or captive total is invented.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#forces.stores_refilled"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/messages.courier_delay",
+    "before": {
+      "minFires": 63,
+      "maxFires": 252
+    },
+    "after": {
+      "minFires": 77,
+      "maxFires": 308
+    },
+    "observed": 154,
+    "cause": "0113 removes unsupported objections and covert delay, changes 68 completed levies and their received reports, and the Texas correction removes twenty battle-days of dispatches. Ordinary courier/mail paths account for the delivery and delay counts.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#messages.courier_delay"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/messages.delivered",
+    "before": {
+      "minFires": 5613,
+      "maxFires": 22452
+    },
+    "after": {
+      "minFires": 7120,
+      "maxFires": 28480
+    },
+    "observed": 14240,
+    "cause": "0113 removes unsupported objections and covert delay, changes 68 completed levies and their received reports, and the Texas correction removes twenty battle-days of dispatches. Ordinary courier/mail paths account for the delivery and delay counts.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#messages.delivered"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/messages.mail_delay",
+    "before": {
+      "minFires": 1351,
+      "maxFires": 5406
+    },
+    "after": {
+      "minFires": 1428,
+      "maxFires": 5712
+    },
+    "observed": 2856,
+    "cause": "0113 removes unsupported objections and covert delay, changes 68 completed levies and their received reports, and the Texas correction removes twenty battle-days of dispatches. Ordinary courier/mail paths account for the delivery and delay counts.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#messages.mail_delay"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/messages.sent",
+    "before": {
+      "minFires": 5947,
+      "maxFires": 23788
+    },
+    "after": {
+      "minFires": 7523,
+      "maxFires": 30094
+    },
+    "observed": 15047,
+    "cause": "0113 removes unsupported objections and covert delay, changes 68 completed levies and their received reports, and the Texas correction removes twenty battle-days of dispatches. Ordinary courier/mail paths account for the delivery and delay counts.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#messages.sent"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/orders.relay_held",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."
+    },
+    "observed": 0,
+    "cause": "0113 removes unsupported covert delay. Beauregard is wounded at Manassas on day 140; the day-145 arrival at his vacant command returns. Cameron retains a reservation without a relay hold. 0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#orders.relay_held"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/orders.returned",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S82 ruling 2 [I]: the accepted dated command/headquarters and received correspondence path has no dispatch arriving at a changed or vacant post in S81. The separate believed-posts test drives a typed return for an order sent before the vacancy report arrives. Zero stays exact, never an unbounded floor."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "observed": 1,
+    "cause": "0113 removes unsupported covert delay. Beauregard is wounded at Manassas on day 140; the day-145 arrival at his vacant command returns. Cameron retains a reservation without a relay hold.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#orders.returned"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.caution",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.caution 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.caution."
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "0113: changed compliance and available levies leave no reference draft whose top pick depends on caution alone. The separate score-term control still changes rankings when a live term is removed."
+    },
+    "observed": 0,
+    "cause": "0113 changes order responses and the forces available to the northern advance. McDowell opens day 135, the advance notice day 138, and drafts select differently; the existing three-day seam remains for the S90 lane. 0113: changed compliance and available levies leave no reference draft whose top pick depends on caution alone. The separate score-term control still changes rankings when a live term is removed.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#planner.term.caution"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.force_ratio",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.force_ratio 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.force_ratio."
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "0113: changed compliance and available levies leave no reference draft whose top pick depends on force ratio alone. The separate score-term control still drives every declared term."
+    },
+    "observed": 0,
+    "cause": "0113 changes order responses and the forces available to the northern advance. McDowell opens day 135, the advance notice day 138, and drafts select differently; the existing three-day seam remains for the S90 lane. 0113: changed compliance and available levies leave no reference draft whose top pick depends on force ratio alone. The separate score-term control still drives every declared term.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#planner.term.force_ratio"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.refused",
+    "before": {
+      "minFires": 18,
+      "maxFires": 72
+    },
+    "after": {
+      "minFires": 6,
+      "maxFires": 24
+    },
+    "observed": 12,
+    "cause": "0113 removes draw-only willingness terms: Moore, Perry and Clark comply with thirteen formerly objected-to calls. The Minnesota original levy exists and voluntarily renews on day 67. Ninety-day expiries, 68 completed musters and actual governor answers produce these counts; no checkpoint or historical pushback threshold changes.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#recruitment.refused"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.renewed",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "observed": 1,
+    "cause": "0113 removes draw-only willingness terms: Moore, Perry and Clark comply with thirteen formerly objected-to calls. The Minnesota original levy exists and voluntarily renews on day 67. Ninety-day expiries, 68 completed musters and actual governor answers produce these counts; no checkpoint or historical pushback threshold changes.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#recruitment.renewed"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/recruitment.slow_walked",
+    "before": {
+      "minFires": 27,
+      "maxFires": 110
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "0113: uncited candour cannot turn disagreement into a covert delay. No Union reference call is slow-walked; the fictional home-rule governor still delays an actual muster."
+    },
+    "observed": 0,
+    "cause": "0113 removes draw-only willingness terms: Moore, Perry and Clark comply with thirteen formerly objected-to calls. The Minnesota original levy exists and voluntarily renews on day 67. Ninety-day expiries, 68 completed musters and actual governor answers produce these counts; no checkpoint or historical pushback threshold changes. 0113: uncited candour cannot turn disagreement into a covert delay. No Union reference call is slow-walked; the fictional home-rule governor still delays an actual muster.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#recruitment.slow_walked"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.battle_dispatch",
+    "before": {
+      "minFires": 9,
+      "maxFires": 36
+    },
+    "after": {
+      "minFires": 21,
+      "maxFires": 84
+    },
+    "observed": 42,
+    "cause": "0113 changes governor compliance and ensuing field forces. Reports now describe Sumter 38-39, Manassas 140/144/145/148, Harpers Ferry 147 and governor replies; Texas 129-148 no longer generates battle traffic.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#reports.battle_dispatch"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.casualty_return",
+    "before": {
+      "minFires": 6,
+      "maxFires": 24
+    },
+    "after": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "observed": 20,
+    "cause": "0113 changes governor compliance and ensuing field forces. Reports now describe Sumter 38-39, Manassas 140/144/145/148, Harpers Ferry 147 and governor replies; Texas 129-148 no longer generates battle traffic.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#reports.casualty_return"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.commander_lost",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires reports.commander_lost 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#reports.commander_lost."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "observed": 1,
+    "cause": "0113 changes governor compliance and ensuing field forces. Reports now describe Sumter 38-39, Manassas 140/144/145/148, Harpers Ferry 147 and governor replies; Texas 129-148 no longer generates battle traffic.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#reports.commander_lost"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.governor_wire",
+    "before": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "observed": 6,
+    "cause": "0113 changes governor compliance and ensuing field forces. Reports now describe Sumter 38-39, Manassas 140/144/145/148, Harpers Ferry 147 and governor replies; Texas 129-148 no longer generates battle traffic.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#reports.governor_wire"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/seats.attention_spent",
+    "before": {
+      "minFires": 65,
+      "maxFires": 260
+    },
+    "after": {
+      "minFires": 76,
+      "maxFires": 306
+    },
+    "observed": 153,
+    "cause": "0113 changes available levies and actual responses. With the Texas duplicate removed and original contingents exited, the remaining Sumter/Manassas/Harpers Ferry encounters supply ten battle-order prompts.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#seats.attention_spent"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/seats.battle_orders",
+    "before": {
+      "minFires": 30,
+      "maxFires": 120
+    },
+    "after": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "observed": 10,
+    "cause": "0113 changes available levies and actual responses. With the Texas duplicate removed and original contingents exited, the remaining Sumter/Manassas/Harpers Ferry encounters supply ten battle-order prompts.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#seats.battle_orders"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/situations.fired",
+    "before": {
+      "minFires": 31,
+      "maxFires": 124,
+      "why": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle."
+    },
+    "after": {
+      "minFires": 44,
+      "maxFires": 176
+    },
+    "observed": 88,
+    "cause": "0113 allows the Minnesota eligible original levy to remuster on day 67. Texas departure terms fire on day 1 with Waite in office and the contingent present; five bounded completion notices fire on day 65, requiring those terms and surviving troops still in Texas.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#situations.fired"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/situations.notice_reports",
+    "before": {
+      "minFires": 22,
+      "maxFires": 88,
+      "why": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle."
+    },
+    "after": {
+      "minFires": 35,
+      "maxFires": 140
+    },
+    "observed": 70,
+    "cause": "0113 allows the Minnesota eligible original levy to remuster on day 67. Texas departure terms fire on day 1 with Waite in office and the contingent present; five bounded completion notices fire on day 65, requiring those terms and surviving troops still in Texas.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#situations.notice_reports"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/situations.noticed",
+    "before": {
+      "minFires": 21,
+      "maxFires": 86,
+      "why": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle."
+    },
+    "after": {
+      "minFires": 34,
+      "maxFires": 138
+    },
+    "observed": 69,
+    "cause": "0113 allows the Minnesota eligible original levy to remuster on day 67. Texas departure terms fire on day 1 with Waite in office and the contingent present; five bounded completion notices fire on day 65, requiring those terms and surviving troops still in Texas.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#situations.noticed"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/situations.proposals",
+    "before": {
+      "minFires": 20,
+      "maxFires": 82,
+      "why": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle."
+    },
+    "after": {
+      "minFires": 36,
+      "maxFires": 146
+    },
+    "observed": 73,
+    "cause": "0113 allows the Minnesota eligible original levy to remuster on day 67. Texas departure terms fire on day 1 with Waite in office and the contingent present; five bounded completion notices fire on day 65, requiring those terms and surviving troops still in Texas.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#situations.proposals"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/situations.surfaced",
+    "before": {
+      "minFires": 30,
+      "maxFires": 122,
+      "why": "R97: seven sourced State-act notices add their surfaced, fired, report and proposal events; each still uses the existing situation lifecycle."
+    },
+    "after": {
+      "minFires": 43,
+      "maxFires": 174
+    },
+    "observed": 87,
+    "cause": "0113 allows the Minnesota eligible original levy to remuster on day 67. Texas departure terms fire on day 1 with Waite in office and the contingent present; five bounded completion notices fire on day 65, requiring those terms and surviving troops still in Texas.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#situations.surfaced"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/verbs.answered",
+    "before": {
+      "minFires": 44,
+      "maxFires": 176
+    },
+    "after": {
+      "minFires": 61,
+      "maxFires": 246
+    },
+    "observed": 123,
+    "cause": "0113 changes actual compliance, resulting calls and received correspondence. Northern concentration and the remaining Manassas/Harpers Ferry command traffic change the answers and declines; no command threshold is tuned.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#verbs.answered"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/operations.repulsed",
+    "before": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "observed": 1,
+    "cause": "0113 changes actual levies and the northern and Confederate field forces. Patterson meets Johnston at Harpers Ferry on day 147, withdraws and has his axis repulsed; no operation or combat rule was tuned.",
+    "evidence": "docs/audit/s92-evidence/continuation/liveness-review.json#operations.repulsed"
   }
 ]

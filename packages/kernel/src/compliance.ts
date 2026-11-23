@@ -162,10 +162,14 @@ export function resolveDirective(
 
   // Temperament: a cautious man ordered to attack, or a bold one ordered to wait. Read against his own best plan when
   // the directive is a plan (lane 0.9 finding 2), else against his temperament.
-  const reference = terms.ownBest ?? proxy.boldness;
-  const boldnessGap = Math.abs(terms.boldness - reference);
+  // 0113: unknown boldness makes no claim about his preferred action. Repeat the stated order/plan in a
+  // counterproposal and read its resource condition on that basis, so neither leaks the unsupported draw.
+  const knownBoldness = proxy.evidence?.boldness !== false;
+  const boldness = knownBoldness ? proxy.boldness : terms.ownBest ?? terms.boldness;
+  const reference = terms.ownBest ?? boldness;
+  const boldnessGap = knownBoldness ? Math.abs(terms.boldness - reference) : 0;
   const temperament = 0 - scale(boldnessGap, rules.temperamentWeight);
-  if (boldnessGap >= rules.temperamentReasonAt) {
+  if (knownBoldness && boldnessGap >= rules.temperamentReasonAt) {
     reasons.push(
       terms.boldness > reference
         ? { kind: 'too_rash', gap: boldnessGap }
@@ -184,7 +188,8 @@ export function resolveDirective(
   if (proxy.regard <= -rules.regardReasonAt) reasons.push({ kind: 'distrusts_leader' });
 
   // Deterrence: the expected cost of shirking, discounted by the proxy's own standing.
-  const shield = scale(proxy.standing, rules.standingShield);
+  const standing = proxy.evidence?.standing === false ? 0 : proxy.standing;
+  const shield = scale(standing, rules.standingShield);
   const effectiveCredibility = scale(context.leaderCredibility, PERMILLE_MAX - shield);
   // Oversight beyond the base, each its own term and reason (lane 1.5).
   let oversight = context.oversight;
@@ -195,7 +200,7 @@ export function resolveDirective(
   const deterrenceLevel = scale(clampPermille(oversight), effectiveCredibility);
   const deterrence = scale(deterrenceLevel, rules.deterrenceWeight);
   if (deterrenceLevel >= rules.fearReasonAt) reasons.push({ kind: 'fears_sanction' });
-  if (proxy.standing >= rules.protectedStandingAt) reasons.push({ kind: 'shielded_by_standing' });
+  if (proxy.evidence?.standing !== false && standing >= rules.protectedStandingAt) reasons.push({ kind: 'shielded_by_standing' });
 
   // Capacity: what the task needs against what the post holds.
   const shortfall = Math.max(0, terms.required - context.available);
@@ -226,7 +231,7 @@ export function resolveDirective(
 
   const contributions: Contribution[] = [
     { term: 'values', amount: values },
-    { term: 'temperament', amount: temperament },
+    ...(knownBoldness ? [{ term: 'temperament' as const, amount: temperament }] : []),
     { term: 'regard', amount: regard },
     { term: 'deterrence', amount: deterrence },
     { term: 'capacity', amount: capacity },
@@ -240,8 +245,8 @@ export function resolveDirective(
 
   const honoursAHeldValue = reasons.some((r) => r.kind === 'values_honoured');
   const isProtected =
-    proxy.standing >= rules.protectedStandingAt || deterrenceLevel <= rules.protectedDeterrenceAt;
-  const isCandid = proxy.candour >= rules.candidAt;
+    (proxy.evidence?.standing !== false && standing >= rules.protectedStandingAt) || deterrenceLevel <= rules.protectedDeterrenceAt;
+  const isCandid = proxy.evidence?.candour === false || proxy.candour >= rules.candidAt;
 
   let actual: ComplianceRung;
   if (willingness >= rules.exceedAt && shortfall === 0 && honoursAHeldValue) actual = 'exceed';
@@ -258,7 +263,7 @@ export function resolveDirective(
 
   const counterProposal: CounterProposal | null =
     actual === 'object'
-      ? { boldness: proxy.boldness, required: Math.min(terms.required, context.available) }
+      ? { boldness, required: Math.min(terms.required, context.available) }
       : null;
 
   const statedReasons = isCandid ? reasons : statedByUncandid(reasons, declared);
@@ -267,7 +272,7 @@ export function resolveDirective(
   const conditions: ResponseCondition[] = [];
   if (actual !== 'refuse' && actual !== 'object') {
     // A shortfall past the share a man of his boldness tolerates: "move when reinforced" (lane 0.9 finding 8).
-    const tolerated = rules.reinforceShareTimid + scale(proxy.boldness, Math.max(0, rules.reinforceShareBold - rules.reinforceShareTimid));
+    const tolerated = rules.reinforceShareTimid + scale(boldness, Math.max(0, rules.reinforceShareBold - rules.reinforceShareTimid));
     if (shortfall > 0 && shortfall * 1000 > tolerated * terms.required) conditions.push({ kind: 'when_reinforced', shortfall });
     const promised = new Set(context.supportPromised ?? []);
     const needs = [...(terms.support ?? [])].sort((a, b) => strictCompare(a.supportKind, b.supportKind) || strictCompare(a.supportFrom ?? '', b.supportFrom ?? ''));
