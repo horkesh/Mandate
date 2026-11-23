@@ -36,7 +36,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0030](0030-foundation-commitments.md) | Foundation commitments: scenario starts, packs as the modding format, string tables, playable at every phase, a planner spike | accepted; amended by 0041 |
 | [0031](0031-map-extent-size-sources.md) | The map covers the whole war at about 250 regions, built from licence-clean sources | accepted |
 | [0032](0032-reports-authors-routes-filters.md) | A report has an author, a route and filters; the telegraph office is a seat | accepted; amended by 0040, 0046 |
-| [0033](0033-forces-scale-and-data-sources.md) | Transfers name a force, not divisions one by one; force blocks fit the period; data comes from public-domain sources | accepted; amended by 0040 |
+| [0033](0033-forces-scale-and-data-sources.md) | Transfers name a force, not divisions one by one; force blocks fit the period; data comes from public-domain sources | accepted; amended by 0040; extended by 0108 |
 | [0034](0034-one-standing-steward.md) | One standing steward lane from Phase 0 | accepted; amended by 0045, 0047 |
 | [0035](0035-the-stack.md) | The stack, and a map-rendering tripwire | accepted; amended by 0043 |
 | [0036](0036-the-title.md) | The game is called By Order of the President; Mandate stays the engine's codename | accepted |
@@ -67,7 +67,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0061](0061-how-the-0058-fields-were-built.md) | How the 0058 format fields were built | accepted; amended by 0064 |
 | [0062](0062-the-planner-shape.md) | The planner's shape: generate, filter and score, with one level of methods | accepted |
 | [0063](0063-atrocity-levers-are-watched.md) | An option that hurts the enemy in response to an atrocity is watched | accepted; amended by 0074 |
-| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted; amended by 0066, 0072, 0076 |
+| [0064](0064-forces-command-movement-and-the-contest.md) | Forces, command, movement, infrastructure and the control contest | accepted; amended by 0066, 0072, 0076; clarified by 0110 |
 | [0065](0065-a-governments-side-is-state.md) | A government's side can change in play, and stores carry their date | accepted; amended by 0067 |
 | [0066](0066-the-war-begins-by-each-governments-decision.md) | The war begins for each side by its own government's decision | accepted; amended by 0068 |
 | [0067](0067-government-sides-as-built.md) | Government sides as built, and Fort Pickens' stores unknown | accepted |
@@ -76,10 +76,10 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0070](0070-a-nations-act-is-its-own.md) | A nation's act must be its own, and must stay with its own people | accepted; amended by 0071 |
 | [0071](0071-cleared-flags-and-goals-are-routes.md) | A cleared flag is a route, and a standing goal is a choice | accepted |
 | [0072](0072-phase-0-closes-with-a-close-out.md) | Phase 0 closes after one close-out lane | accepted |
-| [0073](0073-phase-1-plan.md) | The Phase 1 plan: two milestones, starting with the road to Bull Run | accepted |
+| [0073](0073-phase-1-plan.md) | The Phase 1 plan: two milestones, starting with the road to Bull Run | accepted; extended by 0108 |
 | [0074](0074-the-gate-for-1a.md) | The gate for 1A: capture in battle, the values that touch slavery, and the leaders' own words | accepted; amended by 0082 |
 | [0075](0075-the-planner-as-built.md) | The planner in the kernel, as built | accepted |
-| [0076](0076-the-battle-model-as-built.md) | The battle model, as built | accepted |
+| [0076](0076-the-battle-model-as-built.md) | The battle model, as built | accepted; amended by 0110 |
 | [0077](0077-portraits-get-a-procedural-engraving.md) | Portraits of real people get a procedural engraving finish | accepted |
 | [0078](0078-men-and-regions-as-built.md) | Men and regions, as built, and enslaved people in Union-held slave states | accepted |
 | [0079](0079-the-people-verbs-as-built.md) | The people's verbs, the audience and attention, as built | accepted |
@@ -102,11 +102,15 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0096](0096-codex-resumes-milestone-1a.md) | Codex resumes milestone 1A | accepted; amended by 0106 |
 | [0097](0097-the-1861-starts-blocs-after-re-sourcing.md) | The 1861 start's blocs and judgments after re-sourcing | accepted |
 | [0098](0098-rule-seat-doctrine-concentration-bombardment-and-lost-commanders.md) | Rule-seat doctrine, concentration, bombardment and lost commanders | accepted; extended by 0104 |
-| [0099](0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md) | The 1A checkpoint bands and the limits of the victory sweep | accepted |
+| [0099](0099-the-1a-checkpoint-bands-and-the-limits-of-the-victory-sweep.md) | The 1A checkpoint bands and the limits of the victory sweep | accepted; amended by 0109 |
 | [0100](0100-sourced-situations-absent-staff-advice-and-declared-governments.md) | Sourced situations, absent staff advice and declared governments | accepted |
 | [0101](0101-an-officers-resignation-service-side-and-reported-choice.md) | An officer's resignation, service side and reported choice | accepted |
 | [0102](0102-send-a-plan-back-with-notes-the-commander-may-decline.md) | Send a plan back with notes the commander may decline | accepted |
 | [0103](0103-the-press-carries-received-stories-into-the-seat-view.md) | The press carries received stories into the seat view | accepted |
 | [0104](0104-the-opening-of-the-war-follows-its-causes-and-its-news.md) | The opening of the war follows its causes and its news | accepted |
 | [0105](0105-1as-first-calibration-round-continue-or-park.md) | 1A's first calibration round: continue or park | accepted |
-| [0106](0106-the-codex-sprint-to-22-november.md) | The Codex sprint to 22 November | accepted |
+| [0106](0106-the-codex-sprint-to-22-november.md) | The Codex sprint to 22 November | accepted; amended by 0107 |
+| [0107](0107-the-sprint-continues-on-codexs-renewed-allowance.md) | The sprint continues on Codex's renewed allowance | accepted |
+| [0108](0108-the-july-armies-are-named-brigades-of-regiments.md) | The July armies are named brigades of regiments | accepted |
+| [0109](0109-two-pushback-floor-cases-belong-to-other-mechanisms.md) | Two pushback floor cases belong to other mechanisms | accepted |
+| [0110](0110-unknown-defenders-and-joining-blocks.md) | A force of unknown strength is not an empty field, and a block on its way doesn't move headquarters | accepted |

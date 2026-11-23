@@ -1,0 +1,94 @@
+[
+  {
+    "file": "C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts",
+    "message": "",
+    "assertions": [
+      {
+        "name": "R86: the history months through the player\u2019s console (1A criterion 2) receives at least one hour-stamped battle dispatch by 31 July",
+        "status": "failed",
+        "failure": [
+          "AssertionError: expected false to be true // Object.is equality\n    at C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts:265:132\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+    "message": "",
+    "assertions": [
+      {
+        "name": "the done check on union-1861 at war and the testbed passes every Phase 0 criterion but the budget, which is a stopwatch",
+        "status": "failed",
+        "failure": [
+          "AssertionError: liveness: expected [ \u2026(12) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:47:114\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+        ]
+      },
+      {
+        "name": "each criterion can fail (positive controls) liveness: a planted dead mechanic in a reference run fails the check",
+        "status": "failed",
+        "failure": [
+          "AssertionError: expected [ \u2026(12) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:163:63\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts",
+    "message": "",
+    "assertions": [
+      {
+        "name": "the reference runs union-1861, war by decision, 148 days: every mechanic fires within its band",
+        "status": "failed",
+        "failure": [
+          "AssertionError: expected [ { \u2026(4) }, { \u2026(4) }, { \u2026(4) }, \u2026(9) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts:81:48\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "C:/Pyrrhic/sprint-july/packages/kernel/test/one-writer.test.ts",
+    "message": "",
+    "assertions": [
+      {
+        "name": "one writer per field, over every package writes each owned field only from its writer, and never writes an immutable key",
+        "status": "failed",
+        "failure": [
+          "AssertionError: expected [ \u2026(2) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/kernel/test/one-writer.test.ts:102:24\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "C:/Pyrrhic/sprint-july/packs/union-1861/test/northern-concentration.test.ts",
+    "message": "",
+    "assertions": [
+      {
+        "name": "northern Virginia concentration follows sourced commands and Virginia\u2019s side opens the command only after delivery, then selects it for concentration",
+        "status": "failed",
+        "failure": [
+          "AssertionError: expected { menuKind: 'principal', \u2026(14) } to match object { doctrine: { \u2026(3) } }\n(34 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/index.CZzC1gGg.js:1764:10)\n    at Proxy.<anonymous> (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/index.CZzC1gGg.js:1656:14)\n    at Proxy.methodWrapper (file:///C:/Pyrrhic/sprint-july/node_modules/chai/index.js:1737:25)\n    at C:/Pyrrhic/sprint-july/packs/union-1861/test/northern-concentration.test.ts:100:23\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "C:/Pyrrhic/sprint-july/packs/union-1861/test/s64-command-inclusion.test.ts",
+    "message": "",
+    "assertions": [
+      {
+        "name": "does not identify whole state batches or Charleston harbour garrisons with the July field armies",
+        "status": "failed",
+        "failure": [
+          "AssertionError: expected [ 'st_va_harpers_ferry', \u2026(5) ] to deeply equal [ 'st_va_harpers_ferry' ]\n    at C:/Pyrrhic/sprint-july/packs/union-1861/test/s64-command-inclusion.test.ts:55:72\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+        ]
+      },
+      {
+        "name": "projects both independent inclusions from received command papers without waiting for hidden execution",
+        "status": "failed",
+        "failure": [
+          "AssertionError: expected { crossNeutral: false, \u2026(9) } to match object { \u2026(3) }\n(9 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/index.CZzC1gGg.js:1764:10)\n    at Proxy.<anonymous> (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/index.CZzC1gGg.js:1656:14)\n    at Proxy.methodWrapper (file:///C:/Pyrrhic/sprint-july/node_modules/chai/index.js:1737:25)\n    at C:/Pyrrhic/sprint-july/packs/union-1861/test/s64-command-inclusion.test.ts:74:28\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20"
+        ]
+      }
+    ]
+  }
+]

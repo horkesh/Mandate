@@ -8,9 +8,10 @@
  * held report is kept beside it and dropped when no seat holds it.
  */
 import { strictCompare } from '../compare.ts';
-import type { MessageId, PostId, SeatId } from '../ids.ts';
+import type { MessageId, PersonId, PostId, SeatId } from '../ids.ts';
 import type { TransitMessage } from '../messages/transit.ts';
 import { seatIdFor } from '../seats/seats.ts';
+import type { PlanGoal } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 import { controlEvidence } from './control-beliefs.ts';
 import type { KnownReport } from './records.ts';
@@ -20,7 +21,16 @@ import type { ReportTruth } from './truth.ts';
 
 export type { KnownReport } from './records.ts';
 
+export interface KnownSentAppointment {
+  readonly appointmentPost: PostId;
+  readonly appointmentPerson: PersonId;
+  readonly appointmentMessage: MessageId;
+  readonly appointmentDay: number;
+}
+
 export interface SeatKnowledge {
+  /** The sender's unanswered appointment copies; never reconstructed from a private response. */
+  readonly knownSentAppointments?: readonly KnownSentAppointment[];
   /** At most the last goal and last review reply per post: copies of the principal's own sent letters. */
   readonly knownSentOrders?: readonly KnownSentOrder[];
   /** In (received day, id) order. */
@@ -37,12 +47,26 @@ export interface KnownSentOrder {
   readonly sentKind: 'goal' | 'approve' | 'send_back' | 'edit';
   readonly sentDay: number;
   readonly sentPaper: MessageId | null;
+  /** The principal's own goal terms, copied at sending; never a live commander plan. */
+  readonly sentGoal?: PlanGoal;
 }
 
 /** Knowledge owns the sender's copy, filed when a message first enters transit, never when its private answer changes. */
 export function rememberSentOrders(start: State, messages: readonly TransitMessage[]): State {
   let state = start;
   for (const message of messages) {
+    const verb = message.msgVerb;
+    if (verb?.verbKind === 'appoint' && verb.verbPost !== null && message.msgFrom === verb.verbIssuer && message.msgSentDay === verb.verbIssuedDay) {
+      const seat = seatIdFor(verb.verbIssuer);
+      if (state.seatAssignments[seat] !== undefined) {
+        const held = storedKnowledgeOf(state, seat);
+        const old = held.knownSentAppointments ?? [];
+        if (!old.some(a => a.appointmentMessage === message.msgOrigin)) {
+          const row: KnownSentAppointment = { appointmentPost: verb.verbPost, appointmentPerson: message.msgTo, appointmentMessage: message.msgOrigin, appointmentDay: verb.verbIssuedDay };
+          state = { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownSentAppointments: [...old.filter(a => a.appointmentPost !== row.appointmentPost),row].sort((a,b) => strictCompare(a.appointmentPost,b.appointmentPost)) } } };
+        }
+      }
+    }
     const order = message.msgOrder;
     if (order === null || message.msgFrom !== order.orderIssuer || message.msgSentDay !== order.orderIssuedDay || !(['goal','approve','send_back','edit'] as const).some(k => k === order.orderKind)) continue;
     const seat = seatIdFor(order.orderIssuer);
@@ -51,11 +75,27 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
     const old = held.knownSentOrders ?? [];
     if (old.some(o => o.sentMessage === message.msgOrigin)) continue;
     const paper = [...held.knownReports].filter(r => r.knownBody.reportPlan?.paperPost === order.orderTarget).sort((a,b) => b.knownBody.reportDay - a.knownBody.reportDay || strictCompare(b.id,a.id))[0];
-    const row: KnownSentOrder = { sentPost: order.orderTarget, sentMessage: message.msgOrigin, sentKind: order.orderKind as KnownSentOrder['sentKind'], sentDay: order.orderIssuedDay, sentPaper: paper?.id ?? null };
+    const row: KnownSentOrder = { sentPost: order.orderTarget, sentMessage: message.msgOrigin, sentKind: order.orderKind as KnownSentOrder['sentKind'], sentDay: order.orderIssuedDay, sentPaper: paper?.id ?? null, ...(order.orderGoal === null ? {} : { sentGoal: order.orderGoal }) };
     const kept = old.filter(o => o.sentPost !== row.sentPost || (o.sentKind === 'goal') !== (row.sentKind === 'goal'));
     state = { ...state, knowledgeBySeat: { ...state.knowledgeBySeat, [seat]: { ...held, knownSentOrders: [...kept,row].sort((a,b) => strictCompare(a.sentPost,b.sentPost) || strictCompare(a.sentKind,b.sentKind)) } } };
   }
   return state;
+}
+
+/** Only a received answer closes the sender's letter; hidden arrival/response tables cannot do so. */
+export function unansweredAppointments(state: State, principal: PersonId): readonly KnownSentAppointment[] {
+  const held = knowledgeOf(state, seatIdFor(principal));
+  const answers = new Set(held.knownReports.filter(r => r.knownReceivedDay <= state.stateDay && r.knownBody.reportDay <= state.stateDay).map(r => r.knownBody.reportAnswers));
+  return (held.knownSentAppointments ?? []).filter(a => !answers.has(a.appointmentMessage));
+}
+
+function retireAppointments(held: SeatKnowledge, day: number): SeatKnowledge {
+  if (held.knownSentAppointments === undefined) return held;
+  const answers = new Set(held.knownReports.filter(r => r.knownReceivedDay <= day && r.knownBody.reportDay <= day).map(r => r.knownBody.reportAnswers));
+  const pending = held.knownSentAppointments.filter(a => !answers.has(a.appointmentMessage));
+  if (pending.length === held.knownSentAppointments.length) return held;
+  const { knownSentAppointments: _answered, ...rest } = held;
+  return pending.length === 0 ? rest : { ...held, knownSentAppointments: pending };
 }
 
 export const EMPTY_KNOWLEDGE: SeatKnowledge = Object.freeze({ knownReports: Object.freeze([]) });
@@ -197,7 +237,9 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
   let changed = false;
   const next: Record<SeatId, SeatKnowledge> = {};
   for (const seat of Object.keys(state.knowledgeBySeat).sort(strictCompare) as SeatId[]) {
-    const held = state.knowledgeBySeat[seat]!;
+    const original = state.knowledgeBySeat[seat]!;
+    const held = retireAppointments(original, day);
+    if (held !== original) changed = true;
     if (held.knownReports.length === 0) {
       next[seat] = held;
       continue;
@@ -220,7 +262,7 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
       if (b.reportSubjectKind === 'person' && b.reportSubjectId === b.reportAuthor && b.reportClaims.some(c => c.claimKind === 'service-choice')) keys.push(`service:${b.reportAuthor}`);
       if (b.reportSubjectKind === 'post') {
         if (b.reportClaims.some(c => c.claimKind === 'verb-answered' && c.claimValue === 1 && c.claimToken?.startsWith('appoint:'))) keys.push(`appointment:${b.reportSubjectId}`);
-        if (b.reportClaims.some(c => c.claimKind === 'commander-lost' || (c.claimKind === 'order-returned' && (c.claimToken === 'vacant_post' || c.claimToken === 'holder_changed')) || (c.claimKind === 'verb-answered' && c.claimValue === 1 && c.claimToken?.startsWith('relieve:')))) keys.push(`vacancy:${b.reportSubjectId}`);
+        if (b.reportClaims.some(c => (c.claimKind === 'appointment-refused' && c.claimToken === 'post_held') || c.claimKind === 'commander-lost' || (c.claimKind === 'order-returned' && (c.claimToken === 'vacant_post' || ['holder_changed','not_serving','other_side','not_raising_post'].includes(c.claimToken ?? ''))) || (c.claimKind === 'verb-answered' && c.claimValue === 1 && c.claimToken?.startsWith('relieve:')))) keys.push(`vacancy:${b.reportSubjectId}`);
       }
       for (const key of keys) {
         const prior = institutional.get(key);

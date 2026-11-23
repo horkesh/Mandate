@@ -3,7 +3,7 @@ import { phase0, world as w, type ids } from '@mandate/kernel';
 type PersonId = ids.PersonId;
 type PostId = ids.PostId;
 import { describe, expect, it } from 'vitest';
-import { v2Map } from '../../../packages/cli/src/seats-world.ts';
+import { seatsWorld, v2Map } from '../../../packages/cli/src/seats-world.ts';
 
 /**
  * 0074's cost-only values, on the Union pack itself (lane 1.5b; the gate review's G-1.5d). The pack's vocabulary flags
@@ -23,7 +23,7 @@ function worldWith(holder: PersonId, value: string, honours: string[], costOnly:
   const verbs = world.rules.people.verbs;
   const orderValues = verbs.orderValues.map((r) => (r.order === 'verb:inquire' ? { ...r, honours } : r));
   const next = { ...world, people, vocabularies: { ...world.vocabularies, values }, rules: { ...world.rules, people: { ...world.rules.people, verbs: { ...verbs, orderValues } } } };
-  return phase0.indexSeatsWorld(w.indexWorld(next), map.start, { situations: [] });
+  return phase0.indexSeatsWorld(w.indexWorld(next), map.start, { situations: seatsWorld('union-1861').world.situations.filter(s => s.id === 'manassas_advance_received') });
 }
 
 /** A holder of a post on the first side who is not its principal, with the principal and his post. */

@@ -15,7 +15,7 @@ import { sendReport, type TickContext } from './context.ts';
  * A side with no local command uses the department compiling its opening
  * picture, or the department of its filter/office in packs without a bulletin. */
 function reportingPost(ctx: TickContext, state: State, faction: FactionId, blocks: readonly ForceBlockId[]): PostId | null {
-  const local = sideCommand(state, blocks);
+  const local = sideCommand(state, blocks, ctx.world.map.forceTotalsCache);
   if (local.person !== null) return local.post;
   const posts = Object.keys(state.postStates).sort(strictCompare) as PostId[];
   const office = ctx.world.start.openingControl?.authors.find(a => a.faction === faction)?.post;
@@ -24,7 +24,7 @@ function reportingPost(ctx: TickContext, state: State, faction: FactionId, block
     const p = state.postStates[post]!;
     return p.postHolder !== null && (state.personStatus[p.postHolder]?.statusKind ?? 'serving') === 'serving' && postFaction(ctx.world, state, post) === faction;
   };
-  const offices = posts.filter(p => !isFieldPost(state, p) && p !== filter && serving(p));
+  const offices = posts.filter(p => !isFieldPost(ctx.world, state, p) && p !== filter && serving(p));
   const department = state.postStates[local.post ?? office ?? filter ?? offices[0]!]?.postDepartment;
   for (let post = local.post; post !== null; post = state.postStates[post]?.postParent ?? null) {
     if (state.postStates[post]?.postDepartment !== department) break;

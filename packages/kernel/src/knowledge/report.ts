@@ -90,6 +90,9 @@ export type SubjectKind = (typeof SUBJECT_KINDS)[number];
  */
 export const CLAIM_KINDS = [
   // An explicit received request to see the principal; never inferred from an objection.
+  'organisation-post',
+  'organisation-absence',
+  'organisation-substitution',
   'audience-request',
   'appointment-refused',
   'service-choice',

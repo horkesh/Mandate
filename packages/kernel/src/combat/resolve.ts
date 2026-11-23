@@ -27,7 +27,7 @@ import { clamp } from '../permille.ts';
 import { nextInt, type RngStream } from '../rng.ts';
 import { commitAtDawn, cutOffChoice, pursuitChoice, standAtNight, type CommanderView } from './decide.ts';
 import { JUDGE, ordered, type BattleOrders } from './orders.ts';
-import type { BattleDay, BattleSide, BattleTerm, BlockLoss, CutOff, LeaderHit, Pursuit } from './records.ts';
+import { unresolvedContact, type BattleDay, type BattleSide, type BattleTerm, type BlockLoss, type CutOff, type LeaderHit, type Pursuit } from './records.ts';
 import type { BattleType, CombatRules, Commit, DayResult } from './rules.ts';
 
 /** Values drawn from a battle-day's stream, always (P7). */
@@ -38,7 +38,7 @@ export const LEADER_DRAWS_PER_DAY = 2;
 /** A block as the day reads it. */
 export interface BlockInput {
   readonly id: ForceBlockId;
-  /** Known men present; null when no source gives its strength (it fights as none, and is listed). */
+  /** Known men present; null when no source gives its strength (listed, with no default; see 0110). */
   readonly men: number | null;
   readonly stragglers: number;
   readonly morale: number;
@@ -159,6 +159,8 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
   // The fixed draws first, in faction order, so no branch below can change how many are taken.
   const draws = input.sides.map(() => ({ a: nextInt(stream, 1001), b: nextInt(stream, 1001), flank: nextInt(stream, 1000) }));
   const basics = input.sides.map(sideBasics);
+  // 0110: unknown opposition is present, but cannot support losses or a quantitative defeat.
+  const unresolved = input.sides.some(s => s.blocks.length > 0 && s.blocks.every(b => b.men === null));
   const committed = input.sides.map((s, i) => Math.trunc((basics[i]!.present * rules.commit[s.commit].sharePermille) / 1000));
   const engaged = committed.map((c) => Math.min(c, input.frontageMen));
   const contact = Math.min(engaged[0]!, engaged[1]!);
@@ -237,6 +239,7 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
   // Night: who stays, who leaves, and who is cut off.
   const left = input.sides.map((s, i) => basics[i]!.present - loss[i]!.kw);
   const night = input.sides.map((side, i) => {
+    if (unresolved) return { leaves: false, terms: [term('unresolved_contact', 0, '0110')] };
     if (morale[i]!.routed) return { leaves: true, terms: [] as BattleTerm[] };
     const d = ordered(standAtNight(rules, side.commander, left[i]!, left[1 - i]!), side.orders?.night ?? JUDGE, side.commander.person);
     return { leaves: d.choice === 'withdraw', terms: d.terms };
@@ -304,7 +307,7 @@ export function resolveDay(rules: CombatRules, input: DayInput, stream: RngStrea
       const cp = k < 0 ? 0 : capB[k]!;
       const rest = surrendered && k >= 0 ? b.men! - kw - ms : 0;
       // A force taken loses its stragglers in the pocket; a pursued one loses the pursuer's share of them (lane 1.4).
-      const taken = surrendered ? b.stragglers : Math.trunc((b.stragglers * side.pursuedPermille) / 1000);
+      const taken = unresolved ? 0 : surrendered ? b.stragglers : Math.trunc((b.stragglers * side.pursuedPermille) / 1000);
       surrenderedMen += rest;
       stragglersTaken += taken;
       // In a pocket taken, the day's missing are inside it too: captured with the rest, none left to straggle back.
@@ -402,7 +405,7 @@ export function leaderHits(rules: CombatRules, day: BattleDay, outcomes: readonl
   const sides = day.bdaySides.map((s, i) => {
     const draw = nextInt(stream, 1000);
     let hit: LeaderHit | null = null;
-    if (s.bsideCommander !== null) {
+    if (!unresolvedContact(day) && s.bsideCommander !== null) {
       if (draw < l.killedPermille) hit = 'killed';
       else if (draw < l.killedPermille + l.woundedPermille) hit = 'wounded';
       else if (draw < l.killedPermille + l.woundedPermille + l.capturedPermille && outcomes[i]!.routed) hit = 'captured';

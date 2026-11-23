@@ -127,7 +127,7 @@ describe('posts as the principal believes them (lane 1.12; 0052)', () => {
   it.each(verbs)('$cmd accepts a believed holder, then returns undelivered without answering or applying effects', (command) => {
     const { state: captured } = untilCaptured();
     // The audience needs an existing subject; no-plan refusal has its own paired-State test above.
-    const state = command.cmd !== 'audience' ? captured : setGoal(captured, ARMY, {
+    let state = command.cmd !== 'audience' ? captured : setGoal(captured, ARMY, {
       id: 'm.0.audience-subject' as MessageId,
       issuer: B_LEAD,
       goal: { goalObjective: null, goalPosture: 'hold', goalRisk: 300, goalDeadlineDays: 20, goalRail: false, goalRiver: false, goalSea: false, goalNeutral: false, goalCommitted: [], goalAwaitWord: false, goalApproveAsDrafted: true },
@@ -135,6 +135,11 @@ describe('posts as the principal believes them (lane 1.12; 0052)', () => {
       issuedDay: 0,
       response: 'm.0.audience-subject|b_gen',
     }, 0);
+    if (command.cmd === 'audience') {
+      const plan = state.planRecords[ARMY]!;
+      const copy = { sentPost:ARMY,sentMessage:plan.planOrder as MessageId,sentKind:'goal' as const,sentDay:0,sentPaper:null,sentGoal:plan.planGoal };
+      state = { ...state,knowledgeBySeat:{...state.knowledgeBySeat,[B_SEAT]:{...knowledgeOf(state,B_SEAT),knownSentOrders:[copy]}} };
+    }
     const ctx = ctxFor(world, state, state.stateDay + 1, [...TICK_MECHANICS, ...MAP_MECHANICS]);
     const sent = applyVerb(ctx, state, B_SEAT, command);
     expect(sent.reason).toBeNull();

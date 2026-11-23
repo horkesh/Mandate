@@ -1,3 +1,4 @@
+import { forceTotals } from '@mandate/kernel';
 /**
  * The victory measure (lane 1.14, a proposal for the lead to rule): how well a side stands, read from the same scores as
  * the checkpoints, for the lever sweep (SENSITIVE-HISTORY D6) to weigh a move by. It is a measure of winning, not of
@@ -80,9 +81,9 @@ export function victoryOf(world: phase0.SeatsWorld, state: phase0.State, map: ph
 
   const men = new Map<string, number>();
   for (const block of Object.values(state.forceBlockStates)) {
-    if (block.fbStrength === null) continue;
+    if (forceTotals(block, world.map.forceTotalsCache).fbStrength === null) continue;
     const side = phase0.departmentSide(state, block.fbDepartment);
-    if (side !== null) men.set(side, (men.get(side) ?? 0) + block.fbStrength);
+    if (side !== null) men.set(side, (men.get(side) ?? 0) + forceTotals(block, world.map.forceTotalsCache).fbStrength!);
   }
   const allMen = [...men.values()].reduce((a, b) => a + b, 0);
 

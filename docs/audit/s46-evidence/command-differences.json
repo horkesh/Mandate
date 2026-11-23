@@ -1,0 +1,114 @@
+{
+  "beforeHash": "73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8",
+  "afterHash": "ff7990ec0914365e2edc52a10b5d3ad66bece9b85456c2e28571fc939c1d0340",
+  "referenceMatches": true,
+  "changedGroups": [
+    {
+      "key": "143:seat:cocke_philip_st_george",
+      "before": [],
+      "after": [
+        {
+          "cmd": "battle",
+          "post": "st_va_potomac",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ],
+      "cause": "The source entries add local commands, paper traffic and a dated Hampton-line assignment; the resulting received view changes the rule seat choices. [I]"
+    },
+    {
+      "key": "143:seat:mcdowell_irvin",
+      "before": [],
+      "after": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_northeastern_virginia",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ],
+      "cause": "The source entries add local commands, paper traffic and a dated Hampton-line assignment; the resulting received view changes the rule seat choices. [I]"
+    },
+    {
+      "key": "144:seat:beauregard_pierre_g_t",
+      "before": [],
+      "after": [
+        {
+          "cmd": "battle",
+          "post": "cs_cmd_manassas",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ],
+      "cause": "The source entries add local commands, paper traffic and a dated Hampton-line assignment; the resulting received view changes the rule seat choices. [I]"
+    },
+    {
+      "key": "144:seat:mcdowell_irvin",
+      "before": [],
+      "after": [
+        {
+          "cmd": "battle",
+          "post": "us_dept_northeastern_virginia",
+          "commit": "judge",
+          "night": "judge",
+          "cutOff": "judge",
+          "pursue": "judge"
+        }
+      ],
+      "cause": "The source entries add local commands, paper traffic and a dated Hampton-line assignment; the resulting received view changes the rule seat choices. [I]"
+    },
+    {
+      "key": "77:seat:davis_jefferson",
+      "before": [],
+      "after": [
+        {
+          "cmd": "appoint",
+          "post": "st_va_peninsula",
+          "person": "magruder_john_b",
+          "rank": null,
+          "route": "wire",
+          "from": "st_va_richmond"
+        }
+      ],
+      "cause": "The source entries add local commands, paper traffic and a dated Hampton-line assignment; the resulting received view changes the rule seat choices. [I]"
+    },
+    {
+      "key": "94:seat:davis_jefferson",
+      "before": [
+        {
+          "cmd": "transfer",
+          "from": "cs_cmd_charleston",
+          "to": "cs_cmd_harpers_ferry",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        },
+        {
+          "cmd": "transfer",
+          "from": "st_gov_virginia",
+          "to": "cs_cmd_harpers_ferry",
+          "force": "blocks",
+          "amount": 999,
+          "route": "courier"
+        }
+      ],
+      "after": [
+        {
+          "cmd": "transfer",
+          "from": "cs_cmd_charleston",
+          "to": "cs_cmd_harpers_ferry",
+          "force": "blocks",
+          "amount": 999,
+          "route": "wire"
+        }
+      ],
+      "cause": "The source entries add local commands, paper traffic and a dated Hampton-line assignment; the resulting received view changes the rule seat choices. [I]"
+    }
+  ]
+}

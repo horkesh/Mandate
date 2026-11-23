@@ -198,8 +198,9 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
 
   const region = whereIsPerson(world, state, person.id);
   const situations = situationViews(world, state, seat, person.id, cache);
-  // His side today: his post's while he holds one (0065), so it can change in play.
-  const faction = sideOfPerson(world.map, state, person.id);
+  // A principal knows which government he leads from his own declared office (S62), not a hidden department change.
+  // Other seats retain their own current service identity (0052; 0065).
+  const faction = world.start.factions.find(f => f.principal === person.id)?.faction ?? sideOfPerson(world.map, state, person.id);
   // Lane 1.13: his own week's attention (0025), which he always knows; null for a seat that keeps none.
   const attention = attentionLeft(state, seat);
   let people = cache.people.get(seat);

@@ -1,0 +1,257 @@
+{
+  "succession": [
+    {
+      "situation": "texas_governor_changed",
+      "state": {
+        "sitChosen": [],
+        "sitDecidedBy": null,
+        "sitDecidedDay": null,
+        "sitDelegate": null,
+        "sitFiredDay": 11,
+        "sitOpenOptions": [],
+        "sitResurfaced": [],
+        "sitStaffAuthor": "walker_leroy_p",
+        "sitStatus": "noticed",
+        "sitSurfacedDay": 12,
+        "sitWaitingOn": null
+      },
+      "proposal": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "st_gov_texas",
+        "delta": 1,
+        "reason": "convention-succession",
+        "side": null,
+        "succession": {
+          "from": "houston_samuel",
+          "to": "clark_edward"
+        }
+      },
+      "path": "packs\\union-1861\\situations\\texas_governor_changed.json"
+    },
+    {
+      "situation": "virginia_harpers_jackson",
+      "state": {
+        "sitChosen": [],
+        "sitDecidedBy": null,
+        "sitDecidedDay": null,
+        "sitDelegate": null,
+        "sitFiredDay": 54,
+        "sitOpenOptions": [],
+        "sitResurfaced": [],
+        "sitStaffAuthor": "walker_leroy_p",
+        "sitStatus": "noticed",
+        "sitSurfacedDay": 55,
+        "sitWaitingOn": null
+      },
+      "proposal": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "st_va_harpers_ferry",
+        "delta": 1,
+        "reason": "state-command-succession",
+        "side": null,
+        "succession": {
+          "to": "jackson_thomas_j",
+          "from": "harper_kenton"
+        }
+      },
+      "path": "packs\\union-1861\\situations\\virginia_harpers_jackson.json"
+    },
+    {
+      "situation": "virginia_norfolk_gwynn",
+      "state": {
+        "sitChosen": [],
+        "sitDecidedBy": null,
+        "sitDecidedDay": null,
+        "sitDelegate": null,
+        "sitFiredDay": 52,
+        "sitOpenOptions": [],
+        "sitResurfaced": [],
+        "sitStaffAuthor": "walker_leroy_p",
+        "sitStatus": "noticed",
+        "sitSurfacedDay": 53,
+        "sitWaitingOn": null
+      },
+      "proposal": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "st_va_norfolk",
+        "delta": 1,
+        "reason": "state-command-succession",
+        "side": null,
+        "succession": {
+          "to": "gwynn_walter",
+          "from": "taliaferro_william_b"
+        }
+      },
+      "path": "packs\\union-1861\\situations\\virginia_norfolk_gwynn.json"
+    },
+    {
+      "situation": "virginia_norfolk_huger",
+      "state": {
+        "sitChosen": [],
+        "sitDecidedBy": null,
+        "sitDecidedDay": null,
+        "sitDelegate": null,
+        "sitFiredDay": 79,
+        "sitOpenOptions": [],
+        "sitResurfaced": [],
+        "sitStaffAuthor": "walker_leroy_p",
+        "sitStatus": "noticed",
+        "sitSurfacedDay": 80,
+        "sitWaitingOn": null
+      },
+      "proposal": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "st_va_norfolk",
+        "delta": 1,
+        "reason": "state-command-succession",
+        "side": null,
+        "succession": {
+          "to": "huger_benjamin",
+          "from": "gwynn_walter"
+        }
+      },
+      "path": "packs\\union-1861\\situations\\virginia_norfolk_huger.json"
+    },
+    {
+      "situation": "virginia_richmond_magruder",
+      "state": {
+        "sitChosen": [],
+        "sitDecidedBy": null,
+        "sitDecidedDay": null,
+        "sitDelegate": null,
+        "sitFiredDay": 64,
+        "sitOpenOptions": [],
+        "sitResurfaced": [],
+        "sitStaffAuthor": "walker_leroy_p",
+        "sitStatus": "noticed",
+        "sitSurfacedDay": 65,
+        "sitWaitingOn": null
+      },
+      "proposal": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "st_va_richmond",
+        "delta": 1,
+        "reason": "state-command-succession",
+        "side": null,
+        "succession": {
+          "to": "magruder_john_b",
+          "from": "johnston_joseph_e"
+        }
+      },
+      "path": "packs\\union-1861\\situations\\virginia_richmond_magruder.json"
+    }
+  ],
+  "withdrawals": [
+    {
+      "region": "manassas",
+      "day": 144,
+      "side": {
+        "bsideFaction": "confederate",
+        "bsidePost": "st_va_potomac",
+        "bsideCommander": "cocke_philip_st_george",
+        "bsideCommit": "defend",
+        "bsideBlocks": [
+          "state-forces.va_manassas_garland",
+          "state-forces.va_manassas_preston"
+        ],
+        "bsideUnknown": [
+          "state-forces.va_manassas_garland",
+          "state-forces.va_manassas_preston"
+        ],
+        "bsidePresent": 0,
+        "bsideCommitted": 0,
+        "bsideEngaged": 0,
+        "bsideBase": 160,
+        "bsideTerms": [
+          {
+            "btermKind": "competence",
+            "btermValue": 18,
+            "btermSource": "mcdowell_irvin"
+          },
+          {
+            "btermKind": "numbers",
+            "btermValue": 150,
+            "btermSource": null
+          },
+          {
+            "btermKind": "noise",
+            "btermValue": -20,
+            "btermSource": null
+          }
+        ],
+        "bsideMultiplier": 1148,
+        "bsideKw": 0,
+        "bsideKwParts": [],
+        "bsideKilled": 0,
+        "bsideWounded": 0,
+        "bsideMissing": 0,
+        "bsideMissingParts": [
+          {
+            "btermKind": "result_withdrew",
+            "btermValue": 0,
+            "btermSource": "withdrew"
+          }
+        ],
+        "bsideCaptured": 0,
+        "bsideCapturedParts": [],
+        "bsideFlankDraw": 636,
+        "bsideFlankThreshold": 250,
+        "bsideFlankTerms": [
+          {
+            "btermKind": "flank_base",
+            "btermValue": 50,
+            "btermSource": null
+          },
+          {
+            "btermKind": "enemy_numbers",
+            "btermValue": 200,
+            "btermSource": null
+          }
+        ],
+        "bsideFlankBroken": false,
+        "bsideMoraleBefore": 600,
+        "bsideMoraleAfter": 600,
+        "bsideMoraleTerms": [],
+        "bsideDecisions": [
+          {
+            "btermKind": "believed_ratio",
+            "btermValue": 0,
+            "btermSource": "cocke_philip_st_george"
+          },
+          {
+            "btermKind": "demand",
+            "btermValue": 1250,
+            "btermSource": "cocke_philip_st_george"
+          },
+          {
+            "btermKind": "probe_at",
+            "btermValue": 875,
+            "btermSource": "cocke_philip_st_george"
+          },
+          {
+            "btermKind": "night_believed_ratio",
+            "btermValue": 0,
+            "btermSource": "cocke_philip_st_george"
+          },
+          {
+            "btermKind": "hold_at",
+            "btermValue": 750,
+            "btermSource": "cocke_philip_st_george"
+          }
+        ],
+        "bsideResult": "withdrew",
+        "bsideCutOff": null,
+        "bsideRetreatTo": "fredericksburg",
+        "bsidePursue": null,
+        "bsideLosses": [],
+        "bsideHitDraw": 356,
+        "bsideHit": null
+      }
+    }
+  ]
+}

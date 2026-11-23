@@ -1,0 +1,239 @@
+{
+  "liveness": [
+    {
+      "mechanic": "combat.battle_closed",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      }
+    },
+    {
+      "mechanic": "combat.battle_opened",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      }
+    },
+    {
+      "mechanic": "combat.captured",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      }
+    },
+    {
+      "mechanic": "combat.killed_wounded",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      }
+    },
+    {
+      "mechanic": "combat.missing",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      }
+    },
+    {
+      "mechanic": "combat.routed",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured one rout."
+      }
+    },
+    {
+      "mechanic": "command.post_succeeded",
+      "problem": "too_frequent",
+      "fires": 5,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    },
+    {
+      "mechanic": "control.threshold_crossed",
+      "problem": "too_rare",
+      "fires": 13,
+      "band": {
+        "minFires": 19,
+        "maxFires": 78
+      }
+    },
+    {
+      "mechanic": "forces.stragglers_returned",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 12,
+        "maxFires": 48,
+        "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting."
+      }
+    },
+    {
+      "mechanic": "map.recomputed",
+      "problem": "too_rare",
+      "fires": 25,
+      "band": {
+        "minFires": 26,
+        "maxFires": 104
+      }
+    },
+    {
+      "mechanic": "movement.arrived",
+      "problem": "too_rare",
+      "fires": 182,
+      "band": {
+        "minFires": 319,
+        "maxFires": 1276
+      }
+    },
+    {
+      "mechanic": "movement.joined",
+      "problem": "too_rare",
+      "fires": 28,
+      "band": {
+        "minFires": 32,
+        "maxFires": 128
+      }
+    },
+    {
+      "mechanic": "movement.leg_started",
+      "problem": "too_rare",
+      "fires": 147,
+      "band": {
+        "minFires": 155,
+        "maxFires": 620
+      }
+    },
+    {
+      "mechanic": "operations.stage",
+      "problem": "too_rare",
+      "fires": 3,
+      "band": {
+        "minFires": 4,
+        "maxFires": 18
+      }
+    },
+    {
+      "mechanic": "operations.works",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      }
+    },
+    {
+      "mechanic": "orders.bypassed",
+      "problem": "too_rare",
+      "fires": 1,
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      }
+    },
+    {
+      "mechanic": "orders.relay_held",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    },
+    {
+      "mechanic": "orders.returned",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the day-87 Charleston transfer reaches a vacated post after reassignment. Its return is written day 92 and received day 97; S42 measured one return."
+      }
+    },
+    {
+      "mechanic": "reports.battle_dispatch",
+      "problem": "too_rare",
+      "fires": 2,
+      "band": {
+        "minFires": 9,
+        "maxFires": 36
+      }
+    }
+  ],
+  "checkpoints": {
+    "problems": [
+      "men_confederate (1861-07-31, day 148): confederate has 95153 men, below 100000",
+      "operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1"
+    ],
+    "evidence": [
+      "seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+      "side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+      "side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+      "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+      "side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+      "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+      "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+      "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+      "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+      "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+      "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+      "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+      "men_union (1861-07-31, day 148): union 99686 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+      "men_confederate (1861-07-31, day 148): confederate 95153 men of known strength, 23 blocks of unknown strength (band 100000..200000)",
+      "operations_union (1861-07-31, day 148): union fought 0 planned operations (band 1..26)",
+      "operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+      "confederate at war since day 36",
+      "union at war since day 41"
+    ]
+  },
+  "pushback": {
+    "problems": [
+      "relay holds: 0, below the record's 2",
+      "filter holds: 0, below the record's 1",
+      "trims: 0, below the record's 1",
+      "compliance with reservations: 16, above 9",
+      "slow walks: 18, above 9"
+    ],
+    "evidence": [
+      "relay objections: 1 (band 0..6)",
+      "relay holds: 0 (band 2..6)",
+      "filter holds: 0 (band 1..9)",
+      "trims: 0 (band 1..4)",
+      "compliance with reservations: 16 (band 1..9)",
+      "slow walks: 18 (band 2..9)",
+      "objections to a plan: 37 (band 10..42)"
+    ]
+  },
+  "operation": {
+    "problems": [],
+    "evidence": [
+      "op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38"
+    ]
+  },
+  "leverSweep": {
+    "run": false,
+    "unmeasuredChannels": [
+      {
+        "situation": "fort_monroe_arrivals",
+        "channel": "people/grievance (policy pushback)",
+        "via": "its own choice"
+      }
+    ],
+    "reason": "S67 forbids the done-check campaign; no new sweep or seed/fork claim is made."
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "apply-s46-s52-s64": {
+    "command": [
+      "git",
+      "apply",
+      "--index",
+      "C:\\Pyrrhic\\mandate-reviews\\staged\\s46-s52-s64-manassas-staged.patch"
+    ],
+    "exit": 0,
+    "seconds": 0.151
+  },
+  "apply-s62-s65": {
+    "command": [
+      "git",
+      "apply",
+      "--index",
+      "C:\\Pyrrhic\\mandate-reviews\\staged\\s62-s65-sender-belief-staged.patch"
+    ],
+    "exit": 0,
+    "seconds": 0.104
+  },
+  "boundary": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.608
+  },
+  "check-s46-s52-s64": {
+    "command": [
+      "git",
+      "apply",
+      "--check",
+      "--index",
+      "C:\\Pyrrhic\\mandate-reviews\\staged\\s46-s52-s64-manassas-staged.patch"
+    ],
+    "exit": 0,
+    "seconds": 0.068
+  },
+  "closure-audit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s67/closure-audit.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.518
+  },
+  "decisions": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:decisions"
+    ],
+    "exit": 0,
+    "seconds": 0.995
+  },
+  "filter-diagnostic": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "--input-type=module",
+      "-e",
+      "import {readFileSync,writeFileSync} from 'node:fs';import {seatsWorld} from './packages/cli/src/seats-world.ts';import {filterPostOf} from './packages/kernel/src/seats/posts.ts';const {world}=seatsWorld('union-1861');const state=JSON.parse(readFileSync('runs/s67/references/union-1861-final-state.json','utf8'));const out=world.factionIds.map(f=>{const post=filterPostOf(world,state,f);return {faction:f,post,holder:post?state.postStates[post]?.postHolder:null}});writeFileSync('runs/s67/filter-diagnostic.json',JSON.stringify(out,null,2)+'\\n');console.log(JSON.stringify(out));"
+    ],
+    "exit": 0,
+    "seconds": 2.203
+  },
+  "focused": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/believed-posts.test.ts",
+      "packages/kernel/test/department-sides.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/s51-reaffirmation.test.ts",
+      "packages/kernel/test/s52-advance-notice.test.ts",
+      "packs/union-1861/test/s64-command-inclusion.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 11.493
+  },
+  "full-suite": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s67/full-suite.json"
+    ],
+    "exit": 1,
+    "seconds": 564.123
+  },
+  "licences": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:licences"
+    ],
+    "exit": 0,
+    "seconds": 0.972
+  },
+  "npm-ci": {
+    "command": [
+      "npm.cmd",
+      "ci"
+    ],
+    "exit": 0,
+    "seconds": 27.639
+  },
+  "pack-validate": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:validate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 2.251
+  },
+  "reference-testbed": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s67/references.ts",
+      "testbed"
+    ],
+    "exit": 0,
+    "seconds": 8.767
+  },
+  "reference-union": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s67/references.ts",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 53.87
+  },
+  "rules-closeout": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 1.753
+  },
+  "rules-final": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 1.806
+  },
+  "rules": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 1,
+    "seconds": 2.832
+  },
+  "typecheck": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 3.136
+  },
+  "whitespace": {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit": 2,
+    "seconds": 0.076
+  },
+  "workspace-aliases": {
+    "command": [
+      "node",
+      "-e",
+      "const fs=require('node:fs'),path=require('node:path');for(const n of ['kernel','pack-format','rule-seats']){const actual=fs.realpathSync('node_modules/@mandate/'+n),expected=path.resolve('packages/'+n);console.log(n,actual);if(actual!==expected)process.exitCode=1;}"
+    ],
+    "exit": 0,
+    "seconds": 0.049
+  }
+}

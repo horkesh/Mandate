@@ -17,6 +17,16 @@
   },
   "effects": [
     {
+      "propose": {
+        "owner": "command",
+        "field": "department_side",
+        "subject": "st_tennessee",
+        "side": "confederate",
+        "delta": 1,
+        "reason": "military-authority-confirmed"
+      }
+    },
+    {
       "setFlag": "tennessee_military_league"
     }
   ],

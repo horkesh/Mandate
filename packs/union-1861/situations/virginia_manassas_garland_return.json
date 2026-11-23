@@ -1,0 +1,57 @@
+{
+  "id": "virginia_manassas_garland_return",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.virginia_manassas_garland_return.title",
+  "text": "situation.virginia_manassas_garland_return.text",
+  "earliest": "1861-05-12",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 68
+      },
+      {
+        "flag": "virginia_seceded"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-called-out",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_manassas_garland",
+          "regiments": null,
+          "men": 490,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "post": "st_va_potomac",
+          "region": "manassas"
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative state military entry and command only; no secession motives, civilian conduct, security orders or protected-population effects."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p.841, Cocke to Garnett, 14 May 1861: Garland's own force of 490 arrived Sunday. [I] Sunday is 12 May. S79/S81 accepted dated aggregate, not July PFD, no division of the 918 total, no inferred regimental count or named lineage."
+    }
+  ],
+  "namedOnly": "The source records the state institution's act. No individual speech, motive or discretionary choice is invented."
+}

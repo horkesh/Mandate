@@ -1,0 +1,27 @@
+{
+  "reason": "Restored original Unicode bytes after default Windows decoding; verified exact original non-ASCII sequences. Also fixed a cheaply reproduced duplicate lot identity on detach/rejoin/id reuse. 121 correction tests, typecheck, rules and boundary pass; rerun startup before one replacement full suite. No completed suite or reference was repeated.",
+  "changed_inputs": [
+    "packages/kernel/src/ownership.ts",
+    "packages/kernel/test/s70-lot-ownership.test.ts",
+    "packages/kernel/test/seats-log.test.ts",
+    "packages/kernel/src/combat/battle.ts",
+    "packages/kernel/src/forces/detachments.ts",
+    "packages/cli/src/history-run.ts",
+    "packages/cli/src/victory.ts",
+    "packages/cli/test/men-regions.test.ts",
+    "packages/cli/test/state-forces.test.ts"
+  ],
+  "stopped_exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s70/full-suite.json"
+    ],
+    "exit": 4294967295,
+    "seconds": 287.526
+  }
+}

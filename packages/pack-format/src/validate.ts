@@ -68,7 +68,7 @@ const MUST_DECLARE: Readonly<Record<string, readonly string[]>> = Object.freeze(
 });
 /** Fields that may be declared unknown. */
 const MAY_DECLARE: Readonly<Record<string, readonly string[]>> = Object.freeze({
-  people: ['born', 'died', 'faction', 'bloc'],
+  people: ['born', 'died', 'faction', 'bloc', 'kind'],
   posts: ['holder', 'region', 'parent'],
   forceBlocks: ['strength', 'strengthDate', 'storesDays', 'post'],
 });
@@ -256,6 +256,45 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     citeCheck(d.provenance, W('departments', i), true, 'this department');
   });
 
+  // ---- sourced regiment catalogue (0108). The row order is explicit data.
+  const catalogue = world.regimentCatalogue ?? [];
+  idSet('regimentCatalogue', catalogue);
+  const catalogueOrders = new Set<number>();
+  catalogue.forEach((r, i) => {
+    const at = (field?: string) => W('regimentCatalogue', i, field);
+    refCheck(departments, 'department', r.raisingDepartment, at('raisingDepartment'));
+    refCheck(factions, 'faction', r.side, at('side'));
+    term('arms', r.arm, at('arm'));
+    if (catalogueOrders.has(r.order)) err('duplicate-catalogue-order', at('order'), 'each catalogue order must be unique');
+    catalogueOrders.add(r.order);
+    if (new Set(r.termDays).size !== r.termDays.length) err('duplicate-service-term', at('termDays'), 'service terms must not repeat');
+    if ((r.termDays.length > 0 || r.warTerm === true) && (!r.path.path_source || !r.path.path_pages || r.path.path_source === 'unknown' || r.path.path_pages === 'unknown')) err('unsourced-service-term', at('termDays'), 'a known term requires the read path source and pages');
+  });
+
+  // Organisation records are sourced preferences, not scenario starts or dated effects (0108).
+  for(const [i,t] of (world.organisationTemplates??[]).entries()){
+    const at=(field:string)=>W('organisationTemplates',i,field);
+    const ids=new Set(t.posts.map(p=>p.id));
+    if(ids.size!==t.posts.length)err('duplicate-organisation-post',at('posts'),'formation post identities must be unique');
+    const declared=scenarios.some(s=>s.posts.some(p=>p.id===t.army)||s.temporaryPosts.some(p=>p.id===t.army));
+    if(!declared)err('unknown-organisation-army',at('army'),'organisation needs a declared army or department post');
+    for(const p of t.posts){
+      if(p.id===t.army||(p.parent!==t.army&&!ids.has(p.parent)))err('organisation-parent',at('posts'),'each formation has a parent in this army');
+      const kind=world.vocabularies.postKinds.find(k=>k.id===p.kind);
+      if(kind===undefined||kind.temporary||kind.creatable!=='directive')err('organisation-kind',at('posts'),'formation posts persist and are created by the commander');
+      if(p.commander!==null&&!world.people.some(person=>person.id===p.commander))err('organisation-commander',at('posts'),'named holder is absent from the factual cast');
+      if(p.identityHeld&&p.commander!==null)err('organisation-identity',at('posts'),'a held identity cannot name a replacement person');
+      const seen=new Set<string>();let parent:string=p.id;
+      while(parent!==t.army&&!seen.has(parent)){seen.add(parent);parent=t.posts.find(x=>x.id===parent)?.parent??t.army;}
+      if(parent!==t.army)err('organisation-cycle',at('posts'),'formation hierarchy must not loop');
+      useKey(p.name,at('posts'));
+    }
+    for(const b of t.brigades){
+      if(b.post!==t.army&&!ids.has(b.post))err('organisation-brigade',at('brigades'),'brigade names its declared formation post');
+      for(const id of b.regiments)if(!world.regimentCatalogue?.some(r=>r.id===id))err('organisation-regiment',at('brigades'),'regiment identity must occur in the sourced catalogue');
+    }
+  }
+
   // ---- regions
   const regions = idSet('regions', world.regions);
   const regionKind = new Map(world.regions.map((r) => [r.id as string, r.kind]));
@@ -426,6 +465,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       if (p.service.toFaction === p.faction) err('service-side', at('service.toFaction'), 'resignation must join another side');
       if (p.service.government === null && p.service.historicalOn === null) err('service-trigger', at('service'), 'a service choice needs a government or a historical date');
     }
+    if(p.requiresIntroduction===true&&!p.invented)err('introduction-person',at('requiresIntroduction'),'only an explicit generated officer pool waits for introduction');
     // Every record cites a real source, invented or not (review F7); only the centres and traits of an invented person need none.
     citeCheck(p.provenance, at(), true, 'this person');
     if (p.invented && !manifest.allowsInventedPeople) {
@@ -526,6 +566,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
       warn('no-contemporary-leg', at('bloc'), `bloc "${p.bloc}" rests on no contemporary leg`, noLegExpected);
     }
     p.ranks.forEach((r, j) => {
+      if(r.until!==undefined&&r.until<=r.from)err('rank-interval',at(`ranks[${j}]`),'a commission ends after it begins');
       term('ranks', r.rank, at(`ranks[${j}].rank`));
       if (j > 0 && r.from < p.ranks[j - 1]!.from) err('ranks-out-of-order', at(`ranks[${j}]`), 'ranks must be in date order');
       if (j > 0 && (rankOrder.get(r.rank) ?? 0) < (rankOrder.get(p.ranks[j - 1]!.rank) ?? 0)) warn('rank-demotion', at(`ranks[${j}]`), `"${r.rank}" is junior to the rank before it`);
@@ -538,7 +579,7 @@ export function validatePack(pack: PackData, locate: Locate = locateInData): Iss
     const may = MAY_DECLARE[table] ?? [];
     for (const f of unknowns) {
       if (!may.includes(f)) err('unknowns-field', at('unknowns'), `"${f}" cannot be declared unknown here`, `one of: ${may.join(', ')}`);
-      else if (record[f] !== null) err('unknowns-field', at(f), `"${f}" is declared unknown but has a value`, 'empty, or remove it from unknowns');
+      else if (record[f] !== null && !(f==='kind'&&record[f]==='unknown_kind')) err('unknowns-field', at(f), `"${f}" is declared unknown but has a value`, 'empty, or remove it from unknowns');
       else issueAt(release ? 'error' : 'warning', 'unknown-value', at(f), `"${f}" is unknown (needs a source)`, release ? 'a value: a release pack has no unknowns' : undefined);
     }
     for (const f of MUST_DECLARE[table] ?? []) {

@@ -20,3 +20,5 @@ export * from './ownership.ts';
 export * as phase0 from './phase0.ts';
 // Phase 1 lane 1.2: the planner (0062).
 export * as planner from './planner/index.ts';
+export * from './forces/lots.ts';
+export { enlistmentsOf, enlistmentOf } from './forces/enlistment.ts';

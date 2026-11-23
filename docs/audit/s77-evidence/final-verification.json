@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "checks": 1168,
+  "ledgerRows": 3955,
+  "sourceRecords": 43,
+  "inventoryPaths": 733,
+  "concentrationComplete": false,
+  "JulyCleared": false
+}

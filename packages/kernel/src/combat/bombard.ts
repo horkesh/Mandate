@@ -1,3 +1,4 @@
+import { forceTotals } from '../forces/lots.ts';
 /**
  * Bombardment across water (lane 1.12; the lead's rulings on Sumter and the gate's three conditions). A general stage,
  * not a script for one fort: an operation whose objective lies across a short water edge from ground its side holds
@@ -120,7 +121,7 @@ export interface FortDay {
 /** Record the fire already resolved by `fortDay`; do not run the land model or calculate losses a second time. */
 export function bombardRecords(world: SeatsWorld, state: State, fort: FortDay, attackerPost: PostId, attackers: readonly ForceBlockId[], objective: RegionId, side: FactionId, day: number): readonly BattleRecordChange[] {
   // Only known gun-arm men supplied fire in fortDay. Support and unknown/empty batteries did not fire.
-  const batteries = attackers.filter(b => world.map.world.rules.combat.bombardment.gunArms.includes(state.forceBlockStates[b]!.fbArm) && (state.forceBlockStates[b]!.fbStrength ?? 0) > 0);
+  const batteries = attackers.filter(b => world.map.world.rules.combat.bombardment.gunArms.includes(state.forceBlockStates[b]!.fbArm) && (forceTotals(state.forceBlockStates[b]!, world.map.forceTotalsCache).fbStrength ?? 0) > 0);
   const factions = [side, fort.defFaction].sort(strictCompare);
   const changes: BattleRecordChange[] = [];
   const open = openBattleIn(state, objective);
@@ -134,7 +135,7 @@ export function bombardRecords(world: SeatsWorld, state: State, fort: FortDay, a
   const makeSide = (faction: FactionId): BattleSide => {
     const defending = faction === fort.defFaction;
     const blocks = [...(defending ? fort.defenders : batteries)].sort(strictCompare);
-    const present = blocks.reduce((n, b) => n + (state.forceBlockStates[b]!.fbStrength ?? 0), 0);
+    const present = blocks.reduce((n, b) => n + (forceTotals(state.forceBlockStates[b]!, world.map.forceTotalsCache).fbStrength ?? 0), 0);
     const losses = blocks.map((b) => {
       const deltas = defending ? fort.forces.filter(d => d.change === 'battle_losses' && d.block === b) : [];
       return deltas.reduce((total, d) => d.change !== 'battle_losses' ? total : {
@@ -147,7 +148,7 @@ export function bombardRecords(world: SeatsWorld, state: State, fort: FortDay, a
     const wounded = losses.reduce((n, b) => n + b.blossWounded, 0);
     const captured = losses.reduce((n, b) => n + b.blossCaptured, 0);
     const stragglers = losses.reduce((n, b) => n + b.blossStragglersCaptured, 0);
-    const weight = (b: ForceBlockId) => Math.max(1, state.forceBlockStates[b]!.fbStrength ?? 0);
+    const weight = (b: ForceBlockId) => Math.max(1, forceTotals(state.forceBlockStates[b]!, world.map.forceTotalsCache).fbStrength ?? 0);
     const totalWeight = blocks.reduce((n, b) => n + weight(b), 0);
     const morale = (after: boolean) => totalWeight === 0 ? 0 : Math.trunc(blocks.reduce((n, b) => n + weight(b) * Math.max(0, state.forceBlockStates[b]!.fbMorale - (after && defending ? fort.day.moraleLoss : 0)), 0) / totalWeight);
     const before = morale(false);
@@ -159,7 +160,7 @@ export function bombardRecords(world: SeatsWorld, state: State, fort: FortDay, a
     return {
       bsideFaction: faction, bsidePost: post, bsideCommander: defending ? fort.commander : (state.postStates[attackerPost]?.postHolder ?? null),
       bsideCommit: defending ? 'defend' : 'main', bsideBlocks: blocks,
-      bsideUnknown: blocks.filter(b => state.forceBlockStates[b]!.fbStrength === null), bsidePresent: present,
+      bsideUnknown: blocks.filter(b => forceTotals(state.forceBlockStates[b]!, world.map.forceTotalsCache).fbStrength === null), bsidePresent: present,
       // All defenders are exposed to fire. No land frontage or contact is assumed.
       bsideCommitted: present, bsideEngaged: present,
       bsideBase: defending ? world.map.world.rules.combat.bombardment.lossPermille : 0,
@@ -204,14 +205,14 @@ export function fortDay(world: SeatsWorld, state: State, attackers: readonly For
   if (!rules.objectives.some((o) => o.region === objective)) return null;
   const defenders = fortDefenders(world, state, objective, side);
   if (defenders.length === 0) return null;
-  const men = (blocks: readonly ForceBlockId[]) => blocks.reduce((s, b) => s + (state.forceBlockStates[b]!.fbStrength ?? 0), 0);
+  const men = (blocks: readonly ForceBlockId[]) => blocks.reduce((s, b) => s + (forceTotals(state.forceBlockStates[b]!, world.map.forceTotalsCache).fbStrength ?? 0), 0);
   const gun = (b: ForceBlockId) => rules.gunArms.includes(state.forceBlockStates[b]!.fbArm);
-  const lead = [...defenders].sort((a, b) => (state.forceBlockStates[b]!.fbStrength ?? 0) - (state.forceBlockStates[a]!.fbStrength ?? 0) || strictCompare(a, b))[0]!;
+  const lead = [...defenders].sort((a, b) => (forceTotals(state.forceBlockStates[b]!, world.map.forceTotalsCache).fbStrength ?? 0) - (forceTotals(state.forceBlockStates[a]!, world.map.forceTotalsCache).fbStrength ?? 0) || strictCompare(a, b))[0]!;
   const defFaction = factionOfBlock(world.map, state, lead)!;
   const defPost = state.forceAssignments[lead] ?? null;
   const commander = defPost === null ? null : (state.postStates[defPost]?.postHolder ?? null);
   // Morale by men (a block of unknown strength weighs one man); stores out when every known stock is empty.
-  const weight = (b: ForceBlockId) => Math.max(1, state.forceBlockStates[b]!.fbStrength ?? 0);
+  const weight = (b: ForceBlockId) => Math.max(1, forceTotals(state.forceBlockStates[b]!, world.map.forceTotalsCache).fbStrength ?? 0);
   const total = defenders.reduce((s, b) => s + weight(b), 0);
   const morale = Math.trunc(defenders.reduce((s, b) => s + state.forceBlockStates[b]!.fbMorale * weight(b), 0) / total);
   const known = defenders.filter((b) => state.forceBlockStates[b]!.fbStoresMilli !== null);
@@ -219,7 +220,7 @@ export function fortDay(world: SeatsWorld, state: State, attackers: readonly For
   const garrison = men(defenders);
   const d = bombardDay(rules, men(attackers.filter(gun)), { guns: men(defenders.filter(gun)), men: garrison, morale, storesOut, works: state.regionFortification[objective] ?? 0, commander, boldness: commanderView(world, state, commander).boldness }, order(defPost));
   const forces: ForceDelta[] = defenders.map((b) => ({ change: 'condition', block: b, morale: -d.moraleLoss, experience: 0, equipment: 0, routedDay: null, surrenderedDay: null, cause: 'combat' }));
-  if (d.losses > 0 && state.forceBlockStates[lead]!.fbStrength !== null) {
+  if (d.losses > 0 && forceTotals(state.forceBlockStates[lead]!, world.map.forceTotalsCache).fbStrength !== null) {
     const killed = Math.trunc((d.losses * world.map.world.rules.combat.killedPermille) / 1000);
     forces.push({ change: 'battle_losses', block: lead, killed, wounded: d.losses - killed, missing: 0, captured: 0, stragglersCaptured: 0, cause: 'combat' });
   }
@@ -242,8 +243,8 @@ export function fortDay(world: SeatsWorld, state: State, attackers: readonly For
   } else {
     for (const b of defenders) {
       const f = state.forceBlockStates[b]!;
-      const lost = f.fbStrength === null ? 0 : f.fbStrength - (b === lead ? d.losses : 0);
-      if (lost > 0 || f.fbStragglers > 0) forces.push({ change: 'battle_losses', block: b, killed: 0, wounded: 0, missing: 0, captured: lost, stragglersCaptured: f.fbStragglers, cause: 'combat' });
+      const lost = forceTotals(f, world.map.forceTotalsCache).fbStrength! === null ? 0 : forceTotals(f, world.map.forceTotalsCache).fbStrength! - (b === lead ? d.losses : 0);
+      if (lost > 0 || forceTotals(f, world.map.forceTotalsCache).fbStragglers > 0) forces.push({ change: 'battle_losses', block: b, killed: 0, wounded: 0, missing: 0, captured: lost, stragglersCaptured: forceTotals(f, world.map.forceTotalsCache).fbStragglers, cause: 'combat' });
       forces.push({ change: 'condition', block: b, morale: 0, experience: 0, equipment: 0, routedDay: null, surrenderedDay: day, cause: 'combat' });
       command.push({ change: 'release', block: b, battle });
     }

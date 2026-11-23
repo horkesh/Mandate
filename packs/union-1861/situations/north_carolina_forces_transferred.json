@@ -18,6 +18,16 @@
   "effects": [
     {
       "propose": {
+        "owner": "command",
+        "field": "department_side",
+        "subject": "st_north_carolina",
+        "side": "confederate",
+        "delta": 1,
+        "reason": "military-authority-confirmed"
+      }
+    },
+    {
+      "propose": {
         "owner": "recruitment",
         "field": "state_forces",
         "subject": "st_gov_north_carolina",

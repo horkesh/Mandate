@@ -1,5 +1,7 @@
 import { expect, it } from 'vitest';
 import { toId } from '../src/ids.ts';
+import { deliverReport } from '../src/knowledge/knowledge.ts';
+import { NO_TRUTH } from '../src/knowledge/truth.ts';
 import { term } from '../src/knowledge/truth.ts';
 import type { TransitMessage } from '../src/messages/transit.ts';
 import { believedHolder } from '../src/seats/believed.ts';
@@ -9,18 +11,22 @@ import { claim, fresh, report } from './support/s25-fixture.ts';
 import { F, P, POST } from './support/seats-fixture.ts';
 
 it('S25 seats-03: an office without directly commanded blocks is not a field command', () => {
-  const { state } = fresh();
-  expect(isFieldPost(state, POST('a_office'))).toBe(false);
-  expect(isFieldPost(state, POST('a_army'))).toBe(true);
+  const { world, state } = fresh();
+  expect(isFieldPost(world, state, POST('a_office'))).toBe(false);
+  expect(isFieldPost(world, state, POST('a_army'))).toBe(true);
 });
 
 it('S25 seats-04: the field-command vacancy menu excludes empty offices', () => {
-  const { world, state } = fresh();
+  const { world, state, seat } = fresh();
   const vacant = { ...state, postStates: { ...state.postStates,
     [POST('a_office')]: { ...state.postStates[POST('a_office')]!, postHolder: null },
     [POST('a_army')]: { ...state.postStates[POST('a_army')]!, postHolder: null },
   } };
-  const menu = principalMenu(world, vacant, F('a'), morningGround(world, vacant, 1));
+  let heard = { ...vacant, stateDay: 1 };
+  for (const post of ['a_office', 'a_army']) heard = deliverReport(heard, seat, report(`m.vacant.${post}`, {
+    reportSubjectKind: 'post', reportSubjectId: post, reportClaims: [claim('commander-lost', 1, 'captured')],
+  }), NO_TRUTH);
+  const menu = principalMenu(world, heard, F('a'), morningGround(world, heard, 2));
   expect(menu!.vacancies.map(v => v.post)).toEqual([POST('a_army')]);
 });
 

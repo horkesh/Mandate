@@ -1,0 +1,664 @@
+[
+  {
+    "name": "0110-derived-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/capitals.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.99
+  },
+  {
+    "name": "0110-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/capitals.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.957
+  },
+  {
+    "name": "0110-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/capitals.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.134
+  },
+  {
+    "name": "boundary",
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.164
+  },
+  {
+    "name": "decisions-corrected",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-decisions-index.ts"
+    ],
+    "exit": 1,
+    "seconds": 0.12
+  },
+  {
+    "name": "decisions-ready",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-decisions-index.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.119
+  },
+  {
+    "name": "decisions",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-decisions-index.ts"
+    ],
+    "exit": 1,
+    "seconds": 0.121
+  },
+  {
+    "name": "final-boundary",
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.182
+  },
+  {
+    "name": "final-decisions",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-decisions-index.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.133
+  },
+  {
+    "name": "final-licences",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-licences.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.135
+  },
+  {
+    "name": "final-rules",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.313
+  },
+  {
+    "name": "focused-rail-corrected",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s78-rail.test.ts",
+      "packs/union-1861/test/s78-patterson.test.ts",
+      "packages/kernel/test/department-sides.test.ts",
+      "packages/kernel/test/march.test.ts",
+      "packages/kernel/test/join.test.ts",
+      "packages/kernel/test/canon-receipts.test.ts",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/capitals.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/s74-organisation.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 5.088
+  },
+  {
+    "name": "frozen-diagnostics",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s78/diagnostics.ts"
+    ],
+    "exit": 0,
+    "seconds": 3.36
+  },
+  {
+    "name": "full-suite",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s78/full-suite.json"
+    ],
+    "exit": 1,
+    "seconds": 156.117
+  },
+  {
+    "name": "generate",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 1.878
+  },
+  {
+    "name": "licences",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-licences.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.121
+  },
+  {
+    "name": "map-preflight-corrected",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/map-derived.test.ts",
+      "packages/kernel/test/s25-control-index.test.ts",
+      "packages/kernel/test/march.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.658
+  },
+  {
+    "name": "map-preflight",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/map-derived.test.ts",
+      "packages/kernel/test/s25-control-index.test.ts",
+      "packages/kernel/test/march.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 0.653
+  },
+  {
+    "name": "pack-freshness",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 1.534
+  },
+  {
+    "name": "patterson-green-corrected",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s78-patterson.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.699
+  },
+  {
+    "name": "patterson-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s78-patterson.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.715
+  },
+  {
+    "name": "patterson-policy-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s78-patterson.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.634
+  },
+  {
+    "name": "patterson-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s78-patterson.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.631
+  },
+  {
+    "name": "preflight-final",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/capitals.test.ts",
+      "packages/kernel/test/department-sides.test.ts",
+      "packages/kernel/test/canon-receipts.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/join.test.ts",
+      "packs/union-1861/test/s78-rail.test.ts",
+      "packs/union-1861/test/s78-patterson.test.ts",
+      "packs/union-1861/test/manassas-junction.test.ts",
+      "packs/union-1861/test/northern-concentration.test.ts",
+      "packages/rule-seats/test/rule-seats.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 18.767
+  },
+  {
+    "name": "publication-reuse",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s78/publication-reuse.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.722
+  },
+  {
+    "name": "rail-cache-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s78-rail.test.ts",
+      "packages/kernel/test/control-index.test.ts",
+      "packages/kernel/test/derived.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.615
+  },
+  {
+    "name": "rail-cache-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s78-rail.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.664
+  },
+  {
+    "name": "rail-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s78-rail.test.ts",
+      "packs/union-1861/test/s78-patterson.test.ts",
+      "packages/kernel/test/department-sides.test.ts",
+      "packages/kernel/test/march.test.ts",
+      "packages/kernel/test/join.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.793
+  },
+  {
+    "name": "rail-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s78-rail.test.ts",
+      "packs/union-1861/test/s78-patterson.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.715
+  },
+  {
+    "name": "reference-smoke-corrected",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s78/references.ts",
+      "union-1861",
+      "--smoke"
+    ],
+    "exit": 0,
+    "seconds": 4.468
+  },
+  {
+    "name": "reference-smoke",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s78/references.ts",
+      "union-1861",
+      "--smoke"
+    ],
+    "exit": 1,
+    "seconds": 3.659
+  },
+  {
+    "name": "report-fixture-complete",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/control-reports.test.ts",
+      "packages/kernel/test/press-view.test.ts",
+      "packages/kernel/test/operations.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.59
+  },
+  {
+    "name": "report-fixture-corrected",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/control-reports.test.ts",
+      "packages/kernel/test/press-view.test.ts",
+      "packages/kernel/test/operations.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.616
+  },
+  {
+    "name": "route-diagnostic",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s78/route-diagnostic.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.657
+  },
+  {
+    "name": "rules-final-code",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.578
+  },
+  {
+    "name": "rules-rail",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.61
+  },
+  {
+    "name": "rules-ready",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.312
+  },
+  {
+    "name": "rules",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.575
+  },
+  {
+    "name": "schema-freshness",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "schemas",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 0.603
+  },
+  {
+    "name": "schemas",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "schemas"
+    ],
+    "exit": 0,
+    "seconds": 0.583
+  },
+  {
+    "name": "startup",
+    "command": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import{createRequire}from'node:module';const r=createRequire(import.meta.url);for(const n of ['@mandate/kernel','@mandate/rule-seats','@mandate/pack-format'])console.log(n,r.resolve(n));console.log(process.version);"
+    ],
+    "exit": 0,
+    "seconds": 0.049
+  },
+  {
+    "name": "temporal-publication-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/press-view.test.ts",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/operations.test.ts",
+      "packages/kernel/test/control-reports.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.611
+  },
+  {
+    "name": "temporal-publication-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/press-view.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.674
+  },
+  {
+    "name": "testbed-reference",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s78/references.ts",
+      "testbed"
+    ],
+    "exit": 0,
+    "seconds": 6.792
+  },
+  {
+    "name": "typecheck-after-correction",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.873
+  },
+  {
+    "name": "typecheck-final-code",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 1,
+    "seconds": 0.879
+  },
+  {
+    "name": "typecheck-final",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.886
+  },
+  {
+    "name": "typecheck-preflight",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.856
+  },
+  {
+    "name": "typecheck-ready",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.896
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 1,
+    "seconds": 0.95
+  },
+  {
+    "name": "union-reference",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s78/references.ts",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 56.827
+  },
+  {
+    "name": "unresolved-report-fixture-final",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/control-reports.test.ts",
+      "packages/kernel/test/press-view.test.ts",
+      "packages/kernel/test/operations.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.591
+  },
+  {
+    "name": "unresolved-report-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/control-reports.test.ts",
+      "packages/kernel/test/press-view.test.ts",
+      "packages/kernel/test/operations.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.555
+  },
+  {
+    "name": "unresolved-report-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.026
+  },
+  {
+    "name": "unresolved-report-verified",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/control-reports.test.ts",
+      "packages/kernel/test/press-view.test.ts",
+      "packages/kernel/test/operations.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.578
+  }
+]

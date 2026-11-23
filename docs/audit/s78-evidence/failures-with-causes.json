@@ -1,0 +1,227 @@
+{
+  "fullSuite": [
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts",
+      "test": "R86: the history months through the player’s console (1A criterion 2) receives at least one hour-stamped battle dispatch by 31 July",
+      "messages": [
+        "AssertionError: expected false to be true // Object.is equality\n    at C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts:265:132\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "[I] Unresolved Manassas contact has no fabricated hourly fire dispatch. The July paper assertion remains unmet."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+      "test": "the done check on union-1861 at war and the testbed passes every Phase 0 criterion but the budget, which is a stopwatch",
+      "messages": [
+        "AssertionError: liveness: expected [ …(12) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:47:114\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "[I] The unchanged liveness gate rejects the twelve retained witnesses listed separately. No criterion or assertion is weakened."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+      "test": "each criterion can fail (positive controls) liveness: a planted dead mechanic in a reference run fails the check",
+      "messages": [
+        "AssertionError: expected [ …(12) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:163:63\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "[I] The unchanged liveness gate rejects the twelve retained witnesses listed separately. No criterion or assertion is weakened."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts",
+      "test": "the reference runs union-1861, war by decision, 148 days: every mechanic fires within its band",
+      "messages": [
+        "AssertionError: expected [ { …(4) }, { …(4) }, { …(4) }, …(9) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts:81:48\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "[I] The unchanged liveness gate rejects the twelve retained witnesses listed separately. No criterion or assertion is weakened."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packs/union-1861/test/s35-scoring.test.ts",
+      "test": "the same recorded human commands bring received hour-stamped Manassas papers by the July horizon",
+      "messages": [
+        "AssertionError: expected false to be true // Object.is equality\n    at C:/Pyrrhic/sprint-july/packs/union-1861/test/s35-scoring.test.ts:24:81\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "[I] Unresolved Manassas contact has no fabricated hourly fire dispatch. The July paper assertion remains unmet."
+    }
+  ],
+  "liveness": [
+    {
+      "mechanic": "combat.battle_day",
+      "problem": "too_frequent",
+      "fires": 9,
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "cause": "[I] 0110 preserves unknown opposition through repeated unresolved contact, instead of removing it by zero-based defeat."
+    },
+    {
+      "mechanic": "combat.captured",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "cause": "[I] 0110 forbids the original zero-based capture; unknown opposition provides no quantitative defeat."
+    },
+    {
+      "mechanic": "combat.killed_wounded",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "cause": "[I] The two local Confederate blocks still have no sourced strength; no quantitative contact or losses can be calculated."
+    },
+    {
+      "mechanic": "combat.missing",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "cause": "[I] No quantitative contact/losses, so no missing men are generated."
+    },
+    {
+      "mechanic": "combat.routed",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured one rout."
+      },
+      "cause": "[I] 0110 forbids a rout against wholly unknown opposition; no sourced strength clears the data gap."
+    },
+    {
+      "mechanic": "forces.stragglers_returned",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 12,
+        "maxFires": 48,
+        "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting."
+      },
+      "cause": "[I] No quantified Manassas losses generate stragglers to return."
+    },
+    {
+      "mechanic": "messages.special_messenger",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the one bypass uses the faster zero-day wire instead of a three-day messenger (R78)"
+      },
+      "cause": "[I] Johnston remains at Harpers Ferry; Richmond–lower_valley public access does not connect that headquarters. The bypass remains a special messenger, now three days."
+    },
+    {
+      "mechanic": "orders.returned",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the day-87 Charleston transfer reaches a vacated post after reassignment. Its return is written day 92 and received day 97; S42 measured one return."
+      },
+      "cause": "[I] The source-guided transfers and retained holders do not reproduce the old vacated-post return witness."
+    },
+    {
+      "mechanic": "planner.term.caution",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "few drafts in the reference runs, and none where dropping caution alone changes the pick"
+      },
+      "cause": "[I] Patterson’s new geographic hold changes real draft geometry and which existing scoring terms decide a pick. Quiet band unchanged."
+    },
+    {
+      "mechanic": "planner.term.supply",
+      "problem": "too_frequent",
+      "fires": 2,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S1 appointments: no planner.term.supply event in this observed command/plan path; unchanged testbed fires it 2 times. S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick."
+      },
+      "cause": "[I] New joining routes and Patterson’s goal change supply geometry in draft candidates. Quiet band unchanged."
+    },
+    {
+      "mechanic": "planner.term.time",
+      "problem": "too_frequent",
+      "fires": 3,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick."
+      },
+      "cause": "[I] New routes/goals alter time contributions in candidate comparisons. Quiet band unchanged."
+    },
+    {
+      "mechanic": "reports.governor_wire",
+      "problem": "too_frequent",
+      "fires": 9,
+      "band": {
+        "minFires": 2,
+        "maxFires": 8
+      },
+      "cause": "[I] Repeated unresolved battle days still cause the existing local governor notices. No band change or forced resolution."
+    }
+  ],
+  "checkpoints": [
+    {
+      "problem": "men_confederate (1861-07-31, day 148): confederate has 95153 men, below 100000",
+      "cause": "Unchanged sourced/generated raising leaves known Confederate strength at 95,153. No headcount or identity fit; 23 blocks remain unknown."
+    }
+  ],
+  "pushback": [
+    {
+      "problem": "trims: 0, below the record's 1",
+      "cause": "Existing filtering/compliance mechanisms and received orders retain this breach. Carrier/filter follow-up is outside S78; no band is recentered."
+    },
+    {
+      "problem": "compliance with reservations: 16, above 9",
+      "cause": "Existing filtering/compliance mechanisms and received orders retain this breach. Carrier/filter follow-up is outside S78; no band is recentered."
+    },
+    {
+      "problem": "slow walks: 18, above 9",
+      "cause": "Existing filtering/compliance mechanisms and received orders retain this breach. Carrier/filter follow-up is outside S78; no band is recentered."
+    }
+  ],
+  "unknownStrength": [
+    {
+      "problem": "union-1861: battle battle:manassas:142 at manassas, day 142: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+      "cause": "Garland and Preston still have no sourced strengths. 0110 prevents a fictitious outcome and explicitly preserves this failed criterion. S79 research is not applied here."
+    },
+    {
+      "problem": "union-1861: battle battle:manassas:142 at manassas, day 143: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+      "cause": "Garland and Preston still have no sourced strengths. 0110 prevents a fictitious outcome and explicitly preserves this failed criterion. S79 research is not applied here."
+    },
+    {
+      "problem": "union-1861: battle battle:manassas:142 at manassas, day 144: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+      "cause": "Garland and Preston still have no sourced strengths. 0110 prevents a fictitious outcome and explicitly preserves this failed criterion. S79 research is not applied here."
+    },
+    {
+      "problem": "union-1861: battle battle:manassas:142 at manassas, day 145: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+      "cause": "Garland and Preston still have no sourced strengths. 0110 prevents a fictitious outcome and explicitly preserves this failed criterion. S79 research is not applied here."
+    },
+    {
+      "problem": "union-1861: battle battle:manassas:142 at manassas, day 146: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+      "cause": "Garland and Preston still have no sourced strengths. 0110 prevents a fictitious outcome and explicitly preserves this failed criterion. S79 research is not applied here."
+    },
+    {
+      "problem": "union-1861: battle battle:manassas:142 at manassas, day 147: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+      "cause": "Garland and Preston still have no sourced strengths. 0110 prevents a fictitious outcome and explicitly preserves this failed criterion. S79 research is not applied here."
+    },
+    {
+      "problem": "union-1861: battle battle:manassas:142 at manassas, day 148: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+      "cause": "Garland and Preston still have no sourced strengths. 0110 prevents a fictitious outcome and explicitly preserves this failed criterion. S79 research is not applied here."
+    }
+  ],
+  "july": {
+    "problem": "No quantified Manassas battle and no Johnston junction by 31 July.",
+    "cause": "29,000 known men assigned to each Confederate command remain unjoined; no-control civil access is improved, but small control shares still require the existing rail threshold, and S79 owns railway gaps. Johnston objects to the delivered goal on day146; no movement is forced."
+  }
+}

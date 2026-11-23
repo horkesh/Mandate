@@ -18,6 +18,15 @@ function menu(ready: boolean, day: number) {
     reportAuthor: ids.toId('person', 'walker_leroy_p'), reportAuthorPost: P('cs_secretary_war'), reportSubjectKind: 'situation',
     reportSubjectId: 'virginia_military_convention', reportDay: 52,
   }, 53), NO_TRUTH);
+  if (day >= 83) {
+    // S82: the May 27 institutional succession has actually happened and its
+    // ordinary notice has reached Davis before the May 31 appointment.
+    state = { ...state, postStates: { ...state.postStates, [P('cs_cmd_charleston')]: { ...state.postStates[P('cs_cmd_charleston')]!, postHolder: ids.toId('person','anderson_richard_h') } } };
+    state = deliverReport(state, phase0.seatIdFor(world.faction(CS).principal), report('m.fixture.charleston', {
+      reportAuthor: ids.toId('person','walker_leroy_p'), reportAuthorPost: P('cs_secretary_war'), reportSubjectKind: 'situation',
+      reportSubjectId: 'charleston_anderson_command', reportDay: 83,
+    }, 84), NO_TRUTH);
+  }
   const request = phase0.pendingRequests(world, state).find(r => r.menu.menuKind === 'principal' && r.menu.faction === CS)!;
   if (request.menu.menuKind !== 'principal') throw new Error('principal menu required');
   return { world, state, request, doctrine: request.menu.doctrine };
@@ -49,10 +58,10 @@ describe('northern Virginia concentration follows sourced commands and Virginiaâ
   });
   it('issues Beauregardâ€™s 31 May assignment but keeps Johnston ineligible while he still holds a Union post', () => {
     const m = menu(true, 87);
-    expect(m.doctrine.appointments).toContainEqual(expect.objectContaining({ post: P('cs_cmd_manassas'), from: P('cs_cmd_charleston'), ready: true }));
+    expect(m.doctrine.appointments).toContainEqual(expect.objectContaining({ post: P('cs_cmd_manassas'), person: 'beauregard_pierre_g_t', from: null, ready: true }));
     expect(m.doctrine.appointments).toContainEqual(expect.objectContaining({ post: P('cs_cmd_harpers_ferry'), ready: false }));
     const answer = rules.respond(m.request);
-    expect(answer).toMatchObject({ answerKind: 'commands', commands: expect.arrayContaining([expect.objectContaining({ cmd: 'appoint', post: P('cs_cmd_manassas'), from: P('cs_cmd_charleston') })]) });
+    expect(answer).toMatchObject({ answerKind: 'commands', commands: expect.arrayContaining([expect.objectContaining({ cmd: 'appoint', post: P('cs_cmd_manassas'), person: 'beauregard_pierre_g_t' })]) });
   });
   it('makes Johnston eligible on the sourced May 23 assumption only after his ordinary resignation', () => {
     const { world, setup } = seatsWorld('union-1861');
@@ -89,7 +98,7 @@ describe('northern Virginia concentration follows sourced commands and Virginiaâ
     expect(result.rejections).toEqual([]);
     for (let i = 0; i < 20 && result.state.postStates[P('cs_cmd_manassas')] === undefined; i++) result = phase0.tick(m.world, result.state, [], { freeze: true });
     expect(result.state.postStates[P('cs_cmd_manassas')]).toMatchObject({ postHolder: 'beauregard_pierre_g_t', postSeat: 'manassas' });
-    expect(result.state.postStates[P('cs_cmd_charleston')]!.postHolder).toBeNull();
+    expect(result.state.postStates[P('cs_cmd_charleston')]!.postHolder).toBe('anderson_richard_h');
     let next = phase0.pendingRequests(m.world, result.state).find(r => r.menu.menuKind === 'principal' && r.menu.faction === CS)!;
     // Execution is private until the appointment reply returns to the principal.
     expect(next.menu).toMatchObject({ doctrine: { concentrateAt: 'cs_cmd_charleston' } });
@@ -97,6 +106,6 @@ describe('northern Virginia concentration follows sourced commands and Virginiaâ
       result = phase0.tick(m.world, result.state, [], { freeze: true });
       next = phase0.pendingRequests(m.world, result.state).find(r => r.menu.menuKind === 'principal' && r.menu.faction === CS)!;
     }
-    expect(next.menu).toMatchObject({ doctrine: { concentrateAt: 'cs_cmd_manassas', concentrateFrom: ['cs_cmd_charleston'] } });
+    expect(next.menu).toMatchObject({ doctrine: { concentrateAt: 'cs_cmd_manassas', concentrateFrom: ['st_va_potomac','st_gov_alabama','st_gov_louisiana','st_gov_mississippi','st_gov_south_carolina','st_gov_virginia'], concentrateLevies: false } });
   });
 });

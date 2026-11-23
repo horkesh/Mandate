@@ -1,3 +1,4 @@
+import { forceTotals } from '../src/forces/lots.ts';
 import { expect, it } from 'vitest';
 import { applyDetachments, detachmentProblems } from '../src/forces/detachments.ts';
 import { applyMusters } from '../src/forces/enlistment.ts';
@@ -17,17 +18,17 @@ it('S25 forces-01: the minimum one-man detachment conserves strength', () => {
   const delta = { change: 'detach' as const, parent: B('a_army_1'), detachment: B('s25.detachment'), men: 1, name: 'force.detachment', cause: 'command' as const };
   expect(detachmentProblems(state, delta)).toEqual([]);
   const next = applyDetachments(state, [delta]).state;
-  expect(next.forceBlockStates[delta.detachment]!.fbStrength).toBe(1);
-  expect(next.forceBlockStates[delta.parent]!.fbStrength).toBe(state.forceBlockStates[delta.parent]!.fbStrength! - 1);
+  expect(forceTotals(next.forceBlockStates[delta.detachment]!).fbStrength).toBe(1);
+  expect(forceTotals(next.forceBlockStates[delta.parent]!).fbStrength).toBe(forceTotals(state.forceBlockStates[delta.parent]!).fbStrength! - 1);
 });
 
 it('S25 forces-02/03: both creation paths accept zero strength while rejecting a negative strength', () => {
   const { world, state } = fresh();
   const start = { ...world.start, forceBlocks: world.start.forceBlocks.map(b => b.id === B('a_army_1') ? { ...b, strength: 0 } : b) };
-  expect(initialForces(world.map, start)[B('a_army_1')]!.fbStrength).toBe(0);
+  expect(forceTotals(initialForces(world.map, start)[B('a_army_1')]!).fbStrength).toBe(0);
   const create = { block: B('s25.new'), name: 'force.new', department: DEP('a_war'), arm: world.map.world.vocabularies.arms[0]!.id,
     strength: 0, storesDays: 0, enlistment: { enlPost: POST('a_army'), enlRaisedBy: P('a_gen'), enlCall: toId('message', 's25.muster'), enlRegiments: 1, enlMusterDay: 1, enlEndsDay: 91 } };
-  expect(applyMusters(world.map, state, [{ change: 'create', create, cause: 'recruitment' }]).state.forceBlockStates[create.block]!.fbStrength).toBe(0);
+  expect(forceTotals(applyMusters(world.map, state, [{ change: 'create', create, cause: 'recruitment' }]).state.forceBlockStates[create.block]!).fbStrength).toBe(0);
   expect(() => applyMusters(world.map, state, [{ change: 'create', create: { ...create, strength: -1 }, cause: 'recruitment' }])).toThrow(/strength/);
 });
 

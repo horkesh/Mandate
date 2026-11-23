@@ -101,6 +101,7 @@ function playMonths(atWar = false): Played {
   const p = player(atWar);
   const chosen = new Map<string, Set<string>>();
   const missingChoices = new Set<string>();
+  const resumedOrder = 'order us_dc_militia take manassas review bypass deadline=25';
   // At most 160 console turns: even a decision point every day is bounded.
   for (let turn = 0; turn < 160 && p.date <= '1861-07-31'; turn++) {
     for (const [id, options] of offered(p.type('situations'))) {
@@ -156,11 +157,11 @@ function playMonths(atWar = false): Played {
     }
     const edited = p.commands.some(c => c.startsWith('edit '));
     const answeredEdit = p.transcript.some(line => line.includes('answers your edit:'));
-    const resumedAdvance = edited && p.commands.slice(p.commands.findIndex(c => c.startsWith('edit ')) + 1).includes('order us_dc_militia take manassas review bypass');
+    const resumedAdvance = p.commands.includes(resumedOrder);
     if (edited && answeredEdit && !resumedAdvance) {
-      // Resume the original objective after testing the intermediate arrow edit. These are printed
-      // desk facts and ordinary player words, not a hidden plan or battle injection.
-      p.type('order us_dc_militia take manassas review bypass');
+      // Allow less time now that the first leg is under way. An unchanged
+      // goal would reaffirm the shortened plan instead of requesting a new one.
+      p.type(resumedOrder);
     } else if (edited && resumedAdvance && review && plans.some(line => line.includes('manassas')) && !p.commands.some(c => c.startsWith('approve '))) {
       p.type('approve us_dc_militia bypass');
     }

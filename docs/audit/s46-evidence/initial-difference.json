@@ -1,0 +1,80 @@
+{
+  "baselineHash": "2c7429511a3f996050141180bb5fd0774db01c027778f2c973e438156b1cecae",
+  "currentHash": "8f98b3e773bfb09acea3532d5a31a31a66e39e22e41cc84403d1c521d30b94ae",
+  "openingForceBlocksIdentical": true,
+  "openingLocationsIdentical": true,
+  "fields": [
+    {
+      "field": "seatAssignments",
+      "added": [
+        "seat:cocke_philip_st_george",
+        "seat:ewell_benjamin_s",
+        "seat:gwynn_walter",
+        "seat:harper_kenton",
+        "seat:huger_benjamin",
+        "seat:taliaferro_william_b"
+      ],
+      "removed": []
+    },
+    {
+      "field": "knowledgeBySeat",
+      "added": [
+        "seat:cocke_philip_st_george",
+        "seat:ewell_benjamin_s",
+        "seat:gwynn_walter",
+        "seat:harper_kenton",
+        "seat:huger_benjamin",
+        "seat:taliaferro_william_b"
+      ],
+      "removed": []
+    },
+    {
+      "field": "personTrue",
+      "added": [
+        "cocke_philip_st_george",
+        "ewell_benjamin_s",
+        "gwynn_walter",
+        "harper_kenton",
+        "huger_benjamin",
+        "taliaferro_william_b"
+      ],
+      "removed": []
+    },
+    {
+      "field": "personTraits",
+      "added": [
+        "cocke_philip_st_george",
+        "ewell_benjamin_s",
+        "gwynn_walter",
+        "harper_kenton",
+        "huger_benjamin",
+        "taliaferro_william_b"
+      ],
+      "removed": []
+    },
+    {
+      "field": "personStanding",
+      "added": [
+        "cocke_philip_st_george",
+        "ewell_benjamin_s",
+        "gwynn_walter",
+        "harper_kenton",
+        "huger_benjamin",
+        "taliaferro_william_b"
+      ],
+      "removed": []
+    },
+    {
+      "field": "personStatus",
+      "added": [
+        "cocke_philip_st_george",
+        "ewell_benjamin_s",
+        "gwynn_walter",
+        "harper_kenton",
+        "huger_benjamin",
+        "taliaferro_william_b"
+      ],
+      "removed": []
+    }
+  ]
+}

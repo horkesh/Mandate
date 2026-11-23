@@ -1,0 +1,71 @@
+{
+  "days": 88,
+  "firstChangedNewHash": 119,
+  "finalHash": "9a299907554c955ff00407b814f9ab3ff694aa8bc942a3785e2fcb01612329f1",
+  "projectedFinal": "d330b44b3e2bd2bdf2978caacd28b11ed624920c770850e0491af6a56168e327",
+  "allOldStateHashesMatch": true,
+  "allAffectedDailyFieldsMatch": true,
+  "diagnosticDailyDifferences": [
+    {
+      "day": 61,
+      "hash": "a1cfd7fbd3fccf01841eaaabfbc447e0b4ed7cb940cbe0350a119c0c47575b30",
+      "projected": "db872c885d1f39a4e8e39862736c8b368499d2b4dda32c9bf401c1e2a1eb4e6d",
+      "expected": "db872c885d1f39a4e8e39862736c8b368499d2b4dda32c9bf401c1e2a1eb4e6d",
+      "daily": {
+        "day": 61,
+        "fires": {
+          "knowledge.pruned_age": 1,
+          "knowledge.pruned_superseded": 1,
+          "messages.courier_delay": 1,
+          "messages.mail_delay": 12,
+          "messages.delivered": 53,
+          "messages.sent": 73,
+          "verbs.answered": 1,
+          "movement.arrived": 3,
+          "movement.leg_started": 5,
+          "map.recomputed": 1,
+          "forces.stores_fell": 2,
+          "forces.stores_low": 1,
+          "forces.stores_refilled": 12
+        },
+        "decisionPoints": 0,
+        "rejections": 0
+      },
+      "dailyExact": false
+    }
+  ],
+  "checkpoints": [
+    {
+      "day": 75,
+      "match": true
+    },
+    {
+      "day": 90,
+      "match": true
+    },
+    {
+      "day": 105,
+      "match": true
+    },
+    {
+      "day": 120,
+      "match": true
+    },
+    {
+      "day": 135,
+      "match": true
+    },
+    {
+      "day": 148,
+      "match": true
+    }
+  ],
+  "decisionsExact": true,
+  "replayMatches": true,
+  "resumeMatches": true,
+  "originalFullRunRetained": true,
+  "fullReferenceRepeated": false,
+  "timingMeasured": false,
+  "cause": "Day 119 aggregate returns retain their two unidentified batch lots and known totals; no return is apportioned into 24 generated regiment strengths.",
+  "hash_rows": 88
+}

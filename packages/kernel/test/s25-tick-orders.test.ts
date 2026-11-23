@@ -36,11 +36,11 @@ function planned(status: PlanRecord['planStatus']) {
     planDraft: { draftCommander: P('a_gen'), draftPost: post, draftFaction: F('a'), draftDay: 1,
       draftCandidates: [candidate], draftRejected: [], draftSearches: 0, draftGenerated: 1, draftDeduplicated: 0 } };
   let ready = { ...set, stateDay: 1, planRecords: { ...set.planRecords, [post]: record } };
-  if (status === 'review') {
+  if (status !== 'drafting') {
     const network = passageOf(world.map, ready);
     const derived = deriveMap(world.map, { control: ready.regionControl, network, month: 6 });
     const input = plannerInputFor(world, ready, derived, network, 6, viewFor(world, ready, seatIdFor(P('a_gen'))), post, record.planGoal, 1);
-    // Review acts require the submitted paper in the principal's hands (S36), not only a private planStatus.
+    // Post-draft edits and reviews need a commander paper in this fixture; a private status supplies no knowledge.
     ready = deliverReport(ready, seat, report('s25.submission', { reportAuthorPost: post, reportSubjectKind: 'post', reportSubjectId: post,
       reportAnswers: record.planOrder, reportPlan: enclosePlan(input, record.planDraft!, candidate) }), NO_TRUTH);
   }

@@ -1,0 +1,1269 @@
+{
+  "question": "Do stores_low=13 and pocket_closed=8 reveal counting defects before recentering?",
+  "verdict": "No defect found in retained event transitions and focused owner controls; each counter reports its defined event, not troop-days in hardship.",
+  "stores": {
+    "S78": [
+      {
+        "day": 1,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "fb_us_sumter_garrison",
+          "faction": "union",
+          "region": "fort_sumter",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 70,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_arkansas.d60",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 85,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_arkansas.d82",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 118,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_nc_additional_north_carolina",
+          "faction": "confederate",
+          "region": "raleigh",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 118,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_nc_state_transfer_north_carolina",
+          "faction": "confederate",
+          "region": "raleigh",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 118,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_nc_volunteers_north_carolina",
+          "faction": "confederate",
+          "region": "raleigh",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 127,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_tn_infantry_tennessee",
+          "faction": "confederate",
+          "region": "nashville",
+          "direction": "down",
+          "beforeMilli": 7181,
+          "afterMilli": 6908,
+          "assumed": false
+        }
+      },
+      {
+        "day": 129,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_tn_cavalry_tennessee",
+          "faction": "confederate",
+          "region": "columbia_tn",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 136,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_ar_cavalry_arkansas",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 136,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_ar_infantry_arkansas",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 140,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_arkansas.d137.2",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_1_brigade_4.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7800,
+          "afterMilli": 6800,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_2_brigade_1.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_5_brigade_1.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7750,
+          "afterMilli": 6750,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_5_brigade_1.2",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_5_brigade_2.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7500,
+          "afterMilli": 6500,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_maine.d87",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7800,
+          "afterMilli": 6800,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_massachusetts.d76",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7266,
+          "afterMilli": 6266,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7900,
+          "afterMilli": 6900,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.2",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7999,
+          "afterMilli": 6999,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.4",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.5",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7666,
+          "afterMilli": 6666,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.6",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7833,
+          "afterMilli": 6833,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.8",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d86",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d86.bundle.4",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_1_brigade_1.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_2_brigade_2.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_3_brigade_2.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7500,
+          "afterMilli": 6500,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_connecticut.d77",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_massachusetts.d76.bundle.2",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.10",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7900,
+          "afterMilli": 6900,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.3",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.7",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7450,
+          "afterMilli": 6450,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.9",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7950,
+          "afterMilli": 6950,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d86.bundle.2",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7333,
+          "afterMilli": 6333,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d86.bundle.3",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7500,
+          "afterMilli": 6500,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_rhode_island.d79",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 147,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_1_brigade_2.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 147,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_1_brigade_3.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 148,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_georgia.d129",
+          "faction": "confederate",
+          "region": "nc_coastal_plain",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      }
+    ],
+    "S81": [
+      {
+        "day": 1,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "fb_us_sumter_garrison",
+          "faction": "union",
+          "region": "fort_sumter",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 70,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_arkansas.d60",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 72,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.va_manassas_garland",
+          "faction": "confederate",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 85,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_arkansas.d82",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 118,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_nc_additional_north_carolina",
+          "faction": "confederate",
+          "region": "raleigh",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 118,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_nc_state_transfer_north_carolina",
+          "faction": "confederate",
+          "region": "raleigh",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 118,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_nc_volunteers_north_carolina",
+          "faction": "confederate",
+          "region": "raleigh",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 127,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_tn_infantry_tennessee",
+          "faction": "confederate",
+          "region": "nashville",
+          "direction": "down",
+          "beforeMilli": 7181,
+          "afterMilli": 6908,
+          "assumed": false
+        }
+      },
+      {
+        "day": 129,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_tn_cavalry_tennessee",
+          "faction": "confederate",
+          "region": "tn_rim_south",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 136,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_ar_cavalry_arkansas",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 136,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "state-forces.cs_ar_infantry_arkansas",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 139,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_arkansas.d136.2",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 148,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_georgia.d129",
+          "faction": "confederate",
+          "region": "harpers_ferry",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      }
+    ],
+    "removedBlockCrossings": [
+      {
+        "day": 140,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_arkansas.d137.2",
+          "faction": "confederate",
+          "region": "little_rock",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_1_brigade_4.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7800,
+          "afterMilli": 6800,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_2_brigade_1.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_5_brigade_1.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7750,
+          "afterMilli": 6750,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_5_brigade_1.2",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_5_brigade_2.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7500,
+          "afterMilli": 6500,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_maine.d87",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7800,
+          "afterMilli": 6800,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_massachusetts.d76",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7266,
+          "afterMilli": 6266,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7900,
+          "afterMilli": 6900,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.2",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7999,
+          "afterMilli": 6999,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.4",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.5",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7666,
+          "afterMilli": 6666,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.6",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7833,
+          "afterMilli": 6833,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.8",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d86",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 145,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d86.bundle.4",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_1_brigade_1.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_2_brigade_2.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_3_brigade_2.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7500,
+          "afterMilli": 6500,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_connecticut.d77",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_massachusetts.d76.bundle.2",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.10",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7900,
+          "afterMilli": 6900,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.3",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.7",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7450,
+          "afterMilli": 6450,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d67.bundle.9",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7950,
+          "afterMilli": 6950,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d86.bundle.2",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7333,
+          "afterMilli": 6333,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_new_york.d86.bundle.3",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7500,
+          "afterMilli": 6500,
+          "assumed": false
+        }
+      },
+      {
+        "day": 146,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "raised.st_gov_rhode_island.d79",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 147,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_1_brigade_2.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      },
+      {
+        "day": 147,
+        "event": "stores_crossed",
+        "crossing": {
+          "block": "organised.s74_mcdowell_division_1_brigade_3.1",
+          "faction": "union",
+          "region": "manassas",
+          "direction": "down",
+          "beforeMilli": 7000,
+          "afterMilli": 6000,
+          "assumed": false
+        }
+      }
+    ],
+    "cause": "S82 ruling 2 [I]: accepted S81 civil rail access removes the long stalled marches of S78; finite sourced contracts and actual strength ownership change the eligible eaters. All 13 events are real downward crossings of 7,000 milli-days. Unknown-strength blocks remain non-eaters. Civil railway movement permission does not grant supply tracing. No duplicate/missing crossing defect found in the retained transitions or focused stores driver."
+  },
+  "pockets": {
+    "closed": [
+      {
+        "day": 79,
+        "event": "pocket_closed",
+        "faction": "confederate",
+        "pocket": "pocket:confederate:little_rock",
+        "regions": [
+          "little_rock"
+        ],
+        "cut": {
+          "why": "not_traced",
+          "region": "ar_white_arkansas",
+          "edge": null,
+          "by": null
+        }
+      },
+      {
+        "day": 117,
+        "event": "pocket_closed",
+        "faction": "confederate",
+        "pocket": "pocket:confederate:raleigh",
+        "regions": [
+          "raleigh"
+        ],
+        "cut": {
+          "why": "not_traced",
+          "region": "cape_fear",
+          "edge": null,
+          "by": null
+        }
+      },
+      {
+        "day": 141,
+        "event": "pocket_closed",
+        "faction": "confederate",
+        "pocket": "pocket:confederate:lynchburg",
+        "regions": [
+          "lynchburg"
+        ],
+        "cut": {
+          "why": "not_traced",
+          "region": "cape_fear",
+          "edge": null,
+          "by": null
+        }
+      },
+      {
+        "day": 142,
+        "event": "pocket_closed",
+        "faction": "confederate",
+        "pocket": "pocket:confederate:charlottesville",
+        "regions": [
+          "charlottesville"
+        ],
+        "cut": {
+          "why": "not_traced",
+          "region": "cape_fear",
+          "edge": null,
+          "by": null
+        }
+      },
+      {
+        "day": 143,
+        "event": "pocket_closed",
+        "faction": "confederate",
+        "pocket": "pocket:confederate:charlottesville",
+        "regions": [
+          "culpeper_orange"
+        ],
+        "cut": {
+          "why": "not_traced",
+          "region": "cape_fear",
+          "edge": null,
+          "by": null
+        }
+      },
+      {
+        "day": 146,
+        "event": "pocket_closed",
+        "faction": "confederate",
+        "pocket": "pocket:confederate:charlottesville",
+        "regions": [
+          "charlottesville",
+          "culpeper_orange",
+          "loudoun_fauquier",
+          "lynchburg"
+        ],
+        "cut": {
+          "why": "not_traced",
+          "region": "cape_fear",
+          "edge": null,
+          "by": null
+        }
+      },
+      {
+        "day": 147,
+        "event": "pocket_closed",
+        "faction": "confederate",
+        "pocket": "pocket:confederate:charlottesville",
+        "regions": [
+          "harpers_ferry"
+        ],
+        "cut": {
+          "why": "not_traced",
+          "region": "cape_fear",
+          "edge": null,
+          "by": null
+        }
+      },
+      {
+        "day": 147,
+        "event": "pocket_closed",
+        "faction": "confederate",
+        "pocket": "pocket:confederate:nc_coastal_plain",
+        "regions": [
+          "nc_coastal_plain"
+        ],
+        "cut": {
+          "why": "not_traced",
+          "region": "cape_fear",
+          "edge": null,
+          "by": null
+        }
+      }
+    ],
+    "relieved": [
+      {
+        "day": 144,
+        "event": "pocket_relieved",
+        "faction": "confederate",
+        "pocket": "pocket:confederate:charlottesville",
+        "regions": [
+          "charlottesville",
+          "culpeper_orange",
+          "lynchburg"
+        ],
+        "cut": null
+      }
+    ],
+    "lost": [
+      {
+        "day": 39,
+        "event": "pocket_lost",
+        "faction": "union",
+        "pocket": "pocket:union:fort_sumter",
+        "regions": [
+          "fort_sumter"
+        ],
+        "cut": {
+          "why": "obstructed",
+          "region": null,
+          "edge": "sea:charleston_bar:fort_sumter",
+          "by": "charleston_harbour_forts"
+        }
+      }
+    ],
+    "cause": "S82 ruling 2 [I]: accepted rail journeys create traced isolated footholds when ordinary occupation crosses 250 permille: Little Rock day79, Raleigh117, Lynchburg141, Charlottesville142, Culpeper143, then the July29 loss of the Manassas supply route on day146, Harpers Ferry147 and NC coastal plain147. These are new cut regions, not duplicate reports; day144 relief is real while Manassas still traces for the Confederacy. Civil rail permission is not a supply entitlement. No pocket-diff defect found."
+  },
+  "drivers": [
+    "packages/kernel/test/stores.test.ts: a garrison cut off eats a day a day and crosses the low threshold; relief refills it",
+    "packages/kernel/test/map-tick.test.ts: then its opening",
+    "packages/kernel/test/believed-posts.test.ts: an order sent before the report arrives is accepted, and bounces on arrival as a returned dispatch, typed"
+  ]
+}

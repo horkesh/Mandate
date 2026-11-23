@@ -1,0 +1,531 @@
+[
+  {
+    "name": "anderson-date",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s82-anderson.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.666
+  },
+  {
+    "name": "anderson-final",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s82-anderson.test.ts",
+      "packages/kernel/test/post-succession.test.ts",
+      "packages/kernel/test/department-sides.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.605
+  },
+  {
+    "name": "anderson-generate-corrected",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 1.499
+  },
+  {
+    "name": "anderson-generate-final",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 1.547
+  },
+  {
+    "name": "anderson-generate-ready",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 1.791
+  },
+  {
+    "name": "anderson-generate-valid",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 1.83
+  },
+  {
+    "name": "anderson-generate",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 1.147
+  },
+  {
+    "name": "anderson-green-corrected",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s82-anderson.test.ts",
+      "packages/kernel/test/post-succession.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.809
+  },
+  {
+    "name": "anderson-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s82-anderson.test.ts",
+      "packages/kernel/test/post-succession.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.823
+  },
+  {
+    "name": "anderson-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s82-anderson.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.68
+  },
+  {
+    "name": "anderson-valid",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s82-anderson.test.ts",
+      "packages/kernel/test/post-succession.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.582
+  },
+  {
+    "name": "appointment-generate",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 1.837
+  },
+  {
+    "name": "appointment-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/northern-concentration.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 17.06
+  },
+  {
+    "name": "appointment-smoke",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s82/appointment-smoke.ts"
+    ],
+    "exit": 0,
+    "seconds": 6.523
+  },
+  {
+    "name": "boundary-corrected",
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.16
+  },
+  {
+    "name": "boundary-final",
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.23
+  },
+  {
+    "name": "boundary-ready",
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 1,
+    "seconds": 0.159
+  },
+  {
+    "name": "corrected-validator-band-table",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/post-holder-check.test.ts",
+      "packages/cli/test/liveness-gate.test.ts",
+      "--testNamePattern",
+      "validator|band table"
+    ],
+    "exit": 1,
+    "seconds": 1.465
+  },
+  {
+    "name": "decisions-final",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-decisions-index.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.155
+  },
+  {
+    "name": "full-suite",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s82/full-suite.json"
+    ],
+    "exit": 1,
+    "seconds": 161.342
+  },
+  {
+    "name": "licences-final",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-licences.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.155
+  },
+  {
+    "name": "pack-freshness",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 1.546
+  },
+  {
+    "name": "preflight-final",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/console-session.test.ts",
+      "packages/cli/test/post-holder-check.test.ts",
+      "packages/cli/test/liveness-gate.test.ts",
+      "packs/union-1861/test/northern-concentration.test.ts",
+      "packs/union-1861/test/s82-anderson.test.ts",
+      "packages/kernel/test/post-succession.test.ts",
+      "packages/kernel/test/map-derived.test.ts",
+      "--testNamePattern",
+      "R86|validator|band table|northern Virginia|S82|institutional succession|derived map"
+    ],
+    "exit": 0,
+    "seconds": 20.214
+  },
+  {
+    "name": "quiet-and-succession-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "tools/test/liveness-causes.test.ts",
+      "packages/kernel/test/post-succession.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 0.75
+  },
+  {
+    "name": "quiet-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "tools/test/liveness-causes.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.573
+  },
+  {
+    "name": "rules-anderson",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.297
+  },
+  {
+    "name": "rules-final-code",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.592
+  },
+  {
+    "name": "rules-final",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.439
+  },
+  {
+    "name": "rules-preflight",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.583
+  },
+  {
+    "name": "rules-ready",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.283
+  },
+  {
+    "name": "schema-freshness",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "schemas",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 0.591
+  },
+  {
+    "name": "source-inventory-correction",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/world-v2.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.933
+  },
+  {
+    "name": "source-policy-ready",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "tools/test/liveness-causes.test.ts",
+      "tools/test/projection-truth.test.ts",
+      "packages/pack-format/test/s52-source-guards.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packs/union-1861/test/s82-anderson.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.676
+  },
+  {
+    "name": "staged-history",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s82/stage-check.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.817
+  },
+  {
+    "name": "stores-pocket-drivers",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/stores.test.ts",
+      "packages/kernel/test/map-tick.test.ts",
+      "packages/kernel/test/governments.test.ts",
+      "packages/kernel/test/believed-posts.test.ts",
+      "packages/cli/test/planner.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 7.688
+  },
+  {
+    "name": "surname-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/post-holder-check.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.514
+  },
+  {
+    "name": "surname-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/post-holder-check.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.504
+  },
+  {
+    "name": "table-corrected",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/liveness-gate.test.ts",
+      "--testNamePattern",
+      "the band table"
+    ],
+    "exit": 0,
+    "seconds": 1.037
+  },
+  {
+    "name": "targeted-review-corrections",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/northern-concentration.test.ts",
+      "packs/union-1861/test/s82-anderson.test.ts",
+      "packages/cli/test/post-holder-check.test.ts",
+      "packages/cli/test/liveness-gate.test.ts",
+      "--testNamePattern",
+      "validator|band table|S82|northern Virginia"
+    ],
+    "exit": 1,
+    "seconds": 17.337
+  },
+  {
+    "name": "testbed-reference",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s82/references.ts",
+      "testbed"
+    ],
+    "exit": 0,
+    "seconds": 6.8
+  },
+  {
+    "name": "typecheck-final",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.971
+  },
+  {
+    "name": "typecheck-preflight",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.876
+  },
+  {
+    "name": "typecheck-ready",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.852
+  },
+  {
+    "name": "union-reference",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s82/references.ts",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 57.082
+  }
+]

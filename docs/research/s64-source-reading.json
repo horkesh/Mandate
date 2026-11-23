@@ -1,0 +1,411 @@
+{
+  "source": {
+    "title": "The War of the Rebellion, Series I, Volume II (1880)",
+    "url": "https://archive.org/details/warofrebellion02secrrich",
+    "pdf": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+    "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e"
+  },
+  "pageOffset": "zero-based PDF page index = printed page + 19; sampled headers checked",
+  "readTextPages": [
+    40,
+    161,
+    162,
+    163,
+    164,
+    165,
+    177,
+    178,
+    186,
+    187,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    468,
+    469,
+    470,
+    471,
+    472,
+    473,
+    535,
+    536,
+    537,
+    545,
+    558,
+    559,
+    565,
+    566,
+    567,
+    568,
+    569,
+    751,
+    754,
+    757,
+    824,
+    826,
+    827,
+    846,
+    847,
+    901,
+    902,
+    980,
+    981,
+    982
+  ],
+  "imageInspectedPages": [
+    187,
+    303,
+    309,
+    314,
+    315,
+    469,
+    470,
+    565,
+    751,
+    980
+  ],
+  "files": [
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p40.txt",
+      "printedPage": 40,
+      "sha256": "fe89f956b209ad14fc92dd568fccb5819aedc5316b80d3b6a839b5060d5d1fc2"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p161.txt",
+      "printedPage": 161,
+      "sha256": "f5afd814dc19685f7149f1b6a735749220d5c6c662d0c829558d7f031462d252"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p162.txt",
+      "printedPage": 162,
+      "sha256": "1f56e7fcd0afab58ebefa6dffdc8efe295768d98cc55c5df508af3f6eb6e7bda"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p163.txt",
+      "printedPage": 163,
+      "sha256": "244818028602980731761f049763c347d7658b48f7788049e6996a50c6f25e6b"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p164.txt",
+      "printedPage": 164,
+      "sha256": "7f3bf0935185e73c3046cb0546cf82a52f1f5736671271c84e83b2695017df59"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p165.txt",
+      "printedPage": 165,
+      "sha256": "496be0de5c6fc295f40869e94a57d78ff5938beab2ec6ae18ecfd5a90c1a2d09"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p177.txt",
+      "printedPage": 177,
+      "sha256": "1d350f20d79b8ba1e67ce74293b98f32d6a10f6a134128f4474cc567c7f1e60f"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p178.txt",
+      "printedPage": 178,
+      "sha256": "165965d7a01c8daf38e788b0f27f5bf4a293309154d0f24ea1fa0649e90ede9b"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p186.txt",
+      "printedPage": 186,
+      "sha256": "3530094a2004e53a3f6b1f663c070fbd631e3d15fe7a15ff0737003169495b99"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p187.txt",
+      "printedPage": 187,
+      "sha256": "97bcd9632d69e5c91a523548aebd5289130a2ae74e95d6a5c54d2a2e9c571783"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p302.txt",
+      "printedPage": 302,
+      "sha256": "b8260118f6cfa9a7f9f73b8e78791cc1353ad5517211896d685c3f5e21bc3692"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p303.txt",
+      "printedPage": 303,
+      "sha256": "eb781ffd6156ad9579619a4c072103b69c5ac1a5d9b1183fbf25d2400abe2250"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p304.txt",
+      "printedPage": 304,
+      "sha256": "43a6037b25e41b9787c0817c9b807c2f1a2b9a4be6a4e3d5d374241f5ca4b59e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p305.txt",
+      "printedPage": 305,
+      "sha256": "9a69b6620de754f8fe27ba9a2ceb23c3ebd7bd0c7bcb753023e8dae60ec3d4b5"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p306.txt",
+      "printedPage": 306,
+      "sha256": "383d626f18cd07b98c603b7a264c7b9b78a96ba1b5690ea79cfa6b8f542ef9d3"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p307.txt",
+      "printedPage": 307,
+      "sha256": "50d95b299239b5772c17391e36000b6da4399797617d9fa7ffeae9186db7a8e3"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p308.txt",
+      "printedPage": 308,
+      "sha256": "8b9e3ff731605f3615654ed3f41e37c73e59e2470b8da50383847f61db1c1ef5"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p309.txt",
+      "printedPage": 309,
+      "sha256": "58da5805d57c68cec04fb29a412f64457f3e49e8d15b654bf92f5fefaf75ef56"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p310.txt",
+      "printedPage": 310,
+      "sha256": "17634c34612d3af264117b09710a51ce33762944f5e7218f114144acc7997db3"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p311.txt",
+      "printedPage": 311,
+      "sha256": "33853461cf0279474a173276e2a20e08e1ef9ceaf663d9f6c5b6da84453a2bce"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p312.txt",
+      "printedPage": 312,
+      "sha256": "2a7421cf63e50370d545440464b8a96c65f0ac43040881175da7af0fc58e1996"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p313.txt",
+      "printedPage": 313,
+      "sha256": "5884294b081bbe5fbd84f37b77797e439ee1cde23d39219ca32bb40eaa4d6700"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p314.txt",
+      "printedPage": 314,
+      "sha256": "7b08e050fcc6ca0a86cb69bdb9398e6dc81f5ad781a9bdf364e17f726fa0427c"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p315.txt",
+      "printedPage": 315,
+      "sha256": "2f5a1683da5bdf2cd2248d2888d13cb5d9e6b00ea7d1c1e52ff7d664d4446414"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p316.txt",
+      "printedPage": 316,
+      "sha256": "ca9fc558c472c8f617e237052f3329847693e86c92ae94359f9260674817815c"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p317.txt",
+      "printedPage": 317,
+      "sha256": "7b19dec98ee533d7722fb0d611879450cb755acadaba27b43f7bfcab37a965f8"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p468.txt",
+      "printedPage": 468,
+      "sha256": "800dfc02d40fc9fd95862a7aaf0636249635e5980917e5bf8234d8871df073f6"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p469.txt",
+      "printedPage": 469,
+      "sha256": "68e90ce86a67c510e9cd1f4b2b7782bae4e38cc569c08d474d0e9da60aa5a614"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p470.txt",
+      "printedPage": 470,
+      "sha256": "2f6cc4f4bb581073f9c2ac573add5353b9c31657b81871fdc9d48aace0b8548c"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p471.txt",
+      "printedPage": 471,
+      "sha256": "a6cfd41bcaf5c9ec79bd103b432d254bb04a615d4bc72bfad06cd20ac1af5a61"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p472.txt",
+      "printedPage": 472,
+      "sha256": "376533e18e8aa740b0e3663ffb5df4e30adc42fadba8ee692a7805ecc96bf557"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p473.txt",
+      "printedPage": 473,
+      "sha256": "cb9c84c3d5b6389936f7bfca161f8e10eb6dea2274d66674dc2724a433e88476"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p535.txt",
+      "printedPage": 535,
+      "sha256": "c1147bc6a45550d5bbd39e4c46e6c063b3e800a962c8cd147e822c4b4d159110"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p536.txt",
+      "printedPage": 536,
+      "sha256": "c0ef9e6962a0959bdf5bc25d2f9221e22560bcea58d6b37ca91eb30bd483c576"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p537.txt",
+      "printedPage": 537,
+      "sha256": "ac8acfae1c17e24ff8c44f13059bec25819484e6fd4519581e1865e6a55262e6"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p545.txt",
+      "printedPage": 545,
+      "sha256": "0ccacf29b58b499adf121a2e2a9734f957cb95908c0adba5a5e84e1726c6d862"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p558.txt",
+      "printedPage": 558,
+      "sha256": "e48276fefa18f303084efe9449cd9f52d149e0a4c43e790d8399728fd7936da5"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p559.txt",
+      "printedPage": 559,
+      "sha256": "6cd01497725cec5292309c440e146ce0b42f915021bf0bff4b4c5ee57d3e84ae"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p565.txt",
+      "printedPage": 565,
+      "sha256": "91204e29e67f5fef5118eb3af9899603a0aa40bb031ecc1758fe79dcdd3ce5f6"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p566.txt",
+      "printedPage": 566,
+      "sha256": "85ef78fe7880905672af09a45fa64aa583a7d997cf3eec8db8bd05cd93f60035"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p567.txt",
+      "printedPage": 567,
+      "sha256": "b4db4b12c5c5544286972c44d548305a4aaea08936ae8f4610df97e48f807ebd"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p568.txt",
+      "printedPage": 568,
+      "sha256": "c8bd554b55d4a1850f7b12351af589735dc705e31a0533f92036cbddfe6a8f61"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p569.txt",
+      "printedPage": 569,
+      "sha256": "3536331a6e46fc9d3efdd0d650b108f91b1f7b9af73bfcd0578239b74ee8246a"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p751.txt",
+      "printedPage": 751,
+      "sha256": "08bd2436b72de9bf4fa3b109bfd965f2cb93c547a20a3ddec85b839ac7c8ab91"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p754.txt",
+      "printedPage": 754,
+      "sha256": "f7030495bc024719db86889805d475c5397b8b586d0db95db268f451c162d97e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p757.txt",
+      "printedPage": 757,
+      "sha256": "879455e7f2c6d3979f27bc0ed52e36d30a3f46377fe6595c063214621b200360"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p824.txt",
+      "printedPage": 824,
+      "sha256": "9e6dc7ad92b6ffb10a429e221397227d3289f8a481ab1b271136a5fcc224824d"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p826.txt",
+      "printedPage": 826,
+      "sha256": "4f7e4e2677108fac9cd23af02d35aca261428579b6c43886e130a1641bfdf8d3"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p827.txt",
+      "printedPage": 827,
+      "sha256": "6ba33635abc8957e1ffa41cc8444fdc11ffd5fbcddc34c856f4fa9154ac1fe1b"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p846.txt",
+      "printedPage": 846,
+      "sha256": "3252292ae9e2b71a6a1cd1b4f79c345ddcde3821d5523e123e4ddfb85678ac0c"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p847.txt",
+      "printedPage": 847,
+      "sha256": "be4e370c5a24d52853b826d051e4aafe7ebc8ba4eade29a7ffec25c3e4e5635e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p901.txt",
+      "printedPage": 901,
+      "sha256": "d52419d2654c33e2b67ddc0a0904dfccebd1e8eb4c207dc3eca020a069409bf7"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p902.txt",
+      "printedPage": 902,
+      "sha256": "362640481717eba6574c4ef6548c875dc9d9c5ea06c4f42fdf89febc43e6ee15"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p980.txt",
+      "printedPage": 980,
+      "sha256": "e107a6f54c9657b31ea3e6200c42cad41aeacfcb93b5539703b367f8292c275b"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p981.txt",
+      "printedPage": 981,
+      "sha256": "f384cf1a356e1a5b3a765c8135960e05a5bab37c96d72e47c6862ed56b094617"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p982.txt",
+      "printedPage": 982,
+      "sha256": "3700880aaa3f15b46b53f309f6dbbc01254dccb1641c117e9d0e3af3cce4285f"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p187.png",
+      "printedPage": 187,
+      "sha256": "9f90e5a121c02d4d06b7ce933f6adeba9cb0d879258c7978179a414518ede80c"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p303.png",
+      "printedPage": 303,
+      "sha256": "b71c4c9ecc4844ef52ab9c3f868a41c1970c0522eda434d340d72e062c68e6c4"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p309.png",
+      "printedPage": 309,
+      "sha256": "7852377756ed3992e26ffa58b6a274283ba9a7d5efd68bc2cf5bb15f2defc58e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p314.png",
+      "printedPage": 314,
+      "sha256": "1f62e6916cd5f8251a30c6195ccf43a725603d93c7f2fd288637b767d4d76d7e"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p315.png",
+      "printedPage": 315,
+      "sha256": "4c9e13c8918b9612d085538175e435b2f293b0a0717cdcac4036db5d1d3acf75"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p469.png",
+      "printedPage": 469,
+      "sha256": "01dd14e50b2e7a2bf1dcb304a185d9705f62efebdb77edd3b8b6d61e026fd61a"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p470.png",
+      "printedPage": 470,
+      "sha256": "7d71b4b28699a8ed92e5341734f5ebee752d69f0f95fa4ecf6f4c70139a3f28a"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p565.png",
+      "printedPage": 565,
+      "sha256": "c6a6a616b66c214e2396f2773f8b6ead07cb9439ce67c6c1dee70458e945d291"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p751.png",
+      "printedPage": 751,
+      "sha256": "66961879b61dae2341295a656ee50a0da4e135ecfc25c8b6164bd9e98bd48674"
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S64\\OR-I-2-p980.png",
+      "printedPage": 980,
+      "sha256": "3a69ad26b4d3f128f3634e6b353814cf21237f7df5341fe135ea72248727d589"
+    }
+  ]
+}

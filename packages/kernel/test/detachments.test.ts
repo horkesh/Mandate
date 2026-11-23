@@ -1,3 +1,5 @@
+import { patchBlock, observeBlock } from './support/lot-fixture.ts';
+import { forceTotals } from '../src/forces/lots.ts';
 import { describe, expect, it } from 'vitest';
 import { combatDay } from '../src/combat/battle.ts';
 import { buildControlIndex } from '../src/control-index/control-index.ts';
@@ -48,7 +50,7 @@ function game(blocks: Parameters<typeof forcesStart>[2]) {
 const men = (s: State, roots: readonly string[]) =>
   (Object.keys(s.forceBlockStates) as ForceBlockId[])
     .filter((id) => roots.includes(id) || roots.includes(s.forceBlockStates[id]!.fbParent ?? ''))
-    .reduce((a, id) => a + (s.forceBlockStates[id]!.fbStrength ?? 0) + s.forceBlockStates[id]!.fbStragglers, 0);
+    .reduce((a, id) => a + (forceTotals(s.forceBlockStates[id]!).fbStrength ?? 0) + forceTotals(s.forceBlockStates[id]!).fbStragglers, 0);
 
 const SHIP = [block('a_ship', { department: 'a_war', region: 'w', arm: 'naval', strength: 300, post: P('a_navy') }), block('a_troops', { department: 'a_war', region: 'w', aboard: B('a_ship'), strength: 600, storesDays: 10, post: P('a_army') })];
 
@@ -59,8 +61,8 @@ describe('a landing: men go ashore from a ship as a detachment (lane 1.4b)', () 
     expect(r.refused).toEqual([]);
     const id = r.made[0]!;
     expect(id).toBe('a_troops.det.5');
-    expect(r.state.forceBlockStates[id]).toMatchObject({ fbKind: 'detachment', fbParent: 'a_troops', fbStrength: 450, fbDepartment: 'a_war' });
-    expect(r.state.forceBlockStates[B('a_troops')]!.fbStrength).toBe(150);
+    expect(observeBlock(r.state.forceBlockStates[id]!)).toMatchObject({ fbKind: 'detachment', fbParent: 'a_troops', fbStrength: 450, fbDepartment: 'a_war' });
+    expect(forceTotals(r.state.forceBlockStates[B('a_troops')]!).fbStrength).toBe(150);
     expect(r.state.forceLocations[id]).toEqual({ locRegion: 'b2', locAboard: null, locSinceDay: 5, locMarch: null });
     expect(r.state.forceLocations[B('a_troops')]!.locAboard).toBe('a_ship');
     expect(r.state.forceAssignments[id]).toBe('a_army');
@@ -93,7 +95,7 @@ describe('a landing: men go ashore from a ship as a detachment (lane 1.4b)', () 
     const log = op.opAxes[0]!.oaxLog.map((e) => `${e.axevStage}:${e.axevReason}`);
     expect(log).toContain('march:landed');
     const landed = op.opAxes[0]!.oaxBlocks[0]!;
-    expect(state.forceBlockStates[landed]).toMatchObject({ fbKind: 'detachment', fbParent: 'a_troops', fbStrength: 600 });
+    expect(observeBlock(state.forceBlockStates[landed]!)).toMatchObject({ fbKind: 'detachment', fbParent: 'a_troops', fbStrength: 600 });
     expect(state.forceLocations[landed]!.locRegion).toBe('b2');
     // The carrier sailed: it left w0 on a leg and stands beside the objective, and the landing was counted.
     expect(state.forceLocations[B('a_ship')]!.locRegion).toBe('w');
@@ -154,7 +156,7 @@ describe('a transfer never hands over an empty shell, nor a force standing elsew
     const op = Object.values(state.operationRecords)[0]!;
     const landing = op.opAxes[0]!.oaxBlocks[0]!;
     // The parent is an emptied shell aboard; its landing stands ashore at b2 under the same post.
-    expect(state.forceBlockStates[B('a_troops')]!.fbStrength).toBe(0);
+    expect(forceTotals(state.forceBlockStates[B('a_troops')]!).fbStrength).toBe(0);
     expect(state.forceAssignments[landing]).toBe(P('a_army'));
     for (const force of [{ force: 'blocks' as const, count: 1 }, { force: 'men' as const, men: 500 }]) {
       const r = transferForce(g.world.map, state, P('a_army'), P('a_navy'), force, 'weakest_first');
@@ -212,16 +214,16 @@ describe('a garrison: detached where its parent stands, rejoined, or left to sta
     const out = applyDetachmentProposals(MAP, g.state, [{ kind: 'garrison', parent: B('a_1'), men: 1200, post: null, cause: 'command' }], 3);
     const id = out.made[0]!;
     expect(out.state.forceLocations[id]).toEqual({ locRegion: 'a2', locAboard: null, locSinceDay: 0, locMarch: null });
-    expect([out.state.forceBlockStates[B('a_1')]!.fbStrength, out.state.forceBlockStates[id]!.fbStrength]).toEqual([3800, 1200]);
+    expect([forceTotals(out.state.forceBlockStates[B('a_1')]!).fbStrength, forceTotals(out.state.forceBlockStates[id]!).fbStrength]).toEqual([3800, 1200]);
     expect(men(out.state, ['a_1'])).toBe(5000);
     // A garrison's stragglers come home with it.
-    const straggling = { ...out.state, forceBlockStates: { ...out.state.forceBlockStates, [id]: { ...out.state.forceBlockStates[id]!, fbStrength: 1100, fbStragglers: 100 } } };
+    const straggling = { ...out.state, forceBlockStates: { ...out.state.forceBlockStates, [id]: patchBlock({ ...out.state.forceBlockStates[id]! }, { fbStrength: 1100, fbStragglers: 100 }) } };
     const back = applyDetachmentProposals(MAP, straggling, [{ kind: 'rejoin', detachment: id, cause: 'command' }], 9);
     expect(back.rejoined).toEqual([id]);
     expect(back.state.forceBlockStates[id]).toBeUndefined();
     expect(back.state.forceLocations[id]).toBeUndefined();
     expect(back.state.forceAssignments[id]).toBeUndefined();
-    expect(back.state.forceBlockStates[B('a_1')]).toMatchObject({ fbStrength: 4900, fbStragglers: 100, fbStoresMilli: 10000 });
+    expect(observeBlock(back.state.forceBlockStates[B('a_1')]!)).toMatchObject({ fbStrength: 4900, fbStragglers: 100, fbStoresMilli: 10000 });
     expect(men(back.state, ['a_1'])).toBe(5000);
   });
 
@@ -235,7 +237,7 @@ describe('a garrison: detached where its parent stands, rejoined, or left to sta
     // A refusal changes nothing: the State is the very one given (lane 1.4c).
     expect(refused.state).toBe(apart);
     const alone = applyDetachmentProposals(MAP, apart, [{ kind: 'stand_alone', detachment: id, cause: 'command' }], 4);
-    expect(alone.state.forceBlockStates[id]).toMatchObject({ fbKind: 'block', fbParent: null, fbStrength: 1000 });
+    expect(observeBlock(alone.state.forceBlockStates[id]!)).toMatchObject({ fbKind: 'block', fbParent: null, fbStrength: 1000 });
     expect(alone.state.forceAssignments[id]).toBe('a_army');
   });
 
@@ -248,7 +250,7 @@ describe('a garrison: detached where its parent stands, rejoined, or left to sta
     const set = { ...out.state, forceBlockStates: { ...blocks, [B('a_1')]: { ...blocks[B('a_1')]!, fbMorale: 800, fbExperience: 300, fbEquipment: 600 }, [id]: { ...blocks[id]!, fbMorale: 300, fbExperience: 800, fbEquipment: 100 } } };
     const back = applyDetachmentProposals(MAP, set, [{ kind: 'rejoin', detachment: id, cause: 'command' }], 4);
     // (4000 * 800 + 1000 * 300) / 5000 = 700; (4000 * 300 + 1000 * 800) / 5000 = 400; (4000 * 600 + 1000 * 100) / 5000 = 500.
-    expect(back.state.forceBlockStates[B('a_1')]).toMatchObject({ fbStrength: 5000, fbMorale: 700, fbExperience: 400, fbEquipment: 500 });
+    expect(observeBlock(back.state.forceBlockStates[B('a_1')]!)).toMatchObject({ fbStrength: 5000, fbMorale: 700, fbExperience: 400, fbEquipment: 500 });
   });
 
   it('refuses a garrison from a block not standing on land, and one no post commands, each with its own reason, changing nothing (lane 1.4c)', () => {

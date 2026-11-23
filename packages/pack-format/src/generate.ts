@@ -57,6 +57,8 @@ import {
   type StringTable,
   StringTableSchema,
   WorldSchema,
+  RegimentCatalogueSchema,
+  OrganisationTemplatesSchema,
 } from './schemas.ts';
 import { readSituationLayer } from './situation-layer.ts';
 import { locateInData, type Locate, type PackData, validatePack, walkStrings, type Where } from './validate.ts';
@@ -390,7 +392,9 @@ export function generatePack(files: PackFiles): GenerateResult {
     return sorted.map((it) => it.rec);
   }
   const wt = (key: keyof typeof WORLD_TABLES) => readTable(files, `source/world/${WORLD_TABLES[key].file}`, WORLD_TABLES[key], sink);
-  unknownEntries(files, 'source/world', Object.values(WORLD_TABLES).map((t) => t.file), sink);
+  unknownEntries(files, 'source/world', [...Object.values(WORLD_TABLES).map((t) => t.file), 'regiments.json', 'organisations.json'], sink);
+  const organisationTemplates = readJson(files, 'source/world/organisations.json', OrganisationTemplatesSchema, sink, false);
+  const regimentCatalogue = readJson(files, 'source/world/regiments.json', RegimentCatalogueSchema, sink, false);
   for (const name of files.files('source/scenarios')) sink.error('unknown-table', `source/scenarios/${name}`, '', 'scenario tables live in a folder per scenario', 'source/scenarios/<id>/');
 
   // ---- World tables
@@ -542,8 +546,9 @@ export function generatePack(files: PackFiles): GenerateResult {
         id: r.id_('id'),
         name: names.add(`person.${r.id}.name`, r.text('name')),
         invented: r.bool('invented'),
+        ...(r.raw('requires_introduction')===''?{}:{requiresIntroduction:r.bool('requires_introduction')}),
         faction: r.optionalId('faction', 'faction'),
-        kind: r.text('kind'),
+        kind: r.raw('kind')==='unknown' ? (r.unknowns.push('kind'),'unknown_kind') : r.text('kind'),
         born: r.optionalDate('born', 'born'),
         died: r.optionalDate('died', 'died'),
         centres: { competence: centre('competence'), nerve: centre('nerve'), experience: centre('experience'), reputation: centre('reputation') },
@@ -560,6 +565,7 @@ export function generatePack(files: PackFiles): GenerateResult {
           cites: cites(r, 'resignation_cites'),
         } }),
         ...(r.raw('bloc_cites').trim() === '' ? {} : { blocCites: cites(r, 'bloc_cites') }),
+        ...(r.raw('rank_schedule')===''?{}:{rankSchedule:r.bool('rank_schedule')}),
         ranks: r.cell('ranks', parseRanks(r.raw('ranks')), []),
         unknowns: [] as string[],
         provenance: cites(r),
@@ -862,6 +868,8 @@ export function generatePack(files: PackFiles): GenerateResult {
   }
   const WS = WorldSchema.shape;
   const world: w.World = {
+    ...(organisationTemplates === null ? {} : { organisationTemplates }),
+    ...(regimentCatalogue === null ? {} : { regimentCatalogue }),
     formatVersion: w.WORLD_FORMAT_VERSION,
     pack: manifest.id,
     rules: manifest.rules,

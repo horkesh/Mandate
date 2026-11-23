@@ -14,6 +14,8 @@ export interface RaisingRung {
 }
 
 export interface RecruitmentRules {
+  /** Model planning size [I], never a historical norm. At most four regiments. */
+  readonly planningRegiments?: number;
   /** How a governor reads a call: its boldness and the values it honours and offends (pack data). */
   readonly callTerms: { readonly boldness: number; readonly honours: readonly string[]; readonly offends: readonly string[] };
   /** The post kinds whose holders answer a call (a governor's). A post of a self-governing department never does (SENSITIVE-HISTORY 3.7). */

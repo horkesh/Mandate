@@ -1,3 +1,4 @@
+import { forceTotals, type ForceTotalsCache } from '../forces/lots.ts';
 /**
  * The derived self-emancipation term (0046; SENSITIVE-HISTORY 3.2; lane 1.7). Pure: it reads State and the World and
  * writes nothing. It is never a lever: no seat, verb, option or situation sets, reads as a stock, spends or prevents it.
@@ -59,11 +60,11 @@ function flagsSet<T extends { readonly flag: string; readonly permille: number }
 }
 
 /** Regions with the lines' force present: unknown strengths and surrendered blocks do not count. Derived for one call only. */
-function linesForceRegions(state: State, lines: FactionId): ReadonlySet<RegionId> {
+function linesForceRegions(state: State, lines: FactionId, cache?: ForceTotalsCache): ReadonlySet<RegionId> {
   const regions = new Set<RegionId>();
   for (const b of Object.keys(state.forceLocations) as (keyof typeof state.forceLocations)[]) {
     const block = state.forceBlockStates[b];
-    if (block === undefined || block.fbSurrenderedDay !== null || (block.fbStrength ?? 0) <= 0) continue;
+    if (block === undefined || block.fbSurrenderedDay !== null || (forceTotals(block, cache).fbStrength ?? 0) <= 0) continue;
     if (state.departmentFactions[block.fbDepartment] === lines) regions.add(state.forceLocations[b]!.locRegion);
   }
   return regions;
@@ -102,7 +103,7 @@ export function selfEmancipationTerms(map: WorldIndex, state: State, rules: Self
   // Adjacent census regions often ask about the same force locations. Enumerate
   // them at most once, and only if an eligible census region needs the lookup.
   let forceRegions: ReadonlySet<RegionId> | undefined;
-  const forceIn = (region: RegionId): boolean => (forceRegions ??= linesForceRegions(state, lines)).has(region);
+  const forceIn = (region: RegionId): boolean => (forceRegions ??= linesForceRegions(state, lines, map.forceTotalsCache)).has(region);
   const out: SelfEmancipationTerm[] = [];
   for (const c of [...map.world.census].sort((a, b) => strictCompare(a.region, b.region))) {
     if (c.enslavedPopulation <= 0 || protectedHere.has(c.region)) continue;

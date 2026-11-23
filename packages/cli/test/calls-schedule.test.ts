@@ -1,3 +1,5 @@
+import { enlistmentsOf } from '../../kernel/src/forces/enlistment.ts';
+import { forceTotals } from '../../kernel/src/forces/lots.ts';
 import { ids, phase0, world as w } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
 import { seatsWorld } from '../src/seats-world.ts';
@@ -13,7 +15,7 @@ describe('dated public wires and exact troop quotas', () => {
     }
     expect(Object.values(state.orderResponses).some(r=>r.respCallId==='ready' && r.respRole==='addressee')).toBe(true);
     expect(Object.values(state.postLevies)).toHaveLength(0);
-    expect(Object.values(state.forceEnlistments)).toHaveLength(0);
+    expect(Object.values(enlistmentsOf(state))).toHaveLength(0);
   });
   it('delivers a public wire on its documented dates without assigning military control', () => {
     const { world, setup } = seatsWorld('testbed');
@@ -38,10 +40,10 @@ describe('dated public wires and exact troop quotas', () => {
       state=result.state;
     }
     const response=Object.values(state.orderResponses).find(r=>r.respCallId==='small_quota' && r.respRole==='addressee');
-    const enlisted=Object.entries(state.forceEnlistments).find(([,e])=>e.enlCall===response?.respOrder);
+    const enlisted=Object.entries(enlistmentsOf(state)).find(([,e])=>e.enlCall===response?.respOrder);
     expect(enlisted).toBeDefined();
     expect(enlisted![1].enlEndsDay).toBeNull();
-    expect(state.forceBlockStates[id('forceBlock',enlisted![0])]!.fbStrength).toBe(men);
+    expect(forceTotals(state.forceBlockStates[id('forceBlock',enlisted![0])]!).fbStrength).toBe(men);
     expect(state.forceBlockStates[id('forceBlock',enlisted![0])]!.fbArm).toBe('cavalry');
     expect(state.forceAssignments[id('forceBlock',enlisted![0])]).toBe(governor);
     expect(state.forceLocations[id('forceBlock',enlisted![0])]!.locRegion).toBe(state.postStates[governor]!.postSeat);

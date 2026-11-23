@@ -1,0 +1,32 @@
+[
+  {
+    "path": "packages/kernel/test/one-writer.test.ts",
+    "status": "passed",
+    "assertions": 44
+  },
+  {
+    "path": "packages/kernel/test/s51-reaffirmation.test.ts",
+    "status": "passed",
+    "assertions": 18
+  },
+  {
+    "path": "packages/kernel/test/s52-advance-notice.test.ts",
+    "status": "passed",
+    "assertions": 1
+  },
+  {
+    "path": "packages/kernel/test/s65-sender-belief.test.ts",
+    "status": "passed",
+    "assertions": 19
+  },
+  {
+    "path": "packs/union-1861/test/s35-scoring.test.ts",
+    "status": "passed",
+    "assertions": 2
+  },
+  {
+    "path": "packs/union-1861/test/s64-command-inclusion.test.ts",
+    "status": "passed",
+    "assertions": 4
+  }
+]

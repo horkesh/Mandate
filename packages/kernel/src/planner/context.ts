@@ -86,9 +86,18 @@ export function enemyHeld(index: ControlIndex, region: RegionId, faction: Factio
 }
 
 /** A post's blocks (garrison detachments stay home), or the committed ones, in (strength desc, id) order. */
-export function blocksOf(input: PlannerInput, post: PostId, committed: readonly ForceBlockId[] = []): PlannerForce[] {
+export function blocksOf(input: Pick<PlannerInput,'forces'|'posts'> & {readonly ground:Pick<PlannerInput['ground'],'map'>}, post: PostId, committed: readonly ForceBlockId[] = []): PlannerForce[] {
+  const templates=input.ground.map.world.organisationTemplates??[];
+  const formations=new Set(templates.flatMap(t=>t.posts.map(p=>p.id)));
+  const under=(id:PostId):boolean=>{
+    if(id===post)return true;
+    if(!templates.some(t=>t.army===post)&&!formations.has(post))return false;
+    const seen=new Set<PostId>();
+    while(formations.has(id)&&!seen.has(id)){seen.add(id);const parent=input.posts.find(p=>p.id===id)?.parent;if(parent==null)return false;if(parent===post)return true;id=parent;}
+    return false;
+  };
   return input.forces
-    .filter((b) => b.post === post && (committed.length === 0 ? b.kind === 'block' : committed.includes(b.id)))
+    .filter((b) => under(b.post) && (committed.length === 0 ? b.kind === 'block' : committed.includes(b.id)))
     .sort((a, b) => b.strength - a.strength || strictCompare(a.id, b.id));
 }
 

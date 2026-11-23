@@ -1,0 +1,1494 @@
+{
+  "firstHashDifference": {
+    "day": 87,
+    "s52": "b9ef914f96a39d86c219bcb083896cb32ed1b9849b2fde65dc774e158c3d8c1b",
+    "s64": "ad1437e2f622bb26d6ab58c928483cdae57992335be57a91df8f16a27919b089"
+  },
+  "sameInitialHash": true,
+  "addedCommands": [
+    {
+      "day": 87,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_va_harpers_ferry",
+        "to": "cs_cmd_harpers_ferry",
+        "force": "blocks",
+        "amount": 999,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 98,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_va_potomac",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 107,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_manassas",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 114,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_manassas",
+        "subject": null,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 117,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_louisiana",
+        "regiments": 3,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_louisiana"
+      }
+    },
+    {
+      "day": 135,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "inquire",
+        "to": "cs_cmd_manassas",
+        "subject": null,
+        "route": "courier"
+      }
+    }
+  ],
+  "removedCommands": [
+    {
+      "day": 87,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "cs_cmd_charleston",
+        "to": "cs_cmd_harpers_ferry",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 87,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_new_york",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 87,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_wisconsin",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 87,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "us_dc_militia",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 88,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_illinois",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 88,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_maine",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 91,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 94,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "cs_cmd_charleston",
+        "to": "cs_cmd_harpers_ferry",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 94,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "tr_gov_nebraska",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 98,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 104,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_indiana",
+        "to": "us_dept_northeastern_virginia",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 105,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 112,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 115,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_north_carolina",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "courier"
+      }
+    },
+    {
+      "day": 119,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "call",
+        "to": "st_gov_louisiana",
+        "regiments": 3,
+        "termDays": null,
+        "route": "wire",
+        "bypass": false,
+        "men": 3000,
+        "callId": "cs_jun30_reserve_louisiana"
+      }
+    },
+    {
+      "day": 120,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_tennessee",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 126,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 128,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_georgia",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 131,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_alabama",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 133,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_arkansas",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 133,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "order",
+        "to": "us_dept_northeastern_virginia",
+        "goal": {
+          "objective": "manassas",
+          "posture": "take",
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "committed": [],
+          "awaitWord": false,
+          "approveAsDrafted": true
+        },
+        "route": "wire",
+        "bypass": false
+      }
+    },
+    {
+      "day": 133,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 136,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "order",
+        "to": "us_dept_northeastern_virginia",
+        "goal": {
+          "objective": "manassas",
+          "posture": "take",
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "committed": [],
+          "awaitWord": false,
+          "approveAsDrafted": true
+        },
+        "route": "wire",
+        "bypass": true
+      }
+    },
+    {
+      "day": 137,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_mississippi",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 137,
+      "seat": "seat:mcdowell_irvin",
+      "command": {
+        "cmd": "choose",
+        "request": "plan:us_dept_northeastern_virginia:137",
+        "option": "direct:least_cost:northern_virginia>manassas"
+      }
+    },
+    {
+      "day": 140,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_south_carolina",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 140,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 141,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "transfer",
+        "from": "st_gov_arkansas",
+        "to": "cs_cmd_manassas",
+        "force": "blocks",
+        "amount": 999,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 143,
+      "seat": "seat:cocke_philip_st_george",
+      "command": {
+        "cmd": "battle",
+        "post": "st_va_potomac",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 143,
+      "seat": "seat:mcdowell_irvin",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_northeastern_virginia",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 144,
+      "seat": "seat:beauregard_pierre_g_t",
+      "command": {
+        "cmd": "battle",
+        "post": "cs_cmd_manassas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 144,
+      "seat": "seat:mcdowell_irvin",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_northeastern_virginia",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 145,
+      "seat": "seat:beauregard_pierre_g_t",
+      "command": {
+        "cmd": "battle",
+        "post": "cs_cmd_manassas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 145,
+      "seat": "seat:mcdowell_irvin",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_northeastern_virginia",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 146,
+      "seat": "seat:beauregard_pierre_g_t",
+      "command": {
+        "cmd": "battle",
+        "post": "cs_cmd_manassas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 146,
+      "seat": "seat:mcdowell_irvin",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_northeastern_virginia",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 147,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "order",
+        "to": "cs_cmd_harpers_ferry",
+        "goal": {
+          "objective": "manassas",
+          "posture": "take",
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "committed": [],
+          "awaitWord": false,
+          "approveAsDrafted": true
+        },
+        "route": "courier",
+        "bypass": false
+      }
+    },
+    {
+      "day": 147,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "inquire",
+        "to": "us_dept_northeastern_virginia",
+        "subject": null,
+        "route": "wire"
+      }
+    },
+    {
+      "day": 148,
+      "seat": "seat:beauregard_pierre_g_t",
+      "command": {
+        "cmd": "battle",
+        "post": "cs_cmd_manassas",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    },
+    {
+      "day": 148,
+      "seat": "seat:mcdowell_irvin",
+      "command": {
+        "cmd": "battle",
+        "post": "us_dept_northeastern_virginia",
+        "commit": "judge",
+        "night": "judge",
+        "cutOff": "judge",
+        "pursue": "judge"
+      }
+    }
+  ],
+  "s52JulyOrderResponses": {
+    "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia|cameron_simon": {
+      "respActual": "slow_walk",
+      "respConditions": [],
+      "respDay": 133,
+      "respDeclared": "comply",
+      "respKind": "goal",
+      "respOrder": "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respReasons": [],
+      "respRole": "relay",
+      "respStated": [],
+      "respTerms": [
+        {
+          "respTermAmount": 0,
+          "respTermName": "values"
+        },
+        {
+          "respTermAmount": -66,
+          "respTermName": "temperament"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "regard"
+        },
+        {
+          "respTermAmount": 50,
+          "respTermName": "deterrence"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "capacity"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "disposition"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "grievances"
+        }
+      ],
+      "respWillingness": -16
+    },
+    "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia|scott_winfield": {
+      "respActual": "object",
+      "respConditions": [],
+      "respDay": 135,
+      "respDeclared": "object",
+      "respKind": "goal",
+      "respOrder": "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+      "respPerson": "scott_winfield",
+      "respPost": "us_general_in_chief",
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respRole": "relay",
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respTerms": [
+        {
+          "respTermAmount": -200,
+          "respTermName": "values"
+        },
+        {
+          "respTermAmount": -80,
+          "respTermName": "temperament"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "regard"
+        },
+        {
+          "respTermAmount": 34,
+          "respTermName": "deterrence"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "capacity"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "disposition"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "grievances"
+        }
+      ],
+      "respWillingness": -246
+    },
+    "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia|mcdowell_irvin": {
+      "respActual": "object",
+      "respConditions": [],
+      "respDay": 136,
+      "respDeclared": "object",
+      "respKind": "goal",
+      "respOrder": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+      "respPerson": "mcdowell_irvin",
+      "respPost": "us_dept_northeastern_virginia",
+      "respReasons": [],
+      "respRole": "addressee",
+      "respStated": [],
+      "respTerms": [
+        {
+          "respTermAmount": 0,
+          "respTermName": "values"
+        },
+        {
+          "respTermAmount": -63,
+          "respTermName": "temperament"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "regard"
+        },
+        {
+          "respTermAmount": 58,
+          "respTermName": "deterrence"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "capacity"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "disposition"
+        },
+        {
+          "respTermAmount": 0,
+          "respTermName": "grievances"
+        }
+      ],
+      "respWillingness": -5
+    }
+  },
+  "s52OffensiveStages": [
+    {
+      "day": 133,
+      "plan": null,
+      "operations": []
+    },
+    {
+      "day": 134,
+      "plan": null,
+      "operations": []
+    },
+    {
+      "day": 135,
+      "plan": null,
+      "operations": []
+    },
+    {
+      "day": 136,
+      "plan": {
+        "status": "choosing",
+        "setDay": 136,
+        "issued": 136,
+        "order": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia"
+      },
+      "operations": []
+    },
+    {
+      "day": 137,
+      "plan": {
+        "status": "approved",
+        "setDay": 136,
+        "issued": 136,
+        "order": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia"
+      },
+      "operations": [
+        {
+          "opPost": "us_dept_northeastern_virginia",
+          "opCommander": "mcdowell_irvin",
+          "opOrder": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "opPlan": "direct:least_cost:northern_virginia>manassas",
+          "opMethod": "direct",
+          "opPosture": "take",
+          "opObjective": "manassas",
+          "opStartDay": 137,
+          "opEndDay": null,
+          "opOutcome": null,
+          "opAxes": [
+            {
+              "oaxName": "main",
+              "oaxPost": "us_dept_northeastern_virginia",
+              "oaxBlocks": [
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d49",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_pennsylvania.d56",
+                "raised.st_gov_illinois.d56",
+                "raised.st_gov_illinois.d87",
+                "raised.st_gov_indiana.d103",
+                "raised.st_gov_indiana.d46",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_indiana.d77",
+                "raised.st_gov_maryland.d48",
+                "raised.st_gov_massachusetts.d46",
+                "raised.st_gov_wisconsin.d86",
+                "raised.st_gov_connecticut.d46",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d56",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_new_hampshire.d46",
+                "raised.st_gov_new_hampshire.d77",
+                "raised.st_gov_rhode_island.d49",
+                "raised.st_gov_rhode_island.d79",
+                "raised.st_gov_wisconsin.d49",
+                "raised.tr_gov_nebraska.d93",
+                "fb_us_dc_militia"
+              ],
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 5000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 5000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxObjective": "manassas",
+              "oaxStage": "assemble",
+              "oaxSince": 137,
+              "oaxUntil": 142,
+              "oaxRepulses": 0,
+              "oaxPursuit": null,
+              "oaxSteps": [],
+              "oaxArrived": null,
+              "oaxLog": [
+                {
+                  "axevDay": 137,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ],
+          "opRequests": [],
+          "opEncirclement": null,
+          "opEncirclementWhy": null
+        }
+      ]
+    },
+    {
+      "day": 138,
+      "plan": {
+        "status": "approved",
+        "setDay": 136,
+        "issued": 136,
+        "order": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia"
+      },
+      "operations": [
+        {
+          "opPost": "us_dept_northeastern_virginia",
+          "opCommander": "mcdowell_irvin",
+          "opOrder": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "opPlan": "direct:least_cost:northern_virginia>manassas",
+          "opMethod": "direct",
+          "opPosture": "take",
+          "opObjective": "manassas",
+          "opStartDay": 137,
+          "opEndDay": null,
+          "opOutcome": null,
+          "opAxes": [
+            {
+              "oaxName": "main",
+              "oaxPost": "us_dept_northeastern_virginia",
+              "oaxBlocks": [
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d49",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_pennsylvania.d56",
+                "raised.st_gov_illinois.d56",
+                "raised.st_gov_illinois.d87",
+                "raised.st_gov_indiana.d103",
+                "raised.st_gov_indiana.d46",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_indiana.d77",
+                "raised.st_gov_maryland.d48",
+                "raised.st_gov_massachusetts.d46",
+                "raised.st_gov_wisconsin.d86",
+                "raised.st_gov_connecticut.d46",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d56",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_new_hampshire.d46",
+                "raised.st_gov_new_hampshire.d77",
+                "raised.st_gov_rhode_island.d49",
+                "raised.st_gov_rhode_island.d79",
+                "raised.st_gov_wisconsin.d49",
+                "raised.tr_gov_nebraska.d93",
+                "fb_us_dc_militia"
+              ],
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 5000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 5000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxObjective": "manassas",
+              "oaxStage": "assemble",
+              "oaxSince": 137,
+              "oaxUntil": 142,
+              "oaxRepulses": 0,
+              "oaxPursuit": null,
+              "oaxSteps": [],
+              "oaxArrived": null,
+              "oaxLog": [
+                {
+                  "axevDay": 137,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ],
+          "opRequests": [],
+          "opEncirclement": null,
+          "opEncirclementWhy": null
+        }
+      ]
+    },
+    {
+      "day": 139,
+      "plan": {
+        "status": "approved",
+        "setDay": 136,
+        "issued": 136,
+        "order": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia"
+      },
+      "operations": [
+        {
+          "opPost": "us_dept_northeastern_virginia",
+          "opCommander": "mcdowell_irvin",
+          "opOrder": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "opPlan": "direct:least_cost:northern_virginia>manassas",
+          "opMethod": "direct",
+          "opPosture": "take",
+          "opObjective": "manassas",
+          "opStartDay": 137,
+          "opEndDay": null,
+          "opOutcome": null,
+          "opAxes": [
+            {
+              "oaxName": "main",
+              "oaxPost": "us_dept_northeastern_virginia",
+              "oaxBlocks": [
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d49",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_pennsylvania.d56",
+                "raised.st_gov_illinois.d56",
+                "raised.st_gov_illinois.d87",
+                "raised.st_gov_indiana.d103",
+                "raised.st_gov_indiana.d46",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_indiana.d77",
+                "raised.st_gov_maryland.d48",
+                "raised.st_gov_massachusetts.d46",
+                "raised.st_gov_wisconsin.d86",
+                "raised.st_gov_connecticut.d46",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d56",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_new_hampshire.d46",
+                "raised.st_gov_new_hampshire.d77",
+                "raised.st_gov_rhode_island.d49",
+                "raised.st_gov_rhode_island.d79",
+                "raised.st_gov_wisconsin.d49",
+                "raised.tr_gov_nebraska.d93",
+                "fb_us_dc_militia"
+              ],
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 5000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 5000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxObjective": "manassas",
+              "oaxStage": "assemble",
+              "oaxSince": 137,
+              "oaxUntil": 142,
+              "oaxRepulses": 0,
+              "oaxPursuit": null,
+              "oaxSteps": [],
+              "oaxArrived": null,
+              "oaxLog": [
+                {
+                  "axevDay": 137,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ],
+          "opRequests": [],
+          "opEncirclement": null,
+          "opEncirclementWhy": null
+        }
+      ]
+    },
+    {
+      "day": 140,
+      "plan": {
+        "status": "approved",
+        "setDay": 136,
+        "issued": 136,
+        "order": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia"
+      },
+      "operations": [
+        {
+          "opPost": "us_dept_northeastern_virginia",
+          "opCommander": "mcdowell_irvin",
+          "opOrder": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "opPlan": "direct:least_cost:northern_virginia>manassas",
+          "opMethod": "direct",
+          "opPosture": "take",
+          "opObjective": "manassas",
+          "opStartDay": 137,
+          "opEndDay": null,
+          "opOutcome": null,
+          "opAxes": [
+            {
+              "oaxName": "main",
+              "oaxPost": "us_dept_northeastern_virginia",
+              "oaxBlocks": [
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d49",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_pennsylvania.d56",
+                "raised.st_gov_illinois.d56",
+                "raised.st_gov_illinois.d87",
+                "raised.st_gov_indiana.d103",
+                "raised.st_gov_indiana.d46",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_indiana.d77",
+                "raised.st_gov_maryland.d48",
+                "raised.st_gov_massachusetts.d46",
+                "raised.st_gov_wisconsin.d86",
+                "raised.st_gov_connecticut.d46",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d56",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_new_hampshire.d46",
+                "raised.st_gov_new_hampshire.d77",
+                "raised.st_gov_rhode_island.d49",
+                "raised.st_gov_rhode_island.d79",
+                "raised.st_gov_wisconsin.d49",
+                "raised.tr_gov_nebraska.d93",
+                "fb_us_dc_militia"
+              ],
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 5000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 5000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxObjective": "manassas",
+              "oaxStage": "assemble",
+              "oaxSince": 137,
+              "oaxUntil": 142,
+              "oaxRepulses": 0,
+              "oaxPursuit": null,
+              "oaxSteps": [],
+              "oaxArrived": null,
+              "oaxLog": [
+                {
+                  "axevDay": 137,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ],
+          "opRequests": [],
+          "opEncirclement": null,
+          "opEncirclementWhy": null
+        }
+      ]
+    },
+    {
+      "day": 141,
+      "plan": {
+        "status": "approved",
+        "setDay": 136,
+        "issued": 136,
+        "order": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia"
+      },
+      "operations": [
+        {
+          "opPost": "us_dept_northeastern_virginia",
+          "opCommander": "mcdowell_irvin",
+          "opOrder": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "opPlan": "direct:least_cost:northern_virginia>manassas",
+          "opMethod": "direct",
+          "opPosture": "take",
+          "opObjective": "manassas",
+          "opStartDay": 137,
+          "opEndDay": null,
+          "opOutcome": null,
+          "opAxes": [
+            {
+              "oaxName": "main",
+              "oaxPost": "us_dept_northeastern_virginia",
+              "oaxBlocks": [
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d49",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_pennsylvania.d56",
+                "raised.st_gov_illinois.d56",
+                "raised.st_gov_illinois.d87",
+                "raised.st_gov_indiana.d103",
+                "raised.st_gov_indiana.d46",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_indiana.d77",
+                "raised.st_gov_maryland.d48",
+                "raised.st_gov_massachusetts.d46",
+                "raised.st_gov_wisconsin.d86",
+                "raised.st_gov_connecticut.d46",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d56",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_new_hampshire.d46",
+                "raised.st_gov_new_hampshire.d77",
+                "raised.st_gov_rhode_island.d49",
+                "raised.st_gov_rhode_island.d79",
+                "raised.st_gov_wisconsin.d49",
+                "raised.tr_gov_nebraska.d93",
+                "fb_us_dc_militia"
+              ],
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 5000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 5000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxObjective": "manassas",
+              "oaxStage": "assemble",
+              "oaxSince": 137,
+              "oaxUntil": 142,
+              "oaxRepulses": 0,
+              "oaxPursuit": null,
+              "oaxSteps": [],
+              "oaxArrived": null,
+              "oaxLog": [
+                {
+                  "axevDay": 137,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ],
+          "opRequests": [],
+          "opEncirclement": null,
+          "opEncirclementWhy": null
+        }
+      ]
+    },
+    {
+      "day": 142,
+      "plan": {
+        "status": "approved",
+        "setDay": 136,
+        "issued": 136,
+        "order": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia"
+      },
+      "operations": [
+        {
+          "opPost": "us_dept_northeastern_virginia",
+          "opCommander": "mcdowell_irvin",
+          "opOrder": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+          "opPlan": "direct:least_cost:northern_virginia>manassas",
+          "opMethod": "direct",
+          "opPosture": "take",
+          "opObjective": "manassas",
+          "opStartDay": 137,
+          "opEndDay": null,
+          "opOutcome": null,
+          "opAxes": [
+            {
+              "oaxName": "main",
+              "oaxPost": "us_dept_northeastern_virginia",
+              "oaxBlocks": [
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d49",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_pennsylvania.d56",
+                "raised.st_gov_illinois.d56",
+                "raised.st_gov_illinois.d87",
+                "raised.st_gov_indiana.d103",
+                "raised.st_gov_indiana.d46",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_indiana.d77",
+                "raised.st_gov_maryland.d48",
+                "raised.st_gov_massachusetts.d46",
+                "raised.st_gov_wisconsin.d86",
+                "raised.st_gov_connecticut.d46",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d56",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_new_hampshire.d46",
+                "raised.st_gov_new_hampshire.d77",
+                "raised.st_gov_rhode_island.d49",
+                "raised.st_gov_rhode_island.d79",
+                "raised.st_gov_wisconsin.d49",
+                "raised.tr_gov_nebraska.d93",
+                "fb_us_dc_militia"
+              ],
+              "oaxRoute": {
+                "routeFrom": "northern_virginia",
+                "routeTo": "manassas",
+                "routeLegs": [
+                  {
+                    "legEdge": "road:manassas:northern_virginia",
+                    "legFrom": "northern_virginia",
+                    "legTo": "manassas",
+                    "legType": "road",
+                    "legDays": 3000,
+                    "legThreat": 0,
+                    "legSupply": 1974,
+                    "legObstacleDays": 0,
+                    "legObstacle": null,
+                    "legHeld": false
+                  }
+                ],
+                "routeCost": 4974,
+                "routeDays": 3000
+              },
+              "oaxPhases": [
+                {
+                  "phaseKind": "concentrate",
+                  "phaseStart": 0,
+                  "phaseDays": 5000,
+                  "phaseRegion": "northern_virginia"
+                },
+                {
+                  "phaseKind": "march",
+                  "phaseStart": 5000,
+                  "phaseDays": 3000,
+                  "phaseRegion": "manassas"
+                }
+              ],
+              "oaxObjective": "manassas",
+              "oaxStage": "march",
+              "oaxSince": 142,
+              "oaxUntil": null,
+              "oaxRepulses": 0,
+              "oaxPursuit": null,
+              "oaxSteps": [],
+              "oaxArrived": null,
+              "oaxLog": [
+                {
+                  "axevDay": 137,
+                  "axevStage": "assemble",
+                  "axevReason": "opened",
+                  "axevRegion": "northern_virginia"
+                },
+                {
+                  "axevDay": 142,
+                  "axevStage": "march",
+                  "axevReason": "concentrated",
+                  "axevRegion": "northern_virginia"
+                }
+              ]
+            }
+          ],
+          "opRequests": [],
+          "opEncirclement": null,
+          "opEncirclementWhy": null
+        }
+      ]
+    }
+  ],
+  "s52Route": [
+    {
+      "day": 142,
+      "from": "montgomery",
+      "to": "richmond",
+      "owners": [
+        {
+          "wireOwner": "confederate"
+        },
+        {
+          "wireOwner": null
+        }
+      ],
+      "courierDays": 11,
+      "latency": {
+        "ok": true,
+        "latency": {
+          "days": 4,
+          "parts": [
+            {
+              "part": "wire",
+              "days": 0
+            },
+            {
+              "part": "from the wire",
+              "days": 4
+            }
+          ]
+        }
+      },
+      "control": {
+        "confederate": 100
+      }
+    }
+  ],
+  "s52ReplayHashes": {
+    "checked": 86,
+    "mismatches": []
+  },
+  "s64History": {
+    "commands": 197,
+    "rejections": 0,
+    "battles": 1,
+    "noticeCount": 0,
+    "checkpoints": {
+      "problems": [
+        "men_confederate (1861-07-31, day 148): confederate has 95153 men, below 100000",
+        "operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1"
+      ],
+      "evidence": [
+        "seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "men_union (1861-07-31, day 148): union 99686 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "men_confederate (1861-07-31, day 148): confederate 95153 men of known strength, 23 blocks of unknown strength (band 100000..200000)",
+        "operations_union (1861-07-31, day 148): union fought 0 planned operations (band 1..26)",
+        "operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+        "confederate at war since day 36",
+        "union at war since day 41"
+      ]
+    },
+    "operations": {
+      "problems": [],
+      "evidence": [
+        "op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38"
+      ]
+    }
+  }
+}

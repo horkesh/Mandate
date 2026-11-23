@@ -227,7 +227,8 @@ export function parseRanks(raw: string): Cell<w.RankHeld[]> {
   for (const item of list(raw)) {
     const m = /^([^:\s]+)\s*:\s*(\S+)$/.exec(item);
     if (!m) return bad(`"${item}" is not a rank entry`, 'rank:YYYY-MM-DD (or YYYY-MM, YYYY)');
-    out.push({ rank: m[1]!, from: m[2]! });
+    const [from,until]=m[2]!.split('/');
+    out.push({ rank: m[1]!, from: from!, ...(until===undefined?{}:{until}) });
   }
   return ok(out);
 }

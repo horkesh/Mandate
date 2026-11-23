@@ -49,7 +49,7 @@ export function latestDayOf(historical: string): string {
  */
 export function rankOn(ranks: readonly RankHeld[], isoDate: string): PersonRank | null {
   let held: PersonRank | null = null;
-  for (const r of ranks) if (strictCompare(latestDayOf(r.from), isoDate) <= 0) held = { rankTerm: r.rank, rankSince: r.from };
+  for (const r of ranks) if (strictCompare(latestDayOf(r.from), isoDate) <= 0 && (r.until===undefined || isoDate<r.until)) held = { rankTerm: r.rank, rankSince: r.from };
   return held;
 }
 

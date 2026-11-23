@@ -1,0 +1,57 @@
+{
+  "id": "virginia_norfolk_huger",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.virginia_norfolk_huger.title",
+  "text": "situation.virginia_norfolk_huger.text",
+  "earliest": "1861-05-23",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 79
+      },
+      {
+        "flag": "virginia_seceded"
+      },
+      {
+        "holds": {
+          "post": "st_va_norfolk",
+          "person": "gwynn_walter"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "st_va_norfolk",
+        "delta": 1,
+        "reason": "state-command-succession",
+        "side": null,
+        "succession": {
+          "to": "huger_benjamin",
+          "from": "gwynn_walter"
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative state military entry and command only; no secession motives, civilian conduct, security orders or protected-population effects."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p.867, Special Orders 109, 23 May"
+    }
+  ],
+  "namedOnly": "The source records the state institution's act. No individual speech, motive or discretionary choice is invented."
+}

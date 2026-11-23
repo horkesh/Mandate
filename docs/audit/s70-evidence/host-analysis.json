@@ -1,0 +1,470 @@
+[
+  {
+    "pack": "union",
+    "seconds": 67.91918,
+    "logical_processors": 16,
+    "other_existing_process_cpu": [
+      {
+        "pid": 17672,
+        "name": "GalaxyClient",
+        "cpu_seconds": 2.0
+      },
+      {
+        "pid": 13896,
+        "name": "claude",
+        "cpu_seconds": 1.703125
+      },
+      {
+        "pid": 15220,
+        "name": "claude",
+        "cpu_seconds": 1.578125
+      },
+      {
+        "pid": 14516,
+        "name": "claude",
+        "cpu_seconds": 0.90625
+      },
+      {
+        "pid": 36420,
+        "name": "claude",
+        "cpu_seconds": 0.78125
+      },
+      {
+        "pid": 46380,
+        "name": "chrome",
+        "cpu_seconds": 0.546875
+      },
+      {
+        "pid": 38944,
+        "name": "claude",
+        "cpu_seconds": 0.46875
+      },
+      {
+        "pid": 3220,
+        "name": "codex",
+        "cpu_seconds": 0.46875
+      },
+      {
+        "pid": 42448,
+        "name": "claude",
+        "cpu_seconds": 0.359375
+      },
+      {
+        "pid": 27204,
+        "name": "codex",
+        "cpu_seconds": 0.3125
+      },
+      {
+        "pid": 43336,
+        "name": "claude",
+        "cpu_seconds": 0.28125
+      },
+      {
+        "pid": 33996,
+        "name": "claude",
+        "cpu_seconds": 0.265625
+      },
+      {
+        "pid": 32904,
+        "name": "claude",
+        "cpu_seconds": 0.21875
+      },
+      {
+        "pid": 23432,
+        "name": "claude",
+        "cpu_seconds": 0.203125
+      },
+      {
+        "pid": 45096,
+        "name": "claude",
+        "cpu_seconds": 0.203125
+      },
+      {
+        "pid": 13908,
+        "name": "OneDrive.Sync.Service",
+        "cpu_seconds": 0.171875
+      },
+      {
+        "pid": 11832,
+        "name": "chrome",
+        "cpu_seconds": 0.15625
+      },
+      {
+        "pid": 29944,
+        "name": "claude",
+        "cpu_seconds": 0.15625
+      },
+      {
+        "pid": 48828,
+        "name": "claude",
+        "cpu_seconds": 0.15625
+      },
+      {
+        "pid": 21704,
+        "name": "chrome",
+        "cpu_seconds": 0.140625
+      },
+      {
+        "pid": 16464,
+        "name": "claude",
+        "cpu_seconds": 0.140625
+      },
+      {
+        "pid": 20576,
+        "name": "chrome",
+        "cpu_seconds": 0.125
+      },
+      {
+        "pid": 19688,
+        "name": "GOG Galaxy Notifications Renderer",
+        "cpu_seconds": 0.125
+      },
+      {
+        "pid": 32052,
+        "name": "OUTLOOK",
+        "cpu_seconds": 0.125
+      },
+      {
+        "pid": 31200,
+        "name": "powershell",
+        "cpu_seconds": 0.125
+      },
+      {
+        "pid": 36048,
+        "name": "powershell",
+        "cpu_seconds": 0.109375
+      }
+    ],
+    "other_node_before": [
+      {
+        "Id": 7428,
+        "ProcessName": "node",
+        "CPU": 0.375,
+        "WorkingSet64": 57995264
+      },
+      {
+        "Id": 8700,
+        "ProcessName": "node",
+        "CPU": 21.71875,
+        "WorkingSet64": 150274048
+      },
+      {
+        "Id": 9696,
+        "ProcessName": "node",
+        "CPU": 9.140625,
+        "WorkingSet64": 158306304
+      },
+      {
+        "Id": 14232,
+        "ProcessName": "node",
+        "CPU": 0.046875,
+        "WorkingSet64": 52228096
+      },
+      {
+        "Id": 15392,
+        "ProcessName": "node",
+        "CPU": 0.234375,
+        "WorkingSet64": 69836800
+      },
+      {
+        "Id": 15932,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 41107456
+      },
+      {
+        "Id": 20284,
+        "ProcessName": "node",
+        "CPU": 0.015625,
+        "WorkingSet64": 10043392
+      },
+      {
+        "Id": 26032,
+        "ProcessName": "node",
+        "CPU": 0.171875,
+        "WorkingSet64": 42401792
+      },
+      {
+        "Id": 31260,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 52068352
+      },
+      {
+        "Id": 32336,
+        "ProcessName": "node",
+        "CPU": 0.046875,
+        "WorkingSet64": 41082880
+      },
+      {
+        "Id": 33960,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 52334592
+      },
+      {
+        "Id": 41936,
+        "ProcessName": "node",
+        "CPU": 94.953125,
+        "WorkingSet64": 342818816
+      },
+      {
+        "Id": 44344,
+        "ProcessName": "node",
+        "CPU": 0.21875,
+        "WorkingSet64": 58454016
+      },
+      {
+        "Id": 48320,
+        "ProcessName": "node",
+        "CPU": 0.125,
+        "WorkingSet64": 41172992
+      },
+      {
+        "Id": 48556,
+        "ProcessName": "node",
+        "CPU": 0.390625,
+        "WorkingSet64": 43507712
+      }
+    ],
+    "other_node_after": [
+      {
+        "Id": 8700,
+        "ProcessName": "node",
+        "CPU": 21.734375,
+        "WorkingSet64": 150274048
+      },
+      {
+        "Id": 14232,
+        "ProcessName": "node",
+        "CPU": 0.046875,
+        "WorkingSet64": 52228096
+      },
+      {
+        "Id": 15932,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 41107456
+      },
+      {
+        "Id": 26032,
+        "ProcessName": "node",
+        "CPU": 0.171875,
+        "WorkingSet64": 42401792
+      },
+      {
+        "Id": 31260,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 52068352
+      },
+      {
+        "Id": 32336,
+        "ProcessName": "node",
+        "CPU": 0.046875,
+        "WorkingSet64": 41082880
+      },
+      {
+        "Id": 33960,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 52334592
+      },
+      {
+        "Id": 48320,
+        "ProcessName": "node",
+        "CPU": 0.125,
+        "WorkingSet64": 41172992
+      },
+      {
+        "Id": 48556,
+        "ProcessName": "node",
+        "CPU": 0.390625,
+        "WorkingSet64": 43507712
+      }
+    ],
+    "idle_host_certified": false
+  },
+  {
+    "pack": "testbed",
+    "seconds": 10.851786,
+    "logical_processors": 16,
+    "other_existing_process_cpu": [
+      {
+        "pid": 28900,
+        "name": "node",
+        "cpu_seconds": 11.0
+      },
+      {
+        "pid": 17672,
+        "name": "GalaxyClient",
+        "cpu_seconds": 0.609375
+      },
+      {
+        "pid": 18084,
+        "name": "chrome",
+        "cpu_seconds": 0.125
+      },
+      {
+        "pid": 43336,
+        "name": "claude",
+        "cpu_seconds": 0.109375
+      }
+    ],
+    "other_node_before": [
+      {
+        "Id": 8700,
+        "ProcessName": "node",
+        "CPU": 21.78125,
+        "WorkingSet64": 150274048
+      },
+      {
+        "Id": 14232,
+        "ProcessName": "node",
+        "CPU": 0.046875,
+        "WorkingSet64": 52314112
+      },
+      {
+        "Id": 15932,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 41197568
+      },
+      {
+        "Id": 22556,
+        "ProcessName": "node",
+        "CPU": 0.125,
+        "WorkingSet64": 54226944
+      },
+      {
+        "Id": 26032,
+        "ProcessName": "node",
+        "CPU": 0.171875,
+        "WorkingSet64": 42401792
+      },
+      {
+        "Id": 28900,
+        "ProcessName": "node",
+        "CPU": 264.703125,
+        "WorkingSet64": 452304896
+      },
+      {
+        "Id": 31260,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 52154368
+      },
+      {
+        "Id": 32336,
+        "ProcessName": "node",
+        "CPU": 0.046875,
+        "WorkingSet64": 41168896
+      },
+      {
+        "Id": 33960,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 52334592
+      },
+      {
+        "Id": 47628,
+        "ProcessName": "node",
+        "CPU": 0.296875,
+        "WorkingSet64": 58253312
+      },
+      {
+        "Id": 48320,
+        "ProcessName": "node",
+        "CPU": 0.125,
+        "WorkingSet64": 41172992
+      },
+      {
+        "Id": 48556,
+        "ProcessName": "node",
+        "CPU": 0.390625,
+        "WorkingSet64": 43507712
+      }
+    ],
+    "other_node_after": [
+      {
+        "Id": 8700,
+        "ProcessName": "node",
+        "CPU": 21.78125,
+        "WorkingSet64": 150274048
+      },
+      {
+        "Id": 14232,
+        "ProcessName": "node",
+        "CPU": 0.046875,
+        "WorkingSet64": 52314112
+      },
+      {
+        "Id": 15932,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 41197568
+      },
+      {
+        "Id": 22556,
+        "ProcessName": "node",
+        "CPU": 0.125,
+        "WorkingSet64": 54226944
+      },
+      {
+        "Id": 26032,
+        "ProcessName": "node",
+        "CPU": 0.171875,
+        "WorkingSet64": 42401792
+      },
+      {
+        "Id": 28900,
+        "ProcessName": "node",
+        "CPU": 275.703125,
+        "WorkingSet64": 443080704
+      },
+      {
+        "Id": 31260,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 52154368
+      },
+      {
+        "Id": 32336,
+        "ProcessName": "node",
+        "CPU": 0.046875,
+        "WorkingSet64": 41168896
+      },
+      {
+        "Id": 33960,
+        "ProcessName": "node",
+        "CPU": 0.0625,
+        "WorkingSet64": 52334592
+      },
+      {
+        "Id": 45640,
+        "ProcessName": "node",
+        "CPU": 0.15625,
+        "WorkingSet64": 57761792
+      },
+      {
+        "Id": 47628,
+        "ProcessName": "node",
+        "CPU": 0.296875,
+        "WorkingSet64": 58253312
+      },
+      {
+        "Id": 48320,
+        "ProcessName": "node",
+        "CPU": 0.125,
+        "WorkingSet64": 41172992
+      },
+      {
+        "Id": 48556,
+        "ProcessName": "node",
+        "CPU": 0.390625,
+        "WorkingSet64": 43507712
+      }
+    ],
+    "idle_host_certified": false
+  }
+]

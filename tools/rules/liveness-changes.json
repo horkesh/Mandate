@@ -1240,5 +1240,256 @@
     "observed": 0,
     "cause": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal.",
     "evidence": "notes/lane-1.14-done-check.md#s44-lead-band-rulings"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/command.post_succeeded",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 2,
+      "maxFires": 10,
+      "why": "S68 lead ruling 4 (CODEX.md, 2026-11-22): S46 adds four sourced institutional successions to the existing one. S67 observes five on days 11, 52, 54, 64 and 79; around(5). Each source and page is checked in notes/lane-s68-residuals.md#sourced-successions and the append-only liveness cause record."
+    },
+    "observed": 5,
+    "cause": "S68 lead ruling 4 (CODEX.md, 2026-11-22): five sourced institutional successions: Texas, Houston to Clark, day 11 (TX-CONV-1861 pp.183-187, p.197); S46 adds Norfolk, Taliaferro to Gwynn, day 52 (OR I-2 p.783); Harpers Ferry, Harper to Jackson, day 54 (pp.784-785,787); Richmond, Johnston to Magruder, day 64 (p.817); Norfolk, Gwynn to Huger, day 79 (p.867). S67 retained all five; recentre with around(5).",
+    "evidence": "notes/lane-s68-residuals.md#sourced-successions"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/people.resigned",
+    "before": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "after": {
+      "minFires": 7,
+      "maxFires": 30,
+      "why": "S77 lead ruling 3 (CODEX.md, 2026-11-23): S74 adds Elzey's sourced departure under S69/0101 to the fourteen existing resignations; recentre only this band with around(15). No other quiet band is changed."
+    },
+    "observed": 15,
+    "cause": "S77 ruling 3 accepts S74's fifteenth resignation, Elzey's actual sourced departure (S69, decision 0101). Existing service-change owner clears his earlier commission only upon the actual departure, not on a calendar trigger.",
+    "evidence": "notes/lane-s77-concentration.md#elzey"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.flank_broken",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: no combat.flank_broken event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires combat.flank_broken 3 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#combat.flank_broken."
+    },
+    "observed": 3,
+    "cause": "S82 ruling 2: S81 own-contingent headcounts and S78/S81 civil rail access bring actual known-strength forces into July contact under 0108/0110. The unchanged resolver breaks one flank on 25 July and two on 28 July.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#combat.flank_broken"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/combat.general_hit",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a commander is hit on a low draw on his own stream; no retained reference battle-day draws a commander hit, while the separate kernel test drives it"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires combat.general_hit 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#combat.general_hit."
+    },
+    "observed": 1,
+    "cause": "S82 ruling 2: actual 28 July Manassas combat wounds Beauregard on his existing commander-hit stream; no hit is scripted.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#combat.general_hit"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/forces.stores_low",
+    "before": {
+      "minFires": 28,
+      "maxFires": 112
+    },
+    "after": {
+      "minFires": 6,
+      "maxFires": 26,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires forces.stores_low 13 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#forces.stores_low."
+    },
+    "observed": 13,
+    "cause": "S82 ruling 2 [I]: accepted S81 civil rail access removes the long stalled marches of S78; finite sourced contracts and actual strength ownership change the eligible eaters. All 13 events are real downward crossings of 7,000 milli-days. Unknown-strength blocks remain non-eaters. Civil railway movement permission does not grant supply tracing. No duplicate/missing crossing defect found in the retained transitions or focused stores driver.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#forces.stores_low"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/forces.stragglers_returned",
+    "before": {
+      "minFires": 12,
+      "maxFires": 48,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting."
+    },
+    "after": {
+      "minFires": 32,
+      "maxFires": 128,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires forces.stragglers_returned 64 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#forces.stragglers_returned."
+    },
+    "observed": 64,
+    "cause": "S82 ruling 2 [I]: the 25, 28 and 29 July known-strength battles create stragglers that rejoin surviving blocks on non-battle days with supply, under the unchanged return owner. The 64 firings include the retained earlier returns; each daily firing is preserved.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#forces.stragglers_returned"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/map.pocket_closed",
+    "before": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "after": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_closed 8 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_closed."
+    },
+    "observed": 8,
+    "cause": "S82 ruling 2 [I]: accepted rail journeys create traced isolated footholds when ordinary occupation crosses 250 permille: Little Rock day79, Raleigh117, Lynchburg141, Charlottesville142, Culpeper143, then the July29 loss of the Manassas supply route on day146, Harpers Ferry147 and NC coastal plain147. These are new cut regions, not duplicate reports; day144 relief is real while Manassas still traces for the Confederacy. Civil rail permission is not a supply entitlement. No pocket-diff defect found.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#map.pocket_closed"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/map.pocket_relieved",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved."
+    },
+    "observed": 1,
+    "cause": "S82 ruling 2 [I]: on day144 (26 July), Loudoun reaches 300 permille and the Manassas route still traces Confederate supply; Charlottesville, Culpeper and Lynchburg regain paths. They close again after actual July combat drives Manassas below the 250 threshold on day146.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/messages.special_messenger",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the one bypass uses the faster zero-day wire instead of a three-day messenger (R78)"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires messages.special_messenger 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#messages.special_messenger."
+    },
+    "observed": 1,
+    "cause": "S82 ruling 2: S78 corrected Johnston headquarters to Harpers Ferry; Davis sends the July26 bypass by the existing three-day special messenger, received July29. No wire or arrival is moved.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#messages.special_messenger"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/operations.works",
+    "before": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "after": {
+      "minFires": 3,
+      "maxFires": 14,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works."
+    },
+    "observed": 7,
+    "cause": "S82 ruling 2 [I]: accepted S81 known-strength concentration and July contact change operation progression; seven existing works-stage firings are retained with their days and operation records, not a widened band.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#operations.works"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/orders.returned",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the day-87 Charleston transfer reaches a vacated post after reassignment. Its return is written day 92 and received day 97; S42 measured one return."
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S82 ruling 2 [I]: the accepted dated command/headquarters and received correspondence path has no dispatch arriving at a changed or vacant post in S81. The separate believed-posts test drives a typed return for an order sent before the vacancy report arrives. Zero stays exact, never an unbounded floor."
+    },
+    "observed": 0,
+    "cause": "S82 ruling 2 [I]: the accepted dated command/headquarters and received correspondence path has no dispatch arriving at a changed or vacant post in S81. The separate believed-posts test drives a typed return for an order sent before the vacancy report arrives. Zero stays exact, never an unbounded floor.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#orders.returned"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.caution",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping caution alone changes the pick"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.caution 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.caution."
+    },
+    "observed": 1,
+    "cause": "S82 ruling 2 [I]: accepted S78 Patterson hold goals and S81 rail journeys change the received inputs of Patterson's day142 (25 July) Harpers Ferry draft; dropping caution changes the unchanged scorer pick. Its exact draft is retained.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#planner.term.caution"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.force_ratio",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the reference runs’ drafts are decided by supply and goal fit, never by the ratio alone"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.force_ratio 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.force_ratio."
+    },
+    "observed": 1,
+    "cause": "S82 ruling 2 [I]: accepted S78 Patterson hold goals, S81 rail journeys and own-contingent headcounts change received force inputs in Patterson's day142 (25 July) Harpers Ferry draft; dropping force_ratio changes the unchanged scorer pick.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#planner.term.force_ratio"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.supply",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 appointments: no planner.term.supply event in this observed command/plan path; unchanged testbed fires it 2 times. S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.supply 2 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.supply."
+    },
+    "observed": 2,
+    "cause": "S82 ruling 2 [I]: Patterson's accepted S78 lower-valley and Harpers Ferry hold goals, with S81 journeys, produce decisive supply terms in his day112 (25 June) and day142 (25 July) drafts. Both exact candidate sets and contributions are retained.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#planner.term.supply"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/planner.term.time",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick."
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires planner.term.time 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#planner.term.time."
+    },
+    "observed": 1,
+    "cause": "S82 ruling 2 [I]: Patterson's accepted S78 lower-valley hold goal produces the day112 (25 June) draft; time now changes its unchanged scorer pick. This event precedes July combat. The exact candidates and S41 live control remain.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#planner.term.time"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/reports.commander_lost",
+    "before": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "Anderson evacuates under terms on day 39 and keeps serving; no commander is lost (R78)"
+    },
+    "after": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires reports.commander_lost 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#reports.commander_lost."
+    },
+    "observed": 1,
+    "cause": "S82 ruling 2: Beauregard is wounded in the actual 28 July Manassas battle, vacating his command; its ordinary commander-loss report is generated. Robert Anderson remains a distinct person.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#reports.commander_lost"
   }
 ]

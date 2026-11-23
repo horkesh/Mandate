@@ -1,3 +1,5 @@
+import { enlistmentsOf } from '../forces/enlistment.ts';
+import { forceTotals } from '../forces/lots.ts';
 /**
  * Governors raise regiments on a call (lane 1.7; FOUNDATION section 12 row 1.7).
  *
@@ -14,9 +16,8 @@
  *
  * There is no `men` stock in `economy` in 1A (that is 1B): a regiment goes straight from the governor into a block.
  */
-import { sideOfPerson } from '../command/command.ts';
 import { leviesDue, musterAssignments, recordLevy, type Levy } from '../command/levies.ts';
-import { openBattleIn } from '../combat/records.ts';
+import { openBattleIn, unresolvedContact } from '../combat/records.ts';
 import { shareOf } from '../control/control.ts';
 import type { WorldIndex } from '../world/index.ts';
 import { applyMusters, enlistmentsEnding, type MusterDelta } from '../forces/enlistment.ts';
@@ -32,9 +33,10 @@ import { callTerms, type RecruitmentRules } from '../recruitment/rules.ts';
 import { renewableBlock } from '../recruitment/renewal.ts';
 import { loyaltyOf } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
+import { senderFor } from '../seats/sender.ts';
 import { postFaction } from '../seats/posts.ts';
 import { fire, oversightOf, sendReport, type RejectionReason, type TickContext } from './context.ts';
-import { answerBody, dispatchOrder } from './orders.ts';
+import { answerBody, dispatchOrder, returnDispatch } from './orders.ts';
 
 /** Every mechanic recruitment counts (FOUNDATION section 11.5). */
 export const RECRUITMENT_MECHANICS = ['recruitment.called', 'recruitment.answered', 'recruitment.slow_walked', 'recruitment.refused', 'recruitment.mustered', 'recruitment.men', 'recruitment.muster_blocked', 'recruitment.lapsed', 'recruitment.disbanded', 'recruitment.renewed'] as const;
@@ -49,24 +51,28 @@ function raisingPost(ctx: TickContext, state: State, post: PostId): boolean {
 }
 
 /** Validate and send a call. Returns the reason for a rejection, or null when it is on its way. Only a principal calls. */
-export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: CallCommand): RejectionReason | null {
+export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: CallCommand, requisition = false): RejectionReason | null {
   const { world } = ctx;
   const assignment = state.seatAssignments[seat];
   if (assignment === undefined) return 'unknown_seat';
-  const issuer = world.person(assignment.seatPerson);
-  const side = sideOfPerson(world.map, state, issuer.id);
-  if (side === null || !world.factionIds.includes(side) || world.faction(side).principal !== issuer.id) return 'not_a_principal';
-  if (state.postStates[cmd.to] === undefined) return 'unknown_post';
-  // A call is a requisition, answered by the governor's own compliance (0065: a government's side is State): it may go to
-  // a governor of the calling side or of a neutral government (the April 1861 call went to every state), never the other side's.
-  const targetSide = postFaction(world, state, cmd.to);
-  if (targetSide !== side && targetSide !== null) return 'other_side';
-  if (!raisingPost(ctx, state, cmd.to)) return 'not_raising_post';
-  if (state.postStates[cmd.to]!.postHolder === null) return 'vacant_post';
+  const sender = senderFor(world,state,seat,requisition ? cmd.to : undefined);
+  if (sender === null) return 'not_a_principal';
+  const issuer = { id: sender.principal };
+  const target = sender.definition(cmd.to);
+  if (!sender.known(cmd.to) || target === undefined) {
+    const declared = sender.declaredSide(cmd.to);
+    return declared != null && declared !== sender.faction ? 'other_side' : 'unknown_post';
+  }
+  const targetSide = sender.side(cmd.to);
+  if (targetSide !== sender.faction && targetSide !== null) return 'other_side';
+  const dept = world.map.world.departments.find(d => d.id === target.department);
+  const kind = world.map.world.vocabularies.departmentKinds.find(k => k.id === dept?.kind);
+  if (!world.map.world.rules.recruitment.raisingPostKinds.includes(target.kind) || target.region === null || kind?.selfGoverning === true) return 'not_raising_post';
+  if (sender.holder(cmd.to) === null && (!requisition || sender.posts.get(cmd.to)?.status === 'vacant')) return 'vacant_post';
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
   if (cmd.termDays !== null && cmd.termDays > world.map.world.rules.recruitment.maxTermDays) return 'bad_call';
   if (cmd.arm !== undefined && !world.map.world.vocabularies.arms.some(a => a.id === cmd.arm && !a.naval)) return 'bad_call';
-  dispatchOrder(ctx, state, seat, issuer.id, cmd.to, cmd.route, cmd.bypass, { orderKind: 'call', orderGoal: null, orderEdit: null, orderCall: { callRegiments: cmd.regiments, callTermDays: cmd.termDays, ...(cmd.men === undefined ? {} : { callMen: cmd.men }), ...(cmd.callId === undefined ? {} : { callId: cmd.callId }), ...(cmd.arm === undefined ? {} : { callArm: cmd.arm }), ...(cmd.readiness === undefined ? {} : { callReadiness: cmd.readiness }) } });
+  dispatchOrder(ctx, state, seat, issuer.id, cmd.to, cmd.route, cmd.bypass, { orderKind: 'call', orderGoal: null, orderEdit: null, orderCall: { callRegiments: cmd.regiments, callTermDays: cmd.termDays, ...(cmd.men === undefined ? {} : { callMen: cmd.men }), ...(cmd.callId === undefined ? {} : { callId: cmd.callId }), ...(cmd.arm === undefined ? {} : { callArm: cmd.arm }), ...(cmd.readiness === undefined ? {} : { callReadiness: cmd.readiness }) } }, requisition ? cmd.to : undefined);
   fire(ctx, 'recruitment.called');
   return null;
 }
@@ -99,6 +105,7 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   const call = order.orderCall!;
   const post = msg.msgToPost!;
   const governor = msg.msgTo;
+  if (!raisingPost(ctx,start,post)) return returnDispatch(ctx,start,msg,'not_raising_post');
   const rules = world.map.world.rules.recruitment;
   // He answers watched from where he stands (lane 1.4's oversight: his courier days from the caller, and the wire).
   const answer = answerOrder(world, start, governor, order.orderIssuer, callTerms(rules), { oversight: oversightOf(ctx, start, governor, order.orderIssuer).value });
@@ -155,13 +162,13 @@ function enemyHeld(map: WorldIndex, state: State, region: RegionId, side: Factio
   return Object.keys(state.regionControl[region] ?? {}).some((f) => f !== side && shareOf(map, state.regionControl, region, f as FactionId) > own);
 }
 
-/** Whether a block stands in a region whose open battle names it. */
+/** Discharge protection follows a resolved engagement in the open battle, not unresolved presence (S81 ruling 2). */
 export function inOpenBattle(state: State, block: ForceBlockId): boolean {
   const loc = state.forceLocations[block];
   if (loc === undefined) return false;
   const id = openBattleIn(state, loc.locRegion);
   if (id === null) return false;
-  return state.battleRecords[id]!.battleDays.some((d) => d.bdaySides.some((s) => s.bsideBlocks.includes(block)));
+  return state.battleRecords[id]!.battleDays.some((d) => !unresolvedContact(d) && d.bdaySides.some((s) => s.bsideBlocks.includes(block)));
 }
 
 /** A levy lapsed: the governor tells the man who called it, with the typed reason (its region in enemy hands past the pack's days). */
@@ -211,7 +218,7 @@ export function recruitmentPhase(ctx: TickContext, start: State): State {
   for (const k of dueAll) if (!due.includes(k) && !lapsed.includes(k)) fire(ctx, 'recruitment.muster_blocked');
   for (const k of lapsed) reportLapse(ctx, start, start.postLevies[k]!);
   // A block in a battle still open in its region keeps its men until the battle closes: the record never loses a participant mid-fight.
-  const ending = enlistmentsEnding(start, day).filter((b) => !inOpenBattle(start, b));
+  const ending = enlistmentsEnding(start, day, world.map.forceServiceCache).filter((b) => !inOpenBattle(start, b));
   if (due.length === 0 && ending.length === 0 && lapsed.length === 0) return start;
   const deltas: MusterDelta[] = [];
   const placements: MusterPlacement[] = [];
@@ -242,7 +249,7 @@ export function recruitmentPhase(ctx: TickContext, start: State): State {
     fire(ctx, 'recruitment.mustered');
     if (levy.levyMen !== null) fire(ctx, 'recruitment.men', levy.levyMen);
   }
-  for (const block of ending) deltas.push({ change: 'disband', block, cause: 'recruitment' });
+  for (const block of ending) deltas.push({ change: 'expire', block, day, cause: 'recruitment' });
   const forces = applyMusters(world.map, start, deltas);
   for (const _ of forces.disbanded) fire(ctx, 'recruitment.disbanded');
   const moved = placeAndRemove(world.map, forces.state, placements, forces.disbanded);
@@ -291,15 +298,40 @@ export function stateForcesPhase(ctx: TickContext, start: State): State {
     // without changing that call's answer, expiry, assignment or journey. Durable enlistment identity
     // works after proxy response pruning too.
     const includes = (id: string | undefined) => id !== undefined && (entry.includesCalls ?? []).includes(id);
-    const priorMen = Object.entries(state.forceEnlistments).reduce((n, [id, e]) =>
-      e.enlPost === post && includes(e.enlCallId) ? n + (state.forceBlockStates[id as ForceBlockId]?.fbStrength ?? 0) : n, 0)
+    const priorMen = Object.entries(enlistmentsOf(state, ctx.world.map.forceServiceCache)).reduce((n, [id, e]) =>
+      e.enlPost === post && includes(e.enlCallId) ? n + (forceTotals(state.forceBlockStates[id as ForceBlockId]!, ctx.world.map.forceTotalsCache).fbStrength ?? 0) : n, 0)
       + Object.values(state.postLevies).reduce((n, l) => l.levyPost === post && includes(l.levyCallId) ? n + (l.levyMen ?? 0) : n, 0);
     const men = entry.men === null ? null : Math.max(0, entry.men - priorMen);
     const old = state.forceBlockStates[block];
+    if (entry.release === true) {
+      const own = enlistmentsOf(state, ctx.world.map.forceServiceCache)[block];
+      if (old === undefined || own?.enlSourceAct === undefined || own.enlPost !== post || old.fbArm !== entry.arm ||
+          entry.transferTo !== undefined || entry.post !== undefined || entry.region !== undefined || entry.men !== null || entry.regiments !== null) { refuse('invalid_state_force_relief'); continue; }
+      const removed = applyMusters(ctx.world.map, state, [{ change: 'disband', block, cause: 'recruitment' }]);
+      state = musterAssignments(placeAndRemove(ctx.world.map, removed.state, [], removed.disbanded), [], [], removed.disbanded);
+      continue;
+    }
+    if (entry.transferTo !== undefined) {
+      const destination = ctx.world.map.world.departments.find(d => d.id === entry.transferTo);
+      const own = enlistmentsOf(state, ctx.world.map.forceServiceCache)[block];
+      if (old === undefined || own?.enlSourceAct === undefined || own.enlPost !== post || old.fbArm !== entry.arm ||
+          destination === undefined || state.departmentFactions[destination.id] !== p.side ||
+          ctx.world.map.world.vocabularies.departmentKinds.find(k => k.id === destination.kind)?.selfGoverning === true ||
+          entry.men !== null || entry.regiments !== null || entry.post !== undefined || entry.region !== undefined) { refuse('invalid_state_force_service_transfer'); continue; }
+      state = applyMusters(ctx.world.map, state, [{ change: 'service', block, department: destination.id, cause: 'recruitment' }]).state;
+      continue;
+    }
     if (old !== undefined) {
-      const enlistment = state.forceEnlistments[block];
+      const enlistment = enlistmentsOf(state, ctx.world.map.forceServiceCache)[block];
       if (enlistment?.enlSourceAct === undefined || enlistment.enlPost !== post || old.fbArm !== entry.arm) { refuse('state_force_identity_conflict'); continue; }
-      if (old.fbStrength === null && men !== null) {
+      if (forceTotals(old, ctx.world.map.forceTotalsCache).fbStrength === null && men !== null) {
+        const count = enlistment.enlRegiments;
+        const batchReturn = old.fbLots.length === 1 && old.fbLots[0]?.lotRegiment === null;
+        const modelReturn = count !== null && entry.regiments === count && old.fbLots.length === count &&
+          old.fbLots.every(l => l.lotMen === null) && men === count * ctx.world.map.world.rules.recruitment.menPerRegiment;
+        if (!batchReturn && !modelReturn) {
+          refuse('unattributable_regimental_return'); continue;
+        }
         state = applyMusters(ctx.world.map, state, [{ change: 'quantify', block, men, regiments: entry.regiments, cause: 'recruitment' }]).state;
       }
       continue;
@@ -310,15 +342,20 @@ export function stateForcesPhase(ctx: TickContext, start: State): State {
       state.situationStates[s.id] !== undefined && state.situationStates[s.id]!.sitFiredDay < ctx.day &&
       s.effects.some(e => 'propose' in e && e.propose.owner === 'recruitment' && e.propose.field === 'state_forces' && e.propose.stateForces?.id === entry.id));
     if (enteredBefore) { refuse('state_force_no_longer_present'); continue; }
+    const commandPost = entry.post ?? post;
+    const command = state.postStates[commandPost];
+    if (command?.postSeat == null || postFaction(ctx.world, state, commandPost) !== p.side) { refuse('invalid_state_force_local_command'); continue; }
+    const region = entry.region ?? command.postSeat;
+    if (!ctx.world.map.world.regions.some(r => r.id === region && ['land', 'key_point'].includes(r.kind))) { refuse('invalid_state_force_muster_point'); continue; }
     const created = applyMusters(ctx.world.map, state, [{ change: 'create', cause: 'recruitment', create: {
-      block, name: `raised.${post}`, department: office.postDepartment, arm: entry.arm, strength: men,
+      block, name: `raised.${commandPost}`, department: office.postDepartment, arm: entry.arm, strength: men,
       storesDays: ctx.world.map.world.rules.recruitment.storesDays,
       enlistment: { enlPost: post, enlRaisedBy: office.postHolder, enlCall: toId('message', `state-act.${p.situation}.${entry.id}`),
         enlRegiments: entry.regiments, enlMusterDay: ctx.day, enlEndsDay: entry.termDays === null ? null : ctx.day + entry.termDays,
         enlSourceAct: p.situation, ...(entry.termUnknown === true ? { enlTermUnknown: true } : {}),
       },
     } }]).state;
-    state = musterAssignments(placeAndRemove(ctx.world.map, created, [{ block, region: office.postSeat, day: ctx.day }], []), [], [{ block, post }], []);
+    state = musterAssignments(placeAndRemove(ctx.world.map, created, [{ block, region, day: ctx.day }], []), [], [{ block, post: commandPost }], []);
   }
   return state;
 }

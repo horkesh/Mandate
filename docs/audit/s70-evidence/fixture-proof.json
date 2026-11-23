@@ -1,0 +1,9 @@
+{
+  "prescribedTool": "tools/make-save-fixture.ts (fixture.exit.json)",
+  "schemaUnchanged": true,
+  "worldHashExact": true,
+  "logHashExact": true,
+  "logExact": true,
+  "oldStateRecovered": true,
+  "currentHashCorrect": true
+}

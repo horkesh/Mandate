@@ -1,0 +1,642 @@
+[
+  {
+    "id": "s74_mcdowell",
+    "army": "us_dept_northeastern_virginia",
+    "evidenceDate": "1861-07-08",
+    "sources": [
+      "OR I-LI.1 pp413-414",
+      "OR I-LI.1 pp408-410, brigade orders 1-3 July; prior membership retained in S66 observations"
+    ],
+    "posts": [
+      {
+        "id": "s74_mcdowell_division_1",
+        "name": "post.s74_mcdowell_division_1",
+        "kind": "division_command",
+        "parent": "us_dept_northeastern_virginia",
+        "commander": "tyler_daniel",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_1_brigade_1",
+        "name": "post.s74_mcdowell_division_1_brigade_1",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_1",
+        "commander": "keyes_erasmus_d",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_1_brigade_2",
+        "name": "post.s74_mcdowell_division_1_brigade_2",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_1",
+        "commander": "schenck_robert_c",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_1_brigade_3",
+        "name": "post.s74_mcdowell_division_1_brigade_3",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_1",
+        "commander": "sherman_william_t",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_1_brigade_4",
+        "name": "post.s74_mcdowell_division_1_brigade_4",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_1",
+        "commander": "richardson_israel_b",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_2",
+        "name": "post.s74_mcdowell_division_2",
+        "kind": "division_command",
+        "parent": "us_dept_northeastern_virginia",
+        "commander": "hunter_david",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_2_brigade_1",
+        "name": "post.s74_mcdowell_division_2_brigade_1",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_2",
+        "commander": "porter_andrew",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_2_brigade_2",
+        "name": "post.s74_mcdowell_division_2_brigade_2",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_2",
+        "commander": "burnside_ambrose_e",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_3",
+        "name": "post.s74_mcdowell_division_3",
+        "kind": "division_command",
+        "parent": "us_dept_northeastern_virginia",
+        "commander": "heintzelman_samuel_p",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_3_brigade_1",
+        "name": "post.s74_mcdowell_division_3_brigade_1",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_3",
+        "commander": "franklin_william_b",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_3_brigade_2",
+        "name": "post.s74_mcdowell_division_3_brigade_2",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_3",
+        "commander": "willcox_orlando_b",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_3_brigade_3",
+        "name": "post.s74_mcdowell_division_3_brigade_3",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_3",
+        "commander": "howard_oliver_o",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_4_reserve",
+        "name": "post.s74_mcdowell_division_4_reserve",
+        "kind": "division_command",
+        "parent": "us_dept_northeastern_virginia",
+        "commander": "runyon_theodore",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_5",
+        "name": "post.s74_mcdowell_division_5",
+        "kind": "division_command",
+        "parent": "us_dept_northeastern_virginia",
+        "commander": "miles_dixon_s",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_5_brigade_1",
+        "name": "post.s74_mcdowell_division_5_brigade_1",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_5",
+        "commander": "blenker_louis",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_mcdowell_division_5_brigade_2",
+        "name": "post.s74_mcdowell_division_5_brigade_2",
+        "kind": "brigade_command",
+        "parent": "s74_mcdowell_division_5",
+        "commander": "davies_thomas_a",
+        "identityHeld": false
+      }
+    ],
+    "brigades": [
+      {
+        "post": "s74_mcdowell_division_1_brigade_1",
+        "regiments": [
+          "ct_1_infantry",
+          "ct_2_infantry",
+          "ct_3_infantry",
+          "me_2_infantry",
+          "ny_varian_8th_militia_artillery",
+          "us_2_cavalry_cavalry"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_1_brigade_2",
+        "regiments": [
+          "ny_2_militia_infantry",
+          "oh_1_3m_infantry",
+          "oh_2_3m_infantry",
+          "us_e_2_artillery"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_1_brigade_3",
+        "regiments": [
+          "ny_13_as_printed_militia_go13_infantry",
+          "ny_69_militia_infantry",
+          "ny_79_infantry",
+          "us_e_3_artillery",
+          "wi_2_infantry"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_1_brigade_4",
+        "regiments": [
+          "ma_1_infantry",
+          "mi_2_infantry",
+          "mi_3_infantry",
+          "ny_12_infantry"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_2_brigade_1",
+        "regiments": [
+          "ny_14_militia_infantry",
+          "ny_8_militia_infantry",
+          "us_2_cavalry_cavalry",
+          "us_2_infantry",
+          "us_3_infantry",
+          "us_5_unknown_company_artillery",
+          "us_8_infantry"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_2_brigade_2",
+        "regiments": [
+          "nh_2_infantry",
+          "ny_71_militia_infantry",
+          "ri_1_infantry",
+          "ri_2_infantry",
+          "ri_2nd_regiment_battery_artillery"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_3_brigade_1",
+        "regiments": [
+          "ma_5_militia_infantry",
+          "mn_1_infantry",
+          "pa_4_3m_infantry",
+          "us_2_cavalry_cavalry",
+          "us_i_1_artillery"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_3_brigade_2",
+        "regiments": [
+          "mi_1_3m_infantry",
+          "ny_11_infantry",
+          "ny_38_infantry",
+          "us_d_2_artillery"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_3_brigade_3",
+        "regiments": [
+          "me_2_infantry",
+          "me_4_infantry",
+          "me_5_infantry",
+          "vt_2_infantry"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_4_reserve",
+        "regiments": [
+          "nj_1_3m_infantry",
+          "nj_1_3y_infantry",
+          "nj_2_3m_infantry",
+          "nj_2_3y_infantry",
+          "nj_3_3m_infantry",
+          "nj_3_3y_infantry",
+          "nj_4_3m_infantry"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_5_brigade_1",
+        "regiments": [
+          "ny_29_infantry",
+          "ny_39_infantry",
+          "ny_8_infantry",
+          "pa_27_infantry"
+        ]
+      },
+      {
+        "post": "s74_mcdowell_division_5_brigade_2",
+        "regiments": [
+          "ny_16_infantry",
+          "ny_18_infantry",
+          "ny_31_infantry",
+          "ny_32_infantry",
+          "us_g_2_artillery"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s74_patterson",
+    "army": "us_dept_pennsylvania",
+    "evidenceDate": "1861-07-10",
+    "sources": [
+      "OR I-LI.1 pp397-398",
+      "OR I-LI.1 pp406",
+      "OR I-LI.1 pp415",
+      "OR I-LI.1 pp416",
+      "OR I-LI.1 pp397-398,406,415-416, SO66/68/76/94/95/96; conditional moves remain unforced"
+    ],
+    "posts": [
+      {
+        "id": "s74_patterson_division_1",
+        "name": "post.s74_patterson_division_1",
+        "kind": "division_command",
+        "parent": "us_dept_pennsylvania",
+        "commander": "cadwalader_george",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_patterson_brigade_1",
+        "name": "post.s74_patterson_brigade_1",
+        "kind": "brigade_command",
+        "parent": "s74_patterson_division_1",
+        "commander": "thomas_george_h",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_patterson_division_2",
+        "name": "post.s74_patterson_division_2",
+        "kind": "division_command",
+        "parent": "us_dept_pennsylvania",
+        "commander": "keim_william_h",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_patterson_brigade_2",
+        "name": "post.s74_patterson_brigade_2",
+        "kind": "brigade_command",
+        "parent": "s74_patterson_division_2",
+        "commander": "wynkoop_george_c",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_patterson_brigade_3",
+        "name": "post.s74_patterson_brigade_3",
+        "kind": "brigade_command",
+        "parent": "s74_patterson_division_1",
+        "commander": null,
+        "identityHeld": true
+      },
+      {
+        "id": "s74_patterson_brigade_4",
+        "name": "post.s74_patterson_brigade_4",
+        "kind": "brigade_command",
+        "parent": "s74_patterson_division_1",
+        "commander": "miles_dixon_s",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_patterson_brigade_5",
+        "name": "post.s74_patterson_brigade_5",
+        "kind": "brigade_command",
+        "parent": "s74_patterson_division_2",
+        "commander": "negley_james_s",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_patterson_brigade_6",
+        "name": "post.s74_patterson_brigade_6",
+        "kind": "brigade_command",
+        "parent": "us_dept_pennsylvania",
+        "commander": "abercrombie_john_j",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_patterson_division_3",
+        "name": "post.s74_patterson_division_3",
+        "kind": "division_command",
+        "parent": "us_dept_pennsylvania",
+        "commander": "sandford_charles_w",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_patterson_brigade_7",
+        "name": "post.s74_patterson_brigade_7",
+        "kind": "brigade_command",
+        "parent": "s74_patterson_division_3",
+        "commander": "stone_charles_p",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_patterson_brigade_8",
+        "name": "post.s74_patterson_brigade_8",
+        "kind": "brigade_command",
+        "parent": "s74_patterson_division_3",
+        "commander": null,
+        "identityHeld": false
+      }
+    ],
+    "brigades": [
+      {
+        "post": "s74_patterson_brigade_1",
+        "regiments": [
+          "pa_21_infantry",
+          "pa_23_infantry",
+          "pa_6_infantry",
+          "ri_1_infantry",
+          "ri_1st_battery_artillery",
+          "us_doubleday_mixed_battalion_artillery",
+          "us_unidentified_cavalry_cavalry"
+        ]
+      },
+      {
+        "post": "s74_patterson_brigade_2",
+        "regiments": [
+          "pa_1_infantry",
+          "pa_24_infantry",
+          "pa_2_infantry",
+          "pa_3_infantry"
+        ]
+      },
+      {
+        "post": "s74_patterson_brigade_3",
+        "regiments": [
+          "pa_10_infantry",
+          "pa_20_infantry",
+          "pa_7_infantry",
+          "pa_8_infantry"
+        ]
+      },
+      {
+        "post": "s74_patterson_brigade_4",
+        "regiments": [
+          "pa_13_infantry",
+          "pa_16_infantry",
+          "pa_9_infantry",
+          "us_2_infantry",
+          "us_3_infantry"
+        ]
+      },
+      {
+        "post": "s74_patterson_brigade_5",
+        "regiments": [
+          "pa_14_infantry",
+          "pa_15_infantry"
+        ]
+      },
+      {
+        "post": "s74_patterson_brigade_6",
+        "regiments": [
+          "ct_4_infantry",
+          "pa_11_3m_infantry",
+          "wi_1_3m_infantry"
+        ]
+      },
+      {
+        "post": "s74_patterson_brigade_7",
+        "regiments": [
+          "dc_volunteers_infantry",
+          "nh_1_infantry",
+          "ny_9_militia_infantry",
+          "pa_17_infantry",
+          "pa_25_infantry"
+        ]
+      },
+      {
+        "post": "s74_patterson_brigade_8",
+        "regiments": [
+          "ny_12_militia_infantry",
+          "ny_19_infantry",
+          "ny_28_infantry",
+          "ny_5_militia_infantry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s74_beauregard",
+    "army": "cs_cmd_manassas",
+    "evidenceDate": "1861-06-20",
+    "sources": [
+      "OR I-II pp943-944"
+    ],
+    "posts": [
+      {
+        "id": "s74_beauregard_brigade_1",
+        "name": "post.s74_beauregard_brigade_1",
+        "kind": "brigade_command",
+        "parent": "cs_cmd_manassas",
+        "commander": "bonham_milledge_l",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_beauregard_brigade_2",
+        "name": "post.s74_beauregard_brigade_2",
+        "kind": "brigade_command",
+        "parent": "cs_cmd_manassas",
+        "commander": "ewell_richard_s",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_beauregard_brigade_3",
+        "name": "post.s74_beauregard_brigade_3",
+        "kind": "brigade_command",
+        "parent": "cs_cmd_manassas",
+        "commander": "jones_david_r",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_beauregard_brigade_4",
+        "name": "post.s74_beauregard_brigade_4",
+        "kind": "brigade_command",
+        "parent": "cs_cmd_manassas",
+        "commander": "terrett_george_h",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_beauregard_brigade_5",
+        "name": "post.s74_beauregard_brigade_5",
+        "kind": "brigade_command",
+        "parent": "cs_cmd_manassas",
+        "commander": "cocke_philip_st_george",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_beauregard_brigade_6",
+        "name": "post.s74_beauregard_brigade_6",
+        "kind": "brigade_command",
+        "parent": "cs_cmd_manassas",
+        "commander": "early_jubal_a",
+        "identityHeld": false
+      }
+    ],
+    "brigades": [
+      {
+        "post": "s74_beauregard_brigade_1",
+        "regiments": [
+          "sc_1_gregg_infantry",
+          "sc_2_infantry",
+          "sc_7_infantry",
+          "sc_8_infantry"
+        ]
+      },
+      {
+        "post": "s74_beauregard_brigade_2",
+        "regiments": [
+          "al_5_infantry",
+          "al_6_infantry",
+          "la_6_infantry"
+        ]
+      },
+      {
+        "post": "s74_beauregard_brigade_3",
+        "regiments": [
+          "ms_17_infantry",
+          "ms_18_infantry",
+          "sc_5_infantry"
+        ]
+      },
+      {
+        "post": "s74_beauregard_brigade_4",
+        "regiments": [
+          "va_11_infantry",
+          "va_17_infantry",
+          "va_1_infantry"
+        ]
+      },
+      {
+        "post": "s74_beauregard_brigade_5",
+        "regiments": [
+          "va_18_infantry",
+          "va_cocke_number_unknown_infantry",
+          "va_preston_number_unknown_infantry"
+        ]
+      },
+      {
+        "post": "s74_beauregard_brigade_6",
+        "regiments": [
+          "sc_4_infantry",
+          "va_24_infantry",
+          "va_7_infantry"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s74_johnston",
+    "army": "cs_cmd_harpers_ferry",
+    "evidenceDate": "1861-06-30",
+    "sources": [
+      "OR I-II p470, roster of 30 June 1861"
+    ],
+    "posts": [
+      {
+        "id": "s74_johnston_brigade_1",
+        "name": "post.s74_johnston_brigade_1",
+        "kind": "brigade_command",
+        "parent": "cs_cmd_harpers_ferry",
+        "commander": "jackson_thomas_j",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_johnston_brigade_2",
+        "name": "post.s74_johnston_brigade_2",
+        "kind": "brigade_command",
+        "parent": "cs_cmd_harpers_ferry",
+        "commander": "bartow_francis_s",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_johnston_brigade_3",
+        "name": "post.s74_johnston_brigade_3",
+        "kind": "brigade_command",
+        "parent": "cs_cmd_harpers_ferry",
+        "commander": "bee_barnard_e",
+        "identityHeld": false
+      },
+      {
+        "id": "s74_johnston_brigade_4",
+        "name": "post.s74_johnston_brigade_4",
+        "kind": "brigade_command",
+        "parent": "cs_cmd_harpers_ferry",
+        "commander": "elzey_arnold",
+        "identityHeld": false
+      }
+    ],
+    "brigades": [
+      {
+        "post": "s74_johnston_brigade_1",
+        "regiments": [
+          "unknown_pendleton_artillery",
+          "va_27_infantry",
+          "va_2_infantry",
+          "va_4_infantry",
+          "va_5_infantry"
+        ]
+      },
+      {
+        "post": "s74_johnston_brigade_2",
+        "regiments": [
+          "ga_7_infantry",
+          "ga_8_infantry",
+          "ga_9_infantry",
+          "ky_duncan_infantry",
+          "ky_pope_infantry",
+          "unknown_alburtis_artillery"
+        ]
+      },
+      {
+        "post": "s74_johnston_brigade_3",
+        "regiments": [
+          "al_4_infantry",
+          "ms_11_infantry",
+          "ms_2_infantry",
+          "tn_1_infantry",
+          "unknown_imboden_artillery"
+        ]
+      },
+      {
+        "post": "s74_johnston_brigade_4",
+        "regiments": [
+          "md_1_infantry",
+          "tn_3_infantry",
+          "unknown_grove_artillery",
+          "va_10_infantry",
+          "va_13_infantry"
+        ]
+      },
+      {
+        "post": "cs_cmd_harpers_ferry",
+        "regiments": [
+          "va_1_cavalry",
+          "va_33_infantry"
+        ]
+      }
+    ]
+  }
+]

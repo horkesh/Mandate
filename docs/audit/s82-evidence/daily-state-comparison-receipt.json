@@ -1,0 +1,32 @@
+{
+  "fields": [
+    "forceRaisedIdentities",
+    "postStates",
+    "departmentFactions",
+    "personService",
+    "personRanks",
+    "forceBlockStates",
+    "forceLocations",
+    "forceAssignments",
+    "forceJoins",
+    "orderResponses",
+    "operationRecords",
+    "planRecords",
+    "situationStates",
+    "regionControl",
+    "regionGovernments",
+    "personStatus",
+    "personTravel"
+  ],
+  "changedRows": 682,
+  "countsByField": {
+    "personStatus": 148,
+    "postStates": 71,
+    "situationStates": 125,
+    "orderResponses": 328,
+    "forceAssignments": 10
+  },
+  "artifact": "runs/s82/daily-state-differences.json",
+  "sha256": "6bff7b9603be92533e00279feba694ea2c5b423e0170d38e7a43d1cbc9f0ab43",
+  "meaning": "Each row compares reconstructed end-of-day State truth, not change-list ordering; every before/after is retained."
+}

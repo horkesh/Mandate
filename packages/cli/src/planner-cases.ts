@@ -1,3 +1,4 @@
+import { forceTotals } from '@mandate/kernel';
 /**
  * Lane 0.9's three planner cases, run on the kernel planner on the testbed pack (lane 1.2): a pincer round the salient,
  * a supply-aware march, and a small joint naval relief through a boom.
@@ -113,7 +114,7 @@ export function caseInput(spec: CaseSpec, seating: Seating, options: CaseOptions
     const side = phase0.factionOfBlock(index, state, id);
     if (side === null || side === faction) continue;
     const region = state.forceLocations[id]!.locRegion;
-    enemy.set(region, (enemy.get(region) ?? 0) + (state.forceBlockStates[id]!.fbStrength ?? 0));
+    enemy.set(region, (enemy.get(region) ?? 0) + (forceTotals(state.forceBlockStates[id]!, world.map.forceTotalsCache).fbStrength ?? 0));
   }
   const claims: phase0.ReportClaim[] = [];
   for (const region of [...enemy.keys()].sort()) claims.push({ claimKind: 'enemy-strength', claimRegion: region as ids.RegionId, claimValue: Math.trunc((enemy.get(region)! * bias) / 1000), claimToken: null, claimConfidence: 700 });

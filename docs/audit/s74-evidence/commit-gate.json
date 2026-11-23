@@ -1,0 +1,25 @@
+{
+  "attempted": false,
+  "committed": false,
+  "head": "febfd38ca2241e35e8ab1013857470b7c0e4b45f",
+  "reason": "Mandatory cheap rejection gate: corrected frozen reference has 15 unchanged-band liveness failures. The pre-commit hook runs the liveness unit assertion against the same pack and bands, so an expensive unchanged full-hook retry cannot pass. No bypass or weakened check is used.",
+  "witnesses": [
+    {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "maxFires": 14
+    },
+    {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "maxFires": 0
+    },
+    {
+      "mechanic": "combat.killed_wounded",
+      "fires": 0,
+      "minFires": 2
+    }
+  ],
+  "doneCheckRun": false,
+  "doneCheckReason": "User authorizes the standalone --milestone 1a run only after a passing-hook commit."
+}

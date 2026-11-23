@@ -1,3 +1,5 @@
+import { observeBlock } from './support/lot-fixture.ts';
+import { forceTotals } from '../src/forces/lots.ts';
 import { describe, expect, it } from 'vitest';
 import {
   applyScheduledChanges,
@@ -138,8 +140,8 @@ describe('unposted people on a side', () => {
 
 describe('setup: forces, locations and command copied once from the start (0050)', () => {
   it('copies blocks with strength, stores in milli-days and unknowns kept unknown', () => {
-    expect(S.forceBlockStates[B('a_1')]).toEqual({ fbName: 'block.a_1.name', fbKind: 'block', fbParent: null, fbDepartment: 'a_war', fbArm: 'infantry', fbStrength: 5000, fbNonCombatants: 0, fbStoresMilli: 10000, fbStoresAssumed: false, fbMorale: 600, fbExperience: 400, fbEquipment: 600, fbStragglers: 0, fbRoutedDay: null, fbSurrenderedDay: null });
-    expect(S.forceBlockStates[B('a_3')]!.fbStrength).toBeNull();
+    expect(observeBlock(S.forceBlockStates[B('a_1')]!)).toEqual({ fbName: 'block.a_1.name', fbKind: 'block', fbParent: null, fbDepartment: 'a_war', fbArm: 'infantry', fbStrength: 5000, fbNonCombatants: 0, fbStoresMilli: 10000, fbStoresAssumed: false, fbMorale: 600, fbExperience: 400, fbEquipment: 600, fbStragglers: 0, fbRoutedDay: null, fbSurrenderedDay: null });
+    expect(forceTotals(S.forceBlockStates[B('a_3')]!).fbStrength).toBeNull();
     expect(S.forceBlockStates[B('a_marines')]!.fbStoresMilli).toBeNull();
     expect(S.forceBlockStates[B('a_2_guard')]!.fbParent).toBe('a_2');
     expect(sumStrength(S, [B('a_1'), B('a_3')])).toEqual({ men: 5000, unknown: ['a_3'] });
@@ -208,7 +210,7 @@ describe('forces: the only writer of strength and stores', () => {
       { change: 'stores', block: B('a_2'), milli: -2500, cause: 'consumption' },
       { change: 'stores', block: B('a_marines'), milli: 5000, cause: 'supply' },
     ]);
-    expect(state.forceBlockStates[B('a_1')]!.fbStrength).toBe(0);
+    expect(forceTotals(state.forceBlockStates[B('a_1')]!).fbStrength).toBe(0);
     expect(state.forceBlockStates[B('a_2')]!.fbStoresMilli).toBe(7500);
     expect(state.forceBlockStates[B('a_marines')]!.fbStoresMilli).toBeNull();
     expect(changes.map((c) => `${c.block}:${c.before}>${c.after}:${c.cause}`)).toEqual(['a_1:5000>0:combat', 'a_2:10000>7500:consumption']);

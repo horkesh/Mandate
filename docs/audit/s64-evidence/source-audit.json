@@ -1,0 +1,13 @@
+{
+  "rows": 42,
+  "citationPages": 29,
+  "retainedReadPages": 56,
+  "sourceArtifacts": 66,
+  "localLinks": [
+    "s64-source-reading.json",
+    "2026-11-22-S64-command-inclusion.csv",
+    "s64-cohort-crosswalk.json"
+  ],
+  "departmentDutySum": 37321,
+  "errors": []
+}

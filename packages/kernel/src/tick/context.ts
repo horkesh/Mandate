@@ -50,6 +50,7 @@ export type RejectionReason =
   | 'vacant_post'
   | 'wrong_day'
   // Lane 1.5: the people verbs and attention.
+  | 'appointment_pending'
   | 'already_promised'
   | 'bad_counters'
   | 'no_attention'

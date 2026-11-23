@@ -1,3 +1,5 @@
+import { patchBlock, patchService } from '../../kernel/test/support/lot-fixture.ts';
+import { enlistmentsOf } from '../../kernel/src/forces/enlistment.ts';
 import { canonicalHash, createTelemetry, decodeSave, encodeSave, ids, phase0 } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
 import { seatsWorld } from '../src/seats-world.ts';
@@ -15,7 +17,7 @@ const call = phase0.tick(bareWorld, raised, [{ day: 1, seat: phase0.seatIdFor(id
 if (call.rejections.length) throw Error(JSON.stringify(call.rejections));
 raised = call.state;
 while (raised.stateDay < 20) raised = phase0.tick(bareWorld, raised, [], { freeze: true }).state;
-const entry = Object.entries(raised.forceEnlistments).find(([, e]) => e.enlCallId === 'shire_original')!;
+const entry = Object.entries(enlistmentsOf(raised)).find(([, e]) => e.enlCallId === 'shire_original')!;
 if (!entry) throw Error('fixture call did not muster');
 const block = ids.toId('forceBlock', entry[0]);
 const notice = (r = selector): phase0.SituationDef => ({ ...loaded.world.situations.find(s => s.kind === 'notice')!, id: S,
@@ -32,20 +34,20 @@ describe('a voluntary whole-unit remuster preserves the existing levy', () => {
     expect(telemetry.mechanics['recruitment.mustered']?.fires).toBe(0);
     const control = phase0.tick(bareWorld, raised, [], { freeze: true }).state;
     expect(result.rejections).toEqual([]);
-    expect(result.state.forceEnlistments[block]).toEqual({ ...raised.forceEnlistments[block], enlEndsDay: entry[1].enlMusterDay + 1095, enlRenewedBy: S });
-    expect(result.state.forceBlockStates).toEqual(control.forceBlockStates);
+    expect(enlistmentsOf(result.state)[block]).toEqual({ ...enlistmentsOf(raised)[block], enlEndsDay: entry[1].enlMusterDay + 1095, enlRenewedBy: S });
+    expect(Object.fromEntries(Object.entries(result.state.forceBlockStates).map(([id,b]) => [id, { ...b, fbLots: b.fbLots.map(l => ({ ...l, lotService: null })) }]))).toEqual(Object.fromEntries(Object.entries(control.forceBlockStates).map(([id,b]) => [id, { ...b, fbLots: b.fbLots.map(l => ({ ...l, lotService: null })) }])));
     expect(result.state.forceLocations).toEqual(control.forceLocations);
     expect(result.state.forceAssignments).toEqual(control.forceAssignments);
     expect(result.state.postLevies).toEqual(control.postLevies);
     expect(result.state.orderResponses).toEqual(control.orderResponses);
-    expect(tick(result.state).state.forceEnlistments).toEqual(result.state.forceEnlistments);
+    expect(enlistmentsOf(tick(result.state).state)).toEqual(enlistmentsOf(result.state));
   });
 
   it('does not create a substitute if the original call never produced an enlistment', () => {
     const state = { ...phase0.createState(bareWorld, loaded.setup), stateDay: 20 };
     const result = tick(state);
     expect(result.state.situationStates[S]).toBeUndefined();
-    expect(result.state.forceEnlistments).toEqual({});
+    expect(enlistmentsOf(result.state)).toEqual({});
     expect(Object.keys(result.state.forceBlockStates)).toEqual(Object.keys(state.forceBlockStates));
   });
 
@@ -54,26 +56,26 @@ describe('a voluntary whole-unit remuster preserves the existing levy', () => {
     ['different term', { enlEndsDay: entry[1].enlMusterDay + 365 }], ['four regiments', { enlRegiments: 4 }],
     ['unknown regiments', { enlRegiments: null }], ['later original muster', { enlMusterDay: 19, enlEndsDay: 109 }],
   ] as const)('does not renew an ineligible enlistment: %s', (_, patch) => {
-    const state = { ...raised, forceEnlistments: { ...raised.forceEnlistments, [block]: { ...entry[1], ...patch } } };
+    const state = { ...raised, forceBlockStates: { ...raised.forceBlockStates, [block]: patchService(raised.forceBlockStates[block]!, patch) } };
     const result = tick(state);
     expect(result.state.situationStates[S]).toBeUndefined();
-    expect(result.state.forceEnlistments[block]?.enlRenewedBy).toBeUndefined();
+    expect(enlistmentsOf(result.state)[block]?.enlRenewedBy).toBeUndefined();
   });
 
   it.each([{ fbSurrenderedDay: 19 }, { fbStrength: 0 }, { fbArm: 'cavalry' }, { fbDepartment: ids.toId('department', 's_war') }])('does not renew an unavailable or wrong-arm/side unit: %j', patch => {
-    const state = { ...raised, forceBlockStates: { ...raised.forceBlockStates, [block]: { ...raised.forceBlockStates[block]!, ...patch } } };
+    const state = { ...raised, forceBlockStates: { ...raised.forceBlockStates, [block]: patchBlock(raised.forceBlockStates[block]!, patch) } };
     expect(tick(state).state.situationStates[S]).toBeUndefined();
   });
 
   it('selects the earliest eligible muster, then the strict block id; never splits a larger unit', () => {
     const other = ids.toId('forceBlock', 'aaa_remuster_fixture');
     const state = { ...raised, forceBlockStates: { ...raised.forceBlockStates, [other]: raised.forceBlockStates[block]! },
-      forceEnlistments: { ...raised.forceEnlistments, [other]: entry[1] }, forceLocations: { ...raised.forceLocations, [other]: raised.forceLocations[block]! },
+      forceLocations: { ...raised.forceLocations, [other]: raised.forceLocations[block]! },
       forceAssignments: { ...raised.forceAssignments, [other]: raised.forceAssignments[block]! },
     };
     const result = tick(state);
-    expect(result.state.forceEnlistments[other]?.enlRenewedBy).toBe(S);
-    expect(result.state.forceEnlistments[block]).toEqual(entry[1]);
+    expect(enlistmentsOf(result.state)[other]?.enlRenewedBy).toBe(S);
+    expect(enlistmentsOf(result.state)[block]).toEqual(entry[1]);
   });
 
   it('rejects a decision-origin proposal even when the unit qualifies', () => {

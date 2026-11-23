@@ -1,3 +1,4 @@
+import { forceTotals } from '../src/forces/lots.ts';
 import { expect, it } from 'vitest';
 import { relieveHolder } from '../src/command/command.ts';
 import { deriveMap } from '../src/control-index/derived.ts';
@@ -103,7 +104,7 @@ it('S25 tick-09: a valid garrison proposal reaches all three owners', () => {
   expect(result.refused).toEqual([]);
   expect(result.made).toHaveLength(1);
   const id = result.made[0]!;
-  expect(result.state.forceBlockStates[id]!.fbStrength).toBe(1);
+  expect(forceTotals(result.state.forceBlockStates[id]!).fbStrength).toBe(1);
   expect(result.state.forceLocations[id]!.locRegion).toBe(R('a_front'));
   expect(result.state.forceAssignments[id]).toBe(POST('a_army'));
 });

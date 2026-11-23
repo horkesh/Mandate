@@ -1,3 +1,4 @@
+import type { OrganisationTemplate } from './organisation.ts';
 /**
  * World format v2, the whole World: one pack's static data, self-contained so
  * it can be hashed and referenced from saves by hash (FOUNDATION section 10).
@@ -9,7 +10,7 @@
  * `scenario.ts`; every open list (terrains, post kinds, arms, ranks, traits)
  * belongs to the pack.
  */
-import type { DepartmentId, FactionId, PersonId, PostId, RegionId } from '../ids.ts';
+import type { DepartmentId, FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { ComplianceRung } from '../directive.ts';
 import type { NoteKind } from '../plans/notes.ts';
 import type {
@@ -33,6 +34,7 @@ import type { PeopleRules } from '../people/rules.ts';
 import type { CombatRules } from '../combat/rules.ts';
 import type { OperationsRules, PruningRules } from '../operations/rules.ts';
 import type { PoliticsRules } from '../politics/rules.ts';
+import type { RegimentRecord } from './regiments.ts';
 
 export const WORLD_FORMAT_VERSION = 2;
 
@@ -119,7 +121,7 @@ export interface PrincipalDoctrine {
   /** Why that post: the research it rests on, the choice of post labelled [I]; null exactly when `concentrateAt` is. */
   readonly concentrateSource: string | null;
   /** Dated, cause-dependent concentration changes. Existing troops move only from the expressly named posts. */
-  readonly concentrations?: readonly { readonly post: PostId; readonly fromDate: string; readonly requiresDepartment: DepartmentId; readonly fromPosts: readonly PostId[]; readonly source: string }[];
+  readonly concentrations?: readonly { readonly post: PostId; readonly fromDate: string; readonly requiresDepartment: DepartmentId; readonly fromPosts: readonly PostId[]; readonly receiveLevies?: boolean; readonly source: string }[];
   /** Establish a declared command through a sourced appointment, after the named government joins this side. */
   readonly appointments?: readonly (({ readonly post: PostId; readonly person: PersonId; readonly source: string }) & ({ readonly fromPost: PostId | null; readonly fromDate: string; readonly requiresDepartment: DepartmentId } | { readonly onDate: string }))[];
   /**
@@ -130,7 +132,7 @@ export interface PrincipalDoctrine {
    */
   readonly calls: readonly { readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly fromDate: string; readonly atPeace?: boolean; readonly source: string }[];
   /** The offensive goals he gives, each on its day (or the day after war, if later): a post to take a region. */
-  readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly fromDate: string; readonly source: string }[];
+  readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly fromDate: string; readonly posture?: 'hold' | 'relieve' | 'take'; readonly requiresNotice?: SituationId; readonly source: string }[];
   /** How often he asks each army where it stands and what it faces (an inquiry costs no attention), in days. */
   readonly inquireEveryDays: number;
   /** The person kinds he appoints to a vacant post commanding land troops, and naval ones (the pack's person kinds). */
@@ -341,9 +343,10 @@ export type PostCreation = (typeof POST_CREATION)[number];
 /**
  * What a post kind does in the chain that the engine reads (0058): a filter stands between the wire and its principal
  * and may hold or pass what comes in (0032); an intelligence post gathers and assesses what is known of the enemy.
+ * An institutional office stays at its government's seat and reports as an office despite directly assigned forces.
  * The engine reads only the role, never the pack's kind names (hard rule 3).
  */
-export const POST_KIND_ROLES = ['filter', 'intelligence'] as const;
+export const POST_KIND_ROLES = ['filter', 'intelligence', 'office'] as const;
 export type PostKindRole = (typeof POST_KIND_ROLES)[number];
 
 export interface PostKindTerm {
@@ -457,6 +460,8 @@ export interface DepartmentRecord {
 }
 
 export interface World {
+  readonly organisationTemplates?: readonly OrganisationTemplate[];
+  readonly regimentCatalogue?: readonly RegimentRecord[];
   readonly formatVersion: typeof WORLD_FORMAT_VERSION;
   /** The pack id (its folder name). */
   readonly pack: string;

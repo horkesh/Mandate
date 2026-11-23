@@ -1,0 +1,1695 @@
+{
+  "armies": {
+    "us_dept_northeastern_virginia": {
+      "holder": "mcdowell_irvin",
+      "blocks": 29,
+      "knownAssigned": 63000,
+      "knownJoined": 63000,
+      "unknownBlocks": 0,
+      "joiningRegions": {}
+    },
+    "us_dept_pennsylvania": {
+      "holder": "patterson_robert",
+      "blocks": 1,
+      "knownAssigned": 2000,
+      "knownJoined": 2000,
+      "unknownBlocks": 0,
+      "joiningRegions": {}
+    },
+    "cs_cmd_harpers_ferry": {
+      "holder": "johnston_joseph_e",
+      "blocks": 5,
+      "knownAssigned": 29000,
+      "knownJoined": 0,
+      "unknownBlocks": 1,
+      "joiningRegions": {
+        "nc_coastal_plain": 2,
+        "ga_dalton": 2
+      }
+    },
+    "cs_cmd_manassas": {
+      "holder": "beauregard_pierre_g_t",
+      "blocks": 10,
+      "knownAssigned": 29000,
+      "knownJoined": 0,
+      "unknownBlocks": 2,
+      "joiningRegions": {
+        "knoxville": 2,
+        "al_valley_east": 2,
+        "salisbury_charlotte": 1,
+        "nc_coastal_plain": 3
+      }
+    }
+  },
+  "manassas": [
+    {
+      "id": "battle:manassas:142",
+      "region": "manassas",
+      "start": 142,
+      "days": [
+        {
+          "bdayDay": 142,
+          "bdayNumber": 1,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -52,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 13,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1111,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 111,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 881,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_1.1",
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d67.bundle.10",
+                "raised.st_gov_new_york.d67.bundle.2",
+                "raised.st_gov_new_york.d67.bundle.3",
+                "raised.st_gov_new_york.d67.bundle.4",
+                "raised.st_gov_new_york.d67.bundle.5",
+                "raised.st_gov_new_york.d67.bundle.6",
+                "raised.st_gov_new_york.d67.bundle.7",
+                "raised.st_gov_new_york.d67.bundle.8",
+                "raised.st_gov_new_york.d67.bundle.9",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_new_york.d86.bundle.2",
+                "raised.st_gov_new_york.d86.bundle.3",
+                "raised.st_gov_new_york.d86.bundle.4",
+                "raised.st_gov_rhode_island.d79"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 63000,
+              "bsideCommitted": 44100,
+              "bsideEngaged": 44100,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 52,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 11,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 913,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 311,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 55,
+              "bsideHit": null
+            }
+          ]
+        },
+        {
+          "bdayDay": 143,
+          "bdayNumber": 2,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -52,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -100,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -46,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 952,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 593,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 628,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_1.1",
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d67.bundle.10",
+                "raised.st_gov_new_york.d67.bundle.2",
+                "raised.st_gov_new_york.d67.bundle.3",
+                "raised.st_gov_new_york.d67.bundle.4",
+                "raised.st_gov_new_york.d67.bundle.5",
+                "raised.st_gov_new_york.d67.bundle.6",
+                "raised.st_gov_new_york.d67.bundle.7",
+                "raised.st_gov_new_york.d67.bundle.8",
+                "raised.st_gov_new_york.d67.bundle.9",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_new_york.d86.bundle.2",
+                "raised.st_gov_new_york.d86.bundle.3",
+                "raised.st_gov_new_york.d86.bundle.4",
+                "raised.st_gov_rhode_island.d79"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 63000,
+              "bsideCommitted": 44100,
+              "bsideEngaged": 44100,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 52,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -100,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 71,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 873,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 969,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 312,
+              "bsideHit": null
+            }
+          ]
+        },
+        {
+          "bdayDay": 144,
+          "bdayNumber": 3,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -52,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -200,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 6,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 904,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 818,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 570,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_1.1",
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d67.bundle.10",
+                "raised.st_gov_new_york.d67.bundle.2",
+                "raised.st_gov_new_york.d67.bundle.3",
+                "raised.st_gov_new_york.d67.bundle.4",
+                "raised.st_gov_new_york.d67.bundle.5",
+                "raised.st_gov_new_york.d67.bundle.6",
+                "raised.st_gov_new_york.d67.bundle.7",
+                "raised.st_gov_new_york.d67.bundle.8",
+                "raised.st_gov_new_york.d67.bundle.9",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_new_york.d86.bundle.2",
+                "raised.st_gov_new_york.d86.bundle.3",
+                "raised.st_gov_new_york.d86.bundle.4",
+                "raised.st_gov_rhode_island.d79"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 63000,
+              "bsideCommitted": 44100,
+              "bsideEngaged": 44100,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 52,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -200,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 31,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 733,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 271,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 438,
+              "bsideHit": null
+            }
+          ]
+        },
+        {
+          "bdayDay": 145,
+          "bdayNumber": 4,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -52,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -300,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -52,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 746,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 826,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 910,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_1.1",
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d67.bundle.10",
+                "raised.st_gov_new_york.d67.bundle.2",
+                "raised.st_gov_new_york.d67.bundle.3",
+                "raised.st_gov_new_york.d67.bundle.4",
+                "raised.st_gov_new_york.d67.bundle.5",
+                "raised.st_gov_new_york.d67.bundle.6",
+                "raised.st_gov_new_york.d67.bundle.7",
+                "raised.st_gov_new_york.d67.bundle.8",
+                "raised.st_gov_new_york.d67.bundle.9",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_new_york.d86.bundle.2",
+                "raised.st_gov_new_york.d86.bundle.3",
+                "raised.st_gov_new_york.d86.bundle.4",
+                "raised.st_gov_rhode_island.d79"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 63000,
+              "bsideCommitted": 44100,
+              "bsideEngaged": 44100,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 52,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -300,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -106,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 496,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 595,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 867,
+              "bsideHit": null
+            }
+          ]
+        },
+        {
+          "bdayDay": 146,
+          "bdayNumber": 5,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -52,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -400,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 27,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 725,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 37,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 895,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_1.1",
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d67.bundle.10",
+                "raised.st_gov_new_york.d67.bundle.2",
+                "raised.st_gov_new_york.d67.bundle.3",
+                "raised.st_gov_new_york.d67.bundle.4",
+                "raised.st_gov_new_york.d67.bundle.5",
+                "raised.st_gov_new_york.d67.bundle.6",
+                "raised.st_gov_new_york.d67.bundle.7",
+                "raised.st_gov_new_york.d67.bundle.8",
+                "raised.st_gov_new_york.d67.bundle.9",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_new_york.d86.bundle.2",
+                "raised.st_gov_new_york.d86.bundle.3",
+                "raised.st_gov_new_york.d86.bundle.4",
+                "raised.st_gov_rhode_island.d79"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 63000,
+              "bsideCommitted": 44100,
+              "bsideEngaged": 44100,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 52,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -400,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -37,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 465,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 914,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 828,
+              "bsideHit": null
+            }
+          ]
+        },
+        {
+          "bdayDay": 147,
+          "bdayNumber": 6,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -52,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -500,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 73,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 671,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 635,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 117,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_1.1",
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d67.bundle.10",
+                "raised.st_gov_new_york.d67.bundle.2",
+                "raised.st_gov_new_york.d67.bundle.3",
+                "raised.st_gov_new_york.d67.bundle.4",
+                "raised.st_gov_new_york.d67.bundle.5",
+                "raised.st_gov_new_york.d67.bundle.6",
+                "raised.st_gov_new_york.d67.bundle.7",
+                "raised.st_gov_new_york.d67.bundle.8",
+                "raised.st_gov_new_york.d67.bundle.9",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_new_york.d86.bundle.2",
+                "raised.st_gov_new_york.d86.bundle.3",
+                "raised.st_gov_new_york.d86.bundle.4",
+                "raised.st_gov_rhode_island.d79"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 63000,
+              "bsideCommitted": 44100,
+              "bsideEngaged": 44100,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 52,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -500,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 43,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 445,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 190,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 727,
+              "bsideHit": null
+            }
+          ]
+        },
+        {
+          "bdayDay": 148,
+          "bdayNumber": 7,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -52,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -600,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 105,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 603,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 465,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 945,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_1.1",
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d67.bundle.10",
+                "raised.st_gov_new_york.d67.bundle.2",
+                "raised.st_gov_new_york.d67.bundle.3",
+                "raised.st_gov_new_york.d67.bundle.4",
+                "raised.st_gov_new_york.d67.bundle.5",
+                "raised.st_gov_new_york.d67.bundle.6",
+                "raised.st_gov_new_york.d67.bundle.7",
+                "raised.st_gov_new_york.d67.bundle.8",
+                "raised.st_gov_new_york.d67.bundle.9",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_new_york.d86.bundle.2",
+                "raised.st_gov_new_york.d86.bundle.3",
+                "raised.st_gov_new_york.d86.bundle.4",
+                "raised.st_gov_rhode_island.d79"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 63000,
+              "bsideCommitted": 44100,
+              "bsideEngaged": 44100,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 52,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -600,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -69,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "clamp",
+                  "btermValue": 17,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 250,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 879,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 115,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "headquarters": {
+    "us_secretary_navy": "washington",
+    "cs_secretary_war": "richmond",
+    "us_dept_northeastern_virginia": "manassas",
+    "us_dept_pennsylvania": "lower_valley",
+    "cs_cmd_harpers_ferry": "harpers_ferry",
+    "cs_cmd_manassas": "manassas"
+  },
+  "routeNote": "Davis bypass sent143, received146, special-messenger; Johnston objects rather than executing a forced junction. See headquarters-and-order.json and patterson-orders.json."
+}

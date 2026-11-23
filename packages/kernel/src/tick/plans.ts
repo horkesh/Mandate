@@ -102,6 +102,14 @@ export function planOptions(state: State, post: PostId, day: number): readonly O
   return state.planRecords[post]!.planDraft!.draftCandidates.map(c => optionView(c));
 }
 
+/** Kernel-judged choices addressed to their own commander (0052, Seats), not a principal's post catalogue. */
+export function choosingMenus(state: State, day: number) {
+  return choosingPosts(state, day).flatMap(post => {
+    const options = planOptions(state, post, day);
+    return options === null || options.length < 2 ? [] : [{ post, holder: state.postStates[post]!.postHolder!, options }];
+  });
+}
+
 /** A report from a commander to the goal's issuer, answering the goal's order. */
 function toIssuer(ctx: TickContext, state: State, post: PostId, record: PlanRecord, claims: readonly ReportClaim[], options: { readonly plan?: PlanPaper; readonly notes?: readonly NoteAccount[]; readonly objection?: readonly StatedReason[]; readonly truth?: ReturnType<typeof term>[]; readonly answers: MessageId; readonly tag: string }): MessageId {
   const holder = state.postStates[post]!.postHolder!;

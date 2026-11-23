@@ -1,0 +1,48 @@
+{
+  "id": "manassas_advance_received",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.manassas_advance_received.title",
+  "text": "situation.manassas_advance_received.text",
+  "earliest": "1861-07-17",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 134
+      },
+      {
+        "flag": "war_begun_confederate"
+      },
+      {
+        "holds": {
+          "post": "cs_cmd_manassas",
+          "person": "beauregard_pierre_g_t"
+        }
+      },
+      {
+        "advancingOn": {
+          "post": "us_dept_northeastern_virginia",
+          "region": "manassas"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Military observation and administrative order only; no civilian-conduct, secession-motive or protected-population effect."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 pp.473,980-982: Cooper, 17 July; Johnston acknowledgement, 18 July; report of the advance and conditional junction. [I] A real marching operation causes this summary; the ordinary report route carries it to the principal, without revealing private goals or forcing arrival."
+    }
+  ],
+  "namedOnly": "A summary of the cited military correspondence, without new personal speech or motives."
+}

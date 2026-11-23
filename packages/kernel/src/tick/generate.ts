@@ -1,3 +1,4 @@
+import { forceTotals } from '../forces/lots.ts';
 /**
  * Reports written on a cycle (decision 0032's templates), at the end of the day.
  *
@@ -68,7 +69,7 @@ function enemyAt(ctx: TickContext, state: State, faction: FactionId): ReadonlyMa
     const side = factionOfBlock(map, state, id);
     if (side === null || side === faction) continue;
     const region = state.forceLocations[id]!.locRegion;
-    out.set(region, (out.get(region) ?? 0) + (state.forceBlockStates[id]!.fbStrength ?? 0));
+    out.set(region, (out.get(region) ?? 0) + (forceTotals(state.forceBlockStates[id]!, ctx.world.map.forceTotalsCache).fbStrength ?? 0));
   }
   return out;
 }
@@ -151,7 +152,7 @@ export function generateReports(ctx: TickContext, state: State): void {
     for (const id of fields) {
       const holder = traitsOf(world, state, holderOf(id));
       const hq = headquartersOf(world, state, id);
-      const strength = commandStrength(state, id).men;
+      const strength = commandStrength(state, id, world.map.forceTotalsCache).men;
       const { token: status, region: objective } = goalStatus(state, id);
       const claims: ReportClaim[] = [claim('position', hq, 0, null, 1000), claim('goal-status', objective, 0, status, 1000)];
       const terms: BiasTerm[] = [];
@@ -180,7 +181,7 @@ export function generateReports(ctx: TickContext, state: State): void {
     for (const id of fields) {
       const parent = state.postStates[id]!.postParent;
       const to = (parent === null ? null : state.postStates[parent]!.postHolder) ?? world.faction(sideOf(id)).principal;
-      const strength = commandStrength(state, id).men;
+      const strength = commandStrength(state, id, world.map.forceTotalsCache).men;
       const paper = Math.trunc((strength * world.rules.traits.paperPermille) / 1000);
       sendReport(ctx, state, {
         body: body(holderOf(id), id, day, 'strength-return', null, { kind: 'post', id }, [

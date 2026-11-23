@@ -1,0 +1,14 @@
+{
+  "removals": {
+    "seatAssignments": 29,
+    "knowledgeBySeat": 29,
+    "personRanks": 7,
+    "personTrue": 29,
+    "personTraits": 29,
+    "personStanding": 29,
+    "personStatus": 29
+  },
+  "expected": "15608259885c18220f413903fd4ae83b7bae22feb2f82a178b1e3afad09468b3",
+  "projected": "15608259885c18220f413903fd4ae83b7bae22feb2f82a178b1e3afad09468b3",
+  "newInitialMatchesReference": true
+}

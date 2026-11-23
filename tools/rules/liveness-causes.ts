@@ -28,7 +28,11 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
       // S34 imports older quiet bands; the lead authorizes one S41 time
       // transition and one S44 Union withdrawal. The history guard freezes each exact list.
       const inherited = n === 0 && r.after.minFires === 0 && inheritedQuiet.some(old => fingerprint(old) === fingerprint(r));
-      if (!inherited) {
+      // S82 ruling 2 explicitly permits a now-quiet mechanic with a separate
+      // live driver. Bind this single observed transition in full, including
+      // its cause/evidence; the immutable inherited baseline is not extended.
+      const s82Quiet = fingerprint(r) === '460fa0bdf3671c01fc64013cacdff7506424d57b4054839352b064c5374b6fc9';
+      if (!inherited && !s82Quiet) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
         else if (fingerprint({ minFires: r.after.minFires, maxFires: r.after.maxFires }) !== fingerprint({ minFires: Math.max(1, Math.floor(n / 2)), maxFires: Math.max(n * 2, n + 3) })) problems.push(`${where}: after band is not around(observed)`);
       }

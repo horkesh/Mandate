@@ -51,6 +51,8 @@ export interface ValueEvidence {
 export interface RankHeld {
   readonly rank: string;
   readonly from: string;
+  /** Exclusive end of this commission, when a sourced departure ended it. */
+  readonly until?: string;
 }
 
 export interface PersonRecord {
@@ -58,6 +60,8 @@ export interface PersonRecord {
   readonly name: StringKey;
   /** An officer-pool person, checked against rosters so none is real; needs no citations. */
   readonly invented: boolean;
+  /** Local generated pool: a principal learns of the person through a received introduction. */
+  readonly requiresIntroduction?: boolean;
   /** The faction he serves at the pack's first start; null for foreigners and neutrals. */
   readonly faction: FactionId | null;
   /** A person kind from the pack's vocabulary (general, governor, editor...). */
@@ -101,6 +105,8 @@ export interface PersonRecord {
   readonly blocCites?: readonly Citation[];
   /** Ranks in date order; the rank at a start is the last one on or before its date. */
   readonly ranks: readonly RankHeld[];
+  /** Apply this sourced commission history in play; not a change of allegiance. */
+  readonly rankSchedule?: boolean;
   /** Fields whose null means "unknown, needs a source" rather than "none". */
   readonly unknowns: readonly string[];
   readonly provenance: Provenance;

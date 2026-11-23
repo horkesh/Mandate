@@ -1,0 +1,411 @@
+{
+  "hardware": {
+    "NumberOfLogicalProcessors": 16,
+    "TotalPhysicalMemory": 34281668608
+  },
+  "activeProcesses": [
+    {
+      "process": "GalaxyClient",
+      "pid": 17672,
+      "cpuSecondsDelta": 18.891,
+      "workingSet": 170409984
+    },
+    {
+      "process": "claude",
+      "pid": 13896,
+      "cpuSecondsDelta": 10.484,
+      "workingSet": 344662016
+    },
+    {
+      "process": "claude",
+      "pid": 14516,
+      "cpuSecondsDelta": 7.641,
+      "workingSet": 965431296
+    },
+    {
+      "process": "claude",
+      "pid": 15220,
+      "cpuSecondsDelta": 6.312,
+      "workingSet": 125222912
+    },
+    {
+      "process": "claude",
+      "pid": 36420,
+      "cpuSecondsDelta": 4.0,
+      "workingSet": 508260352
+    },
+    {
+      "process": "claude",
+      "pid": 32904,
+      "cpuSecondsDelta": 2.438,
+      "workingSet": 353214464
+    },
+    {
+      "process": "chrome",
+      "pid": 20576,
+      "cpuSecondsDelta": 2.422,
+      "workingSet": 418127872
+    },
+    {
+      "process": "claude",
+      "pid": 38944,
+      "cpuSecondsDelta": 2.422,
+      "workingSet": 327581696
+    },
+    {
+      "process": "chrome",
+      "pid": 21704,
+      "cpuSecondsDelta": 2.375,
+      "workingSet": 413495296
+    },
+    {
+      "process": "claude",
+      "pid": 23432,
+      "cpuSecondsDelta": 1.953,
+      "workingSet": 394100736
+    },
+    {
+      "process": "claude",
+      "pid": 42448,
+      "cpuSecondsDelta": 1.938,
+      "workingSet": 322973696
+    },
+    {
+      "process": "claude",
+      "pid": 16464,
+      "cpuSecondsDelta": 1.828,
+      "workingSet": 326782976
+    },
+    {
+      "process": "claude",
+      "pid": 48828,
+      "cpuSecondsDelta": 1.828,
+      "workingSet": 278716416
+    },
+    {
+      "process": "claude",
+      "pid": 43336,
+      "cpuSecondsDelta": 1.766,
+      "workingSet": 327622656
+    },
+    {
+      "process": "claude",
+      "pid": 29944,
+      "cpuSecondsDelta": 1.734,
+      "workingSet": 320651264
+    },
+    {
+      "process": "claude",
+      "pid": 45096,
+      "cpuSecondsDelta": 1.688,
+      "workingSet": 312360960
+    },
+    {
+      "process": "chrome",
+      "pid": 27188,
+      "cpuSecondsDelta": 1.516,
+      "workingSet": 170704896
+    },
+    {
+      "process": "claude",
+      "pid": 33996,
+      "cpuSecondsDelta": 1.516,
+      "workingSet": 361930752
+    },
+    {
+      "process": "chrome",
+      "pid": 20852,
+      "cpuSecondsDelta": 1.406,
+      "workingSet": 89059328
+    },
+    {
+      "process": "codex",
+      "pid": 21592,
+      "cpuSecondsDelta": 1.234,
+      "workingSet": 222310400
+    },
+    {
+      "process": "OneDrive.Sync.Service",
+      "pid": 13908,
+      "cpuSecondsDelta": 1.062,
+      "workingSet": 155389952
+    },
+    {
+      "process": "GOG Galaxy Notifications Renderer",
+      "pid": 19688,
+      "cpuSecondsDelta": 0.828,
+      "workingSet": 90402816
+    },
+    {
+      "process": "OUTLOOK",
+      "pid": 32052,
+      "cpuSecondsDelta": 0.625,
+      "workingSet": 576905216
+    },
+    {
+      "process": "chrome",
+      "pid": 18084,
+      "cpuSecondsDelta": 0.578,
+      "workingSet": 59834368
+    },
+    {
+      "process": "chrome",
+      "pid": 21280,
+      "cpuSecondsDelta": 0.438,
+      "workingSet": 310497280
+    },
+    {
+      "process": "chrome",
+      "pid": 8784,
+      "cpuSecondsDelta": 0.266,
+      "workingSet": 632832000
+    },
+    {
+      "process": "GalaxyCommunication",
+      "pid": 18648,
+      "cpuSecondsDelta": 0.25,
+      "workingSet": 23310336
+    },
+    {
+      "process": "chrome",
+      "pid": 20600,
+      "cpuSecondsDelta": 0.172,
+      "workingSet": 75460608
+    },
+    {
+      "process": "chrome",
+      "pid": 11820,
+      "cpuSecondsDelta": 0.156,
+      "workingSet": 56377344
+    },
+    {
+      "process": "svchost",
+      "pid": 34620,
+      "cpuSecondsDelta": 0.156,
+      "workingSet": 54525952
+    },
+    {
+      "process": "claude",
+      "pid": 37804,
+      "cpuSecondsDelta": 0.125,
+      "workingSet": 107565056
+    },
+    {
+      "process": "node",
+      "pid": 8700,
+      "cpuSecondsDelta": 0.125,
+      "workingSet": 151220224
+    },
+    {
+      "process": "chrome",
+      "pid": 44192,
+      "cpuSecondsDelta": 0.109,
+      "workingSet": 54321152
+    },
+    {
+      "process": "chrome",
+      "pid": 28940,
+      "cpuSecondsDelta": 0.094,
+      "workingSet": 57622528
+    },
+    {
+      "process": "chrome",
+      "pid": 31944,
+      "cpuSecondsDelta": 0.094,
+      "workingSet": 65073152
+    },
+    {
+      "process": "chrome",
+      "pid": 12684,
+      "cpuSecondsDelta": 0.078,
+      "workingSet": 60145664
+    },
+    {
+      "process": "sihost",
+      "pid": 26464,
+      "cpuSecondsDelta": 0.078,
+      "workingSet": 45654016
+    },
+    {
+      "process": "chrome",
+      "pid": 20268,
+      "cpuSecondsDelta": 0.062,
+      "workingSet": 60022784
+    },
+    {
+      "process": "chrome",
+      "pid": 28856,
+      "cpuSecondsDelta": 0.062,
+      "workingSet": 61964288
+    },
+    {
+      "process": "chrome",
+      "pid": 21428,
+      "cpuSecondsDelta": 0.047,
+      "workingSet": 80420864
+    },
+    {
+      "process": "chrome",
+      "pid": 30924,
+      "cpuSecondsDelta": 0.047,
+      "workingSet": 56852480
+    },
+    {
+      "process": "chrome",
+      "pid": 35204,
+      "cpuSecondsDelta": 0.047,
+      "workingSet": 71434240
+    },
+    {
+      "process": "chrome",
+      "pid": 37672,
+      "cpuSecondsDelta": 0.047,
+      "workingSet": 56131584
+    },
+    {
+      "process": "esbuild",
+      "pid": 35632,
+      "cpuSecondsDelta": 0.047,
+      "workingSet": 18821120
+    },
+    {
+      "process": "chrome",
+      "pid": 7492,
+      "cpuSecondsDelta": 0.031,
+      "workingSet": 57270272
+    },
+    {
+      "process": "chrome",
+      "pid": 12716,
+      "cpuSecondsDelta": 0.031,
+      "workingSet": 179478528
+    },
+    {
+      "process": "chrome",
+      "pid": 46380,
+      "cpuSecondsDelta": 0.031,
+      "workingSet": 142667776
+    },
+    {
+      "process": "claude",
+      "pid": 26652,
+      "cpuSecondsDelta": 0.031,
+      "workingSet": 114208768
+    },
+    {
+      "process": "claude",
+      "pid": 27608,
+      "cpuSecondsDelta": 0.031,
+      "workingSet": 194469888
+    },
+    {
+      "process": "codex-code-mode-host",
+      "pid": 35972,
+      "cpuSecondsDelta": 0.031,
+      "workingSet": 29048832
+    },
+    {
+      "process": "OneDrive",
+      "pid": 27352,
+      "cpuSecondsDelta": 0.031,
+      "workingSet": 79536128
+    },
+    {
+      "process": "RadeonSoftware",
+      "pid": 13856,
+      "cpuSecondsDelta": 0.031,
+      "workingSet": 54128640
+    },
+    {
+      "process": "ApplicationFrameHost",
+      "pid": 7104,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 46739456
+    },
+    {
+      "process": "bash",
+      "pid": 47804,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 10776576
+    },
+    {
+      "process": "chrome",
+      "pid": 9780,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 104980480
+    },
+    {
+      "process": "chrome",
+      "pid": 15052,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 59949056
+    },
+    {
+      "process": "chrome",
+      "pid": 28720,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 54108160
+    },
+    {
+      "process": "chrome",
+      "pid": 29452,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 52674560
+    },
+    {
+      "process": "chrome",
+      "pid": 33656,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 37777408
+    },
+    {
+      "process": "claude",
+      "pid": 39896,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 260005888
+    },
+    {
+      "process": "conhost",
+      "pid": 39744,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 8585216
+    },
+    {
+      "process": "explorer",
+      "pid": 8292,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 361021440
+    },
+    {
+      "process": "powershell",
+      "pid": 26928,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 92479488
+    },
+    {
+      "process": "QtWebEngineProcess",
+      "pid": 19576,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 98390016
+    },
+    {
+      "process": "RuntimeBroker",
+      "pid": 26132,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 15073280
+    },
+    {
+      "process": "SnippingTool",
+      "pid": 22408,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 130129920
+    },
+    {
+      "process": "svchost",
+      "pid": 34780,
+      "cpuSecondsDelta": 0.016,
+      "workingSet": 22945792
+    }
+  ],
+  "limits": "Shared Windows host; callbacks collect evidence outside the measured tick. No causal attribution, unloaded-host measurement or hosted Linux certification."
+}

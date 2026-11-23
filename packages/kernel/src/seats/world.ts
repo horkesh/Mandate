@@ -84,7 +84,8 @@ export interface SeatsWorld {
   watched(region: RegionId): readonly RegionId[];
   /**
    * Where a post's headquarters stood at the start of play: its strongest directly commanded block in the start (by
-   * known men, ties by block id, as `headquartersOf` reads State), or null when the start gave it no block. Pack data,
+   * known men, ties by block id, as `headquartersOf` reads State), or an institutional office's government seat.
+   * Null for a field post without opening blocks. Pack data,
    * so a principal may be told it; where the post's headquarters is today he may not (exit review P2).
    */
   startHeadquarters(post: PostId): RegionId | null;
@@ -154,11 +155,17 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
     ...situationReferenceProblems(situations, {
       factions,
       posts: postSides,
+      declaredPosts: new Set(start.temporaryPosts.map(p => p.id)),
       persons: people,
       regions: map.regions,
     }),
   );
   problems.push(...doctrineProblems(map, start, factions, postSides));
+  for (const row of map.world.rules.ruleSeats.principals) for (const offensive of row.offensives) {
+    if (offensive.requiresNotice !== undefined && !situations.some(s => s.id === offensive.requiresNotice && s.kind === 'notice' && s.faction === row.faction)) {
+      problems.push(`rules.ruleSeats: ${offensive.requiresNotice} is not this faction's notice`);
+    }
+  }
   for (const wire of rules.latency.publicWires ?? []) {
     if (!map.regions.has(wire.from) || !map.regions.has(wire.to)) problems.push('latency.publicWires: unknown endpoint');
     if (!factions.has(wire.faction)) problems.push('latency.publicWires: unknown faction');
@@ -208,7 +215,14 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
       return d;
     },
     watched: (region: RegionId) => [region, ...(map.edgesAt.get(region) ?? []).map((e) => otherEnd(e, region))].filter((r, i, all) => all.indexOf(r) === i).sort(strictCompare),
-    startHeadquarters: (post: PostId) => startBody.get(post)?.region ?? null,
+    startHeadquarters: (post: PostId) => {
+      const p = start.posts.find(p => p.id === post);
+      if (p !== undefined && roles.get(p.kind) === 'office') {
+        const side = map.world.departments.find(d => d.id === p.department)?.faction;
+        return start.factions.find(f => f.faction === side)?.capital ?? p.region;
+      }
+      return startBody.get(post)?.region ?? null;
+    },
     situations,
     situation: (id: SituationId) => get(situationById, 'situation', id),
   });
@@ -366,9 +380,11 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
     if (r.concentrateAt !== null) onSide(r.concentrateAt, 'concentrateAt');
     if ((r.concentrateAt === null) !== (r.concentrateSource === null)) problems.push(`${at}.concentrateSource: a concentration post cites its source, and only a concentration post has one`);
     const declared = new Map(start.temporaryPosts.map(p => [p.id, p]));
-    const onDeclaredSide = (id: PostId, field: string) => {
+    const onDeclaredSide = (id: PostId, field: string, prerequisite?: string) => {
       const p = posts.get(id) ?? declared.get(id);
-      if (p === undefined || map.world.departments.find(d => d.id === p.department)?.faction !== r.faction) problems.push(`${at}.${field}: ${id} is not a declared post on this side`);
+      const dept = map.world.departments.find(d => d.id === p?.department);
+      const joining = dept?.faction === null && dept.id === prerequisite && map.world.vocabularies.departmentKinds.some(k => k.id === dept.kind && k.government && !k.selfGoverning);
+      if (p === undefined || (dept?.faction !== r.faction && !joining)) problems.push(`${at}.${field}: ${id} is not a declared post on this side`);
     };
     const datedCause = (date: string, department: string, source: string) => {
       try { parseIsoDate(date); } catch { problems.push(`${at}: invalid doctrine date ${date}`); }
@@ -377,19 +393,21 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
     };
     const establishmentPosts = new Set<string>();
     for (const a of (r.appointments ?? []).filter(a => 'fromDate' in a)) {
-      onDeclaredSide(a.post, 'appointments.post');
+      onDeclaredSide(a.post, 'appointments.post', a.requiresDepartment);
       datedCause(a.fromDate, a.requiresDepartment, a.source);
       const p = declared.get(a.post);
       if (p === undefined || p.holder !== a.person || !map.world.vocabularies.postKinds.some(k => k.id === p.kind && k.temporary && k.creatable === 'appoint')) problems.push(`${at}: appointment must name its declared holder and an appointment-created temporary post`);
       if (!map.world.people.some(p => p.id === a.person)) problems.push(`${at}: unknown appointee ${a.person}`);
-      if (a.fromPost !== null) onSide(a.fromPost, 'appointments.fromPost');
+      if (a.fromPost !== null) onDeclaredSide(a.fromPost, 'appointments.fromPost', a.requiresDepartment);
       if (establishmentPosts.has(a.post)) problems.push(`${at}: duplicate establishment ${a.post}`);
       establishmentPosts.add(a.post);
     }
     const concentrationDates = new Set<string>();
     for (const c of r.concentrations ?? []) {
-      onDeclaredSide(c.post, 'concentrations.post');
-      for (const from of c.fromPosts) onDeclaredSide(from, 'concentrations.fromPosts');
+      onDeclaredSide(c.post, 'concentrations.post', c.requiresDepartment);
+      // A source government can join independently of the receiving army's
+      // government. The principal's received picture still gates each source.
+      for (const from of c.fromPosts) onDeclaredSide(from, 'concentrations.fromPosts', (posts.get(from) ?? declared.get(from))?.department ?? c.requiresDepartment);
       datedCause(c.fromDate, c.requiresDepartment, c.source);
       if (concentrationDates.has(c.fromDate)) problems.push(`${at}: ambiguous concentration date ${c.fromDate}`);
       concentrationDates.add(c.fromDate);

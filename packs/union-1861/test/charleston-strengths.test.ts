@@ -1,3 +1,4 @@
+import { forceTotals } from '../../../packages/kernel/src/forces/lots.ts';
 import { describe, expect, it } from 'vitest';
 import { ids, phase0 } from '@mandate/kernel';
 import { seatsWorld } from '../../../packages/cli/src/seats-world.ts';
@@ -12,12 +13,12 @@ describe('S1 Charleston source snapshots reach the opening forces', () => {
     ['fb_st_charleston_regiment_of_rifles', 450, '1861-04-03'],
   ] as const)('loads %s with the reported count and its actual snapshot date', (block, count, date) => {
     expect(world.start.forceBlocks.find(b => b.id === block)).toMatchObject({ strength: count, strengthDate: date });
-    expect(phase0.createState(world, setup).forceBlockStates[id(block)]!.fbStrength).toBe(count);
+    expect(forceTotals(phase0.createState(world, setup).forceBlockStates[id(block)]!).fbStrength).toBe(count);
   });
 
   it('keeps the combined Palmetto force mixed and the unsourced infantry unknown', () => {
     const state = phase0.createState(world, setup);
     expect(state.forceBlockStates[id('fb_st_charleston_fort_palmetto_stono')]!.fbArm).toBe('mixed');
-    expect(state.forceBlockStates[id('fb_st_charleston_1st_infantry_regulars')]!.fbStrength).toBeNull();
+    expect(forceTotals(state.forceBlockStates[id('fb_st_charleston_1st_infantry_regulars')]!).fbStrength).toBeNull();
   });
 });

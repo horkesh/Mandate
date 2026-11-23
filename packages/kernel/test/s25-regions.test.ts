@@ -1,3 +1,4 @@
+import { patchBlock } from './support/lot-fixture.ts';
 import { expect, it } from 'vitest';
 import { applyFortification, initialFortification, initialLoyalty } from '../src/regions/regions.ts';
 import { selfEmancipationTerms } from '../src/regions/self-emancipation.ts';
@@ -33,10 +34,10 @@ it.each([0, null])('S25 regions-02/04: a block with %s known men does not extend
     flightPerMillion: 1000, reachWithForce: 1000, reachLinesOnly: 400, policyBase: 1000 };
   const held: State = { ...state, regionControl: { ...state.regionControl, [R('a_front')]: { a: 1000 }, [R('b_front')]: { b: 1000 } },
     regionGovernments: { ...state.regionGovernments, [R('b_front')]: DEP('b_war') },
-    forceBlockStates: { ...state.forceBlockStates, [B('a_army_1')]: { ...state.forceBlockStates[B('a_army_1')]!, fbStrength: strength } } };
+    forceBlockStates: { ...state.forceBlockStates, [B('a_army_1')]: patchBlock({ ...state.forceBlockStates[B('a_army_1')]! }, { fbStrength: strength }) } };
   const term = selfEmancipationTerms(map, held, rules)[0]!;
   expect(term.toLines).toBe(400);
   expect(term.reasons[0]).toMatchObject({ cause: 'resistance-within', government: 'enslaving-side' });
-  const withMen = { ...held, forceBlockStates: { ...held.forceBlockStates, [B('a_army_1')]: { ...held.forceBlockStates[B('a_army_1')]!, fbStrength: 1 } } };
+  const withMen = { ...held, forceBlockStates: { ...held.forceBlockStates, [B('a_army_1')]: patchBlock({ ...held.forceBlockStates[B('a_army_1')]! }, { fbStrength: 1 }) } };
   expect(selfEmancipationTerms(map, withMen, rules)[0]!.toLines).toBe(1000);
 });

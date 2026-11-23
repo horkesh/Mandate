@@ -1,0 +1,44 @@
+[
+  {
+    "file": "C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts",
+    "test": "R86: the history months through the player\u2019s console (1A criterion 2) receives at least one hour-stamped battle dispatch by 31 July",
+    "messages": [
+      "AssertionError: expected false to be true // Object.is equality\n    at C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts:265:132\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+    ]
+  },
+  {
+    "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+    "test": "the done check on union-1861 at war and the testbed passes every Phase 0 criterion but the budget, which is a stopwatch",
+    "messages": [
+      "AssertionError: liveness: expected [ \u2026(14) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:47:114\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+    ]
+  },
+  {
+    "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+    "test": "each criterion can fail (positive controls) liveness: a planted dead mechanic in a reference run fails the check",
+    "messages": [
+      "AssertionError: expected [ \u2026(14) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:163:63\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+    ]
+  },
+  {
+    "file": "C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts",
+    "test": "the reference runs union-1861, war by decision, 148 days: every mechanic fires within its band",
+    "messages": [
+      "AssertionError: expected [ { \u2026(4) }, { \u2026(4) }, { \u2026(4) }, \u2026(11) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts:81:48\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+    ]
+  },
+  {
+    "file": "C:/Pyrrhic/sprint-july/packages/cli/test/men-regions.test.ts",
+    "test": "the standing review of lane 1.7: refusals, a blocked muster, a battle day, the term\u2019s causes a block whose term ends while a battle it fought in stays open keeps its men until the battle closes",
+    "messages": [
+      "TypeError: Cannot read properties of undefined (reading 'length')\n    at C:/Pyrrhic/sprint-july/packages/kernel/src/combat/records.ts:195:107\n    at Array.some (<anonymous>)\n    at unresolvedContact (C:/Pyrrhic/sprint-july/packages/kernel/src/combat/records.ts:195:54)\n    at C:/Pyrrhic/sprint-july/packages/kernel/src/tick/recruitment.ts:171:59\n    at Array.some (<anonymous>)\n    at Module.inOpenBattle (C:/Pyrrhic/sprint-july/packages/kernel/src/tick/recruitment.ts:171:46)\n    at C:/Pyrrhic/sprint-july/packages/cli/test/men-regions.test.ts:247:19\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20"
+    ]
+  },
+  {
+    "file": "C:/Pyrrhic/sprint-july/packs/union-1861/test/s74-cast-templates.test.ts",
+    "test": "retains the July identity and term holds in the sourced templates",
+    "messages": [
+      "AssertionError: expected [ \u2026(101) ] to have a length of 95 but got 101\n    at Proxy.<anonymous> (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/index.CZzC1gGg.js:1861:20)\n    at Proxy.<anonymous> (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/index.CZzC1gGg.js:1656:14)\n    at Proxy.methodWrapper (file:///C:/Pyrrhic/sprint-july/node_modules/chai/index.js:1737:25)\n    at C:/Pyrrhic/sprint-july/packs/union-1861/test/s74-cast-templates.test.ts:25:76\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20"
+    ]
+  }
+]

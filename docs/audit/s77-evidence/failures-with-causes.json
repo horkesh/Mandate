@@ -1,0 +1,192 @@
+[
+  {
+    "gate": "liveness",
+    "mechanic": "combat.captured",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "cause": "The Manassas record still has zero quantified contact. There are no field killed/wounded or missing to produce the retained rout/capture/return liveness pattern."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "combat.cut_off",
+    "problem": "too_frequent",
+    "fires": 1,
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a side is cut off only with no legal retreat (0019) in a field battle; the retained reference field losers have legal retreats, while the separate trapped-garrison test drives it"
+    },
+    "cause": "0076 treats unknown strength numerically as none: the two local defenders withdraw with no legal retreat, and Beauregard is captured. The unchanged quiet bands are not recentred."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "combat.general_hit",
+    "problem": "too_frequent",
+    "fires": 1,
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a commander is hit on a low draw on his own stream; no retained reference battle-day draws a commander hit, while the separate kernel test drives it"
+    },
+    "cause": "0076 treats unknown strength numerically as none: the two local defenders withdraw with no legal retreat, and Beauregard is captured. The unchanged quiet bands are not recentred."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "combat.killed_wounded",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "cause": "The Manassas record still has zero quantified contact. There are no field killed/wounded or missing to produce the retained rout/capture/return liveness pattern."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "combat.missing",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "cause": "The Manassas record still has zero quantified contact. There are no field killed/wounded or missing to produce the retained rout/capture/return liveness pattern."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "combat.routed",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured one rout."
+    },
+    "cause": "The Manassas record still has zero quantified contact. There are no field killed/wounded or missing to produce the retained rout/capture/return liveness pattern."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "combat.withdrew",
+    "problem": "too_frequent",
+    "fires": 1,
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal."
+    },
+    "cause": "0076 treats unknown strength numerically as none: the two local defenders withdraw with no legal retreat, and Beauregard is captured. The unchanged quiet bands are not recentred."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "forces.stores_low",
+    "problem": "too_rare",
+    "fires": 12,
+    "band": {
+      "minFires": 28,
+      "maxFires": 112
+    },
+    "cause": "[I] New transfers and joins alter supply location, allocation and container store events; the exact 12 events and all daily changes are retained. No store band or balance was fitted."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "forces.stragglers_returned",
+    "problem": "dead",
+    "fires": 0,
+    "band": {
+      "minFires": 12,
+      "maxFires": 48,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting."
+    },
+    "cause": "The Manassas record still has zero quantified contact. There are no field killed/wounded or missing to produce the retained rout/capture/return liveness pattern."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "messages.special_messenger",
+    "problem": "too_frequent",
+    "fires": 1,
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the one bypass uses the faster zero-day wire instead of a three-day messenger (R78)"
+    },
+    "cause": "Davis bypasses Walker on day143. Dispatch recomputes Johnston address from the strongest assigned block, which is still joining remotely; the observed special-messenger envelope is day143 to148 (five days). The Winchester public wire matches neither that remote address nor the declared Harpers Ferry assembly. See headquarters-diagnostic.json; no commander travel is inferred."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "planner.term.supply",
+    "problem": "too_frequent",
+    "fires": 1,
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 appointments: no planner.term.supply event in this observed command/plan path; unchanged testbed fires it 2 times. S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick."
+    },
+    "cause": "[I] Johnston now holds transferred troops on long, incomplete journeys; the changed force/staging geometry makes the unchanged supply scoring term decisive once."
+  },
+  {
+    "gate": "liveness",
+    "mechanic": "reports.commander_lost",
+    "problem": "too_frequent",
+    "fires": 1,
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "Anderson evacuates under terms on day 39 and keeps serving; no commander is lost (R78)"
+    },
+    "cause": "0076 treats unknown strength numerically as none: the two local defenders withdraw with no legal retreat, and Beauregard is captured. The unchanged quiet bands are not recentred."
+  },
+  {
+    "gate": "checkpoints",
+    "problem": "men_confederate (1861-07-31, day 148): confederate has 95153 men, below 100000",
+    "cause": "No men are invented: the known Confederate total remains 95,153, exactly S74."
+  },
+  {
+    "gate": "pushback",
+    "problem": "trims: 0, below the record's 1",
+    "cause": "S77 applies only 0109. The three remaining pushback bands and their observed responses stay unchanged; later dated-carrier work is deferred."
+  },
+  {
+    "gate": "pushback",
+    "problem": "compliance with reservations: 16, above 9",
+    "cause": "S77 applies only 0109. The three remaining pushback bands and their observed responses stay unchanged; later dated-carrier work is deferred."
+  },
+  {
+    "gate": "pushback",
+    "problem": "slow walks: 18, above 9",
+    "cause": "S77 applies only 0109. The three remaining pushback bands and their observed responses stay unchanged; later dated-carrier work is deferred."
+  },
+  {
+    "gate": "unknownStrength",
+    "problem": "union-1861: battle battle:manassas:142 at manassas, day 142: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+    "cause": "The same two unknown local battalions remain in the Manassas record. The scored requirement is unmet; numerical zero under 0076 is not clearance."
+  },
+  {
+    "gate": "July_contact",
+    "problem": "Zero quantified contact on day142; no Johnston junction by day148.",
+    "cause": "Known lots are assigned late and still travel real joining routes. Pure inspection of the frozen day148 State shows 32 local rail alternatives barred as rail_not_traced; Georgia/Alabama lots are on the ten-day Salisbury-Charlotte to Greensboro road. This is a final-State diagnosis, not a counterfactual campaign or every earlier network condition. No return is divided, route time cut, historical arrival scripted or band altered."
+  },
+  {
+    "gate": "remaining_concentration",
+    "problem": "20,115 known men remain under Charleston, 3,518 at Morris Island and 13,000 with Arkansas; generated/unidentified memberships remain unresolved.",
+    "cause": "The old March/April doctrine concentrated regiments at Charleston. S77 requests sourced states but does not reclassify the harbour garrison or invent a replacement sender at its vacated command. Arkansas has no sourced recipient inclusion in the read July orders. This remains unfinished S77 concentration, not historical absence."
+  },
+  {
+    "gate": "Patterson_role",
+    "problem": "Patterson stays at Philadelphia, then loses the Pennsylvania three-month cohort on day146.",
+    "cause": "The concentration request sends 14,000 Pennsylvania and 2,000 Wisconsin men; no doctrine issues a containment/demonstration goal to this command. Expiry is legitimate. A retrospective statement (OR I-II p.178) distinguishes holding Johnston from an unconditional attack, so no take-Winchester goal is invented."
+  },
+  {
+    "gate": "timing",
+    "problem": "Hosted Linux and 100-microsecond/block certification remain open.",
+    "cause": "The reference measures a shared Windows host: median 39.1297 ms, p95 74.3871 ms; 0106 keeps hosted Linux decisive. No budget is changed."
+  },
+  {
+    "gate": "command_location",
+    "problem": "Unjoined incoming blocks pull the headquarters away from its declared assembly and joined local force.",
+    "cause": "Saved-state projection: Johnston assembly remains Harpers Ferry, but derived headquarters is Nashville day129, Chattanooga day143 and Atlanta day148. This follows the existing strongest-assigned-block derivation; it is an unresolved S77 defect, not a physical commander journey. Proposed ruling: the main body should exclude incoming blocks until joining; the lead must reconcile this with0064. No location or arrival was invented."
+  }
+]

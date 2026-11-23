@@ -100,6 +100,8 @@ export interface VerbBody {
 }
 
 export interface TransitMessage {
+  /** An office-addressed requisition: msgTo is the return address until the destination delivers it to its actual holder. */
+  readonly msgOfficeAddress?: true;
   readonly id: MessageId;
   /** The first message of this chain of hops: an order's id and a report's id, which every later hop keeps. */
   readonly msgOrigin: MessageId;

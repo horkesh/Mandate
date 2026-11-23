@@ -162,18 +162,18 @@
       "name": "relay holds",
       "count": { "mechanic": "orders.relay_held" },
       "through": "1861-07-31",
-      "min": 2,
-      "max": 6,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-11 (the Adjutant-General's office and the Crusader's passage) and N3-27 (Special Orders 135 held), both verified; upper bound three times those two cases (the lead's ruling)"
+      "min": 1,
+      "max": 4,
+      "cite": "Decision 0109, amending 0099 item 6; Appendix C N3-11 only: Adjutant-General office and Crusader journey (ORN I-4 pp.89-90,102,104,110-111). Floor 1; upper max(3*1,1+3)=4 [I]. N3-27 is authorised conditional delivery, not resistance (Nicolay and Hay II pp.47-48; OR I-III pp.374,381)."
     },
     {
       "id": "filter_holds",
       "name": "filter holds",
       "count": { "mechanic": "reports.filtered" },
       "through": "1861-07-31",
-      "min": 1,
-      "max": 9,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Appendix C: lower bound N3-06 (Seward's memorandum held, verified primary); upper bound three times the three holds N3-06, N3-09 (note-only, the adversary's) and X-03 (extra) (the lead's ruling)"
+      "min": 0,
+      "max": 6,
+      "cite": "Decision 0109, amending 0099 item 6; no verified in-window presidential filter case. N3-06 is outward diplomatic handling (Richardson I pp.85-88). Upper 3*2=6 [I], from remaining Appendix C cases N3-09 (note-only Charleston postal filter) and X-03 (extra War Department directions to Morgan, OR III-1 p.87). No October or 1862 case is backdated."
     },
     {
       "id": "trims",

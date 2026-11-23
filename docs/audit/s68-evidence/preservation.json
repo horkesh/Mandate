@@ -1,0 +1,32 @@
+{
+  "head": "febfd38ca2241e35e8ab1013857470b7c0e4b45f",
+  "branch": "sprint/july",
+  "initialPaths": 2047,
+  "preservedPaths": 2047,
+  "unchangedOriginalWorktreeBlobs": 2040,
+  "changedOriginalPaths": [
+    "packages/cli/src/liveness-gate.ts",
+    "packages/cli/test/bombardment.test.ts",
+    "packages/cli/test/declared-government.test.ts",
+    "packs/union-1861/test/cost-only.test.ts",
+    "packs/union-1861/test/nation-calls.test.ts",
+    "packs/union-1861/test/passage.test.ts",
+    "tools/rules/liveness-changes.json"
+  ],
+  "allOtherIndexEntriesExact": true,
+  "simulationAndPackInputsUnchanged": true,
+  "unstagedPaths": [],
+  "excludedWorktreesAccessed": false,
+  "measuredInputs": {
+    "count": 462,
+    "changed": [
+      "packages/cli/src/liveness-gate.ts",
+      "tools/rules/liveness-changes.json"
+    ]
+  },
+  "implementationPatchPaths": [
+    "runs/s68/step-1-fixture-notices.patch",
+    "runs/s68/step-2-bombardment-intent.patch",
+    "runs/s68/step-3-succession-band.patch"
+  ]
+}

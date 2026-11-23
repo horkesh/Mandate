@@ -1,3 +1,5 @@
+import { withinCommand } from '../command/command.ts';
+import { forceTotals, type ForceTotalsCache } from '../forces/lots.ts';
 /**
  * Day-tick phase 3 (FOUNDATION section 10; lane 1.4): operations, then movement. It replaces Phase 0's standing-goal
  * path (`tick/standing.ts` and `plans/execute.ts`, retired here).
@@ -63,14 +65,14 @@ export const OPERATIONS_MECHANICS = [
 export function liveBlocks(state: State, axis: OpAxis): ForceBlockId[] {
   return axis.oaxBlocks.filter((b) => {
     const f = state.forceBlockStates[b];
-    return f !== undefined && f.fbSurrenderedDay === null && state.forceAssignments[b] === axis.oaxPost && state.forceLocations[b] !== undefined;
+    return f !== undefined && f.fbSurrenderedDay === null && withinCommand(state,state.forceAssignments[b]??null,axis.oaxPost) && state.forceLocations[b] !== undefined;
   });
 }
 
 /** Where an axis's force stands: the region of its strongest block (known men, ties by id), who stands there, and whether any is on a leg. */
-export function axisGroup(state: State, blocks: readonly ForceBlockId[]): { readonly region: RegionId; readonly standing: readonly ForceBlockId[]; readonly marching: boolean } | null {
+export function axisGroup(state: State, blocks: readonly ForceBlockId[], cache?: ForceTotalsCache): { readonly region: RegionId; readonly standing: readonly ForceBlockId[]; readonly marching: boolean } | null {
   if (blocks.length === 0) return null;
-  const lead = [...blocks].sort((a, b) => (state.forceBlockStates[b]!.fbStrength ?? 0) - (state.forceBlockStates[a]!.fbStrength ?? 0) || strictCompare(a, b))[0]!;
+  const lead = [...blocks].sort((a, b) => (forceTotals(state.forceBlockStates[b]!, cache).fbStrength ?? 0) - (forceTotals(state.forceBlockStates[a]!, cache).fbStrength ?? 0) || strictCompare(a, b))[0]!;
   const loc = state.forceLocations[lead]!;
   const region = loc.locMarch !== null ? loc.locMarch.marchFrom : loc.locRegion;
   const standing = blocks.filter((b) => {
@@ -312,7 +314,7 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
   if (axis.oaxStage === 'end') return { state, axis };
   const blocks = liveBlocks(state, axis);
   const side = postFaction(world, state, axis.oaxPost);
-  const group = axisGroup(state, blocks);
+  const group = axisGroup(state, blocks, ctx.world.map.forceTotalsCache);
   const move = (a: OpAxis, stage: OpAxis['oaxStage'], reason: StageReason, region: RegionId | null, until: number | null = null): OpAxis => {
     fire(ctx, 'operations.stage');
     return enter(a, stage, reason, day, region, until);
@@ -358,8 +360,8 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
     const beside = (world.map.edgesAt.get(at) ?? []).some((e) => otherEnd(e, at) === axis.oaxObjective);
     if (beside && objective !== undefined && (objective.kind === 'land' || objective.kind === 'key_point')) {
       const proposals: DetachmentProposal[] = aboard
-        .filter((b) => (state.forceBlockStates[b]!.fbStrength ?? 0) > 0)
-        .map((b) => ({ kind: 'landing', parent: b, men: state.forceBlockStates[b]!.fbStrength!, region: axis.oaxObjective, post: axis.oaxPost, cause: 'operations' }));
+        .filter((b) => (forceTotals(state.forceBlockStates[b]!, ctx.world.map.forceTotalsCache).fbStrength ?? 0) > 0)
+        .map((b) => ({ kind: 'landing', parent: b, men: forceTotals(state.forceBlockStates[b]!, ctx.world.map.forceTotalsCache).fbStrength!, region: axis.oaxObjective, post: axis.oaxPost, cause: 'operations' }));
       const landed = applyDetachmentProposals(world.map, state, proposals, day);
       for (const r of landed.refused) ctx.mapEvents.push({ event: 'proposal_refused', owner: 'forces', reason: r.reason, why: r.why });
       if (landed.made.length === 0) return { state, axis: move(axis, 'end', 'no_forces', at) };
@@ -418,7 +420,7 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
       if (here !== axis.oaxRoute.routeFrom) return legToward(move(axis, 'march', 'on_route', here), axis.oaxRoute.routeFrom);
       const batteries = world.map.world.rules.combat.bombardment;
       const inRange = (world.map.edgesAt.get(here) ?? []).some((e) => (e.type === 'sea' || e.type === 'river') && otherEnd(e, here) === axis.oaxObjective && e.lengthDays * 1000 <= batteries.rangeMaxDaysPermille);
-      if (!inRange || !group.standing.some((b) => batteries.gunArms.includes(state.forceBlockStates[b]!.fbArm) && (state.forceBlockStates[b]!.fbStrength ?? 0) > 0)) return { state, axis: move(axis, 'end', 'no_forces', here) };
+      if (!inRange || !group.standing.some((b) => batteries.gunArms.includes(state.forceBlockStates[b]!.fbArm) && (forceTotals(state.forceBlockStates[b]!, ctx.world.map.forceTotalsCache).fbStrength ?? 0) > 0)) return { state, axis: move(axis, 'end', 'no_forces', here) };
       const fired = bombardFort(ctx, state, axis.oaxPost, group.standing, axis.oaxObjective, side, works);
       if (fired.fort?.surrendered !== null && fired.fort?.surrendered !== undefined) return { state: fired.state, axis: move({ ...axis, oaxArrived: axis.oaxArrived ?? day }, 'bombard', 'garrison_surrendered', axis.oaxObjective) };
       return { state: fired.state, axis };

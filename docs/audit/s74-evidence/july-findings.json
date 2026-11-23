@@ -1,0 +1,1423 @@
+{
+  "armies": {
+    "us_dept_northeastern_virginia": {
+      "assembly": "northern_virginia",
+      "firstAssigned": {
+        "day": 87,
+        "date": "1861-05-31"
+      },
+      "firstPresent": {
+        "day": 102,
+        "date": "1861-06-15"
+      },
+      "finalBlocks": [
+        {
+          "id": "organised.s74_mcdowell_division_5_brigade_2.1",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 1000,
+          "regiments": [
+            "ny_16_infantry"
+          ]
+        },
+        {
+          "id": "raised.st_gov_connecticut.d77",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 1000,
+          "regiments": [
+            "generated.raised.st_gov_connecticut.d77.1"
+          ]
+        },
+        {
+          "id": "raised.st_gov_maine.d87",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 1000,
+          "regiments": [
+            "generated.raised.st_gov_maine.d87.1"
+          ]
+        },
+        {
+          "id": "raised.st_gov_massachusetts.d76",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_massachusetts.d76.1",
+            "generated.raised.st_gov_massachusetts.d76.2",
+            "generated.raised.st_gov_massachusetts.d76.3",
+            "generated.raised.st_gov_massachusetts.d76.4"
+          ]
+        },
+        {
+          "id": "raised.st_gov_massachusetts.d76.bundle.2",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 2000,
+          "regiments": [
+            "generated.raised.st_gov_massachusetts.d76.5",
+            "generated.raised.st_gov_massachusetts.d76.6"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_hampshire.d77",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 1000,
+          "regiments": [
+            "generated.raised.st_gov_new_hampshire.d77.1"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d67",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 3000,
+          "regiments": [
+            "ny_15_infantry",
+            "ny_17_infantry",
+            "ny_19_infantry"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d67.bundle.10",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 2000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d67.37",
+            "generated.raised.st_gov_new_york.d67.38"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d67.bundle.2",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d67.5",
+            "generated.raised.st_gov_new_york.d67.6",
+            "generated.raised.st_gov_new_york.d67.7",
+            "generated.raised.st_gov_new_york.d67.8"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d67.bundle.3",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d67.9",
+            "generated.raised.st_gov_new_york.d67.10",
+            "generated.raised.st_gov_new_york.d67.11",
+            "generated.raised.st_gov_new_york.d67.12"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d67.bundle.4",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d67.13",
+            "generated.raised.st_gov_new_york.d67.14",
+            "generated.raised.st_gov_new_york.d67.15",
+            "generated.raised.st_gov_new_york.d67.16"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d67.bundle.5",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d67.17",
+            "generated.raised.st_gov_new_york.d67.18",
+            "generated.raised.st_gov_new_york.d67.19",
+            "generated.raised.st_gov_new_york.d67.20"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d67.bundle.6",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d67.21",
+            "generated.raised.st_gov_new_york.d67.22",
+            "generated.raised.st_gov_new_york.d67.23",
+            "generated.raised.st_gov_new_york.d67.24"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d67.bundle.7",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d67.25",
+            "generated.raised.st_gov_new_york.d67.26",
+            "generated.raised.st_gov_new_york.d67.27",
+            "generated.raised.st_gov_new_york.d67.28"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d67.bundle.8",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d67.29",
+            "generated.raised.st_gov_new_york.d67.30",
+            "generated.raised.st_gov_new_york.d67.31",
+            "generated.raised.st_gov_new_york.d67.32"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d67.bundle.9",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d67.33",
+            "generated.raised.st_gov_new_york.d67.34",
+            "generated.raised.st_gov_new_york.d67.35",
+            "generated.raised.st_gov_new_york.d67.36"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d86",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "ny_9_militia_infantry",
+            "generated.raised.st_gov_new_york.d86.2",
+            "generated.raised.st_gov_new_york.d86.3",
+            "generated.raised.st_gov_new_york.d86.4"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d86.bundle.2",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d86.5",
+            "generated.raised.st_gov_new_york.d86.6",
+            "generated.raised.st_gov_new_york.d86.7",
+            "generated.raised.st_gov_new_york.d86.8"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d86.bundle.3",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 4000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d86.9",
+            "generated.raised.st_gov_new_york.d86.10",
+            "generated.raised.st_gov_new_york.d86.11",
+            "generated.raised.st_gov_new_york.d86.12"
+          ]
+        },
+        {
+          "id": "raised.st_gov_new_york.d86.bundle.4",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 2000,
+          "regiments": [
+            "generated.raised.st_gov_new_york.d86.13",
+            "generated.raised.st_gov_new_york.d86.14"
+          ]
+        },
+        {
+          "id": "raised.st_gov_rhode_island.d79",
+          "region": "manassas",
+          "march": null,
+          "joining": null,
+          "men": 1000,
+          "regiments": [
+            "generated.raised.st_gov_rhode_island.d79.1"
+          ]
+        }
+      ],
+      "johnstonManassasArrival": null
+    },
+    "us_dept_pennsylvania": {
+      "assembly": "philadelphia",
+      "firstAssigned": {
+        "day": 57,
+        "date": "1861-05-01"
+      },
+      "firstPresent": {
+        "day": 59,
+        "date": "1861-05-03"
+      },
+      "finalBlocks": [
+        {
+          "id": "raised.st_gov_wisconsin.d86",
+          "region": "philadelphia",
+          "march": null,
+          "joining": null,
+          "men": 2000,
+          "regiments": [
+            "generated.raised.st_gov_wisconsin.d86.1",
+            "generated.raised.st_gov_wisconsin.d86.2"
+          ]
+        }
+      ],
+      "johnstonManassasArrival": null
+    },
+    "cs_cmd_harpers_ferry": {
+      "assembly": "harpers_ferry",
+      "firstAssigned": {
+        "day": 94,
+        "date": "1861-06-07"
+      },
+      "firstPresent": {
+        "day": 94,
+        "date": "1861-06-07"
+      },
+      "finalBlocks": [
+        {
+          "id": "state-forces.va_harpers_ferry",
+          "region": "harpers_ferry",
+          "march": null,
+          "joining": null,
+          "men": null,
+          "regiments": [
+            null
+          ]
+        }
+      ],
+      "johnstonManassasArrival": null
+    },
+    "cs_cmd_manassas": {
+      "assembly": "manassas",
+      "firstAssigned": {
+        "day": 102,
+        "date": "1861-06-15"
+      },
+      "firstPresent": {
+        "day": 102,
+        "date": "1861-06-15"
+      },
+      "finalBlocks": [],
+      "johnstonManassasArrival": null
+    }
+  },
+  "officeHeadquarters": {
+    "wellesOpening": "washington",
+    "walkerMove": {
+      "day": 85,
+      "date": "1861-05-29",
+      "seat": "richmond"
+    },
+    "walkerJuneJulyAllRichmond": true
+  },
+  "manassasRecords": [
+    {
+      "id": "battle:manassas:142",
+      "region": "manassas",
+      "start": 142,
+      "days": [
+        {
+          "bdayDay": 142,
+          "bdayNumber": 1,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": "beauregard_pierre_g_t",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_manassas_garland",
+                "state-forces.va_manassas_preston"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -52,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 13,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1111,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_withdrew",
+                  "btermValue": 0,
+                  "btermSource": "withdrew"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 111,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 600,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "cut_off_believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "breakout_at",
+                  "btermValue": 400,
+                  "btermSource": "beauregard_pierre_g_t"
+                }
+              ],
+              "bsideResult": "withdrew",
+              "bsideCutOff": "surrender",
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 881,
+              "bsideHit": "captured"
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d87",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_new_hampshire.d77",
+                "raised.st_gov_new_york.d67",
+                "raised.st_gov_new_york.d67.bundle.10",
+                "raised.st_gov_new_york.d67.bundle.2",
+                "raised.st_gov_new_york.d67.bundle.3",
+                "raised.st_gov_new_york.d67.bundle.4",
+                "raised.st_gov_new_york.d67.bundle.5",
+                "raised.st_gov_new_york.d67.bundle.6",
+                "raised.st_gov_new_york.d67.bundle.7",
+                "raised.st_gov_new_york.d67.bundle.8",
+                "raised.st_gov_new_york.d67.bundle.9",
+                "raised.st_gov_new_york.d86",
+                "raised.st_gov_new_york.d86.bundle.2",
+                "raised.st_gov_new_york.d86.bundle.3",
+                "raised.st_gov_new_york.d86.bundle.4",
+                "raised.st_gov_rhode_island.d79"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 63000,
+              "bsideCommitted": 44100,
+              "bsideEngaged": 44100,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 52,
+                  "btermSource": "beauregard_pierre_g_t"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 11,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 913,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_gained_ground",
+                  "btermValue": 0,
+                  "btermSource": "gained_ground"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 311,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 669,
+                  "btermSource": "mcdowell_irvin"
+                }
+              ],
+              "bsideResult": "gained_ground",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 55,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notices": {
+    "pickens_reinforcement": {
+      "sitStatus": "decided",
+      "sitFiredDay": 1,
+      "sitSurfacedDay": 1,
+      "sitOpenOptions": [
+        "land_company"
+      ],
+      "sitResurfaced": [],
+      "sitDecidedDay": 1,
+      "sitChosen": [
+        "land_company"
+      ],
+      "sitDecidedBy": "history-default",
+      "sitDelegate": null,
+      "sitWaitingOn": null,
+      "sitStaffAuthor": "scott_winfield"
+    },
+    "pickens_refused": {
+      "sitStatus": "decided",
+      "sitFiredDay": 32,
+      "sitSurfacedDay": 32,
+      "sitOpenOptions": [
+        "courier_order",
+        "department_order",
+        "special_expedition"
+      ],
+      "sitResurfaced": [],
+      "sitDecidedDay": 32,
+      "sitChosen": [
+        "courier_order",
+        "special_expedition"
+      ],
+      "sitDecidedBy": "history-default",
+      "sitDelegate": null,
+      "sitWaitingOn": null,
+      "sitStaffAuthor": "welles_gideon"
+    },
+    "virginia_manassas_state_forces": {
+      "sitStatus": "noticed",
+      "sitFiredDay": 71,
+      "sitSurfacedDay": 72,
+      "sitOpenOptions": [],
+      "sitResurfaced": [],
+      "sitDecidedDay": null,
+      "sitChosen": [],
+      "sitDecidedBy": null,
+      "sitDelegate": null,
+      "sitWaitingOn": null,
+      "sitStaffAuthor": "walker_leroy_p"
+    },
+    "manassas_reinforcement_notice": {
+      "sitStatus": "noticed",
+      "sitFiredDay": 92,
+      "sitSurfacedDay": 93,
+      "sitOpenOptions": [],
+      "sitResurfaced": [],
+      "sitDecidedDay": null,
+      "sitChosen": [],
+      "sitDecidedBy": null,
+      "sitDelegate": null,
+      "sitWaitingOn": null,
+      "sitStaffAuthor": "walker_leroy_p"
+    },
+    "manassas_advance_received": {
+      "sitStatus": "noticed",
+      "sitFiredDay": 140,
+      "sitSurfacedDay": 141,
+      "sitOpenOptions": [],
+      "sitResurfaced": [],
+      "sitDecidedDay": null,
+      "sitChosen": [],
+      "sitDecidedBy": null,
+      "sitDelegate": null,
+      "sitWaitingOn": null,
+      "sitStaffAuthor": "walker_leroy_p"
+    }
+  },
+  "operations": [
+    {
+      "id": "op:us_dept_northeastern_virginia:137",
+      "opPost": "us_dept_northeastern_virginia",
+      "opCommander": "mcdowell_irvin",
+      "opOrder": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+      "opPlan": "direct:least_cost:northern_virginia>manassas",
+      "opMethod": "direct",
+      "opPosture": "take",
+      "opObjective": "manassas",
+      "opStartDay": 137,
+      "opEndDay": 146,
+      "opOutcome": "objective_reached",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "us_dept_northeastern_virginia",
+          "oaxBlocks": [
+            "raised.st_gov_massachusetts.d76",
+            "raised.st_gov_new_york.d67.bundle.2",
+            "raised.st_gov_new_york.d67.bundle.3",
+            "raised.st_gov_new_york.d67.bundle.4",
+            "raised.st_gov_new_york.d67.bundle.5",
+            "raised.st_gov_new_york.d67.bundle.6",
+            "raised.st_gov_new_york.d67.bundle.7",
+            "raised.st_gov_new_york.d67.bundle.8",
+            "raised.st_gov_new_york.d67.bundle.9",
+            "raised.st_gov_new_york.d86",
+            "raised.st_gov_new_york.d86.bundle.2",
+            "raised.st_gov_new_york.d86.bundle.3",
+            "raised.st_gov_new_york.d67",
+            "raised.st_gov_massachusetts.d76.bundle.2",
+            "raised.st_gov_new_york.d67.bundle.10",
+            "raised.st_gov_new_york.d86.bundle.4",
+            "organised.s74_mcdowell_division_1_brigade_1.1",
+            "organised.s74_mcdowell_division_5_brigade_2.1",
+            "raised.st_gov_connecticut.d77",
+            "raised.st_gov_maine.d87",
+            "raised.st_gov_new_hampshire.d77",
+            "raised.st_gov_rhode_island.d79"
+          ],
+          "oaxRoute": {
+            "routeFrom": "northern_virginia",
+            "routeTo": "manassas",
+            "routeLegs": [
+              {
+                "legEdge": "road:manassas:northern_virginia",
+                "legFrom": "northern_virginia",
+                "legTo": "manassas",
+                "legType": "road",
+                "legDays": 3000,
+                "legThreat": 0,
+                "legSupply": 1974,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 4974,
+            "routeDays": 3000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 3000,
+              "phaseRegion": "northern_virginia"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 3000,
+              "phaseDays": 3000,
+              "phaseRegion": "manassas"
+            }
+          ],
+          "oaxObjective": "manassas",
+          "oaxStage": "end",
+          "oaxSince": 146,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": 143,
+          "oaxLog": [
+            {
+              "axevDay": 137,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "northern_virginia"
+            },
+            {
+              "axevDay": 140,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "northern_virginia"
+            },
+            {
+              "axevDay": 143,
+              "axevStage": "assault",
+              "axevReason": "enemy_ahead",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 143,
+              "axevStage": "works",
+              "axevReason": "enemy_gone",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 146,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "manassas"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    {
+      "id": "op:cs_cmd_harpers_ferry:147",
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "opPlan": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>manassas",
+      "opMethod": "supply_line",
+      "opPosture": "take",
+      "opObjective": "manassas",
+      "opStartDay": 147,
+      "opEndDay": null,
+      "opOutcome": null,
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "manassas",
+            "routeLegs": [
+              {
+                "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                "legFrom": "harpers_ferry",
+                "legTo": "loudoun_fauquier",
+                "legType": "road",
+                "legDays": 4000,
+                "legThreat": 0,
+                "legSupply": 4000,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "road:loudoun_fauquier:manassas",
+                "legFrom": "loudoun_fauquier",
+                "legTo": "manassas",
+                "legType": "road",
+                "legDays": 3000,
+                "legThreat": 0,
+                "legSupply": 3000,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 14000,
+            "routeDays": 7000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 3000,
+              "phaseRegion": "harpers_ferry"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 3000,
+              "phaseDays": 4000,
+              "phaseRegion": "loudoun_fauquier"
+            },
+            {
+              "phaseKind": "depot_step",
+              "phaseStart": 7000,
+              "phaseDays": 2000,
+              "phaseRegion": "loudoun_fauquier"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 9000,
+              "phaseDays": 3000,
+              "phaseRegion": "manassas"
+            }
+          ],
+          "oaxObjective": "manassas",
+          "oaxStage": "assemble",
+          "oaxSince": 147,
+          "oaxUntil": 150,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": null,
+          "oaxLog": [
+            {
+              "axevDay": 147,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    }
+  ],
+  "criteria": {
+    "liveness": [
+      {
+        "mechanic": "combat.captured",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 5
+        },
+        "cause": "Both Confederate opposing strengths are unknown, so the resolver has zero quantified engaged men from which to count captured troops. The general capture is a separate event."
+      },
+      {
+        "mechanic": "combat.cut_off",
+        "problem": "too_frequent",
+        "fires": 1,
+        "band": {
+          "minFires": 0,
+          "maxFires": 0,
+          "why": "a side is cut off only with no legal retreat (0019) in a field battle; the retained reference field losers have legal retreats, while the separate trapped-garrison test drives it"
+        },
+        "cause": "The new zero-quantified-contact Manassas record has no legal Confederate retreat; the unchanged resolver records one cut-off."
+      },
+      {
+        "mechanic": "combat.general_hit",
+        "problem": "too_frequent",
+        "fires": 1,
+        "band": {
+          "minFires": 0,
+          "maxFires": 0,
+          "why": "a commander is hit on a low draw on his own stream; no retained reference battle-day draws a commander hit, while the separate kernel test drives it"
+        },
+        "cause": "Beauregard is captured in that Manassas record, contrary to the old quiet-band reference."
+      },
+      {
+        "mechanic": "combat.killed_wounded",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 2,
+          "maxFires": 8
+        },
+        "cause": "The Manassas record has zero quantified contact, so no known casualty arithmetic produces this event; strengths remain unknown."
+      },
+      {
+        "mechanic": "combat.missing",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 2,
+          "maxFires": 8
+        },
+        "cause": "Zero quantified contact and unresolved Confederate men leave no countable missing-men event."
+      },
+      {
+        "mechanic": "combat.routed",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4,
+          "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured one rout."
+        },
+        "cause": "The unchanged resolver withdraws/cuts off the unknown-strength garrison rather than producing the old reference rout."
+      },
+      {
+        "mechanic": "combat.withdrew",
+        "problem": "too_frequent",
+        "fires": 1,
+        "band": {
+          "minFires": 0,
+          "maxFires": 0,
+          "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout rather than withdrawal. This Union-only quiet band has the unchanged testbed three withdrawals as its live control; a rout is not counted as withdrawal."
+        },
+        "cause": "The new Manassas outcome is a withdrawal/cut-off under the unchanged resolver, while the old quiet band expected none."
+      },
+      {
+        "mechanic": "control.threshold_crossed",
+        "problem": "too_rare",
+        "fires": 18,
+        "band": {
+          "minFires": 19,
+          "maxFires": 78
+        },
+        "cause": "The new actual transfers and offensive produce 18 threshold crossings, still below the unchanged floor19. The full control-delta trace is retained."
+      },
+      {
+        "mechanic": "forces.stores_low",
+        "problem": "too_rare",
+        "fires": 13,
+        "band": {
+          "minFires": 28,
+          "maxFires": 112
+        },
+        "cause": "Changed block partition, placement and supply allocation yield 13 low-store crossings, below floor28. Regrouping conserves rations; no low-store floor was relaxed."
+      },
+      {
+        "mechanic": "forces.stragglers_returned",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 12,
+          "maxFires": 48,
+          "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting."
+        },
+        "cause": "With no quantified Manassas casualty/missing-men arithmetic, no countable new stragglers rejoin."
+      },
+      {
+        "mechanic": "messages.special_messenger",
+        "problem": "too_frequent",
+        "fires": 1,
+        "band": {
+          "minFires": 0,
+          "maxFires": 0,
+          "why": "the one bypass uses the faster zero-day wire instead of a three-day messenger (R78)"
+        },
+        "cause": "Davis bypasses Walker on day143 using the offered special messenger; it reaches Johnston on day146."
+      },
+      {
+        "mechanic": "movement.leg_started",
+        "problem": "too_rare",
+        "fires": 137,
+        "band": {
+          "minFires": 155,
+          "maxFires": 620
+        },
+        "cause": "Actual source-guided transfers and the resulting routes produce 137 started legs; unchanged floor155 remains unmet. Arrivals and zero-distance joins are not extra started legs."
+      },
+      {
+        "mechanic": "people.resigned",
+        "problem": "too_frequent",
+        "fires": 15,
+        "band": {
+          "minFires": 3,
+          "maxFires": 14
+        },
+        "cause": "Elzey adds the accepted fifteenth actual departure; the retained maximum is14."
+      },
+      {
+        "mechanic": "planner.term.supply",
+        "problem": "too_frequent",
+        "fires": 1,
+        "band": {
+          "minFires": 0,
+          "maxFires": 0,
+          "why": "S1 appointments: no planner.term.supply event in this observed command/plan path; unchanged testbed fires it 2 times. S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick."
+        },
+        "cause": "Johnston selects the supply_line candidate for the late reinforcement goal."
+      },
+      {
+        "mechanic": "reports.commander_lost",
+        "problem": "too_frequent",
+        "fires": 1,
+        "band": {
+          "minFires": 0,
+          "maxFires": 0,
+          "why": "Anderson evacuates under terms on day 39 and keeps serving; no commander is lost (R78)"
+        },
+        "cause": "Beauregard is captured in the day142 record, producing one loss report against the old max0."
+      }
+    ],
+    "checkpoints": {
+      "problems": [
+        "men_confederate (1861-07-31, day 148): confederate has 95153 men, below 100000"
+      ],
+      "evidence": [
+        "seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "men_union (1861-07-31, day 148): union 99686 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "men_confederate (1861-07-31, day 148): confederate 95153 men of known strength, 23 blocks of unknown strength (band 100000..200000)",
+        "operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+        "operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+        "confederate at war since day 36",
+        "union at war since day 41"
+      ]
+    },
+    "pushback": {
+      "problems": [
+        "relay holds: 1, below the record's 2",
+        "filter holds: 0, below the record's 1",
+        "trims: 0, below the record's 1",
+        "compliance with reservations: 16, above 9",
+        "slow walks: 18, above 9"
+      ],
+      "evidence": [
+        "relay objections: 3 (band 0..6)",
+        "relay holds: 1 (band 2..6)",
+        "filter holds: 0 (band 1..9)",
+        "trims: 0 (band 1..4)",
+        "compliance with reservations: 16 (band 1..9)",
+        "slow walks: 18 (band 2..9)",
+        "objections to a plan: 39 (band 10..42)"
+      ]
+    },
+    "operation": {
+      "problems": [],
+      "evidence": [
+        "op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+        "op:us_dept_northeastern_virginia:137 (union, direct) fought battle battle:manassas:142"
+      ]
+    }
+  },
+  "maxBlocks": null,
+  "planOrders": [
+    {
+      "post": "us_dept_northeastern_virginia",
+      "day": 136,
+      "issuedDay": 136,
+      "setDay": 136,
+      "order": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+      "issuer": "lincoln_abraham",
+      "response": "m.136.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia|mcdowell_irvin"
+    },
+    {
+      "post": "cs_cmd_harpers_ferry",
+      "day": 146,
+      "issuedDay": 143,
+      "setDay": 146,
+      "order": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "issuer": "davis_jefferson",
+      "response": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e"
+    }
+  ],
+  "receivedBattlePapers": [
+    {
+      "day": 143,
+      "seat": "seat:davis_jefferson",
+      "body": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "walker_leroy_p",
+        "reportAuthorPost": "cs_secretary_war",
+        "reportSubjectKind": "region",
+        "reportSubjectId": "manassas",
+        "reportClaims": [
+          {
+            "claimKind": "battle-phase",
+            "claimRegion": "manassas",
+            "claimValue": 1,
+            "claimToken": "afternoon",
+            "claimConfidence": 600,
+            "claimBattle": "battle:manassas:142",
+            "claimBattleDays": [
+              142
+            ],
+            "claimCommander": "beauregard_pierre_g_t"
+          },
+          {
+            "claimKind": "enemy-strength",
+            "claimRegion": "manassas",
+            "claimValue": 125307,
+            "claimToken": null,
+            "claimConfidence": 500
+          }
+        ],
+        "reportDay": 142,
+        "reportHour": 17,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    },
+    {
+      "day": 143,
+      "seat": "seat:davis_jefferson",
+      "body": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "walker_leroy_p",
+        "reportAuthorPost": "cs_secretary_war",
+        "reportSubjectKind": "region",
+        "reportSubjectId": "manassas",
+        "reportClaims": [
+          {
+            "claimKind": "battle-phase",
+            "claimRegion": "manassas",
+            "claimValue": 1,
+            "claimToken": "dawn",
+            "claimConfidence": 600,
+            "claimBattle": "battle:manassas:142",
+            "claimBattleDays": [
+              142
+            ],
+            "claimCommander": "beauregard_pierre_g_t"
+          },
+          {
+            "claimKind": "enemy-strength",
+            "claimRegion": "manassas",
+            "claimValue": 125307,
+            "claimToken": null,
+            "claimConfidence": 500
+          }
+        ],
+        "reportDay": 142,
+        "reportHour": 8,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    },
+    {
+      "day": 143,
+      "seat": "seat:davis_jefferson",
+      "body": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "walker_leroy_p",
+        "reportAuthorPost": "cs_secretary_war",
+        "reportSubjectKind": "region",
+        "reportSubjectId": "manassas",
+        "reportClaims": [
+          {
+            "claimKind": "battle-phase",
+            "claimRegion": "manassas",
+            "claimValue": 0,
+            "claimToken": "evening",
+            "claimConfidence": 600,
+            "claimBattle": "battle:manassas:142",
+            "claimBattleDays": [
+              142
+            ],
+            "claimCommander": "beauregard_pierre_g_t"
+          },
+          {
+            "claimKind": "enemy-strength",
+            "claimRegion": "manassas",
+            "claimValue": 125307,
+            "claimToken": null,
+            "claimConfidence": 500
+          }
+        ],
+        "reportDay": 142,
+        "reportHour": 21,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    },
+    {
+      "day": 143,
+      "seat": "seat:davis_jefferson",
+      "body": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "walker_leroy_p",
+        "reportAuthorPost": "cs_secretary_war",
+        "reportSubjectKind": "region",
+        "reportSubjectId": "manassas",
+        "reportClaims": [
+          {
+            "claimKind": "battle-phase",
+            "claimRegion": "manassas",
+            "claimValue": 1,
+            "claimToken": "morning",
+            "claimConfidence": 600,
+            "claimBattle": "battle:manassas:142",
+            "claimBattleDays": [
+              142
+            ],
+            "claimCommander": "beauregard_pierre_g_t"
+          },
+          {
+            "claimKind": "enemy-strength",
+            "claimRegion": "manassas",
+            "claimValue": 125307,
+            "claimToken": null,
+            "claimConfidence": 500
+          }
+        ],
+        "reportDay": 142,
+        "reportHour": 12,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    },
+    {
+      "day": 143,
+      "seat": "seat:lincoln_abraham",
+      "body": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mcdowell_irvin",
+        "reportAuthorPost": "us_dept_northeastern_virginia",
+        "reportSubjectKind": "region",
+        "reportSubjectId": "manassas",
+        "reportClaims": [
+          {
+            "claimKind": "battle-phase",
+            "claimRegion": "manassas",
+            "claimValue": 1,
+            "claimToken": "afternoon",
+            "claimConfidence": 600,
+            "claimBattle": "battle:manassas:142",
+            "claimBattleDays": [
+              142
+            ],
+            "claimCommander": "mcdowell_irvin"
+          },
+          {
+            "claimKind": "enemy-strength",
+            "claimRegion": "manassas",
+            "claimValue": 0,
+            "claimToken": null,
+            "claimConfidence": 500
+          }
+        ],
+        "reportDay": 142,
+        "reportHour": 17,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    },
+    {
+      "day": 143,
+      "seat": "seat:lincoln_abraham",
+      "body": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mcdowell_irvin",
+        "reportAuthorPost": "us_dept_northeastern_virginia",
+        "reportSubjectKind": "region",
+        "reportSubjectId": "manassas",
+        "reportClaims": [
+          {
+            "claimKind": "battle-phase",
+            "claimRegion": "manassas",
+            "claimValue": 1,
+            "claimToken": "dawn",
+            "claimConfidence": 600,
+            "claimBattle": "battle:manassas:142",
+            "claimBattleDays": [
+              142
+            ],
+            "claimCommander": "mcdowell_irvin"
+          },
+          {
+            "claimKind": "enemy-strength",
+            "claimRegion": "manassas",
+            "claimValue": 0,
+            "claimToken": null,
+            "claimConfidence": 500
+          }
+        ],
+        "reportDay": 142,
+        "reportHour": 8,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    },
+    {
+      "day": 143,
+      "seat": "seat:lincoln_abraham",
+      "body": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mcdowell_irvin",
+        "reportAuthorPost": "us_dept_northeastern_virginia",
+        "reportSubjectKind": "region",
+        "reportSubjectId": "manassas",
+        "reportClaims": [
+          {
+            "claimKind": "battle-phase",
+            "claimRegion": "manassas",
+            "claimValue": 1,
+            "claimToken": "evening",
+            "claimConfidence": 600,
+            "claimBattle": "battle:manassas:142",
+            "claimBattleDays": [
+              142
+            ],
+            "claimCommander": "mcdowell_irvin"
+          },
+          {
+            "claimKind": "enemy-strength",
+            "claimRegion": "manassas",
+            "claimValue": 0,
+            "claimToken": null,
+            "claimConfidence": 500
+          }
+        ],
+        "reportDay": 142,
+        "reportHour": 21,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    },
+    {
+      "day": 143,
+      "seat": "seat:lincoln_abraham",
+      "body": {
+        "reportType": "wire-dispatch",
+        "reportSubtype": null,
+        "reportAuthor": "mcdowell_irvin",
+        "reportAuthorPost": "us_dept_northeastern_virginia",
+        "reportSubjectKind": "region",
+        "reportSubjectId": "manassas",
+        "reportClaims": [
+          {
+            "claimKind": "battle-phase",
+            "claimRegion": "manassas",
+            "claimValue": 1,
+            "claimToken": "morning",
+            "claimConfidence": 600,
+            "claimBattle": "battle:manassas:142",
+            "claimBattleDays": [
+              142
+            ],
+            "claimCommander": "mcdowell_irvin"
+          },
+          {
+            "claimKind": "enemy-strength",
+            "claimRegion": "manassas",
+            "claimValue": 0,
+            "claimToken": null,
+            "claimConfidence": 500
+          }
+        ],
+        "reportDay": 142,
+        "reportHour": 12,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    }
+  ],
+  "causes": {
+    "unionOffensive": "Lincoln issues on day 133 (16 July). Cameron holds two days, Scott objects on day 135, and Lincoln bypasses on day 136. The accepted goal opens a direct operation on day 137; ordinary concentration and movement produce the day-142 record.",
+    "johnston": "The advance notice is received day 141. Davis issues day 142; Walker objects. The bypass goes day 143 and reaches Johnston day 146. His supply_line operation opens day 147 and is still assembling at the horizon.",
+    "strengthHold": "The two opposing Manassas garrison blocks are unknown-strength aggregate local contingents. No historical return was divided or fitted. Confederate known strength remains the same 95153 as S70, below the unchanged 100000 checkpoint floor.",
+    "commitHold": "The corrected reference has 15 unchanged-band liveness failures and zero quantified contact at Manassas. These are known rejecting facts; no expensive full-hook retry or standalone done check is run."
+  },
+  "causeAttribution": "Mechanism-level [I] from observed trace, not isolated intervention estimates."
+}

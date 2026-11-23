@@ -1,0 +1,79 @@
+[
+  {
+    "path": "packages/cli/test/bombardment.test.ts",
+    "category": "S52 inherited non-July contract",
+    "failedAssertions": [
+      "the sourced opening of the bombardment (R78) issues the 10 April authorization once, wires the bypass, and evacuates Anderson on 13 April"
+    ],
+    "collectionError": "",
+    "cause": "S52 adds a declared Confederate offensive gated by manassas_advance_received. This test demands that the entire offensive list be empty, before checking later bombardment assertions.",
+    "disposition": "Retain unchanged. No assertion, prerequisite validation, force assignment, arrival clock or band is weakened."
+  },
+  {
+    "path": "packages/cli/test/console-session.test.ts",
+    "category": "July/contact/liveness",
+    "failedAssertions": [
+      "R86: the history months through the playerâ€™s console (1A criterion 2) receives at least one hour-stamped battle dispatch by 31 July"
+    ],
+    "collectionError": "",
+    "cause": "Missing received hour-stamped July battle dispatch (R86); current script still has no qualifying paper by its July horizon.",
+    "disposition": "Retain unchanged. No assertion, prerequisite validation, force assignment, arrival clock or band is weakened."
+  },
+  {
+    "path": "packages/cli/test/declared-government.test.ts",
+    "category": "S52 inherited non-July contract",
+    "failedAssertions": [
+      "a declared government is established by a situation (lane 1.11) refuses to take a region a people governs themselves (0069, 0070), changing nothing"
+    ],
+    "collectionError": "",
+    "cause": "The isolated fixture passes no situations or substitutes only its planted situation, omitting the prerequisite notice named by S52 doctrine. indexSeatsWorld rejects the incomplete fixture before the protected behavior/assertions run.",
+    "disposition": "Retain unchanged. No assertion, prerequisite validation, force assignment, arrival clock or band is weakened."
+  },
+  {
+    "path": "packages/cli/test/done-check.test.ts",
+    "category": "July/contact/liveness",
+    "failedAssertions": [
+      "the done check on union-1861 at war and the testbed passes every Phase 0 criterion but the budget, which is a stopwatch",
+      "each criterion can fail (positive controls) liveness: a planted dead mechanic in a reference run fails the check"
+    ],
+    "collectionError": "",
+    "cause": "Frozen liveness expectations fail on the changed force/contact trajectory. The done-check positive control also assumes an empty baseline failure list.",
+    "disposition": "Retain unchanged. No assertion, prerequisite validation, force assignment, arrival clock or band is weakened."
+  },
+  {
+    "path": "packages/cli/test/liveness-gate.test.ts",
+    "category": "July/contact/liveness",
+    "failedAssertions": [
+      "the reference runs union-1861, war by decision, 148 days: every mechanic fires within its band"
+    ],
+    "collectionError": "",
+    "cause": "Frozen liveness expectations fail on the changed force/contact trajectory. The done-check positive control also assumes an empty baseline failure list.",
+    "disposition": "Retain unchanged. No assertion, prerequisite validation, force assignment, arrival clock or band is weakened."
+  },
+  {
+    "path": "packs/union-1861/test/cost-only.test.ts",
+    "category": "S52 inherited non-July contract",
+    "failedAssertions": [],
+    "collectionError": "Invalid seats world:\n- rules.ruleSeats: manassas_advance_received is not this faction's notice",
+    "cause": "The isolated fixture passes no situations or substitutes only its planted situation, omitting the prerequisite notice named by S52 doctrine. indexSeatsWorld rejects the incomplete fixture before the protected behavior/assertions run.",
+    "disposition": "Retain unchanged. No assertion, prerequisite validation, force assignment, arrival clock or band is weakened."
+  },
+  {
+    "path": "packs/union-1861/test/nation-calls.test.ts",
+    "category": "S52 inherited non-July contract",
+    "failedAssertions": [
+      "no principal calls on a nation for regiments (the leadâ€™s ruling; 0069, 0070) the kernelâ€™s call path refuses it as not_raising_post, and no levy is held"
+    ],
+    "collectionError": "",
+    "cause": "The isolated fixture passes no situations or substitutes only its planted situation, omitting the prerequisite notice named by S52 doctrine. indexSeatsWorld rejects the incomplete fixture before the protected behavior/assertions run.",
+    "disposition": "Retain unchanged. No assertion, prerequisite validation, force assignment, arrival clock or band is weakened."
+  },
+  {
+    "path": "packs/union-1861/test/passage.test.ts",
+    "category": "S52 inherited non-July contract",
+    "failedAssertions": [],
+    "collectionError": "Invalid seats world:\n- rules.ruleSeats: manassas_advance_received is not this faction's notice",
+    "cause": "The isolated fixture passes no situations or substitutes only its planted situation, omitting the prerequisite notice named by S52 doctrine. indexSeatsWorld rejects the incomplete fixture before the protected behavior/assertions run.",
+    "disposition": "Retain unchanged. No assertion, prerequisite validation, force assignment, arrival clock or band is weakened."
+  }
+]

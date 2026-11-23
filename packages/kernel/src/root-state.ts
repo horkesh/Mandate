@@ -43,7 +43,6 @@ import type { ObserverPosting } from './command/observers.ts';
 import type { PersonRank } from './people/ranks.ts';
 import type { OrderResponse } from './proxy/responses.ts';
 import type { ArrivalTable, FortificationTable, LoyaltyTable } from './regions/regions.ts';
-import type { EnlistmentTable } from './forces/enlistment.ts';
 import type { LevyTable } from './command/levies.ts';
 import type { BattleTable } from './combat/records.ts';
 import type { JoinTable } from './movement/join.ts';
@@ -103,8 +102,8 @@ export interface State {
   readonly postStates: PostTable;
   /** Which post commands each block (division-to-post assignment). Writer: `command`. */
   readonly forceAssignments: AssignmentTable;
-  /** Each raised block's enlistment: who raised it on whose call, and the day its men's term ends (lane 1.7). Writer: `forces`. */
-  readonly forceEnlistments: EnlistmentTable;
+  /** Identities already assigned by forces, retained after discharge so a catalogue regiment cannot be raised twice. */
+  readonly forceRaisedIdentities: Readonly<Record<string, true>>;
   /** Calls a governor answered and has not yet mustered, by the call's id: a prior order on his post (lane 1.7). Writer: `command`. */
   readonly postLevies: LevyTable;
   /** Edge condition, permille, for edges not intact (an intact edge is absent). Writer: `infrastructure`. */

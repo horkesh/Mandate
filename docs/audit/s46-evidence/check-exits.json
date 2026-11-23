@@ -1,0 +1,18 @@
+{
+  "npmCi": 0,
+  "mergeTypecheck": 0,
+  "mergeHook": 0,
+  "candidateHookBeforeStrengthCorrection": 1,
+  "correctedStrengthGeneration": 0,
+  "correctedStrengthTest": 0,
+  "correctedTypecheck": 0,
+  "correctedRules": 0,
+  "boundary": 0,
+  "licences": 0,
+  "decisions": 0,
+  "publishedSchemas": 0,
+  "finalConsoleReplay": 0,
+  "finalReferenceTrace": 0,
+  "comparison": 0,
+  "initialStateDiagnostic": 0
+}

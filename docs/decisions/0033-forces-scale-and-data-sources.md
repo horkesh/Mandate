@@ -1,6 +1,6 @@
 # 0033: Transfers name a force, not divisions one by one; force blocks fit the period; data comes from public-domain sources
 
-Status: accepted (2026-11-14). From the war-scale lane (`docs/research/2026-11-14-war-scale.md`) and the secession-winter lane (`docs/research/2026-11-14-secession-winter-1861.md`). Recommended by the lead; the owner takes recommendations by default. Amends 0016 and 0026; extends 0031's sourcing rule to all pack data. Amended by 0040 (first-month walkthrough revisions).
+Status: accepted (2026-11-14). From the war-scale lane (`docs/research/2026-11-14-war-scale.md`) and the secession-winter lane (`docs/research/2026-11-14-secession-winter-1861.md`). Recommended by the lead; the owner takes recommendations by default. Amends 0016 and 0026; extends 0031's sourcing rule to all pack data. Amended by 0040 (first-month walkthrough revisions). Extended by 0108 (regiments inside named brigades).
 
 ## Context
 

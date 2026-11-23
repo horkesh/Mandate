@@ -14,6 +14,10 @@ describe('state-force proposals are notice-only and validated', () => {
   it('accepts an institutional notice', () => expect(check()).toEqual([]));
   it.each([{ owner: 'politics' }, { field: 'other' }, { subject: 'missing' }, { subject: 'n_army_west' }, { side: 'south' }, { delta: -1 },
     { stateForces: { ...proposal.stateForces, arm: 'missing' } }, { stateForces: { ...proposal.stateForces, men: -1 } },
+    { stateForces: { ...proposal.stateForces, post: 'missing' } },
+    { stateForces: { ...proposal.stateForces, region: 'missing' } },
+    { stateForces: { ...proposal.stateForces, transferTo: 's_war' } },
+    { stateForces: { ...proposal.stateForces, release: true } },
   ])('rejects invalid payload or target: %j', patch => expect(check(patch).length).toBeGreaterThan(0));
   it('rejects principal decisions', () => expect(check({}, true).some(i => i.message.includes('notice'))).toBe(true));
 });

@@ -1,0 +1,17 @@
+{
+  "changed": [
+    "packages/kernel/src/recruitment/renewal.ts"
+  ],
+  "expanded_pure_binding_body_exact": true,
+  "proof": "correction-proof.json",
+  "suite_and_Union_reference_reused": true,
+  "whole_tick_budget_not_certified_after_correction": true,
+  "return_guard_changes": [
+    "packages/kernel/test/s70-recruitment-lots.test.ts",
+    "packages/kernel/src/forces/enlistment.ts",
+    "packages/kernel/src/tick/recruitment.ts"
+  ],
+  "return_guard_proof": "return-suffix/receipt.json",
+  "return_guard_semantics": "Known aggregate return stays one unidentified lot; no identities are minted or replaced by a return. Already identified unknown-strength regiments may only confirm their own original nominal model quota.",
+  "full_reference_repeated": false
+}

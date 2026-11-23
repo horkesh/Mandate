@@ -1,0 +1,19 @@
+{
+  "attempted": false,
+  "committed": false,
+  "head": "febfd38ca2241e35e8ab1013857470b7c0e4b45f",
+  "reason": "Required once-run full suite exits1; corrected frozen reference retains12 liveness failures and zero quantified Manassas contact. The mandatory cheap rejection gate proves the unchanged full hook cannot pass. No bypass or unchanged expensive retry. The conditional milestone1a done check is not run.",
+  "witnesses": [
+    {
+      "mechanic": "combat.killed_wounded",
+      "fires": 0,
+      "minFires": 2
+    },
+    {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "maxFires": 0
+    }
+  ],
+  "backupReceipt": "runs/s77/final-receipt.json"
+}

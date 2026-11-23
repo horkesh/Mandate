@@ -1,0 +1,14 @@
+{
+  "node": "v22.23.2",
+  "platform": "win32",
+  "architecture": "x64",
+  "aliases": {
+    "kernel": "C:\\Pyrrhic\\sprint-july\\packages\\kernel",
+    "pack-format": "C:\\Pyrrhic\\sprint-july\\packages\\pack-format",
+    "rule-seats": "C:\\Pyrrhic\\sprint-july\\packages\\rule-seats",
+    "cli": "C:\\Pyrrhic\\sprint-july\\packages\\cli"
+  },
+  "aliasesLocal": true,
+  "ci": false,
+  "timingEnvPresent": false
+}

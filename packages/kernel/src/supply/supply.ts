@@ -56,6 +56,8 @@ export interface NetworkConditions {
    * (its government is a side's, or unknown). Absent or empty: no neutral passage.
    */
   readonly neutralGround?: Readonly<Record<RegionId, 'open' | 'closed'>>;
+  /** Civil rail access where government affiliation has no opposing positive share (S81). Not ownership. */
+  readonly governmentRail?: Readonly<Record<RegionId, FactionId>>;
 }
 
 export const INTACT_NETWORK: NetworkConditions = Object.freeze({ edgeCondition: Object.freeze({}), depotCondition: Object.freeze({}), obstructions: Object.freeze([]) });

@@ -1,0 +1,4873 @@
+{
+  "scope": "Frozen State inspection only. No new simulation or historical transport assertion.",
+  "finalProjectionExact": true,
+  "shortLegs": [
+    {
+      "day": 129,
+      "block": "state-forces.cs_tn_cavalry_tennessee",
+      "from": "nashville",
+      "to": "columbia_tn",
+      "candidates": [
+        {
+          "edge": "rail:columbia_tn:nashville:tennessee_and_alabama_central",
+          "from": "nashville",
+          "to": "columbia_tn",
+          "type": "rail",
+          "line": "tennessee_and_alabama_central",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:columbia_tn:nashville:tennessee_and_alabama_central",
+        "from": "nashville",
+        "to": "columbia_tn",
+        "type": "rail",
+        "line": "tennessee_and_alabama_central",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 129,
+      "block": "state-forces.cs_tn_infantry_tennessee",
+      "from": "nashville",
+      "to": "columbia_tn",
+      "candidates": [
+        {
+          "edge": "rail:columbia_tn:nashville:tennessee_and_alabama_central",
+          "from": "nashville",
+          "to": "columbia_tn",
+          "type": "rail",
+          "line": "tennessee_and_alabama_central",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:columbia_tn:nashville:tennessee_and_alabama_central",
+        "from": "nashville",
+        "to": "columbia_tn",
+        "type": "rail",
+        "line": "tennessee_and_alabama_central",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 134,
+      "block": "raised.st_gov_georgia.d127.2",
+      "from": "augusta",
+      "to": "columbia_sc",
+      "candidates": [
+        {
+          "edge": "rail:augusta:columbia_sc:south_carolina",
+          "from": "augusta",
+          "to": "columbia_sc",
+          "type": "rail",
+          "line": "south_carolina",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 2,
+          "daysPermille": 1000,
+          "capacityMilli": 2000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:augusta:columbia_sc:south_carolina",
+        "from": "augusta",
+        "to": "columbia_sc",
+        "type": "rail",
+        "line": "south_carolina",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 2,
+        "daysPermille": 1000,
+        "capacityMilli": 2000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 134,
+      "block": "raised.st_gov_georgia.d129",
+      "from": "augusta",
+      "to": "columbia_sc",
+      "candidates": [
+        {
+          "edge": "rail:augusta:columbia_sc:south_carolina",
+          "from": "augusta",
+          "to": "columbia_sc",
+          "type": "rail",
+          "line": "south_carolina",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 2,
+          "daysPermille": 1000,
+          "capacityMilli": 2000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:augusta:columbia_sc:south_carolina",
+        "from": "augusta",
+        "to": "columbia_sc",
+        "type": "rail",
+        "line": "south_carolina",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 2,
+        "daysPermille": 1000,
+        "capacityMilli": 2000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 135,
+      "block": "raised.st_gov_alabama.d130.2",
+      "from": "montgomery",
+      "to": "al_east",
+      "candidates": [
+        {
+          "edge": "rail:al_east:montgomery:montgomery_and_west_point",
+          "from": "montgomery",
+          "to": "al_east",
+          "type": "rail",
+          "line": "montgomery_and_west_point",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:al_east:montgomery:montgomery_and_west_point",
+        "from": "montgomery",
+        "to": "al_east",
+        "type": "rail",
+        "line": "montgomery_and_west_point",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 135,
+      "block": "raised.st_gov_alabama.d132",
+      "from": "montgomery",
+      "to": "al_east",
+      "candidates": [
+        {
+          "edge": "rail:al_east:montgomery:montgomery_and_west_point",
+          "from": "montgomery",
+          "to": "al_east",
+          "type": "rail",
+          "line": "montgomery_and_west_point",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:al_east:montgomery:montgomery_and_west_point",
+        "from": "montgomery",
+        "to": "al_east",
+        "type": "rail",
+        "line": "montgomery_and_west_point",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 135,
+      "block": "raised.st_gov_georgia.d127.2",
+      "from": "columbia_sc",
+      "to": "sc_midlands",
+      "candidates": [
+        {
+          "edge": "rail:columbia_sc:sc_midlands:south_carolina",
+          "from": "columbia_sc",
+          "to": "sc_midlands",
+          "type": "rail",
+          "line": "south_carolina",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:columbia_sc:sc_midlands:south_carolina",
+        "from": "columbia_sc",
+        "to": "sc_midlands",
+        "type": "rail",
+        "line": "south_carolina",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 135,
+      "block": "raised.st_gov_georgia.d129",
+      "from": "columbia_sc",
+      "to": "sc_midlands",
+      "candidates": [
+        {
+          "edge": "rail:columbia_sc:sc_midlands:south_carolina",
+          "from": "columbia_sc",
+          "to": "sc_midlands",
+          "type": "rail",
+          "line": "south_carolina",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:columbia_sc:sc_midlands:south_carolina",
+        "from": "columbia_sc",
+        "to": "sc_midlands",
+        "type": "rail",
+        "line": "south_carolina",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 136,
+      "block": "raised.st_gov_alabama.d130.2",
+      "from": "al_east",
+      "to": "ga_atlanta_west",
+      "candidates": [
+        {
+          "edge": "rail:al_east:ga_atlanta_west:atlanta_and_west_point",
+          "from": "al_east",
+          "to": "ga_atlanta_west",
+          "type": "rail",
+          "line": "atlanta_and_west_point",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:al_east:ga_atlanta_west:atlanta_and_west_point",
+        "from": "al_east",
+        "to": "ga_atlanta_west",
+        "type": "rail",
+        "line": "atlanta_and_west_point",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 136,
+      "block": "raised.st_gov_alabama.d132",
+      "from": "al_east",
+      "to": "ga_atlanta_west",
+      "candidates": [
+        {
+          "edge": "rail:al_east:ga_atlanta_west:atlanta_and_west_point",
+          "from": "al_east",
+          "to": "ga_atlanta_west",
+          "type": "rail",
+          "line": "atlanta_and_west_point",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:al_east:ga_atlanta_west:atlanta_and_west_point",
+        "from": "al_east",
+        "to": "ga_atlanta_west",
+        "type": "rail",
+        "line": "atlanta_and_west_point",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 136,
+      "block": "raised.st_gov_georgia.d127.2",
+      "from": "sc_midlands",
+      "to": "georgetown_pee_dee",
+      "candidates": [
+        {
+          "edge": "rail:georgetown_pee_dee:sc_midlands:wilmington_and_manchester",
+          "from": "sc_midlands",
+          "to": "georgetown_pee_dee",
+          "type": "rail",
+          "line": "wilmington_and_manchester",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 2,
+          "daysPermille": 1000,
+          "capacityMilli": 2000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:georgetown_pee_dee:sc_midlands:wilmington_and_manchester",
+        "from": "sc_midlands",
+        "to": "georgetown_pee_dee",
+        "type": "rail",
+        "line": "wilmington_and_manchester",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 2,
+        "daysPermille": 1000,
+        "capacityMilli": 2000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 136,
+      "block": "raised.st_gov_georgia.d129",
+      "from": "sc_midlands",
+      "to": "georgetown_pee_dee",
+      "candidates": [
+        {
+          "edge": "rail:georgetown_pee_dee:sc_midlands:wilmington_and_manchester",
+          "from": "sc_midlands",
+          "to": "georgetown_pee_dee",
+          "type": "rail",
+          "line": "wilmington_and_manchester",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 2,
+          "daysPermille": 1000,
+          "capacityMilli": 2000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:georgetown_pee_dee:sc_midlands:wilmington_and_manchester",
+        "from": "sc_midlands",
+        "to": "georgetown_pee_dee",
+        "type": "rail",
+        "line": "wilmington_and_manchester",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 2,
+        "daysPermille": 1000,
+        "capacityMilli": 2000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 136,
+      "block": "state-forces.cs_tn_cavalry_tennessee",
+      "from": "al_valley_west",
+      "to": "al_valley_east",
+      "candidates": [
+        {
+          "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+          "from": "al_valley_west",
+          "to": "al_valley_east",
+          "type": "rail",
+          "line": "memphis_and_charleston",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+        "from": "al_valley_west",
+        "to": "al_valley_east",
+        "type": "rail",
+        "line": "memphis_and_charleston",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 136,
+      "block": "state-forces.cs_tn_infantry_tennessee",
+      "from": "al_valley_west",
+      "to": "al_valley_east",
+      "candidates": [
+        {
+          "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+          "from": "al_valley_west",
+          "to": "al_valley_east",
+          "type": "rail",
+          "line": "memphis_and_charleston",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+        "from": "al_valley_west",
+        "to": "al_valley_east",
+        "type": "rail",
+        "line": "memphis_and_charleston",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 137,
+      "block": "raised.st_gov_alabama.d130.2",
+      "from": "ga_atlanta_west",
+      "to": "atlanta",
+      "candidates": [
+        {
+          "edge": "rail:atlanta:ga_atlanta_west:atlanta_and_west_point",
+          "from": "ga_atlanta_west",
+          "to": "atlanta",
+          "type": "rail",
+          "line": "atlanta_and_west_point",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:atlanta:ga_atlanta_west:atlanta_and_west_point",
+        "from": "ga_atlanta_west",
+        "to": "atlanta",
+        "type": "rail",
+        "line": "atlanta_and_west_point",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 137,
+      "block": "raised.st_gov_alabama.d132",
+      "from": "ga_atlanta_west",
+      "to": "atlanta",
+      "candidates": [
+        {
+          "edge": "rail:atlanta:ga_atlanta_west:atlanta_and_west_point",
+          "from": "ga_atlanta_west",
+          "to": "atlanta",
+          "type": "rail",
+          "line": "atlanta_and_west_point",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:atlanta:ga_atlanta_west:atlanta_and_west_point",
+        "from": "ga_atlanta_west",
+        "to": "atlanta",
+        "type": "rail",
+        "line": "atlanta_and_west_point",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 137,
+      "block": "raised.st_gov_georgia.d127.2",
+      "from": "georgetown_pee_dee",
+      "to": "cape_fear",
+      "candidates": [
+        {
+          "edge": "rail:cape_fear:georgetown_pee_dee:wilmington_and_manchester",
+          "from": "georgetown_pee_dee",
+          "to": "cape_fear",
+          "type": "rail",
+          "line": "wilmington_and_manchester",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 2,
+          "daysPermille": 1000,
+          "capacityMilli": 2000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:cape_fear:georgetown_pee_dee:wilmington_and_manchester",
+        "from": "georgetown_pee_dee",
+        "to": "cape_fear",
+        "type": "rail",
+        "line": "wilmington_and_manchester",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 2,
+        "daysPermille": 1000,
+        "capacityMilli": 2000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 137,
+      "block": "raised.st_gov_georgia.d129",
+      "from": "georgetown_pee_dee",
+      "to": "cape_fear",
+      "candidates": [
+        {
+          "edge": "rail:cape_fear:georgetown_pee_dee:wilmington_and_manchester",
+          "from": "georgetown_pee_dee",
+          "to": "cape_fear",
+          "type": "rail",
+          "line": "wilmington_and_manchester",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 2,
+          "daysPermille": 1000,
+          "capacityMilli": 2000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:cape_fear:georgetown_pee_dee:wilmington_and_manchester",
+        "from": "georgetown_pee_dee",
+        "to": "cape_fear",
+        "type": "rail",
+        "line": "wilmington_and_manchester",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 2,
+        "daysPermille": 1000,
+        "capacityMilli": 2000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 138,
+      "block": "raised.st_gov_alabama.d130.2",
+      "from": "atlanta",
+      "to": "ga_etowah",
+      "candidates": [
+        {
+          "edge": "rail:atlanta:ga_etowah:western_and_atlantic",
+          "from": "atlanta",
+          "to": "ga_etowah",
+          "type": "rail",
+          "line": "western_and_atlantic",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:atlanta:ga_etowah:western_and_atlantic",
+        "from": "atlanta",
+        "to": "ga_etowah",
+        "type": "rail",
+        "line": "western_and_atlantic",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 138,
+      "block": "raised.st_gov_alabama.d132",
+      "from": "atlanta",
+      "to": "ga_etowah",
+      "candidates": [
+        {
+          "edge": "rail:atlanta:ga_etowah:western_and_atlantic",
+          "from": "atlanta",
+          "to": "ga_etowah",
+          "type": "rail",
+          "line": "western_and_atlantic",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:atlanta:ga_etowah:western_and_atlantic",
+        "from": "atlanta",
+        "to": "ga_etowah",
+        "type": "rail",
+        "line": "western_and_atlantic",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 138,
+      "block": "state-forces.cs_nc_additional_north_carolina",
+      "from": "raleigh",
+      "to": "nc_coastal_plain",
+      "candidates": [
+        {
+          "edge": "rail:nc_coastal_plain:raleigh:north_carolina",
+          "from": "raleigh",
+          "to": "nc_coastal_plain",
+          "type": "rail",
+          "line": "north_carolina",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:nc_coastal_plain:raleigh:north_carolina",
+        "from": "raleigh",
+        "to": "nc_coastal_plain",
+        "type": "rail",
+        "line": "north_carolina",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 138,
+      "block": "state-forces.cs_nc_state_transfer_north_carolina",
+      "from": "raleigh",
+      "to": "nc_coastal_plain",
+      "candidates": [
+        {
+          "edge": "rail:nc_coastal_plain:raleigh:north_carolina",
+          "from": "raleigh",
+          "to": "nc_coastal_plain",
+          "type": "rail",
+          "line": "north_carolina",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:nc_coastal_plain:raleigh:north_carolina",
+        "from": "raleigh",
+        "to": "nc_coastal_plain",
+        "type": "rail",
+        "line": "north_carolina",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 138,
+      "block": "state-forces.cs_nc_volunteers_north_carolina",
+      "from": "raleigh",
+      "to": "nc_coastal_plain",
+      "candidates": [
+        {
+          "edge": "rail:nc_coastal_plain:raleigh:north_carolina",
+          "from": "raleigh",
+          "to": "nc_coastal_plain",
+          "type": "rail",
+          "line": "north_carolina",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:nc_coastal_plain:raleigh:north_carolina",
+        "from": "raleigh",
+        "to": "nc_coastal_plain",
+        "type": "rail",
+        "line": "north_carolina",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 139,
+      "block": "raised.st_gov_alabama.d130.2",
+      "from": "ga_etowah",
+      "to": "ga_dalton",
+      "candidates": [
+        {
+          "edge": "rail:ga_dalton:ga_etowah:western_and_atlantic",
+          "from": "ga_etowah",
+          "to": "ga_dalton",
+          "type": "rail",
+          "line": "western_and_atlantic",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:ga_dalton:ga_etowah:western_and_atlantic",
+        "from": "ga_etowah",
+        "to": "ga_dalton",
+        "type": "rail",
+        "line": "western_and_atlantic",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 139,
+      "block": "raised.st_gov_alabama.d132",
+      "from": "ga_etowah",
+      "to": "ga_dalton",
+      "candidates": [
+        {
+          "edge": "rail:ga_dalton:ga_etowah:western_and_atlantic",
+          "from": "ga_etowah",
+          "to": "ga_dalton",
+          "type": "rail",
+          "line": "western_and_atlantic",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:ga_dalton:ga_etowah:western_and_atlantic",
+        "from": "ga_etowah",
+        "to": "ga_dalton",
+        "type": "rail",
+        "line": "western_and_atlantic",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 140,
+      "block": "raised.st_gov_alabama.d130.2",
+      "from": "ga_dalton",
+      "to": "tn_cleveland",
+      "candidates": [
+        {
+          "edge": "rail:ga_dalton:tn_cleveland:east_tennessee_and_georgia",
+          "from": "ga_dalton",
+          "to": "tn_cleveland",
+          "type": "rail",
+          "line": "east_tennessee_and_georgia",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:ga_dalton:tn_cleveland:east_tennessee_and_georgia",
+        "from": "ga_dalton",
+        "to": "tn_cleveland",
+        "type": "rail",
+        "line": "east_tennessee_and_georgia",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 140,
+      "block": "raised.st_gov_alabama.d132",
+      "from": "ga_dalton",
+      "to": "tn_cleveland",
+      "candidates": [
+        {
+          "edge": "rail:ga_dalton:tn_cleveland:east_tennessee_and_georgia",
+          "from": "ga_dalton",
+          "to": "tn_cleveland",
+          "type": "rail",
+          "line": "east_tennessee_and_georgia",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:ga_dalton:tn_cleveland:east_tennessee_and_georgia",
+        "from": "ga_dalton",
+        "to": "tn_cleveland",
+        "type": "rail",
+        "line": "east_tennessee_and_georgia",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 141,
+      "block": "raised.st_gov_mississippi.d136",
+      "from": "jackson_ms",
+      "to": "ms_east",
+      "candidates": [
+        {
+          "edge": "rail:jackson_ms:ms_east:southern",
+          "from": "jackson_ms",
+          "to": "ms_east",
+          "type": "rail",
+          "line": "southern",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 2,
+          "daysPermille": 1000,
+          "capacityMilli": 2000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:jackson_ms:ms_east:southern",
+        "from": "jackson_ms",
+        "to": "ms_east",
+        "type": "rail",
+        "line": "southern",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 2,
+        "daysPermille": 1000,
+        "capacityMilli": 2000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 141,
+      "block": "raised.st_gov_mississippi.d137.2",
+      "from": "jackson_ms",
+      "to": "ms_east",
+      "candidates": [
+        {
+          "edge": "rail:jackson_ms:ms_east:southern",
+          "from": "jackson_ms",
+          "to": "ms_east",
+          "type": "rail",
+          "line": "southern",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 2,
+          "daysPermille": 1000,
+          "capacityMilli": 2000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:jackson_ms:ms_east:southern",
+        "from": "jackson_ms",
+        "to": "ms_east",
+        "type": "rail",
+        "line": "southern",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 2,
+        "daysPermille": 1000,
+        "capacityMilli": 2000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 144,
+      "block": "raised.st_gov_mississippi.d136",
+      "from": "ms_northeast",
+      "to": "corinth",
+      "candidates": [
+        {
+          "edge": "rail:corinth:ms_northeast:mobile_and_ohio",
+          "from": "ms_northeast",
+          "to": "corinth",
+          "type": "rail",
+          "line": "mobile_and_ohio",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 1,
+          "daysPermille": 1000,
+          "capacityMilli": 1000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:corinth:ms_northeast:mobile_and_ohio",
+        "from": "ms_northeast",
+        "to": "corinth",
+        "type": "rail",
+        "line": "mobile_and_ohio",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 1,
+        "daysPermille": 1000,
+        "capacityMilli": 1000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 144,
+      "block": "raised.st_gov_mississippi.d137.2",
+      "from": "ms_northeast",
+      "to": "corinth",
+      "candidates": [
+        {
+          "edge": "rail:corinth:ms_northeast:mobile_and_ohio",
+          "from": "ms_northeast",
+          "to": "corinth",
+          "type": "rail",
+          "line": "mobile_and_ohio",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 1,
+          "daysPermille": 1000,
+          "capacityMilli": 1000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:corinth:ms_northeast:mobile_and_ohio",
+        "from": "ms_northeast",
+        "to": "corinth",
+        "type": "rail",
+        "line": "mobile_and_ohio",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 1,
+        "daysPermille": 1000,
+        "capacityMilli": 1000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 144,
+      "block": "raised.st_gov_south_carolina.d139",
+      "from": "columbia_sc",
+      "to": "sc_upstate_east",
+      "candidates": [
+        {
+          "edge": "rail:columbia_sc:sc_upstate_east:charlotte_and_south_carolina",
+          "from": "columbia_sc",
+          "to": "sc_upstate_east",
+          "type": "rail",
+          "line": "charlotte_and_south_carolina",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:columbia_sc:sc_upstate_east:charlotte_and_south_carolina",
+        "from": "columbia_sc",
+        "to": "sc_upstate_east",
+        "type": "rail",
+        "line": "charlotte_and_south_carolina",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 145,
+      "block": "raised.st_gov_south_carolina.d139",
+      "from": "sc_upstate_east",
+      "to": "salisbury_charlotte",
+      "candidates": [
+        {
+          "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+          "from": "sc_upstate_east",
+          "to": "salisbury_charlotte",
+          "type": "rail",
+          "line": "charlotte_and_south_carolina",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+        "from": "sc_upstate_east",
+        "to": "salisbury_charlotte",
+        "type": "rail",
+        "line": "charlotte_and_south_carolina",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 147,
+      "block": "raised.st_gov_mississippi.d136",
+      "from": "al_valley_west",
+      "to": "al_valley_east",
+      "candidates": [
+        {
+          "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+          "from": "al_valley_west",
+          "to": "al_valley_east",
+          "type": "rail",
+          "line": "memphis_and_charleston",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+        "from": "al_valley_west",
+        "to": "al_valley_east",
+        "type": "rail",
+        "line": "memphis_and_charleston",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    },
+    {
+      "day": 147,
+      "block": "raised.st_gov_mississippi.d137.2",
+      "from": "al_valley_west",
+      "to": "al_valley_east",
+      "candidates": [
+        {
+          "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+          "from": "al_valley_west",
+          "to": "al_valley_east",
+          "type": "rail",
+          "line": "memphis_and_charleston",
+          "breakOfBulk": false,
+          "baseDays": 1,
+          "baseCapacity": 3,
+          "daysPermille": 1000,
+          "capacityMilli": 3000,
+          "effects": []
+        }
+      ],
+      "edge": {
+        "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+        "from": "al_valley_west",
+        "to": "al_valley_east",
+        "type": "rail",
+        "line": "memphis_and_charleston",
+        "breakOfBulk": false,
+        "baseDays": 1,
+        "baseCapacity": 3,
+        "daysPermille": 1000,
+        "capacityMilli": 3000,
+        "effects": []
+      },
+      "qualification": "Unique permitted short edge, inferred [I] from consecutive frozen locations."
+    }
+  ],
+  "railPermissionChanges": [
+    {
+      "day": 88,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 88,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 88,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 40
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 88,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 89,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 89,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 89,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 40
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 89,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 90,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 90,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 90,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 40
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 90,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 91,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 91,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 91,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 40
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 91,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 92,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 92,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 92,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 40
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 92,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 93,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 93,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 93,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 40
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 93,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 94,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 94,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 94,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 40
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 94,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 95,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 95,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 95,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 40
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 95,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 96,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 96,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 96,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 140
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 96,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 97,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 97,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 97,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 140
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 97,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 98,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 98,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 98,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 140
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 98,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 99,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 99,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 99,
+      "region": "frederick_md",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 240
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 99,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 100,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 100,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 100,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 101,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 101,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 101,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 102,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 102,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 102,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 103,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 103,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 103,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 104,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 104,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 104,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 105,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 105,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 105,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 106,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 106,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 106,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 107,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 107,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 107,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 108,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 108,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 108,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 109,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 109,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 109,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 110,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 110,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 110,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 111,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 111,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 111,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 112,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 112,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 112,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 113,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 113,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 113,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 114,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 114,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 114,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 115,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 115,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 115,
+      "region": "raleigh",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 115,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 116,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 116,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 116,
+      "region": "raleigh",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 200
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 116,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 117,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 117,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 117,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 118,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 118,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 118,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 119,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 119,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 119,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 120,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 120,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 120,
+      "region": "nashville",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 120,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 120,
+      "region": "western_maryland",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 121,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 121,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 121,
+      "region": "nashville",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 200
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 121,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 121,
+      "region": "western_maryland",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 200
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 122,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 122,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 122,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 123,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 123,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 123,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 124,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 124,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 124,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 125,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 125,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 125,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 126,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 126,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 126,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 127,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 127,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 127,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 128,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 128,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 128,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 129,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 129,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 129,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 129,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 130,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 130,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 130,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 130,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 131,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 131,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 131,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 131,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 132,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 132,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 132,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 132,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 133,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 133,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 133,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 133,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 134,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 134,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 134,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 134,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 135,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 135,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 135,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 135,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 136,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 136,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 136,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 136,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 137,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 137,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 137,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 137,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 137,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 138,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 138,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 138,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 138,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 138,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 138,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 139,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 139,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 139,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 139,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 139,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 139,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 140,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 140,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 140,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 140,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 140,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 140,
+      "region": "tn_cleveland",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 140,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 141,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 141,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 141,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 141,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 141,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 141,
+      "region": "tn_cleveland",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 141,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 142,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 142,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 142,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 142,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 142,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 142,
+      "region": "tn_cleveland",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 142,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 143,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 143,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 143,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 143,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 143,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 143,
+      "region": "tn_cleveland",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 143,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 144,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 144,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 144,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 144,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 144,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 200
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 144,
+      "region": "tn_cleveland",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 144,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 145,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 145,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 145,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 145,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 145,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 200
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 145,
+      "region": "salisbury_charlotte",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 60
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 145,
+      "region": "tn_cleveland",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 145,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 146,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 146,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 146,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 146,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 146,
+      "region": "knoxville",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 146,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 200
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 146,
+      "region": "salisbury_charlotte",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 60
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 146,
+      "region": "tn_cleveland",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 146,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 147,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 147,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 147,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 147,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 147,
+      "region": "knoxville",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 147,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 200
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 147,
+      "region": "salisbury_charlotte",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 60
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 147,
+      "region": "tn_cleveland",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 147,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 148,
+      "region": "baltimore_county",
+      "faction": "union",
+      "government": "st_maryland",
+      "shares": {
+        "union": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 148,
+      "region": "cape_fear",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 148,
+      "region": "chattanooga",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 148,
+      "region": "columbia_tn",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 148,
+      "region": "knoxville",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 148,
+      "region": "nc_coastal_plain",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 200
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 148,
+      "region": "salisbury_charlotte",
+      "faction": "confederate",
+      "government": "st_north_carolina",
+      "shares": {
+        "confederate": 60
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 148,
+      "region": "tn_cleveland",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 100
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    },
+    {
+      "day": 148,
+      "region": "tn_rim_south",
+      "faction": "confederate",
+      "government": "st_tennessee",
+      "shares": {
+        "confederate": 20
+      },
+      "holder": null,
+      "reason": "below_threshold",
+      "oldAccess": false,
+      "newAccess": true,
+      "permissionReason": "affiliated_government_without_opposing_positive_share"
+    }
+  ]
+}

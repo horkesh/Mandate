@@ -1,3 +1,5 @@
+import { observeBlock } from '../../../packages/kernel/test/support/lot-fixture.ts';
+import { enlistmentsOf } from '../../../packages/kernel/src/forces/enlistment.ts';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { ids, phase0 } from '@mandate/kernel';
@@ -33,7 +35,7 @@ describe('S1 national volunteer allocations and Regular recruiting', () => {
     expect(catalogue.records.find((r: { id: string }) => r.id === 'us_may04_regular_organization')).toMatchObject({ requestedMinimumMen: 18154, maximumOrganizationMen: 22714 });
     const start = phase0.createState(world, setup);
     expect(start.postStates[POST('us_recruiting_service')]).toBeUndefined();
-    expect(Object.values(start.forceEnlistments).some(e => e.enlPost === POST('us_recruiting_service'))).toBe(false);
+    expect(Object.values(enlistmentsOf(start)).some(e => e.enlPost === POST('us_recruiting_service'))).toBe(false);
     const dueWithoutOffice = { ...start, stateDay: 59, situationFlags: { war_begun_union: 41 } };
     const answer = createRuleSeat().respond(menu(dueWithoutOffice));
     if (answer.answerKind !== 'commands') throw Error('expected commands');
@@ -56,11 +58,15 @@ describe('S1 national volunteer allocations and Regular recruiting', () => {
     const requested = doctrine.calls.filter(c => c.id?.startsWith('us_may04_regular_'));
     r = phase0.tick(world, state, requested.map(c => ({ day: 60, seat, command: { cmd: 'call' as const, to: c.post, regiments: c.regiments, men: c.men, arm: c.arm!, callId: c.id!, termDays: 1095, route: 'courier' as const, bypass: false } })), { freeze: true });
     expect(r.rejections).toEqual([]); state = r.state;
-    for (let day = 61; day <= 90; day++) state = phase0.tick(world, state, [], { freeze: true }).state;
+    // A vacancy upstream is learned from the returned letters, not silently skipped from truth at sending.
+    // Retry the same requisitions once, only after those papers reach this principal.
+    const retry = phase0.viewFor(world,state,seat).reports.some(r => r.subjectId === 'us_war_adjutant_general' && r.claims.some(c => c.kind === 'order-returned' && c.token === 'vacant_post'));
+    for (let day = 61; day <= 90; day++) state = phase0.tick(world, state,
+      day === 61 && retry ? requested.map(c => ({ day,seat,command:{cmd:'call' as const,to:c.post,regiments:c.regiments,men:c.men,arm:c.arm!,callId:c.id!,termDays:1095,route:'courier' as const,bypass:false} })) : [], { freeze: true }).state;
     const answers = Object.values(state.orderResponses).filter(r => r.respRole === 'addressee' && r.respKind === 'call' && requested.some(c => c.id === r.respCallId));
     expect(answers).toHaveLength(3);
     const accepted = answers.filter(r => ['exceed', 'comply', 'comply_with_reservations', 'slow_walk', 'reinterpret'].includes(r.respActual));
-    const enlistments = Object.entries(state.forceEnlistments).filter(([, e]) => requested.some(c => c.id === e.enlCallId));
+    const enlistments = Object.entries(enlistmentsOf(state)).filter(([, e]) => requested.some(c => c.id === e.enlCallId));
     expect(enlistments).toHaveLength(accepted.length);
     expect(new Set(enlistments.map(([block]) => block)).size).toBe(accepted.length);
     for (const [block, e] of enlistments) {
@@ -68,7 +74,7 @@ describe('S1 national volunteer allocations and Regular recruiting', () => {
       expect(e.enlPost).toBe(POST('us_recruiting_service'));
       expect(e.enlRegiments).toBeNull();
       expect(e.enlEndsDay! - e.enlMusterDay).toBe(1095);
-      expect(state.forceBlockStates[ids.toId('forceBlock', block)]).toMatchObject({ fbArm: arm, fbStrength: null });
+      expect(observeBlock(state.forceBlockStates[ids.toId('forceBlock', block)]!)).toMatchObject({ fbArm: arm, fbStrength: null });
       expect(state.forceAssignments[ids.toId('forceBlock', block)]).toBe(POST('us_recruiting_service'));
     }
   });

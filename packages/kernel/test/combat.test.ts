@@ -1,3 +1,5 @@
+import { patchBlock, observeBlock } from './support/lot-fixture.ts';
+import { forceTotals } from '../src/forces/lots.ts';
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -11,7 +13,7 @@ import { createTelemetry } from '../src/telemetry.ts';
 import { tick, TICK_MECHANICS } from '../src/tick/tick.ts';
 import { indexedFixture, P as SP, POST as SPOST } from './support/seats-fixture.ts';
 import { believedRatio, commitAtDawn } from '../src/combat/decide.ts';
-import type { BattleDay, BattleSide, BattleTerm } from '../src/combat/records.ts';
+import { unresolvedContact, type BattleDay, type BattleSide, type BattleTerm } from '../src/combat/records.ts';
 import { apportion, DRAWS_PER_DAY, LEADER_DRAWS_PER_DAY, leaderHits, resolveDay, type DayInput, type SideInput } from '../src/combat/resolve.ts';
 import { combatRulesProblems, type CombatRules } from '../src/combat/rules.ts';
 import { battleVerdict, dayShape } from '../src/combat/shape.ts';
@@ -25,6 +27,8 @@ import { applyPeopleChanges } from '../src/people/people.ts';
 import { createStream, nextInt } from '../src/rng.ts';
 import type { State } from '../src/root-state.ts';
 import { combatPhase } from '../src/tick/forces.ts';
+import { inOpenBattle } from '../src/tick/recruitment.ts';
+import { battleReports } from '../src/tick/battle-reports.ts';
 import { MAP_MECHANICS, mapPhase } from '../src/tick/map.ts';
 import { passageOf } from '../src/tick/passage.ts';
 import { createState } from '../src/tick/setup.ts';
@@ -194,8 +198,8 @@ describe('a rout by morale kills no one; the missing straggle and rejoin (P5, P8
     expectBreakdownsSum(r.fought[0]!.day);
     // Applied: the block survives, smaller; its stragglers hold the missing; it stands in b2; it may not attack for a while.
     const after = applyForces(base.state, r.forces).state.forceBlockStates[B('b_1')]!;
-    expect(after.fbStrength).toBe(6000 - b.bsideKw - b.bsideMissing - b.bsideCaptured);
-    expect(after.fbStragglers).toBe(b.bsideMissing);
+    expect(forceTotals(after).fbStrength).toBe(6000 - b.bsideKw - b.bsideMissing - b.bsideCaptured);
+    expect(forceTotals(after).fbStragglers).toBe(b.bsideMissing);
     expect(after.fbRoutedDay).toBe(2);
     expect(after.fbSurrenderedDay).toBeNull();
     expect(r.retreats.map((x) => [x.faction, x.to, x.routed])).toEqual([['b', 'b2', true]]);
@@ -212,7 +216,7 @@ describe('a rout by morale kills no one; the missing straggle and rejoin (P5, P8
     s = { ...s, forceLocations: { ...s.forceLocations, [B('b_1')]: { ...s.forceLocations[B('b_1')]!, locRegion: R('b2') } } };
     const supply = deriveMap(MAP, { control: s.regionControl, month: 6, network: networkOf(s) }).supply;
     const once = stragglersStep(MAP, s, supply, new Set());
-    expect(once.state.forceBlockStates[B('b_1')]).toMatchObject({ fbStrength: 5095 + 90, fbStragglers: 815 });
+    expect(observeBlock(once.state.forceBlockStates[B('b_1')]!)).toMatchObject({ fbStrength: 5095 + 90, fbStragglers: 815 });
     // Not while in battle today, and never to a surrendered block (its men are gone: R4's battle ruling).
     expect(stragglersStep(MAP, s, supply, new Set([B('b_1')])).changes).toEqual([]);
     const taken = { ...s, forceBlockStates: { ...s.forceBlockStates, [B('b_1')]: { ...s.forceBlockStates[B('b_1')]!, fbSurrenderedDay: 2 } } };
@@ -238,7 +242,7 @@ describe('destruction only when cut off: surrender, capture, and the trapped gar
     expect(b.bsideCapturedParts.map((t) => t.btermKind)).toContain('surrender');
     expectBreakdownsSum(bday);
     // forces: no men left, marked surrendered; command: released from its post; people: its commander captured, his post vacant.
-    expect(after.forceBlockStates[B('b_gar')]).toMatchObject({ fbStrength: 0, fbStragglers: 0, fbSurrenderedDay: 2 });
+    expect(observeBlock(after.forceBlockStates[B('b_gar')]!)).toMatchObject({ fbStrength: 0, fbStragglers: 0, fbSurrenderedDay: 2 });
     expect(after.forceAssignments[B('b_gar')]).toBeNull();
     expect(after.personStatus[PER('b_gen')]).toEqual({ statusKind: 'captured', statusDay: 2 });
     expect(after.postStates[P('b_army')]!.postHolder).toBeNull();
@@ -492,6 +496,56 @@ describe('the breakdowns and the derived views', () => {
   });
 });
 
+describe('0110 unresolved contact', () => {
+  it('reports unresolved contact without a zero enemy-strength claim or a quantitative victory', () => {
+    const g = game(BASE, [aBlock('a_1', 'mid', 9000), bBlock('b_1', 'mid', null)], ['a_1']);
+    const world = worldOf(g.world.map, { ...g.world.start, factions: [
+      { faction: F('a'), principal: PER('a_lead'), capital: R('a1'), playable: true },
+      { faction: F('b'), principal: PER('b_lead'), capital: R('b1'), playable: false },
+    ] });
+    const start = { ...createState(world, { seed: 1 }), forceLocations: g.state.forceLocations };
+    const ctx = ctxFor(world, start, 2, [...new Set([...TICK_MECHANICS, ...MAP_MECHANICS])]);
+    const state = combatPhase(ctx, start).state;
+    battleReports(ctx, state, g.state.regionControl);
+    const claims = ctx.outbox.flatMap(m => m.msgReport?.reportClaims ?? []);
+    expect(claims.some(c => c.claimKind === 'battle-result' && c.claimToken === 'unresolved contact')).toBe(true);
+    expect(claims.some(c => c.claimKind === 'enemy-strength' || c.claimKind === 'battle-phase')).toBe(false);
+  });
+
+  it.each([false, true])('a wholly unknown side makes no quantitative outcome, reversed=%s', (reverse) => {
+    const blocks = [aBlock('a_1', 'mid', reverse ? null : 9000), bBlock('b_1', 'mid', reverse ? 9000 : null)];
+    const g = game(BASE, blocks, [reverse ? 'b_1' : 'a_1']);
+    const r = day(g);
+    expect(r.fought).toHaveLength(1);
+    const d = r.fought[0]!.day;
+    expect(d.bdayContact).toBe(0);
+    expect(unresolvedContact(d)).toBe(true);
+    expect(d.bdaySides.flatMap(s => s.bsideUnknown)).toEqual([reverse ? 'a_1' : 'b_1']);
+    for (const s of d.bdaySides) expect(s).toMatchObject({ bsideKilled: 0, bsideWounded: 0, bsideMissing: 0, bsideCaptured: 0, bsideCutOff: null, bsideRetreatTo: null, bsideHit: null, bsideFlankBroken: false });
+    expect([r.forces, r.retreats, r.people, r.command, r.control, r.fortification]).toEqual([[], [], [], [], [], []]);
+    const hits = leaderHits({ ...FIXTURE_COMBAT_RULES, leaders: { ...FIXTURE_COMBAT_RULES.leaders, killedPermille: 1000 } }, d, [{ faction: F('a'), retreatTo: null, surrendered: false, breakingOut: false, routed: false }, { faction: F('b'), retreatTo: null, surrendered: false, breakingOut: false, routed: false }], createStream(1, 'leaders'));
+    expect(hits.bdaySides.map(s => s.bsideHit)).toEqual([null, null]);
+    expect(dayShape(FIXTURE_COMBAT_RULES, d).phases).toEqual([]);
+    expectBreakdownsSum(d);
+  });
+
+  it('a partly known side keeps the known-only resolution, listing its unknown block', () => {
+    const known = game(BASE, [aBlock('a_1', 'mid', 9000), bBlock('b_1', 'mid', 4000)], ['a_1']);
+    const mixed = game(BASE, [aBlock('a_1', 'mid', 9000), bBlock('b_1', 'mid', 4000), bBlock('b_2', 'mid', null)], ['a_1']);
+    const a = day(known), b = day(mixed);
+    expect(a.fought[0]!.day.bdayContact).toBeGreaterThan(0);
+    expect(unresolvedContact(b.fought[0]!.day)).toBe(false);
+    expect(sideOf(b.fought[0]!.day, 'b').bsideUnknown).toEqual(['b_2']);
+    for (const faction of ['a', 'b']) {
+      const { bsideBlocks: _blocks, bsideUnknown: _unknown, ...rest } = sideOf(b.fought[0]!.day, faction);
+      const { bsideBlocks: _priorBlocks, bsideUnknown: _priorUnknown, ...prior } = sideOf(a.fought[0]!.day, faction);
+      expect(rest).toEqual(prior);
+    }
+    expect(b.control).toEqual(a.control);
+    expect(b.people).toEqual(a.people);
+  });
+});
+
 describe('neutral ground is passed, never fought over (0055; review S1)', () => {
   const clash = (where: string) => [aBlock('a_1', where, 5000), bBlock('b_1', where, 1000)];
 
@@ -526,7 +580,7 @@ describe('a pocket forming when a force cuts a line, and lifting when it is reli
     const relief: ForceBlockId = B('b_relief');
     state = {
       ...state,
-      forceBlockStates: { ...state.forceBlockStates, [relief]: { ...state.forceBlockStates[B('a_raid')]!, fbDepartment: 'b_war' as never, fbStrength: 10000, fbMorale: 700 } },
+      forceBlockStates: { ...state.forceBlockStates, [relief]: patchBlock({ ...state.forceBlockStates[B('a_raid')]!, fbDepartment: 'b_war' as never, fbMorale: 700 }, { fbStrength: 10000 }) },
       forceLocations: { ...state.forceLocations, [relief]: { locRegion: R('b2'), locAboard: null, locSinceDay: 8, locMarch: null } },
       forceAssignments: { ...state.forceAssignments, [relief]: P('b_army') },
     };
@@ -537,17 +591,17 @@ describe('a pocket forming when a force cuts a line, and lifting when it is reli
   });
 });
 
-describe('a commander’s battle orders (lane 1.12): his seat fights the battle point by point, or leaves it to his traits', () => {
+describe('a commanderÃ¢â‚¬â„¢s battle orders (lane 1.12): his seat fights the battle point by point, or leaves it to his traits', () => {
   const g = game(BASE, [aBlock('a_1', 'mid', 10000), bBlock('b_1', 'mid', 4000)], ['a_1']);
   const withOrders = (orders: Record<string, Partial<BattleOrders>>) => combatDay(g.world, groupOrders(g), g.state, 2, new Map(Object.entries(orders).map(([post, o]) => [P(post) as PostId, { ...ALL_JUDGE, ...o }])));
   const groupOrders = (x: Game) => groundOf(x);
   const has = (terms: readonly BattleTerm[], kind: string) => terms.some((t) => t.btermKind === kind);
 
-  it('with no orders, or `judge` everywhere, the battle is the trait rule’s exactly', () => {
+  it('with no orders, or `judge` everywhere, the battle is the trait ruleÃ¢â‚¬â„¢s exactly', () => {
     expect(JSON.stringify(withOrders({ a_army: {}, b_army: {} }))).toBe(JSON.stringify(day(g)));
   });
 
-  it('an explicit commit replaces his traits’ choice, recorded beside it as ordered; both sides defending fight nothing', () => {
+  it('an explicit commit replaces his traitsÃ¢â‚¬â„¢ choice, recorded beside it as ordered; both sides defending fight nothing', () => {
     const judged = sideOf(day(g).fought[0]!.day, 'a');
     expect(judged.bsideCommit).not.toBe('probe');
     const probe = sideOf(withOrders({ a_army: { commit: 'probe' } }).fought[0]!.day, 'a');
@@ -572,7 +626,7 @@ describe('a commander’s battle orders (lane 1.12): his seat fights the battle 
     expect(has(away.bsideDecisions, 'ordered')).toBe(true);
   });
 
-  it('asks each side’s commander, with his traits’ choices on the morning’s numbers, where a battle can be fought today', () => {
+  it('asks each sideÃ¢â‚¬â„¢s commander, with his traitsÃ¢â‚¬â„¢ choices on the morningÃ¢â‚¬â„¢s numbers, where a battle can be fought today', () => {
     const menus = battleMenus(g.world, g.state, groundOf(g), 2);
     expect(menus.map((m) => [m.holder, m.menu.post, m.menu.region, m.menu.mayAttack]).sort()).toEqual([
       [PER('a_gen'), P('a_army'), R('mid'), true],
@@ -586,7 +640,7 @@ describe('a commander’s battle orders (lane 1.12): his seat fights the battle 
     expect(battleMenus(still.world, still.state, groundOf(still), 2)).toEqual([]);
   });
 
-  it('the tick’s orders reach the battle: through the day’s context, as the battle model reads them', () => {
+  it('the tickÃ¢â‚¬â„¢s orders reach the battle: through the dayÃ¢â‚¬â„¢s context, as the battle model reads them', () => {
     const ctx = { ...ctxFor(g.world, g.state, 2, MAP_MECHANICS), battleOrders: new Map([[P('a_army') as PostId, { ...ALL_JUDGE, commit: 'defend' as const }]]) };
     expect(combatPhase(ctx, g.state).result!.fought).toEqual([]);
     expect(combatPhase(ctxFor(g.world, g.state, 2, MAP_MECHANICS), g.state).result!.fought).toHaveLength(1);
@@ -594,7 +648,7 @@ describe('a commander’s battle orders (lane 1.12): his seat fights the battle 
 });
 
 describe('battle orders in the tick (lane 1.12): only the holder of the post gives them, once a day', () => {
-  it('refuses another man’s orders and a second set, and counts the one it takes as seats.battle_orders', () => {
+  it('refuses another manÃ¢â‚¬â„¢s orders and a second set, and counts the one it takes as seats.battle_orders', () => {
     const world = indexedFixture();
     const state = createState(world, { seed: 1 });
     const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
@@ -607,7 +661,7 @@ describe('battle orders in the tick (lane 1.12): only the holder of the post giv
     expect(telemetry.mechanics['seats.battle_orders']!.fires).toBe(1);
   });
 
-  it('never takes them from a seat the player drives, even the holder’s own (hard rule 1, 0016: the player moves no division)', () => {
+  it('never takes them from a seat the player drives, even the holderÃ¢â‚¬â„¢s own (hard rule 1, 0016: the player moves no division)', () => {
     const world = indexedFixture();
     const state = reassignSeat(createState(world, { seed: 1 }), seatIdFor(SP('a_gen')), 'human');
     const telemetry = createTelemetry([...TICK_MECHANICS, ...MAP_MECHANICS]);
@@ -615,5 +669,23 @@ describe('battle orders in the tick (lane 1.12): only the holder of the post giv
     const r = tick(world, state, [{ day: 1, seat: seatIdFor(SP('a_gen')), command }], { telemetry });
     expect(r.rejections.map((x) => [x.entry, x.reason])).toEqual([[0, 'player_seat']]);
     expect(telemetry.mechanics['seats.battle_orders']!.fires).toBe(0);
+  });
+});
+
+
+describe('S81 discharge protection requires resolved engagement', () => {
+  const engaged = (known: boolean) => {
+    const g = game(BASE, [aBlock('a_1', 'mid', 9000), bBlock('b_1', 'mid', known ? 4000 : null)], ['a_1']);
+    const fought = day(g).fought[0]!.day;
+    return { ...g.state, battleRecords: { 'battle:mid:2': { battleRegion: R('mid'), battleStartDay: 2, battleEndDay: null, battleFactions: [F('a'), F('b')], battleCauses: [], battleDays: [fought] } } };
+  };
+  it.each([false, true])('an open battle protects its named block only after a resolved day, known defender=%s', known => {
+    expect(inOpenBattle(engaged(known), B('a_1'))).toBe(known);
+  });
+  it('an earlier resolved engagement still protects its own blocks after an unresolved day', () => {
+    const state=engaged(true),record=state.battleRecords['battle:mid:2'];
+    const unresolved=engaged(false).battleRecords['battle:mid:2'].battleDays[0]!;
+    const later={...state,battleRecords:{'battle:mid:2':{...record,battleDays:[...record.battleDays,unresolved]}}};
+    expect(inOpenBattle(later,B('a_1'))).toBe(true);
   });
 });

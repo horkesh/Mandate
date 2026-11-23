@@ -1,3 +1,5 @@
+import { transferLots } from './lot-transfer.ts';
+import { formationPost } from '../command/organisation.ts';
 /**
  * The people verbs in the day tick (lane 1.5; FOUNDATION section 5; 0040). Each is an order to a person, answered through
  * his compliance with the pack's order-to-value map (`verb:<verb>` rows), and every answer is recorded by `proxy` with
@@ -11,12 +13,12 @@
  * and an amount, and the sending commander picks the blocks (0033).
  */
 import { strictCompare } from '../compare.ts';
-import { appointHolder, CommandError, createTemporaryPost, declaredAppointment, factionOfPost, heldPost, relieveHolder, sideOfPerson, transferForce } from '../command/command.ts';
+import { appointHolder, CommandError, createTemporaryPost, declaredAppointment, heldPost, relieveHolder, sideOfPerson, transferForce } from '../command/command.ts';
 import { noteLetter, postObserver, recallObserver } from '../command/observers.ts';
 import type { ComplianceRung, DirectiveResponse } from '../directive.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
 import { enemyBeliefs } from '../knowledge/beliefs.ts';
-import { knowledgeOf } from '../knowledge/knowledge.ts';
+import { knowledgeOf, unansweredAppointments } from '../knowledge/knowledge.ts';
 import type { ReportBody, ReportClaim, StatedReason } from '../knowledge/report.ts';
 import { term } from '../knowledge/truth.ts';
 import type { VerbCommand } from '../log/commands.ts';
@@ -32,12 +34,12 @@ import type { State } from '../root-state.ts';
 import { dateOfDay, formatIsoDate } from '../world/calendar.ts';
 import { headquartersOf, isFieldPost } from '../seats/posts.ts';
 import { believedHolder } from '../seats/believed.ts';
-import { returnDispatch } from './orders.ts';
+import { addressRegion, destinationFailure, returnDispatch } from './orders.ts';
 import type { CounterTerms } from '../audience/counters.ts';
 import { situationChoice } from '../seats/requests.ts';
 import { seatIdFor } from '../seats/seats.ts';
 import { receivedCandidates } from '../seats/received.ts';
-import { viewFor } from '../view/view.ts';
+import { senderFor } from '../seats/sender.ts';
 import type { AppointmentRefusal } from '../knowledge/report.ts';
 import { fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
 
@@ -47,25 +49,14 @@ export const VERB_MECHANICS = ['verbs.answered', 'verbs.audience', 'verbs.consul
 const WILLING: ReadonlySet<ComplianceRung> = new Set(['exceed', 'comply', 'comply_with_reservations']);
 const DECLINES: ReadonlySet<ComplianceRung> = new Set(['object', 'refuse']);
 
-/** The principal of a seat's side, or null if the seat's person is not his side's principal. */
-function principalOfSeat(ctx: TickContext, state: State, seat: SeatId): PersonId | null {
-  const assignment = state.seatAssignments[seat];
-  if (assignment === undefined) return null;
-  const person = assignment.seatPerson;
-  const side = sideOfPerson(ctx.world.map, state, person);
-  if (side === null || !ctx.world.factionIds.includes(side) || ctx.world.faction(side).principal !== person) return null;
-  return person;
-}
-
 const sameSide = (ctx: TickContext, state: State, person: PersonId, principal: PersonId) => sideOfPerson(ctx.world.map, state, person) === sideOfPerson(ctx.world.map, state, principal);
-const postOnSide = (ctx: TickContext, state: State, post: PostId, principal: PersonId) => state.postStates[post] !== undefined && factionOfPost(ctx.world.map, state, post) === sideOfPerson(ctx.world.map, state, principal);
 const knownPerson = (ctx: TickContext, person: PersonId) => ctx.world.personIds.includes(person);
 
 /** Send a verb's letter straight to `to` (no relays: it is a letter to one man). */
 function sendVerb(ctx: TickContext, state: State, issuer: PersonId, to: PersonId, toPost: PostId | null, route: TransitMessage['msgRoute'], body: Omit<VerbBody, 'verbIssuer' | 'verbIssuedDay'>): MessageId {
   const subject = body.verbKind === 'consult' ? `${body.verbSubject}.${body.verbPost}` : body.verbPost ?? body.verbSubject ?? to;
   const id = mintMessageId(ctx.mint, ctx.day, issuer, to, `verb.${body.verbKind}.${subject}`);
-  const leg = hop(ctx, state, route, issuer, whereIs(ctx, state, issuer), (toPost !== null ? headquartersOf(ctx.world, state, toPost) : body.verbKind === 'observer' ? headquartersOf(ctx.world, state, body.verbPost!) : whereIs(ctx, state, to)), id);
+  const leg = hop(ctx, state, route, issuer, whereIs(ctx, state, issuer), (toPost !== null ? addressRegion(ctx, state, toPost, issuer) : body.verbKind === 'observer' ? addressRegion(ctx, state, body.verbPost!, issuer) : whereIs(ctx, state, to)), id);
   ctx.outbox.push({
     id,
     msgOrigin: id,
@@ -107,45 +98,52 @@ const body = (kind: VerbKind, over: Partial<Omit<VerbBody, 'verbKind' | 'verbIss
  */
 export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbCommand): { readonly state: State; readonly reason: RejectionReason | null } {
   const reject = (reason: RejectionReason) => ({ state: start, reason });
-  const principal = principalOfSeat(ctx, start, seat);
-  if (principal === null) return reject('not_a_principal');
+  const sender = senderFor(ctx.world, start, seat);
+  if (sender === null) return reject('not_a_principal');
+  const principal = sender.principal;
+  const knownPostOnSide = (post: PostId) => sender.side(post) === sender.faction;
+  const knownOwnPerson = (person: PersonId) => sender.personSide(person) === sender.faction;
   const world = ctx.world;
   const rules = world.map.world.rules.people;
-  const holderOf = (post: PostId) => believedHolder(start, principal, post);
+  const holderOf = sender.holder;
   switch (c.cmd) {
     case 'appoint': {
-      const side = sideOfPerson(world.map, start, principal)!;
-      const template = declaredAppointment(world.map, start, world.start.temporaryPosts, c.post, side);
+      if(formationPost(world.map,c.post))return reject('unknown_post');
+      const side = sender.faction;
+      if (unansweredAppointments(start, principal).some(a => a.appointmentPost === c.post) || ctx.outbox.some(m => m.msgVerb?.verbIssuer === principal && m.msgVerb.verbKind === 'appoint' && m.msgVerb.verbPost === c.post)) return reject('appointment_pending');
+      if (unansweredAppointments(start,principal).some(a => a.appointmentPerson === c.person) || ctx.outbox.some(m => m.msgVerb?.verbIssuer === principal && m.msgVerb.verbKind === 'appoint' && m.msgTo === c.person)) return reject('person_holds_post');
+      const template = sender.mayEstablish(c.post) ? world.start.temporaryPosts.find(p => p.id === c.post) : undefined;
       const expected = world.start.temporaryPosts.find(p => p.id === c.post)?.holder;
       if (template !== undefined && expected !== null && expected !== undefined && expected !== c.person) return reject('unknown_post');
-      if (template === undefined && !postOnSide(ctx, start, c.post, principal)) return reject('unknown_post');
+      if (template === undefined && !knownPostOnSide(c.post)) return reject('unknown_post');
       if (template === undefined && holderOf(c.post) !== null) return reject('post_held');
+      if (template === undefined && sender.posts.get(c.post)?.status !== 'vacant') return reject('unknown_post');
       if (!knownPerson(ctx, c.person) || c.person === principal) return reject('unknown_person');
-      const picture = viewFor(world, start, seat);
+      const picture = sender.view;
       const held = picture.posts.find(p => p.holder === c.person)?.post ?? null;
       if (held === null && !receivedCandidates(world, start, principal, side, null, picture).some(p => p.person === c.person)) return reject('unknown_person');
-      if (c.from === undefined ? held !== null : held !== c.from || c.from === c.post || !postOnSide(ctx, start, c.from, principal)) return reject('person_holds_post');
+      if (c.from === undefined ? held !== null : held !== c.from || c.from === c.post || !knownPostOnSide(c.from)) return reject('person_holds_post');
       if (c.rank !== null && !world.map.world.vocabularies.ranks.some((r) => r.id === c.rank)) return reject('unknown_rank');
       sendVerb(ctx, start, principal, c.person, null, c.route, body('appoint', { verbPost: c.post, verbRank: c.rank, verbTo: c.from ?? null }));
       return { state: start, reason: null };
     }
     case 'relieve': {
-      if (!postOnSide(ctx, start, c.post, principal)) return reject('unknown_post');
+      if (!knownPostOnSide(c.post)) return reject('unknown_post');
       const holder = holderOf(c.post);
       if (holder === null) return reject('vacant_post');
-      if (c.to !== null && (!postOnSide(ctx, start, c.to, principal) || holderOf(c.to) !== null || c.to === c.post)) return reject('unknown_post');
+      if (c.to !== null && (!knownPostOnSide(c.to) || holderOf(c.to) !== null || c.to === c.post)) return reject('unknown_post');
       sendVerb(ctx, start, principal, holder, c.post, c.route, body('relieve', { verbPost: c.post, verbTo: c.to, verbMode: c.mode }));
       return { state: start, reason: null };
     }
     case 'transfer': {
-      if (!postOnSide(ctx, start, c.from, principal) || !postOnSide(ctx, start, c.to, principal) || c.from === c.to) return reject('unknown_post');
-      const sender = holderOf(c.from);
-      if (sender === null) return reject('vacant_post');
-      sendVerb(ctx, start, principal, sender, c.from, c.route, body('transfer', { verbPost: c.from, verbTo: c.to, verbMode: c.force, verbAmount: c.amount }));
+      if ((!knownPostOnSide(c.from) && !sender.promisedTroops(c.from)) || !knownPostOnSide(c.to) || c.from === c.to) return reject('unknown_post');
+      const donor = holderOf(c.from);
+      if (donor === null) return reject('vacant_post');
+      sendVerb(ctx, start, principal, donor, c.from, c.route, body('transfer', { verbPost: c.from, verbTo: c.to, verbMode: c.force, verbAmount: c.amount }));
       return { state: start, reason: null };
     }
     case 'inquire': {
-      if (!postOnSide(ctx, start, c.to, principal)) return reject('unknown_post');
+      if (!knownPostOnSide(c.to)) return reject('unknown_post');
       const holder = holderOf(c.to);
       if (holder === null) return reject('vacant_post');
       if (c.subject !== null && !world.regionIds.includes(c.subject)) return reject('unknown_region');
@@ -155,43 +153,51 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
     case 'consult': {
       const record = start.situationStates[c.situation];
       if (record === undefined || record.sitStatus !== 'open') return reject('situation_not_open');
-      for (const post of c.posts) if (!postOnSide(ctx, start, post, principal) || holderOf(post) === null) return reject('vacant_post');
+      for (const post of c.posts) if (!knownPostOnSide(post) || holderOf(post) === null) return reject('vacant_post');
       for (const post of [...c.posts].sort(strictCompare)) sendVerb(ctx, start, principal, holderOf(post)!, post, 'courier', body('consult', { verbPost: post, verbSubject: c.situation }));
       return { state: start, reason: null };
     }
     case 'observer': {
-      if (!postOnSide(ctx, start, c.to, principal) || holderOf(c.to) === null) return reject('unknown_post');
-      if (!knownPerson(ctx, c.person) || !sameSide(ctx, start, c.person, principal) || c.person === principal || holderOf(c.to) === c.person) return reject('unknown_person');
+      if (!knownPostOnSide(c.to) || holderOf(c.to) === null) return reject('unknown_post');
+      if (!knownPerson(ctx, c.person) || !knownOwnPerson(c.person) || c.person === principal || holderOf(c.to) === c.person) return reject('unknown_person');
       if (start.observerPostings[c.person] !== undefined) return reject('person_holds_post');
       sendVerb(ctx, start, principal, c.person, null, c.route, { ...body('observer', { verbPost: c.to }), verbHost: holderOf(c.to)! });
       return { state: start, reason: null };
     }
     case 'audience': {
       const holder = holderOf(c.to);
-      if (!postOnSide(ctx, start, c.to, principal) || holder === null) return reject('unknown_post');
+      if (!knownPostOnSide(c.to) || holder === null) return reject('unknown_post');
       const last = start.audienceHeld[holder];
       if (last !== undefined && ctx.day - last.audDay < rules.verbs.audience.cooldownDays) return reject('too_soon');
-      // The principal's own plan records supply the subject, just as on arrival (0052).
-      const outcome = previewAudience(world, start, principal, c.to, c.counters, ctx.day, null, planReading(world, start, c.to, ctx.day), oversightOf(ctx, start, holder, principal).value, holder);
-      if (typeof outcome === 'string' || outcome.problems.length > 0) return reject('bad_counters');
+      const knowledge = knowledgeOf(start,seat);
+      const subjectKnown = knowledge.knownSentOrders?.some(o => o.sentPost === c.to && o.sentKind === 'goal') === true ||
+        knowledge.knownReports.some(r => r.knownReceivedDay <= start.stateDay && r.knownBody.reportDay <= start.stateDay && r.knownBody.reportPlan?.paperPost === c.to);
+      if (!subjectKnown || c.counters.length > rules.verbs.audience.maxCounters || new Set(c.counters.map(k => k.kind)).size !== c.counters.length) return reject('bad_counters');
+      const frames = world.map.world.people.find(p => p.id === holder)!.values.map(v => v.value).filter(v => !world.map.world.vocabularies.values.find(row => row.id === v)?.costOnly);
+      for (const k of c.counters) {
+        if (k.kind === 'frame' && (k.value === null || !frames.includes(k.value))) return reject('bad_counters');
+        if (k.kind === 'adjust' && (k.boldness === null || !Number.isSafeInteger(k.boldness) || k.boldness < 0 || k.boldness > 1000)) return reject('bad_counters');
+        if (k.kind === 'reinforce' && (k.from === null || !knownPostOnSide(k.from as PostId) || holderOf(k.from as PostId) === null || k.from === c.to || k.men === null || !Number.isSafeInteger(k.men) || k.men < 1)) return reject('bad_counters');
+      }
+      // Whether those counters still answer his actual plan or grievances is checked with him, on arrival.
       sendVerb(ctx, start, principal, holder, c.to, 'in-person', { ...body('audience', { verbPost: c.to }), verbCounters: c.counters.map((k) => [k.kind, k.value, k.boldness, k.from, k.men] as const) });
       return { state: start, reason: null };
     }
     case 'promise': {
-      if (!knownPerson(ctx, c.person) || !sameSide(ctx, start, c.person, principal) || c.person === principal) return reject('unknown_person');
+      if (!knownPerson(ctx, c.person) || !knownOwnPerson(c.person) || c.person === principal) return reject('unknown_person');
       if ((start.personPromises[c.person] ?? []).some((p) => p.promiseKind === 'advancement')) return reject('already_promised');
       fire(ctx, 'verbs.in_washington');
       return { state: applyPeopleChanges(start, [{ change: 'promise', person: c.person, kind: 'advancement', due: ctx.day + rules.verbs.promise.dueDays }, { change: 'clear_grievances', person: c.person, kinds: ['passed_over'] }], ctx.day, rules, world.map.world.vocabularies.ranks), reason: null };
     }
     case 'pressure': {
-      if (!knownPerson(ctx, c.person) || !sameSide(ctx, start, c.person, principal) || c.person === principal) return reject('unknown_person');
+      if (!knownPerson(ctx, c.person) || !knownOwnPerson(c.person) || c.person === principal) return reject('unknown_person');
       fire(ctx, 'verbs.in_washington');
       return { state: applyPeopleChanges(start, [{ change: 'grievance', person: c.person, kind: 'pressured', weight: rules.verbs.pressure.weight, against: principal, cause: 'pressure' }], ctx.day, rules, world.map.world.vocabularies.ranks), reason: null };
     }
     case 'address': {
       if (!world.map.world.vocabularies.blocs.some((b) => b.id === c.bloc)) return reject('unknown_bloc');
       // Blocs are `politics`' (lane 1.6): a typed proposal, counted and not applied until that owner exists.
-      ctx.proposals.push({ proposal: 'address', bloc: c.bloc, by: principal, side: sideOfPerson(world.map, start, principal) });
+      ctx.proposals.push({ proposal: 'address', bloc: c.bloc, by: principal, side: sender.faction });
       fire(ctx, 'verbs.in_washington');
       return { state: start, reason: null };
     }
@@ -231,7 +237,10 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
   const me = msg.msgTo;
   const target = v.verbPost;
   const expected = v.verbKind === 'observer' ? v.verbHost : msg.msgTo;
-  if (target !== null && v.verbKind !== 'appoint' && expected !== undefined && start.postStates[target]?.postHolder !== expected) return returnDispatch(ctx, start, msg);
+  if (target !== null && v.verbKind !== 'appoint' && expected !== undefined) {
+    const failure = destinationFailure(ctx,start,target,expected,v.verbIssuer);
+    if (failure !== null) return returnDispatch(ctx,start,msg,failure);
+  }
   if (v.verbKind === 'audience') return holdAudience(ctx, start, msg);
 
   // Lane 1.4's oversight: a verb is an order to a person, read where he stands; an observer's or pressure's `watched` terms stack on top.
@@ -323,7 +332,9 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
         const amount = answer.actual === 'reinterpret' ? Math.max(1, Math.trunc((v.verbAmount ?? 0) / 2)) : (v.verbAmount ?? 0);
         const pick = WILLING.has(answer.actual) ? 'strongest_first' : 'weakest_first';
         try {
-          const result = transferForce(world.map, state, from, v.verbTo!, v.verbMode === 'blocks' ? { force: 'blocks', count: amount } : { force: 'men', men: amount }, pick);
+          const lotRequest = v.verbMode === 'men' || (world.map.world.organisationTemplates?.some(t=>t.army===v.verbTo)===true && world.map.world.rules.recruitment.raisingPostKinds.includes(state.postStates[from]!.postKind));
+          const requestedMen = v.verbMode === 'men' ? amount : amount * (world.map.world.rules.recruitment.planningRegiments??1) * world.map.world.rules.recruitment.menPerRegiment;
+          const result = lotRequest ? transferLots(world.map,state,from,v.verbTo!,requestedMen,pick,ctx.day) : transferForce(world.map,state,from,v.verbTo!,{force:'blocks',count:amount},pick);
           state = result.state;
           done = result.moved.length > 0;
           // A transfer concentrates (lane 1.12, the lead's Fix 1): what was handed over is ordered to join the receiving
@@ -345,7 +356,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
       if (done) {
         // His report, shaded by him: where he stands, and the enemy as he believes it (0008).
         const claims: ReportClaim[] = [];
-        if (myPost !== null && isFieldPost(state, myPost)) claims.push({ claimKind: 'position', claimRegion: headquartersOf(world, state, myPost), claimValue: 0, claimToken: null, claimConfidence: 1000 });
+        if (myPost !== null && isFieldPost(world, state, myPost)) claims.push({ claimKind: 'position', claimRegion: headquartersOf(world, state, myPost), claimValue: 0, claimToken: null, claimConfidence: 1000 });
         const subject = v.verbSubject as RegionId | null;
         if (subject !== null) {
           const belief = enemyBeliefs(state, world.rules.traits, traitsOf(world, state, me), knowledgeOf(state, seatIdFor(me))).get(subject);
@@ -415,14 +426,14 @@ export function observerLetters(ctx: TickContext, start: State): State {
     if (ctx.day - p.obsLastLetter < rules.verbs.observer.letterEveryDays) continue;
     const holder = state.postStates[p.obsPost]?.postHolder ?? null;
     const claims: ReportClaim[] = [];
-    if (isFieldPost(state, p.obsPost)) claims.push({ claimKind: 'position', claimRegion: headquartersOf(ctx.world, state, p.obsPost), claimValue: 0, claimToken: null, claimConfidence: 1000 });
+    if (isFieldPost(ctx.world, state, p.obsPost)) claims.push({ claimKind: 'position', claimRegion: headquartersOf(ctx.world, state, p.obsPost), claimValue: 0, claimToken: null, claimConfidence: 1000 });
     if (holder !== null) claims.push({ claimKind: 'goal-status', claimRegion: null, claimValue: 0, claimToken: (state.planRecords[p.obsPost]?.planStatus ?? 'holding') as string, claimConfidence: ctx.world.map.world.rules.reportConfidence.observerGoalStatus });
     sendReport(ctx, state, {
       body: answerBody(o, null, ctx.day, `m.${p.obsSince}.observer.${o}` as MessageId, { kind: 'post', id: p.obsPost }, claims, null, 'observer-letter'),
       truth: { truthTerms: [], truthTrimmed: [] },
       to: p.obsSender,
       tag: `observer.${o}`,
-      ...(isFieldPost(state, p.obsPost) ? { fromRegion: headquartersOf(ctx.world, state, p.obsPost) } : {}),
+      ...(isFieldPost(ctx.world, state, p.obsPost) ? { fromRegion: headquartersOf(ctx.world, state, p.obsPost) } : {}),
     });
     state = noteLetter(state, o, ctx.day);
     fire(ctx, 'reports.observer_letter');

@@ -1,7 +1,7 @@
 /** Men and appointment availability as the principal has been told, never current service or force tables. */
 import { strictCompare } from '../compare.ts';
 import type { DepartmentId, FactionId, PersonId, PostId } from '../ids.ts';
-import { knowledgeOf } from '../knowledge/knowledge.ts';
+import { knowledgeOf, unansweredAppointments } from '../knowledge/knowledge.ts';
 import type { KnownReport } from '../knowledge/records.ts';
 import { ranksOn } from '../people/ranks.ts';
 import type { State } from '../root-state.ts';
@@ -56,6 +56,7 @@ export function receivedStrength(state: State, principal: PersonId, post: PostId
 /** Public roster, opening ranks and offices, followed by received service/loss papers. */
 export function receivedCandidates(world: SeatsWorld, state: State, principal: PersonId, faction: FactionId, fromPost: PostId | null = null, picture?: SeatView): Candidate[] {
   const view = picture ?? viewFor(world, state, seatIdFor(principal), createViewCache());
+  const promised = new Set(unansweredAppointments(state,principal).map(a => a.appointmentPerson));
   const held = new Map(view.posts.flatMap(p => p.holder === null ? [] : [[p.holder,p.post] as const]));
   const side = new Map(world.map.world.people.map(p => [p.id, p.faction]));
   const unavailable = new Map<PersonId, 'not_serving' | 'person_holds_post' | 'other_side'>();
@@ -78,7 +79,7 @@ export function receivedCandidates(world: SeatsWorld, state: State, principal: P
     }
   }
   const ranks = new Map(world.map.world.vocabularies.ranks.map((r,i) => [r.id,i]));
-  return world.map.world.people.filter(p => p.id !== principal && side.get(p.id) === faction && (held.get(p.id) ?? null) === fromPost && !unavailable.has(p.id))
+  return world.map.world.people.filter(p => (p.requiresIntroduction!==true || view.people.some(known=>known.person===p.id)) && p.id !== principal && side.get(p.id) === faction && (held.get(p.id) ?? null) === fromPost && !unavailable.has(p.id) && !promised.has(p.id))
     .map(p => ({ person: p.id, kind: p.kind as string, seniority: Math.max(-1,...Object.values(ranksOn(world.map,p.ranks,world.start.startDate)).map(r => ranks.get(r.rankTerm) ?? -1)) }))
     .sort((a,b) => b.seniority - a.seniority || strictCompare(a.person,b.person));
 }

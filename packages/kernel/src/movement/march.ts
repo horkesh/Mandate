@@ -63,7 +63,8 @@ function railPasses(ground: MarchGround, region: RegionId, faction: FactionId): 
   const kind = ground.map.regions.get(region)!.kind;
   if (kind !== 'land' && kind !== 'key_point') return false;
   const holding = ground.index.holdings.get(region)!;
-  return holding.tracedBy.includes(faction) || neutralOpen(holding, ground.network);
+  return holding.tracedBy.includes(faction) || neutralOpen(holding, ground.network) ||
+    ground.network.governmentRail?.[region] === faction;
 }
 
 /**

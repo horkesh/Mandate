@@ -1,0 +1,7 @@
+{
+  "question": "Does changing public-result suppression from any unresolved day to the last day alter either retained reference?",
+  "verdict": "No. Both predicates agree on every Union record at every retained day, and no testbed block version has unknown strength.",
+  "unionRecordVersions": 118,
+  "testbedBlockVersions": 502,
+  "correction": "Allows a sourced later resolution to be published after an earlier unresolved day. Targeted paired test fails before and passes after; no reference rerun."
+}

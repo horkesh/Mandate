@@ -1,0 +1,347 @@
+{
+  "bombardment": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/bombardment.test.ts",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s68/bombardment.json"
+    ],
+    "exit": 0,
+    "seconds": 7.557
+  },
+  "boundary-corrected": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.56
+  },
+  "boundary": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 1,
+    "seconds": 0.571
+  },
+  "decisions": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:decisions"
+    ],
+    "exit": 0,
+    "seconds": 0.584
+  },
+  "fixtures": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/declared-government.test.ts",
+      "packs/union-1861/test/nation-calls.test.ts",
+      "packs/union-1861/test/cost-only.test.ts",
+      "packs/union-1861/test/passage.test.ts",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s68/fixtures.json"
+    ],
+    "exit": 0,
+    "seconds": 22.375
+  },
+  "full-suite": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s68/full-suite.json"
+    ],
+    "exit": 1,
+    "seconds": 538.117
+  },
+  "licences": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:licences"
+    ],
+    "exit": 0,
+    "seconds": 0.587
+  },
+  "liveness-causes": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "tools/test/liveness-causes.test.ts",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s68/liveness-causes.json"
+    ],
+    "exit": 0,
+    "seconds": 0.587
+  },
+  "liveness-gate": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/liveness-gate.test.ts",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s68/liveness-gate.json"
+    ],
+    "exit": 1,
+    "seconds": 12.217
+  },
+  "rules-corrected": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 2.16
+  },
+  "rules": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 2.054
+  },
+  "typecheck-final": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.274
+  },
+  "typecheck": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.31
+  },
+  "whitespace": {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit": 2,
+    "seconds": 0.079
+  },
+  "assertionPreservation": [
+    {
+      "path": "packages/cli/test/declared-government.test.ts",
+      "assertionLinesUnchanged": true
+    },
+    {
+      "path": "packs/union-1861/test/nation-calls.test.ts",
+      "assertionLinesUnchanged": true
+    },
+    {
+      "path": "packs/union-1861/test/cost-only.test.ts",
+      "assertionLinesUnchanged": true
+    },
+    {
+      "path": "packs/union-1861/test/passage.test.ts",
+      "assertionLinesUnchanged": true
+    },
+    {
+      "path": "packages/cli/test/bombardment.test.ts",
+      "everyOtherByteUnchanged": true
+    }
+  ],
+  "fullSuiteAnalysis": {
+    "counts": {
+      "numTotalTestSuites": 557,
+      "numPassedTestSuites": 550,
+      "numFailedTestSuites": 7,
+      "numTotalTests": 2000,
+      "numPassedTests": 1993,
+      "numFailedTests": 4,
+      "numPendingTests": 3
+    },
+    "files": {
+      "total": 214,
+      "passed": 211,
+      "failed": 3
+    },
+    "failures": [
+      {
+        "path": "packages/cli/test/console-session.test.ts",
+        "category": "July/contact/liveness",
+        "assertions": [
+          {
+            "name": "R86: the history months through the player’s console (1A criterion 2) receives at least one hour-stamped battle dispatch by 31 July",
+            "messages": [
+              "AssertionError: expected false to be true // Object.is equality\n    at C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts:265:132\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+            ]
+          }
+        ],
+        "message": ""
+      },
+      {
+        "path": "packages/cli/test/done-check.test.ts",
+        "category": "July/contact/liveness",
+        "assertions": [
+          {
+            "name": "the done check on union-1861 at war and the testbed passes every Phase 0 criterion but the budget, which is a stopwatch",
+            "messages": [
+              "AssertionError: liveness: expected [ …(18) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:47:114\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+            ]
+          },
+          {
+            "name": "each criterion can fail (positive controls) liveness: a planted dead mechanic in a reference run fails the check",
+            "messages": [
+              "AssertionError: expected [ …(18) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:163:63\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+            ]
+          }
+        ],
+        "message": ""
+      },
+      {
+        "path": "packages/cli/test/liveness-gate.test.ts",
+        "category": "July/contact/liveness",
+        "assertions": [
+          {
+            "name": "the reference runs union-1861, war by decision, 148 days: every mechanic fires within its band",
+            "messages": [
+              "AssertionError: expected [ { …(4) }, { …(4) }, { …(4) }, …(15) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts:81:48\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+            ]
+          }
+        ],
+        "message": ""
+      }
+    ],
+    "affectedAndProtected": [
+      {
+        "path": "tools/test/liveness-causes.test.ts",
+        "status": "passed",
+        "tests": 17
+      },
+      {
+        "path": "packages/cli/test/bombardment.test.ts",
+        "status": "passed",
+        "tests": 1
+      },
+      {
+        "path": "packages/cli/test/declared-government.test.ts",
+        "status": "passed",
+        "tests": 3
+      },
+      {
+        "path": "packages/kernel/test/one-writer.test.ts",
+        "status": "passed",
+        "tests": 44
+      },
+      {
+        "path": "packages/kernel/test/s52-advance-notice.test.ts",
+        "status": "passed",
+        "tests": 1
+      },
+      {
+        "path": "packages/kernel/test/s65-sender-belief.test.ts",
+        "status": "passed",
+        "tests": 19
+      },
+      {
+        "path": "packs/union-1861/test/cost-only.test.ts",
+        "status": "passed",
+        "tests": 3
+      },
+      {
+        "path": "packs/union-1861/test/nation-calls.test.ts",
+        "status": "passed",
+        "tests": 2
+      },
+      {
+        "path": "packs/union-1861/test/passage.test.ts",
+        "status": "passed",
+        "tests": 4
+      },
+      {
+        "path": "packs/union-1861/test/s64-command-inclusion.test.ts",
+        "status": "passed",
+        "tests": 4
+      }
+    ],
+    "allRemainingFailuresInheritedJuly": true,
+    "repairedFileFailures": [
+      "packs/union-1861/test/passage.test.ts",
+      "packages/cli/test/bombardment.test.ts",
+      "packages/cli/test/declared-government.test.ts",
+      "packs/union-1861/test/cost-only.test.ts",
+      "packs/union-1861/test/nation-calls.test.ts"
+    ],
+    "livenessDelta": {
+      "before": 19,
+      "after": 18,
+      "soleRemovedBreach": "command.post_succeeded",
+      "allOtherMechanicFireCountsUnchanged": true,
+      "remaining": {
+        "combat.battle_closed": 0,
+        "combat.battle_opened": 0,
+        "combat.captured": 0,
+        "combat.killed_wounded": 0,
+        "combat.missing": 0,
+        "combat.routed": 0,
+        "control.threshold_crossed": 13,
+        "forces.stragglers_returned": 0,
+        "map.recomputed": 25,
+        "movement.arrived": 182,
+        "movement.joined": 28,
+        "movement.leg_started": 147,
+        "operations.stage": 3,
+        "operations.works": 0,
+        "orders.bypassed": 1,
+        "orders.relay_held": 0,
+        "orders.returned": 0,
+        "reports.battle_dispatch": 2
+      }
+    },
+    "noGitExclusionsAgainstS67": [
+      {
+        "path": "tools/test/lfs-git.test.ts",
+        "tests": 3
+      },
+      {
+        "path": "tools/test/staged-check.test.ts",
+        "tests": 18
+      }
+    ],
+    "failureCauses": {
+      "packages/cli/test/console-session.test.ts": "The unchanged July horizon receives no qualifying hour-stamped battle paper, as in S67; no field armies or contact are introduced by S68.",
+      "packages/cli/test/liveness-gate.test.ts": "The same 18 non-succession breaches retain exactly the S67 fire counts; the sourced fifth succession is now inside around(5). Ruling 1 holds these contracts for the July build.",
+      "packages/cli/test/done-check.test.ts": "The Phase 0 criterion fails on those same 18 liveness problems. The planted-mechanic positive control fails its prerequisite assertion that the unplanted baseline has no liveness problems."
+    }
+  },
+  "reusedEvidence": {
+    "npmCi": "runs/s67/npm-ci.exit.json",
+    "dailyHashesAndSuccessions": "docs/audit/s67-evidence/diagnostics.json",
+    "reason": "No simulation, pack, lockfile, save, fixture-save, checker or signature change; only the gate band and its cause ledger differ among measured non-test inputs. No reference rerun or done-check campaign."
+  }
+}

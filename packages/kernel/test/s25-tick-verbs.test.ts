@@ -7,7 +7,9 @@ import { applyVerb, arriveVerb } from '../src/tick/verbs.ts';
 import { TICK_MECHANICS } from '../src/tick/tick.ts';
 import { createState } from '../src/tick/setup.ts';
 import { indexWorld } from '../src/world/index.ts';
-import { fresh } from './support/s25-fixture.ts';
+import { deliverReport, knowledgeOf } from '../src/knowledge/knowledge.ts';
+import { NO_TRUTH } from '../src/knowledge/truth.ts';
+import { report, claim, fresh } from './support/s25-fixture.ts';
 import { P, POST } from './support/seats-fixture.ts';
 import { ctxFor } from './support/tick-context.ts';
 import { goalTerms } from './support/test-seats.ts';
@@ -18,7 +20,8 @@ it('S25 tick-verbs-01/09: an audience is available at the exact cooldown on issu
   const cooldown = world.rules.people.verbs.audience.cooldownDays;
   const set = setGoal(initial, post, { id: toId('message', 's25.audience-goal'), issuer: P('a_lead'),
     goal: goalOf(goalTerms('hold', null)), viaChain: true, issuedDay: 1, response: 's25.answer' }, 1);
-  const state = { ...set, stateDay: cooldown, audienceHeld: { [holder]: { audDay: 1, audAbout: 'during' as const, audCounters: [] } } };
+  const copy = {sentPost:post,sentMessage:toId('message','s25.audience-goal'),sentKind:'goal' as const,sentDay:1,sentPaper:null,sentGoal:set.planRecords[post]!.planGoal};
+  const state = { ...set, knowledgeBySeat:{...set.knowledgeBySeat,[seat]:{...knowledgeOf(set,seat),knownSentOrders:[copy]}}, stateDay: cooldown, audienceHeld: { [holder]: { audDay: 1, audAbout: 'during' as const, audCounters: [] } } };
   const issue = ctxFor(world, state, cooldown + 1, TICK_MECHANICS);
   expect(applyVerb(issue, state, seat, { cmd: 'audience', to: post, counters: [] }).reason).toBeNull();
   const letter = issue.outbox[0]!;
@@ -56,8 +59,9 @@ it('S25 tick-verbs-10: a received appointment dates its rank by the campaign cal
   const world = indexSeatsWorld(indexWorld({ ...base.map.world, vocabularies: { ...base.map.world.vocabularies,
     ranks: [{ id: 'field_general', name: 'rank.general', seniority: 1, kind: 'regular' }], rankKinds: [{ id: 'regular', name: 'rank.regular' }] } }), base.start);
   const initial = createState(world, { seed: 17 });
-  const state = { ...initial, stateDay: 2, postStates: { ...initial.postStates,
+  const vacant = { ...initial, stateDay: 2, postStates: { ...initial.postStates,
     [POST('a_reserve')]: { ...initial.postStates[POST('a_reserve')]!, postHolder: null } } };
+  const state=deliverReport(vacant,seat,report('m.vacancy.rank',{reportAuthor:P('a_sec'),reportSubjectKind:'post',reportSubjectId:'a_reserve',reportDay:2,reportClaims:[claim('commander-lost',1,'captured')]},2),NO_TRUTH);
   const issue = ctxFor(world, state, 3, TICK_MECHANICS);
   expect(applyVerb(issue, state, seat, { cmd: 'appoint', post: POST('a_reserve'), person: P('a_spy'), rank: 'field_general', route: 'courier' }).reason).toBeNull();
   const letter = issue.outbox[0]!;

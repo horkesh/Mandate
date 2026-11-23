@@ -1,0 +1,57 @@
+{
+  "id": "virginia_norfolk_gwynn",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.virginia_norfolk_gwynn.title",
+  "text": "situation.virginia_norfolk_gwynn.text",
+  "earliest": "1861-04-26",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 52
+      },
+      {
+        "flag": "virginia_seceded"
+      },
+      {
+        "holds": {
+          "post": "st_va_norfolk",
+          "person": "taliaferro_william_b"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "st_va_norfolk",
+        "delta": 1,
+        "reason": "state-command-succession",
+        "side": null,
+        "succession": {
+          "to": "gwynn_walter",
+          "from": "taliaferro_william_b"
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative state military entry and command only; no secession motives, civilian conduct, security orders or protected-population effects."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p.783, Special Orders 2, 26 April"
+    }
+  ],
+  "namedOnly": "The source records the state institution's act. No individual speech, motive or discretionary choice is invented."
+}

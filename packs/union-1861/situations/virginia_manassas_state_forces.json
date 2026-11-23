@@ -1,0 +1,77 @@
+{
+  "id": "virginia_manassas_state_forces",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.virginia_manassas_state_forces.title",
+  "text": "situation.virginia_manassas_state_forces.text",
+  "earliest": "1861-05-15",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 71
+      },
+      {
+        "flag": "virginia_seceded"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-called-out",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_manassas_garland",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "post": "st_va_potomac",
+          "region": "manassas"
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-called-out",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_manassas_preston",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "post": "st_va_potomac",
+          "region": "manassas"
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative state military entry and command only; no secession motives, civilian conduct, security orders or protected-population effects."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 pp.824,826-827, 10 May orders; pp.846-847, Cocke, 15 May. [I] Use the first observed garrison date; ordered battalions represented as separate unquantified contingents, not a fabricated 1,000 each; S81: Garland's own 490 are entered by the separate 12 May return (p.841); the later unknown observation does not overwrite them. Preston stays unknown."
+    }
+  ],
+  "namedOnly": "The source records the state institution's act. No individual speech, motive or discretionary choice is invented."
+}

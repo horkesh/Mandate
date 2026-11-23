@@ -16,16 +16,16 @@
   {
     "path": "packages/kernel/src/seats/requests.ts",
     "symbol": "morningGround",
-    "hash": "a9582d478ad3098437cf17ec20d42f720ea26584306f13b5bb0b90bef99ac7c4",
-    "reason": "Kernel-only morning ground and transport calculation.",
-    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+    "hash": "e3b09bfd2f9d8641415dbd4c88f95812637f7450f8ae6e8e92249d3669b9dedf",
+    "reason": "Kernel-only morning ground and transport calculation. S78 implements 0110 joined-only physical headquarters and side-specific civil rail access on no-control ground; no catalogue reader or classification changes. S81 ruling 3 keeps physical civil rail access through own positive shares; opposing shares restore the threshold rule. No new protected truth reader or catalogue dependency.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only); docs/decisions/0110-unknown-defenders-and-joining-blocks.md; notes/lane-s78-0110-rails-patterson.md; CODEX 2026-11-23 S78 received; rulings; S81, ruling 3"
   },
   {
     "path": "packages/kernel/src/seats/requests.ts",
     "symbol": "battleMenus",
-    "hash": "1b5fcc4bf0d2bc4be3e86efa20e757f3b121eb8ac1d2f07569ce07dc2e44bf0e",
-    "reason": "Kernel-judged combat options for the commander, under 0052.",
-    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+    "hash": "5274b20648a88a442796d3dbc40335ee985f0ab4af57bf1736d0dc107f274969",
+    "reason": "Kernel-judged combat options for the commander, under 0052. S82 applies the sourced institutional successor whose opening faction is explicitly unknown: side follows his actual held post; known contrary allegiance and service choices retain their guards. No new protected reader or catalogue dependency.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only); CODEX 2026-11-23 S81 received; rulings; S82, item 3; docs/audit/s82-evidence/source-reading.json (OR I-VI p.1); docs/audit/s82-evidence/projection-receipt.json"
   },
   {
     "path": "packages/kernel/src/seats/requests.ts",
@@ -37,8 +37,22 @@
   {
     "path": "packages/kernel/src/view/view.ts",
     "symbol": "viewFor",
-    "hash": "a3b7efb0632e71a45fc6a2046d2ef0e649688aa38d43c08118e7a977fbac172d",
-    "reason": "Own seat identity, faction and physical location; the people catalogue itself consumes received evidence.",
-    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only)"
+    "hash": "42d13256f97fd74085ccb23fab37efccde0e769b36178b0b4000bff08dd49446",
+    "reason": "Own seat identity and physical location only; S62 now identifies the principal's side from his declared government. The people catalogue consumes opening establishment and received evidence. S71 changes only institutional-office physical location and public role classification; protected reader identities remain exact. S74 adds immutable formation declarations and received organisation papers; own commanders follow their formation blocks. Protected reader identities remain exact, and paired-State checks retain unreceived chains. S78 implements 0110 joined-only physical headquarters and side-specific civil rail access on no-control ground; no catalogue reader or classification changes. S82 applies the sourced institutional successor whose opening faction is explicitly unknown: side follows his actual held post; known contrary allegiance and service choices retain their guards. No new protected reader or catalogue dependency.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Seats and player-visible boundary; CODEX R48 item 3; notes/lane-seat-view-people.md, R75/R76 (own-seat identity only); CODEX 2026-11-22 S62 items 1-2; notes/lane-s62-projection.md, Proposed rulings; CODEX 2026-11-22 S65 ruling 1 and S65 items 1-3; notes/lane-s65-belief.md; CODEX S71 items 1-3; notes/format-0058.md, S71; CODEX S74 items 1-7; notes/lane-s74-july.md; docs/decisions/0110-unknown-defenders-and-joining-blocks.md; notes/lane-s78-0110-rails-patterson.md; CODEX 2026-11-23 S81 received; rulings; S82, item 3; docs/audit/s82-evidence/source-reading.json (OR I-VI p.1); docs/audit/s82-evidence/projection-receipt.json"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "symbol": "principalMenu",
+    "hash": "c35c98626f1f79b84cf3f12cfeb0ec4677d7bfa72f8ecf631176d5f5a2871a26",
+    "reason": "Received post/side/appointment catalogue only. The remaining protected closure is viewFor's own-seat identity and physical location, already classified separately; no live command table selects a menu post, holder, side, relay, vacancy or appointment. S71 changes only institutional-office physical location and public role classification; protected reader identities remain exact. S74 adds immutable formation declarations and received organisation papers; own commanders follow their formation blocks. Protected reader identities remain exact, and paired-State checks retain unreceived chains. S78 implements 0110 joined-only physical headquarters and side-specific civil rail access on no-control ground; no catalogue reader or classification changes. S82 applies the sourced institutional successor whose opening faction is explicitly unknown: side follows his actual held post; known contrary allegiance and service choices retain their guards. No new protected reader or catalogue dependency.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Decision: Seats (a view plus a menu); CODEX 2026-11-22 S62 items 1-2; notes/lane-s62-projection.md, Proposed rulings; CODEX 2026-11-22 S65 ruling 1 and S65 items 1-3; notes/lane-s65-belief.md; CODEX S71 items 1-3; notes/format-0058.md, S71; CODEX S74 items 1-7; notes/lane-s74-july.md; docs/decisions/0110-unknown-defenders-and-joining-blocks.md; notes/lane-s78-0110-rails-patterson.md; CODEX 2026-11-23 S81 received; rulings; S82, item 3; docs/audit/s82-evidence/source-reading.json (OR I-VI p.1); docs/audit/s82-evidence/projection-receipt.json"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "symbol": "pendingRequests",
+    "hash": "a51ed13f884eac71e9fb9b8297a0d7c2c98b81adcc63da3cd81ea25fa7d94906",
+    "reason": "Kernel request dispatch: own-seat views and consistent plan/battle choices addressed only to that commander. Principal menus consume received evidence. Current battle identifiers and command ownership serve the local commander, never the President's catalogue. S71 changes only institutional-office physical location and public role classification; protected reader identities remain exact. S74 adds immutable formation declarations and received organisation papers; own commanders follow their formation blocks. Protected reader identities remain exact, and paired-State checks retain unreceived chains. S78 implements 0110 joined-only physical headquarters and side-specific civil rail access on no-control ground; no catalogue reader or classification changes. S81 ruling 3 keeps physical civil rail access through own positive shares; opposing shares restore the threshold rule. No new protected truth reader or catalogue dependency. S82 applies the sourced institutional successor whose opening faction is explicitly unknown: side follows his actual held post; known contrary allegiance and service choices retain their guards. No new protected reader or catalogue dependency.",
+    "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Decision: Seats and The tick order; docs/decisions/0064-forces-command-movement-and-the-contest.md, Decision: Neutral passage; CODEX 2026-11-22 S62 item 2; notes/lane-s62-projection.md, Proposed rulings; CODEX 2026-11-22 S65 ruling 1 and S65 items 1-3; notes/lane-s65-belief.md; CODEX S71 items 1-3; notes/format-0058.md, S71; CODEX S74 items 1-7; notes/lane-s74-july.md; docs/decisions/0110-unknown-defenders-and-joining-blocks.md; notes/lane-s78-0110-rails-patterson.md; CODEX 2026-11-23 S78 received; rulings; S81, ruling 3; CODEX 2026-11-23 S81 received; rulings; S82, item 3; docs/audit/s82-evidence/source-reading.json (OR I-VI p.1); docs/audit/s82-evidence/projection-receipt.json"
   }
 ]

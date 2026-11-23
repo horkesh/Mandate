@@ -103,9 +103,27 @@ export function peopleProjection(
       posts.set(post, { ...old, observerReports: [...old.observerReports, r.id] });
     }
     for (const c of r.claims) {
-      if (c.kind === 'commander-lost' || (c.kind === 'order-returned' && c.token === 'vacant_post') || (c.kind === 'verb-answered' && c.token?.startsWith('relieve:') && c.value === 1)) tell(post, null, 'vacant', r);
-      else if (c.kind === 'order-returned' && c.token === 'holder_changed') tell(post, null, 'unknown', r);
-      else if (c.kind === 'verb-answered' && c.token?.startsWith('appoint:') && c.value === 1) tell(post, r.author, 'held', r);
+      if(c.kind==='organisation-post'){
+        const template=(world.map.world.organisationTemplates??[]).find(t=>t.posts.some(p=>p.id===post));
+        const spec=template?.posts.find(p=>p.id===post);
+        const army=world.start.posts.find(p=>p.id===template?.army)??world.start.temporaryPosts.find(p=>p.id===template?.army);
+        if(spec!==undefined&&army!==undefined&&r.authorPost===template!.army&&(departments.has(army.department)||knownSides.get(army.department)===faction)){
+          postDepartments.set(post,army.department);posts.set(post,{...ensure(post),parent:c.token as PostId,placementKnown:true});
+          tell(post,c.commander??null,c.commander==null?'vacant':'held',r);
+        }
+      }
+      else if (c.kind === 'commander-lost' || (c.kind === 'order-returned' && c.token === 'vacant_post') || (c.kind === 'verb-answered' && c.token?.startsWith('relieve:') && c.value === 1)) tell(post, null, 'vacant', r);
+      else if (c.kind === 'appointment-refused' && c.token === 'post_held') tell(post, null, 'unknown', r);
+      else if (c.kind === 'order-returned' && ['holder_changed','not_serving','other_side','not_raising_post'].includes(c.token ?? '')) tell(post, null, 'unknown', r);
+      else if (c.kind === 'verb-answered' && c.token?.startsWith('appoint:') && c.value === 1) {
+        // A received acceptance of our declared establishment identifies its public parent, never a live chain.
+        const declared = world.start.temporaryPosts.find(p => p.id === post);
+        if (declared !== undefined && (departments.has(declared.department) || knownSides.get(declared.department) === faction)) {
+          postDepartments.set(post,declared.department);
+          posts.set(post,{ ...ensure(post), parent:declared.parent, placementKnown:true });
+        }
+        tell(post, r.author, 'held', r);
+      }
     }
   }
   const personViews: KnownPersonView[] = [...people].sort(strictCompare).map(person => {

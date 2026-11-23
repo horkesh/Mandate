@@ -173,11 +173,11 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
 
   // 2. Each offensive goal on its day: the doctrine's dated row, or the opening morning if its date has passed.
   for (const o of doctrine.offensives) {
-    if (day !== Math.max(o.day, opening)) continue;
+    if (o.ready === undefined ? day !== Math.max(o.day, opening) : !o.ready || o.issued === true || day < Math.max(o.day, opening)) continue;
     const target = menu.commandable.find((c) => c.post === o.post);
     const route = target === undefined ? undefined : quickest(target.routes);
     if (target === undefined || route === undefined) continue;
-    send({ cmd: 'order', to: target.post, goal: takeGoal(menu, o.objective), route: route.route, bypass: false });
+    send({ cmd: 'order', to: target.post, goal: { ...takeGoal(menu, o.objective), posture: o.posture ?? 'take' }, route: route.route, bypass: false });
     answered.add(target.post);
   }
   // An order an office withheld is sent again around it, to the objective it named (a fresh goal is never invented).
@@ -211,13 +211,18 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
   }
   // 4. Each dated requisition once. A later identified call is independent of the governor's earlier answers.
   sendCalls(false);
-  // 5. What a governor raised goes to the doctrine's post to concentrate (a transfer, answered by the governor himself).
+  // 5. Named command inclusions remain independent of the latest destination for new levies.
+  // A reported zero is not authority to discard an expressly named contingent of unknown strength.
+  // The receiving post must have become known; the ordinary verb still owns compliance and joining.
+  const inclusions = new Map(doctrine.concentrationTransfers?.map(t => [t.from, t.to]));
   if (doctrine.concentrateAt !== null) {
     for (const c of menu.commandable) {
-      if ((!c.raising && !doctrine.concentrateFrom?.includes(c.post)) || c.post === doctrine.concentrateAt || c.men === 0 || c.inTransit.includes('transfer')) continue;
+      const named = inclusions.get(c.post) ?? (doctrine.concentrationTransfers === undefined && doctrine.concentrateFrom?.includes(c.post) ? doctrine.concentrateAt : undefined);
+      const to = named ?? (c.raising && doctrine.concentrateLevies !== false ? doctrine.concentrateAt : undefined);
+      if (to === undefined || c.post === to || (named === undefined && c.men === 0) || c.inTransit.includes('transfer')) continue;
       const route = quickest(c.routes);
       if (route === undefined) continue;
-      send({ cmd: 'transfer', from: c.post, to: doctrine.concentrateAt, force: 'blocks', amount: 999, route: route.route });
+      send({ cmd: 'transfer', from: c.post, to, force: 'blocks', amount: 999, route: route.route });
     }
   }
   // 6. On the doctrine's cadence, he asks each of his armies where it stands and what it faces: the post where he

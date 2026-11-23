@@ -1,0 +1,590 @@
+{
+  "orders": [
+    {
+      "day": 112,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "order",
+        "to": "us_dept_pennsylvania",
+        "goal": {
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "awaitWord": false,
+          "approveAsDrafted": true,
+          "objective": "lower_valley",
+          "posture": "hold",
+          "committed": []
+        },
+        "route": "wire",
+        "bypass": false
+      }
+    },
+    {
+      "day": 140,
+      "seat": "seat:lincoln_abraham",
+      "command": {
+        "cmd": "order",
+        "to": "us_dept_pennsylvania",
+        "goal": {
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "awaitWord": false,
+          "approveAsDrafted": true,
+          "objective": "harpers_ferry",
+          "posture": "hold",
+          "committed": []
+        },
+        "route": "wire",
+        "bypass": false
+      }
+    },
+    {
+      "day": 142,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "order",
+        "to": "cs_cmd_harpers_ferry",
+        "goal": {
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "awaitWord": false,
+          "approveAsDrafted": true,
+          "objective": "manassas",
+          "posture": "take",
+          "committed": []
+        },
+        "route": "courier",
+        "bypass": false
+      }
+    },
+    {
+      "day": 143,
+      "seat": "seat:davis_jefferson",
+      "command": {
+        "cmd": "order",
+        "to": "cs_cmd_harpers_ferry",
+        "goal": {
+          "risk": 500,
+          "deadlineDays": 30,
+          "rail": true,
+          "river": false,
+          "sea": false,
+          "neutral": false,
+          "awaitWord": false,
+          "approveAsDrafted": true,
+          "objective": "manassas",
+          "posture": "take",
+          "committed": []
+        },
+        "route": "special-messenger",
+        "bypass": true
+      }
+    }
+  ],
+  "responses": [
+    {
+      "day": 112,
+      "id": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|cameron_simon",
+      "before": null,
+      "after": {
+        "respOrder": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "respPerson": "cameron_simon",
+        "respPost": "us_secretary_war",
+        "respRole": "relay",
+        "respKind": "goal",
+        "respDay": 112,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 36,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -14
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": []
+      }
+    },
+    {
+      "day": 112,
+      "id": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|patterson_robert",
+      "before": null,
+      "after": {
+        "respOrder": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "goal",
+        "respDay": 112,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 127,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -110
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 37
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          }
+        ],
+        "respConditions": []
+      }
+    },
+    {
+      "day": 112,
+      "id": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|scott_winfield",
+      "before": null,
+      "after": {
+        "respOrder": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "respPerson": "scott_winfield",
+        "respPost": "us_general_in_chief",
+        "respRole": "relay",
+        "respKind": "goal",
+        "respDay": 112,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 234,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 34
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          },
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          },
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respConditions": []
+      }
+    },
+    {
+      "day": 140,
+      "id": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|cameron_simon",
+      "before": null,
+      "after": {
+        "respOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "respPerson": "cameron_simon",
+        "respPost": "us_secretary_war",
+        "respRole": "relay",
+        "respKind": "goal",
+        "respDay": 140,
+        "respActual": "slow_walk",
+        "respDeclared": "comply",
+        "respWillingness": -9,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -14
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": -45
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "holds_grievance",
+            "grievance": "bypassed",
+            "weight": 150
+          }
+        ],
+        "respStated": [],
+        "respConditions": []
+      }
+    },
+    {
+      "day": 142,
+      "id": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|patterson_robert",
+      "before": null,
+      "after": {
+        "respOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "respPerson": "patterson_robert",
+        "respPost": "us_dept_pennsylvania",
+        "respRole": "addressee",
+        "respKind": "goal",
+        "respDay": 142,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 132,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -110
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 42
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          }
+        ],
+        "respConditions": []
+      }
+    },
+    {
+      "day": 142,
+      "id": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|scott_winfield",
+      "before": null,
+      "after": {
+        "respOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "respPerson": "scott_winfield",
+        "respPost": "us_general_in_chief",
+        "respRole": "relay",
+        "respKind": "goal",
+        "respDay": 142,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 141,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 34
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": -60
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": -33
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          },
+          {
+            "kind": "shielded_by_standing"
+          },
+          {
+            "kind": "holds_grievance",
+            "grievance": "bypassed",
+            "weight": 113
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "caution"
+          },
+          {
+            "kind": "shielded_by_standing"
+          },
+          {
+            "kind": "holds_grievance",
+            "grievance": "bypassed",
+            "weight": 113
+          }
+        ],
+        "respConditions": []
+      }
+    },
+    {
+      "day": 142,
+      "id": "m.142.davis_jefferson.walker_leroy_p.order.cs_cmd_harpers_ferry|walker_leroy_p",
+      "before": null,
+      "after": {
+        "respOrder": "m.142.davis_jefferson.walker_leroy_p.order.cs_cmd_harpers_ferry",
+        "respPerson": "walker_leroy_p",
+        "respPost": "cs_secretary_war",
+        "respRole": "relay",
+        "respKind": "goal",
+        "respDay": 142,
+        "respActual": "object",
+        "respDeclared": "object",
+        "respWillingness": -164,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": -200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -105
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 90
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_offended",
+            "value": "caution"
+          },
+          {
+            "kind": "trusts_leader"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_offended",
+            "value": "caution"
+          },
+          {
+            "kind": "trusts_leader"
+          }
+        ],
+        "respConditions": []
+      }
+    },
+    {
+      "day": 146,
+      "id": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "before": null,
+      "after": {
+        "respOrder": "m.143.davis_jefferson.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+        "respPerson": "johnston_joseph_e",
+        "respPost": "cs_cmd_harpers_ferry",
+        "respRole": "addressee",
+        "respKind": "goal",
+        "respDay": 146,
+        "respActual": "object",
+        "respDeclared": "object",
+        "respWillingness": -236,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": -200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -51
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 15
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_offended",
+            "value": "caution"
+          },
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_offended",
+            "value": "caution"
+          },
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respConditions": []
+      }
+    }
+  ]
+}

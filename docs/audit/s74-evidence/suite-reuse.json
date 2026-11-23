@@ -1,0 +1,21 @@
+{
+  "completedSuite": "full-suite.exit.json",
+  "correctedPaths": [
+    "packages\\kernel\\test\\s74-organisation.test.ts",
+    "packages\\kernel\\src\\forces\\enlistment.ts",
+    "packages\\kernel\\src\\forces\\regroup.ts",
+    "packages\\kernel\\src\\people\\commissions.ts",
+    "packages\\kernel\\src\\recruitment\\renewal.ts",
+    "packages\\kernel\\src\\seats\\posts.ts",
+    "packages\\kernel\\src\\tick\\organisation.ts",
+    "packages\\kernel\\src\\tick\\tick.ts"
+  ],
+  "targetedEvidence": [
+    "corrected-accounting.exit.json",
+    "affected-correction.exit.json",
+    "final-typecheck.exit.json",
+    "final-rules.exit.json",
+    "final-boundary.exit.json"
+  ],
+  "notClaimed": "The completed full suite is not reported as a passing run or as a run of the corrected code."
+}

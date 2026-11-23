@@ -1,0 +1,895 @@
+{
+  "forceAssignments": [
+    {
+      "post": "us_dept_northeastern_virginia",
+      "holder": "mcdowell_irvin",
+      "blocks": []
+    },
+    {
+      "post": "us_dept_pennsylvania",
+      "holder": "patterson_robert",
+      "blocks": []
+    },
+    {
+      "post": "us_dc_militia",
+      "holder": "stone_charles_p",
+      "blocks": [
+        {
+          "id": "fb_us_dc_militia",
+          "strength": 600,
+          "location": {
+            "locRegion": "washington",
+            "locAboard": null,
+            "locSinceDay": 0,
+            "locMarch": null
+          }
+        },
+        {
+          "id": "raised.st_gov_new_york.d67",
+          "strength": 38000,
+          "location": {
+            "locRegion": "washington",
+            "locAboard": null,
+            "locSinceDay": 81,
+            "locMarch": null
+          }
+        },
+        {
+          "id": "raised.st_gov_massachusetts.d76",
+          "strength": 6000,
+          "location": {
+            "locRegion": "washington",
+            "locAboard": null,
+            "locSinceDay": 94,
+            "locMarch": null
+          }
+        },
+        {
+          "id": "raised.st_gov_connecticut.d77",
+          "strength": 1000,
+          "location": {
+            "locRegion": "washington",
+            "locAboard": null,
+            "locSinceDay": 94,
+            "locMarch": null
+          }
+        },
+        {
+          "id": "raised.st_gov_new_hampshire.d77",
+          "strength": 1000,
+          "location": {
+            "locRegion": "washington",
+            "locAboard": null,
+            "locSinceDay": 94,
+            "locMarch": null
+          }
+        },
+        {
+          "id": "raised.st_gov_indiana.d77",
+          "strength": 4000,
+          "location": {
+            "locRegion": "washington",
+            "locAboard": null,
+            "locSinceDay": 95,
+            "locMarch": null
+          }
+        },
+        {
+          "id": "raised.st_gov_rhode_island.d79",
+          "strength": 1000,
+          "location": {
+            "locRegion": "washington",
+            "locAboard": null,
+            "locSinceDay": 96,
+            "locMarch": null
+          }
+        }
+      ]
+    },
+    {
+      "post": "cs_cmd_manassas",
+      "holder": "beauregard_pierre_g_t",
+      "blocks": [
+        {
+          "id": "state-forces.va_manassas_garland",
+          "strength": null,
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 71,
+            "locMarch": null
+          }
+        },
+        {
+          "id": "state-forces.va_manassas_preston",
+          "strength": null,
+          "location": {
+            "locRegion": "manassas",
+            "locAboard": null,
+            "locSinceDay": 71,
+            "locMarch": null
+          }
+        }
+      ]
+    },
+    {
+      "post": "cs_cmd_harpers_ferry",
+      "holder": "johnston_joseph_e",
+      "blocks": [
+        {
+          "id": "state-forces.va_harpers_ferry",
+          "strength": null,
+          "location": {
+            "locRegion": "harpers_ferry",
+            "locAboard": null,
+            "locSinceDay": 54,
+            "locMarch": null
+          }
+        }
+      ]
+    }
+  ],
+  "unionGoalCommands": [],
+  "unionFieldCommandsOfferedOnDays": {
+    "us_dept_northeastern_virginia": [],
+    "us_dept_pennsylvania": []
+  },
+  "advanceNotice": null,
+  "battles": [
+    [
+      "battle:fort_sumter:38",
+      {
+        "battleRegion": "fort_sumter",
+        "battleStartDay": 38,
+        "battleEndDay": 39,
+        "battleFactions": [
+          "confederate",
+          "union"
+        ],
+        "battleCauses": [
+          "cs_cmd_charleston"
+        ],
+        "battleDays": [
+          {
+            "bdayDay": 38,
+            "bdayNumber": 1,
+            "bdayType": "bombard",
+            "bdayAttacker": "confederate",
+            "bdayFrontage": 0,
+            "bdayContact": 0,
+            "bdayDraws": 0,
+            "bdaySides": [
+              {
+                "bsideFaction": "confederate",
+                "bsidePost": "cs_cmd_charleston",
+                "bsideCommander": "beauregard_pierre_g_t",
+                "bsideCommit": "main",
+                "bsideBlocks": [
+                  "fb_st_charleston_1st_artillery_battalion",
+                  "fb_st_charleston_floating_battery",
+                  "fb_st_charleston_fort_johnson"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 416,
+                "bsideCommitted": 416,
+                "bsideEngaged": 416,
+                "bsideBase": 0,
+                "bsideTerms": [],
+                "bsideMultiplier": 1000,
+                "bsideKw": 0,
+                "bsideKwParts": [],
+                "bsideKilled": 0,
+                "bsideWounded": 0,
+                "bsideMissing": 0,
+                "bsideMissingParts": [],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": -1,
+                "bsideFlankThreshold": 0,
+                "bsideFlankTerms": [],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 600,
+                "bsideMoraleTerms": [],
+                "bsideDecisions": [],
+                "bsideResult": "held",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "fb_st_charleston_1st_artillery_battalion",
+                    "blossKilled": 0,
+                    "blossWounded": 0,
+                    "blossMissing": 0,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "fb_st_charleston_floating_battery",
+                    "blossKilled": 0,
+                    "blossWounded": 0,
+                    "blossMissing": 0,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "fb_st_charleston_fort_johnson",
+                    "blossKilled": 0,
+                    "blossWounded": 0,
+                    "blossMissing": 0,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": -1,
+                "bsideHit": null
+              },
+              {
+                "bsideFaction": "union",
+                "bsidePost": "us_fort_sumter",
+                "bsideCommander": "anderson_robert",
+                "bsideCommit": "defend",
+                "bsideBlocks": [
+                  "fb_us_sumter_garrison"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 85,
+                "bsideCommitted": 85,
+                "bsideEngaged": 85,
+                "bsideBase": 0,
+                "bsideTerms": [
+                  {
+                    "btermKind": "fire_ratio",
+                    "btermValue": 2000,
+                    "btermSource": "bombardment.ratioCapPermille"
+                  }
+                ],
+                "bsideMultiplier": 3000,
+                "bsideKw": 0,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "killed_wounded",
+                    "btermValue": 0,
+                    "btermSource": "bombardment.lossPermille"
+                  }
+                ],
+                "bsideKilled": 0,
+                "bsideWounded": 0,
+                "bsideMissing": 0,
+                "bsideMissingParts": [],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": -1,
+                "bsideFlankThreshold": 0,
+                "bsideFlankTerms": [],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 420,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "morale_fire",
+                    "btermValue": -120,
+                    "btermSource": "bombardment.moraleLossPerDay"
+                  },
+                  {
+                    "btermKind": "morale_out_of_stores",
+                    "btermValue": -60,
+                    "btermSource": "bombardment.outOfStoresMoraleLoss"
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "guns_attacker",
+                    "btermValue": 416,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "guns_defender",
+                    "btermValue": 85,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "fire_ratio",
+                    "btermValue": 3000,
+                    "btermSource": "bombardment.ratioCapPermille"
+                  },
+                  {
+                    "btermKind": "morale_fire",
+                    "btermValue": -120,
+                    "btermSource": "bombardment.moraleLossPerDay"
+                  },
+                  {
+                    "btermKind": "morale_out_of_stores",
+                    "btermValue": -60,
+                    "btermSource": "bombardment.outOfStoresMoraleLoss"
+                  },
+                  {
+                    "btermKind": "works_wear",
+                    "btermValue": 0,
+                    "btermSource": "bombardment.worksWearPerDay"
+                  },
+                  {
+                    "btermKind": "killed_wounded",
+                    "btermValue": 0,
+                    "btermSource": "bombardment.lossPermille"
+                  },
+                  {
+                    "btermKind": "surrender_floor",
+                    "btermValue": 364,
+                    "btermSource": "anderson_robert"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 471,
+                    "btermSource": "anderson_robert"
+                  }
+                ],
+                "bsideResult": "held",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "fb_us_sumter_garrison",
+                    "blossKilled": 0,
+                    "blossWounded": 0,
+                    "blossMissing": 0,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": -1,
+                "bsideHit": null
+              }
+            ]
+          },
+          {
+            "bdayDay": 39,
+            "bdayNumber": 2,
+            "bdayType": "bombard",
+            "bdayAttacker": "confederate",
+            "bdayFrontage": 0,
+            "bdayContact": 0,
+            "bdayDraws": 0,
+            "bdaySides": [
+              {
+                "bsideFaction": "confederate",
+                "bsidePost": "cs_cmd_charleston",
+                "bsideCommander": "beauregard_pierre_g_t",
+                "bsideCommit": "main",
+                "bsideBlocks": [
+                  "fb_st_charleston_1st_artillery_battalion",
+                  "fb_st_charleston_floating_battery",
+                  "fb_st_charleston_fort_johnson"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 416,
+                "bsideCommitted": 416,
+                "bsideEngaged": 416,
+                "bsideBase": 0,
+                "bsideTerms": [],
+                "bsideMultiplier": 1000,
+                "bsideKw": 0,
+                "bsideKwParts": [],
+                "bsideKilled": 0,
+                "bsideWounded": 0,
+                "bsideMissing": 0,
+                "bsideMissingParts": [],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": -1,
+                "bsideFlankThreshold": 0,
+                "bsideFlankTerms": [],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 600,
+                "bsideMoraleAfter": 600,
+                "bsideMoraleTerms": [],
+                "bsideDecisions": [],
+                "bsideResult": "gained_ground",
+                "bsideCutOff": null,
+                "bsideRetreatTo": null,
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "fb_st_charleston_1st_artillery_battalion",
+                    "blossKilled": 0,
+                    "blossWounded": 0,
+                    "blossMissing": 0,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "fb_st_charleston_floating_battery",
+                    "blossKilled": 0,
+                    "blossWounded": 0,
+                    "blossMissing": 0,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  },
+                  {
+                    "blossBlock": "fb_st_charleston_fort_johnson",
+                    "blossKilled": 0,
+                    "blossWounded": 0,
+                    "blossMissing": 0,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": -1,
+                "bsideHit": null
+              },
+              {
+                "bsideFaction": "union",
+                "bsidePost": "us_fort_sumter",
+                "bsideCommander": "anderson_robert",
+                "bsideCommit": "defend",
+                "bsideBlocks": [
+                  "fb_us_sumter_garrison"
+                ],
+                "bsideUnknown": [],
+                "bsidePresent": 85,
+                "bsideCommitted": 85,
+                "bsideEngaged": 85,
+                "bsideBase": 0,
+                "bsideTerms": [
+                  {
+                    "btermKind": "fire_ratio",
+                    "btermValue": 2000,
+                    "btermSource": "bombardment.ratioCapPermille"
+                  }
+                ],
+                "bsideMultiplier": 3000,
+                "bsideKw": 0,
+                "bsideKwParts": [
+                  {
+                    "btermKind": "killed_wounded",
+                    "btermValue": 0,
+                    "btermSource": "bombardment.lossPermille"
+                  }
+                ],
+                "bsideKilled": 0,
+                "bsideWounded": 0,
+                "bsideMissing": 0,
+                "bsideMissingParts": [],
+                "bsideCaptured": 0,
+                "bsideCapturedParts": [],
+                "bsideFlankDraw": -1,
+                "bsideFlankThreshold": 0,
+                "bsideFlankTerms": [],
+                "bsideFlankBroken": false,
+                "bsideMoraleBefore": 420,
+                "bsideMoraleAfter": 240,
+                "bsideMoraleTerms": [
+                  {
+                    "btermKind": "morale_fire",
+                    "btermValue": -120,
+                    "btermSource": "bombardment.moraleLossPerDay"
+                  },
+                  {
+                    "btermKind": "morale_out_of_stores",
+                    "btermValue": -60,
+                    "btermSource": "bombardment.outOfStoresMoraleLoss"
+                  }
+                ],
+                "bsideDecisions": [
+                  {
+                    "btermKind": "guns_attacker",
+                    "btermValue": 416,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "guns_defender",
+                    "btermValue": 85,
+                    "btermSource": null
+                  },
+                  {
+                    "btermKind": "fire_ratio",
+                    "btermValue": 3000,
+                    "btermSource": "bombardment.ratioCapPermille"
+                  },
+                  {
+                    "btermKind": "morale_fire",
+                    "btermValue": -120,
+                    "btermSource": "bombardment.moraleLossPerDay"
+                  },
+                  {
+                    "btermKind": "morale_out_of_stores",
+                    "btermValue": -60,
+                    "btermSource": "bombardment.outOfStoresMoraleLoss"
+                  },
+                  {
+                    "btermKind": "works_wear",
+                    "btermValue": 0,
+                    "btermSource": "bombardment.worksWearPerDay"
+                  },
+                  {
+                    "btermKind": "killed_wounded",
+                    "btermValue": 0,
+                    "btermSource": "bombardment.lossPermille"
+                  },
+                  {
+                    "btermKind": "surrender_floor",
+                    "btermValue": 364,
+                    "btermSource": "anderson_robert"
+                  },
+                  {
+                    "btermKind": "boldness",
+                    "btermValue": 471,
+                    "btermSource": "anderson_robert"
+                  }
+                ],
+                "bsideResult": "held",
+                "bsideCutOff": "surrender",
+                "bsideRetreatTo": null,
+                "bsidePursue": null,
+                "bsideLosses": [
+                  {
+                    "blossBlock": "fb_us_sumter_garrison",
+                    "blossKilled": 0,
+                    "blossWounded": 0,
+                    "blossMissing": 0,
+                    "blossCaptured": 0,
+                    "blossStragglersCaptured": 0
+                  }
+                ],
+                "bsideHitDraw": -1,
+                "bsideHit": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  ],
+  "holderSuccessions": [
+    {
+      "day": 11,
+      "post": "st_gov_texas",
+      "before": "houston_samuel",
+      "after": "clark_edward"
+    },
+    {
+      "day": 52,
+      "post": "st_va_norfolk",
+      "before": "taliaferro_william_b",
+      "after": "gwynn_walter"
+    },
+    {
+      "day": 54,
+      "post": "st_va_harpers_ferry",
+      "before": "harper_kenton",
+      "after": "jackson_thomas_j"
+    },
+    {
+      "day": 64,
+      "post": "st_va_richmond",
+      "before": "johnston_joseph_e",
+      "after": "magruder_john_b"
+    },
+    {
+      "day": 79,
+      "post": "st_va_norfolk",
+      "before": "gwynn_walter",
+      "after": "huger_benjamin"
+    }
+  ],
+  "pushbackResponses": [
+    {
+      "actual": "comply",
+      "post": "(no post)",
+      "count": 2
+    },
+    {
+      "actual": "comply",
+      "post": "cs_cmd_charleston",
+      "count": 9
+    },
+    {
+      "actual": "comply",
+      "post": "cs_cmd_harpers_ferry",
+      "count": 6
+    },
+    {
+      "actual": "comply",
+      "post": "cs_cmd_manassas",
+      "count": 7
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_alabama",
+      "count": 6
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_connecticut",
+      "count": 4
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_georgia",
+      "count": 9
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_illinois",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_indiana",
+      "count": 5
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_maine",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_maryland",
+      "count": 2
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_massachusetts",
+      "count": 4
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_mississippi",
+      "count": 6
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_new_hampshire",
+      "count": 4
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_new_york",
+      "count": 2
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_pennsylvania",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_rhode_island",
+      "count": 2
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_south_carolina",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_texas",
+      "count": 2
+    },
+    {
+      "actual": "comply",
+      "post": "st_gov_wisconsin",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "st_va_harpers_ferry",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "st_va_potomac",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "us_attorney_general",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "us_dc_militia",
+      "count": 6
+    },
+    {
+      "actual": "comply",
+      "post": "us_dept_northeastern_virginia",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "us_dept_pennsylvania",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "us_dept_virginia",
+      "count": 2
+    },
+    {
+      "actual": "comply",
+      "post": "us_general_in_chief",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "us_recruiting_service",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "us_secretary_interior",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "us_secretary_state",
+      "count": 1
+    },
+    {
+      "actual": "comply",
+      "post": "us_secretary_war",
+      "count": 1
+    },
+    {
+      "actual": "comply_with_reservations",
+      "post": "st_gov_alabama",
+      "count": 3
+    },
+    {
+      "actual": "comply_with_reservations",
+      "post": "st_gov_arkansas",
+      "count": 1
+    },
+    {
+      "actual": "comply_with_reservations",
+      "post": "st_gov_kentucky",
+      "count": 1
+    },
+    {
+      "actual": "comply_with_reservations",
+      "post": "st_gov_new_york",
+      "count": 6
+    },
+    {
+      "actual": "comply_with_reservations",
+      "post": "st_gov_rhode_island",
+      "count": 2
+    },
+    {
+      "actual": "comply_with_reservations",
+      "post": "st_gov_wisconsin",
+      "count": 2
+    },
+    {
+      "actual": "comply_with_reservations",
+      "post": "st_va_peninsula",
+      "count": 1
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_florida",
+      "count": 4
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_iowa",
+      "count": 2
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_kansas",
+      "count": 1
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_louisiana",
+      "count": 6
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_michigan",
+      "count": 2
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_minnesota",
+      "count": 1
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_new_jersey",
+      "count": 2
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_north_carolina",
+      "count": 3
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_ohio",
+      "count": 2
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_tennessee",
+      "count": 4
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_texas",
+      "count": 3
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_vermont",
+      "count": 2
+    },
+    {
+      "actual": "object",
+      "post": "st_gov_virginia",
+      "count": 2
+    },
+    {
+      "actual": "object",
+      "post": "us_recruiting_service",
+      "count": 3
+    },
+    {
+      "actual": "slow_walk",
+      "post": "st_gov_arkansas",
+      "count": 3
+    },
+    {
+      "actual": "slow_walk",
+      "post": "st_gov_delaware",
+      "count": 1
+    },
+    {
+      "actual": "slow_walk",
+      "post": "st_gov_illinois",
+      "count": 2
+    },
+    {
+      "actual": "slow_walk",
+      "post": "st_gov_maine",
+      "count": 2
+    },
+    {
+      "actual": "slow_walk",
+      "post": "st_gov_mississippi",
+      "count": 3
+    },
+    {
+      "actual": "slow_walk",
+      "post": "st_gov_missouri",
+      "count": 1
+    },
+    {
+      "actual": "slow_walk",
+      "post": "st_gov_pennsylvania",
+      "count": 1
+    },
+    {
+      "actual": "slow_walk",
+      "post": "st_gov_south_carolina",
+      "count": 4
+    },
+    {
+      "actual": "slow_walk",
+      "post": "tr_gov_nebraska",
+      "count": 1
+    }
+  ],
+  "causes": {
+    "july": "McDowell and Patterson hold their offices but have zero assigned blocks and never enter the field-command menu; no Union goal is sent. Manassas has only its two unknown local battalions, Harpers Ferry its unknown local volunteer contingent; identified transfers are preserved and statewide batches withheld. There is no actual Union advance to trigger S52 notice. Only Sumter fights.",
+    "pushback": "No Union offensive means no Scott offensive relay hold/bypass sequence; Walker still objects to the opening Charleston order. The filters have no holder and no filter hold is seen. Addressee responses still exceed reservation/slow-walk ceilings; their per-post counts and typed reasons are retained, not calibrated.",
+    "checkpoints": "Known Confederate strength is below the sourced floor because the aggregate Virginia return is not allocated over partial local contingents. No Union planned operation can fight without its field force. No band or unknown strength is filled to make a checkpoint pass.",
+    "lever": "The current source traversal still finds fort_monroe_arrivals reaching people/grievance outside VICTORY_READS. No sweep was run: prior 8-seed unexercised border-governor forks are retained as historical evidence only, not measured again or certified here."
+  }
+}

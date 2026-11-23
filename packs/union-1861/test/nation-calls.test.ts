@@ -64,7 +64,7 @@ describe('no principal calls on a nation for regiments (the lead’s ruling; 006
       staffLine: { ...plantedSituation.staffLine, authors: [ids.toId('post', 'us_secretary_war')] },
       inaction: { ...plantedSituation.inaction, policy: null },
     } as unknown as phase0.SituationDef;
-    const world = phase0.indexSeatsWorld(map, pack!.scenarios[0]!, { situations: [def] });
+    const world = phase0.indexSeatsWorld(map, pack!.scenarios[0]!, { situations: [...pack!.situations!.filter(s => s.id === 'manassas_advance_received'), def] });
     let state = phase0.createState(world, { seed: 1, people: 'as-history' });
     const rejections: string[] = [];
     for (let d = 1; d <= 4; d++) {

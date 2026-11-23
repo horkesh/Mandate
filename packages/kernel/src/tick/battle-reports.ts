@@ -23,7 +23,7 @@
  */
 import { strictCompare } from '../compare.ts';
 import { battleVerdict, dayShape } from '../combat/shape.ts';
-import type { BattleDay, BattleSide } from '../combat/records.ts';
+import { unresolvedContact, type BattleDay, type BattleSide } from '../combat/records.ts';
 import { holdingOf } from '../control-index/control-index.ts';
 import type { RegionControlTable } from '../control/vocabulary.ts';
 import type { FactionId, PersonId, PostId, RegionId } from '../ids.ts';
@@ -92,7 +92,7 @@ export function battleReports(ctx: TickContext, state: State, controlBefore: Reg
     }
     // The public result has its own source, even when a surrendered force can send no return (0084).
     // Editors receive it by the ordinary report route; a page never consults the record itself.
-    if (record.battleEndDay === day) for (const side of record.battleFactions) {
+    if (record.battleEndDay === day && !record.battleDays.slice(-1).some(unresolvedContact)) for (const side of record.battleFactions) {
       const last = record.battleDays.at(-1)?.bdaySides.find(s => s.bsideFaction === side);
       if (last === undefined) continue;
       const author = authorOf(state, last) ?? { person: world.faction(side).principal, post: null };
@@ -117,6 +117,17 @@ function dispatches(ctx: TickContext, state: State, battle: string, region: Regi
   bday.bdaySides.forEach((side, i) => {
     const author = authorOf(state, side);
     if (author === null) return;
+    if (unresolvedContact(bday)) {
+      sendReport(ctx, state, {
+        body: body(author.person, author.post, ctx.day, null, 'wire-dispatch', null, region, [{
+          ...claim('battle-result', region, 0, 'unresolved contact', 0), claimBattle: battle, claimBattleDays: [bday.bdayDay], claimCommander: side.bsideCommander,
+        }]),
+        truth: { truthTerms: [], truthTrimmed: [] },
+        to: ctx.world.faction(side.bsideFaction).principal, fromRegion: region, tag: `battle.unresolved.${side.bsideFaction}`,
+      });
+      fire(ctx, 'reports.battle_dispatch');
+      return;
+    }
     const enemy = bday.bdaySides[1 - i]!;
     const bias = perceptionBias(ctx.world.rules.traits, traitsOf(ctx.world, state, author.person));
     const seen = Math.trunc((enemy.bsidePresent * bias.permille) / 1000);

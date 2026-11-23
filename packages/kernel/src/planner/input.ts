@@ -1,3 +1,4 @@
+import { forceTotals } from '../forces/lots.ts';
 /**
  * A drafting request's input, built at the request (0062: `draft(world, derived, view, request)`).
  *
@@ -14,7 +15,7 @@
  *   planning); of a partner holder, only what he can know: his regard for him and the holder's public standing (the
  *   lead's ruling on review S2). **From the World**: the map and the pack's rules.
  */
-import { commandedBlocks, postIdsOf } from '../command/command.ts';
+import { allCommandedBlocks, postIdsOf } from '../command/command.ts';
 import { strictCompare } from '../compare.ts';
 import type { DerivedMap } from '../control-index/derived.ts';
 import { blockIds, factionOfBlock, isNaval } from '../forces/forces.ts';
@@ -57,7 +58,7 @@ export function sideForces(world: SeatsWorld, state: State, faction: FactionId):
       kind: fb.fbKind === 'detachment' ? 'detachment' : 'block',
       naval: isNaval(world.map, state, id),
       arm: fb.fbArm,
-      strength: fb.fbStrength ?? 0,
+      strength: forceTotals(fb, world.map.forceTotalsCache).fbStrength ?? 0,
       storesDays: Math.trunc((fb.fbStoresMilli ?? 0) / 1000),
       storesAssumed: fb.fbStoresAssumed,
       aboard: loc.locAboard,
@@ -92,7 +93,7 @@ export function sidePosts(world: SeatsWorld, state: State, faction: FactionId, d
         id,
         holder,
         parent: p.postParent,
-        region: commandedBlocks(state, id).length > 0 ? headquartersOf(world, state, id) : null,
+        region: allCommandedBlocks(world.map, state, id).length > 0 ? headquartersOf(world, state, id) : null,
         seat: p.postSeat,
         holderWillingness: willing + 0,
       };

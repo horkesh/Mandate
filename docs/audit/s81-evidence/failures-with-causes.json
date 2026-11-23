@@ -1,0 +1,272 @@
+{
+  "fullSuite": [
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts",
+      "test": "R86: the history months through the player’s console (1A criterion 2) receives at least one hour-stamped battle dispatch by 31 July",
+      "messages": [
+        "AssertionError: expected false to be true // Object.is equality\n    at C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts:265:132\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "The independently scripted human-console path still receives no hour-stamped battle paper by the horizon. Dedicated rule-seat history contact and S35 passing do not waive this separate July acceptance test.",
+      "disposition": "unmet; assertion byte-exact"
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+      "test": "the done check on union-1861 at war and the testbed passes every Phase 0 criterion but the budget, which is a stopwatch",
+      "messages": [
+        "AssertionError: liveness: expected [ …(14) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:47:114\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "The unchanged liveness gate rejects fourteen witnesses in the current history path; changing bands is prohibited in S81.",
+      "disposition": "unmet; assertion byte-exact"
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+      "test": "each criterion can fail (positive controls) liveness: a planted dead mechanic in a reference run fails the check",
+      "messages": [
+        "AssertionError: expected [ …(14) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:163:63\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "The unchanged liveness gate rejects fourteen witnesses in the current history path; changing bands is prohibited in S81.",
+      "disposition": "unmet; assertion byte-exact"
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts",
+      "test": "the reference runs union-1861, war by decision, 148 days: every mechanic fires within its band",
+      "messages": [
+        "AssertionError: expected [ { …(4) }, { …(4) }, { …(4) }, …(11) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts:81:48\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "The unchanged liveness gate rejects fourteen witnesses in the current history path; changing bands is prohibited in S81.",
+      "disposition": "unmet; assertion byte-exact"
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/men-regions.test.ts",
+      "test": "the standing review of lane 1.7: refusals, a blocked muster, a battle day, the term’s causes a block whose term ends while a battle it fought in stays open keeps its men until the battle closes",
+      "messages": [
+        "TypeError: Cannot read properties of undefined (reading 'length')\n    at C:/Pyrrhic/sprint-july/packages/kernel/src/combat/records.ts:195:107\n    at Array.some (<anonymous>)\n    at unresolvedContact (C:/Pyrrhic/sprint-july/packages/kernel/src/combat/records.ts:195:54)\n    at C:/Pyrrhic/sprint-july/packages/kernel/src/tick/recruitment.ts:171:59\n    at Array.some (<anonymous>)\n    at Module.inOpenBattle (C:/Pyrrhic/sprint-july/packages/kernel/src/tick/recruitment.ts:171:46)\n    at C:/Pyrrhic/sprint-july/packages/cli/test/men-regions.test.ts:247:19\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20"
+      ],
+      "cause": "Synthetic battle fixture omitted bsideUnknown, which unresolvedContact now reads. Add resolved-day shape; original keep-until-close assertions unchanged.",
+      "disposition": "corrected; correction-verification exit0"
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packs/union-1861/test/s74-cast-templates.test.ts",
+      "test": "retains the July identity and term holds in the sourced templates",
+      "messages": [
+        "AssertionError: expected [ …(101) ] to have a length of 95 but got 101\n    at Proxy.<anonymous> (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/index.CZzC1gGg.js:1861:20)\n    at Proxy.<anonymous> (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/index.CZzC1gGg.js:1656:14)\n    at Proxy.methodWrapper (file:///C:/Pyrrhic/sprint-july/node_modules/chai/index.js:1737:25)\n    at C:/Pyrrhic/sprint-july/packs/union-1861/test/s74-cast-templates.test.ts:25:76\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20"
+      ],
+      "cause": "The accepted seven S76 terms add six finite catalogue contracts and one explicit war contract; fixture counts are now 101 and 2.",
+      "disposition": "corrected; correction-verification exit0"
+    }
+  ],
+  "liveness": [
+    {
+      "mechanic": "combat.flank_broken",
+      "problem": "too_frequent",
+      "fires": 3,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S1 national: no combat.flank_broken event in this observed command/plan path; unchanged testbed fires it 1 times. S1 national [I]: the sourced command/concentration changes when and how the existing summer goal reaches field contact; the unchanged resolver determines duration and losses."
+      },
+      "cause": "[I] Actual quantified Manassas combat now breaks three flanks under the unchanged resolver."
+    },
+    {
+      "mechanic": "combat.general_hit",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "a commander is hit on a low draw on his own stream; no retained reference battle-day draws a commander hit, while the separate kernel test drives it"
+      },
+      "cause": "[I] The actual 28 July combat draw wounds Beauregard; his commander-hit stream and thresholds are unchanged."
+    },
+    {
+      "mechanic": "forces.stores_low",
+      "problem": "too_rare",
+      "fires": 13,
+      "band": {
+        "minFires": 28,
+        "maxFires": 112
+      },
+      "cause": "[I] Faster permitted movement and changed occupation alter supply, pockets and stores; no supply rule changed."
+    },
+    {
+      "mechanic": "forces.stragglers_returned",
+      "problem": "too_frequent",
+      "fires": 64,
+      "band": {
+        "minFires": 12,
+        "maxFires": 48,
+        "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting."
+      },
+      "cause": "[I] Quantified combat now produces stragglers and their ordinary returns."
+    },
+    {
+      "mechanic": "map.pocket_closed",
+      "problem": "too_frequent",
+      "fires": 8,
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "cause": "[I] Changed actual locations and occupation/control from real joins and combat alter traced supply components."
+    },
+    {
+      "mechanic": "map.pocket_relieved",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening."
+      },
+      "cause": "[I] A real control/supply component change relieves one pocket; no supply/control threshold changed."
+    },
+    {
+      "mechanic": "messages.special_messenger",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the one bypass uses the faster zero-day wire instead of a three-day messenger (R78)"
+      },
+      "cause": "[I] The junction bypass still rides Richmond to Harpers Ferry in three days; the accepted Winchester wire does not serve that headquarters."
+    },
+    {
+      "mechanic": "operations.works",
+      "problem": "too_frequent",
+      "fires": 7,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "cause": "[I] Changed planner inputs, actual routes and resistance change ordinary preparation work; no timer was fitted."
+    },
+    {
+      "mechanic": "orders.returned",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the day-87 Charleston transfer reaches a vacated post after reassignment. Its return is written day 92 and received day 97; S42 measured one return."
+      },
+      "cause": "[I] The old vacated-Charleston return does not occur in this received-only command path; no stale order is manufactured."
+    },
+    {
+      "mechanic": "planner.term.caution",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "few drafts in the reference runs, and none where dropping caution alone changes the pick"
+      },
+      "cause": "[I] Known local strength and changed real locations/supply alter the normal candidate comparison; coefficients unchanged."
+    },
+    {
+      "mechanic": "planner.term.force_ratio",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the reference runs’ drafts are decided by supply and goal fit, never by the ratio alone"
+      },
+      "cause": "[I] Known local strength and changed real locations/supply alter the normal candidate comparison; coefficients unchanged."
+    },
+    {
+      "mechanic": "planner.term.supply",
+      "problem": "too_frequent",
+      "fires": 2,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S1 appointments: no planner.term.supply event in this observed command/plan path; unchanged testbed fires it 2 times. S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick."
+      },
+      "cause": "[I] Known local strength and changed real locations/supply alter the normal candidate comparison; coefficients unchanged."
+    },
+    {
+      "mechanic": "planner.term.time",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick."
+      },
+      "cause": "[I] Corrected rail permission alters reachable routes and normal candidate time comparisons; coefficients unchanged."
+    },
+    {
+      "mechanic": "reports.commander_lost",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "Anderson evacuates under terms on day 39 and keeps serving; no commander is lost (R78)"
+      },
+      "cause": "[I] Beauregard is wounded on day145; the ordinary loss report is sent. This is not a zero-based unknown-defender capture."
+    }
+  ],
+  "checkpoints": {
+    "result": {
+      "problems": [
+        "men_confederate (1861-07-31, day 148): confederate has 86894 men, below 100000"
+      ],
+      "evidence": [
+        "seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "men_union (1861-07-31, day 148): union 95255 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "men_confederate (1861-07-31, day 148): confederate 86894 men of known strength, 22 blocks of unknown strength (band 100000..200000)",
+        "operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+        "operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+        "confederate at war since day 36",
+        "union at war since day 41"
+      ]
+    },
+    "cause": "[I] Known surviving Confederate men after actual raising, movement and combat total 86,894; the 100,000 floor and all sourced returns remain unchanged."
+  },
+  "pushback": {
+    "result": {
+      "problems": [
+        "trims: 0, below the record's 1",
+        "compliance with reservations: 16, above 9",
+        "slow walks: 18, above 9"
+      ],
+      "evidence": [
+        "relay objections: 3 (band 0..6)",
+        "relay holds: 2 (band 1..4)",
+        "filter holds: 0 (band 0..6)",
+        "trims: 0 (band 1..4)",
+        "compliance with reservations: 16 (band 1..9)",
+        "slow walks: 18 (band 2..9)",
+        "objections to a plan: 39 (band 10..42)"
+      ]
+    },
+    "cause": "[I] The same normal compliance, relay and filter mechanisms give trims0, reservations16 and slow walks18; no documentary carrier build or band amendment is authorised in S81."
+  },
+  "unknownStrength": {
+    "result": {
+      "problems": [
+        "union-1861: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)"
+      ],
+      "evidence": [
+        "union-1861: 4 battles, 5 battle-days read"
+      ]
+    },
+    "cause": "Preston still lacks a read own-unit strength. Garland490 makes the first defending side partly known, which fights normally under0110; it does not quantify Preston or clear the criterion."
+  },
+  "July": {
+    "cause": "[I] Real quantified contact and Johnston29,000 joined at Harpers Ferry do not produce the missing Johnston-Manassas junction or satisfy the separate human-console paper assertion. Charleston remains unfilled because S80 was uncommitted at the apply step."
+  }
+}

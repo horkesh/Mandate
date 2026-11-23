@@ -74,12 +74,15 @@ The games survey compared hexes, AGEoD-style regions, point-to-point graphs and 
 - **Edges.** Typed links between regions: road, rail, river, sea. Each has a length in days for a division and a capacity (World). Railways are edges, not region attributes, so "cut the line at the junction" is a real thing: an edge's **condition** (damaged, repaired) is State with one writer.
 - **Depots and sources.** Supply sources (states' rail hubs, ports) and depots sit on regions.
 - **Control** is a permille per faction per region, not a flag, so fronts are soft. Thresholds start from AGEoD's tested values: a faction needs at least 250‰ control of a region to trace supply or rail through it, and an army cannot retreat into a region where it holds under 50‰. Both are pack-tunable.
+- **Civil railway access.** On land with no control shares, a government affiliated with a side permits that side's rail movement. This access is derived beside neutral passage, adds no holder or control share, and does not override occupied or contested ground (S78). Supply and military wire ownership still read control.
 - **Fronts** are derived, never saved: a front is the set of contact edges between regions where opposing control meets. **Pockets** are derived too: a friendly component with no supply path to a source. Divisions belong to commanders, never to fronts (AWWV's costliest mistake was saving front sectors).
 - **Supply** is a path with capacity from a source, traced along friendly edges, readable by the player as "the line to Nashville is open / cut at X". Rail capacity is allocated in priority order, not by maximum flow.
 - **Stores on hand.** A force block carries its days of supply (State, written by `forces`, proposed by supply each day): they fall while the block is in a pocket and refill when a supply path or a sea delivery reaches it. A report that a garrison's stores have crossed a pack-set threshold is a decision point, like a report that a pocket has closed: the decision point belongs to the report, never to the truth (0054). The player never sees true stores, only the garrison's reports and the staff's range (0040).
 - **Provenance.** Every geographic source carries a provenance and licence entry in its pack. Third-party data is committed only when its licence allows it (0014).
 
 The staff map (0013) draws regions, fronts and arrows from the player's knowledge, never from truth.
+
+A field post's headquarters follow its strongest joined block; incoming blocks are excluded. If none has joined, the declared seat or assembly applies (0110). A battle against a wholly unknown side records unresolved contact with no losses, retreat, capture, commander hit or control gain. The unchanged unknown-strength criterion still rejects it; only sourced strengths can clear it.
 
 ## 5. Forces, command, goals and plans
 
@@ -156,6 +159,8 @@ The plan appears as arrows. The player can:
   - **Options can issue orders through people** (a goal, an appointment, a notice), not only abstract consequences (0040).
   - **The staff recommendation** is an advice report authored by the holder of a named post, carrying his bias (section 8).
   - A `knows` condition may state `forDays`: a pack-authored deliberation interval measured from a matching report's receipt, within the situation's existing receipt window. Omitting it requires receipt only. It reads neither the report's age in truth nor control or authorization flags. An option's `clockAtLeast` remains the time since the situation surfaced.
+  - A notice may observe `advancingOn: { post, region }` only in its event condition: an active offensive with living, still-assigned troops in its marching stage. A date, a private goal or an abandoned operation is insufficient. Its ordinary report route carries the news.
+  - A dated rule-seat offensive may require `requiresNotice`. It remains pending until the principal receives that side's named notice, then issues the ordinary goal once. Readiness reads received papers; suppression reads the principal's own sent-order copy, never the commander's private execution. The existing day-only rows retain their behavior.
 - **Congress.** Each chamber has a state in `politics` (sitting, adjourned, special session called), which changes which situation options are legal and creates an accountability check at the next session (0040).
 - **The war's opening** (0028, as amended by 0040). **The Confederate seat opens the war**: the one deliberate railroad, labelled in data and docs, with an ordered trigger list (a relief attempt at Sumter, a landing at Pickens, a last date) and a guaranteed fallback. The player's choices set the timing, which fort, and a **framing** term owned by `politics`: who the public believes began it, through the press.
 - **Patronage**, if modelled, arrives as weekly lists with defaults, never one card per office (0040).
@@ -249,12 +254,13 @@ These three changes reconcile the prose with the implemented writers and `owners
 | water-edge obstructions (`infraObstructions`); depot condition (`infraDepotCondition`) | `infrastructure` | combat, raids, operations, including clearing works no fort holds (0050, 0064; set at scenario start) |
 | a post's department, and scheduled department changes | `command` | the scenario start's scheduled changes, situations (0050) |
 | a region's civil government, which no-faction governments are closed, and each department's side | `command` | the scenario start, situations (0058, 0065) |
-| a person's ranks, one per kind (regular, volunteer, brevet) held at once, each with its date | `people` | appointments, promotion lists (0050, 0073) |
+| a person's ranks, one per kind (regular, volunteer, brevet) held at once, each with its date | `people` | appointments, promotion lists (0050, 0073), opted-in sourced commission intervals and actual service departures (S74) |
 | a person's status (serving, wounded, killed, captured) and its date | `people` | combat (0073) |
 | a person's service choice (`personService`: service side, bloc, resign or stay, day) | `people` | the people step (R49); `command` empties a resigned holder's post; rank and forces remain with their existing owners |
 | today's weather per weather zone | `weather` | its own seeded draw (0029, 0050; reserved) |
 | a force block's region or ship, and the leg it is on (`forceLocations`) | `movement` | operations, retreats, recruitment (a raised block placed at its muster region; a disbanded one removed), detachments (a garrison placed where its parent stands, a landing ashore) (0064, 0073, 0081) |
-| a raised block's enlistment (`forceEnlistments`): who raised it (nullable for an institutional act during a vacancy), call identity or source act, regiment count (null if unquantified), original muster credit, optional renewal source (`enlRenewedBy`), and current expiry (null for war service, or explicitly unknown via `enlTermUnknown`) | `forces` | recruitment (0073), including notice-only `state_forces` entries and later quantified returns, and notice-only voluntary term renewals that retain original service credit and men; included prior calls are credited through durable `enlCallId` |
+| each regiment lot (`ForceBlockState.fbLots`): identity, generated marker, arm, men, stragglers, raising post/person, call or source act, regiment-count provenance, original muster credit, fixed/war/unknown service term and renewal source | `forces` | recruitment, combat, attrition and detachment proposals; each lot belongs to one block, which supplies its location and commander (0108). Block strength/stragglers and expiry are derived through aggregate interfaces, never saved beside lots. Disposable indexed-world caches reuse unchanged lot arrays |
+| catalogue and generated identities already raised (`forceRaisedIdentities`), retained after discharge | `forces` | recruitment; prevents reusing a consumed catalogue identity without retaining a second strength or service ledger |
 | the current day | `tick` | the day tick (0052) |
 | messages in transit, including a call's identity, exact or unknown strength, arm and readiness status | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules (0052); dated public-office wire access is pack data, independent of military wire ownership |
 | knowledge: reports per seat, and the truth behind them; proposed durable institutional receipts keep latest appointment/vacancy evidence per post, service choice per person and official wire notice per subject | `knowledge` | message delivery, bounded institutional retention and ordinary age/supersession pruning (0052); no live establishment mirror |
@@ -289,6 +295,8 @@ These three changes reconcile the prose with the implemented writers and `owners
 | the received commander's account of each note (`ReportBody.reportNotes`, immutable `NoteAccount`); the transit copy travels with the ordinary report | `knowledge` | message delivery; the account contains stated reasons and the submitted plan's disposition, without actual compliance weights; `messages` owns the transit record |
 | operations and their lifecycles (`operationRecords`: one per goal and plan, axes copied from the plan, each stage with a typed reason) | `operations` | plan approval, movement and combat outcomes, support answers (0080) |
 | knowledge (reports per seat); S36 proposed: immutable submitted-plan enclosures (`ReportBody.reportPlan`) and bounded own sent-order copies (`SeatKnowledge.knownSentOrders`, last goal and last review reply per post); S41 refinement: a noted enclosure retains its historical admitted preference/scoring basis privately for edit preview, never as projected note weights | `knowledge` | message delivery, sender copies filed when an order first enters transit, pruning; `messages` owns each transit copy |
+| S65 proposed: `SeatKnowledge.knownSentAppointments`, at most one unanswered own letter per post (immutable `KnownSentAppointment`), and `KnownSentOrder.sentGoal`, the sender's goal terms | `knowledge` | filed when the sender's letter first enters transit; appointment copies retired only by a received answer, before report pruning; no private response backfill |
+| S65 proposed: optional `TransitMessage.msgOfficeAddress`, an issued requisition addressed to an office whose holder is unknown; `msgTo` is the return address until delivery resolves the holder | `messages` | `tick/orders` dispatches the envelope to the post's physical address; only destination delivery consults the actual holder; sender knowledge gains no name until a received reply |
 | messages in transit | `messages` | commands, reports, relay links forwarding an order, the kernel's latency rules |
 | economy stocks | `economy` | weekly step, verbs |
 | situations fired, live (open options, clocks) and decided | `situations` | cause evaluation, decisions, delegated seats' choices |
@@ -310,7 +318,7 @@ The day tick, each phase declaring what it reads and writes:
 10. The invariant barrier.
 11. Decision-point detection.
 
-In the code the phases run as: morning menus and attention refill (0), commands and plan choices (1), deliveries (2), immediate people changes (2b), plan answers and drafting (2c), recruitment's musters and disbandings (2d, 0078), operations, then movement (3, 0080), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), the self-emancipation term on its cadence (4a′, 0078), due operation-phase battle dispatches (4a″), situations and the delivery of their orders (4b), `command`'s proposals such as a government closing, then notice-only state-force entries and returns through the force, placement and assignment owners (4c), the weekly people step (4d), politics (4e: addresses and effects, drift and the ladder's pull, the press, then the chambers and the ledger, 0084), battle and cyclic reports and observer letters (5), pruning (6), the day (7), and the barrier (8; 0057, 0064). The morning menus still use the State the seats were asked from (0052). A post's headquarters is derived from where its strongest block stands, never stored.
+In the code the phases run as: morning menus and attention refill (0), commands and plan choices (1), deliveries (2), immediate people changes (2b), plan answers and drafting (2c), recruitment's musters and disbandings (2d, 0078), operations, then movement (3, 0080), battles and occupation (3b; the control contest until 0076), control and the derived map (4), stores on hand and stragglers rejoining (4a), the self-emancipation term on its cadence (4a′, 0078), due operation-phase battle dispatches (4a″), situations and the delivery of their orders (4b), `command`'s proposals such as a government closing, then notice-only state-force entries and returns through the force, placement and assignment owners (4c), the weekly people step (4d), politics (4e: addresses and effects, drift and the ladder's pull, the press, then the chambers and the ledger, 0084), battle and cyclic reports and observer letters (5), pruning (6), the day (7), and the barrier (8; 0057, 0064). The morning menus still use the State the seats were asked from (0052). Headquarters is derived, never stored: a field post follows its strongest block, including its declared formation subcommands; a pack-declared institutional office (`PostKindTerm.role: office`, S71's proposed extension of 0058) follows its government's current seat despite directly assigned forces and gives office reports. Received reports retain their original dates and claims.
 
 **M2 is retired (lane 1.13, 0088).** What survives of it is `permille`, `compare`, `rng`, `compliance`, `directive` and the people profile types; M2's `rules` went too, since nothing new read it. M2's nine audience cases now live in `people-verbs.test.ts`, and the done check reads them there. The console's player-facing root is the desk (`packages/cli/src/desk/`, under the boundary test), which renders only from the seat's view; its driver holds State. A turn's length is a pack rule (`turns.maxDays`, 0027). The plan as it stood before the retirement follows, as history:
 
@@ -513,3 +521,56 @@ The critical path is 1.1 → 1.3 → 1.4 → 1.12 → 1.14. The limit of two sim
 - The officer generator's name sources (the history note lists candidates).
 - Setup options beyond the three history modes.
 - Campaign length: the first-month walkthrough projects about 26 hours, just over the 15–25 hour target; the turn cap and decision-point settings are the dials, tuned in Phase 1 (0040).
+
+
+### Regiment organisation (0108, S74)
+
+The pack may declare a model planning size of at most four regiments [I], not a
+historical norm. A mustered batch partitions into provisional blocks by arm,
+place, entry day and service expiry. Unidentified aggregate returns stay opaque.
+Whole-lot transfers carry identity, men, stragglers, rations and service
+provenance; known ration quantities (present men and noncombatants times
+milli-days) stay exact, and an unrepresentable merged balance is refused; the sender selects by compliance, and movement owns each join and
+route. Sources already committed to a saved draft, operation or detachment are
+not replaced by an organisational act.
+
+Sourced organisation templates record preferred brigades, divisions and holders.
+Their dates are evidence, never act triggers. A commander's local act partitions
+only stationary regiments actually present under him; it returns typed refusals
+or applies the force, location and assignment owners together. Missing regiments
+remain absent in his return. No substitution is implicit. Division and brigade
+posts persist with `postOperation: null`; a later local act can close a division
+and reparent its surviving commands. The President's appointment menu and verb
+exclude these formation posts. An available, eligible named officer fills his
+post; a held name leaves a vacancy. Only a source with no named commander may
+use an explicitly generated officer, introduced through the resulting paper.
+
+`forces` writes regrouped `fbLots`, condition and native stores and per-lot
+expiry; `movement` writes repartitioned `forceLocations` and ordinary joins;
+`command` writes persistent `postStates` and `forceAssignments`; `people` writes
+opted-in, sourced commission intervals to `personRanks`. These use the existing
+writer rows and no additional mutable root. Unknown opening kind has an explicit
+pack vocabulary marker and remains declared unknown. `rankSchedule`, commission
+`until`, `requiresIntroduction` and organisation templates are immutable World
+evidence. Historical departures are separate from 0101 service choices; only
+Elzey's sourced in-window resignation is added by S74.
+
+Army planning can include its declared formations and excludes overlapping
+support forces. The principal learns their holders and parentage from received
+organisation papers. Headquarters follows the main body of the command's own
+formations, while S71's institutional office role follows the government seat.
+
+The regiment catalogue distinguishes finite model-day equivalents from an
+explicitly sourced `warTerm`. An empty finite-term list establishes no contract;
+it does not match a war call. A term explicitly marked unknown never matches a
+war contract. State and federal contracts, performed and credited musters,
+component dates and conflicting observations remain separate evidence. None is
+a raising trigger, a replacement for in-play service credit or an expiry reset.
+
+A whole counted aggregate can be transferred without inventing its regiment
+identities or dividing its return. An uncounted unidentified batch retains the
+withholding rule for a governor's regimental transfer. Source governments can
+join independently of the receiving army's government; the received command
+menu gates who can actually be asked. A sourced military-authority notice can
+confirm the government's side in the recipient's own papers, without exposing
+an unseen accession or changing an army's arrival.

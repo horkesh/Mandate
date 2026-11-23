@@ -141,9 +141,13 @@ export interface DoctrineView {
   readonly crossNeutral: boolean;
   readonly concentrateAt: PostId | null;
   readonly concentrateFrom?: readonly PostId[];
+  /** False leaves unallocated statewide levies with their current commands. */
+  readonly concentrateLevies?: boolean;
+  /** Independent sourced command inclusions, newest destination per sending post. */
+  readonly concentrationTransfers?: readonly { readonly from: PostId; readonly to: PostId }[];
   readonly appointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly from: PostId | null; readonly ready: boolean; readonly issued: boolean; readonly routes: readonly RouteOption[] }[];
   readonly calls: readonly { readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly day: number; readonly atPeace?: boolean; readonly issued?: boolean }[];
-  readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly day: number }[];
+  readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly day: number; readonly posture?: 'hold' | 'relieve' | 'take'; readonly ready?: boolean; readonly issued?: boolean }[];
   readonly inquireEveryDays: number;
   readonly appointKinds: { readonly land: readonly string[]; readonly naval: readonly string[] };
 }

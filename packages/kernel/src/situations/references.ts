@@ -15,6 +15,8 @@ export interface SituationRefs {
   readonly factions: ReadonlyMap<string, unknown>;
   /** Each post's side at the start; null for a neutral government's post. */
   readonly posts: ReadonlyMap<string, { readonly faction: string | null }>;
+  /** Commands declared to open later; event observations may name them without opening them. */
+  readonly declaredPosts?: ReadonlySet<string>;
   readonly persons: ReadonlyMap<string, unknown>;
   readonly regions: ReadonlyMap<string, unknown>;
 }
@@ -114,6 +116,11 @@ export function situationReferenceProblems(defs: readonly SituationDef[], refs: 
         if ('headquartersAt' in c) {
           if (!refs.posts.has(c.headquartersAt.post)) at(where, `${c.headquartersAt.post} is not a post`);
           if (!refs.regions.has(c.headquartersAt.region)) at(where, `${c.headquartersAt.region} is not a region`);
+        }
+        if ('advancingOn' in c) {
+          if (!refs.posts.has(c.advancingOn.post) && !refs.declaredPosts?.has(c.advancingOn.post)) at(where, `${c.advancingOn.post} is not a post`);
+          if (!refs.regions.has(c.advancingOn.region)) at(where, `${c.advancingOn.region} is not a region`);
+          if (where !== 'event' || d.kind !== 'notice') at(where, 'advance observation is event-only for a notice');
         }
       });
     }

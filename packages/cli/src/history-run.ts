@@ -1,3 +1,4 @@
+import { forceTotals } from '@mandate/kernel';
 /**
  * 1A's history run and what it is scored on (FOUNDATION sections 11 and 12; lane 1.14, Part A: the harness).
  *
@@ -111,8 +112,8 @@ export function observeRun(c: Checkpoints | null, startDate: string): { readonly
       for (const block of Object.values(state.forceBlockStates)) {
         const side = phase0.departmentSide(state, block.fbDepartment);
         if (side === null || men[side] === undefined) continue;
-        if (block.fbStrength === null) men[side]!.unknownBlocks += 1;
-        else men[side]!.known += block.fbStrength;
+        if (forceTotals(block, world.map.forceTotalsCache).fbStrength === null) men[side]!.unknownBlocks += 1;
+        else men[side]!.known += forceTotals(block, world.map.forceTotalsCache).fbStrength!;
       }
       const holders: Record<string, string | null> = {};
       for (const k of held) holders[k.region] = holder(k.region);

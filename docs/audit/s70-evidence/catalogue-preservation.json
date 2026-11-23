@@ -1,0 +1,8 @@
+{
+  "exact_observations": true,
+  "exact_paths": true,
+  "inputs_unchanged": true,
+  "identities": true,
+  "observations": true,
+  "no_strength_added": true
+}

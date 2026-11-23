@@ -1,3 +1,4 @@
+import { patchBlock } from './support/lot-fixture.ts';
 import { describe, expect, it } from 'vitest';
 import { toId, type MessageId } from '../src/ids.ts';
 import { deliverReport } from '../src/knowledge/knowledge.ts';
@@ -46,7 +47,7 @@ describe('S36 received menus', () => {
   it('A01 keeps byte-identical menus across unreported own strength changes; absent returns are unknown', () => {
     const state = { ...createState(world, { seed: 1 }), stateDay: 2 };
     const id = toId('forceBlock', 'a_army_1');
-    const changed = { ...state, forceBlockStates: { ...state.forceBlockStates, [id]: { ...state.forceBlockStates[id]!, fbStrength: 17 } } };
+    const changed = { ...state, forceBlockStates: { ...state.forceBlockStates, [id]: patchBlock({ ...state.forceBlockStates[id]! }, { fbStrength: 17 }) } };
     expect(JSON.stringify(menu(changed))).toBe(JSON.stringify(menu(state)));
     expect(menu(state).commandable.find(p => p.post === POST('a_army'))!.men).toBeNull();
     const reported = menu(received(state)).commandable.find(p => p.post === POST('a_army'))!;

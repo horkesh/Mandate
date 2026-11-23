@@ -134,16 +134,17 @@ it('prints the testbed editor’s received story and principal’s returns, inde
   expect(frontPage(rules,uninformed,paper,7,principal,1).battles).toEqual([]);
 });
 
-it('routes the public surrender report to a testbed editor even when the force sends no return',()=>{
+it.each([false, true])('routes the public surrender report even after an unresolved earlier day: %s', (earlierUnknown)=>{
   const {world,setup}=seatsWorld('testbed');
   const rules=world.map.world.rules.politics,paper=rules.press.papers[0]!,side=paper.faction;
   const other=world.factionIds.find(f=>f!==side)!;
   const region=paper.region,principal=world.faction(side).principal;
   const row=(f:typeof side,cut:'surrender'|null)=>({bsideFaction:f,bsideCommander:null,bsidePost:null,
-    bsideResult:'held',bsideCutOff:cut,bsideKw:0,bsideKilled:0,bsideWounded:0,bsideMissing:0,bsideCaptured:0,
+    bsideBlocks:[`${f}_fixture`],bsideUnknown:[],bsideResult:'held',bsideCutOff:cut,bsideKw:0,bsideKilled:0,bsideWounded:0,bsideMissing:0,bsideCaptured:0,
     bsideCapturedParts:[],bsidePresent:100,bsideFlankBroken:false,bsideRetreatTo:null,bsideHit:null,bsidePursue:null});
   const record={battleRegion:region,battleStartDay:1,battleEndDay:1,battleFactions:[side,other],battleCauses:[],
     battleDays:[{bdayDay:1,bdayType:'meeting',bdaySides:[row(side,'surrender'),row(other,null)]}]} as unknown as BattleRecord;
+  if (earlierUnknown) (record.battleDays as unknown[]).unshift({ ...record.battleDays[0], bdayDay: 0, bdaySides: [row(side, null), row(other, null)].map(s => ({ ...s, bsideUnknown: s.bsideBlocks })) });
   const start={...createState(world,setup),battleRecords:{'battle.public':record}};
   const ctx={...ctxFor(world,start,1),telemetry:undefined};
   battleReports(ctx,start,start.regionControl);

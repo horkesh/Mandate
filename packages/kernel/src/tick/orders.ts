@@ -10,10 +10,12 @@
  *   the two by his own compliance (lane 1.1's `resolveOrderConflict`, called at `arriveOrder`).
  * - A special messenger is a route with a price.
  */
-import { commandedBlocks, sideOfPerson } from '../command/command.ts';
+import { allCommandedBlocks, sideOfPerson } from '../command/command.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
 import { term } from '../knowledge/truth.ts';
-import { believedHolder, vacancyUnreported } from '../seats/believed.ts';
+import { senderFor } from '../seats/sender.ts';
+import { knowledgeOf } from '../knowledge/knowledge.ts';
+import { seatIdFor } from '../seats/seats.ts';
 import { receivedPlanPapers } from '../seats/received.ts';
 import type { ReportBody, ReportClaim } from '../knowledge/report.ts';
 import type { EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewCommand } from '../log/commands.ts';
@@ -27,7 +29,7 @@ import type { State } from '../root-state.ts';
 import { answerOrder, goalTerms, relayAction, resolveOrderConflict } from '../reading/orders.ts';
 import { callTerms } from '../recruitment/rules.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
-import { headquartersOf, isFieldPost, postFaction, relayChain } from '../seats/posts.ts';
+import { headquartersOf, postFaction } from '../seats/posts.ts';
 import { fire, hop, oversightOf, sendReport, whereIs, type RejectionReason, type TickContext } from './context.ts';
 import { arriveSupport } from './support.ts';
 
@@ -79,16 +81,16 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   const { world } = ctx;
   const assignment = state.seatAssignments[seat];
   if (assignment === undefined) return 'unknown_seat';
-  const issuer = world.person(assignment.seatPerson);
-  const side = sideOfPerson(world.map, state, issuer.id);
-  if (side === null || !world.factionIds.includes(side) || world.faction(side).principal !== issuer.id) return 'not_a_principal';
-  if (state.postStates[cmd.to] === undefined) return 'unknown_post';
-  const target = state.postStates[cmd.to]!;
+  const sender = senderFor(world, state, seat);
+  if (sender === null) return 'not_a_principal';
+  const issuer = { id: sender.principal };
+  if (!sender.posts.has(cmd.to)) {
+    const declared = sender.declaredSide(cmd.to);
+    return declared != null && declared !== sender.faction ? 'not_field_post' : 'unknown_post';
+  }
   const paper = cmd.cmd === 'review' ? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === cmd.to) : undefined;
-  if ((!isFieldPost(state, cmd.to) && !vacancyUnreported(state, issuer.id, cmd.to)) || postFaction(world, state, cmd.to) !== side) return 'not_field_post';
-  // Lane 1.12 (0052): refused at once only if he knows the post vacant. One he still believes held (the report of its
-  // commander's loss not yet in his hands) is accepted, and the dispatch comes back undelivered when it arrives.
-  if (target.postHolder === null && believedHolder(state, issuer.id, cmd.to) === null && paper === undefined) return 'vacant_post';
+  if (!sender.field(cmd.to) || sender.side(cmd.to) !== sender.faction) return 'not_field_post';
+  if (sender.holder(cmd.to) === null && paper === undefined) return 'vacant_post';
   // Only the routes the principal's menu offers (review N1): an order "in person" would be a visit, a verb of its own.
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
 
@@ -97,18 +99,19 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
     const goal = goalOf(cmd.goal);
     if (goalProblems(goal).length > 0) return 'bad_goal';
     if (goal.goalObjective !== null && !world.regionIds.includes(goal.goalObjective)) return 'bad_goal';
-    const commands = commandedBlocks(state, cmd.to);
+    const commands = allCommandedBlocks(ctx.world.map, state, cmd.to);
     if (!goal.goalCommitted.every((b) => commands.includes(b))) return 'bad_goal';
     body = { orderKind: 'goal', orderGoal: goal, orderEdit: null, orderCall: null };
   } else {
-    const plan = planOf(state, cmd.to);
-    if ((plan === undefined || plan.planIssuer !== issuer.id) && paper === undefined) return 'no_plan';
+    const sent = knowledgeOf(state,seatIdFor(issuer.id)).knownSentOrders ?? [];
+    const goal = sent.find(o => o.sentPost === cmd.to && o.sentKind === 'goal');
+    const review = sent.find(o => o.sentPost === cmd.to && (o.sentKind === 'approve' || o.sentKind === 'edit') && o.sentDay >= (goal?.sentDay ?? 0));
+    const approved = goal?.sentGoal?.goalApproveAsDrafted === true || review !== undefined;
     if (cmd.cmd === 'go') {
-      if (plan?.planStatus !== 'ready') return 'no_plan';
+      if (goal?.sentGoal?.goalAwaitWord !== true || !approved) return 'no_plan';
       body = { orderKind: 'go', orderGoal: null, orderEdit: null, orderCall: null };
     } else if (cmd.action === 'edit') {
-      if (paper === undefined && plan?.planStatus !== 'approved' && plan?.planStatus !== 'ready') return 'no_plan';
-      if (paper === undefined && plan?.planApproved === null && plan?.planChosen === null) return 'no_plan';
+      if (paper === undefined && !approved) return 'no_plan';
       const edit = editOf(cmd.edit!);
       if (editIssues(edit).length > 0) return 'bad_review';
       if ([edit.editRegion, ...edit.editVia].some((r) => r !== null && !world.regionIds.includes(r))) return 'bad_review';
@@ -137,18 +140,20 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
  * Send a validated order down the chain (or around it): the hops, the first leg, a special messenger's price and each
  * bypassed relay's grievance. Shared by goals, reviews, the word to go and calls (lane 1.7).
  */
-export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issuerId: PersonId, to: PostId, route: OrderCommand['route'], bypass: boolean, body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes'>): MessageId {
+export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issuerId: PersonId, to: PostId, route: OrderCommand['route'], bypass: boolean, body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes'>, requisition?: PostId): MessageId {
   const { world } = ctx;
   const cmd = { to, route, bypass };
   const issuer = { id: issuerId };
   // The whole chain of posts between the principal's own post and the target relays his order.
-  const chain = relayChain(state, issuer.id, cmd.to);
+  const sender = senderFor(world,state,seat,requisition)!;
+  const officeAddress = requisition !== undefined && sender.holder(cmd.to) === null;
+  const chain = officeAddress ? [cmd.to] : sender.chain(cmd.to);
   // Vacant relay posts cannot relay: the order skips them.
-  const relays = chain.slice(0, -1).filter((p) => state.postStates[p]!.postHolder !== null);
+  const relays = chain.slice(0, -1).filter((p) => sender.holder(p) !== null);
   // The addressee is the man the issuer believes holds the post (lane 1.12): its holder, or the commander a battle took
   // whose loss has not been reported to him.
   const hops: Hop[] = [...(cmd.bypass ? [] : relays), cmd.to].map((p, i, all) => ({
-    hopPerson: i === all.length - 1 ? (believedHolder(state, issuer.id, p) ?? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === p)?.knownBody.reportAuthor)! : state.postStates[p]!.postHolder!,
+    hopPerson: i === all.length - 1 ? (officeAddress ? issuer.id : sender.holder(p) ?? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === p)?.knownBody.reportAuthor)! : sender.holder(p)!,
     hopPost: p,
     hopRole: i === all.length - 1 ? 'addressee' : 'relay',
   }));
@@ -159,6 +164,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   ctx.outbox.push({
     id,
     msgOrigin: id,
+    ...(officeAddress ? { msgOfficeAddress: true as const } : {}),
     msgFrom: issuer.id,
     msgTo: first.hopPerson,
     msgToPost: first.hopPost,
@@ -181,7 +187,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   if (cmd.bypass && relays.length > 0) {
     for (const p of relays) {
       fire(ctx, 'orders.bypassed');
-      ctx.proposals.push({ proposal: 'grievance', person: state.postStates[p]!.postHolder!, cause: 'bypassed', order: id });
+      ctx.proposals.push({ proposal: 'grievance', person: sender.holder(p)!, cause: 'bypassed', order: id });
     }
   }
   return id;
@@ -192,8 +198,29 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
  * a battle took, lane 1.12), the post's headquarters, where the dispatch goes looking for him.
  */
 function hopRegion(ctx: TickContext, state: State, h: Hop): RegionId {
-  if (h.hopPost !== null && state.postStates[h.hopPost]?.postHolder !== h.hopPerson) return headquartersOf(ctx.world, state, h.hopPost);
+  if (h.hopPost !== null && state.postStates[h.hopPost]?.postHolder !== h.hopPerson) return addressRegion(ctx,state,h.hopPost,h.hopPerson);
   return whereIs(ctx, state, h.hopPerson);
+}
+
+/** Kernel transport still follows physical geography; a dissolved post is sought at its declared address. */
+export function addressRegion(ctx: TickContext, state: State, post: PostId, fallback: PersonId): RegionId {
+  if (state.postStates[post] !== undefined) return headquartersOf(ctx.world,state,post);
+  const declared = ctx.world.start.posts.find(p => p.id === post) ?? ctx.world.start.temporaryPosts.find(p => p.id === post);
+  return declared?.region ?? ctx.world.startHeadquarters(post) ?? whereIs(ctx,state,fallback);
+}
+
+/** Destination truth, consulted only when the letter gets there; neutral governors may receive calls. */
+export function destinationFailure(ctx: TickContext, state: State, post: PostId, person: PersonId, issuer: PersonId, neutral = false): string | null {
+  const target = state.postStates[post];
+  if (target === undefined || target.postHolder === null) return 'vacant_post';
+  if (target.postHolder !== person) return 'holder_changed';
+  if ((state.personStatus[person]?.statusKind ?? 'serving') !== 'serving') return 'not_serving';
+  const side = postFaction(ctx.world,state,post);
+  const authority = sideOfPerson(ctx.world.map,state,issuer);
+  if (side !== authority && !(neutral && side === null)) return 'other_side';
+  const service = sideOfPerson(ctx.world.map,state,person);
+  if (service !== authority && !(neutral && side === null && service === null)) return 'other_side';
+  return null;
 }
 
 /**
@@ -202,10 +229,10 @@ function hopRegion(ctx: TickContext, state: State, h: Hop): RegionId {
  * way it went, as a returned dispatch naming the post and why (`vacant_post` or `holder_changed`). The player reads it
  * in his reports, like any answer to an order.
  */
-export function returnDispatch(ctx: TickContext, state: State, msg: TransitMessage): State {
+export function returnDispatch(ctx: TickContext, state: State, msg: TransitMessage, failure?: string): State {
   const issuer = msg.msgOrder?.orderIssuer ?? msg.msgVerb!.verbIssuer;
   const post = msg.msgVerb?.verbPost ?? msg.msgToPost!;
-  const why = state.postStates[post]?.postHolder === null ? 'vacant_post' : 'holder_changed';
+  const why = failure ?? (state.postStates[post]?.postHolder == null ? 'vacant_post' : 'holder_changed');
   sendReport(ctx, state, {
     body: answerBody(issuer, null, ctx.day, {
       reportType: 'wire-dispatch',
@@ -215,11 +242,11 @@ export function returnDispatch(ctx: TickContext, state: State, msg: TransitMessa
       answers: msg.msgOrigin,
       about: post,
     }),
-    truth: { truthTerms: [term('observed', 0, { person: msg.msgTo, post, rule: why })], truthTrimmed: [] },
+    truth: { truthTerms: [term('observed', 0, { ...(msg.msgOfficeAddress === true ? {} : { person: msg.msgTo }), post, rule: why })], truthTrimmed: [] },
     to: issuer,
     tag: `returned.${post}`,
     route: msg.msgRoute,
-    fromRegion: headquartersOf(ctx.world, state, post),
+    fromRegion: addressRegion(ctx, state, post, issuer),
   });
   fire(ctx, 'orders.returned');
   return state;
@@ -355,7 +382,8 @@ function conflictOf(ctx: TickContext, state: State, msg: TransitMessage, plan: P
  * An order reaches its addressee.
  * - A goal: he answers it through his compliance with the pack's terms for its kind, and `proxy` records his response
  *   (`plans` keeps its key). Conflicting orders are resolved by his compliance (`conflictOf`); the goal he works to
- *   waits for the day's drafting, and he reports which order he obeyed.
+ *   waits for the day's drafting, and he reports which order he obeyed. An unchanged goal from the same issuer
+ *   reaffirms the held goal: its plan and operation keep their original identity and clocks (S51's lead ruling).
  * - An approval, a send-back or the word to go: applied if his plan still waits for it, else reported as stale.
  * - An edit: it waits for the day's plans phase, which re-expands it on the morning's map and has him answer it.
  * - A support request (lane 1.4): `tick/support.ts`.
@@ -368,15 +396,16 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
   const plan = planOf(state, post);
   if (order.orderKind === 'goal') {
     const goal = order.orderGoal!;
+    const reaffirmed = plan !== undefined && plan.planIssuer === order.orderIssuer && sameGoal(plan.planGoal, goal);
     const outcome = conflictOf(ctx, state, msg, plan);
     const answer = answerOrder(ctx.world, state, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, goalKindOf(goal)), { oversight: oversightOf(ctx, state, msg.msgTo, order.orderIssuer).value });
     let next = recordResponse(state, responseOf(answer, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day, kind: order.orderKind }));
-    if (outcome.obeyed === 'new') {
+    if (outcome.obeyed === 'new' && !reaffirmed) {
       const set = { id: msg.msgOrigin, issuer: order.orderIssuer, goal, viaChain: !order.orderBypass, issuedDay: order.orderIssuedDay, response: responseKey(msg.msgOrigin, msg.msgTo) };
       next = setGoal(next, post, set, ctx.day);
     }
     fire(ctx, 'orders.obeyed', outcome.obeyed === 'new' ? 1 : 0);
-    if (outcome.obeyed === 'new') fire(ctx, 'plans.goal_set');
+    if (outcome.obeyed === 'new' && !reaffirmed) fire(ctx, 'plans.goal_set');
     if (outcome.conflict) {
       fire(ctx, 'orders.conflict');
       ctx.events.push({ event: 'conflict', person: msg.msgTo, post, message: msg.msgOrigin, terms: [] });

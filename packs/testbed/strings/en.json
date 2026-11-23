@@ -404,6 +404,7 @@
   "console.refusal.bad_counters": "Those audience terms are invalid or have no plan to address.",
   "console.refusal.no_attention": "There is not enough attention left for this act.",
   "console.refusal.person_holds_post": "This person already holds another post.",
+  "console.refusal.appointment_pending": "Your earlier appointment letter still awaits an answer.",
   "console.refusal.post_held": "This post already has a holder.",
   "console.refusal.too_soon": "This act cannot be repeated yet.",
   "console.refusal.unknown_bloc": "That political group is not known.",

@@ -1,3 +1,4 @@
+import { forceTotals, type ForceTotalsCache } from '../forces/lots.ts';
 /**
  * The battle model in the day tick (lane 1.3; FOUNDATION section 12's row 1.3; the combat note's P1–P9). It replaces
  * Phase 0's simple contest (0064). Pure: it reads State and returns proposals for each owner, and its own battle-record
@@ -127,8 +128,8 @@ export function presenceByRegion(ground: Pick<MarchGround, 'map'>, state: State)
     byFaction.set(faction, p);
     p.blocks.push(id);
     if (loc.locSinceDay > 0) p.pressing.push(id);
-    if (b.fbStrength === null) p.unknown.push(id);
-    else p.men += b.fbStrength;
+    if (forceTotals(b, ground.map.forceTotalsCache).fbStrength === null) p.unknown.push(id);
+    else p.men += forceTotals(b, ground.map.forceTotalsCache).fbStrength;
   }
   const out = new Map<RegionId, Presence[]>();
   for (const region of [...raw.keys()].sort(strictCompare)) {
@@ -160,12 +161,12 @@ export function commanderView(world: PrincipalLookup, state: State, person: Pers
 }
 
 /** The post whose blocks here are strongest (known men, ties by post id), and its holder if he is serving. */
-export function sideCommand(state: State, blocks: readonly ForceBlockId[]): { readonly post: PostId | null; readonly person: PersonId | null } {
+export function sideCommand(state: State, blocks: readonly ForceBlockId[], cache?: ForceTotalsCache): { readonly post: PostId | null; readonly person: PersonId | null } {
   const men = new Map<PostId, number>();
   for (const b of blocks) {
     const post = state.forceAssignments[b] ?? null;
     if (post === null) continue;
-    men.set(post, (men.get(post) ?? 0) + (state.forceBlockStates[b]!.fbStrength ?? 0));
+    men.set(post, (men.get(post) ?? 0) + (forceTotals(state.forceBlockStates[b]!, cache).fbStrength ?? 0));
   }
   const best = [...men].sort(([pa, ma], [pb, mb]) => mb - ma || strictCompare(pa, pb))[0];
   if (best === undefined) return { post: null, person: null };
@@ -261,7 +262,7 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
     }
     const last = record === null ? null : lastDay(record);
     const breaking = sides.map((s) => last !== null && last.bdayDay === day - 1 && last.bdaySides.find((x) => x.bsideFaction === s.faction)?.bsideCutOff === 'break_out');
-    const command = sides.map((s) => sideCommand(state, s.blocks));
+    const command = sides.map((s) => sideCommand(state, s.blocks, ground.map.forceTotalsCache));
     const views = command.map((c) => commanderView(world, state, c.person));
     // His seat's orders for today (lane 1.12): a vacant post's side, or a post with no orders, is left to judgement.
     const given = command.map((c) => (c.post === null || c.person === null ? ALL_JUDGE : (orders.get(c.post) ?? ALL_JUDGE)));
@@ -310,7 +311,7 @@ export function combatDay(world: PrincipalLookup, ground: MarchGround, state: St
         commitTerms: commits[i]!.terms,
         blocks: s.blocks.map((b): BlockInput => {
           const f = state.forceBlockStates[b]!;
-          return { id: b, men: f.fbStrength, stragglers: f.fbStragglers, morale: f.fbMorale, experience: f.fbExperience, equipment: f.fbEquipment };
+          return { id: b, men: forceTotals(f, ground.map.forceTotalsCache).fbStrength, stragglers: forceTotals(f, ground.map.forceTotalsCache).fbStragglers, morale: f.fbMorale, experience: f.fbExperience, equipment: f.fbEquipment };
         }),
         retreatTo: retreatTarget(ground, state, region, s.faction)?.to ?? null,
         breakingOut: breaking[i]!,

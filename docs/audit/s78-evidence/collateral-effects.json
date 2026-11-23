@@ -1,0 +1,52 @@
+{
+  "cause": "[I] recruitmentPhase excludes enlistmentsEnding blocks in an open battle (packages/kernel/src/tick/recruitment.ts, inOpenBattle filter). S78 keeps Manassas contact unresolved and open through the horizon, so Maine Second?s model 1,000-man lot remains past its unchanged day146 expiry. S77 removed it day146. No term, muster, lot strength or call was changed.",
+  "evidence": {
+    "s77": {
+      "finalLot": [],
+      "finalMcDowellKnownMen": 62000,
+      "blockLotDepartures": [
+        {
+          "day": 106,
+          "block": "raised.st_gov_maine.d56"
+        },
+        {
+          "day": 146,
+          "block": "organised.s74_mcdowell_division_1_brigade_1.1"
+        }
+      ]
+    },
+    "s78": {
+      "finalLot": [
+        {
+          "block": "organised.s74_mcdowell_division_1_brigade_1.1",
+          "lot": {
+            "lotId": "me_2_infantry",
+            "lotRegiment": "me_2_infantry",
+            "lotGenerated": false,
+            "lotArm": "infantry",
+            "lotMen": 1000,
+            "lotStragglers": 0,
+            "lotService": {
+              "enlPost": "st_gov_maine",
+              "enlRaisedBy": "washburn_israel",
+              "enlCall": "m.41.lincoln_abraham.washburn_israel.call.st_gov_maine",
+              "enlRegiments": 1,
+              "enlMusterDay": 56,
+              "enlEndsDay": 146
+            }
+          },
+          "assignment": "s74_mcdowell_division_1_brigade_1"
+        }
+      ],
+      "finalMcDowellKnownMen": 63000,
+      "blockLotDepartures": [
+        {
+          "day": 106,
+          "block": "raised.st_gov_maine.d56"
+        }
+      ]
+    }
+  },
+  "leadDecision": "Clarify in a later bounded ruling whether the existing open-battle expiry protection should also cover unresolved contact. S78 retains it and does not invent a contract extension.",
+  "evidenceNote": "Day106 is ordinary regrouping into another container in both runs; only the day146 S77 departure is global discharge."
+}

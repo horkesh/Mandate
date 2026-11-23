@@ -1,0 +1,13 @@
+{
+  "fullRun": "full-suite.exit.json",
+  "completeRuns": 1,
+  "noFullRetry": true,
+  "postSuiteCorrections": [
+    "Restore source metadata UTF8; numerical catalogue fields unchanged (encoding-correction.json)",
+    "Correct synthetic resolved-battle fixture and accepted contract counts; focused65 tests pass",
+    "Add one pipeline regression of existing Garland aggregate return; no production logic changed",
+    "Restore original apostrophe in invalid institutional-succession refusal message; focused writer/post-succession checks and reference-text-reuse prove scope"
+  ],
+  "remainingRequiredFailures": 4,
+  "unaffectedReferenceReuse": "reference-text-reuse.json"
+}

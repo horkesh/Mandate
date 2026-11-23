@@ -1,0 +1,292 @@
+Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  packages/cli/test/console-session.test.ts > R86: the history months through the player’s console (1A criterion 2) > receives at least one hour-stamped battle dispatch by 31 July
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ packages/cli/test/console-session.test.ts:265:132
+    263|   // Existence and chronology are ordinary independent assertions.
+    264|   it('receives at least one hour-stamped battle dispatch by 31 July', …
+    265|     expect(throughJuly(played.player).some(line => /wire-dispatch .*wr…
+       |                                                                                                                                    ^
+    266|   });
+    267|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  packages/cli/test/done-check.test.ts > the done check on union-1861 at war and the testbed > passes every Phase 0 criterion but the budget, which is a stopwatch
+AssertionError: liveness: expected [ …(18) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "union-1861, war by decision, 148 days: combat.battle_closed is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.battle_opened is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.captured is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.killed_wounded is dead (0 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: combat.missing is dead (0 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: combat.routed is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: control.threshold_crossed is too_rare (13 fires, band 19..78)",
++   "union-1861, war by decision, 148 days: forces.stragglers_returned is dead (0 fires, band 12..48)",
++   "union-1861, war by decision, 148 days: map.recomputed is too_rare (25 fires, band 26..104)",
++   "union-1861, war by decision, 148 days: movement.arrived is too_rare (182 fires, band 319..1276)",
++   "union-1861, war by decision, 148 days: movement.joined is too_rare (28 fires, band 32..128)",
++   "union-1861, war by decision, 148 days: movement.leg_started is too_rare (147 fires, band 155..620)",
++   "union-1861, war by decision, 148 days: operations.stage is too_rare (3 fires, band 4..18)",
++   "union-1861, war by decision, 148 days: operations.works is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: orders.bypassed is too_rare (1 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: orders.relay_held is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: orders.returned is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: reports.battle_dispatch is too_rare (2 fires, band 9..36)",
++ ]
+
+ ❯ packages/cli/test/done-check.test.ts:47:114
+     45| describe('the done check on union-1861 at war and the testbed', () => {
+     46|   it('passes every Phase 0 criterion but the budget, which is a stopwa…
+     47|     for (const c of result.criteria) if (c.milestone === 'phase0' && c…
+       |                                                                                                                  ^
+     48|     expect(result.criteria.filter((c) => c.milestone === 'phase0').map…
+     49|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  packages/cli/test/done-check.test.ts > each criterion can fail (positive controls) > liveness: a planted dead mechanic in a reference run fails the check
+AssertionError: expected [ …(18) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   "union-1861, war by decision, 148 days: combat.battle_closed is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.battle_opened is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.captured is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: combat.killed_wounded is dead (0 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: combat.missing is dead (0 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: combat.routed is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: control.threshold_crossed is too_rare (13 fires, band 19..78)",
++   "union-1861, war by decision, 148 days: forces.stragglers_returned is dead (0 fires, band 12..48)",
++   "union-1861, war by decision, 148 days: map.recomputed is too_rare (25 fires, band 26..104)",
++   "union-1861, war by decision, 148 days: movement.arrived is too_rare (182 fires, band 319..1276)",
++   "union-1861, war by decision, 148 days: movement.joined is too_rare (28 fires, band 32..128)",
++   "union-1861, war by decision, 148 days: movement.leg_started is too_rare (147 fires, band 155..620)",
++   "union-1861, war by decision, 148 days: operations.stage is too_rare (3 fires, band 4..18)",
++   "union-1861, war by decision, 148 days: operations.works is dead (0 fires, band 1..5)",
++   "union-1861, war by decision, 148 days: orders.bypassed is too_rare (1 fires, band 2..8)",
++   "union-1861, war by decision, 148 days: orders.relay_held is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: orders.returned is dead (0 fires, band 1..4)",
++   "union-1861, war by decision, 148 days: reports.battle_dispatch is too_rare (2 fires, band 9..36)",
++ ]
+
+ ❯ packages/cli/test/done-check.test.ts:163:63
+    161|     const run = union();
+    162|     const reference = REFERENCE_RUNS.find((x) => x.name === 'union-186…
+    163|     expect(livenessProblems(reference, run.checked.liveness)).toEqual(…
+       |                                                               ^
+    164|     // Lane 1.12: a mechanic the Union doctrine drives (its run has no…
+    165|     const planted = run.checked.liveness.map((row) => (row.mechanic ==…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  packages/cli/test/liveness-gate.test.ts > the reference runs > union-1861, war by decision, 148 days: every mechanic fires within its band
+AssertionError: expected [ { …(4) }, { …(4) }, { …(4) }, …(15) ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   {
++     "band": {
++       "maxFires": 5,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "combat.battle_closed",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 5,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "combat.battle_opened",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 5,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "combat.captured",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 8,
++       "minFires": 2,
++     },
++     "fires": 0,
++     "mechanic": "combat.killed_wounded",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 8,
++       "minFires": 2,
++     },
++     "fires": 0,
++     "mechanic": "combat.missing",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 4,
++       "minFires": 1,
++       "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured one rout.",
++     },
++     "fires": 0,
++     "mechanic": "combat.routed",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 78,
++       "minFires": 19,
++     },
++     "fires": 13,
++     "mechanic": "control.threshold_crossed",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 48,
++       "minFires": 12,
++       "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting.",
++     },
++     "fires": 0,
++     "mechanic": "forces.stragglers_returned",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 104,
++       "minFires": 26,
++     },
++     "fires": 25,
++     "mechanic": "map.recomputed",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 1276,
++       "minFires": 319,
++     },
++     "fires": 182,
++     "mechanic": "movement.arrived",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 128,
++       "minFires": 32,
++     },
++     "fires": 28,
++     "mechanic": "movement.joined",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 620,
++       "minFires": 155,
++     },
++     "fires": 147,
++     "mechanic": "movement.leg_started",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 18,
++       "minFires": 4,
++     },
++     "fires": 3,
++     "mechanic": "operations.stage",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 5,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "operations.works",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 8,
++       "minFires": 2,
++     },
++     "fires": 1,
++     "mechanic": "orders.bypassed",
++     "problem": "too_rare",
++   },
++   {
++     "band": {
++       "maxFires": 4,
++       "minFires": 1,
++     },
++     "fires": 0,
++     "mechanic": "orders.relay_held",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 4,
++       "minFires": 1,
++       "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the day-87 Charleston transfer reaches a vacated post after reassignment. Its return is written day 92 and received day 97; S42 measured one return.",
++     },
++     "fires": 0,
++     "mechanic": "orders.returned",
++     "problem": "dead",
++   },
++   {
++     "band": {
++       "maxFires": 36,
++       "minFires": 9,
++     },
++     "fires": 2,
++     "mechanic": "reports.battle_dispatch",
++     "problem": "too_rare",
++   },
++ ]
+
+ ❯ packages/cli/test/liveness-gate.test.ts:81:48
+     79|   for (const run of REFERENCE_RUNS) {
+     80|     it(`${run.name}: every mechanic fires within its band`, () => {
+     81|       expect(gateFailures(run, liveness(run))).toEqual([]);
+       |                                                ^
+     82|     });
+     83|   }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  3 failed | 211 passed (214)
+      Tests  4 failed | 1993 passed | 3 skipped (2000)
+   Start at  23:07:29
+   Duration  537.73s (tests 78%, import 21%, transform 1%)
+
+    Isolate  214 workers spawned · ~125ms startup each (spawn + environment, per file)
+             at least ~26.66s faster with isolate: false — reuses workers across files instead of one per file
+
+JSON report written to C:/Pyrrhic/sprint-july/runs/s68/full-suite.json

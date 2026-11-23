@@ -59,4 +59,19 @@ describe('the validator refuses a notice that names a man without declaring him'
     expect(issues(withText('Secretary Pell writes that the harbour town burned.', { namedOnly: 'a test: the name alone' }))).toEqual([]);
     expect(issues(withText('The garrison at Fort Pell reports the harbour town burned.'))).toEqual([]);
   });
+  it('S82 resolves a shared bare surname to its declared speaker, but still checks an explicitly named second person', () => {
+    const collision = (text: string, declared = true): Edits => {
+      const edits = withText(text, declared ? { speakers: [{ post: 'n_war_office', person: 'n_secretary' }] } : {});
+      const strings = JSON.parse(edits['strings/en.json']!);
+      strings['person.other_pell.name'] = 'Benedict Horace Pell';
+      return { ...edits, 'strings/en.json': JSON.stringify(strings), ...editJson('data/world.json', w => {
+        w.people.push({ ...w.people.find((p: { id: string }) => p.id === 'n_secretary'), id: 'other_pell', name: 'person.other_pell.name' });
+      }) };
+    };
+    expect(issues(collision('Secretary Pell writes that the harbour town burned.'))).toEqual([]);
+    expect(issues(collision('Benedict Pell writes that the harbour town burned.')).some(i => i.message.includes('other_pell'))).toBe(true);
+    expect(issues(collision('Colonel B. H. Pell writes that the harbour town burned.')).some(i => i.message.includes('other_pell'))).toBe(true);
+    expect(issues(collision('Benedict sent the courier. Secretary Pell writes that the harbour town burned.'))).toEqual([]);
+    expect(issues(collision('Secretary Pell writes that the harbour town burned.', false)).length).toBeGreaterThan(0);
+  });
 });

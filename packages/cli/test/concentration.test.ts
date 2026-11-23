@@ -1,3 +1,6 @@
+import { patchBlock } from '../../kernel/test/support/lot-fixture.ts';
+import { enlistmentsOf } from '../../kernel/src/forces/enlistment.ts';
+import { forceTotals } from '../../kernel/src/forces/lots.ts';
 import { ids, phase0 } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { describe, expect, it } from 'vitest';
@@ -31,7 +34,7 @@ describe('a transfer concentrates on union-1861', () => {
     // Follow the original militia levy. The sourced 3 May repeat has had fewer days to march by day 75.
     const militia = Object.values(run.state.orderResponses).find(r => r.respKind === 'call' && r.respRole === 'addressee' && r.respPost === 'st_gov_new_york' && r.respCallId === undefined)!;
     expect(militia).toBeDefined();
-    const ny = Object.keys(run.state.forceLocations).filter((b) => run.state.forceEnlistments[b as ids.ForceBlockId]?.enlCall === militia.respOrder);
+    const ny = Object.keys(run.state.forceLocations).filter((b) => enlistmentsOf(run.state)[b as ids.ForceBlockId]?.enlCall === militia.respOrder);
     expect(ny.length).toBeGreaterThan(0);
     for (const b of ny) {
       // Handed to Washington's post, it stands at Washington with no order left to join.
@@ -53,8 +56,8 @@ describe('a transfer concentrates on union-1861', () => {
     // Put the post's strongest block elsewhere (New York), as a fresh levy would stand before it marches.
     const strongest = Object.keys(state.forceAssignments)
       .filter((b) => state.forceAssignments[b as ids.ForceBlockId] === DC)
-      .sort((a, b) => (state.forceBlockStates[b as ids.ForceBlockId]!.fbStrength ?? 0) - (state.forceBlockStates[a as ids.ForceBlockId]!.fbStrength ?? 0))[0] as ids.ForceBlockId;
-    state = { ...state, forceBlockStates: { ...state.forceBlockStates, [strongest]: { ...state.forceBlockStates[strongest]!, fbStrength: 99999 } }, forceLocations: { ...state.forceLocations, [strongest]: { ...state.forceLocations[strongest]!, locRegion: ids.toId('region', 'new_york') } } };
+      .sort((a, b) => (forceTotals(state.forceBlockStates[b as ids.ForceBlockId]!).fbStrength ?? 0) - (forceTotals(state.forceBlockStates[a as ids.ForceBlockId]!).fbStrength ?? 0))[0] as ids.ForceBlockId;
+    state = { ...state, forceBlockStates: { ...state.forceBlockStates, [strongest]: patchBlock({ ...state.forceBlockStates[strongest]! }, { fbStrength: 99999 }) }, forceLocations: { ...state.forceLocations, [strongest]: { ...state.forceLocations[strongest]!, locRegion: ids.toId('region', 'new_york') } } };
     const lincoln = phase0.seatIdFor(world.faction(ids.toId('faction', 'union')).principal);
     const goal = { ...world.map.world.rules.plans.goalDefaults, objective: WASHINGTON, posture: 'hold' as const, committed: [] };
     const sent = phase0.tick(world, state, [{ day: 1, seat: lincoln, command: { cmd: 'order', to: DC, goal, route: 'courier', bypass: false } }], { freeze: true });

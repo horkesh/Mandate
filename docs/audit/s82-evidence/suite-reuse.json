@@ -1,0 +1,21 @@
+{
+  "fullSuiteExit": 1,
+  "fullSuitePassed": 2074,
+  "fullSuiteFailed": 1,
+  "fullSuiteSkipped": 3,
+  "failedCause": "Exact opening-side inventory omitted new Anderson. Targeted file passed after adding only that identity; no July assertion changes.",
+  "correction": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/world-v2.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.933
+  },
+  "sourceChangesAfterFullSuite": [
+    "packs/union-1861/test/world-v2.test.ts: one expected inventory entry"
+  ],
+  "referenceReuse": "Correction changes tests only. Both dedicated references run after it, once each; no reference retry. The normal hook still runs all required checks."
+}

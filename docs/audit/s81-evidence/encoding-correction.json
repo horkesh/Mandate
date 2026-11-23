@@ -1,0 +1,14 @@
+{
+  "cause": "Initial catalogue read accidentally used the Windows default encoding. Restore untouched UTF-8 metadata from the preserved index; retain only seven accepted S76 changes. No term, identity, lot or other functional input is altered by this correction.",
+  "changedIds": [
+    "la_washington_battalion_artillery",
+    "me_3_infantry",
+    "me_4_infantry",
+    "me_5_infantry",
+    "me_6_infantry",
+    "ri_1_infantry",
+    "ri_2_infantry"
+  ],
+  "unaffectedRecordsExact": true,
+  "functionalFieldsUnchangedFromSuite": true
+}

@@ -1,0 +1,11 @@
+{
+  "wholeStack": {
+    "exit": 2,
+    "output": "packages/kernel/test/s52-advance-notice.test.ts:41: new blank line at EOF.\n"
+  },
+  "s74Delta": {
+    "exit": 0,
+    "output": ""
+  },
+  "cause": "The sole whole-stack EOF warning is in unchanged S52 test content, inherited from the starting staged stack."
+}

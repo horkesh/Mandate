@@ -1,0 +1,3396 @@
+[
+  {
+    "observation": {
+      "observation_id": "S75-O001",
+      "catalogue_id": "ct_3_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-14",
+      "date_end": "1861-05-14",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1008",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at New Haven and mustered in May 14, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1008-read.txt",
+        "page": "1008",
+        "sha256": "787d2dcecdf712c40195178180c2ffee96aefc86a14383339ad37244e8cacbaa"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O002",
+      "catalogue_id": "ma_11_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-13",
+      "date_end": "1861-06-13",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1251",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Readville and mustered in June 13, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1251-read.txt",
+        "page": "1251",
+        "sha256": "49dd73c430b45cc612ba68cc23e81e033d606c3158535284b128d5183366cfdd"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O003",
+      "catalogue_id": "ma_2_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-25",
+      "date_end": "1861-05-25",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1248",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Camp Andrew, West Roxbury, and mustered in May 25, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1248-read.txt",
+        "page": "1248",
+        "sha256": "ca783c408893dfce1afe2f4d0d2158a22c96274c091b7f15c974d1757f372d77"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O010",
+      "catalogue_id": "ny_11_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-07",
+      "date_end": "1861-05-07",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1409",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at New York City and mustered in May 7, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1409-read.txt",
+        "page": "1409",
+        "sha256": "5bf4885740b8b6600b595cd3c42c2f3728f947ea3942974a8ca2113691433a17"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O011",
+      "catalogue_id": "ny_14_militia_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-25",
+      "date_end": "1861-05-25",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1438",
+      "scope": "84th Infantry / 14th Brooklyn State Militia",
+      "identity_relation": "identified",
+      "evidence": "Mustered into United States service at Washington May 25, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1438-read.txt",
+        "page": "1438",
+        "sha256": "2ee59c1feaa70341d369b5ebf4d58a2ec2fab43fe45ba9e2728d367b17d24685"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O012",
+      "catalogue_id": "ny_18_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-17",
+      "date_end": "1861-05-17",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1412",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Albany, N. Y., and mustered in May 17, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1412-read.txt",
+        "page": "1412",
+        "sha256": "9393eee4800c083b4a14d42a5668ef43a3745b6b134726a3bd593b4c62d9df5a"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O013",
+      "catalogue_id": "ny_22_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1413",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Troy, N. Y., and mustered in June 6, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1413-read.txt",
+        "page": "1413",
+        "sha256": "313b55f0756716505deca19753ded23e5dc791f7f7be25572a98fbae5f5fc2ab"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O014",
+      "catalogue_id": "ny_23_infantry",
+      "event": "muster_in",
+      "date_start": "1861-07-02",
+      "date_end": "1861-07-02",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1413",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in July 2, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1413-read.txt",
+        "page": "1413",
+        "sha256": "313b55f0756716505deca19753ded23e5dc791f7f7be25572a98fbae5f5fc2ab"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O015",
+      "catalogue_id": "ny_24_infantry",
+      "event": "muster_in",
+      "date_start": "1861-07-02",
+      "date_end": "1861-07-02",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1414",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in July 2, 1861 to date from May 17, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1414-read.txt",
+        "page": "1414",
+        "sha256": "cf870660d308d96bafa1c85856c922387c54f42015c9ac0f510dcff567b6a56d"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O016",
+      "catalogue_id": "ny_25_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-28",
+      "date_end": "1861-06-28",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1414",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in June 28, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1414-read.txt",
+        "page": "1414",
+        "sha256": "cf870660d308d96bafa1c85856c922387c54f42015c9ac0f510dcff567b6a56d"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O017",
+      "catalogue_id": "ny_26_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-21",
+      "date_end": "1861-05-21",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1414",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Elmira, N. Y., and mustered in May 21, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1414-read.txt",
+        "page": "1414",
+        "sha256": "cf870660d308d96bafa1c85856c922387c54f42015c9ac0f510dcff567b6a56d"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O018",
+      "catalogue_id": "ny_27_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-15",
+      "date_end": "1861-06-15",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1414",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in June 15, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1414-read.txt",
+        "page": "1414",
+        "sha256": "cf870660d308d96bafa1c85856c922387c54f42015c9ac0f510dcff567b6a56d"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O019",
+      "catalogue_id": "ny_28_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-22",
+      "date_end": "1861-05-22",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1415",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Albany, N. Y., and mustered in May 22, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1415-read.txt",
+        "page": "1415",
+        "sha256": "35dbf3fc2590c767f5721bc652e00dcc4a88782aa0086de6ad563cf9be50e985"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O020",
+      "catalogue_id": "ny_29_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1415",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at New York City and mustered in June 6, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1415-read.txt",
+        "page": "1415",
+        "sha256": "35dbf3fc2590c767f5721bc652e00dcc4a88782aa0086de6ad563cf9be50e985"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O021",
+      "catalogue_id": "ny_2_militia_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-28",
+      "date_end": "1861-05-28",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1437",
+      "scope": "82nd Infantry / 2nd State Militia",
+      "identity_relation": "identified",
+      "evidence": "Mustered into United States service May 28, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1437-read.txt",
+        "page": "1437",
+        "sha256": "a3297b4cdd302dfdb6077e4dea97ba9b55c8372f3c907ff3e4202fb86a97dac7"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O022",
+      "catalogue_id": "ny_30_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-01",
+      "date_end": "1861-06-01",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1415",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Troy, N. Y., and mustered in June 1, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1415-read.txt",
+        "page": "1415",
+        "sha256": "35dbf3fc2590c767f5721bc652e00dcc4a88782aa0086de6ad563cf9be50e985"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O023",
+      "catalogue_id": "ny_31_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-14",
+      "date_end": "1861-05-14",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1416",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at New York City and mustered in May 14, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1416-read.txt",
+        "page": "1416",
+        "sha256": "859fc61ce1839ec01b0b1c26fbeb0183d549f17090cb3886080ea33f2199df8f"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O024",
+      "catalogue_id": "ny_32_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-31",
+      "date_end": "1861-05-31",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1416",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Staten Island, N. Y., and mustered in May 31, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1416-read.txt",
+        "page": "1416",
+        "sha256": "859fc61ce1839ec01b0b1c26fbeb0183d549f17090cb3886080ea33f2199df8f"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O025",
+      "catalogue_id": "ny_33_infantry",
+      "event": "muster_in",
+      "date_start": "1861-07-03",
+      "date_end": "1861-07-03",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1416",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in July 3, 1861, to date May 22, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1416-read.txt",
+        "page": "1416",
+        "sha256": "859fc61ce1839ec01b0b1c26fbeb0183d549f17090cb3886080ea33f2199df8f"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O026",
+      "catalogue_id": "ny_35_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-11",
+      "date_end": "1861-06-11",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1417",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Elmira, N. Y., and mustered in June 11, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1417-read.txt",
+        "page": "1417",
+        "sha256": "d069a316faa1757fa7cc62395f0321f757470cd83bf9aa3a7ce4cf582d3fc612"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O027",
+      "catalogue_id": "ny_37_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-07",
+      "date_end": "1861-06-07",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1417",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at New York City and mustered in June 7, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1417-read.txt",
+        "page": "1417",
+        "sha256": "d069a316faa1757fa7cc62395f0321f757470cd83bf9aa3a7ce4cf582d3fc612"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O028",
+      "catalogue_id": "ny_38_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-03",
+      "date_end": "1861-06-03",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1418",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at New York City and mustered in June 3, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1418-read.txt",
+        "page": "1418",
+        "sha256": "2e21369acba1850d50d106b984a2f9eff60d67a371c956956ee1f6d48b5810ae"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O029",
+      "catalogue_id": "ny_39_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1418",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in June 6 to date from May 28.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1418-read.txt",
+        "page": "1418",
+        "sha256": "2e21369acba1850d50d106b984a2f9eff60d67a371c956956ee1f6d48b5810ae"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O030",
+      "catalogue_id": "ny_41_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1419",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Yorkville, N. Y., and mustered in June 6, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1419-read.txt",
+        "page": "1419",
+        "sha256": "95ab63f8c8fe870e6b2e1f6c89b2c13a14d28bd0388af668078d99a0551e70a4"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O031",
+      "catalogue_id": "ny_42_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-22",
+      "date_end": "1861-06-22",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1419",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Great Neck and mustered in June 22, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1419-read.txt",
+        "page": "1419",
+        "sha256": "95ab63f8c8fe870e6b2e1f6c89b2c13a14d28bd0388af668078d99a0551e70a4"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O032",
+      "catalogue_id": "ny_79_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-29",
+      "date_end": "1861-05-29",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1435",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at New York City and mustered in May 29, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1435-read.txt",
+        "page": "1435",
+        "sha256": "cbbd698b2b75106fd95cae57c78c708da282ab52c2f57fd95f4a34973b1659a1"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O033",
+      "catalogue_id": "ny_8_infantry",
+      "event": "muster_in",
+      "date_start": "1861-04-23",
+      "date_end": "1861-04-23",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1408",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at New York City and mustered in April 23, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1408-read.txt",
+        "page": "1408",
+        "sha256": "6062bbb4b691bde8e6a18d7e801eaf88851101c05e57d735698cbbe2e467ac4c"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O034",
+      "catalogue_id": "pa_26_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-27",
+      "date_end": "1861-05-27",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1585",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Philadelphia April 20, 1861. Mustered in May 27, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1585-read.txt",
+        "page": "1585",
+        "sha256": "84d272aaf78e4981a31b03b4befe6336e6e382efcd0128446d75388e72bcc739"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O035",
+      "catalogue_id": "vt_2_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-20",
+      "date_end": "1861-06-20",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1649",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Burlington and mustered in June 20, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1649-read.txt",
+        "page": "1649",
+        "sha256": "1461f958135b9640025aa06b6d42d0d65efb5730453a33fa2c9029c515bd5ab9"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O036",
+      "catalogue_id": "wi_2_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-11",
+      "date_end": "1861-06-11",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1674",
+      "scope": "regiment",
+      "identity_relation": "identified",
+      "evidence": "Organized at Madison, Wis., and mustered in June 11, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1674-read.txt",
+        "page": "1674",
+        "sha256": "9590efa73154ba2054b5b43f47100d61a50b9cb8d535401bdd15bf3ad4a1a2ed"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O037",
+      "catalogue_id": "ma_1_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-23",
+      "date_end": "1861-05-23",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1248",
+      "scope": "companies A B G H",
+      "identity_relation": "identified",
+      "evidence": "Mustered in by companies May 23, 24, 25 and 27, 1861; exact company groups retained in scope.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1248-read.txt",
+        "page": "1248",
+        "sha256": "ca783c408893dfce1afe2f4d0d2158a22c96274c091b7f15c974d1757f372d77"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O038",
+      "catalogue_id": "ma_1_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-24",
+      "date_end": "1861-05-24",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1248",
+      "scope": "companies D F K I",
+      "identity_relation": "identified",
+      "evidence": "Mustered in by companies May 23, 24, 25 and 27, 1861; exact company groups retained in scope.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1248-read.txt",
+        "page": "1248",
+        "sha256": "ca783c408893dfce1afe2f4d0d2158a22c96274c091b7f15c974d1757f372d77"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O039",
+      "catalogue_id": "ma_1_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-25",
+      "date_end": "1861-05-25",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1248",
+      "scope": "company E",
+      "identity_relation": "identified",
+      "evidence": "Mustered in by companies May 23, 24, 25 and 27, 1861; exact company groups retained in scope.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1248-read.txt",
+        "page": "1248",
+        "sha256": "ca783c408893dfce1afe2f4d0d2158a22c96274c091b7f15c974d1757f372d77"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O040",
+      "catalogue_id": "ma_1_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-27",
+      "date_end": "1861-05-27",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1248",
+      "scope": "company C",
+      "identity_relation": "identified",
+      "evidence": "Mustered in by companies May 23, 24, 25 and 27, 1861; exact company groups retained in scope.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1248-read.txt",
+        "page": "1248",
+        "sha256": "ca783c408893dfce1afe2f4d0d2158a22c96274c091b7f15c974d1757f372d77"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O042",
+      "catalogue_id": "ny_24_infantry",
+      "event": "credited_date",
+      "date_start": "1861-05-17",
+      "date_end": "1861-05-17",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1414",
+      "scope": "credit of the separately recorded actual muster",
+      "identity_relation": "identified",
+      "evidence": "To date from 1861-05-17; not the date the muster was performed.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1414-read.txt",
+        "page": "1414",
+        "sha256": "cf870660d308d96bafa1c85856c922387c54f42015c9ac0f510dcff567b6a56d"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O043",
+      "catalogue_id": "ny_33_infantry",
+      "event": "credited_date",
+      "date_start": "1861-05-22",
+      "date_end": "1861-05-22",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1416",
+      "scope": "credit of the separately recorded actual muster",
+      "identity_relation": "identified",
+      "evidence": "To date from 1861-05-22; not the date the muster was performed.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1416-read.txt",
+        "page": "1416",
+        "sha256": "859fc61ce1839ec01b0b1c26fbeb0183d549f17090cb3886080ea33f2199df8f"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O044",
+      "catalogue_id": "ny_39_infantry",
+      "event": "credited_date",
+      "date_start": "1861-05-28",
+      "date_end": "1861-05-28",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1418",
+      "scope": "credit of the separately recorded actual muster",
+      "identity_relation": "identified",
+      "evidence": "To date from 1861-05-28; not the date the muster was performed.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1418-read.txt",
+        "page": "1418",
+        "sha256": "2e21369acba1850d50d106b984a2f9eff60d67a371c956956ee1f6d48b5810ae"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O045",
+      "catalogue_id": "ct_1_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "months",
+      "source": "Dyer",
+      "pages": "21",
+      "scope": "Connecticut 1 Infantry list row",
+      "identity_relation": "identified",
+      "evidence": "1 regiment Infantry: 3-Mos.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p21-read.txt",
+        "page": "21",
+        "sha256": "45e1a25b2a5d02835445d2fed64665d48dffbbfd79919b26f7c3c12202222097"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O046",
+      "catalogue_id": "ct_2_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "months",
+      "source": "Dyer",
+      "pages": "21",
+      "scope": "Connecticut 2 Infantry list row",
+      "identity_relation": "identified",
+      "evidence": "2 regiment Infantry: 3-Mos.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p21-read.txt",
+        "page": "21",
+        "sha256": "45e1a25b2a5d02835445d2fed64665d48dffbbfd79919b26f7c3c12202222097"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O047",
+      "catalogue_id": "ct_3_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "months",
+      "source": "Dyer",
+      "pages": "21",
+      "scope": "Connecticut 3 Infantry list row",
+      "identity_relation": "identified",
+      "evidence": "3 regiment Infantry: 3-Mos.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p21-read.txt",
+        "page": "21",
+        "sha256": "45e1a25b2a5d02835445d2fed64665d48dffbbfd79919b26f7c3c12202222097"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O048",
+      "catalogue_id": "mi_2_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "Dyer",
+      "pages": "1281",
+      "scope": "Second Michigan Infantry",
+      "identity_relation": "identified",
+      "evidence": "The first three-years Regiment from Michigan.",
+      "limits": "May 25 is an organization date in this entry, not an explicit muster."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1281-read.txt",
+        "page": "1281",
+        "sha256": "efd6ff807280162c6f0504e05816186b664489aed3e41d49debf459fff6bb9e9"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O049",
+      "catalogue_id": "ny_varian_8th_militia_artillery",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "months",
+      "source": "Dyer",
+      "pages": "1403",
+      "scope": "Varian State Militia Battery / 1st Troop Washington Grays",
+      "identity_relation": "identified",
+      "evidence": "Entered service of the United States for three months and left State for Annapolis, Md., April 19, 1861.",
+      "limits": "April 19 is departure, not an expressly stated muster date. July 20 discharge is not back-calculated."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1403-read.txt",
+        "page": "1403",
+        "sha256": "9555ef5a4bf4748c9e7aaaad4bba7d95046a2986c077ef63b524494843d22761"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O050",
+      "catalogue_id": "ri_1st_battery_artillery",
+      "event": "original_term",
+      "date_start": "1861-04",
+      "date_end": "1861-04",
+      "date_precision": "month",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "months",
+      "source": "Dyer",
+      "pages": "1633",
+      "scope": "Tompkins Marine Artillery, First Battery",
+      "identity_relation": "identified",
+      "evidence": "Organized at Providence for three months service April, 1861.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1633-read.txt",
+        "page": "1633",
+        "sha256": "1ccad4d72bda6c11bad4c8c042fb6db7c2467d6b2e25181c192b8743e645d1e7"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O051",
+      "catalogue_id": "ri_1st_battery_artillery",
+      "event": "muster_in",
+      "date_start": "1861-05-02",
+      "date_end": "1861-05-02",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1633",
+      "scope": "Tompkins Marine Artillery, First Battery",
+      "identity_relation": "identified",
+      "evidence": "Mustered into service May 2.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1633-read.txt",
+        "page": "1633",
+        "sha256": "1ccad4d72bda6c11bad4c8c042fb6db7c2467d6b2e25181c192b8743e645d1e7"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O052",
+      "catalogue_id": "pa_philadelphia_city_troop_cavalry",
+      "event": "muster_in",
+      "date_start": "1861-05-13",
+      "date_end": "1861-05-13",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Dyer",
+      "pages": "1569-1570",
+      "scope": "Philadelphia City Troop",
+      "identity_relation": "identified",
+      "evidence": "Tendered services April 15; not at first accepted, but finally mustered in May 13, 1861.",
+      "limits": "The August 17 discharge does not establish an original three-month contract."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1569-read.txt",
+        "page": "1569",
+        "sha256": "6c5a5d1a23596c42d0f46ee68d2d70f2d88cda2055308af9a42d0b4519613d95"
+      },
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Dyer-p1570-read.txt",
+        "page": "1570",
+        "sha256": "56bc273678881c6fdbd1647102f10031d3233a3320c5491f915d06b8d0ab3497"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O055",
+      "catalogue_id": "ny_8_infantry",
+      "event": "original_term",
+      "date_start": "1861-04-23",
+      "date_end": "1861-04-23",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "1815",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1815-read.txt",
+        "page": "1815",
+        "sha256": "75f0aa6c30c234af1e49bc0e29ed3f4a4119ce16c76377fab6921b56c3ae271e"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O056",
+      "catalogue_id": "ny_8_infantry",
+      "event": "muster_in",
+      "date_start": "1861-04-23",
+      "date_end": "1861-04-23",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "1815",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1815-read.txt",
+        "page": "1815",
+        "sha256": "75f0aa6c30c234af1e49bc0e29ed3f4a4119ce16c76377fab6921b56c3ae271e"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O057",
+      "catalogue_id": "ny_11_infantry",
+      "event": "original_term",
+      "date_start": "1861-05-07",
+      "date_end": "1861-05-07",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "1861",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1861-read.txt",
+        "page": "1861",
+        "sha256": "9b443f56ade48dba18c608d58b47021a7c9f352db01af819bb8c237686a50d99"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O058",
+      "catalogue_id": "ny_11_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-07",
+      "date_end": "1861-05-07",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "1861",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1861-read.txt",
+        "page": "1861",
+        "sha256": "9b443f56ade48dba18c608d58b47021a7c9f352db01af819bb8c237686a50d99"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O059",
+      "catalogue_id": "ny_18_infantry",
+      "event": "original_term",
+      "date_start": "1861-05-17",
+      "date_end": "1861-05-17",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "1946",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1946-read.txt",
+        "page": "1946",
+        "sha256": "69371c8f4e96bca1ea4ab77099a77c8fe2978c647ddf4a054ba19435be1bb410"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O060",
+      "catalogue_id": "ny_18_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-17",
+      "date_end": "1861-05-17",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "1946",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1946-read.txt",
+        "page": "1946",
+        "sha256": "69371c8f4e96bca1ea4ab77099a77c8fe2978c647ddf4a054ba19435be1bb410"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O061",
+      "catalogue_id": "ny_22_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "1982",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1982-read.txt",
+        "page": "1982",
+        "sha256": "012c233bbd7d644b2bd7a7db47248adf9872fa77d1dba87fc8a02eb9dc0c7f3b"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O062",
+      "catalogue_id": "ny_22_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "1982",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1982-read.txt",
+        "page": "1982",
+        "sha256": "012c233bbd7d644b2bd7a7db47248adf9872fa77d1dba87fc8a02eb9dc0c7f3b"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O063",
+      "catalogue_id": "ny_23_infantry",
+      "event": "original_term",
+      "date_start": "1861-07-02",
+      "date_end": "1861-07-02",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "1994",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1994-read.txt",
+        "page": "1994",
+        "sha256": "5f230d9fd57b02f3454459cafd4cc5833ae61e21ec26379507ed1e3bed3b7e64"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O064",
+      "catalogue_id": "ny_23_infantry",
+      "event": "muster_in",
+      "date_start": "1861-07-02",
+      "date_end": "1861-07-02",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "1994",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p1994-read.txt",
+        "page": "1994",
+        "sha256": "5f230d9fd57b02f3454459cafd4cc5833ae61e21ec26379507ed1e3bed3b7e64"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O065",
+      "catalogue_id": "ny_24_infantry",
+      "event": "original_term",
+      "date_start": "1861-07-02",
+      "date_end": "1861-07-02",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2002",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2002-read.txt",
+        "page": "2002",
+        "sha256": "c4c6efaf15e3a17c1d35ea237039e8584cd4608f2cf1fbf8a0eb293225e55636"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O066",
+      "catalogue_id": "ny_24_infantry",
+      "event": "muster_in",
+      "date_start": "1861-07-02",
+      "date_end": "1861-07-02",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2002",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2002-read.txt",
+        "page": "2002",
+        "sha256": "c4c6efaf15e3a17c1d35ea237039e8584cd4608f2cf1fbf8a0eb293225e55636"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O067",
+      "catalogue_id": "ny_25_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-26",
+      "date_end": "1861-06-26",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2012",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2012-read.txt",
+        "page": "2012",
+        "sha256": "7beb5e94b504c35498dc963e7fb24c0a042d5b1ad9efddabe153b8ff4b3544c3"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O068",
+      "catalogue_id": "ny_25_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-26",
+      "date_end": "1861-06-26",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2012",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2012-read.txt",
+        "page": "2012",
+        "sha256": "7beb5e94b504c35498dc963e7fb24c0a042d5b1ad9efddabe153b8ff4b3544c3"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O069",
+      "catalogue_id": "ny_26_infantry",
+      "event": "original_term",
+      "date_start": "1861-05-21",
+      "date_end": "1861-05-21",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "months",
+      "source": "NY register III",
+      "pages": "2027",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for three months.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2027-read.txt",
+        "page": "2027",
+        "sha256": "4fbd15654f9efdddb40930bc411ae49318659ff7f4bd47767d95eba19e1fb68e"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O070",
+      "catalogue_id": "ny_26_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-21",
+      "date_end": "1861-05-21",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2027",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2027-read.txt",
+        "page": "2027",
+        "sha256": "4fbd15654f9efdddb40930bc411ae49318659ff7f4bd47767d95eba19e1fb68e"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O071",
+      "catalogue_id": "ny_27_infantry",
+      "event": "original_term",
+      "date_start": "1861-07-09",
+      "date_end": "1861-07-09",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2039",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2039-read.txt",
+        "page": "2039",
+        "sha256": "b6a7316ca9b4fc3e0ea7f4a299f799f58dd2bd9443ed7ff9632a9d010e172fa1"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O072",
+      "catalogue_id": "ny_27_infantry",
+      "event": "muster_in",
+      "date_start": "1861-07-09",
+      "date_end": "1861-07-10",
+      "date_precision": "two_days",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2039",
+      "scope": "original muster, July 9 and 10; credited May 21",
+      "identity_relation": "identified",
+      "evidence": "Mustered for two years July 9th and 10th, to date from May 21, 1861.",
+      "limits": "Dyer p1414 instead prints June 15; unresolved actual-muster conflict."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2039-read.txt",
+        "page": "2039",
+        "sha256": "b6a7316ca9b4fc3e0ea7f4a299f799f58dd2bd9443ed7ff9632a9d010e172fa1"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O073",
+      "catalogue_id": "ny_28_infantry",
+      "event": "original_term",
+      "date_start": "1861-05-22",
+      "date_end": "1861-05-22",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2052",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2052-read.txt",
+        "page": "2052",
+        "sha256": "e6766269e673ceaed96467c8d29bde9dda11d0dc208bb301cd72fb061518d9f7"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O074",
+      "catalogue_id": "ny_28_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-22",
+      "date_end": "1861-05-22",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2052",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2052-read.txt",
+        "page": "2052",
+        "sha256": "e6766269e673ceaed96467c8d29bde9dda11d0dc208bb301cd72fb061518d9f7"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O075",
+      "catalogue_id": "ny_29_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-04",
+      "date_end": "1861-06-04",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2062",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2062-read.txt",
+        "page": "2062",
+        "sha256": "91418ea18ff6610edd5140cf38c5d3d8e863c7f8d875a17db17079b0efbf53aa"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O076",
+      "catalogue_id": "ny_29_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-04",
+      "date_end": "1861-06-04",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2062",
+      "scope": "regiment, first specified day",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2062-read.txt",
+        "page": "2062",
+        "sha256": "91418ea18ff6610edd5140cf38c5d3d8e863c7f8d875a17db17079b0efbf53aa"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O077",
+      "catalogue_id": "ny_29_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2062",
+      "scope": "regiment, second specified day",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2062-read.txt",
+        "page": "2062",
+        "sha256": "91418ea18ff6610edd5140cf38c5d3d8e863c7f8d875a17db17079b0efbf53aa"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O078",
+      "catalogue_id": "ny_30_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-01",
+      "date_end": "1861-06-01",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2078",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2078-read.txt",
+        "page": "2078",
+        "sha256": "1858b0424cf5c0d85e95d13718fdbc8eedd3d11b3da31a86cca4c466e40b1db4"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O079",
+      "catalogue_id": "ny_30_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-01",
+      "date_end": "1861-06-01",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2078",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2078-read.txt",
+        "page": "2078",
+        "sha256": "1858b0424cf5c0d85e95d13718fdbc8eedd3d11b3da31a86cca4c466e40b1db4"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O080",
+      "catalogue_id": "ny_31_infantry",
+      "event": "original_term",
+      "date_start": "1861-05-24",
+      "date_end": "1861-05-24",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2089",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2089-read.txt",
+        "page": "2089",
+        "sha256": "f6bfef51e1d16a9884e493f5c16efc061258fee56bc761c532c8607318ab31c1"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O081",
+      "catalogue_id": "ny_31_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-24",
+      "date_end": "1861-05-24",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2089",
+      "scope": "field and staff and company A",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2089-read.txt",
+        "page": "2089",
+        "sha256": "f6bfef51e1d16a9884e493f5c16efc061258fee56bc761c532c8607318ab31c1"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O082",
+      "catalogue_id": "ny_31_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-27",
+      "date_end": "1861-05-27",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2089",
+      "scope": "companies B C D E F G H",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2089-read.txt",
+        "page": "2089",
+        "sha256": "f6bfef51e1d16a9884e493f5c16efc061258fee56bc761c532c8607318ab31c1"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O083",
+      "catalogue_id": "ny_31_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-03",
+      "date_end": "1861-06-03",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2089",
+      "scope": "company I",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2089-read.txt",
+        "page": "2089",
+        "sha256": "f6bfef51e1d16a9884e493f5c16efc061258fee56bc761c532c8607318ab31c1"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O084",
+      "catalogue_id": "ny_31_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-13",
+      "date_end": "1861-06-13",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2089",
+      "scope": "company K",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2089-read.txt",
+        "page": "2089",
+        "sha256": "f6bfef51e1d16a9884e493f5c16efc061258fee56bc761c532c8607318ab31c1"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O085",
+      "catalogue_id": "ny_32_infantry",
+      "event": "original_term",
+      "date_start": "1861-05-31",
+      "date_end": "1861-05-31",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2103",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2103-read.txt",
+        "page": "2103",
+        "sha256": "7aa6e43af7acd704bf0ff5bb83e91e437632ea1a05ff01cfd27168b8c2fcd7fa"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O086",
+      "catalogue_id": "ny_32_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-31",
+      "date_end": "1861-05-31",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2103",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2103-read.txt",
+        "page": "2103",
+        "sha256": "7aa6e43af7acd704bf0ff5bb83e91e437632ea1a05ff01cfd27168b8c2fcd7fa"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O087",
+      "catalogue_id": "ny_33_infantry",
+      "event": "original_term",
+      "date_start": "1861-07-03",
+      "date_end": "1861-07-03",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2115",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2115-read.txt",
+        "page": "2115",
+        "sha256": "ad7ffef05bdaae39817ed4a5be2ad1102b76ad2ec5333589f7a87e079f824f03"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O088",
+      "catalogue_id": "ny_33_infantry",
+      "event": "muster_in",
+      "date_start": "1861-07-03",
+      "date_end": "1861-07-03",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2115",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2115-read.txt",
+        "page": "2115",
+        "sha256": "ad7ffef05bdaae39817ed4a5be2ad1102b76ad2ec5333589f7a87e079f824f03"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O089",
+      "catalogue_id": "ny_35_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-11",
+      "date_end": "1861-06-11",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2137",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2137-read.txt",
+        "page": "2137",
+        "sha256": "7e5476b4137e7c2ed6be66bca879d37780383475b08f154cad48b6e5e5b0cebe"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O090",
+      "catalogue_id": "ny_35_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-11",
+      "date_end": "1861-06-11",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2137",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2137-read.txt",
+        "page": "2137",
+        "sha256": "7e5476b4137e7c2ed6be66bca879d37780383475b08f154cad48b6e5e5b0cebe"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O091",
+      "catalogue_id": "ny_37_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2159",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2159-read.txt",
+        "page": "2159",
+        "sha256": "3389135d9437622ccc741a04be6032042f94da79a5aef2492152460a335ba9c7"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O092",
+      "catalogue_id": "ny_37_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2159",
+      "scope": "regiment, first specified day",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2159-read.txt",
+        "page": "2159",
+        "sha256": "3389135d9437622ccc741a04be6032042f94da79a5aef2492152460a335ba9c7"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O093",
+      "catalogue_id": "ny_37_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-07",
+      "date_end": "1861-06-07",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2159",
+      "scope": "regiment, second specified day",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2159-read.txt",
+        "page": "2159",
+        "sha256": "3389135d9437622ccc741a04be6032042f94da79a5aef2492152460a335ba9c7"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O094",
+      "catalogue_id": "ny_38_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-03",
+      "date_end": "1861-06-03",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2173",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for two years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2173-read.txt",
+        "page": "2173",
+        "sha256": "26b1a72e031bb01cdeb029f541f8a31167f787f876cefa2e5fbf15358fa353e5"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O095",
+      "catalogue_id": "ny_38_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-03",
+      "date_end": "1861-06-03",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2173",
+      "scope": "regiment except company I",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2173-read.txt",
+        "page": "2173",
+        "sha256": "26b1a72e031bb01cdeb029f541f8a31167f787f876cefa2e5fbf15358fa353e5"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O096",
+      "catalogue_id": "ny_38_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-08",
+      "date_end": "1861-06-08",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2173",
+      "scope": "company I",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2173-read.txt",
+        "page": "2173",
+        "sha256": "26b1a72e031bb01cdeb029f541f8a31167f787f876cefa2e5fbf15358fa353e5"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O097",
+      "catalogue_id": "ny_39_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2188",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for three years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2188-read.txt",
+        "page": "2188",
+        "sha256": "089df144198e58c6af84225e37ddf26cb63be459f7fbd8ad86c99a24520d932d"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O098",
+      "catalogue_id": "ny_39_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2188",
+      "scope": "original regimental muster",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster at the place and date stated in the unit opening.",
+      "limits": "Dyer and this register remain separate observations."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2188-read.txt",
+        "page": "2188",
+        "sha256": "089df144198e58c6af84225e37ddf26cb63be459f7fbd8ad86c99a24520d932d"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O099",
+      "catalogue_id": "ny_40_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-14",
+      "date_end": "1861-06-14",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2213",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for three years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2213-read.txt",
+        "page": "2213",
+        "sha256": "07a92e13ed7f2afb212c43e93f064e0a926d9d8c6e72fc7ada736ca3442543b3"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O100",
+      "catalogue_id": "ny_40_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-14",
+      "date_end": "1861-06-14",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2213",
+      "scope": "companies B C D E F",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2213-read.txt",
+        "page": "2213",
+        "sha256": "07a92e13ed7f2afb212c43e93f064e0a926d9d8c6e72fc7ada736ca3442543b3"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O101",
+      "catalogue_id": "ny_40_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-21",
+      "date_end": "1861-06-21",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2213",
+      "scope": "companies A G",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2213-read.txt",
+        "page": "2213",
+        "sha256": "07a92e13ed7f2afb212c43e93f064e0a926d9d8c6e72fc7ada736ca3442543b3"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O102",
+      "catalogue_id": "ny_40_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-26",
+      "date_end": "1861-06-26",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2213",
+      "scope": "company I",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2213-read.txt",
+        "page": "2213",
+        "sha256": "07a92e13ed7f2afb212c43e93f064e0a926d9d8c6e72fc7ada736ca3442543b3"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O103",
+      "catalogue_id": "ny_40_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-27",
+      "date_end": "1861-06-27",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2213",
+      "scope": "companies H K",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2213-read.txt",
+        "page": "2213",
+        "sha256": "07a92e13ed7f2afb212c43e93f064e0a926d9d8c6e72fc7ada736ca3442543b3"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O104",
+      "catalogue_id": "ny_40_infantry",
+      "event": "muster_in",
+      "date_start": "1861-07-01",
+      "date_end": "1861-07-01",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2213",
+      "scope": "field and staff",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2213-read.txt",
+        "page": "2213",
+        "sha256": "07a92e13ed7f2afb212c43e93f064e0a926d9d8c6e72fc7ada736ca3442543b3"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O105",
+      "catalogue_id": "ny_41_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2237",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for three years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2237-read.txt",
+        "page": "2237",
+        "sha256": "cb2e0548289f6982ae3c4a49c0fa1f47ab34cf2774fc26458ad70efc89412d1e"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O106",
+      "catalogue_id": "ny_41_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-06",
+      "date_end": "1861-06-06",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2237",
+      "scope": "regiment, first specified day",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2237-read.txt",
+        "page": "2237",
+        "sha256": "cb2e0548289f6982ae3c4a49c0fa1f47ab34cf2774fc26458ad70efc89412d1e"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O107",
+      "catalogue_id": "ny_41_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-09",
+      "date_end": "1861-06-09",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2237",
+      "scope": "regiment, second specified day",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2237-read.txt",
+        "page": "2237",
+        "sha256": "cb2e0548289f6982ae3c4a49c0fa1f47ab34cf2774fc26458ad70efc89412d1e"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O108",
+      "catalogue_id": "ny_42_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-22",
+      "date_end": "1861-06-22",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2253",
+      "scope": "original United States service of the numbered regiment",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for three years.",
+      "limits": "Unit opening, not its later reorganized regiment or later three-year recruits. See separate muster observations for dates and components."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2253-read.txt",
+        "page": "2253",
+        "sha256": "971bd3db7e2614dacc94a57533f6ff0c80cc540b4d3675e1debe8654b010d0f5"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O109",
+      "catalogue_id": "ny_42_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-22",
+      "date_end": "1861-06-22",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2253",
+      "scope": "regiment except companies H K",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2253-read.txt",
+        "page": "2253",
+        "sha256": "971bd3db7e2614dacc94a57533f6ff0c80cc540b4d3675e1debe8654b010d0f5"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O110",
+      "catalogue_id": "ny_42_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-28",
+      "date_end": "1861-06-28",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2253",
+      "scope": "companies H K",
+      "identity_relation": "identified",
+      "evidence": "Original-service muster component; exact dates and scope transcribed from the unit opening.",
+      "limits": "Dates apply to the stated components; do not make all men present on the first date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2253-read.txt",
+        "page": "2253",
+        "sha256": "971bd3db7e2614dacc94a57533f6ff0c80cc540b4d3675e1debe8654b010d0f5"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O111",
+      "catalogue_id": "ny_26_infantry",
+      "event": "original_term",
+      "date_start": "1861-05-17",
+      "date_end": "1861-05-17",
+      "date_precision": "day",
+      "authority": "New York",
+      "term_value": "2",
+      "term_unit": "years",
+      "source": "NY register III",
+      "pages": "2027",
+      "scope": "State acceptance before federal three-month muster",
+      "identity_relation": "identified",
+      "evidence": "Accepted by the State May 17, 1861, for a service of two years.",
+      "limits": "August 2 federal extension is later and not an initial two-year United States muster."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2027-read.txt",
+        "page": "2027",
+        "sha256": "4fbd15654f9efdddb40930bc411ae49318659ff7f4bd47767d95eba19e1fb68e"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O112",
+      "catalogue_id": "ny_24_infantry",
+      "event": "credited_date",
+      "date_start": "1861-05-17",
+      "date_end": "1861-05-17",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2002",
+      "scope": "credited origin of separate actual muster",
+      "identity_relation": "identified",
+      "evidence": "To date from 1861-05-17; actual muster is separately recorded.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2002-read.txt",
+        "page": "2002",
+        "sha256": "c4c6efaf15e3a17c1d35ea237039e8584cd4608f2cf1fbf8a0eb293225e55636"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O113",
+      "catalogue_id": "ny_27_infantry",
+      "event": "credited_date",
+      "date_start": "1861-05-21",
+      "date_end": "1861-05-21",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2039",
+      "scope": "credited origin of separate actual muster",
+      "identity_relation": "identified",
+      "evidence": "To date from 1861-05-21; actual muster is separately recorded.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2039-read.txt",
+        "page": "2039",
+        "sha256": "b6a7316ca9b4fc3e0ea7f4a299f799f58dd2bd9443ed7ff9632a9d010e172fa1"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O114",
+      "catalogue_id": "ny_33_infantry",
+      "event": "credited_date",
+      "date_start": "1861-05-22",
+      "date_end": "1861-05-22",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2115",
+      "scope": "credited origin of separate actual muster",
+      "identity_relation": "identified",
+      "evidence": "To date from 1861-05-22; actual muster is separately recorded.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2115-read.txt",
+        "page": "2115",
+        "sha256": "ad7ffef05bdaae39817ed4a5be2ad1102b76ad2ec5333589f7a87e079f824f03"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O115",
+      "catalogue_id": "ny_39_infantry",
+      "event": "credited_date",
+      "date_start": "1861-05-28",
+      "date_end": "1861-05-28",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register III",
+      "pages": "2188",
+      "scope": "credited origin of separate actual muster",
+      "identity_relation": "identified",
+      "evidence": "To date from 1861-05-28; actual muster is separately recorded.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-III-p2188-read.txt",
+        "page": "2188",
+        "sha256": "089df144198e58c6af84225e37ddf26cb63be459f7fbd8ad86c99a24520d932d"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O116",
+      "catalogue_id": "ny_79_infantry",
+      "event": "original_term",
+      "date_start": "1861-05-29",
+      "date_end": "1861-05-29",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "NY register IV",
+      "pages": "2841",
+      "scope": "original federal volunteer identity explicitly linked to militia designation",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for three years.",
+      "limits": "Militia designation does not imply a three-month contract. Original entry explicitly identifies the federal volunteer service."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2841-read.txt",
+        "page": "2841",
+        "sha256": "df94c47dd5115ad5747ecd31953e0e1bb256f103f2a30b65133905eb754b7b50"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O117",
+      "catalogue_id": "ny_79_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-29",
+      "date_end": "1861-05-29",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register IV",
+      "pages": "2841",
+      "scope": "regiment; company musters occupy the stated range",
+      "identity_relation": "identified",
+      "evidence": "Original federal muster: 1861-05-29.",
+      "limits": "A range is not simultaneous availability; Dyer gives its own narrower summary date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2841-read.txt",
+        "page": "2841",
+        "sha256": "df94c47dd5115ad5747ecd31953e0e1bb256f103f2a30b65133905eb754b7b50"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O118",
+      "catalogue_id": "ny_2_militia_infantry",
+      "event": "original_term",
+      "date_start": "1861-05-20",
+      "date_end": "1861-06-17",
+      "date_precision": "range",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "NY register IV",
+      "pages": "2897",
+      "scope": "original federal volunteer identity explicitly linked to militia designation",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for three years.",
+      "limits": "Militia designation does not imply a three-month contract. Original entry explicitly identifies the federal volunteer service."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2897-read.txt",
+        "page": "2897",
+        "sha256": "d9408c1ed1cfe5323e0082c4b9c866d0daa62b442b8a4b73a26a78b83224a3e2"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O119",
+      "catalogue_id": "ny_2_militia_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-20",
+      "date_end": "1861-06-17",
+      "date_precision": "range",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register IV",
+      "pages": "2897",
+      "scope": "regiment; company musters occupy the stated range",
+      "identity_relation": "identified",
+      "evidence": "Original federal muster: 1861-05-20 through 1861-06-17.",
+      "limits": "A range is not simultaneous availability; Dyer gives its own narrower summary date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2897-read.txt",
+        "page": "2897",
+        "sha256": "d9408c1ed1cfe5323e0082c4b9c866d0daa62b442b8a4b73a26a78b83224a3e2"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O120",
+      "catalogue_id": "ny_14_militia_infantry",
+      "event": "original_term",
+      "date_start": "1861-05",
+      "date_end": "1861-08",
+      "date_precision": "range_month",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "NY register IV",
+      "pages": "2929-2930",
+      "scope": "original federal volunteer identity explicitly linked to militia designation",
+      "identity_relation": "identified",
+      "evidence": "Mustered in the service of the United States for three years.",
+      "limits": "Militia designation does not imply a three-month contract. Original entry explicitly identifies the federal volunteer service."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2929-read.txt",
+        "page": "2929",
+        "sha256": "9ae751e03ff6cdca43327a807df194a89dcd55bbf7a06eaca1b05a4986542b1f"
+      },
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2930-read.txt",
+        "page": "2930",
+        "sha256": "9ae751e03ff6cdca43327a807df194a89dcd55bbf7a06eaca1b05a4986542b1f"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O121",
+      "catalogue_id": "ny_14_militia_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05",
+      "date_end": "1861-08",
+      "date_precision": "range_month",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NY register IV",
+      "pages": "2929-2930",
+      "scope": "regiment; company musters occupy the stated range",
+      "identity_relation": "identified",
+      "evidence": "Original federal muster: 1861-05 through 1861-08.",
+      "limits": "A range is not simultaneous availability; Dyer gives its own narrower summary date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2929-read.txt",
+        "page": "2929",
+        "sha256": "9ae751e03ff6cdca43327a807df194a89dcd55bbf7a06eaca1b05a4986542b1f"
+      },
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NY-register-IV-p2930-read.txt",
+        "page": "2930",
+        "sha256": "9ae751e03ff6cdca43327a807df194a89dcd55bbf7a06eaca1b05a4986542b1f"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O123",
+      "catalogue_id": "ma_1_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "MA AG 1861",
+      "pages": "30;31",
+      "scope": "regiment explicitly listed in the report section for three-year volunteers",
+      "identity_relation": "identified",
+      "evidence": "Regiments now at the seat of war, comprising the Massachusetts Volunteers for three years; FIRST REGIMENT.",
+      "limits": "The report supplies the term classification; Dyer supplies actual musters where explicit. No term inferred from later duration."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p30-read.txt",
+        "page": "30",
+        "sha256": "b9b63aef98e52f4d2dc407f69e7ed43da5a9bb26537f124a561d337b3e8241f1"
+      },
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p31-read.txt",
+        "page": "31",
+        "sha256": "8f5bdcbf6139469f63e1bd699cccb203b4e9d8ae38dc99cc32f9e716c1bc32a6"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O124",
+      "catalogue_id": "ma_2_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "MA AG 1861",
+      "pages": "30;32",
+      "scope": "regiment explicitly listed in the report section for three-year volunteers",
+      "identity_relation": "identified",
+      "evidence": "Regiments now at the seat of war, comprising the Massachusetts Volunteers for three years; SECOND REGIMENT.",
+      "limits": "The report supplies the term classification; Dyer supplies actual musters where explicit. No term inferred from later duration."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p30-read.txt",
+        "page": "30",
+        "sha256": "b9b63aef98e52f4d2dc407f69e7ed43da5a9bb26537f124a561d337b3e8241f1"
+      },
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p32-read.txt",
+        "page": "32",
+        "sha256": "2b4c4827b1346ac246dad6319f57212b85f925c33407279b7586d45f47d0d736"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O125",
+      "catalogue_id": "ma_9_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "MA AG 1861",
+      "pages": "30;34",
+      "scope": "regiment explicitly listed in the report section for three-year volunteers",
+      "identity_relation": "identified",
+      "evidence": "Regiments now at the seat of war, comprising the Massachusetts Volunteers for three years; NINTH REGIMENT.",
+      "limits": "The report supplies the term classification; Dyer supplies actual musters where explicit. No term inferred from later duration."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p30-read.txt",
+        "page": "30",
+        "sha256": "b9b63aef98e52f4d2dc407f69e7ed43da5a9bb26537f124a561d337b3e8241f1"
+      },
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p34-read.txt",
+        "page": "34",
+        "sha256": "e963ef31e5dbe6832ec73642152ca6f4b0d3608c23724afd65298eb86dbba0a7"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O126",
+      "catalogue_id": "ma_11_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "MA AG 1861",
+      "pages": "30;36",
+      "scope": "regiment explicitly listed in the report section for three-year volunteers",
+      "identity_relation": "identified",
+      "evidence": "Regiments now at the seat of war, comprising the Massachusetts Volunteers for three years; ELEVENTH REGIMENT.",
+      "limits": "The report supplies the term classification; Dyer supplies actual musters where explicit. No term inferred from later duration."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p30-read.txt",
+        "page": "30",
+        "sha256": "b9b63aef98e52f4d2dc407f69e7ed43da5a9bb26537f124a561d337b3e8241f1"
+      },
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\MA-AG-1861-p36-read.txt",
+        "page": "36",
+        "sha256": "03fcc66ea695a6fcff7dcaf596873e58ce86124ec1b33fc62425527873b4644d"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O127",
+      "catalogue_id": "wi_2_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "WI AG 1864",
+      "pages": "26",
+      "scope": "original Second Wisconsin Volunteers; statement of completed original term",
+      "identity_relation": "identified",
+      "evidence": "The Second Wisconsin Volunteers, having served their full term of three years in this army.",
+      "limits": "Order is dated June 10, 1864. It expressly states the old term; it does not prescribe a new term. Dyer p1674 supplies the initial muster."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\WI-AG-1864-p26-read.txt",
+        "page": "26",
+        "sha256": "13c65b589e25d13d621eb98f2e00348e4177d380c825fd38ddc983405d350efc"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O128",
+      "catalogue_id": "ct_4_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "Bates I",
+      "pages": "107",
+      "scope": "Fourth Connecticut Volunteers in the July brigade footnote",
+      "identity_relation": "identified",
+      "evidence": "Fourth Connecticut volunteers, (3 years,) Colonel Woodhouse.",
+      "limits": "Dyer p1008 gives organization May 21, not an explicit performed muster."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p107-read.txt",
+        "page": "107",
+        "sha256": "2e111fb4efb9b7bbd12e573b2b4d38b47d0a3daba90f56aea8a26c1c3e1d45f6"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O129",
+      "catalogue_id": "pa_mcmullin_rangers_infantry",
+      "event": "original_term",
+      "date_start": "unknown",
+      "date_end": "unknown",
+      "date_precision": "unknown",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "months",
+      "source": "Bates I",
+      "pages": "107;243",
+      "scope": "Philadelphia Independent Rangers; M'Mullen/M'Mullin spelling retained",
+      "identity_relation": "identified",
+      "evidence": "With Captain William M'Mullin's Rangers, were the only three months troops remaining.",
+      "limits": "[I] Rangers and Philadelphia/Patterson command crosswalk; no invented first name or surname respelling in the catalogue. Actual muster not established."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p107-read.txt",
+        "page": "107",
+        "sha256": "2e111fb4efb9b7bbd12e573b2b4d38b47d0a3daba90f56aea8a26c1c3e1d45f6"
+      },
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p243-read.txt",
+        "page": "243",
+        "sha256": "7ced7660682931fc7815ef51287f72f17d19f2a7111dd133200a41f8e283625a"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O130",
+      "catalogue_id": "pa_philadelphia_city_troop_cavalry",
+      "event": "original_term",
+      "date_start": "1861-05-13",
+      "date_end": "1861-05-13",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "months",
+      "source": "Bates I",
+      "pages": "241",
+      "scope": "First Troop Philadelphia City Cavalry",
+      "identity_relation": "identified",
+      "evidence": "Mustered into service on the 13th day of May, 1861, for three months.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p241-read.txt",
+        "page": "241",
+        "sha256": "05700594c1152fc183fb93141f416fa7ca30786456fe7cb1405392a6ee22e18b"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O131",
+      "catalogue_id": "pa_philadelphia_city_troop_cavalry",
+      "event": "muster_in",
+      "date_start": "1861-05-13",
+      "date_end": "1861-05-13",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Bates I",
+      "pages": "241",
+      "scope": "First Troop Philadelphia City Cavalry",
+      "identity_relation": "identified",
+      "evidence": "Mustered into service on the 13th day of May, 1861, for three months.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p241-read.txt",
+        "page": "241",
+        "sha256": "05700594c1152fc183fb93141f416fa7ca30786456fe7cb1405392a6ee22e18b"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O132",
+      "catalogue_id": "pa_26_infantry",
+      "event": "original_term",
+      "date_start": "1861-05-25",
+      "date_end": "1861-05-25",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "Bates I",
+      "pages": "344",
+      "scope": "Twenty-sixth Pennsylvania; federal service actually entered",
+      "identity_relation": "identified",
+      "evidence": "May 25th, when they were mustered for three years, by direct order of the Secretary of War ... their muster being dated back to May 5th.",
+      "limits": "Earlier three-month State offer was accepted but not mustered. Dyer p1585 instead gives performed muster May 27; retain the conflict."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p344-read.txt",
+        "page": "344",
+        "sha256": "c8c55ef9b85b86f0ed6806c3e8ad0dd0532ab4d522c464b9478ff89ef7a53ed2"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O133",
+      "catalogue_id": "pa_26_infantry",
+      "event": "muster_in",
+      "date_start": "1861-05-25",
+      "date_end": "1861-05-25",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Bates I",
+      "pages": "344",
+      "scope": "Twenty-sixth Pennsylvania; performed federal muster",
+      "identity_relation": "identified",
+      "evidence": "May 25th, when they were mustered for three years.",
+      "limits": "Dyer p1585 says May 27. Do not silently select either performed-muster date."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p344-read.txt",
+        "page": "344",
+        "sha256": "c8c55ef9b85b86f0ed6806c3e8ad0dd0532ab4d522c464b9478ff89ef7a53ed2"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O134",
+      "catalogue_id": "pa_26_infantry",
+      "event": "credited_date",
+      "date_start": "1861-05-05",
+      "date_end": "1861-05-05",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "Bates I",
+      "pages": "344",
+      "scope": "credit of later actual muster",
+      "identity_relation": "identified",
+      "evidence": "Their muster being dated back to May 5th.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\Bates-I-p344-read.txt",
+        "page": "344",
+        "sha256": "c8c55ef9b85b86f0ed6806c3e8ad0dd0532ab4d522c464b9478ff89ef7a53ed2"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O135",
+      "catalogue_id": "la_8_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-12",
+      "date_end": "1861-06-12",
+      "date_precision": "day",
+      "authority": "Confederate States",
+      "term_value": "war",
+      "term_unit": "duration",
+      "source": "OR I-LI.2",
+      "pages": "138",
+      "scope": "Kelly regiment, joined to Eighth Louisiana by OR IV-I p750",
+      "identity_relation": "identified",
+      "evidence": "The regiment reported by you armed and equipped is received for the war. Cause it to be mustered into service.",
+      "limits": "[I] Henry B. Kelly plus Louisiana and original-muster context joins the numbered regiment; the acceptance is not the June 15 muster."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-I-LI.2-p138-read.txt",
+        "page": "138",
+        "sha256": "d6ce45cdb7cf28df20e6d69109966dcf966d63500b2912dff32b12e3581de54f"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O138",
+      "catalogue_id": "la_8_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-15",
+      "date_end": "1861-06-15",
+      "date_precision": "day",
+      "authority": "Confederate States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "OR IV-I",
+      "pages": "750",
+      "scope": "numbered regiment in Louisiana annual report of November 22, 1861",
+      "identity_relation": "identified",
+      "evidence": "Regiment mustered into service 1861-06-15.",
+      "limits": "Report expressly gives original muster date. Its narrative about changing proposed terms is not a blanket regimental twelve-month assignment."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-I-p750-read.txt",
+        "page": "750",
+        "sha256": "7c50db86d80e8e71cdd4c14b32337d7051db3d0d9e784cdb2373f775fe23bc7a"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O142",
+      "catalogue_id": "vt_2_infantry",
+      "event": "original_term",
+      "date_start": "1861-06-20",
+      "date_end": "1861-06-20",
+      "date_precision": "day",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "VT roster",
+      "pages": "27",
+      "scope": "Second Vermont Volunteer Infantry original federal regiment",
+      "identity_relation": "identified",
+      "evidence": "Second Regiment (Three Years); mustered into United States service June 20, 1861; first three years regiment raised in Vermont.",
+      "limits": "none"
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\VT-roster-p27-read.txt",
+        "page": "27",
+        "sha256": "ff5673ca399ac2971660c303e5993f75df6ebecb969db72286979758ad098bb5"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O143",
+      "catalogue_id": "nh_2_infantry",
+      "event": "original_term",
+      "date_start": "1861-06",
+      "date_end": "1861-06",
+      "date_precision": "month",
+      "authority": "United States",
+      "term_value": "3",
+      "term_unit": "years",
+      "source": "NH register",
+      "pages": "25",
+      "scope": "Second New Hampshire Volunteer Infantry three-year federal organization",
+      "identity_relation": "identified",
+      "evidence": "Three Years heading; after the early May order, most men enlisted for three years; second muster by companies June 1 to 8.",
+      "limits": "Many initial recruits had enlisted for three months in April. This predeparture conversion is retained, not a later-war reorganization; no claim that every individual had the same contract."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NH-register-p25-read.txt",
+        "page": "25",
+        "sha256": "4710601ed426711ff0a27e6fd9d53fa81f0293b3f8c0cfdbd8d6c4e64c145ecc"
+      }
+    ]
+  },
+  {
+    "observation": {
+      "observation_id": "S75-O144",
+      "catalogue_id": "nh_2_infantry",
+      "event": "muster_in",
+      "date_start": "1861-06-01",
+      "date_end": "1861-06-08",
+      "date_precision": "range",
+      "authority": "United States",
+      "term_value": "unknown",
+      "term_unit": "unknown",
+      "source": "NH register",
+      "pages": "25",
+      "scope": "second muster by companies after the initial three-month recruitment",
+      "identity_relation": "identified",
+      "evidence": "Second muster by companies dating from June 1 to 8.",
+      "limits": "Dyer p1347 gives organization May 31 to June 8, not a May 31 performed muster."
+    },
+    "passages": [
+      {
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S75\\NH-register-p25-read.txt",
+        "page": "25",
+        "sha256": "4710601ed426711ff0a27e6fd9d53fa81f0293b3f8c0cfdbd8d6c4e64c145ecc"
+      }
+    ]
+  }
+]

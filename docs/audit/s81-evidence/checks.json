@@ -1,0 +1,502 @@
+[
+  {
+    "name": "boundary",
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.164
+  },
+  {
+    "name": "correction-verification",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/men-regions.test.ts",
+      "packs/union-1861/test/s74-cast-templates.test.ts",
+      "packs/union-1861/test/s81-terms.test.ts",
+      "packs/union-1861/test/virginia-dated-forces.test.ts",
+      "packages/kernel/test/combat.test.ts",
+      "packs/union-1861/test/s78-rail.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 5.553
+  },
+  {
+    "name": "data-green-valid",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s81-terms.test.ts",
+      "packs/union-1861/test/virginia-dated-forces.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 4.428
+  },
+  {
+    "name": "data-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s81-terms.test.ts",
+      "packs/union-1861/test/virginia-dated-forces.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.234
+  },
+  {
+    "name": "data-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s81-terms.test.ts",
+      "packs/union-1861/test/virginia-dated-forces.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 4.484
+  },
+  {
+    "name": "decisions",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-decisions-index.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.124
+  },
+  {
+    "name": "final-boundary",
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.19
+  },
+  {
+    "name": "final-decisions",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-decisions-index.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.128
+  },
+  {
+    "name": "final-licences",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-licences.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.125
+  },
+  {
+    "name": "final-pack-freshness",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 1.584
+  },
+  {
+    "name": "final-rules",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.335
+  },
+  {
+    "name": "final-schema-freshness",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "schemas",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 0.598
+  },
+  {
+    "name": "final-source-policy",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/virginia-dated-forces.test.ts",
+      "packages/pack-format/test/s52-source-guards.test.ts",
+      "tools/test/projection-truth.test.ts",
+      "tools/test/one-writer.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 5.206
+  },
+  {
+    "name": "frozen-baseline-corrected",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s81/frozen.ts",
+      "s78"
+    ],
+    "exit": 0,
+    "seconds": 3.186
+  },
+  {
+    "name": "frozen-baseline",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s81/frozen.ts",
+      "s78"
+    ],
+    "exit": 0,
+    "seconds": 3.264
+  },
+  {
+    "name": "frozen-final",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s81/frozen.ts",
+      "s81"
+    ],
+    "exit": 0,
+    "seconds": 2.868
+  },
+  {
+    "name": "full-suite",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s81/full-suite.json"
+    ],
+    "exit": 1,
+    "seconds": 183.031
+  },
+  {
+    "name": "generate-corrected",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 0.849
+  },
+  {
+    "name": "generate-final",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 1.561
+  },
+  {
+    "name": "generate-ready",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 0.852
+  },
+  {
+    "name": "generate-valid",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 1.561
+  },
+  {
+    "name": "generate",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 1.185
+  },
+  {
+    "name": "licences",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-licences.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.127
+  },
+  {
+    "name": "own-return-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s70-recruitment-lots.test.ts",
+      "packs/union-1861/test/s81-terms.test.ts",
+      "packs/union-1861/test/virginia-dated-forces.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 4.549
+  },
+  {
+    "name": "own-return-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s70-recruitment-lots.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 0.705
+  },
+  {
+    "name": "pack-freshness",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "generate",
+      "union-1861",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 1.553
+  },
+  {
+    "name": "preflight",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packages/kernel/test/s70-recruitment-lots.test.ts",
+      "packages/kernel/test/s70-lots.test.ts",
+      "packages/kernel/test/map-derived.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/cli/test/enlistment-renewal.test.ts",
+      "packs/union-1861/test/s78-rail.test.ts",
+      "packs/union-1861/test/s81-terms.test.ts",
+      "packs/union-1861/test/virginia-dated-forces.test.ts",
+      "packs/union-1861/test/s77-concentration.test.ts",
+      "packs/union-1861/test/manassas-junction.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 8.694
+  },
+  {
+    "name": "reference-smoke",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s81/references.ts",
+      "union-1861",
+      "--smoke"
+    ],
+    "exit": 0,
+    "seconds": 4.825
+  },
+  {
+    "name": "rules-delivery",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.58
+  },
+  {
+    "name": "rules-ready",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.311
+  },
+  {
+    "name": "rules",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.764
+  },
+  {
+    "name": "rulings-green",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packs/union-1861/test/s78-rail.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 3.999
+  },
+  {
+    "name": "rulings-red-corrected",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packs/union-1861/test/s78-rail.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 3.989
+  },
+  {
+    "name": "rulings-red",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/combat.test.ts",
+      "packs/union-1861/test/s78-rail.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 3.742
+  },
+  {
+    "name": "schema-freshness",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "schemas",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 0.604
+  },
+  {
+    "name": "testbed-reference",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s81/references.ts",
+      "testbed"
+    ],
+    "exit": 0,
+    "seconds": 7.88
+  },
+  {
+    "name": "typecheck-delivery",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.885
+  },
+  {
+    "name": "typecheck-final-code",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.946
+  },
+  {
+    "name": "typecheck",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.966
+  },
+  {
+    "name": "union-reference",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s81/references.ts",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 70.9
+  },
+  {
+    "name": "writer-and-text-correction",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/post-succession.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 4.884
+  }
+]

@@ -189,3 +189,8 @@ export function pruneBattles(state: State, day: number, keepDays: number): { rea
   for (const id of drop) delete next[id];
   return { state: { ...state, battleRecords: next }, pruned: drop.length };
 }
+
+/** 0110: derived from the recorded blocks; an unknown force is present, not an empty field. */
+export function unresolvedContact(day: BattleDay): boolean {
+  return day.bdayType !== 'bombard' && day.bdaySides.some(s => s.bsideBlocks.length > 0 && s.bsideUnknown.length === s.bsideBlocks.length);
+}

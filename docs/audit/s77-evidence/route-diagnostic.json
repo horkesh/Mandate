@@ -1,0 +1,1779 @@
+{
+  "scope": "Pure inspection of the frozen final State, not another simulation or a reconstruction of earlier network conditions.",
+  "diagnostics": [
+    {
+      "block": "state-forces.cs_tn_cavalry_tennessee",
+      "location": {
+        "locRegion": "atlanta",
+        "locAboard": null,
+        "locSinceDay": 148,
+        "locMarch": null
+      },
+      "join": {
+        "joinPost": "cs_cmd_harpers_ferry",
+        "joinRegion": "harpers_ferry",
+        "joinSinceDay": 129,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "rail:atlanta:ga_atlanta_east:georgia",
+            "from": "atlanta",
+            "to": "ga_atlanta_east",
+            "type": "rail",
+            "line": "georgia",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "remainingMilli": 52000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:atlanta:ga_atlanta_east:georgia",
+          "to": "ga_atlanta_east",
+          "leg": {
+            "edge": "rail:atlanta:ga_atlanta_east:georgia",
+            "from": "atlanta",
+            "to": "ga_atlanta_east",
+            "type": "rail",
+            "line": "georgia",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": null,
+          "fromHolding": {
+            "region": "atlanta",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "ga_atlanta_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        },
+        {
+          "edge": "rail:atlanta:ga_atlanta_west:atlanta_and_west_point",
+          "to": "ga_atlanta_west",
+          "leg": {
+            "edge": "rail:atlanta:ga_atlanta_west:atlanta_and_west_point",
+            "from": "atlanta",
+            "to": "ga_atlanta_west",
+            "type": "rail",
+            "line": "atlanta_and_west_point",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": null,
+          "fromHolding": {
+            "region": "atlanta",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "ga_atlanta_west",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        },
+        {
+          "edge": "rail:atlanta:ga_etowah:western_and_atlantic",
+          "to": "ga_etowah",
+          "leg": {
+            "edge": "rail:atlanta:ga_etowah:western_and_atlantic",
+            "from": "atlanta",
+            "to": "ga_etowah",
+            "type": "rail",
+            "line": "western_and_atlantic",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": null,
+          "fromHolding": {
+            "region": "atlanta",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "ga_etowah",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "block": "state-forces.cs_tn_infantry_tennessee",
+      "location": {
+        "locRegion": "atlanta",
+        "locAboard": null,
+        "locSinceDay": 148,
+        "locMarch": null
+      },
+      "join": {
+        "joinPost": "cs_cmd_harpers_ferry",
+        "joinRegion": "harpers_ferry",
+        "joinSinceDay": 129,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "rail:atlanta:ga_atlanta_east:georgia",
+            "from": "atlanta",
+            "to": "ga_atlanta_east",
+            "type": "rail",
+            "line": "georgia",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "remainingMilli": 52000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:atlanta:ga_atlanta_east:georgia",
+          "to": "ga_atlanta_east",
+          "leg": {
+            "edge": "rail:atlanta:ga_atlanta_east:georgia",
+            "from": "atlanta",
+            "to": "ga_atlanta_east",
+            "type": "rail",
+            "line": "georgia",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": null,
+          "fromHolding": {
+            "region": "atlanta",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "ga_atlanta_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        },
+        {
+          "edge": "rail:atlanta:ga_atlanta_west:atlanta_and_west_point",
+          "to": "ga_atlanta_west",
+          "leg": {
+            "edge": "rail:atlanta:ga_atlanta_west:atlanta_and_west_point",
+            "from": "atlanta",
+            "to": "ga_atlanta_west",
+            "type": "rail",
+            "line": "atlanta_and_west_point",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": null,
+          "fromHolding": {
+            "region": "atlanta",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "ga_atlanta_west",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        },
+        {
+          "edge": "rail:atlanta:ga_etowah:western_and_atlantic",
+          "to": "ga_etowah",
+          "leg": {
+            "edge": "rail:atlanta:ga_etowah:western_and_atlantic",
+            "from": "atlanta",
+            "to": "ga_etowah",
+            "type": "rail",
+            "line": "western_and_atlantic",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": null,
+          "fromHolding": {
+            "region": "atlanta",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "ga_etowah",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "block": "raised.st_gov_georgia.d127.2",
+      "location": {
+        "locRegion": "salisbury_charlotte",
+        "locAboard": null,
+        "locSinceDay": 140,
+        "locMarch": {
+          "marchEdge": "road:greensboro:salisbury_charlotte",
+          "marchFrom": "salisbury_charlotte",
+          "marchTo": "greensboro",
+          "marchNeedMilli": 10000,
+          "marchDoneMilli": 8000,
+          "marchStartDay": 141
+        }
+      },
+      "join": {
+        "joinPost": "cs_cmd_harpers_ferry",
+        "joinRegion": "harpers_ferry",
+        "joinSinceDay": 132,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "road:greensboro:salisbury_charlotte",
+            "from": "salisbury_charlotte",
+            "to": "greensboro",
+            "type": "road",
+            "line": null,
+            "breakOfBulk": false,
+            "baseDays": 10,
+            "baseCapacity": 2,
+            "daysPermille": 10000,
+            "capacityMilli": 2000,
+            "effects": []
+          },
+          "remainingMilli": 33000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:greensboro:salisbury_charlotte:north_carolina",
+          "to": "greensboro",
+          "leg": {
+            "edge": "rail:greensboro:salisbury_charlotte:north_carolina",
+            "from": "salisbury_charlotte",
+            "to": "greensboro",
+            "type": "rail",
+            "line": "north_carolina",
+            "breakOfBulk": false,
+            "baseDays": 2,
+            "baseCapacity": 3,
+            "daysPermille": 2000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "greensboro",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:nc_foothills:salisbury_charlotte:western_north_carolina",
+          "to": "nc_foothills",
+          "leg": {
+            "edge": "rail:nc_foothills:salisbury_charlotte:western_north_carolina",
+            "from": "salisbury_charlotte",
+            "to": "nc_foothills",
+            "type": "rail",
+            "line": "western_north_carolina",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 1,
+            "daysPermille": 1000,
+            "capacityMilli": 1000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "nc_foothills",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+          "to": "sc_upstate_east",
+          "leg": {
+            "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+            "from": "salisbury_charlotte",
+            "to": "sc_upstate_east",
+            "type": "rail",
+            "line": "charlotte_and_south_carolina",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "sc_upstate_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "block": "raised.st_gov_georgia.d129",
+      "location": {
+        "locRegion": "salisbury_charlotte",
+        "locAboard": null,
+        "locSinceDay": 140,
+        "locMarch": {
+          "marchEdge": "road:greensboro:salisbury_charlotte",
+          "marchFrom": "salisbury_charlotte",
+          "marchTo": "greensboro",
+          "marchNeedMilli": 10000,
+          "marchDoneMilli": 8000,
+          "marchStartDay": 141
+        }
+      },
+      "join": {
+        "joinPost": "cs_cmd_harpers_ferry",
+        "joinRegion": "harpers_ferry",
+        "joinSinceDay": 132,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "road:greensboro:salisbury_charlotte",
+            "from": "salisbury_charlotte",
+            "to": "greensboro",
+            "type": "road",
+            "line": null,
+            "breakOfBulk": false,
+            "baseDays": 10,
+            "baseCapacity": 2,
+            "daysPermille": 10000,
+            "capacityMilli": 2000,
+            "effects": []
+          },
+          "remainingMilli": 33000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:greensboro:salisbury_charlotte:north_carolina",
+          "to": "greensboro",
+          "leg": {
+            "edge": "rail:greensboro:salisbury_charlotte:north_carolina",
+            "from": "salisbury_charlotte",
+            "to": "greensboro",
+            "type": "rail",
+            "line": "north_carolina",
+            "breakOfBulk": false,
+            "baseDays": 2,
+            "baseCapacity": 3,
+            "daysPermille": 2000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "greensboro",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:nc_foothills:salisbury_charlotte:western_north_carolina",
+          "to": "nc_foothills",
+          "leg": {
+            "edge": "rail:nc_foothills:salisbury_charlotte:western_north_carolina",
+            "from": "salisbury_charlotte",
+            "to": "nc_foothills",
+            "type": "rail",
+            "line": "western_north_carolina",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 1,
+            "daysPermille": 1000,
+            "capacityMilli": 1000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "nc_foothills",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+          "to": "sc_upstate_east",
+          "leg": {
+            "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+            "from": "salisbury_charlotte",
+            "to": "sc_upstate_east",
+            "type": "rail",
+            "line": "charlotte_and_south_carolina",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "sc_upstate_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "block": "raised.st_gov_alabama.d130.2",
+      "location": {
+        "locRegion": "salisbury_charlotte",
+        "locAboard": null,
+        "locSinceDay": 146,
+        "locMarch": {
+          "marchEdge": "road:greensboro:salisbury_charlotte",
+          "marchFrom": "salisbury_charlotte",
+          "marchTo": "greensboro",
+          "marchNeedMilli": 10000,
+          "marchDoneMilli": 2000,
+          "marchStartDay": 147
+        }
+      },
+      "join": {
+        "joinPost": "cs_cmd_manassas",
+        "joinRegion": "manassas",
+        "joinSinceDay": 135,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "road:greensboro:salisbury_charlotte",
+            "from": "salisbury_charlotte",
+            "to": "greensboro",
+            "type": "road",
+            "line": null,
+            "breakOfBulk": false,
+            "baseDays": 10,
+            "baseCapacity": 2,
+            "daysPermille": 10000,
+            "capacityMilli": 2000,
+            "effects": []
+          },
+          "remainingMilli": 31000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:greensboro:salisbury_charlotte:north_carolina",
+          "to": "greensboro",
+          "leg": {
+            "edge": "rail:greensboro:salisbury_charlotte:north_carolina",
+            "from": "salisbury_charlotte",
+            "to": "greensboro",
+            "type": "rail",
+            "line": "north_carolina",
+            "breakOfBulk": false,
+            "baseDays": 2,
+            "baseCapacity": 3,
+            "daysPermille": 2000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "greensboro",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:nc_foothills:salisbury_charlotte:western_north_carolina",
+          "to": "nc_foothills",
+          "leg": {
+            "edge": "rail:nc_foothills:salisbury_charlotte:western_north_carolina",
+            "from": "salisbury_charlotte",
+            "to": "nc_foothills",
+            "type": "rail",
+            "line": "western_north_carolina",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 1,
+            "daysPermille": 1000,
+            "capacityMilli": 1000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "nc_foothills",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+          "to": "sc_upstate_east",
+          "leg": {
+            "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+            "from": "salisbury_charlotte",
+            "to": "sc_upstate_east",
+            "type": "rail",
+            "line": "charlotte_and_south_carolina",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "sc_upstate_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "block": "raised.st_gov_alabama.d132",
+      "location": {
+        "locRegion": "salisbury_charlotte",
+        "locAboard": null,
+        "locSinceDay": 146,
+        "locMarch": {
+          "marchEdge": "road:greensboro:salisbury_charlotte",
+          "marchFrom": "salisbury_charlotte",
+          "marchTo": "greensboro",
+          "marchNeedMilli": 10000,
+          "marchDoneMilli": 2000,
+          "marchStartDay": 147
+        }
+      },
+      "join": {
+        "joinPost": "cs_cmd_manassas",
+        "joinRegion": "manassas",
+        "joinSinceDay": 135,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "road:greensboro:salisbury_charlotte",
+            "from": "salisbury_charlotte",
+            "to": "greensboro",
+            "type": "road",
+            "line": null,
+            "breakOfBulk": false,
+            "baseDays": 10,
+            "baseCapacity": 2,
+            "daysPermille": 10000,
+            "capacityMilli": 2000,
+            "effects": []
+          },
+          "remainingMilli": 31000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:greensboro:salisbury_charlotte:north_carolina",
+          "to": "greensboro",
+          "leg": {
+            "edge": "rail:greensboro:salisbury_charlotte:north_carolina",
+            "from": "salisbury_charlotte",
+            "to": "greensboro",
+            "type": "rail",
+            "line": "north_carolina",
+            "breakOfBulk": false,
+            "baseDays": 2,
+            "baseCapacity": 3,
+            "daysPermille": 2000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "greensboro",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:nc_foothills:salisbury_charlotte:western_north_carolina",
+          "to": "nc_foothills",
+          "leg": {
+            "edge": "rail:nc_foothills:salisbury_charlotte:western_north_carolina",
+            "from": "salisbury_charlotte",
+            "to": "nc_foothills",
+            "type": "rail",
+            "line": "western_north_carolina",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 1,
+            "daysPermille": 1000,
+            "capacityMilli": 1000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "nc_foothills",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+          "to": "sc_upstate_east",
+          "leg": {
+            "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+            "from": "salisbury_charlotte",
+            "to": "sc_upstate_east",
+            "type": "rail",
+            "line": "charlotte_and_south_carolina",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "sc_upstate_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "block": "state-forces.cs_nc_additional_north_carolina",
+      "location": {
+        "locRegion": "southside",
+        "locAboard": null,
+        "locSinceDay": 147,
+        "locMarch": {
+          "marchEdge": "road:chesterfield:southside",
+          "marchFrom": "southside",
+          "marchTo": "chesterfield",
+          "marchNeedMilli": 5000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "join": {
+        "joinPost": "cs_cmd_manassas",
+        "joinRegion": "manassas",
+        "joinSinceDay": 138,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "road:chesterfield:southside",
+            "from": "southside",
+            "to": "chesterfield",
+            "type": "road",
+            "line": null,
+            "breakOfBulk": false,
+            "baseDays": 5,
+            "baseCapacity": 2,
+            "daysPermille": 5000,
+            "capacityMilli": 2000,
+            "effects": []
+          },
+          "remainingMilli": 12000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:chesterfield:southside:richmond_and_danville",
+          "to": "chesterfield",
+          "leg": {
+            "edge": "rail:chesterfield:southside:richmond_and_danville",
+            "from": "southside",
+            "to": "chesterfield",
+            "type": "rail",
+            "line": "richmond_and_danville",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "chesterfield",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:danville:southside:richmond_and_danville",
+          "to": "danville",
+          "leg": {
+            "edge": "rail:danville:southside:richmond_and_danville",
+            "from": "southside",
+            "to": "danville",
+            "type": "rail",
+            "line": "richmond_and_danville",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "danville",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:lynchburg:southside:south_side",
+          "to": "lynchburg",
+          "leg": {
+            "edge": "rail:lynchburg:southside:south_side",
+            "from": "southside",
+            "to": "lynchburg",
+            "type": "rail",
+            "line": "south_side",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "lynchburg",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:nc_coastal_plain:southside:petersburg",
+          "to": "nc_coastal_plain",
+          "leg": {
+            "edge": "rail:nc_coastal_plain:southside:petersburg",
+            "from": "southside",
+            "to": "nc_coastal_plain",
+            "type": "rail",
+            "line": "petersburg",
+            "breakOfBulk": false,
+            "baseDays": 2,
+            "baseCapacity": 3,
+            "daysPermille": 2000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "nc_coastal_plain",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:petersburg:southside:south_side",
+          "to": "petersburg",
+          "leg": {
+            "edge": "rail:petersburg:southside:south_side",
+            "from": "southside",
+            "to": "petersburg",
+            "type": "rail",
+            "line": "south_side",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "petersburg",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        }
+      ]
+    },
+    {
+      "block": "state-forces.cs_nc_state_transfer_north_carolina",
+      "location": {
+        "locRegion": "southside",
+        "locAboard": null,
+        "locSinceDay": 147,
+        "locMarch": {
+          "marchEdge": "road:chesterfield:southside",
+          "marchFrom": "southside",
+          "marchTo": "chesterfield",
+          "marchNeedMilli": 5000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "join": {
+        "joinPost": "cs_cmd_manassas",
+        "joinRegion": "manassas",
+        "joinSinceDay": 138,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "road:chesterfield:southside",
+            "from": "southside",
+            "to": "chesterfield",
+            "type": "road",
+            "line": null,
+            "breakOfBulk": false,
+            "baseDays": 5,
+            "baseCapacity": 2,
+            "daysPermille": 5000,
+            "capacityMilli": 2000,
+            "effects": []
+          },
+          "remainingMilli": 12000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:chesterfield:southside:richmond_and_danville",
+          "to": "chesterfield",
+          "leg": {
+            "edge": "rail:chesterfield:southside:richmond_and_danville",
+            "from": "southside",
+            "to": "chesterfield",
+            "type": "rail",
+            "line": "richmond_and_danville",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "chesterfield",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:danville:southside:richmond_and_danville",
+          "to": "danville",
+          "leg": {
+            "edge": "rail:danville:southside:richmond_and_danville",
+            "from": "southside",
+            "to": "danville",
+            "type": "rail",
+            "line": "richmond_and_danville",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "danville",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:lynchburg:southside:south_side",
+          "to": "lynchburg",
+          "leg": {
+            "edge": "rail:lynchburg:southside:south_side",
+            "from": "southside",
+            "to": "lynchburg",
+            "type": "rail",
+            "line": "south_side",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "lynchburg",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:nc_coastal_plain:southside:petersburg",
+          "to": "nc_coastal_plain",
+          "leg": {
+            "edge": "rail:nc_coastal_plain:southside:petersburg",
+            "from": "southside",
+            "to": "nc_coastal_plain",
+            "type": "rail",
+            "line": "petersburg",
+            "breakOfBulk": false,
+            "baseDays": 2,
+            "baseCapacity": 3,
+            "daysPermille": 2000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "nc_coastal_plain",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:petersburg:southside:south_side",
+          "to": "petersburg",
+          "leg": {
+            "edge": "rail:petersburg:southside:south_side",
+            "from": "southside",
+            "to": "petersburg",
+            "type": "rail",
+            "line": "south_side",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "petersburg",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        }
+      ]
+    },
+    {
+      "block": "state-forces.cs_nc_volunteers_north_carolina",
+      "location": {
+        "locRegion": "southside",
+        "locAboard": null,
+        "locSinceDay": 147,
+        "locMarch": {
+          "marchEdge": "road:chesterfield:southside",
+          "marchFrom": "southside",
+          "marchTo": "chesterfield",
+          "marchNeedMilli": 5000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "join": {
+        "joinPost": "cs_cmd_manassas",
+        "joinRegion": "manassas",
+        "joinSinceDay": 138,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "road:chesterfield:southside",
+            "from": "southside",
+            "to": "chesterfield",
+            "type": "road",
+            "line": null,
+            "breakOfBulk": false,
+            "baseDays": 5,
+            "baseCapacity": 2,
+            "daysPermille": 5000,
+            "capacityMilli": 2000,
+            "effects": []
+          },
+          "remainingMilli": 12000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:chesterfield:southside:richmond_and_danville",
+          "to": "chesterfield",
+          "leg": {
+            "edge": "rail:chesterfield:southside:richmond_and_danville",
+            "from": "southside",
+            "to": "chesterfield",
+            "type": "rail",
+            "line": "richmond_and_danville",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "chesterfield",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:danville:southside:richmond_and_danville",
+          "to": "danville",
+          "leg": {
+            "edge": "rail:danville:southside:richmond_and_danville",
+            "from": "southside",
+            "to": "danville",
+            "type": "rail",
+            "line": "richmond_and_danville",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "danville",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:lynchburg:southside:south_side",
+          "to": "lynchburg",
+          "leg": {
+            "edge": "rail:lynchburg:southside:south_side",
+            "from": "southside",
+            "to": "lynchburg",
+            "type": "rail",
+            "line": "south_side",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "lynchburg",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:nc_coastal_plain:southside:petersburg",
+          "to": "nc_coastal_plain",
+          "leg": {
+            "edge": "rail:nc_coastal_plain:southside:petersburg",
+            "from": "southside",
+            "to": "nc_coastal_plain",
+            "type": "rail",
+            "line": "petersburg",
+            "breakOfBulk": false,
+            "baseDays": 2,
+            "baseCapacity": 3,
+            "daysPermille": 2000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "nc_coastal_plain",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:petersburg:southside:south_side",
+          "to": "petersburg",
+          "leg": {
+            "edge": "rail:petersburg:southside:south_side",
+            "from": "southside",
+            "to": "petersburg",
+            "type": "rail",
+            "line": "south_side",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "southside",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          },
+          "toHolding": {
+            "region": "petersburg",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        }
+      ]
+    },
+    {
+      "block": "raised.st_gov_mississippi.d136",
+      "location": {
+        "locRegion": "al_valley_east",
+        "locAboard": null,
+        "locSinceDay": 147,
+        "locMarch": {
+          "marchEdge": "road:al_valley_east:ga_dalton",
+          "marchFrom": "al_valley_east",
+          "marchTo": "ga_dalton",
+          "marchNeedMilli": 9000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "join": {
+        "joinPost": "cs_cmd_manassas",
+        "joinRegion": "manassas",
+        "joinSinceDay": 141,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "road:al_valley_east:ga_dalton",
+            "from": "al_valley_east",
+            "to": "ga_dalton",
+            "type": "road",
+            "line": null,
+            "breakOfBulk": false,
+            "baseDays": 9,
+            "baseCapacity": 1,
+            "daysPermille": 9000,
+            "capacityMilli": 1000,
+            "effects": []
+          },
+          "remainingMilli": 53000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+          "to": "al_valley_west",
+          "leg": {
+            "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+            "from": "al_valley_east",
+            "to": "al_valley_west",
+            "type": "rail",
+            "line": "memphis_and_charleston",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": null,
+          "fromHolding": {
+            "region": "al_valley_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "al_valley_west",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        },
+        {
+          "edge": "rail:al_valley_east:columbia_tn:tennessee_and_alabama_central",
+          "to": "columbia_tn",
+          "leg": {
+            "edge": "rail:al_valley_east:columbia_tn:tennessee_and_alabama_central",
+            "from": "al_valley_east",
+            "to": "columbia_tn",
+            "type": "rail",
+            "line": "tennessee_and_alabama_central",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 2,
+            "daysPermille": 1000,
+            "capacityMilli": 2000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "al_valley_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "columbia_tn",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:al_valley_east:tn_rim_south:nashville_and_chattanooga",
+          "to": "tn_rim_south",
+          "leg": {
+            "edge": "rail:al_valley_east:tn_rim_south:nashville_and_chattanooga",
+            "from": "al_valley_east",
+            "to": "tn_rim_south",
+            "type": "rail",
+            "line": "nashville_and_chattanooga",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "al_valley_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "tn_rim_south",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          }
+        }
+      ]
+    },
+    {
+      "block": "raised.st_gov_mississippi.d137.2",
+      "location": {
+        "locRegion": "al_valley_east",
+        "locAboard": null,
+        "locSinceDay": 147,
+        "locMarch": {
+          "marchEdge": "road:al_valley_east:ga_dalton",
+          "marchFrom": "al_valley_east",
+          "marchTo": "ga_dalton",
+          "marchNeedMilli": 9000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "join": {
+        "joinPost": "cs_cmd_manassas",
+        "joinRegion": "manassas",
+        "joinSinceDay": 141,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "road:al_valley_east:ga_dalton",
+            "from": "al_valley_east",
+            "to": "ga_dalton",
+            "type": "road",
+            "line": null,
+            "breakOfBulk": false,
+            "baseDays": 9,
+            "baseCapacity": 1,
+            "daysPermille": 9000,
+            "capacityMilli": 1000,
+            "effects": []
+          },
+          "remainingMilli": 53000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+          "to": "al_valley_west",
+          "leg": {
+            "edge": "rail:al_valley_east:al_valley_west:memphis_and_charleston",
+            "from": "al_valley_east",
+            "to": "al_valley_west",
+            "type": "rail",
+            "line": "memphis_and_charleston",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": null,
+          "fromHolding": {
+            "region": "al_valley_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "al_valley_west",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        },
+        {
+          "edge": "rail:al_valley_east:columbia_tn:tennessee_and_alabama_central",
+          "to": "columbia_tn",
+          "leg": {
+            "edge": "rail:al_valley_east:columbia_tn:tennessee_and_alabama_central",
+            "from": "al_valley_east",
+            "to": "columbia_tn",
+            "type": "rail",
+            "line": "tennessee_and_alabama_central",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 2,
+            "daysPermille": 1000,
+            "capacityMilli": 2000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "al_valley_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "columbia_tn",
+            "holder": null,
+            "reason": "no_control",
+            "tracedBy": []
+          }
+        },
+        {
+          "edge": "rail:al_valley_east:tn_rim_south:nashville_and_chattanooga",
+          "to": "tn_rim_south",
+          "leg": {
+            "edge": "rail:al_valley_east:tn_rim_south:nashville_and_chattanooga",
+            "from": "al_valley_east",
+            "to": "tn_rim_south",
+            "type": "rail",
+            "line": "nashville_and_chattanooga",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "al_valley_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "tn_rim_south",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          }
+        }
+      ]
+    },
+    {
+      "block": "raised.st_gov_south_carolina.d139",
+      "location": {
+        "locRegion": "sc_upstate_east",
+        "locAboard": null,
+        "locSinceDay": 144,
+        "locMarch": {
+          "marchEdge": "road:salisbury_charlotte:sc_upstate_east",
+          "marchFrom": "sc_upstate_east",
+          "marchTo": "salisbury_charlotte",
+          "marchNeedMilli": 5000,
+          "marchDoneMilli": 4000,
+          "marchStartDay": 145
+        }
+      },
+      "join": {
+        "joinPost": "cs_cmd_manassas",
+        "joinRegion": "manassas",
+        "joinSinceDay": 144,
+        "joinBlocked": null
+      },
+      "quickestSteps": [
+        {
+          "leg": {
+            "edge": "road:salisbury_charlotte:sc_upstate_east",
+            "from": "sc_upstate_east",
+            "to": "salisbury_charlotte",
+            "type": "road",
+            "line": null,
+            "breakOfBulk": false,
+            "baseDays": 5,
+            "baseCapacity": 2,
+            "daysPermille": 5000,
+            "capacityMilli": 2000,
+            "effects": []
+          },
+          "remainingMilli": 41000
+        }
+      ],
+      "localRail": [
+        {
+          "edge": "rail:columbia_sc:sc_upstate_east:charlotte_and_south_carolina",
+          "to": "columbia_sc",
+          "leg": {
+            "edge": "rail:columbia_sc:sc_upstate_east:charlotte_and_south_carolina",
+            "from": "sc_upstate_east",
+            "to": "columbia_sc",
+            "type": "rail",
+            "line": "charlotte_and_south_carolina",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": null,
+          "fromHolding": {
+            "region": "sc_upstate_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "columbia_sc",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          }
+        },
+        {
+          "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+          "to": "salisbury_charlotte",
+          "leg": {
+            "edge": "rail:salisbury_charlotte:sc_upstate_east:charlotte_and_south_carolina",
+            "from": "sc_upstate_east",
+            "to": "salisbury_charlotte",
+            "type": "rail",
+            "line": "charlotte_and_south_carolina",
+            "breakOfBulk": false,
+            "baseDays": 1,
+            "baseCapacity": 3,
+            "daysPermille": 1000,
+            "capacityMilli": 3000,
+            "effects": []
+          },
+          "bar": "rail_not_traced",
+          "fromHolding": {
+            "region": "sc_upstate_east",
+            "holder": "confederate",
+            "reason": "held",
+            "tracedBy": [
+              "confederate"
+            ]
+          },
+          "toHolding": {
+            "region": "salisbury_charlotte",
+            "holder": null,
+            "reason": "below_threshold",
+            "tracedBy": []
+          }
+        }
+      ]
+    }
+  ]
+}

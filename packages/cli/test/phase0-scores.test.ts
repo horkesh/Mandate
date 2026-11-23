@@ -1,3 +1,4 @@
+import { forceTotals } from '../../kernel/src/forces/lots.ts';
 import { phase0 } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
 import { checkpointScores } from '../src/phase0-scores.ts';
@@ -8,11 +9,11 @@ describe('checkpoint scores count a block on its department\'s side today', () =
   it('moves a department\'s known men to the side it is on in State, not the World\'s', () => {
     const { world, setup } = seatsWorld('testbed');
     const result = phase0.tick(world, phase0.createState(world, setup), []);
-    const block = Object.values(result.state.forceBlockStates).find((b) => b.fbStrength !== null && phase0.departmentSide(result.state, b.fbDepartment) !== null)!;
+    const block = Object.values(result.state.forceBlockStates).find((b) => forceTotals(b).fbStrength !== null && phase0.departmentSide(result.state, b.fbDepartment) !== null)!;
     const from = phase0.departmentSide(result.state, block.fbDepartment)!;
     const to = world.map.world.factions.map((f) => f.id).find((f) => f !== from)!;
     let men = 0;
-    for (const b of Object.values(result.state.forceBlockStates)) if (b.fbDepartment === block.fbDepartment) men += b.fbStrength ?? 0;
+    for (const b of Object.values(result.state.forceBlockStates)) if (b.fbDepartment === block.fbDepartment) men += forceTotals(b).fbStrength ?? 0;
     expect(men).toBeGreaterThan(0);
 
     const before = checkpointScores(world, result);

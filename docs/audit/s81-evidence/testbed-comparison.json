@@ -1,0 +1,22 @@
+{
+  "baseline": "runs/s78/references/testbed-summary.json",
+  "completeFunctionalChanges": [],
+  "counterChanges": [],
+  "dailyChanges": [],
+  "changedHashes": [],
+  "beforeTiming": {
+    "unit": "ms",
+    "days": 120,
+    "median": 3.64650000000006,
+    "p95": 7.447799999999916,
+    "max": 36.617399999999975
+  },
+  "afterTiming": {
+    "unit": "ms",
+    "days": 120,
+    "median": 3.5842999999999847,
+    "p95": 7.574200000000019,
+    "max": 37.09439999999995
+  },
+  "attributionLimit": "Mechanism-family explanations are inferences [I], not isolated causal experiments."
+}

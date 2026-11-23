@@ -1,0 +1,754 @@
+{
+  "initialProjection": {
+    "projected": "39b8e93f26e9ce02b921671887277cb95f500e71414b0f73ee39468b46186604",
+    "expected": "39b8e93f26e9ce02b921671887277cb95f500e71414b0f73ee39468b46186604"
+  },
+  "worldProjection": {
+    "projected": "61e9be4a5b3e91bb875d8af8882e4975999e92d5e8143f7d3911758778c8fd26",
+    "expected": "61e9be4a5b3e91bb875d8af8882e4975999e92d5e8143f7d3911758778c8fd26"
+  },
+  "projections": [
+    {
+      "day": 1,
+      "projected": "214b6d582cbeb8fa8b7015cd4af710a994a9dac2a483387b733ab73b0df465a5",
+      "expected": "214b6d582cbeb8fa8b7015cd4af710a994a9dac2a483387b733ab73b0df465a5"
+    },
+    {
+      "day": 2,
+      "projected": "ab106f15539f694e7e16048891990894b85091928302c990c980136cd2e42913",
+      "expected": "ab106f15539f694e7e16048891990894b85091928302c990c980136cd2e42913"
+    },
+    {
+      "day": 3,
+      "projected": "00413386385de21ab69416bea32e2563e7ffe6fe7dae1dae682700641fba000b",
+      "expected": "00413386385de21ab69416bea32e2563e7ffe6fe7dae1dae682700641fba000b"
+    },
+    {
+      "day": 4,
+      "projected": "9b44f2cb4a793b1fd3b2ea87695ffb1c600c38c7ed3a14e2465b7584c130ae2a",
+      "expected": "9b44f2cb4a793b1fd3b2ea87695ffb1c600c38c7ed3a14e2465b7584c130ae2a"
+    },
+    {
+      "day": 5,
+      "projected": "e9c7cc29b1301582711b9e826888795acfb5321890f7597395562c28c7c98ac7",
+      "expected": "e9c7cc29b1301582711b9e826888795acfb5321890f7597395562c28c7c98ac7"
+    },
+    {
+      "day": 6,
+      "projected": "b8aa8c05656d37c022560b97510df72a5e08dcce67f10cb4f84fe319867e1365",
+      "expected": "b8aa8c05656d37c022560b97510df72a5e08dcce67f10cb4f84fe319867e1365"
+    },
+    {
+      "day": 7,
+      "projected": "2dffd9569d5b94bd5b22b54372db4230a8a46b25457ce6c9a0630c99d970fab0",
+      "expected": "2dffd9569d5b94bd5b22b54372db4230a8a46b25457ce6c9a0630c99d970fab0"
+    },
+    {
+      "day": 8,
+      "projected": "7bd9197ed0f0bc59367db11e884c3dc50cf83835876b2ad6db76ee2a05ee69ae",
+      "expected": "7bd9197ed0f0bc59367db11e884c3dc50cf83835876b2ad6db76ee2a05ee69ae"
+    },
+    {
+      "day": 9,
+      "projected": "1d33c8b37f11d766e9afc350c760f81ad9ee982042611aa726a3ef7c74b5b187",
+      "expected": "1d33c8b37f11d766e9afc350c760f81ad9ee982042611aa726a3ef7c74b5b187"
+    },
+    {
+      "day": 10,
+      "projected": "8e35f43e5da0d20f32dc4fcd97a4ef5322256f555718a7f89b8bc84a21a79f77",
+      "expected": "8e35f43e5da0d20f32dc4fcd97a4ef5322256f555718a7f89b8bc84a21a79f77"
+    },
+    {
+      "day": 11,
+      "projected": "bc9267f6aaca7aead292da510111c9f29ad4e915265fb2e7060f8a8b20fcf069",
+      "expected": "bc9267f6aaca7aead292da510111c9f29ad4e915265fb2e7060f8a8b20fcf069"
+    },
+    {
+      "day": 12,
+      "projected": "fb47b4203819a75f438287adbd815165793996dda3e17eeb2436d4b6b08f9a4e",
+      "expected": "fb47b4203819a75f438287adbd815165793996dda3e17eeb2436d4b6b08f9a4e"
+    },
+    {
+      "day": 13,
+      "projected": "f139de8ee62842d30f3187423c1ab8682879ddbf47f055d077897875eb68e19c",
+      "expected": "f139de8ee62842d30f3187423c1ab8682879ddbf47f055d077897875eb68e19c"
+    },
+    {
+      "day": 14,
+      "projected": "db5666ad83dddb98cc46abece904300d9ea5d3c052b2780be23847a69d8a2ab2",
+      "expected": "db5666ad83dddb98cc46abece904300d9ea5d3c052b2780be23847a69d8a2ab2"
+    },
+    {
+      "day": 15,
+      "projected": "d55e4ac19febbd9a85bfd94c1b357abee21eb5695ac61afe94770f79180a97e6",
+      "expected": "d55e4ac19febbd9a85bfd94c1b357abee21eb5695ac61afe94770f79180a97e6"
+    },
+    {
+      "day": 16,
+      "projected": "1a2d3aef3b089a1fc0c79b0a139f02048ba0da7cbfc5688e4c12d80262a8e520",
+      "expected": "1a2d3aef3b089a1fc0c79b0a139f02048ba0da7cbfc5688e4c12d80262a8e520"
+    },
+    {
+      "day": 17,
+      "projected": "0c6c77686b99f8042b1b4230475d4484bcefd90097ca578cab5e0897f6e32354",
+      "expected": "0c6c77686b99f8042b1b4230475d4484bcefd90097ca578cab5e0897f6e32354"
+    },
+    {
+      "day": 18,
+      "projected": "54a251eaaf5cb46bb36499a363f21a1585947d8725f07bf2d0eab791c500b334",
+      "expected": "54a251eaaf5cb46bb36499a363f21a1585947d8725f07bf2d0eab791c500b334"
+    },
+    {
+      "day": 19,
+      "projected": "3801d16f323f62bd9de09ca774efc6a323453832ffe5a63ca0c9824d77b19741",
+      "expected": "3801d16f323f62bd9de09ca774efc6a323453832ffe5a63ca0c9824d77b19741"
+    },
+    {
+      "day": 20,
+      "projected": "f66df7e1a8248704facdb53a71f1320be41a67dc6f004305d1b59f9ae2de7e8c",
+      "expected": "f66df7e1a8248704facdb53a71f1320be41a67dc6f004305d1b59f9ae2de7e8c"
+    },
+    {
+      "day": 21,
+      "projected": "0e34f14417ada62ec1ba7b5dac8589ebb6118f1214ebcc6d929d334078417364",
+      "expected": "0e34f14417ada62ec1ba7b5dac8589ebb6118f1214ebcc6d929d334078417364"
+    },
+    {
+      "day": 22,
+      "projected": "c59d798a0e989fb636097c640851a5e2725cdb2654fc91b7323c26549a2b8d95",
+      "expected": "c59d798a0e989fb636097c640851a5e2725cdb2654fc91b7323c26549a2b8d95"
+    },
+    {
+      "day": 23,
+      "projected": "b62a4c40d8f29d6f663d1247d8ddb6176f9faaf2db3cdf66f8822cc0a1974af1",
+      "expected": "b62a4c40d8f29d6f663d1247d8ddb6176f9faaf2db3cdf66f8822cc0a1974af1"
+    },
+    {
+      "day": 24,
+      "projected": "dfebc8549fd17c85b2783ea9ea397b3d0abd4a89dc42bfcdfbb5a30d2e97f187",
+      "expected": "dfebc8549fd17c85b2783ea9ea397b3d0abd4a89dc42bfcdfbb5a30d2e97f187"
+    },
+    {
+      "day": 25,
+      "projected": "03cf461b7f95b48ce4b6152db1f02c5bce40ee8a461fd411660a3ac384afc21f",
+      "expected": "03cf461b7f95b48ce4b6152db1f02c5bce40ee8a461fd411660a3ac384afc21f"
+    },
+    {
+      "day": 26,
+      "projected": "eb3d36972b3ce0d36ab8464b9547cf20883b08728b46ffcea08b28386aa4d1a3",
+      "expected": "eb3d36972b3ce0d36ab8464b9547cf20883b08728b46ffcea08b28386aa4d1a3"
+    },
+    {
+      "day": 27,
+      "projected": "45423e05cbd777f0df48ea72b3c309dec865f5d2363481a33b28c6454bcb7c54",
+      "expected": "45423e05cbd777f0df48ea72b3c309dec865f5d2363481a33b28c6454bcb7c54"
+    },
+    {
+      "day": 28,
+      "projected": "343887a10cdcaab9dc5983c685626b53684ec6870c53fc7f00ce7b081675bf5b",
+      "expected": "343887a10cdcaab9dc5983c685626b53684ec6870c53fc7f00ce7b081675bf5b"
+    },
+    {
+      "day": 29,
+      "projected": "f2dc3c678526863359210a4f3de3cdcc84392c8352106818bae212c782355705",
+      "expected": "f2dc3c678526863359210a4f3de3cdcc84392c8352106818bae212c782355705"
+    },
+    {
+      "day": 30,
+      "projected": "aad7c069dc0bcea44a15d0f3a0258ec76017fc1b66033b2e4fb0caef68ba489b",
+      "expected": "aad7c069dc0bcea44a15d0f3a0258ec76017fc1b66033b2e4fb0caef68ba489b"
+    },
+    {
+      "day": 31,
+      "projected": "b27af32dc08a8eceb2b77fb011ee6f99cb66105cdcb555a675b16a76ba58c20f",
+      "expected": "b27af32dc08a8eceb2b77fb011ee6f99cb66105cdcb555a675b16a76ba58c20f"
+    },
+    {
+      "day": 32,
+      "projected": "8290f9ac5a12c871a8edeb67987ca865e8e6e1652ec299e9d74ac1a01eb41a16",
+      "expected": "8290f9ac5a12c871a8edeb67987ca865e8e6e1652ec299e9d74ac1a01eb41a16"
+    },
+    {
+      "day": 33,
+      "projected": "933f78c602ee16040ac2152cc7056a75f4ac3d27db619cafc527727c2eb1e944",
+      "expected": "933f78c602ee16040ac2152cc7056a75f4ac3d27db619cafc527727c2eb1e944"
+    },
+    {
+      "day": 34,
+      "projected": "2339c2ccbbdc5a2eb8fa82c7f92d61a1bc597503a23c679e04ee489bd81f9cca",
+      "expected": "2339c2ccbbdc5a2eb8fa82c7f92d61a1bc597503a23c679e04ee489bd81f9cca"
+    },
+    {
+      "day": 35,
+      "projected": "2a0796dc0d4a7db873314b8af501ea00f701842143aa740674ae07e391372bab",
+      "expected": "2a0796dc0d4a7db873314b8af501ea00f701842143aa740674ae07e391372bab"
+    },
+    {
+      "day": 36,
+      "projected": "a3abfdfba9237b5fed27d60e0c19defd953689f4609414ee2824a8f8eee12ad3",
+      "expected": "a3abfdfba9237b5fed27d60e0c19defd953689f4609414ee2824a8f8eee12ad3"
+    },
+    {
+      "day": 37,
+      "projected": "dd1e637432460cfb8a4e5518c718872afbe04005af1498f3b2017529b5f2105a",
+      "expected": "dd1e637432460cfb8a4e5518c718872afbe04005af1498f3b2017529b5f2105a"
+    },
+    {
+      "day": 38,
+      "projected": "247e8cbd2c65a9ac6834c3ecaca90bd644df34afadf91bbb445a940df9e4b9cf",
+      "expected": "247e8cbd2c65a9ac6834c3ecaca90bd644df34afadf91bbb445a940df9e4b9cf"
+    },
+    {
+      "day": 39,
+      "projected": "1669a91cea8cbfb4c3966762f53d1fd1533848ab880cc94d8a5d51040dbd23af",
+      "expected": "1669a91cea8cbfb4c3966762f53d1fd1533848ab880cc94d8a5d51040dbd23af"
+    },
+    {
+      "day": 40,
+      "projected": "dd272b24c5ca137b0d77d003fd32c464cd83c294aebddd2374fc31c39fcb2b61",
+      "expected": "dd272b24c5ca137b0d77d003fd32c464cd83c294aebddd2374fc31c39fcb2b61"
+    },
+    {
+      "day": 41,
+      "projected": "29f0c1b0fa0f8bfc0ce388af401da570e46c2f5009bcbc79078dd3c8985dfd9f",
+      "expected": "29f0c1b0fa0f8bfc0ce388af401da570e46c2f5009bcbc79078dd3c8985dfd9f"
+    },
+    {
+      "day": 42,
+      "projected": "1a018da00d5f33d1b6fce9289485b1938a0daa89e719781de62bb357138abca5",
+      "expected": "1a018da00d5f33d1b6fce9289485b1938a0daa89e719781de62bb357138abca5"
+    },
+    {
+      "day": 43,
+      "projected": "90882c6e5f6acc2d4bc4887966aa82727790d7e052de1ee6118cf3a47f17944f",
+      "expected": "90882c6e5f6acc2d4bc4887966aa82727790d7e052de1ee6118cf3a47f17944f"
+    },
+    {
+      "day": 44,
+      "projected": "0da7b91a0cd80cbc211aeedb7e790e9ab83450b866c464c5ce806d4dcdf6f649",
+      "expected": "0da7b91a0cd80cbc211aeedb7e790e9ab83450b866c464c5ce806d4dcdf6f649"
+    },
+    {
+      "day": 45,
+      "projected": "d4e70e346248c925f5d155b6827ec81522ed83bf52691d743f8d80579d2a067d",
+      "expected": "d4e70e346248c925f5d155b6827ec81522ed83bf52691d743f8d80579d2a067d"
+    },
+    {
+      "day": 46,
+      "projected": "f24a77cf4678def9340e5e4ebeb43d5726f7e710a2875e7450b1b96a4d485876",
+      "expected": "f24a77cf4678def9340e5e4ebeb43d5726f7e710a2875e7450b1b96a4d485876"
+    },
+    {
+      "day": 47,
+      "projected": "445e9347fb72213aba7aab069b38cda2b2eb2945ad97b13deddc135b472f586b",
+      "expected": "445e9347fb72213aba7aab069b38cda2b2eb2945ad97b13deddc135b472f586b"
+    },
+    {
+      "day": 48,
+      "projected": "458ad9d167cd23c620db3629945cd8ef50e0352f28219c7fc8eae4d5a12cfd49",
+      "expected": "458ad9d167cd23c620db3629945cd8ef50e0352f28219c7fc8eae4d5a12cfd49"
+    },
+    {
+      "day": 49,
+      "projected": "223d17319bb947b0dda9f322c82657b22ff10f36b439fa462e4b865096b0dd40",
+      "expected": "223d17319bb947b0dda9f322c82657b22ff10f36b439fa462e4b865096b0dd40"
+    },
+    {
+      "day": 50,
+      "projected": "a069894111f03b5bc0219e89a28529bc679c525574b5634c190b1f7ef48e0130",
+      "expected": "a069894111f03b5bc0219e89a28529bc679c525574b5634c190b1f7ef48e0130"
+    },
+    {
+      "day": 51,
+      "projected": "2714f65c3b2185194df18ac3cdaf09769ca0fee7963a7be326072eb0611b4205",
+      "expected": "2714f65c3b2185194df18ac3cdaf09769ca0fee7963a7be326072eb0611b4205"
+    },
+    {
+      "day": 52,
+      "projected": "682cfa6f8e36ba30dbce86b689f76fa56175cca31b1a3c70062804da43919371",
+      "expected": "682cfa6f8e36ba30dbce86b689f76fa56175cca31b1a3c70062804da43919371"
+    },
+    {
+      "day": 53,
+      "projected": "0037ebe512cf346ea78696177294a9827e35b5df541a3a20bd1a5042924a0077",
+      "expected": "0037ebe512cf346ea78696177294a9827e35b5df541a3a20bd1a5042924a0077"
+    },
+    {
+      "day": 54,
+      "projected": "e47fa3f823590cd4ee289995178dd303a08c941c9b30c9308efaae3f9da6496a",
+      "expected": "e47fa3f823590cd4ee289995178dd303a08c941c9b30c9308efaae3f9da6496a"
+    },
+    {
+      "day": 55,
+      "projected": "4a99d0c67e1250fe5c57895c49285c572450cb197ef9c89af480302cb6826f2f",
+      "expected": "4a99d0c67e1250fe5c57895c49285c572450cb197ef9c89af480302cb6826f2f"
+    },
+    {
+      "day": 56,
+      "projected": "e2fa01ec047ecf5e6313eba5b12fa8d35b455fb608a12a65096f80cea74cede5",
+      "expected": "e2fa01ec047ecf5e6313eba5b12fa8d35b455fb608a12a65096f80cea74cede5"
+    },
+    {
+      "day": 57,
+      "projected": "c3c6481c2f040650ed4afe417d127c5107a48002eeb0ab2d84aa96c9ff49e368",
+      "expected": "c3c6481c2f040650ed4afe417d127c5107a48002eeb0ab2d84aa96c9ff49e368"
+    },
+    {
+      "day": 58,
+      "projected": "a06410e4c73296317e1b1385b00af363e4b5c7141af8ca861885d3a0605ac476",
+      "expected": "a06410e4c73296317e1b1385b00af363e4b5c7141af8ca861885d3a0605ac476"
+    },
+    {
+      "day": 59,
+      "projected": "6ac538f374ebf1d5b5ca339ad6900a8743e1c57a898ec5658d7e7834751007d8",
+      "expected": "6ac538f374ebf1d5b5ca339ad6900a8743e1c57a898ec5658d7e7834751007d8"
+    },
+    {
+      "day": 60,
+      "projected": "ab480a36fe8be1b7742a54015af36b8c493984e3db5a5bdbca4e2adafb5baee7",
+      "expected": "ab480a36fe8be1b7742a54015af36b8c493984e3db5a5bdbca4e2adafb5baee7"
+    },
+    {
+      "day": 61,
+      "projected": "db872c885d1f39a4e8e39862736c8b368499d2b4dda32c9bf401c1e2a1eb4e6d",
+      "expected": "db872c885d1f39a4e8e39862736c8b368499d2b4dda32c9bf401c1e2a1eb4e6d"
+    },
+    {
+      "day": 62,
+      "projected": "55a3b1082007f5e27448a033e3ddd0249826ef3284aa46c4ee8c4e6321c12c80",
+      "expected": "55a3b1082007f5e27448a033e3ddd0249826ef3284aa46c4ee8c4e6321c12c80"
+    },
+    {
+      "day": 63,
+      "projected": "69c9957d9674f873bb98664c32b2e57d2f158318de4a31f9fa66ed6cfda35dc6",
+      "expected": "69c9957d9674f873bb98664c32b2e57d2f158318de4a31f9fa66ed6cfda35dc6"
+    },
+    {
+      "day": 64,
+      "projected": "1474dbf9ae60f305f6365e665f454fe4b4648f2fd32520d62705e1152f59a3ad",
+      "expected": "1474dbf9ae60f305f6365e665f454fe4b4648f2fd32520d62705e1152f59a3ad"
+    },
+    {
+      "day": 65,
+      "projected": "fa5702475269ef55a464240717f39fbd93d500875d996124ca859c62973e4b73",
+      "expected": "fa5702475269ef55a464240717f39fbd93d500875d996124ca859c62973e4b73"
+    },
+    {
+      "day": 66,
+      "projected": "a1c4156aa95c9d245190a74162657087fc1a2e02f1467d94ac81bc9e060b89b2",
+      "expected": "a1c4156aa95c9d245190a74162657087fc1a2e02f1467d94ac81bc9e060b89b2"
+    },
+    {
+      "day": 67,
+      "projected": "9e5861bd8cc957c3c076876a026b125a9b9d3739c99a279ed9a8b6492660177e",
+      "expected": "9e5861bd8cc957c3c076876a026b125a9b9d3739c99a279ed9a8b6492660177e"
+    },
+    {
+      "day": 68,
+      "projected": "c75757de9122b577a415435ecabfdb8b548461792b0ed2de0c4b4a2a022e9a11",
+      "expected": "c75757de9122b577a415435ecabfdb8b548461792b0ed2de0c4b4a2a022e9a11"
+    },
+    {
+      "day": 69,
+      "projected": "7c65107993f0280f645339f8fcd50bf825e2250875e5e86f4b54a179c2981d50",
+      "expected": "7c65107993f0280f645339f8fcd50bf825e2250875e5e86f4b54a179c2981d50"
+    },
+    {
+      "day": 70,
+      "projected": "ad286555d8312ad603be019918cac1c1762f1a31d8e104db64b2ba83ba847ba2",
+      "expected": "ad286555d8312ad603be019918cac1c1762f1a31d8e104db64b2ba83ba847ba2"
+    },
+    {
+      "day": 71,
+      "projected": "5340aeb8966073e6437f591b47670caab724d284a50ef5af3190b62089718e23",
+      "expected": "5340aeb8966073e6437f591b47670caab724d284a50ef5af3190b62089718e23"
+    },
+    {
+      "day": 72,
+      "projected": "0a04f3ee9dc6d6e758825bfc5b8cd89ea0727b920fb84ae24a6fb549bbf37281",
+      "expected": "0a04f3ee9dc6d6e758825bfc5b8cd89ea0727b920fb84ae24a6fb549bbf37281"
+    },
+    {
+      "day": 73,
+      "projected": "525485629f66500cc8cf923def3fe86f530f8b28e81dbb4088264dd143b8ee98",
+      "expected": "525485629f66500cc8cf923def3fe86f530f8b28e81dbb4088264dd143b8ee98"
+    },
+    {
+      "day": 74,
+      "projected": "881cbcf36f3988a6861cba578da959781d716f8d670a08e76d911786bd0cdcbf",
+      "expected": "881cbcf36f3988a6861cba578da959781d716f8d670a08e76d911786bd0cdcbf"
+    },
+    {
+      "day": 75,
+      "projected": "7d89aedbd57c1d541c9ba63b9e7c1da8bbf52506a94eb5358d47325e3577d35a",
+      "expected": "7d89aedbd57c1d541c9ba63b9e7c1da8bbf52506a94eb5358d47325e3577d35a"
+    },
+    {
+      "day": 76,
+      "projected": "b5cb57b448ac73742b9c71ce37bc5c5f59af1bffc9dfd10563dab84106b6f855",
+      "expected": "b5cb57b448ac73742b9c71ce37bc5c5f59af1bffc9dfd10563dab84106b6f855"
+    },
+    {
+      "day": 77,
+      "projected": "f7bb11b8c63b167e892f8367b73a615664f76edd28fe8a48a5e4703ecd99794e",
+      "expected": "f7bb11b8c63b167e892f8367b73a615664f76edd28fe8a48a5e4703ecd99794e"
+    },
+    {
+      "day": 78,
+      "projected": "faf4c675903114a77ebbac0824b4548f5faba385b27ba516b7a9d16eed9fca97",
+      "expected": "faf4c675903114a77ebbac0824b4548f5faba385b27ba516b7a9d16eed9fca97"
+    },
+    {
+      "day": 79,
+      "projected": "122c3113b5b8c15acff38411d7bf77a55dbbef2afa85b3397398b9de12c39392",
+      "expected": "122c3113b5b8c15acff38411d7bf77a55dbbef2afa85b3397398b9de12c39392"
+    },
+    {
+      "day": 80,
+      "projected": "6c6112df722ae88994eb63e9ac00564308b6666d015e1aa34c3e68c3ca62ce6a",
+      "expected": "6c6112df722ae88994eb63e9ac00564308b6666d015e1aa34c3e68c3ca62ce6a"
+    },
+    {
+      "day": 81,
+      "projected": "b859e6d2029c56d618029a48e43200e36a33f10ad5506f50221a79be190a07b6",
+      "expected": "b859e6d2029c56d618029a48e43200e36a33f10ad5506f50221a79be190a07b6"
+    },
+    {
+      "day": 82,
+      "projected": "880b6e327f0b56d866b64c0ddda53f01d92862f9008aff4747c76a18601ce9d6",
+      "expected": "880b6e327f0b56d866b64c0ddda53f01d92862f9008aff4747c76a18601ce9d6"
+    },
+    {
+      "day": 83,
+      "projected": "dbdcd4f9623c3c32fa69d0fc9a405b8153c52c76f1b7a6d8996b3b2512237899",
+      "expected": "dbdcd4f9623c3c32fa69d0fc9a405b8153c52c76f1b7a6d8996b3b2512237899"
+    },
+    {
+      "day": 84,
+      "projected": "9c1c9bc9544022d98ec3f40aca6a27ca5b953db7bef9df61c66bae50f63b3c6d",
+      "expected": "9c1c9bc9544022d98ec3f40aca6a27ca5b953db7bef9df61c66bae50f63b3c6d"
+    },
+    {
+      "day": 85,
+      "projected": "9ae9e7aec936e3861b69529af18c2e279f29db58bb6abf222187341d3c6f695e",
+      "expected": "9ae9e7aec936e3861b69529af18c2e279f29db58bb6abf222187341d3c6f695e"
+    },
+    {
+      "day": 86,
+      "projected": "8fb95fb2d049f2e45dcc48d55f953ae001a58aba09d1f45703e07b189e11a537",
+      "expected": "8fb95fb2d049f2e45dcc48d55f953ae001a58aba09d1f45703e07b189e11a537"
+    },
+    {
+      "day": 87,
+      "projected": "19ba58f75885ebc97cab0bbc6acf04b58c8aebe506b3e0fb01bae55f9b0e93b9",
+      "expected": "19ba58f75885ebc97cab0bbc6acf04b58c8aebe506b3e0fb01bae55f9b0e93b9"
+    },
+    {
+      "day": 88,
+      "projected": "cb38761de7118ded7071517310d6adc18c57b8502be2c9e70189eaa38bf01641",
+      "expected": "cb38761de7118ded7071517310d6adc18c57b8502be2c9e70189eaa38bf01641"
+    },
+    {
+      "day": 89,
+      "projected": "9d04389d73368641f0cc71fd302e484e8ccc3b6dc5a9a8f55979992e500400bf",
+      "expected": "9d04389d73368641f0cc71fd302e484e8ccc3b6dc5a9a8f55979992e500400bf"
+    },
+    {
+      "day": 90,
+      "projected": "bcb0d5d7e93832c708b5b50a765cbcc6512cb49acd8e7a9416032ffdfc4cf4d5",
+      "expected": "bcb0d5d7e93832c708b5b50a765cbcc6512cb49acd8e7a9416032ffdfc4cf4d5"
+    },
+    {
+      "day": 91,
+      "projected": "a0ba9f794af7d0bff14b6fdd353dbf904210c9b7b61bf5b481a50637967fb039",
+      "expected": "a0ba9f794af7d0bff14b6fdd353dbf904210c9b7b61bf5b481a50637967fb039"
+    },
+    {
+      "day": 92,
+      "projected": "395586f306467d4129a5a3c81cfa93563288ab72165517603527e3a5c8c895dd",
+      "expected": "395586f306467d4129a5a3c81cfa93563288ab72165517603527e3a5c8c895dd"
+    },
+    {
+      "day": 93,
+      "projected": "b5442e9014ad3595af71a9faeeaea33a6e8fd716ce89459e098726cd2c2c3985",
+      "expected": "b5442e9014ad3595af71a9faeeaea33a6e8fd716ce89459e098726cd2c2c3985"
+    },
+    {
+      "day": 94,
+      "projected": "40528f80ece7a7249b8658fb85209c6353c19f8c834d909c987f5e4c44f91db2",
+      "expected": "40528f80ece7a7249b8658fb85209c6353c19f8c834d909c987f5e4c44f91db2"
+    },
+    {
+      "day": 95,
+      "projected": "26cb30b73ba006a3cb72360faf4c68db45b3736e3470c86074f5275ee7ac030f",
+      "expected": "26cb30b73ba006a3cb72360faf4c68db45b3736e3470c86074f5275ee7ac030f"
+    },
+    {
+      "day": 96,
+      "projected": "f3b8e9c43bd978a5e229307e33c723fd04e8320d062730e2b5a44207c43ed104",
+      "expected": "f3b8e9c43bd978a5e229307e33c723fd04e8320d062730e2b5a44207c43ed104"
+    },
+    {
+      "day": 97,
+      "projected": "c779439248eaf0b1a5eb9234bbae662b301447ccca87ec0ae6366bdda7b541c8",
+      "expected": "c779439248eaf0b1a5eb9234bbae662b301447ccca87ec0ae6366bdda7b541c8"
+    },
+    {
+      "day": 98,
+      "projected": "23490d9194ca543f11c1e39a87c429b0615361420eabf93d8cf56402ac8242af",
+      "expected": "23490d9194ca543f11c1e39a87c429b0615361420eabf93d8cf56402ac8242af"
+    },
+    {
+      "day": 99,
+      "projected": "75897f6e4d178678aea4b36c3f85bd62467715c0d5d751d3613e1c74c7f000a7",
+      "expected": "75897f6e4d178678aea4b36c3f85bd62467715c0d5d751d3613e1c74c7f000a7"
+    },
+    {
+      "day": 100,
+      "projected": "9b5341d84eeb0c24a0512d0f41cecd628a63499aa73f565f669202c9ac74bbe4",
+      "expected": "9b5341d84eeb0c24a0512d0f41cecd628a63499aa73f565f669202c9ac74bbe4"
+    },
+    {
+      "day": 101,
+      "projected": "25ebb4ae42b33cc983bad93e0df3aa716cce7e708aa2dd9497f2c27249aa7dce",
+      "expected": "25ebb4ae42b33cc983bad93e0df3aa716cce7e708aa2dd9497f2c27249aa7dce"
+    },
+    {
+      "day": 102,
+      "projected": "393ac5bd3628be8d9f064860f27f598b31ae733fe4f6673e38efda6c8c4e973d",
+      "expected": "393ac5bd3628be8d9f064860f27f598b31ae733fe4f6673e38efda6c8c4e973d"
+    },
+    {
+      "day": 103,
+      "projected": "5ca439130ff3b74d597bd308f1875a15f5e70e3a8fd52443273144fb1a916906",
+      "expected": "5ca439130ff3b74d597bd308f1875a15f5e70e3a8fd52443273144fb1a916906"
+    },
+    {
+      "day": 104,
+      "projected": "e8bf1bf8e7f9fc26c44c85ebf3a41370d1fdc9fbfe03b6c95d58680855fbb39a",
+      "expected": "e8bf1bf8e7f9fc26c44c85ebf3a41370d1fdc9fbfe03b6c95d58680855fbb39a"
+    },
+    {
+      "day": 105,
+      "projected": "081a1129b00178728d86f05fddf11134948f605647d675b12b77ffd2de6d5bea",
+      "expected": "081a1129b00178728d86f05fddf11134948f605647d675b12b77ffd2de6d5bea"
+    },
+    {
+      "day": 106,
+      "projected": "e36326e57ec1cb38d52cf3b35bf5306baf0f2af65962f36306389abcb22fb265",
+      "expected": "e36326e57ec1cb38d52cf3b35bf5306baf0f2af65962f36306389abcb22fb265"
+    },
+    {
+      "day": 107,
+      "projected": "fc3ec9f04a7effcb136241cd52aaa7aa26f43899005d0645194bd906fb8d7bc6",
+      "expected": "fc3ec9f04a7effcb136241cd52aaa7aa26f43899005d0645194bd906fb8d7bc6"
+    },
+    {
+      "day": 108,
+      "projected": "b2b02f0b71117d0709f01568f6a0982bdf8f3c94c0f8ac610d23960a86b56ebb",
+      "expected": "b2b02f0b71117d0709f01568f6a0982bdf8f3c94c0f8ac610d23960a86b56ebb"
+    },
+    {
+      "day": 109,
+      "projected": "48de854e7ea947598c2daae488ddbc445a130d0373d307a2db22ce769b042db5",
+      "expected": "48de854e7ea947598c2daae488ddbc445a130d0373d307a2db22ce769b042db5"
+    },
+    {
+      "day": 110,
+      "projected": "6fb2cf45aceaeb49efb8e112396fd159d745889d941600e8b81950f00304dc3b",
+      "expected": "6fb2cf45aceaeb49efb8e112396fd159d745889d941600e8b81950f00304dc3b"
+    },
+    {
+      "day": 111,
+      "projected": "4e1e8cb5caa5f15cf90dab0303904dd22424916e38ac267d0af4982c3e53c8dd",
+      "expected": "4e1e8cb5caa5f15cf90dab0303904dd22424916e38ac267d0af4982c3e53c8dd"
+    },
+    {
+      "day": 112,
+      "projected": "7668d1faad6205443d8d072ccdc13aaf08c8b11b17d85d99d7692fa8c0c6638a",
+      "expected": "7668d1faad6205443d8d072ccdc13aaf08c8b11b17d85d99d7692fa8c0c6638a"
+    },
+    {
+      "day": 113,
+      "projected": "22ee12054b115d04f85d696beeaea03338c9dd8f4b517f9e35ab6308360548cf",
+      "expected": "22ee12054b115d04f85d696beeaea03338c9dd8f4b517f9e35ab6308360548cf"
+    },
+    {
+      "day": 114,
+      "projected": "b221a57989b2e39e4d685ae4b258add5a31a162ab9a31e026022d7e82d81368c",
+      "expected": "b221a57989b2e39e4d685ae4b258add5a31a162ab9a31e026022d7e82d81368c"
+    },
+    {
+      "day": 115,
+      "projected": "82f0e05e23b13b1a9a97e6a47e1b70dcc0e7b32c1aca31924b26b1d116a72b4e",
+      "expected": "82f0e05e23b13b1a9a97e6a47e1b70dcc0e7b32c1aca31924b26b1d116a72b4e"
+    },
+    {
+      "day": 116,
+      "projected": "5648d6648b6e938153e0e7d1d591a52c8aebe97a407a6487a59c0749fafcc84d",
+      "expected": "5648d6648b6e938153e0e7d1d591a52c8aebe97a407a6487a59c0749fafcc84d"
+    },
+    {
+      "day": 117,
+      "projected": "7222fcb7fef2524c03d2934ae40e6bce000f961a56035e066e4d326c9dece961",
+      "expected": "7222fcb7fef2524c03d2934ae40e6bce000f961a56035e066e4d326c9dece961"
+    },
+    {
+      "day": 118,
+      "projected": "89ccc584399098e59dd9521ed58d63846aafc7f1a2a87fcbccaba0969783c5e2",
+      "expected": "89ccc584399098e59dd9521ed58d63846aafc7f1a2a87fcbccaba0969783c5e2"
+    },
+    {
+      "day": 119,
+      "projected": "eb9f44213a1853a73363b0656e6ab141fa146ab42c5b6db6bb015988af103f32",
+      "expected": "eb9f44213a1853a73363b0656e6ab141fa146ab42c5b6db6bb015988af103f32"
+    },
+    {
+      "day": 120,
+      "projected": "6f53038a8cc94c827363544c613f77cf321bd9d15466a28beed1431cb0944db0",
+      "expected": "6f53038a8cc94c827363544c613f77cf321bd9d15466a28beed1431cb0944db0"
+    },
+    {
+      "day": 121,
+      "projected": "45698f761e42a3ad827e49a9334a15ece14e11133052a951978e843b704f8918",
+      "expected": "45698f761e42a3ad827e49a9334a15ece14e11133052a951978e843b704f8918"
+    },
+    {
+      "day": 122,
+      "projected": "25940ee60b245c70ae2b5c5859418a3a272ade4a2b1bb319ee7587cc17b80ccb",
+      "expected": "25940ee60b245c70ae2b5c5859418a3a272ade4a2b1bb319ee7587cc17b80ccb"
+    },
+    {
+      "day": 123,
+      "projected": "d3e8d48dc3a5e6cec7e6ecf9629f234c53af6e9060b32dccdf6c397d80040350",
+      "expected": "d3e8d48dc3a5e6cec7e6ecf9629f234c53af6e9060b32dccdf6c397d80040350"
+    },
+    {
+      "day": 124,
+      "projected": "5e721b17a863afdb5e3991f7602824141f4812e535bb54e6183dff7eacadac9a",
+      "expected": "5e721b17a863afdb5e3991f7602824141f4812e535bb54e6183dff7eacadac9a"
+    },
+    {
+      "day": 125,
+      "projected": "49bb476d700ddc3568d83ae588ba43b3eb4c839b33ef62e0542623158dd03f68",
+      "expected": "49bb476d700ddc3568d83ae588ba43b3eb4c839b33ef62e0542623158dd03f68"
+    },
+    {
+      "day": 126,
+      "projected": "a63d8e4883f2ccea4cf8184abe2beb4ae5b6309da219a5c4d3e6a688244ed12c",
+      "expected": "a63d8e4883f2ccea4cf8184abe2beb4ae5b6309da219a5c4d3e6a688244ed12c"
+    },
+    {
+      "day": 127,
+      "projected": "9edbf83794c749df6df42f7dd407c771ea33aa9cdfe6ad7c07ece9a868766905",
+      "expected": "9edbf83794c749df6df42f7dd407c771ea33aa9cdfe6ad7c07ece9a868766905"
+    },
+    {
+      "day": 128,
+      "projected": "07ea4c4a454c95c59123aa22dba49a24bd29bcd27e3153cd21b770508c3fee39",
+      "expected": "07ea4c4a454c95c59123aa22dba49a24bd29bcd27e3153cd21b770508c3fee39"
+    },
+    {
+      "day": 129,
+      "projected": "60d7fe6d8ed63923ae1a0237e52dd46ddf46cd8d2b47addf58475e971ec60dbd",
+      "expected": "60d7fe6d8ed63923ae1a0237e52dd46ddf46cd8d2b47addf58475e971ec60dbd"
+    },
+    {
+      "day": 130,
+      "projected": "35cfa4f46e7b8a10a2c68e95e5db8ed673fa5bed1b40a747531922a9153574e3",
+      "expected": "35cfa4f46e7b8a10a2c68e95e5db8ed673fa5bed1b40a747531922a9153574e3"
+    },
+    {
+      "day": 131,
+      "projected": "145e3112229772ca4b825a0a72a11b13ecd79182c4b61728c245612db6fdb26e",
+      "expected": "145e3112229772ca4b825a0a72a11b13ecd79182c4b61728c245612db6fdb26e"
+    },
+    {
+      "day": 132,
+      "projected": "06e43f91dffec6f969320c68d6e7a5333244eebd9da154d206007b4513a59ad4",
+      "expected": "06e43f91dffec6f969320c68d6e7a5333244eebd9da154d206007b4513a59ad4"
+    },
+    {
+      "day": 133,
+      "projected": "8efbfffcb1203d8da9afd88a1ed5e0f21e2be50d7c48b2c8b2996c40638e70b1",
+      "expected": "8efbfffcb1203d8da9afd88a1ed5e0f21e2be50d7c48b2c8b2996c40638e70b1"
+    },
+    {
+      "day": 134,
+      "projected": "02b81aae98bc74e2f1e1e43c6a4c801d1b6482c217fcb16a5534ce3c6b3f463f",
+      "expected": "02b81aae98bc74e2f1e1e43c6a4c801d1b6482c217fcb16a5534ce3c6b3f463f"
+    },
+    {
+      "day": 135,
+      "projected": "e5853d6ca68e615f4a6f5908c8607fdb41eb3c05b1bdf8159d75fa2c939027ef",
+      "expected": "e5853d6ca68e615f4a6f5908c8607fdb41eb3c05b1bdf8159d75fa2c939027ef"
+    },
+    {
+      "day": 136,
+      "projected": "ab94965dc56dbcbca5033af160f1237ccdc3ee682918129f3eb16013b809a57d",
+      "expected": "ab94965dc56dbcbca5033af160f1237ccdc3ee682918129f3eb16013b809a57d"
+    },
+    {
+      "day": 137,
+      "projected": "e1fe8acfd89a7ce9e727415280a73c448fc3a37b3a946c09a7b42dab9d13233b",
+      "expected": "e1fe8acfd89a7ce9e727415280a73c448fc3a37b3a946c09a7b42dab9d13233b"
+    },
+    {
+      "day": 138,
+      "projected": "a3714d32180de40b53dc54188ebf3a87f56a3a3fe59a491e0fbd54db2a3ab51b",
+      "expected": "a3714d32180de40b53dc54188ebf3a87f56a3a3fe59a491e0fbd54db2a3ab51b"
+    },
+    {
+      "day": 139,
+      "projected": "34015839f2654c9166b71699ae0b4dd4bff65092092e3b93b9e29e69779cc608",
+      "expected": "34015839f2654c9166b71699ae0b4dd4bff65092092e3b93b9e29e69779cc608"
+    },
+    {
+      "day": 140,
+      "projected": "e8eaa1d08e0193c666e8d1dae7d21a56f257d5914c65247664c05d23055290a0",
+      "expected": "e8eaa1d08e0193c666e8d1dae7d21a56f257d5914c65247664c05d23055290a0"
+    },
+    {
+      "day": 141,
+      "projected": "ca93cec7a1753c6c79254ac50dc8047bf8b206191fed48399efd4fe235acfd2b",
+      "expected": "ca93cec7a1753c6c79254ac50dc8047bf8b206191fed48399efd4fe235acfd2b"
+    },
+    {
+      "day": 142,
+      "projected": "0985fd9fbe73e43f1f25de7fe9f72258c2c860223de578babf84accfe3c1e90f",
+      "expected": "0985fd9fbe73e43f1f25de7fe9f72258c2c860223de578babf84accfe3c1e90f"
+    },
+    {
+      "day": 143,
+      "projected": "c19d8266872da9c09f9b432769274c4472ae43fca0de8d8febc77b298c5e59df",
+      "expected": "c19d8266872da9c09f9b432769274c4472ae43fca0de8d8febc77b298c5e59df"
+    },
+    {
+      "day": 144,
+      "projected": "2f63682b1b7faab029c7563c01ee032f84183e47e6f70f4f167126103a7860f6",
+      "expected": "2f63682b1b7faab029c7563c01ee032f84183e47e6f70f4f167126103a7860f6"
+    },
+    {
+      "day": 145,
+      "projected": "44c58e6ec0425a23a97bbe9f7731779afb7f232ffbae53d7f05514e761c661bb",
+      "expected": "44c58e6ec0425a23a97bbe9f7731779afb7f232ffbae53d7f05514e761c661bb"
+    },
+    {
+      "day": 146,
+      "projected": "2f1d9ce59d4273efa65180b7c8714877eeb41d649bb5eff30539e165cd3ab07f",
+      "expected": "2f1d9ce59d4273efa65180b7c8714877eeb41d649bb5eff30539e165cd3ab07f"
+    },
+    {
+      "day": 147,
+      "projected": "acf8a0e6026e13f3f3d667aad32b50118884dc9b28f21afd8848c171e3827530",
+      "expected": "acf8a0e6026e13f3f3d667aad32b50118884dc9b28f21afd8848c171e3827530"
+    },
+    {
+      "day": 148,
+      "projected": "d330b44b3e2bd2bdf2978caacd28b11ed624920c770850e0491af6a56168e327",
+      "expected": "d330b44b3e2bd2bdf2978caacd28b11ed624920c770850e0491af6a56168e327"
+    }
+  ],
+  "allMatch": true,
+  "provenance": "Derived functional summary: unchanged original prefix through day 60 plus actual corrected suffix. Continuous counters/scores retained and affected rows reverified; timing belongs to original full run."
+}

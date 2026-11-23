@@ -52,7 +52,7 @@ it('supplies wording for every typed refusal, including the S27 supplemental cas
     situation_not_open:true,duplicate_choice:true,malformed:true,no_such_request:true,not_a_principal:true,
     not_an_option:true,not_field_post:true,not_raising_post:true,bad_call:true,other_side:true,player_seat:true,
     route_unavailable:true,unknown_post:true,unknown_seat:true,vacant_post:true,wrong_day:true,
-    already_promised:true,bad_counters:true,no_attention:true,person_holds_post:true,post_held:true,too_soon:true,
+    already_promised:true,bad_counters:true,no_attention:true,person_holds_post:true,post_held:true,appointment_pending:true,too_soon:true,
     unknown_bloc:true,unknown_person:true,unknown_rank:true,unknown_region:true,
   };
   const strings = new ConsoleGame({ pack: 'testbed' }).strings;

@@ -1,0 +1,94 @@
+{
+  "initialIndexCount": 1960,
+  "exactOriginalBlobs": 1950,
+  "changedOriginalPaths": [
+    "packages/kernel/src/seats/api.ts",
+    "packages/kernel/src/seats/requests.ts",
+    "packages/kernel/src/world/world.ts",
+    "packages/pack-format/schemas/pack.schema.json",
+    "packages/pack-format/schemas/world.schema.json",
+    "packages/pack-format/src/schemas.ts",
+    "packages/rule-seats/src/index.ts",
+    "packs/union-1861/data/world.json",
+    "packs/union-1861/pack.json",
+    "packs/union-1861/test/northern-concentration.test.ts"
+  ],
+  "missingOriginalPaths": [],
+  "packOutsideConcentrationsIdentical": true,
+  "concentrationChanges": [
+    {
+      "faction": "union",
+      "before": [
+        {
+          "post": "us_dept_northeastern_virginia",
+          "fromDate": "1861-05-28",
+          "requiresDepartment": "us_war",
+          "fromPosts": [
+            "us_dc_militia"
+          ],
+          "source": "GO1861 GO26 p.61; OR I-2 pp.59-60 (Arlington headquarters on 1 June). [I] Once the command exists, the previous opening concentration and new levies join it through ordinary transfers. The aggregate allocation is a 1A approximation, not a claim that every state regiment historically served this department. Patterson receives no invented army; no battle or outcome is forced."
+        }
+      ],
+      "after": [
+        {
+          "post": "us_dept_northeastern_virginia",
+          "fromDate": "1861-05-28",
+          "requiresDepartment": "us_war",
+          "fromPosts": [],
+          "source": "OR I-2 pp.303-309,314-315,751,754. [I] The dated McDowell department is not the whole Washington garrison or any whole statewide requisition. The model call batches have no named regiment membership, so their July command allocation remains unresolved. Keep them with their current posts; do not apply the 37,321 departmental duty total to these batches or distribute it over divisions.",
+          "receiveLevies": false
+        }
+      ]
+    },
+    {
+      "faction": "confederate",
+      "before": [
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "fromDate": "1861-05-23",
+          "requiresDepartment": "st_virginia",
+          "fromPosts": [
+            "cs_cmd_charleston",
+            "st_va_harpers_ferry"
+          ],
+          "source": "OR I-2 pp.844-845 (15 May assignment and reinforcements via Lynchburg); p.856 (Johnston, 18 May: President intends an army near Harpers Ferry). [I] Once this command exists, route new levies and the former concentration through ordinary transfers and joins; no sourced numerical allocation is asserted.; OR I-2 p.470, Johnston's 14 October report: assumed command at Harpers Ferry on 23 May, distinct from the assignment ordered 15 May (pp.844-845). [I] Use assumption as the earliest effective opening, retaining the service-change and government prerequisites and ordinary appointment delivery. No starting faction, force, march or junction is forced. S46 [I]: only the corresponding local northern state command is an additional sending post; Norfolk, Richmond and Peninsula garrisons are not swept into the northern concentration."
+        },
+        {
+          "post": "cs_cmd_manassas",
+          "fromDate": "1861-05-31",
+          "requiresDepartment": "st_virginia",
+          "fromPosts": [
+            "cs_cmd_charleston",
+            "st_va_potomac"
+          ],
+          "source": "OR I-2 p.896 (31 May, Alexandria line); pp.901-902 (3 June, Camp Pickens, reinforcement request). [I] This later established command receives new levies and troops still at the former Charleston concentration. Johnston keeps any troops already assigned to him; no forced July junction or battle. S46 [I]: only the corresponding local northern state command is an additional sending post; Norfolk, Richmond and Peninsula garrisons are not swept into the northern concentration."
+        }
+      ],
+      "after": [
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "fromDate": "1861-05-23",
+          "requiresDepartment": "st_virginia",
+          "fromPosts": [
+            "st_va_harpers_ferry"
+          ],
+          "source": "OR I-2 pp.470-473,569. [I] Only the existing Virginia Harpers Ferry contingent is identified with Johnston\u2019s command. Preserve its unknown strength and existing location; the ordinary transfer and march own joining. Charleston harbour forces and whole statewide call batches are not identified with this army. The June 30 army total is not this contingent\u2019s strength.",
+          "receiveLevies": false
+        },
+        {
+          "post": "cs_cmd_manassas",
+          "fromDate": "1861-05-31",
+          "requiresDepartment": "st_virginia",
+          "fromPosts": [
+            "st_va_potomac"
+          ],
+          "source": "OR I-2 pp.469-470,473,901-902; pp.824,826-827,846-847 for the existing local battalions. [I] Transfer only the named Virginia Potomac command\u2019s local Manassas contingents to Beauregard. These are partial brigade inclusions, never the whole army or whole regiments. Keep their strengths unknown. Charleston harbour forces and statewide batches are not a sourced July field army.",
+          "receiveLevies": false
+        }
+      ]
+    }
+  ],
+  "initialPatchSha256": "dcedc38b92de2c91dac8ef63c7e73f98b816283581c10b208a87ade43a46ff05",
+  "frozenInputCount": 392,
+  "frozenInputsChanged": []
+}

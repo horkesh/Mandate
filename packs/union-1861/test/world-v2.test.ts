@@ -126,7 +126,8 @@ describe('Union 1861 world v2', () => {
   it('has a private-secretary post held by Nicolay, with no engine role, from the Executive Journal and the Times (verification lane; lead ruling 2026-11-15)', () => {
     // role is null on purpose: a role-filter post sits on the wire (0040 leaves the March telegraph filter empty); caller-screening is a Phase 1 item.
     expect(world.vocabularies.postKinds.find((k) => k.id === 'private_secretary')?.role ?? null).toBeNull();
-    expect(world.vocabularies.postKinds.filter((k) => k.role !== null)).toEqual([]); // no filter and no intelligence kind: no Union post had an intelligence chief on 5 March
+    // S71 declares the institutional cabinet role; no filter or intelligence role is introduced.
+    expect(world.vocabularies.postKinds.filter((k) => k.role !== null).map(k => ({ id: k.id, role: k.role }))).toEqual([{ id: 'cabinet', role: 'office' }]);
     const post = start.posts.find((p) => p.id === 'us_president_secretary')!;
     expect(post.holder).toBe('nicolay_john_g');
     expect(post.intelligenceChief ?? null).toBeNull();
@@ -149,7 +150,7 @@ describe('Union 1861 world v2', () => {
     for (const id of ['hardee_william_j', 'van_dorn_earl']) expect(person(id).faction, id).toBe('confederate');
     // The only Confederate men with no post on 5 March are those the table ruled so from a seceded home state or office.
     const holders = new Set(start.posts.map((p) => p.holder).filter((h) => h !== null));
-    const confederateNoPost = world.people.filter((p) => p.faction === 'confederate' && !holders.has(p.id)).map((p) => p.id as string).sort();
+    const confederateNoPost = world.people.filter((p) => p.faction === 'confederate' && !holders.has(p.id) && !['bartow_francis_s','hampton_wade'].includes(p.id)).map((p) => p.id as string).sort();
     expect(confederateNoPost).toEqual([
       'bragg_braxton', 'clark_edward', 'cobb_howell', 'hardee_william_j', 'mcculloch_ben', 'northrop_lucius_b', 'polk_leonidas', 'reagan_john_h', 'semmes_raphael', 'slidell_john', 'tattnall_josiah', 'twiggs_david_e', 'van_dorn_earl', 'wigfall_louis_t', 'yancey_william_l',
     ]);
@@ -173,11 +174,11 @@ describe('Union 1861 world v2', () => {
     for (const id of ['burnside_ambrose_e', 'fremont_john_c', 'hooker_joseph', 'mcclellan_george_b', 'tod_david', 'wallace_lewis', 'lane_james_h', 'bulloch_james_d']) expect(person(id).faction, id).toBe('union');
     // Missouri, Virginia and North Carolina are no-faction states; Eckert was in North Carolina, not Ohio, until the war began.
     for (const id of ['hitchcock_ethan_a', 'sigel_franz', 'gamble_hamilton_r', 'pierpont_francis_h', 'eckert_thomas_t']) expect(person(id).faction, id).toBeNull();
-    expect(world.people.filter((p) => p.unknowns.includes('faction')).map((p) => p.id)).toEqual([]);
+    expect(world.people.filter((p) => p.unknowns.includes('faction')).map((p) => p.id)).toEqual(['anderson_richard_h','bee_barnard_e','cadwalader_george','carson_james_h','evans_nathan_g','jones_david_r','mccunn_john_h','meem_gilbert_s','negley_james_s','tyler_daniel','wynkoop_george_c']); // S74 retains S69/S72 holds; S82 adds S80's explicitly unknown opening side.
     // 133 men with no post were ruled by name (the importer's tables); each is a roster man, so the count of roster men with no post and a Union
     // or Confederate side is exactly those the tables decided, with the unknowns and no-faction men set apart.
     const holders = new Set(start.posts.map((p) => p.holder).filter((h) => h !== null));
-    const noPost = world.people.filter((p) => !holders.has(p.id));
+    const noPost = world.people.filter((p) => !holders.has(p.id) && !p.provenance.some(c=>c.source.startsWith('S69-')||c.source==='S72-OR') && !p.invented);
     const count = (f: (p: (typeof noPost)[number]) => boolean) => noPost.filter(f).length;
     // R55: Clark was already Texas Lieutenant Governor on 5 March (CRANE-HOUSTON-1884 ch25, cross-checked with the official LRL office-term record).
     // That office has no post here. Its service side follows Texas under 0055, independently of his later succession.

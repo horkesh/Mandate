@@ -1,0 +1,562 @@
+[
+  {
+    "day": 45,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73000,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 18153,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 35,
+          "traced": 35,
+          "controlPermille": 35000,
+          "supplied": 35,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 18686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 89
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73000,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 18153,
+          "blocksUnknownStrength": 11
+        },
+        {
+          "faction": "union",
+          "held": 35,
+          "traced": 35,
+          "controlPermille": 35000,
+          "supplied": 35,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 18686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 1,
+      "blocksTotal": 90
+    },
+    "cause": "Local unquantified contingents replace the former governor-wide aggregate, which was later quantified at 40,000. The 29 July battle itself is identical; the added unquantified contact and changed movements/control explain other score changes. [I]"
+  },
+  {
+    "day": 60,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73000,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 24153,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 35,
+          "traced": 35,
+          "controlPermille": 35160,
+          "supplied": 35,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 72686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 6,
+      "blocksTotal": 108
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73000,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 24153,
+          "blocksUnknownStrength": 13
+        },
+        {
+          "faction": "union",
+          "held": 35,
+          "traced": 35,
+          "controlPermille": 35160,
+          "supplied": 35,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 72686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 6,
+      "blocksTotal": 111
+    },
+    "cause": "Local unquantified contingents replace the former governor-wide aggregate, which was later quantified at 40,000. The 29 July battle itself is identical; the added unquantified contact and changed movements/control explain other score changes. [I]"
+  },
+  {
+    "day": 75,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73120,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 26153,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 35,
+          "traced": 35,
+          "controlPermille": 35400,
+          "supplied": 35,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 110686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 5,
+      "blocksTotal": 109
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73120,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 26153,
+          "blocksUnknownStrength": 15
+        },
+        {
+          "faction": "union",
+          "held": 35,
+          "traced": 35,
+          "controlPermille": 35400,
+          "supplied": 35,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 110686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 5,
+      "blocksTotal": 114
+    },
+    "cause": "Local unquantified contingents replace the former governor-wide aggregate, which was later quantified at 40,000. The 29 July battle itself is identical; the added unquantified contact and changed movements/control explain other score changes. [I]"
+  },
+  {
+    "day": 90,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73160,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 26153,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 37,
+          "traced": 37,
+          "controlPermille": 36000,
+          "supplied": 37,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 146686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 5,
+      "blocksTotal": 118
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73160,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 26153,
+          "blocksUnknownStrength": 16
+        },
+        {
+          "faction": "union",
+          "held": 37,
+          "traced": 37,
+          "controlPermille": 36000,
+          "supplied": 37,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 146686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 5,
+      "blocksTotal": 124
+    },
+    "cause": "Local unquantified contingents replace the former governor-wide aggregate, which was later quantified at 40,000. The 29 July battle itself is identical; the added unquantified contact and changed movements/control explain other score changes. [I]"
+  },
+  {
+    "day": 105,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73160,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 66153,
+          "blocksUnknownStrength": 10
+        },
+        {
+          "faction": "union",
+          "held": 37,
+          "traced": 37,
+          "controlPermille": 36960,
+          "supplied": 37,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 153686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 24,
+      "blocksTotal": 121
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 73,
+          "traced": 73,
+          "controlPermille": 73160,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 26153,
+          "blocksUnknownStrength": 16
+        },
+        {
+          "faction": "union",
+          "held": 37,
+          "traced": 37,
+          "controlPermille": 36960,
+          "supplied": 37,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 153686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 23,
+      "blocksTotal": 126
+    },
+    "cause": "Local unquantified contingents replace the former governor-wide aggregate, which was later quantified at 40,000. The 29 July battle itself is identical; the added unquantified contact and changed movements/control explain other score changes. [I]"
+  },
+  {
+    "day": 120,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 75,
+          "traced": 75,
+          "controlPermille": 74660,
+          "supplied": 73,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 106153,
+          "blocksUnknownStrength": 11
+        },
+        {
+          "faction": "union",
+          "held": 37,
+          "traced": 37,
+          "controlPermille": 37060,
+          "supplied": 37,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 153686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 24,
+      "blocksTotal": 127
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 74,
+          "traced": 74,
+          "controlPermille": 73960,
+          "supplied": 73,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 1,
+          "pocketRegions": 1,
+          "menKnown": 66153,
+          "blocksUnknownStrength": 17
+        },
+        {
+          "faction": "union",
+          "held": 37,
+          "traced": 37,
+          "controlPermille": 37060,
+          "supplied": 37,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 153686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 24,
+      "blocksTotal": 132
+    },
+    "cause": "Local unquantified contingents replace the former governor-wide aggregate, which was later quantified at 40,000. The 29 July battle itself is identical; the added unquantified contact and changed movements/control explain other score changes. [I]"
+  },
+  {
+    "day": 135,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 77,
+          "traced": 77,
+          "controlPermille": 76400,
+          "supplied": 74,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 3,
+          "pocketRegions": 3,
+          "menKnown": 124153,
+          "blocksUnknownStrength": 15
+        },
+        {
+          "faction": "union",
+          "held": 37,
+          "traced": 37,
+          "controlPermille": 37080,
+          "supplied": 37,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 153686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 25,
+      "blocksTotal": 137
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 76,
+          "traced": 76,
+          "controlPermille": 75400,
+          "supplied": 74,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 84153,
+          "blocksUnknownStrength": 21
+        },
+        {
+          "faction": "union",
+          "held": 37,
+          "traced": 37,
+          "controlPermille": 37080,
+          "supplied": 37,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 153686,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 25,
+      "blocksTotal": 142
+    },
+    "cause": "Local unquantified contingents replace the former governor-wide aggregate, which was later quantified at 40,000. The 29 July battle itself is identical; the added unquantified contact and changed movements/control explain other score changes. [I]"
+  },
+  {
+    "day": 148,
+    "before": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 78,
+          "traced": 78,
+          "controlPermille": 78060,
+          "supplied": 75,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 3,
+          "pocketRegions": 3,
+          "menKnown": 130239,
+          "blocksUnknownStrength": 17
+        },
+        {
+          "faction": "union",
+          "held": 38,
+          "traced": 38,
+          "controlPermille": 37680,
+          "supplied": 38,
+          "frontLines": 3,
+          "frontSegments": 3,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 97207,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 40,
+      "blocksTotal": 130
+    },
+    "after": {
+      "factions": [
+        {
+          "faction": "confederate",
+          "held": 77,
+          "traced": 77,
+          "controlPermille": 77060,
+          "supplied": 75,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 2,
+          "pocketRegions": 2,
+          "menKnown": 90239,
+          "blocksUnknownStrength": 23
+        },
+        {
+          "faction": "union",
+          "held": 38,
+          "traced": 38,
+          "controlPermille": 37780,
+          "supplied": 38,
+          "frontLines": 2,
+          "frontSegments": 2,
+          "pockets": 0,
+          "pocketRegions": 0,
+          "menKnown": 97207,
+          "blocksUnknownStrength": 4
+        }
+      ],
+      "contestedRegions": 0,
+      "blocksMarching": 40,
+      "blocksTotal": 135
+    },
+    "cause": "Local unquantified contingents replace the former governor-wide aggregate, which was later quantified at 40,000. The 29 July battle itself is identical; the added unquantified contact and changed movements/control explain other score changes. [I]"
+  }
+]

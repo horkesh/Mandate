@@ -1,3 +1,4 @@
+import { forceTotals } from '@mandate/kernel';
 /**
  * What a day of plan drafting costs on the real Union graph (lane 0.8; 0062's daily drafting cap is "a pack rule, set
  * from the worst day measured here"). Lane 1.2 moved the planner into the kernel: this now measures the kernel's
@@ -63,7 +64,7 @@ export function draftingInputs(pack: string): planner.PlannerInput[] {
       const side = phase0.factionOfBlock(map, state, b);
       if (side === null || side === faction) continue;
       const region = state.forceLocations[b]!.locRegion;
-      enemy.set(region, (enemy.get(region) ?? 0) + (state.forceBlockStates[b]!.fbStrength ?? 0));
+      enemy.set(region, (enemy.get(region) ?? 0) + (forceTotals(state.forceBlockStates[b]!, world.map.forceTotalsCache).fbStrength ?? 0));
     }
     const seat = phase0.seatIdFor(holder);
     const id = ids.toId('message', `measure.${post}`);

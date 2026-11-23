@@ -1,0 +1,6 @@
+{
+  "scope": "After references, restore baseline apostrophe in the invalid institutional-succession refusal message only. All executable numeric/control-flow inputs unchanged. The bad string is absent from every retained reference artifact; post-succession tests pass.",
+  "badStringsAbsent": true,
+  "referenceArtifacts": 18,
+  "noReferenceRerun": true
+}

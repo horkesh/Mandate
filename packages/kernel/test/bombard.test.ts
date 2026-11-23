@@ -1,3 +1,5 @@
+import { patchBlock, observeBlock } from './support/lot-fixture.ts';
+import { forceTotals } from '../src/forces/lots.ts';
 import { describe, expect, it } from 'vitest';
 import { BOMBARD_TARGET_KINDS, bombardDay, fortDay, type BombardDefender } from '../src/combat/bombard.ts';
 import type { BombardmentRules } from '../src/combat/rules.ts';
@@ -257,7 +259,7 @@ describe('a fort across water is bombarded until its commander surrenders (tick/
     const map = indexWorld({ ...raw, rules: { ...raw.rules, combat: { ...raw.rules.combat, bombardment: { ...raw.rules.combat.bombardment, lossPermille: 50 } } } });
     const world = worldOf(map, base.world.start);
     const gar = toId('forceBlock', 'b_gar');
-    const start: State = { ...base.state, forceBlockStates: { ...base.state.forceBlockStates, [gar]: { ...base.state.forceBlockStates[gar]!, fbStragglers: 3 } } };
+    const start: State = { ...base.state, forceBlockStates: { ...base.state.forceBlockStates, [gar]: patchBlock({ ...base.state.forceBlockStates[gar]! }, { fbStragglers: 3 }) } };
     const ctx = { ...ctxFor(world, start, 1, [...TICK_MECHANICS, ...MAP_MECHANICS]), battleOrders: new Map([[P('b_fort'), { commit: 'judge', night: 'judge', cutOff: 'surrender', pursue: 'judge' } as const]]) };
     const result = bombardFort(ctx, start, P('a_army'), [toId('forceBlock', 'a_guns')], R('fort'), F('a'), []);
     const record = Object.values(result.state.battleRecords)[0];
@@ -283,7 +285,7 @@ describe('a fort across water is bombarded until its commander surrenders (tick/
   it('records only batteries that supplied known fire, without guessing the supporting blocks’ strength', () => {
     const g = game();
     const unknown = toId('forceBlock', 'a_inf');
-    const start = { ...g.state, forceBlockStates: { ...g.state.forceBlockStates, [unknown]: { ...g.state.forceBlockStates[unknown]!, fbStrength: null } } };
+    const start = { ...g.state, forceBlockStates: { ...g.state.forceBlockStates, [unknown]: patchBlock({ ...g.state.forceBlockStates[unknown]! }, { fbStrength: null }) } };
     const ctx = ctxFor(g.world, start, 1, [...TICK_MECHANICS, ...MAP_MECHANICS]);
     const result = bombardFort(ctx, start, P('a_army'), [unknown, toId('forceBlock', 'a_guns')], R('fort'), F('a'), []);
     const record = Object.values(result.state.battleRecords)[0];
@@ -291,18 +293,18 @@ describe('a fort across water is bombarded until its commander surrenders (tick/
     expect(record!.battleEndDay).toBeNull();
     expect(record!.battleDays[0]!.bdaySides[0]).toMatchObject({ bsideBlocks: [toId('forceBlock', 'a_guns')], bsideUnknown: [], bsidePresent: 600, bsideKw: 0 });
     expect(result.fort!.day.terms.find(t => t.btermKind === 'guns_attacker')?.btermValue).toBe(600);
-    expect(result.state.forceBlockStates[unknown]!.fbStrength).toBeNull();
+    expect(forceTotals(result.state.forceBlockStates[unknown]!).fbStrength).toBeNull();
   });
 
   it('still lists unknown defenders under fire and counts their strength as none', () => {
     const g = game();
     const unknown = toId('forceBlock', 'b_gar');
-    const start: State = { ...g.state, forceBlockStates: { ...g.state.forceBlockStates, [unknown]: { ...g.state.forceBlockStates[unknown]!, fbStrength: null } } };
+    const start: State = { ...g.state, forceBlockStates: { ...g.state.forceBlockStates, [unknown]: patchBlock({ ...g.state.forceBlockStates[unknown]! }, { fbStrength: null }) } };
     const ctx = ctxFor(g.world, start, 1, [...TICK_MECHANICS, ...MAP_MECHANICS]);
     const result = bombardFort(ctx, start, P('a_army'), [toId('forceBlock', 'a_guns')], R('fort'), F('a'), []);
     const record = Object.values(result.state.battleRecords)[0]!;
     expect(record.battleDays[0]!.bdaySides[1]).toMatchObject({ bsideBlocks: [unknown], bsideUnknown: [unknown], bsidePresent: 0, bsideKw: 0 });
-    expect(result.state.forceBlockStates[unknown]!.fbStrength).toBeNull();
+    expect(forceTotals(result.state.forceBlockStates[unknown]!).fbStrength).toBeNull();
   });
 
   it('resumes an open bombardment from a save to the same record and State', () => {
@@ -328,7 +330,7 @@ describe('a fort across water is bombarded until its commander surrenders (tick/
     expect(state.personStatus[PER('b_other')]?.statusKind).toBe('captured');
     expect(state.personStatus[PER('b_gen')]?.statusKind ?? 'serving').toBe('serving');
     expect(state.postStates[P('b_fort')]!.postHolder).toBeNull();
-    expect(state.forceBlockStates[toId('forceBlock', 'b_gar')]!.fbStrength).toBe(0);
+    expect(forceTotals(state.forceBlockStates[toId('forceBlock', 'b_gar')]!).fbStrength).toBe(0);
     expect(state.forceBlockStates[toId('forceBlock', 'b_gar')]!.fbSurrenderedDay).not.toBeNull();
     const told = knowledgeOf(state, seatIdFor(PER('b_lead'))).knownReports.flatMap((r) => r.knownBody.reportClaims).find((c) => c.claimKind === 'fort-surrendered');
     expect(told?.claimToken).toBe('captured');
@@ -338,7 +340,7 @@ describe('a fort across water is bombarded until its commander surrenders (tick/
     const { state, telemetry } = play(game({ recordTerms: true, offerWindow }), 'fort', 15);
     expect(telemetry.mechanics['combat.evacuated']!.fires).toBe(0);
     expect(state.personStatus[PER('b_gen')]?.statusKind).toBe('captured');
-    expect(state.forceBlockStates[toId('forceBlock', 'b_gar')]!.fbStrength).toBe(0);
+    expect(forceTotals(state.forceBlockStates[toId('forceBlock', 'b_gar')]!).fbStrength).toBe(0);
     expect(state.forceBlockStates[toId('forceBlock', 'b_gar')]!.fbSurrenderedDay).not.toBeNull();
     const told = knowledgeOf(state, seatIdFor(PER('b_lead'))).knownReports.flatMap((r) => r.knownBody.reportClaims).find((c) => c.claimKind === 'fort-surrendered');
     expect(told?.claimToken).toBe('captured');
@@ -420,7 +422,7 @@ describe('a fort across water is bombarded until its commander surrenders (tick/
     // No record terms here: captured (lane 1.3's surrender), his post vacant, his men gone as a typed capture.
     expect(state.personStatus[PER('b_gen')]?.statusKind).toBe('captured');
     expect(state.postStates[P('b_fort')]!.postHolder).toBeNull();
-    expect(state.forceBlockStates[toId('forceBlock', 'b_gar')]).toMatchObject({ fbStrength: 0 });
+    expect(observeBlock(state.forceBlockStates[toId('forceBlock', 'b_gar')]!)).toMatchObject({ fbStrength: 0 });
     expect(state.forceBlockStates[toId('forceBlock', 'b_gar')]!.fbSurrenderedDay).not.toBeNull();
     // Nothing crossed the water: a's men are all still on the shore.
     expect(state.forceLocations[toId('forceBlock', 'a_guns')]!.locRegion).toBe(R('shore'));
@@ -457,7 +459,7 @@ describe('a fort across water is bombarded until its commander surrenders (tick/
     expect(rejected?.rejGates.map((g) => g.gateKind)).toEqual(['no_target']);
     expect(rejected?.rejGates[0]!.gateDetail).toContain('not a fortification the rules let be bombarded');
     // The town's men are untouched.
-    expect(state.forceBlockStates[toId('forceBlock', 'b_town')]!.fbStrength).toBe(500);
+    expect(forceTotals(state.forceBlockStates[toId('forceBlock', 'b_town')]!).fbStrength).toBe(500);
   });
 
   it('the stage itself fires on nothing the list leaves out (rule 7: a check, not only the planner’s judgement)', () => {

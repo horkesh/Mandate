@@ -9,14 +9,20 @@ import { canonicalHash } from '../serialize/hash.ts';
 import { otherEnd, type EdgeRecord, type RegionRecord } from './graph.ts';
 import type { ScenarioStart } from './scenario.ts';
 import type { World } from './world.ts';
+import type { ForceTotalsCache } from '../forces/lots.ts';
+import type { ForceServiceCache } from '../forces/enlistment.ts';
 
 export * from './calendar.ts';
 export * from './graph.ts';
 export * from './people.ts';
 export * from './scenario.ts';
 export * from './world.ts';
+export * from './regiments.ts';
 
 export interface WorldIndex {
+  /** Disposable derived caches, shared by readers of this indexed world; never hashed or saved. */
+  readonly forceTotalsCache: ForceTotalsCache;
+  readonly forceServiceCache: ForceServiceCache;
   readonly world: World;
   readonly regions: ReadonlyMap<RegionId, RegionRecord>;
   readonly edges: ReadonlyMap<EdgeId, EdgeRecord>;
@@ -40,7 +46,7 @@ export function indexWorld(world: World): WorldIndex {
       list.push(e);
     }
   }
-  return { world, regions, edges, edgesAt: at };
+  return { world, regions, edges, edgesAt: at, forceTotalsCache: new WeakMap(), forceServiceCache: new WeakMap() };
 }
 
 /** A region's edges, in edge-id order. Throws on an unknown region. */
@@ -62,3 +68,5 @@ export function worldHash(world: World): string {
 export function scenarioHash(start: ScenarioStart): string {
   return canonicalHash(start);
 }
+
+export * from './organisation.ts';

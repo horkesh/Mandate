@@ -1,0 +1,11 @@
+[
+  {
+    "file": "C:/Pyrrhic/sprint-july/packs/union-1861/test/world-v2.test.ts",
+    "test": "Union 1861 world v2 audits every man with no post against the starting-side rule: eight no-faction states give no side (round 3)",
+    "messages": [
+      "AssertionError: expected [ 'anderson_richard_h', …(10) ] to deeply equal [ 'bee_barnard_e', …(9) ]\n    at C:/Pyrrhic/sprint-july/packs/union-1861/test/world-v2.test.ts:177:89\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+    ],
+    "cause": "S82 adds committed S80 Anderson with explicitly unknown opening faction; the exact opening-side inventory omitted the new identity. No side is assigned to satisfy the test.",
+    "disposition": "Correct the inventory to eleven exact identities; keep all starting-side and no-post count assertions."
+  }
+]

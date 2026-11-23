@@ -1,3 +1,4 @@
+import { patchBlock } from './support/lot-fixture.ts';
 import { expect, it } from 'vitest';
 import { initialDepartmentSides } from '../src/command/command.ts';
 import { initialForces } from '../src/forces/forces.ts';
@@ -24,7 +25,7 @@ it('scans the force locations once for all census regions, preserving destinatio
 });
 
 it('recomputes presence after movement, surrender, strength and department-side changes', () => {
-  const without = (strength: number | null, surrendered: number | null) => ({ ...state, forceBlockStates: { ...state.forceBlockStates, [B('present')]: { ...state.forceBlockStates[B('present')]!, fbStrength: strength, fbSurrenderedDay: surrendered } } });
+  const without = (strength: number | null, surrendered: number | null) => ({ ...state, forceBlockStates: { ...state.forceBlockStates, [B('present')]: patchBlock({ ...state.forceBlockStates[B('present')]!, fbSurrenderedDay: surrendered }, { fbStrength: strength }) } });
   const first = (s: typeof state) => selfEmancipationTerms(map, s, rules)[0]!;
   for (const s of [without(0, null), without(null, null), without(-1, null), without(1000, 1), { ...state, departmentFactions: { ...state.departmentFactions, [DEP('a_war')]: F('b') } }]) {
     expect([first(s).destination, first(s).toLines]).toEqual(['a1', 200]);

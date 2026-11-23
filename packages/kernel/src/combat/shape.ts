@@ -6,7 +6,7 @@
  * - **the verdict** (P5): who held the field at the close, and each side's losses and loss share.
  */
 import type { FactionId } from '../ids.ts';
-import type { BattleDay, BattleRecord, Pursuit } from './records.ts';
+import { unresolvedContact, type BattleDay, type BattleRecord, type Pursuit } from './records.ts';
 import { apportion } from './resolve.ts';
 import { DAY_PHASES, type CombatRules, type DayPhase } from './rules.ts';
 
@@ -45,7 +45,7 @@ export interface DayShape {
  */
 export function dayShape(rules: CombatRules, day: BattleDay): DayShape {
   // Bombardment resolves a whole day. Its dedicated dispatch reports fire, not invented hourly phases.
-  if (day.bdayType === 'bombard') return { day: day.bdayDay, phases: [], pursuits: [] };
+  if (day.bdayType === 'bombard' || unresolvedContact(day)) return { day: day.bdayDay, phases: [], pursuits: [] };
   const shares = rules.phases.lossShares[day.bdayType];
   const split = day.bdaySides.map((s) => ({
     kw: apportion(s.bsideKw, shares),

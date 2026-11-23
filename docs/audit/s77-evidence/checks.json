@@ -1,0 +1,605 @@
+{
+  "commands": {
+    "boundary-ready": {
+      "command": [
+        "node",
+        "tools/check-pack-boundary.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.162
+    },
+    "boundary": {
+      "command": [
+        "node",
+        "tools/check-pack-boundary.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.162
+    },
+    "closure-audit": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s77/closure-audit.ts",
+        "--apply"
+      ],
+      "exit": 0,
+      "seconds": 12.879
+    },
+    "concentration-data-corrected": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s77-concentration.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 2.778
+    },
+    "concentration-data-green": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s77-concentration.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 2.799
+    },
+    "concentration-data-red": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s77-concentration.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 3.785
+    },
+    "concentration-side-corrected": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s77-concentration.test.ts",
+        "packages/kernel/test/received-concentration.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 3.65
+    },
+    "counted-transfer-green": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/s74-organisation.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 0.715
+    },
+    "counted-transfer-red": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/s74-organisation.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 0.801
+    },
+    "decisions": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/check-decisions-index.ts"
+      ],
+      "exit": 0,
+      "seconds": 0.123
+    },
+    "focused": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/s70-recruitment-lots.test.ts",
+        "packages/kernel/test/s74-organisation.test.ts",
+        "packages/kernel/test/received-concentration.test.ts",
+        "packs/union-1861/test/s77-concentration.test.ts",
+        "packages/kernel/test/s70-lot-ownership.test.ts",
+        "packages/kernel/test/menu-received.test.ts",
+        "packages/kernel/test/s65-sender-belief.test.ts",
+        "packages/kernel/test/ownership.test.ts",
+        "packages/kernel/test/banned-apis.test.ts",
+        "packages/pack-format/test/state-forces.test.ts",
+        "packages/kernel/test/canon-receipts.test.ts",
+        "packages/kernel/test/department-sides.test.ts",
+        "packages/kernel/test/forces-command.test.ts",
+        "packages/kernel/test/people-verbs.test.ts",
+        "packages/kernel/test/combat.test.ts",
+        "packages/kernel/test/knowledge.test.ts",
+        "packages/rule-seats/test/rule-seats.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 6.314
+    },
+    "freshness": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "packages/cli/src/pack.ts",
+        "generate",
+        "union-1861",
+        "--check"
+      ],
+      "exit": 0,
+      "seconds": 1.512
+    },
+    "full-suite": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "--reporter=default",
+        "--reporter=json",
+        "--outputFile=runs/s77/full-suite.json"
+      ],
+      "exit": 1,
+      "seconds": 156.324
+    },
+    "generate-concentration": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "packages/cli/src/pack.ts",
+        "generate",
+        "union-1861"
+      ],
+      "exit": 0,
+      "seconds": 1.531
+    },
+    "generate-confirmation": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "packages/cli/src/pack.ts",
+        "generate",
+        "union-1861"
+      ],
+      "exit": 0,
+      "seconds": 1.538
+    },
+    "generate-data": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "packages/cli/src/pack.ts",
+        "generate",
+        "union-1861"
+      ],
+      "exit": 0,
+      "seconds": 1.872
+    },
+    "generate-received": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "packages/cli/src/pack.ts",
+        "generate",
+        "union-1861"
+      ],
+      "exit": 1,
+      "seconds": 1.462
+    },
+    "government-receipt-green": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s77-concentration.test.ts",
+        "packages/kernel/test/received-concentration.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 2.432
+    },
+    "government-receipt-red-corrected": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s77-concentration.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 4.875
+    },
+    "government-receipt-red": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s77-concentration.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 4.789
+    },
+    "government-receipt-string-corrected": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s77-concentration.test.ts",
+        "packages/kernel/test/received-concentration.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 4.761
+    },
+    "licences": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/check-licences.ts"
+      ],
+      "exit": 0,
+      "seconds": 0.121
+    },
+    "pack-ready": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "packages/cli/src/pack.ts",
+        "validate",
+        "union-1861"
+      ],
+      "exit": 0,
+      "seconds": 1.392
+    },
+    "preflight-corrected": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s74-cast-templates.test.ts",
+        "packs/union-1861/test/s77-concentration.test.ts",
+        "tools/test/workspace-links.test.ts",
+        "tools/test/workspaces.test.ts",
+        "tools/test/liveness-causes.test.ts",
+        "tools/test/projection-truth.test.ts",
+        "tools/test/rule-history.test.ts",
+        "packages/kernel/test/desk-projections.test.ts",
+        "packages/kernel/test/received-establishment.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 6.002
+    },
+    "preflight": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/workspace-links.test.ts",
+        "tools/test/workspaces.test.ts",
+        "tools/test/liveness-causes.test.ts",
+        "tools/test/projection-truth.test.ts",
+        "tools/test/rule-history.test.ts",
+        "packages/kernel/test/desk-projections.test.ts",
+        "packages/kernel/test/received-establishment.test.ts",
+        "packs/union-1861/test/s74-cast-templates.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 2.663
+    },
+    "reference-smoke": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s77/references.ts",
+        "testbed",
+        "--smoke"
+      ],
+      "exit": 0,
+      "seconds": 1.355
+    },
+    "route-diagnostic": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s77/route-diagnostic.ts"
+      ],
+      "exit": 0,
+      "seconds": 2.583
+    },
+    "rules-concentration": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/check-rules.ts"
+      ],
+      "exit": 1,
+      "seconds": 1.605
+    },
+    "rules-corrected": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/check-rules.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.272
+    },
+    "rules-final-code": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/check-rules.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.57
+    },
+    "rules-ready-reference": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/check-rules.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.263
+    },
+    "rules-ready": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/check-rules.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.264
+    },
+    "rules-with-data": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/check-rules.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.305
+    },
+    "schema-freshness": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "packages/cli/src/pack.ts",
+        "schemas",
+        "--check"
+      ],
+      "exit": 0,
+      "seconds": 0.577
+    },
+    "schemas-data": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "packages/cli/src/pack.ts",
+        "schemas"
+      ],
+      "exit": 0,
+      "seconds": 0.584
+    },
+    "source-policy-correction": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s64-command-inclusion.test.ts",
+        "packages/kernel/test/received-concentration.test.ts",
+        "packs/union-1861/test/s77-concentration.test.ts",
+        "packages/kernel/test/one-writer.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 6.656
+    },
+    "startup": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "-e",
+        "import {seatsWorld} from './packages/cli/src/seats-world.ts'; import {createRequire} from 'node:module'; const r=createRequire(import.meta.url); console.log(r.resolve('@mandate/kernel')); const w=seatsWorld('union-1861'); console.log(w.world.map.world.pack);"
+      ],
+      "exit": 0,
+      "seconds": 2.264
+    },
+    "suite-corrections": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/one-writer.test.ts",
+        "packages/kernel/test/s74-organisation.test.ts",
+        "packs/union-1861/test/northern-concentration.test.ts",
+        "packs/union-1861/test/s64-command-inclusion.test.ts",
+        "packs/union-1861/test/s77-concentration.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 18.42
+    },
+    "testbed-reference": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s77/references.ts",
+        "testbed"
+      ],
+      "exit": 0,
+      "seconds": 6.789
+    },
+    "typecheck-concentration": {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exit": 0,
+      "seconds": 0.855
+    },
+    "typecheck-data": {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exit": 0,
+      "seconds": 0.923
+    },
+    "typecheck-final-code": {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exit": 0,
+      "seconds": 0.905
+    },
+    "typecheck-ready-reference": {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exit": 0,
+      "seconds": 0.864
+    },
+    "typecheck-ready": {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exit": 0,
+      "seconds": 0.854
+    },
+    "typecheck-received": {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exit": 0,
+      "seconds": 0.853
+    },
+    "union-reference": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s77/references.ts",
+        "union-1861"
+      ],
+      "exit": 0,
+      "seconds": 55.295
+    },
+    "war-term-green": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/s70-recruitment-lots.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 0.706
+    },
+    "war-term-red": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/s70-recruitment-lots.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 0.704
+    },
+    "final-boundary": {
+      "command": [
+        "node",
+        "tools/check-pack-boundary.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.16
+    },
+    "final-pack": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "packages/cli/src/pack.ts",
+        "validate",
+        "union-1861"
+      ],
+      "exit": 0,
+      "seconds": 1.392
+    },
+    "final-rules": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/check-rules.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.258
+    },
+    "headquarters-diagnostic-corrected": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s77/headquarters-diagnostic.ts"
+      ],
+      "exit": 0,
+      "seconds": 2.742
+    },
+    "headquarters-diagnostic": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s77/headquarters-diagnostic.ts"
+      ],
+      "exit": 1,
+      "seconds": 2.477
+    },
+    "staged-rule-history": {
+      "exit": 0,
+      "command": "stagedRuleHistoryProblems(process.cwd())"
+    }
+  },
+  "fullSuite": {
+    "exit": 1,
+    "seconds": 156.324,
+    "files": 220,
+    "passedFiles": 214,
+    "failedFiles": 6,
+    "passedTests": 2024,
+    "failedTests": 8,
+    "skippedTests": 3
+  },
+  "corrections": "One-writer lexical != read changed to explicit checks; three obsolete S64 source-list expectations updated; full suite is retained as exit1. The temporary redundant source-holder filter was removed: source eligibility stays in the received command menu. No July/liveness assertion or checker was weakened.",
+  "reuse": "S74 npm ci reused: unchanged locks and fresh local workspace resolution passed. All unchanged testbed functional evidence is corroborated by the once-run S77 reference. No full-suite, reference-pair or done-check campaign repeated."
+}

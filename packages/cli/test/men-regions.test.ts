@@ -1,3 +1,5 @@
+import { observeBlock, patchBlock } from '../../kernel/test/support/lot-fixture.ts';
+import { enlistmentsOf } from '../../kernel/src/forces/enlistment.ts';
 import { createTelemetry, ids, phase0, world as w } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
 import { seatsWorld, v2Map } from '../src/seats-world.ts';
@@ -97,11 +99,11 @@ describe('one recruitment proposal makes each block, applied in one phase; enlis
     const s = toMuster.state;
     const block = ids.toId('forceBlock', `raised.${NORTH_GOVERNOR}.d${levy.levyMusterDay}`);
     // Each owner wrote its own field: forces the block and its enlistment, movement its place, command its post.
-    expect(s.forceBlockStates[block]).toMatchObject({ fbKind: 'block', fbDepartment: 'n_province', fbArm: world.map.world.rules.recruitment.arm, fbStrength: levy.levyMen });
+    expect(observeBlock(s.forceBlockStates[block]!)).toMatchObject({ fbKind: 'block', fbDepartment: 'n_province', fbArm: world.map.world.rules.recruitment.arm, fbStrength: levy.levyMen });
     // In the pack's starting condition (lane 1.3), with no stragglers, never routed or surrendered.
     const combat = world.map.world.rules.combat;
-    expect(s.forceBlockStates[block]).toMatchObject({ fbMorale: combat.morale.start, fbExperience: combat.experience.start, fbEquipment: combat.equipment.start, fbStragglers: 0, fbRoutedDay: null, fbSurrenderedDay: null });
-    expect(s.forceEnlistments[block]).toEqual({ enlPost: NORTH_GOVERNOR, enlRaisedBy: P('n_governor'), enlCall: levy.levyCall, enlRegiments: levy.levyRegiments, enlMusterDay: levy.levyMusterDay, enlEndsDay: levy.levyMusterDay + 90 });
+    expect(observeBlock(s.forceBlockStates[block]!)).toMatchObject({ fbMorale: combat.morale.start, fbExperience: combat.experience.start, fbEquipment: combat.equipment.start, fbStragglers: 0, fbRoutedDay: null, fbSurrenderedDay: null });
+    expect(enlistmentsOf(s)[block]).toEqual({ enlPost: NORTH_GOVERNOR, enlRaisedBy: P('n_governor'), enlCall: levy.levyCall, enlRegiments: levy.levyRegiments, enlMusterDay: levy.levyMusterDay, enlEndsDay: levy.levyMusterDay + 90 });
     expect(s.forceLocations[block]).toMatchObject({ locRegion: R('n_heartland'), locAboard: null, locSinceDay: levy.levyMusterDay });
     expect(s.forceAssignments[block]).toBe(NORTH_GOVERNOR);
     expect(s.postLevies).toEqual({});
@@ -112,7 +114,7 @@ describe('one recruitment proposal makes each block, applied in one phase; enlis
     const before = play(world, s, 89);
     expect(before.state.forceBlockStates[block]).toBeDefined();
     const after = play(world, before.state, 1);
-    for (const table of [after.state.forceBlockStates, after.state.forceLocations, after.state.forceAssignments, after.state.forceEnlistments]) expect(Object.prototype.hasOwnProperty.call(table, block)).toBe(false);
+    for (const table of [after.state.forceBlockStates, after.state.forceLocations, after.state.forceAssignments, enlistmentsOf(after.state)]) expect(Object.prototype.hasOwnProperty.call(table, block)).toBe(false);
     expect(after.fires('recruitment.disbanded')).toBe(1);
   });
 });
@@ -206,7 +208,7 @@ describe('the standing review of lane 1.7: refusals, a blocked muster, a battle 
     const held = playHeld(world, first.state, freedOn - first.state.stateDay, (d) => d < freedOn);
     expect(held.fires('recruitment.muster_blocked')).toBe(3);
     const block = ids.toId('forceBlock', `raised.${NORTH_GOVERNOR}.d${freedOn}`);
-    expect(held.state.forceEnlistments[block]).toMatchObject({ enlMusterDay: freedOn, enlEndsDay: freedOn + 90 });
+    expect(enlistmentsOf(held.state)[block]).toMatchObject({ enlMusterDay: freedOn, enlEndsDay: freedOn + 90 });
     expect(held.state.postLevies).toEqual({});
   });
 
@@ -219,7 +221,7 @@ describe('the standing review of lane 1.7: refusals, a blocked muster, a battle 
     expect(held.state.postLevies).toEqual({});
     expect(held.fires('recruitment.lapsed')).toBe(1);
     expect(held.fires('recruitment.muster_blocked')).toBe(limit);
-    expect(Object.values(held.state.forceEnlistments)).toEqual([]);
+    expect(Object.values(enlistmentsOf(held.state))).toEqual([]);
     const later = playHeld(world, held.state, 3, () => false);
     const lapse = later.results.flatMap((r) => phase0.knowledgeOf(r.state, phase0.seatIdFor(P('n_leader'))).knownReports).find((k) => k.knownBody.reportClaims[0]?.claimKind === 'levy-lapsed');
     expect(lapse?.knownBody.reportClaims[0]).toMatchObject({ claimKind: 'levy-lapsed', claimRegion: R('n_heartland'), claimValue: levy.levyRegiments, claimToken: 'region_enemy_held' });
@@ -232,10 +234,10 @@ describe('the standing review of lane 1.7: refusals, a blocked muster, a battle 
     const levy = Object.values(first.state.postLevies)[0]!;
     const mustered = play(world, first.state, levy.levyMusterDay - first.state.stateDay).state;
     const block = ids.toId('forceBlock', `raised.${NORTH_GOVERNOR}.d${levy.levyMusterDay}`);
-    const ends = mustered.forceEnlistments[block]!.enlEndsDay;
+    const ends = enlistmentsOf(mustered)[block]!.enlEndsDay;
     if (ends === null) throw new Error('this fixture enlisted for ninety days');
     const battle = (endDay: number | null) => ({
-      ['battle.n_heartland.d1']: { battleRegion: R('n_heartland'), battleStartDay: ends - 1, battleEndDay: endDay, battleFactions: [], battleCauses: [], battleDays: [{ bdaySides: [{ bsideBlocks: [block] }] }] },
+      ['battle.n_heartland.d1']: { battleRegion: R('n_heartland'), battleStartDay: ends - 1, battleEndDay: endDay, battleFactions: [], battleCauses: [], battleDays: [{ bdayType: 'battle', bdaySides: [{ bsideBlocks: [block], bsideUnknown: [] }] }] },
     }) as unknown as phase0.State['battleRecords'];
     const ctx = (s: phase0.State, day: number): phase0.TickContext => ({
       world, latency: phase0.latencyMapFor(world, phase0.buildControlIndex(world.map, s.regionControl)), day, seed: s.gameSeed, mint: phase0.createIdMint(s),
@@ -282,7 +284,7 @@ describe('the standing review of lane 1.7: refusals, a blocked muster, a battle 
     const valley = (s: phase0.State) => phase0.selfEmancipationTerms(world.map, s, rules).find((t) => t.region === R('w_valley'))!.reasons[1];
     expect(valley(state)).toMatchObject({ reach: 'lines-with-force', reachPermille: rules.reachWithForce });
     const north = (Object.keys(state.forceBlockStates) as ids.ForceBlockId[]).filter((b) => state.departmentFactions[state.forceBlockStates[b]!.fbDepartment] === 'north');
-    const each = (change: Partial<phase0.ForceBlockState>) => ({ ...state, forceBlockStates: { ...state.forceBlockStates, ...Object.fromEntries(north.map((b) => [b, { ...state.forceBlockStates[b]!, ...change }])) } });
+    const each = (change: Partial<phase0.ForceBlockState> & { fbStrength?: number | null }) => ({ ...state, forceBlockStates: { ...state.forceBlockStates, ...Object.fromEntries(north.map((b) => [b, patchBlock(state.forceBlockStates[b]!, change)])) } });
     expect(valley(each({ fbSurrenderedDay: 1 }))).toMatchObject({ reach: 'lines', reachPermille: rules.reachLinesOnly });
     expect(valley(each({ fbStrength: 0 }))).toMatchObject({ reach: 'lines', reachPermille: rules.reachLinesOnly });
   });

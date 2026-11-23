@@ -1,0 +1,58 @@
+[
+  {
+    "path": "docs/design/FOUNDATION.md",
+    "passes": 1,
+    "before": "5ae72366366b1961fab90ba48198b2d81ec691ed3b41b0c2d2df2441dbd0d3db",
+    "after": "c9989dc9ad88242eecf0c87200b79257859ffb498d068bc9ede074d184d47801",
+    "original_non_ascii_exact": true
+  },
+  {
+    "path": "packages/cli/src/history-run.ts",
+    "passes": 1,
+    "before": "7acac001f49b971d153cd5adb2d05cec476b30cbafd4a52bad0e32dd90af0aab",
+    "after": "b9ef3786c2c592f49e1caeea4b62ddcc1b64deaef5cd876bac330a73c98e68a3",
+    "original_non_ascii_exact": true
+  },
+  {
+    "path": "packages/cli/src/victory.ts",
+    "passes": 1,
+    "before": "ba2c121ba3c85a33c2602c137944ceaf27db0eeff07d8e52919cbc0259fb8d55",
+    "after": "8d58655788fe22bb3502523e18a8ee879e311f328d1549dff6c46b6c43d89ff0",
+    "original_non_ascii_exact": true
+  },
+  {
+    "path": "packages/cli/test/men-regions.test.ts",
+    "passes": 1,
+    "before": "8164e7171225e71c7d91ec327bcf3e10b3ad0716922c1fe521143d6c260cc759",
+    "after": "5ab1be47ed978b3a2a1702d37c04fa9966aa52341d64a42d22a354c3cb671af8",
+    "original_non_ascii_exact": true
+  },
+  {
+    "path": "packages/cli/test/state-forces.test.ts",
+    "passes": 1,
+    "before": "16757b7423734f53e0bbfd6ede2ada55bc6b2b290cf1e2431522f46c1fdab1c5",
+    "after": "e2e2593d099cb83983f02b86cef0e10dd6b1b885bd88e0ec26066636ebecb893",
+    "original_non_ascii_exact": true
+  },
+  {
+    "path": "packages/kernel/src/combat/battle.ts",
+    "passes": 1,
+    "before": "1049705b1c0193df70f525ed08ace09243c805154c1bef817f73d61c8ef2238d",
+    "after": "69b5d7061def5aec536c0a39b833b0ebdcabc7415abb811bd39fa316bb6c739a",
+    "original_non_ascii_exact": true
+  },
+  {
+    "path": "packages/kernel/src/ownership.ts",
+    "passes": 2,
+    "before": "49c72a203e45fba57c4b48449ff9bddba1b34ca18c0e4fafad31d8cfabdbf86b",
+    "after": "6799d325af62916e46375f8b0ad45297d958512415bc416afe00ba7ecfb39e48",
+    "original_non_ascii_exact": true
+  },
+  {
+    "path": "packages/kernel/test/seats-log.test.ts",
+    "passes": 2,
+    "before": "0d15e0634d5abd338730c52338e4a5b95d798329b27c9a933b5680030261292d",
+    "after": "1825c80384782aa664a712df634f039740b30336b54122eee21d3941303acb2b",
+    "original_non_ascii_exact": true
+  }
+]

@@ -1,9 +1,11 @@
+import { NO_TRUTH } from '../src/knowledge/truth.ts';
+import { report } from './support/s25-fixture.ts';
 import { describe, expect, it } from 'vitest';
 import { resolveDirective } from '../src/compliance.ts';
 import { toId, type PersonId, type PostId, type SituationId } from '../src/ids.ts';
 import { previewAudience } from '../src/audience/audience.ts';
 import type { CounterTerms } from '../src/audience/counters.ts';
-import { knowledgeOf } from '../src/knowledge/knowledge.ts';
+import { deliverReport, knowledgeOf } from '../src/knowledge/knowledge.ts';
 import type { AudienceCommand, Command } from '../src/log/commands.ts';
 import type { LogEntry } from '../src/log/log.ts';
 import { applyPeopleChanges } from '../src/people/people.ts';
@@ -150,7 +152,8 @@ function planned(state: State): State {
     planCounters: [],
     planPending: null,
   } as unknown as State['planRecords'][PostId];
-  return { ...state, planRecords: { ...state.planRecords, [POST('a_army')]: plan } } as State;
+  const copy = { sentPost:POST('a_army'),sentMessage:toId('message',plan.planOrder),sentKind:'goal' as const,sentDay:1,sentPaper:null,sentGoal:plan.planGoal };
+  return { ...state, knowledgeBySeat:{...state.knowledgeBySeat,[lead]:{...knowledgeOf(state,lead),knownSentOrders:[copy]}}, planRecords: { ...state.planRecords, [POST('a_army')]: plan } } as State;
 }
 
 /** a_gen with a grievance of being passed over (weight 300). */
@@ -666,7 +669,10 @@ describe('regard between people (lane 1.5’s column)', () => {
     const world = indexedFixture({}, [sit]);
     const initial = createState(world, { seed: 1, drivers: { a_lead: 'human' } });
     const start = { ...initial, postStates: { ...initial.postStates, a_reserve: { ...initial.postStates[POST('a_reserve')]!, postHolder: null } } };
-    const opened = days(world, start, 1).state;
+    const opened = deliverReport(days(world, start, 1).state, lead, report('m.reserve.loss', {
+      reportAuthor: P('a_sec'), reportSubjectKind: 'post', reportSubjectId: 'a_reserve',
+      reportClaims: [{ claimKind: 'commander-lost', claimRegion: null, claimValue: 1, claimToken: 'captured', claimConfidence: 1000 }],
+    }), NO_TRUTH);
     const offered = (state: State) => principalMenu(world, state, F('a'), morningGround(world, state, state.stateDay + 1)).situations[0]?.consultPosts;
     expect(offered(opened)).toEqual([POST('a_army'), POST('a_office')]);
     const sent = days(world, opened, 1, { 2: [{ cmd: 'consult', situation: S('choice'), posts: [POST('a_army'), POST('a_office')] }] });

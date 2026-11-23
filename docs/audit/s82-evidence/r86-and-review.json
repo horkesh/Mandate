@@ -1,0 +1,14 @@
+{
+  "rootCause": "The public script repeated its original goal after the approved shortening. S51 identical-goal reaffirmation correctly retained the shortened plan.",
+  "correction": "After the first leg, a new public order grants 25 remaining days to the original objective. No assertion, resolver, route or arrival is altered for this console correction.",
+  "assertionsExact": true,
+  "consoleScript": "packages/cli/test/console-session.test.ts",
+  "retainedTranscripts": "runs/s82/worker/r86-green/history-transcript.txt",
+  "review": "runs/s82/review.md",
+  "reviewCorrections": [
+    "Bare surname resolves through declared speaker; adjacent explicit names/initials still require a declaration. Signed Sumter exact.",
+    "Beauregard sourcePost null after dated institutional release; same person/date/prerequisite, received eligibility and ordinary delivery.",
+    "Remove six now-live global QUIET entries; copy exact testbed fallback bands for caution/force_ratio."
+  ],
+  "verification": "runs/s82/preflight-final.log:43 passed; runs/s82/source-inventory-correction.log:19 passed"
+}

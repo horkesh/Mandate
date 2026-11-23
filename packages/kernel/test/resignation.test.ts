@@ -1,4 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import { deliverReport } from '../src/knowledge/knowledge.ts';
+import { NO_TRUTH } from '../src/knowledge/truth.ts';
+import { report, claim } from './support/s25-fixture.ts';
 import { canonicalHash } from '../src/serialize/hash.ts';
 import { blocOfPerson, resignationChoice } from '../src/people/resignation.ts';
 import { changeDepartmentSide, heldPost, relieveHolder, sideOfPerson } from '../src/command/command.ts';
@@ -91,6 +94,7 @@ describe('an officer chooses his service', () => {
     expect(hasCandidate(state)).toBe(true);
     expect(ranks?.regular?.rankTerm).toBe('service_captain');
     state = relieveHolder(state, POST('b_army'));
+    state = deliverReport(state,seat,report('m.known-relief',{reportAuthor:P('b_gen'),reportSubjectKind:'post',reportSubjectId:'b_army',reportDay:state.stateDay,reportClaims:[claim('verb-answered',1,'relieve:comply')]},state.stateDay),NO_TRUTH);
     const first = tick(world, state, [{ day: state.stateDay + 1, seat, command: {
       cmd: 'appoint', person: P('a_gen'), post: POST('b_army'), rank: null, route: 'courier',
     } }], { freeze: true });

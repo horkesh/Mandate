@@ -1,0 +1,173 @@
+{
+  "scope": "Pure projection of saved force/post/location deltas; no tick, replay or new campaign.",
+  "rows": [
+    {
+      "day": 125,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "harpers_ferry",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "manassas"
+    },
+    {
+      "day": 126,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "harpers_ferry",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "manassas"
+    },
+    {
+      "day": 127,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "harpers_ferry",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "manassas"
+    },
+    {
+      "day": 128,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "harpers_ferry",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "manassas"
+    },
+    {
+      "day": 129,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "nashville",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "manassas"
+    },
+    {
+      "day": 130,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "nashville",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "manassas"
+    },
+    {
+      "day": 131,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "nashville",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "manassas"
+    },
+    {
+      "day": 132,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "murfreesboro",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "manassas"
+    },
+    {
+      "day": 133,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "murfreesboro",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "manassas"
+    },
+    {
+      "day": 134,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "murfreesboro",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "manassas"
+    },
+    {
+      "day": 135,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "murfreesboro",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "al_east"
+    },
+    {
+      "day": 136,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "murfreesboro",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "ga_atlanta_west"
+    },
+    {
+      "day": 137,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "murfreesboro",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "ga_atlanta_east"
+    },
+    {
+      "day": 138,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "tn_rim_south",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "raleigh"
+    },
+    {
+      "day": 139,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "tn_rim_south",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "raleigh"
+    },
+    {
+      "day": 140,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "tn_rim_south",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "raleigh"
+    },
+    {
+      "day": 141,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "tn_rim_south",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "raleigh"
+    },
+    {
+      "day": 142,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "tn_rim_south",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "raleigh"
+    },
+    {
+      "day": 143,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "chattanooga",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "raleigh"
+    },
+    {
+      "day": 144,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "chattanooga",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "raleigh"
+    },
+    {
+      "day": 145,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "chattanooga",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "raleigh"
+    },
+    {
+      "day": 146,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "ga_dalton",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "raleigh"
+    },
+    {
+      "day": 147,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "ga_etowah",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "southside"
+    },
+    {
+      "day": 148,
+      "JohnstonAssembly": "harpers_ferry",
+      "JohnstonActualHeadquarters": "atlanta",
+      "BeauregardAssembly": "manassas",
+      "BeauregardActualHeadquarters": "southside"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "-e",
+    "import {stagedRuleHistoryProblems} from './tools/rule-history.ts'; const p=stagedRuleHistoryProblems(process.cwd()); console.log(JSON.stringify(p,null,2)); if(p.length)process.exitCode=1;"
+  ],
+  "exit": 0,
+  "seconds": 0.874
+}

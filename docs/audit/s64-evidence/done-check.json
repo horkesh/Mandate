@@ -1,0 +1,2092 @@
+{
+  "exit": {
+    "job": "done-check",
+    "exit": 1,
+    "seconds": 3153.633680900006,
+    "command": [
+      "npm.cmd",
+      "run",
+      "run:done-check",
+      "--",
+      "--milestone",
+      "1a",
+      "--label",
+      "s64-done"
+    ]
+  },
+  "criteria": [
+    {
+      "milestone": "phase0",
+      "verdict": "PASS",
+      "id": "behaviour",
+      "text": "rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 220 arrivals, 2 battle-days, 45 control changes, confederate 2 front segments 74 supplied 2 pockets; union 2 front segments 36 supplied 0 pockets",
+        "testbed, 120 days: 27 arrivals, 4 battle-days, 35 control changes, north 13 front segments 13 supplied 1 pockets; south 13 front segments 1 supplied 1 pockets"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "verdict": "PASS",
+      "id": "hash",
+      "text": "the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 148 daily hashes, final 8e6af8cfc5e61ad0",
+        "testbed, 120 days: 120 daily hashes, final 9480a41da773d3d5"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "verdict": "PASS",
+      "id": "resume",
+      "text": "a mid-run save, loaded, resumes to the continuous run\u2019s final hash, and the log replays to every hash",
+      "evidence": [
+        "union-1861, war by decision, 148 days: from day 60, matches",
+        "testbed, 120 days: from day 40, matches"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "verdict": "FAIL",
+      "id": "liveness",
+      "text": "every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 162 mechanics inside their bands",
+        "testbed, 120 days: 162 mechanics inside their bands",
+        "testbed, commanders silent, 120 days: 1 mechanics inside their bands",
+        "testbed, the principal edits every plan, 120 days: 6 mechanics inside their bands",
+        "union-1861 before the opening decisions, 30 days (the war gate, 0064): 9 mechanics inside their bands"
+      ],
+      "problems": [
+        "union-1861, war by decision, 148 days: combat.battle_closed is dead (0 fires, band 1..5)",
+        "union-1861, war by decision, 148 days: combat.battle_opened is dead (0 fires, band 1..5)",
+        "union-1861, war by decision, 148 days: combat.captured is dead (0 fires, band 1..5)",
+        "union-1861, war by decision, 148 days: combat.killed_wounded is dead (0 fires, band 2..8)",
+        "union-1861, war by decision, 148 days: combat.missing is dead (0 fires, band 2..8)",
+        "union-1861, war by decision, 148 days: combat.occupation is too_rare (43 fires, band 62..248)",
+        "union-1861, war by decision, 148 days: combat.routed is dead (0 fires, band 1..4)",
+        "union-1861, war by decision, 148 days: command.post_succeeded is too_frequent (5 fires, band 1..4)",
+        "union-1861, war by decision, 148 days: control.changed is too_rare (45 fires, band 64..256)",
+        "union-1861, war by decision, 148 days: control.threshold_crossed is too_rare (13 fires, band 19..78)",
+        "union-1861, war by decision, 148 days: forces.stragglers_returned is dead (0 fires, band 12..48)",
+        "union-1861, war by decision, 148 days: map.recomputed is too_rare (25 fires, band 26..104)",
+        "union-1861, war by decision, 148 days: movement.arrived is too_rare (220 fires, band 319..1276)",
+        "union-1861, war by decision, 148 days: movement.joined is too_rare (30 fires, band 32..128)",
+        "union-1861, war by decision, 148 days: operations.stage is too_rare (3 fires, band 4..18)",
+        "union-1861, war by decision, 148 days: operations.works is dead (0 fires, band 1..5)",
+        "union-1861, war by decision, 148 days: orders.bypassed is too_rare (1 fires, band 2..8)",
+        "union-1861, war by decision, 148 days: orders.relay_held is dead (0 fires, band 1..4)",
+        "union-1861, war by decision, 148 days: orders.returned is dead (0 fires, band 1..4)",
+        "union-1861, war by decision, 148 days: reports.battle_dispatch is too_rare (2 fires, band 9..36)"
+      ]
+    },
+    {
+      "milestone": "phase0",
+      "verdict": "PASS",
+      "id": "section-ten",
+      "text": "the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite\u2019s)",
+      "evidence": [
+        "packages/kernel/test/compliance.test.ts",
+        "packages/kernel/test/rng.test.ts",
+        "packages/kernel/test/banned-apis.test.ts",
+        "packages/kernel/test/people-verbs.test.ts"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "verdict": "FAIL",
+      "id": "budget",
+      "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+      "evidence": [
+        "union-1861, war by decision, 148 days: median 49.61 ms, p95 155.76 ms, max 400.10 ms over 148 days (plans.drafted 1, ladder.moved 5, situations.fired 76)",
+        "testbed, 120 days: median 4.05 ms, p95 6.78 ms, max 11.87 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+        "union-1861 history run, 148 days to 1861-07-31: median 53.15 ms, p95 178.07 ms, max 381.65 ms over 148 days (plans.drafted 1, ladder.moved 5, situations.fired 76)"
+      ],
+      "problems": [
+        "union-1861, war by decision, 148 days: median 49.6 ms a day, over the 40 ms budget",
+        "union-1861 history run, 148 days to 1861-07-31: median 53.1 ms a day, over the 40 ms budget",
+        "union-1861 history run, 148 days to 1861-07-31: p95 178.1 ms a day, over 4 times the budget"
+      ]
+    },
+    {
+      "milestone": "1a",
+      "verdict": "FAIL",
+      "id": "checkpoints",
+      "text": "the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "union-1861 history run, 148 days to 1861-07-31: side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): union 99686 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate 95153 men of known strength, 23 blocks of unknown strength (band 100000..200000)",
+        "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations (band 1..26)",
+        "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+        "union-1861 history run, 148 days to 1861-07-31: confederate at war since day 36",
+        "union-1861 history run, 148 days to 1861-07-31: union at war since day 41"
+      ],
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 95153 men, below 100000",
+        "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1"
+      ]
+    },
+    {
+      "milestone": "1a",
+      "verdict": "PASS",
+      "id": "operation",
+      "text": "at least one operation drafted by the kernel planner, chosen by its commander\u2019s seat, approved, executed and fought with the battle model, with a breakdown",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1a",
+      "verdict": "FAIL",
+      "id": "pushback",
+      "text": "pushback fires inside its bands: lower bounds from the record\u2019s sourced cases (S01\u2013S21), upper bounds the lead\u2019s",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: relay objections: 1 (band 0..6)",
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 0 (band 2..6)",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0 (band 1..4)",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 18 (band 2..9)",
+        "union-1861 history run, 148 days to 1861-07-31: objections to a plan: 37 (band 10..42)"
+      ],
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 0, below the record's 2",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17, above 9",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 18, above 9"
+      ]
+    },
+    {
+      "milestone": "1a",
+      "verdict": "PASS",
+      "id": "unknown-strength",
+      "text": "no block fights with unknown strength: every battle record, in every run, lists none unknown",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 1 battles, 2 battle-days read",
+        "testbed, 120 days: 4 battles, 4 battle-days read",
+        "union-1861 history run, 148 days to 1861-07-31: 1 battles, 2 battle-days read"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1a",
+      "verdict": "PASS",
+      "id": "stand-ins",
+      "text": "the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+      "evidence": [
+        "standing goals: gone (lane 1.4\u2019s operations (4a64082))",
+        "the consistency judgement: gone (lane 1.2\u2019s planner (0062))",
+        "the trait adapter: gone (lane 1.1\u2019s people recast (`standin/traits.ts` deleted))",
+        "weakest-first transfers: gone (lane 1.5\u2019s people verbs (0079: the sender\u2019s answer picks the blocks))",
+        "conflicts resolved by department: gone (lane 1.1\u2019s compliance (`resolveConflict`))",
+        "the simple contest: gone (lane 1.3\u2019s battle model (0076))",
+        "the generic rule-seat principal: no label names it, so it is gone",
+        "the capital as objective: no label names it, so it is gone",
+        "other stand-ins: packages/kernel/src/forces/stores.ts:74 (owner 1B, ships' stores), packages/kernel/src/planner/route.ts:127 (owner 1B, ships' stores), packages/kernel/src/recruitment/renewal.ts:3 (owner 1B, recruitment and service), packages/kernel/src/situations/types.ts:76 (owner 1B, conventions and legislatures), packages/pack-format/src/situations.ts:69 (owner 1B, conventions and legislatures)",
+        "pack values carried from M2, for calibration: union-1861 rules.politics.drift, union-1861 rules.politics.address, union-1861 rules.politics.ladder, union-1861 rules.politics.credibility, union-1861 rules.politics.press.standing"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1a",
+      "verdict": "FAIL",
+      "id": "lever-sweep",
+      "text": "the lever sweep (D6): no watched option, nor an atrocity-class decision\u2019s inaction, is the victory-only bot\u2019s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: 8 seeds, 8 gated decisions weighed, 744 calls for regiments in the base runs",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: return best in 2 of 8 seeds weighed"
+      ],
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "path": "runs\\s64-done\\20261122-183515-24808-b5c2b9\\summary.json",
+      "sha256": "4e7aedd8099f82b5982f81bb26e1ac64cc51e029f803da4a031130688efe7285",
+      "pack": "union-1861",
+      "dailyHashCount": 148,
+      "sameDailyHashesAsS52": false,
+      "sameInitialHashAsS52": true,
+      "finalHash": "8e6af8cfc5e61ad0907ab07fdba43c322f982fcddc9b652492c1e0e44f9a817d",
+      "liveness": [
+        {
+          "mechanic": "combat.battle_closed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.battle_day",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "combat.battle_opened",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.bombardment",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "combat.breakout",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.captured",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.cut_off",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.destroyed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.evacuated",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "combat.flank_broken",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.general_hit",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.killed_wounded",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.missing",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.occupation",
+          "fires": 43,
+          "magnitude": 3740
+        },
+        {
+          "mechanic": "combat.pursuit_chosen",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.records_pruned",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.routed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.surrendered",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "combat.withdrew",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.works_stormed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "command.government_closed",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "command.government_established",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "command.government_reopened",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "command.post_succeeded",
+          "fires": 5,
+          "magnitude": 5
+        },
+        {
+          "mechanic": "command.proposal_refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "command.side_changed",
+          "fires": 10,
+          "magnitude": 10
+        },
+        {
+          "mechanic": "command.temporary_post_opened",
+          "fires": 13,
+          "magnitude": 13
+        },
+        {
+          "mechanic": "commands.rejected",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "control.changed",
+          "fires": 45,
+          "magnitude": 5740
+        },
+        {
+          "mechanic": "control.threshold_crossed",
+          "fires": 13,
+          "magnitude": 13
+        },
+        {
+          "mechanic": "forces.landed_by_situation",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "forces.landing_refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "forces.stores_fell",
+          "fires": 960,
+          "magnitude": 917948
+        },
+        {
+          "mechanic": "forces.stores_low",
+          "fires": 49,
+          "magnitude": 49
+        },
+        {
+          "mechanic": "forces.stores_refilled",
+          "fires": 1099,
+          "magnitude": 1070534
+        },
+        {
+          "mechanic": "forces.stragglers_returned",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "infrastructure.changed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "knowledge.pruned_age",
+          "fires": 105,
+          "magnitude": 1383
+        },
+        {
+          "mechanic": "knowledge.pruned_superseded",
+          "fires": 146,
+          "magnitude": 10362
+        },
+        {
+          "mechanic": "ladder.moved",
+          "fires": 5,
+          "magnitude": 5
+        },
+        {
+          "mechanic": "ladder.rival",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "map.pocket_closed",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "map.pocket_lost",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "map.pocket_relieved",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "map.recomputed",
+          "fires": 25,
+          "magnitude": 27
+        },
+        {
+          "mechanic": "messages.courier_delay",
+          "fires": 167,
+          "magnitude": 167
+        },
+        {
+          "mechanic": "messages.delivered",
+          "fires": 12381,
+          "magnitude": 12381
+        },
+        {
+          "mechanic": "messages.mail_delay",
+          "fires": 2734,
+          "magnitude": 2734
+        },
+        {
+          "mechanic": "messages.sent",
+          "fires": 13101,
+          "magnitude": 13101
+        },
+        {
+          "mechanic": "messages.special_messenger",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "movement.arrived",
+          "fires": 220,
+          "magnitude": 220
+        },
+        {
+          "mechanic": "movement.join_blocked",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "movement.joined",
+          "fires": 30,
+          "magnitude": 30
+        },
+        {
+          "mechanic": "movement.leg_started",
+          "fires": 166,
+          "magnitude": 166
+        },
+        {
+          "mechanic": "operations.ended",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "operations.landed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "operations.opened",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "operations.repulsed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "operations.stage",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "operations.support_answered",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "operations.support_refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "operations.support_sent",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "operations.works",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "orders.bypassed",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "orders.conflict",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "orders.obeyed",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "orders.relay_held",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "orders.relay_objected",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "orders.relayed",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "orders.responses_pruned",
+          "fires": 27,
+          "magnitude": 50
+        },
+        {
+          "mechanic": "orders.returned",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "people.grievances_faded",
+          "fires": 26,
+          "magnitude": 26
+        },
+        {
+          "mechanic": "people.promise_broken",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "people.promise_kept",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "people.resigned",
+          "fires": 14,
+          "magnitude": 14
+        },
+        {
+          "mechanic": "people.stayed",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "planner.candidates",
+          "fires": 1,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "planner.searches",
+          "fires": 1,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "planner.term.caution",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.coordination",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.dependence",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.exposure",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.force_ratio",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.glory",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.goal_fit",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.haste",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.notes",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.supply",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.time",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.approved",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.chosen",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "plans.draft_deferred",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.drafted",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "plans.edit_answered",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.edit_invalid",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.edit_objected",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.edit_received",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.edit_shirked",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.goal_reached",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "plans.goal_set",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "plans.released",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.sent_back",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.submitted",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.went_ahead",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "politics.act",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "politics.adjourned",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "politics.answered",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "politics.called",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "politics.framing",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "politics.front_page",
+          "fires": 63,
+          "magnitude": 63
+        },
+        {
+          "mechanic": "politics.met",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "politics.opened",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "politics.press_silent",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "politics.refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "politics.support",
+          "fires": 49,
+          "magnitude": 49
+        },
+        {
+          "mechanic": "recruitment.answered",
+          "fires": 59,
+          "magnitude": 59
+        },
+        {
+          "mechanic": "recruitment.called",
+          "fires": 97,
+          "magnitude": 97
+        },
+        {
+          "mechanic": "recruitment.disbanded",
+          "fires": 13,
+          "magnitude": 13
+        },
+        {
+          "mechanic": "recruitment.lapsed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "recruitment.men",
+          "fires": 44,
+          "magnitude": 182500
+        },
+        {
+          "mechanic": "recruitment.muster_blocked",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "recruitment.mustered",
+          "fires": 48,
+          "magnitude": 48
+        },
+        {
+          "mechanic": "recruitment.refused",
+          "fires": 38,
+          "magnitude": 38
+        },
+        {
+          "mechanic": "recruitment.renewed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "recruitment.slow_walked",
+          "fires": 32,
+          "magnitude": 32
+        },
+        {
+          "mechanic": "regions.reached_lines",
+          "fires": 253,
+          "magnitude": 253
+        },
+        {
+          "mechanic": "regions.self_emancipation",
+          "fires": 3080,
+          "magnitude": 3080
+        },
+        {
+          "mechanic": "reports.battle_dispatch",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "reports.casualty_return",
+          "fires": 8,
+          "magnitude": 8
+        },
+        {
+          "mechanic": "reports.commander_lost",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "reports.filtered",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "reports.governor_wire",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "reports.observer_letter",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "reports.pocket",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "reports.trimmed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "seats.attention_refilled",
+          "fires": 21,
+          "magnitude": 42
+        },
+        {
+          "mechanic": "seats.attention_refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "seats.attention_spent",
+          "fires": 115,
+          "magnitude": 115
+        },
+        {
+          "mechanic": "seats.battle_orders",
+          "fires": 56,
+          "magnitude": 56
+        },
+        {
+          "mechanic": "seats.choices",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "seats.defaulted",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "seats.initiative",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "situations.decided",
+          "fires": 19,
+          "magnitude": 19
+        },
+        {
+          "mechanic": "situations.delegated",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "situations.fired",
+          "fires": 76,
+          "magnitude": 76
+        },
+        {
+          "mechanic": "situations.lapsed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "situations.notice_reports",
+          "fires": 58,
+          "magnitude": 58
+        },
+        {
+          "mechanic": "situations.noticed",
+          "fires": 57,
+          "magnitude": 57
+        },
+        {
+          "mechanic": "situations.options_changed",
+          "fires": 5,
+          "magnitude": 5
+        },
+        {
+          "mechanic": "situations.orders",
+          "fires": 25,
+          "magnitude": 25
+        },
+        {
+          "mechanic": "situations.policy",
+          "fires": 1,
+          "magnitude": 200
+        },
+        {
+          "mechanic": "situations.policy_unpaid",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "situations.proposals",
+          "fires": 63,
+          "magnitude": 627
+        },
+        {
+          "mechanic": "situations.resurfaced",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "situations.staff_lines",
+          "fires": 18,
+          "magnitude": 18
+        },
+        {
+          "mechanic": "situations.surfaced",
+          "fires": 75,
+          "magnitude": 75
+        },
+        {
+          "mechanic": "situations.waiting",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "verbs.answered",
+          "fires": 70,
+          "magnitude": 70
+        },
+        {
+          "mechanic": "verbs.audience",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "verbs.consulted",
+          "fires": 5,
+          "magnitude": 5
+        },
+        {
+          "mechanic": "verbs.declined",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "verbs.in_washington",
+          "fires": 0,
+          "magnitude": 0
+        }
+      ],
+      "rejections": 0,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "8e6af8cfc5e61ad0907ab07fdba43c322f982fcddc9b652492c1e0e44f9a817d",
+        "matches": true,
+        "savedLogReplays": true
+      }
+    },
+    {
+      "path": "runs\\s64-done\\20261122-183616-24808-01f7c9\\summary.json",
+      "sha256": "caa8cad33537c835261397a893efe8be8e077e64ace835a459af88dfbe4f39b5",
+      "pack": "testbed",
+      "dailyHashCount": 120,
+      "sameDailyHashesAsS52": true,
+      "sameInitialHashAsS52": true,
+      "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+      "liveness": [
+        {
+          "mechanic": "combat.battle_closed",
+          "fires": 4,
+          "magnitude": 4
+        },
+        {
+          "mechanic": "combat.battle_day",
+          "fires": 4,
+          "magnitude": 4
+        },
+        {
+          "mechanic": "combat.battle_opened",
+          "fires": 4,
+          "magnitude": 4
+        },
+        {
+          "mechanic": "combat.bombardment",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.breakout",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.captured",
+          "fires": 4,
+          "magnitude": 86
+        },
+        {
+          "mechanic": "combat.cut_off",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.destroyed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.evacuated",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.flank_broken",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "combat.general_hit",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.killed_wounded",
+          "fires": 8,
+          "magnitude": 1614
+        },
+        {
+          "mechanic": "combat.missing",
+          "fires": 8,
+          "magnitude": 358
+        },
+        {
+          "mechanic": "combat.occupation",
+          "fires": 31,
+          "magnitude": 2548
+        },
+        {
+          "mechanic": "combat.pursuit_chosen",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "combat.records_pruned",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.routed",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "combat.surrendered",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "combat.withdrew",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "combat.works_stormed",
+          "fires": 1,
+          "magnitude": 150
+        },
+        {
+          "mechanic": "command.government_closed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "command.government_established",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "command.government_reopened",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "command.post_succeeded",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "command.proposal_refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "command.side_changed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "command.temporary_post_opened",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "commands.rejected",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "control.changed",
+          "fires": 35,
+          "magnitude": 3348
+        },
+        {
+          "mechanic": "control.threshold_crossed",
+          "fires": 13,
+          "magnitude": 13
+        },
+        {
+          "mechanic": "forces.landed_by_situation",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "forces.landing_refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "forces.stores_fell",
+          "fires": 187,
+          "magnitude": 187000
+        },
+        {
+          "mechanic": "forces.stores_low",
+          "fires": 6,
+          "magnitude": 6
+        },
+        {
+          "mechanic": "forces.stores_refilled",
+          "fires": 238,
+          "magnitude": 236000
+        },
+        {
+          "mechanic": "forces.stragglers_returned",
+          "fires": 108,
+          "magnitude": 230
+        },
+        {
+          "mechanic": "infrastructure.changed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "knowledge.pruned_age",
+          "fires": 43,
+          "magnitude": 83
+        },
+        {
+          "mechanic": "knowledge.pruned_superseded",
+          "fires": 118,
+          "magnitude": 1963
+        },
+        {
+          "mechanic": "ladder.moved",
+          "fires": 6,
+          "magnitude": 6
+        },
+        {
+          "mechanic": "ladder.rival",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "map.pocket_closed",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "map.pocket_lost",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "map.pocket_relieved",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "map.recomputed",
+          "fires": 20,
+          "magnitude": 20
+        },
+        {
+          "mechanic": "messages.courier_delay",
+          "fires": 50,
+          "magnitude": 50
+        },
+        {
+          "mechanic": "messages.delivered",
+          "fires": 2158,
+          "magnitude": 2158
+        },
+        {
+          "mechanic": "messages.mail_delay",
+          "fires": 107,
+          "magnitude": 107
+        },
+        {
+          "mechanic": "messages.sent",
+          "fires": 2189,
+          "magnitude": 2189
+        },
+        {
+          "mechanic": "messages.special_messenger",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "movement.arrived",
+          "fires": 27,
+          "magnitude": 27
+        },
+        {
+          "mechanic": "movement.join_blocked",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "movement.joined",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "movement.leg_started",
+          "fires": 16,
+          "magnitude": 16
+        },
+        {
+          "mechanic": "operations.ended",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "operations.landed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "operations.opened",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "operations.repulsed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "operations.stage",
+          "fires": 13,
+          "magnitude": 13
+        },
+        {
+          "mechanic": "operations.support_answered",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "operations.support_refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "operations.support_sent",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "operations.works",
+          "fires": 4,
+          "magnitude": 200
+        },
+        {
+          "mechanic": "orders.bypassed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "orders.conflict",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "orders.obeyed",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "orders.relay_held",
+          "fires": 3,
+          "magnitude": 6
+        },
+        {
+          "mechanic": "orders.relay_objected",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "orders.relayed",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "orders.responses_pruned",
+          "fires": 16,
+          "magnitude": 24
+        },
+        {
+          "mechanic": "orders.returned",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "people.grievances_faded",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "people.promise_broken",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "people.promise_kept",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "people.resigned",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "people.stayed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.candidates",
+          "fires": 3,
+          "magnitude": 12
+        },
+        {
+          "mechanic": "planner.searches",
+          "fires": 3,
+          "magnitude": 26
+        },
+        {
+          "mechanic": "planner.term.caution",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.coordination",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.dependence",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.exposure",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.force_ratio",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.glory",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.goal_fit",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "planner.term.haste",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.notes",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "planner.term.supply",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "planner.term.time",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.approved",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.chosen",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "plans.draft_deferred",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.drafted",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "plans.edit_answered",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.edit_invalid",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.edit_objected",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.edit_received",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.edit_shirked",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.goal_reached",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "plans.goal_set",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "plans.released",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.sent_back",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.submitted",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "plans.went_ahead",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "politics.act",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "politics.adjourned",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "politics.answered",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "politics.called",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "politics.framing",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "politics.front_page",
+          "fires": 17,
+          "magnitude": 17
+        },
+        {
+          "mechanic": "politics.met",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "politics.opened",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "politics.press_silent",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "politics.refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "politics.support",
+          "fires": 74,
+          "magnitude": 74
+        },
+        {
+          "mechanic": "recruitment.answered",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "recruitment.called",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "recruitment.disbanded",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "recruitment.lapsed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "recruitment.men",
+          "fires": 2,
+          "magnitude": 3000
+        },
+        {
+          "mechanic": "recruitment.muster_blocked",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "recruitment.mustered",
+          "fires": 2,
+          "magnitude": 2
+        },
+        {
+          "mechanic": "recruitment.refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "recruitment.renewed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "recruitment.slow_walked",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "regions.reached_lines",
+          "fires": 36,
+          "magnitude": 36
+        },
+        {
+          "mechanic": "regions.self_emancipation",
+          "fires": 90,
+          "magnitude": 90
+        },
+        {
+          "mechanic": "reports.battle_dispatch",
+          "fires": 32,
+          "magnitude": 32
+        },
+        {
+          "mechanic": "reports.casualty_return",
+          "fires": 16,
+          "magnitude": 16
+        },
+        {
+          "mechanic": "reports.commander_lost",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "reports.filtered",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "reports.governor_wire",
+          "fires": 4,
+          "magnitude": 4
+        },
+        {
+          "mechanic": "reports.observer_letter",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "reports.pocket",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "reports.trimmed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "seats.attention_refilled",
+          "fires": 17,
+          "magnitude": 34
+        },
+        {
+          "mechanic": "seats.attention_refused",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "seats.attention_spent",
+          "fires": 6,
+          "magnitude": 6
+        },
+        {
+          "mechanic": "seats.battle_orders",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "seats.choices",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "seats.defaulted",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "seats.initiative",
+          "fires": 15,
+          "magnitude": 15
+        },
+        {
+          "mechanic": "situations.decided",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "situations.delegated",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "situations.fired",
+          "fires": 6,
+          "magnitude": 6
+        },
+        {
+          "mechanic": "situations.lapsed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "situations.notice_reports",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "situations.noticed",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "situations.options_changed",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "situations.orders",
+          "fires": 1,
+          "magnitude": 1
+        },
+        {
+          "mechanic": "situations.policy",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "situations.policy_unpaid",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "situations.proposals",
+          "fires": 5,
+          "magnitude": 220
+        },
+        {
+          "mechanic": "situations.resurfaced",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "situations.staff_lines",
+          "fires": 3,
+          "magnitude": 3
+        },
+        {
+          "mechanic": "situations.surfaced",
+          "fires": 6,
+          "magnitude": 6
+        },
+        {
+          "mechanic": "situations.waiting",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "verbs.answered",
+          "fires": 36,
+          "magnitude": 36
+        },
+        {
+          "mechanic": "verbs.audience",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "verbs.consulted",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "verbs.declined",
+          "fires": 17,
+          "magnitude": 17
+        },
+        {
+          "mechanic": "verbs.in_washington",
+          "fires": 0,
+          "magnitude": 0
+        }
+      ],
+      "rejections": 0,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 40,
+        "finalHash": "9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4",
+        "matches": true,
+        "savedLogReplays": true
+      }
+    }
+  ],
+  "timingLines": [
+    "FAIL  [budget] the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+    "union-1861, war by decision, 148 days: median 49.61 ms, p95 155.76 ms, max 400.10 ms over 148 days (plans.drafted 1, ladder.moved 5, situations.fired 76)",
+    "testbed, 120 days: median 4.05 ms, p95 6.78 ms, max 11.87 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+    "union-1861 history run, 148 days to 1861-07-31: median 53.15 ms, p95 178.07 ms, max 381.65 ms over 148 days (plans.drafted 1, ladder.moved 5, situations.fired 76)",
+    "! union-1861, war by decision, 148 days: median 49.6 ms a day, over the 40 ms budget",
+    "! union-1861 history run, 148 days to 1861-07-31: median 53.1 ms a day, over the 40 ms budget",
+    "! union-1861 history run, 148 days to 1861-07-31: p95 178.1 ms a day, over 4 times the budget",
+    "union-1861, war by decision, 148 days: median 49.61 ms, p95 155.76 ms, max 400.10 ms over 148 days",
+    "testbed, 120 days: median 4.05 ms, p95 6.78 ms, max 11.87 ms over 120 days",
+    "union-1861 history run, 148 days to 1861-07-31: median 53.15 ms, p95 178.07 ms, max 381.65 ms over 148 days",
+    "one day of all 23 drafts back to back: median 111.6 ms, p95 162.7 ms, worst 199.2 ms over 20 days; slowest single draft 48.0 ms; a capped day (the pack's 3 slowest drafts for each of 2 sides, together) at worst 88.5 ms"
+  ],
+  "history": {
+    "commands": 197,
+    "rejections": 0,
+    "battles": 1,
+    "noticeCount": 0,
+    "checkpoints": {
+      "problems": [
+        "men_confederate (1861-07-31, day 148): confederate has 95153 men, below 100000",
+        "operations_union (1861-07-31, day 148): union fought 0 planned operations, below 1"
+      ],
+      "evidence": [
+        "seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "men_union (1861-07-31, day 148): union 99686 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "men_confederate (1861-07-31, day 148): confederate 95153 men of known strength, 23 blocks of unknown strength (band 100000..200000)",
+        "operations_union (1861-07-31, day 148): union fought 0 planned operations (band 1..26)",
+        "operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+        "confederate at war since day 36",
+        "union at war since day 41"
+      ]
+    },
+    "operations": {
+      "problems": [],
+      "evidence": [
+        "op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38"
+      ]
+    },
+    "finalArmies": {
+      "cs_cmd_harpers_ferry": {
+        "post": {
+          "postName": "post.cs_cmd_harpers_ferry.name",
+          "postKind": "army_command",
+          "postDepartment": "cs_war",
+          "postParent": "cs_secretary_war",
+          "postHolder": "johnston_joseph_e",
+          "postActing": false,
+          "postIntelChief": null,
+          "postSeat": "harpers_ferry",
+          "postOperation": "shenandoah_command",
+          "postInstallation": null,
+          "postLinks": [],
+          "postScheduled": [],
+          "postStandingOrders": []
+        },
+        "blocks": [
+          {
+            "id": "state-forces.va_harpers_ferry",
+            "strength": null,
+            "location": {
+              "locRegion": "harpers_ferry",
+              "locAboard": null,
+              "locSinceDay": 54,
+              "locMarch": null
+            }
+          }
+        ],
+        "operations": []
+      },
+      "cs_cmd_manassas": {
+        "post": {
+          "postName": "post.cs_cmd_manassas.name",
+          "postKind": "army_command",
+          "postDepartment": "cs_war",
+          "postParent": "cs_secretary_war",
+          "postHolder": "beauregard_pierre_g_t",
+          "postActing": false,
+          "postIntelChief": null,
+          "postSeat": "manassas",
+          "postOperation": "alexandria_command",
+          "postInstallation": null,
+          "postLinks": [],
+          "postScheduled": [],
+          "postStandingOrders": []
+        },
+        "blocks": [
+          {
+            "id": "state-forces.va_manassas_garland",
+            "strength": null,
+            "location": {
+              "locRegion": "manassas",
+              "locAboard": null,
+              "locSinceDay": 71,
+              "locMarch": null
+            }
+          },
+          {
+            "id": "state-forces.va_manassas_preston",
+            "strength": null,
+            "location": {
+              "locRegion": "manassas",
+              "locAboard": null,
+              "locSinceDay": 71,
+              "locMarch": null
+            }
+          }
+        ],
+        "operations": []
+      },
+      "st_va_harpers_ferry": {
+        "post": {
+          "postName": "post.st_va_harpers_ferry.name",
+          "postKind": "temporary_command",
+          "postDepartment": "st_virginia",
+          "postParent": "st_gov_virginia",
+          "postHolder": "jackson_thomas_j",
+          "postActing": false,
+          "postIntelChief": null,
+          "postSeat": "harpers_ferry",
+          "postOperation": "st_va_harpers_ferry",
+          "postInstallation": null,
+          "postLinks": [],
+          "postScheduled": [],
+          "postStandingOrders": []
+        },
+        "blocks": [],
+        "operations": []
+      },
+      "st_va_potomac": {
+        "post": {
+          "postName": "post.st_va_potomac.name",
+          "postKind": "temporary_command",
+          "postDepartment": "st_virginia",
+          "postParent": "st_gov_virginia",
+          "postHolder": "cocke_philip_st_george",
+          "postActing": false,
+          "postIntelChief": null,
+          "postSeat": "culpeper_orange",
+          "postOperation": "st_va_potomac",
+          "postInstallation": null,
+          "postLinks": [],
+          "postScheduled": [],
+          "postStandingOrders": []
+        },
+        "blocks": [],
+        "operations": []
+      },
+      "us_dept_northeastern_virginia": {
+        "post": {
+          "postName": "post.us_dept_northeastern_virginia.name",
+          "postKind": "temporary_appointment",
+          "postDepartment": "us_war",
+          "postParent": "us_general_in_chief",
+          "postHolder": "mcdowell_irvin",
+          "postActing": false,
+          "postIntelChief": null,
+          "postSeat": "northern_virginia",
+          "postOperation": "northeastern_virginia_command",
+          "postInstallation": null,
+          "postLinks": [],
+          "postScheduled": [],
+          "postStandingOrders": []
+        },
+        "blocks": [],
+        "operations": []
+      },
+      "us_dept_pennsylvania": {
+        "post": {
+          "postName": "post.us_dept_pennsylvania.name",
+          "postKind": "temporary_appointment",
+          "postDepartment": "us_war",
+          "postParent": "us_general_in_chief",
+          "postHolder": "patterson_robert",
+          "postActing": false,
+          "postIntelChief": null,
+          "postSeat": "philadelphia",
+          "postOperation": "pennsylvania_command",
+          "postInstallation": null,
+          "postLinks": [],
+          "postScheduled": [],
+          "postStandingOrders": []
+        },
+        "blocks": [],
+        "operations": []
+      }
+    }
+  },
+  "frozenInputs": {
+    "count": 392,
+    "changed": []
+  }
+}

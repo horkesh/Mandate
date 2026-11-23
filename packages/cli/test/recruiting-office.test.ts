@@ -1,3 +1,5 @@
+import { enlistmentsOf } from '../../kernel/src/forces/enlistment.ts';
+import { forceTotals } from '../../kernel/src/forces/lots.ts';
 import { expect, it } from 'vitest';
 import { ids, phase0, world as w } from '@mandate/kernel';
 import { seatsWorld } from '../src/seats-world.ts';
@@ -21,14 +23,14 @@ it('a fictional recruiting office can answer three arm requests concurrently wit
   } })), { freeze: true });
   expect(result.rejections).toEqual([]); state = result.state;
   for (let day = 2; day <= 20; day++) state = phase0.tick(world, state, [], { freeze: true }).state;
-  const entries = Object.entries(state.forceEnlistments).filter(([, e]) => e.enlCallId?.startsWith('office_quota_'));
+  const entries = Object.entries(enlistmentsOf(state)).filter(([, e]) => e.enlCallId?.startsWith('office_quota_'));
   expect(entries).toHaveLength(3);
   expect(new Set(entries.map(([id]) => id)).size).toBe(3);
   expect(entries.map(([id]) => state.forceBlockStates[ids.toId('forceBlock', id)]!.fbArm).sort()).toEqual([...arms].sort());
   for (const [id, e] of entries) {
     expect(e).toMatchObject({ enlPost: office, enlRegiments: null });
     expect(e.enlEndsDay! - e.enlMusterDay).toBe(1095);
-    expect(state.forceBlockStates[ids.toId('forceBlock', id)]!.fbStrength).toBeNull();
+    expect(forceTotals(state.forceBlockStates[ids.toId('forceBlock', id)]!).fbStrength).toBeNull();
     expect(state.forceAssignments[ids.toId('forceBlock', id)]).toBe(office);
   }
   expect(state.postLevies).toEqual({});

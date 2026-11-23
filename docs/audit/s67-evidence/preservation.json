@@ -1,0 +1,47 @@
+{
+  "head": "febfd38ca2241e35e8ab1013857470b7c0e4b45f",
+  "branch": "sprint/july",
+  "expectedCompositionPaths": 2032,
+  "compositionDifferences": [
+    {
+      "path": "tools/rules/projection-derivations.json",
+      "expected": {
+        "mode": "100644",
+        "blob": "cdfb1c614c89c65d723a2a510628d836d68d638d",
+        "stage": "0"
+      },
+      "actual": {
+        "mode": "100644",
+        "blob": "a74360f2031f03ddabcb84e3c7bb2cc8e38d994f",
+        "stage": "0"
+      }
+    }
+  ],
+  "additionalPaths": [
+    "docs/audit/s67-evidence/checks.json",
+    "docs/audit/s67-evidence/classification-receipt.json",
+    "docs/audit/s67-evidence/closure-audit.json",
+    "docs/audit/s67-evidence/comparison.json",
+    "docs/audit/s67-evidence/diagnostics.json",
+    "docs/audit/s67-evidence/failure-diagnosis.json",
+    "docs/audit/s67-evidence/filter-diagnostic.json",
+    "docs/audit/s67-evidence/focused-full-suite-receipt.json",
+    "docs/audit/s67-evidence/preservation.json",
+    "docs/audit/s67-evidence/testbed-criteria.json",
+    "docs/audit/s67-evidence/testbed-summary.json",
+    "docs/audit/s67-evidence/union-1861-criteria.json",
+    "docs/audit/s67-evidence/union-1861-summary.json",
+    "docs/audit/s67-july-integration.md",
+    "notes/lane-s67-july.md"
+  ],
+  "originalPaths": 1976,
+  "originalByteIdentical": 1918,
+  "deletedOriginalPaths": [],
+  "measuredInputCount": 462,
+  "runtimeDrift": [],
+  "backupInputCount": 9,
+  "backupInputDrift": [],
+  "unstaged": [],
+  "untracked": [],
+  "conflictStages": []
+}

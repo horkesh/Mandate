@@ -1,6 +1,6 @@
 import { ids, phase0, world as w } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
-import { v2Map } from '../src/seats-world.ts';
+import { seatsWorld, v2Map } from '../src/seats-world.ts';
 
 /**
  * A government the start declares (lane 1.11, the lead's ruling on a government formed during the war): inactive at the
@@ -60,7 +60,7 @@ describe('a declared government is established by a situation (lane 1.11)', () =
     const world = { ...map.world, departments: [...map.world.departments, fresh] } as w.World;
     const start = { ...map.start, declaredGovernments: [{ id: fresh.id, regions: [nationRegion.region] }] };
     const def = { ...notice('wheeling', 1, { field: 'government_established', subject: 'zz_declared', side: null }), faction: ids.toId('faction', 'union'), report: { authors: [ids.toId('post', 'us_secretary_war')], reportType: 'informal', subtype: 'cabinet-word' } } as unknown as phase0.SituationDef;
-    const seats = phase0.indexSeatsWorld(w.indexWorld(world), start, { situations: [def] });
+    const seats = phase0.indexSeatsWorld(w.indexWorld(world), start, { situations: [...seatsWorld('union-1861').world.situations.filter(s => s.id === 'manassas_advance_received'), def] });
     let state = phase0.createState(seats, { seed: map.start.seed, people: 'as-history' });
     const events: unknown[] = [];
     for (let d = 1; d <= 3; d++) {

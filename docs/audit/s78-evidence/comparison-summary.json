@@ -1,0 +1,251 @@
+[
+  {
+    "pack": "testbed",
+    "initialExact": true,
+    "worldExact": true,
+    "functionalChanges": 0,
+    "changedHashes": 0,
+    "counterChanges": 0,
+    "dailyChanges": 0,
+    "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0,
+    "timing": {
+      "unit": "ms",
+      "days": 120,
+      "median": 3.64650000000006,
+      "p95": 7.447799999999916,
+      "max": 36.617399999999975
+    },
+    "criteria": {
+      "liveness": [],
+      "checkpoints": null,
+      "pushback": null,
+      "operation": null,
+      "unknownStrength": {
+        "problems": [],
+        "evidence": [
+          "testbed: 4 battles, 4 battle-days read"
+        ]
+      }
+    }
+  },
+  {
+    "pack": "union-1861",
+    "initialExact": true,
+    "worldExact": false,
+    "functionalChanges": 652,
+    "changedHashes": 102,
+    "counterChanges": 51,
+    "dailyChanges": 416,
+    "finalHash": "f69091979a99e9b83d267eb7b261990145341e9c9294f59b0e385df1d8ce8545",
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "f69091979a99e9b83d267eb7b261990145341e9c9294f59b0e385df1d8ce8545",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0,
+    "timing": {
+      "unit": "ms",
+      "days": 148,
+      "median": 38.79410000000098,
+      "p95": 83.29780000000028,
+      "max": 154.41849999999977
+    },
+    "criteria": {
+      "liveness": [
+        {
+          "mechanic": "combat.battle_day",
+          "problem": "too_frequent",
+          "fires": 9,
+          "band": {
+            "minFires": 2,
+            "maxFires": 8
+          }
+        },
+        {
+          "mechanic": "combat.captured",
+          "problem": "dead",
+          "fires": 0,
+          "band": {
+            "minFires": 1,
+            "maxFires": 5
+          }
+        },
+        {
+          "mechanic": "combat.killed_wounded",
+          "problem": "dead",
+          "fires": 0,
+          "band": {
+            "minFires": 2,
+            "maxFires": 8
+          }
+        },
+        {
+          "mechanic": "combat.missing",
+          "problem": "dead",
+          "fires": 0,
+          "band": {
+            "minFires": 2,
+            "maxFires": 8
+          }
+        },
+        {
+          "mechanic": "combat.routed",
+          "problem": "dead",
+          "fires": 0,
+          "band": {
+            "minFires": 1,
+            "maxFires": 4,
+            "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the 29 July battle ends in a rout under the unchanged resolver. S42 measured one rout."
+          }
+        },
+        {
+          "mechanic": "forces.stragglers_returned",
+          "problem": "dead",
+          "fires": 0,
+          "band": {
+            "minFires": 12,
+            "maxFires": 48,
+            "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture, field contact, losses and aftermath; S42 measured 24 straggler returns under the unchanged resolver and return accounting."
+          }
+        },
+        {
+          "mechanic": "messages.special_messenger",
+          "problem": "too_frequent",
+          "fires": 1,
+          "band": {
+            "minFires": 0,
+            "maxFires": 0,
+            "why": "the one bypass uses the faster zero-day wire instead of a three-day messenger (R78)"
+          }
+        },
+        {
+          "mechanic": "orders.returned",
+          "problem": "dead",
+          "fires": 0,
+          "band": {
+            "minFires": 1,
+            "maxFires": 4,
+            "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the day-87 Charleston transfer reaches a vacated post after reassignment. Its return is written day 92 and received day 97; S42 measured one return."
+          }
+        },
+        {
+          "mechanic": "planner.term.caution",
+          "problem": "too_frequent",
+          "fires": 1,
+          "band": {
+            "minFires": 0,
+            "maxFires": 0,
+            "why": "few drafts in the reference runs, and none where dropping caution alone changes the pick"
+          }
+        },
+        {
+          "mechanic": "planner.term.supply",
+          "problem": "too_frequent",
+          "fires": 2,
+          "band": {
+            "minFires": 0,
+            "maxFires": 0,
+            "why": "S1 appointments: no planner.term.supply event in this observed command/plan path; unchanged testbed fires it 2 times. S1 appointments [I]: the actual holder and headquarters change candidate geometry and which unchanged scoring terms decide a pick."
+          }
+        },
+        {
+          "mechanic": "planner.term.time",
+          "problem": "too_frequent",
+          "fires": 3,
+          "band": {
+            "minFires": 0,
+            "maxFires": 0,
+            "why": "S41 lead ruling after S40 (2026-11-21): S36 received-only correspondence changes the day-136 draft inputs. Time contributes +300 to direct and -300 to holding, but dropping it leaves direct 304 against holding 279, so it no longer changes the reference pick. The constructed S41 time live control proves it can still decide a pick."
+          }
+        },
+        {
+          "mechanic": "reports.governor_wire",
+          "problem": "too_frequent",
+          "fires": 9,
+          "band": {
+            "minFires": 2,
+            "maxFires": 8
+          }
+        }
+      ],
+      "checkpoints": {
+        "problems": [
+          "men_confederate (1861-07-31, day 148): confederate has 95153 men, below 100000"
+        ],
+        "evidence": [
+          "seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+          "side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+          "side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+          "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+          "side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+          "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+          "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+          "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+          "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+          "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+          "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+          "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+          "men_union (1861-07-31, day 148): union 100686 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+          "men_confederate (1861-07-31, day 148): confederate 95153 men of known strength, 23 blocks of unknown strength (band 100000..200000)",
+          "operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+          "operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+          "confederate at war since day 36",
+          "union at war since day 41"
+        ]
+      },
+      "pushback": {
+        "problems": [
+          "trims: 0, below the record's 1",
+          "compliance with reservations: 16, above 9",
+          "slow walks: 18, above 9"
+        ],
+        "evidence": [
+          "relay objections: 3 (band 0..6)",
+          "relay holds: 2 (band 1..4)",
+          "filter holds: 0 (band 0..6)",
+          "trims: 0 (band 1..4)",
+          "compliance with reservations: 16 (band 1..9)",
+          "slow walks: 18 (band 2..9)",
+          "objections to a plan: 39 (band 10..42)"
+        ]
+      },
+      "operation": {
+        "problems": [],
+        "evidence": [
+          "op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+          "op:us_dept_northeastern_virginia:137 (union, direct) fought battle battle:manassas:142"
+        ]
+      },
+      "unknownStrength": {
+        "problems": [
+          "union-1861: battle battle:manassas:142 at manassas, day 142: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+          "union-1861: battle battle:manassas:142 at manassas, day 143: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+          "union-1861: battle battle:manassas:142 at manassas, day 144: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+          "union-1861: battle battle:manassas:142 at manassas, day 145: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+          "union-1861: battle battle:manassas:142 at manassas, day 146: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+          "union-1861: battle battle:manassas:142 at manassas, day 147: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)",
+          "union-1861: battle battle:manassas:142 at manassas, day 148: confederate fought with 2 blocks of unknown strength (state-forces.va_manassas_garland, state-forces.va_manassas_preston)"
+        ],
+        "evidence": [
+          "union-1861: 2 battles, 9 battle-days read"
+        ]
+      }
+    }
+  }
+]

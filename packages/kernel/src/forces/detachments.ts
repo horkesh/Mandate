@@ -1,3 +1,5 @@
+import { changeLotTotals } from './lots.ts';
+import { forceTotals } from './lots.ts';
 /**
  * Detachments in play (lane 1.4b; FOUNDATION section 5: detachments below the force block, for garrisons and landings,
  * 0040; section 10's row, which shares the block's own record). A detachment is a `forces` record of kind `detachment`
@@ -15,7 +17,6 @@
 import type { ForceBlockId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 import { ForcesError, type ForceBlockState } from './forces.ts';
-import type { Enlistment } from './enlistment.ts';
 
 /** Who proposes a detachment's change (the proposers `OWNED_FIELDS` lists for the detachments row). */
 /** Who proposed it: an operation's landing, `command`, or a situation's option (lane 1.11: S02's landing). */
@@ -40,8 +41,8 @@ export function detachmentProblems(state: State, d: DetachmentDelta): string[] {
     if (state.forceBlockStates[d.detachment] !== undefined) return [`force block ${d.detachment} already exists`];
     if (p.fbKind !== 'block') return [`${d.parent} is a detachment: only a block detaches`];
     if (p.fbSurrenderedDay !== null) return [`${d.parent} has surrendered`];
-    if (p.fbStrength === null) return [`${d.parent}'s strength is unknown: no men can be counted out of it`];
-    if (!Number.isSafeInteger(d.men) || d.men < 1 || d.men > p.fbStrength) return [`${d.parent} has ${p.fbStrength} men, not ${d.men} to detach`];
+    if (forceTotals(p).fbStrength === null) return [`${d.parent}'s strength is unknown: no men can be counted out of it`];
+    if (!Number.isSafeInteger(d.men) || d.men < 1 || d.men > forceTotals(p).fbStrength!) return [`${d.parent} has ${forceTotals(p).fbStrength!} men, not ${d.men} to detach`];
     return [];
   }
   const det = state.forceBlockStates[d.detachment];
@@ -62,7 +63,13 @@ export function detachmentProblems(state: State, d: DetachmentDelta): string[] {
 export function applyDetachments(state: State, deltas: readonly DetachmentDelta[]): { readonly state: State; readonly made: readonly ForceBlockId[]; readonly removed: readonly ForceBlockId[] } {
   if (deltas.length === 0) return { state, made: [], removed: [] };
   const blocks: Record<ForceBlockId, ForceBlockState> = { ...state.forceBlockStates };
-  const enlistments: Record<ForceBlockId, Enlistment> = { ...state.forceEnlistments };
+  const identities = new Set(Object.values(blocks).flatMap(b => b.fbLots.map(l => l.lotId)));
+  const splitId = (base: string): string => {
+    let id = base;
+    for (let n = 2; identities.has(id); n++) id = `${base}.${n}`;
+    identities.add(id);
+    return id;
+  };
   const made: ForceBlockId[] = [];
   const removed: ForceBlockId[] = [];
   let current: State = state;
@@ -71,34 +78,31 @@ export function applyDetachments(state: State, deltas: readonly DetachmentDelta[
     if (problems.length > 0) throw new ForcesError(problems);
     if (d.change === 'detach') {
       const p = blocks[d.parent]!;
-      const strength = p.fbStrength!;
+      const strength = forceTotals(p).fbStrength!;
       const stores = p.fbStoresMilli === null ? null : share(p.fbStoresMilli, d.men, strength);
-      blocks[d.detachment] = { ...p, fbName: d.name, fbKind: 'detachment', fbParent: d.parent, fbStrength: d.men, fbNonCombatants: 0, fbStoresMilli: stores, fbStragglers: 0, fbSurrenderedDay: null };
-      blocks[d.parent] = { ...p, fbStrength: strength - d.men, fbStoresMilli: p.fbStoresMilli === null ? null : p.fbStoresMilli - stores! };
-      const enl = enlistments[d.parent];
-      if (enl !== undefined) enlistments[d.detachment] = enl;
+      const parentLots = changeLotTotals(p.fbLots, strength - d.men, forceTotals(p).fbStragglers);
+      blocks[d.detachment] = { ...p, fbName: d.name, fbKind: 'detachment', fbParent: d.parent, fbLots: p.fbLots.map((l, i) => ({ ...l, lotId: splitId(`${l.lotId}.det.${d.detachment}`), lotMen: l.lotMen === null ? null : l.lotMen - parentLots[i]!.lotMen!, lotStragglers: 0 })), fbNonCombatants: 0, fbStoresMilli: stores, fbSurrenderedDay: null };
+      blocks[d.parent] = { ...p, fbLots: parentLots, fbStoresMilli: p.fbStoresMilli === null ? null : p.fbStoresMilli - stores! };
       made.push(d.detachment);
     } else if (d.change === 'rejoin') {
       const det = blocks[d.detachment]!;
       const p = blocks[det.fbParent!]!;
-      const men = det.fbStrength ?? 0;
-      const pm = p.fbStrength ?? 0;
+      const men = forceTotals(det).fbStrength ?? 0;
+      const pm = forceTotals(p).fbStrength ?? 0;
       blocks[det.fbParent!] = {
         ...p,
-        fbStrength: p.fbStrength === null ? null : pm + men,
+        fbLots: [...p.fbLots, ...det.fbLots],
         fbStoresMilli: p.fbStoresMilli === null || det.fbStoresMilli === null ? p.fbStoresMilli : p.fbStoresMilli + det.fbStoresMilli,
-        fbStragglers: p.fbStragglers + det.fbStragglers,
         fbMorale: blend(p.fbMorale, pm, det.fbMorale, men),
         fbExperience: blend(p.fbExperience, pm, det.fbExperience, men),
         fbEquipment: blend(p.fbEquipment, pm, det.fbEquipment, men),
       };
       delete blocks[d.detachment];
-      delete enlistments[d.detachment];
       removed.push(d.detachment);
     } else {
       blocks[d.detachment] = { ...blocks[d.detachment]!, fbKind: 'block', fbParent: null };
     }
     current = { ...current, forceBlockStates: blocks };
   }
-  return { state: { ...state, forceBlockStates: blocks, forceEnlistments: enlistments }, made, removed };
+  return { state: { ...state, forceBlockStates: blocks }, made, removed };
 }

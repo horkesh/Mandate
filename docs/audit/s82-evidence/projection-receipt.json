@@ -1,0 +1,69 @@
+{
+  "sameProtectedReaders": true,
+  "updates": [
+    {
+      "symbol": "battleMenus",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "f4aa97c1f760a9018090a49444f9df1287aacaeb649e1a215a8c8d0e9806c15f",
+        "detail": "battleMenus reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "5274b20648a88a442796d3dbc40335ee985f0ab4af57bf1736d0dc107f274969",
+        "detail": "battleMenus reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions)"
+      }
+    },
+    {
+      "symbol": "viewFor",
+      "path": "packages/kernel/src/view/view.ts",
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/view/view.ts",
+        "hash": "13bff179173ad5fc63a49b26ac279087d6d3ecaca25c003a53da53372c705611",
+        "detail": "viewFor reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/view/view.ts",
+        "hash": "42d13256f97fd74085ccb23fab37efccde0e769b36178b0b4000bff08dd49446",
+        "detail": "viewFor reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)"
+      }
+    },
+    {
+      "symbol": "principalMenu",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "e2966770de073529d217c49d4420df32e7151b7708d633ad60a52544cefa1989",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "c35c98626f1f79b84cf3f12cfeb0ec4677d7bfa72f8ecf631176d5f5a2871a26",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)"
+      }
+    },
+    {
+      "symbol": "pendingRequests",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "7378b663acf9fa8cd2b66b128d7abf791be0bb520bb1ef4702d5f6a3648c6738",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "a51ed13f884eac71e9fb9b8297a0d7c2c98b81adcc63da3cd81ea25fa7d94906",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      }
+    }
+  ]
+}

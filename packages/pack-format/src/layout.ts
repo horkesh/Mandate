@@ -115,7 +115,7 @@ export const WORLD_TABLES = {
       c('bloc'),
       c('bloc_cites'),
       c('ranks'),
-      c('service_government'), c('resigned_on'), c('resignation_side'), c('resignation_bloc'), c('resignation_cites'),
+      c('service_government'), c('resigned_on'), c('resignation_side'), c('resignation_bloc'), c('resignation_cites'), c('rank_schedule'), c('requires_introduction'),
       c('sources'),
       c('notes'),
     ],

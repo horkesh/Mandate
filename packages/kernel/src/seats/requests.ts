@@ -1,3 +1,5 @@
+import { formationPost } from '../command/organisation.ts';
+import { forceTotals } from '../forces/lots.ts';
 /**
  * Which seats must answer, and the kernel's menu for each (Derived).
  *
@@ -7,7 +9,7 @@
  * for orders, and is shown the plans submitted to him that have reached him.
  */
 import { strictCompare } from '../compare.ts';
-import { commandedBlocks, declaredAppointment, heldPost, sideOfPerson, unpostedPeopleOnSide } from '../command/command.ts';
+import { commandedBlocks, heldPost } from '../command/command.ts';
 import { commanderView, mayAttackToday, presenceByRegion, sideCommand } from '../combat/battle.ts';
 import { believedRatio, commitAtDawn, cutOffChoice, pursuitChoice, standAtNight } from '../combat/decide.ts';
 import { BATTLE_ORDER_OPTIONS } from '../combat/order-kinds.ts';
@@ -20,19 +22,17 @@ import { mintMessageId } from '../messages/transit.ts';
 import type { MarchGround } from '../movement/march.ts';
 import { candidateOf, postsInStatus } from '../plans/plans.ts';
 import { isCallAnswer } from '../proxy/responses.ts';
-import { knowledgeOf } from '../knowledge/knowledge.ts';
-import { believedHolder, lossesInTransit, vacancyUnreported } from './believed.ts';
+import { knowledgeOf, unansweredAppointments } from '../knowledge/knowledge.ts';
 import { capitalOf } from '../command/capitals.ts';
 import type { State } from '../root-state.ts';
 import type { SituationDef } from '../situations/types.ts';
 import { valuesOf } from '../people/traits.ts';
 import { deepFreeze } from '../tick/freeze.ts';
 import { passageOf } from '../tick/passage.ts';
-import { choosingPosts, optionView, planKey, planOptions } from '../tick/plans.ts';
+import { choosingMenus, optionView, planKey } from '../tick/plans.ts';
 import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
 import { dateOfDay, daysFromCivil, formatIsoDate, parseIsoDate } from '../world/calendar.ts';
 import type { BattleMenu, Candidate, CommandablePost, DelegatedMenu, DoctrineView, PlanMenu, RaisingPost, Vacancy, PlanReview, PrincipalMenu, RouteOption, SeatRequest, SituationChoice } from './api.ts';
-import { fieldPosts, headquartersOf, isFieldPost, postFaction, relayChain } from './posts.ts';
 import { seatIdFor } from './seats.ts';
 import { attentionLeft } from './attention.ts';
 import { latencyMapFor, type SeatsWorld } from './world.ts';
@@ -98,6 +98,7 @@ export function warSince(world: SeatsWorld, state: State, faction: FactionId): n
 /** The kinds of a principal's orders and verbs to a post still on their way (lane 1.12: so a rule seat sends each once). */
 function inTransitTo(state: State, principal: PersonId, post: PostId): string[] {
   const kinds = new Set<string>();
+  if (unansweredAppointments(state, principal).some(a => a.appointmentPost === post)) kinds.add('appoint');
   for (const m of state.messagesInTransit) {
     if (m.msgOrder !== null && m.msgOrder.orderIssuer === principal && m.msgOrder.orderTarget === post) kinds.add(m.msgOrder.orderKind === 'goal' ? 'order' : m.msgOrder.orderKind);
     if (m.msgVerb !== null && m.msgVerb.verbIssuer === principal && m.msgVerb.verbPost === post) kinds.add(m.msgVerb.verbKind);
@@ -121,19 +122,34 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId, recei
   const start = daysFromCivil(parseIsoDate(state.calendarStart));
   const sides = receivedDepartmentSides(world, receivedView);
   const due = (date: string, department: DepartmentId) => state.stateDay + 1 >= daysFromCivil(parseIsoDate(date)) - start && sides.get(department) === faction;
-  const concentration = [...(row.concentrations ?? [])].filter(c => due(c.fromDate, c.requiresDepartment) && receivedPostSide(world, receivedView, sides, c.post) === faction)
-    .sort((a, b) => strictCompare(b.fromDate, a.fromDate) || strictCompare(a.post, b.post))[0];
+  const concentrations = [...(row.concentrations ?? [])].filter(c => due(c.fromDate, c.requiresDepartment) && receivedPostSide(world, receivedView, sides, c.post) === faction)
+    .sort((a, b) => strictCompare(b.fromDate, a.fromDate) || strictCompare(a.post, b.post));
+  const concentration = concentrations[0];
+  const transfers = new Map<PostId, PostId>();
+  for (const c of concentrations) for (const from of c.fromPosts) if (!transfers.has(from)) transfers.set(from, c.post);
   return {
     crossNeutral: row.crossNeutral,
     concentrateAt: concentration?.post ?? row.concentrateAt,
-    ...(concentration === undefined ? {} : { concentrateFrom: concentration.fromPosts }),
+    ...(concentration === undefined ? {} : { concentrateFrom: concentration.fromPosts,
+      concentrateLevies: concentration.receiveLevies ?? true,
+      concentrationTransfers: [...transfers].sort(([a], [b]) => strictCompare(a, b)).map(([from, to]) => ({ from, to })),
+    }),
     calls: row.calls.map((c) => ({ post: c.post, regiments: c.regiments, termDays: c.termDays, day: daysFromCivil(parseIsoDate(c.fromDate)) - start,
       ...(c.men === undefined ? {} : { men: c.men }), ...(c.atPeace === undefined ? {} : { atPeace: c.atPeace }),
       ...(c.arm === undefined ? {} : { arm: c.arm }),
       ...(c.readiness === undefined ? {} : { readiness: c.readiness }),
       ...(c.id === undefined ? {} : { id: c.id, issued: state.messagesInTransit.some(m => m.msgOrder !== null && m.msgOrder.orderCall?.callId === c.id && m.msgOrder.orderIssuer === world.faction(faction).principal) || Object.values(state.orderResponses).some(r => r.respCallId === c.id && r.respPost === c.post) }),
     })),
-    offensives: row.offensives.map((o) => ({ post: o.post, objective: o.objective, day: daysFromCivil(parseIsoDate(o.fromDate)) - start })),
+    offensives: row.offensives.map((o) => {
+      const day = daysFromCivil(parseIsoDate(o.fromDate)) - start;
+      if (o.requiresNotice === undefined) return { post: o.post, objective: o.objective, day, ...(o.posture === undefined ? {} : { posture: o.posture }) };
+      const heard = receivedView.reports.some(r => r.subjectKind === 'situation' && r.subjectId === o.requiresNotice && r.day <= state.stateDay && r.receivedDay <= state.stateDay);
+      // The principal remembers his own dispatch, never the addressee's private plan or operation.
+      // A later personal order to the same command supersedes this automatic doctrine as well.
+      const sent = state.knowledgeBySeat[seatIdFor(world.faction(faction).principal)]?.knownSentOrders ?? [];
+      return { post: o.post, objective: o.objective, day, ...(o.posture === undefined ? {} : { posture: o.posture }), ready: heard,
+        issued: sent.some(s => s.sentPost === o.post && s.sentKind === 'goal' && s.sentDay >= day) };
+    }),
     inquireEveryDays: row.inquireEveryDays,
     appointKinds: { land: [...row.appointKinds.land], naval: [...row.appointKinds.naval] },
   };
@@ -142,12 +158,48 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId, recei
 export function principalMenu(world: SeatsWorld, state: State, faction: FactionId, ground: MorningGround, cache?: ViewCache, picture?: SeatView): PrincipalMenu {
   const f = world.faction(faction);
   const receivedView = picture ?? viewFor(world,state,seatIdFor(f.principal),cache);
+  const sides = receivedDepartmentSides(world, receivedView);
+  const knownPosts = new Map(receivedView.posts.map(p => [p.post, p]));
+  // Only public declared structure for a post already named in this seat's establishment or correspondence.
+  const structure = (id: PostId) => {
+    const opening = world.start.posts.find(p => p.id === id);
+    const declared = opening ?? world.start.temporaryPosts.find(p => p.id === id);
+    if (declared === undefined) return undefined;
+    const today = formatIsoDate(dateOfDay(world.start.startDate, receivedView.day));
+    const schedule = opening?.departmentChanges.filter(c => c.on <= today).sort((a,b) => strictCompare(a.on,b.on)).at(-1);
+    return { ...declared, department: schedule?.department ?? declared.department };
+  };
+  const side = (id: PostId) => {
+    const p = structure(id);
+    return p === undefined ? null : sides.get(p.department) ?? null;
+  };
+  // Own-force records identify commands (0064). An opening command still believed held does not disappear when
+  // its whole garrison is secretly captured; the received loss closes that belief (0052).
+  const blocks = (id: PostId) => {
+    const templates=world.map.world.organisationTemplates??[];
+    const forms=new Set(templates.flatMap(t=>t.posts.map(p=>p.id)));
+    if(!forms.has(id)&&!templates.some(t=>t.army===id))return commandedBlocks(state,id);
+    return Object.keys(state.forceAssignments).filter(key=>{
+      let assigned=state.forceAssignments[key as ForceBlockId]??null;
+      if(assigned===id)return true;
+      const seen=new Set<PostId>();
+      while(assigned!==null&&forms.has(assigned)&&!seen.has(assigned)){seen.add(assigned);assigned=knownPosts.get(assigned)?.parent??null;if(assigned===id)return true;}
+      return false;
+    }) as ForceBlockId[];
+  };
+  const institutional = (id: PostId) => world.roleOf(structure(id)?.kind ?? '') === 'office';
+  const field = (id: PostId) => !institutional(id) && (blocks(id).length > 0 || (knownPosts.get(id)?.status === 'held' && (world.start.forceBlocks.some(b => b.post === id) || world.map.world.organisationTemplates?.some(t=>t.army===id)===true)));
+  const relays = (id: PostId): PostId[] => {
+    const up: PostId[] = [];
+    for (let parent = knownPosts.get(id)?.parent; parent != null && parent !== receivedView.post && !up.includes(parent); parent = knownPosts.get(parent)?.parent) up.push(parent);
+    return up.reverse();
+  };
   // Typical days to a post's seat in pack data, or where it stood at the start of play, or else his own side's capital:
   // the principal is not told where it is today (exit review P2).
   const routesTo = (id: PostId): RouteOption[] => {
-    const p = state.postStates[id];
+    const p = structure(id);
     const capital = capitalOf(state, faction);
-    const to = p?.postSeat ?? world.start.temporaryPosts.find(p => p.id === id)?.region ?? world.startHeadquarters(id) ?? capital;
+    const to = institutional(id) ? capital : p?.region ?? world.start.temporaryPosts.find(p => p.id === id)?.region ?? world.startHeadquarters(id) ?? capital;
     const routes: RouteOption[] = [];
     for (const route of ORDER_ROUTES) {
       const l = routeLatency(ground.latency, world.rules.latency, route, capital, to, faction, null);
@@ -158,33 +210,22 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   const raisingKinds = new Set(world.map.world.rules.recruitment.raisingPostKinds);
   const selfGoverning = new Set(world.map.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id as string));
   const raisesRegiments = (id: PostId): boolean => {
-    const p = state.postStates[id]!;
-    const dept = world.map.world.departments.find((d) => d.id === p.postDepartment);
-    return raisingKinds.has(p.postKind) && p.postSeat !== null && !selfGoverning.has(dept?.kind ?? '');
+    const p = structure(id);
+    if (p === undefined) return false;
+    const dept = world.map.world.departments.find((d) => d.id === p.department);
+    return raisingKinds.has(p.kind) && p.region !== null && !selfGoverning.has(dept?.kind ?? '');
   };
   // The posts as he believes them (0052; lane 1.12): a field post whose commander a battle took stays on his menu, with
   // the man he lost, until the report of it reaches him; an order he sends it meanwhile comes back undelivered.
-  const ownPosts = (Object.keys(state.postStates).sort(strictCompare) as PostId[]).filter((id) => postFaction(world, state, id) === faction);
-  const losses = lossesInTransit(state, f.principal);
-  const unreported = new Set(losses.size === 0 ? [] : ownPosts.filter((id) => vacancyUnreported(state, f.principal, id, losses)));
-  const commandable: CommandablePost[] = [];
-  for (const id of [...new Set([...fieldPosts(world, state), ...unreported])].sort(strictCompare)) {
-    if (postFaction(world, state, id) !== faction) continue;
-    const holder = believedHolder(state, f.principal, id, losses)!;
-    commandable.push({ post: id, holder, relays: relayChain(state, f.principal, id).slice(0, -1), routes: routesTo(id), ...receivedStrength(state, f.principal, id), raising: raisesRegiments(id), inTransit: inTransitTo(state, f.principal, id) });
-  }
-  // Lane 1.12: what his doctrine reads. Posts that raise regiments, held; posts commanding troops that nobody holds; and
-  // the men he may appoint to them, senior first.
-  const raising: RaisingPost[] = (Object.keys(state.postStates).sort(strictCompare) as PostId[]).filter(id => postFaction(world,state,id) === faction || postFaction(world,state,id) === null)
-    .filter((id) => state.postStates[id]!.postHolder !== null && raisesRegiments(id))
-    .map((id) => ({ post: id, holder: state.postStates[id]!.postHolder!, routes: routesTo(id), called: calledOn(state, f.principal, id) }));
-  // A vacancy is a post that had a holder when the scenario began and has lost him (to a wound, a capture, a relief), and
-  // that he knows is vacant: a loss in battle only once its report has reached him. A post the scenario starts vacant is
-  // the history's own choice: no doctrine fills it.
-  const heldAtStart = new Set(world.start.posts.filter((p) => p.holder !== null).map((p) => p.id as PostId));
-  const vacancies: Vacancy[] = ownPosts
-    .filter((id) => state.postStates[id]!.postHolder === null && !unreported.has(id) && heldAtStart.has(id) && commandedBlocks(state, id).length > 0)
-    .map((id) => ({ post: id, arm: commandedBlocks(state, id).every((b) => isNaval(world.map, state, b)) ? ('naval' as const) : ('land' as const), routes: routesTo(id), appointing: inTransitTo(state, f.principal, id).includes('appoint') }));
+  const ownPosts = receivedView.posts.filter(p => side(p.post) === faction).map(p => p.post).sort(strictCompare);
+  const commandable: CommandablePost[] = ownPosts.filter(id => knownPosts.get(id)!.status === 'held' && knownPosts.get(id)!.holder !== null && field(id))
+    .map(id => ({ post: id, holder: knownPosts.get(id)!.holder!, relays: relays(id), routes: routesTo(id), ...receivedStrength(state, f.principal, id), raising: raisesRegiments(id), inTransit: inTransitTo(state, f.principal, id) }));
+  const raising: RaisingPost[] = receivedView.posts.filter(p => p.status === 'held' && p.holder !== null && (side(p.post) === faction || side(p.post) === null) && raisesRegiments(p.post))
+    .map(p => ({ post: p.post, holder: p.holder!, routes: routesTo(p.post), called: calledOn(state, f.principal, p.post) }));
+  // Only received vacancies in commands held at the opening; unknown holders and unreceived losses stay unchanged.
+  const heldAtStart = new Set(world.start.posts.filter(p => p.holder !== null).map(p => p.id));
+  const vacancies: Vacancy[] = ownPosts.filter(id => !formationPost(world.map,id) && knownPosts.get(id)!.status === 'vacant' && heldAtStart.has(id) && field(id))
+    .map(id => ({ post: id, arm: blocks(id).length > 0 && blocks(id).every(b => isNaval(world.map, state, b)) ? ('naval' as const) : ('land' as const), routes: routesTo(id), appointing: inTransitTo(state, f.principal, id).includes('appoint') }));
   const previousCandidates = cache?.candidates.get(faction);
   let candidates: readonly Candidate[];
   if (previousCandidates !== undefined && previousCandidates.world === world && previousCandidates.posts === receivedView.posts && previousCandidates.reports === receivedView.reports && previousCandidates.calendar === state.calendarStart) {
@@ -222,9 +263,10 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     historicalAppointees.sort(strictCompare);
     for (const a of [...unsent].sort((a, b) => strictCompare(a.post, b.post) || strictCompare(a.person, b.person))) {
       if (!('onDate' in a) || a.onDate > today || !candidates.some((p) => p.person === a.person) || inTransitTo(state, f.principal, a.post).includes('appoint')) continue;
-      const template = declaredAppointment(world.map, state, world.start.temporaryPosts, a.post, faction);
-      const existing = state.postStates[a.post];
-      if (template === undefined && (existing === undefined || postFaction(world, state, a.post) !== faction || believedHolder(state, f.principal, a.post, losses) !== null)) continue;
+      const template = world.start.temporaryPosts.find(p => p.id === a.post);
+      const kind = world.map.world.vocabularies.postKinds.find(k => k.id === template?.kind);
+      const mayEstablish = template !== undefined && !knownPosts.has(a.post) && sides.get(template.department) === faction && kind?.creatable === 'appoint' && kind.temporary && (template.parent === null || (knownPosts.has(template.parent) && side(template.parent) === faction));
+      if (!mayEstablish && (knownPosts.get(a.post)?.status !== 'vacant' || side(a.post) !== faction)) continue;
       // The letter goes to the man, not to a post that does not exist yet (the appoint verb's own route).
       const to = capitalOf(state, faction);
       const routes = ORDER_ROUTES.flatMap((route): RouteOption[] => {
@@ -240,7 +282,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     if (def.faction !== faction || r === undefined || r.sitStatus !== 'open' || r.sitSurfacedDay === null || r.sitDelegate !== null) continue;
     const proposers = new Set(def.options.filter((o) => r.sitOpenOptions.includes(o.id)).flatMap((o) => Array.isArray(o.proposedBy) ? o.proposedBy : []));
     const consultPosts = ownPosts.filter((post) => {
-      const holder = believedHolder(state, f.principal, post, losses);
+      const holder = knownPosts.get(post)!.holder;
       if (holder === null || holder === f.principal || !proposers.has(holder)) return false;
       // Only the identity of his own sent letter is read, never its actual response or an adviser's private stance.
       const tag = `verb.consult.${def.id}.${post}`;
@@ -338,14 +380,14 @@ export function battleMenus(world: SeatsWorld, state: State, ground: MarchGround
       const s = here.find((x) => x.faction === faction);
       const arriving = coming.get(faction) ?? [];
       const blocks = [...(s?.blocks ?? []), ...arriving];
-      const men = blocks.reduce((n, b) => n + (state.forceBlockStates[b]!.fbStrength ?? 0), 0);
+      const men = blocks.reduce((n, b) => n + (forceTotals(state.forceBlockStates[b]!, world.map.forceTotalsCache).fbStrength ?? 0), 0);
       return { faction, blocks, men, pressing: [...(s?.pressing ?? []), ...arriving], unknown: [] as ForceBlockId[], arriving: arriving.length > 0 };
     });
     // Only where a battle can be fought today: one is open, a side is marching in, or a side may attack.
     const open = openBattleIn(state, region);
     if (open === null && !sides.some((s) => s.arriving || mayAttackToday(rules, state, s, day))) continue;
     sides.forEach((side, i) => {
-      const command = sideCommand(state, side.blocks);
+      const command = sideCommand(state, side.blocks, world.map.forceTotalsCache);
       if (command.post === null || command.person === null) return;
       const view = commanderView(world, state, command.person);
       const enemy = sides[1 - i]!.men;
@@ -395,10 +437,8 @@ export function pendingRequests(world: SeatsWorld, state: State, cache: ViewCach
     const menu: DelegatedMenu = { menuKind: 'delegated-situation', choice: situationChoice(def, r.sitOpenOptions, [], valuesOf(world.map, r.sitDelegate)) };
     out.push(freezeDeep({ requestDay: day, requestSeat: seat, requestKey: `delegated:${def.id}:${day}`, view: viewFor(world, state, seat, cache), menu }, cache));
   }
-  for (const post of choosingPosts(state, day)) {
-    const options = planOptions(state, post, day);
-    if (options === null || options.length < 2) continue;
-    const holder = state.postStates[post]!.postHolder!;
+  // 0052: the kernel supplies consistent choices to the commander himself, never to his principal.
+  for (const { post, holder, options } of choosingMenus(state, day)) {
     const seat = seatIdFor(holder);
     const view = viewFor(world, state, seat, cache);
     const menu: PlanMenu = { menuKind: 'plan-selection', post, goal: view.goal!, options };

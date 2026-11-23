@@ -17,6 +17,13 @@ describe('the derived map is rebuilt only when what it reads changes (FOUNDATION
     expect(cache.recomputes).toBe(1);
   });
 
+  it('keeps the cached supply map when only civil rail movement access changes', () => {
+    const cache = createDerivedMapCache();
+    const first = deriveMap(map, { control, month: 6, network: { ...INTACT_NETWORK, governmentRail: { [R('a1')]: F('a') } } }, cache);
+    expect(deriveMap(map, { control, month: 6, network: INTACT_NETWORK }, cache)).toBe(first);
+    expect(cache.recomputes).toBe(1);
+  });
+
   it('rebuilds when a threshold is crossed, a holder changes with no threshold crossed, the month changes, or the network does', () => {
     const cache = createDerivedMapCache();
     deriveMap(map, { control, month: 6 }, cache);
@@ -38,7 +45,7 @@ describe('the derived map is rebuilt only when what it reads changes (FOUNDATION
     const swapped = controlTable({ a1: { a: 1000 }, a2: { a: 1000 }, mid: { a: 550, b: 300 }, b2: { b: 1000 }, b1: { b: 1000 } });
     // Every faction's band in mid is the same before and after (both at or above 250): only the holder moved.
     const midTerm = (c: typeof control) => mapSignature(map, { control: c, month: 6 }).split('|').find((p) => p.startsWith('mid:'));
-    expect([midTerm(control), midTerm(swapped)]).toEqual(['mid:22:b', 'mid:22:a']);
+    expect([midTerm(control), midTerm(swapped)]).toEqual(['mid:22:b:held', 'mid:22:a:held']);
     const after = deriveMap(map, { control: swapped, month: 6 }, cache);
     expect(cache.recomputes).toBe(2);
     expect(before.index.contactEdges.map((c) => c.edge)).toEqual(['road:a2:mid']);

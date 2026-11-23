@@ -15,6 +15,17 @@ describe('liveness changes require a cause and around(observed)', () => {
   it('accepts the exact around formula with its observation and recorded cause', () => {
     expect(livenessProblems(original, current, [record])).toEqual([]);
   });
+  it('S82 permits only the exact authorized quiet return with its existing live driver', () => {
+    const receipt = JSON.parse(readFileSync(new URL('./support/s82-quiet-transition.json', import.meta.url), 'utf8'));
+    const r = receipt.record;
+    const origin = { [r.key]: r.before }, current = { [r.key]: r.after };
+    expect(readFileSync(new URL('../../' + receipt.driver.test, import.meta.url), 'utf8')).toContain(receipt.driver.needle);
+    expect(livenessProblems(origin, current, [r])).toEqual([]);
+    for (const changed of [{ ...r, cause: 'another cause' }, { ...r, key: 'testbed, 120 days/orders.returned' },
+      { ...r, evidence: 'elsewhere' }, { ...r, after: { ...r.after, maxFires: 1 } }]) {
+      expect(livenessProblems({ [changed.key]: changed.before }, { [changed.key]: changed.after }, [changed])).not.toEqual([]);
+    }
+  });
   it.each([
     { ...record, cause: '' }, { ...record, evidence: '' }, { ...record, observed: 0 },
     { ...record, observed: 19 }, { ...record, after: { minFires: 9, maxFires: 40 } },

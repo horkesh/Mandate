@@ -1,0 +1,57 @@
+{
+  "id": "virginia_richmond_magruder",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.virginia_richmond_magruder.title",
+  "text": "situation.virginia_richmond_magruder.text",
+  "earliest": "1861-05-08",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 64
+      },
+      {
+        "flag": "virginia_seceded"
+      },
+      {
+        "holds": {
+          "post": "st_va_richmond",
+          "person": "johnston_joseph_e"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "st_va_richmond",
+        "delta": 1,
+        "reason": "state-command-succession",
+        "side": null,
+        "succession": {
+          "to": "magruder_john_b",
+          "from": "johnston_joseph_e"
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative state military entry and command only; no secession motives, civilian conduct, security orders or protected-population effects."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p.817, General Orders 12, 8 May"
+    }
+  ],
+  "namedOnly": "The source records the state institution's act. No individual speech, motive or discretionary choice is invented."
+}

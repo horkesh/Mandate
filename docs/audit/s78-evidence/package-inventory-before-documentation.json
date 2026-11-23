@@ -1,0 +1,90 @@
+{
+  "runtime": {
+    "node": "v22.23.2",
+    "python": "3.14.3",
+    "os": "Windows-11-10.0.26200-SP0",
+    "hooksPath": ".githooks"
+  },
+  "manifests": [
+    {
+      "path": "docs/research/_resource/tools/package.json",
+      "bytes": 25,
+      "sha256": "8005a3491db7d92f36ac66369861589f9c47123d3a7c71e643fc2c06168cd45a",
+      "unchanged": true
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 69293,
+      "sha256": "82dbb02254bcc312709e8db78ae7ed7dd9fc26e0bdea4760c5549c956cc429d9",
+      "unchanged": true
+    },
+    {
+      "path": "package.json",
+      "bytes": 1464,
+      "sha256": "bc019b9d2445a17e4dcaaf98f331a57676cfab29f86bd49356b50ccce114a729",
+      "unchanged": true
+    },
+    {
+      "path": "packages/cli/package.json",
+      "bytes": 454,
+      "sha256": "9831538271a75c8bd564d21b3906ec0172ffa1612706168445c376be082f76b0",
+      "unchanged": true
+    },
+    {
+      "path": "packages/kernel/package.json",
+      "bytes": 385,
+      "sha256": "cadb9be3b77f4cf7ea8c485c35ff589e428559039368fa02b78e5a8046dc825f",
+      "unchanged": true
+    },
+    {
+      "path": "packages/pack-format/package.json",
+      "bytes": 789,
+      "sha256": "7e49c716a4f78134a943f21f25fc93e88ecf8bc1bea8e852ab4f78365fe43d33",
+      "unchanged": true
+    },
+    {
+      "path": "packages/rule-seats/package.json",
+      "bytes": 459,
+      "sha256": "08755847f8bdaf29965239b2f6cfa2c40a0565906d1d34162b27aaf75d365ef8",
+      "unchanged": true
+    },
+    {
+      "path": "prototypes/desk/package-lock.json",
+      "bytes": 82514,
+      "sha256": "022041c25aabad6eba14931604acb543fd4d6abfa4524742c9d23008759f0337",
+      "unchanged": true
+    },
+    {
+      "path": "prototypes/desk/package.json",
+      "bytes": 1463,
+      "sha256": "a1875f97f9d56e1677b8de3efbb3c7cb14e6b06696955bf09394af224ed6b966",
+      "unchanged": true
+    },
+    {
+      "path": "prototypes/map-icons/package-lock.json",
+      "bytes": 1215,
+      "sha256": "3b544ca2b62d3af5fce4e9bfa681e7f87b2095b49e1e907a24aa5c8d8299df39",
+      "unchanged": true
+    },
+    {
+      "path": "prototypes/map-icons/package.json",
+      "bytes": 457,
+      "sha256": "93f088a9cfdf0d4bed98c71426d98ada7166c0838ae2fa64399ff9c35cc1b287",
+      "unchanged": true
+    },
+    {
+      "path": "prototypes/map-tripwire/package-lock.json",
+      "bytes": 40292,
+      "sha256": "77137df775d047bd4f67b1ba3be6a387a930d9edd2e6a141c0578326d35b225c",
+      "unchanged": true
+    },
+    {
+      "path": "prototypes/map-tripwire/package.json",
+      "bytes": 786,
+      "sha256": "5a64613899dbedcbf58954f40fead4771d51e08fa1395856fb0e82210f231d57",
+      "unchanged": true
+    }
+  ],
+  "workspaceResolution": "@mandate/kernel C:\\Pyrrhic\\sprint-july\\packages\\kernel\\src\\index.ts\n@mandate/rule-seats C:\\Pyrrhic\\sprint-july\\packages\\rule-seats\\src\\index.ts\n@mandate/pack-format C:\\Pyrrhic\\sprint-july\\packages\\pack-format\\src\\index.ts\nv22.23.2\n",
+  "sharedHostTimingOnly": true
+}

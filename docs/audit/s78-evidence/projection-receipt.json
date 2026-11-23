@@ -1,0 +1,26 @@
+[
+  {
+    "symbol": "morningGround",
+    "before": "a9582d478ad3098437cf17ec20d42f720ea26584306f13b5bb0b90bef99ac7c4",
+    "after": "52c452f3f185cabbe6c8707d7891768ac811ae7ec13e3e0df4115bfbe89cf5a8",
+    "detail": "morningGround reaches packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions)"
+  },
+  {
+    "symbol": "principalMenu",
+    "before": "b16e3735a1a87f33018c928bac0e3dfdf85f250df6a6cdf4ae54728ce354cb01",
+    "after": "e2966770de073529d217c49d4420df32e7151b7708d633ad60a52544cefa1989",
+    "detail": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)"
+  },
+  {
+    "symbol": "pendingRequests",
+    "before": "cefeb4a212a6b451362bc7de63bb6d599d7148925e2f376b419b91d8a5075948",
+    "after": "79f7c2a487a1f956664395d285e311c56c7c799388b5dde71de9b7180e7ec16f",
+    "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+  },
+  {
+    "symbol": "viewFor",
+    "before": "599e58fef33b11fd450d53bf500cf9a0cbfe7d7599d0d925435ba7b7b08f9ce1",
+    "after": "13bff179173ad5fc63a49b26ac279087d6d3ecaca25c003a53da53372c705611",
+    "detail": "viewFor reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "counts": {
+    "numTotalTestSuites": 565,
+    "numPassedTestSuites": 555,
+    "numFailedTestSuites": 10,
+    "numTotalTests": 2023,
+    "numPassedTests": 2012,
+    "numFailedTests": 8,
+    "numPendingTests": 3
+  },
+  "failures": [
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts",
+      "name": "R86: the history months through the player\u2019s console (1A criterion 2) receives at least one hour-stamped battle dispatch by 31 July",
+      "messages": [
+        "AssertionError: expected false to be true // Object.is equality\n    at C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts:265:132\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "The pre-correction history did not deliver a qualifying battle paper. Its provisional ration accounting was subsequently corrected.",
+      "disposition": "The corrected once-run reference receives eight hour-stamped Manassas papers; the full console test was not rerun or claimed passed. Zero quantified contact still prevents July clearance."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+      "name": "the done check on union-1861 at war and the testbed passes every Phase 0 criterion but the budget, which is a stopwatch",
+      "messages": [
+        "AssertionError: liveness: expected [ \u2026(14) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:47:114\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "Unchanged liveness assertions reject the diverged reference; the corrected reference retains 15 failures with every band intact.",
+      "disposition": "Open. See july-findings.json and union-1861-comparison.json. No full-suite retry or hook attempt against this known failure."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+      "name": "each criterion can fail (positive controls) liveness: a planted dead mechanic in a reference run fails the check",
+      "messages": [
+        "AssertionError: expected [ \u2026(14) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:163:63\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "Unchanged liveness assertions reject the diverged reference; the corrected reference retains 15 failures with every band intact.",
+      "disposition": "Open. See july-findings.json and union-1861-comparison.json. No full-suite retry or hook attempt against this known failure."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/enlistment-renewal.test.ts",
+      "name": "a voluntary whole-unit remuster preserves the existing levy does not renew an ineligible enlistment: four regiments",
+      "messages": [
+        "AssertionError: expected { sitStatus: 'noticed', \u2026(10) } to be undefined\n    at C:/Pyrrhic/sprint-july/packages/cli/test/enlistment-renewal.test.ts:61:45\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2885:79\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)"
+      ],
+      "cause": "Derived current container count masked the source cohort's count, admitting an ineligible collective remuster.",
+      "disposition": "Require every lot to retain the requested original cohort and call; unchanged assertions pass in corrected-accounting.log."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/enlistment-renewal.test.ts",
+      "name": "a voluntary whole-unit remuster preserves the existing levy does not renew an ineligible enlistment: unknown regiments",
+      "messages": [
+        "AssertionError: expected { sitStatus: 'noticed', \u2026(10) } to be undefined\n    at C:/Pyrrhic/sprint-july/packages/cli/test/enlistment-renewal.test.ts:61:45\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2885:79\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)"
+      ],
+      "cause": "Derived current container count masked the source cohort's count, admitting an ineligible collective remuster.",
+      "disposition": "Require every lot to retain the requested original cohort and call; unchanged assertions pass in corrected-accounting.log."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts",
+      "name": "the reference runs union-1861, war by decision, 148 days: every mechanic fires within its band",
+      "messages": [
+        "AssertionError: expected [ { \u2026(4) }, { \u2026(4) }, { \u2026(4) }, \u2026(11) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts:81:48\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+      ],
+      "cause": "Unchanged liveness assertions reject the diverged reference; the corrected reference retains 15 failures with every band intact.",
+      "disposition": "Open. See july-findings.json and union-1861-comparison.json. No full-suite retry or hook attempt against this known failure."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/kernel/test/post-membership.test.ts",
+      "name": "field posts enumerates assignments once for its whole post list",
+      "messages": [
+        "AssertionError: expected 6 to be 1 // Object.is equality\n    at C:/Pyrrhic/sprint-july/packages/kernel/test/post-membership.test.ts:17:17\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2885:79\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)"
+      ],
+      "cause": "The initial formation membership implementation scanned assignments once per post, violating the existing one-pass contract.",
+      "disposition": "Corrected by one assignment enumeration plus declared-formation ancestor propagation; unchanged assertions pass in corrected-accounting.log."
+    },
+    {
+      "file": "C:/Pyrrhic/sprint-july/packages/kernel/test/post-membership.test.ts",
+      "name": "offices enumerates assignments once for its whole post list",
+      "messages": [
+        "AssertionError: expected 6 to be 1 // Object.is equality\n    at C:/Pyrrhic/sprint-july/packages/kernel/test/post-membership.test.ts:17:17\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2885:79\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)"
+      ],
+      "cause": "The initial formation membership implementation scanned assignments once per post, violating the existing one-pass contract.",
+      "disposition": "Corrected by one assignment enumeration plus declared-formation ancestor propagation; unchanged assertions pass in corrected-accounting.log."
+    }
+  ]
+}

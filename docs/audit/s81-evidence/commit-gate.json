@@ -1,0 +1,10 @@
+{
+  "fullSuiteExit": 1,
+  "fullSuiteFailedAssertions": 6,
+  "correctedFixtureAssertions": 2,
+  "remainingRejectingRequiredAssertions": 4,
+  "fullHookAttempted": false,
+  "committed": false,
+  "doneCheckRun": false,
+  "reason": "Required hook tests retain fresh liveness and human-console July failures. Per cost-control gate, no unchanged full hook retry; the binding done check is conditional on a passing-hook commit. No hook bypass."
+}

@@ -67,6 +67,8 @@ export type Condition =
   | { readonly goal: { readonly post: PostId; readonly posture: Posture } }
   /** A post's headquarters stands in a region: derived from where its strongest block stands, never stored (0064, `seats/posts.ts`). */
   | { readonly headquartersAt: { readonly post: PostId; readonly region: RegionId } }
+  /** Event-only observation: an active offensive has living troops in its marching stage toward this region. */
+  | { readonly advancingOn: { readonly post: PostId; readonly region: RegionId } }
   /** Days since this situation surfaced to the principal (its clock; gate re-check N6): for `expiresWhen`, `appearsWhen` and `waitsOn`. */
   | { readonly clockAtLeast: number }
   /**
@@ -153,6 +155,14 @@ export interface StateForces {
   readonly termUnknown?: boolean;
   /** Prior requisitions included in this return, so their surviving men are not counted twice. */
   readonly includesCalls?: readonly string[];
+  /** Local command at first entry; the raising post remains the enlistment source. */
+  readonly post?: PostId;
+  /** A detached local muster point; used only at first entry. */
+  readonly region?: RegionId;
+  /** Service transfer only: never creates or quantifies a contingent. */
+  readonly transferTo?: DepartmentId;
+  /** The state relieves this contingent from duty; distinct from an invented original term. */
+  readonly release?: boolean;
 }
 
 /**

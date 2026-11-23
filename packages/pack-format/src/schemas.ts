@@ -137,6 +137,7 @@ export const PersonSchema = z.strictObject({
   id: idOf('person'),
   name: stringKey,
   invented: z.boolean(),
+  requiresIntroduction:z.boolean().optional(),
   faction: idOf('faction').nullable(),
   kind: termId,
   born: historicalDate.nullable(),
@@ -155,7 +156,8 @@ export const PersonSchema = z.strictObject({
   bloc: termId.nullable(),
   service: z.strictObject({ government: idOf('department').nullable(), toFaction: idOf('faction'), toBloc: termId.nullable(), historicalOn: isoDate.nullable(), cites: z.array(citation).min(1) }).optional(),
   blocCites: z.array(citation).optional().describe('The citations for his bloc (0087: a bloc is a judgment true at the start, so it needs a contemporary leg dated before the pack’s first start); absent when none is given.'),
-  ranks: z.array(z.strictObject({ rank: termId, from: historicalDate })),
+  ranks: z.array(z.strictObject({ rank: termId, from: historicalDate, until:isoDate.optional() })),
+  rankSchedule:z.boolean().optional(),
   unknowns: z.array(z.string()),
   provenance,
 });
@@ -289,14 +291,14 @@ export const RulesSchema = z.strictObject({
             crossNeutral: z.boolean().describe('Whether his goals may cross a neutral government’s open ground: a political act (lane 1.12).'),
             concentrateAt: idOf('post').nullable().describe('The post his raised regiments are transferred to; null leaves them with the governors.'),
             concentrateSource: z.string().min(1).nullable().describe('Why that post: the research it rests on, the choice of post labelled [I]; null exactly when concentrateAt is.'),
-            concentrations: z.array(z.strictObject({ post: idOf('post'), fromDate: historicalDate, requiresDepartment: idOf('department'), fromPosts: z.array(idOf('post')), source: z.string().min(1) })).optional().describe('Dated concentration changes after a government joins this side and the receiving command exists; transfer only from named old posts and governors.'),
+            concentrations: z.array(z.strictObject({ post: idOf('post'), fromDate: historicalDate, requiresDepartment: idOf('department'), fromPosts: z.array(idOf('post')), receiveLevies: z.boolean().optional(), source: z.string().min(1) })).optional().describe('Dated concentration changes after a government joins this side and the receiving command is received. Named sending posts keep independent destinations; receiveLevies false withholds unallocated statewide batches.'),
             appointments: z.array(z.union([z.strictObject({ post: idOf('post'), person: idOf('person'), fromPost: idOf('post').nullable(), fromDate: historicalDate, requiresDepartment: idOf('department'), source: z.string().min(1) }), z.strictObject({ post: idOf('post'), person: idOf('person'), onDate: isoDate, source: z.string().min(1) })])).optional().describe('Sourced appointments establishing declared commands through the existing appointment verb, conditional on government side and commander eligibility.'),
             calls: z
               .array(z.strictObject({ id: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), post: idOf('post'), regiments: positive.nullable().describe('Regiments requested; null when only an unquantified sub-regimental unit is documented.'), men: positive.nullable().optional().describe('Exact headcount; null preserves an unquantified unit, absent uses menPerRegiment.'), arm: termId.optional(), readiness: z.boolean().optional(), termDays: positive.nullable().describe('Days from muster, or null for the war.'), fromDate: historicalDate, atPeace: z.boolean().optional(), source: z.string().min(1) }))
               .describe('Each identified dated requisition goes once; distinct IDs allow repeats to a governor. atPeace permits a cited pre-war call. readiness records an answer without muster. Remove a row when a situation owns the same requisition.'),
             offensives: z
-              .array(z.strictObject({ post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, source: z.string().min(1) }))
-              .describe('The offensive goals he gives, each from its date (or the day after war, if later); each cites its source.'),
+              .array(z.strictObject({ post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, posture: z.enum(['hold', 'relieve', 'take']).optional(), requiresNotice: idOf('situation').optional(), source: z.string().min(1) }))
+              .describe('The dated goals he gives (take unless a posture is specified), each from its date (or the day after war, if later); each cites its source.'),
             inquireEveryDays: positive.describe('How often he asks each army where it stands, in days (an inquiry costs no attention).'),
             appointKinds: z
               .strictObject({ land: z.array(termId), naval: z.array(termId) })
@@ -414,6 +416,7 @@ export const RulesSchema = z.strictObject({
         .strictObject({ boldness: permille, honours: z.array(termId), offends: z.array(termId) })
         .describe('How a governor reads a call for regiments: its boldness and the values it honours and offends (pack data; 0074).'),
       raisingPostKinds: z.array(termId).describe('Post kinds whose holders answer a call (a governor’s). A post of a self-governing department never does.'),
+      planningRegiments: positive.max(4).optional().describe('Model planning size [I], at most four regiments; not a historical norm.'),
       menPerRegiment: positive.describe('Men in a regiment.'),
       arm: termId.describe('The arm new blocks are.'),
       storesDays: nonNegative.describe('Days of stores a new block is issued at muster.'),
@@ -610,7 +613,7 @@ export const VocabulariesSchema = z.strictObject({
         .enum(w.POST_KIND_ROLES)
         .nullable()
         .default(null)
-        .describe('What the engine reads of this kind (0058): filter (holds or passes what comes in for its principal) or intelligence; null for any other kind. The engine never reads kind names.'),
+        .describe('What the engine reads of this kind (0058): filter (holds or passes what comes in for its principal), intelligence, or office (government seat and office reports despite directly assigned forces); null for any other kind. The engine never reads kind names.'),
     }),
   ),
   departmentKinds: z.array(
@@ -652,7 +655,35 @@ export const DepartmentSchema = z.strictObject({
   provenance,
 });
 
+export const RegimentCatalogueSchema = z.array(z.strictObject({
+  id: termId,
+  order: nonNegative,
+  state: z.string().min(1),
+  raisingDepartment: idOf('department').nullable(),
+  designation: z.string().min(1),
+  arm: z.string().min(1),
+  scope: z.string().min(1),
+  side: z.string().min(1),
+  termDays: z.array(positive),
+  warTerm: z.boolean().optional().describe('An explicitly sourced war contract; absent does not establish a term.'),
+  aliases: z.array(z.string().min(1)),
+  observations: z.array(z.strictObject({
+    observationId: z.string().min(1), observedOn: z.string().min(1),
+    observationKind: z.string().min(1), command: z.string(), division: z.string(), brigade: z.string(),
+    source: z.string().min(1), pages: z.string().min(1), evidence: z.record(z.string(), z.string()),
+  })).min(1),
+  path: z.record(z.string(), z.string()),
+}));
+
+export const OrganisationTemplatesSchema = z.array(z.strictObject({
+  id: termId, army: idOf('post'), evidenceDate: isoDate, sources: z.array(z.string().min(1)).min(1),
+  posts: z.array(z.strictObject({ id: idOf('post'), name: stringKey, kind: termId, parent: idOf('post'), commander: idOf('person').nullable(), identityHeld: z.boolean() })),
+  brigades: z.array(z.strictObject({post: idOf('post'), regiments:z.array(termId)})),
+}));
+
 export const WorldSchema = z.strictObject({
+  organisationTemplates: OrganisationTemplatesSchema.optional(),
+  regimentCatalogue: RegimentCatalogueSchema.optional(),
   formatVersion: z.literal(w.WORLD_FORMAT_VERSION),
   pack: termId,
   rules: RulesSchema,

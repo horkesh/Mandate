@@ -1,0 +1,41 @@
+{
+  "inherited_failures_exact": true,
+  "before": [
+    [
+      "console-session.test.ts",
+      "R86: the history months through the player\u2019s console (1A criterion 2) receives at least one hour-stamped battle dispatch by 31 July"
+    ],
+    [
+      "done-check.test.ts",
+      "each criterion can fail (positive controls) liveness: a planted dead mechanic in a reference run fails the check"
+    ],
+    [
+      "done-check.test.ts",
+      "the done check on union-1861 at war and the testbed passes every Phase 0 criterion but the budget, which is a stopwatch"
+    ],
+    [
+      "liveness-gate.test.ts",
+      "the reference runs union-1861, war by decision, 148 days: every mechanic fires within its band"
+    ]
+  ],
+  "after": [
+    [
+      "console-session.test.ts",
+      "R86: the history months through the player\u2019s console (1A criterion 2) receives at least one hour-stamped battle dispatch by 31 July"
+    ],
+    [
+      "done-check.test.ts",
+      "each criterion can fail (positive controls) liveness: a planted dead mechanic in a reference run fails the check"
+    ],
+    [
+      "done-check.test.ts",
+      "the done check on union-1861 at war and the testbed passes every Phase 0 criterion but the budget, which is a stopwatch"
+    ],
+    [
+      "liveness-gate.test.ts",
+      "the reference runs union-1861, war by decision, 148 days: every mechanic fires within its band"
+    ]
+  ],
+  "added_passes": 10,
+  "new_tests": 10
+}

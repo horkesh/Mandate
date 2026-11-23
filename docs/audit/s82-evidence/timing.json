@@ -1,0 +1,359 @@
+{
+  "comparison": {
+    "profiles": {
+      "s78": {
+        "timing": {
+          "unit": "ms",
+          "days": 148,
+          "median": 42.517900000000736,
+          "p95": 80.58080000000155,
+          "max": 145.65140000000065
+        },
+        "exact": true,
+        "comparisonCount": 148,
+        "finalHash": "f69091979a99e9b83d267eb7b261990145341e9c9294f59b0e385df1d8ce8545",
+        "totalProfileSamples": 13584,
+        "sampledMs": 20553.484,
+        "inclusive": {
+          "governmentRailOf": {
+            "sampledMs": 24.583,
+            "samples": 16,
+            "selfMs": 24.583
+          },
+          "mapSignature": {
+            "sampledMs": 104.507,
+            "samples": 72,
+            "selfMs": 34.907
+          },
+          "deriveMap": {
+            "sampledMs": 327.843,
+            "samples": 226,
+            "selfMs": 6.264
+          },
+          "stateForcesPhase": {
+            "sampledMs": 9.376,
+            "samples": 6,
+            "selfMs": 1.553
+          },
+          "applyMusters": {
+            "sampledMs": 10.89,
+            "samples": 7,
+            "selfMs": 9.336
+          },
+          "recruitmentPhase": {
+            "sampledMs": 15.513,
+            "samples": 10,
+            "selfMs": 0.0
+          },
+          "combatPhase": {
+            "sampledMs": 131.949,
+            "samples": 87,
+            "selfMs": 4.632
+          },
+          "combatDay": {
+            "sampledMs": 37.633,
+            "samples": 25,
+            "selfMs": 9.61
+          },
+          "principalMenu": {
+            "sampledMs": 1511.895,
+            "samples": 1042,
+            "selfMs": 31.157
+          },
+          "doctrineView": {
+            "sampledMs": 120.531,
+            "samples": 89,
+            "selfMs": 11.171
+          },
+          "pendingRequests": {
+            "sampledMs": 2373.904,
+            "samples": 1673,
+            "selfMs": 4.62
+          },
+          "tick": {
+            "sampledMs": 3877.079,
+            "samples": 2596,
+            "selfMs": 66.751
+          },
+          "generateReports": {
+            "sampledMs": 975.383,
+            "samples": 641,
+            "selfMs": 73.159
+          },
+          "playDays": {
+            "sampledMs": 15797.056,
+            "samples": 10457,
+            "selfMs": 5.82
+          },
+          "canonicalHash": {
+            "sampledMs": 9691.336,
+            "samples": 6280,
+            "selfMs": 0.0
+          }
+        }
+      },
+      "before": {
+        "timing": {
+          "unit": "ms",
+          "days": 148,
+          "median": 52.071899999999914,
+          "p95": 95.87869999999748,
+          "max": 163.0608999999995
+        },
+        "exact": true,
+        "comparisonCount": 148,
+        "finalHash": "fe2a7d7267bd4e5d366fe06da299a8bc909d9f0e35b13792e8fa07fe128e2478",
+        "totalProfileSamples": 15518,
+        "sampledMs": 23666.877,
+        "inclusive": {
+          "governmentRailOf": {
+            "sampledMs": 59.373,
+            "samples": 38,
+            "selfMs": 59.373
+          },
+          "mapSignature": {
+            "sampledMs": 124.547,
+            "samples": 85,
+            "selfMs": 28.692
+          },
+          "deriveMap": {
+            "sampledMs": 398.626,
+            "samples": 270,
+            "selfMs": 12.433
+          },
+          "stateForcesPhase": {
+            "sampledMs": 4.654,
+            "samples": 3,
+            "selfMs": 0.0
+          },
+          "applyMusters": {
+            "sampledMs": 7.834,
+            "samples": 5,
+            "selfMs": 6.267
+          },
+          "recruitmentPhase": {
+            "sampledMs": 21.776,
+            "samples": 14,
+            "selfMs": 1.511
+          },
+          "combatPhase": {
+            "sampledMs": 151.745,
+            "samples": 101,
+            "selfMs": 4.693
+          },
+          "combatDay": {
+            "sampledMs": 45.677,
+            "samples": 31,
+            "selfMs": 6.399
+          },
+          "principalMenu": {
+            "sampledMs": 1834.747,
+            "samples": 1241,
+            "selfMs": 55.518
+          },
+          "doctrineView": {
+            "sampledMs": 161.759,
+            "samples": 112,
+            "selfMs": 10.856
+          },
+          "pendingRequests": {
+            "sampledMs": 2918.95,
+            "samples": 2003,
+            "selfMs": 17.169
+          },
+          "tick": {
+            "sampledMs": 4531.404,
+            "samples": 3015,
+            "selfMs": 61.746
+          },
+          "generateReports": {
+            "sampledMs": 1089.714,
+            "samples": 713,
+            "selfMs": 49.365
+          },
+          "playDays": {
+            "sampledMs": 18506.82,
+            "samples": 12158,
+            "selfMs": 10.955
+          },
+          "canonicalHash": {
+            "sampledMs": 11219.052,
+            "samples": 7244,
+            "selfMs": 0.0
+          }
+        }
+      },
+      "rail-only": {
+        "timing": {
+          "unit": "ms",
+          "days": 148,
+          "median": 43.48280000000159,
+          "p95": 84.6955999999991,
+          "max": 145.0703999999996
+        },
+        "exact": true,
+        "comparisonCount": 148,
+        "finalHash": "fe2a7d7267bd4e5d366fe06da299a8bc909d9f0e35b13792e8fa07fe128e2478",
+        "totalProfileSamples": 13568,
+        "sampledMs": 20584.554,
+        "inclusive": {
+          "governmentRailOf": {
+            "sampledMs": 51.48,
+            "samples": 33,
+            "selfMs": 51.48
+          },
+          "mapSignature": {
+            "sampledMs": 81.382,
+            "samples": 56,
+            "selfMs": 36.441
+          },
+          "deriveMap": {
+            "sampledMs": 337.458,
+            "samples": 234,
+            "selfMs": 13.338
+          },
+          "stateForcesPhase": {
+            "sampledMs": 7.828,
+            "samples": 5,
+            "selfMs": 1.564
+          },
+          "applyMusters": {
+            "sampledMs": 7.785,
+            "samples": 5,
+            "selfMs": 3.111
+          },
+          "recruitmentPhase": {
+            "sampledMs": 17.181,
+            "samples": 11,
+            "selfMs": 6.25
+          },
+          "combatPhase": {
+            "sampledMs": 139.153,
+            "samples": 92,
+            "selfMs": 7.751
+          },
+          "combatDay": {
+            "sampledMs": 36.547,
+            "samples": 25,
+            "selfMs": 6.161
+          },
+          "principalMenu": {
+            "sampledMs": 1534.375,
+            "samples": 1053,
+            "selfMs": 49.432
+          },
+          "doctrineView": {
+            "sampledMs": 126.246,
+            "samples": 91,
+            "selfMs": 6.327
+          },
+          "pendingRequests": {
+            "sampledMs": 2423.154,
+            "samples": 1691,
+            "selfMs": 15.574
+          },
+          "tick": {
+            "sampledMs": 4003.751,
+            "samples": 2678,
+            "selfMs": 57.361
+          },
+          "generateReports": {
+            "sampledMs": 963.212,
+            "samples": 634,
+            "selfMs": 49.143
+          },
+          "playDays": {
+            "sampledMs": 16020.735,
+            "samples": 10591,
+            "selfMs": 6.212
+          },
+          "canonicalHash": {
+            "sampledMs": 9747.317,
+            "samples": 6319,
+            "selfMs": 0.0
+          }
+        }
+      }
+    },
+    "archivedReferences": {
+      "s78": {
+        "timing": {
+          "unit": "ms",
+          "days": 148,
+          "median": 38.79410000000098,
+          "p95": 83.29780000000028,
+          "max": 154.41849999999977
+        },
+        "finalStateAndEventCounts": {
+          "forceBlockStates": 158,
+          "forceJoins": 12,
+          "orderResponses": 168,
+          "battleRecords": 2,
+          "messagesInTransit": 833,
+          "knowledgeBySeat": 297,
+          "retainedSeatReports": 609,
+          "logEntries": 259,
+          "events": {
+            "combat.battle_day": 9,
+            "combat.battle_opened": 1,
+            "reports.battle_dispatch": 16,
+            "recruitment.mustered": 47
+          }
+        }
+      },
+      "s81": {
+        "timing": {
+          "unit": "ms",
+          "days": 148,
+          "median": 49.209600000001956,
+          "p95": 103.99569999999949,
+          "max": 159.42599999999948
+        },
+        "finalStateAndEventCounts": {
+          "forceBlockStates": 157,
+          "forceJoins": 8,
+          "orderResponses": 172,
+          "battleRecords": 4,
+          "messagesInTransit": 806,
+          "knowledgeBySeat": 297,
+          "retainedSeatReports": 651,
+          "logEntries": 248,
+          "events": {
+            "combat.battle_day": 5,
+            "combat.battle_opened": 3,
+            "reports.battle_dispatch": 26,
+            "recruitment.mustered": 47
+          }
+        }
+      }
+    }
+  },
+  "optimizationProof": {
+    "r86DispatchAssertionBlockExact": true,
+    "seatsRequestsRestoredExact": true,
+    "historyDailyHashesExact": 148,
+    "beforeTiming": {
+      "unit": "ms",
+      "days": 148,
+      "median": 52.071899999999914,
+      "p95": 95.87869999999748,
+      "max": 163.0608999999995
+    },
+    "railOnlyTiming": {
+      "unit": "ms",
+      "days": 148,
+      "median": 43.48280000000159,
+      "p95": 84.6955999999991,
+      "max": 145.0703999999996
+    },
+    "historyRejections": 0
+  },
+  "finalReference": {
+    "unit": "ms",
+    "days": 148,
+    "median": 39.731799999999566,
+    "p95": 86.6885000000002,
+    "max": 141.59789999999975
+  },
+  "caveat": "CPU-profiled shared-Windows samples; no causal allocation of the historical wall gap or Linux/idle-host certification. The rail-only patch has initial+148 S81 hashes exact before Anderson data. Final S82 States legitimately differ by the cast/succession."
+}

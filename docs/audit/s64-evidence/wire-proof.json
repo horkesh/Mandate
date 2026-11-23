@@ -1,0 +1,39 @@
+{
+  "day": 148,
+  "evidenceScope": "S52 final-save analytical probe; day-142 route is independently verified by saved-command replay",
+  "actual": {
+    "ok": true,
+    "latency": {
+      "days": 4,
+      "parts": [
+        {
+          "part": "wire",
+          "days": 0
+        },
+        {
+          "part": "from the wire",
+          "days": 4
+        }
+      ]
+    }
+  },
+  "nearestOwnedRegions": [
+    {
+      "region": "raleigh",
+      "days": 4
+    }
+  ],
+  "hypotheticalEndpointAccess": {
+    "ok": true,
+    "latency": {
+      "days": 0,
+      "parts": [
+        {
+          "part": "wire",
+          "days": 0
+        }
+      ]
+    }
+  },
+  "modelStoresIntermediateOfficeOrWirePath": false
+}

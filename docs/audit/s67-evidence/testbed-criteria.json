@@ -1,0 +1,11 @@
+{
+  "liveness": [],
+  "checkpoints": null,
+  "pushback": null,
+  "operation": null,
+  "leverSweep": {
+    "run": false,
+    "unmeasuredChannels": [],
+    "reason": "S67 forbids the done-check campaign; no new sweep or seed/fork claim is made."
+  }
+}

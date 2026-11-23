@@ -1,0 +1,22 @@
+{
+  "record": {
+    "key": "union-1861, war by decision, 148 days/orders.returned",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S44 lead ruling (CODEX.md, 2026-11-21): S42 received-only concentration and received government papers change the opposing principal?s posture; the day-87 Charleston transfer reaches a vacated post after reassignment. Its return is written day 92 and received day 97; S42 measured one return."
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S82 ruling 2 [I]: the accepted dated command/headquarters and received correspondence path has no dispatch arriving at a changed or vacant post in S81. The separate believed-posts test drives a typed return for an order sent before the vacancy report arrives. Zero stays exact, never an unbounded floor."
+    },
+    "observed": 0,
+    "cause": "S82 ruling 2 [I]: the accepted dated command/headquarters and received correspondence path has no dispatch arriving at a changed or vacant post in S81. The separate believed-posts test drives a typed return for an order sent before the vacancy report arrives. Zero stays exact, never an unbounded floor.",
+    "evidence": "docs/audit/s82-evidence/liveness-review.json#orders.returned"
+  },
+  "driver": {
+    "test": "packages/kernel/test/believed-posts.test.ts",
+    "needle": "an order sent before the report arrives is accepted, and bounces on arrival as a returned dispatch, typed"
+  }
+}

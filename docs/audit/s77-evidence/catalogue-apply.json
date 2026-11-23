@@ -1,0 +1,569 @@
+{
+  "changed": [
+    {
+      "id": "ct_1_infantry",
+      "termDays": [
+        90
+      ],
+      "warTerm": false,
+      "muster": "muster_HOLD",
+      "observations": [
+        "S75-O045"
+      ]
+    },
+    {
+      "id": "ct_2_infantry",
+      "termDays": [
+        90
+      ],
+      "warTerm": false,
+      "muster": "muster_HOLD",
+      "observations": [
+        "S75-O046"
+      ]
+    },
+    {
+      "id": "ct_3_infantry",
+      "termDays": [
+        90
+      ],
+      "warTerm": false,
+      "muster": "muster_observed",
+      "observations": [
+        "S75-O001",
+        "S75-O047"
+      ]
+    },
+    {
+      "id": "ct_4_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "muster_HOLD",
+      "observations": [
+        "S75-O128"
+      ]
+    },
+    {
+      "id": "la_8_infantry",
+      "termDays": [],
+      "warTerm": true,
+      "muster": "muster_observed",
+      "observations": [
+        "S75-O135",
+        "S75-O138"
+      ]
+    },
+    {
+      "id": "ma_11_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "muster_observed",
+      "observations": [
+        "S75-O002",
+        "S75-O126"
+      ]
+    },
+    {
+      "id": "ma_1_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O037",
+        "S75-O038",
+        "S75-O039",
+        "S75-O040",
+        "S75-O123"
+      ]
+    },
+    {
+      "id": "ma_2_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "muster_observed",
+      "observations": [
+        "S75-O003",
+        "S75-O124"
+      ]
+    },
+    {
+      "id": "ma_9_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "muster_HOLD",
+      "observations": [
+        "S75-O125"
+      ]
+    },
+    {
+      "id": "mi_2_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "muster_HOLD",
+      "observations": [
+        "S75-O048"
+      ]
+    },
+    {
+      "id": "nh_2_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O143",
+        "S75-O144"
+      ]
+    },
+    {
+      "id": "ny_11_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O010",
+        "S75-O057",
+        "S75-O058"
+      ]
+    },
+    {
+      "id": "ny_14_militia_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O011",
+        "S75-O120",
+        "S75-O121"
+      ]
+    },
+    {
+      "id": "ny_18_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O012",
+        "S75-O059",
+        "S75-O060"
+      ]
+    },
+    {
+      "id": "ny_22_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O013",
+        "S75-O061",
+        "S75-O062"
+      ]
+    },
+    {
+      "id": "ny_23_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O014",
+        "S75-O063",
+        "S75-O064"
+      ]
+    },
+    {
+      "id": "ny_24_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O015",
+        "S75-O042",
+        "S75-O065",
+        "S75-O066",
+        "S75-O112"
+      ]
+    },
+    {
+      "id": "ny_25_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "conflicting_sources_HOLD",
+      "observations": [
+        "S75-O016",
+        "S75-O067",
+        "S75-O068"
+      ]
+    },
+    {
+      "id": "ny_26_infantry",
+      "termDays": [
+        90
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O017",
+        "S75-O069",
+        "S75-O070",
+        "S75-O111"
+      ]
+    },
+    {
+      "id": "ny_27_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "conflicting_sources_HOLD",
+      "observations": [
+        "S75-O018",
+        "S75-O071",
+        "S75-O072",
+        "S75-O113"
+      ]
+    },
+    {
+      "id": "ny_28_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O019",
+        "S75-O073",
+        "S75-O074"
+      ]
+    },
+    {
+      "id": "ny_29_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O020",
+        "S75-O075",
+        "S75-O076",
+        "S75-O077"
+      ]
+    },
+    {
+      "id": "ny_2_militia_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O021",
+        "S75-O118",
+        "S75-O119"
+      ]
+    },
+    {
+      "id": "ny_30_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O022",
+        "S75-O078",
+        "S75-O079"
+      ]
+    },
+    {
+      "id": "ny_31_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "conflicting_sources_HOLD",
+      "observations": [
+        "S75-O023",
+        "S75-O080",
+        "S75-O081",
+        "S75-O082",
+        "S75-O083",
+        "S75-O084"
+      ]
+    },
+    {
+      "id": "ny_32_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O024",
+        "S75-O085",
+        "S75-O086"
+      ]
+    },
+    {
+      "id": "ny_33_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O025",
+        "S75-O043",
+        "S75-O087",
+        "S75-O088",
+        "S75-O114"
+      ]
+    },
+    {
+      "id": "ny_35_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O026",
+        "S75-O089",
+        "S75-O090"
+      ]
+    },
+    {
+      "id": "ny_37_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O027",
+        "S75-O091",
+        "S75-O092",
+        "S75-O093"
+      ]
+    },
+    {
+      "id": "ny_38_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O028",
+        "S75-O094",
+        "S75-O095",
+        "S75-O096"
+      ]
+    },
+    {
+      "id": "ny_39_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O029",
+        "S75-O044",
+        "S75-O097",
+        "S75-O098",
+        "S75-O115"
+      ]
+    },
+    {
+      "id": "ny_40_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O099",
+        "S75-O100",
+        "S75-O101",
+        "S75-O102",
+        "S75-O103",
+        "S75-O104"
+      ]
+    },
+    {
+      "id": "ny_41_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O030",
+        "S75-O105",
+        "S75-O106",
+        "S75-O107"
+      ]
+    },
+    {
+      "id": "ny_42_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O031",
+        "S75-O108",
+        "S75-O109",
+        "S75-O110"
+      ]
+    },
+    {
+      "id": "ny_79_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O032",
+        "S75-O116",
+        "S75-O117"
+      ]
+    },
+    {
+      "id": "ny_8_infantry",
+      "termDays": [
+        730
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O033",
+        "S75-O055",
+        "S75-O056"
+      ]
+    },
+    {
+      "id": "ny_varian_8th_militia_artillery",
+      "termDays": [
+        90
+      ],
+      "warTerm": false,
+      "muster": "muster_HOLD",
+      "observations": [
+        "S75-O049"
+      ]
+    },
+    {
+      "id": "pa_26_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "conflicting_sources_HOLD",
+      "observations": [
+        "S75-O034",
+        "S75-O132",
+        "S75-O133",
+        "S75-O134"
+      ]
+    },
+    {
+      "id": "pa_mcmullin_rangers_infantry",
+      "termDays": [
+        90
+      ],
+      "warTerm": false,
+      "muster": "muster_HOLD",
+      "observations": [
+        "S75-O129"
+      ]
+    },
+    {
+      "id": "pa_philadelphia_city_troop_cavalry",
+      "termDays": [
+        90
+      ],
+      "warTerm": false,
+      "muster": "component_or_range_observations",
+      "observations": [
+        "S75-O052",
+        "S75-O130",
+        "S75-O131"
+      ]
+    },
+    {
+      "id": "ri_1st_battery_artillery",
+      "termDays": [
+        90
+      ],
+      "warTerm": false,
+      "muster": "muster_observed",
+      "observations": [
+        "S75-O050",
+        "S75-O051"
+      ]
+    },
+    {
+      "id": "vt_2_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "muster_observed",
+      "observations": [
+        "S75-O035",
+        "S75-O142"
+      ]
+    },
+    {
+      "id": "wi_2_infantry",
+      "termDays": [
+        1095
+      ],
+      "warTerm": false,
+      "muster": "muster_observed",
+      "observations": [
+        "S75-O036",
+        "S75-O127"
+      ]
+    }
+  ],
+  "terms": 43,
+  "muster_identities": 36,
+  "state_only_unchanged": [
+    "sc_2_infantry",
+    "sc_3_infantry",
+    "sc_4_infantry"
+  ],
+  "deferred": "All S76 additions; no unknown term wildcard, historical date trigger, term inferred from discharge, or reset of service credit."
+}

@@ -25,12 +25,108 @@
         "reason": "state-forces-transferred",
         "side": "confederate",
         "stateForces": {
-          "id": "cs_va_transfer_virginia",
+          "id": "va_norfolk",
           "regiments": null,
           "men": null,
           "arm": "infantry",
           "termDays": null,
-          "termUnknown": true
+          "termUnknown": true,
+          "transferTo": "cs_war"
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_harpers_ferry",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "transferTo": "cs_war"
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_richmond",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "transferTo": "cs_war"
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_manassas_garland",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "transferTo": "cs_war"
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_manassas_preston",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "transferTo": "cs_war"
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-transferred",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_peninsula",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "transferTo": "cs_war"
         }
       }
     },

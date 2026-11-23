@@ -1,0 +1,16 @@
+[
+  {
+    "symbol": "principalMenu",
+    "before": "bde0d6a09240bbef7a66ec5b63265e3ef0087fc4a494edece2d61d1134e08b7d",
+    "after": "2806986de38e6d33cda118689672034dec0c1ba5615af09ae4a57749389cb44a",
+    "protectedReads": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)",
+    "cause": "Only doctrineView changes in the accepted closure: received-notice offensive readiness and own sent-goal suppression (S52), sourced concentration routing/withholding (S64). No added or removed closure units, no changed protected-read identities. Paired-State tests pass."
+  },
+  {
+    "symbol": "pendingRequests",
+    "before": "6bf5f89abf1f2230df960e03adde890a464d21e410c1dd6ec284901e5576e597",
+    "after": "d4f564faaa9ded19757e814da26ab42c522502168f57894fe36b059f53dbc09d",
+    "protectedReads": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)",
+    "cause": "Only doctrineView changes in the accepted closure: received-notice offensive readiness and own sent-goal suppression (S52), sourced concentration routing/withholding (S64). No added or removed closure units, no changed protected-read identities. Paired-State tests pass."
+  }
+]

@@ -64,6 +64,7 @@ export const ConditionSchema: z.ZodType<Condition> = z.lazy(() =>
     z.strictObject({ knows, forDays: nonNegative.optional().describe('A pack-stated deliberation interval from receipt of a matching report; omitting it requires receipt only.') }),
     z.strictObject({ goal: z.strictObject({ post: idOf('post'), posture: z.enum(phase0.POSTURES) }).describe('The post holds a goal of this posture, ordered by its principal (lane 1.2: a goal in plans, no longer a standing goal).') }),
     z.strictObject({ headquartersAt: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
+    z.strictObject({ advancingOn: z.strictObject({ post: idOf('post'), region: idOf('region') }) }),
     z.strictObject({ renewableEnlistment: renewal }),
     z.strictObject({ callReceived: z.strictObject({ post: idOf('post'), days: int.min(0) }) }).describe('A call for regiments reached the holder of a post at least this many days ago (lane 1.11): a state’s act a pack-set delay after the call arrives. STAND-IN(call-received-delay; owner: 1B, conventions and legislatures).'),
     z.strictObject({ holds: z.strictObject({ post: idOf('post'), person: idOf('person') }) }).describe('The post is held today by this person (lane 1.11).'),
@@ -95,6 +96,7 @@ export const EffectSchema = z.union([
       stateForces: z.strictObject({
         id: z.string().regex(/^[a-z][a-z0-9_]*$/), regiments: positive.nullable(), men: nonNegative.nullable(),
         arm: termId, termDays: positive.nullable(), termUnknown: z.boolean().optional(), includesCalls: z.array(termId).optional(),
+        post: idOf('post').optional(), region: idOf('region').optional(), transferTo: idOf('department').optional(), release: z.boolean().optional(),
       }).optional(),
       side: idOf('faction')
         .nullable()
@@ -329,6 +331,7 @@ export function validateSituations(items: readonly { readonly file: string; read
   });
   const regions = new Set(pack.world.regions.map((r) => r.id as string));
   const posts = new Set(pack.scenarios.flatMap((s) => s.posts.map((p) => p.id as string)));
+  const observedPosts = new Set(pack.scenarios.flatMap(s => [...s.posts, ...s.temporaryPosts].map(p => p.id as string)));
   const forceBlocks = new Set(pack.scenarios.flatMap((s) => s.forceBlocks.map((b) => b.id as string)));
   // A post's side is its department's (null for a neutral government).
   const departmentSide = new Map(pack.world.departments.map((d) => [d.id as string, d.faction as string | null]));
@@ -365,6 +368,13 @@ export function validateSituations(items: readonly { readonly file: string; read
     byId.set(def.id, def);
   }
   // The proposals `command` owns (0058, 0065), checked here as the kernel would refuse them in play.
+  for (const [i, row] of pack.world.rules.ruleSeats.principals.entries()) for (const [j, offensive] of row.offensives.entries()) {
+    if (offensive.requiresNotice === undefined) continue;
+    const at = `rules.ruleSeats.principals[${i}].offensives[${j}].requiresNotice`;
+    const notice = byId.get(offensive.requiresNotice);
+    if (notice === undefined) sink.error('unknown-reference', 'pack.json', at, `${offensive.requiresNotice} is not a situation`);
+    else if (notice.kind !== 'notice' || notice.faction !== row.faction) sink.error('situation-offensive', 'pack.json', at, 'an offensive prerequisite must name this side’s notice');
+  }
   const governmentKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.government).map((k) => k.id as string));
   const departmentKind = new Map(pack.world.departments.map((d) => [d.id as string, d.kind as string]));
   const selfGoverningKinds = new Set(pack.world.vocabularies.departmentKinds.filter((k) => k.selfGoverning).map((k) => k.id as string));
@@ -387,7 +397,7 @@ export function validateSituations(items: readonly { readonly file: string; read
     }
     if (p.field === phase0.POST_SUCCESSION_FIELD) {
       if (!fromNotice) err('situation-command-proposal', at, 'institutional succession must come from a notice, not a principal decision');
-      if (p.subject === null || !posts.has(p.subject)) err('unknown-reference', `${at}.subject`, 'succession names no existing post');
+      if (p.subject === null || (!posts.has(p.subject) && !temporaryPostIds.has(p.subject))) err('unknown-reference', `${at}.subject`, 'succession names no existing post');
       if (p.delta !== 1 || p.side !== null) err('situation-command-proposal', at, 'succession requires delta +1 and no side measure');
       if (p.succession === undefined || p.succession.from === p.succession.to) err('situation-command-proposal', `${at}.succession`, 'succession must name distinct incumbent and successor');
       for (const person of Object.values(p.succession ?? {})) if (!people.has(person)) err('unknown-reference', `${at}.succession`, `unknown person ${person}`);
@@ -585,6 +595,11 @@ export function validateSituations(items: readonly { readonly file: string; read
           ref(posts, 'post in any scenario', c.headquartersAt.post, at);
           ref(regions, 'region', c.headquartersAt.region, at);
         }
+        if ('advancingOn' in c) {
+          ref(observedPosts, 'declared command', c.advancingOn.post, at);
+          ref(regions, 'region', c.advancingOn.region, at);
+          if (at !== 'event' || def.kind !== 'notice') err('situation-advance', at, 'advance observation is event-only for an autonomous notice');
+        }
         if ('chamber' in c) ref(chambers, 'chamber', c.chamber.id, at);
         if ('ledger' in c) {
           ref(factions, 'faction', c.ledger.side, at);
@@ -604,6 +619,12 @@ export function validateSituations(items: readonly { readonly file: string; read
         if (p.subject === null || postRaising.get(p.subject) !== 'raising') fail('state forces require a raising state post, never a self-governing nation');
         if (p.subject !== null && postSide.has(p.subject) && postSide.get(p.subject) !== null && postSide.get(p.subject) !== p.side) fail('state forces cannot enter another side’s service');
         if (entry !== undefined) {
+          if (entry.region !== undefined && !pack.world.regions.some(r => r.id === entry.region && ['land', 'key_point'].includes(r.kind))) fail('local muster point must be land');
+          if (entry.post !== undefined && !posts.has(entry.post) && !temporaryPostIds.has(entry.post)) fail('local command must be a declared post');
+          if (entry.transferTo !== undefined && pack.world.departments.some(d => d.id === entry.transferTo && d.faction !== null && d.faction !== p.side)) fail('service transfer cannot join another side');
+          if (entry.transferTo !== undefined && (!departmentKind.has(entry.transferTo) || selfGoverningKinds.has(departmentKind.get(entry.transferTo)!))) fail('service transfer requires a declared non-self-governing department');
+          if (entry.release === true && (entry.transferTo !== undefined || entry.post !== undefined || entry.region !== undefined || entry.men !== null || entry.regiments !== null)) fail('relief cannot count or relocate a contingent');
+          if (entry.transferTo !== undefined && (entry.men !== null || entry.regiments !== null || entry.post !== undefined || entry.region !== undefined)) fail('service transfer cannot create, count or relocate forces');
           if (!pack.world.vocabularies.arms.some(a => a.id === entry.arm && !a.naval)) fail('state forces require a land arm from the pack vocabulary');
           if (entry.termDays !== null && entry.termDays > pack.world.rules.recruitment.maxTermDays) fail('term exceeds the pack maximum');
           if (entry.termUnknown === true && entry.termDays !== null) fail('an unknown original expiry cannot also have a fixed term');
@@ -650,9 +671,19 @@ export function validateSituations(items: readonly { readonly file: string; read
     if (def.kind === 'notice' && def.namedOnly === undefined) {
       const text = defaultStrings.get(def.text) ?? '';
       const declared = new Set((def.speakers ?? []).map((s) => s.person as string));
-      for (const [person, surname] of surnames()) {
+      const names = surnames();
+      const declaredSurnames = new Set(names.filter(([person]) => declared.has(person)).map(([, surname]) => surname));
+      for (const [person, surname] of names) {
         // A place named for a man (a fort or a camp) names no man.
         if (declared.has(person) || !new RegExp(`(?<!\\b(?:Fort|Camp) )\\b${surname}\\b`).test(text)) continue;
+        // A bare surname already resolved by speakers does not also name every
+        // other person with that surname. An explicit given name still requires
+        // his own declaration; do not edit a signed notice to add a non-speaker.
+        const name = defaultStrings.get(pack.world.people.find(p => p.id === person)!.name) ?? '';
+        const given = name.match(/[A-Za-z'-]+/g)?.slice(0, -1) ?? [];
+        const token = (word: string) => `(?:${word}\\s+|${word[0]}\\.\\s*)`;
+        const explicit = given.length > 0 && new RegExp(`\\b${token(given[0]!)}${given.slice(1).map(word => `(?:${token(word)})?`).join('')}${surname}\\b`).test(text);
+        if (declaredSurnames.has(surname) && given.length > 0 && !explicit) continue;
         err('post-holder-check', 'speakers', `the text names ${surname} (${person}) but neither lists him in speakers nor says why it only names him`, 'speakers: [{ post, person }] when the text quotes him or gives an act of his as a holder of a post (it then fires only while he holds it); namedOnly: "<why>" when it names him without giving his words or acts (a treaty’s signers, an appointment as the record states it)');
       }
     }

@@ -1,3 +1,4 @@
+import { patchBlock } from '../../../packages/kernel/test/support/lot-fixture.ts';
 import { canonicalHash, ids, phase0 } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
 import { fortDay } from '../../../packages/kernel/src/combat/bombard.ts';
@@ -26,7 +27,7 @@ describe('Sumter’s cited terms (R74, OR I-1 pp. 13–15)', () => {
     const legacyBlocks = { ...initial.forceBlockStates };
     for (const name of ['fb_st_charleston_fort_johnson', 'fb_st_charleston_fort_palmetto_stono', 'fb_st_charleston_regiment_of_rifles']) {
       const block = ids.toId('forceBlock', name);
-      legacyBlocks[block] = { ...legacyBlocks[block]!, fbStrength: null };
+      legacyBlocks[block] = patchBlock({ ...legacyBlocks[block]! }, { fbStrength: null });
     }
     const palmetto = ids.toId('forceBlock', 'fb_st_charleston_fort_palmetto_stono');
     legacyBlocks[palmetto] = { ...legacyBlocks[palmetto]!, fbArm: 'artillery' };

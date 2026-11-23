@@ -1,0 +1,32 @@
+[
+  {
+    "path": "docs/audit/s46-evidence/union-1861-summary.json",
+    "counts": [
+      {
+        "mechanic": "combat.withdrew",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "command.post_succeeded",
+        "fires": 5,
+        "magnitude": 5
+      }
+    ]
+  },
+  {
+    "path": "runs/s52-done/20261122-144945-33460-77642b/summary.json",
+    "counts": [
+      {
+        "mechanic": "combat.withdrew",
+        "fires": 1,
+        "magnitude": 1
+      },
+      {
+        "mechanic": "command.post_succeeded",
+        "fires": 5,
+        "magnitude": 5
+      }
+    ]
+  }
+]

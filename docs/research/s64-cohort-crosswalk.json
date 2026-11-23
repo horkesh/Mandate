@@ -1,0 +1,61 @@
+{
+  "note": "[I] Existing model cohorts are not named regiment identities; no one-to-one army or division match. No numerical apply.",
+  "s52McDowellAxis": {
+    "day": 136,
+    "knownMen": 135600,
+    "blocks": [
+      "raised.st_gov_new_york.d67",
+      "raised.st_gov_new_york.d49",
+      "raised.st_gov_new_york.d86",
+      "raised.st_gov_pennsylvania.d56",
+      "raised.st_gov_illinois.d56",
+      "raised.st_gov_illinois.d87",
+      "raised.st_gov_indiana.d103",
+      "raised.st_gov_indiana.d46",
+      "raised.st_gov_massachusetts.d76",
+      "raised.st_gov_indiana.d77",
+      "raised.st_gov_maryland.d48",
+      "raised.st_gov_massachusetts.d46",
+      "raised.st_gov_wisconsin.d86",
+      "raised.st_gov_connecticut.d46",
+      "raised.st_gov_connecticut.d77",
+      "raised.st_gov_maine.d56",
+      "raised.st_gov_maine.d87",
+      "raised.st_gov_new_hampshire.d46",
+      "raised.st_gov_new_hampshire.d77",
+      "raised.st_gov_rhode_island.d49",
+      "raised.st_gov_rhode_island.d79",
+      "raised.st_gov_wisconsin.d49",
+      "raised.tr_gov_nebraska.d93",
+      "fb_us_dc_militia"
+    ]
+  },
+  "exactPartialInclusions": [
+    {
+      "block": "state-forces.va_harpers_ferry",
+      "post": "cs_cmd_harpers_ferry",
+      "scope": "Virginia contingent only",
+      "strength": null,
+      "pages": "470-473"
+    },
+    {
+      "block": "state-forces.va_manassas_garland",
+      "post": "cs_cmd_manassas",
+      "scope": "existing May four-company battalion only; not entire July brigade",
+      "strength": null,
+      "pages": "824,826-827,846-847,901-902"
+    },
+    {
+      "block": "state-forces.va_manassas_preston",
+      "post": "cs_cmd_manassas",
+      "scope": "existing May seven-company battalion only; not entire July brigade",
+      "strength": null,
+      "pages": "824,826-827,846-847,901-902"
+    }
+  ],
+  "patterson": {
+    "post": "us_dept_pennsylvania",
+    "sourceCommandBlock": null
+  },
+  "appliedHistoricalTotals": []
+}

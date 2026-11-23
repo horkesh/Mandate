@@ -1,0 +1,30 @@
+[
+  {
+    "pack": "testbed",
+    "changedHashes": 0,
+    "changedCounters": 0,
+    "changedDailyFields": 0,
+    "final": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+    "timing": {
+      "unit": "ms",
+      "days": 120,
+      "median": 3.489900000000034,
+      "p95": 7.811199999999872,
+      "max": 35.863699999999994
+    }
+  },
+  {
+    "pack": "union-1861",
+    "changedHashes": 148,
+    "changedCounters": 62,
+    "changedDailyFields": 866,
+    "final": "aee6fafeb6ad56b3535dfc2ace7f5522387f667a16ef90519de5e325467a2f1c",
+    "timing": {
+      "unit": "ms",
+      "days": 148,
+      "median": 37.59099999999944,
+      "p95": 66.90759999999955,
+      "max": 150.3158000000003
+    }
+  }
+]

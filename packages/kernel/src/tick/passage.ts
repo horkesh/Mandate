@@ -6,7 +6,7 @@
  * loses (the map phase for control and the network; the proposals phase for a government
  * closing). Its own module so the map and forces phases share it without importing each other.
  */
-import { neutralGroundOf } from '../command/command.ts';
+import { governmentRailOf, neutralGroundOf } from '../command/command.ts';
 import type { DerivedMap } from '../control-index/derived.ts';
 import type { FactionId, RegionId } from '../ids.ts';
 import { networkOf } from '../infrastructure/infrastructure.ts';
@@ -16,7 +16,7 @@ import type { WorldIndex } from '../world/index.ts';
 import { fire, type TickContext } from './context.ts';
 
 export function passageOf(map: WorldIndex, state: State): NetworkConditions {
-  return { ...networkOf(state), neutralGround: neutralGroundOf(map, state) };
+  return { ...networkOf(state), neutralGround: neutralGroundOf(map, state), governmentRail: governmentRailOf(map, state) };
 }
 function pocketRegions(derived: DerivedMap, faction: FactionId): Set<RegionId> {
   return new Set(derived.supply.factions.get(faction)!.pockets.flatMap((p) => p.regions));

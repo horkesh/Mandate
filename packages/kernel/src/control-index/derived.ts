@@ -69,9 +69,12 @@ export function mapSignature(map: WorldIndex, inputs: MapInputs): string {
       const s = shares[f] ?? 0;
       return thresholds.filter((t) => s >= t).length;
     });
-    parts.push(`${region}:${bands.join('')}:${holdingOf(map, inputs.control, region, threshold).holder ?? '-'}`);
+    const holding = holdingOf(map, inputs.control, region, threshold);
+    parts.push(`${region}:${bands.join('')}:${holding.holder ?? '-'}:${holding.reason}`);
   }
-  parts.push(canonicalJson(inputs.network ?? INTACT_NETWORK));
+  // Civil rail access is read by movement. Control and supply do not read it.
+  const { governmentRail: _movementAccess, ...supplyNetwork } = inputs.network ?? INTACT_NETWORK;
+  parts.push(canonicalJson(supplyNetwork));
   return parts.join('|');
 }
 

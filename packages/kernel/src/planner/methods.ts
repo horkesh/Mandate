@@ -173,7 +173,8 @@ function partnersFor(ctx: Ctx, route: PlanRoute | null): { readonly all: readonl
   const objective = input.goal.goalObjective!;
   const all = input.posts
     .filter((p) => p.id !== input.post && p.region !== null && p.region !== route?.routeFrom)
-    .filter((p) => blocksOf(input, p.id).some((b) => !b.naval && b.region === p.region));
+    .filter((p) => blocksOf(input, p.id).some((b) => !b.naval && b.region === p.region))
+    .filter(p=>!blocksOf(input,p.id).some(b=>blocksOf(input,input.post,input.goal.goalCommitted).some(own=>own.id===b.id)));
   const beside = all
     .filter((p) => adjacent(ctx, p.region!, objective, true))
     .map((post) => ({ post, answer: answeringPost(input, post.id) }))

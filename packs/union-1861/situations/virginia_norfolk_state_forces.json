@@ -1,0 +1,66 @@
+{
+  "id": "virginia_norfolk_state_forces",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.virginia_norfolk_state_forces.title",
+  "text": "situation.virginia_norfolk_state_forces.text",
+  "earliest": "1861-04-18",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 44
+      },
+      {
+        "flag": "virginia_seceded"
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "temporary_post",
+        "subject": "st_va_norfolk",
+        "delta": 1,
+        "reason": "state-forces-command",
+        "side": null
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-called-out",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_norfolk",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "post": "st_va_norfolk"
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative state military entry and command only; no secession motives, civilian conduct, security orders or protected-population effects."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 p.771, executive order of 18 April"
+    }
+  ],
+  "namedOnly": "The source records the state institution's act. No individual speech, motive or discretionary choice is invented."
+}

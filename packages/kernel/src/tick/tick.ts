@@ -1,3 +1,6 @@
+import { advanceCommissions } from '../people/commissions.ts';
+import { dateOfDay,formatIsoDate } from '../world/calendar.ts';
+import { bundleRaised, organisationPhase } from './organisation.ts';
 /**
  * The day tick (FOUNDATION section 10's fixed day order, as built in Phase 0):
  *
@@ -31,7 +34,7 @@
  */
 import type { BattleOrders } from '../combat/order-kinds.ts';
 import { createDerivedMapCache, type DerivedMap, type DerivedMapCache } from '../control-index/derived.ts';
-import type { PostId } from '../ids.ts';
+import type { ForceBlockId, PostId } from '../ids.ts';
 import { pruneKnowledge } from '../knowledge/knowledge.ts';
 import { entryProblems, type LogEntry } from '../log/log.ts';
 import { createIdMint, sendMessages } from '../messages/transit.ts';
@@ -170,6 +173,8 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     return freeze(next);
   };
 
+  state = applyPhase(advanceCommissions(world.map,state,formatIsoDate(dateOfDay(world.start.startDate,day))));
+
   // 0. The morning's plan menus, exactly as `pendingRequests` built them for the seats.
   const menus = new Map<PostId, readonly OptionView[]>();
   for (const post of choosingPosts(state, day)) {
@@ -262,12 +267,17 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   // 2b. People apply the changes proposed to them so far today (lane 1.1): a bypassed relay holds a grievance.
   state = applyPhase(applyPeopleChanges(state, peopleChangesFrom(world, state, ctx.proposals), day, world.rules.people, world.map.world.vocabularies.ranks));
 
+  // Local acts precede fresh drafts; a saved draft or active operation keeps its participating containers intact.
+  state = applyPhase(organisationPhase(ctx,state));
+
   // 2c. Plans: edits that arrived are answered, then goals awaiting a plan are drafted within the daily cap (lane 1.2).
   state = applyPhase(plansPhase(ctx, state, options.viewCache ?? createViewCache()));
   state = applyPhase(sendMessages(state, ctx.outbox.splice(0)));
 
   // 2d. Recruitment (lane 1.7): levies due muster into new blocks, enlistments that end disband; one proposal per block.
+  const beforeMuster = state;
   state = applyPhase(recruitmentPhase(ctx, state));
+  state = applyPhase(bundleRaised(world,state,(Object.keys(state.forceBlockStates) as ForceBlockId[]).filter(id=>beforeMuster.forceBlockStates[id]===undefined)));
 
   // 3. Operations: approved plans executed axis by axis (lane 1.4), then every march a day further.
   state = applyPhase(operationsPhase(ctx, state));
@@ -307,6 +317,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
 
   // 4d. The weekly people step (lane 1.5): grievances fade, promises due break, the ladder and rivals, seat initiatives.
   state = freeze(serviceChoices(ctx, state));
+  state = freeze(advanceCommissions(world.map,state,formatIsoDate(dateOfDay(world.start.startDate,day))));
   state = freeze(sendMessages(state, ctx.outbox.splice(0)));
   if (isPeopleWeek(ctx)) {
     state = applyPhase(peopleWeek(ctx, state));

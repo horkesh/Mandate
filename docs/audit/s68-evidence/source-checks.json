@@ -1,0 +1,120 @@
+{
+  "receipts": [
+    {
+      "source": "OR-I-2",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S46\\OR-I-2.txt",
+      "sha256": "66d9a89b843925389e1d2d5d9798dc4e0c66f9a0488bbfcc8705659e4b37ebbf",
+      "ranges": [
+        [
+          55675,
+          55690
+        ],
+        [
+          56510,
+          56856
+        ],
+        [
+          58809,
+          58835
+        ],
+        [
+          62200,
+          62264
+        ]
+      ],
+      "extractSha256": "54c120832fb3357ddf637a25e05872d55513a12266443427fcd55e02b2edc44e"
+    },
+    {
+      "source": "TX-CONV-1861",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\r65-sources\\journalofsecessi00texa.txt",
+      "sha256": "fdc32a731dfff02da3aeafaaeccac44991d5bafe2c93328a16401bbbe04b1e2b",
+      "ranges": [
+        [
+          13749,
+          14110
+        ],
+        [
+          14700,
+          14770
+        ]
+      ],
+      "extractSha256": "5990abea11d32a49e0bc504702630e51bdce9b76a5c980fcd00360c838f0fd66"
+    }
+  ],
+  "events": [
+    {
+      "day": 11,
+      "post": "st_gov_texas",
+      "before": "houston_samuel",
+      "after": "clark_edward"
+    },
+    {
+      "day": 52,
+      "post": "st_va_norfolk",
+      "before": "taliaferro_william_b",
+      "after": "gwynn_walter"
+    },
+    {
+      "day": 54,
+      "post": "st_va_harpers_ferry",
+      "before": "harper_kenton",
+      "after": "jackson_thomas_j"
+    },
+    {
+      "day": 64,
+      "post": "st_va_richmond",
+      "before": "johnston_joseph_e",
+      "after": "magruder_john_b"
+    },
+    {
+      "day": 79,
+      "post": "st_va_norfolk",
+      "before": "gwynn_walter",
+      "after": "huger_benjamin"
+    }
+  ],
+  "sourcesChecked": [
+    {
+      "day": 11,
+      "source": "TX-CONV-1861",
+      "pages": "183-187,197",
+      "checked": true
+    },
+    {
+      "day": 52,
+      "source": "OR I-2",
+      "pages": "771,783",
+      "checked": true
+    },
+    {
+      "day": 54,
+      "source": "OR I-2",
+      "pages": "784-785,787",
+      "checked": true
+    },
+    {
+      "day": 64,
+      "source": "OR I-2",
+      "pages": "783,817",
+      "checked": true
+    },
+    {
+      "day": 79,
+      "source": "OR I-2",
+      "pages": "867",
+      "checked": true
+    }
+  ],
+  "before": {
+    "around": 1,
+    "minFires": 1,
+    "maxFires": 4
+  },
+  "after": {
+    "around": 5,
+    "minFires": 2,
+    "maxFires": 10
+  },
+  "originUnchanged": true,
+  "priorCauseRecordsUnchanged": true
+}

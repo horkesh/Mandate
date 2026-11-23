@@ -1,0 +1,88 @@
+[
+  {
+    "source": "ME AG 1861",
+    "printed_page": "6",
+    "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S76\\ME-main-pp6-7-read.txt",
+    "kind": "selected passage read in S76",
+    "sha256": "13bf7443884eccfa828cef6d0166198c81a10c4ffec2fdbe97a78d5cedc42bd7",
+    "S81_sha256": "13bf7443884eccfa828cef6d0166198c81a10c4ffec2fdbe97a78d5cedc42bd7"
+  },
+  {
+    "source": "ME AG 1861",
+    "printed_page": "7",
+    "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S76\\ME-main-pp6-7-read.txt",
+    "kind": "selected passage read in S76",
+    "sha256": "13bf7443884eccfa828cef6d0166198c81a10c4ffec2fdbe97a78d5cedc42bd7",
+    "S81_sha256": "13bf7443884eccfa828cef6d0166198c81a10c4ffec2fdbe97a78d5cedc42bd7"
+  },
+  {
+    "source": "ME AG 1861",
+    "printed_page": "F2",
+    "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S76\\ME-AppendixF-pp2-3-read.txt",
+    "kind": "selected passage read in S76",
+    "sha256": "4d8e392bdba91718cdaa0727225d94906e213ca21d0f9bf7bca980d9ffbc64f5",
+    "S81_sha256": "4d8e392bdba91718cdaa0727225d94906e213ca21d0f9bf7bca980d9ffbc64f5"
+  },
+  {
+    "source": "ME AG 1861",
+    "printed_page": "F3",
+    "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S76\\ME-AppendixF-pp2-3-read.txt",
+    "kind": "selected passage read in S76",
+    "sha256": "4d8e392bdba91718cdaa0727225d94906e213ca21d0f9bf7bca980d9ffbc64f5",
+    "S81_sha256": "4d8e392bdba91718cdaa0727225d94906e213ca21d0f9bf7bca980d9ffbc64f5"
+  },
+  {
+    "source": "RI register excerpt",
+    "printed_page": "1",
+    "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S76\\RI-p1-read.txt",
+    "kind": "selected passage read in S76",
+    "sha256": "234dd20f7e79dadeb5f0f270c22a52784437a36e73076cb7c6aa33ed42e88b9d",
+    "S81_sha256": "234dd20f7e79dadeb5f0f270c22a52784437a36e73076cb7c6aa33ed42e88b9d"
+  },
+  {
+    "source": "RI register excerpt",
+    "printed_page": "9",
+    "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S76\\RI-p9-read.txt",
+    "kind": "selected passage read in S76",
+    "sha256": "557c81dd60fc71e572ad12f2819204bfa22e9b4f41c23bbecf42950b57c178e4",
+    "S81_sha256": "557c81dd60fc71e572ad12f2819204bfa22e9b4f41c23bbecf42950b57c178e4"
+  },
+  {
+    "source": "RI register excerpt",
+    "printed_page": "39",
+    "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S76\\RI-p39-read.txt",
+    "kind": "selected passage read in S76",
+    "sha256": "04f2237ae82321b8f9031f5db4fe5d03fa0424dc8f33eaee0fb5db88ce67dec7",
+    "S81_sha256": "04f2237ae82321b8f9031f5db4fe5d03fa0424dc8f33eaee0fb5db88ce67dec7"
+  },
+  {
+    "source": "RI register excerpt",
+    "printed_page": "45",
+    "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S76\\RI-p45-read.txt",
+    "kind": "selected passage read in S76",
+    "sha256": "0c334315654118113a95281b0d480b9ecf66cfe8063d17da4c865af3535519b2",
+    "S81_sha256": "0c334315654118113a95281b0d480b9ecf66cfe8063d17da4c865af3535519b2"
+  },
+  {
+    "source": "OR I-LI.2",
+    "printed_page": "572",
+    "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S76\\OR51-Washington-pp572-573-read.txt",
+    "kind": "selected passage read in S76",
+    "sha256": "f5cf1952194723ea79b32b813e47ce2a2395b3c895dc4f2c82c14c15033d1e8a",
+    "S81_sha256": "f5cf1952194723ea79b32b813e47ce2a2395b3c895dc4f2c82c14c15033d1e8a"
+  },
+  {
+    "source": "OR I-LI.2",
+    "printed_page": "573",
+    "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S76\\OR51-Washington-pp572-573-read.txt",
+    "kind": "selected passage read in S76",
+    "sha256": "f5cf1952194723ea79b32b813e47ce2a2395b3c895dc4f2c82c14c15033d1e8a",
+    "S81_sha256": "f5cf1952194723ea79b32b813e47ce2a2395b3c895dc4f2c82c14c15033d1e8a"
+  },
+  {
+    "source": "OR I-II",
+    "printed_page": "841",
+    "artifact": "C:/Pyrrhic/mandate-research-sources/S79/reading/OR-I-II-p841.txt",
+    "S81_sha256": "42a18d9adfe32ad9d14d848e6cbd40f4ca14f693b24e8ff8ae1fcd1092c4eaf7"
+  }
+]

@@ -15,6 +15,9 @@ import {
   sideOfPerson,
   type CommandProposal,
 } from '../src/command/command.ts';
+import { deliverReport } from '../src/knowledge/knowledge.ts';
+import { NO_TRUTH } from '../src/knowledge/truth.ts';
+import { report } from './support/s25-fixture.ts';
 import { factionOfBlock } from '../src/forces/forces.ts';
 import { toId, type DepartmentId, type FactionId } from '../src/ids.ts';
 import type { State } from '../src/root-state.ts';
@@ -163,16 +166,26 @@ describe('a situation moves a government of no side to a side (0065)', () => {
     expect(neutralGroundOf(MAP, plain)).toEqual({ n1: 'open' });
   });
 
-  it('its guard post becomes commandable with no goal, holding where it stands, and an order to it is carried out, not crashed on (exit review S1; lane 1.2)', () => {
-    const world = indexSeatsWorld(MAP, START, { situations: [close] });
+  it('its guard obeys an order with no goal; its principal catalogue waits for received side and holder papers (S62; exit review S1)', () => {
+    const notice: SituationDef = { ...close, id: toId('situation', 'joining_notice'), kind: 'notice', event: { dayAtLeast: 99 },
+      options: [], staffLine: null, historicalDefault: null, inaction: null,
+      effects: close.options[0]!.effects,
+      report: { authors: [P('a_office')], reportType: 'wire-dispatch', subtype: null },
+    };
+    const world = indexSeatsWorld(MAP, START, { situations: [close, notice] });
     const lead = seatIdFor(PER('a_lead'));
     const days: TickResult[] = [];
-    const out = playDays(world, createState(world, { seed: 1 }), scriptedSeats({ a: { 4: [order('n_guard', 'advance', 'a2', 'courier')] } }), 14, { freeze: true, onDay: (r) => days.push(r) });
+    playDays(world, createState(world, { seed: 1 }), scriptedSeats({}), 3, { freeze: true, onDay: (r) => days.push(r) });
     // Day 1: neutral, not commandable. Day 2: it joins a, with no goal (0072's hold goal is retired): nothing moves it.
     expect(days[1]!.state.planRecords[P('n_guard')]).toBeUndefined();
     expect(Object.values(days[1]!.state.operationRecords).filter((o) => o.opPost === P('n_guard'))).toEqual([]);
-    const menu = pendingRequests(world, days[2]!.state).find((r) => r.requestSeat === lead)!.menu;
-    expect(menu.menuKind === 'principal' && menu.commandable.map((c) => c.post)).toContain('n_guard');
+    const unseen = pendingRequests(world, days[2]!.state).find(r => r.requestSeat === lead)!.menu;
+    expect(unseen.menuKind === 'principal' && unseen.commandable.map(c => c.post)).not.toContain('n_guard');
+    let heard = deliverReport(days[2]!.state, lead, report('m.side', { reportAuthor: PER('a_lead'), reportSubjectKind: 'situation', reportSubjectId: notice.id, reportDay: 2 }, 3), NO_TRUTH);
+    heard = deliverReport(heard, lead, report('m.guard', { reportAuthor: PER('n_officer'), reportAuthorPost: P('n_guard'), reportSubjectKind: 'post', reportSubjectId: 'n_guard', reportDay: 2 }, 3), NO_TRUTH);
+    const menu = pendingRequests(world, heard).find(r => r.requestSeat === lead)!.menu;
+    expect(menu.menuKind === 'principal' && menu.commandable.map(c => c.post)).toContain('n_guard');
+    const out = playDays(world, heard, scriptedSeats({ a: { 4: [order('n_guard', 'advance', 'a2', 'courier')] } }), 11, { freeze: true, onDay: (r) => days.push(r) });
     // The order sent on day 4 arrives and is obeyed; its plan is drafted, goes ahead as drafted, marches on a2 and, there, holds it.
     expect(days.flatMap((r) => r.rejections)).toEqual([]);
     const record = out.state.planRecords[P('n_guard')]!;

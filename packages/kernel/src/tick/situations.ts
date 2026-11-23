@@ -82,6 +82,7 @@ function conditionContext(ctx: TickContext, state: State, def: SituationDef, sin
     situation: def.id,
     knowledge: knowledgeOf(state, seatIdFor(principalOf(ctx, def))),
     since,
+    forceTotalsCache: ctx.world.map.forceTotalsCache,
     headquartersOf: (post) => (state.postStates[post] === undefined ? null : headquartersOf(ctx.world, state, post)),
     renewableEnlistment: r => renewableBlock(ctx.world, state, def.faction, r, ctx.day) !== undefined,
     practicesOf: (person) => ctx.world.map.world.people.find((p) => p.id === person)?.practices.map((x) => x.practice) ?? [],
@@ -162,7 +163,7 @@ function applyDecision(ctx: TickContext, start: State, def: SituationDef, chosen
     }
     // Calls for regiments, through the validated call path (lane 1.11): each governor answers by his own compliance.
     for (const call of o.calls) {
-      const reason = issueCall(ctx, state, principal, { cmd: 'call', to: call.to, regiments: call.regiments, termDays: call.termDays, route: call.route, bypass: false });
+      const reason = issueCall(ctx, state, principal, { cmd: 'call', to: call.to, regiments: call.regiments, termDays: call.termDays, route: call.route, bypass: false }, true);
       if (reason === null) fire(ctx, 'situations.orders');
       else ctx.rejections.push({ day: ctx.day, seat: principal, entry: -1, reason });
     }

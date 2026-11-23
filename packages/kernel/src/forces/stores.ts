@@ -1,3 +1,4 @@
+import { forceTotals, type ForceTotalsCache } from './lots.ts';
 /**
  * Stores on hand (FOUNDATION section 4; decisions 0040, 0054): each day a
  * force block eats a day of its stores, and supply refills what its line
@@ -52,10 +53,10 @@ export interface StoresResult {
 }
 
 /** A block's daily need in milli-units of the capacity scale; 0 when it has no men or its strength is unknown. */
-export function dailyNeedMilli(rules: StoresRules, state: State, block: ForceBlockId): number {
+export function dailyNeedMilli(rules: StoresRules, state: State, block: ForceBlockId, cache?: ForceTotalsCache): number {
   const b = state.forceBlockStates[block]!;
-  if (b.fbStrength === null) return 0;
-  return Math.trunc(((b.fbStrength + b.fbNonCombatants) * 1000) / rules.menPerCapacityUnit);
+  if (forceTotals(b, cache).fbStrength === null) return 0;
+  return Math.trunc(((forceTotals(b, cache).fbStrength! + b.fbNonCombatants) * 1000) / rules.menPerCapacityUnit);
 }
 
 /** One day of eating and refilling for every block with a side, standing on land, with known strength and stores. */
@@ -75,7 +76,7 @@ export function storesStep(map: WorldIndex, state: State, supply: SupplyResult):
     if (kind === 'river' || kind === 'sea' || kind === 'off_map') continue;
     const faction = factionOfBlock(map, state, block);
     if (faction === null) continue;
-    const need = dailyNeedMilli(rules, state, block);
+    const need = dailyNeedMilli(rules, state, block, map.forceTotalsCache);
     if (need === 0) continue;
     eaters.push({ block, faction, region: loc.locRegion, need, stores: b.fbStoresMilli });
   }

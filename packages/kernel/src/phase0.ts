@@ -100,3 +100,7 @@ export * from './politics/press.ts';
 export * from './tick/politics.ts';
 // Lane 1.13: the console's preview of an arrow edit before it is sent (lane 0.9's finding 5).
 export * from './tick/edit-preview.ts';
+
+// 0108: commander-owned local acts, kept outside the presidential seat API.
+export { organise, type OrganisationResult } from './tick/organisation.ts';
+export { closeFormationPost } from './command/organisation.ts';

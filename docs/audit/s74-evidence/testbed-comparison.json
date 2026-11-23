@@ -1,0 +1,1357 @@
+{
+  "pack": "testbed",
+  "baseline": "runs\\s70\\references\\testbed-summary.json",
+  "beforeInitial": "ffff8656261d854e720cfd5d70d89562cc1d6cf551634e5fa603cea5481dc5ba",
+  "afterInitial": "ffff8656261d854e720cfd5d70d89562cc1d6cf551634e5fa603cea5481dc5ba",
+  "beforeWorld": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5",
+  "afterWorld": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5",
+  "beforeFinal": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+  "afterFinal": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+  "hashes": [
+    {
+      "day": 1,
+      "before": "5d9481d05d67b75b1f8381ba70eba25bce9644c0a632cdb0ae5b4db8f07a07e0",
+      "after": "5d9481d05d67b75b1f8381ba70eba25bce9644c0a632cdb0ae5b4db8f07a07e0",
+      "cause": "unchanged"
+    },
+    {
+      "day": 2,
+      "before": "7893554de8d9741b1d9a66a6e9d1cd3ec3dd9e922c44a282c4ec1bd947fcecde",
+      "after": "7893554de8d9741b1d9a66a6e9d1cd3ec3dd9e922c44a282c4ec1bd947fcecde",
+      "cause": "unchanged"
+    },
+    {
+      "day": 3,
+      "before": "b60c02d121ca1e6e5ba3871e932a4db64000c8c186a48d2af1beb291939b6b8e",
+      "after": "b60c02d121ca1e6e5ba3871e932a4db64000c8c186a48d2af1beb291939b6b8e",
+      "cause": "unchanged"
+    },
+    {
+      "day": 4,
+      "before": "e39afeaffd0004e9bc4bebf2e4414b095af2a16ee7f9b40bb0445a66774981b2",
+      "after": "e39afeaffd0004e9bc4bebf2e4414b095af2a16ee7f9b40bb0445a66774981b2",
+      "cause": "unchanged"
+    },
+    {
+      "day": 5,
+      "before": "d4e8d5ece69a4a581b68fa17c7616e7a02e8aa636514be524268d3ff8f90cfdb",
+      "after": "d4e8d5ece69a4a581b68fa17c7616e7a02e8aa636514be524268d3ff8f90cfdb",
+      "cause": "unchanged"
+    },
+    {
+      "day": 6,
+      "before": "2317f8fd0b8bc025bc1cfcbc877f7477256f1e6520996d735a854349ac1219c7",
+      "after": "2317f8fd0b8bc025bc1cfcbc877f7477256f1e6520996d735a854349ac1219c7",
+      "cause": "unchanged"
+    },
+    {
+      "day": 7,
+      "before": "5926d8d058c53483616562fb53b9bfbeb576ae54d6ecec4c01fc044cf0360597",
+      "after": "5926d8d058c53483616562fb53b9bfbeb576ae54d6ecec4c01fc044cf0360597",
+      "cause": "unchanged"
+    },
+    {
+      "day": 8,
+      "before": "8089e6d2731b7be6b3bf998da4c1c76d2fb0f9ed12d9ae47809f094eb5133212",
+      "after": "8089e6d2731b7be6b3bf998da4c1c76d2fb0f9ed12d9ae47809f094eb5133212",
+      "cause": "unchanged"
+    },
+    {
+      "day": 9,
+      "before": "d6d5f2557d3ea18af5a3cbbcfbadf234921bff3423f53922f9d512e34e735f63",
+      "after": "d6d5f2557d3ea18af5a3cbbcfbadf234921bff3423f53922f9d512e34e735f63",
+      "cause": "unchanged"
+    },
+    {
+      "day": 10,
+      "before": "e6f01cbe5ab8c69367e12b13a20aedea671c8ed491e99eb1bcf6ada6a737397e",
+      "after": "e6f01cbe5ab8c69367e12b13a20aedea671c8ed491e99eb1bcf6ada6a737397e",
+      "cause": "unchanged"
+    },
+    {
+      "day": 11,
+      "before": "5365d16d91b214db1cd074c226910bf53f4996b5c2553a71c7f98798b7c38b96",
+      "after": "5365d16d91b214db1cd074c226910bf53f4996b5c2553a71c7f98798b7c38b96",
+      "cause": "unchanged"
+    },
+    {
+      "day": 12,
+      "before": "4843e491a2ac068fab2128d41e9a28afd2fd696eb4d0413df311f28bd953bcac",
+      "after": "4843e491a2ac068fab2128d41e9a28afd2fd696eb4d0413df311f28bd953bcac",
+      "cause": "unchanged"
+    },
+    {
+      "day": 13,
+      "before": "24d1e1ee0bf30cf755e9d5a428bad4aee166fdd6b1a7cda7aa9f18805c4689aa",
+      "after": "24d1e1ee0bf30cf755e9d5a428bad4aee166fdd6b1a7cda7aa9f18805c4689aa",
+      "cause": "unchanged"
+    },
+    {
+      "day": 14,
+      "before": "687042b6b9929cc1581e5fcce193c3f34497d1e79774cf4057705411536c8828",
+      "after": "687042b6b9929cc1581e5fcce193c3f34497d1e79774cf4057705411536c8828",
+      "cause": "unchanged"
+    },
+    {
+      "day": 15,
+      "before": "34ec3e830cb8d35e5af3da656a86616288c65552f042d386bc0e355a2bd2ae25",
+      "after": "34ec3e830cb8d35e5af3da656a86616288c65552f042d386bc0e355a2bd2ae25",
+      "cause": "unchanged"
+    },
+    {
+      "day": 16,
+      "before": "fa83b9742b9d1109b2ccde4987083f84b1f00ce6021fe098c637542e80f7202d",
+      "after": "fa83b9742b9d1109b2ccde4987083f84b1f00ce6021fe098c637542e80f7202d",
+      "cause": "unchanged"
+    },
+    {
+      "day": 17,
+      "before": "4e7b29efbef1ceb3bf0850f3f19094b574e9d649e06952018e8d5c2ad9ba005d",
+      "after": "4e7b29efbef1ceb3bf0850f3f19094b574e9d649e06952018e8d5c2ad9ba005d",
+      "cause": "unchanged"
+    },
+    {
+      "day": 18,
+      "before": "431444b7e05a26265e86e68db768aaf32ba9459074defa619636f16d7ba3c580",
+      "after": "431444b7e05a26265e86e68db768aaf32ba9459074defa619636f16d7ba3c580",
+      "cause": "unchanged"
+    },
+    {
+      "day": 19,
+      "before": "ae6abeebb8161d03ed7e5e822305397969fbdee4d657269a384116bab1adf266",
+      "after": "ae6abeebb8161d03ed7e5e822305397969fbdee4d657269a384116bab1adf266",
+      "cause": "unchanged"
+    },
+    {
+      "day": 20,
+      "before": "ecb3128d1729a15619b4459aff8714f8a47ecb7ea91f630c9992881b951c7379",
+      "after": "ecb3128d1729a15619b4459aff8714f8a47ecb7ea91f630c9992881b951c7379",
+      "cause": "unchanged"
+    },
+    {
+      "day": 21,
+      "before": "5c5c96297290d97b11976b78b6f72f6f229340eea2eb612148cb08045cb112fa",
+      "after": "5c5c96297290d97b11976b78b6f72f6f229340eea2eb612148cb08045cb112fa",
+      "cause": "unchanged"
+    },
+    {
+      "day": 22,
+      "before": "27a7a183fa010d326eb638f8679edc2daed1c7403efbea3de32d8385148324af",
+      "after": "27a7a183fa010d326eb638f8679edc2daed1c7403efbea3de32d8385148324af",
+      "cause": "unchanged"
+    },
+    {
+      "day": 23,
+      "before": "256365fa9f3747c5fc5715ff4641cb460fef2e9fcc121aee97e08e4f4c2c496b",
+      "after": "256365fa9f3747c5fc5715ff4641cb460fef2e9fcc121aee97e08e4f4c2c496b",
+      "cause": "unchanged"
+    },
+    {
+      "day": 24,
+      "before": "385719f865e530604c6710ddf6214cfa82b7817c237c56bd5c9ce0c342e998d0",
+      "after": "385719f865e530604c6710ddf6214cfa82b7817c237c56bd5c9ce0c342e998d0",
+      "cause": "unchanged"
+    },
+    {
+      "day": 25,
+      "before": "7274916fb42f901d33090b8e93cce059aaef6f715d723b928d947774bf6074ee",
+      "after": "7274916fb42f901d33090b8e93cce059aaef6f715d723b928d947774bf6074ee",
+      "cause": "unchanged"
+    },
+    {
+      "day": 26,
+      "before": "367e1d1e3220f7edd9daea57ca78f1ee7103963ee8965fc2a2ab73e4fbf46853",
+      "after": "367e1d1e3220f7edd9daea57ca78f1ee7103963ee8965fc2a2ab73e4fbf46853",
+      "cause": "unchanged"
+    },
+    {
+      "day": 27,
+      "before": "4beee11e353479023d246ede6714db7e7394135ec4566a3b96ad3253a3a8cef7",
+      "after": "4beee11e353479023d246ede6714db7e7394135ec4566a3b96ad3253a3a8cef7",
+      "cause": "unchanged"
+    },
+    {
+      "day": 28,
+      "before": "be4240d0fd8451e667acbd319b9f18e03babacaecfad9dfeabc3eb0c866550f4",
+      "after": "be4240d0fd8451e667acbd319b9f18e03babacaecfad9dfeabc3eb0c866550f4",
+      "cause": "unchanged"
+    },
+    {
+      "day": 29,
+      "before": "a70db97b618f61662b03d605ababba543dd27d2ed562c1a50909537089148dfc",
+      "after": "a70db97b618f61662b03d605ababba543dd27d2ed562c1a50909537089148dfc",
+      "cause": "unchanged"
+    },
+    {
+      "day": 30,
+      "before": "770ea893545090c87bc37cf7baab0498bb3eac0cba9009f7525af0b8ed626f89",
+      "after": "770ea893545090c87bc37cf7baab0498bb3eac0cba9009f7525af0b8ed626f89",
+      "cause": "unchanged"
+    },
+    {
+      "day": 31,
+      "before": "2f3155e4a84492fd93e9e11daec6b177f5b4e823f17eb34937ed15d02e066c29",
+      "after": "2f3155e4a84492fd93e9e11daec6b177f5b4e823f17eb34937ed15d02e066c29",
+      "cause": "unchanged"
+    },
+    {
+      "day": 32,
+      "before": "acbc17a9931d743df704b27a500ccc263bb65ae1906e472f395fe70e8e2426cf",
+      "after": "acbc17a9931d743df704b27a500ccc263bb65ae1906e472f395fe70e8e2426cf",
+      "cause": "unchanged"
+    },
+    {
+      "day": 33,
+      "before": "e3043fb04bfc91a974683b1bde2a8cd81826c4566f7b7a87bd5fad4aefcca132",
+      "after": "e3043fb04bfc91a974683b1bde2a8cd81826c4566f7b7a87bd5fad4aefcca132",
+      "cause": "unchanged"
+    },
+    {
+      "day": 34,
+      "before": "12ae4308900bf72fe8ccd423bed5c3b37585c2d7da47d2e982009ee586255a1d",
+      "after": "12ae4308900bf72fe8ccd423bed5c3b37585c2d7da47d2e982009ee586255a1d",
+      "cause": "unchanged"
+    },
+    {
+      "day": 35,
+      "before": "ecd03b02f43b374b22fd933d89611e03be7e464c550f4d84aab11a6ba0ba995e",
+      "after": "ecd03b02f43b374b22fd933d89611e03be7e464c550f4d84aab11a6ba0ba995e",
+      "cause": "unchanged"
+    },
+    {
+      "day": 36,
+      "before": "dae1c4a2539918fc771fd76d0b8dafda9727c3aaf43c41efad449bdfb2c83cae",
+      "after": "dae1c4a2539918fc771fd76d0b8dafda9727c3aaf43c41efad449bdfb2c83cae",
+      "cause": "unchanged"
+    },
+    {
+      "day": 37,
+      "before": "ca64062bff8aa45fd8473405b0b37256737edbc1e021f1139bee6c6248e50c34",
+      "after": "ca64062bff8aa45fd8473405b0b37256737edbc1e021f1139bee6c6248e50c34",
+      "cause": "unchanged"
+    },
+    {
+      "day": 38,
+      "before": "6e387ff0397c73e5430423870e1e2fc4b23f5aa85fed5390c6ab27d2065f0202",
+      "after": "6e387ff0397c73e5430423870e1e2fc4b23f5aa85fed5390c6ab27d2065f0202",
+      "cause": "unchanged"
+    },
+    {
+      "day": 39,
+      "before": "60a3f0d79e7cc6f02f9863ccbcb0dce8684bf151f1411fd88c21d58e96c6d400",
+      "after": "60a3f0d79e7cc6f02f9863ccbcb0dce8684bf151f1411fd88c21d58e96c6d400",
+      "cause": "unchanged"
+    },
+    {
+      "day": 40,
+      "before": "0b95e796a2f12e9d051873c2c3aadf09d4a4d7de44e2afd33a857f686a91810a",
+      "after": "0b95e796a2f12e9d051873c2c3aadf09d4a4d7de44e2afd33a857f686a91810a",
+      "cause": "unchanged"
+    },
+    {
+      "day": 41,
+      "before": "a5fdcad08db1bec3230dc06c51c56be022f22fd5c62cc952f6a5be3172fe6496",
+      "after": "a5fdcad08db1bec3230dc06c51c56be022f22fd5c62cc952f6a5be3172fe6496",
+      "cause": "unchanged"
+    },
+    {
+      "day": 42,
+      "before": "14558663e3ef3694116f09a3e3886ffdc0249e93f94f2f261d366146f767c848",
+      "after": "14558663e3ef3694116f09a3e3886ffdc0249e93f94f2f261d366146f767c848",
+      "cause": "unchanged"
+    },
+    {
+      "day": 43,
+      "before": "76ed1706db20c2d0f679e2b13dc64d5170e6d55e9b0f74058eeaca66f73c9814",
+      "after": "76ed1706db20c2d0f679e2b13dc64d5170e6d55e9b0f74058eeaca66f73c9814",
+      "cause": "unchanged"
+    },
+    {
+      "day": 44,
+      "before": "ffb4172aa27a39830207fc3803350064f54d3ed72ae5ee5f5503b66f7367a6f4",
+      "after": "ffb4172aa27a39830207fc3803350064f54d3ed72ae5ee5f5503b66f7367a6f4",
+      "cause": "unchanged"
+    },
+    {
+      "day": 45,
+      "before": "e2f5ea983883786817d2cbb8cc525d37f29701e3805cd3279228e4e2cc1f0280",
+      "after": "e2f5ea983883786817d2cbb8cc525d37f29701e3805cd3279228e4e2cc1f0280",
+      "cause": "unchanged"
+    },
+    {
+      "day": 46,
+      "before": "b4b750c7fa87791bbea22f3b701c76a55472da0d8f6ca5c240a56ef914e08bf9",
+      "after": "b4b750c7fa87791bbea22f3b701c76a55472da0d8f6ca5c240a56ef914e08bf9",
+      "cause": "unchanged"
+    },
+    {
+      "day": 47,
+      "before": "80812f6fa2f199e1010cdc3ed9d5bcddf2e3a5c44667e3426ed57ec773826ca9",
+      "after": "80812f6fa2f199e1010cdc3ed9d5bcddf2e3a5c44667e3426ed57ec773826ca9",
+      "cause": "unchanged"
+    },
+    {
+      "day": 48,
+      "before": "7e2aceddda62a1b362c443e60c86b9ec8b6b5f7951ec14937a5ff2c247a05e84",
+      "after": "7e2aceddda62a1b362c443e60c86b9ec8b6b5f7951ec14937a5ff2c247a05e84",
+      "cause": "unchanged"
+    },
+    {
+      "day": 49,
+      "before": "03e64d4df974c1448d9825a9a2afe404f689483d663671ebedbe313aa0f3812d",
+      "after": "03e64d4df974c1448d9825a9a2afe404f689483d663671ebedbe313aa0f3812d",
+      "cause": "unchanged"
+    },
+    {
+      "day": 50,
+      "before": "92b9013f608bc7dfcfd5f231cd8342ba555eb6c9b15400d7f8210bc96fc4b34a",
+      "after": "92b9013f608bc7dfcfd5f231cd8342ba555eb6c9b15400d7f8210bc96fc4b34a",
+      "cause": "unchanged"
+    },
+    {
+      "day": 51,
+      "before": "d482f134d630296741977bfb967dc1a4e84f7f79b137a459f3c29365f0607237",
+      "after": "d482f134d630296741977bfb967dc1a4e84f7f79b137a459f3c29365f0607237",
+      "cause": "unchanged"
+    },
+    {
+      "day": 52,
+      "before": "0d407a8e81e56828df903b3e81d3d61192b6a9ac9b576f1ead23795dc0cefa20",
+      "after": "0d407a8e81e56828df903b3e81d3d61192b6a9ac9b576f1ead23795dc0cefa20",
+      "cause": "unchanged"
+    },
+    {
+      "day": 53,
+      "before": "5ff2f0b033cb784e107adbf41cd91220e171953966d056f7632507ca097f2471",
+      "after": "5ff2f0b033cb784e107adbf41cd91220e171953966d056f7632507ca097f2471",
+      "cause": "unchanged"
+    },
+    {
+      "day": 54,
+      "before": "792d5c54adac3b33859952a29d0488392a3e42005f357d421ea9a3e8de2138e3",
+      "after": "792d5c54adac3b33859952a29d0488392a3e42005f357d421ea9a3e8de2138e3",
+      "cause": "unchanged"
+    },
+    {
+      "day": 55,
+      "before": "6a056fb16001d642d7e671ad97101418fdcca2126060b383b3cf848db3ccd19c",
+      "after": "6a056fb16001d642d7e671ad97101418fdcca2126060b383b3cf848db3ccd19c",
+      "cause": "unchanged"
+    },
+    {
+      "day": 56,
+      "before": "bc08b8cde1157c373f23947b54d08168cdb76e7d8b4431b3ea8766f1cca8349c",
+      "after": "bc08b8cde1157c373f23947b54d08168cdb76e7d8b4431b3ea8766f1cca8349c",
+      "cause": "unchanged"
+    },
+    {
+      "day": 57,
+      "before": "4aab16133a0d82b6d9f40f389ee855c9928270d84d9a5b4462f4f02b8ee081e9",
+      "after": "4aab16133a0d82b6d9f40f389ee855c9928270d84d9a5b4462f4f02b8ee081e9",
+      "cause": "unchanged"
+    },
+    {
+      "day": 58,
+      "before": "eea0f1a20e7f2815e03182c1777810a245fdc24df748afa5bf0b0f7b459d6157",
+      "after": "eea0f1a20e7f2815e03182c1777810a245fdc24df748afa5bf0b0f7b459d6157",
+      "cause": "unchanged"
+    },
+    {
+      "day": 59,
+      "before": "ffcd0ffd5f585d60e8d2026ef6dc14ce0d58565b09cefdb8b1359bedb223035c",
+      "after": "ffcd0ffd5f585d60e8d2026ef6dc14ce0d58565b09cefdb8b1359bedb223035c",
+      "cause": "unchanged"
+    },
+    {
+      "day": 60,
+      "before": "34314874f47a43baf02176ce58dbcb5471eb51a28d0d7db943717bccee963033",
+      "after": "34314874f47a43baf02176ce58dbcb5471eb51a28d0d7db943717bccee963033",
+      "cause": "unchanged"
+    },
+    {
+      "day": 61,
+      "before": "f0028513732d58e47f1eb6cc628924694b112ae5afadd921ca5d939ce7708d6f",
+      "after": "f0028513732d58e47f1eb6cc628924694b112ae5afadd921ca5d939ce7708d6f",
+      "cause": "unchanged"
+    },
+    {
+      "day": 62,
+      "before": "35ab1361109f1723c589e7f8de815cb73dcb8722a3c14b37483888fcf2a3ab60",
+      "after": "35ab1361109f1723c589e7f8de815cb73dcb8722a3c14b37483888fcf2a3ab60",
+      "cause": "unchanged"
+    },
+    {
+      "day": 63,
+      "before": "defe5fe8c0c010d1e88a24b386de50ca4ec2353b74f0b52ba55677c7adbbeb6a",
+      "after": "defe5fe8c0c010d1e88a24b386de50ca4ec2353b74f0b52ba55677c7adbbeb6a",
+      "cause": "unchanged"
+    },
+    {
+      "day": 64,
+      "before": "f097c8ea0fbb5c001f49cc5faa6323992b10f05293e255a54cdf5d25f0cbf9ed",
+      "after": "f097c8ea0fbb5c001f49cc5faa6323992b10f05293e255a54cdf5d25f0cbf9ed",
+      "cause": "unchanged"
+    },
+    {
+      "day": 65,
+      "before": "f64988ac0f4d405b190be731ef24af6ab5c4a11d7a68ab86556e7e3d869e8198",
+      "after": "f64988ac0f4d405b190be731ef24af6ab5c4a11d7a68ab86556e7e3d869e8198",
+      "cause": "unchanged"
+    },
+    {
+      "day": 66,
+      "before": "c6d24eea270c1709a760415d6b4801e66bb3885ca518ec1583e00fbffb07d718",
+      "after": "c6d24eea270c1709a760415d6b4801e66bb3885ca518ec1583e00fbffb07d718",
+      "cause": "unchanged"
+    },
+    {
+      "day": 67,
+      "before": "a5ce24c91504d5b852451afe375e0192bcb10b9b7ae9d540ba239283fa7cc3f5",
+      "after": "a5ce24c91504d5b852451afe375e0192bcb10b9b7ae9d540ba239283fa7cc3f5",
+      "cause": "unchanged"
+    },
+    {
+      "day": 68,
+      "before": "2271902b333ddbb2a067f220cd3c42ba2e2f9db33ffe9af0706f02c61deca659",
+      "after": "2271902b333ddbb2a067f220cd3c42ba2e2f9db33ffe9af0706f02c61deca659",
+      "cause": "unchanged"
+    },
+    {
+      "day": 69,
+      "before": "754d462e1ca2cc2bbed93007c4b06dd8206b9e55275d7344137fe40b2d3c0e86",
+      "after": "754d462e1ca2cc2bbed93007c4b06dd8206b9e55275d7344137fe40b2d3c0e86",
+      "cause": "unchanged"
+    },
+    {
+      "day": 70,
+      "before": "8719aa14f25a52e3c167bf3095f4670b0ed0df92f723a91a5be7d6ae4713aad8",
+      "after": "8719aa14f25a52e3c167bf3095f4670b0ed0df92f723a91a5be7d6ae4713aad8",
+      "cause": "unchanged"
+    },
+    {
+      "day": 71,
+      "before": "aa8eca745b10e77ded5bb466440fe4c68d3c430ab3147736d362b7a3889c4296",
+      "after": "aa8eca745b10e77ded5bb466440fe4c68d3c430ab3147736d362b7a3889c4296",
+      "cause": "unchanged"
+    },
+    {
+      "day": 72,
+      "before": "b2a1c7b892115e6ad3d68effd23bc88a749ebfdb2361831fbf30f5fa0aff7646",
+      "after": "b2a1c7b892115e6ad3d68effd23bc88a749ebfdb2361831fbf30f5fa0aff7646",
+      "cause": "unchanged"
+    },
+    {
+      "day": 73,
+      "before": "e66f630e4d3847290f4809a61c68f2a10badc978cc6d9180dd1111b1915c1b4c",
+      "after": "e66f630e4d3847290f4809a61c68f2a10badc978cc6d9180dd1111b1915c1b4c",
+      "cause": "unchanged"
+    },
+    {
+      "day": 74,
+      "before": "1f10ba2072c84437d27069b3e5bc0397d3523043d81bb1cadced11ed3c9c669a",
+      "after": "1f10ba2072c84437d27069b3e5bc0397d3523043d81bb1cadced11ed3c9c669a",
+      "cause": "unchanged"
+    },
+    {
+      "day": 75,
+      "before": "528d68c43aa7af5943b96574954f4b8f4e8ce905e4d8c5c5440e6b512bdb9f59",
+      "after": "528d68c43aa7af5943b96574954f4b8f4e8ce905e4d8c5c5440e6b512bdb9f59",
+      "cause": "unchanged"
+    },
+    {
+      "day": 76,
+      "before": "5e7fac29b52c2bc5f497a6b4e429587e026b040eea27f1e8fe85ab2ef678c416",
+      "after": "5e7fac29b52c2bc5f497a6b4e429587e026b040eea27f1e8fe85ab2ef678c416",
+      "cause": "unchanged"
+    },
+    {
+      "day": 77,
+      "before": "bc500e2a072e760a8da2c020a85a850126520a14af0ee8739231f3e7fb1b8e37",
+      "after": "bc500e2a072e760a8da2c020a85a850126520a14af0ee8739231f3e7fb1b8e37",
+      "cause": "unchanged"
+    },
+    {
+      "day": 78,
+      "before": "9801be95787e9b64812072322afdd9903dd50c4076a2c053b50f2ee06ca4d49c",
+      "after": "9801be95787e9b64812072322afdd9903dd50c4076a2c053b50f2ee06ca4d49c",
+      "cause": "unchanged"
+    },
+    {
+      "day": 79,
+      "before": "137c993c9522df59c6b49b0ae63ebe630991bb55bd98695f8b8c6d6c40c201a0",
+      "after": "137c993c9522df59c6b49b0ae63ebe630991bb55bd98695f8b8c6d6c40c201a0",
+      "cause": "unchanged"
+    },
+    {
+      "day": 80,
+      "before": "8b84c2e5ef4759ea42767d4a3d5b1d28b388d3c2d816a6116c23b01754698d54",
+      "after": "8b84c2e5ef4759ea42767d4a3d5b1d28b388d3c2d816a6116c23b01754698d54",
+      "cause": "unchanged"
+    },
+    {
+      "day": 81,
+      "before": "1d86b7e878a31dc9b471fd07d04bafb88b09c1ca69d94c842a0bd3d41d07fae9",
+      "after": "1d86b7e878a31dc9b471fd07d04bafb88b09c1ca69d94c842a0bd3d41d07fae9",
+      "cause": "unchanged"
+    },
+    {
+      "day": 82,
+      "before": "dff8126481ec0f28d0a6ec5e285f3662defc5ae2ca92d7e88f3d506ee284d6cc",
+      "after": "dff8126481ec0f28d0a6ec5e285f3662defc5ae2ca92d7e88f3d506ee284d6cc",
+      "cause": "unchanged"
+    },
+    {
+      "day": 83,
+      "before": "85d7e190a2ca69cc41dccc7094c1993917aa81ba7ab21369caee7e7ba17ce1e1",
+      "after": "85d7e190a2ca69cc41dccc7094c1993917aa81ba7ab21369caee7e7ba17ce1e1",
+      "cause": "unchanged"
+    },
+    {
+      "day": 84,
+      "before": "d56a830431880a24504d69472e4a9187b3d4d82cbe4c3dbbb4e4278218da2488",
+      "after": "d56a830431880a24504d69472e4a9187b3d4d82cbe4c3dbbb4e4278218da2488",
+      "cause": "unchanged"
+    },
+    {
+      "day": 85,
+      "before": "ffd70fb4c118ea3d47b94e5709be8f93a2220036a8a9627fe2f80c1ea27971fb",
+      "after": "ffd70fb4c118ea3d47b94e5709be8f93a2220036a8a9627fe2f80c1ea27971fb",
+      "cause": "unchanged"
+    },
+    {
+      "day": 86,
+      "before": "d9e91a3f71a9c22bfa32eb561148b10a03da060d79da6b95a45860bb37d3a9e8",
+      "after": "d9e91a3f71a9c22bfa32eb561148b10a03da060d79da6b95a45860bb37d3a9e8",
+      "cause": "unchanged"
+    },
+    {
+      "day": 87,
+      "before": "d4c9d0a9d63dbf0aa28ee488c39f2a39b4b234ad823dff0776e366cc526e03e4",
+      "after": "d4c9d0a9d63dbf0aa28ee488c39f2a39b4b234ad823dff0776e366cc526e03e4",
+      "cause": "unchanged"
+    },
+    {
+      "day": 88,
+      "before": "880f3247e46f017cb9da2842120b668730c82a1140361da20ffe8b85593e6319",
+      "after": "880f3247e46f017cb9da2842120b668730c82a1140361da20ffe8b85593e6319",
+      "cause": "unchanged"
+    },
+    {
+      "day": 89,
+      "before": "d793ca1e11e18c540e275297f923347ebdcaa1af759f39ab57f35c33bfdce58d",
+      "after": "d793ca1e11e18c540e275297f923347ebdcaa1af759f39ab57f35c33bfdce58d",
+      "cause": "unchanged"
+    },
+    {
+      "day": 90,
+      "before": "d6cff3bef255da07e45e6ef29b20e9cb3b0bcd76c8a06cadb845313f347b0ef1",
+      "after": "d6cff3bef255da07e45e6ef29b20e9cb3b0bcd76c8a06cadb845313f347b0ef1",
+      "cause": "unchanged"
+    },
+    {
+      "day": 91,
+      "before": "c76cb5cab046c57a2a329c75763d47f0bfca4bd99ed45542de43c5a8e93640be",
+      "after": "c76cb5cab046c57a2a329c75763d47f0bfca4bd99ed45542de43c5a8e93640be",
+      "cause": "unchanged"
+    },
+    {
+      "day": 92,
+      "before": "2ecad70ad8c2ece4d5115d4af4b84865c80e4df374b9563a208c6ebac12fd6ae",
+      "after": "2ecad70ad8c2ece4d5115d4af4b84865c80e4df374b9563a208c6ebac12fd6ae",
+      "cause": "unchanged"
+    },
+    {
+      "day": 93,
+      "before": "e5aa50500fe63187c7057904ec61771852a396830ec6dbcff7242e7930307af4",
+      "after": "e5aa50500fe63187c7057904ec61771852a396830ec6dbcff7242e7930307af4",
+      "cause": "unchanged"
+    },
+    {
+      "day": 94,
+      "before": "b5c4f883d43ba90619a203db9526c8afcd218a50fc9675325658f88f05a695d1",
+      "after": "b5c4f883d43ba90619a203db9526c8afcd218a50fc9675325658f88f05a695d1",
+      "cause": "unchanged"
+    },
+    {
+      "day": 95,
+      "before": "72fac1dba81a3948077dc7ec16f6c16a52cd89643fc57c811105f27be7ffe3bf",
+      "after": "72fac1dba81a3948077dc7ec16f6c16a52cd89643fc57c811105f27be7ffe3bf",
+      "cause": "unchanged"
+    },
+    {
+      "day": 96,
+      "before": "b18bfe6123c7f31ce26e3773db06e8bd590784d07fd2202e9175392fa02f99ac",
+      "after": "b18bfe6123c7f31ce26e3773db06e8bd590784d07fd2202e9175392fa02f99ac",
+      "cause": "unchanged"
+    },
+    {
+      "day": 97,
+      "before": "d4470f548bb8603f0b5842dc306af4901e95e56d2dc7cc0722e1d6bd2c716289",
+      "after": "d4470f548bb8603f0b5842dc306af4901e95e56d2dc7cc0722e1d6bd2c716289",
+      "cause": "unchanged"
+    },
+    {
+      "day": 98,
+      "before": "8f3b92e00b1b75e08f611e65aa0960b81d2b99027af1051eae91e88e38dc0389",
+      "after": "8f3b92e00b1b75e08f611e65aa0960b81d2b99027af1051eae91e88e38dc0389",
+      "cause": "unchanged"
+    },
+    {
+      "day": 99,
+      "before": "6bb6b468ae1e9b16efd3f9afbadfbe62994d8aa8317ba51354dab4734d64b5b2",
+      "after": "6bb6b468ae1e9b16efd3f9afbadfbe62994d8aa8317ba51354dab4734d64b5b2",
+      "cause": "unchanged"
+    },
+    {
+      "day": 100,
+      "before": "d81b127eb56e94833cca03b6eaa3a3509cd740ae849f83a98b877c73b76f0ae7",
+      "after": "d81b127eb56e94833cca03b6eaa3a3509cd740ae849f83a98b877c73b76f0ae7",
+      "cause": "unchanged"
+    },
+    {
+      "day": 101,
+      "before": "5b876b2786952631641a68dcd3fd77878caf52bd8c26dce793416806e2a77e7e",
+      "after": "5b876b2786952631641a68dcd3fd77878caf52bd8c26dce793416806e2a77e7e",
+      "cause": "unchanged"
+    },
+    {
+      "day": 102,
+      "before": "26a441882d25a4b20795ec58b9b8f73e7af70c22b494fca43241f858ad70f54a",
+      "after": "26a441882d25a4b20795ec58b9b8f73e7af70c22b494fca43241f858ad70f54a",
+      "cause": "unchanged"
+    },
+    {
+      "day": 103,
+      "before": "1a76ac59d423b902ec6ee0c30fb5b1171513194007b1bb1b7a4c778a28ac65f1",
+      "after": "1a76ac59d423b902ec6ee0c30fb5b1171513194007b1bb1b7a4c778a28ac65f1",
+      "cause": "unchanged"
+    },
+    {
+      "day": 104,
+      "before": "02722a9361d80ad6d7b7b8d68040b4f71828f0959e938946698d13f02c8944b7",
+      "after": "02722a9361d80ad6d7b7b8d68040b4f71828f0959e938946698d13f02c8944b7",
+      "cause": "unchanged"
+    },
+    {
+      "day": 105,
+      "before": "b3e5c574d8c787424c61e2fece7a64cc163b12cf622d4d7fccf7cbe2d7b0e919",
+      "after": "b3e5c574d8c787424c61e2fece7a64cc163b12cf622d4d7fccf7cbe2d7b0e919",
+      "cause": "unchanged"
+    },
+    {
+      "day": 106,
+      "before": "e3dfab8d3c2c7b6c1f8df8a294af52d7d20d4bf5cc67b89b06ae84712846c3b4",
+      "after": "e3dfab8d3c2c7b6c1f8df8a294af52d7d20d4bf5cc67b89b06ae84712846c3b4",
+      "cause": "unchanged"
+    },
+    {
+      "day": 107,
+      "before": "fc962289675694f2b1f20fb40978da6a583d35751e4dc0b85246397d19d77d1f",
+      "after": "fc962289675694f2b1f20fb40978da6a583d35751e4dc0b85246397d19d77d1f",
+      "cause": "unchanged"
+    },
+    {
+      "day": 108,
+      "before": "07a3d260f02727bce59e011edb1d8605a5375f8652fc0a24edf783e2270b0715",
+      "after": "07a3d260f02727bce59e011edb1d8605a5375f8652fc0a24edf783e2270b0715",
+      "cause": "unchanged"
+    },
+    {
+      "day": 109,
+      "before": "343492d3f2e3100a8f6738a32380bbc6bcfc9e315906cfa233d4f7e5341145a9",
+      "after": "343492d3f2e3100a8f6738a32380bbc6bcfc9e315906cfa233d4f7e5341145a9",
+      "cause": "unchanged"
+    },
+    {
+      "day": 110,
+      "before": "3cf9d11cdde4fd5075d9356365effeb4b0337a17a16ff4e41bc9561fedbb7113",
+      "after": "3cf9d11cdde4fd5075d9356365effeb4b0337a17a16ff4e41bc9561fedbb7113",
+      "cause": "unchanged"
+    },
+    {
+      "day": 111,
+      "before": "3cb76f0e78a0c73f05187b3c96db52add1fc489f11b6fb614e3fe2357a632c9b",
+      "after": "3cb76f0e78a0c73f05187b3c96db52add1fc489f11b6fb614e3fe2357a632c9b",
+      "cause": "unchanged"
+    },
+    {
+      "day": 112,
+      "before": "1c3dd208b19682cfd51e560add8d37723fd13a037ca8b34e350fbb472a167f2f",
+      "after": "1c3dd208b19682cfd51e560add8d37723fd13a037ca8b34e350fbb472a167f2f",
+      "cause": "unchanged"
+    },
+    {
+      "day": 113,
+      "before": "96c69dddd084266e833d7a811984b41d3788adfa5cec3f0b915a34db3551305f",
+      "after": "96c69dddd084266e833d7a811984b41d3788adfa5cec3f0b915a34db3551305f",
+      "cause": "unchanged"
+    },
+    {
+      "day": 114,
+      "before": "0bf6346503fde80bc706890e0613fb45d78724c1971a7eb45cd7f9e66006aff4",
+      "after": "0bf6346503fde80bc706890e0613fb45d78724c1971a7eb45cd7f9e66006aff4",
+      "cause": "unchanged"
+    },
+    {
+      "day": 115,
+      "before": "687d984a760840de318efd29b9234b181f6cfa154ac549c10bff877d173fe65b",
+      "after": "687d984a760840de318efd29b9234b181f6cfa154ac549c10bff877d173fe65b",
+      "cause": "unchanged"
+    },
+    {
+      "day": 116,
+      "before": "c0f4c4dc5739ff6e9d0d8eff52b529c4272901c1c16a8bb2afe00c9e11dfb012",
+      "after": "c0f4c4dc5739ff6e9d0d8eff52b529c4272901c1c16a8bb2afe00c9e11dfb012",
+      "cause": "unchanged"
+    },
+    {
+      "day": 117,
+      "before": "cbb63acd4989e2a22fbcf6e591e375be1e96bef2fc204526a9f3aa56946a5b8b",
+      "after": "cbb63acd4989e2a22fbcf6e591e375be1e96bef2fc204526a9f3aa56946a5b8b",
+      "cause": "unchanged"
+    },
+    {
+      "day": 118,
+      "before": "b537e32175fae1ed269aab208e384886953536fb21881031ac455f82cfe9fead",
+      "after": "b537e32175fae1ed269aab208e384886953536fb21881031ac455f82cfe9fead",
+      "cause": "unchanged"
+    },
+    {
+      "day": 119,
+      "before": "c58b5fc5036cd068031411b23f59bc3a9f34cca109439641700b787e19e15539",
+      "after": "c58b5fc5036cd068031411b23f59bc3a9f34cca109439641700b787e19e15539",
+      "cause": "unchanged"
+    },
+    {
+      "day": 120,
+      "before": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "after": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "cause": "unchanged"
+    }
+  ],
+  "counterChanges": [],
+  "dailyChanges": [],
+  "checkpointBefore": [
+    {
+      "day": 15,
+      "hash": "34ec3e830cb8d35e5af3da656a86616288c65552f042d386bc0e355a2bd2ae25",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 10,
+            "traced": 12,
+            "controlPermille": 10224,
+            "supplied": 11,
+            "frontLines": 1,
+            "frontSegments": 9,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 24119,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 12,
+            "traced": 12,
+            "controlPermille": 11434,
+            "supplied": 12,
+            "frontLines": 1,
+            "frontSegments": 9,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 19085,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 2,
+        "blocksMarching": 4,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 30,
+      "hash": "770ea893545090c87bc37cf7baab0498bb3eac0cba9009f7525af0b8ed626f89",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11610,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 23937,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10128,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 45,
+      "hash": "e2f5ea983883786817d2cbb8cc525d37f29701e3805cd3279228e4e2cc1f0280",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 23949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 60,
+      "hash": "34314874f47a43baf02176ce58dbcb5471eb51a28d0d7db943717bccee963033",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 23949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 75,
+      "hash": "528d68c43aa7af5943b96574954f4b8f4e8ce905e4d8c5c5440e6b512bdb9f59",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 23949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 90,
+      "hash": "d6cff3bef255da07e45e6ef29b20e9cb3b0bcd76c8a06cadb845313f347b0ef1",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 23949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 105,
+      "hash": "b3e5c574d8c787424c61e2fece7a64cc163b12cf622d4d7fccf7cbe2d7b0e919",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 21949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 20
+      }
+    },
+    {
+      "day": 120,
+      "hash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 21949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 20
+      }
+    }
+  ],
+  "checkpointAfter": [
+    {
+      "day": 15,
+      "hash": "34ec3e830cb8d35e5af3da656a86616288c65552f042d386bc0e355a2bd2ae25",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 10,
+            "traced": 12,
+            "controlPermille": 10224,
+            "supplied": 11,
+            "frontLines": 1,
+            "frontSegments": 9,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 24119,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 12,
+            "traced": 12,
+            "controlPermille": 11434,
+            "supplied": 12,
+            "frontLines": 1,
+            "frontSegments": 9,
+            "pockets": 0,
+            "pocketRegions": 0,
+            "menKnown": 19085,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 2,
+        "blocksMarching": 4,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 30,
+      "hash": "770ea893545090c87bc37cf7baab0498bb3eac0cba9009f7525af0b8ed626f89",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11610,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 23937,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10128,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 45,
+      "hash": "e2f5ea983883786817d2cbb8cc525d37f29701e3805cd3279228e4e2cc1f0280",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 23949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 60,
+      "hash": "34314874f47a43baf02176ce58dbcb5471eb51a28d0d7db943717bccee963033",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 23949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 75,
+      "hash": "528d68c43aa7af5943b96574954f4b8f4e8ce905e4d8c5c5440e6b512bdb9f59",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 23949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 90,
+      "hash": "d6cff3bef255da07e45e6ef29b20e9cb3b0bcd76c8a06cadb845313f347b0ef1",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 23949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 21
+      }
+    },
+    {
+      "day": 105,
+      "hash": "b3e5c574d8c787424c61e2fece7a64cc163b12cf622d4d7fccf7cbe2d7b0e919",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 21949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 20
+      }
+    },
+    {
+      "day": 120,
+      "hash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "scores": {
+        "factions": [
+          {
+            "faction": "north",
+            "held": 11,
+            "traced": 14,
+            "controlPermille": 11710,
+            "supplied": 13,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 1,
+            "menKnown": 21949,
+            "blocksUnknownStrength": 0
+          },
+          {
+            "faction": "south",
+            "held": 11,
+            "traced": 11,
+            "controlPermille": 10028,
+            "supplied": 1,
+            "frontLines": 2,
+            "frontSegments": 13,
+            "pockets": 1,
+            "pocketRegions": 10,
+            "menKnown": 18473,
+            "blocksUnknownStrength": 0
+          }
+        ],
+        "contestedRegions": 3,
+        "blocksMarching": 0,
+        "blocksTotal": 20
+      }
+    }
+  ],
+  "beforeTiming": {
+    "unit": "ms",
+    "days": 120,
+    "median": 4.3431000000000495,
+    "p95": 9.68509999999992,
+    "max": 35.647699999999986
+  },
+  "afterTiming": {
+    "unit": "ms",
+    "days": 120,
+    "median": 3.489900000000034,
+    "p95": 7.811199999999872,
+    "max": 35.863699999999994
+  },
+  "summaryChanges": {},
+  "proofs": {
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "matches": true,
+      "savedLogReplays": true
+    }
+  }
+}

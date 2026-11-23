@@ -27,8 +27,12 @@ describe('R97: the recorded state acts have their own cause, date and service en
     const present = phase0.tick(world, { ...initial, situationFlags: { [cause]: day - 5 }, departmentFactions: { ...initial.departmentFactions, [dept]: ids.toId('faction', 'confederate') } }, [], { freeze: true });
     expect(present.state.situationStates[ids.toId('situation', id)]?.sitFiredDay).toBe(day);
     for (const e of p) {
-      expect(present.state.forceBlockStates[B(e.stateForces!.id)]).toBeDefined();
-      expect(present.state.forceAssignments[B(e.stateForces!.id)]).toBe(e.subject);
+      if (e.stateForces!.transferTo !== undefined) {
+        expect(present.state.forceBlockStates[B(e.stateForces!.id)]).toBeUndefined();
+      } else {
+        expect(present.state.forceBlockStates[B(e.stateForces!.id)]).toBeDefined();
+        expect(present.state.forceAssignments[B(e.stateForces!.id)]).toBe(e.subject);
+      }
     }
     expect(present.state.orderResponses).toEqual(initial.orderResponses);
     expect(present.state.postLevies).toEqual({});

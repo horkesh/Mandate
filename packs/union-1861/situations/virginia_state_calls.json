@@ -1,0 +1,36 @@
+{
+  "id": "virginia_state_calls",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.virginia_state_calls.title",
+  "text": "situation.virginia_state_calls.text",
+  "earliest": "1861-05-03",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 59
+      },
+      {
+        "flag": "virginia_seceded"
+      }
+    ]
+  },
+  "effects": [],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative state military entry and command only; no secession motives, civilian conduct, security orders or protected-population effects."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 pp.792-793, 1 May call and Harpers Ferry authority; pp.797-801, 3 May proclamation and Norfolk authority"
+    }
+  ],
+  "namedOnly": "The source records the state institution's act. No individual speech, motive or discretionary choice is invented."
+}

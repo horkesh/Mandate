@@ -1,3 +1,4 @@
+import { forceTotals } from '../forces/lots.ts';
 /**
  * Command (FOUNDATION section 10; decisions 0033, 0040, 0050): posts, the
  * people in them, and which post commands each force block, as State written
@@ -72,7 +73,7 @@ export interface PostState {
   readonly postActing: boolean;
   /** Who runs the post's intelligence (0058), on its side; null when none is sourced. */
   readonly postIntelChief: PersonId | null;
-  /** Where the office sits; its headquarters when it commands no force. */
+  /** Declared home seat. An institutional office follows its government's current seat instead. */
   readonly postSeat: RegionId | null;
   /** For a temporary post, the operation it dissolves with; null otherwise. */
   readonly postOperation: string | null;
@@ -294,7 +295,7 @@ export function sideOfPerson(map: WorldIndex, state: State, person: PersonId, ca
   if (post === null) return record.faction;
   const side = factionOfPost(map, state, post);
   const startSide = map.world.departments.find((d) => d.id === postStateOf(state, post).postDepartment)?.faction ?? null;
-  return record.faction === side || record.faction === startSide ? side : record.faction;
+  return record.faction === side || record.faction === startSide || (record.faction === null && record.unknowns.includes('faction')) ? side : record.faction;
 }
 
 /** The posts an order passes from below `top` down to `target`, inclusive of `target` (the relays). */
@@ -307,6 +308,22 @@ export function chainBelow(state: State, top: PostId | null, target: PostId): Po
 /** The blocks a post commands directly, in id order. */
 export function commandedBlocks(state: State, post: PostId): ForceBlockId[] {
   return (Object.keys(state.forceAssignments) as ForceBlockId[]).filter((b) => state.forceAssignments[b] === post).sort(strictCompare);
+}
+
+/** Whether a post belongs to this command, including persistent formations below it. */
+export function withinCommand(state:State,post:PostId|null,command:PostId):boolean{
+  const seen=new Set<PostId>();
+  while(post!==null&&!seen.has(post)){if(post===command)return true;seen.add(post);post=postStateOf(state,post).postParent;}
+  return false;
+}
+export function allCommandedBlocks(map:WorldIndex,state:State,post:PostId):ForceBlockId[]{
+  const templates=map.world.organisationTemplates??[];
+  const formationIds=new Set(templates.flatMap(t=>t.posts.map(p=>p.id)));
+  if(!templates.some(t=>t.army===post)&&!formationIds.has(post))return commandedBlocks(state,post);
+  return (Object.keys(state.forceAssignments) as ForceBlockId[]).filter(id=>{
+    const assigned=state.forceAssignments[id]??null;
+    return assigned===post||(assigned!==null&&formationIds.has(assigned)&&withinCommand(state,assigned,post));
+  }).sort(strictCompare);
 }
 
 /** The post commanding a block, or null. Throws on an unknown block. */
@@ -407,10 +424,10 @@ export function transferForce(map: WorldIndex, state: State, from: PostId, to: P
   }
   const own = commandedBlocks(state, from);
   const blocks = own
-    .filter((id) => state.forceBlockStates[id]!.fbKind === 'block' && state.forceBlockStates[id]!.fbStrength !== 0)
+    .filter((id) => state.forceBlockStates[id]!.fbKind === 'block' && forceTotals(state.forceBlockStates[id]!, map.forceTotalsCache).fbStrength !== 0)
     .sort((a, b) => {
-      const sa = state.forceBlockStates[a]!.fbStrength;
-      const sb = state.forceBlockStates[b]!.fbStrength;
+      const sa = forceTotals(state.forceBlockStates[a]!, map.forceTotalsCache).fbStrength;
+      const sb = forceTotals(state.forceBlockStates[b]!, map.forceTotalsCache).fbStrength;
       if (sa === null || sb === null) return sa === sb ? strictCompare(a, b) : sa === null ? 1 : -1;
       return (pick === 'weakest_first' ? sa - sb : sb - sa) || strictCompare(a, b);
     });
@@ -418,7 +435,7 @@ export function transferForce(map: WorldIndex, state: State, from: PostId, to: P
   const regionOf = (id: ForceBlockId) => state.forceLocations[id]?.locRegion ?? null;
   const following = (parent: ForceBlockId) =>
     own.filter((id) => state.forceBlockStates[id]!.fbKind === 'detachment' && state.forceBlockStates[id]!.fbParent === parent && regionOf(id) === regionOf(parent));
-  const menOf = (ids: readonly ForceBlockId[]) => ids.reduce((s, id) => s + (state.forceBlockStates[id]!.fbStrength ?? 0), 0);
+  const menOf = (ids: readonly ForceBlockId[]) => ids.reduce((s, id) => s + (forceTotals(state.forceBlockStates[id]!, map.forceTotalsCache).fbStrength ?? 0), 0);
   const going = new Set<ForceBlockId>();
   const take = (id: ForceBlockId) => {
     going.add(id);
@@ -565,6 +582,18 @@ export function neutralGroundOf(_map: WorldIndex, state: State): Readonly<Record
     const dept = state.regionGovernments[region]!;
     if (dept === 'unknown' || state.departmentFactions[dept] !== null) continue;
     out[region] = Object.prototype.hasOwnProperty.call(state.closedGovernments, dept) ? 'closed' : 'open';
+  }
+  return out;
+}
+
+/** Civil rail access survives affiliation while every positive share is its own (S81 ruling 3); never ownership. */
+export function governmentRailOf(_map: WorldIndex, state: State): Readonly<Record<RegionId, FactionId>> {
+  const out: Record<RegionId, FactionId> = {};
+  for (const region of (Object.keys(state.regionGovernments) as RegionId[]).sort(strictCompare)) {
+    const department = state.regionGovernments[region]!;
+    if (department === 'unknown') continue;
+    const faction = state.departmentFactions[department];
+    if (faction !== null && faction !== undefined && !Object.entries(state.regionControl[region] ?? {}).some(([side, share]) => side !== faction && share > 0)) out[region] = faction;
   }
   return out;
 }
@@ -830,7 +859,17 @@ export function applyCommandProposals(
       }
       try {
         // Commit both writes together only after the existing appointment guards pass. Neither person's status changes.
-        const next = appointHolder(map, relieveHolder(state, post), post, change.to);
+        const released = relieveHolder(state, post);
+        const institutionalEntry = sideOfPerson(map, released, change.to) === null && heldPost(released, change.to) === null &&
+          state.personService?.[change.to] === undefined &&
+          (map.world.people.find(person => person.id === change.to)!.unknowns.includes('faction') ||
+           map.world.vocabularies.departmentKinds.some(k => k.government && !k.selfGoverning &&
+             map.world.departments.some(d => d.id === current.postDepartment && d.kind === k.id && d.faction === null)));
+        // A sourced institutional notice establishes an unknown unposted successor's
+        // command side through the held post. It supplies no opening commission,
+        // rank or service choice, and cannot override a known contrary side.
+        const next = institutionalEntry ? withPost(released, post, { ...current, postHolder: change.to, postActing: false }) :
+          appointHolder(map, released, post, change.to);
         state = next;
         applied.push({ ...record, change: 'succeeded' });
       } catch (e) {

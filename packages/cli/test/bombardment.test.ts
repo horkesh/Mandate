@@ -23,7 +23,21 @@ describe('the sourced opening of the bombardment (R78)', () => {
     const command = ids.toId('post', 'cs_cmd_charleston');
     const garrison = ids.toId('forceBlock', 'fb_us_sumter_garrison');
     expect(state.situationStates[opening]?.sitDecidedDay).toBe(36);
-    expect(world.map.world.rules.ruleSeats.principals.find((d) => d.faction === 'confederate')!.offensives).toEqual([]);
+    const confederate = ids.toId('faction', 'confederate');
+    const doctrine = world.map.world.rules.ruleSeats.principals.find((d) => d.faction === confederate)!;
+    const seat = phase0.seatIdFor(world.faction(confederate).principal);
+    // S68: S52 declares a later offensive. None may activate through Anderson's evacuation on 13 April.
+    for (const { day, state: early } of days.filter((d) => d.day <= 39)) {
+      for (const offensive of doctrine.offensives) {
+        expect(offensive.requiresNotice, `day ${day}: offensive requires a notice`).toBeDefined();
+        expect(world.situations.find((s) => s.id === offensive.requiresNotice)).toMatchObject({ kind: 'notice', faction: confederate });
+        expect(phase0.knowledgeOf(early, seat).knownReports.some((r) => r.knownBody.reportSubjectKind === 'situation'
+          && r.knownBody.reportSubjectId === offensive.requiresNotice && r.knownReceivedDay <= day), `day ${day}: notice unreceived`).toBe(false);
+        expect(Object.values(early.operationRecords).some((o) => o.opPost === offensive.post), `day ${day}: no active offensive`).toBe(false);
+      }
+    }
+    expect(log.filter((e) => e.day <= 39 && e.seat === seat && e.command.cmd === 'order'
+      && doctrine.offensives.map((o) => o.post).includes(e.command.to))).toEqual([]);
     const orders = log.filter((e) => e.command.cmd === 'order' && e.command.to === command);
     expect(orders).toHaveLength(1);
     expect(orders[0]).toMatchObject({ day: 37, command: { bypass: true, route: 'wire' } });

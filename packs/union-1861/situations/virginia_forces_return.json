@@ -15,26 +15,7 @@
       }
     ]
   },
-  "effects": [
-    {
-      "propose": {
-        "owner": "recruitment",
-        "field": "state_forces",
-        "subject": "st_gov_virginia",
-        "delta": 1,
-        "reason": "state-forces-transferred",
-        "side": "confederate",
-        "stateForces": {
-          "id": "cs_va_transfer_virginia",
-          "regiments": 40,
-          "men": 40000,
-          "arm": "infantry",
-          "termDays": null,
-          "termUnknown": true
-        }
-      }
-    }
-  ],
+  "effects": [],
   "report": {
     "authors": [
       "cs_secretary_war"

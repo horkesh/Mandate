@@ -1,0 +1,15 @@
+{
+  "fixes": [
+    {
+      "path": "packages/kernel/src/command/command.ts",
+      "replacements": [
+        [
+          "â€™",
+          "’"
+        ]
+      ]
+    }
+  ],
+  "scope": "Restore baseline Unicode sequences only; no numerical or control-flow changes.",
+  "referenceReuse": "The sole changed production string is an invalid-succession refusal reason; no proposal_refused events or error strings in the retained references use it."
+}

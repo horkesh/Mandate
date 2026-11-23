@@ -1,0 +1,73 @@
+{
+  "step1-hook": {
+    "log": "runs\\s46\\step1-hook.log",
+    "summary": [
+      " Test Files  208 passed (208)",
+      "      Tests  1952 passed | 3 skipped (1955)",
+      "   Duration  167.01s (tests 74%, import 20%, transform 6%)",
+      "Pack boundary clean: 389 files, 61 terms.",
+      "Dependency licences clean: package-lock.json (123 packages), prototypes/desk/package-lock.json (160 packages), prototyp",
+      "Decisions index clean: 106 records, 106 rows."
+    ]
+  },
+  "step2-hook": {
+    "log": "runs\\s46\\step2-hook.log",
+    "summary": [
+      " Test Files  2 failed | 207 passed (209)",
+      "      Tests  3 failed | 1958 passed | 3 skipped (1964)",
+      "   Duration  226.76s (tests 81%, import 18%, transform 1%)"
+    ]
+  },
+  "strength-correction-test": {
+    "log": "runs\\s46\\strength-correction-test.log",
+    "summary": [
+      " Test Files  1 passed (1)",
+      "      Tests  1 passed (1)",
+      "   Duration  2.51s (tests 78%, import 11%, transform 10%)"
+    ]
+  },
+  "corrected-typecheck": {
+    "log": "runs\\s46\\corrected-typecheck.log",
+    "summary": []
+  },
+  "corrected-rules": {
+    "log": "runs\\s46\\corrected-rules.log",
+    "summary": []
+  },
+  "boundary-preflight": {
+    "log": "runs\\s46\\boundary-preflight.log",
+    "summary": [
+      "Pack boundary clean: 389 files, 61 terms."
+    ]
+  },
+  "licences-preflight": {
+    "log": "runs\\s46\\licences-preflight.log",
+    "summary": [
+      "Dependency licences clean: package-lock.json (123 packages), prototypes/desk/package-lock.json (160 packages), prototypes/map-icons/package-lock.json (2 packages), prototypes/map-tripwire/package-lock.json (78 packages)."
+    ]
+  },
+  "decisions-preflight": {
+    "log": "runs\\s46\\decisions-preflight.log",
+    "summary": [
+      "Decisions index clean: 106 records, 106 rows."
+    ]
+  },
+  "schemas-check": {
+    "log": "runs\\s46\\schemas-check.log",
+    "summary": []
+  },
+  "generate-check": {
+    "log": "runs\\s46\\generate-check.log",
+    "summary": []
+  },
+  "console-replay-corrected": {
+    "log": "runs\\s46\\console-replay-corrected.log",
+    "summary": [
+      "{\"worldHash\":\"723ee20119b7db2307d5fe882cfc36c8443b1df9ada9862c3ff12e4f56f9f2a9\",\"days\":155,\"checkedDays\":155,\"mismatches\":[],\"finalMatches\":true,\"saveMatches\":true,\"loadedStateMatches\":true,\"logEntries\":189}"
+    ]
+  },
+  "reference-trace": {
+    "log": "runs\\s46\\reference-trace.log",
+    "summary": []
+  }
+}

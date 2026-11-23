@@ -22,7 +22,7 @@ const files: PackFiles = {
 };
 const { pack } = loadPack(files);
 const map = w.indexWorld(pack!.world);
-const world = phase0.indexSeatsWorld(map, pack!.scenarios[0]!);
+const world = phase0.indexSeatsWorld(map, pack!.scenarios[0]!, { situations: pack!.situations!.filter(s => s.id === 'manassas_advance_received') });
 const state = phase0.createState(world, { seed: 1 });
 const R = (id: string) => ids.toId('region', id);
 const UNION = ids.toId('faction', 'union');

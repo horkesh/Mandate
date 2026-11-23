@@ -1,0 +1,18 @@
+{
+  "node": "v22.23.2",
+  "aliases": {
+    "kernel": "C:\\Pyrrhic\\sprint-july\\packages\\kernel",
+    "pack-format": "C:\\Pyrrhic\\sprint-july\\packages\\pack-format",
+    "rule-seats": "C:\\Pyrrhic\\sprint-july\\packages\\rule-seats"
+  },
+  "processes_stopped_by_this_task": [
+    11228,
+    26728
+  ],
+  "stopped_reason": "Owned interrupted full-suite node and its owned worker, after encoding preflight failure; no other process stopped.",
+  "refs_sequential": true,
+  "done_check_run": false,
+  "commits": false,
+  "pushes": false,
+  "head": "febfd38ca2241e35e8ab1013857470b7c0e4b45f"
+}

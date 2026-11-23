@@ -1760,6 +1760,336 @@
       "copyUsed": "https://archive.org/details/shermanlettersco00sher/page/120; S6 2c1cea0, individually read S9 backlog opt-in. Heading p120, professional appraisal p121. Only this letter is primary; editorial narrative and the separate May 22 letter are excluded. Scan hashes: p120 88789da093fb3ee132b6228440295edc5906ccd935377ad41ade08aeffb27b8f; p121 908d8c8e43ec7840bf0b739ab7e397fd937cb96f8794d928ffa1a51e17d445bd. S9; S6 commit 2c1cea0, docs/research/S6/scan-manifest.json; originals under C:/Pyrrhic/mandate-research-sources/S6/.",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "S69-AP1",
+      "title": "S69 factual source AP1 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia903107.us.archive.org/BookReader/BookReaderImages.php?zip=/7/items/appletonscyclop01wilsuoft/appletonscyclop01wilsuoft_jp2.zip&file=appletonscyclop01wilsuoft_jp2/appletonscyclop01wilsuoft_0250.jp2&id=appletonscyclop01wilsuoft&scale=2&rotate=0; selected source SHA256 af890415d53649f89d22a51d75af3f3f0250ed59fe6a3405125ce228054336e7",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-AP2",
+      "title": "S69 factual source AP2 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia601609.us.archive.org/BookReader/BookReaderImages.php?zip=/33/items/appletonscyclop02wilsuoft/appletonscyclop02wilsuoft_jp2.zip&file=appletonscyclop02wilsuoft_jp2/appletonscyclop02wilsuoft_0316.jp2&id=appletonscyclop02wilsuoft&scale=2&rotate=0; selected source SHA256 494f8e29ae67135cd30dd758673713cab990801a889d24b6c43b2ff873d89d8a",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-AP3",
+      "title": "S69 factual source AP3 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia600902.us.archive.org/BookReader/BookReaderImages.php?zip=/27/items/appletonscyclop03wilsuoft/appletonscyclop03wilsuoft_jp2.zip&file=appletonscyclop03wilsuoft_jp2/appletonscyclop03wilsuoft_0316.jp2&id=appletonscyclop03wilsuoft&scale=2&rotate=0; selected source SHA256 eb8f5d3d0217edbac9d33d6d27c67b3504cb475989384988bd4bc8039714232e",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-AP4",
+      "title": "S69 factual source AP4 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia600108.us.archive.org/BookReader/BookReaderImages.php?zip=/13/items/appletonscyclop04wilsuoft/appletonscyclop04wilsuoft_jp2.zip&file=appletonscyclop04wilsuoft_jp2/appletonscyclop04wilsuoft_0359.jp2&id=appletonscyclop04wilsuoft&scale=2&rotate=0; selected source SHA256 dbb26c9da3544a538e4bca2b406f8ee5402ddd0b22ebe865f289d918e43c7066",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-AP5",
+      "title": "S69 factual source AP5 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia601603.us.archive.org/BookReader/BookReaderImages.php?zip=/32/items/appletonscyclop05wilsuoft/appletonscyclop05wilsuoft_jp2.zip&file=appletonscyclop05wilsuoft_jp2/appletonscyclop05wilsuoft_0276.jp2&id=appletonscyclop05wilsuoft&scale=2&rotate=0; selected source SHA256 e41c73c71bdcd5e1cff02e791cb089aa0bf4a3340e7437349fe1efc8c8fa3abb",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-AP6",
+      "title": "S69 factual source AP6 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia601809.us.archive.org/BookReader/BookReaderImages.php?zip=/1/items/appletonscyclop06wilsuoft/appletonscyclop06wilsuoft_jp2.zip&file=appletonscyclop06wilsuoft_jp2/appletonscyclop06wilsuoft_0220.jp2&id=appletonscyclop06wilsuoft&scale=2&rotate=0; selected source SHA256 7e0091e32ad026836a725ced39488b436a936f6116c11a3fe1e0c3c9e8f5af52",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-BARTOW-UGA",
+      "title": "S69 factual source BARTOW-UGA (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://dlg.usg.edu/images/iiif/2/dlg%2Fdlg%2Falum%2Fdlg_alum_bartow-francis-stebbins%2Fdlg_alum_bartow-francis-stebbins-00001.jp2/full/full/0/default.jpg; selected source SHA256 aae218aa917bf9a43dcd5d92f9ded4a1efdb1fd947e822f781b09951ef613b1c",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-CALLAHAN",
+      "title": "S69 factual source CALLAHAN (edition and page receipts retained in S74 cast receipt)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/download/listofofficersof00unitrich/page/n706.jpg; selected source SHA256 9809d7d902bc60592a4933649d9ff84df8c83f666c26beb038ef06417d6484e2",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-CLARK1",
+      "title": "S69 factual source CLARK1 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia902807.us.archive.org/BookReader/BookReaderImages.php?zip=/25/items/historyofseventh01clar/historyofseventh01clar_jp2.zip&file=historyofseventh01clar_jp2/historyofseventh01clar_0283.jp2&id=historyofseventh01clar&scale=2&rotate=0; selected source SHA256 49daf890dce6c6620d5eda49b0719b61136c596faa6f346cf1b49a4afa8d29f7",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-CONGRESS",
+      "title": "S69 factual source CONGRESS (edition and page receipts retained in S74 cast receipt)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/download/biographicalcong00unit/page/n641.jpg; selected source SHA256 d8fe3f9b65a4a51b17ba0110e5b99fb830ed2708dfec611130cf264cd2615f6f",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-CULLUM-I",
+      "title": "S69 factual source CULLUM-I (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/download/biographicalreg00gradgoog/page/n679.jpg; selected source SHA256 efef4e1498fe3386bf22ad81c0d4eee6b55f0e128721f72e3b80650d5aa47503",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-CULLUM-II",
+      "title": "S69 factual source CULLUM-II (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/download/biographicalregi02bost/page/n317.jpg; selected source SHA256 83aa5142113e032a8d625ce3c6c288d1c8e0cb2b2f70ea31df86c6ec2ba41b0b",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-DYER",
+      "title": "S69 factual source DYER (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/08697590.3359.emory.edu; selected source SHA256 cc583717ae439f318593c98d8372820c5eba68f1871c82deb9339ed66160ece0",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-HEITMAN",
+      "title": "S69 factual source HEITMAN (edition and page receipts retained in S74 cast receipt)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/download/historicalregist01heitrich/page/n1045.jpg; selected source SHA256 52a47c42a17a2e67b6425f7460ad0a5cd2972545a8136cdb9fa3c31920308d89",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-NJ-MANUAL",
+      "title": "S69 factual source NJ-MANUAL (edition and page receipts retained in S74 cast receipt)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://dspace.njstatelib.org/server/api/core/bitstreams/1a74314e-d0f9-4174-978a-04c48ed1926b/content; selected source SHA256 9f7298c48070f9aa0a516183c828d0fce2af6d7c2639e4c33ccad1d5a52c9f65",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-NY37",
+      "title": "S69 factual source NY37 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://museum.dmna.ny.gov/application/files/5915/5059/8950/37th_Infantry_CW_Roster.pdf; selected source SHA256 b456c2d6fb281c3843d871067f95aa37966c3784d43d9754224811ed7e58e69d",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-OR-I-2",
+      "title": "S69 factual source OR-I-2 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/warofrebellion02secrrich; selected source SHA256 7b08e050fcc6ca0a86cb69bdb9398e6dc81f5ad781a9bdf364e17f726fa0427c",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-OR-I-51-1",
+      "title": "S69 factual source OR-I-51-1 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/warofrebellion511unit; selected source SHA256 72ea18ef4a1ab3d7cde883bc7e7b88ba40a8aa484196b9c736bf2ced5ebfb2fe",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-RUNYON-OBIT",
+      "title": "S69 factual source RUNYON-OBIT (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.cadl.org/ICN1896-01-30.pdf; selected source SHA256 48f2b807e4d79109f586c721bf71bb51ec84096b35224c9c31c48c2f1ad23eca",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-UA8",
+      "title": "S69 factual source UA8 (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia601404.us.archive.org/BookReader/BookReaderImages.php?zip=/15/items/unionarmyhistory08madi/unionarmyhistory08madi_jp2.zip&file=unionarmyhistory08madi_jp2/unionarmyhistory08madi_0177.jp2&id=unionarmyhistory08madi&scale=2&rotate=0; selected source SHA256 3d4956a755e3724a0d411f9769aac370272812d447de90089d96bcf65f8c0dd9",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-UNION-LEAGUE",
+      "title": "S69 factual source UNION-LEAGUE (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ppolinks.com/ulheritage/1805_060_021A.pdf; selected source SHA256 44987f9aafa7e7a44af01e9be0d7c7d280a3c4c6d1b4cf6827179359286185ec",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S69-YALE",
+      "title": "S69 factual source YALE (edition and page receipts retained in S74 cast receipt)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ead-pdfs.library.yale.edu/5714.pdf; selected source SHA256 a1f81b57e409e76c40d352f912e886a581516e911e7411b002e89a5f06e7d388",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S72-OR",
+      "title": "Official Records, series I, volumes II, V and LI part 1; S72 settled commander signatures and indexes",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "Cornell Official Records; S72/commander-identities.csv cites each printed page; middle initials remain unexpanded",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S74-MODEL",
+      "title": "S74 generated officer pool [I], under 0020 and the lead brigade-post ruling, 23 November 2026",
+      "kind": "own-work",
+      "licence": "own-work",
+      "basis": null,
+      "copyUsed": "packs/union-1861/source/world/people.csv, explicitly fictional role label only; checked against the named S66/S69/S72 cast",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S76-ME AG 1861",
+      "title": "John L. Hodsdon, Maine Adjutant General report for 1861 (Augusta: Stevens & Sayward, 1862), with appendices",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://lldc.mainelegislature.org/Open/Rpts/PubDocs/PubDocs1862v1/PD1862v1_00E.pdf; selected pages and hashes: docs/audit/s81-evidence/source-reading.json",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S76-RI register excerpt",
+      "title": "Rhode Island Adjutant General, Official Register of Rhode Island Officers and Soldiers (1866), digitized excerpt covering First and Second infantry only",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/details/officialregister00rhod; selected pages and hashes: docs/audit/s81-evidence/source-reading.json",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S80-AP1",
+      "title": "Appletons’ Cyclopaedia of American Biography, I",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://ia903107.us.archive.org/BookReader/BookReaderImages.php?zip=/7/items/appletonscyclop01wilsuoft/appletonscyclop01wilsuoft_jp2.zip&file=appletonscyclop01wilsuoft_jp2/appletonscyclop01wilsuoft_0096.jp2&id=appletonscyclop01wilsuoft&scale=2&rotate=0; selected page/hash receipts: docs/audit/s82-evidence/source-reading.json",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S80-HEITMAN",
+      "title": "F. B. Heitman, Historical Register, I (1903)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://archive.org/download/historicalregist01heitrich/page/n171.jpg; selected page/hash receipts: docs/audit/s82-evidence/source-reading.json",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S80-JCC-I",
+      "title": "Journal of the Confederate Congress, I (1904)",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://archive.org/download/journalofcongres00conf/page/n315.jpg; selected page/hash receipts: docs/audit/s82-evidence/source-reading.json",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S80-OR-I-VI",
+      "title": "Official Records I-VI",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://archive.org/details/warofrebellion06unit/page/n12; selected page/hash receipts: docs/audit/s82-evidence/source-reading.json",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S80-OR-IV-I",
+      "title": "Official Records IV-I, Pickens to Walker, June30,1861",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "government-work",
+      "copyUsed": "https://archive.org/download/cu31924079579524/page/n428.jpg; selected page/hash receipts: docs/audit/s82-evidence/source-reading.json",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S80-WALKER",
+      "title": "C. Irvine Walker, The Life of Lieutenant General Richard Heron Anderson (1917)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/download/lifeoflieutenant01walk/page/n27.jpg; selected page/hash receipts: docs/audit/s82-evidence/source-reading.json",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S80-WRIGHT",
+      "title": "M. J. Wright, General Officers of the Confederate Army (1911)",
+      "kind": "secondary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "https://archive.org/download/generalofficers00wrigrich/page/n31.jpg; selected page/hash receipts: docs/audit/s82-evidence/source-reading.json",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

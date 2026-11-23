@@ -1,0 +1,3987 @@
+[
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_alabama",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "courier"
+    },
+    "reportedDonor": {
+      "post": "st_gov_alabama",
+      "holder": "moore_andrew_b",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 0,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 0,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 2000,
+      "strengthReport": {
+        "source": "m.31.moore_andrew_b.davis_jefferson.return.st_gov_alabama",
+        "author": "moore_andrew_b",
+        "asOfDay": 31
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 37,
+        "id": "m.37.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama|moore_andrew_b",
+        "before": null,
+        "after": {
+          "respOrder": "m.37.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "respPerson": "moore_andrew_b",
+          "respPost": "st_gov_alabama",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 37,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 50,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 50
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_georgia",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_georgia",
+      "holder": "brown_joseph_e",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 3,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 1,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 2000,
+      "strengthReport": {
+        "source": "m.21.brown_joseph_e.davis_jefferson.return.st_gov_georgia",
+        "author": "brown_joseph_e",
+        "asOfDay": 21
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 37,
+        "id": "m.37.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+        "before": null,
+        "after": {
+          "respOrder": "m.37.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "respPerson": "brown_joseph_e",
+          "respPost": "st_gov_georgia",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 37,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 245,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 200
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 45
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_mississippi",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_mississippi",
+      "holder": "pettus_john_j",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 1500,
+      "strengthReport": {
+        "source": "m.21.pettus_john_j.davis_jefferson.return.st_gov_mississippi",
+        "author": "pettus_john_j",
+        "asOfDay": 21
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 37,
+        "id": "m.37.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi|pettus_john_j",
+        "before": null,
+        "after": {
+          "respOrder": "m.37.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "respPerson": "pettus_john_j",
+          "respPost": "st_gov_mississippi",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 37,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 41,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 41
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_south_carolina",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_south_carolina",
+      "holder": "pickens_francis_w",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 3000,
+      "strengthReport": {
+        "source": "m.21.pickens_francis_w.davis_jefferson.return.st_gov_south_carolina",
+        "author": "pickens_francis_w",
+        "asOfDay": 21
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 37,
+        "id": "m.37.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina|pickens_francis_w",
+        "before": null,
+        "after": {
+          "respOrder": "m.37.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina",
+          "respPerson": "pickens_francis_w",
+          "respPost": "st_gov_south_carolina",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 37,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 43,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 43
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 37,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_texas",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_texas",
+      "holder": "clark_edward",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 9,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 4,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 1000,
+      "strengthReport": {
+        "source": "m.11.clark_edward.davis_jefferson.return.st_gov_texas",
+        "author": "clark_edward",
+        "asOfDay": 11
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 37,
+        "id": "m.37.davis_jefferson.clark_edward.verb.transfer.st_gov_texas|clark_edward",
+        "before": null,
+        "after": {
+          "respOrder": "m.37.davis_jefferson.clark_edward.verb.transfer.st_gov_texas",
+          "respPerson": "clark_edward",
+          "respPost": "st_gov_texas",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 37,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 22,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 22
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 47,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_connecticut",
+      "to": "us_dc_militia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_connecticut",
+      "holder": "buckingham_william_a",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 47,
+        "id": "m.47.lincoln_abraham.buckingham_william_a.verb.transfer.st_gov_connecticut|buckingham_william_a",
+        "before": null,
+        "after": {
+          "respOrder": "m.47.lincoln_abraham.buckingham_william_a.verb.transfer.st_gov_connecticut",
+          "respPerson": "buckingham_william_a",
+          "respPost": "st_gov_connecticut",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 47,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 35,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 35
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 47,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_indiana",
+      "to": "us_dc_militia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_indiana",
+      "holder": "morton_oliver_h_p_t",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 8,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 4,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 47,
+        "id": "m.47.lincoln_abraham.morton_oliver_h_p_t.verb.transfer.st_gov_indiana|morton_oliver_h_p_t",
+        "before": null,
+        "after": {
+          "respOrder": "m.47.lincoln_abraham.morton_oliver_h_p_t.verb.transfer.st_gov_indiana",
+          "respPerson": "morton_oliver_h_p_t",
+          "respPost": "st_gov_indiana",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 47,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 18,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 18
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 47,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_massachusetts",
+      "to": "us_dc_militia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_massachusetts",
+      "holder": "andrew_john_a",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 47,
+        "id": "m.47.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts|andrew_john_a",
+        "before": null,
+        "after": {
+          "respOrder": "m.47.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts",
+          "respPerson": "andrew_john_a",
+          "respPost": "st_gov_massachusetts",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 47,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 123,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 90
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 33
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "trusts_leader"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "trusts_leader"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 47,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_new_hampshire",
+      "to": "us_dc_militia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_new_hampshire",
+      "holder": "goodwin_ichabod",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 47,
+        "id": "m.47.lincoln_abraham.goodwin_ichabod.verb.transfer.st_gov_new_hampshire|goodwin_ichabod",
+        "before": null,
+        "after": {
+          "respOrder": "m.47.lincoln_abraham.goodwin_ichabod.verb.transfer.st_gov_new_hampshire",
+          "respPerson": "goodwin_ichabod",
+          "respPost": "st_gov_new_hampshire",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 47,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 41,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 41
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 50,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_new_york",
+      "to": "us_dc_militia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_new_york",
+      "holder": "morgan_edwin_d",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 50,
+        "id": "m.50.lincoln_abraham.morgan_edwin_d.verb.transfer.st_gov_new_york|morgan_edwin_d",
+        "before": null,
+        "after": {
+          "respOrder": "m.50.lincoln_abraham.morgan_edwin_d.verb.transfer.st_gov_new_york",
+          "respPerson": "morgan_edwin_d",
+          "respPost": "st_gov_new_york",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 50,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 30,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 30
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 50,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_rhode_island",
+      "to": "us_dc_militia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_rhode_island",
+      "holder": "sprague_william",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 50,
+        "id": "m.50.lincoln_abraham.sprague_william.verb.transfer.st_gov_rhode_island|sprague_william",
+        "before": null,
+        "after": {
+          "respOrder": "m.50.lincoln_abraham.sprague_william.verb.transfer.st_gov_rhode_island",
+          "respPerson": "sprague_william",
+          "respPost": "st_gov_rhode_island",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 50,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 30,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 30
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 50,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_wisconsin",
+      "to": "us_dc_militia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_wisconsin",
+      "holder": "randall_alexander_w",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 6,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 3,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 50,
+        "id": "m.50.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin|randall_alexander_w",
+        "before": null,
+        "after": {
+          "respOrder": "m.50.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin",
+          "respPerson": "randall_alexander_w",
+          "respPost": "st_gov_wisconsin",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 50,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 26,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 26
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 54,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_alabama",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "courier"
+    },
+    "reportedDonor": {
+      "post": "st_gov_alabama",
+      "holder": "moore_andrew_b",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 0,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 0,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 2000,
+      "strengthReport": {
+        "source": "m.31.moore_andrew_b.davis_jefferson.return.st_gov_alabama",
+        "author": "moore_andrew_b",
+        "asOfDay": 31
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 54,
+        "id": "m.54.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama|moore_andrew_b",
+        "before": null,
+        "after": {
+          "respOrder": "m.54.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "respPerson": "moore_andrew_b",
+          "respPost": "st_gov_alabama",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 54,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 50,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 50
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 54,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_georgia",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_georgia",
+      "holder": "brown_joseph_e",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 3,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 1,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 2000,
+      "strengthReport": {
+        "source": "m.31.brown_joseph_e.davis_jefferson.return.st_gov_georgia",
+        "author": "brown_joseph_e",
+        "asOfDay": 31
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 54,
+        "id": "m.54.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+        "before": null,
+        "after": {
+          "respOrder": "m.54.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "respPerson": "brown_joseph_e",
+          "respPost": "st_gov_georgia",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 54,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 245,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 200
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 45
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 54,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_mississippi",
+      "to": "cs_cmd_charleston",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_mississippi",
+      "holder": "pettus_john_j",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 1500,
+      "strengthReport": {
+        "source": "m.31.pettus_john_j.davis_jefferson.return.st_gov_mississippi",
+        "author": "pettus_john_j",
+        "asOfDay": 31
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 54,
+        "id": "m.54.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi|pettus_john_j",
+        "before": null,
+        "after": {
+          "respOrder": "m.54.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "respPerson": "pettus_john_j",
+          "respPost": "st_gov_mississippi",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 54,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 41,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 41
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 57,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_pennsylvania",
+      "to": "us_dept_pennsylvania",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_pennsylvania",
+      "holder": "curtin_andrew_g",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 4,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 57,
+        "id": "m.57.lincoln_abraham.curtin_andrew_g.verb.transfer.st_gov_pennsylvania|curtin_andrew_g",
+        "before": null,
+        "after": {
+          "respOrder": "m.57.lincoln_abraham.curtin_andrew_g.verb.transfer.st_gov_pennsylvania",
+          "respPerson": "curtin_andrew_g",
+          "respPost": "st_gov_pennsylvania",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 57,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 33,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 33
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_va_harpers_ferry",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "courier"
+    },
+    "reportedDonor": {
+      "post": "st_va_harpers_ferry",
+      "holder": "jackson_thomas_j",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 6,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 3,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 6,
+          "price": 0
+        }
+      ],
+      "men": 0,
+      "strengthReport": {
+        "source": "m.85.letcher_john.davis_jefferson.word.st_va_harpers_ferry",
+        "author": "letcher_john",
+        "asOfDay": 85
+      },
+      "raising": false,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 94,
+        "id": "m.87.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry|jackson_thomas_j",
+        "before": null,
+        "after": {
+          "respOrder": "m.87.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry",
+          "respPerson": "jackson_thomas_j",
+          "respPost": "st_va_harpers_ferry",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 94,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 21,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 21
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_connecticut",
+      "to": "us_dept_northeastern_virginia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_connecticut",
+      "holder": "buckingham_william_a",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 87,
+        "id": "m.87.lincoln_abraham.buckingham_william_a.verb.transfer.st_gov_connecticut|buckingham_william_a",
+        "before": null,
+        "after": {
+          "respOrder": "m.87.lincoln_abraham.buckingham_william_a.verb.transfer.st_gov_connecticut",
+          "respPerson": "buckingham_william_a",
+          "respPost": "st_gov_connecticut",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 87,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 35,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 35
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_maine",
+      "to": "us_dept_northeastern_virginia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_maine",
+      "holder": "washburn_israel",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 1000,
+      "strengthReport": {
+        "source": "m.71.washburn_israel.lincoln_abraham.return.st_gov_maine",
+        "author": "washburn_israel",
+        "asOfDay": 71
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 87,
+        "id": "m.87.lincoln_abraham.washburn_israel.verb.transfer.st_gov_maine|washburn_israel",
+        "before": null,
+        "after": {
+          "respOrder": "m.87.lincoln_abraham.washburn_israel.verb.transfer.st_gov_maine",
+          "respPerson": "washburn_israel",
+          "respPost": "st_gov_maine",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 87,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 40,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 40
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_massachusetts",
+      "to": "us_dept_northeastern_virginia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_massachusetts",
+      "holder": "andrew_john_a",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 87,
+        "id": "m.87.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts|andrew_john_a",
+        "before": null,
+        "after": {
+          "respOrder": "m.87.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts",
+          "respPerson": "andrew_john_a",
+          "respPost": "st_gov_massachusetts",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 87,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 123,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 90
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 33
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "trusts_leader"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "trusts_leader"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_new_hampshire",
+      "to": "us_dept_northeastern_virginia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_new_hampshire",
+      "holder": "goodwin_ichabod",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 87,
+        "id": "m.87.lincoln_abraham.goodwin_ichabod.verb.transfer.st_gov_new_hampshire|goodwin_ichabod",
+        "before": null,
+        "after": {
+          "respOrder": "m.87.lincoln_abraham.goodwin_ichabod.verb.transfer.st_gov_new_hampshire",
+          "respPerson": "goodwin_ichabod",
+          "respPost": "st_gov_new_hampshire",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 87,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 41,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 41
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_new_york",
+      "to": "us_dept_northeastern_virginia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_new_york",
+      "holder": "morgan_edwin_d",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 38000,
+      "strengthReport": {
+        "source": "m.71.morgan_edwin_d.lincoln_abraham.return.st_gov_new_york",
+        "author": "morgan_edwin_d",
+        "asOfDay": 71
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 87,
+        "id": "m.87.lincoln_abraham.morgan_edwin_d.verb.transfer.st_gov_new_york|morgan_edwin_d",
+        "before": null,
+        "after": {
+          "respOrder": "m.87.lincoln_abraham.morgan_edwin_d.verb.transfer.st_gov_new_york",
+          "respPerson": "morgan_edwin_d",
+          "respPost": "st_gov_new_york",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 87,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 30,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 30
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_rhode_island",
+      "to": "us_dept_northeastern_virginia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_rhode_island",
+      "holder": "sprague_william",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 87,
+        "id": "m.87.lincoln_abraham.sprague_william.verb.transfer.st_gov_rhode_island|sprague_william",
+        "before": null,
+        "after": {
+          "respOrder": "m.87.lincoln_abraham.sprague_william.verb.transfer.st_gov_rhode_island",
+          "respPerson": "sprague_william",
+          "respPost": "st_gov_rhode_island",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 87,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 30,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 30
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 87,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_wisconsin",
+      "to": "us_dept_pennsylvania",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_wisconsin",
+      "holder": "randall_alexander_w",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 6,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 3,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 87,
+        "id": "m.87.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin|randall_alexander_w",
+        "before": null,
+        "after": {
+          "respOrder": "m.87.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin",
+          "respPerson": "randall_alexander_w",
+          "respPost": "st_gov_wisconsin",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 87,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 26,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 26
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "shielded_by_standing"
+            }
+          ],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 88,
+    "seat": "seat:lincoln_abraham",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_maine",
+      "to": "us_dept_northeastern_virginia",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_maine",
+      "holder": "washburn_israel",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 5,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 0,
+          "price": 0
+        }
+      ],
+      "men": 1000,
+      "strengthReport": {
+        "source": "m.71.washburn_israel.lincoln_abraham.return.st_gov_maine",
+        "author": "washburn_israel",
+        "asOfDay": 71
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 88,
+        "id": "m.88.lincoln_abraham.washburn_israel.verb.transfer.st_gov_maine|washburn_israel",
+        "before": null,
+        "after": {
+          "respOrder": "m.88.lincoln_abraham.washburn_israel.verb.transfer.st_gov_maine",
+          "respPerson": "washburn_israel",
+          "respPost": "st_gov_maine",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 88,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 40,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 40
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 98,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_va_potomac",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "courier"
+    },
+    "reportedDonor": {
+      "post": "st_va_potomac",
+      "holder": "cocke_philip_st_george",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 3,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 1,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 3,
+          "price": 0
+        }
+      ],
+      "men": 0,
+      "strengthReport": {
+        "source": "m.92.letcher_john.davis_jefferson.word.st_va_potomac",
+        "author": "letcher_john",
+        "asOfDay": 92
+      },
+      "raising": false,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 102,
+        "id": "m.98.davis_jefferson.cocke_philip_st_george.verb.transfer.st_va_potomac|cocke_philip_st_george",
+        "before": null,
+        "after": {
+          "respOrder": "m.98.davis_jefferson.cocke_philip_st_george.verb.transfer.st_va_potomac",
+          "respPerson": "cocke_philip_st_george",
+          "respPost": "st_va_potomac",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 102,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 27,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 27
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 125,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_tennessee",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_tennessee",
+      "holder": "harris_isham_g",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 12,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 6,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 129,
+        "id": "m.125.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+        "before": null,
+        "after": {
+          "respOrder": "m.125.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "respPerson": "harris_isham_g",
+          "respPost": "st_gov_tennessee",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 129,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 10,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 10
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 128,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_georgia",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_georgia",
+      "holder": "brown_joseph_e",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 8,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 4,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 132,
+        "id": "m.128.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+        "before": null,
+        "after": {
+          "respOrder": "m.128.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "respPerson": "brown_joseph_e",
+          "respPost": "st_gov_georgia",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 132,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 222,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 200
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 22
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 130,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_tennessee",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_tennessee",
+      "holder": "harris_isham_g",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 12,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 6,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 134,
+        "id": "m.130.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+        "before": null,
+        "after": {
+          "respOrder": "m.130.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "respPerson": "harris_isham_g",
+          "respPost": "st_gov_tennessee",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 134,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 10,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 10
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 131,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_alabama",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_alabama",
+      "holder": "moore_andrew_b",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 11,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 5,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 135,
+        "id": "m.131.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama|moore_andrew_b",
+        "before": null,
+        "after": {
+          "respOrder": "m.131.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "respPerson": "moore_andrew_b",
+          "respPost": "st_gov_alabama",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 135,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 10,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 10
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 133,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_georgia",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_georgia",
+      "holder": "brown_joseph_e",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 8,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 4,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 137,
+        "id": "m.133.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+        "before": null,
+        "after": {
+          "respOrder": "m.133.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "respPerson": "brown_joseph_e",
+          "respPost": "st_gov_georgia",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 137,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 222,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 200
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 22
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 134,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_north_carolina",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "courier"
+    },
+    "reportedDonor": {
+      "post": "st_gov_north_carolina",
+      "holder": "ellis_john_w",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 4,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 2,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": 16000,
+      "strengthReport": {
+        "source": "m.121.ellis_john_w.davis_jefferson.return.st_gov_north_carolina",
+        "author": "ellis_john_w",
+        "asOfDay": 121
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 138,
+        "id": "m.134.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina|ellis_john_w",
+        "before": null,
+        "after": {
+          "respOrder": "m.134.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina",
+          "respPerson": "ellis_john_w",
+          "respPost": "st_gov_north_carolina",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 138,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 28,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 28
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 135,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_tennessee",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_tennessee",
+      "holder": "harris_isham_g",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 12,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 6,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 139,
+        "id": "m.135.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+        "before": null,
+        "after": {
+          "respOrder": "m.135.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "respPerson": "harris_isham_g",
+          "respPost": "st_gov_tennessee",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 139,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 10,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 10
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 136,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_alabama",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_alabama",
+      "holder": "moore_andrew_b",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 11,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 5,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 140,
+        "id": "m.136.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama|moore_andrew_b",
+        "before": null,
+        "after": {
+          "respOrder": "m.136.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "respPerson": "moore_andrew_b",
+          "respPost": "st_gov_alabama",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 140,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 10,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 10
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 137,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_mississippi",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_mississippi",
+      "holder": "pettus_john_j",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 12,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 6,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 141,
+        "id": "m.137.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi|pettus_john_j",
+        "before": null,
+        "after": {
+          "respOrder": "m.137.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "respPerson": "pettus_john_j",
+          "respPost": "st_gov_mississippi",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 141,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 10,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 10
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 138,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_georgia",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_georgia",
+      "holder": "brown_joseph_e",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 8,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 4,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 142,
+        "id": "m.138.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+        "before": null,
+        "after": {
+          "respOrder": "m.138.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "respPerson": "brown_joseph_e",
+          "respPost": "st_gov_georgia",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 142,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 222,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 200
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 22
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 140,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_south_carolina",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_south_carolina",
+      "holder": "pickens_francis_w",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 7,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 3,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 144,
+        "id": "m.140.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina|pickens_francis_w",
+        "before": null,
+        "after": {
+          "respOrder": "m.140.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina",
+          "respPerson": "pickens_francis_w",
+          "respPost": "st_gov_south_carolina",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 144,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 32,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 32
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 140,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_tennessee",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_tennessee",
+      "holder": "harris_isham_g",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 12,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 6,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 144,
+        "id": "m.140.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+        "before": null,
+        "after": {
+          "respOrder": "m.140.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "respPerson": "harris_isham_g",
+          "respPost": "st_gov_tennessee",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 144,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 10,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 10
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 141,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_alabama",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_alabama",
+      "holder": "moore_andrew_b",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 11,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 5,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 145,
+        "id": "m.141.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama|moore_andrew_b",
+        "before": null,
+        "after": {
+          "respOrder": "m.141.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "respPerson": "moore_andrew_b",
+          "respPost": "st_gov_alabama",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 145,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 10,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 10
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 142,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_mississippi",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_mississippi",
+      "holder": "pettus_john_j",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 12,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 6,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 146,
+        "id": "m.142.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi|pettus_john_j",
+        "before": null,
+        "after": {
+          "respOrder": "m.142.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "respPerson": "pettus_john_j",
+          "respPost": "st_gov_mississippi",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 146,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 10,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 10
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 143,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_georgia",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_georgia",
+      "holder": "brown_joseph_e",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 8,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 4,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": [
+      {
+        "day": 147,
+        "id": "m.143.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+        "before": null,
+        "after": {
+          "respOrder": "m.143.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "respPerson": "brown_joseph_e",
+          "respPost": "st_gov_georgia",
+          "respRole": "addressee",
+          "respKind": "verb:transfer",
+          "respDay": 147,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 222,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 200
+            },
+            {
+              "respTermName": "temperament",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 22
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "values_honoured",
+              "value": "duty"
+            }
+          ],
+          "respConditions": []
+        }
+      }
+    ]
+  },
+  {
+    "day": 145,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_tennessee",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_tennessee",
+      "holder": "harris_isham_g",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 12,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 6,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": []
+  },
+  {
+    "day": 146,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_alabama",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_alabama",
+      "holder": "moore_andrew_b",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 11,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 5,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": []
+  },
+  {
+    "day": 147,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_mississippi",
+      "to": "cs_cmd_manassas",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_mississippi",
+      "holder": "pettus_john_j",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 12,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 6,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": null,
+      "strengthReport": null,
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": []
+  },
+  {
+    "day": 148,
+    "seat": "seat:davis_jefferson",
+    "command": {
+      "cmd": "transfer",
+      "from": "st_gov_georgia",
+      "to": "cs_cmd_harpers_ferry",
+      "force": "blocks",
+      "amount": 999,
+      "route": "wire"
+    },
+    "reportedDonor": {
+      "post": "st_gov_georgia",
+      "holder": "brown_joseph_e",
+      "relays": [],
+      "routes": [
+        {
+          "route": "courier",
+          "typicalDays": 8,
+          "price": 0
+        },
+        {
+          "route": "special-messenger",
+          "typicalDays": 4,
+          "price": 1
+        },
+        {
+          "route": "wire",
+          "typicalDays": 4,
+          "price": 0
+        }
+      ],
+      "men": 5000,
+      "strengthReport": {
+        "source": "m.131.brown_joseph_e.davis_jefferson.return.st_gov_georgia",
+        "author": "brown_joseph_e",
+        "asOfDay": 131
+      },
+      "raising": true,
+      "inTransit": []
+    },
+    "responses": []
+  }
+]

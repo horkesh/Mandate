@@ -1,0 +1,256 @@
+{
+  "correction-renewal-types": {
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.952
+  },
+  "correction-renewal-rules": {
+    "command": [
+      "node",
+      "node_modules/tsx/dist/cli.mjs",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.38
+  },
+  "correction-boundary": {
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.162
+  },
+  "pack-validate": {
+    "command": [
+      "node",
+      "node_modules/tsx/dist/cli.mjs",
+      "packages/cli/src/pack.ts",
+      "validate",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 1.452
+  },
+  "paired-writer-final": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/canon-receipts.test.ts",
+      "packages/kernel/test/s70-lots.test.ts",
+      "packages/kernel/test/s70-recruitment-lots.test.ts",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s70/paired-writer-final.json"
+    ],
+    "exit": 0,
+    "seconds": 6.231
+  },
+  "correction-renewal": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/enlistment-renewal.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/s70-recruitment-lots.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 6.66
+  },
+  "full-suite": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s70/full-suite.json"
+    ],
+    "exit": 1,
+    "seconds": 564.124
+  },
+  "reference-union": {
+    "command": [
+      "node",
+      "node_modules/tsx/dist/cli.mjs",
+      "runs/s70/references.ts",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 67.576
+  },
+  "correction-proof": {
+    "command": [
+      "node",
+      "node_modules/tsx/dist/cli.mjs",
+      "runs/s70/correction-proof.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.775
+  },
+  "reference-testbed": {
+    "command": [
+      "node",
+      "node_modules/tsx/dist/cli.mjs",
+      "runs/s70/references.ts",
+      "testbed"
+    ],
+    "exit": 0,
+    "seconds": 10.548
+  },
+  "fixture": {
+    "command": [
+      "node",
+      "node_modules/tsx/dist/cli.mjs",
+      "tools/make-save-fixture.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.892
+  },
+  "fixture-proof": {
+    "command": [
+      "node",
+      "node_modules/tsx/dist/cli.mjs",
+      "runs/s70/fixture-proof.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.039
+  },
+  "full_suite_result": {
+    "files_passed": 214,
+    "files_failed": 3,
+    "tests_passed": 2003,
+    "tests_failed": 4,
+    "tests_pending": 3,
+    "failures": [
+      {
+        "file": "C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts",
+        "name": "R86: the history months through the player\u2019s console (1A criterion 2) receives at least one hour-stamped battle dispatch by 31 July",
+        "messages": [
+          "AssertionError: expected false to be true // Object.is equality\n    at C:/Pyrrhic/sprint-july/packages/cli/test/console-session.test.ts:265:132\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+        ]
+      },
+      {
+        "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+        "name": "the done check on union-1861 at war and the testbed passes every Phase 0 criterion but the budget, which is a stopwatch",
+        "messages": [
+          "AssertionError: liveness: expected [ \u2026(18) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:47:114\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+        ]
+      },
+      {
+        "file": "C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts",
+        "name": "each criterion can fail (positive controls) liveness: a planted dead mechanic in a reference run fails the check",
+        "messages": [
+          "AssertionError: expected [ \u2026(18) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/done-check.test.ts:163:63\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+        ]
+      },
+      {
+        "file": "C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts",
+        "name": "the reference runs union-1861, war by decision, 148 days: every mechanic fires within its band",
+        "messages": [
+          "AssertionError: expected [ { \u2026(4) }, { \u2026(4) }, { \u2026(4) }, \u2026(15) ] to deeply equal []\n    at C:/Pyrrhic/sprint-july/packages/cli/test/liveness-gate.test.ts:81:48\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:1632:35\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:2801:26\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3338:20\n    at new Promise (<anonymous>)\n    at runWithCancel (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3333:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3318:20\n    at new Promise (<anonymous>)\n    at runWithTimeout (file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3276:10)\n    at file:///C:/Pyrrhic/sprint-july/node_modules/vitest/dist/chunks/run.CjdgFZiW.js:3922:64"
+        ]
+      }
+    ]
+  },
+  "same_failures_as_S68": true,
+  "licences_decisions": "Reuse S68 passes: dependency manifests/locks, licence checker and 106 decisions/index unchanged; ignored TS5 tooling is not a production dependency.",
+  "stopped_attempt": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s70/full-suite.json"
+    ],
+    "exit": 4294967295,
+    "seconds": 287.526
+  },
+  "reference_union_auxiliary_exit": "Original wrapper exit 1 retained: raw World hash was compared with compound CLI hash. Correct compound-envelope proof passes offline; kernel/replay/resume and 148 State projections already passed. No rerun.",
+  "post_suite_source": {
+    "changed": [
+      "packages/kernel/src/recruitment/renewal.ts"
+    ],
+    "expanded_pure_binding_body_exact": true,
+    "proof": "correction-proof.json",
+    "suite_and_Union_reference_reused": true,
+    "whole_tick_budget_not_certified_after_correction": true,
+    "return_guard_changes": [
+      "packages/kernel/test/s70-recruitment-lots.test.ts",
+      "packages/kernel/src/forces/enlistment.ts",
+      "packages/kernel/src/tick/recruitment.ts"
+    ],
+    "return_guard_proof": "return-suffix/receipt.json",
+    "return_guard_semantics": "Known aggregate return stays one unidentified lot; no identities are minted or replaced by a return. Already identified unknown-strength regiments may only confirm their own original nominal model quota.",
+    "full_reference_repeated": false
+  },
+  "final_typecheck": {
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.897
+  },
+  "final_rules": {
+    "command": [
+      "node",
+      "node_modules/tsx/dist/cli.mjs",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.658
+  },
+  "final_boundary": {
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.167
+  },
+  "return_guard": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s70-recruitment-lots.test.ts",
+      "packages/cli/test/state-forces.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s70/return-guard-final.json"
+    ],
+    "exit": 0,
+    "seconds": 6.793
+  },
+  "return_guard_result": {
+    "numPassedTests": 63,
+    "numFailedTests": 0
+  },
+  "return_suffix": {
+    "command": [
+      "node",
+      "node_modules/tsx/dist/cli.mjs",
+      "runs/s70/return-suffix.ts"
+    ],
+    "exit": 0,
+    "seconds": 43.028
+  }
+}

@@ -159,6 +159,15 @@ describe('a principal doing his historical jobs by his pack doctrine (lane 1.12)
     for (const day of [1, 2, 30, 90]) expect(quiet(principalOrders(menu, [], day))).toEqual([]);
   });
 
+  it('keeps a caused offensive pending after its date until news arrives, and sends it only once', () => {
+    const m = doctrine({ offensives: [{ post: post('near'), objective: region('r9'), day: 30, ready: false, issued: false }] });
+    expect(quiet(principalOrders(m, [], 35))).toEqual([]);
+    const ready = { ...m, doctrine: { ...m.doctrine, offensives: [{ ...m.doctrine.offensives[0]!, ready: true }] } };
+    expect(quiet(principalOrders(ready, [], 35))).toHaveLength(1);
+    expect(quiet(principalOrders({ ...ready, doctrine: { ...ready.doctrine, offensives: [{ ...ready.doctrine.offensives[0]!, issued: true }] } }, [], 36))).toEqual([]);
+    expect(quiet(principalOrders(ready, [], 29))).toEqual([]);
+  });
+
   it('keeps the peace until his side is at war (0064, 0066): nothing of his doctrine before the morning after', () => {
     const m = doctrine({ offensives: [{ post: post('near'), objective: region('r9'), day: 0 }], calls: [{ post: post('gov'), regiments: 2, termDays: 90, day: 0 }] });
     const raising = [{ post: post('gov'), holder: person('gov_holder'), routes: [{ route: 'courier' as const, typicalDays: 3, price: 0 }], called: false }];

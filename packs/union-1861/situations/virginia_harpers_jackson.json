@@ -1,0 +1,94 @@
+{
+  "id": "virginia_harpers_jackson",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.virginia_harpers_jackson.title",
+  "text": "situation.virginia_harpers_jackson.text",
+  "earliest": "1861-04-28",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 54
+      },
+      {
+        "flag": "virginia_seceded"
+      },
+      {
+        "holds": {
+          "post": "st_va_harpers_ferry",
+          "person": "harper_kenton"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "st_va_harpers_ferry",
+        "delta": 1,
+        "reason": "state-command-succession",
+        "side": null,
+        "succession": {
+          "to": "jackson_thomas_j",
+          "from": "harper_kenton"
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-called-out",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_harpers_militia",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "release": true
+        }
+      }
+    },
+    {
+      "propose": {
+        "owner": "recruitment",
+        "field": "state_forces",
+        "subject": "st_gov_virginia",
+        "delta": 1,
+        "reason": "state-forces-called-out",
+        "side": "confederate",
+        "stateForces": {
+          "id": "va_harpers_ferry",
+          "regiments": null,
+          "men": null,
+          "arm": "infantry",
+          "termDays": null,
+          "termUnknown": true,
+          "post": "st_va_harpers_ferry"
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative state military entry and command only; no secession motives, civilian conduct, security orders or protected-population effects."
+  },
+  "citations": [
+    {
+      "source": "OR",
+      "at": "I-2 pp.784-785, 27 April orders; p.787, Special Orders 7, 28 April: Harper and his militia relieved"
+    }
+  ],
+  "namedOnly": "The source records the state institution's act. No individual speech, motive or discretionary choice is invented."
+}

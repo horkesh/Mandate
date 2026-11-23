@@ -1,0 +1,15 @@
+{
+  "days": 148,
+  "duplicateLots": [],
+  "maxBlocks": {
+    "day": 132,
+    "blocks": 177
+  },
+  "finalBlocks": {
+    "day": 148,
+    "blocks": 157
+  },
+  "lotCountFinal": 243,
+  "confederateDailyBlockObservations": 3955,
+  "allDailyBlockObservations": 13694
+}

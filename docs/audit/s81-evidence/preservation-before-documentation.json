@@ -1,0 +1,27 @@
+{
+  "startingPaths": 2164,
+  "missing": [],
+  "protectedPaths": 926,
+  "protectedChanged": [],
+  "changedStartingPaths": [
+    "packages/cli/test/men-regions.test.ts",
+    "packages/kernel/src/command/command.ts",
+    "packages/kernel/src/forces/enlistment.ts",
+    "packages/kernel/src/movement/march.ts",
+    "packages/kernel/src/supply/supply.ts",
+    "packages/kernel/src/tick/recruitment.ts",
+    "packages/kernel/test/combat.test.ts",
+    "packages/kernel/test/s70-recruitment-lots.test.ts",
+    "packs/union-1861/PROVENANCE.json",
+    "packs/union-1861/data/world.json",
+    "packs/union-1861/situations/virginia_manassas_state_forces.json",
+    "packs/union-1861/source/world/regiments.json",
+    "packs/union-1861/strings/en.json",
+    "packs/union-1861/test/s74-cast-templates.test.ts",
+    "packs/union-1861/test/s78-rail.test.ts",
+    "packs/union-1861/test/virginia-dated-forces.test.ts",
+    "tools/rules/projection-derivations.json"
+  ],
+  "head": "febfd38ca2241e35e8ab1013857470b7c0e4b45f",
+  "branch": "sprint/july"
+}

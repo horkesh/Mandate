@@ -1,3 +1,6 @@
+import { patchBlock, observeBlock } from '../../kernel/test/support/lot-fixture.ts';
+import { enlistmentsOf } from '../../kernel/src/forces/enlistment.ts';
+import { forceTotals } from '../../kernel/src/forces/lots.ts';
 import { canonicalHash, decodeSave, encodeSave, ids, phase0 } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
 import { seatsWorld } from '../src/seats-world.ts';
@@ -36,13 +39,41 @@ describe('a state transfers its own forces by institutional notice', () => {
     const f = fixture();
     const r = run(f);
     expect(r.results[0]!.state.forceBlockStates[B('shire_infantry')]).toBeUndefined();
-    expect(r.results[1]!.state.forceBlockStates[B('shire_infantry')]).toMatchObject({ fbStrength: 2000, fbArm: 'infantry' });
+    expect(observeBlock(r.results[1]!.state.forceBlockStates[B('shire_infantry')]!)).toMatchObject({ fbStrength: 2000, fbArm: 'infantry' });
     expect(r.state.forceLocations[B('shire_infantry')]!.locRegion).toBe(f.state.postStates[post]!.postSeat);
     expect(r.state.forceAssignments[B('shire_infantry')]).toBe(post);
-    expect(r.state.forceEnlistments[B('shire_infantry')]).toMatchObject({ enlMusterDay: 2, enlEndsDay: 92, enlSourceAct: 'shire_transfer' });
+    expect(enlistmentsOf(r.state)[B('shire_infantry')]).toMatchObject({ enlMusterDay: 2, enlEndsDay: 92, enlSourceAct: 'shire_transfer' });
     expect(r.state.orderResponses).toEqual(f.state.orderResponses);
     expect(r.state.postLevies).toEqual({});
     expect(run(f).state).toEqual(r.state);
+  });
+  it('musters at its declared local command and transfers service without resetting the contingent', () => {
+    const f = fixture([effect(2000, { stateForces: { id: 'shire_infantry', regiments: 2, men: 2000, arm: 'infantry', termDays: 90, post: 'n_army_west' } })]);
+    const entered = run(f, 2).state;
+    const b = B('shire_infantry');
+    expect(entered.forceAssignments[b]).toBe('n_army_west');
+    expect(entered.forceLocations[b]!.locRegion).toBe(entered.postStates[ids.toId('post', 'n_army_west')]!.postSeat);
+    const previous = { ...entered, forceBlockStates: { ...entered.forceBlockStates, [b]: patchBlock({ ...entered.forceBlockStates[b]! }, { fbStrength: 1700, fbStragglers: 50 }) } };
+    const notice = { ...f.world.situations[0]!, id: S('shire_service'), event: { dayAtLeast: 3 }, effects: [effect(null, { stateForces: { id: 'shire_infantry', regiments: null, men: null, arm: 'infantry', termDays: null, transferTo: 'n_war' } })] } as unknown as phase0.SituationDef;
+    const next = run({ world: { ...f.world, situations: [notice] }, state: previous }, 3).state;
+    const control = run({ world: { ...f.world, situations: [] }, state: previous }, 3).state;
+    expect(next.forceBlockStates[b]).toEqual({ ...control.forceBlockStates[b], fbDepartment: 'n_war' });
+    expect(enlistmentsOf(next)[b]).toEqual(enlistmentsOf(previous)[b]);
+    expect(next.forceAssignments[b]).toEqual(previous.forceAssignments[b]);
+    expect(next.forceLocations[b]).toEqual(previous.forceLocations[b]);
+  });
+  it('does not create a missing contingent from a service-transfer notice', () => {
+    const r = run(fixture([effect(null, { stateForces: { id: 'shire_infantry', regiments: null, men: null, arm: 'infantry', termDays: null, transferTo: 'n_war' } })]));
+    expect(r.state.forceBlockStates[B('shire_infantry')]).toBeUndefined();
+  });
+  it('ends a separately identified militia contingent by its sourced relief, without inventing an enlistment term', () => {
+    const f = fixture([effect(null)]);
+    const entered = run(f, 2).state;
+    const notice = { ...f.world.situations[0]!, id: S('shire_relief'), event: { dayAtLeast: 3 }, effects: [effect(null, { stateForces: { id: 'shire_infantry', regiments: null, men: null, arm: 'infantry', termDays: null, release: true } })] } as unknown as phase0.SituationDef;
+    const next = run({ world: { ...f.world, situations: [notice] }, state: entered }, 3).state;
+    expect(next.forceBlockStates[B('shire_infantry')]).toBeUndefined();
+    expect(next.forceAssignments[B('shire_infantry')]).toBeUndefined();
+    expect(next.forceLocations[B('shire_infantry')]).toBeUndefined();
   });
   it('waits indefinitely without the secession cause', () => {
     const f = fixture();
@@ -53,20 +84,20 @@ describe('a state transfers its own forces by institutional notice', () => {
   it('does not turn a vacancy in the governor’s office into a veto of the state act', () => {
     const f = fixture();
     const r = run({ ...f, state: { ...f.state, postStates: { ...f.state.postStates, [post]: { ...f.state.postStates[post]!, postHolder: null } } } });
-    expect(r.state.forceBlockStates[B('shire_infantry')]!.fbStrength).toBe(2000);
-    expect(r.state.forceEnlistments[B('shire_infantry')]!.enlRaisedBy).toBeNull();
+    expect(forceTotals(r.state.forceBlockStates[B('shire_infantry')]!).fbStrength).toBe(2000);
+    expect(enlistmentsOf(r.state)[B('shire_infantry')]!.enlRaisedBy).toBeNull();
   });
   it('retains unknown strength and unknown original expiry explicitly', () => {
     const r = run(fixture([effect(null, { stateForces: { id: 'shire_infantry', regiments: null, men: null, arm: 'infantry', termDays: null, termUnknown: true } })]));
-    expect(r.state.forceBlockStates[B('shire_infantry')]!.fbStrength).toBeNull();
-    expect(r.state.forceEnlistments[B('shire_infantry')]).toMatchObject({ enlEndsDay: null, enlTermUnknown: true });
+    expect(forceTotals(r.state.forceBlockStates[B('shire_infantry')]!).fbStrength).toBeNull();
+    expect(enlistmentsOf(r.state)[B('shire_infantry')]).toMatchObject({ enlEndsDay: null, enlTermUnknown: true });
   });
   it('a later quantified return fills the same block without renewing or relocating it', () => {
     const f = fixture([effect(null)]);
     const count = { ...f.world.situations[0]!, id: S('shire_return'), event: { all: [{ dayAtLeast: 3 }, { fired: S('shire_transfer') }] }, effects: [effect(2000)] } as phase0.SituationDef;
     const r = run({ ...f, world: { ...f.world, situations: [...f.world.situations, count] } }, 4);
-    expect(r.state.forceBlockStates[B('shire_infantry')]!.fbStrength).toBe(2000);
-    expect(r.state.forceEnlistments[B('shire_infantry')]).toMatchObject({ enlMusterDay: 2, enlEndsDay: 92, enlSourceAct: 'shire_transfer' });
+    expect(forceTotals(r.state.forceBlockStates[B('shire_infantry')]!).fbStrength).toBe(2000);
+    expect(enlistmentsOf(r.state)[B('shire_infantry')]).toMatchObject({ enlMusterDay: 2, enlEndsDay: 92, enlSourceAct: 'shire_transfer' });
     expect(Object.keys(r.state.forceBlockStates).filter(b => b.startsWith('state-forces.'))).toHaveLength(1);
   });
   it('a later return cannot recreate a contingent that has left play', () => {
@@ -101,14 +132,14 @@ describe('a state transfers its own forces by institutional notice', () => {
     expect(call.rejections).toEqual([]);
     let state = call.state;
     while (state.stateDay < 20) state = phase0.tick(world, state, [], { freeze: true }).state;
-    const previous = Object.entries(state.forceEnlistments).filter(([, e]) => e.enlCallId === 'shire_prior');
+    const previous = Object.entries(enlistmentsOf(state)).filter(([, e]) => e.enlCallId === 'shire_prior');
     expect(previous).toHaveLength(1);
     const [id, enlistment] = previous[0]!;
-    const previousMen = state.forceBlockStates[id as keyof typeof state.forceBlockStates]!.fbStrength!;
+    const previousMen = forceTotals(state.forceBlockStates[id as keyof typeof state.forceBlockStates]!).fbStrength!;
     const e = effect(4000, { stateForces: { id: 'shire_infantry', regiments: 4, men: 4000, arm: 'infantry', termDays: null, termUnknown: true, includesCalls: ['shire_prior'] } });
     const notice = { ...f.world.situations[0]!, effects: [e] } as phase0.SituationDef;
     const r = run({ world: { ...world, situations: [notice] }, state: { ...state, orderResponses: {} } }, 21);
-    expect(r.state.forceBlockStates[B('shire_infantry')]!.fbStrength).toBe(4000 - previousMen);
-    expect(r.state.forceEnlistments[id as keyof typeof state.forceEnlistments]).toEqual(enlistment);
+    expect(forceTotals(r.state.forceBlockStates[B('shire_infantry')]!).fbStrength).toBe(4000 - previousMen);
+    expect(enlistmentsOf(r.state)[id as keyof ReturnType<typeof enlistmentsOf>]).toEqual(enlistment);
   });
 });

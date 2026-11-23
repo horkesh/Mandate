@@ -1,0 +1,14 @@
+{
+  "commitAttempted": false,
+  "hookAttempted": false,
+  "reason": "The complete suite has five fresh failing assertions in unchanged July/liveness gates, plus unresolved contact and concentration. The unchanged required hook cannot pass; no expensive unchanged retry or bypass.",
+  "fullSuiteExit": 1,
+  "fullSuiteFailures": 5,
+  "livenessFailures": 12,
+  "unknownStrengthDayFailures": 7,
+  "doneCheck": "Not run: --milestone 1a is conditional on a passing-hook commit.",
+  "bandsRecentered": false,
+  "headUnchanged": true,
+  "branch": "sprint/july",
+  "disclosedAbortedStartup": "runs/s78/full-suite-startup-interrupted.json"
+}

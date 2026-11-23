@@ -1,0 +1,17 @@
+{
+  "changedCatalogueIds": [
+    "me_3_infantry",
+    "me_4_infantry",
+    "me_5_infantry",
+    "me_6_infantry",
+    "ri_1_infantry",
+    "ri_2_infantry",
+    "la_washington_battalion_artillery"
+  ],
+  "otherRecordsExact": false,
+  "Anderson": {
+    "disposition": "deferred per S81: S80 not committed when data step reached",
+    "head": "2728729ea474eb38e72a0639e187e6b2b8f82de0",
+    "status": "?? docs/research/S80/\n?? notes/sprint-S80-anderson.md\n"
+  }
+}

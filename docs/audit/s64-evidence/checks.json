@@ -1,0 +1,155 @@
+{
+  "npm-ci": {
+    "exit": 0,
+    "seconds": 5.691168499994092
+  },
+  "inclusion-red": {
+    "exit": 1
+  },
+  "inclusion-green": {
+    "exit": 1,
+    "seconds": 24.870853100001113
+  },
+  "focused-final": {
+    "exit": 0,
+    "seconds": 30.925478699995438
+  },
+  "typecheck-final": {
+    "exit": 0,
+    "seconds": 29.903077700000722
+  },
+  "pack-current": {
+    "exit": 0,
+    "seconds": 9.927848799998173
+  },
+  "generate": {
+    "exit": 0,
+    "seconds": 4.927831699984381
+  },
+  "schemas": {
+    "exit": 0,
+    "seconds": 1.6629335000179708
+  },
+  "check": {
+    "exit": 1,
+    "seconds": 5.852071300003445,
+    "command": [
+      "npm.cmd",
+      "run",
+      "check"
+    ]
+  },
+  "rules": {
+    "exit": 1,
+    "seconds": 4.114266799995676
+  },
+  "boundary": {
+    "exit": 0,
+    "seconds": 1.1458339000237174,
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ]
+  },
+  "licences": {
+    "exit": 0,
+    "seconds": 1.290903699991759,
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:licences"
+    ]
+  },
+  "decisions": {
+    "exit": 0,
+    "seconds": 1.5485360999882687,
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:decisions"
+    ]
+  },
+  "s52-replay": {
+    "job": "s52-replay",
+    "exit": 0,
+    "seconds": 13.983083699975396,
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s64/replay-s52.ts"
+    ]
+  },
+  "history": {
+    "job": "history",
+    "exit": 0,
+    "seconds": 24.946701200009556,
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s64/history.ts"
+    ]
+  },
+  "done-check": {
+    "job": "done-check",
+    "exit": 1,
+    "seconds": 3153.633680900006,
+    "command": [
+      "npm.cmd",
+      "run",
+      "run:done-check",
+      "--",
+      "--milestone",
+      "1a",
+      "--label",
+      "s64-done"
+    ]
+  },
+  "focusedCounts": {
+    "files": 7,
+    "passed": 50,
+    "s64Regressions": 4
+  },
+  "fullSuite": "not reached: the required root chain stops at inherited S62 projection findings",
+  "frozenInputs": {
+    "count": 392,
+    "changed": []
+  },
+  "preflightCorrections": [
+    {
+      "step": "first focused-test launch",
+      "outcome": "FileNotFoundError WinError 2 for relative node_modules/.bin/vitest.cmd launched through Python",
+      "correction": "invoke node node_modules/vitest/vitest.mjs; no campaign started"
+    },
+    {
+      "step": "initial red fixture",
+      "outcome": "peace-time fixture returned before concentration code",
+      "correction": "set requestDay 140 and atWarSince 0 before implementation; retained red log demonstrates the statewide transfer and missing named transfers"
+    },
+    {
+      "step": "first focused green",
+      "outcome": "41 pass, one inherited expectation still required Charleston in the northern sweep",
+      "correction": "updated that expectation to the sourced local-only transfer; final focused run passes 50 tests"
+    },
+    {
+      "step": "required root check",
+      "outcome": "stops at inherited principalMenu and pendingRequests projection findings plus stale baseline entries",
+      "correction": "none; S62 owns the repair; baseline/checker unchanged"
+    },
+    {
+      "step": "per-file preservation pass",
+      "outcome": "stopped own identified Python process after the per-path git calls proved inefficient",
+      "correction": "used one complete original/current index blob comparison and final working-tree diff instead"
+    }
+  ],
+  "finalPackageCheck": {
+    "unstaged": [],
+    "brokenLocalLinks": [],
+    "frozenInputsChanged": [],
+    "whitespaceExit": 2,
+    "whitespaceFinding": "packages/kernel/test/s52-advance-notice.test.ts:41 new blank line at EOF",
+    "whitespaceFindingMatchesInitialIndexedBlob": true
+  }
+}

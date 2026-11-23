@@ -1,0 +1,890 @@
+{
+  "affected-correction.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/people-verbs.test.ts",
+      "packages/kernel/test/s25-tick-verbs.test.ts",
+      "packages/kernel/test/forces-command.test.ts",
+      "packages/kernel/test/detachments.test.ts",
+      "packages/kernel/test/s25-planner.test.ts",
+      "packages/kernel/test/plans.test.ts",
+      "packages/cli/test/state-forces.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 4.941
+  },
+  "boundary-ready.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 1.491
+  },
+  "boundary.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.587
+  },
+  "cast-holds.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/s74-cast-templates.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 2.692
+  },
+  "classification-audit.exit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s74/closure-audit.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.457
+  },
+  "commissions-green.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packages/kernel/test/banned-apis.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 6.296
+  },
+  "commissions-red.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 0.721
+  },
+  "corrected-accounting.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packages/kernel/test/post-membership.test.ts",
+      "packages/cli/test/enlistment-renewal.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/banned-apis.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 7.579
+  },
+  "corrected-closure.exit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s74/closure-audit.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.139
+  },
+  "corrected-introduction.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/world-v2.test.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 2.633
+  },
+  "corrected-typecheck.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 1,
+    "seconds": 1.317
+  },
+  "decisions.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:decisions"
+    ],
+    "exit": 0,
+    "seconds": 0.637
+  },
+  "eligibility-check.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 0.757
+  },
+  "eligibility-confirmed.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 0.704
+  },
+  "eligibility-fixed.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 0.729
+  },
+  "eligibility-fixture-correct.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 0.71
+  },
+  "final-boundary.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.579
+  },
+  "final-check-rules.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 2.15
+  },
+  "final-check-typecheck.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.396
+  },
+  "final-export-boundary.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.615
+  },
+  "final-export-rules.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 2.178
+  },
+  "final-export-typecheck.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.361
+  },
+  "final-ownership.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packs/union-1861/test/s74-cast-templates.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 8.387
+  },
+  "final-pack-shape.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 2.05
+  },
+  "final-rules.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 2.133
+  },
+  "final-shape-typecheck.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.358
+  },
+  "final-typecheck.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.32
+  },
+  "focused-final.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/banned-apis.test.ts",
+      "packages/kernel/test/s70-lots.test.ts",
+      "packages/kernel/test/s70-recruitment-lots.test.ts",
+      "packs/union-1861/test/world-v2.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 14.857
+  },
+  "formation-plan-green.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/banned-apis.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 6.781
+  },
+  "formation-plan-red.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 0.737
+  },
+  "full-suite.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile=runs/s74/full-suite.json"
+    ],
+    "exit": 1,
+    "seconds": 526.568
+  },
+  "generate-introduction.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 1.711
+  },
+  "generate-labelled-pool.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 2.04
+  },
+  "generate-templates.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 2.313
+  },
+  "generated-check.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 1.981
+  },
+  "generated-pool-fixed.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 2.32
+  },
+  "generation-pool.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 1.779
+  },
+  "initial-proof.exit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s74/initial-proof.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.673
+  },
+  "licences.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:licences"
+    ],
+    "exit": 0,
+    "seconds": 0.632
+  },
+  "npm-ci.exit": {
+    "command": [
+      "npm.cmd",
+      "ci"
+    ],
+    "exit": 0,
+    "seconds": 4.278
+  },
+  "organisation-tests.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 0.785
+  },
+  "pack-errors.exit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "-e",
+      "import {generatePack,errorsOf} from '@mandate/pack-format';import {packFilesAt,packRoot} from './packages/cli/src/pack-files.ts'; console.log(JSON.stringify(errorsOf(generatePack(packFilesAt(packRoot('union-1861'))).issues),null,2));"
+    ],
+    "exit": 0,
+    "seconds": 1.482
+  },
+  "pack-generate-corrected.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 1.686
+  },
+  "pack-generate-fixed.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 2.437
+  },
+  "pack-generate.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 1,
+    "seconds": 1.819
+  },
+  "pack-shape-final.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/world-v2.test.ts",
+      "packages/kernel/test/s70-lot-ownership.test.ts",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 5.686
+  },
+  "paired-chain.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/capitals.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 1.535
+  },
+  "paired-fixed.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/capitals.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 1.792
+  },
+  "partition-green.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 0,
+    "seconds": 0.753
+  },
+  "partition-red.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 0.99
+  },
+  "preflight-tests.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/banned-apis.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/capitals.test.ts",
+      "packages/pack-format/test/state-forces.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 8.754
+  },
+  "projection-final.exit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s74/closure-audit.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.128
+  },
+  "ready-tests.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/banned-apis.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/capitals.test.ts",
+      "packs/union-1861/test/world-v2.test.ts",
+      "packages/kernel/test/forces-command.test.ts",
+      "packages/kernel/test/detachments.test.ts",
+      "packages/kernel/test/s70-recruitment-lots.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 9.436
+  },
+  "reference-smoke.exit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s74/references.ts",
+      "union-1861",
+      "--smoke"
+    ],
+    "exit": 0,
+    "seconds": 4.794
+  },
+  "review-corrections-green.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packages/kernel/test/post-membership.test.ts",
+      "packages/cli/test/enlistment-renewal.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/banned-apis.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 4.907
+  },
+  "review-corrections-red.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 0.753
+  },
+  "rules-ready.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 9.967
+  },
+  "rules-structural.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 1,
+    "seconds": 3.965
+  },
+  "runtime.exit": {
+    "command": [
+      "node",
+      "-e",
+      "const fs=require('fs');const path=require('path');const root=process.cwd();const aliases=Object.fromEntries(['kernel','pack-format','rule-seats','cli'].map(n=>[n,fs.realpathSync(path.join(root,'node_modules/@mandate',n))]));const pass=Object.values(aliases).every(p=>p.toLowerCase().startsWith(path.join(root,'packages').toLowerCase()));fs.writeFileSync('runs/s74/runtime-diagnostics.json',JSON.stringify({node:process.version,platform:process.platform,architecture:process.arch,aliases,aliasesLocal:pass,ci:!!process.env.CI,timingEnvPresent:Object.hasOwn(process.env,'MANDATE_TIMING')},null,2));if(!pass)process.exitCode=1;"
+    ],
+    "exit": 0,
+    "seconds": 0.044
+  },
+  "schemas-check.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:schemas",
+      "--",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 1.047
+  },
+  "schemas-final.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:schemas"
+    ],
+    "exit": 0,
+    "seconds": 1.091
+  },
+  "schemas.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:schemas"
+    ],
+    "exit": 0,
+    "seconds": 1.131
+  },
+  "source-shape.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packs/union-1861/test/world-v2.test.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 2.583
+  },
+  "startup-ready.exit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "-e",
+      "import {phase0Run} from './packages/cli/src/phase0-run.ts'; for (const pack of ['testbed','union-1861']) { const r=phase0Run({pack,days:2,hash:'daily',replay:false}); console.log(JSON.stringify({pack,rejections:r.rejections,final:r.finalHash})); if(r.rejections!==0)process.exitCode=1;}"
+    ],
+    "exit": 0,
+    "seconds": 6.501
+  },
+  "startup.exit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "-e",
+      "import {phase0Run} from './packages/cli/src/phase0-run.ts'; for (const pack of ['testbed','union-1861']) { const r=phase0Run({pack,days:2,hash:'daily',replay:false}); console.log(JSON.stringify({pack,rejections:r.rejections,final:r.finalHash})); if(r.rejections!==0)process.exitCode=1;}"
+    ],
+    "exit": 0,
+    "seconds": 2.612
+  },
+  "structural-tests.exit": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s74-organisation.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/banned-apis.test.ts",
+      "packages/kernel/test/capitals.test.ts",
+      "--maxWorkers=1"
+    ],
+    "exit": 1,
+    "seconds": 7.51
+  },
+  "testbed-reference.exit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s74/references.ts",
+      "testbed"
+    ],
+    "exit": 0,
+    "seconds": 6.812
+  },
+  "typecheck-chain.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 1,
+    "seconds": 1.349
+  },
+  "typecheck-command.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 1,
+    "seconds": 1.343
+  },
+  "typecheck-corrected.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 1,
+    "seconds": 4.933
+  },
+  "typecheck-data.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.429
+  },
+  "typecheck-early.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 1,
+    "seconds": 1.392
+  },
+  "typecheck-eligibility.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.267
+  },
+  "typecheck-paired.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.373
+  },
+  "typecheck-phase.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.314
+  },
+  "typecheck-pre-campaign.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 1,
+    "seconds": 1.405
+  },
+  "typecheck-semantic.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.278
+  },
+  "typecheck-structural.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.448
+  },
+  "typecheck-structure-final.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 4.419
+  },
+  "union-reference.exit": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s74/references.ts",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 71.985
+  },
+  "validate-semantic.exit": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:validate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 2.21
+  }
+}

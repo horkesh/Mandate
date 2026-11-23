@@ -1,0 +1,23 @@
+{
+  "before": {
+    "result": "raised.st_gov_alabama.d9",
+    "rootReads": 31050,
+    "ms": 4.277000000000044
+  },
+  "after": {
+    "result": "raised.st_gov_alabama.d9",
+    "rootReads": 1350,
+    "ms": 0.9825999999998203
+  },
+  "allRequestsEqual": true,
+  "worldProofCorrect": true,
+  "stateProofCorrect": true,
+  "noAuthoritativeChange": "One pure derived table is bound once instead of re-derived inside the filter and sort; no State or World write, random draw, clock or branch changes.",
+  "quantities": {
+    "fbStrength": 3000,
+    "fbStragglers": 0
+  },
+  "originalRunnerExit": 1,
+  "correction": "The runner compared raw World with the CLI compound envelope; retained full run needs no repeat.",
+  "query_comparisons": 148
+}

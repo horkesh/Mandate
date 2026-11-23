@@ -1,0 +1,54 @@
+{
+  "id": "charleston_anderson_command",
+  "kind": "notice",
+  "faction": "confederate",
+  "title": "situation.charleston_anderson_command.title",
+  "text": "situation.charleston_anderson_command.text",
+  "earliest": "1861-05-27",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 83
+      },
+      {
+        "holds": {
+          "post": "cs_cmd_charleston",
+          "person": "beauregard_pierre_g_t"
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "command",
+        "field": "post_succession",
+        "subject": "cs_cmd_charleston",
+        "delta": 1,
+        "reason": "charleston-command-succession",
+        "side": null,
+        "succession": {
+          "from": "beauregard_pierre_g_t",
+          "to": "anderson_richard_h"
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "cs_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Administrative local command succession only; no personal words, motive, civilian conduct, security orders or protected-population effects."
+  },
+  "citations": [
+    {
+      "source": "S80-OR-I-VI",
+      "at": "p.1, chronology footnote, 27 May 1861; local Confederate forces distinct from Pickens State volunteers"
+    }
+  ],
+  "namedOnly": "The printed chronology records an institutional transfer. No personal speech, motive, rank commission, journey or troop transfer is inferred."
+}
