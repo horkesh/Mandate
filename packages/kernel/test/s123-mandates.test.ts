@@ -17,6 +17,7 @@ import { canonicalHash } from '../src/serialize/hash.ts';
 import { playDays, replay } from '../src/log/session.ts';
 import { mandateProblems, type MandateGrant } from '../src/world/mandates.ts';
 import type { State } from '../src/root-state.ts';
+import { knowledgeOf } from '../src/knowledge/knowledge.ts';
 
 const origin = (s: string) => toId('message',s);
 const grant = (more: Partial<MandateGrant> = {}): MandateGrant => ({
@@ -78,6 +79,26 @@ describe('S123 received authority', () => {
     const state=createState(world,{seed:17});
     expect(availableMandatePapers(world,state,P('a_lead'),1)).toEqual([]);
   });
+  it('C1: a principal holding his own office retains the principal address path', () => {
+    const map=fixtureMap(), spec=fixtureStart();
+    const g=grant({mandateHolder:P('a_bold'),mandatePost:POST('a_reserve')});
+    const principalPost={...spec.posts.find(p => p.id===POST('a_office'))!,id:POST('a_principal'),holder:P('a_lead')};
+    const world=indexSeatsWorld(indexWorld({...map.world,rules:{...map.world.rules,mandates:[{id:'root',fromDate:'1900-06-01',source:'Fictional p.1',grant:g}]}}),
+      {...spec,posts:[principalPost,...spec.posts.map(p => p.id===POST('a_office')?{...p,parent:POST('a_principal')}:p)]});
+    const state=createState(world,{seed:17});
+    const result=tick(world,state,[{day:1,seat:seatIdFor(P('a_lead')),command:{cmd:'mandate',paper:'root',route:'courier'}}]);
+    expect(result.rejections).toEqual([]);
+    expect(result.requestDispatches?.find(m => m.msgOrder?.orderMandate!==undefined)?.msgTo).toBe(P('a_sec'));
+  });
+  it('C1: dispatching a mandate preserves the sender’s earlier plan review memory', () => {
+    const {world,start}=fixture();
+    const seat=seatIdFor(P('a_lead'));
+    const earlier={sentPost:POST('a_office'),sentMessage:origin('earlier.approval'),sentKind:'approve' as const,sentDay:0,sentPaper:origin('plan.paper')};
+    const ready={...start,knowledgeBySeat:{...start.knowledgeBySeat,[seat]:{...knowledgeOf(start,seat),knownSentOrders:[earlier]}}};
+    const result=tick(world,ready,[{day:1,seat,command:{cmd:'mandate',paper:'root',route:'courier'}}]);
+    expect(result.rejections).toEqual([]);
+    expect(knowledgeOf(result.state,seat).knownSentOrders).toContainEqual(earlier);
+  });
   it('C2: child permissions intersect geography, recipients, modes, expiry, ceiling and delegation', () => {
     const { active,g } = fixture(grant({ mandateExpires:10,mandateGuard:100,mandateOnward:false }));
     const child = intersectMandate(active,grant({ mandatePost:POST('a_army'), mandateRecipients:[POST('a_army'),POST('b_army')],
@@ -113,6 +134,21 @@ describe('S123 received authority', () => {
     expect(mayCommit(world.map,live,mandateAt(live,g.mandatePost,g.mandateKey)!,POST('a_army'),[army])).toBe(false);
     expect(mayCommit(world.map,live,mandateAt(live,g.mandatePost,g.mandateKey)!,POST('a_office'),[reserve])).toBe(false);
   });
+  it('C2: independently enacted sibling grants draw from one parent commitment balance', () => {
+    const {world,active}=fixture();
+    const child=(post: 'a_army'|'a_reserve',holder: 'a_gen'|'a_bold') => grant({mandateKey:post,mandateIssuer:P('a_sec'),
+      mandateIssuerPost:POST('a_office'),mandateHolder:P(holder),mandatePost:POST(post),mandateRecipients:[POST(post)],
+      mandateParent:{parentPost:POST('a_office'),parentKey:'root'},mandateCeiling:{ceilingPost:POST(post),ceilingMen:1000}});
+    let state=enactMandate(world.map,active,child('a_army','a_gen'),origin('child.army'),1,'answer',['hold']);
+    state=enactMandate(world.map,state,child('a_reserve','a_bold'),origin('child.reserve'),1,'answer',['hold']);
+    const first=mandateAt(state,POST('a_reserve'),'a_reserve')!;
+    const block=toId('forceBlock','a_reserve_1');
+    expect(mayCommit(world.map,state,first,POST('a_reserve'),[block])).toBe(true);
+    state=commitAuthority(state,first,origin('sibling.use'),POST('a_reserve'),[block]);
+    state=setGoal(state,POST('a_reserve'),{id:origin('sibling.use'),issuer:P('a_sec'),goal:goalOf(goalTerms('hold','a_mid')),
+      viaChain:true,issuedDay:1,response:'answer'},1);
+    expect(mayCommit(world.map,state,mandateAt(state,POST('a_army'),'a_army')!,POST('a_army'),[toId('forceBlock','a_army_1')])).toBe(false);
+  });
   it('C7: revocation changes authority on receipt; a late older grant never restores it', () => {
     const { world,active,g } = fixture();
     expect(activeMandate(world.map,active,mandateAt(active,g.mandatePost,g.mandateKey)!,2)).toBe(true);
@@ -139,6 +175,13 @@ describe('S123 received authority', () => {
       { cmd:'appoint' as const,post:POST('a_army'),person:P('a_bold'),rank:null,route:'courier' as const },
     ]) expect(tick(world,active,[{day:1,seat:seatIdFor(P('a_sec')),command}]).rejections).toHaveLength(1);
     expect(mandateProblems({ ...world.map.world,rules:{...world.map.world.rules,mandates:[{id:'fake',fromDate:'1900-06-01',source:'Fictional p.1',grant:grant({mandateIssuer:P('a_sec')})}]} },world.start)).toContain('mandates.fake: root requires a principal');
+  });
+  it('C8: two granting issuers cannot collide on a post’s mandate family key', () => {
+    const {world}=fixture();
+    const papers=[{id:'first',fromDate:'1900-06-01',source:'Fictional p.1',grant:grant()},
+      {id:'second',fromDate:'1900-06-01',source:'Fictional p.2',grant:grant({mandateIssuer:P('b_lead'),mandateRevision:2})}];
+    expect(mandateProblems({...world.map.world,rules:{...world.map.world.rules,mandates:papers}},world.start))
+      .toContain('mandates.second: a mandate family cannot change granting issuer');
   });
   it('C8: authority survives save and deterministic replay; old states remain empty', () => {
     const { world,start,active } = fixture();
@@ -195,5 +238,17 @@ describe('S123 received authority', () => {
     const changed={...active,forceBlockStates:{...active.forceBlockStates,[enemy]:{...active.forceBlockStates[enemy]!,
       fbLots:active.forceBlockStates[enemy]!.fbLots.map(l => ({...l,lotMen:90000}))}}};
     expect(localOptions(world,changed,P('a_bold'),1)).toEqual(localOptions(world,active,P('a_bold'),1));
+  });
+  it('C3: a broad standing scope alone does not invent distant offensive objectives', () => {
+    const {world,active}=fixture(grant({mandateHolder:P('a_bold'),mandatePost:POST('a_reserve'),mandateRecipients:[],
+      mandateActions:['take'],mandateRegions:[R('a_mid'),R('a_front')],mandateCeiling:{ceilingPost:POST('a_reserve'),ceilingMen:null}}));
+    expect(localOptions(world,active,P('a_bold'),1)).toEqual([]);
+  });
+  it('C1: an unrelated officer without a known public position is not asked for a mandate view', () => {
+    const map=fixtureMap(), spec=fixtureStart();
+    const world=indexSeatsWorld(indexWorld({...map.world,people:map.world.people.map(p => p.id===P('a_bold')?{...p,faction:null}:p),
+      rules:{...map.world.rules,mandates:[{id:'root',fromDate:'1900-06-01',source:'Fictional p.1',grant:grant()}]}}),spec);
+    const state=createState(world,{seed:17});
+    expect(localOptions(world,state,P('a_bold'),1)).toEqual([]);
   });
 });

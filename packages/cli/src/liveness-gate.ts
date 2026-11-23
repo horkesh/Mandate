@@ -287,7 +287,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'orders.obeyed': around(3),
   "orders.relay_held": quiet("0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."),
   'orders.relay_objected': around(3),
-  'orders.relayed': around(9), // S90 continuation ruling 4: Cooper forwards the junction letter; eight existing relays remain.
+  'orders.relayed': around(20), // S123: five mandate and four local-review relays join the eleven inherited relays; retained event proof accompanies the band.
   'plans.goal_reached': around(2), // S1 national [I]: the integrated sourced build changes this existing counter through its normal owner.
   'politics.adjourned': around(1),
   'politics.front_page': around(63),
@@ -537,6 +537,8 @@ export const REFERENCE_RUNS: readonly ReferenceRun[] = [
     seats: 'rules',
     bands: {
       ...Object.fromEntries(PEACE_QUIET.map((m) => [m, quiet(`union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine`)])),
+      'orders.relayed': { ...around(2), why: 'S123: the standing assignment and its hold-plan approval each pass the intermediate office; no offensive order or force movement. docs/audit/s123-evidence/peace-reference.json' },
+      'plans.goal_reached': { ...around(1), why: 'S123: the received standing assignment yields one completed hold at the existing headquarters; all goals stay hold under the peace rule. docs/audit/s123-evidence/peace-reference.json' },
       'recruitment.called': { ...around(7), why: "R96: R90's seven sourced 9 March provisional-force requisitions precede the war decisions; other war doctrine still waits on each side's own decision" },
     },
   },

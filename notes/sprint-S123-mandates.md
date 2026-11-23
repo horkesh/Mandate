@@ -1,61 +1,50 @@
-# S123: received mandates
+# S123: received mandates and standing authority
 
-Scope: 0121 item 4 and 0124 only, on `sprint/mandates` from `5625454f`.
-Other worktrees are read only; the sole exception is the final Python UTF-8
-append to the main CODEX.md. No sortie, strength work, push or signature.
+For the lead: 3 items. `sprint/mandates` in `C:/Pyrrhic/sprint-mandates`, from
+`5625454f`. Kernel commit `6ef4b4ddc4930571f5e6a17d09de79a91d668acb` passed the
+unchanged ordinary hook: 262 files, 2,327 tests passed, 3 skipped. All 2,816
+pre-hook files were preserved. [Full report, all 33 rows and band cause](../docs/audit/s123-evidence/README.md).
 
-1. Kernel commit: fictional C1–C3, C7 (authority portion), C8; command owns
-   `authorityByPost`; receipt/answer, holder and chain bounds, intersections,
-   shared commitments, revocation, planner menus, logged choices and execution
-   checks. Empty optional authority preserves old hashes and saves.
-2. Data commit: read S117 instruments; declare sourced standing/specific grants,
-   record geographic mapping/discrepancies and named unsupported terms.
-3. Cheap checks before each ordinary hook: typecheck, boundary, rules and rule
-   tests, focused authority/save/ownership tests. Hook runs unchanged (roughly
-   3 minutes per commit); stop on failure, inspect all retained categories,
-   correct and verify cheaply before a justified repeat.
-4. Kernel equivalence: reuse S119 capture as baseline, check startup for two
-   days, then compare the 148 daily hashes once (roughly 1–2 minutes).
-   Data measurement: one 148-day Union reference run, with the existing score
-   observer, all 33 checkpoint rows, issuer/recipient/dispatch/receipt dates,
-   and changed liveness bands. Exact commands and stop rule are recorded before
-   running. No tuning, extra campaigns or acceptance waivers.
+1. **Kernel.** Received enclosure/answer, person binding, parent intersection,
+   two enacted siblings sharing a ceiling, local revocation and obsolete older
+   grant, family-issuer collision validation, planner menus, logged initiative and subordinate orders, execution
+   revalidation, excluded verbs, source-bound immutable papers, saves/replay.
+   `command` alone writes authority; FOUNDATION and schema 4 name the contract.
+   Kernel-only Union hashes equal S119 on all 148 days. Data integration adds
+   reproduced corrections for principal-held office addresses, preservation of
+   old review memory, views only for participating actors, and belief-grounded
+   standing initiative bounded by the existing planner limit.
+2. **Data and limits.** Four sourced standing commands and Johnston's 18 June
+   revision, from 23 read retained primary texts with page/hash receipts. GO12
+   governs Patterson's nine conservative regions; no Virginia or ambiguous
+   corridor region is silently granted. Lee's state command is declared under
+   the governor but unopened; neither a mandate nor a date appoints him.
+   Scott's 24 May demonstration/quota/guard, Wallace's sortie, Jackson's
+   distribution-request receipt/refusal producer, and detailed administrative
+   order-copy routing remain named gaps. The whole June chain is not claimed.
+3. **Measurement and gates.** Failed attempt 22.359 s, then one completed
+   148-day capture 75.606 s after a cheap fictional regression/correction.
+   Zero rejections; exact replay, day-60 resume and saved-log replay. All 33
+   rows exactly unchanged: 5 matched, 3 mismatched, 3 not observed, 22 gaps.
+   Strength and pushback criteria remain non-passing; no 1A credit. The full-run
+   relay band recentred 4-18 to 10-40 at observed 20; baseline actual 11,
+   exactly five new mandate relays plus four local-review relays. The first data
+   hook passed 2,334 tests but failed two peace-reference tests (216.889 s).
+   A 5.449 s, 30-day diagnosis equals the retained first 30 days exactly:
+   only Washington hold, no military action. Record peace relay 0-0 to 1-5 at
+   observed 2, and completed hold 0-0 to 1-4 at observed 1, under 0064/0124.
+   No new zero, timing/quantity/scoring constant, criterion or behavior change.
+   Retained evidence passes liveness after pure re-evaluation; no second full
+   measurement. Latest targeted rule tests 66/66; letters/receipts 22/22.
 
-Kernel evidence settled: 142 focused checks passed; boundary/rules passed;
-S119's retained 148-day reference has equal world, initial and every daily hash,
-zero rejections, final `d5a8e6c67102566f6b773ec0d461a4e6b68eda765da60b92e6f4240e45ad4213`.
-No Union rule, scenario or generated World changed. Three console string keys
-were added in both packs when the hook exposed the missing console verb mapping. Schema 4 keeps absent authority as canonical empty.
-The grant history is finite (declared instrument revisions only). A refusal
-preserves an earlier accepted grant; revocation is local to its receipt. A
-child dispatched before an ancestor's later revocation uses the parent's
-received grant as of dispatch; the child needs its own received revocation.
-Shared resources remain one balance across the family.
+Final runtime/source inventory and preservation checks precede this report.
+Hook, final commit and recovery evidence: `runs/s123/data-commit.*`,
+`runs/s123/kernel-final.json` and the one final main-checkout CODEX status.
+Both commits use the ordinary hook; no bypass, push or history rewrite.
+Formal review/signatures remain with the lead under 0106/0107.
 
-Proposed implementation rulings [I]: use the assignment's scoped public opening
-establishment plus received corrections for local addresses (not live holders);
-score standing local initiatives with existing goal defaults and planner rules;
-require ordinary superior review unless `approve` is explicitly in the grant;
-keep empty optional collections for hash-compatible save migration. Rejected:
-a global address book, hidden enemy truth, free-form commander commands,
-self-addressed operational letters, automatic approval, and invented troop
-amounts. Specific historical instruments and the unsupported terms follow in
-the second commit. No sortie stage or civilian/political authority is built.
-
-First ordinary hook: exit 1, 260 files and 2,322 tests passed; three failures
-were console verb/parser inventories and the expected root ownership list.
-The correction adds menu-constrained parsing and localization, plus the explicit
-ownership expectation. A cheap ICU validation caught unescaped angle brackets
-in the two usage strings; they now use paper-id. Simulation evidence is reused
-because these changes affect only console parsing, text and test inventories.
-
-Correction verification: 109 targeted tests passed, current two-day startup
-retains S119 hashes, and boundary/rules/type checks pass. The finite assignment
-menu now waits for the named holder in opening/received establishment; a missing
-command post never produces daily rejected grant attempts. This branch has no
-mandates before the data commit, so its 148-day opt-out evidence remains valid.
-
-Formal independent review stays with the lead after the sprint (0106/0107).
-Validation logs and recovery evidence: `runs/s123/`.
+Proposed rulings [I] and rejected alternatives are in the full report. Accepted
+0123-0127 and their status/index dependencies are exact lead-source canon,
+not additional lane builds. Checkpoint/coverage contracts remain byte-exact.
 
 Findings outside my scope

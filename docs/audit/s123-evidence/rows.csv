@@ -1,0 +1,34 @@
+side,id,actor,matter,before_verdict,after_verdict,origins,issued_days,received_answered_days,cause
+union,U01,scott_winfield,"Sumter relief feasibility, March 12 inquiry",representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U02,scott_winfield,Evacuating both Sumter and Pickens,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U03a,seward_william_h,March 15 written Sumter provisioning consultation,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U03b,cameron_simon,March 15 written Sumter provisioning consultation,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U03c,welles_gideon,March 15 written Sumter provisioning consultation,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U03d,smith_caleb_b,March 15 written Sumter provisioning consultation,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U03e,bates_edward,March 15 written Sumter provisioning consultation,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U04,seward_william_h,March 29 renewed relief consultation,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U05,blair_montgomery,March 29 proposed Sumter abandonment,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U14,seward_william_h,Some Thoughts administration policy and direction,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U25a,hicks_thomas_h,Troop transit through Maryland after Baltimore alternative,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U25b,brown_george_w,Protecting troops marching around Baltimore,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U32,patterson_robert,Changing Valley depot and line before active operations,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U33,patterson_robert,Fresh attack or demonstration direction in Valley,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U34,patterson_robert,Fresh July 17-18 attack/demonstration direction,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U39,morgan_edwin_d,April Union militia requisition,matched,matched,m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york,41,41,Unchanged exact row and act match; no matcher or source-hold change.
+union,U40,mccauley_charles_s,Peremptory Merrimack removal to Philadelphia,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+union,U42,scott_winfield,March 5 first Sumter relief assessment,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C01,brown_joseph_e,First Pensacola contingent mustering,matched,matched,m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia,4,4,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C02,brown_joseph_e,April additional regiments for Virginia,matched,matched,m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia,48,48,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C03,moore_thomas_o,April active Virginia regiments and earlier readiness call,mismatch,mismatch,m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana,48,48,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C04,pickens_francis_w,Sending South Carolina volunteers to Virginia,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C05,harris_isham_g,Initial three Virginia regiments,mismatch,mismatch,m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee,122,124,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C06,bragg_braxton,Preventing Pickens reinforcement at dock,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C07,letcher_john,Reserve corps organization and appointments,matched,matched,m.120.davis_jefferson.letcher_john.call.st_gov_virginia,120,120,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C09,pickens_francis_w,Later two armed regiments,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C10,brown_joseph_e,Reserve corps and appointment authority,matched,matched,m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2,117,117,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C11,moore_thomas_o,Reserve corps raising and support,mismatch,mismatch,m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana,117,117,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C12,brown_joseph_e,Later two armed regiments versus State brigade,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C14,holmes_theophilus_h,Supporting Commander Lewis river expedition,not_observed,not_observed,,,,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C15,johnston_joseph_e,Keeping force at Harpers Ferry,not_observed,not_observed,,,,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C16,holmes_theophilus_h,Conditional withdrawal from Mathias Point,representation_gap,representation_gap,,,,Unchanged exact row and act match; no matcher or source-hold change.
+confederate,C25,holmes_theophilus_h,Retaining the main force at Fredericksburg,not_observed,not_observed,,,,Unchanged exact row and act match; no matcher or source-hold change.

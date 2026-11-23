@@ -150,6 +150,8 @@ export function rememberSentOrders(start: State, messages: readonly TransitMessa
     };
     const kept = old.filter(o => {
       if (o.sentPost !== row.sentPost || o.sentKind === 'transfer') return true;
+      if (row.sentKind === 'mandate') return o.sentKind !== 'mandate';
+      if (o.sentKind === 'mandate') return true;
       if (row.sentKind === 'goal') {
         if (o.sentKind === 'goal') return row.sentProposal !== undefined &&
           (row.sentProposal.replyOrder === o.sentMessage || row.sentProposal.replyOrder === o.sentReaffirms);

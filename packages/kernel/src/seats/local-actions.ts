@@ -31,10 +31,10 @@ export function mandateLetter(paper: MandatePaper) {
   return { namespace: `authority.${paper.grant.mandateIssuer}`, key: paper.grant.mandateKey, revision: paper.grant.mandateRevision };
 }
 export function availableMandatePapers(world: SeatsWorld, state: State, person: PersonId, day: number): MandatePaper[] {
-  if (world.map.world.rules.mandates === undefined) return [];
+  const declared = (world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person);
+  if (declared.length === 0) return [];
   const knowledge = knowledgeOf(state,seatIdFor(person));
   const view = viewFor(world,state,seatIdFor(person));
-  const declared = (world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person);
   const addresses = world.start.factions.some(f => f.principal === person) ? view.posts :
     commandProjection(world,person,view.faction,view.reports,state.stateDay,state.calendarStart,declared.map(p => p.grant.mandatePost)).posts;
   return (world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person &&
@@ -116,7 +116,8 @@ export function localOptions(world: SeatsWorld, state: State, person: PersonId, 
     if (!mayCommit(world.map,state,a,target,blocks)) continue;
     const defaults = world.map.world.rules.plans.goalDefaults;
     const goals: PlanGoal[] = target !== post ? own === undefined ? [] : [{ ...own.planGoal, goalCommitted: blocks, goalApproveAsDrafted: false }] :
-      a.authorityGrant.mandateRegions.flatMap(region => a.authorityGrant.mandateActions.filter(action => action !== 'approve').map(action => ({
+      a.authorityGrant.mandateRegions.filter(region => region === view.region || (view.enemyBeliefs[region]?.value ?? 0) > 0)
+      .flatMap(region => a.authorityGrant.mandateActions.filter((action): action is PlanGoal['goalPosture'] => action !== 'approve' && (region !== view.region || action === 'hold')).map(action => ({
         goalObjective:region,goalPosture:action,goalRisk:defaults.risk,goalDeadlineDays:defaults.deadlineDays,
         goalRail:a.authorityGrant.mandateModes.includes('rail'),goalRiver:a.authorityGrant.mandateModes.includes('river'),goalSea:a.authorityGrant.mandateModes.includes('sea'),
         goalNeutral:false,goalCommitted:blocks,goalAwaitWord:false,goalApproveAsDrafted:false,
@@ -134,7 +135,7 @@ export function localOptions(world: SeatsWorld, state: State, person: PersonId, 
   }
   const rank = { grant:0,review:1,goal:2 };
   return out.sort((a,b) => rank[a.kind]-rank[b.kind] || (a.kind === 'goal' && b.kind === 'goal' ?
-    b.candidate.candScore-a.candidate.candScore : 0) || strictCompare(a.id,b.id));
+    b.candidate.candScore-a.candidate.candScore : 0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
 }
 export function localMenu(world: SeatsWorld, state: State, person: PersonId, day: number): LocalActionMenu | null {
   const options = localOptions(world,state,person,day);

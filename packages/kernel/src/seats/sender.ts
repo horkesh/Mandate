@@ -23,7 +23,9 @@ export function receivedPostDefinition(world: SeatsWorld, view: SeatView, id: Po
 
 export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisition?: PostId, cache?: ViewCache, localPost?: PostId) {
   const person = state.seatAssignments[seat]?.seatPerson;
-  const office = world.start.factions.find(f => f.principal === person) ?? (localPost === undefined || person === undefined ? undefined : { principal: person, faction: state.departmentFactions[state.postStates[localPost]!.postDepartment]! });
+  const principalOffice = world.start.factions.find(f => f.principal === person);
+  if (principalOffice !== undefined) localPost = undefined;
+  const office = principalOffice ?? (localPost === undefined || person === undefined ? undefined : { principal: person, faction: state.departmentFactions[state.postStates[localPost]!.postDepartment]! });
   if (office === undefined || office.principal === null) return null;
   const principal = office.principal;
   const faction = office.faction;

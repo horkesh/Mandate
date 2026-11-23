@@ -52,6 +52,7 @@ export function mandateProblems(world: World, start: ScenarioStart): string[] {
   const people = new Set(world.people.map(p => p.id));
   const regions = new Set(world.regions.map(r => r.id));
   const ids = new Set<string>(), revisions = new Set<string>();
+  const familyIssuers = new Map<string, PersonId>();
   for (const paper of papers) {
     const at = `mandates.${paper.id}`;
     if (!paper.id || ids.has(paper.id)) problems.push(`${at}: duplicate or missing instrument id`);
@@ -60,6 +61,10 @@ export function mandateProblems(world: World, start: ScenarioStart): string[] {
     if (typeof paper.source !== 'string' || paper.source.trim().length === 0) problems.push(`${at}: source required`);
     const g = paper.grant;
     if (g == null) { problems.push(`${at}: enclosure required`); continue; }
+    const family = `${g.mandatePost}:${g.mandateKey}`;
+    const issuer = familyIssuers.get(family);
+    if (issuer !== undefined && issuer !== g.mandateIssuer) problems.push(`${at}: a mandate family cannot change granting issuer`);
+    else familyIssuers.set(family, g.mandateIssuer);
     const revision = `${g.mandateIssuer}:${g.mandatePost}:${g.mandateKey}:${g.mandateRevision}`;
     if (!g.mandateKey || revisions.has(revision) || !Number.isSafeInteger(g.mandateRevision) || g.mandateRevision < 1) problems.push(`${at}: invalid or duplicated revision`);
     revisions.add(revision);
