@@ -1,0 +1,136 @@
+{
+  "install": {
+    "command": [
+      "npm.cmd",
+      "ci"
+    ],
+    "exit": 0,
+    "seconds": 3.55,
+    "log": "runs/s105/install.log"
+  },
+  "typecheck": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.749,
+    "log": "runs/s105/typecheck.log"
+  },
+  "projection": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s105/projection.ts"
+    ],
+    "exit": 0,
+    "seconds": 14.518,
+    "log": "runs/s105/projection.log"
+  },
+  "focused": {
+    "command": [
+      "npm.cmd",
+      "test",
+      "--",
+      "packages/kernel/test/s102-call-terms.test.ts",
+      "packs/union-1861/test/s102-call-terms.test.ts",
+      "packages/kernel/test/s96-discretion.test.ts",
+      "packages/kernel/test/s51-reaffirmation.test.ts",
+      "packages/cli/test/union-opening.test.ts",
+      "packages/cli/test/run-done-check.test.ts",
+      "tools/test/ci-workflow.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 26.66,
+    "log": "runs/s105/focused.log"
+  },
+  "rules-corrected": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 2.218,
+    "log": "runs/s105/rules-corrected.log"
+  },
+  "cheap-boundary": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.568,
+    "log": "runs/s105/cheap-boundary.log"
+  },
+  "cheap-decisions": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:decisions"
+    ],
+    "exit": 0,
+    "seconds": 0.61,
+    "log": "runs/s105/cheap-decisions.log"
+  },
+  "cheap-licences": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:licences"
+    ],
+    "exit": 0,
+    "seconds": 0.599,
+    "log": "runs/s105/cheap-licences.log"
+  },
+  "references": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s105/references.ts"
+    ],
+    "exit": 0,
+    "seconds": 63.793,
+    "log": "runs/s105/references.log"
+  },
+  "standing": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check"
+    ],
+    "exit": 0,
+    "seconds": 176.819,
+    "log": "runs/s105/standing.log"
+  },
+  "merge-commit": {
+    "command": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s105/merge-message.txt"
+    ],
+    "exit": 0,
+    "seconds": 186.517,
+    "log": "runs/s105/merge-commit.log"
+  },
+  "done": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "run:done-check",
+      "--",
+      "--label",
+      "s105-done",
+      "--milestone",
+      "1a"
+    ],
+    "exit": 1,
+    "seconds": 1587.748,
+    "log": "runs/s105/done.log"
+  }
+}

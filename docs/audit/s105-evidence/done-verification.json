@@ -1,0 +1,42 @@
+{
+  "command": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "run:done-check",
+      "--",
+      "--label",
+      "s105-done",
+      "--milestone",
+      "1a"
+    ],
+    "exit": 1,
+    "seconds": 1587.748,
+    "log": "runs/s105/done.log"
+  },
+  "criteria": "runs\\s105-done-criteria\\20261123-125019-47492-0466ae\\criteria.json",
+  "referenceAgreement": [
+    {
+      "pack": "union-1861",
+      "summary": "runs\\s105-done\\20261123-122543-47492-83d6b9\\summary.json",
+      "dailyHashes": 148,
+      "allNonClockFieldsExact": true
+    },
+    {
+      "pack": "testbed",
+      "summary": "runs\\s105-done\\20261123-122621-47492-311630\\summary.json",
+      "dailyHashes": 120,
+      "allNonClockFieldsExact": true
+    }
+  ],
+  "coverageExact": true,
+  "trackedFilesByteExact": 2597,
+  "drafting": "runs\\s105-done-drafting\\20261123-125023-47492-acbab6\\drafting.json",
+  "normalSweepSeeds": 8,
+  "budgetAdvisory": false,
+  "phase0Passed": 6,
+  "phase0Total": 6,
+  "milestone1APassed": 2,
+  "milestone1ATotal": 6,
+  "problems": 18
+}

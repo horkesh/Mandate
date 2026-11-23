@@ -1,48 +1,67 @@
 # S105: call terms on the July branch
 
-For the lead: 3 items. S105 only, `C:/Pyrrhic/sprint-july`, `sprint/july`,
-from `97c850376945538fe1f1eb189fb9f33a7af59353`. Merge `sprint/callterms`
-by name with `git merge --no-commit`, retaining S102's per-paper terms,
-S100's grammar and 0116 trigger, and S103's 0117 Windows budget option.
+For the lead: 3 items. **S105 only**, `C:/Pyrrhic/sprint-july`, `sprint/july`,
+from `97c850376945538fe1f1eb189fb9f33a7af59353`. Merge **`15b04bdcc9e9eeb0013aee4207fbf6d8c8944f20`**,
+through the unchanged hook. Its two parents are `97c85037` and `e12a85fb`.
+Final documentation commit/hook receipts are in `runs/s105/` and the sole
+main-CODEX status. Headless only; no S104 work, other-worktree write, push,
+history rewrite, bypass or signature. Formal review remains deferred.
 
-Authorized validation: cheap typecheck, rule/schema generation, startup and
-focused S102/discretion/reaffirmation checks before one reference capture;
-compare every hash/counter and coverage row against retained S100 evidence
-(S103 changes no simulation inputs). Review any failing band individually.
-Required standing check and ordinary hook, then exactly one normal eight-seed,
-drafting-retained `--milestone 1a` done check, with the local budget binding.
-No campaign retry, threshold fitting, historical credit waiver or S104 work.
-Logs and raw artifacts: `runs/s105/`; final results will replace this plan
-after runtime diagnostics and preservation settle. Whole-branch/gate review
-remains deferred under 0106/0107; nothing is signed or cleared for main.
+1. **Merge.** Merged `sprint/callterms` by name with `git merge --no-commit`.
+   Six conflicts combine S102's selectors with S100's discretion grammar,
+   regenerate schemas/World and bind the two combined projection closures.
+   Their protected reader identities are exact. The 0114-0117 decision chain,
+   S103 Windows-only CI option, S100 non-call doctrine and 0116 trigger remain
+   intact. S102's registry is exact; typed conditions/material demand remain
+   unscored, fallback explicit, all observed governor capacity terms zero.
 
-The one reference capture completed in 63.793 seconds, exit 0, with zero
-rejections and exact daily replay/save-resume. All 328 band rows pass unchanged.
-Union changes 145/148 daily hashes (first day 4), 30 aggregate counters,
-39 daily-fire rows and ten checkpoint score snapshots. Testbed's 120 hashes,
-counters and scores are exact. Every summary-field difference, hash, counter,
-day, response and inferred causal path is retained in `docs/audit/s105-evidence/`.
-Coverage remains 20 gaps, nine mismatches, one exposure mismatch and three
-not observed; no row matches. Raw acts change 258 to 251. Confederate known
-strength changes 88,452 to 82,329, with 22 unknown blocks; source-origin
-reconciliation is retained. All observed governor call capacity terms are zero.
+2. **One reference capture.** Exit 0, 63.793 seconds; replay/resume exact,
+   zero rejections. Union changes **145/148 hashes**, first day 4, **30 aggregate
+   counters**, 39 daily-fire rows and ten checkpoint score snapshots against
+   `97c85037`. Testbed's120 hashes/counters/scores are exact. All **328 full-run
+   band rows pass unchanged**, with all 165 old cause records exact. The packet
+   retains every non-clock summary difference, exact counter magnitudes/days,
+   responses, all 27 governor dispositions, call terms and inferred causal paths.
+   Coverage stays **0 matched /20 gaps /9 mismatches /1 exposure mismatch /
+   3 not observed**; C15 stays not observed. Raw acts 258 to 251. Confederate
+   known men **88,452 to 82,329**, unknown blocks 22; all origin deltas retained.
+   These diagnostics confer no historical credit.
 
-Six conflicts combine the call selector and discretion grammar, update only
-the two combined projection closure receipts (protected reader identities
-exact), and regenerate schemas/World from merged sources. The 0114-0117
-decision chain and S103 CLI/workflow remain intact. Focused checks pass
-92/92; typecheck, rules, boundary, licences and decisions pass. The required
-`MANDATE_NO_GIT=1 npm run check` passes (176.819 seconds). The actual
-commit/hook and single binding done check remain pending.
-Pre-commit preservation retains all 2,536 starting paths, 29 signed files,
-216 protected inputs, all 165 old band records, four local workspace aliases,
-S102's exact call registry and S100's exact non-call doctrine.
+3. **Checks and binding result.** Focused 92/92; typecheck, rules, boundary,
+   licences, 117 decisions, generated data and preservation pass. Required
+   `MANDATE_NO_GIT=1 npm run check`: exit 0,247 files/2,216 passed/three timing
+   skips,176.819s. Actual merge hook: exit 0,249 files/2,237 passed/three timing
+   skips,186.517s, including normal Git fixtures. Exactly one normal eight-seed,
+   drafting-retained `--milestone 1a` done check: **exit 1,
+   1587.748s; Phase 0 6/6;1A 2/6;
+   18 problems**. Failed criteria: checkpoints, pushback, unknown-strength and
+   lever-sweep. Local Union median/p95: 35.04/71.99 ms; history: 38.16/72.96 ms.
+   Budget binds locally; no advisory flag or retry.
+   All 268 daily hashes and every non-clock checked-summary field agree with
+   the capture; coverage exact. All 2,597 pre-gate tracked
+   files remain byte-exact. No criterion waived; Linux CI remains the hosted
+   budget authority under 0115/0117.
 
-Proposed ruling [I]: retain the combined accepted semantics and unchanged
-bands. Reject widening willingness windows, fitting cast/weights/strength,
-crediting raw counts as historical matches, or waiving any failed criterion.
+Before final documentation: all 2,536 starting paths survive;
+2511 original working files exact/25 intended
+changes;29 signed files,216 protected inputs and four local aliases exact.
+Recovery/inventories and actual final hook receipt are retained in `runs/s105/`.
+Full criteria, local tick and every problem: [packet](../docs/audit/s105-evidence/README.md).
+
+Proposed ruling [I]: retain the combined accepted meanings and unchanged bands.
+Reject fitted values/traits/weights/strength, widened reservation windows,
+reply-derived issuer terms, invented means, raw-count coverage credit and
+acceptance waivers. Conditional compliance remains S104's separate proposal.
+
+## For the lead
+
+1. Review the integration and retained measurements; pushing remains yours.
+2. Keep every failed criterion unmet and route S104/S99 separately.
+3. Hosted CI, whole-branch/gate review and signatures remain pending.
 
 ## Findings outside my scope
 
-S104 conditional-compliance design; inherited unmet 1A criteria; queued S99
-Union moves; hosted CI, formal review/signatures, main integration and pushing.
+S104 conditional compliance; queued S99 Union moves and absent June threat;
+unread originals/material balances; unmet historical strength, unknown-strength
+and D6 obligations; performance remediation, hosted CI, formal review,
+signatures, main integration, release and pushing. Nothing is cleared for main.
