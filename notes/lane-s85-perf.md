@@ -1,6 +1,76 @@
+For the lead: 2 items.
+
+# S85 continuation: the actual in-suite tick
+
+Continued from `839272ab`, after the lead's hosted-CI result. One additional
+optimization; the earlier accepted delivery is retained below. Headless only,
+no push, no history rewrite, and no access to July or unknowns worktrees.
+
+1. **Profile and change.** Temporary instrumentation wraps the unchanged
+   test's three timed calls during the full suite, forwarding the same inputs
+   and returning the identical result objects. Default **15 fork workers**, no
+   selector/exclusion, `CI=1 MANDATE_TIMING=1`. Inspector setup and file writes
+   are outside the timers. Independent review approved the instrumentation.
+
+   The appointment `issued` check consumed about 625 ms of scoped samples per
+   Union slot. It repeatedly parsed correspondence and minted the same key.
+   The new lazy, per-menu day index collects the same eligible IDs once and
+   mints once per day/query. Exact and dot-suffix matches, shortened IDs,
+   negative days, visibility and appointment order retain their semantics.
+   No derived State or cross-call cache is added. Four alternating direct
+   pairs all improved; each checked its returned sample menu. Eleven separate
+   adversarial cases and the collected regression cover the matching behavior.
+
+   | Actual full-suite mode | War median | History median |
+   |---|---:|---:|
+   | `a4c0a43a`, CPU sampled | 27.01 ms | 26.61 ms |
+   | `839272ab`, CPU sampled | 35.81 ms | 33.49 ms |
+   | Candidate, CPU sampled | 30.28 ms | 29.60 ms |
+   | Candidate, sampler off | **32.61 ms** | **31.54 ms** |
+
+   Old/current suites have 209/226 files and 1,956/2,081 tests; their model
+   workloads differ too. Both use default workers. Inclusive sample rows
+   overlap; absent/inlined frames are not measured zero. Wall-clock changes
+   across these shared-host samples are not an isolated causal estimate.
+   Received views, command/headquarters queries and reports also grew; sent
+   messages rose 11,839 to 15,396 per Union slot. Organisation/rail have distinct
+   new frames, lot aggregation a small history frame, and combat changes less.
+
+2. **Acceptance and preservation.** The sampler-off full run passes
+   **2,082 tests, zero skips**, in 176.605 s. War/history p95 are
+   **60.94/64.80 ms**. Both medians meet the **36 ms local aim**; the hard
+   40/160 limits, original timing test, workload and worker count are unchanged.
+   All **268 frozen hashes plus 148 observed history hashes**, counters, scores,
+   non-clock criteria, replay and resume are exact. All eight protected readers
+   match; only two existing fingerprint fields refresh. Independent source
+   review found no blocking issue. Focused checks pass 115 tests, typecheck,
+   one-writer and rules before the long runs.
+
+   The warm standalone `runDoneCheck({sweepSeeds:0})` exits 0 in 127.857 s,
+   war/history **32.53/32.37 ms**, Phase 0 passing. It is a timing-only check,
+   not a new eight-seed result. Prior S85's full eight-seed report remains the
+   latest; scorer/seed/fork code is unchanged and no new D6 clearance is claimed.
+   Before this note, all 2,219 starting paths remained, 2,216 byte-identical;
+   all 273 protected inputs and the 689-file runtime were verified.
+
+Proposed [I]: retain this local correspondence index. Reject budget/test/load
+changes, broader matching domains, persistent derived data and weaker keys.
+The local headroom is measured; hosted Linux still needs the lead's push.
+
+Evidence: `docs/audit/s85-evidence/loaded-appointment.json`; raw profiles,
+snapshots, probes, checks and recovery: `runs/s85b/`. Actual hook/commit follow
+this pre-hook note in `runs/s85b/commit-appointment.*` and the sole CODEX append.
+
+## Findings outside my scope
+
+Hosted CI certification, other lanes, 1A calibration/coverage, whole-branch
+and gate review, July/main integration, release and pushing remain with owners.
+
+## Earlier accepted S85 delivery at 839272ab
+
 For the lead: 3 items.
 
-# S85: the loaded tick budget
+### S85: the loaded tick budget
 
 S85 only, `sprint/perf3`, from `e2b98c81`. Root `npm ci` passed; workspace
 aliases resolve here. Work remained headless. No push or history rewrite.

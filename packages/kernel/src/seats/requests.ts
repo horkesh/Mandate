@@ -115,6 +115,28 @@ function transitByPost(state: State, principal: PersonId): ReadonlyMap<PostId, R
   return kinds;
 }
 
+/** Index correspondence IDs by the day carried in the minted appointment ID. */
+function appointmentDispatchesByDay(state: State, principal: PersonId): ReadonlyMap<number, readonly string[]> {
+  const lettersByDay = new Map<number, string[]>();
+  const addLetter = (letterId: string | null | undefined) => {
+    if (!letterId?.startsWith('m.')) return;
+    const endOfDay = letterId.indexOf('.', 2);
+    if (endOfDay === -1) return;
+    const day = Number(letterId.slice(2, endOfDay));
+    if (!Number.isSafeInteger(day)) return;
+    const dayLetters = lettersByDay.get(day);
+    if (dayLetters === undefined) lettersByDay.set(day, [letterId]);
+    else dayLetters.push(letterId);
+  };
+  for (const message of state.messagesInTransit) {
+    addLetter(message.id);
+    if (message.msgTo === principal) addLetter(message.msgReport?.reportAnswers);
+  }
+  for (const response of Object.values(state.orderResponses)) addLetter(response.respOrder);
+  for (const known of knowledgeOf(state, seatIdFor(principal)).knownReports) addLetter(known.knownBody.reportAnswers);
+  return lettersByDay;
+}
+
 /** The pack's doctrine for a faction's principal, its offensives' dates as days of the run (day 0 is the start's date). */
 function doctrineView(world: SeatsWorld, state: State, faction: FactionId, receivedView: SeatView, sides: ReadonlyMap<DepartmentId, FactionId | null>): DoctrineView {
   const row = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === faction);
@@ -281,17 +303,15 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     const rows = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === faction)?.appointments ?? [];
     // An effective date makes an unsent letter due. Attention can defer sending, but a refusal is final.
     // Read only the identity of the principal's own sent letter, not its private answer or willingness.
+    let dispatches: ReturnType<typeof appointmentDispatchesByDay> | undefined;
     const issued = (post: PostId, person: PersonId): boolean => {
-      const sent = (id: string | null | undefined): boolean => {
-        if (id == null) return false;
-        const day = Number(id.split('.')[1]);
-        if (!Number.isSafeInteger(day)) return false;
+      dispatches ??= appointmentDispatchesByDay(state, f.principal);
+      for (const [day, dayLetters] of dispatches) {
         const expected = mintMessageId(new Set(), day, f.principal, person, `verb.appoint.${post}`);
-        return id === expected || id.startsWith(`${expected}.`);
-      };
-      return state.messagesInTransit.some(m => sent(m.id) || (m.msgTo === f.principal && sent(m.msgReport?.reportAnswers))) ||
-        Object.values(state.orderResponses).some(r => sent(r.respOrder)) ||
-        knowledgeOf(state, seatIdFor(f.principal)).knownReports.some(k => sent(k.knownBody.reportAnswers));
+        const prefix = `${expected}.`;
+        if (dayLetters.some(letter => letter === expected || letter.startsWith(prefix))) return true;
+      }
+      return false;
     };
     const unsent = rows.filter(a => 'onDate' in a && !issued(a.post, a.person));
     historicalAppointees.push(...new Set(unsent.map(a => a.person)));

@@ -2,6 +2,7 @@ import { expect, it } from 'vitest';
 import { toId } from '../src/ids.ts';
 import { deliverReport } from '../src/knowledge/knowledge.ts';
 import { NO_TRUTH } from '../src/knowledge/truth.ts';
+import { mintMessageId, type TransitMessage } from '../src/messages/transit.ts';
 import type { State } from '../src/root-state.ts';
 import { morningGround, pendingRequests, principalMenu } from '../src/seats/requests.ts';
 import { indexSeatsWorld } from '../src/seats/world.ts';
@@ -103,6 +104,42 @@ it('S62: a due appointment and raising offices use received establishment, never
     [POST('new_command')]: { ...state.postStates[POST('a_army')]!, postHolder: P('a_spy') },
   } };
   expect(menu(hidden)).toEqual(expected);
+});
+
+it('reads each dispatch ID once for dated appointments and recognises a shortened ID with a suffix', () => {
+  const { world: base, seat } = fresh();
+  const principal = P('a_lead');
+  const person = P('a_spy');
+  const unsent = [POST('new_command'), POST('other_command')];
+  const sent = POST(`long_command_${'a'.repeat(96)}`);
+  const posts = [...unsent, sent];
+  const { rules, vocabularies } = base.map.world;
+  const map = indexWorld({ ...base.map.world,
+    vocabularies: { ...vocabularies, postKinds: vocabularies.postKinds.map(k => k.id === 'expedition' ? { ...k, creatable: 'appoint' } : k) },
+    rules: { ...rules, ruleSeats: { ...rules.ruleSeats, principals: rules.ruleSeats.principals.map(row => row.faction !== F('a') ? row : {
+      ...row, appointments: posts.map(post => ({ post, person, onDate: '1900-06-02', source: 'fictional appointment' })),
+    }) } },
+  });
+  const world = indexSeatsWorld(map, { ...base.start, temporaryPosts: posts.map(id => ({ id, name: `post.${id}`, kind: 'expedition',
+    department: toId('department', 'a_war'), parent: POST('a_office'), holder: null, region: R('a_front'), operation: 'new',
+  })) });
+  const messageBase = mintMessageId(new Set(), 3, principal, person, `verb.appoint.${sent}`);
+  expect(messageBase).toMatch(/^m\.3\.[0-9a-f]{16}$/);
+  const answered = toId('message', `${messageBase}.2`);
+  const opening = { ...createState(world, { seed: 17 }), stateDay: 10 };
+  const state = deliverReport(opening, seat, report('m.appointment.answer', { reportAnswers: answered }), NO_TRUTH);
+  let idReads = 0;
+  const messagesInTransit = Array.from({ length: 12 }, (_, index): TransitMessage => {
+    const id = toId('message', `m.2.unrelated.${index}`);
+    return { get id() { idReads++; return id; }, msgOrigin: id, msgFrom: person, msgTo: P('b_lead'), msgToPost: null,
+      msgRole: 'addressee', msgRoute: 'courier', msgSentDay: 2, msgArriveDay: 12, msgVia: [], msgPending: [],
+      msgOrder: null, msgVerb: null, msgReport: report(id).knownBody, msgTruth: NO_TRUTH,
+    };
+  });
+  const morning = { ...state, messagesInTransit };
+  const menu = principalMenu(world, morning, F('a'), morningGround(world, morning, 11));
+  expect(menu.historicalAppointments?.map(row => row.post)).toEqual(unsent);
+  expect(idReads).toBe(messagesInTransit.length);
 });
 
 it("S62: a hidden local battle changes its commanders' choices without reaching either principal", () => {

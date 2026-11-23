@@ -2,6 +2,16 @@
 
 Handover: [lane-s85-perf.md](../../../notes/lane-s85-perf.md).
 
+- `loaded-appointment.json`: continuation at `839272ab`, actual in-suite CPU
+  profiles under each revision's full default-worker load, the local appointment
+  index, direct pairs, sampler-off acceptance and exact hashes/counters/scores.
+  It includes the independently reviewed instrumentation, warm standalone
+  timing-only check and explicit reuse limits. Raw continuation evidence is in
+  `runs/s85b/`; its actual hook/commit is `runs/s85b/commit-appointment.*` and
+  the single continuation CODEX status. Hosted Linux remains pending.
+
+The original accepted delivery packet follows:
+
 - `sender-view.json`: first optimization, direct and alternating timings, exact
   reference comparisons and regression checks.
 - `menu.json`: second optimization, the two existing fingerprint updates and
@@ -19,7 +29,7 @@ logs, exits, failed/rejected witnesses and staged recovery patches remain in
 `runs/s85/`. Normal standalone saves/summaries and drafting are in
 `runs/s85-done/` and `runs/s85-done-drafting/`.
 
-This packet precedes the final commit hook. Its actual result and commit are
+The original packet preceded its final commit hook. Its actual result and commit are
 recorded in `runs/s85/commit-final.*` and the sole main-checkout CODEX status.
 The evidence establishes local Windows results; hosted Linux CI remains with
 the lead's subsequent push. No threshold, test selection or workload changed.
