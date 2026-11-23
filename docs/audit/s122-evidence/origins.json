@@ -1,0 +1,582 @@
+[
+  {
+    "side": "confederate",
+    "origin": "arkansas_forces_transferred",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "generated.state-forces.cs_ar_infantry_arkansas.1",
+      "generated.state-forces.cs_ar_infantry_arkansas.2",
+      "generated.state-forces.cs_ar_infantry_arkansas.3",
+      "generated.state-forces.cs_ar_infantry_arkansas.4",
+      "generated.state-forces.cs_ar_infantry_arkansas.5",
+      "generated.state-forces.cs_ar_infantry_arkansas.6",
+      "generated.state-forces.cs_ar_infantry_arkansas.7",
+      "generated.state-forces.cs_ar_cavalry_arkansas.1",
+      "unidentified.state-forces.cs_ar_cavalry_battalion_arkansas",
+      "unidentified.state-forces.cs_ar_artillery_arkansas"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_alabama",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 1560,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_arkansas",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 780,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_georgia",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 1560,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_louisiana",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 780,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_mississippi",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 1560,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_north_carolina",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 168,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_tennessee",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 2340,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jul01_extra_alabama",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 704,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jul01_extra_georgia",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 1449,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun29_extra_louisiana",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 1560,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun29_extra_mississippi",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 465,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_cavalry_alabama",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "unidentified.raised.st_gov_alabama.d122"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_cavalry_arkansas",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "unidentified.raised.st_gov_arkansas.d122"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_cavalry_georgia",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "unidentified.raised.st_gov_georgia.d122"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_cavalry_mississippi",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "unidentified.raised.st_gov_mississippi.d122"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_cavalry_tennessee",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "unidentified.raised.st_gov_tennessee.d129.2"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_alabama",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 2265,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_arkansas",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 3000,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_florida",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 1000,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_georgia",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 2784,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_mississippi",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 3000,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_north_carolina",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 651,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_south_carolina",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 2265,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_texas",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 2000,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_virginia",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 2265,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_alabama",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 2000,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_florida",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 500,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_georgia",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 2000,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_louisiana",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 1700,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_mississippi",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 1500,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_south_carolina",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 3000,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "initial.forces",
+    "returnMen": 3133,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "initial.fb_cs_charleston",
+      "initial.fb_cs_charleston_guard_steamers",
+      "initial.fb_st_charleston_1st_infantry_regulars",
+      "initial.fb_st_charleston_2nd_artillery_battalion",
+      "initial.fb_st_charleston_hagood_regiment",
+      "initial.fb_st_charleston_kershaw_regiment",
+      "initial.fb_st_charleston_morris_island",
+      "initial.fb_st_charleston_rion_battalion",
+      "initial.fb_st_fort_morgan",
+      "initial.fb_st_la_forts_jackson_st_philip",
+      "initial.fb_st_tx_ford_regiment",
+      "initial.fb_st_tx_galveston_batteries",
+      "initial.fb_st_tx_northwest_frontier_companies"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "north_carolina_forces_transferred",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.1",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.2",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.3",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.4",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.5",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.6",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.7",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.8",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.9",
+      "generated.state-forces.cs_nc_state_transfer_north_carolina.10",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.1",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.2",
+      "generated.state-forces.cs_nc_volunteers_north_carolina.3",
+      "generated.state-forces.cs_nc_additional_north_carolina.1",
+      "generated.state-forces.cs_nc_additional_north_carolina.2"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "tennessee_forces_return",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "unidentified.state-forces.cs_tn_infantry_tennessee",
+      "unidentified.state-forces.cs_tn_cavalry_tennessee",
+      "unidentified.state-forces.cs_tn_river_artillery_tennessee"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "virginia_harpers_jackson",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "unidentified.state-forces.va_harpers_ferry"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "virginia_manassas_garland_return",
+    "returnMen": 368,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": []
+  },
+  {
+    "side": "confederate",
+    "origin": "virginia_norfolk_state_forces",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "unidentified.state-forces.va_norfolk"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "virginia_peninsula_state_forces",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "unidentified.state-forces.va_peninsula"
+    ]
+  },
+  {
+    "side": "confederate",
+    "origin": "virginia_richmond_state_forces",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 0,
+    "unknownLots": [
+      "unidentified.state-forces.va_richmond"
+    ]
+  },
+  {
+    "side": "union",
+    "origin": "initial.forces",
+    "returnMen": 6371,
+    "estimateMen": 490,
+    "ruleMen": 0,
+    "unknownLots": [
+      "initial.fb_us_dc_militia",
+      "initial.fb_us_fort_monroe_garrison",
+      "initial.fb_us_marines_philadelphia_yard",
+      "initial.fb_us_marines_washington_barracks",
+      "initial.fb_us_new_mexico_troops",
+      "initial.fb_us_pacific_troops",
+      "initial.fb_us_pickens_garrison",
+      "initial.fb_us_pickens_vogdes_co_a",
+      "initial.fb_us_ship_anacostia",
+      "initial.fb_us_ship_michigan",
+      "initial.fb_us_ship_water_witch",
+      "initial.fb_us_washington_regulars"
+    ]
+  },
+  {
+    "side": "union",
+    "origin": "m.41.lincoln_abraham.ramsey_alexander.call.st_gov_minnesota",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 780,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_jul25_new_york",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 25000,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_jun11_indiana",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 5196,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may03_accepted_new_york",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 31057,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may04_regular_artillery",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 997,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may04_regular_cavalry",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 997,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may04_regular_infantry",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 16160,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may15_vol_kansas",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 866,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may15_vol_massachusetts",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 4908,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may15_vol_nebraska",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 866,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may15_vol_rhode_island",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 820,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_connecticut",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 820,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_illinois",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 5196,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_indiana",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 3464,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_iowa",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 1732,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_maine",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 821,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_michigan",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 2456,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_new_hampshire",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 820,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_new_jersey",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 2452,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_new_york",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 11456,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_vermont",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 819,
+    "unknownLots": []
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_wisconsin",
+    "returnMen": 0,
+    "estimateMen": 0,
+    "ruleMen": 1482,
+    "unknownLots": []
+  }
+]

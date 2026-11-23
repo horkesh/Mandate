@@ -75,7 +75,7 @@ describe('the migrations registry', () => {
 
   it('preserves older hashes and round-trips unknown stragglers in schema 3', () => {
     const original = JSON.parse(readFileSync(fixture(2), 'utf8'));
-    expect(decodeSave(JSON.stringify(original))).toMatchObject({ schemaVersion: 3, stateHash: original.stateHash, logHash: original.logHash });
+    expect(decodeSave(JSON.stringify(original))).toMatchObject({ schemaVersion: CURRENT_SAVE_SCHEMA, stateHash: original.stateHash, logHash: original.logHash });
     const state = { forceBlockStates: { sample: { fbLots: [{ lotId: 'unknown', lotMen: null, lotStragglers: null }] } } };
     expect(decodeSave(encodeSave({ worldHash: WORLD, state })).state).toEqual(state);
   });

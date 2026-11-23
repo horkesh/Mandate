@@ -1,4 +1,4 @@
-import { forceTotals } from '@mandate/kernel';
+import { forceTotals, type StrengthKinds } from '@mandate/kernel';
 /**
  * 1A's history run and what it is scored on (FOUNDATION sections 11 and 12; lane 1.14, Part A: the harness).
  *
@@ -28,13 +28,15 @@ export function historyDays(c: Checkpoints, startDate: string): number {
 }
 
 export interface Snapshot {
+  readonly commandMembers?: Readonly<Record<string, readonly string[]>>;
+  readonly lots?: readonly { readonly id: string; readonly faction: string; readonly department: string; readonly men: number | null; readonly source: string | null }[];
   readonly day: number;
   /** Each department's side (null: neutral). */
   readonly sides: Readonly<Record<string, string | null>>;
   /** Each department's kind (the World's), which a `side-set` counts by. */
   readonly kinds: Readonly<Record<string, string>>;
   /** Each faction's men in blocks of known strength, and its blocks of unknown strength. */
-  readonly men: Readonly<Record<string, { readonly known: number; readonly unknownBlocks: number }>>;
+  readonly men: Readonly<Record<string, { readonly known: number; readonly unknownBlocks: number; readonly byKind?: StrengthKinds; readonly unknownLots?: readonly string[] }>>;
   /** The holder of each region a `held` checkpoint names (null: nobody holds it). */
   readonly holders: Readonly<Record<string, string | null>>;
 }
@@ -112,17 +114,26 @@ export function observeRun(c: Checkpoints | null, startDate: string): { readonly
       for (const [d, f] of Object.entries(state.departmentFactions)) sides[d] = f;
       const kinds: Record<string, string> = {};
       for (const d of world.map.world.departments) kinds[d.id] = d.kind;
-      const men: Record<string, { known: number; unknownBlocks: number }> = {};
-      for (const f of world.map.world.factions) men[f.id] = { known: 0, unknownBlocks: 0 };
+      const men: Record<string, { known: number; unknownBlocks: number; byKind: { return:number; estimate:number; rule:number; unknown:null }; unknownLots:string[] }> = {};
+      const lots: NonNullable<Snapshot['lots']>[number][] = [];
+      for (const f of world.map.world.factions) men[f.id] = { known: 0, unknownBlocks: 0, byKind:{return:0,estimate:0,rule:0,unknown:null},unknownLots:[] };
       for (const block of Object.values(state.forceBlockStates)) {
         const side = phase0.departmentSide(state, block.fbDepartment);
         if (side === null || men[side] === undefined) continue;
-        if (forceTotals(block, world.map.forceTotalsCache).fbStrength === null) men[side]!.unknownBlocks += 1;
-        else men[side]!.known += forceTotals(block, world.map.forceTotalsCache).fbStrength!;
+        const total = forceTotals(block, world.map.forceTotalsCache);
+        if (total.fbStrength === null) men[side]!.unknownBlocks += 1;
+        for (const kind of ['return','estimate','rule'] as const) men[side]!.byKind[kind] += total.fbByKind[kind];
+        men[side]!.known += total.fbByKind.return + total.fbByKind.estimate + total.fbByKind.rule;
+        men[side]!.unknownLots.push(...total.fbUnknownLots);
+        for (const l of block.fbLots) lots.push({id:l.lotId,faction:side,department:block.fbDepartment,men:l.lotMen,source:l.lotStrength.strengthSource});
       }
       const holders: Record<string, string | null> = {};
       for (const k of held) holders[k.region] = holder(k.region);
-      snapshots.set(r.day, { day: r.day, sides, kinds, men, holders });
+      const commandMembers: Record<string, readonly string[]> = {};
+      for (const k of c?.checkpoints ?? []) if (k.kind === 'men' && dayOfDate(startDate,k.date) === r.day) for (const g of k.groups ?? []) {
+        if (g.post !== undefined) commandMembers[g.post] = phase0.allCommandedBlocks(world.map,state,g.post).flatMap(id=>state.forceBlockStates[id]?.fbLots.map(l=>l.lotId) ?? []);
+      }
+      snapshots.set(r.day, { day: r.day, sides, kinds, men, holders, lots, commandMembers });
     }
   };
   return { onTick, observations: () => ({ battles, operations, responses, snapshots, notHeld, unpaidFloors, warSince, lastDay, pushbackActs: pushback.observations() }) };
@@ -141,6 +152,7 @@ export function operationsFought(obs: Observations, day: number): { readonly id:
 }
 
 export interface Scored {
+  readonly verdict?: 'pass' | 'unresolved' | 'fail';
   readonly problems: readonly string[];
   readonly evidence: readonly string[];
 }
@@ -149,6 +161,11 @@ const list = (xs: readonly string[]): string => (xs.length === 0 ? 'none' : xs.j
 
 /** One checkpoint against the run's observations. */
 export function checkpointScore(k: Checkpoint, obs: Observations, startDate: string): Scored {
+  const score = checkpointDetails(k, obs, startDate);
+  return { ...score, verdict: score.verdict ?? (score.problems.length ? 'fail' : 'pass') };
+}
+
+function checkpointDetails(k: Checkpoint, obs: Observations, startDate: string): Scored {
   const day = dayOfDate(startDate, k.date);
   const at = `${k.id} (${k.date}, day ${day})`;
   const snap = obs.snapshots.get(day);
@@ -183,12 +200,44 @@ export function checkpointScore(k: Checkpoint, obs: Observations, startDate: str
       const band = `${k.min}..${k.max ?? 'no upper bound'}`;
       const problems: string[] = [];
       const evidence = [`${at}: ${k.faction} ${m.known} men of known strength, ${m.unknownBlocks} blocks of unknown strength (band ${band})`];
-      if (m.known < k.min) {
-        if (k.floorBinding) problems.push(`${at}: ${k.faction} has ${m.known} men, below ${k.min}`);
+      if (m.byKind !== undefined) evidence.push(`${at}: totals by kind: return ${m.byKind.return}, estimate ${m.byKind.estimate}, rule ${m.byKind.rule}, unknown men unknown (${m.unknownLots?.length ?? 0} lots)`);
+      const sideLots = snap.lots?.filter(l => l.faction === k.faction) ?? [];
+      const ids = sideLots.map(l => l.id);
+      const duplicate = ids.filter((id,i) => ids.indexOf(id) !== i);
+      if (duplicate.length) problems.push(`${at}: duplicated men/lot identities: ${list(duplicate)}`);
+      let lower = m.known;
+      let upper: number | null = m.unknownBlocks ? null : m.known;
+      const covered = new Set<string>();
+      for (const g of k.groups ?? []) {
+        const command = g.post === undefined ? undefined : snap.commandMembers?.[g.post];
+        const actual = sideLots.filter(l => g.department === undefined ? command?.includes(l.id) : l.department === g.department);
+        const expected = [...g.members].sort();
+        const members = actual.map(l => l.id).sort();
+        if ((g.post !== undefined && command === undefined) || g.date !== k.date || new Set(expected).size !== expected.length || members.join('|') !== expected.join('|') || members.some(id => covered.has(id)) || (g.max !== null && g.max < g.min) || (g.kind === 'return' && g.min !== g.max)) {
+          problems.push(`${at}: group ${g.id} has an evidence error: date or exact disjoint membership does not reconcile`); continue;
+        }
+        for (const id of members) covered.add(id);
+        const known = actual.reduce((n,l) => n + (l.men ?? 0),0);
+        if (g.max !== null && known > g.max) problems.push(`${at}: group ${g.id} counted constituents ${known} exceed its ${g.kind} ceiling ${g.max}`);
+        lower += Math.max(known,g.min) - known;
+        evidence.push(`${at}: ${g.kind} ${g.id} bounds exactly [${members.join(', ')}] at ${g.min}..${g.max ?? 'unknown'}; constituents not added; ${g.cite}; ${g.membershipSource}`);
+      }
+      if ((k.groups?.length ?? 0) > 0) {
+        const outsideUnknown = sideLots.some(l => l.men === null && !covered.has(l.id));
+        upper = outsideUnknown || k.groups!.some(g => g.max === null) ? null : sideLots.filter(l => !covered.has(l.id)).reduce((n,l) => n+(l.men??0),0) + k.groups!.reduce((n,g)=>n+g.max!,0);
+      }
+      for (const d of k.diagnostics ?? []) evidence.push(`${at}: diagnostic only, unreconciled scope, ${d.kind} ${d.date}: ${d.description}; ${d.cite}`);
+      let unresolved = false;
+      if (lower < k.min) {
+        if (k.floorBinding) {
+          unresolved = (m.unknownLots?.length ?? m.unknownBlocks) > 0 && (upper === null || upper >= k.min);
+          problems.push(`${at}: ${k.faction} has ${lower} men, below ${k.min}${unresolved ? '; unresolved: unknown lots could close the gap' : ''}`);
+        }
         else evidence.push(`${at}: below the lower edge, reported and not failed (the band's floor is not binding: no primary return bounds it)`);
       }
-      if (k.max !== null && m.known > k.max) problems.push(`${at}: ${k.faction} has ${m.known} men, above ${k.max}`);
-      return { problems, evidence };
+      if (unresolved) for (const id of m.unknownLots ?? []) evidence.push(`${at}: recover ${id}: dated return or estimate with exact membership; ${sideLots.find(l=>l.id===id)?.source ?? 'source not yet recovered'}`);
+      if (k.max !== null && lower > k.max) problems.push(`${at}: ${k.faction} has ${lower} men, above ${k.max}`);
+      return { problems, evidence, verdict: problems.length === 0 ? 'pass' : unresolved && problems.length === 1 ? 'unresolved' : 'fail' };
     }
     case 'operations-fought': {
       const fought = operationsFought(obs, day).filter((o) => o.op.faction === k.faction);
@@ -206,8 +255,12 @@ export function checkpointScore(k: Checkpoint, obs: Observations, startDate: str
 export function checkpointsScore(c: Checkpoints, obs: Observations, startDate: string, atWar: boolean): Scored {
   const problems: string[] = [];
   const evidence: string[] = [];
+  let unresolved = false;
+  let failed = false;
   for (const k of c.checkpoints) {
     const s = checkpointScore(k, obs, startDate);
+    unresolved ||= s.verdict === 'unresolved';
+    failed ||= s.verdict === 'fail';
     problems.push(...s.problems);
     evidence.push(...s.evidence);
   }
@@ -216,7 +269,8 @@ export function checkpointsScore(c: Checkpoints, obs: Observations, startDate: s
     if (since === null) problems.push(`${f} is not at war by day ${obs.lastDay}: no decision of its government set its war flag (0066)`);
     else evidence.push(`${f} at war since day ${since}`);
   }
-  return { problems, evidence };
+  const ownProblems = atWar || Object.values(obs.warSince).some(s => s === null);
+  return { problems, evidence, verdict: failed || ownProblems ? 'fail' : unresolved ? 'unresolved' : 'pass' };
 }
 
 /**

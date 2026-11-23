@@ -28,9 +28,9 @@ describe('S1 national volunteer allocations and Regular recruiting', () => {
     expect(catalogue.records.find((r: { id: string }) => r.id === 'us_may03')).toMatchObject({ volunteers: 42034, regulars: 22714, seamen: 18000 });
   });
 
-  it('keeps the directed Regular organizations separate from unread actual enlisted strength', () => {
+  it('uses each directed Regular organisation as a model minimum, separately from actual enlisted returns', () => {
     const calls = doctrine.calls.filter(c => c.id?.startsWith('us_may04_regular_'));
-    expect(calls.map(c => [c.arm, c.regiments, c.men])).toEqual([['infantry', 8, null], ['cavalry', 1, null], ['artillery', 1, null]]);
+    expect(calls.map(c => [c.arm, c.regiments, c.men])).toEqual([['infantry', 8, undefined], ['cavalry', 1, undefined], ['artillery', 1, undefined]]);
     const catalogue = JSON.parse(readFileSync(new URL('../calls-1861.json', import.meta.url), 'utf8'));
     expect(catalogue.records.find((r: { id: string }) => r.id === 'us_may04_regular_organization')).toMatchObject({ requestedMinimumMen: 18154, maximumOrganizationMen: 22714 });
     const start = phase0.createState(world, setup);
@@ -56,13 +56,13 @@ describe('S1 national volunteer allocations and Regular recruiting', () => {
     expect(state.postStates[POST('us_recruiting_service')]?.postHolder).toBe(P('smith_charles_f'));
     state = { ...state, stateDay: 59 };
     const requested = doctrine.calls.filter(c => c.id?.startsWith('us_may04_regular_'));
-    r = phase0.tick(world, state, requested.map(c => ({ day: 60, seat, command: { cmd: 'call' as const, to: c.post, regiments: c.regiments, men: c.men, arm: c.arm!, callId: c.id!, termDays: 1095, route: 'courier' as const, bypass: false } })), { freeze: true });
+    r = phase0.tick(world, state, requested.map(c => ({ day: 60, seat, command: { cmd: 'call' as const, to: c.post, regiments: c.regiments, ...(c.men === undefined ? {} : {men:c.men}), arm: c.arm!, callId: c.id!, termDays: 1095, route: 'courier' as const, bypass: false } })), { freeze: true });
     expect(r.rejections).toEqual([]); state = r.state;
     // A vacancy upstream is learned from the returned letters, not silently skipped from truth at sending.
     // Retry the same requisitions once, only after those papers reach this principal.
     const retry = phase0.viewFor(world,state,seat).reports.some(r => r.subjectId === 'us_war_adjutant_general' && r.claims.some(c => c.kind === 'order-returned' && c.token === 'vacant_post'));
     for (let day = 61; day <= 90; day++) state = phase0.tick(world, state,
-      day === 61 && retry ? requested.map(c => ({ day,seat,command:{cmd:'call' as const,to:c.post,regiments:c.regiments,men:c.men,arm:c.arm!,callId:c.id!,termDays:1095,route:'courier' as const,bypass:false} })) : [], { freeze: true }).state;
+      day === 61 && retry ? requested.map(c => ({ day,seat,command:{cmd:'call' as const,to:c.post,regiments:c.regiments,...(c.men === undefined ? {} : {men:c.men}),arm:c.arm!,callId:c.id!,termDays:1095,route:'courier' as const,bypass:false} })) : [], { freeze: true }).state;
     const answers = Object.values(state.orderResponses).filter(r => r.respRole === 'addressee' && r.respKind === 'call' && requested.some(c => c.id === r.respCallId));
     expect(answers).toHaveLength(3);
     const accepted = answers.filter(r => ['exceed', 'comply', 'comply_with_reservations', 'slow_walk', 'reinterpret'].includes(r.respActual));
@@ -76,14 +76,15 @@ describe('S1 national volunteer allocations and Regular recruiting', () => {
       const call = requested.find(c => c.id === response.respCallId)!;
       const raised = lots.filter(l => l.lotService?.enlCallId === call.id);
       expect(raised).toHaveLength(call.regiments!);
-      expect(raised.every(l => l.lotMen === null)).toBe(true);
+      expect(raised.every(l => l.lotMen !== null && l.lotMen > 0 && l.lotStrength.strengthKind === 'rule')).toBe(true);
     }
     for (const [block, e] of enlistments) {
       const arm = requested.find(c => c.id === e.enlCallId)!.arm;
       expect(e.enlPost).toBe(POST('us_recruiting_service'));
       expect(e.enlRegiments).toBeGreaterThan(0);
       expect(e.enlEndsDay! - e.enlMusterDay).toBe(1095);
-      expect(observeBlock(state.forceBlockStates[ids.toId('forceBlock', block)]!)).toMatchObject({ fbArm: arm, fbStrength: null });
+      expect(observeBlock(state.forceBlockStates[ids.toId('forceBlock', block)]!)).toMatchObject({ fbArm: arm });
+      expect(observeBlock(state.forceBlockStates[ids.toId('forceBlock', block)]!).fbStrength).toBeGreaterThan(0);
       expect(state.forceAssignments[ids.toId('forceBlock', block)]).toBe(POST('us_recruiting_service'));
     }
   });

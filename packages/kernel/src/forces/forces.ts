@@ -1,3 +1,4 @@
+import type { StrengthKinds } from './lots.ts';
 /**
  * Forces (FOUNDATION section 10; decisions 0033, 0040, 0041, 0050): force
  * blocks and their detachments as State, written only here.
@@ -10,7 +11,7 @@
  * Stores are held in milli-days (1000 = one day of supply for the block), so
  * a part-day's consumption or delivery never rounds away (decision 0002).
  */
-import { forceTotals, changeLotTotals, knownStragglers, unidentifiedLot, type RegimentLot } from './lots.ts';
+import { forceTotals, changeLotTotals, knownStragglers, unidentifiedLot, strengthBasisProblems, type RegimentLot } from './lots.ts';
 import { strictCompare } from '../compare.ts';
 import type { DepartmentId, FactionId, ForceBlockId } from '../ids.ts';
 import type { State } from '../root-state.ts';
@@ -140,6 +141,7 @@ export function initialForces(map: WorldIndex, start: ScenarioStart): ForceTable
     if (b.kind === 'detachment' && (b.parent === null || !ids.has(b.parent))) problems.push(`force block ${b.id}: a detachment needs a parent block`);
     if (b.kind === 'block' && b.parent !== null) problems.push(`force block ${b.id}: a block has no parent`);
     if (b.strength !== null && (!Number.isSafeInteger(b.strength) || b.strength < 0)) problems.push(`force block ${b.id}: strength must be a whole number of men`);
+    if (b.strengthBasis !== undefined) problems.push(...strengthBasisProblems(b.strength,b.strengthBasis).map(p=>`force block ${b.id}: ${p}`));
     if (!Number.isSafeInteger(b.nonCombatants) || b.nonCombatants < 0) problems.push(`force block ${b.id}: non-combatants must be a whole number`);
     if (b.storesDays !== null && (!Number.isSafeInteger(b.storesDays) || b.storesDays < 0)) problems.push(`force block ${b.id}: stores must be whole days`);
     // Stores no source gives take the first norm that covers the block (lane 1.4), flagged assumed; none: unknown.
@@ -152,7 +154,7 @@ export function initialForces(map: WorldIndex, start: ScenarioStart): ForceTable
       fbParent: b.parent,
       fbDepartment: b.department,
       fbArm: b.arm,
-      fbLots: [unidentifiedLot(`initial.${b.id}`, b.arm, b.strength)],
+      fbLots: [unidentifiedLot(`initial.${b.id}`, b.arm, b.strength, 0, null, b.strengthBasis)],
       fbNonCombatants: b.nonCombatants,
       fbStoresMilli: b.storesDays !== null ? b.storesDays * STORES_MILLI : norm === null ? null : norm.days * STORES_MILLI,
       fbStoresAssumed: b.storesDays === null && norm !== null,
@@ -196,17 +198,21 @@ export function isNaval(map: WorldIndex, state: State, id: ForceBlockId): boolea
 export interface StrengthSum {
   readonly men: number;
   readonly unknown: readonly ForceBlockId[];
+  readonly byKind: StrengthKinds;
 }
 
 export function sumStrength(state: State, ids: readonly ForceBlockId[]): StrengthSum {
   let men = 0;
   const unknown: ForceBlockId[] = [];
+  const byKind = { return:0, estimate:0, rule:0, unknown:null };
   for (const id of [...ids].sort(strictCompare)) {
-    const s = forceTotals(blockOf(state, id)).fbStrength;
+    const totals = forceTotals(blockOf(state, id));
+    for (const kind of ['return','estimate','rule'] as const) byKind[kind] += totals.fbByKind[kind];
+    const s = totals.fbStrength;
     if (s === null) unknown.push(id);
     else men += s;
   }
-  return { men, unknown };
+  return { men, unknown, byKind };
 }
 
 /**

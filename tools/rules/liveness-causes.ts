@@ -76,7 +76,10 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
         'd267609dfc583151e2c695995f945fe29cdb04306ff59448b1147683308fd064',
         '1a0118e99e7d9c808ee42d1f4d7524fc425281ff8cbaba84238449f9f4562cc4',
       ].includes(fingerprint(r));
-      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet && !s96Quiet && !s106Quiet && !s119Quiet) {
+      // CODEX 2026-11-23: S122's one landing zero is authorised with its paired driver.
+      // The complete record is frozen; no other zero or cause is admitted.
+      const s122Quiet = fingerprint(r) === 'd88f7c043e717692f3fe541b545a1385efaca2bfeda16a1cba32d6a20c8e2652';
+      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet && !s96Quiet && !s106Quiet && !s119Quiet && !s122Quiet) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
         else if (fingerprint({ minFires: r.after.minFires, maxFires: r.after.maxFires }) !== fingerprint({ minFires: Math.max(1, Math.floor(n / 2)), maxFires: Math.max(n * 2, n + 3) })) problems.push(`${where}: after band is not around(observed)`);
       }

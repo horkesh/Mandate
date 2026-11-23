@@ -102,6 +102,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
   // Lane 1.3: morale, experience, equipment, stragglers, and the days a block routed or surrendered join the same record.
   field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment', 'local organisation (0108)', 'situations (sourced theatre exit)'], [at('State', 'forceBlockStates')]),
+  field('each lot strength kind, source and source date', 'forces', ['scenario start', 'recruitment'], []),
   field("a force block's stores on hand", 'forces', ['supply (daily)', 'operations (a sea delivery)']),
   // Lane 1.4b: a detachment is a `forceBlockStates` record of kind `detachment` (its row shares that record); one proposal
   // makes, rejoins or frees it across `forces`, `movement` and `command` (`tick/detachments.ts`).
@@ -267,6 +268,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   // Lane 0.5: forces, movement and command (each replaced whole by its writer)
   'ForceBlockState',
   'RegimentLot',
+  'LotStrength',
   'ForceLocation',
   'PostState',
   'ScheduledChangeState',

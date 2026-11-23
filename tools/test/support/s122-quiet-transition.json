@@ -1,0 +1,21 @@
+{
+  "record": {
+    "key": "union-1861, war by decision, 148 days/forces.landed_by_situation",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S122 /0125: unsupported parent strength becomes unknown, so the existing landing cannot detach a known number of men."
+    },
+    "observed": 0,
+    "cause": "S122 /0125: unsupported parent strength becomes unknown, so the existing landing cannot detach a known number of men.",
+    "evidence": "docs/audit/s122-evidence/band-review.json#forces.landed_by_situation"
+  },
+  "driver": {
+    "test": "packages/cli/test/situation-landing.test.ts",
+    "needle": "drives forces.landed_by_situation from a quantified fictional parent and refuses an unknown parent"
+  }
+}

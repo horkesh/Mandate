@@ -32,7 +32,12 @@
           "termDays": null,
           "termUnknown": true,
           "post": "st_va_potomac",
-          "region": "manassas"
+          "region": "manassas",
+          "strengthBasis": {
+            "strengthKind": "return",
+            "strengthSource": "OR I-II p.841, Cocke May14 reporting Garland arrived May12, 490 separately from command918",
+            "strengthDate": "1861-05-12"
+          }
         }
       }
     }

@@ -31,7 +31,7 @@ describe('identities follow actual raising (0108)', () => {
     expect(r.forceBlockStates[a.block]!.fbLots.map(l => [l.lotRegiment, l.lotGenerated, l.lotMen])).toEqual([
       ['early', false, 1000], ['late', false, 1000], ['generated.batch.3', true, 1000],
     ]);
-    expect(forceTotals(r.forceBlockStates[a.block]!)).toEqual({fbStrength:3000,fbStragglers:0});
+    expect(forceTotals(r.forceBlockStates[a.block]!)).toMatchObject({fbStrength:3000,fbStragglers:0});
     expect(enlistmentsOf(r)[a.block]).toEqual(a.enlistment);
     const gone = applyMusters(map, r, [{change:'disband',block:a.block,cause:'recruitment'}]).state;
     const b = proposal('later_batch',1,1000);
@@ -60,7 +60,7 @@ describe('identities follow actual raising (0108)', () => {
     const raised = mustered.forceBlockStates[block.block]!;
     expect(raised.fbLots.map(l => [l.lotRegiment, l.lotMen, l.lotStragglers, l.lotService])).toEqual(
       ['first', 'second', 'generated.named_batch.3'].map(id => [id, null, null, service]));
-    expect(forceTotals(raised)).toEqual({ fbStrength: null, fbStragglers: null });
+    expect(forceTotals(raised)).toMatchObject({ fbStrength: null, fbStragglers: null });
   });
   it('S77: matches an explicit war contract without treating an unknown term as war service', () => {
     const {map,state}=fixture([{...entry('held',0,[]),warTerm:false},{...entry('war',1,[]),warTerm:true}]);
@@ -75,18 +75,18 @@ describe('identities follow actual raising (0108)', () => {
     const {map,state}=fixture([]), b=proposal('partial',2,1500);
     const next=applyMusters(map,state,[{change:'create',create:b,cause:'recruitment'}]).state;
     expect(next.forceBlockStates[b.block]!.fbLots.map(l=>l.lotMen)).toEqual([1000,500]);
-    expect(forceTotals(next.forceBlockStates[b.block]!)).toEqual({fbStrength:1500,fbStragglers:0});
+    expect(forceTotals(next.forceBlockStates[b.block]!)).toMatchObject({fbStrength:1500,fbStragglers:0});
   });
   it('does not apportion an aggregate return into purported regimental strengths', () => {
     const {map,state}=fixture([]), b=proposal('return_batch',2,null);
     const entered=applyMusters(map,state,[{change:'create',create:{...b,enlistment:{...b.enlistment,enlSourceAct:toId('situation','entry')}},cause:'recruitment'}]).state;
-    expect(()=>applyMusters(map,entered,[{change:'quantify',block:b.block,men:3500,regiments:2,cause:'recruitment'}])).toThrow('aggregate return cannot assign regimental strengths');
+    expect(()=>applyMusters(map,entered,[{change:'quantify',strengthBasis:{strengthKind:'return',strengthSource:'fictional return p.1',strengthDate:'1861-03-01'},block:b.block,men:3500,regiments:2,cause:'recruitment'}])).toThrow('aggregate return cannot assign regimental strengths');
     expect(forceTotals(entered.forceBlockStates[b.block]!).fbStrength).toBeNull();
   });
   it('keeps a counted but unidentified return as one aggregate lot without assigning identities', () => {
     const {map,state}=fixture([entry('early',0)]), b=proposal('unidentified_return',null,null);
     const entered=applyMusters(map,state,[{change:'create',create:{...b,enlistment:{...b.enlistment,enlSourceAct:toId('situation','entry')}},cause:'recruitment'}]).state;
-    const next=applyMusters(map,entered,[{change:'quantify',block:b.block,men:2500,regiments:2,cause:'recruitment'}]).state;
+    const next=applyMusters(map,entered,[{change:'quantify',strengthBasis:{strengthKind:'return',strengthSource:'fictional return p.1',strengthDate:'1861-03-01'},block:b.block,men:2500,regiments:2,cause:'recruitment'}]).state;
     expect(next.forceBlockStates[b.block]!.fbLots).toHaveLength(1);
     expect(next.forceBlockStates[b.block]!.fbLots[0]).toMatchObject({lotRegiment:null,lotMen:2500});
     expect(next.forceRaisedIdentities).toEqual({});
@@ -101,7 +101,7 @@ it('S81 keeps a sourced own-contingent headcount with unknown regiment count on 
  const direct=applyMusters(map,state,[{change:'create',create:{...b,enlistment:service},cause:'recruitment'}]).state;
  expect(forceTotals(direct.forceBlockStates[b.block]!).fbStrength).toBe(490);
  const unknown=applyMusters(map,state,[{change:'create',create:{...b,strength:null,enlistment:service},cause:'recruitment'}]).state;
- const returned=applyMusters(map,unknown,[{change:'quantify',block:b.block,men:490,regiments:null,cause:'recruitment'}]).state;
+ const returned=applyMusters(map,unknown,[{change:'quantify',strengthBasis:{strengthKind:'return',strengthSource:'fictional return p.1',strengthDate:'1861-03-01'},block:b.block,men:490,regiments:null,cause:'recruitment'}]).state;
  expect(returned.forceBlockStates[b.block]!.fbLots).toHaveLength(1);
  expect(returned.forceBlockStates[b.block]!.fbLots[0]).toMatchObject({lotMen:490,lotRegiment:null});
  expect(enlistmentsOf(returned)[b.block]).toEqual(service);

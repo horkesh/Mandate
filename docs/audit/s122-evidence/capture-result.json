@@ -1,0 +1,70 @@
+{
+  "result": [
+    {
+      "pack": "union-1861",
+      "days": 148,
+      "finalHash": "857e6280da9ac2b44a7b95ffcdfe86f31b368d1a9b5ce6b35e2401ceb528629d",
+      "rejections": 0,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "857e6280da9ac2b44a7b95ffcdfe86f31b368d1a9b5ce6b35e2401ceb528629d",
+        "matches": true,
+        "savedLogReplays": true
+      },
+      "gates": [
+        {
+          "mechanic": "forces.landed_by_situation",
+          "problem": "dead",
+          "fires": 0,
+          "band": {
+            "minFires": 1,
+            "maxFires": 4
+          }
+        },
+        {
+          "mechanic": "forces.landing_refused",
+          "problem": "too_frequent",
+          "fires": 1,
+          "band": {
+            "minFires": 0,
+            "maxFires": 0,
+            "why": "the one situation landing in the reference runs is made"
+          }
+        },
+        {
+          "mechanic": "orders.obeyed",
+          "problem": "too_frequent",
+          "fires": 7,
+          "band": {
+            "minFires": 1,
+            "maxFires": 6
+          }
+        },
+        {
+          "mechanic": "planner.term.supply",
+          "problem": "too_frequent",
+          "fires": 1,
+          "band": {
+            "minFires": 0,
+            "maxFires": 0,
+            "why": "S119: Patterson day140 changes from S116 holding to direct. Dropping supply from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. Supply remains live in the unchanged testbed reference; no supply or scoring rule changed."
+          }
+        },
+        {
+          "mechanic": "plans.goal_set",
+          "problem": "too_frequent",
+          "fires": 7,
+          "band": {
+            "minFires": 1,
+            "maxFires": 6
+          }
+        }
+      ]
+    }
+  ],
+  "bandProblems": []
+}

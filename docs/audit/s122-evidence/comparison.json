@@ -1,0 +1,235 @@
+{
+  "lotsChanged": 300,
+  "answersChanged": 13,
+  "rows": 33,
+  "verdictsBefore": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 3,
+    "not_observed": 3
+  },
+  "verdictsAfter": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 4,
+    "not_observed": 2
+  },
+  "changedRowVerdicts": [
+    "C25"
+  ],
+  "rawBefore": 259,
+  "rawAfter": 260,
+  "changedBands": 39,
+  "bandRows": 328,
+  "failedBands": [
+    {
+      "mechanic": "forces.landed_by_situation",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    },
+    {
+      "mechanic": "forces.landing_refused",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the one situation landing in the reference runs is made"
+      }
+    },
+    {
+      "mechanic": "orders.obeyed",
+      "problem": "too_frequent",
+      "fires": 7,
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      }
+    },
+    {
+      "mechanic": "planner.term.supply",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S119: Patterson day140 changes from S116 holding to direct. Dropping supply from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. Supply remains live in the unchanged testbed reference; no supply or scoring rule changed."
+      }
+    },
+    {
+      "mechanic": "plans.goal_set",
+      "problem": "too_frequent",
+      "fires": 7,
+      "band": {
+        "minFires": 1,
+        "maxFires": 6
+      }
+    }
+  ],
+  "sides": {
+    "confederate": {
+      "byKind": {
+        "return": 3501,
+        "estimate": 0,
+        "rule": 42856,
+        "unknown": null
+      },
+      "counted": 46357,
+      "unknownLots": [
+        "initial.fb_cs_charleston",
+        "initial.fb_cs_charleston_guard_steamers",
+        "initial.fb_st_charleston_1st_infantry_regulars",
+        "initial.fb_st_charleston_2nd_artillery_battalion",
+        "initial.fb_st_charleston_hagood_regiment",
+        "initial.fb_st_charleston_kershaw_regiment",
+        "initial.fb_st_charleston_morris_island",
+        "initial.fb_st_charleston_rion_battalion",
+        "initial.fb_st_fort_morgan",
+        "initial.fb_st_la_forts_jackson_st_philip",
+        "initial.fb_st_tx_ford_regiment",
+        "initial.fb_st_tx_galveston_batteries",
+        "initial.fb_st_tx_northwest_frontier_companies",
+        "unidentified.state-forces.va_norfolk",
+        "unidentified.state-forces.va_richmond",
+        "unidentified.state-forces.va_harpers_ferry",
+        "unidentified.state-forces.va_peninsula",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.1",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.2",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.3",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.4",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.5",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.6",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.7",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.8",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.9",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.10",
+        "generated.state-forces.cs_nc_volunteers_north_carolina.1",
+        "generated.state-forces.cs_nc_volunteers_north_carolina.2",
+        "generated.state-forces.cs_nc_volunteers_north_carolina.3",
+        "generated.state-forces.cs_nc_additional_north_carolina.1",
+        "generated.state-forces.cs_nc_additional_north_carolina.2",
+        "unidentified.state-forces.cs_tn_infantry_tennessee",
+        "unidentified.state-forces.cs_tn_cavalry_tennessee",
+        "unidentified.state-forces.cs_tn_river_artillery_tennessee",
+        "unidentified.raised.st_gov_georgia.d122",
+        "unidentified.raised.st_gov_alabama.d122",
+        "unidentified.raised.st_gov_mississippi.d122",
+        "unidentified.raised.st_gov_arkansas.d122",
+        "unidentified.raised.st_gov_tennessee.d129.2",
+        "generated.state-forces.cs_ar_infantry_arkansas.1",
+        "generated.state-forces.cs_ar_infantry_arkansas.2",
+        "generated.state-forces.cs_ar_infantry_arkansas.3",
+        "generated.state-forces.cs_ar_infantry_arkansas.4",
+        "generated.state-forces.cs_ar_infantry_arkansas.5",
+        "generated.state-forces.cs_ar_infantry_arkansas.6",
+        "generated.state-forces.cs_ar_infantry_arkansas.7",
+        "generated.state-forces.cs_ar_cavalry_arkansas.1",
+        "unidentified.state-forces.cs_ar_cavalry_battalion_arkansas",
+        "unidentified.state-forces.cs_ar_artillery_arkansas"
+      ],
+      "unknownBlocks": [
+        "fb_cs_charleston",
+        "fb_cs_charleston_guard_steamers",
+        "fb_st_charleston_1st_infantry_regulars",
+        "fb_st_charleston_2nd_artillery_battalion",
+        "fb_st_charleston_hagood_regiment",
+        "fb_st_charleston_kershaw_regiment",
+        "fb_st_charleston_morris_island",
+        "fb_st_charleston_rion_battalion",
+        "fb_st_fort_morgan",
+        "fb_st_la_forts_jackson_st_philip",
+        "fb_st_tx_ford_regiment",
+        "fb_st_tx_galveston_batteries",
+        "fb_st_tx_northwest_frontier_companies",
+        "state-forces.va_norfolk",
+        "state-forces.va_richmond",
+        "state-forces.va_harpers_ferry",
+        "state-forces.va_peninsula",
+        "state-forces.cs_nc_state_transfer_north_carolina",
+        "state-forces.cs_nc_volunteers_north_carolina",
+        "state-forces.cs_nc_additional_north_carolina",
+        "state-forces.cs_tn_infantry_tennessee",
+        "state-forces.cs_tn_cavalry_tennessee",
+        "state-forces.cs_tn_river_artillery_tennessee",
+        "raised.st_gov_georgia.d122",
+        "raised.st_gov_alabama.d122",
+        "raised.st_gov_mississippi.d122",
+        "raised.st_gov_arkansas.d122",
+        "raised.st_gov_tennessee.d129.2",
+        "state-forces.cs_ar_infantry_arkansas",
+        "state-forces.cs_ar_cavalry_arkansas",
+        "state-forces.cs_ar_cavalry_battalion_arkansas",
+        "state-forces.cs_ar_artillery_arkansas"
+      ]
+    },
+    "union": {
+      "byKind": {
+        "return": 6371,
+        "estimate": 490,
+        "rule": 119165,
+        "unknown": null
+      },
+      "counted": 126026,
+      "unknownLots": [
+        "initial.fb_us_dc_militia",
+        "initial.fb_us_fort_monroe_garrison",
+        "initial.fb_us_marines_philadelphia_yard",
+        "initial.fb_us_marines_washington_barracks",
+        "initial.fb_us_new_mexico_troops",
+        "initial.fb_us_pacific_troops",
+        "initial.fb_us_pickens_garrison",
+        "initial.fb_us_pickens_vogdes_co_a",
+        "initial.fb_us_ship_anacostia",
+        "initial.fb_us_ship_michigan",
+        "initial.fb_us_ship_water_witch",
+        "initial.fb_us_washington_regulars"
+      ],
+      "unknownBlocks": [
+        "fb_us_dc_militia",
+        "fb_us_fort_monroe_garrison",
+        "fb_us_marines_philadelphia_yard",
+        "fb_us_marines_washington_barracks",
+        "fb_us_new_mexico_troops",
+        "fb_us_pacific_troops",
+        "fb_us_pickens_garrison",
+        "fb_us_pickens_vogdes_co_a",
+        "fb_us_ship_anacostia",
+        "fb_us_ship_michigan",
+        "fb_us_ship_water_witch",
+        "fb_us_washington_regulars"
+      ]
+    }
+  },
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "857e6280da9ac2b44a7b95ffcdfe86f31b368d1a9b5ce6b35e2401ceb528629d",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "finalHash": "857e6280da9ac2b44a7b95ffcdfe86f31b368d1a9b5ce6b35e2401ceb528629d",
+  "rejections": 0,
+  "lifetimeLotsChanged": 374,
+  "livenessAfterPositiveRecentres": {
+    "reusedCapture": true,
+    "failed": [
+      {
+        "mechanic": "forces.landed_by_situation",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4
+        }
+      }
+    ],
+    "bandProblems": []
+  }
+}

@@ -1,6 +1,6 @@
-import { ids, phase0, world as w } from '@mandate/kernel';
+import { createTelemetry, ids, phase0, world as w } from '@mandate/kernel';
 import { describe, expect, it } from 'vitest';
-import { v2Map } from '../src/seats-world.ts';
+import { seatsMechanics, v2Map } from '../src/seats-world.ts';
 
 /**
  * A situation's option proposes a landing (lane 1.11) through `forces`' detachment path (lane 1.4b), applied in phase 4c
@@ -57,6 +57,27 @@ function landingSituation(parent: string, region: string): phase0.SituationDef {
 }
 
 describe('a situation proposes a landing (lane 1.11, on lane 1.4b’s path)', () => {
+  it('drives forces.landed_by_situation from a quantified fictional parent and refuses an unknown parent', () => {
+    const map=v2Map('testbed')!;
+    const start={...map.start,forceBlocks:map.start.forceBlocks.map(b=>['n_relief_troops','n_ship_resolute'].includes(b.id)?{...b,region:ids.toId('region','north_sea')}:b)};
+    const world=phase0.indexSeatsWorld(w.indexWorld(map.world),start,{situations:[landingSituation('n_relief_troops','n_naval_base')]});
+    const initial=phase0.createState(world,{seed:start.seed,people:'as-history'});
+    const parent=ids.toId('forceBlock','n_relief_troops');
+    const run=(unknown:boolean)=>{
+      const b=initial.forceBlockStates[parent]!;
+      let state=unknown?{...initial,forceBlockStates:{...initial.forceBlockStates,[parent]:{...b,fbLots:b.fbLots.map(l=>({...l,lotMen:null,lotStrength:{strengthKind:'unknown' as const,strengthSource:null,strengthDate:null}}))}}}:initial;
+      const telemetry=createTelemetry(seatsMechanics());
+      for(let day=1;day<=3;day++)state=phase0.tick(world,state,[],{freeze:true,telemetry}).state;
+      return {state,telemetry};
+    };
+    const known=run(false),unknown=run(true);
+    expect(known.telemetry.mechanics['forces.landed_by_situation']!.fires).toBe(1);
+    expect(known.telemetry.mechanics['forces.landing_refused']!.fires).toBe(0);
+    expect(unknown.telemetry.mechanics['forces.landed_by_situation']!.fires).toBe(0);
+    expect(unknown.telemetry.mechanics['forces.landing_refused']!.fires).toBe(1);
+    expect(Object.keys(known.state.forceBlockStates).filter(id=>id.startsWith('n_relief_troops.det.'))).toHaveLength(1);
+    expect(Object.keys(unknown.state.forceBlockStates).filter(id=>id.startsWith('n_relief_troops.det.'))).toHaveLength(0);
+  });
   it('refuses a landing from a block that is not aboard, changing nothing and naming its reason', () => {
     const map = v2Map('testbed')!;
     const block = map.start.forceBlocks.find((b) => b.aboard === null)!;

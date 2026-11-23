@@ -75,6 +75,7 @@ export interface HistoryRun {
 export type CriterionId = 'behaviour' | 'hash' | 'resume' | 'liveness' | 'section-ten' | 'budget' | 'checkpoints' | 'operation' | 'pushback' | 'unknown-strength' | 'stand-ins' | 'lever-sweep';
 
 export interface Criterion {
+  readonly verdict?: 'pass' | 'unresolved' | 'fail';
   readonly id: CriterionId;
   /** Phase 0's criteria decide the exit status; 1A's are measured and reported until the lead makes them binding. */
   readonly milestone: 'phase0' | '1A';
@@ -205,15 +206,18 @@ export interface DoneCheckInput {
 export function milestone1A(input: DoneCheckInput): Criterion[] {
   const history = input.history ?? [];
   const none = history.length === 0 ? ['no history run was made (no pack has done-check bands, checkpoints.json)'] : [];
-  const each = (f: (h: HistoryRun) => { readonly problems: readonly string[]; readonly evidence: readonly string[] }) => {
+  const each = (f: (h: HistoryRun) => { readonly problems: readonly string[]; readonly evidence: readonly string[]; readonly verdict?: 'pass' | 'unresolved' | 'fail' }) => {
     const problems: string[] = [...none];
     const evidence: string[] = [];
+    let verdict: 'pass' | 'unresolved' | 'fail' = none.length ? 'fail' : 'pass';
     for (const h of history) {
       const s = f(h);
+      const next = s.verdict ?? (s.problems.length ? 'fail' : 'pass');
+      if (next === 'fail' || (next === 'unresolved' && verdict === 'pass')) verdict = next;
       problems.push(...s.problems.map((p) => `${h.name}: ${p}`));
       evidence.push(...s.evidence.map((e) => `${h.name}: ${e}`));
     }
-    return { problems, evidence };
+    return { problems, evidence, verdict };
   };
   const declared = new Set(seatsMechanics());
   const checkpoints = each((h) => checkpointsScore(h.checkpoints, h.observations, h.startDate, h.summary.atWar));

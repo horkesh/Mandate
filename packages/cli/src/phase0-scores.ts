@@ -1,4 +1,4 @@
-import { forceTotals } from '@mandate/kernel';
+import { forceTotals, type StrengthKinds } from '@mandate/kernel';
 /**
  * Checkpoint scores for a Phase 0 run (FOUNDATION section 11.6).
  *
@@ -29,6 +29,8 @@ export interface FactionScore {
   readonly pocketRegions: number;
   /** Men in its blocks that have a known strength. */
   readonly menKnown: number;
+  readonly menByKind: StrengthKinds;
+  readonly unknownLots: readonly string[];
   /** Blocks whose strength no source gives (counted as none, and listed here). */
   readonly blocksUnknownStrength: number;
 }
@@ -49,11 +51,16 @@ export function checkpointScores(world: phase0.SeatsWorld, result: phase0.TickRe
     for (const shares of Object.values(state.regionControl)) controlPermille += shares[faction] ?? 0;
     let menKnown = 0;
     let unknown = 0;
+    const menByKind = { return:0,estimate:0,rule:0,unknown:null };
+    const unknownLots:string[]=[];
     for (const block of Object.values(state.forceBlockStates)) {
       // A block's side is its department's side today, which is State (0065): a government that changed side counts on its new one.
       if (phase0.departmentSide(state, block.fbDepartment) !== faction) continue;
-      if (forceTotals(block, world.map.forceTotalsCache).fbStrength === null) unknown += 1;
-      else menKnown += forceTotals(block, world.map.forceTotalsCache).fbStrength!;
+      const totals = forceTotals(block, world.map.forceTotalsCache);
+      if (totals.fbStrength === null) unknown += 1;
+      for (const kind of ['return','estimate','rule'] as const) menByKind[kind] += totals.fbByKind[kind];
+      unknownLots.push(...totals.fbUnknownLots);
+      menKnown += totals.fbByKind.return + totals.fbByKind.estimate + totals.fbByKind.rule;
     }
     const fronts = map?.index.fronts.get(faction) ?? [];
     const pockets = map?.supply.factions.get(faction)?.pockets ?? [];
@@ -70,6 +77,8 @@ export function checkpointScores(world: phase0.SeatsWorld, result: phase0.TickRe
       pockets: pockets.length,
       pocketRegions: pockets.reduce((n, p) => n + p.regions.length, 0),
       menKnown,
+      menByKind,
+      unknownLots,
       blocksUnknownStrength: unknown,
     };
   });

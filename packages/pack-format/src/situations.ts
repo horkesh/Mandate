@@ -13,6 +13,7 @@
  * (0041), chains, routes and string keys. The gate (`gate.ts`) runs on top.
  */
 import { phase0 } from '@mandate/kernel';
+import { strengthBasisProblems } from '@mandate/kernel';
 import { z } from 'zod';
 import { listOptional, readJson, type PackFiles } from './generate.ts';
 import { type Issue, IssueSink } from './issues.ts';
@@ -97,6 +98,7 @@ export const EffectSchema = z.union([
       renewal: renewal.optional(),
       withdrawal: withdrawal.optional(),
       stateForces: z.strictObject({
+        strengthBasis: z.strictObject({ strengthKind: z.enum(['return','estimate','rule','unknown']), strengthSource: z.string().min(1).nullable(), strengthDate: z.string().min(1).nullable() }).optional(),
         id: z.string().regex(/^[a-z][a-z0-9_]*$/), regiments: positive.nullable(), men: nonNegative.nullable(),
         arm: termId, termDays: positive.nullable(), termUnknown: z.boolean().optional(), stragglersUnknown: z.boolean().optional(), includesCalls: z.array(termId).optional(),
         post: idOf('post').optional(), region: idOf('region').optional(), transferTo: idOf('department').optional(), release: z.boolean().optional(),
@@ -629,6 +631,8 @@ export function validateSituations(items: readonly { readonly file: string; read
         if (p.subject === null || postRaising.get(p.subject) !== 'raising') fail('state forces require a raising state post, never a self-governing nation');
         if (p.subject !== null && postSide.has(p.subject) && postSide.get(p.subject) !== null && postSide.get(p.subject) !== p.side) fail('state forces cannot enter another side’s service');
         if (entry !== undefined) {
+            if (entry.men !== null && entry.strengthBasis === undefined) fail('a historical headcount needs its strength kind and dated source');
+            if (entry.strengthBasis !== undefined) for (const problem of strengthBasisProblems(entry.men,entry.strengthBasis)) fail(problem);
           if (entry.region !== undefined && !pack.world.regions.some(r => r.id === entry.region && ['land', 'key_point'].includes(r.kind))) fail('local muster point must be land');
           if (entry.post !== undefined && !posts.has(entry.post) && !temporaryPostIds.has(entry.post)) fail('local command must be a declared post');
           if (entry.transferTo !== undefined && pack.world.departments.some(d => d.id === entry.transferTo && d.faction !== null && d.faction !== p.side)) fail('service transfer cannot join another side');

@@ -22,7 +22,8 @@ describe('1861 calls follow the read record, with authorizations kept apart from
   expect(catalogue.records.find((r:{id:string})=>r.id==='us_jul22')).toMatchObject({kind:'authorization',maximumMen:500000});
   expect(catalogue.records.find((r:{id:string})=>r.id==='us_jul25')).toMatchObject({kind:'authorization',maximumMen:500000});
   expect(rows.some(r=>r.men===500000 || r.men===100000)).toBe(false);
-  expect(pack.rules.recruitment.menPerRegiment).toBe(1000);
+  expect(pack.rules.recruitment.menPerRegiment).toBeUndefined();
+  expect(pack.rules.recruitment.establishments.find((e:{id:string})=>e.id==='us_april_militia').men).toBe(780);
   expect(rows.find(r=>r.id==='cs_nc_state_transfer_north_carolina')).toBeUndefined();
   const transfer=JSON.parse(fs.readFileSync(new URL('../situations/north_carolina_forces_transferred.json',import.meta.url),'utf8'));
   expect(transfer.effects.find((e:{propose?:{stateForces?:{id:string}}})=>e.propose?.stateForces?.id==='cs_nc_state_transfer_north_carolina').propose.stateForces.termDays).toBeNull();

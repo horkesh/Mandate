@@ -1,0 +1,884 @@
+[
+  {
+    "side": "confederate",
+    "origin": "arkansas_forces_transferred",
+    "before": {
+      "knownLotMen": 8000,
+      "unknownLots": 2
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 10
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_alabama",
+    "before": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 1560,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_arkansas",
+    "before": {
+      "knownLotMen": 1000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 780,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_georgia",
+    "before": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 1560,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_louisiana",
+    "before": {
+      "knownLotMen": 1000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 780,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_mississippi",
+    "before": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 1560,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_north_carolina",
+    "before": {
+      "knownLotMen": 224,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 168,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_apr22_absolute_tennessee",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 3
+    },
+    "after": {
+      "knownLotMen": 2340,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jul01_extra_alabama",
+    "before": {
+      "knownLotMen": 909,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 704,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jul01_extra_georgia",
+    "before": {
+      "knownLotMen": 1849,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 1449,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun29_extra_louisiana",
+    "before": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 1560,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun29_extra_mississippi",
+    "before": {
+      "knownLotMen": 602,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 465,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_cavalry_alabama",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_cavalry_arkansas",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_cavalry_georgia",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_cavalry_mississippi",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_cavalry_tennessee",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_alabama",
+    "before": {
+      "knownLotMen": 2262,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 2265,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_arkansas",
+    "before": {
+      "knownLotMen": 3000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 3000,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_florida",
+    "before": {
+      "knownLotMen": 1000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 1000,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_georgia",
+    "before": {
+      "knownLotMen": 2771,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 2784,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_mississippi",
+    "before": {
+      "knownLotMen": 3000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 3000,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_north_carolina",
+    "before": {
+      "knownLotMen": 674,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 651,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_south_carolina",
+    "before": {
+      "knownLotMen": 2262,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 2265,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_texas",
+    "before": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_jun30_reserve_virginia",
+    "before": {
+      "knownLotMen": 2263,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 2265,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_alabama",
+    "before": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_florida",
+    "before": {
+      "knownLotMen": 500,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 500,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_georgia",
+    "before": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_louisiana",
+    "before": {
+      "knownLotMen": 1700,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 1700,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_mississippi",
+    "before": {
+      "knownLotMen": 1500,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 1500,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "cs_mar09_south_carolina",
+    "before": {
+      "knownLotMen": 3000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 3000,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "initial.forces",
+    "before": {
+      "knownLotMen": 8653,
+      "unknownLots": 10
+    },
+    "after": {
+      "knownLotMen": 3133,
+      "unknownLots": 13
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "north_carolina_forces_transferred",
+    "before": {
+      "knownLotMen": 3373,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 15
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "confederate",
+    "origin": "tennessee_forces_return",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 3
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 3
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "virginia_harpers_jackson",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "virginia_manassas_garland_return",
+    "before": {
+      "knownLotMen": 368,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 368,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "virginia_norfolk_state_forces",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "virginia_peninsula_state_forces",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "confederate",
+    "origin": "virginia_richmond_state_forces",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "union",
+    "origin": "initial.forces",
+    "before": {
+      "knownLotMen": 13791,
+      "unknownLots": 4
+    },
+    "after": {
+      "knownLotMen": 6861,
+      "unknownLots": 12
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "m.41.lincoln_abraham.ramsey_alexander.call.st_gov_minnesota",
+    "before": {
+      "knownLotMen": 1000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 780,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_jul25_new_york",
+    "before": {
+      "knownLotMen": 25000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 25000,
+      "unknownLots": 0
+    },
+    "changed": false,
+    "cause": "Counted quantities unchanged; new kind metadata only."
+  },
+  {
+    "side": "union",
+    "origin": "us_jun11_indiana",
+    "before": {
+      "knownLotMen": 6000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 5196,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may03_accepted_new_york",
+    "before": {
+      "knownLotMen": 33093,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 31057,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may04_regular_artillery",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 997,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may04_regular_cavalry",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 1
+    },
+    "after": {
+      "knownLotMen": 997,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may04_regular_infantry",
+    "before": {
+      "knownLotMen": 0,
+      "unknownLots": 8
+    },
+    "after": {
+      "knownLotMen": 16160,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may15_vol_kansas",
+    "before": {
+      "knownLotMen": 1000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 866,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may15_vol_massachusetts",
+    "before": {
+      "knownLotMen": 5222,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 4908,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may15_vol_nebraska",
+    "before": {
+      "knownLotMen": 1000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 866,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may15_vol_rhode_island",
+    "before": {
+      "knownLotMen": 870,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 820,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_connecticut",
+    "before": {
+      "knownLotMen": 870,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 820,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_illinois",
+    "before": {
+      "knownLotMen": 6000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 5196,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_indiana",
+    "before": {
+      "knownLotMen": 4000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 3464,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_iowa",
+    "before": {
+      "knownLotMen": 2000,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 1732,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_maine",
+    "before": {
+      "knownLotMen": 870,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 821,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_michigan",
+    "before": {
+      "knownLotMen": 2610,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 2456,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_new_hampshire",
+    "before": {
+      "knownLotMen": 869,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 820,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_new_jersey",
+    "before": {
+      "knownLotMen": 2612,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 2452,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_new_york",
+    "before": {
+      "knownLotMen": 12186,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 11456,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_vermont",
+    "before": {
+      "knownLotMen": 870,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 819,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  },
+  {
+    "side": "union",
+    "origin": "us_may16_vol_wisconsin",
+    "before": {
+      "knownLotMen": 1712,
+      "unknownLots": 0
+    },
+    "after": {
+      "knownLotMen": 1482,
+      "unknownLots": 0
+    },
+    "changed": true,
+    "cause": "[I] Accepted 0125/0127 input changes and their propagation through unchanged compliance, planning, movement, supply, organisation and combat; no isolated causal attribution to one simultaneous input. Named lot quantity provenance remains its actual originating call or historical entry."
+  }
+]

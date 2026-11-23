@@ -553,7 +553,6 @@
               "id": "us_may04_regular_infantry",
               "post": "us_recruiting_service",
               "regiments": 8,
-              "men": null,
               "arm": "infantry",
               "termDays": 1095,
               "fromDate": "1861-05-04",
@@ -564,7 +563,6 @@
               "id": "us_may04_regular_cavalry",
               "post": "us_recruiting_service",
               "regiments": 1,
-              "men": null,
               "arm": "cavalry",
               "termDays": 1095,
               "fromDate": "1861-05-04",
@@ -575,7 +573,6 @@
               "id": "us_may04_regular_artillery",
               "post": "us_recruiting_service",
               "regiments": 1,
-              "men": null,
               "arm": "artillery",
               "termDays": 1095,
               "fromDate": "1861-05-04",
@@ -993,9 +990,8 @@
               "regiments": 3,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S119: the known quota is three regiments; Harris does not report an actual number of men or stragglers (OR IV-I pp.272,275).",
-              "termsId": "cs_apr22_absolute_tennessee",
-              "men": null
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S119: the known quota is three regiments; Harris does not report an actual number of men or stragglers (OR IV-I pp.272,275). S122/0125/0127: the model-raised lots keep their own legal-minimum rule quantity; historical naming supplies no personnel return.",
+              "termsId": "cs_apr22_absolute_tennessee"
             },
             {
               "id": "cs_jun29_extra_louisiana",
@@ -1718,7 +1714,6 @@
         "governor",
         "recruiting_office"
       ],
-      "menPerRegiment": 1000,
       "arm": "infantry",
       "storesDays": 10,
       "musterDays": 5,
@@ -1884,7 +1879,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr08_florida",
@@ -2015,7 +2011,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr08_georgia",
@@ -2146,7 +2143,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr08_louisiana",
@@ -2277,7 +2275,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr08_mississippi",
@@ -2408,7 +2407,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr08_south_carolina",
@@ -2539,7 +2539,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr08_texas",
@@ -2670,7 +2671,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr16_alabama",
@@ -2818,7 +2820,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr16_florida",
@@ -2966,7 +2969,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr16_georgia",
@@ -3114,7 +3118,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr16_louisiana",
@@ -3262,7 +3267,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr16_mississippi",
@@ -3410,7 +3416,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr16_south_carolina",
@@ -3558,7 +3565,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr16_texas",
@@ -3706,7 +3714,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr22_absolute_alabama",
@@ -3822,7 +3831,8 @@
               "detail": "muster_receiver",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr22_absolute_arkansas",
@@ -3969,7 +3979,8 @@
               "detail": "muster_receiver",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr22_absolute_georgia",
@@ -4085,7 +4096,8 @@
               "detail": "muster_receiver",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr22_absolute_kentucky",
@@ -4232,7 +4244,8 @@
               "detail": "muster_receiver",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr22_absolute_louisiana",
@@ -4348,7 +4361,8 @@
               "detail": "muster_receiver",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr22_absolute_mississippi",
@@ -4464,7 +4478,8 @@
               "detail": "muster_receiver",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr22_absolute_north_carolina",
@@ -4611,7 +4626,8 @@
               "detail": "muster_receiver",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_apr22_absolute_tennessee",
@@ -4758,7 +4774,8 @@
               "detail": "muster_receiver",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jul01_extra_alabama",
@@ -4841,7 +4858,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jul01_extra_georgia",
@@ -4924,7 +4942,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun29_extra_louisiana",
@@ -5011,7 +5030,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun29_extra_mississippi",
@@ -5098,7 +5118,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_cavalry_alabama",
@@ -5204,7 +5225,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_cavalry_company_unquantified"
         },
         {
           "id": "cs_jun30_cavalry_arkansas",
@@ -5310,7 +5332,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_cavalry_company_unquantified"
         },
         {
           "id": "cs_jun30_cavalry_georgia",
@@ -5416,7 +5439,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_cavalry_company_unquantified"
         },
         {
           "id": "cs_jun30_cavalry_mississippi",
@@ -5522,7 +5546,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_cavalry_company_unquantified"
         },
         {
           "id": "cs_jun30_cavalry_tennessee",
@@ -5628,7 +5653,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_cavalry_company_unquantified"
         },
         {
           "id": "cs_jun30_reserve_alabama",
@@ -5752,7 +5778,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_reserve_arkansas",
@@ -5876,7 +5903,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_reserve_florida",
@@ -6000,7 +6028,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_reserve_georgia",
@@ -6124,7 +6153,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_reserve_louisiana",
@@ -6248,7 +6278,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_reserve_mississippi",
@@ -6372,7 +6403,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_reserve_north_carolina",
@@ -6496,7 +6528,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_reserve_south_carolina",
@@ -6620,7 +6653,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_reserve_tennessee",
@@ -6744,7 +6778,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_reserve_texas",
@@ -6868,7 +6903,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_jun30_reserve_virginia",
@@ -6992,7 +7028,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_mar09_alabama",
@@ -7120,7 +7157,8 @@
               "detail": "rejection_return_support",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_mar09_florida",
@@ -7248,7 +7286,8 @@
               "detail": "rejection_return_support",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_mar09_georgia",
@@ -7376,7 +7415,8 @@
               "detail": "rejection_return_support",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_mar09_louisiana",
@@ -7504,7 +7544,8 @@
               "detail": "rejection_return_support",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_mar09_mississippi",
@@ -7632,7 +7673,8 @@
               "detail": "rejection_return_support",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_mar09_south_carolina",
@@ -7760,7 +7802,8 @@
               "detail": "rejection_return_support",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "cs_mar09_texas",
@@ -7888,7 +7931,8 @@
               "detail": "rejection_return_support",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
         },
         {
           "id": "us_apr15_arkansas",
@@ -8026,7 +8070,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_connecticut",
@@ -8164,7 +8209,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_delaware",
@@ -8302,7 +8348,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_illinois",
@@ -8440,7 +8487,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_indiana",
@@ -8578,7 +8626,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_iowa",
@@ -8716,7 +8765,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_kentucky",
@@ -8854,7 +8904,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_maine",
@@ -8992,7 +9043,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_maryland",
@@ -9130,7 +9182,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_massachusetts",
@@ -9268,7 +9321,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_michigan",
@@ -9406,7 +9460,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_minnesota",
@@ -9544,7 +9599,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_missouri",
@@ -9682,7 +9738,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_new_hampshire",
@@ -9820,7 +9877,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_new_jersey",
@@ -9958,7 +10016,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_new_york",
@@ -10096,7 +10155,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_north_carolina",
@@ -10234,7 +10294,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_ohio",
@@ -10372,7 +10433,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_pennsylvania",
@@ -10510,7 +10572,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_rhode_island",
@@ -10648,7 +10711,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_tennessee",
@@ -10786,7 +10850,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_vermont",
@@ -10924,7 +10989,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_virginia",
@@ -11062,7 +11128,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_apr15_wisconsin",
@@ -11200,7 +11267,8 @@
               "detail": "purpose_detail",
               "value": null
             }
-          ]
+          ],
+          "callEstablishment": "us_april_militia"
         },
         {
           "id": "us_jul25_new_york",
@@ -11295,7 +11363,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_jul30_artillery_new_york",
@@ -11374,7 +11443,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "us_volunteer_artillery_unrecovered"
         },
         {
           "id": "us_jul30_cavalry_new_york",
@@ -11453,7 +11523,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_cavalry_4"
         },
         {
           "id": "us_jun11_indiana",
@@ -11617,7 +11688,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may03_accepted_new_york",
@@ -11695,7 +11767,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may04_regular_artillery",
@@ -11798,7 +11871,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "us_go16_artillery"
         },
         {
           "id": "us_may04_regular_cavalry",
@@ -11901,7 +11975,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "us_go16_cavalry"
         },
         {
           "id": "us_may04_regular_infantry",
@@ -12004,7 +12079,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "us_go16_infantry"
         },
         {
           "id": "us_may15_minnesota_renewal",
@@ -12148,7 +12224,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may15_vol_kansas",
@@ -12292,7 +12369,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may15_vol_massachusetts",
@@ -12464,7 +12542,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may15_vol_nebraska",
@@ -12608,7 +12687,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may15_vol_rhode_island",
@@ -12711,7 +12791,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_connecticut",
@@ -12883,7 +12964,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_illinois",
@@ -13055,7 +13137,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_indiana",
@@ -13227,7 +13310,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_iowa",
@@ -13399,7 +13483,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_maine",
@@ -13571,7 +13656,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_michigan",
@@ -13743,7 +13829,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_new_hampshire",
@@ -13915,7 +14002,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_new_jersey",
@@ -14087,7 +14175,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_new_york",
@@ -14166,7 +14255,8 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_ohio",
@@ -14338,7 +14428,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_vermont",
@@ -14510,7 +14601,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may16_vol_wisconsin",
@@ -14682,7 +14774,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "us_may03_national",
@@ -14830,7 +14923,8 @@
               ],
               "linkRationale": "[I] 0122 textual offence: the original names suppression of combinations/insurrection, directly or through expressly incorporated GO15. This opposes the common Confederate polity. No offence from kind alone; existing honours and offences retained."
             }
-          ]
+          ],
+          "callEstablishment": "us_go15_infantry"
         },
         {
           "id": "cs_jul12_brigade_demand",
@@ -14888,7 +14982,242 @@
               ],
               "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
             }
-          ]
+          ],
+          "callEstablishment": "cs_public_defense_infantry"
+        }
+      ],
+      "establishments": [
+        {
+          "id": "us_april_militia",
+          "faction": "union",
+          "callKind": "april_militia",
+          "arm": "infantry",
+          "organisation": "ten_companies",
+          "effective": "1861-04-15",
+          "men": 780,
+          "cites": [
+            [
+              "OR III-I",
+              69
+            ]
+          ],
+          "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+        },
+        {
+          "id": "us_go15_infantry",
+          "faction": "union",
+          "callKind": "go15_volunteers",
+          "arm": "infantry",
+          "organisation": "ten_companies",
+          "effective": "1861-05-04",
+          "men": 866,
+          "cites": [
+            [
+              "OR III-I",
+              151
+            ],
+            [
+              "OR III-I",
+              152
+            ]
+          ],
+          "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+        },
+        {
+          "id": "us_go15_cavalry_4",
+          "faction": "union",
+          "callKind": "go15_volunteers",
+          "arm": "cavalry",
+          "organisation": "4_squadrons",
+          "effective": "1861-05-04",
+          "men": 660,
+          "cites": [
+            [
+              "OR III-I",
+              152
+            ],
+            [
+              "OR III-I",
+              153
+            ]
+          ],
+          "note": "0127; minimum for this squadron organisation. Four squadrons is the smallest permitted regiment [I]; six is not assumed."
+        },
+        {
+          "id": "us_go15_cavalry_5",
+          "faction": "union",
+          "callKind": "go15_volunteers",
+          "arm": "cavalry",
+          "organisation": "5_squadrons",
+          "effective": "1861-05-04",
+          "men": 818,
+          "cites": [
+            [
+              "OR III-I",
+              152
+            ],
+            [
+              "OR III-I",
+              153
+            ]
+          ],
+          "note": "0127; minimum for this squadron organisation. Four squadrons is the smallest permitted regiment [I]; six is not assumed."
+        },
+        {
+          "id": "us_go15_cavalry_6",
+          "faction": "union",
+          "callKind": "go15_volunteers",
+          "arm": "cavalry",
+          "organisation": "6_squadrons",
+          "effective": "1861-05-04",
+          "men": 976,
+          "cites": [
+            [
+              "OR III-I",
+              152
+            ],
+            [
+              "OR III-I",
+              153
+            ]
+          ],
+          "note": "0127; minimum for this squadron organisation. Four squadrons is the smallest permitted regiment [I]; six is not assumed."
+        },
+        {
+          "id": "us_go16_infantry",
+          "faction": "union",
+          "callKind": "go16_regulars",
+          "arm": "infantry",
+          "organisation": "three_battalions",
+          "effective": "1861-05-04",
+          "men": 2020,
+          "cites": [
+            [
+              "OR III-I",
+              154
+            ],
+            [
+              "OR III-I",
+              155
+            ]
+          ],
+          "note": "0127; stated minimum of this organisation. Artillery row is explicitly twelve batteries, not an invented eight-battery figure."
+        },
+        {
+          "id": "us_go16_cavalry",
+          "faction": "union",
+          "callKind": "go16_regulars",
+          "arm": "cavalry",
+          "organisation": "three_battalions",
+          "effective": "1861-05-04",
+          "men": 997,
+          "cites": [
+            [
+              "OR III-I",
+              155
+            ],
+            [
+              "OR III-I",
+              156
+            ]
+          ],
+          "note": "0127; stated minimum of this organisation. Artillery row is explicitly twelve batteries, not an invented eight-battery figure."
+        },
+        {
+          "id": "us_go16_artillery",
+          "faction": "union",
+          "callKind": "go16_regulars",
+          "arm": "artillery",
+          "organisation": "twelve_batteries",
+          "effective": "1861-05-04",
+          "men": 997,
+          "cites": [
+            [
+              "OR III-I",
+              156
+            ],
+            [
+              "OR III-I",
+              157
+            ]
+          ],
+          "note": "0127; stated minimum of this organisation. Artillery row is explicitly twelve batteries, not an invented eight-battery figure."
+        },
+        {
+          "id": "us_volunteer_artillery_unrecovered",
+          "faction": "union",
+          "callKind": "volunteer_artillery",
+          "arm": "artillery",
+          "organisation": "unrecovered",
+          "effective": "1861-07-30",
+          "men": null,
+          "cites": [
+            [
+              "OR III-I",
+              152
+            ]
+          ],
+          "note": "GO15 supplies no volunteer artillery regiment establishment. GO16 regular artillery is not substituted. Recover the applicable organisation before assigning men."
+        },
+        {
+          "id": "cs_public_defense_infantry",
+          "faction": "confederate",
+          "callKind": "public_defense_volunteers",
+          "arm": "infantry",
+          "organisation": "ten_companies",
+          "effective": "1861-03-06",
+          "men": 780,
+          "cites": [
+            [
+              "OR IV-I",
+              126
+            ],
+            [
+              "OR IV-I",
+              127
+            ],
+            [
+              "OR IV-I",
+              367
+            ]
+          ],
+          "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+        },
+        {
+          "id": "cs_cavalry_company_unquantified",
+          "faction": "confederate",
+          "callKind": "public_defense_cavalry",
+          "arm": "cavalry",
+          "organisation": "unquantified_companies",
+          "effective": "1861-06-30",
+          "men": null,
+          "cites": [
+            [
+              "OR IV-I",
+              126
+            ],
+            [
+              "OR IV-I",
+              127
+            ],
+            [
+              "OR IV-I",
+              128
+            ]
+          ],
+          "note": "Call supplies no count of companies/squadrons. No infantry regiment or ten-company organisation is imposed on the unknown contingent."
+        }
+      ],
+      "defaultEstablishments": [
+        {
+          "faction": "union",
+          "arm": "infantry",
+          "id": "us_april_militia"
+        },
+        {
+          "faction": "confederate",
+          "arm": "infantry",
+          "id": "cs_public_defense_infantry"
         }
       ]
     },

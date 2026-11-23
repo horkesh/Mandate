@@ -1,0 +1,21 @@
+{
+  "capture": "runs/s122/capture/union-1861-final-state.json",
+  "sha256": "1e0b4e4ced7fd12980869c77a67abec3b7d32bb5ab196f9ef63cf9364d7ef97f",
+  "flagRetained": true,
+  "landingLots": 0,
+  "parent": {
+    "lotId": "initial.fb_us_pickens_vogdes_co_a",
+    "lotRegiment": null,
+    "lotGenerated": false,
+    "lotArm": "artillery",
+    "lotMen": null,
+    "lotStrength": {
+      "strengthKind": "unknown",
+      "strengthSource": "OR I-1 pp.353, 357, 395; SecNav1861 4 July 1861 (msg_jul1861) p.5; OR I-1 p.352; no dated strength at this lot scope; recover a dated unit return or estimate",
+      "strengthDate": "1861-03-05"
+    },
+    "lotStragglers": 0,
+    "lotService": null
+  },
+  "fullOpeningTest": "Not repeated: it would execute another148-day history run; the new assertions are checked directly on the one retained capture. Ordinary suite/hook still pending the new-zero ruling."
+}

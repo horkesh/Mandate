@@ -1,3 +1,4 @@
+import type { LotStrength } from '../forces/lots.ts';
 /**
  * Situations as pack data (World; FOUNDATION section 7; decisions 0023, 0040,
  * 0041 and 0046). The kernel owns these types; `@mandate/pack-format` holds
@@ -155,6 +156,7 @@ export interface EnlistmentRenewal {
 }
 
 export interface StateForces {
+  readonly strengthBasis?: LotStrength;
   /** Stable identity, also used by a later quantified return for the same contingent. */
   readonly id: string;
   readonly regiments: number | null;

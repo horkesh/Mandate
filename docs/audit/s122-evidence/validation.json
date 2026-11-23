@@ -1,0 +1,161 @@
+{
+  "checks": [
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.687,
+      "log": "runs/s122/final-boundary.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 2.098,
+      "log": "runs/s122/final-rules.log"
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exit": 0,
+      "seconds": 1.14,
+      "log": "runs/s122/final-typecheck.log"
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/projection-truth.test.ts",
+        "tools/test/liveness-causes.test.ts",
+        "tools/test/s90-liveness-ruling.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.128,
+      "log": "runs/s122/final-rule-tests.log"
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/s122-strength.test.ts",
+        "packages/kernel/test/save.test.ts",
+        "packages/cli/test/s122-strength-score.test.ts",
+        "packages/cli/test/men-regions.test.ts",
+        "packages/cli/test/done-check-1a.test.ts",
+        "packages/pack-format/test/checkpoints.test.ts",
+        "packages/pack-format/test/schemas.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 2.757,
+      "log": "runs/s122/final-strength-tests.log"
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/national-enlistment.test.ts",
+        "packs/union-1861/test/s77-concentration.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 9.671,
+      "log": "runs/s122/expectation-corrections.log"
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/cli/test/situation-landing.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 1.31,
+      "log": "runs/s122/landing-control.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:licences"
+      ],
+      "exit": 0,
+      "seconds": 0.754,
+      "log": "runs/s122/licences.log"
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:decisions"
+      ],
+      "exit": 0,
+      "seconds": 0.687,
+      "log": "runs/s122/decisions.log"
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/one-writer.test.ts",
+        "packages/kernel/test/banned-apis.test.ts",
+        "packages/kernel/test/s122-strength.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 6.793,
+      "log": "runs/s122/ownership-correction.log"
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/cli/test/state-forces.test.ts",
+        "packages/pack-format/test/state-forces.test.ts",
+        "packages/kernel/test/s122-strength.test.ts",
+        "packs/union-1861/test/s122-establishments.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 4.031,
+      "log": "runs/s122/focused-source.log"
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/cli/test/s122-strength-score.test.ts",
+        "packs/union-1861/test/state-forces.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 8.872,
+      "log": "runs/s122/scorer-groups.log"
+    }
+  ],
+  "capture": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s122/capture.ts"
+    ],
+    "exit": 1,
+    "seconds": 64.226,
+    "log": "runs/s122/measure.log"
+  },
+  "inputs": 462,
+  "afterCaptureChanges": "Only four permitted positive liveness bands and obsolete quiet bookkeeping. No simulation, pack, checkpoint, cast, source strength, or combat input changed after capture.",
+  "ordinaryHook": "Not attempted: retained capture proves an unapproved new zero fails the ordinary liveness gate. Hook unchanged, never bypassed; no push. Required independent review deferred under0106/0107.",
+  "unmetCriterion": "forces.landed_by_situation: observed0, required1..4; exact proposal retained, unapplied. No new experiment or sweep."
+}

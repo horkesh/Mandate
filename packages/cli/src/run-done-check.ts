@@ -49,7 +49,7 @@ for (const h of result.history) {
 const report = (title: string, milestone: 'phase0' | '1A') => {
   lines.push(title, '');
   for (const c of result.criteria.filter((x) => x.milestone === milestone)) {
-    lines.push(`${c.problems.length === 0 ? 'PASS' : 'FAIL'}  [${c.id}] ${c.text}`);
+    lines.push(`${(c.verdict ?? (c.problems.length === 0 ? 'pass' : 'fail')).toUpperCase()}  [${c.id}] ${c.text}`);
     for (const e of c.evidence) lines.push(`        ${e}`);
     for (const p of c.problems) lines.push(`      ! ${p}`);
   }

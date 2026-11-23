@@ -170,6 +170,8 @@ export const SCENARIO_TABLES = {
       c('arm', true),
       c('strength'),
       c('strength_date'),
+      c('strength_kind', false),
+      c('strength_source', false),
       c('non_combatants'),
       c('stores_days'),
       c('stores_date'),

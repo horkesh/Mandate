@@ -9,7 +9,8 @@ import { forceTotals } from './lots.ts';
  *
  * There is no `men` stock in `economy` in 1A (that is 1B): a regiment goes straight from the governor into a block.
  */
-import { unidentifiedLot, type RegimentLot } from './lots.ts';
+import { unidentifiedLot, strengthBasisProblems, type RegimentLot } from './lots.ts';
+import type { LotStrength } from './lots.ts';
 import { strictCompare } from '../compare.ts';
 import type { DepartmentId, ForceBlockId, MessageId, PersonId, PostId, SituationId } from '../ids.ts';
 import type { State } from '../root-state.ts';
@@ -49,6 +50,8 @@ export interface NewBlock {
   readonly department: DepartmentId;
   readonly arm: string;
   readonly strength: number | null;
+  readonly strengthBasis?: LotStrength;
+  readonly menPerLot?: number | null;
   readonly stragglersUnknown?: boolean;
   readonly storesDays: number;
   readonly enlistment: Enlistment;
@@ -61,7 +64,7 @@ export interface NewBlock {
 export type MusterDelta = { readonly change: 'create'; readonly create: NewBlock; readonly cause: 'recruitment' }
   | { readonly change: 'renew'; readonly block: ForceBlockId; readonly day: number; readonly fromTermDays: number; readonly termDays: number; readonly situation: SituationId; readonly cause: 'recruitment' }
   | { readonly change: 'service'; readonly block: ForceBlockId; readonly department: DepartmentId; readonly cause: 'recruitment' }
-  | { readonly change: 'quantify'; readonly block: ForceBlockId; readonly men: number; readonly regiments: number | null; readonly cause: 'recruitment' }
+  | { readonly change: 'quantify'; readonly block: ForceBlockId; readonly men: number; readonly regiments: number | null; readonly strengthBasis?: LotStrength; readonly cause: 'recruitment' }
   | { readonly change: 'expire'; readonly block: ForceBlockId; readonly day: number; readonly cause: 'recruitment' }
   | { readonly change: 'disband'; readonly block: ForceBlockId; readonly cause: 'recruitment' | 'evacuated_under_terms' };
 
@@ -138,26 +141,22 @@ export function applyMusters(map: WorldIndex, state: State, deltas: readonly Mus
       if (b.fbLots.length === 1 && single?.lotRegiment === null) {
         // An own-contingent return stays one lot, even when regiment count is unknown. Its
         // sourced aggregate is not a strength claim for any named regiment.
-        blocks[d.block] = { ...b, fbLots: [{ ...single, lotMen: d.men, lotService: { ...e, enlRegiments: d.regiments } }] };
+        const basis = d.strengthBasis ?? { strengthKind: 'unknown' as const, strengthSource: null, strengthDate: null };
+        if (strengthBasisProblems(d.men,basis).length) throw new ForcesError([`quantified return needs its dated source for ${d.block}`]);
+        blocks[d.block] = { ...b, fbLots: [{ ...single, lotMen: d.men, lotStrength: basis, lotService: { ...e, enlRegiments: d.regiments } }] };
         enlistments[d.block] = { ...e, enlRegiments: d.regiments };
         continue;
       }
       // An aggregate return is not evidence of each regiment's strength. It
       // can confirm the original model quota, but cannot apportion a different
       // headcount or create/replace regimental identities after raising.
-      const nominal = map.world.rules.recruitment.menPerRegiment;
-      if (e.enlRegiments === null || d.regiments !== e.enlRegiments || b.fbLots.length !== e.enlRegiments ||
-        b.fbLots.some(l => l.lotMen !== null) || d.men !== e.enlRegiments * nominal) {
-        throw new ForcesError([`aggregate return cannot assign regimental strengths for ${d.block}`]);
-      }
-      blocks[d.block] = { ...b, fbLots: b.fbLots.map(l => ({ ...l, lotMen: nominal })) };
-      enlistments[d.block] = { ...e, enlRegiments: d.regiments };
-      continue;
+      throw new ForcesError([`aggregate return cannot assign regimental strengths for ${d.block}`]);
     }
     if (d.change === 'create') {
       const b = d.create;
       if (Object.prototype.hasOwnProperty.call(blocks, b.block)) throw new ForcesError([`force block ${b.block} already exists`]);
       if ((b.strength !== null && (!Number.isSafeInteger(b.strength) || b.strength < 0)) || !Number.isSafeInteger(b.storesDays) || b.storesDays < 0) throw new ForcesError([`force block ${b.block}: strength must be unknown or whole and nonnegative; stores must be whole and nonnegative`]);
+      if (b.strengthBasis !== undefined && strengthBasisProblems(b.strength,b.strengthBasis).length) throw new ForcesError([`force block ${b.block}: invalid strength provenance`]);
       blocks[b.block] = blockState(b, startingCondition(map), raisedLots(map, state, b, identities));
       enlistments[b.block] = b.enlistment;
       created.push(b.block);
@@ -211,7 +210,8 @@ export function enlistmentsOf(state: State, cache?: ForceServiceCache): Enlistme
  */
 function raisedLots(map: WorldIndex, state: State, b: NewBlock, used: Record<string, true>): readonly RegimentLot[] {
   const e = b.enlistment;
-  if (e.enlRegiments === null) return [unidentifiedLot(`unidentified.${b.block}`, b.arm, b.strength, b.stragglersUnknown === true ? null : 0, e)];
+  const basis: LotStrength = b.strengthBasis ?? { strengthKind: b.strength === null ? 'unknown' : e.enlSourceAct === undefined ? 'rule' : 'estimate', strengthSource: b.strength === null ? null : e.enlSourceAct === undefined ? `model call:${e.enlCall}` : `legacy institutional quantity:${e.enlSourceAct}`, strengthDate: null };
+  if (e.enlRegiments === null) return [unidentifiedLot(`unidentified.${b.block}`, b.arm, b.strength, b.stragglersUnknown === true ? null : 0, e, basis)];
   const raiser = state.postStates[e.enlPost]?.postDepartment ?? b.department;
   const term = e.enlEndsDay === null ? null : e.enlEndsDay - e.enlMusterDay;
   const catalogue = (map.world.regimentCatalogue ?? []).filter(r => r.raisingDepartment === raiser && r.arm === b.arm && r.scope === 'regiment' &&
@@ -226,9 +226,10 @@ function raisedLots(map: WorldIndex, state: State, b: NewBlock, used: Record<str
     const record = catalogue.find(r => used[r.id] !== true);
     const identity = record?.id ?? `generated.${b.block}.${n + 1}`;
     used[identity] = true;
-    const men = remaining === null ? null : n === e.enlRegiments - 1 ? remaining : Math.min(remaining, map.world.rules.recruitment.menPerRegiment);
+    const nominal = b.menPerLot ?? map.world.rules.recruitment.menPerRegiment ?? (b.strength === null ? 0 : Math.ceil(b.strength / e.enlRegiments));
+    const men = remaining === null ? null : n === e.enlRegiments - 1 ? remaining : Math.min(remaining, nominal);
     if (remaining !== null) remaining -= men!;
-    out.push({ lotId: identity, lotRegiment: identity, lotGenerated: record === undefined, lotArm: b.arm, lotMen: men, lotStragglers: stragglers, lotService: e });
+    out.push({ lotId: identity, lotRegiment: identity, lotGenerated: record === undefined, lotArm: b.arm, lotMen: men, lotStrength: basis, lotStragglers: stragglers, lotService: e });
   }
   return out;
 }

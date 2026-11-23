@@ -3,6 +3,31 @@ import { strictCompare } from '../compare.ts';
 import type { Enlistment } from './enlistment.ts';
 import type { ForceBlockState } from './forces.ts';
 
+export type StrengthKind = 'return' | 'estimate' | 'rule' | 'unknown';
+
+/** Provenance of the quantity, retained through losses, splits and organisation. */
+export interface LotStrength {
+  readonly strengthKind: StrengthKind;
+  readonly strengthSource: string | null;
+  readonly strengthDate: string | null;
+}
+
+export interface StrengthKinds {
+  readonly return: number;
+  readonly estimate: number;
+  readonly rule: number;
+  /** Unknown is not zero men. Its population is listed separately. */
+  readonly unknown: null;
+}
+
+export function strengthBasisProblems(men: number | null, basis: LotStrength): string[] {
+  const problems: string[] = [];
+  if ((men === null) !== (basis.strengthKind === 'unknown')) problems.push('unknown men and unknown kind must agree');
+  if (basis.strengthKind !== 'unknown' && !basis.strengthSource?.trim()) problems.push('a known quantity needs its source');
+  if ((basis.strengthKind === 'return' || basis.strengthKind === 'estimate') && !basis.strengthDate) problems.push('a return or estimate needs its source date');
+  return problems;
+}
+
 export interface RegimentLot {
   readonly lotId: string;
   /** Catalogue identity; null for a formation whose regiment identity is not established. */
@@ -10,6 +35,7 @@ export interface RegimentLot {
   readonly lotGenerated: boolean;
   readonly lotArm: string;
   readonly lotMen: number | null;
+  readonly lotStrength: LotStrength;
   readonly lotStragglers: number | null;
   readonly lotService: Enlistment | null;
 }
@@ -17,6 +43,8 @@ export interface RegimentLot {
 export interface ForceTotals {
   readonly fbStrength: number | null;
   readonly fbStragglers: number | null;
+  readonly fbByKind: StrengthKinds;
+  readonly fbUnknownLots: readonly string[];
 }
 
 /** Caller-held, disposable derived data; never part of World data or saved State. */
@@ -31,8 +59,8 @@ export function forceTotals(block: Pick<ForceBlockState, 'fbLots'>, cache?: Forc
 }
 
 /** Existing unlabelled formation, not a claim that a regiment has been identified. */
-export function unidentifiedLot(id: string, arm: string, men: number | null, stragglers: number | null = 0, service: Enlistment | null = null): RegimentLot {
-  return { lotId: id, lotRegiment: null, lotGenerated: false, lotArm: arm, lotMen: men, lotStragglers: stragglers, lotService: service };
+export function unidentifiedLot(id: string, arm: string, men: number | null, stragglers: number | null = 0, service: Enlistment | null = null, basis?: LotStrength): RegimentLot {
+  return { lotId: id, lotRegiment: null, lotGenerated: false, lotArm: arm, lotMen: men, lotStrength: basis ?? { strengthKind: men === null ? 'unknown' : 'rule', strengthSource: men === null ? null : `model quantity:${id}`, strengthDate: null }, lotStragglers: stragglers, lotService: service };
 }
 
 export function aggregateLots(lots: readonly RegimentLot[]): ForceTotals {
@@ -40,13 +68,17 @@ export function aggregateLots(lots: readonly RegimentLot[]): ForceTotals {
   let absent = 0;
   let unknown = false;
   let unknownAbsent = false;
+  const byKind = { return: 0, estimate: 0, rule: 0, unknown: null };
+  const unknownLots: string[] = [];
   for (const l of lots) {
     if (l.lotMen === null) unknown = true;
     else present += l.lotMen;
+    if (l.lotMen === null || l.lotStrength.strengthKind === 'unknown') unknownLots.push(l.lotId);
+    else byKind[l.lotStrength.strengthKind] += l.lotMen;
     if (l.lotStragglers === null) unknownAbsent = true;
     else absent += l.lotStragglers;
   }
-  return { fbStrength: unknown ? null : present, fbStragglers: unknownAbsent ? null : absent };
+  return { fbStrength: unknown ? null : present, fbStragglers: unknownAbsent ? null : absent, fbByKind: byKind, fbUnknownLots: unknownLots.sort(strictCompare) };
 }
 
 /** Only accounted stragglers can return or be captured. An incomplete sum stays unknown in returns. */

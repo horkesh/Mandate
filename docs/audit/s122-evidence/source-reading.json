@@ -1,0 +1,618 @@
+{
+  "read": [
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\III1-p67.txt",
+      "raw_sha256": "e8f5618d4c7ebbc385e20396712dc5f4f294306e186c0a2e343c2756a6957940",
+      "retained_path": "docs/audit/s122-evidence/read/III1-p67.txt",
+      "sha256": "a7eae89b72e4eb197f5807566642bdab28fb1081f2278811babaecefb7242d1d",
+      "source": {
+        "key": "III1:67",
+        "work": "OR III-I",
+        "page": 67,
+        "leaf": 83,
+        "path": "docs/research/S121/read/III1-p67.txt",
+        "sha256": "e8f5618d4c7ebbc385e20396712dc5f4f294306e186c0a2e343c2756a6957940",
+        "url": "https://archive.org/details/warofrebellion0301rootrich/page/n83/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "a7eae89b72e4eb197f5807566642bdab28fb1081f2278811babaecefb7242d1d",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\III1-p68.txt",
+      "raw_sha256": "fe01c25d0427b5c15f736f4784a70cd596d4f7a5a9f9a087a2a5708d15df02d8",
+      "retained_path": "docs/audit/s122-evidence/read/III1-p68.txt",
+      "sha256": "c5e4ff0f4d5c2cf9440c7f394a26a2fe954614f1846b1421d12396799e504f7a",
+      "source": {
+        "key": "III1:68",
+        "work": "OR III-I",
+        "page": 68,
+        "leaf": 84,
+        "path": "docs/research/S121/read/III1-p68.txt",
+        "sha256": "fe01c25d0427b5c15f736f4784a70cd596d4f7a5a9f9a087a2a5708d15df02d8",
+        "url": "https://archive.org/details/warofrebellion0301rootrich/page/n84/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "c5e4ff0f4d5c2cf9440c7f394a26a2fe954614f1846b1421d12396799e504f7a",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\III1-p69.txt",
+      "raw_sha256": "f3688a91c5ccd2c6c53d18c0a4d1e39e58e9ff45da43f6e3fd51c01d85387c08",
+      "retained_path": "docs/audit/s122-evidence/read/III1-p69.txt",
+      "sha256": "32fd95848a216ade4c21b27def2ce16e3b7ba2c229e82307a6695b1cca01f05f",
+      "source": {
+        "key": "III1:69",
+        "work": "OR III-I",
+        "page": 69,
+        "leaf": 85,
+        "path": "docs/research/S121/read/III1-p69.txt",
+        "sha256": "f3688a91c5ccd2c6c53d18c0a4d1e39e58e9ff45da43f6e3fd51c01d85387c08",
+        "url": "https://archive.org/details/warofrebellion0301rootrich/page/n85/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "32fd95848a216ade4c21b27def2ce16e3b7ba2c229e82307a6695b1cca01f05f",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\III1-p151.txt",
+      "raw_sha256": "20f224029ffb92331a554a62a955135f26776ffc58a127a55cc5acd9234a858d",
+      "retained_path": "docs/audit/s122-evidence/read/III1-p151.txt",
+      "sha256": "0bf59fcd0d075bf412a92cc50524a5fddbffe6e648c6442cc00e0d67bccde6a2",
+      "source": {
+        "key": "III1:151",
+        "work": "OR III-I",
+        "page": 151,
+        "leaf": 167,
+        "path": "docs/research/S121/read/III1-p151.txt",
+        "sha256": "20f224029ffb92331a554a62a955135f26776ffc58a127a55cc5acd9234a858d",
+        "url": "https://archive.org/details/warofrebellion0301rootrich/page/n167/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "0bf59fcd0d075bf412a92cc50524a5fddbffe6e648c6442cc00e0d67bccde6a2",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\III1-p152.txt",
+      "raw_sha256": "b267c6faa9c94ab74b52b5ae855a3ad044182014c2212b08ea488ceb1efb8cb4",
+      "retained_path": "docs/audit/s122-evidence/read/III1-p152.txt",
+      "sha256": "abc478625f7107fb3174d92fb21944a72ab73aa6c24d5b50534140e1faa4226e",
+      "source": {
+        "key": "III1:152",
+        "work": "OR III-I",
+        "page": 152,
+        "leaf": 168,
+        "path": "docs/research/S121/read/III1-p152.txt",
+        "sha256": "b267c6faa9c94ab74b52b5ae855a3ad044182014c2212b08ea488ceb1efb8cb4",
+        "url": "https://archive.org/details/warofrebellion0301rootrich/page/n168/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "abc478625f7107fb3174d92fb21944a72ab73aa6c24d5b50534140e1faa4226e",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\III1-p153.txt",
+      "raw_sha256": "5b157089d7b454bb7cc63ac1a5ca9cacda0a4d2b8b6638df521a78f16ed848cb",
+      "retained_path": "docs/audit/s122-evidence/read/III1-p153.txt",
+      "sha256": "735aefbdd2af8a9c14c4622888e33bc245a24cff7b97fd3033623b3d3a5b3b29",
+      "source": {
+        "key": "III1:153",
+        "work": "OR III-I",
+        "page": 153,
+        "leaf": 169,
+        "path": "docs/research/S121/read/III1-p153.txt",
+        "sha256": "5b157089d7b454bb7cc63ac1a5ca9cacda0a4d2b8b6638df521a78f16ed848cb",
+        "url": "https://archive.org/details/warofrebellion0301rootrich/page/n169/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "735aefbdd2af8a9c14c4622888e33bc245a24cff7b97fd3033623b3d3a5b3b29",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\III1-p154.txt",
+      "raw_sha256": "bf38fe3a44514daaa556ea207ba219f55a7c6c59141d883d32189861ee95a520",
+      "retained_path": "docs/audit/s122-evidence/read/III1-p154.txt",
+      "sha256": "eb38967164857adf10229fb4d37ac8389ba99a708bba19867aa2179e33ab2a89",
+      "source": {
+        "key": "III1:154",
+        "work": "OR III-I",
+        "page": 154,
+        "leaf": 170,
+        "path": "docs/research/S121/read/III1-p154.txt",
+        "sha256": "bf38fe3a44514daaa556ea207ba219f55a7c6c59141d883d32189861ee95a520",
+        "url": "https://archive.org/details/warofrebellion0301rootrich/page/n170/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "eb38967164857adf10229fb4d37ac8389ba99a708bba19867aa2179e33ab2a89",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\III1-p155.txt",
+      "raw_sha256": "50ab4dad2d5ae9e094bf77a685b25ee77d81fbbe76d81d54c095346af5771a0c",
+      "retained_path": "docs/audit/s122-evidence/read/III1-p155.txt",
+      "sha256": "bb64d205da1c7848422c331c591f77ae2b34f7480888bcf28893a2d5ca5b2427",
+      "source": {
+        "key": "III1:155",
+        "work": "OR III-I",
+        "page": 155,
+        "leaf": 171,
+        "path": "docs/research/S121/read/III1-p155.txt",
+        "sha256": "50ab4dad2d5ae9e094bf77a685b25ee77d81fbbe76d81d54c095346af5771a0c",
+        "url": "https://archive.org/details/warofrebellion0301rootrich/page/n171/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "bb64d205da1c7848422c331c591f77ae2b34f7480888bcf28893a2d5ca5b2427",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\III1-p156.txt",
+      "raw_sha256": "392f9257c6e9c9562e73c6d387f66dc90b00390aa57e70cc7680a2b93daeb99d",
+      "retained_path": "docs/audit/s122-evidence/read/III1-p156.txt",
+      "sha256": "aa6e71c972fbc225879b514a5db83d01cd728a3110f93374bec555c3cfc8f107",
+      "source": {
+        "key": "III1:156",
+        "work": "OR III-I",
+        "page": 156,
+        "leaf": 172,
+        "path": "docs/research/S121/read/III1-p156.txt",
+        "sha256": "392f9257c6e9c9562e73c6d387f66dc90b00390aa57e70cc7680a2b93daeb99d",
+        "url": "https://archive.org/details/warofrebellion0301rootrich/page/n172/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "aa6e71c972fbc225879b514a5db83d01cd728a3110f93374bec555c3cfc8f107",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\III1-p157.txt",
+      "raw_sha256": "5cee77f3a93d046c564dcd27ddca2ba026fc91fb195f7f4a978dd893b0ad9dab",
+      "retained_path": "docs/audit/s122-evidence/read/III1-p157.txt",
+      "sha256": "f3cbb0fe3235eb05740a7dc2ef36fd878971daefb314a9c137e568b04cc2a83d",
+      "source": {
+        "key": "III1:157",
+        "work": "OR III-I",
+        "page": 157,
+        "leaf": 173,
+        "path": "docs/research/S121/read/III1-p157.txt",
+        "sha256": "5cee77f3a93d046c564dcd27ddca2ba026fc91fb195f7f4a978dd893b0ad9dab",
+        "url": "https://archive.org/details/warofrebellion0301rootrich/page/n173/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "f3cbb0fe3235eb05740a7dc2ef36fd878971daefb314a9c137e568b04cc2a83d",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p126.txt",
+      "raw_sha256": "77111920c2b07bc2af61dd3ef5563afdb92fdc3729577f46c3e9616fee0dfdb4",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p126.txt",
+      "sha256": "e1696bf8444c5d838dd663ac0994b8ad07bfd2440fb607164cc6922352820628",
+      "source": {
+        "key": "IV1:126",
+        "work": "OR IV-I",
+        "page": 126,
+        "leaf": 141,
+        "path": "docs/research/S121/read/IV1-p126.txt",
+        "sha256": "77111920c2b07bc2af61dd3ef5563afdb92fdc3729577f46c3e9616fee0dfdb4",
+        "url": "https://archive.org/details/cu31924079579524/page/n141/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "e1696bf8444c5d838dd663ac0994b8ad07bfd2440fb607164cc6922352820628",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p127.txt",
+      "raw_sha256": "2bc7d7cd50420e249c2a96dbf3238208749c868e81e5cae04cd256190fceb9fa",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p127.txt",
+      "sha256": "2c26cb6a7b1cbfe531c74451330d191dfee3abadbce0a89b996218b77ca94c4f",
+      "source": {
+        "key": "IV1:127",
+        "work": "OR IV-I",
+        "page": 127,
+        "leaf": 142,
+        "path": "docs/research/S121/read/IV1-p127.txt",
+        "sha256": "2bc7d7cd50420e249c2a96dbf3238208749c868e81e5cae04cd256190fceb9fa",
+        "url": "https://archive.org/details/cu31924079579524/page/n142/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "2c26cb6a7b1cbfe531c74451330d191dfee3abadbce0a89b996218b77ca94c4f",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p128.txt",
+      "raw_sha256": "db533356f86064001df68d050d57e93dce168737ff53c83e98a95a62c77f2dbd",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p128.txt",
+      "sha256": "12d3734f0c58862c9902038d6c8887473ee8e14d176a38b072a809585eb6b660",
+      "source": {
+        "key": "IV1:128",
+        "work": "OR IV-I",
+        "page": 128,
+        "leaf": 143,
+        "path": "docs/research/S121/read/IV1-p128.txt",
+        "sha256": "db533356f86064001df68d050d57e93dce168737ff53c83e98a95a62c77f2dbd",
+        "url": "https://archive.org/details/cu31924079579524/page/n143/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "12d3734f0c58862c9902038d6c8887473ee8e14d176a38b072a809585eb6b660",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p131.txt",
+      "raw_sha256": "0fcf0ec9b2459add0cca92e972f35d43bebbee228e85ac613613b20c53da0fba",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p131.txt",
+      "sha256": "e45a8d5b2188370ce3ccebd12e8ef721bf0349940e2f9dd29a85659001ea1834",
+      "source": {
+        "key": "IV1:131",
+        "work": "OR IV-I",
+        "page": 131,
+        "leaf": 146,
+        "path": "docs/research/S121/read/IV1-p131.txt",
+        "sha256": "0fcf0ec9b2459add0cca92e972f35d43bebbee228e85ac613613b20c53da0fba",
+        "url": "https://archive.org/details/cu31924079579524/page/n146/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "e45a8d5b2188370ce3ccebd12e8ef721bf0349940e2f9dd29a85659001ea1834",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p231.txt",
+      "raw_sha256": "9857114fa5269013819a9c03372d93d7e056aa8fd5ffd5abd839afbe4c8dd9c0",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p231.txt",
+      "sha256": "574265c6b5a75b534f48bcefd20c092dcfb6cc4909a81373af6ca02d523f829a",
+      "source": {
+        "key": "IV1:231",
+        "work": "OR IV-I",
+        "page": 231,
+        "leaf": 246,
+        "path": "docs/research/S121/read/IV1-p231.txt",
+        "sha256": "9857114fa5269013819a9c03372d93d7e056aa8fd5ffd5abd839afbe4c8dd9c0",
+        "url": "https://archive.org/details/cu31924079579524/page/n246/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "574265c6b5a75b534f48bcefd20c092dcfb6cc4909a81373af6ca02d523f829a",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p232.txt",
+      "raw_sha256": "440148a8134def4f2521037303b455c31766ebf92d2ee0660e8daea351ed7497",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p232.txt",
+      "sha256": "34331584bfe4e78bd6e565acf5af343a268d81170f6d8d1e8da784c30db45ec1",
+      "source": {
+        "key": "IV1:232",
+        "work": "OR IV-I",
+        "page": 232,
+        "leaf": 247,
+        "path": "docs/research/S121/read/IV1-p232.txt",
+        "sha256": "440148a8134def4f2521037303b455c31766ebf92d2ee0660e8daea351ed7497",
+        "url": "https://archive.org/details/cu31924079579524/page/n247/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "34331584bfe4e78bd6e565acf5af343a268d81170f6d8d1e8da784c30db45ec1",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p233.txt",
+      "raw_sha256": "c5042068c381fd8ab24e1137f11995088a42f8bc8cefd62d0925671bfc465197",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p233.txt",
+      "sha256": "1a1fb4c9512d17558dd928faecd96fdba94ff47295aeffdb62f4382b3f888b70",
+      "source": {
+        "key": "IV1:233",
+        "work": "OR IV-I",
+        "page": 233,
+        "leaf": 248,
+        "path": "docs/research/S121/read/IV1-p233.txt",
+        "sha256": "c5042068c381fd8ab24e1137f11995088a42f8bc8cefd62d0925671bfc465197",
+        "url": "https://archive.org/details/cu31924079579524/page/n248/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "1a1fb4c9512d17558dd928faecd96fdba94ff47295aeffdb62f4382b3f888b70",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p367.txt",
+      "raw_sha256": "70dfaad81ba048b6d6b54ac91811a3da62688fc2fb919e4e956a7b7fdce036ac",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p367.txt",
+      "sha256": "ee9189dad876a23f248b5aad292e3dc65366b03e333be225573202da30fff2ec",
+      "source": {
+        "key": "IV1:367",
+        "work": "OR IV-I",
+        "page": 367,
+        "leaf": 382,
+        "path": "docs/research/S121/read/IV1-p367.txt",
+        "sha256": "70dfaad81ba048b6d6b54ac91811a3da62688fc2fb919e4e956a7b7fdce036ac",
+        "url": "https://archive.org/details/cu31924079579524/page/n382/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "ee9189dad876a23f248b5aad292e3dc65366b03e333be225573202da30fff2ec",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p388.txt",
+      "raw_sha256": "7e93848e463d32a969851043b6111baf002467330fa6b7d077c201a425e387b7",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p388.txt",
+      "sha256": "64e657a6202cc7a0fe095606f46a823eeaf15254ce584200b0e443b7fbcfe473",
+      "source": {
+        "key": "IV1:388",
+        "work": "OR IV-I",
+        "page": 388,
+        "leaf": 403,
+        "path": "docs/research/S121/read/IV1-p388.txt",
+        "sha256": "7e93848e463d32a969851043b6111baf002467330fa6b7d077c201a425e387b7",
+        "url": "https://archive.org/details/cu31924079579524/page/n403/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "64e657a6202cc7a0fe095606f46a823eeaf15254ce584200b0e443b7fbcfe473",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p390.txt",
+      "raw_sha256": "632dff9050de61d17240a020451b22f77a7cd057c82069d2c23a26899ce01204",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p390.txt",
+      "sha256": "6eec555a6d473477fcbe3d70ed35575f5f8f957ed1af5280ea108aab295757b7",
+      "source": {
+        "key": "IV1:390",
+        "work": "OR IV-I",
+        "page": 390,
+        "leaf": 405,
+        "path": "docs/research/S121/read/IV1-p390.txt",
+        "sha256": "632dff9050de61d17240a020451b22f77a7cd057c82069d2c23a26899ce01204",
+        "url": "https://archive.org/details/cu31924079579524/page/n405/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "6eec555a6d473477fcbe3d70ed35575f5f8f957ed1af5280ea108aab295757b7",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p391.txt",
+      "raw_sha256": "30e849e07698161caffa8175f3293f9763867092b74f61ce4c6b88d8170043d5",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p391.txt",
+      "sha256": "f0a0a516a81dcda7d6f9f4189a1261f1fc1402521c2b91adbd188c7e0a9f1478",
+      "source": {
+        "key": "IV1:391",
+        "work": "OR IV-I",
+        "page": 391,
+        "leaf": 406,
+        "path": "docs/research/S121/read/IV1-p391.txt",
+        "sha256": "30e849e07698161caffa8175f3293f9763867092b74f61ce4c6b88d8170043d5",
+        "url": "https://archive.org/details/cu31924079579524/page/n406/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "f0a0a516a81dcda7d6f9f4189a1261f1fc1402521c2b91adbd188c7e0a9f1478",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p392.txt",
+      "raw_sha256": "d53aea9fcb4074f344cadcc107da185bcf4da36fbc233979893f20393a5f1adf",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p392.txt",
+      "sha256": "bcb1a57767448fd4a41daa6cf3bdfa8913e42baac33f3a0f95880913656cfa15",
+      "source": {
+        "key": "IV1:392",
+        "work": "OR IV-I",
+        "page": 392,
+        "leaf": 407,
+        "path": "docs/research/S121/read/IV1-p392.txt",
+        "sha256": "d53aea9fcb4074f344cadcc107da185bcf4da36fbc233979893f20393a5f1adf",
+        "url": "https://archive.org/details/cu31924079579524/page/n407/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "bcb1a57767448fd4a41daa6cf3bdfa8913e42baac33f3a0f95880913656cfa15",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\I4-p372.txt",
+      "raw_sha256": "64ae58675307be7a2c160903e2c3cc1cf8a0d527e80ed162fc33d77d164dd939",
+      "retained_path": "docs/audit/s122-evidence/read/I4-p372.txt",
+      "sha256": "d67a0b15af4edcae9c84372148154e0baed4d75c958753fcaaa7d734ddd96445",
+      "source": {
+        "key": "I4:372",
+        "work": "OR I-IV",
+        "page": 372,
+        "leaf": 377,
+        "path": "docs/research/S121/read/I4-p372.txt",
+        "sha256": "64ae58675307be7a2c160903e2c3cc1cf8a0d527e80ed162fc33d77d164dd939",
+        "url": "https://archive.org/details/warofrebellionco0004vari/page/n377/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "7749895b438e2c9d697d9aa44dbf2fa0e99e02d420600372f711ba9a3d4a456d",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\I4-p373.txt",
+      "raw_sha256": "215f621e8f9866cab2dd0a7c647c74ea171a2147eb05487cc9fe3ab4f225f6f6",
+      "retained_path": "docs/audit/s122-evidence/read/I4-p373.txt",
+      "sha256": "e8b54f93acb8752fc3f69792c7f1a5061f1e5fa2319b6c74ced25a0047a782d0",
+      "source": {
+        "key": "I4:373",
+        "work": "OR I-IV",
+        "page": 373,
+        "leaf": 378,
+        "path": "docs/research/S121/read/I4-p373.txt",
+        "sha256": "215f621e8f9866cab2dd0a7c647c74ea171a2147eb05487cc9fe3ab4f225f6f6",
+        "url": "https://archive.org/details/warofrebellionco0004vari/page/n378/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "b091c565d5c6550c97fee7eb3076ca030b94d7e7561b56f0223f33c56054a8c5",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\I3-p609.txt",
+      "raw_sha256": "8eae38db63f88228760d101bc2fa9014c2ef43fe97a14eb4411ef8a7fc4c150f",
+      "retained_path": "docs/audit/s122-evidence/read/I3-p609.txt",
+      "sha256": "62ff825228806d109d599bf1bd846341c3f4fc9ac88985267e7f154138ec4555",
+      "source": {
+        "key": "I3:609",
+        "work": "OR I-III",
+        "page": 609,
+        "leaf": 637,
+        "path": "docs/research/S121/read/I3-p609.txt",
+        "sha256": "8eae38db63f88228760d101bc2fa9014c2ef43fe97a14eb4411ef8a7fc4c150f",
+        "url": "https://archive.org/details/warofrebellionco03unit/page/n637/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "62ff825228806d109d599bf1bd846341c3f4fc9ac88985267e7f154138ec4555",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\I3-p610.txt",
+      "raw_sha256": "17677573b08b739b52995948a922c7a23f39b7f6b8e5e17cb913aac9d970f462",
+      "retained_path": "docs/audit/s122-evidence/read/I3-p610.txt",
+      "sha256": "1189faf5c8d2b49d45156e6e5ccf7b26e57901d1bad79445c18569f038476c27",
+      "source": {
+        "key": "I3:610",
+        "work": "OR I-III",
+        "page": 610,
+        "leaf": 638,
+        "path": "docs/research/S121/read/I3-p610.txt",
+        "sha256": "17677573b08b739b52995948a922c7a23f39b7f6b8e5e17cb913aac9d970f462",
+        "url": "https://archive.org/details/warofrebellionco03unit/page/n638/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "1189faf5c8d2b49d45156e6e5ccf7b26e57901d1bad79445c18569f038476c27",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\I2-p841.txt",
+      "raw_sha256": "40875461523b209b6b2bf081f9bf6c6feab9c137c4f28cf97c21356ed68a40d3",
+      "retained_path": "docs/audit/s122-evidence/read/I2-p841.txt",
+      "sha256": "898866fc60b410557ebd0c42ca88682677d40252c38bbd031f29e43f0b191f68",
+      "source": {
+        "key": "I2:841",
+        "work": "OR I-II",
+        "page": 841,
+        "leaf": 860,
+        "path": "docs/research/S121/read/I2-p841.txt",
+        "sha256": "40875461523b209b6b2bf081f9bf6c6feab9c137c4f28cf97c21356ed68a40d3",
+        "url": "https://archive.org/details/cu31924077730186/page/n860/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "898866fc60b410557ebd0c42ca88682677d40252c38bbd031f29e43f0b191f68",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p402.txt",
+      "raw_sha256": "4498b0ba7c503c62fec02752e9f30bf7b26562681a36e8d97a2c81dfd0905591",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p402.txt",
+      "sha256": "64d985fa3a523efe3f02d718e397fd6f7753029ef7e193048478f31888eaea7b",
+      "source": {
+        "key": "IV1:402",
+        "work": "OR IV-I",
+        "page": 402,
+        "leaf": 417,
+        "path": "docs/research/S121/read/IV1-p402.txt",
+        "sha256": "4498b0ba7c503c62fec02752e9f30bf7b26562681a36e8d97a2c81dfd0905591",
+        "url": "https://archive.org/details/cu31924079579524/page/n417/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "64d985fa3a523efe3f02d718e397fd6f7753029ef7e193048478f31888eaea7b",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p403.txt",
+      "raw_sha256": "80f6f1727d8afeeb5818820708af8e8b9c101fd6783dd9fd313645fe8cb94ed2",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p403.txt",
+      "sha256": "28c8d3c228713dcbfee880901990390bafed7a29998c6ad0860cbe01fcc87d65",
+      "source": {
+        "key": "IV1:403",
+        "work": "OR IV-I",
+        "page": 403,
+        "leaf": 418,
+        "path": "docs/research/S121/read/IV1-p403.txt",
+        "sha256": "80f6f1727d8afeeb5818820708af8e8b9c101fd6783dd9fd313645fe8cb94ed2",
+        "url": "https://archive.org/details/cu31924079579524/page/n418/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "28c8d3c228713dcbfee880901990390bafed7a29998c6ad0860cbe01fcc87d65",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S121\\read\\IV1-p404.txt",
+      "raw_sha256": "76da95c255ed2a447b2b1e9e461f8e2945fb6f0b6edb9a58731ede8dec5cb308",
+      "retained_path": "docs/audit/s122-evidence/read/IV1-p404.txt",
+      "sha256": "18af9196b86ef15e22e64e96b2a8a6e406cea0a8b022583be855f6c8e6ed963c",
+      "source": {
+        "key": "IV1:404",
+        "work": "OR IV-I",
+        "page": 404,
+        "leaf": 419,
+        "path": "docs/research/S121/read/IV1-p404.txt",
+        "sha256": "76da95c255ed2a447b2b1e9e461f8e2945fb6f0b6edb9a58731ede8dec5cb308",
+        "url": "https://archive.org/details/cu31924079579524/page/n419/mode/1up",
+        "scope": "Selected page read; OCR checked against image where tabular layout matters.",
+        "raw_extract_sha256": "18af9196b86ef15e22e64e96b2a8a6e406cea0a8b022583be855f6c8e6ed963c",
+        "normalisation": "UTF-8 LF, trailing line whitespace removed, exactly one final newline; no wording edits"
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S120\\read\\OR-I-I-p261-262.txt",
+      "raw_sha256": "35359a2d536a587308d1425aa78fdb1d0d43f5e1f9496b728ffe66c2332577d2",
+      "retained_path": "docs/audit/s122-evidence/read/OR-I-I-p261-262.txt",
+      "sha256": "e698e96e43fbf03a52f0f4d1844601e1f8791393da2481a690e66986ca030ba2",
+      "source": {
+        "key": "OR-I-I-p261-262",
+        "source_path": "C:\\Pyrrhic\\mandate-research-sources\\S1\\OR-I-1.txt",
+        "source_sha256": "3021eef1063df4ff3854ae416926e21ab294c5f7245a6ff1fcd9fe310c008893",
+        "retained_path": "docs/research/S120/read/OR-I-I-p261-262.txt",
+        "sha256": "35359a2d536a587308d1425aa78fdb1d0d43f5e1f9496b728ffe66c2332577d2",
+        "url": "https://ehistory.osu.edu/books/official-records/001/0261",
+        "scope": "Bounded Walker4 March budget estimate and no-returns explanation; not a personnel return.",
+        "line_slice": [
+          21754,
+          21821
+        ],
+        "normalisation": "UTF-8 LF; strip trailing whitespace and excess EOF blank lines only; wording unchanged."
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S120\\read\\OR-I-I-p302.txt",
+      "raw_sha256": "90f83f59aed2ef616d8286264d0492442eea54771cc532583a3c753a69cfffc5",
+      "retained_path": "docs/audit/s122-evidence/read/OR-I-I-p302.txt",
+      "sha256": "9aa5e739289f5e7a85bbbaec03a788b3ff7218865686697c288f037d18bc4905",
+      "source": {
+        "key": "OR-I-I-p302",
+        "source_path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s120\\web\\001-0302.json",
+        "source_sha256": "c935b3d44ea69b1db1d6aa05e8be4762f6c34549db4052f47979ec0b8c6c2aa2",
+        "retained_path": "docs/research/S120/read/OR-I-I-p302.txt",
+        "sha256": "90f83f59aed2ef616d8286264d0492442eea54771cc532583a3c753a69cfffc5",
+        "url": "https://ehistory.osu.edu/books/official-records/001/0302",
+        "scope": "Headless Firecrawl university transcription read; not a scan. OCR/transcription errors remain; no unsupported exact unit return inferred.",
+        "line_slice": null,
+        "normalisation": "UTF-8 LF; strip trailing whitespace and excess EOF blank lines only; wording unchanged."
+      }
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\mandate-research-sources\\S1\\OR-I-1.txt",
+      "source_sha256": "3021eef1063df4ff3854ae416926e21ab294c5f7245a6ff1fcd9fe310c008893",
+      "line_slice": [
+        53919,
+        54008
+      ],
+      "retained_path": "docs/audit/s122-evidence/read/OR-I-I-p654-655.txt",
+      "sha256": "1083b78afcf43743bea8890b543a11fa0c698856980cfca58abacb4a69ba6a01",
+      "printed_pages": "OR I-I pp.654-655",
+      "scope": "Harney February19 493 and Hagner February21 488; [I] integer interpolation490 at February20, not a March return"
+    },
+    {
+      "source_path": "C:\\Pyrrhic\\mandate-research-sources\\S1\\OR-I-1.txt",
+      "source_sha256": "3021eef1063df4ff3854ae416926e21ab294c5f7245a6ff1fcd9fe310c008893",
+      "line_slice": [
+        29089,
+        29255
+      ],
+      "retained_path": "docs/audit/s122-evidence/read/OR-I-I-p352-353.txt",
+      "sha256": "2931c321e367b9a490701a224e3906bcee28b3ed5ed9390c7eb9090631236e49",
+      "printed_pages": "OR I-I pp.352-353",
+      "scope": "January25 transmitted return not printed in this passage; January23 order details40 attachments and maximum organisation, not a returned90."
+    }
+  ],
+  "imageInspections": [
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S121\\III1-p152.jpg",
+      "sha256": "2294c2ebd271af7777941e7583315723586087e6620166b5995030bd7e93bf0e",
+      "inspection": "Headless local image view in S122; printed minima866 and660 verified against OCR806 and600. No browser or desktop."
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S121\\III1-p153.jpg",
+      "sha256": "7d97fe0c5b1ef7793d7f1ef5df33ff3265e7bad045f775e8afc58934840c741c",
+      "inspection": "Headless local image view in S122; printed minima866 and660 verified against OCR806 and600. No browser or desktop."
+    }
+  ],
+  "limits": "Selected read primary pages only. Inherited opening source attributions outside the explicit S120 inference/estimate inventory are carried, not re-certified; no complete new historical total. Other S121 returns and all16 recovery holds remain open."
+}

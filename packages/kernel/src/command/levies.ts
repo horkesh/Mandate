@@ -14,6 +14,8 @@ import { CommandError } from './command.ts';
 
 /** A call answered and not yet mustered. Immutable: `command` replaces it whole. */
 export interface Levy {
+  readonly levyEstablishment?: string;
+  readonly levyStrengthSource?: string;
   /** The post whose holder raises it (a governor's). */
   readonly levyPost: PostId;
   readonly levyGovernor: PersonId;

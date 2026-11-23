@@ -15,6 +15,7 @@ import { formationPost } from '../command/organisation.ts';
 import { fileSpokenPromise } from './promise-reports.ts';
 import { strictCompare } from '../compare.ts';
 import { appointHolder, CommandError, createTemporaryPost, declaredAppointment, heldPost, relieveHolder, sideOfPerson, transferForce } from '../command/command.ts';
+import { callEstablishment } from '../recruitment/rules.ts';
 import { noteLetter, postObserver, recallObserver } from '../command/observers.ts';
 import type { ComplianceRung, DirectiveResponse } from '../directive.ts';
 import type { MessageId, PersonId, PostId, RegionId, SeatId } from '../ids.ts';
@@ -352,7 +353,10 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
         const pick = WILLING.has(answer.actual) ? 'strongest_first' : 'weakest_first';
         try {
           const lotRequest = v.verbMode === 'men' || (world.map.world.organisationTemplates?.some(t=>t.army===v.verbTo)===true && world.map.world.rules.recruitment.raisingPostKinds.includes(state.postStates[from]!.postKind));
-          const requestedMen = v.verbMode === 'men' ? amount : amount * (world.map.world.rules.recruitment.planningRegiments??1) * world.map.world.rules.recruitment.menPerRegiment;
+          const recruitment = world.map.world.rules.recruitment;
+          const nominal = callEstablishment(recruitment, undefined, sideOfPerson(world.map,state,v.verbIssuer))?.men ?? recruitment.menPerRegiment;
+          if (lotRequest && v.verbMode !== 'men' && v.verbRegiments === undefined && nominal === undefined) throw new CommandError(['no declared planning establishment']);
+          const requestedMen = v.verbMode === 'men' ? amount : amount * (recruitment.planningRegiments??1) * (nominal ?? 0);
           const result = v.verbRegiments !== undefined ? transferLots(world.map, state, from, v.verbTo!, amount, pick, ctx.day, v.verbRegiments)
             : lotRequest ? transferLots(world.map,state,from,v.verbTo!,requestedMen,pick,ctx.day) : transferForce(world.map,state,from,v.verbTo!,{force:'blocks',count:amount},pick);
           state = result.state;

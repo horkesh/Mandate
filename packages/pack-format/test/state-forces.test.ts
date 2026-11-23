@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { loadPack } from '../src/index.ts';
 import { editJson, testbedFiles } from './support/testbed.ts';
 const proposal = { owner: 'recruitment', field: 'state_forces', subject: 'n_brenmark_governor', delta: 1, side: 'north', reason: 'assembly-transfer',
-  stateForces: { id: 'shire_infantry', regiments: 2, men: 2000, arm: 'infantry', termDays: 90 } };
+  stateForces: { id: 'shire_infantry', regiments: 2, men: 2000, strengthBasis:{strengthKind:'return',strengthSource:'fictional return p.1',strengthDate:'1861-03-02'}, arm: 'infantry', termDays: 90 } };
 function check(patch = {}, decision = false) {
   const file = decision ? 'situations/eastwatch_stalls.json' : 'situations/fen_arrivals.json';
   return loadPack(testbedFiles(editJson(file, s => {

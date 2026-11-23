@@ -1,0 +1,666 @@
+[
+  {
+    "id": "fb_cs_charleston",
+    "before": "3000",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-I pp.261-262, March4: probable whole-command 3000; constituent membership/date not reconciled",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_cs_charleston_castle_pinckney",
+    "before": "64",
+    "after": "64",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.1; OR I-1 p.281; OR I-1 p.295",
+    "date": "1861-03-23"
+  },
+  {
+    "id": "fb_cs_charleston_guard_steamers",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "ORN I-4 pp.260-262; OR I-1 p.295; OR I-1 p.299",
+    "date": ""
+  },
+  {
+    "id": "fb_st_charleston_17th_scm",
+    "before": "418",
+    "after": "418",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.7; OR I-1 p.296; OR I-1 p.302; OR I-1 p.317",
+    "date": "1861-04-11"
+  },
+  {
+    "id": "fb_st_charleston_1st_artillery_battalion",
+    "before": "242",
+    "after": "242",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 pp.262-265; OR I-1 p.36; OR I-1 pp.39-40",
+    "date": "1861-03-05"
+  },
+  {
+    "id": "fb_st_charleston_1st_infantry_regulars",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 p.36",
+    "date": ""
+  },
+  {
+    "id": "fb_st_charleston_1st_sc_volunteers",
+    "before": "1100",
+    "after": "1100",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.26; OR I-1 p.262; OR I-1 p.270; OR I-1 p.302; OR I-1 p.317",
+    "date": "1861-04-11"
+  },
+  {
+    "id": "fb_st_charleston_2nd_artillery_battalion",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 pp.33-34; OR I-1 pp.43-45; OR I-1 p.38; OR I-1 pp.277-278; OR I-1 p.302; OR I-1 p.317",
+    "date": ""
+  },
+  {
+    "id": "fb_st_charleston_floating_battery",
+    "before": "74",
+    "after": "74",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.262; OR I-1 p.36; OR I-1 pp.39-40; OR I-1 p.317; Callahan p.242",
+    "date": "1861-03-05"
+  },
+  {
+    "id": "fb_st_charleston_fort_johnson",
+    "before": "100",
+    "after": "100",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.1; OR I-1 p.31; OR I-1 p.34; OR I-1 p.271; OR I-1 p.277; SC-HIST-1900 p.13",
+    "date": "1861-03-03"
+  },
+  {
+    "id": "fb_st_charleston_fort_palmetto_stono",
+    "before": "146",
+    "after": "146",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.268; OR I-1 pp.306-307; SC-HIST-1900 p.13",
+    "date": "1861-03-03"
+  },
+  {
+    "id": "fb_st_charleston_hagood_regiment",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 pp.306-307; OR I-1 p.317",
+    "date": ""
+  },
+  {
+    "id": "fb_st_charleston_kershaw_regiment",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 p.302; OR I-1 pp.306-307; OR I-1 p.317",
+    "date": "1861-04-11"
+  },
+  {
+    "id": "fb_st_charleston_morris_island",
+    "before": "2000",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-I p.302, April11: whole Morris Island infantry2000 includes Gregg and Cunningham; constituent membership/date not reconciled",
+    "date": "1861-04-11"
+  },
+  {
+    "id": "fb_st_charleston_moultrie_infantry_recruits",
+    "before": "318",
+    "after": "318",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 pp.262-264",
+    "date": "1861-03-06"
+  },
+  {
+    "id": "fb_st_charleston_regiment_of_rifles",
+    "before": "450",
+    "after": "450",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 pp.268-269; OR I-1 pp.35-36; NYH-1861-0409 p.2",
+    "date": "1861-04-03"
+  },
+  {
+    "id": "fb_st_charleston_rion_battalion",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 p.317",
+    "date": ""
+  },
+  {
+    "id": "fb_st_charleston_vigilant_rifles",
+    "before": "63",
+    "after": "63",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.262; OR I-1 p.264; OR I-1 p.267; OR I-1 p.39",
+    "date": "1861-03-05"
+  },
+  {
+    "id": "fb_st_fort_morgan",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR IV-1 pp.192-193; OR IV-1 p.209; OR IV-1 p.135; OR I-1 p.454",
+    "date": ""
+  },
+  {
+    "id": "fb_st_georgetown_coast_guard",
+    "before": "158",
+    "after": "158",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.311; OR I-1 p.277",
+    "date": "1861-04-13"
+  },
+  {
+    "id": "fb_st_la_forts_jackson_st_philip",
+    "before": "520",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR IV-1 p.178; OR IV-1 p.135; OR IV-1 p.135; OR IV-1 p.178; no dated strength at this lot scope; recover a dated unit return or estimate",
+    "date": "1861-03-13"
+  },
+  {
+    "id": "fb_st_tx_ford_regiment",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 pp.617-618; OR I-1 pp.621-622",
+    "date": ""
+  },
+  {
+    "id": "fb_st_tx_galveston_batteries",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 pp.610-611",
+    "date": ""
+  },
+  {
+    "id": "fb_st_tx_northwest_frontier_companies",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 pp.617-618",
+    "date": ""
+  },
+  {
+    "id": "fb_us_dc_militia",
+    "before": "600",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "NOTE-march-1861-facts q.15; OOB-LANE needs-source (primary source not reached); no dated strength at this lot scope; recover a dated unit return or estimate",
+    "date": "1861-04-18"
+  },
+  {
+    "id": "fb_us_fort_monroe_garrison",
+    "before": "377",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 pp.351-353; OR III-1 p.23; OR I-1 p.352; no dated strength at this lot scope; recover a dated unit return or estimate",
+    "date": "1861-03-05"
+  },
+  {
+    "id": "fb_us_key_west_garrison",
+    "before": "44",
+    "after": "44",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.343; NOTE-governments-stores-1861 s.3.1",
+    "date": "1861-01-14"
+  },
+  {
+    "id": "fb_us_marines_philadelphia_yard",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "NavyReg1861 p.99; ORN I-4 pp.283-284",
+    "date": ""
+  },
+  {
+    "id": "fb_us_marines_washington_barracks",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "ORN I-4 pp.263, 285, 292, 423-424; NavyReg1861 p.99",
+    "date": ""
+  },
+  {
+    "id": "fb_us_new_mexico_troops",
+    "before": "2225",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 p.599; OR III-1 p.26; OR I-4; no dated strength at this lot scope; recover a dated unit return or estimate",
+    "date": "1861-03-05"
+  },
+  {
+    "id": "fb_us_pacific_troops",
+    "before": "2900",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-50 (June 1861 abstract); OR III-1 p.24; OR I-50 pt 1 p.525; no dated strength at this lot scope; recover a dated unit return or estimate",
+    "date": "1861-03-05"
+  },
+  {
+    "id": "fb_us_pickens_garrison",
+    "before": "82",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 pp.341, 390, 357, 362, 364, 365; NOTE-governments-stores-1861 s.3.1; no dated lot strength retained; recover dated unit return",
+    "date": "unknown"
+  },
+  {
+    "id": "fb_us_pickens_squadron_marines",
+    "before": "110",
+    "after": "110",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 pp.376, 395; ORN I-4 pp.82, 84, 115",
+    "date": "1861-04-12"
+  },
+  {
+    "id": "fb_us_pickens_vogdes_co_a",
+    "before": "90",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "OR I-1 pp.353, 357, 395; SecNav1861 4 July 1861 (msg_jul1861) p.5; OR I-1 p.352; no dated strength at this lot scope; recover a dated unit return or estimate",
+    "date": "1861-03-05"
+  },
+  {
+    "id": "fb_us_ship_anacostia",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "NavyReg1861 p.97; SecNav1861 pp.85-86, 91",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_brooklyn",
+    "before": "259",
+    "after": "259",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.82, 85, 96, 100-101, 104, 140; ORN II-1 p.451",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_congress",
+    "before": "436",
+    "after": "436",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 pp.xv, 30; SecNav1860 p.232",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_constellation",
+    "before": "227",
+    "after": "227",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 pp.xvi, 24; SecNav1860 p.233; NavyReg1861 p.95",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_crusader",
+    "before": "70",
+    "after": "70",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.xv, 84, 89-90, 95, 102-103, 140; ORN II-1 p.451",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_cumberland",
+    "before": "270",
+    "after": "270",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.xv, 86, 266-268, 278; ORN II-1 p.69; SecNav1861 p.86",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_cyane",
+    "before": "154",
+    "after": "154",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; SecNav1860 p.234; NavyReg1861 p.95",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_dacotah",
+    "before": "106",
+    "after": "106",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; SecNav1860 p.236",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_hartford",
+    "before": "264",
+    "after": "264",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; SecNav1860 p.235",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_iroquois",
+    "before": "118",
+    "after": "118",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 pp.xv, 20; ORN II-1 p.451; SecNav1860 p.233",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_lancaster",
+    "before": "327",
+    "after": "327",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; SecNav1860 p.234",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_macedonian",
+    "before": "280",
+    "after": "280",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.62, 80-81, 85-87, 266",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_michigan",
+    "before": "unknown",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "NavyReg1861 p.97; SecNav1861 pp.85-86; ORN II-1 p.451",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_mohawk",
+    "before": "62",
+    "after": "62",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN II-1 pp.147, 451; ORN I-4 pp.xv, 79, 89, 93-95, 101, 103, 106-107",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_mohican",
+    "before": "125",
+    "after": "125",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; SecNav1860 p.233",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_mystic",
+    "before": "61",
+    "after": "61",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; SecNav1860 p.233; NavyReg1861 p.97",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_narragansett",
+    "before": "100",
+    "after": "100",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; SecNav1860 p.234",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_niagara",
+    "before": "372",
+    "after": "372",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; SecNav1860 p.237; SecNav1861 p.89",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_pawnee",
+    "before": "115",
+    "after": "115",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.224, 228-229, 234-236, 240-243, 249; NavyReg1861 p.96; ORN II-1 p.451; SecNav1860 p.231; SecNav1861 p.86",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_pocahontas",
+    "before": "68",
+    "after": "68",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.xv, 236, 243, 264-266; ORN II-1 p.180",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_portsmouth",
+    "before": "161",
+    "after": "161",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; SecNav1860 p.233; NavyReg1861 p.95",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_powhatan",
+    "before": "226",
+    "after": "226",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.108-109, 140, 226-231, 235, 237-239, 264-265; ORN II-1 p.183",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_pulaski",
+    "before": "35",
+    "after": "35",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 pp.xv, 27; SecNav1860 p.232",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_relief",
+    "before": "36",
+    "after": "36",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; SecNav1860 p.231",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_richmond",
+    "before": "259",
+    "after": "259",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 pp.xv, 4-7, 20; ORN II-1 p.451; SecNav1860 p.233; Callahan p.289",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_sabine",
+    "before": "393",
+    "after": "393",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.79, 85, 100-101, 105, 140; NavyReg1861 p.95",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_saginaw",
+    "before": "42",
+    "after": "42",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; SecNav1860 p.235",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_san_jacinto",
+    "before": "182",
+    "after": "182",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; ORN II-1 p.451; SecNav1860 p.233",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_saranac",
+    "before": "187",
+    "after": "187",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 pp.xvi, 15; SecNav1860 pp.234-235",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_saratoga",
+    "before": "144",
+    "after": "144",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 pp.xvi, 11; SecNav1860 p.233; SecNav1861 p.97; NavyReg1861 p.95",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_seminole",
+    "before": "102",
+    "after": "102",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 pp.xv, 27; ORN II-1 p.451; SecNav1860 p.232",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_st_louis",
+    "before": "133",
+    "after": "133",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.xvi, 84-85, 100, 140",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_st_marys",
+    "before": "174",
+    "after": "174",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; SecNav1860 p.234; NavyReg1861 p.95",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_sumter",
+    "before": "60",
+    "after": "60",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; SecNav1860 p.233; NavyReg1861 p.97",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_supply",
+    "before": "45",
+    "after": "45",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.xv, 78-79, 88, 93, 105",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_susquehanna",
+    "before": "230",
+    "after": "230",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 pp.xv, 20; SecNav1860 p.233; Callahan p.271",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_vandalia",
+    "before": "131",
+    "after": "131",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; SecNav1860 p.236; NavyReg1861 p.95",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_water_witch",
+    "before": "56",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-4 pp.xvi, 106, 138-139; ORN II-1 p.237; NavyReg1861 p.97; no dated lot strength retained; recover dated unit return",
+    "date": "unknown"
+  },
+  {
+    "id": "fb_us_ship_wyandotte",
+    "before": "60",
+    "after": "60",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xv; ORN I-4 pp.85, 104, 115, 140",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_ship_wyoming",
+    "before": "137",
+    "after": "137",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): ORN I-1 p.xvi; SecNav1860 p.234; SecNav1861 p.97",
+    "date": "1861-03-04"
+  },
+  {
+    "id": "fb_us_st_louis_arsenal_troops",
+    "before": "490",
+    "after": "490",
+    "kind": "estimate",
+    "source": "[I] integer interpolation 490 on February20 between Harney February19 493 and Hagner February21 488; OR I-I pp.654-655. Carried opening estimate, not a March return.",
+    "date": "1861-02-20"
+  },
+  {
+    "id": "fb_us_sumter_garrison",
+    "before": "85",
+    "after": "85",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 pp.70, 197, 214, 230, 233, 235; NOTE-secession-winter-1861 s.2.1",
+    "date": "1861-03-25"
+  },
+  {
+    "id": "fb_us_texas_1st_inf",
+    "before": "406",
+    "after": "406",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.524",
+    "date": "1861-02-26"
+  },
+  {
+    "id": "fb_us_texas_2nd_cav",
+    "before": "614",
+    "after": "614",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.524",
+    "date": "1861-02-26"
+  },
+  {
+    "id": "fb_us_texas_2nd_cav_eg",
+    "before": "127",
+    "after": "127",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.524",
+    "date": "1861-02-26"
+  },
+  {
+    "id": "fb_us_texas_3rd_inf",
+    "before": "797",
+    "after": "797",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.524",
+    "date": "1861-02-26"
+  },
+  {
+    "id": "fb_us_texas_8th_inf",
+    "before": "501",
+    "after": "501",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 p.524 (second OCR scan)",
+    "date": "1861-02-26"
+  },
+  {
+    "id": "fb_us_tortugas_garrison",
+    "before": "66",
+    "after": "66",
+    "kind": "return",
+    "source": "Inherited opening source (not re-certified in S122): OR I-1 pp.345-346",
+    "date": "1861-01-10"
+  },
+  {
+    "id": "fb_us_washington_regulars",
+    "before": "600",
+    "after": "unknown",
+    "kind": "unknown",
+    "source": "NOTE-march-1861-facts q.15 (NPS, Civil War Defenses of Washington, ch.4); OR I-1 p.373; no dated strength at this lot scope; recover a dated unit return or estimate",
+    "date": "1861-04-18"
+  }
+]

@@ -128,6 +128,7 @@ const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (two bo
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
+  'forces.landed_by_situation': {"why":"S122 /0125: unsupported parent strength becomes unknown, so the existing landing cannot detach a known number of men.","test":"packages/cli/test/situation-landing.test.ts","needle":"drives forces.landed_by_situation from a quantified fictional parent and refuses an unknown parent"},
   "planner.term.caution": {"why":"S119: Patterson day140 changes from the S116 holding pick (caution/force_ratio/supply each decisive) to direct. Dropping caution from his corrected retained scores leaves direct first. Other retained drafts also keep their pick; daily telemetry records0. No temperament or scoring weight changed.","test":"packages/cli/test/planner.test.ts","needle":"counts every scoring term live"},
   "planner.term.force_ratio": {"why":"S119: Patterson day140 changes from S116 holding to direct. Dropping force_ratio from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. No strength/default, assault margin or scoring weight was fitted.","test":"packages/cli/test/planner.test.ts","needle":"counts every scoring term live"},
   'plans.goal_proposed': { why: "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted.", test: 'packages/kernel/test/s96-discretion.test.ts', needle: 'complete proposal back along the wire' },
@@ -186,7 +187,6 @@ export const QUIET: Readonly<Record<string, QuietReason>> = {
   // Lane 1.6: politics' paths that wait for authored situations (lane 1.11: S09's call, S20's ratification, the war's opening).
   'politics.refused': { why: 'a refusal needs a proposal politics cannot apply; honest situations propose none', test: POL, needle: 'refuses a call while one stands' },
   'politics.press_silent': { why: 'every paper’s editor serves on his paper’s side throughout both runs', test: POL, needle: 'a paper whose editor no longer serves prints nothing' },
-  'forces.landing_refused': { why: 'the one situation landing in the reference runs is made', test: 'packages/cli/test/situation-landing.test.ts', needle: 'refuses a landing from a block that is not aboard' },
 
   "combat.cut_off": {"why": "S98: none of the five field routs at the objective is cut off; each has a legal retreat. The island fort remains a bombardment surrender, outside this field counter. The trapped-garrison control remains live.", "test": "packages/kernel/test/combat.test.ts", "needle": "a trapped garrison with nowhere to go surrenders"},
   "orders.returned": {"why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch.", "test": "packages/kernel/test/believed-posts.test.ts", "needle": "an order sent before the report arrives is accepted, and bounces on arrival"},
@@ -236,6 +236,7 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
  * (each pack's checkpoints.json) are independent and unchanged; these are mechanic liveness counts only.
  */
 const UNION_BANDS: Record<string, GateBand> = {
+  "forces.landing_refused": {"minFires":1,"maxFires":4,"why":"S122 /0125: the unsupported opening company count becomes unknown; the existing situation landing refuses an unquantified parent. No default headcount or landing rule changed."},
   "orders.returned": {"minFires": 0, "maxFires": 0, "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."},
   "planner.term.time": { ...around(1), why: "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed." },
   'people.resigned': { ...around(15), why: "S77 lead ruling 3 (CODEX.md, 2026-11-23): S74 adds Elzey's sourced departure under S69/0101 to the fourteen existing resignations; recentre only this band with around(15). No other quiet band is changed." },
@@ -284,7 +285,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'orders.bypassed': around(4),
   'movement.arrived': around(638), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
   'movement.leg_started': around(310), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
-  'orders.obeyed': around(3),
+  "orders.obeyed": {"minFires":3,"maxFires":14,"why":"S122 /0125/0127 [I]: sourced call establishments and unknown historical quantities change the ordinary command and received-picture trajectory. Seven orders are obeyed; response records and exact identities are retained."},
   "orders.relay_held": quiet("0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."),
   'orders.relay_objected': around(3),
   'orders.relayed': around(9), // S90 continuation ruling 4: Cooper forwards the junction letter; eight existing relays remain.
@@ -300,12 +301,12 @@ const UNION_BANDS: Record<string, GateBand> = {
   "planner.searches": {"minFires": 3, "maxFires": 12},
   "plans.drafted": {"minFires": 3, "maxFires": 12},
   "plans.chosen": {"minFires": 3, "maxFires": 12},
-  'plans.goal_set': around(3),
+  "plans.goal_set": {"minFires":3,"maxFires":14,"why":"S122 /0125/0127 [I]: ordinary command and planning respond to the changed strength picture; seven goals are set. No authored goal, term weight or scheduling rule changed."},
   "plans.went_ahead": {"minFires": 3, "maxFires": 12},
   'plans.approved': notHere("both chosen plans go ahead as drafted without review; the editing exercise drives plan review"),
   'plans.submitted': notHere("both chosen plans go ahead as drafted without review; the editing exercise drives plan review"),
   'planner.term.goal_fit': notHere("dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"),
-  "planner.term.supply": {"minFires":0,"maxFires":0,"why":"S119: Patterson day140 changes from S116 holding to direct. Dropping supply from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. Supply remains live in the unchanged testbed reference; no supply or scoring rule changed."},
+  "planner.term.supply": {"minFires":1,"maxFires":4,"why":"S122 /0125/0127 [I]: the changed force quantities restore one live supply contribution among retained planner candidates. No supply weight, candidate score or definition of a live term changed."},
   'planner.term.haste': quiet("an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"),
   'plans.edit_received': quiet("only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"),
   'plans.edit_answered': quiet("only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"),
@@ -342,7 +343,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   "seats.attention_spent": around(153),
   'seats.initiative': { ...around(3), why: 'S16 dating holds remove two cabinet officers\' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json.' },
   "operations.repulsed": { ...around(1), why: "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once." },
-  'forces.landed_by_situation': around(1),
+  'forces.landed_by_situation': {"minFires":0,"maxFires":0,"why":"S122 /0125: unsupported parent strength becomes unknown, so the existing landing cannot detach a known number of men."},
   'politics.act': around(2),
   'politics.answered': around(2),
   'politics.called': around(1),

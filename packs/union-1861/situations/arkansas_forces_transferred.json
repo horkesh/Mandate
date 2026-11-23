@@ -27,10 +27,15 @@
         "stateForces": {
           "id": "cs_ar_infantry_arkansas",
           "regiments": 7,
-          "men": 7000,
+          "men": null,
           "arm": "infantry",
           "termDays": null,
-          "termUnknown": true
+          "termUnknown": true,
+          "strengthBasis": {
+            "strengthKind": "unknown",
+            "strengthSource": "OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+            "strengthDate": null
+          }
         }
       }
     },
@@ -45,10 +50,15 @@
         "stateForces": {
           "id": "cs_ar_cavalry_arkansas",
           "regiments": 1,
-          "men": 1000,
+          "men": null,
           "arm": "cavalry",
           "termDays": null,
-          "termUnknown": true
+          "termUnknown": true,
+          "strengthBasis": {
+            "strengthKind": "unknown",
+            "strengthSource": "OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+            "strengthDate": null
+          }
         }
       }
     },
@@ -66,7 +76,12 @@
           "men": null,
           "arm": "cavalry",
           "termDays": null,
-          "termUnknown": true
+          "termUnknown": true,
+          "strengthBasis": {
+            "strengthKind": "unknown",
+            "strengthSource": "OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+            "strengthDate": null
+          }
         }
       }
     },
@@ -84,7 +99,12 @@
           "men": null,
           "arm": "artillery",
           "termDays": null,
-          "termUnknown": true
+          "termUnknown": true,
+          "strengthBasis": {
+            "strengthKind": "unknown",
+            "strengthSource": "OR I-III pp.609-610; dated constituent muster/transfer returns unrecovered",
+            "strengthDate": null
+          }
         }
       }
     },

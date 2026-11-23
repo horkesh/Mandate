@@ -144,7 +144,7 @@ describe('setup: forces, locations and command copied once from the start (0050)
     expect(forceTotals(S.forceBlockStates[B('a_3')]!).fbStrength).toBeNull();
     expect(S.forceBlockStates[B('a_marines')]!.fbStoresMilli).toBeNull();
     expect(S.forceBlockStates[B('a_2_guard')]!.fbParent).toBe('a_2');
-    expect(sumStrength(S, [B('a_1'), B('a_3')])).toEqual({ men: 5000, unknown: ['a_3'] });
+    expect(sumStrength(S, [B('a_1'), B('a_3')])).toEqual({ men: 5000, unknown: ['a_3'], byKind:{return:0,estimate:0,rule:5000,unknown:null} });
   });
 
   it('copies locations, with troops aboard a ship on the water', () => {

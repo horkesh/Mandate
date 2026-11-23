@@ -1,5 +1,6 @@
 import { enlistmentsOf } from '../forces/enlistment.ts';
-import { forceTotals } from '../forces/lots.ts';
+import { sideOfPerson } from '../command/command.ts';
+import { forceTotals, strengthBasisProblems } from '../forces/lots.ts';
 /**
  * Governors raise regiments on a call (lane 1.7; FOUNDATION section 12 row 1.7).
  *
@@ -33,7 +34,7 @@ import { knowledgeOf } from '../knowledge/knowledge.ts';
 import { hasRequiredPapers } from '../knowledge/papers.ts';
 import { term } from '../knowledge/truth.ts';
 import { answerOrder } from '../reading/orders.ts';
-import { callDirective, type RecruitmentRules } from '../recruitment/rules.ts';
+import { callDirective, callEstablishment, type RecruitmentRules } from '../recruitment/rules.ts';
 import { renewableBlock } from '../recruitment/renewal.ts';
 import { loyaltyOf } from '../regions/regions.ts';
 import type { State } from '../root-state.ts';
@@ -94,7 +95,7 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
 }
 
 /** The share of a call a rung raises, scaled by his region's loyalty to his side (pack rules), in whole regiments. */
-export function regimentsRaised(rules: RecruitmentRules, asked: number | null, rung: string, loyalty: number | null, askedMen?: number | null): { readonly regiments: number | null; readonly men: number | null; readonly delayDays: number; readonly loyaltyPermille: number } | null {
+export function regimentsRaised(rules: RecruitmentRules, asked: number | null, rung: string, loyalty: number | null, askedMen?: number | null, establishment: number | null = rules.menPerRegiment ?? null): { readonly regiments: number | null; readonly men: number | null; readonly delayDays: number; readonly loyaltyPermille: number } | null {
   const executionRung = rung === 'comply_with_reservations' ? 'comply' : rung;
   const row = rules.rungs.find((r) => r.rung === executionRung);
   if (row === undefined) return null;
@@ -103,11 +104,12 @@ export function regimentsRaised(rules: RecruitmentRules, asked: number | null, r
   if (askedMen === null && regiments !== null && regiments > 0) return { regiments, men: null, delayDays: row.delayDays, loyaltyPermille: factor };
   if (asked === null && (askedMen === null || askedMen === undefined) && row.sharePermille > 0 && factor > 0) return { regiments: null, men: null, delayDays: row.delayDays, loyaltyPermille: factor };
   if (askedMen === null || (asked === null && askedMen === undefined)) return { regiments: 0, men: 0, delayDays: row.delayDays, loyaltyPermille: factor };
-  const men = askedMen === undefined ? regiments! * rules.menPerRegiment : Math.trunc((Math.trunc((askedMen * row.sharePermille) / 1000) * factor) / 1000);
+  if (askedMen === undefined && establishment === null) return { regiments, men: null, delayDays: row.delayDays, loyaltyPermille: factor };
+  const men = askedMen === undefined ? regiments! * establishment! : Math.trunc((Math.trunc((askedMen * row.sharePermille) / 1000) * factor) / 1000);
   // An explicit headcount can describe a different organization size. Preserve the known nominal quota;
   // converting its men by the pack's default again would invent additional regiments. A positive
   // sub-regimental remainder has unknown whole-unit count, rather than a fabricated extra regiment.
-  const nominal = askedMen === undefined || asked !== null ? (men > 0 && regiments === 0 ? null : regiments) : Math.ceil(men / rules.menPerRegiment);
+  const nominal = askedMen === undefined || asked !== null ? (men > 0 && regiments === 0 ? null : regiments) : establishment === null ? null : Math.ceil(men / establishment);
   return { regiments: nominal, men, delayDays: row.delayDays, loyaltyPermille: factor };
 }
 
@@ -135,8 +137,10 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   const side = postFaction(world, state, post);
   const region = state.postStates[post]!.postSeat;
   const loyalty = side === null || region === null ? null : loyaltyOf(state, region, side);
-  const actual = regimentsRaised(rules, call.callRegiments, answer.actual, loyalty, call.callMen);
-  const declared = regimentsRaised(rules, call.callRegiments, answer.declared, loyalty, call.callMen);
+  const establishment = callEstablishment(rules, call.callProfile, sideOfPerson(world.map, state, order.orderIssuer), call.callArm);
+  const nominal = establishment?.men ?? (rules.establishments === undefined ? rules.menPerRegiment : null);
+  const actual = regimentsRaised(rules, call.callRegiments, answer.actual, loyalty, call.callMen, nominal);
+  const declared = regimentsRaised(rules, call.callRegiments, answer.declared, loyalty, call.callMen, nominal);
   if (actual === null || actual.regiments === 0) fire(ctx, 'recruitment.refused');
   else {
     if (call.callReadiness !== true) state = recordLevy(state, {
@@ -146,6 +150,8 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
       levyCall: msg.msgOrigin,
       levyRegiments: actual.regiments,
       levyMen: actual.men,
+      ...(establishment === undefined ? {} : { levyEstablishment: establishment.id }),
+      levyStrengthSource: call.callMen === undefined ? establishment === undefined ? 'legacy declared recruitment rule' : `${establishment.id}: ${establishment.cites.map(([s,p]) => `${s} p.${p}`).join('; ')}` : `call:${call.callId ?? msg.msgOrigin}; ${call.callProfile?.callProvenance.map(c => `${c.source} p.${c.page}`).join('; ') ?? 'explicit requested men'}`,
       levyTermDays: call.callTermDays,
       ...(call.callArm === undefined ? {} : { levyArm: call.callArm }),
       ...(call.callId === undefined ? {} : { levyCallId: call.callId }),
@@ -264,6 +270,8 @@ export function recruitmentPhase(ctx: TickContext, start: State): State {
         department: p.postDepartment,
         arm: levy.levyArm ?? rules.arm,
         strength: levy.levyMen,
+        strengthBasis: { strengthKind: levy.levyMen === null ? 'unknown' : 'rule', strengthSource: levy.levyStrengthSource ?? `call:${levy.levyCall}`, strengthDate: null },
+        menPerLot: levy.levyEstablishment === undefined ? rules.menPerRegiment : rules.establishments?.find(e => e.id === levy.levyEstablishment)?.men,
         storesDays: rules.storesDays,
         enlistment: { enlPost: levy.levyPost, enlRaisedBy: levy.levyGovernor, enlCall: levy.levyCall, enlRegiments: levy.levyRegiments, enlMusterDay: day, enlEndsDay: levy.levyTermDays === null ? null : day + levy.levyTermDays,
           ...(levy.levyCallId === undefined ? {} : { enlCallId: levy.levyCallId }),
@@ -317,6 +325,7 @@ export function stateForcesPhase(ctx: TickContext, start: State): State {
       (entry.regiments !== null && (!Number.isSafeInteger(entry.regiments) || entry.regiments < 1)) ||
       (entry.termDays !== null && (!Number.isSafeInteger(entry.termDays) || entry.termDays < 1 || entry.termDays > ctx.world.map.world.rules.recruitment.maxTermDays)) ||
       (entry.termUnknown === true && entry.termDays !== null) ||
+      (entry.strengthBasis !== undefined && strengthBasisProblems(entry.men,entry.strengthBasis).length > 0) ||
       (entry.stragglersUnknown === true && (entry.men !== null || entry.release === true || entry.transferTo !== undefined))) {
       refuse('invalid_state_forces_notice'); continue;
     }
@@ -329,7 +338,13 @@ export function stateForcesPhase(ctx: TickContext, start: State): State {
       e.enlPost === post && includes(e.enlCallId) ? n + (forceTotals(state.forceBlockStates[id as ForceBlockId]!, ctx.world.map.forceTotalsCache).fbStrength ?? 0) : n, 0)
       + Object.values(state.postLevies).reduce((n, l) => l.levyPost === post && includes(l.levyCallId) ? n + (l.levyMen ?? 0) : n, 0);
     const men = entry.men === null ? null : Math.max(0, entry.men - priorMen);
+    // An included model call remains its own quantity. The historical remainder
+    // loses its included regiment count too, even when no men can be subtracted.
+    const priorRegiments = Object.values(enlistmentsOf(state, ctx.world.map.forceServiceCache)).reduce((n,e) => e.enlPost === post && includes(e.enlCallId) ? n + (e.enlRegiments ?? 0) : n, 0)
+      + Object.values(state.postLevies).reduce((n,l) => l.levyPost === post && includes(l.levyCallId) ? n + (l.levyRegiments ?? 0) : n, 0);
+    const regiments = entry.regiments === null ? null : Math.max(0, entry.regiments - priorRegiments);
     const old = state.forceBlockStates[block];
+    if (entry.men !== null && entry.strengthBasis === undefined) { refuse('state_force_strength_source_required'); continue; }
     if (entry.release === true) {
       const own = enlistmentsOf(state, ctx.world.map.forceServiceCache)[block];
       if (old === undefined || own?.enlSourceAct === undefined || own.enlPost !== post || old.fbArm !== entry.arm ||
@@ -352,14 +367,11 @@ export function stateForcesPhase(ctx: TickContext, start: State): State {
       const enlistment = enlistmentsOf(state, ctx.world.map.forceServiceCache)[block];
       if (enlistment?.enlSourceAct === undefined || enlistment.enlPost !== post || old.fbArm !== entry.arm) { refuse('state_force_identity_conflict'); continue; }
       if (forceTotals(old, ctx.world.map.forceTotalsCache).fbStrength === null && men !== null) {
-        const count = enlistment.enlRegiments;
         const batchReturn = old.fbLots.length === 1 && old.fbLots[0]?.lotRegiment === null;
-        const modelReturn = count !== null && entry.regiments === count && old.fbLots.length === count &&
-          old.fbLots.every(l => l.lotMen === null) && men === count * ctx.world.map.world.rules.recruitment.menPerRegiment;
-        if (!batchReturn && !modelReturn) {
+        if (!batchReturn) {
           refuse('unattributable_regimental_return'); continue;
         }
-        state = applyMusters(ctx.world.map, state, [{ change: 'quantify', block, men, regiments: entry.regiments, cause: 'recruitment' }]).state;
+        state = applyMusters(ctx.world.map, state, [{ change: 'quantify', block, men, regiments, ...(entry.strengthBasis === undefined ? {} : { strengthBasis: entry.strengthBasis }), cause: 'recruitment' }]).state;
       }
       continue;
     }
@@ -376,10 +388,11 @@ export function stateForcesPhase(ctx: TickContext, start: State): State {
     if (!ctx.world.map.world.regions.some(r => r.id === region && ['land', 'key_point'].includes(r.kind))) { refuse('invalid_state_force_muster_point'); continue; }
     const created = applyMusters(ctx.world.map, state, [{ change: 'create', cause: 'recruitment', create: {
       block, name: `raised.${commandPost}`, department: office.postDepartment, arm: entry.arm, strength: men,
+      ...(entry.strengthBasis === undefined ? {} : { strengthBasis: entry.strengthBasis }),
       ...(entry.stragglersUnknown === true ? { stragglersUnknown: true } : {}),
       storesDays: ctx.world.map.world.rules.recruitment.storesDays,
       enlistment: { enlPost: post, enlRaisedBy: office.postHolder, enlCall: toId('message', `state-act.${p.situation}.${entry.id}`),
-        enlRegiments: entry.regiments, enlMusterDay: ctx.day, enlEndsDay: entry.termDays === null ? null : ctx.day + entry.termDays,
+        enlRegiments: regiments, enlMusterDay: ctx.day, enlEndsDay: entry.termDays === null ? null : ctx.day + entry.termDays,
         enlSourceAct: p.situation, ...(entry.termUnknown === true ? { enlTermUnknown: true } : {}),
       },
     } }]).state;

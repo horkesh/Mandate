@@ -757,6 +757,7 @@ export function generatePack(files: PackFiles): GenerateResult {
           arm: r.text('arm'),
           strength: r.optionalInt('strength', 'strength'),
           strengthDate: r.optionalDate('strength_date', 'strengthDate'),
+          ...(r.raw('strength_kind') ? { strengthBasis: { strengthKind: r.raw('strength_kind'), strengthSource: r.raw('strength_source') || null, strengthDate: r.optionalDate('strength_date', 'strengthDate') } } : {}),
           nonCombatants: r.optionalInt('non_combatants') ?? 0,
           storesDays: r.optionalInt('stores_days', 'storesDays'),
           storesDate: r.optionalDate('stores_date', 'storesDate'),

@@ -11,6 +11,7 @@ export const StateConditionSchema = z.discriminatedUnion('conditionKind', [
 
 /** Issuer clauses, recorded without executing a contract or inventing available capacity. */
 export const CallProfileSchema = z.strictObject({
+  callEstablishment: z.string().min(1).optional(),
   information: z.array(z.strictObject({
     detail: z.enum(['purpose_detail', 'muster_receiver', 'rejection_return_support']),
     value: z.string().min(1).nullable(),

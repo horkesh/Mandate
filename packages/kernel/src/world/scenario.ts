@@ -1,3 +1,4 @@
+import type { LotStrength } from '../forces/lots.ts';
 /**
  * World format v2, a scenario start (decision 0030: a scenario is world data
  * plus a starting state; a pack may have several starts).
@@ -213,6 +214,7 @@ export interface ForceBlockStart {
   readonly strength: number | null;
   /** The return the strength comes from: ISO, year-month or year. */
   readonly strengthDate: string | null;
+  readonly strengthBasis?: LotStrength;
   /** Labourers and other non-combatants who eat the block's rations. */
   readonly nonCombatants: number;
   /** Days of supply on hand (0040); null when unknown. */

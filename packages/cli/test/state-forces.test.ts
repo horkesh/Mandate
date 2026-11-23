@@ -11,7 +11,8 @@ const post = ids.toId('post', 'n_brenmark_governor');
 const effect = (men: number | null = 2000, patch = {}) => ({ propose: {
   owner: 'recruitment', field: 'state_forces', subject: post, delta: 1,
   reason: 'assembly-transfer', side: ids.toId('faction', 'north'),
-  stateForces: { id: 'shire_infantry', regiments: men === null ? null : 2, men, arm: 'infantry', termDays: 90 }, ...patch,
+  stateForces: { id: 'shire_infantry', regiments: men === null ? null : 2, men, arm: 'infantry', termDays: 90,
+    ...(men === null ? {} : { strengthBasis:{strengthKind:'return',strengthSource:'fictional contingent return p.1',strengthDate:'1861-03-02'} }) }, ...patch,
 } });
 function fixture(effects: unknown[] = [effect()]) {
   const loaded = seatsWorld('testbed');
@@ -48,7 +49,7 @@ describe('a state transfers its own forces by institutional notice', () => {
     expect(run(f).state).toEqual(r.state);
   });
   it('musters at its declared local command and transfers service without resetting the contingent', () => {
-    const f = fixture([effect(2000, { stateForces: { id: 'shire_infantry', regiments: 2, men: 2000, arm: 'infantry', termDays: 90, post: 'n_army_west' } })]);
+    const f = fixture([effect(2000, { stateForces: { id: 'shire_infantry', regiments: 2, men: 2000, strengthBasis:{strengthKind:'return',strengthSource:'fictional return p.1',strengthDate:'1861-03-02'}, arm: 'infantry', termDays: 90, post: 'n_army_west' } })]);
     const entered = run(f, 2).state;
     const b = B('shire_infantry');
     expect(entered.forceAssignments[b]).toBe('n_army_west');
@@ -136,7 +137,7 @@ describe('a state transfers its own forces by institutional notice', () => {
     expect(previous).toHaveLength(1);
     const [id, enlistment] = previous[0]!;
     const previousMen = forceTotals(state.forceBlockStates[id as keyof typeof state.forceBlockStates]!).fbStrength!;
-    const e = effect(4000, { stateForces: { id: 'shire_infantry', regiments: 4, men: 4000, arm: 'infantry', termDays: null, termUnknown: true, includesCalls: ['shire_prior'] } });
+    const e = effect(4000, { stateForces: { id: 'shire_infantry', regiments: 4, men: 4000, strengthBasis:{strengthKind:'return',strengthSource:'fictional return p.1',strengthDate:'1861-03-02'}, arm: 'infantry', termDays: null, termUnknown: true, includesCalls: ['shire_prior'] } });
     const notice = { ...f.world.situations[0]!, effects: [e] } as phase0.SituationDef;
     const r = run({ world: { ...world, situations: [notice] }, state: { ...state, orderResponses: {} } }, 21);
     expect(forceTotals(r.state.forceBlockStates[B('shire_infantry')]!).fbStrength).toBe(4000 - previousMen);

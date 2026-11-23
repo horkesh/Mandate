@@ -1,0 +1,3462 @@
+[
+  {
+    "call": "cs_apr08_alabama",
+    "sourceProfile": "CS-A08",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr08_alabama",
+      "post": "st_gov_alabama",
+      "regiments": 3,
+      "termDays": 365,
+      "fromDate": "1861-04-08",
+      "source": "OR IV-1 p.211 (https://ehistory.osu.edu/books/official-records/127/0211): conditional readiness call; Florida 1,500, other named states 3,000. Twelve-month volunteers under 6 March act, pp.126-127. Page 233: not mustered until call made absolute.",
+      "men": 3000,
+      "atPeace": true,
+      "readiness": true,
+      "termsId": "cs_apr08_alabama"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr08_florida",
+    "sourceProfile": "CS-A08",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr08_florida",
+      "post": "st_gov_florida",
+      "regiments": 2,
+      "termDays": 365,
+      "fromDate": "1861-04-08",
+      "source": "OR IV-1 p.211 (https://ehistory.osu.edu/books/official-records/127/0211): conditional readiness call; Florida 1,500, other named states 3,000. Twelve-month volunteers under 6 March act, pp.126-127. Page 233: not mustered until call made absolute.",
+      "men": 1500,
+      "atPeace": true,
+      "readiness": true,
+      "termsId": "cs_apr08_florida"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr08_georgia",
+    "sourceProfile": "CS-A08",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr08_georgia",
+      "post": "st_gov_georgia",
+      "regiments": 3,
+      "termDays": 365,
+      "fromDate": "1861-04-08",
+      "source": "OR IV-1 p.211 (https://ehistory.osu.edu/books/official-records/127/0211): conditional readiness call; Florida 1,500, other named states 3,000. Twelve-month volunteers under 6 March act, pp.126-127. Page 233: not mustered until call made absolute.",
+      "men": 3000,
+      "atPeace": true,
+      "readiness": true,
+      "termsId": "cs_apr08_georgia"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr08_louisiana",
+    "sourceProfile": "CS-A08",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr08_louisiana",
+      "post": "st_gov_louisiana",
+      "regiments": 3,
+      "termDays": 365,
+      "fromDate": "1861-04-08",
+      "source": "OR IV-1 p.211 (https://ehistory.osu.edu/books/official-records/127/0211): conditional readiness call; Florida 1,500, other named states 3,000. Twelve-month volunteers under 6 March act, pp.126-127. Page 233: not mustered until call made absolute.",
+      "men": 3000,
+      "atPeace": true,
+      "readiness": true,
+      "termsId": "cs_apr08_louisiana"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr08_mississippi",
+    "sourceProfile": "CS-A08",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr08_mississippi",
+      "post": "st_gov_mississippi",
+      "regiments": 3,
+      "termDays": 365,
+      "fromDate": "1861-04-08",
+      "source": "OR IV-1 p.211 (https://ehistory.osu.edu/books/official-records/127/0211): conditional readiness call; Florida 1,500, other named states 3,000. Twelve-month volunteers under 6 March act, pp.126-127. Page 233: not mustered until call made absolute.",
+      "men": 3000,
+      "atPeace": true,
+      "readiness": true,
+      "termsId": "cs_apr08_mississippi"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr08_south_carolina",
+    "sourceProfile": "CS-A08",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr08_south_carolina",
+      "post": "st_gov_south_carolina",
+      "regiments": 3,
+      "termDays": 365,
+      "fromDate": "1861-04-08",
+      "source": "OR IV-1 p.211 (https://ehistory.osu.edu/books/official-records/127/0211): conditional readiness call; Florida 1,500, other named states 3,000. Twelve-month volunteers under 6 March act, pp.126-127. Page 233: not mustered until call made absolute.",
+      "men": 3000,
+      "atPeace": true,
+      "readiness": true,
+      "termsId": "cs_apr08_south_carolina"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr08_texas",
+    "sourceProfile": "CS-A08",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr08_texas",
+      "post": "st_gov_texas",
+      "regiments": 3,
+      "termDays": 365,
+      "fromDate": "1861-04-08",
+      "source": "OR IV-1 p.211 (https://ehistory.osu.edu/books/official-records/127/0211): conditional readiness call; Florida 1,500, other named states 3,000. Twelve-month volunteers under 6 March act, pp.126-127. Page 233: not mustered until call made absolute.",
+      "men": 3000,
+      "atPeace": true,
+      "readiness": true,
+      "termsId": "cs_apr08_texas"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr16_alabama",
+    "sourceProfile": "CS-A16",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr16_alabama",
+      "post": "st_gov_alabama",
+      "regiments": 5,
+      "termDays": 365,
+      "fromDate": "1861-04-16",
+      "source": "OR IV-1 pp.221-222 (https://ehistory.osu.edu/books/official-records/127/0221): additional to 8 April, not replacement; Florida 2,000, others 5,000, held for instant movement. Twelve-month term under 6 March act, pp.126-127. Page 233: no muster until absolute requisition.",
+      "men": 5000,
+      "readiness": true,
+      "termsId": "cs_apr16_alabama"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr16_florida",
+    "sourceProfile": "CS-A16",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr16_florida",
+      "post": "st_gov_florida",
+      "regiments": 2,
+      "termDays": 365,
+      "fromDate": "1861-04-16",
+      "source": "OR IV-1 pp.221-222 (https://ehistory.osu.edu/books/official-records/127/0221): additional to 8 April, not replacement; Florida 2,000, others 5,000, held for instant movement. Twelve-month term under 6 March act, pp.126-127. Page 233: no muster until absolute requisition.",
+      "men": 2000,
+      "readiness": true,
+      "termsId": "cs_apr16_florida"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr16_georgia",
+    "sourceProfile": "CS-A16",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr16_georgia",
+      "post": "st_gov_georgia",
+      "regiments": 5,
+      "termDays": 365,
+      "fromDate": "1861-04-16",
+      "source": "OR IV-1 pp.221-222 (https://ehistory.osu.edu/books/official-records/127/0221): additional to 8 April, not replacement; Florida 2,000, others 5,000, held for instant movement. Twelve-month term under 6 March act, pp.126-127. Page 233: no muster until absolute requisition.",
+      "men": 5000,
+      "readiness": true,
+      "termsId": "cs_apr16_georgia"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr16_louisiana",
+    "sourceProfile": "CS-A16",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr16_louisiana",
+      "post": "st_gov_louisiana",
+      "regiments": 5,
+      "termDays": 365,
+      "fromDate": "1861-04-16",
+      "source": "OR IV-1 pp.221-222 (https://ehistory.osu.edu/books/official-records/127/0221): additional to 8 April, not replacement; Florida 2,000, others 5,000, held for instant movement. Twelve-month term under 6 March act, pp.126-127. Page 233: no muster until absolute requisition.",
+      "men": 5000,
+      "readiness": true,
+      "termsId": "cs_apr16_louisiana"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr16_mississippi",
+    "sourceProfile": "CS-A16",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr16_mississippi",
+      "post": "st_gov_mississippi",
+      "regiments": 5,
+      "termDays": 365,
+      "fromDate": "1861-04-16",
+      "source": "OR IV-1 pp.221-222 (https://ehistory.osu.edu/books/official-records/127/0221): additional to 8 April, not replacement; Florida 2,000, others 5,000, held for instant movement. Twelve-month term under 6 March act, pp.126-127. Page 233: no muster until absolute requisition.",
+      "men": 5000,
+      "readiness": true,
+      "termsId": "cs_apr16_mississippi"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr16_south_carolina",
+    "sourceProfile": "CS-A16",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr16_south_carolina",
+      "post": "st_gov_south_carolina",
+      "regiments": 5,
+      "termDays": 365,
+      "fromDate": "1861-04-16",
+      "source": "OR IV-1 pp.221-222 (https://ehistory.osu.edu/books/official-records/127/0221): additional to 8 April, not replacement; Florida 2,000, others 5,000, held for instant movement. Twelve-month term under 6 March act, pp.126-127. Page 233: no muster until absolute requisition.",
+      "men": 5000,
+      "readiness": true,
+      "termsId": "cs_apr16_south_carolina"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr16_texas",
+    "sourceProfile": "CS-A16",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr16_texas",
+      "post": "st_gov_texas",
+      "regiments": 5,
+      "termDays": 365,
+      "fromDate": "1861-04-16",
+      "source": "OR IV-1 pp.221-222 (https://ehistory.osu.edu/books/official-records/127/0221): additional to 8 April, not replacement; Florida 2,000, others 5,000, held for instant movement. Twelve-month term under 6 March act, pp.126-127. Page 233: no muster until absolute requisition.",
+      "men": 5000,
+      "readiness": true,
+      "termsId": "cs_apr16_texas"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr22_absolute_alabama",
+    "sourceProfile": "CS-A22",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr22_absolute_alabama",
+      "post": "st_gov_alabama",
+      "regiments": 2,
+      "termDays": 365,
+      "fromDate": "1861-04-22",
+      "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
+      "termsId": "cs_apr22_absolute_alabama"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr22_absolute_arkansas",
+    "sourceProfile": "CS-A22-N",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr22_absolute_arkansas",
+      "post": "st_gov_arkansas",
+      "regiments": 1,
+      "termDays": 365,
+      "fromDate": "1861-04-22",
+      "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
+      "termsId": "cs_apr22_absolute_arkansas"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr22_absolute_georgia",
+    "sourceProfile": "CS-A22",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr22_absolute_georgia",
+      "post": "st_gov_georgia",
+      "regiments": 2,
+      "termDays": 365,
+      "fromDate": "1861-04-22",
+      "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
+      "termsId": "cs_apr22_absolute_georgia"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr22_absolute_kentucky",
+    "sourceProfile": "CS-A22-N",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr22_absolute_kentucky",
+      "post": "st_gov_kentucky",
+      "regiments": 1,
+      "termDays": 365,
+      "fromDate": "1861-04-22",
+      "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
+      "termsId": "cs_apr22_absolute_kentucky"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr22_absolute_louisiana",
+    "sourceProfile": "CS-A22",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr22_absolute_louisiana",
+      "post": "st_gov_louisiana",
+      "regiments": 1,
+      "termDays": 365,
+      "fromDate": "1861-04-22",
+      "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
+      "termsId": "cs_apr22_absolute_louisiana"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr22_absolute_mississippi",
+    "sourceProfile": "CS-A22",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr22_absolute_mississippi",
+      "post": "st_gov_mississippi",
+      "regiments": 2,
+      "termDays": 365,
+      "fromDate": "1861-04-22",
+      "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
+      "termsId": "cs_apr22_absolute_mississippi"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr22_absolute_north_carolina",
+    "sourceProfile": "CS-A22-N",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr22_absolute_north_carolina",
+      "post": "st_gov_north_carolina",
+      "regiments": 1,
+      "termDays": 365,
+      "fromDate": "1861-04-22",
+      "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
+      "termsId": "cs_apr22_absolute_north_carolina"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_apr22_absolute_tennessee",
+    "sourceProfile": "CS-A22-N",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_apr22_absolute_tennessee",
+      "post": "st_gov_tennessee",
+      "regiments": 3,
+      "termDays": 365,
+      "fromDate": "1861-04-22",
+      "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S119: the known quota is three regiments; Harris does not report an actual number of men or stragglers (OR IV-I pp.272,275). S122/0125/0127: the model-raised lots keep their own legal-minimum rule quantity; historical naming supplies no personnel return.",
+      "termsId": "cs_apr22_absolute_tennessee"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jul01_extra_alabama",
+    "sourceProfile": "CS-J01",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jul01_extra_alabama",
+      "post": "st_gov_alabama",
+      "regiments": 2,
+      "termDays": null,
+      "fromDate": "1861-07-01",
+      "source": "OR IV-1 p.416 (https://ehistory.osu.edu/books/official-records/127/0416): two armed/equipped infantry regiments for the war, expressly additional to reserve. Brown's conditional reply on p.424 is not a promise of automatic compliance.",
+      "termsId": "cs_jul01_extra_alabama"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jul01_extra_georgia",
+    "sourceProfile": "CS-J01",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jul01_extra_georgia",
+      "post": "st_gov_georgia",
+      "regiments": 2,
+      "termDays": null,
+      "fromDate": "1861-07-01",
+      "source": "OR IV-1 p.416 (https://ehistory.osu.edu/books/official-records/127/0416): two armed/equipped infantry regiments for the war, expressly additional to reserve. Brown's conditional reply on p.424 is not a promise of automatic compliance.",
+      "termsId": "cs_jul01_extra_georgia"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun29_extra_louisiana",
+    "sourceProfile": "CS-J29",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun29_extra_louisiana",
+      "post": "st_gov_louisiana",
+      "regiments": 2,
+      "termDays": null,
+      "fromDate": "1861-06-29",
+      "source": "OR IV-1 p.411 (https://ehistory.osu.edu/books/official-records/127/0411): two additional regiments for the war to Corinth, expressly outside the reserve corps. Concentration remains the existing doctrine's choice.",
+      "termsId": "cs_jun29_extra_louisiana"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun29_extra_mississippi",
+    "sourceProfile": "CS-J29",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun29_extra_mississippi",
+      "post": "st_gov_mississippi",
+      "regiments": 2,
+      "termDays": null,
+      "fromDate": "1861-06-29",
+      "source": "OR IV-1 p.411 (https://ehistory.osu.edu/books/official-records/127/0411): same letter to Pettus, two war-term regiments outside reserve.",
+      "termsId": "cs_jun29_extra_mississippi"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_cavalry_alabama",
+    "sourceProfile": "CS-J30-C",
+    "establishment": {
+      "id": "cs_cavalry_company_unquantified",
+      "faction": "confederate",
+      "callKind": "public_defense_cavalry",
+      "arm": "cavalry",
+      "organisation": "unquantified_companies",
+      "effective": "1861-06-30",
+      "men": null,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          128
+        ]
+      ],
+      "note": "Call supplies no count of companies/squadrons. No infantry regiment or ten-company organisation is imposed on the unknown contingent."
+    },
+    "requested": {
+      "id": "cs_jun30_cavalry_alabama",
+      "post": "st_gov_alabama",
+      "regiments": null,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): two additional armed/equipped cavalry companies from each of these five states, apart from 30,000 reserve. Headcount unknown within prescribed 60-100 privates per company. [I] Bundled as one unknown-strength block, no regiment count invented.",
+      "arm": "cavalry",
+      "men": null,
+      "termsId": "cs_jun30_cavalry_alabama"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_cavalry_arkansas",
+    "sourceProfile": "CS-J30-C",
+    "establishment": {
+      "id": "cs_cavalry_company_unquantified",
+      "faction": "confederate",
+      "callKind": "public_defense_cavalry",
+      "arm": "cavalry",
+      "organisation": "unquantified_companies",
+      "effective": "1861-06-30",
+      "men": null,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          128
+        ]
+      ],
+      "note": "Call supplies no count of companies/squadrons. No infantry regiment or ten-company organisation is imposed on the unknown contingent."
+    },
+    "requested": {
+      "id": "cs_jun30_cavalry_arkansas",
+      "post": "st_gov_arkansas",
+      "regiments": null,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): two additional armed/equipped cavalry companies from each of these five states, apart from 30,000 reserve. Headcount unknown within prescribed 60-100 privates per company. [I] Bundled as one unknown-strength block, no regiment count invented.",
+      "arm": "cavalry",
+      "men": null,
+      "termsId": "cs_jun30_cavalry_arkansas"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_cavalry_georgia",
+    "sourceProfile": "CS-J30-C",
+    "establishment": {
+      "id": "cs_cavalry_company_unquantified",
+      "faction": "confederate",
+      "callKind": "public_defense_cavalry",
+      "arm": "cavalry",
+      "organisation": "unquantified_companies",
+      "effective": "1861-06-30",
+      "men": null,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          128
+        ]
+      ],
+      "note": "Call supplies no count of companies/squadrons. No infantry regiment or ten-company organisation is imposed on the unknown contingent."
+    },
+    "requested": {
+      "id": "cs_jun30_cavalry_georgia",
+      "post": "st_gov_georgia",
+      "regiments": null,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): two additional armed/equipped cavalry companies from each of these five states, apart from 30,000 reserve. Headcount unknown within prescribed 60-100 privates per company. [I] Bundled as one unknown-strength block, no regiment count invented.",
+      "arm": "cavalry",
+      "men": null,
+      "termsId": "cs_jun30_cavalry_georgia"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_cavalry_mississippi",
+    "sourceProfile": "CS-J30-C",
+    "establishment": {
+      "id": "cs_cavalry_company_unquantified",
+      "faction": "confederate",
+      "callKind": "public_defense_cavalry",
+      "arm": "cavalry",
+      "organisation": "unquantified_companies",
+      "effective": "1861-06-30",
+      "men": null,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          128
+        ]
+      ],
+      "note": "Call supplies no count of companies/squadrons. No infantry regiment or ten-company organisation is imposed on the unknown contingent."
+    },
+    "requested": {
+      "id": "cs_jun30_cavalry_mississippi",
+      "post": "st_gov_mississippi",
+      "regiments": null,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): two additional armed/equipped cavalry companies from each of these five states, apart from 30,000 reserve. Headcount unknown within prescribed 60-100 privates per company. [I] Bundled as one unknown-strength block, no regiment count invented.",
+      "arm": "cavalry",
+      "men": null,
+      "termsId": "cs_jun30_cavalry_mississippi"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_cavalry_tennessee",
+    "sourceProfile": "CS-J30-C",
+    "establishment": {
+      "id": "cs_cavalry_company_unquantified",
+      "faction": "confederate",
+      "callKind": "public_defense_cavalry",
+      "arm": "cavalry",
+      "organisation": "unquantified_companies",
+      "effective": "1861-06-30",
+      "men": null,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          128
+        ]
+      ],
+      "note": "Call supplies no count of companies/squadrons. No infantry regiment or ten-company organisation is imposed on the unknown contingent."
+    },
+    "requested": {
+      "id": "cs_jun30_cavalry_tennessee",
+      "post": "st_gov_tennessee",
+      "regiments": null,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): two additional armed/equipped cavalry companies from each of these five states, apart from 30,000 reserve. Headcount unknown within prescribed 60-100 privates per company. [I] Bundled as one unknown-strength block, no regiment count invented.",
+      "arm": "cavalry",
+      "men": null,
+      "termsId": "cs_jun30_cavalry_tennessee"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_alabama",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_alabama",
+      "post": "st_gov_alabama",
+      "regiments": 3,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 3000,
+      "termsId": "cs_jun30_reserve_alabama"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_arkansas",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_arkansas",
+      "post": "st_gov_arkansas",
+      "regiments": 3,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 3000,
+      "termsId": "cs_jun30_reserve_arkansas"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_florida",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_florida",
+      "post": "st_gov_florida",
+      "regiments": 1,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 1000,
+      "termsId": "cs_jun30_reserve_florida"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_georgia",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_georgia",
+      "post": "st_gov_georgia",
+      "regiments": 3,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 3000,
+      "termsId": "cs_jun30_reserve_georgia"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_louisiana",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_louisiana",
+      "post": "st_gov_louisiana",
+      "regiments": 3,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 3000,
+      "termsId": "cs_jun30_reserve_louisiana"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_mississippi",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_mississippi",
+      "post": "st_gov_mississippi",
+      "regiments": 3,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 3000,
+      "termsId": "cs_jun30_reserve_mississippi"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_north_carolina",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_north_carolina",
+      "post": "st_gov_north_carolina",
+      "regiments": 3,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 3000,
+      "termsId": "cs_jun30_reserve_north_carolina"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_south_carolina",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_south_carolina",
+      "post": "st_gov_south_carolina",
+      "regiments": 3,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 3000,
+      "termsId": "cs_jun30_reserve_south_carolina"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_tennessee",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_tennessee",
+      "post": "st_gov_tennessee",
+      "regiments": 3,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 3000,
+      "termsId": "cs_jun30_reserve_tennessee"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_texas",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_texas",
+      "post": "st_gov_texas",
+      "regiments": 2,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 2000,
+      "termsId": "cs_jun30_reserve_texas"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jun30_reserve_virginia",
+    "sourceProfile": "CS-J30-R",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_jun30_reserve_virginia",
+      "post": "st_gov_virginia",
+      "regiments": 3,
+      "termDays": null,
+      "fromDate": "1861-06-30",
+      "source": "OR IV-1 p.412 (https://ehistory.osu.edu/books/official-records/127/0412): reserve corps of 30,000, war term, 3,000 each except Texas 2,000 and Florida 1,000. [I] Existing raising path represents camps of instruction; separate cavalry-company supplements have no headcount and are catalogued rather than invented.",
+      "men": 3000,
+      "termsId": "cs_jun30_reserve_virginia"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_mar09_alabama",
+    "sourceProfile": "CS-M09",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_mar09_alabama",
+      "post": "st_gov_alabama",
+      "regiments": 2,
+      "termDays": 365,
+      "fromDate": "1861-03-09",
+      "source": "OR IV-1 p.135 (https://ehistory.osu.edu/books/official-records/127/0135), immediate service; twelve-month minimum under 28 February act, p.117. [I] Charleston's 3,000 and Texas's 1,000 are the named destination requirements, assigned here to their governors; the other state allocations are explicit. Regiments are administrative ceiling equivalents of the stated headcount, not a change to menPerRegiment.",
+      "men": 2000,
+      "atPeace": true,
+      "termsId": "cs_mar09_alabama"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_mar09_florida",
+    "sourceProfile": "CS-M09",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_mar09_florida",
+      "post": "st_gov_florida",
+      "regiments": 1,
+      "termDays": 365,
+      "fromDate": "1861-03-09",
+      "source": "OR IV-1 p.135 (https://ehistory.osu.edu/books/official-records/127/0135), immediate service; twelve-month minimum under 28 February act, p.117. [I] Charleston's 3,000 and Texas's 1,000 are the named destination requirements, assigned here to their governors; the other state allocations are explicit. Regiments are administrative ceiling equivalents of the stated headcount, not a change to menPerRegiment.",
+      "men": 500,
+      "atPeace": true,
+      "termsId": "cs_mar09_florida"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_mar09_georgia",
+    "sourceProfile": "CS-M09",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_mar09_georgia",
+      "post": "st_gov_georgia",
+      "regiments": 2,
+      "termDays": 365,
+      "fromDate": "1861-03-09",
+      "source": "OR IV-1 p.135 (https://ehistory.osu.edu/books/official-records/127/0135), immediate service; twelve-month minimum under 28 February act, p.117. [I] Charleston's 3,000 and Texas's 1,000 are the named destination requirements, assigned here to their governors; the other state allocations are explicit. Regiments are administrative ceiling equivalents of the stated headcount, not a change to menPerRegiment.",
+      "men": 2000,
+      "atPeace": true,
+      "termsId": "cs_mar09_georgia"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_mar09_louisiana",
+    "sourceProfile": "CS-M09",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_mar09_louisiana",
+      "post": "st_gov_louisiana",
+      "regiments": 2,
+      "termDays": 365,
+      "fromDate": "1861-03-09",
+      "source": "OR IV-1 p.135 (https://ehistory.osu.edu/books/official-records/127/0135), immediate service; twelve-month minimum under 28 February act, p.117. [I] Charleston's 3,000 and Texas's 1,000 are the named destination requirements, assigned here to their governors; the other state allocations are explicit. Regiments are administrative ceiling equivalents of the stated headcount, not a change to menPerRegiment.",
+      "men": 1700,
+      "atPeace": true,
+      "termsId": "cs_mar09_louisiana"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_mar09_mississippi",
+    "sourceProfile": "CS-M09",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_mar09_mississippi",
+      "post": "st_gov_mississippi",
+      "regiments": 2,
+      "termDays": 365,
+      "fromDate": "1861-03-09",
+      "source": "OR IV-1 p.135 (https://ehistory.osu.edu/books/official-records/127/0135), immediate service; twelve-month minimum under 28 February act, p.117. [I] Charleston's 3,000 and Texas's 1,000 are the named destination requirements, assigned here to their governors; the other state allocations are explicit. Regiments are administrative ceiling equivalents of the stated headcount, not a change to menPerRegiment.",
+      "men": 1500,
+      "atPeace": true,
+      "termsId": "cs_mar09_mississippi"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_mar09_south_carolina",
+    "sourceProfile": "CS-M09",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_mar09_south_carolina",
+      "post": "st_gov_south_carolina",
+      "regiments": 3,
+      "termDays": 365,
+      "fromDate": "1861-03-09",
+      "source": "OR IV-1 p.135 (https://ehistory.osu.edu/books/official-records/127/0135), immediate service; twelve-month minimum under 28 February act, p.117. [I] Charleston's 3,000 and Texas's 1,000 are the named destination requirements, assigned here to their governors; the other state allocations are explicit. Regiments are administrative ceiling equivalents of the stated headcount, not a change to menPerRegiment.",
+      "men": 3000,
+      "atPeace": true,
+      "termsId": "cs_mar09_south_carolina"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_mar09_texas",
+    "sourceProfile": "CS-M09",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": {
+      "id": "cs_mar09_texas",
+      "post": "st_gov_texas",
+      "regiments": 1,
+      "termDays": 365,
+      "fromDate": "1861-03-09",
+      "source": "OR IV-1 p.135 (https://ehistory.osu.edu/books/official-records/127/0135), immediate service; twelve-month minimum under 28 February act, p.117. [I] Charleston's 3,000 and Texas's 1,000 are the named destination requirements, assigned here to their governors; the other state allocations are explicit. Regiments are administrative ceiling equivalents of the stated headcount, not a change to menPerRegiment.",
+      "men": 1000,
+      "atPeace": true,
+      "termsId": "cs_mar09_texas"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_arkansas",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_connecticut",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_delaware",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_illinois",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_indiana",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_iowa",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_kentucky",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_maine",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_maryland",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_massachusetts",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_michigan",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_minnesota",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_missouri",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_new_hampshire",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_new_jersey",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_new_york",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_north_carolina",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_ohio",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_pennsylvania",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_rhode_island",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_tennessee",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_vermont",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_virginia",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_apr15_wisconsin",
+    "sourceProfile": "US-A15",
+    "establishment": {
+      "id": "us_april_militia",
+      "faction": "union",
+      "callKind": "april_militia",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-04-15",
+      "men": 780,
+      "cites": [
+        [
+          "OR III-I",
+          69
+        ]
+      ],
+      "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_jul25_new_york",
+    "sourceProfile": "US-NY25",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_jul25_new_york",
+      "post": "st_gov_new_york",
+      "regiments": 25,
+      "termDays": 1095,
+      "fromDate": "1861-07-25",
+      "source": "OR III-1 p.369 (https://ehistory.osu.edu/books/official-records/122/0369): regulations of 30 July for requisition of 25,000, twenty-five regiments, three years or war. Morgan's 1 August acknowledgement on p.376 dates his proclamation to 25 July. [I] Three-year term represented; the cavalry/artillery additionally accepted on 30 July are separate.",
+      "men": 25000,
+      "termsId": "us_jul25_new_york"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_jul30_artillery_new_york",
+    "sourceProfile": "US-NY30",
+    "establishment": {
+      "id": "us_volunteer_artillery_unrecovered",
+      "faction": "union",
+      "callKind": "volunteer_artillery",
+      "arm": "artillery",
+      "organisation": "unrecovered",
+      "effective": "1861-07-30",
+      "men": null,
+      "cites": [
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "GO15 supplies no volunteer artillery regiment establishment. GO16 regular artillery is not substituted. Recover the applicable organisation before assigning men."
+    },
+    "requested": {
+      "id": "us_jul30_artillery_new_york",
+      "post": "st_gov_new_york",
+      "regiments": 2,
+      "termDays": null,
+      "fromDate": "1861-07-30",
+      "source": "OR III-1 p.369 (https://ehistory.osu.edu/books/official-records/122/0369): Cameron accepts two artillery regiments in addition to twenty-five. [I] War term under the 25 July act, p.383.",
+      "arm": "artillery",
+      "termsId": "us_jul30_artillery_new_york"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_jul30_cavalry_new_york",
+    "sourceProfile": "US-NY30",
+    "establishment": {
+      "id": "us_go15_cavalry_4",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "cavalry",
+      "organisation": "4_squadrons",
+      "effective": "1861-05-04",
+      "men": 660,
+      "cites": [
+        [
+          "OR III-I",
+          152
+        ],
+        [
+          "OR III-I",
+          153
+        ]
+      ],
+      "note": "0127; minimum for this squadron organisation. Four squadrons is the smallest permitted regiment [I]; six is not assumed."
+    },
+    "requested": {
+      "id": "us_jul30_cavalry_new_york",
+      "post": "st_gov_new_york",
+      "regiments": 2,
+      "termDays": null,
+      "fromDate": "1861-07-30",
+      "source": "OR III-1 p.369 (https://ehistory.osu.edu/books/official-records/122/0369): Cameron accepts two cavalry regiments in addition to twenty-five. [I] War term under the 25 July act, p.383.",
+      "arm": "cavalry",
+      "termsId": "us_jul30_cavalry_new_york"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_jun11_indiana",
+    "sourceProfile": "US-IN11",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_jun11_indiana",
+      "post": "st_gov_indiana",
+      "regiments": 6,
+      "termDays": 1095,
+      "fromDate": "1861-06-11",
+      "source": "OR III-1 p.290 (https://ehistory.osu.edu/books/official-records/122/0290): Morton on 22 June identifies call dated 11 June for six more regiments; correspondence concerns three-year regiments.",
+      "termsId": "us_jun11_indiana"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may03_accepted_new_york",
+    "sourceProfile": "US-NY2",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may03_accepted_new_york",
+      "post": "st_gov_new_york",
+      "regiments": 38,
+      "termDays": 730,
+      "fromDate": "1861-05-03",
+      "source": "OR III-1 p.151 (https://ehistory.osu.edu/books/official-records/122/0151): Cameron accepts New York's tender of thirty-eight regiments for two years, State armed/equipped. A separate accepted tender, not a fabricated division of the national 42,034 call.",
+      "termsId": "us_may03_accepted_new_york"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may04_regular_artillery",
+    "sourceProfile": "US-M04-REG",
+    "establishment": {
+      "id": "us_go16_artillery",
+      "faction": "union",
+      "callKind": "go16_regulars",
+      "arm": "artillery",
+      "organisation": "twelve_batteries",
+      "effective": "1861-05-04",
+      "men": 997,
+      "cites": [
+        [
+          "OR III-I",
+          156
+        ],
+        [
+          "OR III-I",
+          157
+        ]
+      ],
+      "note": "0127; stated minimum of this organisation. Artillery row is explicitly twelve batteries, not an invented eight-battery figure."
+    },
+    "requested": {
+      "id": "us_may04_regular_artillery",
+      "post": "us_recruiting_service",
+      "regiments": 1,
+      "arm": "artillery",
+      "termDays": 1095,
+      "fromDate": "1861-05-04",
+      "source": "OR III-1 pp.154-155,157 (https://ehistory.osu.edu/books/official-records/122/0157); GO1861 GO16, 4 May, pp.36-40: additional Regular regiments directed to be raised, not a return of men actually enlisted. The minimum and maximum remain catalogue figures; actual strength is unknown, so the executable requisition keeps men:null. [I] One central recruiting post and the ordinary compliance/loyalty/muster path represent an unquantified enlistment effort; the common pack muster delay is not a sourced completion date and supplies no numerical strength. The default concentration leaves these zero-known-strength units at the recruiting office, not in a field army. Three-year terms follow the July 29 act section 5, GO1861 p.101, expressly applying to enlistments made in 1861; retrospective term representation [I].",
+      "termsId": "us_may04_regular_artillery"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may04_regular_cavalry",
+    "sourceProfile": "US-M04-REG",
+    "establishment": {
+      "id": "us_go16_cavalry",
+      "faction": "union",
+      "callKind": "go16_regulars",
+      "arm": "cavalry",
+      "organisation": "three_battalions",
+      "effective": "1861-05-04",
+      "men": 997,
+      "cites": [
+        [
+          "OR III-I",
+          155
+        ],
+        [
+          "OR III-I",
+          156
+        ]
+      ],
+      "note": "0127; stated minimum of this organisation. Artillery row is explicitly twelve batteries, not an invented eight-battery figure."
+    },
+    "requested": {
+      "id": "us_may04_regular_cavalry",
+      "post": "us_recruiting_service",
+      "regiments": 1,
+      "arm": "cavalry",
+      "termDays": 1095,
+      "fromDate": "1861-05-04",
+      "source": "OR III-1 pp.154-155,157 (https://ehistory.osu.edu/books/official-records/122/0157); GO1861 GO16, 4 May, pp.36-40: additional Regular regiments directed to be raised, not a return of men actually enlisted. The minimum and maximum remain catalogue figures; actual strength is unknown, so the executable requisition keeps men:null. [I] One central recruiting post and the ordinary compliance/loyalty/muster path represent an unquantified enlistment effort; the common pack muster delay is not a sourced completion date and supplies no numerical strength. The default concentration leaves these zero-known-strength units at the recruiting office, not in a field army. Three-year terms follow the July 29 act section 5, GO1861 p.101, expressly applying to enlistments made in 1861; retrospective term representation [I].",
+      "termsId": "us_may04_regular_cavalry"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may04_regular_infantry",
+    "sourceProfile": "US-M04-REG",
+    "establishment": {
+      "id": "us_go16_infantry",
+      "faction": "union",
+      "callKind": "go16_regulars",
+      "arm": "infantry",
+      "organisation": "three_battalions",
+      "effective": "1861-05-04",
+      "men": 2020,
+      "cites": [
+        [
+          "OR III-I",
+          154
+        ],
+        [
+          "OR III-I",
+          155
+        ]
+      ],
+      "note": "0127; stated minimum of this organisation. Artillery row is explicitly twelve batteries, not an invented eight-battery figure."
+    },
+    "requested": {
+      "id": "us_may04_regular_infantry",
+      "post": "us_recruiting_service",
+      "regiments": 8,
+      "arm": "infantry",
+      "termDays": 1095,
+      "fromDate": "1861-05-04",
+      "source": "OR III-1 pp.154-155,157 (https://ehistory.osu.edu/books/official-records/122/0157); GO1861 GO16, 4 May, pp.36-40: additional Regular regiments directed to be raised, not a return of men actually enlisted. The minimum and maximum remain catalogue figures; actual strength is unknown, so the executable requisition keeps men:null. [I] One central recruiting post and the ordinary compliance/loyalty/muster path represent an unquantified enlistment effort; the common pack muster delay is not a sourced completion date and supplies no numerical strength. The default concentration leaves these zero-known-strength units at the recruiting office, not in a field army. Three-year terms follow the July 29 act section 5, GO1861 p.101, expressly applying to enlistments made in 1861; retrospective term representation [I].",
+      "termsId": "us_may04_regular_infantry"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may15_minnesota_renewal",
+    "sourceProfile": "US-M15-KNM",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may15_vol_kansas",
+    "sourceProfile": "US-M15-KNM",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may15_vol_kansas",
+      "post": "st_gov_kansas",
+      "regiments": 1,
+      "termDays": 1095,
+      "fromDate": "1861-05-15",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0204): dated May 15 allocation, 1 regiment(s) for three years or war. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may15_vol_kansas"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may15_vol_massachusetts",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may15_vol_massachusetts",
+      "post": "st_gov_massachusetts",
+      "regiments": 6,
+      "termDays": 1095,
+      "fromDate": "1861-05-15",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0203): dated May 15 allocation, 6 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may15_vol_massachusetts"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may15_vol_nebraska",
+    "sourceProfile": "US-M15-KNM",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may15_vol_nebraska",
+      "post": "tr_gov_nebraska",
+      "regiments": 1,
+      "termDays": 1095,
+      "fromDate": "1861-05-15",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0204): dated May 15 allocation, 1 regiment(s) for three years or war. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may15_vol_nebraska"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may15_vol_rhode_island",
+    "sourceProfile": "US-M15-RI",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may15_vol_rhode_island",
+      "post": "st_gov_rhode_island",
+      "regiments": 1,
+      "termDays": 1095,
+      "fromDate": "1861-05-15",
+      "source": "OR III-1 pp.207 (https://ehistory.osu.edu/books/official-records/122/0207): dated May 15 allocation, 1 regiment(s) for three years or war. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may15_vol_rhode_island"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_connecticut",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_connecticut",
+      "post": "st_gov_connecticut",
+      "regiments": 1,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0203): dated May 16 allocation, 1 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_connecticut"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_illinois",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_illinois",
+      "post": "st_gov_illinois",
+      "regiments": 6,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0203): dated May 16 allocation, 6 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_illinois"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_indiana",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_indiana",
+      "post": "st_gov_indiana",
+      "regiments": 4,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0203): dated May 16 allocation, 4 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_indiana"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_iowa",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_iowa",
+      "post": "st_gov_iowa",
+      "regiments": 2,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0203): dated May 16 allocation, 2 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_iowa"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_maine",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_maine",
+      "post": "st_gov_maine",
+      "regiments": 1,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0204): dated May 16 allocation, 1 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_maine"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_michigan",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_michigan",
+      "post": "st_gov_michigan",
+      "regiments": 3,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0204): dated May 16 allocation, 3 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_michigan"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_new_hampshire",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_new_hampshire",
+      "post": "st_gov_new_hampshire",
+      "regiments": 1,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0204): dated May 16 allocation, 1 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_new_hampshire"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_new_jersey",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_new_jersey",
+      "post": "st_gov_new_jersey",
+      "regiments": 3,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0204): dated May 16 allocation, 3 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_new_jersey"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_new_york",
+    "sourceProfile": "US-M15-NY",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_new_york",
+      "post": "st_gov_new_york",
+      "regiments": 14,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.208 (https://ehistory.osu.edu/books/official-records/122/0208): dated May 16 allocation, 14 regiment(s) for three years or war. Scott to Morgan, 16 May: fourteen accepted yesterday from the Committee of Safety are expressly additional to the earlier long-term volunteers, not deducted from them. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_new_york"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_ohio",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_ohio",
+      "post": "st_gov_ohio",
+      "regiments": 9,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0204): dated May 16 allocation, 9 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_ohio"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_vermont",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_vermont",
+      "post": "st_gov_vermont",
+      "regiments": 1,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0204): dated May 16 allocation, 1 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_vermont"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may16_vol_wisconsin",
+    "sourceProfile": "US-M15",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": {
+      "id": "us_may16_vol_wisconsin",
+      "post": "st_gov_wisconsin",
+      "regiments": 2,
+      "termDays": 1095,
+      "fromDate": "1861-05-16",
+      "source": "OR III-1 pp.203-204 (https://ehistory.osu.edu/books/official-records/122/0204): dated May 16 allocation, 2 regiment(s) for three years or war. The letter distinguishes this quota from the earlier three-month militia. [I] The principal issues through the governor, with the existing 1000 men-per-regiment, loyalty, compliance and muster rules; 1095 days represents the stated three-year term. This is a requisition, not a return of men present.",
+      "termsId": "us_may16_vol_wisconsin"
+    },
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "us_may03_national",
+    "sourceProfile": "US-M03",
+    "establishment": {
+      "id": "us_go15_infantry",
+      "faction": "union",
+      "callKind": "go15_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-05-04",
+      "men": 866,
+      "cites": [
+        [
+          "OR III-I",
+          151
+        ],
+        [
+          "OR III-I",
+          152
+        ]
+      ],
+      "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  },
+  {
+    "call": "cs_jul12_brigade_demand",
+    "sourceProfile": "CS-J12",
+    "establishment": {
+      "id": "cs_public_defense_infantry",
+      "faction": "confederate",
+      "callKind": "public_defense_volunteers",
+      "arm": "infantry",
+      "organisation": "ten_companies",
+      "effective": "1861-03-06",
+      "men": 780,
+      "cites": [
+        [
+          "OR IV-I",
+          126
+        ],
+        [
+          "OR IV-I",
+          127
+        ],
+        [
+          "OR IV-I",
+          367
+        ]
+      ],
+      "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+    },
+    "requested": null,
+    "priorRule": "S119 universal1000; explicit headcounts and explicitly unknown calls overrode it",
+    "rule": "The selected legal minimum raises model lots only. Explicit requested men remain their own rule quantity; no historical transfer receives this size."
+  }
+]

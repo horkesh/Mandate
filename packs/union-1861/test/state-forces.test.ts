@@ -51,7 +51,7 @@ describe('R97: the recorded state acts have their own cause, date and service en
       expect(loaded.world.situations.find(s => s.id === id)!.event).toEqual({ all: [{ dayAtLeast: day }, { flag: parent }] });
     }
     const nc = loaded.world.situations.find(s => s.id === 'north_carolina_forces_transferred')!;
-    expect(nc.effects.flatMap(e => 'propose' in e && e.propose.stateForces?.id === 'cs_nc_volunteers_north_carolina' ? [e.propose.stateForces] : [])).toMatchObject([{ regiments: 4, men: 4000, includesCalls: ['cs_apr22_absolute_north_carolina'] }]);
+    expect(nc.effects.flatMap(e => 'propose' in e && e.propose.stateForces?.id === 'cs_nc_volunteers_north_carolina' ? [e.propose.stateForces] : [])).toMatchObject([{ regiments: 4, men: null, includesCalls: ['cs_apr22_absolute_north_carolina'] }]);
   });
   it('records the Tennessee tender under its State chain without allocating its headcounts or ship-ready field batteries', () => {
     const loaded = seatsWorld('union-1861');

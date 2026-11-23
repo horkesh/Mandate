@@ -1,0 +1,110 @@
+{
+  "baseline": "S119 at5625454f",
+  "capture": "runs/s122/capture",
+  "positiveApplied": [
+    {
+      "key": "union-1861, war by decision, 148 days/forces.landing_refused",
+      "before": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "the one situation landing in the reference runs is made"
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S122 /0125: the unsupported opening company count becomes unknown; the existing situation landing refuses an unquantified parent. No default headcount or landing rule changed."
+      },
+      "observed": 1,
+      "cause": "S122 /0125: the unsupported opening company count becomes unknown; the existing situation landing refuses an unquantified parent. No default headcount or landing rule changed.",
+      "evidence": "docs/audit/s122-evidence/band-review.json#forces.landing_refused"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/orders.obeyed",
+      "before": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 14,
+        "why": "S122 /0125/0127 [I]: sourced call establishments and unknown historical quantities change the ordinary command and received-picture trajectory. Seven orders are obeyed; response records and exact identities are retained."
+      },
+      "observed": 7,
+      "cause": "S122 /0125/0127 [I]: sourced call establishments and unknown historical quantities change the ordinary command and received-picture trajectory. Seven orders are obeyed; response records and exact identities are retained.",
+      "evidence": "docs/audit/s122-evidence/band-review.json#orders.obeyed"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.supply",
+      "before": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S119: Patterson day140 changes from S116 holding to direct. Dropping supply from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. Supply remains live in the unchanged testbed reference; no supply or scoring rule changed."
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S122 /0125/0127 [I]: the changed force quantities restore one live supply contribution among retained planner candidates. No supply weight, candidate score or definition of a live term changed."
+      },
+      "observed": 1,
+      "cause": "S122 /0125/0127 [I]: the changed force quantities restore one live supply contribution among retained planner candidates. No supply weight, candidate score or definition of a live term changed.",
+      "evidence": "docs/audit/s122-evidence/band-review.json#planner.term.supply"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.goal_set",
+      "before": {
+        "minFires": 1,
+        "maxFires": 6
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 14,
+        "why": "S122 /0125/0127 [I]: ordinary command and planning respond to the changed strength picture; seven goals are set. No authored goal, term weight or scheduling rule changed."
+      },
+      "observed": 7,
+      "cause": "S122 /0125/0127 [I]: ordinary command and planning respond to the changed strength picture; seven goals are set. No authored goal, term weight or scheduling rule changed.",
+      "evidence": "docs/audit/s122-evidence/band-review.json#plans.goal_set"
+    }
+  ],
+  "quietProposal": [
+    {
+      "key": "union-1861, war by decision, 148 days/forces.landed_by_situation",
+      "before": {
+        "minFires": 1,
+        "maxFires": 4
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S122 /0125: unsupported parent strength becomes unknown, so the existing landing cannot detach a known number of men."
+      },
+      "observed": 0,
+      "cause": "S122 /0125: unsupported parent strength becomes unknown, so the existing landing cannot detach a known number of men.",
+      "evidence": "docs/audit/s122-evidence/band-review.json#forces.landed_by_situation"
+    }
+  ],
+  "quietApplied": true,
+  "rule": "Four existing positive recentres are unchanged. The exact proposed landing zero is now applied under the lead ruling, bound to its complete fingerprint and paired driver. No other band or criterion changes.",
+  "driver": {
+    "test": "packages/cli/test/situation-landing.test.ts",
+    "needle": "drives forces.landed_by_situation from a quantified fictional parent and refuses an unknown parent",
+    "receipt": "runs/s122/landing-control.json",
+    "pass": 2
+  },
+  "quietBookkeeping": "Removed obsolete forces.landing_refused entry from QUIET after the reference now fires it once; its existing negative test and the new paired control remain. No new zero has been applied.",
+  "diagnosis": {
+    "day": 33,
+    "beforeLanding": 1,
+    "afterLanding": 0,
+    "afterRefusal": 1,
+    "parent": "fb_us_pickens_vogdes_co_a",
+    "source": "Opening CSV explicitly says inferred90, no printed January25 return; OR I-I pp.352-353 names augmentation and unprinted return, not a returned90. 0125 forbids a default.",
+    "effect": "Unknown parent cannot furnish a quantified detachment. Existing Pickens order/flag remains a paper, not proof of executed landing."
+  },
+  "authorization": "CODEX.md, 2026-11-23 Claude to Codex: S122 received; the landing zero is authorised; commit. Exactly the proposed record and paired fictional driver; no cause, evidence or numeric rewrite.",
+  "quietFingerprints": [
+    {
+      "key": "union-1861, war by decision, 148 days/forces.landed_by_situation",
+      "fingerprint": "d88f7c043e717692f3fe541b545a1385efaca2bfeda16a1cba32d6a20c8e2652"
+    }
+  ]
+}

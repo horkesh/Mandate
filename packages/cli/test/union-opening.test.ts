@@ -22,11 +22,11 @@ describe('the opening of 1861 (lane 1.11)', () => {
     expect(run.state.postStates['us_sumter_relief_expedition' as never]).toMatchObject({ postKind: 'temporary_command', postHolder: 'fox_gustavus_v', postOperation: 'sumter_relief' });
   });
 
-  it('lands the Pickens company from its ship by the Navy Department’s order (S06), through the detachment path (lane 1.4b)', () => {
+  it('retains the Pickens landing order but refuses to quantify the unreturned company (0125)', () => {
     expect(run.state.situationFlags['pickens_landed']).toBeDefined();
     const landed = Object.entries(run.state.forceLocations).filter(([id]) => id.startsWith('fb_us_pickens_vogdes_co_a.det.'));
-    expect(landed.length).toBe(1);
-    expect(landed[0]![1].locAboard).toBeNull();
+    expect(landed.length).toBe(0);
+    expect(run.state.forceBlockStates[ids.toId('forceBlock','fb_us_pickens_vogdes_co_a')]!.fbLots[0]).toMatchObject({lotMen:null,lotStrength:{strengthKind:'unknown'}});
   });
 
   it('S17: the Fort Monroe command opens before the question, its holder carries both rows, and the history run holds the men', () => {

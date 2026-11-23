@@ -17,6 +17,8 @@ export interface RaisingRung {
 
 /** Clauses of the issuer's paper. Recorded only; neither these nor demand imply available means. */
 export interface CallProfile {
+  /** The legal organisation this paper uses, declared by the pack (0127). */
+  readonly callEstablishment?: string;
   /** Typed readings of original issuer details. Omitted metadata makes no claim of unknownness. */
   readonly information?: readonly CallInformation[];
   readonly id: string;
@@ -72,6 +74,8 @@ export function callValueLinkProblems(profile: CallProfile): string[] {
 }
 
 export interface RecruitmentRules {
+  readonly establishments?: readonly RegimentEstablishment[];
+  readonly defaultEstablishments?: readonly { readonly faction: FactionId; readonly arm: string; readonly id: string }[];
   /** Dated sourced own-state records, filed with their named holder; never historical replies. */
   readonly stateConditions?: readonly StateConditionRecord[];
   /** Model planning size [I], never a historical norm. At most four regiments. */
@@ -83,7 +87,7 @@ export interface RecruitmentRules {
   /** The post kinds whose holders answer a call (a governor's). A post of a self-governing department never does (SENSITIVE-HISTORY 3.7). */
   readonly raisingPostKinds: readonly string[];
   /** Men in a regiment. */
-  readonly menPerRegiment: number;
+  readonly menPerRegiment?: number;
   /** The arm new blocks are (the pack's vocabulary). */
   readonly arm: string;
   /** Days of stores a new block is issued at muster. */
@@ -100,6 +104,24 @@ export interface RecruitmentRules {
   readonly maxTermDays: number;
   /** Days a levy due to muster waits while its region is enemy-held; past them it lapses, reported to the caller (the lead's ruling). */
   readonly musterBlockedDays: number;
+}
+
+/** Legal minimum, not a historical return or a claim about achieved muster. */
+export interface RegimentEstablishment {
+  readonly id: string;
+  readonly faction: FactionId;
+  readonly callKind: string;
+  readonly arm: string;
+  readonly organisation: string;
+  readonly effective: string;
+  readonly men: number | null;
+  readonly cites: readonly (readonly [string, number])[];
+  readonly note: string;
+}
+
+export function callEstablishment(rules: RecruitmentRules, profile?: CallProfile, faction?: string | null, arm = rules.arm): RegimentEstablishment | undefined {
+  const id = profile?.callEstablishment ?? rules.defaultEstablishments?.find(r => r.faction === faction && r.arm === arm)?.id;
+  return rules.establishments?.find(e => e.id === id && e.arm === arm && (faction == null || e.faction === faction));
 }
 
 /** A pack's situation flag and what it adds, for the self-emancipation term. */
@@ -175,7 +197,19 @@ export function recruitmentRuleProblems(r: RecruitmentRules): string[] {
     }
     for (const d of p.materialDemand) if (d.quantity !== null) whole(problems, `recruitment callProfiles.${p.id}.quantity`, d.quantity, 0);
   }
-  for (const k of ['menPerRegiment', 'maxTermDays'] as const) whole(problems, `recruitment rule ${k}`, r[k], 1);
+  whole(problems, 'recruitment rule maxTermDays', r.maxTermDays, 1);
+  if (r.menPerRegiment !== undefined) whole(problems, 'recruitment rule menPerRegiment', r.menPerRegiment, 1);
+  if (r.menPerRegiment !== undefined && r.establishments !== undefined) problems.push('choose establishments or legacy menPerRegiment, never both');
+  if (r.menPerRegiment === undefined && !r.establishments?.length) problems.push('recruitment needs declared establishments');
+  const establishmentIds = new Set<string>();
+  for (const e of r.establishments ?? []) {
+    if (!e.id.trim() || establishmentIds.has(e.id)) problems.push(`invalid or duplicate establishment ${e.id}`);
+    establishmentIds.add(e.id);
+    if (e.men !== null) whole(problems, `establishment ${e.id}.men`, e.men, 1);
+    if (!e.cites.length || e.cites.some(([s,p]) => !s.trim() || !Number.isSafeInteger(p) || p < 1)) problems.push(`establishment ${e.id} needs printed-page provenance`);
+  }
+  for (const p of r.callProfiles ?? []) if (r.establishments !== undefined && !establishmentIds.has(p.callEstablishment ?? '')) problems.push(`call ${p.id} needs its own establishment`);
+  for (const d of r.defaultEstablishments ?? []) if (!r.establishments?.some(e => e.id === d.id && e.faction === d.faction && e.arm === d.arm)) problems.push(`invalid default establishment ${d.id}`);
   for (const k of ['storesDays', 'musterDays', 'musterBlockedDays'] as const) whole(problems, `recruitment rule ${k}`, r[k], 0);
   for (const k of ['loyaltyFull', 'loyaltyWeight'] as const) whole(problems, `recruitment rule ${k}`, r[k], 0, 1000);
   if (r.loyaltyWeight > 0 && r.loyaltyFull === 0) problems.push('recruitment rule loyaltyFull must be above 0 when loyalty is read');

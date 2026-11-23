@@ -53,7 +53,7 @@ describe('a call for regiments, answered by each governor through his own compli
     const levy = Object.values(s.postLevies)[0]!;
     expect(levy).toMatchObject({ levyPost: NORTH_GOVERNOR, levyGovernor: P('n_governor'), levyIssuer: P('n_leader'), levyTermDays: 90, levyResponse: phase0.responseKey(levy.levyCall, P('n_governor')) });
     expect(levy.levyRegiments).toBeGreaterThan(0);
-    expect(levy.levyMen).toBe(levy.levyRegiments! * world.map.world.rules.recruitment.menPerRegiment);
+    expect(levy.levyMen).toBe(levy.levyRegiments! * world.map.world.rules.recruitment.menPerRegiment!);
     expect(fires('recruitment.called')).toBe(1);
     expect(fires('recruitment.answered')).toBe(1);
     // His answer goes back to the First Minister: the regiments he says he will raise, and the rung he declares.

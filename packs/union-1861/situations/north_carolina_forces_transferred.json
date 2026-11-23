@@ -37,9 +37,14 @@
         "stateForces": {
           "id": "cs_nc_state_transfer_north_carolina",
           "regiments": 10,
-          "men": 10000,
+          "men": null,
           "arm": "infantry",
-          "termDays": null
+          "termDays": null,
+          "strengthBasis": {
+            "strengthKind": "unknown",
+            "strengthSource": "OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+            "strengthDate": null
+          }
         }
       }
     },
@@ -54,13 +59,18 @@
         "stateForces": {
           "id": "cs_nc_volunteers_north_carolina",
           "regiments": 4,
-          "men": 4000,
+          "men": null,
           "arm": "infantry",
           "termDays": null,
           "termUnknown": true,
           "includesCalls": [
             "cs_apr22_absolute_north_carolina"
-          ]
+          ],
+          "strengthBasis": {
+            "strengthKind": "unknown",
+            "strengthSource": "OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+            "strengthDate": null
+          }
         }
       }
     },
@@ -75,10 +85,15 @@
         "stateForces": {
           "id": "cs_nc_additional_north_carolina",
           "regiments": 2,
-          "men": 2000,
+          "men": null,
           "arm": "infantry",
           "termDays": null,
-          "termUnknown": true
+          "termUnknown": true,
+          "strengthBasis": {
+            "strengthKind": "unknown",
+            "strengthSource": "OR IV-I pp.402-404; dated constituent muster/transfer returns unrecovered",
+            "strengthDate": null
+          }
         }
       }
     },

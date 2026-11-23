@@ -5,8 +5,22 @@
       "date": "1861-07-31",
       "kind": "side-set",
       "faction": "confederate",
-      "departmentKinds": ["state_government"],
-      "exactly": ["st_alabama", "st_arkansas", "st_florida", "st_georgia", "st_louisiana", "st_mississippi", "st_north_carolina", "st_south_carolina", "st_tennessee", "st_texas", "st_virginia"],
+      "departmentKinds": [
+        "state_government"
+      ],
+      "exactly": [
+        "st_alabama",
+        "st_arkansas",
+        "st_florida",
+        "st_georgia",
+        "st_louisiana",
+        "st_mississippi",
+        "st_north_carolina",
+        "st_south_carolina",
+        "st_tennessee",
+        "st_texas",
+        "st_virginia"
+      ],
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 'Which states have seceded' (an exact band: eleven) and Appendix A; Missouri, Kentucky, Maryland and Delaware had not seceded on 31 July"
     },
     {
@@ -14,7 +28,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "Maryland",
-      "departments": ["st_maryland"],
+      "departments": [
+        "st_maryland"
+      ],
       "side": "union",
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, not seceded, Hicks governor, Federal troops at Baltimore from 13 May (MSA exhibit; OR I-2 p. 29)"
     },
@@ -23,7 +39,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "Delaware",
-      "departments": ["st_delaware"],
+      "departments": [
+        "st_delaware"
+      ],
       "side": "union",
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, not seceded, Burton governor (AAC)"
     },
@@ -32,7 +50,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "Kentucky",
-      "departments": ["st_kentucky"],
+      "departments": [
+        "st_kentucky"
+      ],
       "side": null,
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: neutral by the Governor's proclamation of 20 May, government not seceded (AAC; Kentucky archives)"
     },
@@ -41,7 +61,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "Missouri",
-      "departments": ["st_missouri"],
+      "departments": [
+        "st_missouri"
+      ],
       "side": "union",
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union by 31 July, the convention installed Gamble's provisional government (Missouri convention journal; MoSA); Jackson's rival government continues in the field"
     },
@@ -50,7 +72,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "western Virginia (the Restored Government at Wheeling)",
-      "departments": ["st_virginia_restored"],
+      "departments": [
+        "st_virginia_restored"
+      ],
       "side": "union",
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: Union, the Restored Government of Virginia at Wheeling, Pierpont governor from 20 June, senators seated 13 July (WV Archives). Department reference: source/world/departments.csv, st_virginia_restored; OR I-2 p. 723, Cameron to Governor Francis H. Peirpoint, 25 June 1861 (https://ehistory.osu.edu/books/official-records/002/0723), read for R85. The existing western_virginia recognition option sets this department to Union; the expected side and checkpoint date are unchanged"
     },
@@ -59,7 +83,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "the Creek (Muscogee) Nation",
-      "departments": ["nation_muscogee"],
+      "departments": [
+        "nation_muscogee"
+      ],
       "side": "confederate",
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: allied to the Confederacy by treaty (10 July; CSAL)"
     },
@@ -68,7 +94,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "the Choctaw Nation",
-      "departments": ["nation_choctaw"],
+      "departments": [
+        "nation_choctaw"
+      ],
       "side": "confederate",
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: allied to the Confederacy by treaty (12 July; CSAL)"
     },
@@ -77,7 +105,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "the Chickasaw Nation",
-      "departments": ["nation_chickasaw"],
+      "departments": [
+        "nation_chickasaw"
+      ],
       "side": "confederate",
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: allied to the Confederacy by treaty (12 July; CSAL)"
     },
@@ -86,7 +116,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "the Cherokee Nation",
-      "departments": ["nation_cherokee"],
+      "departments": [
+        "nation_cherokee"
+      ],
       "side": null,
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: neutral (Ross's proclamation, 17 May; OR I-13 p. 490); the treaty of 7 October is after the window"
     },
@@ -95,7 +127,9 @@
       "date": "1861-07-31",
       "kind": "government-side",
       "name": "the Seminole Nation",
-      "departments": ["nation_seminole"],
+      "departments": [
+        "nation_seminole"
+      ],
       "side": null,
       "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 sides table: not yet allied; treaties from 1 August are after the window (CSAL)"
     },
@@ -126,7 +160,33 @@
       "min": 100000,
       "max": 200000,
       "floorBinding": true,
-      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B A3: whole Confederacy about 112,040 in July (Livermore p. 42, an estimate he calls probably too low), rounded outward to 100,000; above 32,232 effectives at Bull Run alone (Livermore p. 77). Ceiling 200,000 [I]: docs/research/_leads/T2-strengths.md, section 1, corrected reasoning (R44), Walker to Davis, 24 July 1861, OR IV-1 pp. 496-497. His 190 regiments and 34 battalions give a rough paper estimate of about 200,000 to 210,000 for those units [I], not a count of men present or under arms. The independent companies, twelve recently called regiments and reserve corps of 30,000 are outside that count. The 200,000 ceiling is an inferred, revisable calibration band [I], not an upper bound the sources prove; Davis's 20 July message gives no troop count"
+      "cite": "docs/research/2026-11-16-numbers-and-facts-1861.md, Priority 1 and Appendix B A3: whole Confederacy about 112,040 in July (Livermore p. 42, an estimate he calls probably too low), rounded outward to 100,000; above 32,232 effectives at Bull Run alone (Livermore p. 77). Ceiling 200,000 [I]: docs/research/_leads/T2-strengths.md, section 1, corrected reasoning (R44), Walker to Davis, 24 July 1861, OR IV-1 pp. 496-497. His 190 regiments and 34 battalions give a rough paper estimate of about 200,000 to 210,000 for those units [I], not a count of men present or under arms. The independent companies, twelve recently called regiments and reserve corps of 30,000 are outside that count. The 200,000 ceiling is an inferred, revisable calibration band [I], not an upper bound the sources prove; Davis's 20 July message gives no troop count",
+      "diagnostics": [
+        {
+          "date": "1861-06-17",
+          "kind": "estimate",
+          "description": "Virginia upward of 40000 raised/equipped; S121 R02 cannot reconcile membership with model lots. Not moved to July31.",
+          "cite": "OR IV-I pp.388,390-393; S121 returns.csv R02"
+        },
+        {
+          "date": "1861-07-23",
+          "kind": "estimate",
+          "description": "Tennessee whole army about22000, not 22000 infantry plus2000 cavalry; S121 R08 lacks exact membership. Not moved to July31.",
+          "cite": "OR I-IV pp.372-373; S121 returns.csv R08"
+        },
+        {
+          "date": "1861-03-04",
+          "kind": "estimate",
+          "description": "Charleston probable command3000. Opening aggregate overlaps independently represented constituents; no lot allocation or sum.",
+          "cite": "OR I-I pp.261-262"
+        },
+        {
+          "date": "1861-04-11",
+          "kind": "estimate",
+          "description": "Morris Island infantry2000 exclusive of artillery includes Gregg1100, Cunningham418 and Kershaw300-500. No exact disjoint lot group.",
+          "cite": "OR I-I p.302"
+        }
+      ]
     },
     {
       "id": "operations_union",
@@ -148,7 +208,10 @@
     }
   ],
   "pushback": [],
-  "pushbackRegisters": ["pushback-union.json", "pushback-confederate.json"],
+  "pushbackRegisters": [
+    "pushback-union.json",
+    "pushback-confederate.json"
+  ],
   "victory": {
     "capital": 1000,
     "government": 100,

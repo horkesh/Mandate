@@ -1,3 +1,4 @@
+import { migrateStrengthKinds } from '../forces/migrations.ts';
 /**
  * Versioned saves (FOUNDATION section 11.2; AWWV lesson M4).
  *
@@ -18,7 +19,7 @@ import { canonicalHash } from './hash.ts';
 export const SAVE_FORMAT = 'mandate-save';
 
 /** Bump this, and add a migration and a fixture, whenever the saved shape changes. */
-export const CURRENT_SAVE_SCHEMA = 3;
+export const CURRENT_SAVE_SCHEMA = 4;
 
 export interface SaveEnvelope {
   readonly format: typeof SAVE_FORMAT;
@@ -64,6 +65,10 @@ export const SAVE_MIGRATIONS: readonly SaveMigration[] = [{
   from: 2, to: 3,
   change: 'Allow unknown lot stragglers and named transfer orders. Existing lot values and orders are preserved exactly.',
   migrate: save => save,
+}, {
+  from: 3, to: 4,
+  change: 'Label model-raised lots as rule; historical quantities without saved provenance become unknown. Never invent a return.',
+  migrate: ({state,log}) => ({state:migrateStrengthKinds(state),log}),
 }];
 
 export type SaveProblem =

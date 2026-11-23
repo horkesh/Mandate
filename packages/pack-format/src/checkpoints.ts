@@ -54,6 +54,13 @@ export const CheckpointSchema = z.discriminatedUnion('kind', [
     max: whole.nullable(),
     /** False: a run below `min` is reported, not failed (the research note's rule while no primary return bounds it). */
     floorBinding: z.boolean(),
+    /** Exact dated scope; constituents are replaced as a bound, never added to it. */
+    groups: z.array(z.strictObject({
+      id: termId, kind: z.enum(['return','estimate']), date: isoDate,
+      department: idOf('department').optional(), post: idOf('post').optional(), members: z.array(z.string().min(1)).min(1),
+      min: whole, max: whole.nullable(), cite, membershipSource: cite,
+    }).refine(g => (g.department === undefined) !== (g.post === undefined), 'exactly one department or command post defines the group scope')).optional(),
+    diagnostics: z.array(z.strictObject({ date: isoDate, kind: z.enum(['return','estimate']), description: z.string().min(1), cite })).optional(),
   }).describe('The faction’s men in blocks of known strength on the date, inside [min, max] (max null: no upper bound yet).'),
   z.strictObject({
     ...base,

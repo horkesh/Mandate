@@ -86,7 +86,7 @@ it('S119: a received call answer opens named transfer after the normal muster wi
    reportSubjectKind: 'post', reportSubjectId: p.id, reportDay: 100}, 101));
  add(report('m.s119.harris', {reportAuthor:harris, reportAuthorPost:donor, reportSubjectKind:'post', reportSubjectId:donor, reportDay:100}, 101));
  const dispatch = phase0.tick(world, state, [{day:119, seat, command:{cmd:'call', to:donor, regiments:call.regiments,
-   men:call.men!, termDays:call.termDays, callId, route:'courier', bypass:false}}], {freeze:true});
+   ...(call.men === undefined ? {} : {men:call.men}), termDays:call.termDays, callId, route:'courier', bypass:false}}], {freeze:true});
  expect(dispatch.rejections).toEqual([]);
  const letter = dispatch.requestDispatches!.find(m => m.msgOrder?.orderCall?.callId === callId)!;
  expect(letter.msgTo).toBe(harris);
@@ -127,7 +127,7 @@ it('S119: a received call answer opens named transfer after the normal muster wi
  const augmented = musterAssignments({...positioned, orderResponses:{...positioned.orderResponses,...priorCalls}},[],[{block:cavalry,post:donor}],[]);
  const withPaper = deliverReport(confirmReceivers(augmented), seat, report('m.s119.delivered', answer.msgReport!, mustered.stateDay), NO_TRUTH);
  const name = (regiment: string) => Object.values(withPaper.forceBlockStates).flatMap(b => b.fbLots).find(l => l.lotRegiment === regiment);
- expect(name('tn_2_infantry')).toMatchObject({lotMen:null,lotStragglers:null});
+ expect(name('tn_2_infantry')).toMatchObject({lotMen:780,lotStragglers:0,lotStrength:{strengthKind:'rule'}});
  expect(name('tn_3_infantry')).toBeUndefined();
  const offered = request(withPaper);
  const entries = answerEntries(offered, createRuleSeat());

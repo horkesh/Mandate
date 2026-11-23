@@ -17,7 +17,8 @@ export function patchService(block: ForceBlockState, patch: Partial<Enlistment>)
 }
 
 /** Observe the former block schema, keeping all old expectations byte-for-byte. */
-export function observeBlock(block: ForceBlockState): Omit<ForceBlockState, 'fbLots'> & ReturnType<typeof forceTotals> {
+export function observeBlock(block: ForceBlockState): Omit<ForceBlockState, 'fbLots'> & Pick<ReturnType<typeof forceTotals>, 'fbStrength' | 'fbStragglers'> {
   const { fbLots: _lots, ...rest } = block;
-  return { ...rest, ...forceTotals(block) };
+  const { fbStrength, fbStragglers } = forceTotals(block);
+  return { ...rest, fbStrength, fbStragglers };
 }

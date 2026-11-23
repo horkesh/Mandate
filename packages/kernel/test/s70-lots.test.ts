@@ -4,24 +4,24 @@ import { toId } from '../src/ids.ts';
 
 const lot = (id: string, men: number | null, stragglers = 0): RegimentLot => ({
   lotId: id, lotRegiment: null, lotGenerated: false, lotArm: 'infantry',
-  lotMen: men, lotStragglers: stragglers, lotService: null,
+  lotStrength: { strengthKind: men === null ? 'unknown' : 'rule', strengthSource: men === null ? null : 'fictional model quantity', strengthDate: null }, lotMen: men, lotStragglers: stragglers, lotService: null,
 });
 
 describe('regiment quantities (0108, S70)', () => {
   it('derives exact totals and preserves unknown men', () => {
-    expect(aggregateLots([lot('b', 3, 2), lot('a', 2, 1)])).toEqual({ fbStrength: 5, fbStragglers: 3 });
-    expect(aggregateLots([lot('a', null), lot('b', 2)])).toEqual({ fbStrength: null, fbStragglers: 0 });
+    expect(aggregateLots([lot('b', 3, 2), lot('a', 2, 1)])).toMatchObject({ fbStrength: 5, fbStragglers: 3 });
+    expect(aggregateLots([lot('a', null), lot('b', 2)])).toMatchObject({ fbStrength: null, fbStragglers: 0 });
   });
   it('allocates losses proportionally with integer remainders in identity order', () => {
     const input = [lot('b', 3), lot('a', 3)];
     const after = changeLotTotals(input, 3, 1);
     expect(after.map(x => [x.lotId, x.lotMen, x.lotStragglers])).toEqual([['b', 2, 0], ['a', 1, 1]]);
-    expect(aggregateLots(after)).toEqual({ fbStrength: 3, fbStragglers: 1 });
+    expect(aggregateLots(after)).toMatchObject({ fbStrength: 3, fbStragglers: 1 });
     expect(input.map(x => x.lotMen)).toEqual([3, 3]);
   });
   it('returns and captures stragglers exactly without guessing unknown strength', () => {
     const a = [lot('a', 0, 2), lot('b', 0, 1)];
-    expect(aggregateLots(changeLotTotals(a, 2, 1))).toEqual({ fbStrength: 2, fbStragglers: 1 });
+    expect(aggregateLots(changeLotTotals(a, 2, 1))).toMatchObject({ fbStrength: 2, fbStragglers: 1 });
     expect(changeLotTotals([lot('a', null, 2)], null, 1)[0]!.lotMen).toBeNull();
   });
   it('keeps a mixed straggler total unknown while crediting only accounted captures', () => {
@@ -29,7 +29,7 @@ describe('regiment quantities (0108, S70)', () => {
     const after = changeLotTotals([held, lot('accounted', 3, 2)], null, 1);
     expect(after).toEqual([held, lot('accounted', 3, 1)]);
     expect(knownStragglers({ fbLots: after })).toBe(1);
-    expect(aggregateLots(after)).toEqual({ fbStrength: null, fbStragglers: null });
+    expect(aggregateLots(after)).toMatchObject({ fbStrength: null, fbStragglers: null });
   });
   it('reuses derived totals across block changes that retain the same lots', () => {
     const cache = new WeakMap();
