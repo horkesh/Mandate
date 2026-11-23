@@ -55,7 +55,7 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
   const { world } = ctx;
   const assignment = state.seatAssignments[seat];
   if (assignment === undefined) return 'unknown_seat';
-  const sender = senderFor(world,state,seat,requisition ? cmd.to : undefined);
+  const sender = senderFor(world, state, seat, requisition ? cmd.to : undefined, ctx.senderViews);
   if (sender === null) return 'not_a_principal';
   const issuer = { id: sender.principal };
   const target = sender.definition(cmd.to);

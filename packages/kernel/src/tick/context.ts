@@ -24,6 +24,7 @@ import { heldPost, sideOfPerson, type HeldPostCache, type SideChange } from '../
 import { filterPostOf, whereIsPerson } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { TurnStopPoint } from '../seats/turn-stops.ts';
+import type { ViewCache } from '../view/view.ts';
 
 export type RejectionReason =
   | 'bad_goal'
@@ -152,6 +153,8 @@ export interface TickContext {
   readonly world: SeatsWorld;
   /** Inverse holder lookups shared by this tick's report routes; keyed by the exact post table. */
   readonly postHolders?: HeldPostCache;
+  /** Caller-owned view cache for the sender’s current received establishment. */
+  readonly senderViews?: ViewCache;
   /** Latency on the morning's map: courier days from the edges, the wire of whoever holds each region (0052). */
   readonly latency: LatencyMap;
   readonly day: number;
@@ -273,13 +276,13 @@ export function sendReport(
   const fromRegion = report.fromRegion ?? whereIs(ctx, state, from);
   const route = report.route ?? templateFor(world.rules.templates, report.body.reportType, report.body.reportSubtype).templateRoute;
   const faction = world.faction(sideOf(ctx, state, report.to));
-  const filterId = filterPostOf(world, state, faction.id);
+  const filterId = report.to === faction.principal ? filterPostOf(world, state, faction.id) : null;
   const filterHolder = filterId === null ? null : state.postStates[filterId]!.postHolder;
   const filter = filterId !== null && filterHolder !== null && filterHolder !== from ? { id: filterId, holder: filterHolder } : undefined;
   const toPost = heldPost(state, report.to, ctx.postHolders);
   const addressee: Hop = { hopPerson: report.to, hopPost: toPost, hopRole: 'addressee' };
   // Only a report that really goes by wire meets the filter; one sent off the wire rides past it.
-  const throughFilter = filter !== undefined && report.to === faction.principal && takenRoute(ctx, state, route, from, fromRegion, whereIs(ctx, state, report.to), report.to) === 'wire';
+  const throughFilter = filter !== undefined && takenRoute(ctx, state, route, from, fromRegion, whereIs(ctx, state, report.to), report.to) === 'wire';
   const first: Hop = throughFilter ? { hopPerson: filter.holder, hopPost: filter.id, hopRole: 'filter' } : addressee;
   const id = mintMessageId(ctx.mint, ctx.day, from, first.hopPerson, report.tag);
   const leg = hop(ctx, state, route, from, fromRegion, whereIs(ctx, state, first.hopPerson), id, 0, report.to);

@@ -1,0 +1,241 @@
+{
+  "optimization": "Look up a wire filter only on a report headed to the principal, where the existing routing logic could use it.",
+  "parent": "34421fa9899862e9b16f70e604f8d9f5fb6e99af",
+  "files": {
+    "packages/kernel/src/tick/context.ts": "5de02e0cda63a614155f7759968230df1f0842ae800ee2b259f2e3c7c9d39b20",
+    "packages/kernel/test/seats-orders.test.ts": "405abdcbcab7849ece457d653845b12293d7ee9ce74110a87b5f2e5d7dd89d98"
+  },
+  "profiledFilterCostMs": {
+    "perf2-timed": {
+      "war": {
+        "sendReport": 168.952
+      },
+      "history": {
+        "sendReport": 188.64
+      }
+    },
+    "baseline-timed": {
+      "war": {
+        "sendReport": 296.211
+      },
+      "history": {
+        "sendReport": 257.828
+      }
+    }
+  },
+  "direct": {
+    "reportsPerSample": 4000,
+    "filterRoleReadsOnNonPrincipalReport": {
+      "before": 1,
+      "after": 0
+    },
+    "samePrincipalAndNonPrincipalEnvelopes": true,
+    "medianPairedSavingMs": 2.682550000000049,
+    "pairs": [
+      {
+        "beforeMs": 41.07389999999998,
+        "afterMs": 37.55329999999992,
+        "savingMs": 3.5206000000000586
+      },
+      {
+        "beforeMs": 24.50419999999997,
+        "afterMs": 21.44679999999994,
+        "savingMs": 3.0574000000000296
+      },
+      {
+        "beforeMs": 21.748199999999997,
+        "afterMs": 20.765699999999924,
+        "savingMs": 0.9825000000000728
+      },
+      {
+        "beforeMs": 21.473299999999995,
+        "afterMs": 19.165599999999927,
+        "savingMs": 2.307700000000068
+      }
+    ]
+  },
+  "wholeRun": {
+    "rows": [
+      {
+        "slot": "war",
+        "pair": 1,
+        "order": [
+          "menu-candidate",
+          "report-filter-candidate"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 39.3407000000002,
+          "p95": 77.48660000000018,
+          "max": 104.83750000000146
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 37.69569999999976,
+          "p95": 63.65029999999933,
+          "max": 85.05519999999888
+        },
+        "parentBudgetProblems": [],
+        "candidateBudgetProblems": [],
+        "savingMs": 1.6450000000004366
+      },
+      {
+        "slot": "war",
+        "pair": 2,
+        "order": [
+          "report-filter-candidate",
+          "menu-candidate"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 40.23570000000018,
+          "p95": 75.13929999999982,
+          "max": 107.05429999999978
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 38.77169999999978,
+          "p95": 67.77099999999973,
+          "max": 87.07260000000042
+        },
+        "parentBudgetProblems": [
+          "war: median 40.2 ms a day, over the 40 ms budget"
+        ],
+        "candidateBudgetProblems": [],
+        "savingMs": 1.4640000000003965
+      },
+      {
+        "slot": "history",
+        "pair": 1,
+        "order": [
+          "report-filter-candidate",
+          "menu-candidate"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 89.86219999999958,
+          "p95": 169.43730000000141,
+          "max": 246.90339999999924
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 42.20589999999993,
+          "p95": 70.0573000000004,
+          "max": 99.30540000000019
+        },
+        "parentBudgetProblems": [
+          "history: median 89.9 ms a day, over the 40 ms budget",
+          "history: p95 169.4 ms a day, over 4 times the budget"
+        ],
+        "candidateBudgetProblems": [
+          "history: median 42.2 ms a day, over the 40 ms budget"
+        ],
+        "savingMs": 47.656299999999646
+      },
+      {
+        "slot": "history",
+        "pair": 2,
+        "order": [
+          "menu-candidate",
+          "report-filter-candidate"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 90.02109999999993,
+          "p95": 162.2412000000004,
+          "max": 220.6758000000009
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 42.52429999999913,
+          "p95": 73.29700000000048,
+          "max": 131.57250000000022
+        },
+        "parentBudgetProblems": [
+          "history: median 90.0 ms a day, over the 40 ms budget",
+          "history: p95 162.2 ms a day, over 4 times the budget"
+        ],
+        "candidateBudgetProblems": [
+          "history: median 42.5 ms a day, over the 40 ms budget"
+        ],
+        "savingMs": 47.4968000000008
+      }
+    ],
+    "medianPairedSavingMs": {
+      "war": 1.5545000000004165,
+      "history": 47.576550000000225
+    }
+  },
+  "exactReferenceBehavior": {
+    "war": {
+      "hashes": 148,
+      "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+      "summaryEqual": true,
+      "observedScoresEqual": true
+    },
+    "testbed": {
+      "hashes": 120,
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "summaryEqual": true,
+      "observedScoresEqual": true
+    },
+    "history": {
+      "hashes": 148,
+      "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+      "summaryEqual": true,
+      "observedScoresEqual": true
+    }
+  },
+  "checks": {
+    "typecheckExit": 0,
+    "focusedTestExit": 0,
+    "focusedTestFiles": 3,
+    "focusedTests": 48,
+    "projectionRatchetExit": 0,
+    "directRegressionRedExit": 1,
+    "directRegressionGreenExit": 0
+  },
+  "limit": "The alternating standalone timing process starts cold. The full suite measures the same references after checked/replayed runs under its own worker load, and is the acceptance measurement.",
+  "independentComparison": {
+    "rows": [
+      {
+        "slot": "war",
+        "dailyHashes": 148,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "dbc7d9254c4f09481adcd54a7550f6e5316eb14a94c809c48d16492f60b651a7",
+        "afterSha256": "9f2a771480769bfce73d5e2320ca958c72a59ba61279f99c808c5e0389facb4c"
+      },
+      {
+        "slot": "testbed",
+        "dailyHashes": 120,
+        "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "b2e413d302ada5e652d34b9e85e3fee7bbf2596dbfadec202db91a2f3563d7d2",
+        "afterSha256": "b8f3e18be893d540538f064a54b903003857c57ff2262a10df735d37dba87d84"
+      },
+      {
+        "slot": "history",
+        "dailyHashes": 148,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "5623b8db44a81006c58b0efd952d65bd99dffd1b69ec2477c75a5592cc048dd9",
+        "afterSha256": "d80454a1a9de2e680e954d91dfc493f244d23b9f28858445f649408a76451fc1"
+      }
+    ],
+    "frozenReferenceHashes": 268,
+    "additionalHistoryHashes": 148,
+    "differences": 0
+  }
+}

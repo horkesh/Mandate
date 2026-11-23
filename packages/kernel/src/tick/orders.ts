@@ -81,7 +81,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   const { world } = ctx;
   const assignment = state.seatAssignments[seat];
   if (assignment === undefined) return 'unknown_seat';
-  const sender = senderFor(world, state, seat);
+  const sender = senderFor(world, state, seat, undefined, ctx.senderViews);
   if (sender === null) return 'not_a_principal';
   const issuer = { id: sender.principal };
   if (!sender.posts.has(cmd.to)) {
@@ -145,7 +145,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   const cmd = { to, route, bypass };
   const issuer = { id: issuerId };
   // The whole chain of posts between the principal's own post and the target relays his order.
-  const sender = senderFor(world,state,seat,requisition)!;
+  const sender = senderFor(world, state, seat, requisition, ctx.senderViews)!;
   const officeAddress = requisition !== undefined && sender.holder(cmd.to) === null;
   const chain = officeAddress ? [cmd.to] : sender.chain(cmd.to);
   // Vacant relay posts cannot relay: the order skips them.

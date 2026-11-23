@@ -122,6 +122,8 @@ export interface TickOptions {
   readonly deepChecks?: boolean;
   /** A view cache kept by the caller across days, for the plans phase's views of the commanders it drafts for. */
   readonly viewCache?: ViewCache;
+  /** Views previously built by this run, reusable for sending from the same World. */
+  readonly senderViews?: ViewCache;
 }
 
 export interface TickResult {
@@ -149,6 +151,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   const ctx: TickContext = {
     world,
     postHolders: createHeldPostCache(),
+    senderViews: options.senderViews ?? createViewCache(),
     latency: ground.latency,
     day,
     seed: state.gameSeed,

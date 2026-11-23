@@ -1,0 +1,295 @@
+{
+  "optimization": "Derive public post definitions, received formation memberships, outgoing dispatches and received department sides once per principal menu.",
+  "parent": "5dd5e04e80ceee8e3c96b6640af480f87437f811",
+  "files": {
+    "packages/kernel/src/seats/requests.ts": "702a0d7203c542ad1fae2b1fe679f381f10e895d3ec43fa6482f690d0314ea42",
+    "packages/kernel/test/menu-received.test.ts": "db5f9120eaf02b11c8fd522a2391b8fde332d378970c524886ab55996fa91b6d",
+    "tools/rules/projection-derivations.json": "6311d35466be888508fa6f38880882b6193fe2057e272c6a50f6e8c9e550aef0"
+  },
+  "direct": {
+    "assignmentEnumerations": {
+      "before": 4,
+      "after": 1
+    },
+    "fixture": {
+      "assignments": 177,
+      "receivedReports": 120,
+      "menusPerSample": 500
+    },
+    "medianPairedSavingMs": 35.55310000000003,
+    "pairs": [
+      {
+        "beforeMs": 90.97449999999998,
+        "afterMs": 51.948800000000006,
+        "savingMs": 39.02569999999997
+      },
+      {
+        "beforeMs": 71.92849999999999,
+        "afterMs": 46.55040000000008,
+        "savingMs": 25.378099999999904
+      },
+      {
+        "beforeMs": 63.20830000000001,
+        "afterMs": 27.590499999999906,
+        "savingMs": 35.6178000000001
+      },
+      {
+        "beforeMs": 61.567999999999984,
+        "afterMs": 26.079600000000028,
+        "savingMs": 35.488399999999956
+      }
+    ]
+  },
+  "wholeRun": {
+    "rows": [
+      {
+        "slot": "war",
+        "pair": 1,
+        "order": [
+          "sender-view-candidate",
+          "menu-candidate"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 46.29819999999927,
+          "p95": 87.03189999999995,
+          "max": 114.7640999999985
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 43.16429999999991,
+          "p95": 73.38479999999981,
+          "max": 117.95510000000013
+        },
+        "parentBudgetProblems": [
+          "war: median 46.3 ms a day, over the 40 ms budget"
+        ],
+        "candidateBudgetProblems": [
+          "war: median 43.2 ms a day, over the 40 ms budget"
+        ],
+        "savingMs": 3.1338999999993575
+      },
+      {
+        "slot": "war",
+        "pair": 2,
+        "order": [
+          "menu-candidate",
+          "sender-view-candidate"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 46.053100000000086,
+          "p95": 87.03889999999956,
+          "max": 107.320099999999
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 42.50889999999981,
+          "p95": 79.35180000000037,
+          "max": 95.08829999999944
+        },
+        "parentBudgetProblems": [
+          "war: median 46.1 ms a day, over the 40 ms budget"
+        ],
+        "candidateBudgetProblems": [
+          "war: median 42.5 ms a day, over the 40 ms budget"
+        ],
+        "savingMs": 3.5442000000002736
+      },
+      {
+        "slot": "history",
+        "pair": 1,
+        "order": [
+          "menu-candidate",
+          "sender-view-candidate"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 47.23959999999988,
+          "p95": 80.08230000000003,
+          "max": 108.76239999999962
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 42.306800000000294,
+          "p95": 78.04629999999997,
+          "max": 124.27689999999984
+        },
+        "parentBudgetProblems": [
+          "history: median 47.2 ms a day, over the 40 ms budget"
+        ],
+        "candidateBudgetProblems": [
+          "history: median 42.3 ms a day, over the 40 ms budget"
+        ],
+        "savingMs": 4.932799999999588
+      },
+      {
+        "slot": "history",
+        "pair": 2,
+        "order": [
+          "sender-view-candidate",
+          "menu-candidate"
+        ],
+        "parent": {
+          "unit": "ms",
+          "days": 148,
+          "median": 44.99239999999918,
+          "p95": 79.27009999999973,
+          "max": 136.72090000000026
+        },
+        "candidate": {
+          "unit": "ms",
+          "days": 148,
+          "median": 42.57929999999942,
+          "p95": 71.60170000000016,
+          "max": 101.45329999999922
+        },
+        "parentBudgetProblems": [
+          "history: median 45.0 ms a day, over the 40 ms budget"
+        ],
+        "candidateBudgetProblems": [
+          "history: median 42.6 ms a day, over the 40 ms budget"
+        ],
+        "savingMs": 2.4130999999997584
+      }
+    ],
+    "medianPairedSavingMs": {
+      "war": 3.3390499999998156,
+      "history": 3.6729499999996733
+    }
+  },
+  "exactReferenceBehavior": {
+    "war": {
+      "hashes": 148,
+      "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+      "summaryEqual": true,
+      "observedScoresEqual": true
+    },
+    "testbed": {
+      "hashes": 120,
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "summaryEqual": true,
+      "observedScoresEqual": true
+    },
+    "history": {
+      "hashes": 148,
+      "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+      "summaryEqual": true,
+      "observedScoresEqual": true
+    }
+  },
+  "historyWorkload": {
+    "peakBlocks": {
+      "day": 135,
+      "blocks": 178,
+      "lots": 294,
+      "posts": 170
+    },
+    "peakLots": {
+      "day": 135,
+      "blocks": 178,
+      "lots": 294,
+      "posts": 170
+    },
+    "finalDay": {
+      "day": 148,
+      "blocks": 157,
+      "lots": 243,
+      "posts": 170
+    }
+  },
+  "checks": {
+    "snapshotTypecheckExit": 0,
+    "snapshotFocusedTestExit": 0,
+    "focusedTestFiles": 5,
+    "focusedTests": 54,
+    "directRegressionRedExit": 1,
+    "directRegressionGreenExit": 0
+  },
+  "protectedProjection": {
+    "identity": true,
+    "protectedRoots": 8,
+    "changed": [
+      {
+        "path": "packages/kernel/src/seats/requests.ts",
+        "symbol": "principalMenu",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)",
+        "oldHash": "c35c98626f1f79b84cf3f12cfeb0ec4677d7bfa72f8ecf631176d5f5a2871a26",
+        "newHash": "26e007a2abaf737d1b540b1554044dd5e040c64158d3bbbd4dbc19f6867bd8bd",
+        "reason": "Received post/side/appointment catalogue only. The remaining protected closure is viewFor's own-seat identity and physical location, already classified separately; no live command table selects a menu post, holder, side, relay, vacancy or appointment. S71 changes only institutional-office physical location and public role classification; protected reader identities remain exact. S74 adds immutable formation declarations and received organisation papers; own commanders follow their formation blocks. Protected reader identities remain exact, and paired-State checks retain unreceived chains. S78 implements 0110 joined-only physical headquarters and side-specific civil rail access on no-control ground; no catalogue reader or classification changes. S82 applies the sourced institutional successor whose opening faction is explicitly unknown: side follows his actual held post; known contrary allegiance and service choices retain their guards. No new protected reader or catalogue dependency.",
+        "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Decision: Seats (a view plus a menu); CODEX 2026-11-22 S62 items 1-2; notes/lane-s62-projection.md, Proposed rulings; CODEX 2026-11-22 S65 ruling 1 and S65 items 1-3; notes/lane-s65-belief.md; CODEX S71 items 1-3; notes/format-0058.md, S71; CODEX S74 items 1-7; notes/lane-s74-july.md; docs/decisions/0110-unknown-defenders-and-joining-blocks.md; notes/lane-s78-0110-rails-patterson.md; CODEX 2026-11-23 S81 received; rulings; S82, item 3; docs/audit/s82-evidence/source-reading.json (OR I-VI p.1); docs/audit/s82-evidence/projection-receipt.json"
+      },
+      {
+        "path": "packages/kernel/src/seats/requests.ts",
+        "symbol": "pendingRequests",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)",
+        "oldHash": "a51ed13f884eac71e9fb9b8297a0d7c2c98b81adcc63da3cd81ea25fa7d94906",
+        "newHash": "89c2ef421e1f7e963f6b62e001da953063ece3c091ea86e4fbc0bc3e49a56aa2",
+        "reason": "Kernel request dispatch: own-seat views and consistent plan/battle choices addressed only to that commander. Principal menus consume received evidence. Current battle identifiers and command ownership serve the local commander, never the President's catalogue. S71 changes only institutional-office physical location and public role classification; protected reader identities remain exact. S74 adds immutable formation declarations and received organisation papers; own commanders follow their formation blocks. Protected reader identities remain exact, and paired-State checks retain unreceived chains. S78 implements 0110 joined-only physical headquarters and side-specific civil rail access on no-control ground; no catalogue reader or classification changes. S81 ruling 3 keeps physical civil rail access through own positive shares; opposing shares restore the threshold rule. No new protected truth reader or catalogue dependency. S82 applies the sourced institutional successor whose opening faction is explicitly unknown: side follows his actual held post; known contrary allegiance and service choices retain their guards. No new protected reader or catalogue dependency.",
+        "citation": "docs/decisions/0052-seats-knowledge-and-the-command-log.md, Decision: Seats and The tick order; docs/decisions/0064-forces-command-movement-and-the-contest.md, Decision: Neutral passage; CODEX 2026-11-22 S62 item 2; notes/lane-s62-projection.md, Proposed rulings; CODEX 2026-11-22 S65 ruling 1 and S65 items 1-3; notes/lane-s65-belief.md; CODEX S71 items 1-3; notes/format-0058.md, S71; CODEX S74 items 1-7; notes/lane-s74-july.md; docs/decisions/0110-unknown-defenders-and-joining-blocks.md; notes/lane-s78-0110-rails-patterson.md; CODEX 2026-11-23 S78 received; rulings; S81, ruling 3; CODEX 2026-11-23 S81 received; rulings; S82, item 3; docs/audit/s82-evidence/source-reading.json (OR I-VI p.1); docs/audit/s82-evidence/projection-receipt.json"
+      }
+    ]
+  },
+  "limit": "Candidate samples are above the unchanged 40 ms median budget. Measurements are local Windows comparisons.",
+  "ownershipCorrection": {
+    "change": "Alpha-rename the local vacancy block list to distinguish it from the earlier forceAssignments read.",
+    "beforeSha256": "8d455e367104d5843be8fa39ef36b358e2923dc455ee3db26b68094672defb29",
+    "afterSha256": "702a0d7203c542ad1fae2b1fe679f381f10e895d3ec43fa6482f690d0314ea42",
+    "normalizingOnlyVacancyBindingMakesSourcesByteEqual": true,
+    "changedLines": 3,
+    "initialHookExit": 1,
+    "initialHookReason": "The lexical alias checker associates two distinct local bindings named assigned, marking the scratch vacancy list sort as a write to State.forceAssignments.",
+    "targetedChecks": {
+      "typecheck": 0,
+      "tests": 0,
+      "rules": 0,
+      "boundary": 0,
+      "licences": 0,
+      "decisions": 0,
+      "projection": 0
+    },
+    "focusedFiles": 6,
+    "focusedTests": 98,
+    "unchangedMeasurementsReused": "Only the vacancy scratch binding\u2019s identifier changed. Normalizing that identifier recovers the exact measured runtime source bytes."
+  },
+  "independentComparison": {
+    "rows": [
+      {
+        "slot": "war",
+        "dailyHashes": 148,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "dbc7d9254c4f09481adcd54a7550f6e5316eb14a94c809c48d16492f60b651a7",
+        "afterSha256": "157537e3281635c3f6bf4244d8a67807e3f95572316dc6f4df014f4d6e325902"
+      },
+      {
+        "slot": "testbed",
+        "dailyHashes": 120,
+        "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "b2e413d302ada5e652d34b9e85e3fee7bbf2596dbfadec202db91a2f3563d7d2",
+        "afterSha256": "828761ca7736c7e054d1519f4cf8ca9b265f8d6c7e187af016d749f42876d2e8"
+      },
+      {
+        "slot": "history",
+        "dailyHashes": 148,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "5623b8db44a81006c58b0efd952d65bd99dffd1b69ec2477c75a5592cc048dd9",
+        "afterSha256": "ac6083e9b7962c4f55197afab7d26f12b94a5e086adde7f596931cb60f2f3f16"
+      }
+    ],
+    "frozenReferenceHashes": 268,
+    "additionalHistoryHashes": 148,
+    "differences": 0
+  }
+}

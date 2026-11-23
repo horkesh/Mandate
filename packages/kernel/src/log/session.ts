@@ -128,11 +128,11 @@ export function playDays(
   let state = options.freeze === true ? deepFreeze(start, ledger) : start;
   const log: LogEntry[] = [];
   const hashes: DayHash[] = [];
-  const cache = createViewCache();
+  const senderViews = createViewCache();
   for (let i = 0; i < days; i++) {
     options.beforeDay?.(state.stateDay + 1);
-    const entries = pendingRequests(world, state, cache).flatMap((r) => answerEntries(r, seats(r.requestSeat)));
-    const result = tick(world, state, entries, { mapCache, ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}), ...(options.deepChecks ? { deepChecks: true } : {}) });
+    const entries = pendingRequests(world, state, senderViews).flatMap((r) => answerEntries(r, seats(r.requestSeat)));
+    const result = tick(world, state, entries, { mapCache, senderViews, ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}), ...(options.deepChecks ? { deepChecks: true } : {}) });
     options.onDay?.(result);
     state = result.state;
     log.push(...entries);
@@ -158,9 +158,10 @@ export function replay(
   const mapCache = createDerivedMapCache();
   let state = options.freeze === true ? deepFreeze(start, ledger) : start;
   const hashes: DayHash[] = [];
+  const senderViews = createViewCache();
   while (state.stateDay < throughDay) {
     options.beforeDay?.(state.stateDay + 1);
-    const result = tick(world, state, entriesForDay(log, state.stateDay + 1), { mapCache, ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}), ...(options.deepChecks ? { deepChecks: true } : {}) });
+    const result = tick(world, state, entriesForDay(log, state.stateDay + 1), { mapCache, senderViews, ...(options.telemetry ? { telemetry: options.telemetry } : {}), ...(options.freeze ? { freeze: true, freezeLedger: ledger } : {}), ...(options.deepChecks ? { deepChecks: true } : {}) });
     options.onDay?.(result);
     state = result.state;
     if (hashDue(options, state.stateDay, state.stateDay === throughDay)) hashes.push({ day: state.stateDay, hash: canonicalHash(state) });

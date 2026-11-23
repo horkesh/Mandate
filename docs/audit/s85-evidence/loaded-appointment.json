@@ -1,0 +1,1388 @@
+{
+  "step": "Index dated appointment correspondence once per menu, by mint day",
+  "parentRevision": "839272abada6d26fa572720963848b0d14481a9a",
+  "comparisonRevision": "a4c0a43a43fcc47aca93a613914d7554c7025838",
+  "changedSource": {
+    "packages/kernel/src/seats/requests.ts": {
+      "gitBlob": "98d06ed685a883ac8cf2da241cc80aad61702c75",
+      "sha256": "d0b1253f032edafbded7e60193a26b7be0b1f0ed8c9e7af7912f663bf7192f27"
+    },
+    "packages/kernel/test/menu-received.test.ts": {
+      "gitBlob": "cd9f635065eeb58730452ae23667de6487233460",
+      "sha256": "af82a9adf09e1343eb06676d756bcd04985c1f23b9014c85336ed341ab3816e5"
+    },
+    "tools/rules/projection-derivations.json": {
+      "gitBlob": "a02309467b2dc4aef48261e2302ce0818cfc6055",
+      "sha256": "24af6eb0f9644ec8e80466af0ad1fbd347e82884d536afc646795293c810cb47"
+    }
+  },
+  "loadedRuns": [
+    {
+      "mode": "cpu",
+      "tests": 1956,
+      "files": 209,
+      "skipped": 0,
+      "defaultForkWorkers": 15,
+      "elapsed": {
+        "exit": 0,
+        "seconds": 148.488,
+        "evidence": "runs/s85b/loaded-a4-cpu.exit.json"
+      },
+      "capture": "runs/s85b/perf2-full/runs/s85b/loaded-a4-cpu.capture.json",
+      "slots": [
+        {
+          "name": "union-1861, war by decision, 148 days",
+          "medianMs": 27.010800000003655,
+          "p95Ms": 47.964300000006915
+        },
+        {
+          "name": "testbed, 120 days",
+          "medianMs": 2.6689000000042142,
+          "p95Ms": 4.25810000000638
+        },
+        {
+          "name": "union-1861 history run, 148 days to 1861-07-31",
+          "medianMs": 26.61139999999432,
+          "p95Ms": 44.02019999999902
+        }
+      ]
+    },
+    {
+      "mode": "cpu",
+      "tests": 2081,
+      "files": 226,
+      "skipped": 0,
+      "defaultForkWorkers": 15,
+      "elapsed": {
+        "exit": 0,
+        "seconds": 175.209,
+        "evidence": "runs/s85b/loaded-839-cpu.exit.json"
+      },
+      "capture": "runs/s85b/loaded-839-cpu.capture.json",
+      "slots": [
+        {
+          "name": "union-1861, war by decision, 148 days",
+          "medianMs": 35.81040000001667,
+          "p95Ms": 66.82199999998556
+        },
+        {
+          "name": "testbed, 120 days",
+          "medianMs": 2.9355999999970663,
+          "p95Ms": 4.527000000001863
+        },
+        {
+          "name": "union-1861 history run, 148 days to 1861-07-31",
+          "medianMs": 33.494000000006054,
+          "p95Ms": 67.36009999999078
+        }
+      ]
+    },
+    {
+      "mode": "cpu",
+      "tests": 2082,
+      "files": 226,
+      "skipped": 0,
+      "defaultForkWorkers": 15,
+      "elapsed": {
+        "exit": 0,
+        "seconds": 173.886,
+        "evidence": "runs/s85b/loaded-appointment-cpu.exit.json"
+      },
+      "capture": "runs/s85b/loaded-appointment-cpu.capture.json",
+      "slots": [
+        {
+          "name": "union-1861, war by decision, 148 days",
+          "medianMs": 30.27619999999297,
+          "p95Ms": 57.694900000002235
+        },
+        {
+          "name": "testbed, 120 days",
+          "medianMs": 3.0622999999905005,
+          "p95Ms": 5.054299999988871
+        },
+        {
+          "name": "union-1861 history run, 148 days to 1861-07-31",
+          "medianMs": 29.597200000018347,
+          "p95Ms": 53.54509999998845
+        }
+      ]
+    },
+    {
+      "mode": "clock",
+      "tests": 2082,
+      "files": 226,
+      "skipped": 0,
+      "defaultForkWorkers": 15,
+      "elapsed": {
+        "exit": 0,
+        "seconds": 176.605,
+        "evidence": "runs/s85b/loaded-appointment-clock.exit.json"
+      },
+      "capture": "runs/s85b/loaded-appointment-clock.capture.json",
+      "slots": [
+        {
+          "name": "union-1861, war by decision, 148 days",
+          "medianMs": 32.612999999983,
+          "p95Ms": 60.94329999998445
+        },
+        {
+          "name": "testbed, 120 days",
+          "medianMs": 3.057299999985844,
+          "p95Ms": 5.2018000000098255
+        },
+        {
+          "name": "union-1861 history run, 148 days to 1861-07-31",
+          "medianMs": 31.544399999984307,
+          "p95Ms": 64.79990000001271
+        }
+      ]
+    }
+  ],
+  "loadedCpuScopedAttribution": {
+    "perf2": [
+      {
+        "pendingRequests": {
+          "sampleDeltaMs": 1836.806,
+          "shareOfScopedSamples": 44.21
+        },
+        "principalMenu": {
+          "sampleDeltaMs": 1062.023,
+          "shareOfScopedSamples": 25.58
+        },
+        "generateReports": {
+          "sampleDeltaMs": 535.898,
+          "shareOfScopedSamples": 12.85
+        },
+        "issued": {
+          "sampleDeltaMs": 501.951,
+          "shareOfScopedSamples": 12.06
+        },
+        "sendReport": {
+          "sampleDeltaMs": 394.322,
+          "shareOfScopedSamples": 9.47
+        }
+      },
+      {
+        "pendingRequests": {
+          "sampleDeltaMs": 1795.342,
+          "shareOfScopedSamples": 44.34
+        },
+        "principalMenu": {
+          "sampleDeltaMs": 1040.479,
+          "shareOfScopedSamples": 25.71
+        },
+        "generateReports": {
+          "sampleDeltaMs": 536.292,
+          "shareOfScopedSamples": 13.22
+        },
+        "issued": {
+          "sampleDeltaMs": 528.369,
+          "shareOfScopedSamples": 13.03
+        },
+        "sendReport": {
+          "sampleDeltaMs": 358.491,
+          "shareOfScopedSamples": 8.85
+        }
+      }
+    ],
+    "parent": [
+      {
+        "pendingRequests": {
+          "sampleDeltaMs": 2129.033,
+          "shareOfScopedSamples": 39.53
+        },
+        "principalMenu": {
+          "sampleDeltaMs": 1195.911,
+          "shareOfScopedSamples": 22.22
+        },
+        "generateReports": {
+          "sampleDeltaMs": 900.397,
+          "shareOfScopedSamples": 16.64
+        },
+        "issued": {
+          "sampleDeltaMs": 627.035,
+          "shareOfScopedSamples": 11.62
+        },
+        "sendReport": {
+          "sampleDeltaMs": 568.976,
+          "shareOfScopedSamples": 10.52
+        }
+      },
+      {
+        "pendingRequests": {
+          "sampleDeltaMs": 2104.955,
+          "shareOfScopedSamples": 40.32
+        },
+        "principalMenu": {
+          "sampleDeltaMs": 1190.539,
+          "shareOfScopedSamples": 22.84
+        },
+        "generateReports": {
+          "sampleDeltaMs": 897.534,
+          "shareOfScopedSamples": 17.19
+        },
+        "issued": {
+          "sampleDeltaMs": 624.27,
+          "shareOfScopedSamples": 11.99
+        },
+        "sendReport": {
+          "sampleDeltaMs": 557.068,
+          "shareOfScopedSamples": 10.67
+        }
+      }
+    ],
+    "candidate": [
+      {
+        "pendingRequests": {
+          "sampleDeltaMs": 1503.5,
+          "shareOfScopedSamples": 32.41
+        },
+        "generateReports": {
+          "sampleDeltaMs": 878.665,
+          "shareOfScopedSamples": 18.76
+        },
+        "principalMenu": {
+          "sampleDeltaMs": 600.376,
+          "shareOfScopedSamples": 13.01
+        },
+        "sendReport": {
+          "sampleDeltaMs": 494.203,
+          "shareOfScopedSamples": 10.66
+        },
+        "issued": {
+          "sampleDeltaMs": 30.719,
+          "shareOfScopedSamples": 0.67
+        },
+        "appointmentDispatchesByDay": {
+          "sampleDeltaMs": 18.127,
+          "shareOfScopedSamples": 0.4
+        }
+      },
+      {
+        "pendingRequests": {
+          "sampleDeltaMs": 1462.764,
+          "shareOfScopedSamples": 32.14
+        },
+        "generateReports": {
+          "sampleDeltaMs": 872.389,
+          "shareOfScopedSamples": 19.11
+        },
+        "principalMenu": {
+          "sampleDeltaMs": 597.616,
+          "shareOfScopedSamples": 13.13
+        },
+        "sendReport": {
+          "sampleDeltaMs": 538.055,
+          "shareOfScopedSamples": 11.79
+        },
+        "appointmentDispatchesByDay": {
+          "sampleDeltaMs": 17.269,
+          "shareOfScopedSamples": 0.38
+        }
+      }
+    ]
+  },
+  "profileScope": "Named pendingRequests, seat answers and tick branches under playDays. Setup, separate garbage-collector samples, checkpoint hash and beforeDay/onDay bookkeeping are outside this attribution. Inclusive function rows overlap. The candidate history profile has no separate issued frame.",
+  "unionWorkloadForBothSlots": {
+    "perf2": {
+      "decisions": 74,
+      "logEntries": 222,
+      "rejections": 0,
+      "sent": 11839,
+      "delivered": 11164,
+      "plansDrafted": 2
+    },
+    "parent": {
+      "decisions": 81,
+      "logEntries": 249,
+      "rejections": 0,
+      "sent": 15396,
+      "delivered": 14587,
+      "plansDrafted": 5
+    }
+  },
+  "timingLimits": "The perf2 suite differs in workload and test count. Parent/candidate CPU runs use one loaded sample each in the same mode. The final clock run leaves the sampler off. Shared host and run order limit causal estimates from wall-clock differences.",
+  "directPairOrder": [
+    "baseline/candidate",
+    "candidate/baseline",
+    "baseline/candidate",
+    "candidate/baseline"
+  ],
+  "directPairs": {
+    "reps": 400,
+    "pairs": [
+      {
+        "beforeMs": 692.3873000000001,
+        "afterMs": 80.13319999999999,
+        "savedMs": 612.2541000000001
+      },
+      {
+        "beforeMs": 675.3604999999998,
+        "afterMs": 75.09360000000015,
+        "savedMs": 600.2668999999996
+      },
+      {
+        "beforeMs": 685.3298,
+        "afterMs": 105.97270000000026,
+        "savedMs": 579.3570999999997
+      },
+      {
+        "beforeMs": 1097.5256999999997,
+        "afterMs": 114.24180000000024,
+        "savedMs": 983.2838999999994
+      }
+    ]
+  },
+  "directWitness": "Same-process alternating menus over the same fixed state, 400 iterations per sample. Each sample returned exactly the same final menu. A separate 11-case adversarial control checked correspondence domains and minted ID forms.",
+  "regressions": {
+    "direct": "1320\u00e2\u2020\u2019120 unrelated ID reads",
+    "collected": "36\u00e2\u2020\u201912 unrelated ID reads"
+  },
+  "checks": {
+    "appointment-red-direct": {
+      "exit": 1,
+      "seconds": 0.409,
+      "evidence": "runs/s85b/appointment-red-direct.exit.json"
+    },
+    "appointment-red-collected": {
+      "exit": 1,
+      "seconds": 0.865,
+      "evidence": "runs/s85b/appointment-red-collected.exit.json"
+    },
+    "appointment-green-direct": {
+      "exit": 0,
+      "seconds": 0.944,
+      "evidence": "runs/s85b/appointment-green-direct.exit.json"
+    },
+    "appointment-green-focused": {
+      "exit": 0,
+      "seconds": 5.624,
+      "evidence": "runs/s85b/appointment-green-focused.exit.json"
+    },
+    "appointment-typecheck": {
+      "exit": 0,
+      "seconds": 1.743,
+      "evidence": "runs/s85b/appointment-typecheck.exit.json"
+    },
+    "appointment-projection": {
+      "exit": 0,
+      "seconds": 3.025,
+      "evidence": "runs/s85b/appointment-projection.exit.json"
+    },
+    "appointment-rules": {
+      "exit": 0,
+      "seconds": 1.803,
+      "evidence": "runs/s85b/appointment-rules.exit.json"
+    },
+    "appointment-daily-history": {
+      "exit": 0,
+      "seconds": 20.14,
+      "evidence": "runs/s85b/appointment-daily-history.exit.json"
+    }
+  },
+  "projection": {
+    "protectedReaders": [
+      {
+        "path": "packages/kernel/src/seats/believed.ts",
+        "detail": "believedHolder reaches packages/kernel/src/seats/believed.ts:believedHolder (postStates)"
+      },
+      {
+        "path": "packages/kernel/src/seats/believed.ts",
+        "detail": "vacancyUnreported reaches packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates)"
+      },
+      {
+        "path": "packages/kernel/src/seats/requests.ts",
+        "detail": "morningGround reaches packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions)"
+      },
+      {
+        "path": "packages/kernel/src/seats/requests.ts",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)"
+      },
+      {
+        "path": "packages/kernel/src/seats/requests.ts",
+        "detail": "battleMenus reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions)"
+      },
+      {
+        "path": "packages/kernel/src/seats/requests.ts",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      {
+        "path": "packages/kernel/src/seats/requests.ts",
+        "detail": "postOfSeatPerson reaches packages/kernel/src/command/command.ts:heldPost (postStates)"
+      },
+      {
+        "path": "packages/kernel/src/view/view.ts",
+        "detail": "viewFor reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)"
+      }
+    ],
+    "changes": [
+      {
+        "path": "packages/kernel/src/seats/requests.ts",
+        "symbol": "principalMenu",
+        "from": "26e007a2abaf737d1b540b1554044dd5e040c64158d3bbbd4dbc19f6867bd8bd",
+        "to": "a421737116e5aa74c06c83862ca854fe138d6bb50e0e827fa38345b2b5479045"
+      },
+      {
+        "path": "packages/kernel/src/seats/requests.ts",
+        "symbol": "pendingRequests",
+        "from": "89c2ef421e1f7e963f6b62e001da953063ece3c091ea86e4fbc0bc3e49a56aa2",
+        "to": "d06c9228d99c9fa76d321056d174681642921031e7e6f59c35e1e9ea30552855"
+      }
+    ]
+  },
+  "references": {
+    "frozenHashes": 268,
+    "observedHistoryHashes": 148,
+    "slots": {
+      "war": {
+        "frozenHashes": 148,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+        "replayAndResume": true
+      },
+      "testbed": {
+        "frozenHashes": 120,
+        "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "replayAndResume": true
+      },
+      "history": {
+        "dailyHashes": 148,
+        "scoresExact": true,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c"
+      }
+    },
+    "timedNonClockSummariesExact": true,
+    "nonClockCriteriaExact": true,
+    "references": {
+      "runs\\s85b\\loaded-839-cpu.capture.json": "1038a724631245ff4a549ec160af3a9beb2342f971deb13c1c9b8c7954074204",
+      "runs\\s85b\\loaded-appointment-clock.capture.json": "5bb9024282b68bd9124d2fcbe4b6d220054b34777196cb3fc2e66c1bbd519b98",
+      "runs\\s85b\\appointment-daily-history.json": "95cc05ceb87805240f7dbe9b1cc41b75b96024ec095b0c0b1cfb46f434c3c1c3"
+    }
+  },
+  "standalone": {
+    "sweepSeeds": 0,
+    "phase0Passed": true,
+    "slots": [
+      {
+        "name": "union-1861, war by decision, 148 days",
+        "timing": {
+          "unit": "ms",
+          "days": 148,
+          "median": 32.528999999994994,
+          "p95": 61.16569999999774,
+          "max": 80.3524000000034
+        },
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c"
+      },
+      {
+        "name": "testbed, 120 days",
+        "timing": {
+          "unit": "ms",
+          "days": 120,
+          "median": 3.6959999999962747,
+          "p95": 5.04660000000149,
+          "max": 12.630799999998999
+        },
+        "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db"
+      },
+      {
+        "name": "union-1861 history run, 148 days to 1861-07-31",
+        "timing": {
+          "unit": "ms",
+          "days": 148,
+          "median": 32.371200000008685,
+          "p95": 64.57469999999739,
+          "max": 82.94379999999364
+        },
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c"
+      }
+    ],
+    "evidence": {
+      "exit": 0,
+      "seconds": 127.857,
+      "evidence": "runs/s85b/standalone-done-no-sweep.exit.json"
+    }
+  },
+  "referenceEvidenceReuse": "The standalone eight-seed result from prior S85 remains the latest eight-seed evidence. This step verifies exact reference behavior and reruns the zero-sweep suite workload. No new eight-seed result is asserted.",
+  "instrumentation": {
+    "method": "Installed Vitest runner, stock config and default worker count; exact done-check worker wraps original timed calls, forwards unchanged options and returns identical summary objects. CPU mode profiles only timed calls; clock mode has no sampler. Capture writes afterAll. Production test/config unchanged.",
+    "files": {
+      "loaded-setup.ts": "4cd71611077b341bb6095af341150342b782afe9052ff90f3f842152ea0a7081",
+      "loaded-vitest.mjs": "829ca39860e20343eeeefdf860b2a950b50ca0163affbeaf0c0cb71aa6c41332"
+    },
+    "smokeExitBeforeCorrection": 1,
+    "smokeExitAfterCorrection": 0,
+    "note": "Missing Profiler.enable was corrected at the cheap smoke gate before any full run. Probe selectors/skips are confined to smoke mode; every full run collected its entire revision suite."
+  },
+  "independentReview": {
+    "instrumentation": "approved; exact arguments/results, target scoping, stock runner lifecycle and exit propagation",
+    "production": "approved; existential match grouping preserves ID domains, canonical/negative day parsing, shortened IDs and dot suffixes, ordering, visibility and per-invocation dependencies",
+    "reviewedSourceBlob": "98d06ed685a883ac8cf2da241cc80aad61702c75",
+    "requiredCorrections": []
+  },
+  "remainingCategories": {
+    "source": {
+      "a4c0a43a": "runs/s85b/loaded-a4-attribution.json",
+      "839272ab": "runs/s85b/loaded-839-attribution.json"
+    },
+    "scope": "Inclusive named pendingRequests, seat-answer and tick stacks under playDays. Rows can overlap and must not be added. Sample deltas are profiler timing attribution, not independent wall-clock deltas. No-distinct-sample covers absent, inlined or unsampled frames and is not measured zero.",
+    "workload": {
+      "a4c0a43a": {
+        "suiteFiles": 209,
+        "suiteTests": 1956,
+        "forkWorkers": 15,
+        "eachUnionSlot": {
+          "days": 148,
+          "decisions": 74,
+          "logEntries": 222,
+          "messagesSent": 11839,
+          "messagesDelivered": 11164,
+          "plansDrafted": 2
+        }
+      },
+      "839272ab": {
+        "suiteFiles": 226,
+        "suiteTests": 2081,
+        "forkWorkers": 15,
+        "eachUnionSlot": {
+          "days": 148,
+          "decisions": 81,
+          "logEntries": 249,
+          "messagesSent": 15396,
+          "messagesDelivered": 14587,
+          "plansDrafted": 5
+        }
+      }
+    },
+    "categories": {
+      "receivedViews": {
+        "viewFor": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 399.932,
+              "samples": 255,
+              "shareOfScopedSamplesPct": 9.58,
+              "frameFile": "kernel/src/view/view.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 412.066,
+              "samples": 262,
+              "shareOfScopedSamplesPct": 10.13,
+              "frameFile": "kernel/src/view/view.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 492.834,
+              "samples": 316,
+              "shareOfScopedSamplesPct": 9.13,
+              "frameFile": "kernel/src/view/view.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 483.997,
+              "samples": 308,
+              "shareOfScopedSamplesPct": 9.25,
+              "frameFile": "kernel/src/view/view.ts"
+            }
+          }
+        },
+        "peopleProjection": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 113.902,
+              "samples": 73,
+              "shareOfScopedSamplesPct": 2.74,
+              "frameFile": "kernel/src/view/people.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 97.374,
+              "samples": 62,
+              "shareOfScopedSamplesPct": 2.4,
+              "frameFile": "kernel/src/view/people.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 129.189,
+              "samples": 83,
+              "shareOfScopedSamplesPct": 2.4,
+              "frameFile": "kernel/src/view/people.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 124.21,
+              "samples": 79,
+              "shareOfScopedSamplesPct": 2.37,
+              "frameFile": "kernel/src/view/people.ts"
+            }
+          }
+        },
+        "receivedCandidates": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 90.827,
+              "samples": 58,
+              "shareOfScopedSamplesPct": 2.18,
+              "frameFile": "kernel/src/seats/received.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 54.385,
+              "samples": 35,
+              "shareOfScopedSamplesPct": 1.35,
+              "frameFile": "kernel/src/seats/received.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 110.25,
+              "samples": 71,
+              "shareOfScopedSamplesPct": 2.05,
+              "frameFile": "kernel/src/seats/received.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 152.364,
+              "samples": 97,
+              "shareOfScopedSamplesPct": 2.91,
+              "frameFile": "kernel/src/seats/received.ts"
+            }
+          }
+        },
+        "reportView": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 23.591,
+              "samples": 15,
+              "shareOfScopedSamplesPct": 0.56,
+              "frameFile": "kernel/src/view/view.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 21.947,
+              "samples": 14,
+              "shareOfScopedSamplesPct": 0.54,
+              "frameFile": "kernel/src/view/view.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 29.733,
+              "samples": 19,
+              "shareOfScopedSamplesPct": 0.55,
+              "frameFile": "kernel/src/view/view.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 28.374,
+              "samples": 18,
+              "shareOfScopedSamplesPct": 0.54,
+              "frameFile": "kernel/src/view/view.ts"
+            }
+          }
+        },
+        "receivedDepartmentSides": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 10.883,
+              "samples": 7,
+              "shareOfScopedSamplesPct": 0.26,
+              "frameFile": "kernel/src/seats/received.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 12.475,
+              "samples": 8,
+              "shareOfScopedSamplesPct": 0.31,
+              "frameFile": "kernel/src/seats/received.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 18.826,
+              "samples": 12,
+              "shareOfScopedSamplesPct": 0.35,
+              "frameFile": "kernel/src/seats/received.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 23.595,
+              "samples": 14,
+              "shareOfScopedSamplesPct": 0.42,
+              "frameFile": "kernel/src/seats/received.ts"
+            }
+          }
+        },
+        "receivedStrength": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 14.061,
+              "samples": 9,
+              "shareOfScopedSamplesPct": 0.34,
+              "frameFile": "kernel/src/seats/received.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 15.628,
+              "samples": 10,
+              "shareOfScopedSamplesPct": 0.39,
+              "frameFile": "kernel/src/seats/received.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 37.69,
+              "samples": 24,
+              "shareOfScopedSamplesPct": 0.69,
+              "frameFile": "kernel/src/seats/received.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 4.757,
+              "samples": 3,
+              "shareOfScopedSamplesPct": 0.09,
+              "frameFile": "kernel/src/seats/received.ts"
+            }
+          }
+        }
+      },
+      "lotAggregationAndCommandQueries": {
+        "forceTotals": {
+          "a4c0a43a": {
+            "war": {
+              "status": "no-distinct-sample"
+            },
+            "history": {
+              "status": "no-distinct-sample"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "status": "no-distinct-sample"
+            },
+            "history": {
+              "sampleDeltaMs": 6.314,
+              "samples": 4,
+              "shareOfScopedSamplesPct": 0.12,
+              "frameFile": "kernel/src/forces/lots.ts"
+            }
+          }
+        },
+        "enlistmentsOf": {
+          "a4c0a43a": {
+            "war": {
+              "status": "no-distinct-sample"
+            },
+            "history": {
+              "status": "no-distinct-sample"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 9.408,
+              "samples": 6,
+              "shareOfScopedSamplesPct": 0.17,
+              "frameFile": "kernel/src/forces/enlistment.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 6.314,
+              "samples": 4,
+              "shareOfScopedSamplesPct": 0.12,
+              "frameFile": "kernel/src/forces/enlistment.ts"
+            }
+          }
+        },
+        "commandStrength": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 116.821,
+              "samples": 75,
+              "shareOfScopedSamplesPct": 2.82,
+              "frameFile": "kernel/src/seats/posts.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 114.595,
+              "samples": 73,
+              "shareOfScopedSamplesPct": 2.82,
+              "frameFile": "kernel/src/seats/posts.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 164.993,
+              "samples": 106,
+              "shareOfScopedSamplesPct": 3.06,
+              "frameFile": "kernel/src/seats/posts.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 170.683,
+              "samples": 109,
+              "shareOfScopedSamplesPct": 3.28,
+              "frameFile": "kernel/src/seats/posts.ts"
+            }
+          }
+        },
+        "allCommandedBlocks": {
+          "a4c0a43a": {
+            "war": {
+              "status": "no-distinct-sample"
+            },
+            "history": {
+              "status": "no-distinct-sample"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 220.499,
+              "samples": 141,
+              "shareOfScopedSamplesPct": 4.07,
+              "frameFile": "kernel/src/command/command.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 234.195,
+              "samples": 148,
+              "shareOfScopedSamplesPct": 4.45,
+              "frameFile": "kernel/src/command/command.ts"
+            }
+          }
+        },
+        "commandedBlocks": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 77.947,
+              "samples": 50,
+              "shareOfScopedSamplesPct": 1.88,
+              "frameFile": "kernel/src/command/command.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 84.589,
+              "samples": 54,
+              "shareOfScopedSamplesPct": 2.09,
+              "frameFile": "kernel/src/command/command.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 113.771,
+              "samples": 73,
+              "shareOfScopedSamplesPct": 2.11,
+              "frameFile": "kernel/src/command/command.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 98.879,
+              "samples": 63,
+              "shareOfScopedSamplesPct": 1.89,
+              "frameFile": "kernel/src/command/command.ts"
+            }
+          }
+        },
+        "headquartersOf": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 76.914,
+              "samples": 49,
+              "shareOfScopedSamplesPct": 1.84,
+              "frameFile": "kernel/src/seats/posts.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 87.738,
+              "samples": 56,
+              "shareOfScopedSamplesPct": 2.16,
+              "frameFile": "kernel/src/seats/posts.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 270.897,
+              "samples": 173,
+              "shareOfScopedSamplesPct": 5.0,
+              "frameFile": "kernel/src/seats/posts.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 290.008,
+              "samples": 185,
+              "shareOfScopedSamplesPct": 5.56,
+              "frameFile": "kernel/src/seats/posts.ts"
+            }
+          }
+        },
+        "mainBody": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 58.079,
+              "samples": 37,
+              "shareOfScopedSamplesPct": 1.39,
+              "frameFile": "kernel/src/seats/posts.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 67.463,
+              "samples": 43,
+              "shareOfScopedSamplesPct": 1.66,
+              "frameFile": "kernel/src/seats/posts.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 236.351,
+              "samples": 151,
+              "shareOfScopedSamplesPct": 4.36,
+              "frameFile": "kernel/src/seats/posts.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 244.837,
+              "samples": 156,
+              "shareOfScopedSamplesPct": 4.69,
+              "frameFile": "kernel/src/seats/posts.ts"
+            }
+          }
+        },
+        "heldPost": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 164.671,
+              "samples": 105,
+              "shareOfScopedSamplesPct": 3.94,
+              "frameFile": "kernel/src/command/command.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 169.283,
+              "samples": 108,
+              "shareOfScopedSamplesPct": 4.17,
+              "frameFile": "kernel/src/command/command.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 223.312,
+              "samples": 143,
+              "shareOfScopedSamplesPct": 4.13,
+              "frameFile": "kernel/src/command/command.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 216.921,
+              "samples": 138,
+              "shareOfScopedSamplesPct": 4.15,
+              "frameFile": "kernel/src/command/command.ts"
+            }
+          }
+        }
+      },
+      "organisation": {
+        "organisationPhase": {
+          "a4c0a43a": {
+            "war": {
+              "status": "no-distinct-sample"
+            },
+            "history": {
+              "status": "no-distinct-sample"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 48.719,
+              "samples": 32,
+              "shareOfScopedSamplesPct": 0.92,
+              "frameFile": "kernel/src/tick/organisation.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 37.916,
+              "samples": 24,
+              "shareOfScopedSamplesPct": 0.72,
+              "frameFile": "kernel/src/tick/organisation.ts"
+            }
+          }
+        },
+        "organise": {
+          "a4c0a43a": {
+            "war": {
+              "status": "no-distinct-sample"
+            },
+            "history": {
+              "status": "no-distinct-sample"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 45.492,
+              "samples": 29,
+              "shareOfScopedSamplesPct": 0.84,
+              "frameFile": "kernel/src/tick/organisation.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 33.206,
+              "samples": 21,
+              "shareOfScopedSamplesPct": 0.63,
+              "frameFile": "kernel/src/tick/organisation.ts"
+            }
+          }
+        },
+        "regroupForces": {
+          "a4c0a43a": {
+            "war": {
+              "status": "no-distinct-sample"
+            },
+            "history": {
+              "status": "no-distinct-sample"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 4.724,
+              "samples": 3,
+              "shareOfScopedSamplesPct": 0.09,
+              "frameFile": "kernel/src/forces/regroup.ts"
+            },
+            "history": {
+              "status": "no-distinct-sample"
+            }
+          }
+        }
+      },
+      "civilRail": {
+        "governmentRailOf": {
+          "a4c0a43a": {
+            "war": {
+              "status": "no-distinct-sample"
+            },
+            "history": {
+              "status": "no-distinct-sample"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 59.395,
+              "samples": 38,
+              "shareOfScopedSamplesPct": 1.1,
+              "frameFile": "kernel/src/command/command.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 47.097,
+              "samples": 30,
+              "shareOfScopedSamplesPct": 0.9,
+              "frameFile": "kernel/src/command/command.ts"
+            }
+          }
+        },
+        "passageOf": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 43.936,
+              "samples": 27,
+              "shareOfScopedSamplesPct": 1.01,
+              "frameFile": "kernel/src/tick/passage.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 51.628,
+              "samples": 33,
+              "shareOfScopedSamplesPct": 1.28,
+              "frameFile": "kernel/src/tick/passage.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 128.127,
+              "samples": 82,
+              "shareOfScopedSamplesPct": 2.37,
+              "frameFile": "kernel/src/tick/passage.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 130.105,
+              "samples": 83,
+              "shareOfScopedSamplesPct": 2.49,
+              "frameFile": "kernel/src/tick/passage.ts"
+            }
+          }
+        },
+        "railPasses": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 7.831,
+              "samples": 5,
+              "shareOfScopedSamplesPct": 0.19,
+              "frameFile": "kernel/src/movement/march.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 12.585,
+              "samples": 8,
+              "shareOfScopedSamplesPct": 0.31,
+              "frameFile": "kernel/src/movement/march.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 3.134,
+              "samples": 2,
+              "shareOfScopedSamplesPct": 0.06,
+              "frameFile": "kernel/src/movement/march.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 3.185,
+              "samples": 2,
+              "shareOfScopedSamplesPct": 0.06,
+              "frameFile": "kernel/src/movement/march.ts"
+            }
+          }
+        }
+      },
+      "combat": {
+        "combatPhase": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 94.78,
+              "samples": 61,
+              "shareOfScopedSamplesPct": 2.29,
+              "frameFile": "kernel/src/tick/forces.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 93.881,
+              "samples": 60,
+              "shareOfScopedSamplesPct": 2.32,
+              "frameFile": "kernel/src/tick/forces.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 94.793,
+              "samples": 60,
+              "shareOfScopedSamplesPct": 1.73,
+              "frameFile": "kernel/src/tick/forces.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 109.965,
+              "samples": 70,
+              "shareOfScopedSamplesPct": 2.1,
+              "frameFile": "kernel/src/tick/forces.ts"
+            }
+          }
+        },
+        "combatDay": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 32.074,
+              "samples": 21,
+              "shareOfScopedSamplesPct": 0.79,
+              "frameFile": "kernel/src/combat/battle.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 23.638,
+              "samples": 15,
+              "shareOfScopedSamplesPct": 0.58,
+              "frameFile": "kernel/src/combat/battle.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 31.968,
+              "samples": 21,
+              "shareOfScopedSamplesPct": 0.61,
+              "frameFile": "kernel/src/combat/battle.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 29.963,
+              "samples": 19,
+              "shareOfScopedSamplesPct": 0.57,
+              "frameFile": "kernel/src/combat/battle.ts"
+            }
+          }
+        },
+        "presenceByRegion": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 29.659,
+              "samples": 19,
+              "shareOfScopedSamplesPct": 0.71,
+              "frameFile": "kernel/src/combat/battle.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 15.666,
+              "samples": 10,
+              "shareOfScopedSamplesPct": 0.39,
+              "frameFile": "kernel/src/combat/battle.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 31.001,
+              "samples": 20,
+              "shareOfScopedSamplesPct": 0.58,
+              "frameFile": "kernel/src/combat/battle.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 43.948,
+              "samples": 27,
+              "shareOfScopedSamplesPct": 0.81,
+              "frameFile": "kernel/src/combat/battle.ts"
+            }
+          }
+        }
+      },
+      "menuAndReports": {
+        "principalMenu": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 1062.023,
+              "samples": 681,
+              "shareOfScopedSamplesPct": 25.58,
+              "frameFile": "kernel/src/seats/requests.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 1040.479,
+              "samples": 665,
+              "shareOfScopedSamplesPct": 25.71,
+              "frameFile": "kernel/src/seats/requests.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 1195.911,
+              "samples": 769,
+              "shareOfScopedSamplesPct": 22.22,
+              "frameFile": "kernel/src/seats/requests.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 1190.539,
+              "samples": 760,
+              "shareOfScopedSamplesPct": 22.84,
+              "frameFile": "kernel/src/seats/requests.ts"
+            }
+          }
+        },
+        "issued": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 501.951,
+              "samples": 321,
+              "shareOfScopedSamplesPct": 12.06,
+              "frameFile": "kernel/src/seats/requests.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 528.369,
+              "samples": 337,
+              "shareOfScopedSamplesPct": 13.03,
+              "frameFile": "kernel/src/seats/requests.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 627.035,
+              "samples": 402,
+              "shareOfScopedSamplesPct": 11.62,
+              "frameFile": "kernel/src/seats/requests.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 624.27,
+              "samples": 399,
+              "shareOfScopedSamplesPct": 11.99,
+              "frameFile": "kernel/src/seats/requests.ts"
+            }
+          }
+        },
+        "generateReports": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 535.898,
+              "samples": 342,
+              "shareOfScopedSamplesPct": 12.85,
+              "frameFile": "kernel/src/tick/generate.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 536.292,
+              "samples": 342,
+              "shareOfScopedSamplesPct": 13.22,
+              "frameFile": "kernel/src/tick/generate.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 900.397,
+              "samples": 576,
+              "shareOfScopedSamplesPct": 16.64,
+              "frameFile": "kernel/src/tick/generate.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 897.534,
+              "samples": 572,
+              "shareOfScopedSamplesPct": 17.19,
+              "frameFile": "kernel/src/tick/generate.ts"
+            }
+          }
+        },
+        "sendReport": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 394.322,
+              "samples": 252,
+              "shareOfScopedSamplesPct": 9.47,
+              "frameFile": "kernel/src/tick/context.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 358.491,
+              "samples": 229,
+              "shareOfScopedSamplesPct": 8.85,
+              "frameFile": "kernel/src/tick/context.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 568.976,
+              "samples": 364,
+              "shareOfScopedSamplesPct": 10.52,
+              "frameFile": "kernel/src/tick/context.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 557.068,
+              "samples": 355,
+              "shareOfScopedSamplesPct": 10.67,
+              "frameFile": "kernel/src/tick/context.ts"
+            }
+          }
+        },
+        "deliverDue": {
+          "a4c0a43a": {
+            "war": {
+              "sampleDeltaMs": 329.254,
+              "samples": 210,
+              "shareOfScopedSamplesPct": 7.89,
+              "frameFile": "kernel/src/tick/deliver.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 336.181,
+              "samples": 213,
+              "shareOfScopedSamplesPct": 8.23,
+              "frameFile": "kernel/src/tick/deliver.ts"
+            }
+          },
+          "839272ab": {
+            "war": {
+              "sampleDeltaMs": 501.385,
+              "samples": 320,
+              "shareOfScopedSamplesPct": 9.25,
+              "frameFile": "kernel/src/tick/deliver.ts"
+            },
+            "history": {
+              "sampleDeltaMs": 406.545,
+              "samples": 260,
+              "shareOfScopedSamplesPct": 7.81,
+              "frameFile": "kernel/src/tick/deliver.ts"
+            }
+          }
+        }
+      }
+    },
+    "interpretation": {
+      "receivedViews": "viewFor and peopleProjection grew in both slots. These inclusive rows include their own evidence projection and subordinate work.",
+      "lotAggregationAndCommandQueries": "Headquarters and main-body/formation command queries grew in both slots; forceTotals has only a small distinct history frame and no distinct war frame. Command-query growth is not solely lot summation.",
+      "organisation": "Named organisation work appears on 839, with inclusive organise/regroup descendants overlapping it.",
+      "civilRail": "Government rail is newly visible; passageOf is a broader network read and railPasses falls in both slots.",
+      "combat": "combatPhase is essentially flat in war and modestly up in history. combatDay is flat in war and modestly up in history; association with rail or organisation is not established by sampling.",
+      "menuAndReports": "Report generation and delivery grow alongside more messages. The separate concentration under dated appointment issued was selected for removal; cross-revision timings also reflect the different workloads."
+    }
+  },
+  "preservationBeforeDocumentation": {
+    "base": "839272abada6d26fa572720963848b0d14481a9a",
+    "originalPaths": 2219,
+    "missing": [],
+    "changed": [
+      "packages/kernel/src/seats/requests.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "tools/rules/projection-derivations.json"
+    ],
+    "byteExactOriginalPaths": 2216,
+    "newPaths": [],
+    "protectedPaths": 273,
+    "protectedByteExact": true,
+    "runtimeFiles": 689,
+    "runtimeInventorySha256": "4f4e5d84487a12b95d3db6f5c262be50934d850a3cac5c41fe5e827f0f1d1941"
+  },
+  "finalHook": "This pre-hook packet records settled source/measurement evidence. Actual final hook and commit are in runs/s85b/commit-appointment.* and the single continuation CODEX status."
+}

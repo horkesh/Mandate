@@ -1,0 +1,787 @@
+{
+  "base": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+  "comparisonBase": "a4c0a43a43fcc47aca93a613914d7554c7025838",
+  "baselineLoaded": {
+    "exit": 1,
+    "files": 226,
+    "passed": 2077,
+    "failed": 1,
+    "skipped": 0,
+    "budgetFailureLines": [
+      "+   \"union-1861, war by decision, 148 days: median 46.5 ms a day, over the 40 ms budget\",",
+      "+   \"union-1861 history run, 148 days to 1861-07-31: median 46.6 ms a day, over the 40 ms budget\","
+    ],
+    "testSourceSha256": "a7cc35f1024cbac8deab02a05edca0de857b8db4bf60bd531b9a763d8e2d8f0f",
+    "platform": "Windows 11; shared host; default workers; CI=1 MANDATE_TIMING=1",
+    "hostedLinuxCertified": false
+  },
+  "finalLoaded": {
+    "numTotalTests": 2081,
+    "numPassedTests": 2081,
+    "numFailedTests": 0,
+    "numPendingTests": 0,
+    "numTodoTests": 0,
+    "timingTest": [
+      {
+        "file": "C:/Pyrrhic/sprint-perf3/packages/cli/test/done-check.test.ts",
+        "test": "the done check on union-1861 at war and the testbed stays inside the tick budget on this machine, so the whole check passes (wall clock: MANDATE_TIMING=1)",
+        "status": "passed"
+      }
+    ],
+    "files": 226
+  },
+  "finalLoadedCommand": {
+    "command": [
+      "npm.cmd",
+      "test",
+      "--",
+      "--reporter=default",
+      "--reporter=json",
+      "--outputFile.json=runs/s85/final-ci-vitest.json"
+    ],
+    "set": [
+      "CI=1",
+      "MANDATE_TIMING=1"
+    ],
+    "unset": [
+      "MANDATE_NO_GIT",
+      "VITEST_MAX_WORKERS",
+      "VITEST_MIN_WORKERS"
+    ],
+    "exit": 0,
+    "seconds": 175.863339500007,
+    "log": "runs\\s85\\final-ci-suite.log"
+  },
+  "noSkips": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/no-skips.ts",
+      "runs/s85/final-ci-vitest.json"
+    ],
+    "set": [],
+    "unset": [],
+    "exit": 0,
+    "seconds": 0.5251186999958009,
+    "log": "runs\\s85\\final-no-skips.log"
+  },
+  "standalone": {
+    "command": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "run:done-check",
+        "--",
+        "--label",
+        "s85-done"
+      ],
+      "set": [],
+      "unset": [
+        "CI",
+        "MANDATE_NO_GIT",
+        "MANDATE_TIMING"
+      ],
+      "exit": 0,
+      "seconds": 1663.659806199983,
+      "log": "runs\\s85\\final-done.log"
+    },
+    "criteria": [
+      {
+        "milestone": "phase0",
+        "id": "behaviour",
+        "status": "PASS",
+        "text": "rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+        "problems": [],
+        "evidence": [
+          "union-1861, war by decision, 148 days: 528 arrivals, 5 battle-days, 223 control changes, confederate 10 front segments 74 supplied 3 pockets; union 10 front segments 41 supplied 0 pockets",
+          "testbed, 120 days: 27 arrivals, 4 battle-days, 35 control changes, north 13 front segments 13 supplied 1 pockets; south 13 front segments 1 supplied 1 pockets"
+        ]
+      },
+      {
+        "milestone": "phase0",
+        "id": "hash",
+        "status": "PASS",
+        "text": "the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+        "problems": [],
+        "evidence": [
+          "union-1861, war by decision, 148 days: 148 daily hashes, final 97fb93236a6a3af5",
+          "testbed, 120 days: 120 daily hashes, final 160f67761bda23a1"
+        ]
+      },
+      {
+        "milestone": "phase0",
+        "id": "resume",
+        "status": "PASS",
+        "text": "a mid-run save, loaded, resumes to the continuous run\u2019s final hash, and the log replays to every hash",
+        "problems": [],
+        "evidence": [
+          "union-1861, war by decision, 148 days: from day 60, matches",
+          "testbed, 120 days: from day 40, matches"
+        ]
+      },
+      {
+        "milestone": "phase0",
+        "id": "liveness",
+        "status": "PASS",
+        "text": "every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+        "problems": [],
+        "evidence": [
+          "union-1861, war by decision, 148 days: 162 mechanics inside their bands",
+          "testbed, 120 days: 162 mechanics inside their bands",
+          "testbed, commanders silent, 120 days: 1 mechanics inside their bands",
+          "testbed, the principal edits every plan, 120 days: 6 mechanics inside their bands",
+          "union-1861 before the opening decisions, 30 days (the war gate, 0064): 9 mechanics inside their bands"
+        ]
+      },
+      {
+        "milestone": "phase0",
+        "id": "section-ten",
+        "status": "PASS",
+        "text": "the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite\u2019s)",
+        "problems": [],
+        "evidence": [
+          "packages/kernel/test/compliance.test.ts",
+          "packages/kernel/test/rng.test.ts",
+          "packages/kernel/test/banned-apis.test.ts",
+          "packages/kernel/test/people-verbs.test.ts"
+        ]
+      },
+      {
+        "milestone": "phase0",
+        "id": "budget",
+        "status": "PASS",
+        "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+        "problems": [],
+        "evidence": [
+          "union-1861, war by decision, 148 days: median 37.43 ms, p95 67.09 ms, max 88.36 ms over 148 days (plans.drafted 5, ladder.moved 9, situations.fired 79)",
+          "testbed, 120 days: median 3.28 ms, p95 5.07 ms, max 31.03 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+          "union-1861 history run, 148 days to 1861-07-31: median 37.32 ms, p95 66.90 ms, max 77.14 ms over 148 days (plans.drafted 5, ladder.moved 9, situations.fired 79)"
+        ]
+      },
+      {
+        "milestone": "1A",
+        "id": "checkpoints",
+        "status": "FAIL",
+        "text": "the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+        "problems": [
+          "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 86894 men, below 100000"
+        ],
+        "evidence": [
+          "union-1861 history run, 148 days to 1861-07-31: seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+          "union-1861 history run, 148 days to 1861-07-31: side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+          "union-1861 history run, 148 days to 1861-07-31: side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+          "union-1861 history run, 148 days to 1861-07-31: side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+          "union-1861 history run, 148 days to 1861-07-31: side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+          "union-1861 history run, 148 days to 1861-07-31: side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+          "union-1861 history run, 148 days to 1861-07-31: side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+          "union-1861 history run, 148 days to 1861-07-31: side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+          "union-1861 history run, 148 days to 1861-07-31: side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+          "union-1861 history run, 148 days to 1861-07-31: side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+          "union-1861 history run, 148 days to 1861-07-31: side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+          "union-1861 history run, 148 days to 1861-07-31: washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+          "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): union 95255 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+          "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate 86894 men of known strength, 22 blocks of unknown strength (band 100000..200000)",
+          "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+          "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+          "union-1861 history run, 148 days to 1861-07-31: confederate at war since day 36",
+          "union-1861 history run, 148 days to 1861-07-31: union at war since day 41"
+        ]
+      },
+      {
+        "milestone": "1A",
+        "id": "operation",
+        "status": "PASS",
+        "text": "at least one operation drafted by the kernel planner, chosen by its commander\u2019s seat, approved, executed and fought with the battle model, with a breakdown",
+        "problems": [],
+        "evidence": [
+          "union-1861 history run, 148 days to 1861-07-31: op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+          "union-1861 history run, 148 days to 1861-07-31: op:us_dept_northeastern_virginia:137 (union, direct) fought battle battle:manassas:142"
+        ]
+      },
+      {
+        "milestone": "1A",
+        "id": "pushback",
+        "status": "FAIL",
+        "text": "pushback fires inside its bands: lower bounds from the record\u2019s sourced cases (S01\u2013S21), upper bounds the lead\u2019s",
+        "problems": [
+          "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+          "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 16, above 9",
+          "union-1861 history run, 148 days to 1861-07-31: slow walks: 18, above 9"
+        ],
+        "evidence": [
+          "union-1861 history run, 148 days to 1861-07-31: relay objections: 3 (band 0..6)",
+          "union-1861 history run, 148 days to 1861-07-31: relay holds: 2 (band 1..4)",
+          "union-1861 history run, 148 days to 1861-07-31: filter holds: 0 (band 0..6)",
+          "union-1861 history run, 148 days to 1861-07-31: trims: 0 (band 1..4)",
+          "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 16 (band 1..9)",
+          "union-1861 history run, 148 days to 1861-07-31: slow walks: 18 (band 2..9)",
+          "union-1861 history run, 148 days to 1861-07-31: objections to a plan: 39 (band 10..42)"
+        ]
+      },
+      {
+        "milestone": "1A",
+        "id": "unknown-strength",
+        "status": "FAIL",
+        "text": "no block fights with unknown strength: every battle record, in every run, lists none unknown",
+        "problems": [
+          "union-1861, war by decision, 148 days: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)",
+          "union-1861 history run, 148 days to 1861-07-31: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)"
+        ],
+        "evidence": [
+          "union-1861, war by decision, 148 days: 4 battles, 5 battle-days read",
+          "testbed, 120 days: 4 battles, 4 battle-days read",
+          "union-1861 history run, 148 days to 1861-07-31: 4 battles, 5 battle-days read"
+        ]
+      },
+      {
+        "milestone": "1A",
+        "id": "stand-ins",
+        "status": "PASS",
+        "text": "the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+        "problems": [],
+        "evidence": [
+          "standing goals: gone (lane 1.4\u2019s operations (4a64082))",
+          "the consistency judgement: gone (lane 1.2\u2019s planner (0062))",
+          "the trait adapter: gone (lane 1.1\u2019s people recast (`standin/traits.ts` deleted))",
+          "weakest-first transfers: gone (lane 1.5\u2019s people verbs (0079: the sender\u2019s answer picks the blocks))",
+          "conflicts resolved by department: gone (lane 1.1\u2019s compliance (`resolveConflict`))",
+          "the simple contest: gone (lane 1.3\u2019s battle model (0076))",
+          "the generic rule-seat principal: no label names it, so it is gone",
+          "the capital as objective: no label names it, so it is gone",
+          "other stand-ins: packages/kernel/src/forces/stores.ts:75 (owner 1B, ships' stores), packages/kernel/src/planner/route.ts:127 (owner 1B, ships' stores), packages/kernel/src/recruitment/renewal.ts:5 (owner 1B, recruitment and service), packages/kernel/src/situations/types.ts:76 (owner 1B, conventions and legislatures), packages/pack-format/src/situations.ts:69 (owner 1B, conventions and legislatures)",
+          "pack values carried from M2, for calibration: union-1861 rules.politics.drift, union-1861 rules.politics.address, union-1861 rules.politics.ladder, union-1861 rules.politics.credibility, union-1861 rules.politics.press.standing"
+        ]
+      },
+      {
+        "milestone": "1A",
+        "id": "lever-sweep",
+        "status": "FAIL",
+        "text": "the lever sweep (D6): no watched option, nor an atrocity-class decision\u2019s inaction, is the victory-only bot\u2019s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active",
+        "problems": [
+          "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+          "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+        ],
+        "evidence": [
+          "union-1861 history run, 148 days to 1861-07-31: 8 seeds, 8 gated decisions weighed, 736 calls for regiments in the base runs",
+          "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: return best in 2 of 8 seeds weighed"
+        ]
+      }
+    ],
+    "timings": [
+      {
+        "name": "union-1861, war by decision, 148 days",
+        "medianMs": 37.43,
+        "p95Ms": 67.09,
+        "maxMs": 88.36,
+        "days": 148
+      },
+      {
+        "name": "testbed, 120 days",
+        "medianMs": 3.28,
+        "p95Ms": 5.07,
+        "maxMs": 31.03,
+        "days": 120
+      },
+      {
+        "name": "union-1861 history run, 148 days to 1861-07-31",
+        "medianMs": 37.32,
+        "p95Ms": 66.9,
+        "maxMs": 77.14,
+        "days": 148
+      }
+    ],
+    "phase0Passed": 6,
+    "phase1APassed": 2
+  },
+  "referenceEquality": {
+    "rows": [
+      {
+        "slot": "war",
+        "dailyHashes": 148,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "dbc7d9254c4f09481adcd54a7550f6e5316eb14a94c809c48d16492f60b651a7",
+        "afterSha256": "9f2a771480769bfce73d5e2320ca958c72a59ba61279f99c808c5e0389facb4c"
+      },
+      {
+        "slot": "testbed",
+        "dailyHashes": 120,
+        "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "b2e413d302ada5e652d34b9e85e3fee7bbf2596dbfadec202db91a2f3563d7d2",
+        "afterSha256": "b8f3e18be893d540538f064a54b903003857c57ff2262a10df735d37dba87d84"
+      },
+      {
+        "slot": "history",
+        "dailyHashes": 148,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+        "nonTimingSummaryExact": true,
+        "allCountersAndScoresExact": true,
+        "beforeSha256": "5623b8db44a81006c58b0efd952d65bd99dffd1b69ec2477c75a5592cc048dd9",
+        "afterSha256": "d80454a1a9de2e680e954d91dfc493f244d23b9f28858445f649408a76451fc1"
+      }
+    ],
+    "frozenReferenceHashes": 268,
+    "additionalHistoryHashes": 148,
+    "differences": 0
+  },
+  "normalRunReplayAndResume": [
+    {
+      "path": "runs\\s85-done\\20261123-050143-19972-1ce9a1\\summary.json",
+      "pack": "union-1861",
+      "dailyHashes": 148,
+      "nonTimingSummaryExact": true,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 60,
+        "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+        "matches": true,
+        "savedLogReplays": true
+      }
+    },
+    {
+      "path": "runs\\s85-done\\20261123-050222-19972-1a04cf\\summary.json",
+      "pack": "testbed",
+      "dailyHashes": 120,
+      "nonTimingSummaryExact": true,
+      "replay": {
+        "matches": true,
+        "firstDifferentDay": null
+      },
+      "resume": {
+        "atTurn": 40,
+        "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "matches": true,
+        "savedLogReplays": true
+      }
+    }
+  ],
+  "preservation": {
+    "originalFiles": 2212,
+    "missing": [],
+    "changed": [
+      "packages/kernel/src/log/session.ts",
+      "packages/kernel/src/seats/requests.ts",
+      "packages/kernel/src/seats/sender.ts",
+      "packages/kernel/src/tick/context.ts",
+      "packages/kernel/src/tick/orders.ts",
+      "packages/kernel/src/tick/recruitment.ts",
+      "packages/kernel/src/tick/tick.ts",
+      "packages/kernel/src/tick/verbs.ts",
+      "packages/kernel/test/menu-received.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/seats-orders.test.ts",
+      "tools/rules/projection-derivations.json"
+    ],
+    "newFiles": [
+      "docs/audit/s85-evidence/menu.json",
+      "docs/audit/s85-evidence/sender-view.json"
+    ],
+    "protectedFiles": 262,
+    "protectedByteExact": true
+  },
+  "runtimeFiles": 689,
+  "runtimeInventorySha256": "0e6c51a0f87f6b9fa1faaebbb605190202d366f6e41a2b38168f58c5c2cfa213",
+  "firstHook": {
+    "command": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s85/commit-sender-view.txt"
+    ],
+    "set": [
+      "MANDATE_NO_GIT=1"
+    ],
+    "unset": [
+      "CI",
+      "MANDATE_TIMING",
+      "VITEST_MAX_WORKERS",
+      "VITEST_MIN_WORKERS"
+    ],
+    "exit": 0,
+    "seconds": 203.07994909997797,
+    "log": "runs\\s85\\commit-sender-view.log"
+  },
+  "menuFailedHook": {
+    "command": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s85/commit-menu.txt"
+    ],
+    "set": [
+      "MANDATE_NO_GIT=1"
+    ],
+    "unset": [
+      "CI",
+      "MANDATE_TIMING",
+      "VITEST_MAX_WORKERS",
+      "VITEST_MIN_WORKERS"
+    ],
+    "exit": 1,
+    "seconds": 188.26759940001648,
+    "log": "runs\\s85\\commit-menu.log"
+  },
+  "menuCorrectedHook": {
+    "command": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s85/commit-menu.txt"
+    ],
+    "set": [
+      "MANDATE_NO_GIT=1"
+    ],
+    "unset": [
+      "CI",
+      "MANDATE_TIMING",
+      "VITEST_MAX_WORKERS",
+      "VITEST_MIN_WORKERS"
+    ],
+    "exit": 0,
+    "seconds": 183.5530619000201,
+    "log": "runs\\s85\\commit-menu-corrected.log"
+  },
+  "independentReview": {
+    "reviewer": "Independent Sol worker, fresh compact context, medium effort",
+    "verdict": "No blocking findings or required corrections",
+    "lenses": [
+      "correctness",
+      "canon and decisions",
+      "determinism and ordering",
+      "knowledge boundaries",
+      "cache invalidation",
+      "process"
+    ],
+    "sender": {
+      "commit": "5dd5e04e80ceee8e3c96b6640af480f87437f811",
+      "proof": "All eight committed source/test SHA-256 values match the receipt; current State is selected on each authorization, with the existing view guards handling report receipt, changed posts and older States."
+    },
+    "menu": {
+      "reviewedBlobBeforeRename": "603b64b56623729f531ec8ec37b39d6430ae80f1",
+      "proof": "Invocation-local groupings preserve received formation ancestry, vacancy arm order, sorted transit kinds and principal filters. The three installed source/test/registry hashes match their receipt. Exactly two existing fingerprint fields change; all eight protected readers and other registry fields remain exact."
+    },
+    "targetedCorrection": {
+      "reason": "The writer scanner tracks alias names across lexical scopes and conflated two unrelated assigned bindings.",
+      "proof": "The vacancy group contains fresh arrays of block IDs. Renaming its four references across three lines to vacancyBlocks is byte-identical after normalizing that binding; the scanner itself is unchanged."
+    },
+    "reportFilter": {
+      "reviewedSourceBlob": "8d05451e9ec5f5dd2ea43ce5bbaf1f05e94f0443",
+      "reviewedTestBlob": "666c87691e1832a7a0bf5acfb0a9ba33da1c1cac",
+      "proof": "The moved principal-recipient guard skips a pure lookup already rejected by the old predicate. Principal filter eligibility, actual route checks and fallback, message ID, selected hop, delivery timing and outbox remain equal. Both recipient paths have a regression control. Root verified installed Git blob identities."
+    },
+    "reviewerRuntimeChecks": "No tests or simulations started during performance measurements.",
+    "scope": "Code and evidence review; no hosted Linux or timing-gate certification. Root owns actual acceptance commands."
+  },
+  "scopeDeviation": "The initial AGENTS filename search enumerated paths outside the named worktrees; none of those files were opened or written. Subsequent reads stayed within authorized paths.",
+  "hostedLinuxCertified": false,
+  "finalCommitHook": "Recorded after this pre-hook packet in runs/s85/commit-final.exit.json and the sole CODEX status.",
+  "finalColdProfiles": [
+    {
+      "slot": "war",
+      "timing": {
+        "unit": "ms",
+        "days": 148,
+        "median": 38.202000000000226,
+        "p95": 66.5106999999989,
+        "max": 88.92099999999846
+      },
+      "budgetProblems": [],
+      "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c"
+    },
+    {
+      "slot": "history",
+      "timing": {
+        "unit": "ms",
+        "days": 148,
+        "median": 36.19680000000062,
+        "p95": 62.6877999999997,
+        "max": 82.13639999999987
+      },
+      "budgetProblems": [],
+      "finalHash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c"
+    }
+  ],
+  "profileAttribution": {
+    "perf2": {
+      "ref": "a4c0a43a43fcc47aca93a613914d7554c7025838",
+      "slots": {
+        "war": {
+          "timing": {
+            "unit": "ms",
+            "days": 148,
+            "median": 31.65480000000025,
+            "p95": 49.807700000000295,
+            "max": 70.75689999999986
+          },
+          "budgetProblems": [],
+          "sampledPlayDaysMs": 4869.738,
+          "inclusiveFunctionMs": {
+            "pendingRequests": 2090.285,
+            "principalMenu": 1117.796,
+            "generateReports": 600.349,
+            "senderFor": 0,
+            "buildControlIndex": 407.929,
+            "deliverDue": 357.457,
+            "peopleProjection": 98.147,
+            "deliverReports": 182.919,
+            "allCommandedBlocks": 0,
+            "commandedBlocks": 86.445,
+            "reportView": 40.469,
+            "combatPhase": 117.592,
+            "combatDay": 35.811,
+            "passageOf": 52.213,
+            "inTransitTo": 13.494,
+            "governmentRailOf": 0,
+            "unansweredAppointments": 0,
+            "organisationPhase": 0,
+            "advanceCommissions": 0,
+            "applyMusters": 0.191,
+            "forceTotals": 0,
+            "enlistmentOf": 0
+          },
+          "decisions": 74,
+          "logEntries": 222,
+          "rejections": 0
+        },
+        "history": {
+          "timing": {
+            "unit": "ms",
+            "days": 148,
+            "median": 31.344699999999648,
+            "p95": 52.38040000000001,
+            "max": 78.73720000000003
+          },
+          "budgetProblems": [],
+          "sampledPlayDaysMs": 4913.833,
+          "inclusiveFunctionMs": {
+            "pendingRequests": 2132.257,
+            "principalMenu": 1138.313,
+            "generateReports": 613.859,
+            "senderFor": 0,
+            "buildControlIndex": 448.867,
+            "deliverDue": 347.852,
+            "peopleProjection": 124.398,
+            "deliverReports": 187.493,
+            "allCommandedBlocks": 0,
+            "commandedBlocks": 108.313,
+            "reportView": 27.89,
+            "combatPhase": 143.94,
+            "combatDay": 37.864,
+            "passageOf": 39.311,
+            "inTransitTo": 17.919,
+            "governmentRailOf": 0,
+            "unansweredAppointments": 0,
+            "organisationPhase": 0,
+            "advanceCommissions": 0,
+            "applyMusters": 1.564,
+            "forceTotals": 0,
+            "enlistmentOf": 0
+          },
+          "decisions": 74,
+          "logEntries": 222,
+          "rejections": 0
+        }
+      }
+    },
+    "july": {
+      "ref": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+      "slots": {
+        "war": {
+          "timing": {
+            "unit": "ms",
+            "days": 148,
+            "median": 42.19679999999971,
+            "p95": 82.79539999999997,
+            "max": 160.1831000000002
+          },
+          "budgetProblems": [
+            "war: median 42.2 ms a day, over the 40 ms budget"
+          ],
+          "sampledPlayDaysMs": 6875.176,
+          "inclusiveFunctionMs": {
+            "pendingRequests": 2511.069,
+            "principalMenu": 1540.33,
+            "generateReports": 1012.275,
+            "senderFor": 641.983,
+            "buildControlIndex": 497.559,
+            "deliverDue": 452.869,
+            "peopleProjection": 284.606,
+            "deliverReports": 249.298,
+            "allCommandedBlocks": 237.062,
+            "commandedBlocks": 187.994,
+            "reportView": 232.917,
+            "combatPhase": 131.655,
+            "combatDay": 37.616,
+            "passageOf": 113.891,
+            "inTransitTo": 85.592,
+            "governmentRailOf": 62.95,
+            "unansweredAppointments": 51.179,
+            "organisationPhase": 41.687,
+            "advanceCommissions": 30.037,
+            "applyMusters": 8.283,
+            "forceTotals": 6.228,
+            "enlistmentOf": 1.596
+          },
+          "decisions": 81,
+          "logEntries": 249,
+          "rejections": 0
+        },
+        "history": {
+          "timing": {
+            "unit": "ms",
+            "days": 148,
+            "median": 41.00200000000041,
+            "p95": 82.10620000000017,
+            "max": 148.10339999999997
+          },
+          "budgetProblems": [
+            "history: median 41.0 ms a day, over the 40 ms budget"
+          ],
+          "sampledPlayDaysMs": 6541.087,
+          "inclusiveFunctionMs": {
+            "pendingRequests": 2382.843,
+            "principalMenu": 1500.847,
+            "generateReports": 974.079,
+            "senderFor": 602.494,
+            "buildControlIndex": 467.374,
+            "deliverDue": 456.623,
+            "peopleProjection": 227.097,
+            "deliverReports": 232.805,
+            "allCommandedBlocks": 220.71,
+            "commandedBlocks": 175.492,
+            "reportView": 211.076,
+            "combatPhase": 143.81,
+            "combatDay": 26.791,
+            "passageOf": 111.357,
+            "inTransitTo": 114.771,
+            "governmentRailOf": 49.169,
+            "unansweredAppointments": 54.297,
+            "organisationPhase": 29.88,
+            "advanceCommissions": 35.821,
+            "applyMusters": 9.052,
+            "forceTotals": 7.799,
+            "enlistmentOf": 1.826
+          },
+          "decisions": 81,
+          "logEntries": 249,
+          "rejections": 0
+        }
+      }
+    },
+    "sourceAttribution": [
+      {
+        "finding": "Sender validation and routing now project received authority, side, holder and chain. A fresh desk view on each call repeats report, map and people projection. This is removable within the same received-view semantics.",
+        "source": [
+          "packages/kernel/src/seats/sender.ts",
+          "packages/kernel/src/tick/orders.ts",
+          "packages/kernel/src/tick/recruitment.ts",
+          "packages/kernel/src/tick/verbs.ts"
+        ]
+      },
+      {
+        "finding": "Principal menus use received posts and sides. July expands each per-post presence/command check and rechecks unanswered appointments while scanning transit. These scans can share per-menu scratch data while reading the same truth.",
+        "source": [
+          "packages/kernel/src/seats/requests.ts",
+          "packages/kernel/src/seats/received.ts",
+          "packages/kernel/src/knowledge/knowledge.ts"
+        ]
+      },
+      {
+        "finding": "Lot totals and service are derived; organisation bundles and transfers regroup lot identities and create or open declared formations. Main-body and report queries now include formation commands. The retained S77 concentration run peaks at 177 blocks on day 132; this is a prior observation, not a profiler event or independently captured July baseline count.",
+        "source": [
+          "packages/kernel/src/forces/lots.ts",
+          "packages/kernel/src/forces/enlistment.ts",
+          "packages/kernel/src/tick/organisation.ts",
+          "packages/kernel/src/command/command.ts",
+          "packages/kernel/src/seats/posts.ts",
+          "notes/lane-s77-concentration.md"
+        ]
+      },
+      {
+        "finding": "The passage derivation now supplies side-specific civil rail eligibility. July also runs the changed combat and bombardment path; the two combat slots do not exhibit a consistent increase in sampled combatDay. The required work from rail, lot organisation, commission advancement and combat remains part of the workload.",
+        "source": [
+          "packages/kernel/src/tick/passage.ts",
+          "packages/kernel/src/command/command.ts",
+          "packages/kernel/src/combat/battle.ts",
+          "packages/kernel/src/combat/bombard.ts",
+          "packages/kernel/src/tick/tick.ts"
+        ]
+      }
+    ],
+    "limits": "Fresh serial Node 22.23.2 Windows CPU profiles. Inclusive samples overlap and are descriptive. Zero means no observed sample, not proof of no work. Setup and unparented GC excluded; final checkpoint hash beneath playDays included. Different revisions have different simulation behavior and workload. Old and current runs were captured on the same host at separate times; timing differences are not an additive causal decomposition or hosted CI certification."
+  },
+  "frozenS82DoneComparison": {
+    "source": "C:\\Pyrrhic\\sprint-july\\runs\\s82\\done-results.json",
+    "sha256": "b3c5ce7952f72d9425e39da50f668d94b34976d75ee22e1aa382735fbe1059f9",
+    "criteria": [
+      {
+        "milestone": "phase0",
+        "id": "behaviour",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "phase0",
+        "id": "hash",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "phase0",
+        "id": "resume",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "phase0",
+        "id": "liveness",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "phase0",
+        "id": "section-ten",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "phase0",
+        "id": "budget",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "1A",
+        "id": "checkpoints",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "1A",
+        "id": "operation",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "1A",
+        "id": "pushback",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "1A",
+        "id": "unknown-strength",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "1A",
+        "id": "stand-ins",
+        "sameFunctionalEvidence": true
+      },
+      {
+        "milestone": "1A",
+        "id": "lever-sweep",
+        "sameFunctionalEvidence": true
+      }
+    ],
+    "scope": "All reported criteria, problems and non-clock evidence, including the eight-seed lever-sweep counts. Clock values differ and are retained separately."
+  }
+}
