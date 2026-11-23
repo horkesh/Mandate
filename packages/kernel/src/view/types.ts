@@ -17,7 +17,7 @@ import type { ClaimKind, ReportType, SubjectKind, NoteAccount, GoalProposal, Dis
 import type { GoalTerms } from '../log/commands.ts';
 import type { Discretion } from '../plans/goal.ts';
 import type { RouteKind } from '../messages/latency.ts';
-import type { PlanStatus, Posture } from '../plans/goal.ts';
+import type { DetentionPurpose, PlanStatus, Posture } from '../plans/goal.ts';
 import type { CounterTerms } from '../audience/counters.ts';
 import type { ConsultationAdvice, CourseEvidence } from '../world/consultations.ts';
 
@@ -60,6 +60,7 @@ export interface ClaimView {
   readonly value: number;
   readonly token: string | null;
   readonly confidence: number;
+  readonly activity?: 'deployment' | 'reconnaissance_in_force';
   readonly battle?: string;
   readonly battleDays?: readonly number[];
   readonly commander?: PersonId | null;
@@ -153,8 +154,9 @@ export interface ClaimedFrontView extends FrontSegment {
 /** The goal he was given (lane 1.2: the full goal, FOUNDATION section 5), and where its plan stands. */
 export interface GoalView {
   readonly discretion?: Discretion<GoalTerms>;
-  readonly posture: Posture;
-  readonly objective: RegionId | null;
+  readonly purpose?: DetentionPurpose;
+  readonly posture?: Posture;
+  readonly objective?: RegionId | null;
   readonly risk: number;
   readonly deadlineDays: number;
   readonly permissions: { readonly rail: boolean; readonly river: boolean; readonly sea: boolean; readonly neutral: boolean };

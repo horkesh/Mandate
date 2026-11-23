@@ -1,0 +1,456 @@
+{
+  "before": {
+    "draftDay": 140,
+    "goal": {
+      "goalObjective": "harpers_ferry",
+      "goalPosture": "hold",
+      "goalRisk": 500,
+      "goalDeadlineDays": 30,
+      "goalRail": true,
+      "goalRiver": false,
+      "goalSea": false,
+      "goalNeutral": false,
+      "goalCommitted": [],
+      "goalAwaitWord": false,
+      "goalApproveAsDrafted": true
+    },
+    "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+    "candidates": [
+      {
+        "id": "direct:least_cost:lower_valley>harpers_ferry",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "us_dept_pennsylvania",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "lower_valley",
+              "routeTo": "harpers_ferry",
+              "routeLegs": [
+                {
+                  "legEdge": "road:harpers_ferry:lower_valley",
+                  "legFrom": "lower_valley",
+                  "legTo": "harpers_ferry",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 2166,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 5166,
+              "routeDays": 3000
+            },
+            "axisBlocks": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "axisStrength": 1732,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "lower_valley"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 3000,
+                "phaseRegion": "harpers_ferry"
+              }
+            ],
+            "axisArrival": 6000,
+            "axisOutOfSupply": 3000,
+            "axisStoresDays": 9,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [
+          {
+            "reqKind": "reinforcement",
+            "reqPost": null,
+            "reqHolder": null,
+            "reqMen": 4027,
+            "reqFrom": null,
+            "reqObjective": "harpers_ferry",
+            "reqArriveFrom": 0,
+            "reqArriveTo": 0,
+            "reqCarrier": null,
+            "reqEdges": []
+          }
+        ],
+        "candConditions": [
+          {
+            "gateKind": "move_when_reinforced",
+            "gateHard": false,
+            "gateDetail": "4027 men short of his demand"
+          }
+        ],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches harpers_ferry"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": -419,
+            "contribWhy": "ratio 374 under his demand 1244; short 4027 men"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 24000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": -216,
+            "contribWhy": "3000 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": 0,
+            "contribWhy": "0 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 75,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 140,
+        "candPerceived": 4630,
+        "candRatio": 374
+      },
+      {
+        "id": "holding:hold:harpers_ferry",
+        "candMethod": "holding",
+        "candVariant": "hold",
+        "candAxes": [
+          {
+            "axisName": "hold",
+            "axisPost": "us_dept_pennsylvania",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "harpers_ferry",
+              "routeTo": "harpers_ferry",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0
+            },
+            "axisBlocks": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "axisStrength": 1732,
+            "axisPhases": [
+              {
+                "phaseKind": "hold",
+                "phaseStart": 0,
+                "phaseDays": 30000,
+                "phaseRegion": "harpers_ferry"
+              }
+            ],
+            "axisArrival": 0,
+            "axisOutOfSupply": 0,
+            "axisStoresDays": 9,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 0,
+            "contribWhy": "does not move on the objective"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": -300,
+            "contribWhy": "the deadline passes with nothing attempted"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 311,
+            "contribWhy": "keeps the force whole"
+          }
+        ],
+        "candScore": 11,
+        "candPerceived": 4630,
+        "candRatio": 374
+      }
+    ],
+    "ordinary": [
+      {
+        "id": "direct:least_cost:lower_valley>harpers_ferry",
+        "score": 140
+      },
+      {
+        "id": "holding:hold:harpers_ferry",
+        "score": 11
+      }
+    ],
+    "withoutTime": [
+      {
+        "id": "holding:hold:harpers_ferry",
+        "score": 311
+      },
+      {
+        "id": "direct:least_cost:lower_valley>harpers_ferry",
+        "score": -160
+      }
+    ],
+    "withoutGoalFit": [
+      {
+        "id": "holding:hold:harpers_ferry",
+        "score": 11
+      },
+      {
+        "id": "direct:least_cost:lower_valley>harpers_ferry",
+        "score": -260
+      }
+    ]
+  },
+  "after": {
+    "draftDay": 140,
+    "goal": {
+      "goalObjective": "harpers_ferry",
+      "goalPosture": "hold",
+      "goalRisk": 500,
+      "goalDeadlineDays": 30,
+      "goalRail": true,
+      "goalRiver": false,
+      "goalSea": false,
+      "goalNeutral": false,
+      "goalCommitted": [],
+      "goalAwaitWord": false,
+      "goalApproveAsDrafted": true
+    },
+    "chosen": "direct:least_cost:lower_valley>harpers_ferry",
+    "candidates": [
+      {
+        "id": "direct:least_cost:lower_valley>harpers_ferry",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "us_dept_pennsylvania",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "lower_valley",
+              "routeTo": "harpers_ferry",
+              "routeLegs": [
+                {
+                  "legEdge": "road:harpers_ferry:lower_valley",
+                  "legFrom": "lower_valley",
+                  "legTo": "harpers_ferry",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 2166,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 5166,
+              "routeDays": 3000
+            },
+            "axisBlocks": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "axisStrength": 1732,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "lower_valley"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 3000,
+                "phaseRegion": "harpers_ferry"
+              }
+            ],
+            "axisArrival": 6000,
+            "axisOutOfSupply": 3000,
+            "axisStoresDays": 9,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches harpers_ferry"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": 201,
+            "contribWhy": "ratio 3255 over his demand 1244"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 24000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": -216,
+            "contribWhy": "3000 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": 0,
+            "contribWhy": "0 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 75,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 760,
+        "candPerceived": 532,
+        "candRatio": 3255
+      },
+      {
+        "id": "holding:hold:harpers_ferry",
+        "candMethod": "holding",
+        "candVariant": "hold",
+        "candAxes": [
+          {
+            "axisName": "hold",
+            "axisPost": "us_dept_pennsylvania",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "harpers_ferry",
+              "routeTo": "harpers_ferry",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0
+            },
+            "axisBlocks": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "axisStrength": 1732,
+            "axisPhases": [
+              {
+                "phaseKind": "hold",
+                "phaseStart": 0,
+                "phaseDays": 30000,
+                "phaseRegion": "harpers_ferry"
+              }
+            ],
+            "axisArrival": 0,
+            "axisOutOfSupply": 0,
+            "axisStoresDays": 9,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 0,
+            "contribWhy": "does not move on the objective"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": -300,
+            "contribWhy": "the deadline passes with nothing attempted"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 311,
+            "contribWhy": "keeps the force whole"
+          }
+        ],
+        "candScore": 11,
+        "candPerceived": 532,
+        "candRatio": 3255
+      }
+    ],
+    "ordinary": [
+      {
+        "id": "direct:least_cost:lower_valley>harpers_ferry",
+        "score": 760
+      },
+      {
+        "id": "holding:hold:harpers_ferry",
+        "score": 11
+      }
+    ],
+    "withoutTime": [
+      {
+        "id": "direct:least_cost:lower_valley>harpers_ferry",
+        "score": 460
+      },
+      {
+        "id": "holding:hold:harpers_ferry",
+        "score": 311
+      }
+    ],
+    "withoutGoalFit": [
+      {
+        "id": "direct:least_cost:lower_valley>harpers_ferry",
+        "score": 360
+      },
+      {
+        "id": "holding:hold:harpers_ferry",
+        "score": 11
+      }
+    ]
+  },
+  "method": "Read-only arithmetic over retained scored candidates, not a new simulation or parameter fit."
+}

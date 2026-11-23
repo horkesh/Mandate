@@ -1,0 +1,712 @@
+{
+  "first": [],
+  "corrected": [
+    {
+      "origin": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+      "issuer": "scott_winfield",
+      "letter": {
+        "namespace": "us_army_orders",
+        "key": "scott_patterson_jul13",
+        "revision": 1
+      },
+      "target": "us_dept_pennsylvania",
+      "issuedDay": 130,
+      "body": {
+        "orderKind": "goal",
+        "orderGoal": {
+          "goalPurpose": {
+            "detKind": "attack_or_demonstrate",
+            "detDuty": "detain",
+            "detTargetPost": "cs_cmd_harpers_ferry",
+            "detTargetKind": "opposing_command",
+            "detDetentionArea": [
+              "lower_valley"
+            ],
+            "detActionArea": [
+              "harpers_ferry",
+              "lower_valley"
+            ],
+            "detMeans": [
+              "attack",
+              "demonstrate"
+            ]
+          },
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "orderEdit": null,
+        "orderCall": null,
+        "orderLetter": {
+          "namespace": "us_army_orders",
+          "key": "scott_patterson_jul13",
+          "revision": 1
+        },
+        "orderAuthority": {
+          "basisPost": "us_general_in_chief",
+          "basisKey": "scott_army_command"
+        },
+        "orderIssuer": "scott_winfield",
+        "orderTarget": "us_dept_pennsylvania",
+        "orderBypass": false,
+        "orderIssuedDay": 130
+      },
+      "receipts": [
+        {
+          "id": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+          "msgOrigin": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+          "msgFrom": "scott_winfield",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 130,
+          "msgArriveDay": 135,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalPurpose": {
+                "detKind": "attack_or_demonstrate",
+                "detDuty": "detain",
+                "detTargetPost": "cs_cmd_harpers_ferry",
+                "detTargetKind": "opposing_command",
+                "detDetentionArea": [
+                  "lower_valley"
+                ],
+                "detActionArea": [
+                  "harpers_ferry",
+                  "lower_valley"
+                ],
+                "detMeans": [
+                  "attack",
+                  "demonstrate"
+                ]
+              },
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [
+                "raised.st_gov_wisconsin.d83"
+              ],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderLetter": {
+              "namespace": "us_army_orders",
+              "key": "scott_patterson_jul13",
+              "revision": 1
+            },
+            "orderAuthority": {
+              "basisPost": "us_general_in_chief",
+              "basisKey": "scott_army_command"
+            },
+            "orderIssuer": "scott_winfield",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 130
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      ],
+      "answers": [
+        {
+          "key": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1|patterson_robert",
+          "respOrder": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+          "respPerson": "patterson_robert",
+          "respPost": "us_dept_pennsylvania",
+          "respRole": "addressee",
+          "respKind": "goal",
+          "respDay": 135,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 57,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 57
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": [],
+          "respClauses": [
+            {
+              "clauseId": "approval",
+              "clauseSubject": "authority"
+            },
+            {
+              "clauseId": "commitment",
+              "clauseSubject": "organisation"
+            },
+            {
+              "clauseId": "course",
+              "clauseSubject": "course"
+            },
+            {
+              "clauseId": "deadline",
+              "clauseSubject": "timing"
+            },
+            {
+              "clauseId": "objective",
+              "clauseSubject": "destination"
+            },
+            {
+              "clauseId": "routes",
+              "clauseSubject": "transport"
+            }
+          ],
+          "respUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+            "clauses": [
+              "approval",
+              "commitment",
+              "course",
+              "deadline",
+              "objective",
+              "routes"
+            ],
+            "undertakingRevision": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1"
+          },
+          "respDeclaredUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1",
+            "clauses": [
+              "approval",
+              "commitment",
+              "course",
+              "deadline",
+              "objective",
+              "routes"
+            ],
+            "undertakingRevision": "m.130.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul13.1"
+          },
+          "respReservations": [],
+          "respDeclaredReservations": [],
+          "respReservationGaps": [],
+          "respDeclaredReservationGaps": []
+        }
+      ]
+    },
+    {
+      "origin": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+      "issuer": "scott_winfield",
+      "letter": {
+        "namespace": "us_army_orders",
+        "key": "scott_patterson_jul17",
+        "revision": 1
+      },
+      "target": "us_dept_pennsylvania",
+      "issuedDay": 134,
+      "body": {
+        "orderKind": "goal",
+        "orderGoal": {
+          "goalPurpose": {
+            "detKind": "attack_or_demonstrate",
+            "detDuty": "detain",
+            "detTargetPost": "cs_cmd_harpers_ferry",
+            "detTargetKind": "opposing_command",
+            "detDetentionArea": [
+              "lower_valley"
+            ],
+            "detActionArea": [
+              "harpers_ferry",
+              "lower_valley"
+            ],
+            "detMeans": [
+              "attack",
+              "demonstrate"
+            ]
+          },
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "orderEdit": null,
+        "orderCall": null,
+        "orderLetter": {
+          "namespace": "us_army_orders",
+          "key": "scott_patterson_jul17",
+          "revision": 1
+        },
+        "orderAuthority": {
+          "basisPost": "us_general_in_chief",
+          "basisKey": "scott_army_command"
+        },
+        "orderIssuer": "scott_winfield",
+        "orderTarget": "us_dept_pennsylvania",
+        "orderBypass": false,
+        "orderIssuedDay": 134
+      },
+      "receipts": [
+        {
+          "id": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+          "msgOrigin": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+          "msgFrom": "scott_winfield",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 134,
+          "msgArriveDay": 139,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalPurpose": {
+                "detKind": "attack_or_demonstrate",
+                "detDuty": "detain",
+                "detTargetPost": "cs_cmd_harpers_ferry",
+                "detTargetKind": "opposing_command",
+                "detDetentionArea": [
+                  "lower_valley"
+                ],
+                "detActionArea": [
+                  "harpers_ferry",
+                  "lower_valley"
+                ],
+                "detMeans": [
+                  "attack",
+                  "demonstrate"
+                ]
+              },
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [
+                "raised.st_gov_wisconsin.d83"
+              ],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderLetter": {
+              "namespace": "us_army_orders",
+              "key": "scott_patterson_jul17",
+              "revision": 1
+            },
+            "orderAuthority": {
+              "basisPost": "us_general_in_chief",
+              "basisKey": "scott_army_command"
+            },
+            "orderIssuer": "scott_winfield",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 134
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      ],
+      "answers": [
+        {
+          "key": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1|patterson_robert",
+          "respOrder": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+          "respPerson": "patterson_robert",
+          "respPost": "us_dept_pennsylvania",
+          "respRole": "addressee",
+          "respKind": "goal",
+          "respDay": 139,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 57,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 57
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": [],
+          "respClauses": [
+            {
+              "clauseId": "approval",
+              "clauseSubject": "authority"
+            },
+            {
+              "clauseId": "commitment",
+              "clauseSubject": "organisation"
+            },
+            {
+              "clauseId": "course",
+              "clauseSubject": "course"
+            },
+            {
+              "clauseId": "deadline",
+              "clauseSubject": "timing"
+            },
+            {
+              "clauseId": "objective",
+              "clauseSubject": "destination"
+            },
+            {
+              "clauseId": "routes",
+              "clauseSubject": "transport"
+            }
+          ],
+          "respUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+            "clauses": [
+              "approval",
+              "commitment",
+              "course",
+              "deadline",
+              "objective",
+              "routes"
+            ],
+            "undertakingRevision": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1"
+          },
+          "respDeclaredUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1",
+            "clauses": [
+              "approval",
+              "commitment",
+              "course",
+              "deadline",
+              "objective",
+              "routes"
+            ],
+            "undertakingRevision": "m.134.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul17.1"
+          },
+          "respReservations": [],
+          "respDeclaredReservations": [],
+          "respReservationGaps": [],
+          "respDeclaredReservationGaps": []
+        }
+      ]
+    },
+    {
+      "origin": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+      "issuer": "scott_winfield",
+      "letter": {
+        "namespace": "us_army_orders",
+        "key": "scott_patterson_jul18",
+        "revision": 1
+      },
+      "target": "us_dept_pennsylvania",
+      "issuedDay": 135,
+      "body": {
+        "orderKind": "goal",
+        "orderGoal": {
+          "goalPurpose": {
+            "detKind": "attack_or_demonstrate",
+            "detDuty": "detain",
+            "detTargetPost": "cs_cmd_harpers_ferry",
+            "detTargetKind": "opposing_command",
+            "detDetentionArea": [
+              "lower_valley"
+            ],
+            "detActionArea": [
+              "harpers_ferry",
+              "lower_valley"
+            ],
+            "detMeans": [
+              "attack",
+              "demonstrate"
+            ]
+          },
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "orderEdit": null,
+        "orderCall": null,
+        "orderLetter": {
+          "namespace": "us_army_orders",
+          "key": "scott_patterson_jul18",
+          "revision": 1
+        },
+        "orderAuthority": {
+          "basisPost": "us_general_in_chief",
+          "basisKey": "scott_army_command"
+        },
+        "orderIssuer": "scott_winfield",
+        "orderTarget": "us_dept_pennsylvania",
+        "orderBypass": false,
+        "orderIssuedDay": 135
+      },
+      "receipts": [
+        {
+          "id": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+          "msgOrigin": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+          "msgFrom": "scott_winfield",
+          "msgTo": "patterson_robert",
+          "msgToPost": "us_dept_pennsylvania",
+          "msgRole": "addressee",
+          "msgRoute": "courier",
+          "msgSentDay": 135,
+          "msgArriveDay": 140,
+          "msgVia": [],
+          "msgPending": [],
+          "msgOrder": {
+            "orderKind": "goal",
+            "orderGoal": {
+              "goalPurpose": {
+                "detKind": "attack_or_demonstrate",
+                "detDuty": "detain",
+                "detTargetPost": "cs_cmd_harpers_ferry",
+                "detTargetKind": "opposing_command",
+                "detDetentionArea": [
+                  "lower_valley"
+                ],
+                "detActionArea": [
+                  "harpers_ferry",
+                  "lower_valley"
+                ],
+                "detMeans": [
+                  "attack",
+                  "demonstrate"
+                ]
+              },
+              "goalRisk": 500,
+              "goalDeadlineDays": 30,
+              "goalRail": true,
+              "goalRiver": false,
+              "goalSea": false,
+              "goalNeutral": false,
+              "goalCommitted": [
+                "raised.st_gov_wisconsin.d83"
+              ],
+              "goalAwaitWord": false,
+              "goalApproveAsDrafted": true
+            },
+            "orderEdit": null,
+            "orderCall": null,
+            "orderLetter": {
+              "namespace": "us_army_orders",
+              "key": "scott_patterson_jul18",
+              "revision": 1
+            },
+            "orderAuthority": {
+              "basisPost": "us_general_in_chief",
+              "basisKey": "scott_army_command"
+            },
+            "orderIssuer": "scott_winfield",
+            "orderTarget": "us_dept_pennsylvania",
+            "orderBypass": false,
+            "orderIssuedDay": 135
+          },
+          "msgVerb": null,
+          "msgReport": null,
+          "msgTruth": null
+        }
+      ],
+      "answers": [
+        {
+          "key": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1|patterson_robert",
+          "respOrder": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+          "respPerson": "patterson_robert",
+          "respPost": "us_dept_pennsylvania",
+          "respRole": "addressee",
+          "respKind": "goal",
+          "respDay": 140,
+          "respActual": "comply",
+          "respDeclared": "comply",
+          "respWillingness": 57,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 57
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": [],
+          "respClauses": [
+            {
+              "clauseId": "approval",
+              "clauseSubject": "authority"
+            },
+            {
+              "clauseId": "commitment",
+              "clauseSubject": "organisation"
+            },
+            {
+              "clauseId": "course",
+              "clauseSubject": "course"
+            },
+            {
+              "clauseId": "deadline",
+              "clauseSubject": "timing"
+            },
+            {
+              "clauseId": "objective",
+              "clauseSubject": "destination"
+            },
+            {
+              "clauseId": "routes",
+              "clauseSubject": "transport"
+            }
+          ],
+          "respUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+            "clauses": [
+              "approval",
+              "commitment",
+              "course",
+              "deadline",
+              "objective",
+              "routes"
+            ],
+            "undertakingRevision": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1"
+          },
+          "respDeclaredUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1",
+            "clauses": [
+              "approval",
+              "commitment",
+              "course",
+              "deadline",
+              "objective",
+              "routes"
+            ],
+            "undertakingRevision": "m.135.scott_winfield.patterson_robert.letter.us_army_orders.scott_patterson_jul18.1"
+          },
+          "respReservations": [],
+          "respDeclaredReservations": [],
+          "respReservationGaps": [],
+          "respDeclaredReservationGaps": []
+        }
+      ]
+    }
+  ],
+  "receivedAddressWitness": {
+    "id": "m.111.patterson_robert.scott_winfield.return.us_dept_pennsylvania",
+    "knownReceivedDay": 122,
+    "knownRoute": "mail",
+    "knownVia": [],
+    "knownBody": {
+      "reportType": "strength-return",
+      "reportSubtype": null,
+      "reportAuthor": "patterson_robert",
+      "reportAuthorPost": "us_dept_pennsylvania",
+      "reportSubjectKind": "post",
+      "reportSubjectId": "us_dept_pennsylvania",
+      "reportClaims": [
+        {
+          "claimKind": "present-for-duty",
+          "claimRegion": null,
+          "claimValue": 1732,
+          "claimToken": null,
+          "claimConfidence": 900
+        },
+        {
+          "claimKind": "present-and-absent",
+          "claimRegion": null,
+          "claimValue": 2424,
+          "claimToken": null,
+          "claimConfidence": 900
+        }
+      ],
+      "reportDay": 111,
+      "reportHour": null,
+      "reportAdvice": null,
+      "reportAnswers": null
+    }
+  },
+  "note": "The retained day148 proof used the day139 return. The full trajectory also contains an earlier self-attributed return written111 and received122, enabling each authored dispatch from its date. Runtime days are not recovered historical receipt dates."
+}

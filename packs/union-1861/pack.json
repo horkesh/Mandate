@@ -592,7 +592,7 @@
               "objective": "lower_valley",
               "posture": "hold",
               "fromDate": "1861-06-25",
-              "source": "OR I-II p.725, Scott to Patterson, 25 June: remain before the enemy between Winchester and the Potomac; battle conditional on equal/superior force; pursuit to Winchester not enjoined. Pp.166-168, 13/17/18 July: demonstrations to detain Johnston in the valley and prevent reinforcement of Manassas. [I] Hold the existing lower_valley region as the available geographic containment goal; not an order to take Winchester or a guarantee of pinning. Ordinary planning, compliance, messages and movement decide performance."
+              "source": "OR I-II p.725, Scott to Patterson, 25 June: remain before the enemy between Winchester and the Potomac; battle conditional on equal/superior force; pursuit to Winchester not enjoined. [I:S130] This inherited June25 regional goal remains separate. The July13/17/18 papers now carry their own typed detention purpose; this hold grants no demonstration or pinning credit."
             },
             {
               "post": "us_dept_pennsylvania",
@@ -600,6 +600,96 @@
               "posture": "hold",
               "fromDate": "1861-07-23",
               "source": "OR I-II p.173, Scott to Patterson, 23 July, 4.15 p.m.: hold Harpers Ferry unless a well-ascertained force can expel him. [I] Later ordinary hold order; no forced arrival, outcome or extension of expiring service."
+            },
+            {
+              "issuer": "scott_winfield",
+              "post": "us_dept_pennsylvania",
+              "fromDate": "1861-07-13",
+              "letter": {
+                "namespace": "us_army_orders",
+                "key": "scott_patterson_jul13",
+                "revision": 1
+              },
+              "purpose": {
+                "kind": "attack_or_demonstrate",
+                "duty": "detain",
+                "target": {
+                  "kind": "opposing_command",
+                  "post": "cs_cmd_harpers_ferry"
+                },
+                "detentionArea": [
+                  "lower_valley"
+                ],
+                "actionArea": [
+                  "harpers_ferry",
+                  "lower_valley"
+                ],
+                "means": [
+                  "attack",
+                  "demonstrate"
+                ]
+              },
+              "source": "OR I-II pp.166, Scott to Patterson, 1861-07-13; retained read primary OCR docs/research/S130/OR-I-II-p166.txt. If unable to beat the enemy, demonstrate to detain him in the valley of Winchester. The additional hazardous-pursuit/Keys Ferry-Leesburg route contingency remains unrepresented; no alternative route is granted. [I] Existing coarse region mapping and default delivery/risk/review terms. The paper becomes available on its written date; receipt and generated answer are ordinary runtime events, not asserted historical clocks."
+            },
+            {
+              "issuer": "scott_winfield",
+              "post": "us_dept_pennsylvania",
+              "fromDate": "1861-07-17",
+              "letter": {
+                "namespace": "us_army_orders",
+                "key": "scott_patterson_jul17",
+                "revision": 1
+              },
+              "purpose": {
+                "kind": "attack_or_demonstrate",
+                "duty": "detain",
+                "target": {
+                  "kind": "opposing_command",
+                  "post": "cs_cmd_harpers_ferry"
+                },
+                "detentionArea": [
+                  "lower_valley"
+                ],
+                "actionArea": [
+                  "harpers_ferry",
+                  "lower_valley"
+                ],
+                "means": [
+                  "attack",
+                  "demonstrate"
+                ]
+              },
+              "source": "OR I-II pp.167-168, Scott to Patterson, 1861-07-17; retained read primary OCR docs/research/S130/OR-I-II-p167.txt and OR-I-II-p168.txt. Fresh warning against a small front force masking reinforcement of the Junction. Continuing duty under 0123. No invented screen size or omniscient report of movement is supplied. [I] Existing coarse region mapping and default delivery/risk/review terms. The paper becomes available on its written date; receipt and generated answer are ordinary runtime events, not asserted historical clocks."
+            },
+            {
+              "issuer": "scott_winfield",
+              "post": "us_dept_pennsylvania",
+              "fromDate": "1861-07-18",
+              "letter": {
+                "namespace": "us_army_orders",
+                "key": "scott_patterson_jul18",
+                "revision": 1
+              },
+              "purpose": {
+                "kind": "attack_or_demonstrate",
+                "duty": "detain",
+                "target": {
+                  "kind": "opposing_command",
+                  "post": "cs_cmd_harpers_ferry"
+                },
+                "detentionArea": [
+                  "lower_valley"
+                ],
+                "actionArea": [
+                  "harpers_ferry",
+                  "lower_valley"
+                ],
+                "means": [
+                  "attack",
+                  "demonstrate"
+                ]
+              },
+              "source": "OR I-II pp.168, Scott to Patterson, 1861-07-18; retained read primary OCR docs/research/S130/OR-I-II-p168.txt. Fresh expectation of attack or active threats/demonstrations. No retreat across the Potomac: this action area is entirely Virginia. The conditional entrench-and-wait instruction remains an unrepresented term; no immunity, volunteer extension, known enemy number or tactical location is supplied. [I] Existing coarse region mapping and default delivery/risk/review terms. The paper becomes available on its written date; receipt and generated answer are ordinary runtime events, not asserted historical clocks."
             }
           ],
           "appointments": [
@@ -676,7 +766,7 @@
               "receiveLevies": false
             }
           ],
-          "letterNamespace": "us_consultations",
+          "letterNamespace": "us_army_orders",
           "consultations": [
             {
               "letter": {
@@ -903,7 +993,8 @@
               ],
               "source": "Lincoln, Complete Works II pp.26-27: opinions at the President's verbal request in the March 29 meeting on a relief expedition; withdrawal discussed by the respondents. [I] Paraphrase, transported as an authored question under 0120.2, not a claim that the verbal question was an original written letter. [I] Relief serves the maintenance purpose through the preparation instruction (Lincoln, Complete Works II pp.9,25-26). Bare withdrawal states no purpose or wider abandonment of federal authority. Cabinet forecasts and accompanying proposals supply no course terms (pp.26-28)."
             }
-          ]
+          ],
+          "consultationNamespace": "us_consultations"
         },
         {
           "faction": "confederate",
@@ -1945,7 +2036,19 @@
           }
         ]
       },
-      "holdingRisk": -400
+      "holdingRisk": -400,
+      "demonstration": {
+        "detentionRegions": 2,
+        "actionRegions": 4,
+        "deploymentDays": [
+          1,
+          2
+        ],
+        "reconnaissanceDays": 1,
+        "demonstrationCandidates": 12,
+        "totalCandidates": 16,
+        "reserveDays": 1
+      }
     },
     "recruitment": {
       "callTerms": {
@@ -16177,7 +16280,7 @@
       {
         "id": "s123_scott_1841",
         "fromDate": "1841-07-05",
-        "source": "Richardson IV p.73, presidential General Orders of 5 July 1841; Army Regulations 1857 pp.2-3 paras.7-14 and pp.57-60 paras.422-447. Retained read texts: docs/research/S123/sources/.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. The runtime principal transmits the declared Army office grant; this is not a claim that Lincoln wrote the 1841 instrument. Army land-domain mapping and strict exclusion of state-governor and Navy peers: docs/research/S123/standing-mandates.md.",
+        "source": "Richardson IV p.73, presidential General Orders of 5 July 1841; Army Regulations 1857 pp.2-3 paras.7-14 and pp.57-60 paras.422-447. Retained read texts: docs/research/S123/sources/.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. The runtime principal transmits the declared Army office grant; this is not a claim that Lincoln wrote the 1841 instrument. Army land-domain mapping and strict exclusion of state-governor and Navy peers: docs/research/S123/standing-mandates.md. [I:S130] The newly offered field-goal form is included under 0124 item2, inside this same read Army assignment and its existing troops/territory; no new force, guard or authority root.",
         "grant": {
           "mandateKey": "scott_army_command",
           "mandateRevision": 1,
@@ -16190,6 +16293,7 @@
             "hold",
             "relieve",
             "take",
+            "attack_or_demonstrate",
             "approve"
           ],
           "mandateRecipients": [

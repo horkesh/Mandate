@@ -11,7 +11,7 @@ it('observes one typed proposal against the original goal matter and shares the 
   const tick = (state: unknown, day: number) => ({ state, day, events: [] }) as unknown as phase0.TickResult;
   const original = { id: 'original', msgOrigin: 'original', msgOrder: { orderIssuer: 'a_lead', orderGoal: phase0.goalOf(goalTerms('hold', 'a_mid')), orderCall: null }, msgVerb: null, msgReport: null };
   observer.onTick(world, tick({ ...initial, messagesInTransit: [original] }, 1));
-  const proposal = { reportAuthor: 'a_gen', reportAuthorPost: 'a_army', reportDay: 2, reportAnswers: 'original', reportAdvice: null,
+  const proposal = { reportAuthor: 'a_gen', reportAuthorPost: 'a_army', reportDay: 2, reportAnswers: 'original', reportAdvice: null, reportClaims: [],
     reportProposal: { goal: phase0.goalOf(goalTerms('hold', 'a_cap')), reasons: [{ kind: 'safer_position', heldThreat: 10000, preferredThreat: 0 }] } };
   const message = { id: 'reply', msgOrigin: 'reply', msgOrder: null, msgVerb: null, msgReport: proposal, msgPending: [], msgTo: 'a_lead' };
   const state = { ...initial, messagesInTransit: [message] };
@@ -29,6 +29,6 @@ it('does not invent an original order identity for an uncorrelated proposal', ()
   const world = indexedFixture();
   const state = phase0.createState(world, { seed: 1 });
   const observer = observePushback();
-  observer.onTick(world, { state: { ...state, messagesInTransit: [{ msgOrder: null, msgVerb: null, msgReport: { reportAuthor: 'a_gen', reportDay: 2, reportAnswers: null, reportProposal: { goal: phase0.goalOf(goalTerms('hold', null)), reasons: [] } }, msgPending: [], msgTo: 'a_lead' }] }, day: 2, events: [] } as unknown as phase0.TickResult);
+  observer.onTick(world, { state: { ...state, messagesInTransit: [{ msgOrder: null, msgVerb: null, msgReport: { reportAuthor: 'a_gen', reportDay: 2, reportAnswers: null, reportClaims: [], reportProposal: { goal: phase0.goalOf(goalTerms('hold', null)), reasons: [] } }, msgPending: [], msgTo: 'a_lead' }] }, day: 2, events: [] } as unknown as phase0.TickResult);
   expect(observer.observations()).toEqual([]);
 });

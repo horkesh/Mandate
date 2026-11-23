@@ -66,7 +66,7 @@ function permitted(ctx: Ctx, edge: EdgeRecord, mode: SearchMode): boolean {
 /** Whether a force may take this leg: movement's passage rule, the goal's permissions, and (by water) landing only at the end. */
 export function legPasses(ctx: Ctx, edge: EdgeRecord, leg: EdgeLeg, mode: SearchMode, isEnd: boolean): boolean {
   const { ground, faction, goal } = ctx.input;
-  if (!permitted(ctx, edge, mode)) return false;
+  if (!permitted(ctx, edge, mode) || (ctx.regions !== undefined && !ctx.regions.has(leg.to))) return false;
   if (passageBar(ground, leg, faction, mode === 'water') !== null) return false;
   const kind = ground.map.regions.get(leg.to)!.kind;
   if (mode === 'water') return isEnd || kind === 'river' || kind === 'sea';

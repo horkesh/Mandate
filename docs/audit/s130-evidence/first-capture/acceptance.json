@@ -1,0 +1,75 @@
+{
+  "scope": "S130 demonstration; no limited sortie implementation",
+  "fictional": {
+    "file": "packages/kernel/test/demonstration.test.ts",
+    "names": [
+      "round-trips its purpose and advance kind without a regional goal",
+      "weighs both means after ordinary attributed reconnaissance",
+      "can demonstrate without attack superiority and closes on unknown men or stores",
+      "validates bounded connected areas and exact command grammar",
+      "accepts only the two deployment intervals and the single reconnaissance interval",
+      "keeps a deployment movement gate and charges asymmetric recovery days",
+      "discloses candidate counts and retains content ids across calendar changes",
+      "requires carried stores for the arrival boundary and full intervals before recovery",
+      "authorizes a distinct local authored letter only through live in-scope received authority",
+      "keeps authored dispatch correlations and candidate ids when an unrelated message is inserted",
+      "does not enact a refused detention order or one whose mandate is revoked before delivery",
+      "executes a regional reconnaissance interval, reports it by normal delivery, and permits departure",
+      "starts the attack course through ordinary movement without certifying detention on arrival",
+      "records a two-interval deployment only with real movement and leaves contact to battle",
+      "lets the opposing command move during the live deployment",
+      "carries the same observed activity through delivered, lost, delayed and filtered journeys",
+      "ends a bounded duty only on the received departure paper and keeps one interval after interruption"
+    ],
+    "count": 17,
+    "log": "runs/s130/serial-accepted-options.log",
+    "exit": 0
+  },
+  "coverage": {
+    "file": "packages/cli/test/s130-detention-coverage.test.ts",
+    "count": 5,
+    "log": "runs/s130/coverage-authorship.log",
+    "exit": 0
+  },
+  "paired": [
+    {
+      "ids": "P01,P13-P22",
+      "evidence": "packages/kernel/test/demonstration.test.ts",
+      "scope": "direct fictional date/commander renaming, geometry/duration/store bounds, authority, candidate counts, actual intervals/contact, own delivered reports, active opponent departure, replay/resume and unrelated insertion; shared letter/save/mandate cases reused below"
+    },
+    {
+      "ids": "P02-P12",
+      "status": "inapplicable to S130",
+      "reason": "limited-sortie size/guard/split/report-consumption lifecycle; the separate sortie build is not authorized here"
+    }
+  ],
+  "s115": {
+    "ids": "T01-T24",
+    "direct": "packages/kernel/test/demonstration.test.ts",
+    "coverage": "packages/cli/test/s130-detention-coverage.test.ts",
+    "reused": [
+      "packages/kernel/test/s112-authored-letters.test.ts",
+      "packages/kernel/test/s112-paper-receipts.test.ts",
+      "packages/kernel/test/s123-mandates.test.ts",
+      "packages/kernel/test/save.test.ts",
+      "packages/kernel/test/operations.test.ts",
+      "packages/kernel/test/seats-log.test.ts"
+    ]
+  },
+  "reuse": [
+    {
+      "log": "runs/s130/kernel/28-regressions.log",
+      "exit": 0,
+      "files": 10,
+      "tests": 146,
+      "limit": "earlier bounded regression set; subsequent new branches verified by final fictional17 and the required ordinary hook"
+    },
+    {
+      "log": "runs/s130/kernel/47-ownership.log",
+      "exit": 0,
+      "tests": 59
+    }
+  ],
+  "lossLimit": "No independent transport-loss simulator exists. The loss control withholds a real produced in-flight report; delivery/filtering/delay use ordinary transport.",
+  "historicalCredit": "none from fictional tests; U33/U34 measured only after sourced exposure; no 1A/budget/sweep credit"
+}

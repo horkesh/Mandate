@@ -3,6 +3,8 @@
  * `plans` (the only writer) stores the returned draft set on the request day, because a later call on a changed map
  * would not reproduce it (planner-design finding 1).
  */
+import { purposeTerms } from '../plans/goal.ts';
+import { detentionDraft } from './detention.ts';
 import { strictCompare } from '../compare.ts';
 import type { RegionId } from '../ids.ts';
 import { makeCtx, type PlannerInput } from './context.ts';
@@ -32,6 +34,7 @@ function sameShape(a: PlanCandidate, b: PlanCandidate): boolean {
 
 export function draft(input: PlannerInput): DraftSet {
   const ctx = makeCtx(input);
+  if (input.goal.goalPurpose !== undefined) return detentionDraft(ctx, purposeTerms(input.goal.goalPurpose));
   const route = directRoute(ctx);
   // Lane 1.12: a bombardment only where no land route reaches the objective (it fires instead of halting with no route).
   const outcomes: Outcome[] = [direct(ctx, route), flank(ctx, route), supplyLine(ctx), ...pincer(ctx, route), ...byWater(ctx), ...(route === null ? [bombard(ctx)] : []), holding(ctx)];

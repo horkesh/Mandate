@@ -17,6 +17,8 @@ import type { ComplianceRung, DirectiveAlternative, DirectiveTerms, Qualificatio
 import type { MessageId, PersonId, PostId } from '../ids.ts';
 import { reportQualificationOf, type DiscretionReport, type ReportBody, type ReportClaim, type StatedReason, type NoteAccount, type GoalProposal, type GoalProposalReason } from '../knowledge/report.ts';
 import { followsNote } from '../planner/notes.ts';
+import { templateFor } from '../knowledge/templates.ts';
+import { knowledgeOf } from '../knowledge/knowledge.ts';
 import { term } from '../knowledge/truth.ts';
 import { clampPermille } from '../permille.ts';
 import { liveTerms, draft } from '../planner/draft.ts';
@@ -31,7 +33,7 @@ import type { DraftSet, PlanCandidate, TermKind } from '../planner/types.ts';
 import { goalKindOf } from '../plans/goal.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { answerOrder, goalTerms } from '../reading/orders.ts';
-import { candidateOf, choose, finishChallenge, finishProposal, planOf, plannedPosts, postsInStatus, saveDraft, settleCounter, submitted, switchGoal, type PlanCounter, type PlanRecord } from '../plans/plans.ts';
+import { candidateOf, choose, endDetention, finishChallenge, finishProposal, planOf, plannedPosts, postsInStatus, saveDraft, settleCounter, submitted, switchGoal, type PlanCounter, type PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
 import { headquartersOf, postFaction } from '../seats/posts.ts';
@@ -72,6 +74,9 @@ export function optionView(c: PlanCandidate, privateTerms = true): OptionView {
   return {
     optionId: privateTerms ? c.id : c.id.replace(/\+note\d+/g, ''),
     method: c.candMethod,
+    ...(c.candDetention === undefined ? {} : { detention: c.candDetention.means === 'attack' ? { means: 'attack' } :
+      { means: 'demonstrate', task: c.candDetention.task, intervals: c.candDetention.intervals,
+        recovery: [c.candDetention.recovery.routeFrom, ...c.candDetention.recovery.routeLegs.map(l => l.legTo)] } }),
     variant: privateTerms ? c.candVariant : c.candVariant.replace(/\+note\d+/g, ''),
     score: visibleTerms.reduce((s,t) => s+t.contribAmount,0),
     terms: visibleTerms.map((t) => ({ term: t.contribTerm, amount: t.contribAmount })),
@@ -98,7 +103,16 @@ export function planKey(post: PostId, day: number): string {
 
 /** Posts whose holder picks a plan this morning (a draft saved on an earlier day), in id order. */
 export function choosingPosts(state: State, day: number): PostId[] {
-  return postsInStatus(state, 'choosing').filter((p) => state.planRecords[p]!.planDraft!.draftDay < day && (state.postStates[p]?.postHolder ?? null) !== null);
+  return postsInStatus(state, 'choosing').filter(post => {
+    const record = state.planRecords[post]!;
+    return record.planDetentionEnd === undefined && record.planDraft!.draftDay < day && (state.postStates[post]?.postHolder ?? null) !== null;
+  });
+}
+
+export function requiresEpisodeChoice(state: State, post: PostId): boolean {
+  const plan = state.planRecords[post];
+  return plan?.planGoal.goalPurpose !== undefined &&
+    Object.values(state.operationRecords).some(o => o.opOrder === plan.planOrder && o.opEndDay !== null);
 }
 
 /** The options a commander is offered this morning: every candidate of his draft set, best first; null when he has nothing to pick. */
@@ -111,7 +125,7 @@ export function planOptions(state: State, post: PostId, day: number): readonly O
 export function choosingMenus(state: State, day: number) {
   return choosingPosts(state, day).flatMap(post => {
     const options = planOptions(state, post, day);
-    return options === null || options.length < 2 ? [] : [{ post, holder: state.postStates[post]!.postHolder!, options }];
+    return options === null || (options.length < 2 && !requiresEpisodeChoice(state, post)) ? [] : [{ post, holder: state.postStates[post]!.postHolder!, options }];
   });
 }
 
@@ -153,6 +167,7 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
     if (options.length === 0) continue;
     let pick = choices.get(post);
     if (pick === undefined) {
+      if (requiresEpisodeChoice(start, post)) continue;
       pick = options[0]!.id;
       if (menus.has(post) && options.length > 1) {
         fire(ctx, 'seats.defaulted');
@@ -178,7 +193,7 @@ export function applyPlanChoices(ctx: TickContext, start: State, menus: Readonly
       const month = monthOf(state, ctx.day);
       const derived = deriveMap(ctx.world.map, { control: state.regionControl, month, network });
       const input = withNotePreferences(plannerInputFor(ctx.world, state, derived, network, month, viewFor(ctx.world, state, seatIdFor(state.postStates[post]!.postHolder!), createViewCache()), post, record.planGoal, ctx.day), ctx.world, state, record);
-      const report = toIssuer(ctx, state, post, record, [{ claimKind: 'plan-submitted', claimRegion: record.planGoal.goalObjective, claimValue: optionView(c, false).score, claimToken: c.candMethod, claimConfidence: 1000 }], { plan: enclosePlan(input, record.planDraft!, c), answers: record.planOrder, tag: `plan.${post}`, ...(notes.length ? { notes } : {}) });
+      const report = toIssuer(ctx, state, post, record, [{ claimKind: 'plan-submitted', claimRegion: record.planGoal.goalObjective ?? null, claimValue: optionView(c, false).score, claimToken: c.candMethod, claimConfidence: 1000 }], { plan: enclosePlan(input, record.planDraft!, c), answers: record.planOrder, tag: `plan.${post}`, ...(notes.length ? { notes } : {}) });
       state = submitted(state, post, report);
       fire(ctx, 'plans.submitted');
     } else {
@@ -228,6 +243,19 @@ function draftProposal(ctx: TickContext, state: State, post: PostId, record: Pla
   letter: { readonly answers: MessageId; readonly response: string; readonly issuer: PersonId; readonly basis?: MessageId }): boolean {
   const response = state.orderResponses[letter.response];
   if (response?.respPerson !== input.profile.person) return false;
+  if (input.goal.goalPurpose !== undefined) {
+    const challenged = OBJECTS.includes(response.respDeclared) &&
+      (OBJECTS.includes(response.respActual) || response.respReservations?.some(r => r.subject === 'course'));
+    const grounded = [...new Set(set.draftRejected.flatMap(r => r.rejGates.map(g => g.gateKind)))]
+      .filter(g => g === 'insufficient_force' || g === 'insufficient_stores' || g === 'no_route').sort(strictCompare);
+    if (!challenged || grounded.length === 0) return false;
+    toIssuer(ctx, state, post, record, grounded.map(gate => ({ claimKind: 'detention-course', claimRegion: null,
+      claimValue: 1, claimToken: gate, claimConfidence: ctx.world.map.world.rules.reportConfidence.planObjection })), {
+      objection: response.respStated.map(r => ({ reasonKind: r.kind, reasonWeight: statedWeight(r) })),
+      answers: letter.answers, issuer: letter.issuer, tag: `detention-course.${post}`,
+    });
+    return true;
+  }
   const { searches, choice } = preferableGoal(input, set);
   if (searches > 0) fire(ctx, 'planner.searches', searches);
   if (choice === null) return false;
@@ -259,17 +287,67 @@ function draftProposal(ctx: TickContext, state: State, post: PostId, record: Pla
   return true;
 }
 
+/** An affirmative received association elsewhere, covering the detention area, can end a bounded duty. */
+function closeReportedDeparture(ctx: TickContext, state: State, post: PostId): State {
+  const record = state.planRecords[post]!;
+  const purpose = record.planGoal.goalPurpose;
+  const holder = state.postStates[post]?.postHolder ?? null;
+  if (purpose === undefined || holder === null || record.planDetentionEnd !== undefined) return state;
+  const maxAge = templateFor(ctx.world.rules.templates, 'enemy-estimate', null).maxAgeDays;
+  const papers = knowledgeOf(state, seatIdFor(holder)).knownReports.filter(r => r.knownReceivedDay < ctx.day &&
+    r.knownReceivedDay >= record.planSetDay && r.knownBody.reportType === 'enemy-estimate' &&
+    ctx.day - r.knownBody.reportDay <= maxAge);
+  const newest = papers.sort((a, b) => b.knownBody.reportDay - a.knownBody.reportDay ||
+    b.knownReceivedDay - a.knownReceivedDay || strictCompare(a.id, b.id))[0];
+  if (newest === undefined) return state;
+  const claims = newest.knownBody.reportClaims.filter(c => c.claimConfidence > 0);
+  const positions = claims.filter(c => c.claimKind === 'enemy-command' && c.claimToken === purpose.detTargetPost && c.claimRegion !== null);
+  if (positions.length === 0 || positions.some(c => purpose.detDetentionArea.includes(c.claimRegion!)) ||
+    !purpose.detDetentionArea.every(region => claims.some(c => c.claimKind === 'enemy-strength' && c.claimRegion === region))) return state;
+  toIssuer(ctx, state, post, record, positions.map(c => ({ claimKind: 'detention-effect', claimRegion: c.claimRegion,
+    claimValue: newest.knownBody.reportDay, claimToken: 'reported_departure', claimConfidence: c.claimConfidence })), {
+    answers: record.planOrder, tag: `detention-departure.${post}`,
+  });
+  return endDetention(state, post, { dendReason: 'reported_departure', dendDay: ctx.day, dendReport: newest.id });
+}
+
 /** The day's edits and drafts, on the morning's map (one derivation, only when there is plan work today). */
-export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): State {
+export function plansPhase(ctx: TickContext, initial: State, cache: ViewCache): State {
   const { world, day } = ctx;
+  let start = initial;
+  if (world.map.world.rules.plans.demonstration !== undefined) {
+    for (const post of plannedPosts(initial)) start = closeReportedDeparture(ctx, start, post);
+  }
   const posts = plannedPosts(start);
   const pending = posts.filter(p => planOf(start, p)!.planPending !== null);
   const granted = posts.filter(p => planOf(start, p)!.planGoal.goalDiscretion !== undefined);
-  const needsDraft = (record: PlanRecord) => record.planStatus === 'drafting' || record.planProposalPending === true;
+  const retryDetention = (post: PostId, record: PlanRecord) => {
+    const purpose = record.planGoal.goalPurpose;
+    const holder = start.postStates[post]?.postHolder;
+    if (purpose === undefined || holder === undefined || holder === null || record.planDraft === null ||
+      record.planDetentionEnd !== undefined || !planAuthorized(world, start, post, record, day)) return false;
+    const empty = record.planDraft.draftCandidates.length === 0;
+    const prior = Object.values(start.operationRecords).filter(o => o.opOrder === record.planOrder && o.opPost === post)
+      .sort((a, b) => b.opStartDay - a.opStartDay)[0];
+    const recovered = prior !== undefined && prior.opEndDay !== null && prior.opDemonstration?.demEvents.at(-1)?.devReason === 'recovered';
+    if (!empty && (!recovered || prior.opDraftDay !== record.planDraft.draftDay)) return false;
+    // A recovered demonstration does not consume its target observation (the
+    // separate limited-sortie form does). A new explicit logged choice, rather
+    // than a newer report, is what permits another episode of this same duty.
+    const earliest = recovered ? 0 : record.planDraft.draftDay;
+    const maxAge = templateFor(ctx.world.rules.templates, 'enemy-estimate', null).maxAgeDays;
+    return knowledgeOf(start, seatIdFor(holder)).knownReports.some(r => r.knownReceivedDay >= earliest &&
+      day - r.knownBody.reportDay <= maxAge &&
+      r.knownReceivedDay < day && r.knownBody.reportType === 'enemy-estimate' && r.knownBody.reportClaims.some(c =>
+        c.claimKind === 'enemy-command' && c.claimToken === purpose.detTargetPost && c.claimRegion !== null &&
+        purpose.detDetentionArea.includes(c.claimRegion)));
+  };
+  const needsDraft = (post: PostId, record: PlanRecord) => record.planDetentionEnd === undefined &&
+    (record.planStatus === 'drafting' || record.planProposalPending === true || retryDetention(post, record));
   const hasChallenge = (record: PlanRecord) => record.planChallenge?.challengePending === true;
   if (pending.length === 0 && granted.length === 0 && !posts.some(p => {
     const record = planOf(start, p)!;
-    return needsDraft(record) || hasChallenge(record);
+    return needsDraft(p, record) || hasChallenge(record);
   })) return start;
   const network = passageOf(world.map, start);
   const month = monthOf(start, day);
@@ -308,7 +386,7 @@ export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): St
     const record = planOf(state, post)!;
     const incoming = record.planChallenge;
     return [
-      ...(needsDraft(record) ? [{ post, since: record.planSetDay, separate: false }] : []),
+      ...(needsDraft(post, record) ? [{ post, since: record.planSetDay, separate: false }] : []),
       ...(incoming?.challengePending === true
         ? [{ post, since: state.orderResponses[incoming.challengeResponse]?.respDay ?? day, separate: true }] : []),
     ];
@@ -337,12 +415,12 @@ export function plansPhase(ctx: TickContext, start: State, cache: ViewCache): St
     const drafted = draftFor(ctx, input);
     const set = record.planAuthority === undefined ? drafted : { ...drafted,
       draftCandidates: drafted.draftCandidates.filter(c => planAuthorized(world,state,post,record,day,c)) };
-    if (record.planAuthority !== undefined && set.draftCandidates.length === 0) continue;
+    if (record.planAuthority !== undefined && set.draftCandidates.length === 0 && record.planGoal.goalPurpose === undefined) continue;
     if (record.planProposalPending === true) {
       draftProposal(ctx, state, post, record, input, set, { answers: record.planOrder, response: record.planResponse, issuer: record.planIssuer });
       state = finishProposal(state, post);
     }
-    if (record.planStatus === 'drafting') state = saveDraft(state, post, set);
+    if (record.planStatus === 'drafting' || retryDetention(post, record)) state = saveDraft(state, post, set);
   }
   return state;
 }
@@ -359,7 +437,7 @@ function answerEdit(ctx: TickContext, start: State, post: PostId, derived: Deriv
   const pending = record.planPending!;
   const holder = start.postStates[post]?.postHolder ?? null;
   const chosen = record.planApproved ?? (record.planChosen === null ? undefined : candidateOf(record, record.planChosen));
-  const objective = record.planGoal.goalObjective;
+  const objective = record.planGoal.goalObjective ?? null;
   const invalid = (reason: string, state: State): State => {
     const counter: PlanCounter = { counterSpec: pending.pendingSpec, counterOrder: pending.pendingOrder, counterDay: day, counterDistance: 0, counterFell: [], counterInvalid: reason, counterResponse: null };
     fire(ctx, 'plans.edit_invalid');

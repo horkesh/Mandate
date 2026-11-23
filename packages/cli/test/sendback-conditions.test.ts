@@ -50,7 +50,7 @@ it('N9: notes cannot turn holding or bombardment into a march, but can change a 
   const { input } = caseInput(CASES[2]!, SEATINGS[0]!);
   const request: planner.PlannerInput = {
     ...input,
-    goal: { ...input.goal, goalPosture: 'take' },
+    goal: { ...input.goal, goalPurpose: undefined, goalObjective: input.goal.goalObjective ?? null, goalPosture: 'take' },
     // Put a held battery shore beside the fictional fort, instead of sailing through open sea.
     ground: { ...input.ground, map: world.indexWorld({ ...input.ground.map.world,
       edges: [...input.ground.map.world.edges, edge('n_naval_base', 'island_fort', { type: 'sea' })],

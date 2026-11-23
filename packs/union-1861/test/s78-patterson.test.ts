@@ -17,7 +17,7 @@ it('Scott’s containment doctrine sends a hold through the ordinary order path,
   expect(answer).toMatchObject({ answerKind: 'commands', commands: expect.arrayContaining([
     expect.objectContaining({ cmd: 'order', to: 'us_dept_pennsylvania', goal: expect.objectContaining({ objective: 'lower_valley', posture: 'hold' }) }),
   ]) });
-  const rows = world.map.world.rules.ruleSeats.principals.find(p => p.faction === 'union')!.offensives.filter(o => o.post === 'us_dept_pennsylvania');
+  const rows = world.map.world.rules.ruleSeats.principals.find(p => p.faction === 'union')!.offensives.filter(o => o.post === 'us_dept_pennsylvania' && o.issuer === undefined);
   expect(rows).toHaveLength(2);
   expect(rows[1]).toMatchObject({ objective: 'harpers_ferry', fromDate: '1861-07-23', posture: 'hold' });
 });

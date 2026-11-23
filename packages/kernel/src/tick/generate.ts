@@ -61,6 +61,24 @@ const claim = (kind: ReportClaim['claimKind'], region: RegionId | null, value: n
 });
 
 /** The enemy's known men standing in each region: other sides' force blocks, ships and troops aboard included. */
+function reconContacts(ctx: TickContext, state: State, side: FactionId, region: RegionId) {
+  const commands = new Set<PostId>();
+  let unquantified = false;
+  const ids = Object.keys(state.forceLocations) as ForceBlockId[];
+  for (const block of ids.sort(strictCompare)) {
+    const loc = state.forceLocations[block]!;
+    const force = state.forceBlockStates[block]!;
+    const faction = factionOfBlock(ctx.world.map, state, block);
+    if (faction === null || faction === side || loc.locRegion !== region || loc.locMarch !== null ||
+      loc.locAboard !== null || force.fbSurrenderedDay !== null) continue;
+    const strength = forceTotals(force, ctx.world.map.forceTotalsCache).fbStrength;
+    if (strength === null) unquantified = true;
+    const post = state.forceAssignments[block];
+    if (post !== undefined && post !== null && force.fbKind !== 'detachment' && strength !== 0) commands.add(post);
+  }
+  return { commands: [...commands].sort(strictCompare), unquantified };
+}
+
 function enemyAt(ctx: TickContext, state: State, faction: FactionId): ReadonlyMap<RegionId, number> {
   const map = ctx.world.map;
   const out = new Map<RegionId, number>();
@@ -82,6 +100,13 @@ function enemyAt(ctx: TickContext, state: State, faction: FactionId): ReadonlyMa
 export function goalStatus(state: State, post: PostId): { readonly token: string; readonly region: RegionId | null } {
   const r = state.planRecords[post];
   if (r === undefined) return { token: 'holding', region: null };
+  if (r.planGoal.goalPurpose !== undefined) {
+    if (r.planDetentionEnd !== undefined) return { token: r.planDetentionEnd.dendReason, region: null };
+    const operations = Object.values(state.operationRecords).filter(o => o.opOrder === r.planOrder);
+    return { token: state.stateDay > r.planSetDay + r.planGoal.goalDeadlineDays ? 'duty_overdue' :
+      operations.some(o => (o.opDemonstration?.demActions.length ?? 0) > 0) ? 'pressure_attempted' :
+      r.planDraft?.draftCandidates.length === 0 ? 'blocked' : 'planning', region: null };
+  }
   const region = r.planGoal.goalObjective;
   if (r.planStatus !== 'approved') return { token: 'planning', region };
   const plan = r.planApproved;
@@ -123,7 +148,18 @@ export function generateReports(ctx: TickContext, state: State): void {
       const edges = new Set<EdgeId>();
       for (const region of world.watched(hq)) {
         const seen = enemy.get(region) ?? 0;
-        claims.push(claim('enemy-strength', region, Math.trunc((seen * bias) / 1000), null, confidence.scoutEnemyStrength));
+        const contacts = world.map.world.rules.plans.demonstration === undefined ? undefined : reconContacts(ctx, state, side, region);
+        if (!contacts?.unquantified) claims.push(claim('enemy-strength', region, Math.trunc((seen * bias) / 1000), null, confidence.scoutEnemyStrength));
+        else claims.push(claim('enemy-estimate-unknown', region, 1, null, confidence.scoutEnemyStrength));
+        for (const command of contacts?.commands ?? []) claims.push(claim('enemy-command', region, 1, command, confidence.scoutEnemyStrength));
+        if (contacts !== undefined) for (const key of Object.keys(state.operationRecords).sort(strictCompare)) {
+          const operation = state.operationRecords[key]!;
+          const action = operation.opDemonstration?.demActions.at(-1);
+          const actor = postFaction(world, state, operation.opPost);
+          if (action?.dactDay !== day || action.dactRegion !== region || actor === null || actor === side) continue;
+          claims.push({ ...claim('enemy-activity', region, 1, operation.opPost, confidence.scoutEnemyStrength),
+            claimActivity: action.dactTask });
+        }
         terms.push(term('observed', seen, { region, post: id }));
         if (bias !== 1000) terms.push(term('intelligence_bias', bias, { person: author, region, post: id }));
         const works = state.regionFortification[region] ?? 0;

@@ -28,7 +28,7 @@ const letter = (key: string, revision = 1): LetterIdentity => ({ namespace: 'a_d
 const first = letter('first');
 const second = letter('second');
 
-function offensive(identity: LetterIdentity, more: Partial<DoctrineOffensive> = {}): DoctrineOffensive {
+function offensive(identity: LetterIdentity, more: Partial<Extract<DoctrineOffensive, { objective: unknown }>> = {}): DoctrineOffensive {
   return { letter: identity, post, objective: R('a_mid'), posture: 'hold', fromDate: date, source: 'Fictional dispatch book', ...more };
 }
 
@@ -48,7 +48,7 @@ function command(world: ReturnType<typeof fixture>, row: DoctrineOffensive, chan
   const { goalDefaults } = world.map.world.rules.plans;
   const { risk, deadlineDays, rail, river, sea, neutral, awaitWord, approveAsDrafted } = goalDefaults;
   return { cmd: 'order', to: row.post, route: 'courier', bypass: true, letter: row.letter!,
-    goal: { objective: row.objective, posture: row.posture ?? 'take', risk, deadlineDays, rail, river, sea, neutral, awaitWord, approveAsDrafted, committed: [] }, ...changes };
+    goal: { objective: row.objective!, posture: row.posture ?? 'take', risk, deadlineDays, rail, river, sea, neutral, awaitWord, approveAsDrafted, committed: [] }, ...changes };
 }
 
 function menu(world: ReturnType<typeof fixture>, state: State) {

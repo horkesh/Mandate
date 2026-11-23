@@ -77,11 +77,11 @@ function reportCopy(r: ReportView, t: DeskStrings): string {
     return stories.length === 0 ? t('press.empty') : stories.map(s => t('console.report.story', { headline: s.headline, body: s.body })).join('; ');
   }
   if (r.proposal !== undefined) return t('console.report.proposal', { paper: r.id, post: r.subjectId,
-    posture: r.proposal.goal.goalPosture, objective: r.proposal.goal.goalObjective ?? t('console.goal.here'),
+    posture: r.proposal.goal.goalPurpose?.detKind ?? r.proposal.goal.goalPosture ?? '', objective: r.proposal.goal.goalObjective ?? t('console.goal.here'),
     reasons: r.proposal.reasons.map(reason => reason.kind).join(', '),
   });
   if (r.discretion !== undefined) return t('console.report.discretion', { post: r.subjectId,
-    condition: r.discretion.switchCondition, posture: r.discretion.switchGoal.goalPosture,
+    condition: r.discretion.switchCondition, posture: r.discretion.switchGoal.goalPurpose?.detKind ?? r.discretion.switchGoal.goalPosture ?? '',
     objective: r.discretion.switchGoal.goalObjective ?? t('console.goal.here'), region: r.discretion.switchRegion,
     estimate: String(r.discretion.switchEstimate),
   });

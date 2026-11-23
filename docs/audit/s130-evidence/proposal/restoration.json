@@ -1,0 +1,65 @@
+{
+  "trackedBefore": 3007,
+  "trackedAfter": 3007,
+  "changesAfterRestore": [],
+  "indexUntouched": true,
+  "temporaryTestRemoved": true,
+  "proposalFiles": [
+    {
+      "path": "packages/kernel/src/seats/local-actions.ts",
+      "original": "6899024ebf7ed21d942369c437207356ebbc1e68ac2c7e68791c26fc2e2f6b91",
+      "restored": "6899024ebf7ed21d942369c437207356ebbc1e68ac2c7e68791c26fc2e2f6b91",
+      "proposed": "c34fc89fe70365a31cf510888714dfbcaa6abfaf261fe72a68062e4ad8ac6831"
+    },
+    {
+      "path": "packages/kernel/src/seats/sender.ts",
+      "original": "e78557a07a19a21b784e7f2c7e4c566dfe2d21388261f6fd991d14db9fc56cec",
+      "restored": "e78557a07a19a21b784e7f2c7e4c566dfe2d21388261f6fd991d14db9fc56cec",
+      "proposed": "ff76f5cf88d2613ea40edf4bedb688151e547eacc6b17b52491d0bf096ae9ac3"
+    },
+    {
+      "path": "packages/kernel/src/tick/orders.ts",
+      "original": "6b5b8ce032f5cda9deb71e6500999a37a1fb9b8c43eeb358a4fdda9132bc4ead",
+      "restored": "6b5b8ce032f5cda9deb71e6500999a37a1fb9b8c43eeb358a4fdda9132bc4ead",
+      "proposed": "3be062bf22cdaf4d99e47604aba16ec79fc33d203a216c6d4641a2b340063b33"
+    },
+    {
+      "path": "packages/kernel/src/view/people.ts",
+      "original": "89ef895ee186a32db46082e700f0ef8f741a191110061632cc0af317af36f463",
+      "restored": "89ef895ee186a32db46082e700f0ef8f741a191110061632cc0af317af36f463",
+      "proposed": "ccab2ba01407299dfb7731b955f58bbfa6336c23fb382223cda2a2a08bed85b2"
+    },
+    {
+      "path": "packages/kernel/test/s130-late-address-proposal.test.ts",
+      "original": null,
+      "restored": null,
+      "proposed": "3753b258cbbbc213f98a7d9e5a35b5de64b750d156fb15830fca9fbc43d8122b"
+    }
+  ],
+  "runs": [
+    {
+      "name": "retained-before",
+      "command": "npx tsx runs/s130/proposal/retained.ts runs/s130/proposal/retained-before.json",
+      "exit": 0,
+      "seconds": 11.738
+    },
+    {
+      "name": "focused",
+      "command": "npm test -- packages/kernel/test/s130-late-address-proposal.test.ts packages/kernel/test/s65-sender-belief.test.ts",
+      "exit": 0,
+      "seconds": 3.064
+    },
+    {
+      "name": "typecheck",
+      "command": "npm run typecheck",
+      "exit": 0,
+      "seconds": 4.439
+    },
+    {
+      "name": "retained-after",
+      "command": "npx tsx runs/s130/proposal/retained.ts runs/s130/proposal/retained-after.json",
+      "exit": 0,
+      "seconds": 10.219
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+diff --git a/packages/kernel/src/seats/local-actions.ts b/packages/kernel/src/seats/local-actions.ts
+--- a/packages/kernel/src/seats/local-actions.ts
++++ b/packages/kernel/src/seats/local-actions.ts
+@@ -126,16 +126,17 @@
+     const dispatched = new Map((knowledge.knownDoctrineDispatches ?? []).map(d => [letterKey(d.dispatchLetter), d.dispatchOrigin]));
+     const since = warSince(world, state, doctrine.faction);
+     const start = daysFromCivil(parseIsoDate(state.calendarStart));
+-    const sender = senderFor(world, state, seatIdFor(person), undefined, undefined, post);
+     const selected = new Set<PostId>();
+     for (const row of orderedLetters(doctrine.offensives)) {
+       if (row.issuer !== person || row.purpose === undefined || row.letter === undefined || row.post === post ||
+         since === null || day <= since || day < daysFromCivil(parseIsoDate(row.fromDate)) - start ||
+-        selected.has(row.post) || dispatched.has(letterKey(row.letter)) || sender?.holder(row.post) == null ||
++        selected.has(row.post) || dispatched.has(letterKey(row.letter)) ||
+         !letterDependencies(row).every(d => dispatched.has(letterKey(d))) ||
+         !hasRequiredPapers(row.requiresPapers, knowledge, state.stateDay, world.rules.templates) ||
+         (row.requiresNotice !== undefined && !knowledge.knownReports.some(r => r.knownReceivedDay <= state.stateDay &&
+           r.knownBody.reportSubjectKind === 'situation' && r.knownBody.reportSubjectId === row.requiresNotice))) continue;
++      const sender = senderFor(world, state, seatIdFor(person), undefined, undefined, post, row.post);
++      if (sender?.holder(row.post) == null || sender.side(row.post) !== side) continue;
+       const blocks = allCommandedBlocks(world.map, state, row.post);
+       for (const authority of active) {
+         const grant = authority.authorityGrant;
+diff --git a/packages/kernel/src/seats/sender.ts b/packages/kernel/src/seats/sender.ts
+--- a/packages/kernel/src/seats/sender.ts
++++ b/packages/kernel/src/seats/sender.ts
+@@ -21,7 +21,7 @@
+   return { ...declared, department: schedule?.department ?? declared.department };
+ }
+
+-export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisition?: PostId, cache?: ViewCache, localPost?: PostId) {
++export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisition?: PostId, cache?: ViewCache, localPost?: PostId, detentionAddress?: PostId) {
+   const person = state.seatAssignments[seat]?.seatPerson;
+   const principalOffice = world.start.factions.find(f => f.principal === person);
+   if (principalOffice !== undefined) localPost = undefined;
+@@ -33,7 +33,7 @@
+   const scope = localPost === undefined ? [] : currentMandates(state,localPost)
+     .filter(a => activeMandate(world.map,state,a,state.stateDay+1)).flatMap(a => a.authorityGrant.mandateRecipients).concat((world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person && p.grant.mandateIssuerPost === localPost && p.grant.mandateParent === null).map(p => p.grant.mandatePost));
+   const view = localPost === undefined ? baseView : { ...baseView,
+-    posts: commandProjection(world,person!,baseView.faction,baseView.reports,state.stateDay,state.calendarStart,scope).posts };
++    posts: commandProjection(world,person!,baseView.faction,baseView.reports,state.stateDay,state.calendarStart,scope,detentionAddress).posts };
+   const posts = new Map(view.posts.map(p => [p.post,p]));
+   const sides = receivedDepartmentSides(world, view);
+   const definition = (post: PostId) => receivedPostDefinition(world, view, post);
+diff --git a/packages/kernel/src/tick/orders.ts b/packages/kernel/src/tick/orders.ts
+--- a/packages/kernel/src/tick/orders.ts
++++ b/packages/kernel/src/tick/orders.ts
+@@ -220,7 +220,9 @@
+   const cmd = { to, route, bypass };
+   const issuer = { id: issuerId };
+   // The whole chain of posts between the principal's own post and the target relays his order.
+-  const sender = senderFor(world, state, seat, requisition, ctx.senderViews, body.orderAuthority === undefined && body.orderMandate === undefined ? undefined : heldPost(state,issuerId) ?? undefined)!;
++  const local = body.orderAuthority === undefined && body.orderMandate === undefined ? undefined : heldPost(state, issuerId) ?? undefined;
++  const detentionAddress = body.orderAuthority === undefined || body.orderLetter === undefined || body.orderGoal?.goalPurpose === undefined ? undefined : to;
++  const sender = senderFor(world, state, seat, requisition, ctx.senderViews, local, detentionAddress)!;
+   const officeAddress = requisition !== undefined && (resolveOffice || sender.holder(cmd.to) === null);
+   const chain = officeAddress ? [cmd.to] : sender.chain(cmd.to);
+   // Vacant relay posts cannot relay: the order skips them.
+diff --git a/packages/kernel/src/view/people.ts b/packages/kernel/src/view/people.ts
+--- a/packages/kernel/src/view/people.ts
++++ b/packages/kernel/src/view/people.ts
+@@ -36,8 +36,23 @@
+ /** A received assignment opens only its named command's public establishment.
+  * This reads opening assignments and received corrections, never live holders.
+  */
+-export function commandProjection(world: SeatsWorld, person: PersonId, faction: FactionId | null, reports: readonly ReportView[], day: number, calendar: string | null, scope: readonly PostId[]): PeopleProjection {
+-  const known = establishmentProjection(world,person,faction,reports,() => null,day,calendar);
++export function commandProjection(world: SeatsWorld, person: PersonId, faction: FactionId | null, reports: readonly ReportView[], day: number, calendar: string | null, scope: readonly PostId[], detentionAddress?: PostId): PeopleProjection {
++  const establishment = establishmentProjection(world,person,faction,reports,() => null,day,calendar);
++  const known = detentionAddress === undefined ? establishment : {
++    ...establishment, posts: establishment.posts.map(p => {
++      if (p.post !== detentionAddress || p.placementKnown || p.status !== 'held' || p.holder === null) return p;
++      const declared = world.start.temporaryPosts.find(t => t.id === p.post);
++      if (declared === undefined || declared.parent === null ||
++        world.map.world.departments.find(d => d.id === declared.department)?.faction !== faction) return p;
++      // A received self-attributed strength return can identify the commander's address.
++      // Its declared placement supplies the route; it grants no live mandate or appointment.
++      const evidenced = reports.some(r => r.id === p.source && r.type === 'strength-return' && r.subtype === null &&
++        r.day <= day && r.receivedDay <= day && r.author === p.holder && r.authorPost === p.post &&
++        r.subjectKind === 'post' && r.subjectId === p.post &&
++        r.claims.some(c => c.kind === 'present-for-duty' && c.confidence > 0));
++      return evidenced ? { ...p, parent: declared.parent, placementKnown: true } : p;
++    }),
++  };
+   const byPost = new Map(known.posts.map(p => [p.post,p]));
+   const own = known.posts.find(p => p.holder === person)?.post;
+   const inside = (post: PostId) => {
+diff --git a/packages/kernel/test/s130-late-address-proposal.test.ts b/packages/kernel/test/s130-late-address-proposal.test.ts
+new file mode 100644
+--- /dev/null
++++ b/packages/kernel/test/s130-late-address-proposal.test.ts
+@@ -0,0 +1,79 @@
++import { describe, expect, it } from 'vitest';
++import { enactMandate } from '../src/command/authority.ts';
++import { toId } from '../src/ids.ts';
++import { deliverReport } from '../src/knowledge/knowledge.ts';
++import type { ReportBody } from '../src/knowledge/report.ts';
++import { senderFor } from '../src/seats/sender.ts';
++import { seatIdFor } from '../src/seats/seats.ts';
++import { indexSeatsWorld } from '../src/seats/world.ts';
++import { createState } from '../src/tick/setup.ts';
++import { indexWorld } from '../src/world/index.ts';
++import type { MandateGrant } from '../src/world/mandates.ts';
++import { fixtureMap, fixtureStart, P, POST, R } from './support/seats-fixture.ts';
++
++const office = POST('a_office');
++const late = POST('late_command');
++const commander = P('a_spy');
++const secretary = P('a_sec');
++const seat = seatIdFor(secretary);
++const principal = seatIdFor(P('a_lead'));
++const department = toId('department', 'a_war');
++const message = toId('message', 'm.late.return');
++const noTruth = { truthTerms: [], truthTrimmed: [] } as const;
++
++function fixture() {
++  const base = fixtureMap();
++  const map = indexWorld({ ...base.world, vocabularies: { ...base.world.vocabularies,
++    postKinds: base.world.vocabularies.postKinds.map(k => k.id === 'expedition' ? { ...k, creatable: 'appoint' as const } : k),
++  } });
++  const world = indexSeatsWorld(map, { ...fixtureStart(), temporaryPosts: [{
++    id: late, name: 'post.late_command', kind: 'expedition', department, parent: office, holder: null, region: R('a_mid'), operation: 'late_operation',
++  }] });
++  const opening = { ...createState(world, { seed: 17 }), stateDay: 5 };
++  const grant: MandateGrant = { mandateKey: 'root', mandateRevision: 1, mandateIssuer: P('a_lead'), mandateIssuerPost: null,
++    mandateHolder: secretary, mandatePost: office, mandateParent: null, mandateActions: ['attack_or_demonstrate'],
++    mandateRecipients: [office], mandateRegions: [R('a_mid')], mandateModes: ['land'],
++    mandateCeiling: { ceilingPost: office, ceilingMen: null }, mandateGuard: null, mandateExpires: null,
++    mandateReports: [], mandateOnward: false, mandateRevoke: false };
++  const active = enactMandate(map, opening, grant, toId('message', 'm.root'), 1, 'answered', ['attack_or_demonstrate']);
++  const body: ReportBody = { reportType: 'strength-return', reportSubtype: null, reportAuthor: commander, reportAuthorPost: late,
++    reportSubjectKind: 'post', reportSubjectId: late, reportDay: 4, reportHour: null, reportAnswers: null, reportAdvice: null,
++    reportClaims: [{ claimKind: 'present-for-duty', claimRegion: null, claimValue: 300, claimToken: null, claimConfidence: 900 }] };
++  return { world, active, body };
++}
++
++describe('address of a declared late command under a received mandate', () => {
++  it('uses one received self-attributed return and the declared parent, surviving hidden chain/holder changes', () => {
++    const { world, active, body } = fixture();
++    const report = { id: message, knownReceivedDay: 5, knownRoute: 'mail', knownVia: [], knownBody: body } as const;
++    const heard = deliverReport(active, seat, report, noTruth);
++    const sender = (state: typeof active) => senderFor(world, state, seat, undefined, undefined, office, late)!;
++    expect(sender(active).known(late)).toBe(false);
++    expect(sender(heard).holder(late)).toBe(commander);
++    expect(sender(heard).chain(late)).toEqual([late]);
++    const hidden = { ...heard, postStates: { ...heard.postStates, [late]: {
++      ...heard.postStates[POST('a_army')]!, postParent: POST('b_office'), postHolder: P('b_gen'),
++    } } };
++    expect(sender(hidden).holder(late)).toBe(commander);
++    expect(sender(hidden).chain(late)).toEqual([late]);
++    expect(senderFor(world, heard, seat, undefined, undefined, office)?.known(late)).toBe(false);
++    const principalKnowledge = deliverReport(active, principal, report, noTruth);
++    expect(senderFor(world, principalKnowledge, principal, undefined, undefined, office, late)?.posts.get(late))
++      .toMatchObject({ holder: commander, parent: null, placementKnown: false });
++  });
++
++  it('leaves withheld, future, unscoped, anonymous and superseded addresses closed', () => {
++    const { world, active, body } = fixture();
++    const report = { id: message, knownReceivedDay: 5, knownRoute: 'mail', knownVia: [], knownBody: body } as const;
++    const sender = (state: typeof active) => senderFor(world, state, seat, undefined, undefined, office, late)!;
++    expect(sender(deliverReport(active, seat, { ...report, knownReceivedDay: 6 }, noTruth)).known(late)).toBe(false);
++    expect(sender(deliverReport(active, seat, { ...report, knownBody: { ...body, reportClaims: [] } }, noTruth)).known(late)).toBe(false);
++    const heard = deliverReport(active, seat, report, noTruth);
++    expect(sender({ ...heard, authorityByPost: {} }).known(late)).toBe(false);
++    const vacant = deliverReport(heard, seat, { ...report, id: toId('message', 'm.late.vacant'), knownBody: {
++      ...body, reportType: 'wire-dispatch', reportAuthor: secretary, reportAuthorPost: office, reportDay: 5,
++      reportClaims: [{ claimKind: 'commander-lost', claimRegion: null, claimValue: 1, claimToken: 'captured', claimConfidence: 1000 }],
++    } }, noTruth);
++    expect(sender(vacant).known(late)).toBe(false);
++  });
++});

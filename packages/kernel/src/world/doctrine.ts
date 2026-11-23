@@ -31,12 +31,13 @@ export function orderedLetters(rows: readonly DoctrineOffensive[]): DoctrineOffe
 }
 
 /** The enclosure the declaration authorizes, including all pack defaults and recursive fallback terms. */
-export function authoredGoal(row: DoctrineOffensive, defaults: Omit<GoalTerms, 'objective' | 'posture' | 'committed' | 'discretion'>, crossNeutral: boolean): GoalTerms {
+export function authoredGoal(row: DoctrineOffensive, defaults: Omit<GoalTerms, 'objective' | 'posture' | 'purpose' | 'committed' | 'discretion'>, crossNeutral: boolean): GoalTerms {
   const goal = (term: Fallback): GoalTerms => ({ ...defaults, neutral: defaults.neutral || crossNeutral,
     objective: term.objective, posture: term.posture, committed: [],
     ...(term.discretion === undefined ? {} : { discretion: { condition: term.discretion.condition, fallback: goal(term.discretion.fallback) } }),
   });
-  return goal({ ...row, posture: row.posture ?? 'take' });
+  return row.purpose === undefined ? goal({ ...row, posture: row.posture ?? 'take' }) :
+    { ...defaults, purpose: row.purpose, committed: [], neutral: false };
 }
 
 interface Fallback {
@@ -94,7 +95,7 @@ export function conditionalDoctrineProblems(row: PrincipalDoctrine, hasRegion: (
   const questionKeys = new Set<string>();
   for (const [i, q] of (row.consultations ?? []).entries()) {
     const field = `consultations[${i}]`;
-    if (!isLetterIdentity(q.letter) || q.letter.namespace !== row.letterNamespace || q.letter.revision !== 1) add(field, 'a consultation needs a first-revision letter in its issuer namespace; a changed question is a new round');
+    if (!isLetterIdentity(q.letter) || q.letter.namespace !== (row.consultationNamespace ?? row.letterNamespace) || q.letter.revision !== 1) add(field, 'a consultation needs a first-revision letter in its issuer namespace; a changed question is a new round');
     const key = letterKey(q.letter);
     if (questionKeys.has(key) || letters.has(key)) add(field, 'duplicate authored question identity');
     questionKeys.add(key);

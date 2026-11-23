@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "runs/s134/capture.ts"
+  ],
+  "exit": 1,
+  "seconds": 118.952,
+  "log": "runs/s134/merge-capture.log"
+}

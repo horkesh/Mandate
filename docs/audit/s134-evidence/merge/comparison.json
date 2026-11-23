@@ -1,0 +1,30 @@
+{
+  "baseline": "runs/s132/capture",
+  "baselineHash": "416675a8549206416acbd8023a42d764112dbc50aa7c97ac399cd350e0ffb4c7",
+  "afterHash": "b3054fd0f6beabf08792de5213a92320678c0beeb750cbc00fbd1d4ee447886e",
+  "rejections": 0,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "b3054fd0f6beabf08792de5213a92320678c0beeb750cbc00fbd1d4ee447886e",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "coverageBefore": {
+    "mismatch": 13,
+    "matched": 6,
+    "representation_gap": 12,
+    "not_observed": 2
+  },
+  "coverageAfter": {
+    "mismatch": 15,
+    "matched": 6,
+    "representation_gap": 10,
+    "not_observed": 2
+  },
+  "changedCounts": 12,
+  "newZeros": []
+}

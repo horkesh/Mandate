@@ -1,0 +1,56 @@
+{
+  "initialGateExit": 1,
+  "bindingFailures": [
+    {
+      "mechanic": "planner.term.time",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+      }
+    }
+  ],
+  "changedCountRows": [
+    {
+      "mechanic": "planner.term.goal_fit",
+      "before": {
+        "mechanic": "planner.term.goal_fit",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "after": {
+        "mechanic": "planner.term.goal_fit",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "changed": true,
+      "cause": "S130 opted-in reconnaissance records an unknown estimate where some observed enemy strength is unquantified. The current numeric estimate is omitted. In the retained day140 regional Harper goal, perceived opposition changes4630->532 and the direct candidate score140->760; holding stays11. The force-ratio contribution changes-419->201, while time and goal-fit weights/contributions are unchanged. Removing either time or goal-fit used to switch the top pick to holding and now leaves direct on top. This exactly explains both lost live-term firings. The received unknown paper and candidate arithmetic are retained; this combined before/after comparison does not isolate every upstream cause or certify the legacy unknown-estimate fallback."
+    },
+    {
+      "mechanic": "planner.term.time",
+      "before": {
+        "mechanic": "planner.term.time",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "after": {
+        "mechanic": "planner.term.time",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "changed": true,
+      "cause": "S130 opted-in reconnaissance records an unknown estimate where some observed enemy strength is unquantified. The current numeric estimate is omitted. In the retained day140 regional Harper goal, perceived opposition changes4630->532 and the direct candidate score140->760; holding stays11. The force-ratio contribution changes-419->201, while time and goal-fit weights/contributions are unchanged. Removing either time or goal-fit used to switch the top pick to holding and now leaves direct on top. This exactly explains both lost live-term firings. The received unknown paper and candidate arithmetic are retained; this combined before/after comparison does not isolate every upstream cause or certify the legacy unknown-estimate fallback."
+    }
+  ],
+  "movedBands": [],
+  "newQuietBands": [],
+  "newZeroCounts": [
+    "planner.term.goal_fit",
+    "planner.term.time"
+  ],
+  "ruling": "No band moved or quiet waiver installed. The time1..4 band remains binding and unmet. CODEX standing rule requires the lead to rule on a new zero. The ordinary reference test is known to fail, so a costly hook retry is not attempted before that ruling.",
+  "exactCounterfactual": "Patterson-day140.json",
+  "cause": "S130 opted-in reconnaissance records an unknown estimate where some observed enemy strength is unquantified. The current numeric estimate is omitted. In the retained day140 regional Harper goal, perceived opposition changes4630->532 and the direct candidate score140->760; holding stays11. The force-ratio contribution changes-419->201, while time and goal-fit weights/contributions are unchanged. Removing either time or goal-fit used to switch the top pick to holding and now leaves direct on top. This exactly explains both lost live-term firings. The received unknown paper and candidate arithmetic are retained; this combined before/after comparison does not isolate every upstream cause or certify the legacy unknown-estimate fallback."
+}

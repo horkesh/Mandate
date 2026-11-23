@@ -17,7 +17,7 @@ import type { GoalProposalReason, NoteAccount } from '../knowledge/report.ts';
 import type { Commit } from '../combat/rules.ts';
 import type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId, SituationId } from '../ids.ts';
 import type { GoalTerms, SeatCommand } from '../log/commands.ts';
-import type { DoctrineDiscretion, DoctrineProposalAnswer } from '../plans/goal.ts';
+import type { DetentionPurpose, DoctrineDiscretion, DoctrineProposalAnswer } from '../plans/goal.ts';
 import type { RouteKind } from '../messages/latency.ts';
 import type { GoalView, SeatView } from '../view/types.ts';
 import type { LetterIdentity } from '../world/letters.ts';
@@ -48,6 +48,12 @@ export interface AxisView {
 export interface OptionView {
   readonly optionId: string;
   readonly method: string;
+  readonly detention?: { readonly means: 'attack' } | {
+    readonly means: 'demonstrate';
+    readonly task: 'deployment' | 'reconnaissance_in_force';
+    readonly intervals: number;
+    readonly recovery: readonly RegionId[];
+  };
   readonly variant: string;
   readonly score: number;
   readonly terms: readonly { readonly term: string; readonly amount: number }[];
@@ -155,7 +161,7 @@ export interface DoctrineView {
   readonly namedConcentrationTransfers?: readonly { readonly id: string; readonly from: PostId; readonly to: PostId; readonly regiments: readonly string[] }[];
   readonly appointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly from: PostId | null; readonly ready: boolean; readonly issued: boolean; readonly routes: readonly RouteOption[] }[];
   readonly calls: readonly { readonly address?: 'office'; readonly officeRoutes?: readonly RouteOption[]; readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly day: number; readonly atPeace?: boolean; readonly issued?: boolean; readonly ready?: boolean }[];
-  readonly offensives: readonly { readonly id?: string; readonly letter?: LetterIdentity; readonly post: PostId; readonly objective: RegionId; readonly day: number; readonly posture?: 'hold' | 'relieve' | 'take'; readonly discretion?: DoctrineDiscretion; readonly ready?: boolean; readonly issued?: boolean }[];
+  readonly offensives: readonly ({ readonly id?: string; readonly letter?: LetterIdentity; readonly post: PostId; readonly day: number; readonly ready?: boolean; readonly issued?: boolean } & ({ readonly purpose?: never; readonly objective: RegionId; readonly posture?: 'hold' | 'relieve' | 'take'; readonly discretion?: DoctrineDiscretion } | { readonly purpose: DetentionPurpose; readonly objective?: never; readonly posture?: never; readonly discretion?: never }))[];
   readonly proposalAnswers?: readonly (DoctrineProposalAnswer & { readonly day: number; readonly paper: MessageId; readonly ordered: GoalTerms })[];
   readonly inquireEveryDays: number;
   readonly appointKinds: { readonly land: readonly string[]; readonly naval: readonly string[] };
@@ -235,7 +241,7 @@ export interface PrincipalMenu {
   /** Posts whose operation he approved under "prepare, await my word": each waits for his "go". */
   readonly awaiting: readonly PostId[];
   /** The goal terms the pack gives an order that names only an objective and a posture (`WorldRules.plans.goalDefaults`). */
-  readonly goalDefaults: Omit<GoalTerms, 'objective' | 'posture' | 'committed'>;
+  readonly goalDefaults: Omit<GoalTerms, 'objective' | 'posture' | 'purpose' | 'committed'>;
   /** Copies of his own sent goals, keyed by the letter a relay's answer names. Never a live commander's plan. */
   readonly sentGoals?: readonly { readonly post: PostId; readonly message: MessageId; readonly goal: GoalTerms; readonly proposalReply?: true; readonly doctrine?: string; readonly letter?: LetterIdentity }[];
 }

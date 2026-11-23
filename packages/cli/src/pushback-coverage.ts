@@ -28,6 +28,14 @@ export interface CoverageAct {
   readonly feasibility?: string;
   readonly assessment?: import('@mandate/kernel').phase0.CourseAssessment;
   readonly adviceTerms?: readonly (readonly [string, number])[];
+  readonly purpose?: string;
+  readonly target?: string;
+  readonly letterKey?: string;
+  readonly letterNamespace?: string;
+  readonly letterRevision?: number;
+  readonly courseGrounds?: readonly string[];
+  /** Offline execution witness: full intervals actually deferred by this answer. */
+  readonly deferredIntervals?: number;
   readonly undertaking?: { readonly undertakingKind: string; readonly undertakingRequest: string | null; readonly clauses: readonly string[] } | null;
   readonly declaredUndertaking?: CoverageAct['undertaking'];
   readonly reservations?: readonly { readonly clause: string; readonly subject: string; readonly effect: string; readonly grounds?: { readonly groundKind: string; readonly groundFact?: string } }[];
@@ -52,7 +60,7 @@ export interface CoverageResult {
 }
 const cmp = (a: string, b: string): number => a < b ? -1 : a > b ? 1 : 0;
 const dayOf = (start: string, date: string) => w.daysFromCivil(w.parseIsoDate(date)) - w.daysFromCivil(w.parseIsoDate(start));
-const MATTER_KEYS = ['kind', 'callId', 'regiments', 'termDays', 'subject', 'objective', 'posture', 'post', 'to', 'round', 'course'] as const;
+const MATTER_KEYS = ['kind', 'callId', 'regiments', 'termDays', 'subject', 'objective', 'posture', 'post', 'to', 'round', 'course', 'purpose', 'target'] as const;
 
 export function coverageScore(registers: readonly PushbackRegister[], acts: readonly CoverageAct[], startDate: string, lastDay: number, daily: readonly { readonly day: number; readonly fires: Readonly<Record<string, number>> }[] = []) {
   const rows: CoverageResult[] = [];
@@ -77,8 +85,10 @@ export function coverageScore(registers: readonly PushbackRegister[], acts: read
         continue;
       }
       const nearby = diagnostics.filter(a => a.day <= through && a.actor === row.actor && a.role === row.role && a.kind === m.kind && (a.side === row.side || a.side === null));
-      const candidates = nearby.filter(a => a.side === row.side && MATTER_KEYS.every(k => m[k] === undefined || a[k] === m[k]));
-      const incomplete = nearby.some(a => a.side === null || MATTER_KEYS.some(k => m[k] !== undefined && a[k] === undefined));
+      const candidates = nearby.filter(a => a.side === row.side && MATTER_KEYS.every(k => m[k] === undefined || a[k] === m[k]) &&
+        (m.letters === undefined || m.letters.some(l => l.key === a.letterKey && l.namespace === a.letterNamespace && l.revision === a.letterRevision)));
+      const incomplete = nearby.some(a => a.side === null || MATTER_KEYS.some(k => m[k] !== undefined && a[k] === undefined) ||
+        (m.letters !== undefined && (a.letterKey === undefined || a.letterNamespace === undefined || a.letterRevision === undefined)));
       if (candidates.length === 0) {
         if (lastDay < through || incomplete) add('unresolved', lastDay < through ? 'The observation window ended before the register horizon.' : 'The response lacks issuing-side or typed matter evidence; no identity inferred from its message ID.', nearby);
         else if (nearby.length > 0) add('exposure_mismatch', 'Same actor and role, but the observed requests address different matters. The represented historical request was not issued.', nearby);
@@ -90,8 +100,12 @@ export function coverageScore(registers: readonly PushbackRegister[], acts: read
         (a.reservations ?? []).some(r => a.undertaking!.clauses.includes(r.clause) && m.qualification!.some(q => q.subject === r.subject && q.effects.includes(r.effect as 'statement' | 'request' | 'gate' | 'offer') &&
           (q.groundKind === undefined || r.grounds?.groundKind === q.groundKind) && (q.groundFact === undefined || r.grounds?.groundFact === q.groundFact)))
       );
-      const eligible = candidates.filter(a => (m.actual === undefined || a.actual === m.actual) && (m.advice === undefined || a.advice === m.advice) &&
-        (m.feasibility === undefined || a.feasibility === m.feasibility) && qualificationMatches(a));
+      const detentionMatches = (a: CoverageAct) => m.detentionEvidence === undefined ||
+        (m.detentionEvidence === 'course_challenge'
+          ? ((a.kind === 'goal-proposal' && a.actual === 'propose') || (a.kind === 'goal' &&
+              ['object', 'refuse', 'comply_with_reservations'].includes(a.actual))) && (a.courseGrounds?.length ?? 0) > 0
+          : (a.actual === 'slow_walk' || a.actual === 'comply_with_reservations') && (a.deferredIntervals ?? 0) > 0);
+      const eligible = candidates.filter(a => (m.actual === undefined || a.actual === m.actual) && (m.advice === undefined || a.advice === m.advice) && (m.feasibility === undefined || a.feasibility === m.feasibility) && qualificationMatches(a) && detentionMatches(a));
       const identity = (a: CoverageAct) => a.creditKey ?? `${a.order}|${a.actor}|${a.role}`;
       const available = eligible.find(a => !used.has(identity(a)));
       if (available !== undefined) { used.add(identity(available)); add('matched', 'One act on the same issuing side, actor, role and bounded matter; nearest-type interpretation follows the accepted register.', candidates, available.id); }

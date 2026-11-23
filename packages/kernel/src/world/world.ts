@@ -14,7 +14,7 @@ import type { OrganisationTemplate } from './organisation.ts';
 import type { DepartmentId, FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { ComplianceRung } from '../directive.ts';
 import type { NoteKind } from '../plans/notes.ts';
-import type { DoctrineDiscretion, DoctrineProposalAnswer, Posture } from '../plans/goal.ts';
+import type { DetentionPurpose, DoctrineDiscretion, DoctrineProposalAnswer, Posture } from '../plans/goal.ts';
 import type {
   CensusRecord,
   DepotRecord,
@@ -122,17 +122,33 @@ export interface RuleSeatRules {
 /** A rule-seat principal's doctrine. Martial actions wait for war; a cited call may explicitly permit peacetime issue. */
 export type { LetterIdentity } from './letters.ts';
 
-export interface DoctrineOffensive {
+export type DoctrineOffensive = RegionalOffensive | DetentionOffensive;
+
+interface RegionalOffensive extends DoctrineOffensiveCommon {
+  readonly purpose?: never;
+  readonly issuer?: never;
+  readonly objective: RegionId;
+  readonly posture?: Posture;
+  readonly discretion?: DoctrineDiscretion;
+}
+
+interface DetentionOffensive extends DoctrineOffensiveCommon {
+  readonly objective?: never;
+  readonly posture?: never;
+  readonly discretion?: never;
+  readonly purpose: DetentionPurpose;
+  readonly issuer?: PersonId;
+  readonly letter: LetterIdentity;
+}
+
+interface DoctrineOffensiveCommon {
   readonly id?: string;
   readonly letter?: LetterIdentity;
   readonly supersedes?: LetterIdentity;
   readonly dependsOn?: readonly LetterIdentity[];
   readonly repeats?: LetterIdentity;
   readonly post: PostId;
-  readonly objective: RegionId;
   readonly fromDate: string;
-  readonly posture?: Posture;
-  readonly discretion?: DoctrineDiscretion;
   readonly requiresNotice?: SituationId;
   readonly requiresPapers?: readonly PaperSelector[];
   readonly source: string;
@@ -155,6 +171,8 @@ export interface PrincipalDoctrine {
   readonly consultations?: readonly ConsultationRound[];
   readonly faction: FactionId;
   readonly letterNamespace?: string;
+  /** Independently authored consultation identity family; defaults to the order family. */
+  readonly consultationNamespace?: string;
   /** Pack bound on the number of selectors per action and claim tests per selector. */
   readonly maxPaperSelectors?: number;
   /** Whether his goals may cross a neutral government's open ground: a political act, decided per side. */
@@ -299,7 +317,18 @@ export interface PlannerRules {
 }
 
 /** Goals and plans (0040, 0062; lane 1.2). DESIGN PARAMETERS the pack states. */
+export interface DemonstrationPolicy {
+  readonly detentionRegions: 2;
+  readonly actionRegions: 4;
+  readonly deploymentDays: readonly [1, 2];
+  readonly reconnaissanceDays: 1;
+  readonly demonstrationCandidates: 12;
+  readonly totalCandidates: 16;
+  readonly reserveDays: 1;
+}
+
 export interface PlansRules {
+  readonly demonstration?: DemonstrationPolicy;
   /** Send-back design parameters; each note is a soft preference, never an edit. */
   readonly notes: {
     readonly maxMarks: number;

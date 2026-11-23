@@ -1,0 +1,929 @@
+{
+  "bindingFailures": [],
+  "newZeroCounts": [
+    {
+      "mechanic": "planner.term.goal_fit",
+      "S126": {
+        "mechanic": "planner.term.goal_fit",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "first": {
+        "mechanic": "planner.term.goal_fit",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "corrected": {
+        "mechanic": "planner.term.goal_fit",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "changedFromS126": true,
+      "changedFromFirst": false,
+      "cause": "[I] S130 opt-in reconnaissance emits an explicit unknown estimate for partially unquantified opposition. The regional planner still uses its legacy numeric-belief fallback. Retained day140 opposition4630->532 changes direct140->760 while holding remains11. Time/goal-fit weights and contributions are unchanged; deleting either no longer changes the winning candidate. Both S130 captures retain exactly the same day140 candidates. The approved address correction exposes the papers but does not cure this earlier unknown/numeric interaction. No numeric patch or proxy fitting is made.",
+      "dailyFromS126": [
+        {
+          "day": 140,
+          "before": 1,
+          "after": 0
+        }
+      ],
+      "dailyFromFirst": []
+    },
+    {
+      "mechanic": "planner.term.time",
+      "S126": {
+        "mechanic": "planner.term.time",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "first": {
+        "mechanic": "planner.term.time",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "corrected": {
+        "mechanic": "planner.term.time",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "changedFromS126": true,
+      "changedFromFirst": false,
+      "cause": "[I] S130 opt-in reconnaissance emits an explicit unknown estimate for partially unquantified opposition. The regional planner still uses its legacy numeric-belief fallback. Retained day140 opposition4630->532 changes direct140->760 while holding remains11. Time/goal-fit weights and contributions are unchanged; deleting either no longer changes the winning candidate. Both S130 captures retain exactly the same day140 candidates. The approved address correction exposes the papers but does not cure this earlier unknown/numeric interaction. No numeric patch or proxy fitting is made.",
+      "dailyFromS126": [
+        {
+          "day": 140,
+          "before": 1,
+          "after": 0
+        }
+      ],
+      "dailyFromFirst": []
+    }
+  ],
+  "cause": "[I] S130 opt-in reconnaissance emits an explicit unknown estimate for partially unquantified opposition. The regional planner still uses its legacy numeric-belief fallback. Retained day140 opposition4630->532 changes direct140->760 while holding remains11. Time/goal-fit weights and contributions are unchanged; deleting either no longer changes the winning candidate. Both S130 captures retain exactly the same day140 candidates. The approved address correction exposes the papers but does not cure this earlier unknown/numeric interaction. No numeric patch or proxy fitting is made.",
+  "liveDrivers": {
+    "time": {
+      "test": "packages/cli/test/planner.test.ts",
+      "needle": "S41 time live control: dropping time changes the chosen candidate"
+    },
+    "goal_fit": {
+      "test": "packages/cli/test/planner.test.ts",
+      "needle": "counts every scoring term live in some case: dropping it changes a draft"
+    }
+  },
+  "driverVerification": {
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/planner.test.ts",
+      "-t",
+      "S41 time live control|counts every scoring term live"
+    ],
+    "exit": 0,
+    "seconds": 2.397,
+    "log": "runs/s130/address-live-drivers.log"
+  },
+  "driverCounts": {
+    "passed": 2,
+    "skipped": 30
+  },
+  "movedBands": [
+    {
+      "key": "union-1861, war by decision, 148 days/messages.courier_delay",
+      "before": {
+        "minFires": 77,
+        "maxFires": 308
+      },
+      "after": {
+        "minFires": 49,
+        "maxFires": 198,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires99; no behavior or numeric input changed."
+      },
+      "observed": 99,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires99; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#messages.courier_delay"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/messages.delivered",
+      "before": {
+        "minFires": 7120,
+        "maxFires": 28480
+      },
+      "after": {
+        "minFires": 7221,
+        "maxFires": 28886,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires14443; no behavior or numeric input changed."
+      },
+      "observed": 14443,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires14443; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#messages.delivered"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/messages.sent",
+      "before": {
+        "minFires": 7523,
+        "maxFires": 30094
+      },
+      "after": {
+        "minFires": 7607,
+        "maxFires": 30428,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires15214; no behavior or numeric input changed."
+      },
+      "observed": 15214,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires15214; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#messages.sent"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/operations.stage",
+      "before": {
+        "minFires": 9,
+        "maxFires": 38
+      },
+      "after": {
+        "minFires": 12,
+        "maxFires": 48,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires24; no behavior or numeric input changed."
+      },
+      "observed": 24,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires24; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#operations.stage"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/orders.obeyed",
+      "before": {
+        "minFires": 3,
+        "maxFires": 14,
+        "why": "S122 /0125/0127 [I]: sourced call establishments and unknown historical quantities change the ordinary command and received-picture trajectory. Seven orders are obeyed; response records and exact identities are retained."
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 18,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed."
+      },
+      "observed": 9,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#orders.obeyed"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.candidates",
+      "before": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+      },
+      "observed": 8,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#planner.candidates"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.searches",
+      "before": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+      },
+      "observed": 8,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#planner.searches"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.drafted",
+      "before": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 16,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+      },
+      "observed": 8,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#plans.drafted"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.goal_reached",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 6,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires3; no behavior or numeric input changed."
+      },
+      "observed": 3,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires3; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#plans.goal_reached"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.goal_set",
+      "before": {
+        "minFires": 3,
+        "maxFires": 14,
+        "why": "S122 /0125/0127 [I]: ordinary command and planning respond to the changed strength picture; seven goals are set. No authored goal, term weight or scheduling rule changed."
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 18,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed."
+      },
+      "observed": 9,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#plans.goal_set"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/seats.choices",
+      "before": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "after": {
+        "minFires": 5,
+        "maxFires": 22,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires11; no behavior or numeric input changed."
+      },
+      "observed": 11,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires11; no behavior or numeric input changed.",
+      "evidence": "docs/audit/s130-evidence/band-review.json#seats.choices"
+    }
+  ],
+  "newQuietBands": [
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.time",
+      "before": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S130 lead ruling2026-11-24: the regional planner's legacy numeric-belief fallback reads an explicitly unknown reconnaissance estimate as a small number; Patterson's opposition falls4630->532 on day140, so time no longer changes his winner. This conflicts with0125 and awaits S133; review the band when that design lands. Independent live drivers in packages/cli/test/planner.test.ts: \"S41 time live control: dropping time changes the chosen candidate\" and \"counts every scoring term live in some case\"."
+      },
+      "observed": 0,
+      "cause": "S130 lead ruling2026-11-24: the regional planner's legacy numeric-belief fallback reads an explicitly unknown reconnaissance estimate as a small number; Patterson's opposition falls4630->532 on day140, so time no longer changes his winner. This conflicts with0125 and awaits S133; review the band when that design lands. Independent live drivers in packages/cli/test/planner.test.ts: \"S41 time live control: dropping time changes the chosen candidate\" and \"counts every scoring term live in some case\".",
+      "evidence": "docs/audit/s130-evidence/band-review.json#planner.term.time"
+    }
+  ],
+  "positiveChangedRows": [
+    {
+      "mechanic": "knowledge.pruned_superseded",
+      "S126": {
+        "mechanic": "knowledge.pruned_superseded",
+        "fires": 146,
+        "magnitude": 12000
+      },
+      "first": {
+        "mechanic": "knowledge.pruned_superseded",
+        "fires": 146,
+        "magnitude": 12000
+      },
+      "corrected": {
+        "mechanic": "knowledge.pruned_superseded",
+        "fires": 146,
+        "magnitude": 12001
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [],
+      "dailyFromFirst": []
+    },
+    {
+      "mechanic": "messages.courier_delay",
+      "S126": {
+        "mechanic": "messages.courier_delay",
+        "fires": 96,
+        "magnitude": 96
+      },
+      "first": {
+        "mechanic": "messages.courier_delay",
+        "fires": 96,
+        "magnitude": 96
+      },
+      "corrected": {
+        "mechanic": "messages.courier_delay",
+        "fires": 99,
+        "magnitude": 99
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 130,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 134,
+          "before": 1,
+          "after": 2
+        },
+        {
+          "day": 135,
+          "before": 1,
+          "after": 2
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 130,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 134,
+          "before": 1,
+          "after": 2
+        },
+        {
+          "day": 135,
+          "before": 1,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "mechanic": "messages.delivered",
+      "S126": {
+        "mechanic": "messages.delivered",
+        "fires": 14436,
+        "magnitude": 14436
+      },
+      "first": {
+        "mechanic": "messages.delivered",
+        "fires": 14436,
+        "magnitude": 14436
+      },
+      "corrected": {
+        "mechanic": "messages.delivered",
+        "fires": 14443,
+        "magnitude": 14443
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 135,
+          "before": 128,
+          "after": 130
+        },
+        {
+          "day": 137,
+          "before": 147,
+          "after": 148
+        },
+        {
+          "day": 139,
+          "before": 76,
+          "after": 78
+        },
+        {
+          "day": 140,
+          "before": 135,
+          "after": 137
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 135,
+          "before": 128,
+          "after": 130
+        },
+        {
+          "day": 137,
+          "before": 147,
+          "after": 148
+        },
+        {
+          "day": 139,
+          "before": 76,
+          "after": 78
+        },
+        {
+          "day": 140,
+          "before": 135,
+          "after": 137
+        }
+      ]
+    },
+    {
+      "mechanic": "messages.sent",
+      "S126": {
+        "mechanic": "messages.sent",
+        "fires": 15207,
+        "magnitude": 15207
+      },
+      "first": {
+        "mechanic": "messages.sent",
+        "fires": 15207,
+        "magnitude": 15207
+      },
+      "corrected": {
+        "mechanic": "messages.sent",
+        "fires": 15214,
+        "magnitude": 15214
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 130,
+          "before": 55,
+          "after": 56
+        },
+        {
+          "day": 134,
+          "before": 79,
+          "after": 80
+        },
+        {
+          "day": 135,
+          "before": 110,
+          "after": 112
+        },
+        {
+          "day": 136,
+          "before": 57,
+          "after": 58
+        },
+        {
+          "day": 139,
+          "before": 100,
+          "after": 101
+        },
+        {
+          "day": 140,
+          "before": 374,
+          "after": 375
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 130,
+          "before": 55,
+          "after": 56
+        },
+        {
+          "day": 134,
+          "before": 79,
+          "after": 80
+        },
+        {
+          "day": 135,
+          "before": 110,
+          "after": 112
+        },
+        {
+          "day": 136,
+          "before": 57,
+          "after": 58
+        },
+        {
+          "day": 139,
+          "before": 100,
+          "after": 101
+        },
+        {
+          "day": 140,
+          "before": 374,
+          "after": 375
+        }
+      ]
+    },
+    {
+      "mechanic": "operations.stage",
+      "S126": {
+        "mechanic": "operations.stage",
+        "fires": 25,
+        "magnitude": 25
+      },
+      "first": {
+        "mechanic": "operations.stage",
+        "fires": 25,
+        "magnitude": 25
+      },
+      "corrected": {
+        "mechanic": "operations.stage",
+        "fires": 24,
+        "magnitude": 24
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 137,
+          "before": 1,
+          "after": 0
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 137,
+          "before": 1,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "mechanic": "orders.obeyed",
+      "S126": {
+        "mechanic": "orders.obeyed",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "first": {
+        "mechanic": "orders.obeyed",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "corrected": {
+        "mechanic": "orders.obeyed",
+        "fires": 9,
+        "magnitude": 9
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 135,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 139,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 140,
+          "before": 1,
+          "after": 2
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 135,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 139,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 140,
+          "before": 1,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "mechanic": "planner.candidates",
+      "S126": {
+        "mechanic": "planner.candidates",
+        "fires": 6,
+        "magnitude": 12
+      },
+      "first": {
+        "mechanic": "planner.candidates",
+        "fires": 6,
+        "magnitude": 12
+      },
+      "corrected": {
+        "mechanic": "planner.candidates",
+        "fires": 8,
+        "magnitude": 12
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 135,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 139,
+          "before": 0,
+          "after": 1
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 135,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 139,
+          "before": 0,
+          "after": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "planner.searches",
+      "S126": {
+        "mechanic": "planner.searches",
+        "fires": 6,
+        "magnitude": 34
+      },
+      "first": {
+        "mechanic": "planner.searches",
+        "fires": 6,
+        "magnitude": 34
+      },
+      "corrected": {
+        "mechanic": "planner.searches",
+        "fires": 8,
+        "magnitude": 34
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 135,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 139,
+          "before": 0,
+          "after": 1
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 135,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 139,
+          "before": 0,
+          "after": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "plans.drafted",
+      "S126": {
+        "mechanic": "plans.drafted",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "first": {
+        "mechanic": "plans.drafted",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "corrected": {
+        "mechanic": "plans.drafted",
+        "fires": 8,
+        "magnitude": 8
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 135,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 139,
+          "before": 0,
+          "after": 1
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 135,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 139,
+          "before": 0,
+          "after": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "plans.goal_reached",
+      "S126": {
+        "mechanic": "plans.goal_reached",
+        "fires": 4,
+        "magnitude": 4
+      },
+      "first": {
+        "mechanic": "plans.goal_reached",
+        "fires": 4,
+        "magnitude": 4
+      },
+      "corrected": {
+        "mechanic": "plans.goal_reached",
+        "fires": 3,
+        "magnitude": 3
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 137,
+          "before": 1,
+          "after": 0
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 137,
+          "before": 1,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "mechanic": "plans.goal_set",
+      "S126": {
+        "mechanic": "plans.goal_set",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "first": {
+        "mechanic": "plans.goal_set",
+        "fires": 6,
+        "magnitude": 6
+      },
+      "corrected": {
+        "mechanic": "plans.goal_set",
+        "fires": 9,
+        "magnitude": 9
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 135,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 139,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 140,
+          "before": 1,
+          "after": 2
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 135,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 139,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 140,
+          "before": 1,
+          "after": 2
+        }
+      ]
+    },
+    {
+      "mechanic": "seats.choices",
+      "S126": {
+        "mechanic": "seats.choices",
+        "fires": 8,
+        "magnitude": 8
+      },
+      "first": {
+        "mechanic": "seats.choices",
+        "fires": 8,
+        "magnitude": 8
+      },
+      "corrected": {
+        "mechanic": "seats.choices",
+        "fires": 11,
+        "magnitude": 11
+      },
+      "changedFromS126": true,
+      "changedFromFirst": true,
+      "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+      "dailyFromS126": [
+        {
+          "day": 130,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 134,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 135,
+          "before": 1,
+          "after": 2
+        }
+      ],
+      "dailyFromFirst": [
+        {
+          "day": 130,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 134,
+          "before": 0,
+          "after": 1
+        },
+        {
+          "day": 135,
+          "before": 1,
+          "after": 2
+        }
+      ]
+    }
+  ],
+  "disposition": "Authorized quiet record applied; eleven changed positive counts recentered with around(observed). Retained corrected capture passes the revised liveness gate without another capture. Ordinary hook required before the record commit; no push.",
+  "initialBindingFailures": [
+    {
+      "mechanic": "planner.term.time",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+      }
+    }
+  ],
+  "quietApplied": true,
+  "quietRecord": {
+    "record": {
+      "key": "union-1861, war by decision, 148 days/planner.term.time",
+      "before": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S130 lead ruling2026-11-24: the regional planner's legacy numeric-belief fallback reads an explicitly unknown reconnaissance estimate as a small number; Patterson's opposition falls4630->532 on day140, so time no longer changes his winner. This conflicts with0125 and awaits S133; review the band when that design lands. Independent live drivers in packages/cli/test/planner.test.ts: \"S41 time live control: dropping time changes the chosen candidate\" and \"counts every scoring term live in some case\"."
+      },
+      "observed": 0,
+      "cause": "S130 lead ruling2026-11-24: the regional planner's legacy numeric-belief fallback reads an explicitly unknown reconnaissance estimate as a small number; Patterson's opposition falls4630->532 on day140, so time no longer changes his winner. This conflicts with0125 and awaits S133; review the band when that design lands. Independent live drivers in packages/cli/test/planner.test.ts: \"S41 time live control: dropping time changes the chosen candidate\" and \"counts every scoring term live in some case\".",
+      "evidence": "docs/audit/s130-evidence/band-review.json#planner.term.time"
+    },
+    "fingerprint": "9fa5be7cd39404a145de49a41a375e34efd5c6bba90be758a4de22e4dfb8ed67",
+    "drivers": [
+      {
+        "test": "packages/cli/test/planner.test.ts",
+        "needle": "S41 time live control: dropping time changes the chosen candidate"
+      },
+      {
+        "test": "packages/cli/test/planner.test.ts",
+        "needle": "counts every scoring term live in some case"
+      }
+    ]
+  },
+  "quietFingerprints": [
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.time",
+      "fingerprint": "9fa5be7cd39404a145de49a41a375e34efd5c6bba90be758a4de22e4dfb8ed67"
+    }
+  ],
+  "effectiveGateFailures": [],
+  "authorization": "Main CODEX2026-11-24: S130 record accepted; authorize exactly planner.term.time0..0 with cause and both named live drivers, freeze the complete record fingerprint, recenter moved positive bands. S133 designs the unknown-strength fix separately; no behavior change here."
+}

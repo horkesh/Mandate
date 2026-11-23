@@ -1,0 +1,29 @@
+{
+  "record": {
+    "key": "union-1861, war by decision, 148 days/planner.term.time",
+    "before": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+    },
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S130 lead ruling2026-11-24: the regional planner's legacy numeric-belief fallback reads an explicitly unknown reconnaissance estimate as a small number; Patterson's opposition falls4630->532 on day140, so time no longer changes his winner. This conflicts with0125 and awaits S133; review the band when that design lands. Independent live drivers in packages/cli/test/planner.test.ts: \"S41 time live control: dropping time changes the chosen candidate\" and \"counts every scoring term live in some case\"."
+    },
+    "observed": 0,
+    "cause": "S130 lead ruling2026-11-24: the regional planner's legacy numeric-belief fallback reads an explicitly unknown reconnaissance estimate as a small number; Patterson's opposition falls4630->532 on day140, so time no longer changes his winner. This conflicts with0125 and awaits S133; review the band when that design lands. Independent live drivers in packages/cli/test/planner.test.ts: \"S41 time live control: dropping time changes the chosen candidate\" and \"counts every scoring term live in some case\".",
+    "evidence": "docs/audit/s130-evidence/band-review.json#planner.term.time"
+  },
+  "fingerprint": "9fa5be7cd39404a145de49a41a375e34efd5c6bba90be758a4de22e4dfb8ed67",
+  "drivers": [
+    {
+      "test": "packages/cli/test/planner.test.ts",
+      "needle": "S41 time live control: dropping time changes the chosen candidate"
+    },
+    {
+      "test": "packages/cli/test/planner.test.ts",
+      "needle": "counts every scoring term live in some case"
+    }
+  ]
+}

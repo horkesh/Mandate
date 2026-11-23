@@ -1,0 +1,3257 @@
+{
+  "premeasure": {
+    "union-1861, war by decision, 148 days/forces.landing_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S124: the sole situation landing is now a whole-company move, so no numeric split is attempted or refused. Unknown strength remains unknown. The paired fictional control still drives one numeric landing and one unknown-parent numeric refusal."
+    },
+    "union-1861, war by decision, 148 days/orders.returned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."
+    },
+    "union-1861, war by decision, 148 days/planner.term.time": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S130 lead ruling2026-11-24: the regional planner's legacy numeric-belief fallback reads an explicitly unknown reconnaissance estimate as a small number; Patterson's opposition falls4630->532 on day140, so time no longer changes his winner. This conflicts with0125 and awaits S133; review the band when that design lands. Independent live drivers in packages/cli/test/planner.test.ts: \"S41 time live control: dropping time changes the chosen candidate\" and \"counts every scoring term live in some case\"."
+    },
+    "union-1861, war by decision, 148 days/people.resigned": {
+      "minFires": 7,
+      "maxFires": 30,
+      "why": "S77 lead ruling 3 (CODEX.md, 2026-11-23): S74 adds Elzey's sourced departure under S69/0101 to the fourteen existing resignations; recentre only this band with around(15). No other quiet band is changed."
+    },
+    "union-1861, war by decision, 148 days/people.stayed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.battle_closed": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "union-1861, war by decision, 148 days/verbs.consulted": {
+      "minFires": 8,
+      "maxFires": 32,
+      "why": "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted."
+    },
+    "union-1861, war by decision, 148 days/combat.battle_day": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "union-1861, war by decision, 148 days/combat.battle_opened": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "union-1861, war by decision, 148 days/combat.captured": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "union-1861, war by decision, 148 days/combat.killed_wounded": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/combat.missing": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "union-1861, war by decision, 148 days/combat.occupation": {
+      "minFires": 157,
+      "maxFires": 628
+    },
+    "union-1861, war by decision, 148 days/combat.pursuit_chosen": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "union-1861, war by decision, 148 days/combat.surrendered": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.withdrew": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+    },
+    "union-1861, war by decision, 148 days/control.changed": {
+      "minFires": 160,
+      "maxFires": 640
+    },
+    "union-1861, war by decision, 148 days/control.threshold_crossed": {
+      "minFires": 19,
+      "maxFires": 78
+    },
+    "union-1861, war by decision, 148 days/forces.stores_fell": {
+      "minFires": 1444,
+      "maxFires": 5776,
+      "why": "S116 /0122 [I]: cause honours change Brown and Perry reserve refusals to original undertakings at day117; ordinary muster adds Georgia 3000 and Florida 1000 at day122. Recruitment, transfer, control and supply then run unchanged. Retained daily telemetry shows exactly one extra stores-fell firing on each day132-148: 2871 -> 2888 fires, magnitude 2850214 -> 2867214. The integrated additional-force/supply trajectory breaches the former max2886 by two; no initial strength, stores rule or threshold is fitted."
+    },
+    "union-1861, war by decision, 148 days/forces.stores_low": {
+      "minFires": 51,
+      "maxFires": 206
+    },
+    "union-1861, war by decision, 148 days/forces.stores_refilled": {
+      "minFires": 1200,
+      "maxFires": 4800
+    },
+    "union-1861, war by decision, 148 days/forces.stragglers_returned": {
+      "minFires": 92,
+      "maxFires": 368
+    },
+    "union-1861, war by decision, 148 days/combat.flank_broken": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "union-1861, war by decision, 148 days/combat.routed": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "union-1861, war by decision, 148 days/combat.works_stormed": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "union-1861, war by decision, 148 days/operations.ended": {
+      "minFires": 4,
+      "maxFires": 18,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.ended."
+    },
+    "union-1861, war by decision, 148 days/operations.opened": {
+      "minFires": 3,
+      "maxFires": 12,
+      "why": "S119 integrated correction changes Patterson day140 planner pick from holding to direct. His additional operation opens day141; five other openings remain, giving6. No operation quota or planner weight changed."
+    },
+    "union-1861, war by decision, 148 days/operations.stage": {
+      "minFires": 12,
+      "maxFires": 48,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires24; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/operations.works": {
+      "minFires": 7,
+      "maxFires": 30,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.works."
+    },
+    "union-1861, war by decision, 148 days/orders.responses_pruned": {
+      "minFires": 13,
+      "maxFires": 54
+    },
+    "union-1861, war by decision, 148 days/reports.battle_dispatch": {
+      "minFires": 21,
+      "maxFires": 84
+    },
+    "union-1861, war by decision, 148 days/reports.casualty_return": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "union-1861, war by decision, 148 days/reports.governor_wire": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "union-1861, war by decision, 148 days/reports.pocket": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports."
+    },
+    "union-1861, war by decision, 148 days/map.pocket_closed": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "S106 /0118 [I]: the same reserve undertakes without the retired three-day numeric-rung delay; earlier muster changes the existing control, supply and passage sequence. Three pocket closures remain at days 79, 87 and 128; the former day-136 closure disappears. No passage/control rule, original strength or gameplay threshold changes."
+    },
+    "union-1861, war by decision, 148 days/knowledge.pruned_age": {
+      "minFires": 53,
+      "maxFires": 214
+    },
+    "union-1861, war by decision, 148 days/knowledge.pruned_superseded": {
+      "minFires": 73,
+      "maxFires": 292
+    },
+    "union-1861, war by decision, 148 days/map.pocket_relieved": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved."
+    },
+    "union-1861, war by decision, 148 days/map.recomputed": {
+      "minFires": 26,
+      "maxFires": 104
+    },
+    "union-1861, war by decision, 148 days/messages.courier_delay": {
+      "minFires": 49,
+      "maxFires": 198,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires99; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/messages.mail_delay": {
+      "minFires": 1428,
+      "maxFires": 5712
+    },
+    "union-1861, war by decision, 148 days/messages.delivered": {
+      "minFires": 7221,
+      "maxFires": 28886,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires14443; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/messages.sent": {
+      "minFires": 7607,
+      "maxFires": 30428,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires15214; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/messages.special_messenger": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."
+    },
+    "union-1861, war by decision, 148 days/orders.bypassed": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "union-1861, war by decision, 148 days/movement.arrived": {
+      "minFires": 319,
+      "maxFires": 1276
+    },
+    "union-1861, war by decision, 148 days/movement.leg_started": {
+      "minFires": 155,
+      "maxFires": 620
+    },
+    "union-1861, war by decision, 148 days/orders.obeyed": {
+      "minFires": 4,
+      "maxFires": 18,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/orders.relay_held": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."
+    },
+    "union-1861, war by decision, 148 days/orders.relay_objected": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "union-1861, war by decision, 148 days/orders.relayed": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "union-1861, war by decision, 148 days/plans.goal_reached": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires3; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/politics.adjourned": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.front_page": {
+      "minFires": 31,
+      "maxFires": 126
+    },
+    "union-1861, war by decision, 148 days/politics.support": {
+      "minFires": 42,
+      "maxFires": 170
+    },
+    "union-1861, war by decision, 148 days/politics.opened": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/regions.self_emancipation": {
+      "minFires": 1548,
+      "maxFires": 6194
+    },
+    "union-1861, war by decision, 148 days/regions.reached_lines": {
+      "minFires": 137,
+      "maxFires": 548
+    },
+    "union-1861, war by decision, 148 days/seats.choices": {
+      "minFires": 5,
+      "maxFires": 22,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires11; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/planner.candidates": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/planner.searches": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/plans.drafted": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/plans.chosen": {
+      "minFires": 7,
+      "maxFires": 28,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#plans.chosen."
+    },
+    "union-1861, war by decision, 148 days/plans.goal_set": {
+      "minFires": 4,
+      "maxFires": 18,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/plans.went_ahead": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "union-1861, war by decision, 148 days/plans.approved": {
+      "minFires": 0,
+      "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+    },
+    "union-1861, war by decision, 148 days/plans.submitted": {
+      "minFires": 0,
+      "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+    },
+    "union-1861, war by decision, 148 days/planner.term.goal_fit": {
+      "minFires": 0,
+      "why": "dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/planner.term.supply": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#planner.term.supply."
+    },
+    "union-1861, war by decision, 148 days/planner.term.haste": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_received": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_objected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.released": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no goal here says \"prepare, await my word\"; the editing exercise run gives the word"
+    },
+    "union-1861, war by decision, 148 days/seats.defaulted": {
+      "minFires": 0,
+      "why": "every request is answered in this run; the silent-seats exercise run fires it"
+    },
+    "union-1861, war by decision, 148 days/situations.decided": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "union-1861, war by decision, 148 days/situations.delegated": {
+      "minFires": 0,
+      "why": "no authored Union situation in this window names a delegate as its historical default; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/situations.fired": {
+      "minFires": 44,
+      "maxFires": 176
+    },
+    "union-1861, war by decision, 148 days/situations.notice_reports": {
+      "minFires": 35,
+      "maxFires": 140
+    },
+    "union-1861, war by decision, 148 days/situations.noticed": {
+      "minFires": 34,
+      "maxFires": 138
+    },
+    "union-1861, war by decision, 148 days/situations.options_changed": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "union-1861, war by decision, 148 days/situations.orders": {
+      "minFires": 12,
+      "maxFires": 50
+    },
+    "union-1861, war by decision, 148 days/situations.proposals": {
+      "minFires": 36,
+      "maxFires": 146
+    },
+    "union-1861, war by decision, 148 days/command.side_changed": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/command.government_established": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/command.post_succeeded": {
+      "minFires": 2,
+      "maxFires": 10,
+      "why": "S68 lead ruling 4 (CODEX.md, 2026-11-22): S46 adds four sourced institutional successions to the existing one. S67 observes five on days 11, 52, 54, 64 and 79; around(5). Each source and page is checked in notes/lane-s68-residuals.md#sourced-successions and the append-only liveness cause record."
+    },
+    "union-1861, war by decision, 148 days/command.government_closed": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/command.temporary_post_opened": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "union-1861, war by decision, 148 days/situations.resurfaced": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/situations.staff_lines": {
+      "minFires": 9,
+      "maxFires": 36
+    },
+    "union-1861, war by decision, 148 days/situations.surfaced": {
+      "minFires": 43,
+      "maxFires": 174
+    },
+    "union-1861, war by decision, 148 days/recruitment.called": {
+      "minFires": 48,
+      "maxFires": 194
+    },
+    "union-1861, war by decision, 148 days/recruitment.answered": {
+      "minFires": 30,
+      "maxFires": 122
+    },
+    "union-1861, war by decision, 148 days/recruitment.slow_walked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S106 /0118: the reserve answer at willingness 7 has no grounded reservation. Retiring the numeric window removes its old three-day reservation delay. No actual slow_walk or reinterpret call occurs in this Union reference. The unchanged testbed still fires recruitment.slow_walked once."
+    },
+    "union-1861, war by decision, 148 days/recruitment.refused": {
+      "minFires": 6,
+      "maxFires": 24
+    },
+    "union-1861, war by decision, 148 days/recruitment.mustered": {
+      "minFires": 25,
+      "maxFires": 100
+    },
+    "union-1861, war by decision, 148 days/recruitment.men": {
+      "minFires": 23,
+      "maxFires": 92
+    },
+    "union-1861, war by decision, 148 days/recruitment.disbanded": {
+      "minFires": 7,
+      "maxFires": 30
+    },
+    "union-1861, war by decision, 148 days/ladder.moved": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/ladder.rival": {
+      "minFires": 0,
+      "why": "no holder reaches a rival rung with the required standing in the merged 148-day history run; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/people.grievances_faded": {
+      "minFires": 15,
+      "maxFires": 60
+    },
+    "union-1861, war by decision, 148 days/seats.attention_refilled": {
+      "minFires": 10,
+      "maxFires": 42
+    },
+    "union-1861, war by decision, 148 days/seats.attention_spent": {
+      "minFires": 76,
+      "maxFires": 306
+    },
+    "union-1861, war by decision, 148 days/seats.initiative": {
+      "minFires": 6,
+      "maxFires": 24,
+      "why": "S132 [I]: S131 sourced conciliation cells restore three cabinet initiative participants; twelve retained events and additive terms are published in docs/audit/s132-evidence/initiative-review.json. Existing initiative owner, admission threshold and cooldown are unchanged."
+    },
+    "union-1861, war by decision, 148 days/operations.repulsed": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+    },
+    "union-1861, war by decision, 148 days/forces.landed_by_situation": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S124/0126: a whole represented company lands without a numeric split. The block and its lots keep unknown men (OR I-I pp.352-353); the situation fires one landing on day33."
+    },
+    "union-1861, war by decision, 148 days/politics.act": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/politics.answered": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/politics.called": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.framing": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.met": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/situations.policy": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.bombardment": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/reports.commander_lost": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.evacuated": {
+      "minFires": 1,
+      "maxFires": 1
+    },
+    "union-1861, war by decision, 148 days/map.pocket_lost": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/seats.battle_orders": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/movement.joined": {
+      "minFires": 32,
+      "maxFires": 128
+    },
+    "union-1861, war by decision, 148 days/verbs.answered": {
+      "minFires": 61,
+      "maxFires": 246
+    },
+    "union-1861, war by decision, 148 days/verbs.declined": {
+      "minFires": 0,
+      "why": "every army asked in the merged history run answers; recruitment refusals are counted separately; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/combat.general_hit": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/planner.term.caution": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S119: Patterson day140 changes from the S116 holding pick (caution/force_ratio/supply each decisive) to direct. Dropping caution from his corrected retained scores leaves direct first. Other retained drafts also keep their pick; daily telemetry records0. No temperament or scoring weight changed."
+    },
+    "union-1861, war by decision, 148 days/planner.term.force_ratio": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S119: Patterson day140 changes from S116 holding to direct. Dropping force_ratio from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. No strength/default, assault margin or scoring weight was fitted."
+    },
+    "union-1861, war by decision, 148 days/combat.cut_off": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98: none of the five field routs at the objective is cut off; each has a legal retreat. The island fort remains a bombardment surrender, outside this field counter. The trapped-garrison control remains live."
+    },
+    "union-1861, war by decision, 148 days/recruitment.renewed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/plans.goal_proposed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+    },
+    "union-1861, war by decision, 148 days/plans.discretion_exercised": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+    },
+    "union-1861, war by decision, 148 days/command.government_reopened": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no pack situation reopens one yet"
+    },
+    "union-1861, war by decision, 148 days/command.proposal_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal that cannot be applied; honest situations propose none"
+    },
+    "union-1861, war by decision, 148 days/commands.rejected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "rule seats send only commands the menu offers; a bad command is a seat bug"
+    },
+    "union-1861, war by decision, 148 days/infrastructure.changed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/combat.records_pruned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a closed battle is pruned after the pack's battleDays (120), longer than either reference run"
+    },
+    "union-1861, war by decision, 148 days/operations.landed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)"
+    },
+    "union-1861, war by decision, 148 days/operations.support_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "union-1861, war by decision, 148 days/operations.support_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "union-1861, war by decision, 148 days/operations.support_sent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "union-1861, war by decision, 148 days/combat.breakout": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a cut-off force breaks out only when its commander believes it can fight free; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force is cut off"
+    },
+    "union-1861, war by decision, 148 days/combat.destroyed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a force is destroyed only when the breakout its commander chose fails; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force breaks out"
+    },
+    "union-1861, war by decision, 148 days/movement.join_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+    },
+    "union-1861, war by decision, 148 days/orders.conflict": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a conflict needs two issuers, a chain order and one sent around it; here only the principal orders"
+    },
+    "union-1861, war by decision, 148 days/reports.filtered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "union-1861, war by decision, 148 days/reports.trimmed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "union-1861, war by decision, 148 days/situations.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)"
+    },
+    "union-1861, war by decision, 148 days/recruitment.muster_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no governor called in either run has his seat region in enemy hands when his levy falls due"
+    },
+    "union-1861, war by decision, 148 days/recruitment.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run"
+    },
+    "union-1861, war by decision, 148 days/plans.sent_back": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits"
+    },
+    "union-1861, war by decision, 148 days/planner.term.notes": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the reference principals send no notes; the send-back driver makes a timing note change the pick"
+    },
+    "union-1861, war by decision, 148 days/plans.draft_deferred": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run asks for more plans in a day than the pack’s cap of three (0062)"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_invalid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the editing exercise edits only a moving axis’s timing, which can always be made"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_shirked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly"
+    },
+    "union-1861, war by decision, 148 days/planner.term.coordination": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a two-axis plan close enough to the best for coordination to decide it"
+    },
+    "union-1861, war by decision, 148 days/planner.term.exposure": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception"
+    },
+    "union-1861, war by decision, 148 days/planner.term.dependence": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a support request close enough to the best for dependence to decide it"
+    },
+    "union-1861, war by decision, 148 days/planner.term.glory": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping glory alone changes the pick"
+    },
+    "union-1861, war by decision, 148 days/situations.waiting": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "waiting is an option a human takes; the rule-driven principal takes the historical default (0057)"
+    },
+    "union-1861, war by decision, 148 days/verbs.audience": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/verbs.in_washington": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/people.promise_kept": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/people.promise_broken": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/reports.observer_letter": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/situations.policy_unpaid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and the chosen reference-run policy pays its floor through stakeholders; the gate reviewer requires it never to fire in one"
+    },
+    "union-1861, war by decision, 148 days/seats.attention_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal prices each command by the pack’s table and sends only what his week’s attention pays for (lane 1.12), so the kernel refuses him nothing; the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/politics.refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal politics cannot apply; honest situations propose none"
+    },
+    "union-1861, war by decision, 148 days/politics.press_silent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every paper’s editor serves on his paper’s side throughout both runs"
+    },
+    "testbed, 120 days/planner.term.caution": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98 wording correction: this testbed mechanic remains quiet. No testbed draft pick depends on caution alone; the Union reference now fires it once."
+    },
+    "testbed, 120 days/planner.term.force_ratio": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98 wording correction: this testbed mechanic remains quiet. No testbed draft pick depends on force ratio alone; the Union reference now fires it once."
+    },
+    "testbed, 120 days/orders.returned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no dispatch arrives at a vacant or changed post in either reference run; the kernel test sends one before the loss is reported and drives its return"
+    },
+    "testbed, 120 days/planner.term.time": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly."
+    },
+    "testbed, 120 days/people.resigned": {
+      "minFires": 0,
+      "why": "the testbed reference pack has no service-choice records; union-1861 fires it, and resignation.test.ts drives the government path"
+    },
+    "testbed, 120 days/people.stayed": {
+      "minFires": 0,
+      "why": "the testbed reference pack has no service-choice records; union-1861 fires it when an officer stays after his government joins"
+    },
+    "testbed, 120 days/verbs.consulted": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed history resolves its situations before a morning consultation; the Union history consults the open question’s proposers (R84)"
+    },
+    "testbed, 120 days/combat.battle_closed": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.battle_day": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.battle_opened": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.captured": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.killed_wounded": {
+      "minFires": 4,
+      "maxFires": 16
+    },
+    "testbed, 120 days/combat.missing": {
+      "minFires": 4,
+      "maxFires": 16
+    },
+    "testbed, 120 days/combat.occupation": {
+      "minFires": 15,
+      "maxFires": 62
+    },
+    "testbed, 120 days/combat.pursuit_chosen": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/combat.withdrew": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/control.changed": {
+      "minFires": 17,
+      "maxFires": 70
+    },
+    "testbed, 120 days/control.threshold_crossed": {
+      "minFires": 6,
+      "maxFires": 26
+    },
+    "testbed, 120 days/forces.stores_fell": {
+      "minFires": 93,
+      "maxFires": 374
+    },
+    "testbed, 120 days/forces.stores_low": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/forces.stores_refilled": {
+      "minFires": 119,
+      "maxFires": 476
+    },
+    "testbed, 120 days/forces.stragglers_returned": {
+      "minFires": 54,
+      "maxFires": 216
+    },
+    "testbed, 120 days/combat.flank_broken": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/movement.joined": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/combat.bombardment": {
+      "minFires": 0,
+      "why": "no testbed objective lies across water from a shore with guns; the Union run fires it"
+    },
+    "testbed, 120 days/combat.evacuated": {
+      "minFires": 0,
+      "why": "no testbed fort is bombarded; the Union reference evacuates Anderson within the recorded terms"
+    },
+    "testbed, 120 days/reports.commander_lost": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no commander is lost in this testbed run; the kernel test in QUIET drives the loss report"
+    },
+    "testbed, 120 days/combat.surrendered": {
+      "minFires": 0,
+      "why": "only a cut-off force surrenders, and no testbed force is cut off; the Union run fires it"
+    },
+    "testbed, 120 days/map.pocket_lost": {
+      "minFires": 0,
+      "why": "no testbed pocket is overrun; the Union run fires it (Sumter’s, when the fort falls)"
+    },
+    "testbed, 120 days/combat.routed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/combat.works_stormed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/operations.ended": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/operations.opened": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/operations.stage": {
+      "minFires": 6,
+      "maxFires": 26
+    },
+    "testbed, 120 days/operations.works": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/orders.responses_pruned": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "testbed, 120 days/reports.battle_dispatch": {
+      "minFires": 16,
+      "maxFires": 64
+    },
+    "testbed, 120 days/reports.casualty_return": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "testbed, 120 days/reports.governor_wire": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/reports.pocket": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/map.pocket_closed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/knowledge.pruned_age": {
+      "minFires": 20,
+      "maxFires": 82
+    },
+    "testbed, 120 days/knowledge.pruned_superseded": {
+      "minFires": 59,
+      "maxFires": 236
+    },
+    "testbed, 120 days/map.pocket_relieved": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening."
+    },
+    "testbed, 120 days/map.recomputed": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "testbed, 120 days/messages.courier_delay": {
+      "minFires": 24,
+      "maxFires": 98
+    },
+    "testbed, 120 days/messages.mail_delay": {
+      "minFires": 53,
+      "maxFires": 214
+    },
+    "testbed, 120 days/messages.delivered": {
+      "minFires": 1060,
+      "maxFires": 4240
+    },
+    "testbed, 120 days/messages.sent": {
+      "minFires": 1075,
+      "maxFires": 4302
+    },
+    "testbed, 120 days/messages.special_messenger": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/movement.arrived": {
+      "minFires": 13,
+      "maxFires": 54
+    },
+    "testbed, 120 days/movement.leg_started": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "testbed, 120 days/orders.bypassed": {
+      "minFires": 0,
+      "why": "the principal goes around an office only when it objects, which the testbed’s does not (it holds instead); union-1861 fires it"
+    },
+    "testbed, 120 days/orders.obeyed": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/orders.relay_held": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/orders.relay_objected": {
+      "minFires": 0,
+      "why": "the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it"
+    },
+    "testbed, 120 days/orders.relayed": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.goal_reached": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/politics.adjourned": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/politics.front_page": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "testbed, 120 days/politics.opened": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/politics.support": {
+      "minFires": 36,
+      "maxFires": 144
+    },
+    "testbed, 120 days/regions.self_emancipation": {
+      "minFires": 45,
+      "maxFires": 180
+    },
+    "testbed, 120 days/regions.reached_lines": {
+      "minFires": 18,
+      "maxFires": 72
+    },
+    "testbed, 120 days/seats.choices": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/seats.battle_orders": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/recruitment.called": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.answered": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.slow_walked": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/recruitment.mustered": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.men": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.disbanded": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/recruitment.refused": {
+      "minFires": 0,
+      "why": "both testbed governors answer their calls; the Union run fires it"
+    },
+    "testbed, 120 days/verbs.answered": {
+      "minFires": 18,
+      "maxFires": 72
+    },
+    "testbed, 120 days/verbs.declined": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "testbed, 120 days/seats.defaulted": {
+      "minFires": 0,
+      "why": "every request is answered in this run; the silent-seats exercise run fires it"
+    },
+    "testbed, 120 days/planner.candidates": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/planner.searches": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.drafted": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.chosen": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.goal_set": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.went_ahead": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.approved": {
+      "minFires": 0,
+      "why": "every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed"
+    },
+    "testbed, 120 days/plans.submitted": {
+      "minFires": 0,
+      "why": "every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed"
+    },
+    "testbed, 120 days/planner.term.goal_fit": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/planner.term.supply": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/planner.term.haste": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.edit_received": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.edit_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.edit_objected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.released": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no goal here says \"prepare, await my word\"; the editing exercise run gives the word"
+    },
+    "testbed, 120 days/situations.decided": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.delegated": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/situations.fired": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/situations.notice_reports": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.noticed": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.orders": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/situations.proposals": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "testbed, 120 days/situations.staff_lines": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.surfaced": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/ladder.moved": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/ladder.rival": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/people.grievances_faded": {
+      "minFires": 0,
+      "why": "no testbed man holds a grievance at any week’s end in this run (nobody is overruled, and its office holds rather than objects, so it is never bypassed); its ladder moves come from cool regard alone; union-1861 fires it"
+    },
+    "testbed, 120 days/seats.attention_refilled": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "testbed, 120 days/seats.attention_spent": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/seats.initiative": {
+      "minFires": 7,
+      "maxFires": 30
+    },
+    "testbed, 120 days/command.temporary_post_opened": {
+      "minFires": 0,
+      "why": "no testbed situation declares or opens a temporary post; union-1861 fires it (the relief expedition)"
+    },
+    "testbed, 120 days/command.government_closed": {
+      "minFires": 0,
+      "why": "no testbed situation closes a neutral government in this run; union-1861 fires it (a border state’s neutrality)"
+    },
+    "testbed, 120 days/command.side_changed": {
+      "minFires": 0,
+      "why": "no testbed situation changes a government’s side in this run; union-1861 fires it"
+    },
+    "testbed, 120 days/command.government_established": {
+      "minFires": 0,
+      "why": "no testbed notice establishes a declared government; the Union reference does"
+    },
+    "testbed, 120 days/command.post_succeeded": {
+      "minFires": 0,
+      "why": "no testbed notice replaces an occupied post’s holder; the Union reference does"
+    },
+    "testbed, 120 days/situations.options_changed": {
+      "minFires": 0,
+      "why": "no testbed situation in this run has an option that appears or expires while it is open; union-1861 fires it"
+    },
+    "testbed, 120 days/situations.resurfaced": {
+      "minFires": 0,
+      "why": "no testbed situation in this run stays open to a resurface day; union-1861 fires it"
+    },
+    "testbed, 120 days/combat.cut_off": {
+      "minFires": 0,
+      "why": "a side is cut off only with no legal retreat (0019); every testbed loser has a way back; QUIET"
+    },
+    "testbed, 120 days/combat.general_hit": {
+      "minFires": 0,
+      "why": "a commander is hit on a low draw on his own stream; none of the testbed run's three battle-days draws one; QUIET"
+    },
+    "testbed, 120 days/operations.repulsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98 wording correction: this testbed mechanic remains quiet. No testbed operation axis is repulsed; neither full reference now fires it, while the fortified-defender control remains live."
+    },
+    "testbed, 120 days/forces.landed_by_situation": {
+      "minFires": 0,
+      "why": "no testbed situation lands troops; the Union run fires it"
+    },
+    "testbed, 120 days/forces.landing_refused": {
+      "minFires": 0,
+      "why": "no testbed situation lands troops; QUIET"
+    },
+    "testbed, 120 days/politics.act": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.answered": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.called": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.framing": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.met": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/situations.policy": {
+      "minFires": 0,
+      "why": "no testbed decision names a policy row in this run; the Union run fires it"
+    },
+    "testbed, 120 days/recruitment.renewed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal."
+    },
+    "testbed, 120 days/plans.goal_proposed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+    },
+    "testbed, 120 days/plans.discretion_exercised": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+    },
+    "testbed, 120 days/command.government_reopened": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no pack situation reopens one yet"
+    },
+    "testbed, 120 days/command.proposal_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal that cannot be applied; honest situations propose none"
+    },
+    "testbed, 120 days/commands.rejected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "rule seats send only commands the menu offers; a bad command is a seat bug"
+    },
+    "testbed, 120 days/infrastructure.changed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it"
+    },
+    "testbed, 120 days/combat.records_pruned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a closed battle is pruned after the pack's battleDays (120), longer than either reference run"
+    },
+    "testbed, 120 days/operations.landed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)"
+    },
+    "testbed, 120 days/operations.support_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "testbed, 120 days/operations.support_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "testbed, 120 days/operations.support_sent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "testbed, 120 days/combat.breakout": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a cut-off force breaks out only when its commander believes it can fight free; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force is cut off"
+    },
+    "testbed, 120 days/combat.destroyed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a force is destroyed only when the breakout its commander chose fails; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force breaks out"
+    },
+    "testbed, 120 days/movement.join_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+    },
+    "testbed, 120 days/orders.conflict": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a conflict needs two issuers, a chain order and one sent around it; here only the principal orders"
+    },
+    "testbed, 120 days/reports.filtered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "testbed, 120 days/reports.trimmed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "testbed, 120 days/situations.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)"
+    },
+    "testbed, 120 days/recruitment.muster_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no governor called in either run has his seat region in enemy hands when his levy falls due"
+    },
+    "testbed, 120 days/recruitment.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run"
+    },
+    "testbed, 120 days/plans.sent_back": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits"
+    },
+    "testbed, 120 days/planner.term.notes": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the reference principals send no notes; the send-back driver makes a timing note change the pick"
+    },
+    "testbed, 120 days/plans.draft_deferred": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run asks for more plans in a day than the pack’s cap of three (0062)"
+    },
+    "testbed, 120 days/plans.edit_invalid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the editing exercise edits only a moving axis’s timing, which can always be made"
+    },
+    "testbed, 120 days/plans.edit_shirked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly"
+    },
+    "testbed, 120 days/planner.term.coordination": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a two-axis plan close enough to the best for coordination to decide it"
+    },
+    "testbed, 120 days/planner.term.exposure": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception"
+    },
+    "testbed, 120 days/planner.term.dependence": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a support request close enough to the best for dependence to decide it"
+    },
+    "testbed, 120 days/planner.term.glory": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping glory alone changes the pick"
+    },
+    "testbed, 120 days/situations.waiting": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "waiting is an option a human takes; the rule-driven principal takes the historical default (0057)"
+    },
+    "testbed, 120 days/verbs.audience": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/verbs.in_washington": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/people.promise_kept": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/people.promise_broken": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/reports.observer_letter": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/situations.policy_unpaid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and the chosen reference-run policy pays its floor through stakeholders; the gate reviewer requires it never to fire in one"
+    },
+    "testbed, 120 days/seats.attention_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal prices each command by the pack’s table and sends only what his week’s attention pays for (lane 1.12), so the kernel refuses him nothing; the kernel test drives it"
+    },
+    "testbed, 120 days/politics.refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal politics cannot apply; honest situations propose none"
+    },
+    "testbed, 120 days/politics.press_silent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every paper’s editor serves on his paper’s side throughout both runs"
+    },
+    "testbed, commanders silent, 120 days/seats.defaulted": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, the principal edits every plan, 120 days/plans.submitted": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, the principal edits every plan, 120 days/plans.edit_received": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, the principal edits every plan, 120 days/plans.edit_answered": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, the principal edits every plan, 120 days/plans.edit_objected": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, the principal edits every plan, 120 days/plans.released": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, the principal edits every plan, 120 days/planner.term.haste": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/orders.relayed": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S123: the standing assignment and its hold-plan approval each pass the intermediate office; no offensive order or force movement. docs/audit/s123-evidence/peace-reference.json"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/orders.obeyed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/plans.goal_reached": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S123: the received standing assignment yields one completed hold at the existing headquarters; all goals stay hold under the peace rule. docs/audit/s123-evidence/peace-reference.json"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/movement.leg_started": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/movement.arrived": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/combat.battle_day": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/combat.occupation": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/control.changed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/recruitment.called": {
+      "minFires": 3,
+      "maxFires": 14,
+      "why": "R96: R90's seven sourced 9 March provisional-force requisitions precede the war decisions; other war doctrine still waits on each side's own decision"
+    }
+  },
+  "after": {
+    "union-1861, war by decision, 148 days/forces.landing_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S124: the sole situation landing is now a whole-company move, so no numeric split is attempted or refused. Unknown strength remains unknown. The paired fictional control still drives one numeric landing and one unknown-parent numeric refusal."
+    },
+    "union-1861, war by decision, 148 days/orders.returned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."
+    },
+    "union-1861, war by decision, 148 days/planner.term.time": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S134 merge [I]: time is live again on the retained combined readiness/demonstration path. Retire the current S130 quiet designation, retaining its exact historical record. The saved candidate counterfactual identifies the changed winner; no time weight changes."
+    },
+    "union-1861, war by decision, 148 days/people.resigned": {
+      "minFires": 7,
+      "maxFires": 30,
+      "why": "S77 lead ruling 3 (CODEX.md, 2026-11-23): S74 adds Elzey's sourced departure under S69/0101 to the fourteen existing resignations; recentre only this band with around(15). No other quiet band is changed."
+    },
+    "union-1861, war by decision, 148 days/people.stayed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.battle_closed": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "union-1861, war by decision, 148 days/verbs.consulted": {
+      "minFires": 8,
+      "maxFires": 32,
+      "why": "S128/0120.2: the history rule seat asks four distinct authored rounds, with two single-adviser feasibility questions and two seven-member cabinet consultations. Sixteen generated replies replace the old five-adviser undifferentiated consultation. No adviser stance, value, confidence or compliance threshold was fitted."
+    },
+    "union-1861, war by decision, 148 days/combat.battle_day": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "union-1861, war by decision, 148 days/combat.battle_opened": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "union-1861, war by decision, 148 days/combat.captured": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "union-1861, war by decision, 148 days/combat.killed_wounded": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/combat.missing": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "union-1861, war by decision, 148 days/combat.occupation": {
+      "minFires": 157,
+      "maxFires": 628
+    },
+    "union-1861, war by decision, 148 days/combat.pursuit_chosen": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "union-1861, war by decision, 148 days/combat.surrendered": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.withdrew": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+    },
+    "union-1861, war by decision, 148 days/control.changed": {
+      "minFires": 160,
+      "maxFires": 640
+    },
+    "union-1861, war by decision, 148 days/control.threshold_crossed": {
+      "minFires": 19,
+      "maxFires": 78
+    },
+    "union-1861, war by decision, 148 days/forces.stores_fell": {
+      "minFires": 1444,
+      "maxFires": 5776,
+      "why": "S116 /0122 [I]: cause honours change Brown and Perry reserve refusals to original undertakings at day117; ordinary muster adds Georgia 3000 and Florida 1000 at day122. Recruitment, transfer, control and supply then run unchanged. Retained daily telemetry shows exactly one extra stores-fell firing on each day132-148: 2871 -> 2888 fires, magnitude 2850214 -> 2867214. The integrated additional-force/supply trajectory breaches the former max2886 by two; no initial strength, stores rule or threshold is fitted."
+    },
+    "union-1861, war by decision, 148 days/forces.stores_low": {
+      "minFires": 51,
+      "maxFires": 206
+    },
+    "union-1861, war by decision, 148 days/forces.stores_refilled": {
+      "minFires": 1200,
+      "maxFires": 4800
+    },
+    "union-1861, war by decision, 148 days/forces.stragglers_returned": {
+      "minFires": 92,
+      "maxFires": 368
+    },
+    "union-1861, war by decision, 148 days/combat.flank_broken": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "union-1861, war by decision, 148 days/combat.routed": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "union-1861, war by decision, 148 days/combat.works_stormed": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "union-1861, war by decision, 148 days/operations.ended": {
+      "minFires": 4,
+      "maxFires": 18,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.ended."
+    },
+    "union-1861, war by decision, 148 days/operations.opened": {
+      "minFires": 3,
+      "maxFires": 12,
+      "why": "S119 integrated correction changes Patterson day140 planner pick from holding to direct. His additional operation opens day141; five other openings remain, giving6. No operation quota or planner weight changed."
+    },
+    "union-1861, war by decision, 148 days/operations.stage": {
+      "minFires": 12,
+      "maxFires": 48,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires24; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/operations.works": {
+      "minFires": 7,
+      "maxFires": 30,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.works."
+    },
+    "union-1861, war by decision, 148 days/orders.responses_pruned": {
+      "minFires": 13,
+      "maxFires": 54
+    },
+    "union-1861, war by decision, 148 days/reports.battle_dispatch": {
+      "minFires": 21,
+      "maxFires": 84
+    },
+    "union-1861, war by decision, 148 days/reports.casualty_return": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "union-1861, war by decision, 148 days/reports.governor_wire": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "union-1861, war by decision, 148 days/reports.pocket": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports."
+    },
+    "union-1861, war by decision, 148 days/map.pocket_closed": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "S106 /0118 [I]: the same reserve undertakes without the retired three-day numeric-rung delay; earlier muster changes the existing control, supply and passage sequence. Three pocket closures remain at days 79, 87 and 128; the former day-136 closure disappears. No passage/control rule, original strength or gameplay threshold changes."
+    },
+    "union-1861, war by decision, 148 days/knowledge.pruned_age": {
+      "minFires": 53,
+      "maxFires": 214
+    },
+    "union-1861, war by decision, 148 days/knowledge.pruned_superseded": {
+      "minFires": 73,
+      "maxFires": 292
+    },
+    "union-1861, war by decision, 148 days/map.pocket_relieved": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved."
+    },
+    "union-1861, war by decision, 148 days/map.recomputed": {
+      "minFires": 26,
+      "maxFires": 104
+    },
+    "union-1861, war by decision, 148 days/messages.courier_delay": {
+      "minFires": 49,
+      "maxFires": 198,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires99; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/messages.mail_delay": {
+      "minFires": 1428,
+      "maxFires": 5712
+    },
+    "union-1861, war by decision, 148 days/messages.delivered": {
+      "minFires": 7221,
+      "maxFires": 28886,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires14443; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/messages.sent": {
+      "minFires": 7607,
+      "maxFires": 30428,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires15214; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/messages.special_messenger": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."
+    },
+    "union-1861, war by decision, 148 days/orders.bypassed": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "union-1861, war by decision, 148 days/movement.arrived": {
+      "minFires": 319,
+      "maxFires": 1276
+    },
+    "union-1861, war by decision, 148 days/movement.leg_started": {
+      "minFires": 155,
+      "maxFires": 620
+    },
+    "union-1861, war by decision, 148 days/orders.obeyed": {
+      "minFires": 4,
+      "maxFires": 18,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/orders.relay_held": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."
+    },
+    "union-1861, war by decision, 148 days/orders.relay_objected": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "union-1861, war by decision, 148 days/orders.relayed": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "union-1861, war by decision, 148 days/plans.goal_reached": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires3; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/politics.adjourned": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.front_page": {
+      "minFires": 31,
+      "maxFires": 126
+    },
+    "union-1861, war by decision, 148 days/politics.support": {
+      "minFires": 42,
+      "maxFires": 170
+    },
+    "union-1861, war by decision, 148 days/politics.opened": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/regions.self_emancipation": {
+      "minFires": 1548,
+      "maxFires": 6194
+    },
+    "union-1861, war by decision, 148 days/regions.reached_lines": {
+      "minFires": 137,
+      "maxFires": 548
+    },
+    "union-1861, war by decision, 148 days/seats.choices": {
+      "minFires": 12,
+      "maxFires": 50,
+      "why": "S134 merge [I]: combined received demonstration letters, advice and command readiness change the recorded path through existing owners. Retained events, candidate terms and daily counter differences are published; no weight, quota or true strength is fitted."
+    },
+    "union-1861, war by decision, 148 days/planner.candidates": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/planner.searches": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/plans.drafted": {
+      "minFires": 4,
+      "maxFires": 16,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/plans.chosen": {
+      "minFires": 7,
+      "maxFires": 28,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#plans.chosen."
+    },
+    "union-1861, war by decision, 148 days/plans.goal_set": {
+      "minFires": 4,
+      "maxFires": 18,
+      "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed."
+    },
+    "union-1861, war by decision, 148 days/plans.went_ahead": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "union-1861, war by decision, 148 days/plans.approved": {
+      "minFires": 0,
+      "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+    },
+    "union-1861, war by decision, 148 days/plans.submitted": {
+      "minFires": 0,
+      "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+    },
+    "union-1861, war by decision, 148 days/planner.term.goal_fit": {
+      "minFires": 0,
+      "why": "dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/planner.term.supply": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#planner.term.supply."
+    },
+    "union-1861, war by decision, 148 days/planner.term.haste": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_received": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_objected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "union-1861, war by decision, 148 days/plans.released": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no goal here says \"prepare, await my word\"; the editing exercise run gives the word"
+    },
+    "union-1861, war by decision, 148 days/seats.defaulted": {
+      "minFires": 0,
+      "why": "every request is answered in this run; the silent-seats exercise run fires it"
+    },
+    "union-1861, war by decision, 148 days/situations.decided": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "union-1861, war by decision, 148 days/situations.delegated": {
+      "minFires": 0,
+      "why": "no authored Union situation in this window names a delegate as its historical default; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/situations.fired": {
+      "minFires": 44,
+      "maxFires": 176
+    },
+    "union-1861, war by decision, 148 days/situations.notice_reports": {
+      "minFires": 35,
+      "maxFires": 140
+    },
+    "union-1861, war by decision, 148 days/situations.noticed": {
+      "minFires": 34,
+      "maxFires": 138
+    },
+    "union-1861, war by decision, 148 days/situations.options_changed": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "union-1861, war by decision, 148 days/situations.orders": {
+      "minFires": 12,
+      "maxFires": 50
+    },
+    "union-1861, war by decision, 148 days/situations.proposals": {
+      "minFires": 36,
+      "maxFires": 146
+    },
+    "union-1861, war by decision, 148 days/command.side_changed": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/command.government_established": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/command.post_succeeded": {
+      "minFires": 2,
+      "maxFires": 10,
+      "why": "S68 lead ruling 4 (CODEX.md, 2026-11-22): S46 adds four sourced institutional successions to the existing one. S67 observes five on days 11, 52, 54, 64 and 79; around(5). Each source and page is checked in notes/lane-s68-residuals.md#sourced-successions and the append-only liveness cause record."
+    },
+    "union-1861, war by decision, 148 days/command.government_closed": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/command.temporary_post_opened": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "union-1861, war by decision, 148 days/situations.resurfaced": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/situations.staff_lines": {
+      "minFires": 9,
+      "maxFires": 36
+    },
+    "union-1861, war by decision, 148 days/situations.surfaced": {
+      "minFires": 43,
+      "maxFires": 174
+    },
+    "union-1861, war by decision, 148 days/recruitment.called": {
+      "minFires": 48,
+      "maxFires": 194
+    },
+    "union-1861, war by decision, 148 days/recruitment.answered": {
+      "minFires": 30,
+      "maxFires": 122
+    },
+    "union-1861, war by decision, 148 days/recruitment.slow_walked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S106 /0118: the reserve answer at willingness 7 has no grounded reservation. Retiring the numeric window removes its old three-day reservation delay. No actual slow_walk or reinterpret call occurs in this Union reference. The unchanged testbed still fires recruitment.slow_walked once."
+    },
+    "union-1861, war by decision, 148 days/recruitment.refused": {
+      "minFires": 6,
+      "maxFires": 24
+    },
+    "union-1861, war by decision, 148 days/recruitment.mustered": {
+      "minFires": 25,
+      "maxFires": 100
+    },
+    "union-1861, war by decision, 148 days/recruitment.men": {
+      "minFires": 23,
+      "maxFires": 92
+    },
+    "union-1861, war by decision, 148 days/recruitment.disbanded": {
+      "minFires": 7,
+      "maxFires": 30
+    },
+    "union-1861, war by decision, 148 days/ladder.moved": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/ladder.rival": {
+      "minFires": 0,
+      "why": "no holder reaches a rival rung with the required standing in the merged 148-day history run; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/people.grievances_faded": {
+      "minFires": 15,
+      "maxFires": 60
+    },
+    "union-1861, war by decision, 148 days/seats.attention_refilled": {
+      "minFires": 10,
+      "maxFires": 42
+    },
+    "union-1861, war by decision, 148 days/seats.attention_spent": {
+      "minFires": 76,
+      "maxFires": 306
+    },
+    "union-1861, war by decision, 148 days/seats.initiative": {
+      "minFires": 6,
+      "maxFires": 24,
+      "why": "S132 [I]: S131 sourced conciliation cells restore three cabinet initiative participants; twelve retained events and additive terms are published in docs/audit/s132-evidence/initiative-review.json. Existing initiative owner, admission threshold and cooldown are unchanged."
+    },
+    "union-1861, war by decision, 148 days/operations.repulsed": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+    },
+    "union-1861, war by decision, 148 days/forces.landed_by_situation": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S124/0126: a whole represented company lands without a numeric split. The block and its lots keep unknown men (OR I-I pp.352-353); the situation fires one landing on day33."
+    },
+    "union-1861, war by decision, 148 days/politics.act": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/politics.answered": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/politics.called": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.framing": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/politics.met": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/situations.policy": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.bombardment": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861, war by decision, 148 days/reports.commander_lost": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/combat.evacuated": {
+      "minFires": 1,
+      "maxFires": 1
+    },
+    "union-1861, war by decision, 148 days/map.pocket_lost": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/seats.battle_orders": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "union-1861, war by decision, 148 days/movement.joined": {
+      "minFires": 32,
+      "maxFires": 128
+    },
+    "union-1861, war by decision, 148 days/verbs.answered": {
+      "minFires": 61,
+      "maxFires": 246
+    },
+    "union-1861, war by decision, 148 days/verbs.declined": {
+      "minFires": 0,
+      "why": "every army asked in the merged history run answers; recruitment refusals are counted separately; the testbed run fires it"
+    },
+    "union-1861, war by decision, 148 days/combat.general_hit": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/planner.term.caution": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S119: Patterson day140 changes from the S116 holding pick (caution/force_ratio/supply each decisive) to direct. Dropping caution from his corrected retained scores leaves direct first. Other retained drafts also keep their pick; daily telemetry records0. No temperament or scoring weight changed."
+    },
+    "union-1861, war by decision, 148 days/planner.term.force_ratio": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S119: Patterson day140 changes from S116 holding to direct. Dropping force_ratio from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. No strength/default, assault margin or scoring weight was fitted."
+    },
+    "union-1861, war by decision, 148 days/combat.cut_off": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98: none of the five field routs at the objective is cut off; each has a legal retreat. The island fort remains a bombardment surrender, outside this field counter. The trapped-garrison control remains live."
+    },
+    "union-1861, war by decision, 148 days/recruitment.renewed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "union-1861, war by decision, 148 days/plans.goal_proposed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+    },
+    "union-1861, war by decision, 148 days/plans.discretion_exercised": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+    },
+    "union-1861, war by decision, 148 days/command.government_reopened": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no pack situation reopens one yet"
+    },
+    "union-1861, war by decision, 148 days/command.proposal_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal that cannot be applied; honest situations propose none"
+    },
+    "union-1861, war by decision, 148 days/commands.rejected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "rule seats send only commands the menu offers; a bad command is a seat bug"
+    },
+    "union-1861, war by decision, 148 days/infrastructure.changed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/combat.records_pruned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a closed battle is pruned after the pack's battleDays (120), longer than either reference run"
+    },
+    "union-1861, war by decision, 148 days/operations.landed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)"
+    },
+    "union-1861, war by decision, 148 days/operations.support_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "union-1861, war by decision, 148 days/operations.support_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "union-1861, war by decision, 148 days/operations.support_sent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "union-1861, war by decision, 148 days/combat.breakout": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a cut-off force breaks out only when its commander believes it can fight free; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force is cut off"
+    },
+    "union-1861, war by decision, 148 days/combat.destroyed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a force is destroyed only when the breakout its commander chose fails; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force breaks out"
+    },
+    "union-1861, war by decision, 148 days/movement.join_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+    },
+    "union-1861, war by decision, 148 days/orders.conflict": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a conflict needs two issuers, a chain order and one sent around it; here only the principal orders"
+    },
+    "union-1861, war by decision, 148 days/reports.filtered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "union-1861, war by decision, 148 days/reports.trimmed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "union-1861, war by decision, 148 days/situations.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)"
+    },
+    "union-1861, war by decision, 148 days/recruitment.muster_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no governor called in either run has his seat region in enemy hands when his levy falls due"
+    },
+    "union-1861, war by decision, 148 days/recruitment.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run"
+    },
+    "union-1861, war by decision, 148 days/plans.sent_back": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits"
+    },
+    "union-1861, war by decision, 148 days/planner.term.notes": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the reference principals send no notes; the send-back driver makes a timing note change the pick"
+    },
+    "union-1861, war by decision, 148 days/plans.draft_deferred": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run asks for more plans in a day than the pack’s cap of three (0062)"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_invalid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the editing exercise edits only a moving axis’s timing, which can always be made"
+    },
+    "union-1861, war by decision, 148 days/plans.edit_shirked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly"
+    },
+    "union-1861, war by decision, 148 days/planner.term.coordination": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a two-axis plan close enough to the best for coordination to decide it"
+    },
+    "union-1861, war by decision, 148 days/planner.term.exposure": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception"
+    },
+    "union-1861, war by decision, 148 days/planner.term.dependence": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a support request close enough to the best for dependence to decide it"
+    },
+    "union-1861, war by decision, 148 days/planner.term.glory": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping glory alone changes the pick"
+    },
+    "union-1861, war by decision, 148 days/situations.waiting": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "waiting is an option a human takes; the rule-driven principal takes the historical default (0057)"
+    },
+    "union-1861, war by decision, 148 days/verbs.audience": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/verbs.in_washington": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/people.promise_kept": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/people.promise_broken": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/reports.observer_letter": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/situations.policy_unpaid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and the chosen reference-run policy pays its floor through stakeholders; the gate reviewer requires it never to fire in one"
+    },
+    "union-1861, war by decision, 148 days/seats.attention_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal prices each command by the pack’s table and sends only what his week’s attention pays for (lane 1.12), so the kernel refuses him nothing; the kernel test drives it"
+    },
+    "union-1861, war by decision, 148 days/politics.refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal politics cannot apply; honest situations propose none"
+    },
+    "union-1861, war by decision, 148 days/politics.press_silent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every paper’s editor serves on his paper’s side throughout both runs"
+    },
+    "testbed, 120 days/planner.term.caution": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98 wording correction: this testbed mechanic remains quiet. No testbed draft pick depends on caution alone; the Union reference now fires it once."
+    },
+    "testbed, 120 days/planner.term.force_ratio": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98 wording correction: this testbed mechanic remains quiet. No testbed draft pick depends on force ratio alone; the Union reference now fires it once."
+    },
+    "testbed, 120 days/orders.returned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no dispatch arrives at a vacant or changed post in either reference run; the kernel test sends one before the loss is reported and drives its return"
+    },
+    "testbed, 120 days/planner.term.time": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 national: neither full reference fires planner.term.time on this observed path; the named live case drives it explicitly."
+    },
+    "testbed, 120 days/people.resigned": {
+      "minFires": 0,
+      "why": "the testbed reference pack has no service-choice records; union-1861 fires it, and resignation.test.ts drives the government path"
+    },
+    "testbed, 120 days/people.stayed": {
+      "minFires": 0,
+      "why": "the testbed reference pack has no service-choice records; union-1861 fires it when an officer stays after his government joins"
+    },
+    "testbed, 120 days/verbs.consulted": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed history resolves its situations before a morning consultation; the Union history consults the open question’s proposers (R84)"
+    },
+    "testbed, 120 days/combat.battle_closed": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.battle_day": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.battle_opened": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.captured": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/combat.killed_wounded": {
+      "minFires": 4,
+      "maxFires": 16
+    },
+    "testbed, 120 days/combat.missing": {
+      "minFires": 4,
+      "maxFires": 16
+    },
+    "testbed, 120 days/combat.occupation": {
+      "minFires": 15,
+      "maxFires": 62
+    },
+    "testbed, 120 days/combat.pursuit_chosen": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/combat.withdrew": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/control.changed": {
+      "minFires": 17,
+      "maxFires": 70
+    },
+    "testbed, 120 days/control.threshold_crossed": {
+      "minFires": 6,
+      "maxFires": 26
+    },
+    "testbed, 120 days/forces.stores_fell": {
+      "minFires": 93,
+      "maxFires": 374
+    },
+    "testbed, 120 days/forces.stores_low": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/forces.stores_refilled": {
+      "minFires": 119,
+      "maxFires": 476
+    },
+    "testbed, 120 days/forces.stragglers_returned": {
+      "minFires": 54,
+      "maxFires": 216
+    },
+    "testbed, 120 days/combat.flank_broken": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/movement.joined": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/combat.bombardment": {
+      "minFires": 0,
+      "why": "no testbed objective lies across water from a shore with guns; the Union run fires it"
+    },
+    "testbed, 120 days/combat.evacuated": {
+      "minFires": 0,
+      "why": "no testbed fort is bombarded; the Union reference evacuates Anderson within the recorded terms"
+    },
+    "testbed, 120 days/reports.commander_lost": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no commander is lost in this testbed run; the kernel test in QUIET drives the loss report"
+    },
+    "testbed, 120 days/combat.surrendered": {
+      "minFires": 0,
+      "why": "only a cut-off force surrenders, and no testbed force is cut off; the Union run fires it"
+    },
+    "testbed, 120 days/map.pocket_lost": {
+      "minFires": 0,
+      "why": "no testbed pocket is overrun; the Union run fires it (Sumter’s, when the fort falls)"
+    },
+    "testbed, 120 days/combat.routed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/combat.works_stormed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/operations.ended": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/operations.opened": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/operations.stage": {
+      "minFires": 6,
+      "maxFires": 26
+    },
+    "testbed, 120 days/operations.works": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/orders.responses_pruned": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "testbed, 120 days/reports.battle_dispatch": {
+      "minFires": 16,
+      "maxFires": 64
+    },
+    "testbed, 120 days/reports.casualty_return": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "testbed, 120 days/reports.governor_wire": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "testbed, 120 days/reports.pocket": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/map.pocket_closed": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/knowledge.pruned_age": {
+      "minFires": 20,
+      "maxFires": 82
+    },
+    "testbed, 120 days/knowledge.pruned_superseded": {
+      "minFires": 59,
+      "maxFires": 236
+    },
+    "testbed, 120 days/map.pocket_relieved": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1 effective-date: neither full reference reverses a pocket closing after the effective-date change; the named kernel case drives its reopening."
+    },
+    "testbed, 120 days/map.recomputed": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "testbed, 120 days/messages.courier_delay": {
+      "minFires": 24,
+      "maxFires": 98
+    },
+    "testbed, 120 days/messages.mail_delay": {
+      "minFires": 53,
+      "maxFires": 214
+    },
+    "testbed, 120 days/messages.delivered": {
+      "minFires": 1060,
+      "maxFires": 4240
+    },
+    "testbed, 120 days/messages.sent": {
+      "minFires": 1075,
+      "maxFires": 4302
+    },
+    "testbed, 120 days/messages.special_messenger": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/movement.arrived": {
+      "minFires": 13,
+      "maxFires": 54
+    },
+    "testbed, 120 days/movement.leg_started": {
+      "minFires": 8,
+      "maxFires": 32
+    },
+    "testbed, 120 days/orders.bypassed": {
+      "minFires": 0,
+      "why": "the principal goes around an office only when it objects, which the testbed’s does not (it holds instead); union-1861 fires it"
+    },
+    "testbed, 120 days/orders.obeyed": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/orders.relay_held": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/orders.relay_objected": {
+      "minFires": 0,
+      "why": "the testbed’s one relaying office (the war ministry) holds what it dislikes rather than objecting: its holder is not candid (lane 1.1); union-1861 fires it, and the kernel test drives it"
+    },
+    "testbed, 120 days/orders.relayed": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.goal_reached": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/politics.adjourned": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/politics.front_page": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "testbed, 120 days/politics.opened": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/politics.support": {
+      "minFires": 36,
+      "maxFires": 144
+    },
+    "testbed, 120 days/regions.self_emancipation": {
+      "minFires": 45,
+      "maxFires": 180
+    },
+    "testbed, 120 days/regions.reached_lines": {
+      "minFires": 18,
+      "maxFires": 72
+    },
+    "testbed, 120 days/seats.choices": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/seats.battle_orders": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/recruitment.called": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.answered": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.slow_walked": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/recruitment.mustered": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.men": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/recruitment.disbanded": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/recruitment.refused": {
+      "minFires": 0,
+      "why": "both testbed governors answer their calls; the Union run fires it"
+    },
+    "testbed, 120 days/verbs.answered": {
+      "minFires": 18,
+      "maxFires": 72
+    },
+    "testbed, 120 days/verbs.declined": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "testbed, 120 days/seats.defaulted": {
+      "minFires": 0,
+      "why": "every request is answered in this run; the silent-seats exercise run fires it"
+    },
+    "testbed, 120 days/planner.candidates": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/planner.searches": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.drafted": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.chosen": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.goal_set": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.went_ahead": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/plans.approved": {
+      "minFires": 0,
+      "why": "every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed"
+    },
+    "testbed, 120 days/plans.submitted": {
+      "minFires": 0,
+      "why": "every testbed commander picks a moving plan with no condition, so it goes ahead as drafted, unreviewed"
+    },
+    "testbed, 120 days/planner.term.goal_fit": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/planner.term.supply": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, 120 days/planner.term.haste": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.edit_received": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.edit_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.edit_objected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "testbed, 120 days/plans.released": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no goal here says \"prepare, await my word\"; the editing exercise run gives the word"
+    },
+    "testbed, 120 days/situations.decided": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.delegated": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/situations.fired": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/situations.notice_reports": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.noticed": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.orders": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/situations.proposals": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "testbed, 120 days/situations.staff_lines": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, 120 days/situations.surfaced": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/ladder.moved": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/ladder.rival": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, 120 days/people.grievances_faded": {
+      "minFires": 0,
+      "why": "no testbed man holds a grievance at any week’s end in this run (nobody is overruled, and its office holds rather than objects, so it is never bypassed); its ladder moves come from cool regard alone; union-1861 fires it"
+    },
+    "testbed, 120 days/seats.attention_refilled": {
+      "minFires": 8,
+      "maxFires": 34
+    },
+    "testbed, 120 days/seats.attention_spent": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "testbed, 120 days/seats.initiative": {
+      "minFires": 7,
+      "maxFires": 30
+    },
+    "testbed, 120 days/command.temporary_post_opened": {
+      "minFires": 0,
+      "why": "no testbed situation declares or opens a temporary post; union-1861 fires it (the relief expedition)"
+    },
+    "testbed, 120 days/command.government_closed": {
+      "minFires": 0,
+      "why": "no testbed situation closes a neutral government in this run; union-1861 fires it (a border state’s neutrality)"
+    },
+    "testbed, 120 days/command.side_changed": {
+      "minFires": 0,
+      "why": "no testbed situation changes a government’s side in this run; union-1861 fires it"
+    },
+    "testbed, 120 days/command.government_established": {
+      "minFires": 0,
+      "why": "no testbed notice establishes a declared government; the Union reference does"
+    },
+    "testbed, 120 days/command.post_succeeded": {
+      "minFires": 0,
+      "why": "no testbed notice replaces an occupied post’s holder; the Union reference does"
+    },
+    "testbed, 120 days/situations.options_changed": {
+      "minFires": 0,
+      "why": "no testbed situation in this run has an option that appears or expires while it is open; union-1861 fires it"
+    },
+    "testbed, 120 days/situations.resurfaced": {
+      "minFires": 0,
+      "why": "no testbed situation in this run stays open to a resurface day; union-1861 fires it"
+    },
+    "testbed, 120 days/combat.cut_off": {
+      "minFires": 0,
+      "why": "a side is cut off only with no legal retreat (0019); every testbed loser has a way back; QUIET"
+    },
+    "testbed, 120 days/combat.general_hit": {
+      "minFires": 0,
+      "why": "a commander is hit on a low draw on his own stream; none of the testbed run's three battle-days draws one; QUIET"
+    },
+    "testbed, 120 days/operations.repulsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98 wording correction: this testbed mechanic remains quiet. No testbed operation axis is repulsed; neither full reference now fires it, while the fortified-defender control remains live."
+    },
+    "testbed, 120 days/forces.landed_by_situation": {
+      "minFires": 0,
+      "why": "no testbed situation lands troops; the Union run fires it"
+    },
+    "testbed, 120 days/forces.landing_refused": {
+      "minFires": 0,
+      "why": "no testbed situation lands troops; QUIET"
+    },
+    "testbed, 120 days/politics.act": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.answered": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.called": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.framing": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/politics.met": {
+      "minFires": 0,
+      "why": "no testbed situation acts on the legislature or frames the war; the Union run fires it"
+    },
+    "testbed, 120 days/situations.policy": {
+      "minFires": 0,
+      "why": "no testbed decision names a policy row in this run; the Union run fires it"
+    },
+    "testbed, 120 days/recruitment.renewed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S1: the original northern governor refuses the call, so no eligible unit exists; unchanged testbed has no remuster notice. The unit-conservation case drives a real renewal."
+    },
+    "testbed, 120 days/plans.goal_proposed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+    },
+    "testbed, 120 days/plans.discretion_exercised": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+    },
+    "testbed, 120 days/command.government_reopened": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no pack situation reopens one yet"
+    },
+    "testbed, 120 days/command.proposal_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal that cannot be applied; honest situations propose none"
+    },
+    "testbed, 120 days/commands.rejected": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "rule seats send only commands the menu offers; a bad command is a seat bug"
+    },
+    "testbed, 120 days/infrastructure.changed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it"
+    },
+    "testbed, 120 days/combat.records_pruned": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a closed battle is pruned after the pack's battleDays (120), longer than either reference run"
+    },
+    "testbed, 120 days/operations.landed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)"
+    },
+    "testbed, 120 days/operations.support_answered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "testbed, 120 days/operations.support_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "testbed, 120 days/operations.support_sent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "testbed, 120 days/combat.breakout": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a cut-off force breaks out only when its commander believes it can fight free; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force is cut off"
+    },
+    "testbed, 120 days/combat.destroyed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a force is destroyed only when the breakout its commander chose fails; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force breaks out"
+    },
+    "testbed, 120 days/movement.join_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+    },
+    "testbed, 120 days/orders.conflict": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a conflict needs two issuers, a chain order and one sent around it; here only the principal orders"
+    },
+    "testbed, 120 days/reports.filtered": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "testbed, 120 days/reports.trimmed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "testbed, 120 days/situations.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)"
+    },
+    "testbed, 120 days/recruitment.muster_blocked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no governor called in either run has his seat region in enemy hands when his levy falls due"
+    },
+    "testbed, 120 days/recruitment.lapsed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run"
+    },
+    "testbed, 120 days/plans.sent_back": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits"
+    },
+    "testbed, 120 days/planner.term.notes": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the reference principals send no notes; the send-back driver makes a timing note change the pick"
+    },
+    "testbed, 120 days/plans.draft_deferred": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run asks for more plans in a day than the pack’s cap of three (0062)"
+    },
+    "testbed, 120 days/plans.edit_invalid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the editing exercise edits only a moving axis’s timing, which can always be made"
+    },
+    "testbed, 120 days/plans.edit_shirked": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly"
+    },
+    "testbed, 120 days/planner.term.coordination": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a two-axis plan close enough to the best for coordination to decide it"
+    },
+    "testbed, 120 days/planner.term.exposure": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception"
+    },
+    "testbed, 120 days/planner.term.dependence": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a support request close enough to the best for dependence to decide it"
+    },
+    "testbed, 120 days/planner.term.glory": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping glory alone changes the pick"
+    },
+    "testbed, 120 days/situations.waiting": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "waiting is an option a human takes; the rule-driven principal takes the historical default (0057)"
+    },
+    "testbed, 120 days/verbs.audience": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/verbs.in_washington": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/people.promise_kept": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/people.promise_broken": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/reports.observer_letter": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "testbed, 120 days/situations.policy_unpaid": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and the chosen reference-run policy pays its floor through stakeholders; the gate reviewer requires it never to fire in one"
+    },
+    "testbed, 120 days/seats.attention_refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal prices each command by the pack’s table and sends only what his week’s attention pays for (lane 1.12), so the kernel refuses him nothing; the kernel test drives it"
+    },
+    "testbed, 120 days/politics.refused": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal politics cannot apply; honest situations propose none"
+    },
+    "testbed, 120 days/politics.press_silent": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every paper’s editor serves on his paper’s side throughout both runs"
+    },
+    "testbed, commanders silent, 120 days/seats.defaulted": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, the principal edits every plan, 120 days/plans.submitted": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, the principal edits every plan, 120 days/plans.edit_received": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, the principal edits every plan, 120 days/plans.edit_answered": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "testbed, the principal edits every plan, 120 days/plans.edit_objected": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "testbed, the principal edits every plan, 120 days/plans.released": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "testbed, the principal edits every plan, 120 days/planner.term.haste": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/orders.relayed": {
+      "minFires": 1,
+      "maxFires": 5,
+      "why": "S123: the standing assignment and its hold-plan approval each pass the intermediate office; no offensive order or force movement. docs/audit/s123-evidence/peace-reference.json"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/orders.obeyed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/plans.goal_reached": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S123: the received standing assignment yields one completed hold at the existing headquarters; all goals stay hold under the peace rule. docs/audit/s123-evidence/peace-reference.json"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/movement.leg_started": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/movement.arrived": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/combat.battle_day": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/combat.occupation": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/control.changed": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "union-1861 keeps the peace before either side's opening decision (0064): the rule-seat principal sends no doctrine"
+    },
+    "union-1861 before the opening decisions, 30 days (the war gate, 0064)/recruitment.called": {
+      "minFires": 3,
+      "maxFires": 14,
+      "why": "R96: R90's seven sourced 9 March provisional-force requisitions precede the war decisions; other war doctrine still waits on each side's own decision"
+    }
+  },
+  "newRecords": [
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.time",
+      "before": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S130 lead ruling2026-11-24: the regional planner's legacy numeric-belief fallback reads an explicitly unknown reconnaissance estimate as a small number; Patterson's opposition falls4630->532 on day140, so time no longer changes his winner. This conflicts with0125 and awaits S133; review the band when that design lands. Independent live drivers in packages/cli/test/planner.test.ts: \"S41 time live control: dropping time changes the chosen candidate\" and \"counts every scoring term live in some case\"."
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S134 merge [I]: time is live again on the retained combined readiness/demonstration path. Retire the current S130 quiet designation, retaining its exact historical record. The saved candidate counterfactual identifies the changed winner; no time weight changes."
+      },
+      "observed": 1,
+      "cause": "S134 merge [I]: time is live again on the retained combined readiness/demonstration path. Retire the current S130 quiet designation, retaining its exact historical record. The saved candidate counterfactual identifies the changed winner; no time weight changes.",
+      "evidence": "docs/audit/s134-evidence/merge/band-review.json#planner.term.time"
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/seats.choices",
+      "before": {
+        "minFires": 5,
+        "maxFires": 22,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires11; no behavior or numeric input changed."
+      },
+      "after": {
+        "minFires": 12,
+        "maxFires": 50,
+        "why": "S134 merge [I]: combined received demonstration letters, advice and command readiness change the recorded path through existing owners. Retained events, candidate terms and daily counter differences are published; no weight, quota or true strength is fitted."
+      },
+      "observed": 25,
+      "cause": "S134 merge [I]: combined received demonstration letters, advice and command readiness change the recorded path through existing owners. Retained events, candidate terms and daily counter differences are published; no weight, quota or true strength is fitted.",
+      "evidence": "docs/audit/s134-evidence/merge/band-review.json#seats.choices"
+    }
+  ],
+  "rawFailures": [
+    {
+      "mechanic": "planner.term.time",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S130 lead ruling2026-11-24: the regional planner's legacy numeric-belief fallback reads an explicitly unknown reconnaissance estimate as a small number; Patterson's opposition falls4630->532 on day140, so time no longer changes his winner. This conflicts with0125 and awaits S133; review the band when that design lands. Independent live drivers in packages/cli/test/planner.test.ts: \"S41 time live control: dropping time changes the chosen candidate\" and \"counts every scoring term live in some case\"."
+      }
+    },
+    {
+      "mechanic": "seats.choices",
+      "problem": "too_frequent",
+      "fires": 25,
+      "band": {
+        "minFires": 5,
+        "maxFires": 22,
+        "why": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires11; no behavior or numeric input changed."
+      }
+    }
+  ],
+  "newZeros": [],
+  "changedCounts": [
+    {
+      "mechanic": "knowledge.pruned_superseded",
+      "before": {
+        "mechanic": "knowledge.pruned_superseded",
+        "fires": 146,
+        "magnitude": 12348
+      },
+      "after": {
+        "mechanic": "knowledge.pruned_superseded",
+        "fires": 146,
+        "magnitude": 12349
+      }
+    },
+    {
+      "mechanic": "messages.courier_delay",
+      "before": {
+        "mechanic": "messages.courier_delay",
+        "fires": 158,
+        "magnitude": 158
+      },
+      "after": {
+        "mechanic": "messages.courier_delay",
+        "fires": 161,
+        "magnitude": 161
+      }
+    },
+    {
+      "mechanic": "messages.delivered",
+      "before": {
+        "mechanic": "messages.delivered",
+        "fires": 14873,
+        "magnitude": 14873
+      },
+      "after": {
+        "mechanic": "messages.delivered",
+        "fires": 14880,
+        "magnitude": 14880
+      }
+    },
+    {
+      "mechanic": "messages.sent",
+      "before": {
+        "mechanic": "messages.sent",
+        "fires": 15651,
+        "magnitude": 15651
+      },
+      "after": {
+        "mechanic": "messages.sent",
+        "fires": 15658,
+        "magnitude": 15658
+      }
+    },
+    {
+      "mechanic": "operations.stage",
+      "before": {
+        "mechanic": "operations.stage",
+        "fires": 39,
+        "magnitude": 39
+      },
+      "after": {
+        "mechanic": "operations.stage",
+        "fires": 38,
+        "magnitude": 38
+      }
+    },
+    {
+      "mechanic": "orders.obeyed",
+      "before": {
+        "mechanic": "orders.obeyed",
+        "fires": 10,
+        "magnitude": 10
+      },
+      "after": {
+        "mechanic": "orders.obeyed",
+        "fires": 13,
+        "magnitude": 13
+      }
+    },
+    {
+      "mechanic": "planner.candidates",
+      "before": {
+        "mechanic": "planner.candidates",
+        "fires": 10,
+        "magnitude": 22
+      },
+      "after": {
+        "mechanic": "planner.candidates",
+        "fires": 12,
+        "magnitude": 22
+      }
+    },
+    {
+      "mechanic": "planner.searches",
+      "before": {
+        "mechanic": "planner.searches",
+        "fires": 10,
+        "magnitude": 62
+      },
+      "after": {
+        "mechanic": "planner.searches",
+        "fires": 12,
+        "magnitude": 62
+      }
+    },
+    {
+      "mechanic": "plans.drafted",
+      "before": {
+        "mechanic": "plans.drafted",
+        "fires": 10,
+        "magnitude": 10
+      },
+      "after": {
+        "mechanic": "plans.drafted",
+        "fires": 12,
+        "magnitude": 12
+      }
+    },
+    {
+      "mechanic": "plans.goal_reached",
+      "before": {
+        "mechanic": "plans.goal_reached",
+        "fires": 7,
+        "magnitude": 7
+      },
+      "after": {
+        "mechanic": "plans.goal_reached",
+        "fires": 6,
+        "magnitude": 6
+      }
+    },
+    {
+      "mechanic": "plans.goal_set",
+      "before": {
+        "mechanic": "plans.goal_set",
+        "fires": 10,
+        "magnitude": 10
+      },
+      "after": {
+        "mechanic": "plans.goal_set",
+        "fires": 13,
+        "magnitude": 13
+      }
+    },
+    {
+      "mechanic": "seats.choices",
+      "before": {
+        "mechanic": "seats.choices",
+        "fires": 22,
+        "magnitude": 22
+      },
+      "after": {
+        "mechanic": "seats.choices",
+        "fires": 25,
+        "magnitude": 25
+      }
+    }
+  ]
+}

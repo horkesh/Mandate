@@ -9,7 +9,7 @@ import type { OrderBody, TransitMessage } from '../messages/transit.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { answerOrder, goalTerms } from '../reading/orders.ts';
 import type { State } from '../root-state.ts';
-import { availableMandatePapers, localOptions, mandateLetter, type LocalOption } from '../seats/local-actions.ts';
+import { availableMandatePapers, goalWithin, localOptions, mandateLetter, type LocalOption } from '../seats/local-actions.ts';
 import { assignmentLetter } from '../seats/onward-assignments.ts';
 import { seatIdFor } from '../seats/seats.ts';
 import { senderFor } from '../seats/sender.ts';
@@ -103,9 +103,7 @@ export function validateLocalOrder(ctx: TickContext, state: State, order: OrderB
   const a = mandateAt(state,basis.basisPost,basis.basisKey);
   if (a === undefined || !activeMandate(ctx.world.map,state,a,ctx.day) || a.authorityGrant.mandateHolder !== order.orderIssuer) return false;
   const g = a.authorityGrant, goal = order.orderGoal;
-  return (order.orderKind === 'approve' ? g.mandateActions.includes('approve') : g.mandateActions.includes(goal.goalPosture)) && goal.goalObjective !== null && g.mandateRegions.includes(goal.goalObjective) &&
-    !goal.goalNeutral && goal.goalDiscretion === undefined && (!goal.goalRail || g.mandateModes.includes('rail')) &&
-    (!goal.goalRiver || g.mandateModes.includes('river')) && (!goal.goalSea || g.mandateModes.includes('sea')) &&
+  return (order.orderKind !== 'approve' || g.mandateActions.includes('approve')) && goalWithin(g, goal) &&
     g.mandateRecipients.some(r => inSubtree(state,order.orderTarget,r)) &&
     mayCommit(ctx.world.map,state,a,order.orderTarget,goal.goalCommitted);
 }
@@ -139,6 +137,21 @@ export function executeLocal(ctx: TickContext, state: State, person: PersonId, o
       orderAuthority:{basisPost:fresh.authority.authorityGrant.mandatePost,basisKey:fresh.authority.authorityGrant.mandateKey},
     });
     return {state,reason:null};
+  }
+  if (fresh.kind === 'letter') {
+    const row = fresh.row;
+    if (ctx.outbox.some(m => m.msgOrder?.orderKind === 'goal' && m.msgOrder.orderTarget === row.post && m.msgOrder.orderIssuer === person)) {
+      return { state, reason: 'duplicate_choice' };
+    }
+    const prior = row.repeats === undefined ? undefined : knowledgeOf(state, seatIdFor(person)).knownDoctrineDispatches
+      ?.find(d => letterKey(d.dispatchLetter) === letterKey(row.repeats!))?.dispatchOrigin;
+    const id = dispatchOrder(ctx, state, seatIdFor(person), person, row.post, 'courier', false, {
+      orderKind: 'goal', orderGoal: fresh.goal, orderEdit: null, orderCall: null, orderLetter: row.letter!,
+      ...(row.supersedes === undefined ? {} : { orderSupersedes: row.supersedes }),
+      ...(prior === undefined ? {} : { orderPriorDispatch: prior }),
+      orderAuthority: { basisPost: fresh.authority.authorityGrant.mandatePost, basisKey: fresh.authority.authorityGrant.mandateKey },
+    });
+    return { state: commitAuthority(state, fresh.authority, id, row.post, fresh.goal.goalCommitted), reason: null };
   }
   if (state.postStates[fresh.target]?.postHolder === person) {
     // A local decision has an identity, but never travels as a letter from the holder to himself.

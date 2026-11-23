@@ -27,13 +27,18 @@ import { forceTotals, type ForceTotalsCache } from '../forces/lots.ts';
  *
  * Commanders' choices here are their plans' and the battle model's: no dice (0007), and never the player's (hard rule 1).
  */
+import { routeDays } from '../planner/detention.ts';
+import { neutralOpen } from '../supply/supply.ts';
+import { knowledgeOf } from '../knowledge/knowledge.ts';
+import { seatIdFor } from '../seats/seats.ts';
+import { templateFor } from '../knowledge/templates.ts';
 import { strictCompare } from '../compare.ts';
 import { factionOfBlock, isNaval } from '../forces/forces.ts';
 import type { FactionId, ForceBlockId, PostId, RegionId } from '../ids.ts';
 import { endJoins, markJoins } from '../movement/join.ts';
 import { BOMBARD_MECHANICS, bombardFort } from './bombard.ts';
 import { advanceMarches, marchBar, marchSteps, startLeg, type MarchGround } from '../movement/march.ts';
-import { enter, openOperationOf, openOperations, operationId, putOperations, type OpAxis, type OperationRecord, type OpRequest, type StageReason } from '../operations/operations.ts';
+import { enter, openOperationOf, openOperations, operationId, putOperations, type DemonstrationReason, type DemonstrationStage, type OpAxis, type OperationRecord, type OpRequest, type StageReason } from '../operations/operations.ts';
 import type { PlanCandidate } from '../planner/types.ts';
 import { applyFortification, type FortificationDelta } from '../regions/regions.ts';
 import { otherEnd } from '../world/index.ts';
@@ -138,8 +143,11 @@ function opened(post: PostId, holder: OperationRecord['opCommander'], record: St
     opOrder: record!.planOrder,
     opPlan: plan.id,
     opMethod: plan.candMethod,
-    opPosture: record!.planGoal.goalPosture,
-    opObjective: record!.planGoal.goalObjective,
+    ...(record!.planGoal.goalPurpose === undefined ? { opPosture: record!.planGoal.goalPosture, opObjective: record!.planGoal.goalObjective } :
+      { opPurpose: record!.planGoal.goalPurpose, opDraftDay: record!.planDraft?.draftDay ?? day,
+        ...(record!.planLetter === undefined ? {} : { opLetter: record!.planLetter }) }),
+    ...(plan.candDetention?.means !== 'demonstrate' ? {} : { opDemonstration: { demCourse: plan.candDetention, demActions: [],
+      demEvents: [{ devDay: day, devStage: 'preparing' as const, devReason: 'approved' as const, devRegion: axes[0]?.oaxRoute.routeFrom ?? null }] } }),
     opStartDay: day,
     opEndDay: null,
     opOutcome: null,
@@ -191,15 +199,21 @@ export function operationsPhase(ctx: TickContext, start: State): State {
     const executing = planAuthorized(world,state,post,r,day,plan ?? undefined) && (r.planStatus === 'approved' || r.planStatus === 'ready') && plan !== null && plan.candMethod !== 'holding';
     const open = openOperationOf(state, post);
     const current = open === null ? null : state.operationRecords[open]!;
-    const same = current !== null && executing && current.opOrder === r.planOrder && current.opPlan === plan!.id;
-    if (current !== null && !same) {
+    const same = current !== null && executing && current.opOrder === r.planOrder && current.opPlan === plan!.id &&
+      (current.opPurpose === undefined || current.opDraftDay === r.planDraft?.draftDay);
+    if (current !== null && !same && current.opDemonstration === undefined) {
       state = putOperations(state, [{ id: open!, record: ended(current, 'superseded', 'superseded', day) }]);
       fire(ctx, 'operations.ended');
     }
     // One operation per goal and plan: once it has run (held, failed), the plan stays approved but nothing reopens it.
-    const ran = executing && Object.values(state.operationRecords).some((o) => o.opPost === post && o.opOrder === r.planOrder && o.opPlan === plan!.id);
-    if (executing && !same && !ran && state.operationRecords[operationId(post, day)] === undefined) {
+    const ran = executing && Object.values(state.operationRecords).some(o => o.opPost === post && o.opOrder === r.planOrder && o.opPlan === plan!.id &&
+      (o.opPurpose === undefined || o.opDraftDay === undefined || o.opDraftDay === r.planDraft?.draftDay));
+    if (executing && !same && !ran && current?.opDemonstration === undefined && state.operationRecords[operationId(post, day)] === undefined) {
       const holder = state.postStates[post]?.postHolder ?? null;
+      if (r.planGoal.goalPurpose !== undefined) {
+        const inUse = new Set(openOperations(state).flatMap(id => state.operationRecords[id]!.opAxes.flatMap(a => a.oaxBlocks)));
+        if (plan!.candDetention === undefined || plan!.candAxes.some(a => a.axisBlocks.some(b => inUse.has(b)))) continue;
+      }
       let op = opened(post, holder, r, plan!, day);
       const requests: OpRequest[] = plan!.candRequests.map((q) => {
         const axis = q.reqKind === 'cooperating_axis' ? (plan!.candAxes.find((a) => a.axisPost === q.reqPost && a.axisPost !== post)?.axisName ?? null) : q.reqKind === 'naval_support' ? (plan!.candAxes.find((a) => a.axisMode !== 'land')?.axisName ?? null) : null;
@@ -207,6 +221,7 @@ export function operationsPhase(ctx: TickContext, start: State): State {
         if (q.reqKind === 'reinforcement') return { ...base, oreqAnswer: 'to_principal' };
         const target = q.reqPost === null ? null : (state.postStates[q.reqPost]?.postHolder ?? null);
         if (holder === null || target === null || q.reqPost === null) return { ...base, oreqAnswer: 'vacant', oreqAnswerDay: day };
+        if (r.planGoal.goalPurpose !== undefined) return { ...base, oreqAnswer: 'refused', oreqAnswerDay: day };
         const goal = { ...r.planGoal, goalObjective: q.reqObjective ?? r.planGoal.goalObjective, goalCommitted: [], goalAwaitWord: false, goalApproveAsDrafted: true };
         const message = sendSupportRequest(ctx, state, holder, post, q.reqPost, goal);
         return { ...base, oreqMessage: message, oreqHolder: target };
@@ -223,6 +238,26 @@ export function operationsPhase(ctx: TickContext, start: State): State {
     let op = state.operationRecords[id]!;
     const record = state.planRecords[op.opPost];
     const plan = record?.planApproved ?? null;
+    const matches = record !== undefined && record.planOrder === op.opOrder && plan?.id === op.opPlan;
+    const authorized = matches && state.postStates[op.opPost]?.postHolder === op.opCommander &&
+      planAuthorized(world, state, op.opPost, record, day, plan);
+    const mainAxis = op.opAxes[0];
+    const readyDay = mainAxis?.oaxUntil ?? day;
+    const delay = op.opPurpose !== undefined && mainAxis?.oaxStage === 'assemble' && authorized &&
+      state.orderResponses[record.planResponse]?.respActual === 'slow_walk' ?
+      days(mainAxis.oaxPhases.find(p => p.phaseKind === 'concentrate')?.phaseDays ?? 0) : 0;
+    const qualifiedDelay = delay > 0 && record?.planStatus === 'approved' && day >= readyDay && day < readyDay + delay;
+    if (op.opDemonstration !== undefined) {
+      const reason = !matches ? 'superseded' : record.planDetentionEnd?.dendReason ?? (authorized ? null : 'authority_ended');
+      const stepped = stepDemonstration(ctx, state, ground, op, reason,
+        record?.planStatus === 'ready', qualifiedDelay);
+      state = putOperations(stepped.state, [{ id, record: stepped.op }]);
+      continue;
+    }
+    if (qualifiedDelay) {
+      state = putOperations(state, [{ id, record: { ...op, opDeferredDays: [...(op.opDeferredDays ?? []), day] } }]);
+      continue;
+    }
     const axes: OpAxis[] = [];
     for (const axis of op.opAxes) {
       const stepped = stepAxis(ctx, state, ground, op, axis, record?.planStatus === 'ready', works);
@@ -235,7 +270,7 @@ export function operationsPhase(ctx: TickContext, start: State): State {
     const main = axes.find((a) => a.oaxPost === op.opPost) ?? axes[0];
     if (main !== undefined && main.oaxStage === 'end') {
       const why = main.oaxLog[main.oaxLog.length - 1]!.axevReason;
-      const outcome = why === 'objective_held' ? 'objective_reached' : why === 'superseded' ? 'superseded' : 'failed';
+      const outcome = why === 'episode_closed' ? 'episode_closed' : why === 'objective_held' ? 'objective_reached' : why === 'superseded' ? 'superseded' : 'failed';
       op = ended(op, outcome, why, day);
       fire(ctx, 'operations.ended');
     }
@@ -255,6 +290,161 @@ export function operationsPhase(ctx: TickContext, start: State): State {
   state = marched.state;
   for (const a of marched.arrivals) fire(ctx, 'movement.arrived', 1 + a.carried.length);
   return receiveAssignments(ctx,receiveOffers(ctx,state));
+}
+
+function demonstrationEvent(op: OperationRecord, stage: DemonstrationStage, reason: DemonstrationReason, day: number, region: RegionId | null): OperationRecord {
+  const episode = op.opDemonstration!;
+  const last = episode.demEvents.at(-1);
+  if (last?.devStage === stage && last.devReason === reason && reason !== 'qualified_delay') return op;
+  return { ...op, opDemonstration: { ...episode, demEvents: [...episode.demEvents, { devDay: day, devStage: stage, devReason: reason, devRegion: region }] } };
+}
+
+function stepDemonstration(ctx: TickContext, start: State, ground: MarchGround, initial: OperationRecord,
+  invalid: 'superseded' | 'authority_ended' | 'reported_departure' | null, awaitingWord: boolean, qualifiedDelay: boolean): { state: State; op: OperationRecord } {
+  let op = initial;
+  let state = start;
+  const day = ctx.day;
+  const axis = op.opAxes[0]!;
+  const episode = op.opDemonstration!;
+  const blocks = liveBlocks(state, axis);
+  const group = axisGroup(state, blocks, ctx.world.map.forceTotalsCache);
+  const side = postFaction(ctx.world, state, axis.oaxPost);
+  const here = group?.region ?? null;
+  let stage = episode.demEvents.at(-1)!.devStage;
+  const event = (target: DemonstrationStage, reason: DemonstrationReason) => {
+    op = demonstrationEvent(op, target, reason, day, here);
+    stage = target;
+  };
+  const close = (reason: DemonstrationReason) => {
+    event('closed', reason);
+    op = ended(op, reason === 'recovered' ? 'episode_closed' : 'failed', 'episode_closed', day);
+    reportDetentionEffect(ctx, state, op);
+    fire(ctx, 'operations.ended');
+    return { state, op };
+  };
+  if (group === null || side === null) return close('terminal_loss');
+  if (stage !== 'recovering') {
+    if (invalid !== null) event('recovering', invalid);
+    else if (blocks.length !== axis.oaxBlocks.length) event('recovering', 'allocation_lost');
+    else if (episode.demActions.length >= episode.demCourse.intervals) event('recovering', 'task_complete');
+    else if (yesterdaysBattle(state, blocks, side, day) !== null) event('recovering', 'contact');
+  }
+  if (group.marching || here === null) return { state, op };
+  if (group.standing.length !== blocks.length) {
+    event('recovering', 'allocation_lost');
+    return { state, op };
+  }
+  if (stage === 'preparing') {
+    if (awaitingWord || (axis.oaxUntil !== null && day < axis.oaxUntil)) return { state, op };
+    if (qualifiedDelay) {
+      event('preparing', 'qualified_delay');
+      return { state, op: { ...op, opDeferredDays: [...(op.opDeferredDays ?? []), day] } };
+    }
+    event('approaching', 'ready');
+  }
+  const out = axis.oaxRoute;
+  const back = episode.demCourse.recovery;
+  const enoughStores = (required: number) => blocks.every(b => {
+    const block = state.forceBlockStates[b]!;
+    return (block.fbStoresMilli ?? 0) >= required * 1000 && (forceTotals(block, ctx.world.map.forceTotalsCache).fbStrength ?? 0) > 0;
+  });
+  const remainingApproach = { ...out, routeLegs: out.routeLegs.slice(out.routeLegs.findIndex(l => l.legFrom === here)) };
+  const arrivalWait = stage === 'approaching' ? 1 : 0;
+  const remaining = (here === out.routeTo ? 0 : routeDays(remainingApproach)) + arrivalWait + routeDays(back) +
+    episode.demCourse.intervals - episode.demActions.length + episode.demCourse.reserveDays;
+  if (stage !== 'recovering' && !enoughStores(remaining)) event('recovering', 'insufficient_stores');
+  if (stage !== 'recovering' && enemyIn(ctx, state, here, side)) {
+    event('recovering', 'contact');
+    // Stay through this day's ordinary contact and combat.
+    return { state, op };
+  }
+  if (stage === 'approaching' && here === axis.oaxObjective) {
+    event('demonstrating', 'arrived');
+    return { state, op };
+  }
+  if (stage === 'demonstrating') return { state, op };
+
+  if (stage === 'recovering' && here === back.routeTo) return close('recovered');
+  // Recovery can use a reversible approach leg when the episode aborts before reaching the endpoint.
+  const planned = stage === 'recovering' ? back.routeLegs.find(l => l.legFrom === here) ??
+    out.routeLegs.find(l => l.legTo === here) : out.routeLegs.find(l => l.legFrom === here);
+  const edge = planned === undefined ? undefined : ctx.world.map.edges.get(planned.legEdge);
+  const leg = edge === undefined ? null : edgeLeg(ctx.world.map, edge, here, ground.month, ground.network);
+  const holding = leg === null ? undefined : ground.index.holdings.get(leg.to);
+  if (leg === null || !op.opPurpose!.detActionArea.includes(leg.to) || marchBar(ground, leg, side, false) !== null ||
+    (holding !== undefined && neutralOpen(holding, ground.network))) {
+    event('recovering', stage === 'recovering' ? 'return_blocked' : 'approach_blocked');
+    return { state, op };
+  }
+  fire(ctx, 'movement.leg_started');
+  state = startLeg(ground, state, blocks, leg, side, false, day);
+  return { state, op };
+}
+
+/** A performance report names only observations his own scouts actually delivered. */
+function reportDetentionEffect(ctx: TickContext, state: State, op: OperationRecord): void {
+  const purpose = op.opPurpose;
+  const record = state.planRecords[op.opPost];
+  if (purpose === undefined || record?.planOrder !== op.opOrder || op.opCommander === null ||
+    state.postStates[op.opPost]?.postHolder !== op.opCommander) return;
+  const maxAge = templateFor(ctx.world.rules.templates, 'enemy-estimate', null).maxAgeDays;
+  const known = knowledgeOf(state, seatIdFor(op.opCommander)).knownReports.filter(r =>
+    r.knownBody.reportType === 'enemy-estimate' && r.knownReceivedDay < ctx.day &&
+    r.knownBody.reportDay >= op.opStartDay && ctx.day - r.knownBody.reportDay <= maxAge)
+    .sort((a, b) => b.knownBody.reportDay - a.knownBody.reportDay || b.knownReceivedDay - a.knownReceivedDay || strictCompare(a.id, b.id));
+  const basis = known.find(r => r.knownBody.reportClaims.some(c =>
+    c.claimKind === 'enemy-command' && c.claimToken === purpose.detTargetPost && c.claimConfidence > 0));
+  const observations = basis?.knownBody.reportClaims.filter(c =>
+    c.claimKind === 'enemy-command' && c.claimToken === purpose.detTargetPost && c.claimConfidence > 0) ?? [];
+  if (observations.length === 0) return;
+  sendReport(ctx, state, {
+    body: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: op.opCommander, reportAuthorPost: op.opPost,
+      reportSubjectKind: 'post', reportSubjectId: op.opPost, reportDay: ctx.day, reportHour: null,
+      reportAnswers: op.opOrder, reportAdvice: null, ...(op.opLetter === undefined ? {} : { reportLetter: op.opLetter }),
+      reportClaims: observations.map(c => ({ claimKind: 'detention-effect', claimRegion: c.claimRegion,
+        claimValue: basis!.knownBody.reportDay, claimToken: c.claimRegion !== null && purpose.detDetentionArea.includes(c.claimRegion) ?
+          'reported_in_area' : 'reported_elsewhere', claimConfidence: c.claimConfidence })) },
+    truth: { truthTerms: [], truthTrimmed: [] }, to: record.planIssuer, tag: `detention-effect.${op.opPost}`,
+  });
+}
+
+/** An arrived force gets credit only after its full operations, contact and stores opportunity. */
+export function finishDemonstrations(ctx: TickContext, start: State, fought: ReadonlySet<ForceBlockId>): State {
+  let state = start;
+  for (const id of openOperations(state)) {
+    let op = state.operationRecords[id]!;
+    const episode = op.opDemonstration;
+    const last = episode?.demEvents.at(-1);
+    if (episode === undefined || last?.devStage !== 'demonstrating' || last.devDay >= ctx.day) continue;
+    const axis = op.opAxes[0]!;
+    const blocks = liveBlocks(state, axis);
+    const side = postFaction(ctx.world, state, op.opPost);
+    if (axis.oaxBlocks.some(b => fought.has(b)) || (side !== null && enemyIn(ctx, state, axis.oaxObjective, side))) {
+      op = demonstrationEvent(op, 'recovering', 'contact', ctx.day, axis.oaxObjective);
+    } else if (blocks.length !== axis.oaxBlocks.length || blocks.some(b => {
+      const loc = state.forceLocations[b]!;
+      const men = forceTotals(state.forceBlockStates[b]!, ctx.world.map.forceTotalsCache).fbStrength;
+      return loc.locRegion !== axis.oaxObjective || loc.locMarch !== null || loc.locAboard !== null || (men ?? 0) <= 0;
+    })) {
+      op = demonstrationEvent(op, 'recovering', 'allocation_lost', ctx.day, axis.oaxObjective);
+    } else {
+      const action = { dactDay: ctx.day, dactRegion: axis.oaxObjective, dactBlocks: blocks, dactTask: episode.demCourse.task };
+      op = { ...op, opDemonstration: { ...episode, demActions: [...episode.demActions, action] } };
+      const record = state.planRecords[op.opPost];
+      if (op.opCommander !== null && record?.planOrder === op.opOrder) {
+        sendReport(ctx, state, {
+          body: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: op.opCommander, reportAuthorPost: op.opPost,
+            reportSubjectKind: 'post', reportSubjectId: op.opPost, reportDay: ctx.day, reportHour: null, reportAnswers: op.opOrder,
+            reportAdvice: null, ...(op.opLetter === undefined ? {} : { reportLetter: op.opLetter }),
+            reportClaims: [{ claimKind: 'detention-activity', claimRegion: action.dactRegion, claimValue: 1,
+              claimToken: action.dactTask, claimConfidence: 1000 }] },
+          truth: { truthTerms: [], truthTrimmed: [] }, to: record.planIssuer, tag: `detention-activity.${op.opPost}`,
+        });
+      }
+    }
+    state = putOperations(state, [{ id, record: op }]);
+  }
+  return state;
 }
 
 /**
@@ -341,6 +531,7 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
   const legToward = (a: OpAxis, to: RegionId): { readonly state: State; readonly axis: OpAxis } => {
     if (group.marching || group.standing.length === 0 || here === to) return { state, axis: a };
     const planned = a.oaxRoute.routeLegs.find((l) => l.legFrom === here && to === a.oaxObjective);
+    if (op.opPurpose !== undefined && (planned === undefined || !op.opPurpose.detActionArea.includes(planned.legTo))) return { state, axis: a };
     let leg = null;
     let rerouted = false;
     if (planned !== undefined) {
@@ -348,7 +539,7 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
       const candidate = edge === undefined ? null : edgeLeg(world.map, edge, here, ground.month, ground.network);
       if (candidate !== null && marchBar(ground, candidate, side, naval) === null) leg = candidate;
     }
-    if (leg === null) {
+    if (leg === null && op.opPurpose === undefined) {
       leg = marchSteps(ground, here, to, side, naval)[0]?.leg ?? null;
       rerouted = leg !== null && planned !== undefined;
     }
@@ -446,6 +637,7 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
       }
       if (enemyIn(ctx, state, here, side)) return { state, axis: move(axis, 'assault', 'enemy_ahead', here) };
       if (here === axis.oaxObjective) {
+        if (op.opPurpose !== undefined) return { state, axis: move(axis, 'end', 'episode_closed', here) };
         const a = move({ ...axis, oaxArrived: axis.oaxArrived ?? day }, 'works', 'objective_reached', here);
         reportArrival(ctx, state, op, a, here);
         return { state, axis: a };
@@ -463,12 +655,13 @@ function stepAxis(ctx: TickContext, start: State, ground: MarchGround, op: Opera
         return { state, axis };
       }
       const pursue = battle?.mine.bsidePursue ?? null;
-      if (battle !== null && (pursue === 'follow' || pursue === 'press') && battle.theirs.bsideRetreatTo !== null) {
+      if (op.opPurpose === undefined && battle !== null && (pursue === 'follow' || pursue === 'press') && battle.theirs.bsideRetreatTo !== null) {
         const until = day + (pursue === 'press' ? rules.pursuitDays.press : rules.pursuitDays.follow);
         const a = move({ ...axis, oaxPursuit: battle.theirs.bsideRetreatTo }, 'pursue', 'pursuing', here, until);
         return legToward(a, battle.theirs.bsideRetreatTo);
       }
       if (here === axis.oaxObjective) {
+        if (op.opPurpose !== undefined) return { state, axis: move(axis, 'end', 'episode_closed', here) };
         const a = move({ ...axis, oaxArrived: axis.oaxArrived ?? day }, 'works', 'enemy_gone', here);
         reportArrival(ctx, state, op, a, here);
         return { state, axis: a };

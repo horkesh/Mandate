@@ -15,7 +15,7 @@ import type { EdgeId, FactionId, PersonId, RegionId, SeatId } from '../ids.ts';
 import { latestEnemyClaims, latestObstructionClaims, latestWorksClaims, perceived } from '../knowledge/beliefs.ts';
 import { knowledgeOf, reportsForView, type KnowledgeCache, type OpeningReportCache, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
 import type { PlanRecord } from '../plans/plans.ts';
-import { termsOfGoal, type PlanGoal } from '../plans/goal.ts';
+import { purposeTerms, termsOfGoal, type PlanGoal } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
 import { attentionLeft } from '../seats/attention.ts';
@@ -76,13 +76,14 @@ function paperGoal(goal: PlanGoal): PlanGoal {
 
 /** Build once, then freeze: absent battle fields need no temporary objects on ordinary claims. */
 function claimView(c: ReportClaim): ClaimView {
-  if (c.claimBattle === undefined && c.claimBattleDays === undefined && c.claimCommander === undefined) return freeze({
+  if (c.claimBattle === undefined && c.claimBattleDays === undefined && c.claimCommander === undefined && c.claimActivity === undefined) return freeze({
     kind: c.claimKind, region: c.claimRegion, value: c.claimValue, token: c.claimToken, confidence: c.claimConfidence,
   });
   return freeze({
     kind: c.claimKind, region: c.claimRegion, value: c.claimValue, token: c.claimToken, confidence: c.claimConfidence,
     ...(c.claimBattle === undefined ? {} : { battle: c.claimBattle }),
     ...(c.claimBattleDays === undefined ? {} : { battleDays: freeze([...c.claimBattleDays]) }),
+    ...(c.claimActivity === undefined ? {} : { activity: c.claimActivity }),
     ...(c.claimCommander === undefined ? {} : { commander: c.claimCommander }),
   });
 }
@@ -143,8 +144,7 @@ function reportView(r: KnownReport, world: SeatsWorld): ReportView {
 function goalView(r: PlanRecord): GoalView {
   const g = r.planGoal;
   return freeze({
-    posture: g.goalPosture,
-    objective: g.goalObjective,
+    ...(g.goalPurpose === undefined ? { posture: g.goalPosture, objective: g.goalObjective } : { purpose: purposeTerms(g.goalPurpose) }),
     risk: g.goalRisk,
     deadlineDays: g.goalDeadlineDays,
     permissions: freeze({ rail: g.goalRail, river: g.goalRiver, sea: g.goalSea, neutral: g.goalNeutral }),

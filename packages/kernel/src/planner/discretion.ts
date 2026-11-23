@@ -33,7 +33,7 @@ export function discretionThreat(input: PlannerInput, position: RegionId, grant:
     if (![...input.beliefs.values()].some(estimate => estimate > threshold)) return null;
     const ctx = makeCtx({ ...input, goal: grant.fallback });
     const objective = grant.fallback.goalObjective;
-    const route = objective === null ? null : search(ctx, position, objective, 'land', weights(ctx, { supplyCare: 0 }));
+    const route = objective == null ? null : search(ctx, position, objective, 'land', weights(ctx, { supplyCare: 0 }));
     const line = route?.routeLegs.map(l => l.legTo) ?? [];
     // An enemy on the line, or able to reach both the position and its line from the side, may turn it.
     const flank = landNeighbours(input, position).filter(r => line.some(t => landNeighbours(input, t).includes(r)));
@@ -48,6 +48,7 @@ export function discretionThreat(input: PlannerInput, position: RegionId, grant:
 
 /** At most one direct search per safer neighbouring position, within the planner's normal search limit. */
 export function preferableGoal(input: PlannerInput, drafted: DraftSet): { choice: { goal: PlanGoal; reason: GoalProposalReason } | null; searches: number } {
+  if (input.goal.goalPurpose !== undefined) return { choice: null, searches: 0 };
   const winner = drafted.draftCandidates[0];
   const { goalDiscretion: _grant, ...base } = input.goal;
   if (base.goalPosture !== 'hold') {

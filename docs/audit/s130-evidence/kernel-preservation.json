@@ -1,0 +1,482 @@
+{
+  "base": "4b45f4e1",
+  "unionInputs": {
+    "packs/union-1861/PROVENANCE.json": "e5cddb400020e17c6e56948bfc4fb7fd01abb221a49f3dfcd18b94fad86a6688",
+    "packs/union-1861/README.md": "83aa9d9cd61909f3da30473ac9c3315ab9a03c8190ecb2b06e05b5094d68ac6f",
+    "packs/union-1861/calls-1861.json": "a28eb70d0e8b97d9c499a43b27b56b6ce5de3cf982e69d94e2ec36c513b874e7",
+    "packs/union-1861/checkpoints.json": "d114683a73ff7a7fa6c95c7da3ff0253a5a7a94c89ac20800c6eff312c584756",
+    "packs/union-1861/data/GENERATED.md": "803e5173f49d5223354046ee94b7f05c714c50137c6886780389a853a0e8b805",
+    "packs/union-1861/data/scenarios/march_1861.json": "ac4b1e0ed352a40d04c03265f4b7605b75e49be4aaab2a13d57fd179dc895386",
+    "packs/union-1861/data/strings/en.json": "29061c732830c2a64a353c2c028d4f37e49d64d9c412ce8df4478b71db260c2f",
+    "packs/union-1861/data/world.json": "f0ae2a6106669ca82c9dc64651d139a88acb703113ca809180d14470db4db0ec",
+    "packs/union-1861/gate/anachronisms.json": "6815417aca239ff2c1d78755fc6734f3e5eb73bc58afccc9cb457ae8f9c3ce44",
+    "packs/union-1861/gate/checklist.json": "75fa8649ad26baa129c3b0ceee94d35e9c8c142b58ea3aa9dcc7d46d14924c0a",
+    "packs/union-1861/gate/classes.json": "8f6633af861a289b9eb96999e69bf2ea6b35f93c7b9ce62179875f2d0a766461",
+    "packs/union-1861/gate/forbidden.json": "f6e1e7221377004ee8ce624a185a534b6442a04243b8aa3cad304e6a486d83d2",
+    "packs/union-1861/gate/register.json": "11587c14e1cc40aa33fd3dca5bf3289d8d4a26f335ee6ba503dbc8cbe3eabb95",
+    "packs/union-1861/gate/reviewers.json": "a287e3d5c5de8fd3b1a2dc7e8249fdf42e1368bec4cef6bc6400b1a1219452fc",
+    "packs/union-1861/gate/source-policy.json": "3044c446843d5db58ec2bbfd2a3da96e53c504efa4ef14a3bfeca4612455808c",
+    "packs/union-1861/gate/triggers.json": "cc15707d4fe2fa20317183a434da3f1ca418da793843f8ee6ddf1e2a8ae9d6e9",
+    "packs/union-1861/pack.json": "6d461f8810c48308160d577f25d4c67e653a73fae8010db2fea521a46ab0d013",
+    "packs/union-1861/pushback-confederate.json": "a6f380fd1dabe5d393424ba37dc888cc2e2820fdc87a3093501d42dc3747c83b",
+    "packs/union-1861/pushback-union.json": "61b6e1705e9a780b3a354a5b8057ee2e93d914c477ce052badbb614de3e1fd5c",
+    "packs/union-1861/situations/arkansas_forces_transferred.json": "ddf74cccf5b591ebd53a273eeee5d3f39534ba961f94e503295ac66fd9718f37",
+    "packs/union-1861/situations/arkansas_secedes.json": "4b25073e53205ca7536553ff2abc7d0935cead80ed6f2c406f194fb67a04fa10",
+    "packs/union-1861/situations/baltimore_route_closed.json": "8ca8a9a37f8b86aa24358d9f0f627c18646d15de236298143bb4c3e0fa7d88f3",
+    "packs/union-1861/situations/bates_fugitive_law_opinion.json": "704540c2aa47854006c1eaae6bc5ddf5acb63c657f0a4b7a9592944c2a368a16",
+    "packs/union-1861/situations/black_volunteer_offers.json": "b1cc139e07bff97385b2cd7d2c946ab794d761d02762759fc0dfd1b569c82ede",
+    "packs/union-1861/situations/blockade_or_closure.json": "8b95ed78c15accc251396c7f5a2076d788824f6027f1cf98c6cf86480648f0c9",
+    "packs/union-1861/situations/call_for_troops.json": "87343ac2c352ed2d2d021e46089dac3c57bf8c072081f6c20df9406edf1cf1b8",
+    "packs/union-1861/situations/camp_jackson_deaths.json": "80bae2612b449b041a2e012822cdbe4434ec2f52c0bf338fb566c9976f00c867",
+    "packs/union-1861/situations/charleston_anderson_command.json": "db83d0cd603ea3d6937ead18e101def8f96253913479b12708dcff703212c7c0",
+    "packs/union-1861/situations/cherokee_neutrality.json": "6fc6b23600221f414afabfb7b9d613f7e63ee7e1424bf807ded4da1820a1d24b",
+    "packs/union-1861/situations/chickasaw_treaty.json": "c6288db9dab9a346382a452919d4e70228d92dde15b364b5c23654579515baca",
+    "packs/union-1861/situations/choctaw_treaty.json": "dcf21dedb00b992e27607d6ae3e0f2e1817114223e8e559ac39525c19dc4f4a9",
+    "packs/union-1861/situations/confederate_capital_moved.json": "52f469e80f72ac96c2f4b6b1ac81b66458a8e83523cd65f0784a19cb6c68bcd8",
+    "packs/union-1861/situations/confederate_commissioners.json": "0345707ec3052d3f6013f4deda730fe1b9c938f190d12f41d7c8637dcb0b6ae1",
+    "packs/union-1861/situations/confederate_opening.json": "80909b7a68db3628041dac1528e419b5c70526bfb74b575587ba2d11d47b3eeb",
+    "packs/union-1861/situations/confederate_protection_act.json": "40bd7d93c82de5458280ab5a058c3ce823db3fd4bdc9adc2d1ff65209ddfeda4",
+    "packs/union-1861/situations/drafts/chickasaw_treaty.json": "8aa7d22f334908b3a41777492631b692cf160bae31c31b9cf207f3678c8fdf3f",
+    "packs/union-1861/situations/drafts/choctaw_treaty.json": "7f5859854e9187796cb507651f8bc0c52db2d9e8a449c5a7837d5e7d3275cc68",
+    "packs/union-1861/situations/drafts/merryman_answer.json": "c15862591643dca18be932366ecb8be5a3781ab143ec39d932569658df5824ce",
+    "packs/union-1861/situations/drafts/muscogee_treaty.json": "f6e89239e6c38a4b267cfafa22586a52bb31c1e4cd4ba7ec49efd00a84507b37",
+    "packs/union-1861/situations/fort_monroe_arrivals.json": "8168b73f2c70b952adaa98bf6b6524e96b1c27e89dfffb980b11c6d5336d5b3f",
+    "packs/union-1861/situations/fort_monroe_escape.json": "99aa7c1f3f1196bca900f584b1bf937de4fdc773b1370eb9aacffe1f4e39e67e",
+    "packs/union-1861/situations/fort_monroe_escape_asked.json": "93d7e40fa7aedf79f757ed6f6d8b704d77e3795c67ccc6bc456c382da01513a3",
+    "packs/union-1861/situations/gosport_yard.json": "cf021f179cc1533a82d85987514efc7cd0abe11ecdc94363a02835f8d58973c6",
+    "packs/union-1861/situations/habeas_on_the_line.json": "87ec35d47de726691f43b247aadd5edf3d7b21ab431820abee6f2c1bd3bdcd4c",
+    "packs/union-1861/situations/harpers_ferry_assignment_notice.json": "eea0c3a0cca5266fb911c089fbf58abcff7f00b3d37d55854744dae1e0869f65",
+    "packs/union-1861/situations/houston_confederate_obligations.json": "5236931c98b05411b23a21f57191b1a18b5e928065ac252d8796d0f855032947",
+    "packs/union-1861/situations/indian_territory_posts_given_up.json": "bf20ddcda7f25965ad9829882bedb7910a58cacb32a48e438d62888696f368cc",
+    "packs/union-1861/situations/kentucky_neutrality.json": "236344d7da7fb37987a85412df87e4bf8201a5177e0bb1f4bf4f59c04cefdb16",
+    "packs/union-1861/situations/kentucky_neutrality_proclaimed.json": "b7cd3bee2898a427c467c0cfcd55581c8323948fd67fce57ab5f320787832fa0",
+    "packs/union-1861/situations/lamon_promise.json": "00bcb47652aa4f67bf8189e4f14c358d997534ccc37543d45a00e596c6a170dd",
+    "packs/union-1861/situations/manassas_advance_received.json": "c77bbded7dbae8a579f0680dd854c0c640013a5c5b810a5b5655a0c05bc133ec",
+    "packs/union-1861/situations/manassas_reinforcement_notice.json": "2ff37628c8a38b8602134361797c2d9cec4a6e1f3aca282cbc9f88cca1d8ac8f",
+    "packs/union-1861/situations/maryland_legislature.json": "a11e2ad5363658f886510756b2e3b52373e3c646a5b51bc7bfe014e5ee7bbc0a",
+    "packs/union-1861/situations/mcclellan_proclamation.json": "6d308fdc2bfd7f1f3c3f41642bbcda6c385c0fd9d0d9928fc6ebab16bb7d7347",
+    "packs/union-1861/situations/mcdowell_advance.json": "70aad9ae701322baf25c32562045542220067a5642dc0231b6c55297a0fcc1e4",
+    "packs/union-1861/situations/merryman_writ.json": "33de8607f4d9dc505ff6898c88bc355f1e649b92be92b24702c920c9f0410fb1",
+    "packs/union-1861/situations/minnesota_first_remuster.json": "a27bf3035d3b9f596aada30c5ecb2bd31381912b44467bef9795dc60a00b513d",
+    "packs/union-1861/situations/missouri_arsenal.json": "608841144589f1c203adc14e5d474afbda2a73c51e02427f07bc772a964c6d70",
+    "packs/union-1861/situations/missouri_provisional_government.json": "42e6f4f7f463648d800a9ef23560f823318c16eeb86b80bd6a52c2317fe2de96",
+    "packs/union-1861/situations/muscogee_treaty.json": "f9dc9a73c0b3be37118c7aa88a06fa86a5824f382350472dc90709663d04b6a1",
+    "packs/union-1861/situations/nelson_arrest_power.json": "b06055aa9c8891f0ad8bfd25b322213886f9c5ebd25237b3be162c14b9b6c7e7",
+    "packs/union-1861/situations/north_carolina_forces_transferred.json": "e2a2a8615836617cfd3df0a64617d4d82a4d2c9092d3131cb88b658e10ab4d25",
+    "packs/union-1861/situations/north_carolina_secedes.json": "0415cc429cbb1e9b28990092dcae5970ee52504def73c241e2c859b7f361205b",
+    "packs/union-1861/situations/officer_resignation.json": "991741466c1fc2c4a165b3fe16e8dd090d0466bd6a9497b2ce3b3d5f2afce36e",
+    "packs/union-1861/situations/patterson_martial_law.json": "e993d0d942a6d9b13356b90ce6d547079e27ad61df2e4a7ad32263018e149439",
+    "packs/union-1861/situations/pickens_refusal_received.json": "4f573324d0545a7d3ed2ad9523b6e00e797eed8d1141471170a52c264e8e3927",
+    "packs/union-1861/situations/pickens_refused.json": "5248fd787dce29fe489d1bfedf192fdf76ccdfd2be863797791a20d98acc9012",
+    "packs/union-1861/situations/pickens_reinforcement.json": "c1bcfc6b01d3876873946a0ee36dacef041edb7596cf013862071a211263fd31",
+    "packs/union-1861/situations/pierpont_aid_requested.json": "af92216531c3f4eff18d1d7450c0748e7f85e0c45b1fe078067844f2e4f8ea00",
+    "packs/union-1861/situations/pierpont_elected.json": "c13ebabe7aa684ec43d836285d432119d3c712ed73619812ab08bbe610bac05e",
+    "packs/union-1861/situations/pratt_street_deaths.json": "dde10a77c01f648a63373fb2804ee45d397c68323e4e43b99770fa641b357a27",
+    "packs/union-1861/situations/seward_memorandum.json": "f4758685496e04c305265785e35e4dc633a2f91a8feeec95ebfe361d9bccdc02",
+    "packs/union-1861/situations/special_session.json": "a1ba2a3d3ddbcf545b31e4a0eeeaa06ff77645627138985deb80b55fefbae501",
+    "packs/union-1861/situations/sumter_evacuated.json": "269b2a002a89711bd263ceca8af7df65b3a04e8f5878de96e39b36565421424b",
+    "packs/union-1861/situations/sumter_fired_upon.json": "539090473588ee957b21bb81e780c6df456b5c4064e80aa5fd01f6c20c49e711",
+    "packs/union-1861/situations/sumter_garrison.json": "25f3646dec87f805ba296eebb60ac8d3689bdade5969717bf47671a02c0e380e",
+    "packs/union-1861/situations/tennessee_forces_receiving_procedure.json": "2febcb70acf82b6e0b2258c5231ecf91f413f8a6964fe3f399516b615af75fcc",
+    "packs/union-1861/situations/tennessee_forces_return.json": "0506d230ebbb08e331ce60553a8241774103caec50c9a1ae843e3f331c34f763",
+    "packs/union-1861/situations/tennessee_forces_state_order.json": "e0165e803203049c7a13b5c91f6b554fa70433c233123f6c40007e39fd3cc461",
+    "packs/union-1861/situations/tennessee_forces_transferred.json": "62a21a10fef09ecd72324d473c1c77eb3c9aa95412b0bfb025712bdabb77ec02",
+    "packs/union-1861/situations/tennessee_military_league.json": "a4c978f30dac9f9d94cf63d4d75cb7178b63aaca04b686dda006898285a0e323",
+    "packs/union-1861/situations/tennessee_secedes.json": "13110b0fe3a50797e6e987f377ff90eecad21b382c006308904e655cd027bd13",
+    "packs/union-1861/situations/texas_evacuation_terms.json": "cc6ee102019857d91cdae007314214d1104416e60395f6db37a121ee7b3c179c",
+    "packs/union-1861/situations/texas_exit_1st_inf.json": "1321fb68e99894f109d537168a6d66932d718eaf478dd4eee35268ed3539243f",
+    "packs/union-1861/situations/texas_exit_2nd_cav.json": "54235d3d15c3fcc1753172d1e1a3c98f2bbf7fd5bb2d4978c9972c994ef4fa1c",
+    "packs/union-1861/situations/texas_exit_2nd_cav_eg.json": "8034dc38b94205a7cb2b528aea92c9bac705b75485c905400320e45752fa52d3",
+    "packs/union-1861/situations/texas_exit_3rd_inf.json": "956bd804cbed2e6abcc70c57639b7d27253a77e95df541da7b16dc95671af170",
+    "packs/union-1861/situations/texas_exit_8th_inf.json": "760500d1d1876b4177b582a9fd7ce3466cf46d57eb4d75fd67e68ce8fd1428fd",
+    "packs/union-1861/situations/texas_governor_changed.json": "4a79bbe78ff8443bbfa22ec25242cb2d9df3a1dc90c232410e78d574c0a4d6b6",
+    "packs/union-1861/situations/thomson_martial_law.json": "93b507cbf26dd64832472896a18e081dc0e558a543c4be67952b635140544cf0",
+    "packs/union-1861/situations/townsend_fugitive_order.json": "08e1dedd80ecd325f7bfc98a13625d0a971b8ff7dfd34513444e124d72d29d35",
+    "packs/union-1861/situations/virginia_forces_return.json": "5c989cda696c13f03e3351be7e574a4d36d89e1961b76128015ff03bf1dc8d07",
+    "packs/union-1861/situations/virginia_forces_transferred.json": "2246e2fcb6a068e1c8cbbd19fa003951a251979c971b4e33bdace1a50c55e017",
+    "packs/union-1861/situations/virginia_harpers_jackson.json": "6f2cfa45d5d5eabc953d11b5121480281442d124ac1fd4aba1f8677c9887cd4c",
+    "packs/union-1861/situations/virginia_harpers_state_forces.json": "7300b13f0c1c16c3bbd60336d0abcf255525e8193866513429123d5dc3d7b138",
+    "packs/union-1861/situations/virginia_manassas_garland_return.json": "0f3b235bd9fa940537c577893388f18c4680aa791bfa9c8b11d78e797b56939f",
+    "packs/union-1861/situations/virginia_manassas_state_forces.json": "a7c869eb2a0c80c7972725983b1e355979de97dcf1a30829fb02d5c64d186787",
+    "packs/union-1861/situations/virginia_military_convention.json": "cee51268e08d64d3225f7c03202e4c57a29f3b8041d57c4221811cc25e0283d2",
+    "packs/union-1861/situations/virginia_norfolk_gwynn.json": "9341cfd9af4d6f6e01d02d09413b1503f7ba3facacb6618b0557b4324e8246fd",
+    "packs/union-1861/situations/virginia_norfolk_huger.json": "c59531ec4f1ecfc01956998897693b47c755674cc5b3c52e14b109a17fc7c0fa",
+    "packs/union-1861/situations/virginia_norfolk_state_forces.json": "354fc1d5d15f786370760ab9cea72653c4b326fa5e907f7820d9340af0ee1cdb",
+    "packs/union-1861/situations/virginia_peninsula_state_forces.json": "b6233b8a8d96d8c4d1992c5ca9974356c767b79eb814c891a069d3518d88cff0",
+    "packs/union-1861/situations/virginia_potomac_command.json": "4357a9d13553286faf4a9d33dc99feb9a696aa2e6f945547f344f4a535d72a33",
+    "packs/union-1861/situations/virginia_richmond_magruder.json": "8691ef03294873e9f9316645b7a925b2bf66886f8ed1ae84f470c798f8e4876e",
+    "packs/union-1861/situations/virginia_richmond_state_forces.json": "4775c9fe0cdb44dba72b1c683db57df0ad2ebcafcc3c75ba23528b373ac4e4bc",
+    "packs/union-1861/situations/virginia_secedes.json": "10733065e6b11ca2a0cacdd616cab147e67ccd2fdd8bb4790b0200cfce517a6a",
+    "packs/union-1861/situations/virginia_state_calls.json": "f75a9c0dbc67e903a12b10382d60861b85cecac187023c0dbf645e8c20f9ea3a",
+    "packs/union-1861/situations/virginia_unionists.json": "7218c40e08d030d83de7b3689a2fb559e8b2bae38f472a6d8c5831dd2a76acd4",
+    "packs/union-1861/situations/washington_cut_off.json": "3c67db5e9c02acb831a75cc455672dc292c4b412abb0ca123dce484385a26e34",
+    "packs/union-1861/situations/western_virginia.json": "dad2020d3333a6c99609f01cde876e5030491dbe0afd24a379be82d538dc43ca",
+    "packs/union-1861/situations/wheeling_convention.json": "ff5a24bb536f1e24c53d467ba9743ee9d9088deb58a18505bd2bf73d8db9630d",
+    "packs/union-1861/situations/wheeling_legislature.json": "3d6190e887297589f6c9dadf66d05ddff18d446b5225d9dedc6cadfded2c052d",
+    "packs/union-1861/situations/wheeling_ordinance.json": "8f3bc8472646e423643c8cdf2dee74d3e158d0852a55a0eda6d31261ac4c1ad3",
+    "packs/union-1861/situations/wheeling_recognition_letter.json": "eb07fddd32a455cc34d5f78ee53fb9181fb803ba7e02b864e65e3dd6dadd2f0e",
+    "packs/union-1861/source/drafts/calls/README.md": "4a5bbff34df90fa24eb7a0f54861a3e548ddee9bea3aa8c4ac4b3409ab0579d0",
+    "packs/union-1861/source/drafts/calls/union-calls-1861.csv": "9a6365ae8eb0d576f6c995649faa8029ad1da260ff3e8a8b48208bf3593f9322",
+    "packs/union-1861/source/drafts/census/README.md": "d3f6a67d83120ae7bff8de220af3e68752d239fe5faf15896061c1b2f77a2d4e",
+    "packs/union-1861/source/drafts/census/aggregate-report.txt": "3bd27d64be3c7411daef8b97d434a600d8c12255a0403bd7b5ac223e93a84303",
+    "packs/union-1861/source/drafts/census/aggregate.mjs": "b894591bf22bdeaeab736bc9ced625bad30b6bc25dca0c3bfba22041c2f8e538",
+    "packs/union-1861/source/drafts/census/enslaved-1860-by-region.csv": "906b7e2cb6a66c604405c705c5243cc2e5240bc6bf166e46f0374357418b3ffe",
+    "packs/union-1861/source/drafts/census/kennedy-baltimore-split-1860.csv": "12a3803376dcc0252cbae69e1d2347ef588feb3096bd42defb0f3f5cef7b8cc9",
+    "packs/union-1861/source/drafts/census/kennedy-county-1860.csv": "5541b65965f0f0e2bd3995aa0b1e0736a69f14e0d65f5d92b768ac9a23ddb8fa",
+    "packs/union-1861/source/drafts/census/kennedy-state-summary-1860.csv": "2ed96181278a2796acc7f069247f8956070c99e2088bbfcbf7482c59ed977b7a",
+    "packs/union-1861/source/drafts/map/README.md": "044425f3c41a494cda5b6ca0429b8eaf8e023aa371346441ea5643798adb4654",
+    "packs/union-1861/source/drafts/map/edges.csv": "3df69008f1ff48dd2a34c56d354667fd3177b801cf104c847760b2b5a13af991",
+    "packs/union-1861/source/drafts/map/regions.csv": "96fd635eb6a8a6936a07bf8c2a95955c3c85f92b496844a78df883c9eaf97fef",
+    "packs/union-1861/source/drafts/oob/README.md": "ca603b43b5511d92304e1ac587efd843c14ce26eb5a8cb01b842531dc6625c66",
+    "packs/union-1861/source/drafts/oob/force_blocks.csv": "a6dd384b3376dabd0157fbd55249f134b4ad258139d61a8ac7e6ae6837916b23",
+    "packs/union-1861/source/drafts/oob/people_in_posts.csv": "b70feba63d4700c0c8f1352caf0501d409d74dc4cc8f8c69f59531e97a690e08",
+    "packs/union-1861/source/drafts/oob/posts.csv": "91b5fa49236b81de2d524f6276fb250856910d7137711ab88b94c9141bbc2e97",
+    "packs/union-1861/source/drafts/oob/strengths-stores-1861.csv": "ae50f8669a1effb60ddd8274cc40c11ffb2e778d3482c4573e6d9247dc514f7a",
+    "packs/union-1861/source/drafts/people/README.md": "e6b8db761d8fa8a5f14670b99c72809edfc59fd8382b27177c3244c0afa88a4a",
+    "packs/union-1861/source/drafts/people/cast-1861.csv": "f74feaf569fc9599eea3b14680135bed592a68ed48cded3870bafbffc5921735",
+    "packs/union-1861/source/drafts/people/held-back-blocs-1861.csv": "10e9fc07e5f4e115b631eb31dd3552d557c90a4de87c145ebf875723d4bd21e4",
+    "packs/union-1861/source/drafts/people/held-back-judgments-1861.csv": "70a56c9e5088535b7f6678f08bf52c062765b59c231a971bb419e147f5b197f0",
+    "packs/union-1861/source/drafts/people/held-back-resourced-1861.csv": "6257938a9eff6f04103a04a7751f70b9d963e0a0c06e1630d813206370c64c94",
+    "packs/union-1861/source/drafts/people/people-sources.md": "8e43b6786db0cb2c412d07471bdbf8ebfae8541366f461b3eb27b0225ac334ea",
+    "packs/union-1861/source/drafts/people/people.csv": "39002d114be871b8f4a34c83ff2975bd7e3087c9eec3f1f7113861f5449ede06",
+    "packs/union-1861/source/drafts/people/s9-people-gate.json": "c4a333e4c41791cf707cb49cf30c428d26982972d3ac720f3fa42de24687c00f",
+    "packs/union-1861/source/evidence/s118/lot-candidates.csv": "1eb7ec6069b1fc6048e144c6b6df72dd4c7947a1e8748d21192f31f9d085705e",
+    "packs/union-1861/source/evidence/s118/receiving-commands.csv": "07912c8a49694529706394a60c5c597cfabe07d8f9020076cfdc201d7559d879",
+    "packs/union-1861/source/import/import-drafts.mjs": "fc4836c4ba5760abcd66f3c331cd96bfe5bf0adaef836a77b07953cf96aa1d2a",
+    "packs/union-1861/source/import/import-people-oob.mjs": "4d831bac57d886075d4bdead052c896a76095f9513bf5cd1953ee9e776ab8b40",
+    "packs/union-1861/source/import/places.mjs": "1f4ac3f4939b2236433984bea2bc36aa6047e3ca90e62a31f916370538ded7ba",
+    "packs/union-1861/source/import/registry.mjs": "0822e8b1ed5ed9e77f65bfcc40be7a232212bbe3a928629189e95dabe9d27223",
+    "packs/union-1861/source/import/vocab.mjs": "5dc72f53ab27604225b0fadf0acd44e9e664701f036778135381bec505075e02",
+    "packs/union-1861/source/scenarios/march_1861/control.csv": "f2b45598b35a2047b4f23cd5d5a874ec8a44b12892f194ecf08834bed484d4e1",
+    "packs/union-1861/source/scenarios/march_1861/declared_governments.csv": "d80e321989ae6ef8e2daec6e595c61eadcd3b5b5d9b52a016383e26d905a3734",
+    "packs/union-1861/source/scenarios/march_1861/force_blocks.csv": "90f5e48de50044f428d14174e2ed91a7e64e1e1ecc4c3a56a3476987129baa74",
+    "packs/union-1861/source/scenarios/march_1861/governments.csv": "4affa4cd894b5a3cfc3edc9783e53714ce5f295b3e33783fe40b084aabdf495e",
+    "packs/union-1861/source/scenarios/march_1861/holders.csv": "b0a12b266223eef8e1d26af9f77e1ebd6e75786d7e42cd40a76576d1444c4bca",
+    "packs/union-1861/source/scenarios/march_1861/loyalty.csv": "67f0b034b32e832b9c26719fc72e7f075bc224d6926797346a4958b776b9a44c",
+    "packs/union-1861/source/scenarios/march_1861/obstructions.csv": "13dda28df9127daf53ecb2ef751006d85be1d9ad2eee34a6b9dc064443ccd8ea",
+    "packs/union-1861/source/scenarios/march_1861/posts.csv": "e84924de7bea0a9ac854a0fe2b3a2e63daf3d5c2d7cb8c5bada99d3cdf9cdbae",
+    "packs/union-1861/source/scenarios/march_1861/scenario.json": "978e08f81c1e28f34ac1beab2d0f76d6bdddd2c8bdc56cc9d9ae53df40be1879",
+    "packs/union-1861/source/scenarios/march_1861/standing_orders.csv": "1063fe70ac447b436fcd83e625f49a1564fbd6e087f89ca4a6a3ab4a69a069f7",
+    "packs/union-1861/source/scenarios/march_1861/temporary_posts.csv": "0467ff7168ec598a7e78c94b4c583a49fd44c028c5aed1ecb6ea87ce36aa0cd6",
+    "packs/union-1861/source/world/census.csv": "b7396af608d21a3fc384da80408a584faea1137dc6db01e43e8e628ed5bcd5cf",
+    "packs/union-1861/source/world/departments.csv": "8647370157244340a552c84bcc950a3dfaf23d2c64b1283c924ba31b6557b21d",
+    "packs/union-1861/source/world/depots.csv": "0ba1846320f7c138e42f04ca5c8b32852eae8623cad5bd0d629ce1592b436170",
+    "packs/union-1861/source/world/edges.csv": "03a60cdc6da6770e13d095df6f7f03403a8198d3d0f97188d0a322b2d33fbe28",
+    "packs/union-1861/source/world/installations.csv": "609a29b736e56249df6b528c7d2512ceb5d029b177fbad0c6a296d5db93c4f7b",
+    "packs/union-1861/source/world/organisations.json": "eacc22f1d86de937bfab62b1e0a6f5905d025109cd3d8f3f145697d107742ed4",
+    "packs/union-1861/source/world/people.csv": "73564057349b91e4b2b70f8401711a66550372d6e4b51c62538eaec619a5e883",
+    "packs/union-1861/source/world/rail_lines.csv": "70c3119450e804b2cc25c649a50b11877e142bca3005a31e2493e8152b06f60f",
+    "packs/union-1861/source/world/regiments.json": "57f61b4d4b6fffac2b9e09c8d3631185f9e28a34783f080be16d673a17307e5d",
+    "packs/union-1861/source/world/regions.csv": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+    "packs/union-1861/strings/en.json": "3b864d93505556ccbd93aed5282ae064bdd463ae045f15ffb752f6ddc1409bed",
+    "packs/union-1861/test/butler-appointment.test.ts": "39fda1454452f9bcef0e610a9f1298bfd4c82395e940e41122473445f66b6793",
+    "packs/union-1861/test/calls-1861.test.ts": "deedb04f9882cc5b7e1112f3c9a5528c0884aefb2d60cf5d62ac46b3b3d9223a",
+    "packs/union-1861/test/capital-move.test.ts": "dea344c5589c3c0b97a31c91abd83353b3fe521c4f9748ddf0bdea6100b1307d",
+    "packs/union-1861/test/charleston-strengths.test.ts": "f09e9607fbd892bb253c4eb513d09dc67a11a7da56bd5018ccbff4c798bcef3a",
+    "packs/union-1861/test/cost-only.test.ts": "d33a5b26ce040461a6e7990d18d9b3c9e7269cc2180f8939dd270fc8be92e37b",
+    "packs/union-1861/test/dated-appointments.test.ts": "eda034193777bf9043f2bf79fea5fbbd85b8f4403d20a39cb5570505369c92c6",
+    "packs/union-1861/test/desk-scheduled-calls.test.ts": "aa558d97823f3891094170e2adcce50e818b3fc2f42fb4777bb1ae1142813cb6",
+    "packs/union-1861/test/discretion-chain.test.ts": "b5608df7be67f5bdb883258282b6b30535ebce163a30920db7992a86fc6a9655",
+    "packs/union-1861/test/gate-register.test.ts": "3345186c6ff7ed1b9322cd2eafbc6191ad3b503bc4728e992fe79ff0efdb29e9",
+    "packs/union-1861/test/gated-blocs.test.ts": "476463bffe9dc3171de57374e385cd346834a1e26b8e534b250bfab6c87a0893",
+    "packs/union-1861/test/gated-rows.test.ts": "3b8da27e3b88ee3519c1788a0f949f1f2401b0f3b704b78f4458ec8aee3c5b6e",
+    "packs/union-1861/test/livermore.test.ts": "ae92d65d88610ee6a597fe9fe48d4f748343d9868073072e669a83a463c71fff",
+    "packs/union-1861/test/livermore/README.md": "fb5b94840ecc76606b43db28392b4b6bdb7918b49615e2710fd349dc4f98691c",
+    "packs/union-1861/test/livermore/livermore-1900.csv": "348467f0e1b07d1ca3da25afe7c96429dfa21199b41ca5a19d1ef433b78bf12e",
+    "packs/union-1861/test/manassas-junction.test.ts": "f1af7e0e92aa953aa8f9260c96f44c83f3c2e1ea450bd6628007acdfd9a39687",
+    "packs/union-1861/test/nation-calls.test.ts": "e7d2e56de2dc3ab0e1fd938b52f2f9879883dc1981abdb843dac0df9952ebc7c",
+    "packs/union-1861/test/national-enlistment.test.ts": "aa99489133e91880034b8917c8bdef6bb56052ed69348c4f8d033274ef15bc38",
+    "packs/union-1861/test/northern-concentration.test.ts": "33068c453879e5e9ca26ebe537dba837d8d387a0cfe1f04f0367e35d2001b6a2",
+    "packs/union-1861/test/opening-cause.test.ts": "1530cc1a4d6da4775c25adf6bbcbb1ff0bec484fefc01509e6c9fc084e7731d3",
+    "packs/union-1861/test/passage.test.ts": "fe11e80cdb40bfeeaed491a1793ed92491357d67c9329cea8ea7508f6e5c7a6b",
+    "packs/union-1861/test/r47-authoring.test.ts": "aa8281a108a6bde442fe5dc1ad46b6b151777f350dc4335ce739d4d16d4ef434",
+    "packs/union-1861/test/r69-wheeling.test.ts": "0658fcbac6feb3ab8680baf9d04c425c45dc6a0017ffd2a35423aa2e147b787f",
+    "packs/union-1861/test/r94-missouri.test.ts": "29c736ad2fb69a034632916fa5a00c299591464eacaf1cd49b5985b4f857f325",
+    "packs/union-1861/test/received-papers.test.ts": "feb38e6a87399457593ac45e09a339bacbbfbd415e6d627d680b5730ef3a07ff",
+    "packs/union-1861/test/record-terms.test.ts": "f87bab39708b0ae3daf5ffb271aa0a82730b136d773fe86eeb7b14ae3c98fc4c",
+    "packs/union-1861/test/resignation.test.ts": "4a7ba53ceb4e2a147af913671ce870e738f1856af9f12d1c88605605e2da3b34",
+    "packs/union-1861/test/resource-apply.test.ts": "817158dbc0edf120e42a5506aec04937bede4eba66060565036849e1519b4dc9",
+    "packs/union-1861/test/s102-call-terms.test.ts": "c94c4c3324aeb164b39bd842605e3e4c2eacd095b148645d48b4369237acc929",
+    "packs/union-1861/test/s108-value-clauses.test.ts": "cedfc9ef35eb1b8bb9234845b7507528109fba8155b809c1536f183580c80fce",
+    "packs/union-1861/test/s116-cause.test.ts": "a9f469a9ffc2c14153117e633b45cd20b12d048fa3021edb1f7fe032e788aec8",
+    "packs/union-1861/test/s122-establishments.test.ts": "e8749d5ffd890826dcfacb10dc8dc8803cbad5350503ba2de342b1d938f4bd98",
+    "packs/union-1861/test/s27-console-playtests.test.ts": "3484caa634bf32b0ab5fc34469dc2f014a3469d5b320a7f64e24a4b91be6b4c9",
+    "packs/union-1861/test/s35-scoring.test.ts": "43c515148d7862fe3d88e748cc664d7480c8549f083386327eec9087bd003d01",
+    "packs/union-1861/test/s58-b2-drafts.test.ts": "24990bd0156e7bfee75ad7e5130831af3d42612737dc83f8c647bd4809a47d2b",
+    "packs/union-1861/test/s58-b2-live.test.ts": "de0ecbea60abdb60b3f7539e6ea68558012b4d1f23be545dd41c171cd93d25e5",
+    "packs/union-1861/test/s64-command-inclusion.test.ts": "660257849e6fe7faef4b32e137ff881a3414646436f5982ab9349e6c39cc7f4f",
+    "packs/union-1861/test/s74-cast-templates.test.ts": "b49634ab9437592105cbbdeb1b38ed6c3255c7775c576b9b4165d18a67ed6907",
+    "packs/union-1861/test/s77-concentration.test.ts": "60df291612450b7c8cc6f5823b1ff5222a77f654cd3ce1d2551a00ba5036c720",
+    "packs/union-1861/test/s78-patterson.test.ts": "789be418c62958b666fcfcc33d918cf76beb541dea1586db3956afc0187fc219",
+    "packs/union-1861/test/s78-rail.test.ts": "16d1ca3595856b9b637ddfab8e01e7cf8b5c2c0fcbe800b0a18b8e414247071a",
+    "packs/union-1861/test/s81-terms.test.ts": "030e1f646b40e1c27bae15991820259e120f67111b81220cd7d3d876885b34db",
+    "packs/union-1861/test/s82-anderson.test.ts": "46f1915e2ce2c154a1d107e2ee53942d2d5d22a1153f0abcb80dcac9eb0816ed",
+    "packs/union-1861/test/s9-people-apply.test.ts": "caefafd926cc429f31996f8a32ed114a1f1c9a317063d6f6e4f11be1d7424881",
+    "packs/union-1861/test/s90-junction-chain.test.ts": "3d54e8064b060e7eb84ce1e5ad924fffec127bbbd7095caa68403e5cbe6227d7",
+    "packs/union-1861/test/s90-junction-order.test.ts": "20e49bab208d965e84cafc0a8a7fa1acd3cee82fa78e40339c9cf88a1b4fd4f9",
+    "packs/union-1861/test/s92-texas.test.ts": "c5625d82586def3857c885a6c46fe8646cee16e15b62cafce5c54fc77884aeea",
+    "packs/union-1861/test/s98-cast-evidence.test.ts": "b9afe66c418762227785867a64145bcd62eea66023def394631e002342de5270",
+    "packs/union-1861/test/state-forces.test.ts": "3a591abc75996970b7835c56aba1720acbcefec62e3bbd465108da3ed6dbc3cd",
+    "packs/union-1861/test/virginia-dated-forces.test.ts": "0aa352f0d53cdba87af218876f41e4954386c6f61540886989ed235e54bbe94b",
+    "packs/union-1861/test/world-v2.test.ts": "cc418747cd5c58ffe72074fb9b861784f46ef68270d7ef954eb6da4fca22d654"
+  },
+  "changedUnionInputs": [],
+  "unionDay2Hash": "64a4bf8e13dae4e6c7b8c42b610250363ae651ccbf94dbbd9520dc96d1f8bb14",
+  "day2MatchesS126": true,
+  "cheapStartup": {
+    "rows": [
+      {
+        "pack": "testbed",
+        "hash": "62fe5678feccac3317e84f64210a03fbd3228bb237b7d87a1251cc70793ac17f",
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 1,
+          "finalHash": "62fe5678feccac3317e84f64210a03fbd3228bb237b7d87a1251cc70793ac17f",
+          "matches": true,
+          "savedLogReplays": true
+        }
+      },
+      {
+        "pack": "union-1861",
+        "hash": "64a4bf8e13dae4e6c7b8c42b610250363ae651ccbf94dbbd9520dc96d1f8bb14",
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 1,
+          "finalHash": "64a4bf8e13dae4e6c7b8c42b610250363ae651ccbf94dbbd9520dc96d1f8bb14",
+          "matches": true,
+          "savedLogReplays": true
+        }
+      }
+    ],
+    "baseline": "C:/Pyrrhic/sprint-july/runs/s126/capture",
+    "localKernel": "C:\\Pyrrhic\\sprint-demonstrate\\packages\\kernel",
+    "establishments": [
+      {
+        "id": "us_april_militia",
+        "faction": "union",
+        "callKind": "april_militia",
+        "arm": "infantry",
+        "organisation": "ten_companies",
+        "effective": "1861-04-15",
+        "men": 780,
+        "cites": [
+          [
+            "OR III-I",
+            69
+          ]
+        ],
+        "note": "0127; schedule 37 officers and 743 men. Rule output, not a returned regiment."
+      },
+      {
+        "id": "us_go15_infantry",
+        "faction": "union",
+        "callKind": "go15_volunteers",
+        "arm": "infantry",
+        "organisation": "ten_companies",
+        "effective": "1861-05-04",
+        "men": 866,
+        "cites": [
+          [
+            "OR III-I",
+            151
+          ],
+          [
+            "OR III-I",
+            152
+          ]
+        ],
+        "note": "0127; printed minimum 866 (OCR 806 rejected against scan); not maximum 1046 or an empirical mean."
+      },
+      {
+        "id": "us_go15_cavalry_4",
+        "faction": "union",
+        "callKind": "go15_volunteers",
+        "arm": "cavalry",
+        "organisation": "4_squadrons",
+        "effective": "1861-05-04",
+        "men": 660,
+        "cites": [
+          [
+            "OR III-I",
+            152
+          ],
+          [
+            "OR III-I",
+            153
+          ]
+        ],
+        "note": "0127; minimum for this squadron organisation. Four squadrons is the smallest permitted regiment [I]; six is not assumed."
+      },
+      {
+        "id": "us_go15_cavalry_5",
+        "faction": "union",
+        "callKind": "go15_volunteers",
+        "arm": "cavalry",
+        "organisation": "5_squadrons",
+        "effective": "1861-05-04",
+        "men": 818,
+        "cites": [
+          [
+            "OR III-I",
+            152
+          ],
+          [
+            "OR III-I",
+            153
+          ]
+        ],
+        "note": "0127; minimum for this squadron organisation. Four squadrons is the smallest permitted regiment [I]; six is not assumed."
+      },
+      {
+        "id": "us_go15_cavalry_6",
+        "faction": "union",
+        "callKind": "go15_volunteers",
+        "arm": "cavalry",
+        "organisation": "6_squadrons",
+        "effective": "1861-05-04",
+        "men": 976,
+        "cites": [
+          [
+            "OR III-I",
+            152
+          ],
+          [
+            "OR III-I",
+            153
+          ]
+        ],
+        "note": "0127; minimum for this squadron organisation. Four squadrons is the smallest permitted regiment [I]; six is not assumed."
+      },
+      {
+        "id": "us_go16_infantry",
+        "faction": "union",
+        "callKind": "go16_regulars",
+        "arm": "infantry",
+        "organisation": "three_battalions",
+        "effective": "1861-05-04",
+        "men": 2020,
+        "cites": [
+          [
+            "OR III-I",
+            154
+          ],
+          [
+            "OR III-I",
+            155
+          ]
+        ],
+        "note": "0127; stated minimum of this organisation. Artillery row is explicitly twelve batteries, not an invented eight-battery figure."
+      },
+      {
+        "id": "us_go16_cavalry",
+        "faction": "union",
+        "callKind": "go16_regulars",
+        "arm": "cavalry",
+        "organisation": "three_battalions",
+        "effective": "1861-05-04",
+        "men": 997,
+        "cites": [
+          [
+            "OR III-I",
+            155
+          ],
+          [
+            "OR III-I",
+            156
+          ]
+        ],
+        "note": "0127; stated minimum of this organisation. Artillery row is explicitly twelve batteries, not an invented eight-battery figure."
+      },
+      {
+        "id": "us_go16_artillery",
+        "faction": "union",
+        "callKind": "go16_regulars",
+        "arm": "artillery",
+        "organisation": "twelve_batteries",
+        "effective": "1861-05-04",
+        "men": 997,
+        "cites": [
+          [
+            "OR III-I",
+            156
+          ],
+          [
+            "OR III-I",
+            157
+          ]
+        ],
+        "note": "0127; stated minimum of this organisation. Artillery row is explicitly twelve batteries, not an invented eight-battery figure."
+      },
+      {
+        "id": "us_volunteer_artillery_unrecovered",
+        "faction": "union",
+        "callKind": "volunteer_artillery",
+        "arm": "artillery",
+        "organisation": "unrecovered",
+        "effective": "1861-07-30",
+        "men": null,
+        "cites": [
+          [
+            "OR III-I",
+            152
+          ]
+        ],
+        "note": "GO15 supplies no volunteer artillery regiment establishment. GO16 regular artillery is not substituted. Recover the applicable organisation before assigning men."
+      },
+      {
+        "id": "cs_public_defense_infantry",
+        "faction": "confederate",
+        "callKind": "public_defense_volunteers",
+        "arm": "infantry",
+        "organisation": "ten_companies",
+        "effective": "1861-03-06",
+        "men": 780,
+        "cites": [
+          [
+            "OR IV-I",
+            126
+          ],
+          [
+            "OR IV-I",
+            127
+          ],
+          [
+            "OR IV-I",
+            367
+          ]
+        ],
+        "note": "0127: 10*(64 privates+4 officers+4 sergeants+4 corporals+2 musicians)=780. Cooper June3 explains the existing law. April22 calls say at least 64 men, beside the statute's privates (pp.231-233). No extra regimental appointments added without a separate legal creation."
+      },
+      {
+        "id": "cs_cavalry_company_unquantified",
+        "faction": "confederate",
+        "callKind": "public_defense_cavalry",
+        "arm": "cavalry",
+        "organisation": "unquantified_companies",
+        "effective": "1861-06-30",
+        "men": null,
+        "cites": [
+          [
+            "OR IV-I",
+            126
+          ],
+          [
+            "OR IV-I",
+            127
+          ],
+          [
+            "OR IV-I",
+            128
+          ]
+        ],
+        "note": "Call supplies no count of companies/squadrons. No infantry regiment or ten-company organisation is imposed on the unknown contingent."
+      }
+    ]
+  }
+}

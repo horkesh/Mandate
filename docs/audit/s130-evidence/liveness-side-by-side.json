@@ -1,0 +1,4130 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "S126": {
+      "mechanic": "combat.battle_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "first": {
+      "mechanic": "combat.battle_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "combat.battle_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.battle_day",
+    "S126": {
+      "mechanic": "combat.battle_day",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "first": {
+      "mechanic": "combat.battle_day",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "corrected": {
+      "mechanic": "combat.battle_day",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "S126": {
+      "mechanic": "combat.battle_opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "first": {
+      "mechanic": "combat.battle_opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "combat.battle_opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.bombardment",
+    "S126": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "first": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.breakout",
+    "S126": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.captured",
+    "S126": {
+      "mechanic": "combat.captured",
+      "fires": 6,
+      "magnitude": 954
+    },
+    "first": {
+      "mechanic": "combat.captured",
+      "fires": 6,
+      "magnitude": 954
+    },
+    "corrected": {
+      "mechanic": "combat.captured",
+      "fires": 6,
+      "magnitude": 954
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.cut_off",
+    "S126": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.destroyed",
+    "S126": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.evacuated",
+    "S126": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "S126": {
+      "mechanic": "combat.flank_broken",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "first": {
+      "mechanic": "combat.flank_broken",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "corrected": {
+      "mechanic": "combat.flank_broken",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "S126": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "S126": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 12,
+      "magnitude": 8575
+    },
+    "first": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 12,
+      "magnitude": 8575
+    },
+    "corrected": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 12,
+      "magnitude": 8575
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.missing",
+    "S126": {
+      "mechanic": "combat.missing",
+      "fires": 12,
+      "magnitude": 2633
+    },
+    "first": {
+      "mechanic": "combat.missing",
+      "fires": 12,
+      "magnitude": 2633
+    },
+    "corrected": {
+      "mechanic": "combat.missing",
+      "fires": 12,
+      "magnitude": 2633
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.occupation",
+    "S126": {
+      "mechanic": "combat.occupation",
+      "fires": 338,
+      "magnitude": 12963
+    },
+    "first": {
+      "mechanic": "combat.occupation",
+      "fires": 338,
+      "magnitude": 12963
+    },
+    "corrected": {
+      "mechanic": "combat.occupation",
+      "fires": 338,
+      "magnitude": 12963
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.pursuit_chosen",
+    "S126": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.records_pruned",
+    "S126": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.routed",
+    "S126": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "first": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "corrected": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.surrendered",
+    "S126": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.withdrew",
+    "S126": {
+      "mechanic": "combat.withdrew",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "combat.withdrew",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "combat.withdrew",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "combat.works_stormed",
+    "S126": {
+      "mechanic": "combat.works_stormed",
+      "fires": 1,
+      "magnitude": 150
+    },
+    "first": {
+      "mechanic": "combat.works_stormed",
+      "fires": 1,
+      "magnitude": 150
+    },
+    "corrected": {
+      "mechanic": "combat.works_stormed",
+      "fires": 1,
+      "magnitude": 150
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "command.government_closed",
+    "S126": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "first": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "command.government_established",
+    "S126": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "command.government_reopened",
+    "S126": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "command.post_succeeded",
+    "S126": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "first": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "command.proposal_refused",
+    "S126": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "command.side_changed",
+    "S126": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "first": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "corrected": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "command.temporary_post_opened",
+    "S126": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 14,
+      "magnitude": 14
+    },
+    "first": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 14,
+      "magnitude": 14
+    },
+    "corrected": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 14,
+      "magnitude": 14
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "commands.rejected",
+    "S126": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "control.changed",
+    "S126": {
+      "mechanic": "control.changed",
+      "fires": 345,
+      "magnitude": 15963
+    },
+    "first": {
+      "mechanic": "control.changed",
+      "fires": 345,
+      "magnitude": 15963
+    },
+    "corrected": {
+      "mechanic": "control.changed",
+      "fires": 345,
+      "magnitude": 15963
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "control.threshold_crossed",
+    "S126": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 48,
+      "magnitude": 48
+    },
+    "first": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 48,
+      "magnitude": 48
+    },
+    "corrected": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 48,
+      "magnitude": 48
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "forces.landed_by_situation",
+    "S126": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "forces.landing_refused",
+    "S126": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "forces.stores_fell",
+    "S126": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2638,
+      "magnitude": 2609571
+    },
+    "first": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2638,
+      "magnitude": 2609571
+    },
+    "corrected": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2638,
+      "magnitude": 2609571
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "forces.stores_low",
+    "S126": {
+      "mechanic": "forces.stores_low",
+      "fires": 102,
+      "magnitude": 102
+    },
+    "first": {
+      "mechanic": "forces.stores_low",
+      "fires": 102,
+      "magnitude": 102
+    },
+    "corrected": {
+      "mechanic": "forces.stores_low",
+      "fires": 102,
+      "magnitude": 102
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "forces.stores_refilled",
+    "S126": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2943,
+      "magnitude": 2898839
+    },
+    "first": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2943,
+      "magnitude": 2898839
+    },
+    "corrected": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2943,
+      "magnitude": 2898839
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "S126": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 178,
+      "magnitude": 1021
+    },
+    "first": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 178,
+      "magnitude": 1021
+    },
+    "corrected": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 178,
+      "magnitude": 1021
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "infrastructure.changed",
+    "S126": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "S126": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 106,
+      "magnitude": 1518
+    },
+    "first": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 106,
+      "magnitude": 1518
+    },
+    "corrected": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 106,
+      "magnitude": 1518
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "S126": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12000
+    },
+    "first": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12000
+    },
+    "corrected": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12001
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "ladder.moved",
+    "S126": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "first": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "corrected": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "ladder.rival",
+    "S126": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "map.pocket_closed",
+    "S126": {
+      "mechanic": "map.pocket_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "first": {
+      "mechanic": "map.pocket_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "map.pocket_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "map.pocket_lost",
+    "S126": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "S126": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "map.recomputed",
+    "S126": {
+      "mechanic": "map.recomputed",
+      "fires": 52,
+      "magnitude": 59
+    },
+    "first": {
+      "mechanic": "map.recomputed",
+      "fires": 52,
+      "magnitude": 59
+    },
+    "corrected": {
+      "mechanic": "map.recomputed",
+      "fires": 52,
+      "magnitude": 59
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "S126": {
+      "mechanic": "messages.courier_delay",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "first": {
+      "mechanic": "messages.courier_delay",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "corrected": {
+      "mechanic": "messages.courier_delay",
+      "fires": 99,
+      "magnitude": 99
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 130,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 134,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 135,
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 130,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 134,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 135,
+        "before": 1,
+        "after": 2
+      }
+    ]
+  },
+  {
+    "mechanic": "messages.delivered",
+    "S126": {
+      "mechanic": "messages.delivered",
+      "fires": 14436,
+      "magnitude": 14436
+    },
+    "first": {
+      "mechanic": "messages.delivered",
+      "fires": 14436,
+      "magnitude": 14436
+    },
+    "corrected": {
+      "mechanic": "messages.delivered",
+      "fires": 14443,
+      "magnitude": 14443
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 135,
+        "before": 128,
+        "after": 130
+      },
+      {
+        "day": 137,
+        "before": 147,
+        "after": 148
+      },
+      {
+        "day": 139,
+        "before": 76,
+        "after": 78
+      },
+      {
+        "day": 140,
+        "before": 135,
+        "after": 137
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 135,
+        "before": 128,
+        "after": 130
+      },
+      {
+        "day": 137,
+        "before": 147,
+        "after": 148
+      },
+      {
+        "day": 139,
+        "before": 76,
+        "after": 78
+      },
+      {
+        "day": 140,
+        "before": 135,
+        "after": 137
+      }
+    ]
+  },
+  {
+    "mechanic": "messages.mail_delay",
+    "S126": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2858,
+      "magnitude": 2858
+    },
+    "first": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2858,
+      "magnitude": 2858
+    },
+    "corrected": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2858,
+      "magnitude": 2858
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "messages.sent",
+    "S126": {
+      "mechanic": "messages.sent",
+      "fires": 15207,
+      "magnitude": 15207
+    },
+    "first": {
+      "mechanic": "messages.sent",
+      "fires": 15207,
+      "magnitude": 15207
+    },
+    "corrected": {
+      "mechanic": "messages.sent",
+      "fires": 15214,
+      "magnitude": 15214
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 130,
+        "before": 55,
+        "after": 56
+      },
+      {
+        "day": 134,
+        "before": 79,
+        "after": 80
+      },
+      {
+        "day": 135,
+        "before": 110,
+        "after": 112
+      },
+      {
+        "day": 136,
+        "before": 57,
+        "after": 58
+      },
+      {
+        "day": 139,
+        "before": 100,
+        "after": 101
+      },
+      {
+        "day": 140,
+        "before": 374,
+        "after": 375
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 130,
+        "before": 55,
+        "after": 56
+      },
+      {
+        "day": 134,
+        "before": 79,
+        "after": 80
+      },
+      {
+        "day": 135,
+        "before": 110,
+        "after": 112
+      },
+      {
+        "day": 136,
+        "before": 57,
+        "after": 58
+      },
+      {
+        "day": 139,
+        "before": 100,
+        "after": 101
+      },
+      {
+        "day": 140,
+        "before": 374,
+        "after": 375
+      }
+    ]
+  },
+  {
+    "mechanic": "messages.special_messenger",
+    "S126": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "movement.arrived",
+    "S126": {
+      "mechanic": "movement.arrived",
+      "fires": 701,
+      "magnitude": 701
+    },
+    "first": {
+      "mechanic": "movement.arrived",
+      "fires": 701,
+      "magnitude": 701
+    },
+    "corrected": {
+      "mechanic": "movement.arrived",
+      "fires": 701,
+      "magnitude": 701
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "movement.join_blocked",
+    "S126": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "movement.joined",
+    "S126": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "first": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "corrected": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "S126": {
+      "mechanic": "movement.leg_started",
+      "fires": 385,
+      "magnitude": 385
+    },
+    "first": {
+      "mechanic": "movement.leg_started",
+      "fires": 385,
+      "magnitude": 385
+    },
+    "corrected": {
+      "mechanic": "movement.leg_started",
+      "fires": 385,
+      "magnitude": 385
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "operations.ended",
+    "S126": {
+      "mechanic": "operations.ended",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "first": {
+      "mechanic": "operations.ended",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "corrected": {
+      "mechanic": "operations.ended",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 137,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 137,
+        "before": 1,
+        "after": 0
+      }
+    ]
+  },
+  {
+    "mechanic": "operations.landed",
+    "S126": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "operations.opened",
+    "S126": {
+      "mechanic": "operations.opened",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "first": {
+      "mechanic": "operations.opened",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "corrected": {
+      "mechanic": "operations.opened",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "S126": {
+      "mechanic": "operations.repulsed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "operations.repulsed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "operations.repulsed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "operations.stage",
+    "S126": {
+      "mechanic": "operations.stage",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "first": {
+      "mechanic": "operations.stage",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "corrected": {
+      "mechanic": "operations.stage",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 137,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 137,
+        "before": 1,
+        "after": 0
+      }
+    ]
+  },
+  {
+    "mechanic": "operations.support_answered",
+    "S126": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "operations.support_refused",
+    "S126": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "operations.support_sent",
+    "S126": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "operations.works",
+    "S126": {
+      "mechanic": "operations.works",
+      "fires": 14,
+      "magnitude": 700
+    },
+    "first": {
+      "mechanic": "operations.works",
+      "fires": 14,
+      "magnitude": 700
+    },
+    "corrected": {
+      "mechanic": "operations.works",
+      "fires": 14,
+      "magnitude": 700
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "orders.bypassed",
+    "S126": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "first": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "corrected": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "orders.conflict",
+    "S126": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "orders.obeyed",
+    "S126": {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "first": {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "orders.obeyed",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 139,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 140,
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 139,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 140,
+        "before": 1,
+        "after": 2
+      }
+    ]
+  },
+  {
+    "mechanic": "orders.relay_held",
+    "S126": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "orders.relay_objected",
+    "S126": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "first": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "orders.relayed",
+    "S126": {
+      "mechanic": "orders.relayed",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "first": {
+      "mechanic": "orders.relayed",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "corrected": {
+      "mechanic": "orders.relayed",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "orders.responses_pruned",
+    "S126": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 27,
+      "magnitude": 66
+    },
+    "first": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 27,
+      "magnitude": 66
+    },
+    "corrected": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 27,
+      "magnitude": 66
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "orders.returned",
+    "S126": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "people.grievances_faded",
+    "S126": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "first": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "corrected": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "people.promise_broken",
+    "S126": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "people.promise_kept",
+    "S126": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "people.resigned",
+    "S126": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "first": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "corrected": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "people.stayed",
+    "S126": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.candidates",
+    "S126": {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    "first": {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    "corrected": {
+      "mechanic": "planner.candidates",
+      "fires": 8,
+      "magnitude": 12
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 139,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 139,
+        "before": 0,
+        "after": 1
+      }
+    ]
+  },
+  {
+    "mechanic": "planner.searches",
+    "S126": {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 34
+    },
+    "first": {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 34
+    },
+    "corrected": {
+      "mechanic": "planner.searches",
+      "fires": 8,
+      "magnitude": 34
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 139,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 139,
+        "before": 0,
+        "after": 1
+      }
+    ]
+  },
+  {
+    "mechanic": "planner.term.caution",
+    "S126": {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.term.coordination",
+    "S126": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.term.dependence",
+    "S126": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.term.exposure",
+    "S126": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.term.force_ratio",
+    "S126": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.term.glory",
+    "S126": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.term.goal_fit",
+    "S126": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": true,
+    "changedFromFirst": false,
+    "cause": "[I] S130 opt-in reconnaissance emits an explicit unknown estimate for partially unquantified opposition. The regional planner still uses its legacy numeric-belief fallback. Retained day140 opposition4630->532 changes direct140->760 while holding remains11. Time/goal-fit weights and contributions are unchanged; deleting either no longer changes the winning candidate. Both S130 captures retain exactly the same day140 candidates. The approved address correction exposes the papers but does not cure this earlier unknown/numeric interaction. No numeric patch or proxy fitting is made.",
+    "dailyFromS126": [
+      {
+        "day": 140,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.term.haste",
+    "S126": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.term.notes",
+    "S126": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.term.supply",
+    "S126": {
+      "mechanic": "planner.term.supply",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "planner.term.supply",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.supply",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "planner.term.time",
+    "S126": {
+      "mechanic": "planner.term.time",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": true,
+    "changedFromFirst": false,
+    "cause": "[I] S130 opt-in reconnaissance emits an explicit unknown estimate for partially unquantified opposition. The regional planner still uses its legacy numeric-belief fallback. Retained day140 opposition4630->532 changes direct140->760 while holding remains11. Time/goal-fit weights and contributions are unchanged; deleting either no longer changes the winning candidate. Both S130 captures retain exactly the same day140 candidates. The approved address correction exposes the papers but does not cure this earlier unknown/numeric interaction. No numeric patch or proxy fitting is made.",
+    "dailyFromS126": [
+      {
+        "day": 140,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.approved",
+    "S126": {
+      "mechanic": "plans.approved",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "first": {
+      "mechanic": "plans.approved",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "plans.approved",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.chosen",
+    "S126": {
+      "mechanic": "plans.chosen",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "first": {
+      "mechanic": "plans.chosen",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "corrected": {
+      "mechanic": "plans.chosen",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.discretion_exercised",
+    "S126": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.draft_deferred",
+    "S126": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.drafted",
+    "S126": {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "first": {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "plans.drafted",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 139,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 139,
+        "before": 0,
+        "after": 1
+      }
+    ]
+  },
+  {
+    "mechanic": "plans.edit_answered",
+    "S126": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.edit_invalid",
+    "S126": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.edit_objected",
+    "S126": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.edit_received",
+    "S126": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.edit_shirked",
+    "S126": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.goal_proposed",
+    "S126": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.goal_reached",
+    "S126": {
+      "mechanic": "plans.goal_reached",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "first": {
+      "mechanic": "plans.goal_reached",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "corrected": {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 137,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 137,
+        "before": 1,
+        "after": 0
+      }
+    ]
+  },
+  {
+    "mechanic": "plans.goal_set",
+    "S126": {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "first": {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "plans.goal_set",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 139,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 140,
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 135,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 139,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 140,
+        "before": 1,
+        "after": 2
+      }
+    ]
+  },
+  {
+    "mechanic": "plans.released",
+    "S126": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.sent_back",
+    "S126": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.submitted",
+    "S126": {
+      "mechanic": "plans.submitted",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "first": {
+      "mechanic": "plans.submitted",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "plans.submitted",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "plans.went_ahead",
+    "S126": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "first": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.act",
+    "S126": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "first": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.adjourned",
+    "S126": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.answered",
+    "S126": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "first": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.called",
+    "S126": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.framing",
+    "S126": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.front_page",
+    "S126": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "first": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "corrected": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.met",
+    "S126": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "first": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.opened",
+    "S126": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "first": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.press_silent",
+    "S126": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.refused",
+    "S126": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "politics.support",
+    "S126": {
+      "mechanic": "politics.support",
+      "fires": 103,
+      "magnitude": 103
+    },
+    "first": {
+      "mechanic": "politics.support",
+      "fires": 103,
+      "magnitude": 103
+    },
+    "corrected": {
+      "mechanic": "politics.support",
+      "fires": 103,
+      "magnitude": 103
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "recruitment.answered",
+    "S126": {
+      "mechanic": "recruitment.answered",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "first": {
+      "mechanic": "recruitment.answered",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "corrected": {
+      "mechanic": "recruitment.answered",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "recruitment.called",
+    "S126": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "first": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "corrected": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "recruitment.disbanded",
+    "S126": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "first": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "corrected": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "recruitment.lapsed",
+    "S126": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "recruitment.men",
+    "S126": {
+      "mechanic": "recruitment.men",
+      "fires": 66,
+      "magnitude": 225300
+    },
+    "first": {
+      "mechanic": "recruitment.men",
+      "fires": 66,
+      "magnitude": 225300
+    },
+    "corrected": {
+      "mechanic": "recruitment.men",
+      "fires": 66,
+      "magnitude": 225300
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "recruitment.muster_blocked",
+    "S126": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "recruitment.mustered",
+    "S126": {
+      "mechanic": "recruitment.mustered",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "first": {
+      "mechanic": "recruitment.mustered",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "corrected": {
+      "mechanic": "recruitment.mustered",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "recruitment.refused",
+    "S126": {
+      "mechanic": "recruitment.refused",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "first": {
+      "mechanic": "recruitment.refused",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "corrected": {
+      "mechanic": "recruitment.refused",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "recruitment.renewed",
+    "S126": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "recruitment.slow_walked",
+    "S126": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "regions.reached_lines",
+    "S126": {
+      "mechanic": "regions.reached_lines",
+      "fires": 271,
+      "magnitude": 271
+    },
+    "first": {
+      "mechanic": "regions.reached_lines",
+      "fires": 271,
+      "magnitude": 271
+    },
+    "corrected": {
+      "mechanic": "regions.reached_lines",
+      "fires": 271,
+      "magnitude": 271
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "regions.self_emancipation",
+    "S126": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3081,
+      "magnitude": 3081
+    },
+    "first": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3081,
+      "magnitude": 3081
+    },
+    "corrected": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3081,
+      "magnitude": 3081
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "S126": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 50,
+      "magnitude": 50
+    },
+    "first": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 50,
+      "magnitude": 50
+    },
+    "corrected": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 50,
+      "magnitude": 50
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "reports.casualty_return",
+    "S126": {
+      "mechanic": "reports.casualty_return",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "first": {
+      "mechanic": "reports.casualty_return",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "corrected": {
+      "mechanic": "reports.casualty_return",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "S126": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "first": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "reports.filtered",
+    "S126": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "reports.governor_wire",
+    "S126": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "first": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "corrected": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "reports.observer_letter",
+    "S126": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "reports.pocket",
+    "S126": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "first": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "corrected": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "reports.trimmed",
+    "S126": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "seats.attention_refilled",
+    "S126": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "first": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "corrected": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "seats.attention_refused",
+    "S126": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "seats.attention_spent",
+    "S126": {
+      "mechanic": "seats.attention_spent",
+      "fires": 176,
+      "magnitude": 176
+    },
+    "first": {
+      "mechanic": "seats.attention_spent",
+      "fires": 176,
+      "magnitude": 176
+    },
+    "corrected": {
+      "mechanic": "seats.attention_spent",
+      "fires": 176,
+      "magnitude": 176
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "S126": {
+      "mechanic": "seats.battle_orders",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "first": {
+      "mechanic": "seats.battle_orders",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "corrected": {
+      "mechanic": "seats.battle_orders",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "seats.choices",
+    "S126": {
+      "mechanic": "seats.choices",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "first": {
+      "mechanic": "seats.choices",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "corrected": {
+      "mechanic": "seats.choices",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "changedFromS126": true,
+    "changedFromFirst": true,
+    "cause": "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit.",
+    "dailyFromS126": [
+      {
+        "day": 130,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 134,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 135,
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "dailyFromFirst": [
+      {
+        "day": 130,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 134,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 135,
+        "before": 1,
+        "after": 2
+      }
+    ]
+  },
+  {
+    "mechanic": "seats.defaulted",
+    "S126": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "seats.initiative",
+    "S126": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "first": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "corrected": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.decided",
+    "S126": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "first": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "corrected": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.delegated",
+    "S126": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.fired",
+    "S126": {
+      "mechanic": "situations.fired",
+      "fires": 90,
+      "magnitude": 90
+    },
+    "first": {
+      "mechanic": "situations.fired",
+      "fires": 90,
+      "magnitude": 90
+    },
+    "corrected": {
+      "mechanic": "situations.fired",
+      "fires": 90,
+      "magnitude": 90
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.lapsed",
+    "S126": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.notice_reports",
+    "S126": {
+      "mechanic": "situations.notice_reports",
+      "fires": 72,
+      "magnitude": 72
+    },
+    "first": {
+      "mechanic": "situations.notice_reports",
+      "fires": 72,
+      "magnitude": 72
+    },
+    "corrected": {
+      "mechanic": "situations.notice_reports",
+      "fires": 72,
+      "magnitude": 72
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.noticed",
+    "S126": {
+      "mechanic": "situations.noticed",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "first": {
+      "mechanic": "situations.noticed",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "corrected": {
+      "mechanic": "situations.noticed",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.options_changed",
+    "S126": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "first": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "corrected": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.orders",
+    "S126": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "first": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "corrected": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.policy",
+    "S126": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "first": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "corrected": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.policy_unpaid",
+    "S126": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.proposals",
+    "S126": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "first": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "corrected": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.resurfaced",
+    "S126": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "first": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.staff_lines",
+    "S126": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "first": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "corrected": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.surfaced",
+    "S126": {
+      "mechanic": "situations.surfaced",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "first": {
+      "mechanic": "situations.surfaced",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "corrected": {
+      "mechanic": "situations.surfaced",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "situations.waiting",
+    "S126": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "verbs.answered",
+    "S126": {
+      "mechanic": "verbs.answered",
+      "fires": 145,
+      "magnitude": 145
+    },
+    "first": {
+      "mechanic": "verbs.answered",
+      "fires": 145,
+      "magnitude": 145
+    },
+    "corrected": {
+      "mechanic": "verbs.answered",
+      "fires": 145,
+      "magnitude": 145
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "verbs.audience",
+    "S126": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "verbs.consulted",
+    "S126": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "first": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "corrected": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "verbs.declined",
+    "S126": {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "first": {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "corrected": {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  },
+  {
+    "mechanic": "verbs.in_washington",
+    "S126": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "first": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedFromS126": false,
+    "changedFromFirst": false,
+    "cause": "Unchanged.",
+    "dailyFromS126": [],
+    "dailyFromFirst": []
+  }
+]

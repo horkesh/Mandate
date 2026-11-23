@@ -68,15 +68,17 @@ export function choosePlan(menu: PlanMenu): OptionView {
 }
 
 /** A goal to take `objective` with every block the post commands, on the pack's goal terms and his doctrine's neutral ground. */
-export function takeGoal(menu: PrincipalMenu, objective: GoalTerms['objective']): GoalTerms {
+type RegionalTerms = Extract<GoalTerms, { posture: string }>;
+
+export function takeGoal(menu: PrincipalMenu, objective: RegionalTerms['objective']): RegionalTerms {
   return { ...menu.goalDefaults, objective, posture: 'take', committed: [], neutral: menu.goalDefaults.neutral || menu.doctrine.crossNeutral };
 }
 
-type FallbackTerms = Pick<GoalTerms, 'objective' | 'posture'> & {
+type FallbackTerms = Pick<RegionalTerms, 'objective' | 'posture'> & {
   readonly discretion?: Discretion<FallbackTerms>;
 };
 
-function withDiscretion(goal: GoalTerms, grant: Discretion<FallbackTerms>): GoalTerms & { readonly discretion: Discretion<GoalTerms> } {
+function withDiscretion(goal: RegionalTerms, grant: Discretion<FallbackTerms>): GoalTerms & { readonly discretion: Discretion<GoalTerms> } {
   const { discretion: _old, ...terms } = goal;
   const { discretion, ...fallback } = grant.fallback;
   const next = { ...terms, ...fallback };
@@ -187,11 +189,14 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
     const route = target === undefined ? undefined : (around ? fastest : quickest)(target.routes);
     if (route === undefined) continue;
     const address = { cmd: 'answer_proposal' as const, to: reply.post, proposal: reply.paper, route: route.route, bypass: around, doctrine: reply.id };
-    const command: SeatCommand = reply.action === 'discretion'
-      ? { ...address, action: reply.action, goal: withDiscretion({
-        ...reply.ordered, objective: reply.objective === undefined ? reply.ordered.objective : reply.objective, posture: reply.posture ?? reply.ordered.posture,
-      }, reply.discretion) }
-      : { ...address, action: reply.action };
+    let command: SeatCommand;
+    if (reply.action === 'discretion') {
+      const ordered = reply.ordered;
+      if (ordered.purpose !== undefined) continue;
+      command = { ...address, action: reply.action, goal: withDiscretion({
+        ...ordered, objective: reply.objective === undefined ? ordered.objective : reply.objective, posture: reply.posture ?? ordered.posture,
+      }, reply.discretion) };
+    } else command = { ...address, action: reply.action };
     if (send(command)) answered.add(reply.post);
   }
 
@@ -210,8 +215,9 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
     const target = menu.commandable.find((c) => c.post === o.post);
     const route = target === undefined ? undefined : quickest(target.routes);
     if (target === undefined || route === undefined) continue;
-    const primary = { ...takeGoal(menu, o.objective), posture: o.posture ?? 'take' };
-    const goal = o.discretion === undefined ? primary : withDiscretion(primary, o.discretion);
+    const primary: GoalTerms = o.purpose === undefined ? { ...takeGoal(menu, o.objective), posture: o.posture ?? 'take' }
+      : { ...menu.goalDefaults, purpose: o.purpose, committed: [], neutral: false };
+    const goal = o.discretion === undefined || primary.purpose !== undefined ? primary : withDiscretion(primary, o.discretion);
     const sent = send({ cmd: 'order', to: target.post, goal, route: route.route, bypass: false,
       ...(o.id === undefined ? {} : { doctrine: o.id }), ...(o.letter === undefined ? {} : { letter: o.letter }) });
     if (sent || o.letter === undefined) answered.add(target.post);

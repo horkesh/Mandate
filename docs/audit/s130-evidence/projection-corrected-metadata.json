@@ -1,0 +1,14 @@
+[
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "symbol": "principalMenu",
+    "before": "bc750dd81e48f56d991b0f2348cd3fdcfd598bd9a32b047ebd5f2a0565e3d77a",
+    "after": "09a3972f1be0157c4c17ef4006e70b683119e9d127f42f167ba577f662becabe"
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "symbol": "pendingRequests",
+    "before": "cf31703608cc13ba300e1fcc0d9a8b5291d3eaca6b34715007291e680bc8a45b",
+    "after": "f01ae6cf51827a4e3252cb358ac8fb4b82bf50111305153e3e97ba5f0892e02a"
+  }
+]

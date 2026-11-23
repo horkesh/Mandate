@@ -22,7 +22,7 @@ export interface MandateGrant {
   readonly mandateHolder: PersonId;
   readonly mandatePost: PostId;
   readonly mandateParent: MandateParent | null;
-  readonly mandateActions: readonly ('hold' | 'relieve' | 'take' | 'approve' | 'assign')[];
+  readonly mandateActions: readonly ('hold' | 'relieve' | 'take' | 'approve' | 'assign' | 'attack_or_demonstrate')[];
   readonly mandateRecipients: readonly PostId[];
   readonly mandateRegions: readonly RegionId[];
   readonly mandateModes: readonly ('land' | 'rail' | 'river' | 'sea')[];
@@ -91,7 +91,7 @@ export function mandateProblems(world: World, start: ScenarioStart): string[] {
     if (!people.has(g.mandateIssuer) || !people.has(g.mandateHolder) || !posts.has(g.mandatePost) ||
       (g.mandateIssuerPost !== null && !posts.has(g.mandateIssuerPost))) problems.push(`${at}: unknown issuer, holder or post`);
     for (const [name, allowed] of [
-      ['mandateActions', ['hold','take','relieve','approve','assign']], ['mandateModes',['land','rail','river','sea']],
+      ['mandateActions', ['hold','take','relieve','approve','assign','attack_or_demonstrate']], ['mandateModes',['land','rail','river','sea']],
       ['mandateRecipients',[...posts.keys()]], ['mandateRegions',[...regions]],
     ] as const) {
       const values = g[name];

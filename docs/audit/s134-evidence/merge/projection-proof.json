@@ -1,0 +1,62 @@
+{
+  "reference": "HEAD",
+  "identitiesExact": true,
+  "roots": 8,
+  "changed": [
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "symbol": "principalMenu",
+      "before": "7373a3de5291d14ccd32e0930d5d333083e23e38f49427128cdc73cb00a2425a",
+      "after": "b6682e5d01deb85d436348eceb683fe155c65ff10999e5e366c9b59ec7bf0697",
+      "detail": "principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "symbol": "pendingRequests",
+      "before": "2573a43b619fda541a6117299601c82296f5a7eac9057baeea9f728b677f5c32",
+      "after": "8b2d6081b6e62b05081b8f6bb7cd78b7886a9719e4aa6c523f89a96b3603c6dc",
+      "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/authority.ts:activeMandate (postStates); packages/kernel/src/command/authority.ts:inSubtree (postStates); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/planner/input.ts:plannerInputFor (postStates); packages/kernel/src/planner/input.ts:sidePosts (postStates); packages/kernel/src/seats/local-actions.ts:localOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptionsAt (postStates); packages/kernel/src/seats/onward-assignments.ts:assignmentOptions (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/sender.ts:senderFor (departmentFactions, postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/view/view.ts",
+      "symbol": "viewFor",
+      "before": "e64526b6d6c2e56e3ed1404526eebd2bb7f4734b8191d5af3cee2dc80ef9ab50",
+      "after": "81b060d810c2a809a31bc9ce5c2204d4a87ddd280deb3df2ba7b04a870abcc38",
+      "detail": "viewFor reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    }
+  ],
+  "readers": [
+    {
+      "path": "packages/kernel/src/seats/believed.ts",
+      "detail": "believedHolder reaches packages/kernel/src/seats/believed.ts:believedHolder (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/seats/believed.ts",
+      "detail": "vacancyUnreported reaches packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "detail": "morningGround reaches packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions)"
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "detail": "principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "detail": "battleMenus reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions)"
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/authority.ts:activeMandate (postStates); packages/kernel/src/command/authority.ts:inSubtree (postStates); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/planner/input.ts:plannerInputFor (postStates); packages/kernel/src/planner/input.ts:sidePosts (postStates); packages/kernel/src/seats/local-actions.ts:localOptions (postStates); packages/kernel/src/seats/local-actions.ts:localOptionsAt (postStates); packages/kernel/src/seats/onward-assignments.ts:assignmentOptions (postStates); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/seats/sender.ts:senderFor (departmentFactions, postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "detail": "postOfSeatPerson reaches packages/kernel/src/command/command.ts:heldPost (postStates)"
+    },
+    {
+      "path": "packages/kernel/src/view/view.ts",
+      "detail": "viewFor reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+    }
+  ]
+}

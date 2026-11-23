@@ -1,0 +1,195 @@
+{
+  "day148": {
+    "senderKnown": false,
+    "senderHolder": null,
+    "permissions": [
+      {
+        "letter": {
+          "namespace": "us_army_orders",
+          "key": "scott_patterson_jul13",
+          "revision": 1
+        },
+        "goal": {
+          "goalPurpose": {
+            "detKind": "attack_or_demonstrate",
+            "detDuty": "detain",
+            "detTargetPost": "cs_cmd_harpers_ferry",
+            "detTargetKind": "opposing_command",
+            "detDetentionArea": [
+              "lower_valley"
+            ],
+            "detActionArea": [
+              "harpers_ferry",
+              "lower_valley"
+            ],
+            "detMeans": [
+              "attack",
+              "demonstrate"
+            ]
+          },
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "grants": [
+          {
+            "active": true,
+            "within": true,
+            "mayCommit": true
+          }
+        ]
+      },
+      {
+        "letter": {
+          "namespace": "us_army_orders",
+          "key": "scott_patterson_jul17",
+          "revision": 1
+        },
+        "goal": {
+          "goalPurpose": {
+            "detKind": "attack_or_demonstrate",
+            "detDuty": "detain",
+            "detTargetPost": "cs_cmd_harpers_ferry",
+            "detTargetKind": "opposing_command",
+            "detDetentionArea": [
+              "lower_valley"
+            ],
+            "detActionArea": [
+              "harpers_ferry",
+              "lower_valley"
+            ],
+            "detMeans": [
+              "attack",
+              "demonstrate"
+            ]
+          },
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "grants": [
+          {
+            "active": true,
+            "within": true,
+            "mayCommit": true
+          }
+        ]
+      },
+      {
+        "letter": {
+          "namespace": "us_army_orders",
+          "key": "scott_patterson_jul18",
+          "revision": 1
+        },
+        "goal": {
+          "goalPurpose": {
+            "detKind": "attack_or_demonstrate",
+            "detDuty": "detain",
+            "detTargetPost": "cs_cmd_harpers_ferry",
+            "detTargetKind": "opposing_command",
+            "detDetentionArea": [
+              "lower_valley"
+            ],
+            "detActionArea": [
+              "harpers_ferry",
+              "lower_valley"
+            ],
+            "detMeans": [
+              "attack",
+              "demonstrate"
+            ]
+          },
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "grants": [
+          {
+            "active": true,
+            "within": true,
+            "mayCommit": true
+          }
+        ]
+      }
+    ],
+    "targetPost": {
+      "postName": "post.us_dept_pennsylvania.name",
+      "postKind": "temporary_appointment",
+      "postDepartment": "us_war",
+      "postParent": "us_general_in_chief",
+      "postHolder": "patterson_robert",
+      "postActing": false,
+      "postIntelChief": null,
+      "postSeat": "philadelphia",
+      "postOperation": "pennsylvania_command",
+      "postInstallation": null,
+      "postLinks": [],
+      "postScheduled": [],
+      "postStandingOrders": []
+    }
+  },
+  "receivedPattersonReports": [
+    {
+      "id": "m.131.patterson_robert.scott_winfield.return.us_dept_pennsylvania",
+      "knownReceivedDay": 139,
+      "knownRoute": "mail",
+      "knownVia": [],
+      "knownBody": {
+        "reportType": "strength-return",
+        "reportSubtype": null,
+        "reportAuthor": "patterson_robert",
+        "reportAuthorPost": "us_dept_pennsylvania",
+        "reportSubjectKind": "post",
+        "reportSubjectId": "us_dept_pennsylvania",
+        "reportClaims": [
+          {
+            "claimKind": "present-for-duty",
+            "claimRegion": null,
+            "claimValue": 1732,
+            "claimToken": null,
+            "claimConfidence": 900
+          },
+          {
+            "claimKind": "present-and-absent",
+            "claimRegion": null,
+            "claimValue": 2424,
+            "claimToken": null,
+            "claimConfidence": 900
+          }
+        ],
+        "reportDay": 131,
+        "reportHour": null,
+        "reportAdvice": null,
+        "reportAnswers": null
+      }
+    }
+  ],
+  "ScottViewPosts": [],
+  "typedOrdersIssued": 0,
+  "cause": "All three declarations remain undispatched. Scott has an active in-scope mandate and mayCommit passes, but senderFor does not know Patterson as an addressable subordinate. His received strength return names Patterson and the later post, yet commandProjection has no received placement/parent witness; that post is omitted from the scoped command address book. No true State parent/holder is substituted and no paper/receipt is invented.",
+  "scope": "This read-only diagnosis uses the retained final State. No capture was repeated."
+}

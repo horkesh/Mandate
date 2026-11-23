@@ -1,0 +1,23 @@
+{
+  "pack": "union-1861",
+  "kernel": "phase0",
+  "atWar": false,
+  "hashScheme": "sha256/canonical-json/v1",
+  "worldHash": "b28330db4467c2cbbc6dd24e3e34de1784d0446127f193ff8dbb6b693ce2b86d",
+  "initialHash": "eeaa85ce83025019838eb85ed7e4586e126d135a1a62dce813b380e77e93bf5e",
+  "finalHash": "b3054fd0f6beabf08792de5213a92320678c0beeb750cbc00fbd1d4ee447886e",
+  "finalDay": 148,
+  "logEntries": 275,
+  "rejections": 0,
+  "decisionPoints": 68,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "b3054fd0f6beabf08792de5213a92320678c0beeb750cbc00fbd1d4ee447886e",
+    "matches": true,
+    "savedLogReplays": true
+  }
+}

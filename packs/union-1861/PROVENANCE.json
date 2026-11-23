@@ -2740,6 +2740,46 @@
       "copyUsed": "https://archive.org/details/confidentialcorr01foxg; retained docs/research/S131/read/FOX-I-2-4.txt; SHA256 4cf6ed2cec7b6974aa7badfe504d950c09705048fd28aa5adc8d620c09342e5c",
       "licencePage": null,
       "licenceReadOn": null
+    },
+    {
+      "key": "S130-OR-I-II-166",
+      "title": "Official Records, series I, volume II (1880), chapter IX, printed p.166",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "Retained primary OCR read in full, docs/research/S130/OR-I-II-p166.txt; inherited S115 receipt https://archive.org/details/cu31924077730186/page/n185/mode/1up. No fresh scan or receipt-clock verification. Patterson replies remain source evidence, never prescribed generated answers.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S130-OR-I-II-167",
+      "title": "Official Records, series I, volume II (1880), chapter IX, printed p.167",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "Retained primary OCR read in full, docs/research/S130/OR-I-II-p167.txt; inherited S115 receipt https://archive.org/details/cu31924077730186/page/n186/mode/1up. No fresh scan or receipt-clock verification. Patterson replies remain source evidence, never prescribed generated answers.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S130-OR-I-II-168",
+      "title": "Official Records, series I, volume II (1880), chapter IX, printed p.168",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "Retained primary OCR read in full, docs/research/S130/OR-I-II-p168.txt; inherited S115 receipt https://archive.org/details/cu31924077730186/page/n187/mode/1up. No fresh scan or receipt-clock verification. Patterson replies remain source evidence, never prescribed generated answers.",
+      "licencePage": null,
+      "licenceReadOn": null
+    },
+    {
+      "key": "S130-OR-I-II-169",
+      "title": "Official Records, series I, volume II (1880), chapter IX, printed p.169",
+      "kind": "primary",
+      "licence": "public-domain",
+      "basis": "expired-copyright",
+      "copyUsed": "Retained primary OCR read in full, docs/research/S130/OR-I-II-p169.txt; inherited S115 receipt https://archive.org/details/cu31924077730186/page/n188/mode/1up. No fresh scan or receipt-clock verification. Patterson replies remain source evidence, never prescribed generated answers.",
+      "licencePage": null,
+      "licenceReadOn": null
     }
   ]
 }

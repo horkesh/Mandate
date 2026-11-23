@@ -26,14 +26,14 @@ export interface Scored {
 /** Defenders he believes stand at the objective, plus a share of those one hop away. */
 export function opposition(ctx: Ctx): number {
   const objective = ctx.input.goal.goalObjective;
-  return objective === null ? 0 : (ctx.threat.get(objective) ?? 0);
+  return objective == null ? 0 : (ctx.threat.get(objective) ?? 0);
 }
 
 /** His demand for this goal, permille: his open-field demand, times the assault margin against a garrisoned enemy-held objective. */
 export function demandFor(ctx: Ctx): number {
   const { profile, goal, ground, faction, beliefs, assaultMargin } = ctx.input;
   const objective = goal.goalObjective;
-  const assault = objective !== null && goal.goalPosture === 'take' && enemyHeld(ground.index, objective, faction) && (beliefs.get(objective) ?? 0) > 0;
+  const assault = objective !== undefined && objective !== null && goal.goalPosture === 'take' && enemyHeld(ground.index, objective, faction) && (beliefs.get(objective) ?? 0) > 0;
   return assault ? Math.trunc((profile.demand * assaultMargin) / 1000) : profile.demand;
 }
 
@@ -141,7 +141,7 @@ export function makeCandidate(ctx: Ctx, method: Method, variant: string, axes: r
   const reqs: PlanRequest[] = [...requests];
   const conds: PlanGate[] = [...conditions];
   if (method !== 'holding' && s.waits) {
-    reqs.push({ reqKind: 'reinforcement', reqPost: null, reqHolder: null, reqMen: s.shortfall, reqFrom: null, reqObjective: ctx.input.goal.goalObjective, reqArriveFrom: 0, reqArriveTo: 0, reqCarrier: null, reqEdges: [] });
+    reqs.push({ reqKind: 'reinforcement', reqPost: null, reqHolder: null, reqMen: s.shortfall, reqFrom: null, reqObjective: ctx.input.goal.goalObjective ?? null, reqArriveFrom: 0, reqArriveTo: 0, reqCarrier: null, reqEdges: [] });
     conds.push({ gateKind: 'move_when_reinforced', gateHard: false, gateDetail: `${s.shortfall} men short of his demand` });
   }
   return {

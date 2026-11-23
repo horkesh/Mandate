@@ -1,0 +1,158 @@
+[
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "before": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12348
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12349
+    }
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "before": {
+      "mechanic": "messages.courier_delay",
+      "fires": 158,
+      "magnitude": 158
+    },
+    "after": {
+      "mechanic": "messages.courier_delay",
+      "fires": 161,
+      "magnitude": 161
+    }
+  },
+  {
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 14873,
+      "magnitude": 14873
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 14880,
+      "magnitude": 14880
+    }
+  },
+  {
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 15651,
+      "magnitude": 15651
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 15658,
+      "magnitude": 15658
+    }
+  },
+  {
+    "mechanic": "operations.stage",
+    "before": {
+      "mechanic": "operations.stage",
+      "fires": 39,
+      "magnitude": 39
+    },
+    "after": {
+      "mechanic": "operations.stage",
+      "fires": 38,
+      "magnitude": 38
+    }
+  },
+  {
+    "mechanic": "orders.obeyed",
+    "before": {
+      "mechanic": "orders.obeyed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "orders.obeyed",
+      "fires": 13,
+      "magnitude": 13
+    }
+  },
+  {
+    "mechanic": "planner.candidates",
+    "before": {
+      "mechanic": "planner.candidates",
+      "fires": 10,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "planner.candidates",
+      "fires": 12,
+      "magnitude": 22
+    }
+  },
+  {
+    "mechanic": "planner.searches",
+    "before": {
+      "mechanic": "planner.searches",
+      "fires": 10,
+      "magnitude": 62
+    },
+    "after": {
+      "mechanic": "planner.searches",
+      "fires": 12,
+      "magnitude": 62
+    }
+  },
+  {
+    "mechanic": "plans.drafted",
+    "before": {
+      "mechanic": "plans.drafted",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "plans.drafted",
+      "fires": 12,
+      "magnitude": 12
+    }
+  },
+  {
+    "mechanic": "plans.goal_reached",
+    "before": {
+      "mechanic": "plans.goal_reached",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "plans.goal_reached",
+      "fires": 6,
+      "magnitude": 6
+    }
+  },
+  {
+    "mechanic": "plans.goal_set",
+    "before": {
+      "mechanic": "plans.goal_set",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "plans.goal_set",
+      "fires": 13,
+      "magnitude": 13
+    }
+  },
+  {
+    "mechanic": "seats.choices",
+    "before": {
+      "mechanic": "seats.choices",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "seats.choices",
+      "fires": 25,
+      "magnitude": 25
+    }
+  }
+]

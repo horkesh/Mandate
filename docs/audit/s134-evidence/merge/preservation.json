@@ -1,0 +1,22 @@
+{
+  "protected": [
+    {
+      "path": ".githooks/pre-commit",
+      "sha256": "6de1446ba999b82153413ebf1a07b2fefe3fcb6b1bd50881bfdce55ef6160d70"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "82dbb02254bcc312709e8db78ae7ed7dd9fc26e0bdea4760c5549c956cc429d9"
+    },
+    {
+      "path": "CODEX.md",
+      "sha256": "a02d41ede487b0236b26c983dcc18ac8a6a4afc616d100117c1f8eae3a1ca03a"
+    },
+    {
+      "path": "packs/union-1861/checkpoints.json",
+      "sha256": "121e97ec90fb9ec31756c0e7250d77ef795869c450a4ede68f7649071d002afd"
+    }
+  ],
+  "priorCaptureAndPacketFiles": 122,
+  "allExact": true
+}
