@@ -60,7 +60,7 @@ export function readQualifications(
         input.reportedDay < 0 || input.reportedDay > input.receivedDay || input.receivedDay > context.receivedDay) continue;
       const request = qualification(clause, input.evidence, input.reference, input.treatment, 'request' as const, input.reference, 'reported');
       reservations.push({
-        ...request, grounds: { ...request.grounds, groundReportedDay: input.reportedDay, groundReceivedDay: input.receivedDay },
+        ...request, grounds: { ...request.grounds, ...(input.fact === undefined ? {} : { groundFact: input.fact }), groundReportedDay: input.reportedDay, groundReceivedDay: input.receivedDay },
       });
     } else if (input.evidence === 'structural_condition' && input.stage && input.prerequisite && input.mechanism) {
       if (clause.clauseObligation !== 'not_required') gaps.push({
@@ -70,7 +70,8 @@ export function readQualifications(
     } else {
       const effect = input.treatment === 'protest' ? 'statement' : 'request';
       const knowledge = input.evidence === 'structural_condition' ? input.stateOfKnowledge ?? 'reported' : 'reported';
-      reservations.push(qualification(clause, input.evidence, input.reference, input.treatment, effect, input.reference, knowledge));
+      const result = qualification<'statement' | 'request'>(clause, input.evidence, input.reference, input.treatment, effect, input.reference, knowledge);
+      reservations.push(input.fact === undefined ? result : { ...result, grounds: { ...result.grounds, groundFact: input.fact } });
     }
   }
   return { reservations, gaps };

@@ -70,6 +70,7 @@ export function profileOf(world: ReadingWorld, state: State, person: PersonId, t
 /** The circumstances he reads an order in: the pack's oversight and credibility, full means unless the caller says, and his grievances. */
 /** What the caller knows of an order's circumstances: the means at hand, the support promised, and how closely he is watched. */
 export interface OrderMeans {
+  readonly receivedDay?: number;
   readonly available?: number;
   readonly supportPromised?: readonly string[];
   /** Oversight from where he stands (`tick/context.ts`'s `oversightOf`, lane 1.4); the pack's base where the caller cannot place him. */
@@ -95,7 +96,7 @@ export function contextFor(world: ReadingWorld, state: State, person: PersonId, 
     leaderCredibility: principalCredibility(world, state, person),
     grievances: (state.personGrievances[person] ?? []).map((g) => ({ kind: g.grievanceKind, weight: g.grievanceWeight })),
     ...(means.supportPromised === undefined ? {} : { supportPromised: means.supportPromised }),
-    ...(means.qualifications === undefined ? {} : { qualifications: means.qualifications, receivedDay: state.stateDay }),
+    ...(means.qualifications === undefined ? {} : { qualifications: means.qualifications, receivedDay: means.receivedDay ?? state.stateDay }),
     ...extraContext(world, state, person),
   };
 }

@@ -25,7 +25,7 @@ export interface CoverageAct {
   readonly advice?: string;
   readonly undertaking?: { readonly undertakingKind: string; readonly undertakingRequest: string | null; readonly clauses: readonly string[] } | null;
   readonly declaredUndertaking?: CoverageAct['undertaking'];
-  readonly reservations?: readonly { readonly clause: string; readonly subject: string; readonly effect: string }[];
+  readonly reservations?: readonly { readonly clause: string; readonly subject: string; readonly effect: string; readonly grounds?: { readonly groundKind: string; readonly groundFact?: string } }[];
   readonly declaredReservations?: CoverageAct['reservations'];
   readonly reservationGaps?: readonly { readonly clause: string; readonly subject: string; readonly effect: string; readonly mechanism: string }[];
   readonly declaredReservationGaps?: CoverageAct['reservationGaps'];
@@ -82,7 +82,8 @@ export function coverageScore(registers: readonly PushbackRegister[], acts: read
       }
       const qualificationMatches = (a: CoverageAct) => m.qualification === undefined || (
         a.undertaking != null && a.undertaking.undertakingRequest === a.order &&
-        (a.reservations ?? []).some(r => a.undertaking!.clauses.includes(r.clause) && m.qualification!.some(q => q.subject === r.subject && q.effects.includes(r.effect as 'statement' | 'request' | 'gate' | 'offer')))
+        (a.reservations ?? []).some(r => a.undertaking!.clauses.includes(r.clause) && m.qualification!.some(q => q.subject === r.subject && q.effects.includes(r.effect as 'statement' | 'request' | 'gate' | 'offer') &&
+          (q.groundKind === undefined || r.grounds?.groundKind === q.groundKind) && (q.groundFact === undefined || r.grounds?.groundFact === q.groundFact)))
       );
       const eligible = candidates.filter(a => (m.actual === undefined || a.actual === m.actual) && (m.advice === undefined || a.advice === m.advice) && qualificationMatches(a));
       const identity = (a: CoverageAct) => a.creditKey ?? `${a.order}|${a.actor}|${a.role}`;

@@ -17,6 +17,8 @@ export const PushbackMatchSchema = z.strictObject({
   advice: text.optional(),
   /** 0118: subject and compatible effect of the qualification, apart from the rung. */
   qualification: z.array(z.strictObject({
+    groundKind: z.enum(['offended_value','course_judgment','structural_condition','resource_report','information_request']).optional(),
+    groundFact: z.enum(['purpose_detail','muster_receiver','rejection_return_support','camp_finance_limited','resource_unavailable','external_order_authority_absent','organisation_incomplete']).optional(),
     subject: z.enum(['purpose', 'service_term', 'appointments', 'organisation', 'authority', 'muster', 'destination', 'arms_equipment', 'transport', 'support', 'timing', 'course']),
     effects: z.array(z.enum(['statement', 'request', 'gate', 'offer'])).min(1),
   })).min(1).optional(),

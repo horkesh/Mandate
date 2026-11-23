@@ -131,6 +131,11 @@ export function indexSeatsWorld(map: WorldIndex, start: ScenarioStart, options: 
 
   const people = new Map<PersonId, SeatPerson>();
   for (const p of map.world.people) people.set(p.id, { id: p.id, faction: p.faction });
+  for (const record of pack.recruitment.stateConditions ?? []) {
+    if (!people.has(record.recordActor)) problems.push(`state condition ${record.recordId}: unknown actor ${record.recordActor}`);
+    if (!start.posts.some(p => p.id === record.recordPost)) problems.push(`state condition ${record.recordId}: unknown own post ${record.recordPost}`);
+    try { parseIsoDate(record.recordDate); } catch { problems.push(`state condition ${record.recordId}: invalid date`); }
+  }
 
   const factions = new Map<FactionId, SeatFaction>();
   for (const f of start.factions) {

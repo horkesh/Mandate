@@ -1,6 +1,6 @@
 # 0016: Goals, plans and arrow edits: places are targeted only through a person
 
-Status: accepted (2026-11-14). The owner asked to plan operations as president ("giving grand goals maybe, like, take New Orleans. Then your commander prepares a plan"), chose "edit arrows, at a cost" over "approve or send back", and chose to transfer divisions between commanders. Supersedes 0001. Amended by 0026 (kernel-drafted plans, edit grammar, corps as posts, promotion lists, visits) and 0033 (transfers name a force). Design: `docs/design/FOUNDATION.md` section 5. Amended by 0040 (first-month walkthrough revisions). Extended by 0114 (commander proposals and conditional discretion).
+Status: accepted (2026-11-14). The owner asked to plan operations as president ("giving grand goals maybe, like, take New Orleans. Then your commander prepares a plan"), chose "edit arrows, at a cost" over "approve or send back", and chose to transfer divisions between commanders. Supersedes 0001. Amended by 0026 (kernel-drafted plans, edit grammar, corps as posts, promotion lists, visits) and 0033 (transfers name a force). Design: `docs/design/FOUNDATION.md` section 5. Amended by 0040 (first-month walkthrough revisions). Extended by 0114 (commander proposals and conditional discretion) and 0120 (four operational goal forms).
 
 ## Context
 

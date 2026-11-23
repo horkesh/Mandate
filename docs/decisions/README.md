@@ -19,7 +19,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0013](0013-the-staff-map.md) | The map is the staff's map: hand-drawn, procedural, drawn from claims | accepted; extended by 0019, confirmed by 0035 |
 | [0014](0014-licence.md) | Source-available under the PolyForm Noncommercial licence | accepted |
 | [0015](0015-seats.md) | Every person is a seat; rules first; the command log is the truth | accepted; refined by 0032 |
-| [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026, 0033, 0040; extended by 0114 |
+| [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026, 0033, 0040; extended by 0114, 0120 |
 | [0017](0017-real-time-with-pause.md) | Real time with pause on a daily tick | superseded by 0027; amended by 0026 |
 | [0018](0018-civil-war-scope.md) | The American Civil War, 1861–65; the engine's promise is wars with fronts | accepted; amended by 0028 |
 | [0019](0019-regions-over-a-typed-graph.md) | The map is regions over a typed graph; fronts and pockets are derived | accepted; extended by 0031 |
@@ -55,7 +55,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0049](0049-ultrawide-first.md) | The game is designed for ultrawide displays first (3440×1440 reference) | accepted |
 | [0050](0050-world-format-v2.md) | World format v2: the pack format, its validator and generator, and what becomes State at scenario start | accepted; amended by 0055, 0058, 0065 |
 | [0051](0051-codex-output-rules.md) | Rules for Codex output: no AI likenesses of real people, game-resolution assets only, and full provenance | accepted; amended by 0077 |
-| [0052](0052-seats-knowledge-and-the-command-log.md) | Seats, knowledge and the command log: copy-on-write State, the player-visible boundary, and who may order | accepted; amended by 0059 |
+| [0052](0052-seats-knowledge-and-the-command-log.md) | Seats, knowledge and the command log: copy-on-write State, the player-visible boundary, and who may order | accepted; amended by 0059, 0121 |
 | [0053](0053-presentation-and-asset-briefs.md) | The presentation design and the asset briefs are accepted | accepted |
 | [0054](0054-control-fronts-pockets-and-supply.md) | Control, fronts, pockets and supply | accepted; amended by 0055 |
 | [0055](0055-neutral-passage-starting-sides-and-supply-sources.md) | Passage through neutral states, starting sides, and supply sources | accepted; amended by 0058, 0065 |
@@ -121,5 +121,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0115](0115-the-tick-budget-is-measured-on-its-own.md) | The tick budget is measured on its own | accepted; amends 0106; clarified by 0117 |
 | [0116](0116-a-commander-may-propose-while-he-complies.md) | A commander may propose while he complies | accepted; amends 0114 |
 | [0117](0117-the-budget-binds-on-linux.md) | The tick budget binds on Linux; Windows reports it | accepted; clarifies 0115 |
-| [0118](0118-an-undertaking-carries-typed-reservations.md) | An undertaking carries typed reservations | accepted; clarified by 0119 |
+| [0118](0118-an-undertaking-carries-typed-reservations.md) | An undertaking carries typed reservations | accepted; clarified by 0119, 0120 |
 | [0119](0119-a-call-for-troops-asks-no-temperament.md) | A call for troops asks no temperament | accepted; clarifies 0118 |
+| [0120](0120-what-the-pushback-plan-builds-first.md) | What the pushback plan builds first, and what waits | accepted |
+| [0121](0121-letters-receipts-and-authority-a-commander-receives.md) | Authored letters, their receipt, and the authority a commander receives | accepted |

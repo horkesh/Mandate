@@ -1222,6 +1222,14 @@
                   "posture": "hold"
                 }
               }
+            },
+            {
+              "id": "holmes_fredericksburg_assignment",
+              "post": "cs_cmd_fredericksburg",
+              "objective": "fredericksburg",
+              "posture": "hold",
+              "fromDate": "1861-06-05",
+              "source": "OR I-II p.907, Special Orders No.64 IV, Richmond, 5 June 1861: Holmes to proceed to Fredericksburg and assume command of troops in that vicinity. [I] Existing hold grammar represents his assigned local command; government principal issues through the existing chain. Not a claim that Davis authored Withers’s order, or that the June17 reply preceded the June15 proposal (pp.929,932). No scripted objection, transfer, threat or proposal; his planner and own received knowledge decide."
             }
           ],
           "inquireEveryDays": 7,
@@ -1263,6 +1271,14 @@
               "fromDate": "1861-05-21",
               "requiresDepartment": "st_virginia",
               "source": "OR I-2 p.865, Special Orders 95, 21 May. [I] Ordinary appointment delivery from Richmond; no forced arrival, force transfer or march."
+            },
+            {
+              "post": "cs_cmd_fredericksburg",
+              "person": "holmes_theophilus_h",
+              "fromPost": null,
+              "fromDate": "1861-06-05",
+              "requiresDepartment": "st_virginia",
+              "source": "OR I-II p.907, Special Orders64 IV, 5 June1861, directs Holmes to Fredericksburg and command in its vicinity. [I] Government principal issues this sourced appointment through ordinary service eligibility, latency and answer; no pre-positioning, force or automatic acceptance. Subsequent hold uses his actual appointed post, not C26 peer disagreement."
             }
           ],
           "concentrations": [
@@ -3371,7 +3387,13 @@
           ],
           "rationale": "[I] Minimal own-text mapping: a regiment to a destination alone supplies no universal union/duty/glory tag. State officer rights belong to the incorporated law and can be represented structurally without presuming every clause is a value reward.",
           "limits": "Do not import Brown April23 election/Augusta proposal or Moore camp finance complaint into the April22 issuer text.",
-          "valueClauseLinks": []
+          "valueClauseLinks": [],
+          "information": [
+            {
+              "detail": "muster_receiver",
+              "value": null
+            }
+          ]
         },
         {
           "id": "cs_apr22_absolute_arkansas",
@@ -3496,6 +3518,12 @@
               ],
               "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
             }
+          ],
+          "information": [
+            {
+              "detail": "muster_receiver",
+              "value": null
+            }
           ]
         },
         {
@@ -3576,7 +3604,13 @@
           ],
           "rationale": "[I] Minimal own-text mapping: a regiment to a destination alone supplies no universal union/duty/glory tag. State officer rights belong to the incorporated law and can be represented structurally without presuming every clause is a value reward.",
           "limits": "Do not import Brown April23 election/Augusta proposal or Moore camp finance complaint into the April22 issuer text.",
-          "valueClauseLinks": []
+          "valueClauseLinks": [],
+          "information": [
+            {
+              "detail": "muster_receiver",
+              "value": null
+            }
+          ]
         },
         {
           "id": "cs_apr22_absolute_kentucky",
@@ -3701,6 +3735,12 @@
               ],
               "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
             }
+          ],
+          "information": [
+            {
+              "detail": "muster_receiver",
+              "value": null
+            }
           ]
         },
         {
@@ -3781,7 +3821,13 @@
           ],
           "rationale": "[I] Minimal own-text mapping: a regiment to a destination alone supplies no universal union/duty/glory tag. State officer rights belong to the incorporated law and can be represented structurally without presuming every clause is a value reward.",
           "limits": "Do not import Brown April23 election/Augusta proposal or Moore camp finance complaint into the April22 issuer text.",
-          "valueClauseLinks": []
+          "valueClauseLinks": [],
+          "information": [
+            {
+              "detail": "muster_receiver",
+              "value": null
+            }
+          ]
         },
         {
           "id": "cs_apr22_absolute_mississippi",
@@ -3861,7 +3907,13 @@
           ],
           "rationale": "[I] Minimal own-text mapping: a regiment to a destination alone supplies no universal union/duty/glory tag. State officer rights belong to the incorporated law and can be represented structurally without presuming every clause is a value reward.",
           "limits": "Do not import Brown April23 election/Augusta proposal or Moore camp finance complaint into the April22 issuer text.",
-          "valueClauseLinks": []
+          "valueClauseLinks": [],
+          "information": [
+            {
+              "detail": "muster_receiver",
+              "value": null
+            }
+          ]
         },
         {
           "id": "cs_apr22_absolute_north_carolina",
@@ -3985,6 +4037,12 @@
                 ]
               ],
               "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+            }
+          ],
+          "information": [
+            {
+              "detail": "muster_receiver",
+              "value": null
             }
           ]
         },
@@ -4110,6 +4168,12 @@
                 ]
               ],
               "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+            }
+          ],
+          "information": [
+            {
+              "detail": "muster_receiver",
+              "value": null
             }
           ]
         },
@@ -6163,6 +6227,12 @@
               ],
               "linkRationale": "[I] Incorporated act requires State consent and retains officers. No union honour: these are Confederate provisional forces. Mere fort destination does not warrant glory/caution tags."
             }
+          ],
+          "information": [
+            {
+              "detail": "rejection_return_support",
+              "value": null
+            }
           ]
         },
         {
@@ -6264,6 +6334,12 @@
                 ]
               ],
               "linkRationale": "[I] Incorporated act requires State consent and retains officers. No union honour: these are Confederate provisional forces. Mere fort destination does not warrant glory/caution tags."
+            }
+          ],
+          "information": [
+            {
+              "detail": "rejection_return_support",
+              "value": null
             }
           ]
         },
@@ -6367,6 +6443,12 @@
               ],
               "linkRationale": "[I] Incorporated act requires State consent and retains officers. No union honour: these are Confederate provisional forces. Mere fort destination does not warrant glory/caution tags."
             }
+          ],
+          "information": [
+            {
+              "detail": "rejection_return_support",
+              "value": null
+            }
           ]
         },
         {
@@ -6468,6 +6550,12 @@
                 ]
               ],
               "linkRationale": "[I] Incorporated act requires State consent and retains officers. No union honour: these are Confederate provisional forces. Mere fort destination does not warrant glory/caution tags."
+            }
+          ],
+          "information": [
+            {
+              "detail": "rejection_return_support",
+              "value": null
             }
           ]
         },
@@ -6571,6 +6659,12 @@
               ],
               "linkRationale": "[I] Incorporated act requires State consent and retains officers. No union honour: these are Confederate provisional forces. Mere fort destination does not warrant glory/caution tags."
             }
+          ],
+          "information": [
+            {
+              "detail": "rejection_return_support",
+              "value": null
+            }
           ]
         },
         {
@@ -6673,6 +6767,12 @@
               ],
               "linkRationale": "[I] Incorporated act requires State consent and retains officers. No union honour: these are Confederate provisional forces. Mere fort destination does not warrant glory/caution tags."
             }
+          ],
+          "information": [
+            {
+              "detail": "rejection_return_support",
+              "value": null
+            }
           ]
         },
         {
@@ -6774,6 +6874,12 @@
                 ]
               ],
               "linkRationale": "[I] Incorporated act requires State consent and retains officers. No union honour: these are Confederate provisional forces. Mere fort destination does not warrant glory/caution tags."
+            }
+          ],
+          "information": [
+            {
+              "detail": "rejection_return_support",
+              "value": null
             }
           ]
         },
@@ -6891,6 +6997,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -7006,6 +7118,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -7123,6 +7241,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -7238,6 +7362,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -7355,6 +7485,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -7470,6 +7606,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -7587,6 +7729,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -7702,6 +7850,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -7819,6 +7973,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -7934,6 +8094,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -8051,6 +8217,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -8166,6 +8338,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -8283,6 +8461,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -8398,6 +8582,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -8515,6 +8705,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -8630,6 +8826,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -8747,6 +8949,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -8862,6 +9070,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -8979,6 +9193,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -9094,6 +9314,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -9211,6 +9437,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -9326,6 +9558,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },
@@ -9443,6 +9681,12 @@
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
             }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
+            }
           ]
         },
         {
@@ -9558,6 +9802,12 @@
                 ]
               ],
               "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+            }
+          ],
+          "information": [
+            {
+              "detail": "purpose_detail",
+              "value": null
             }
           ]
         },

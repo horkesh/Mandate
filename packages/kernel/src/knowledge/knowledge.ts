@@ -243,7 +243,9 @@ export function deliverReports(state: State, deliveries: readonly ReportDelivery
  * by the author's routine reports.
  */
 export function supersessionKey(body: ReportBody): string {
-  return `${templateKey(body.reportType, body.reportSubtype)}|${body.reportAuthor}|${body.reportSubjectKind}:${body.reportSubjectId}|${body.reportAnswers ?? ''}`;
+  const condition = body.reportStateCondition;
+  const evidence = condition === undefined ? '' : `|condition:${condition.conditionSubject}:${condition.conditionFact}`;
+  return `${templateKey(body.reportType, body.reportSubtype)}|${body.reportAuthor}|${body.reportSubjectKind}:${body.reportSubjectId}|${body.reportAnswers ?? ''}${evidence}`;
 }
 
 export interface PruneCounts {

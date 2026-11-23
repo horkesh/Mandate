@@ -1,0 +1,239 @@
+{
+  "interpretation": "[I] Read original issuer details by paper family, never by actor or register membership. Null means this precise detail is not supplied, not that purpose/muster as a whole is unknown. No own-state finance/authority record applied without a pre-call source.",
+  "profiles": [
+    {
+      "profile": "cs_apr22_absolute_alabama",
+      "family": "CS-A22",
+      "detail": "muster_receiver",
+      "value": null
+    },
+    {
+      "profile": "cs_apr22_absolute_arkansas",
+      "family": "CS-A22-N",
+      "detail": "muster_receiver",
+      "value": null
+    },
+    {
+      "profile": "cs_apr22_absolute_georgia",
+      "family": "CS-A22",
+      "detail": "muster_receiver",
+      "value": null
+    },
+    {
+      "profile": "cs_apr22_absolute_kentucky",
+      "family": "CS-A22-N",
+      "detail": "muster_receiver",
+      "value": null
+    },
+    {
+      "profile": "cs_apr22_absolute_louisiana",
+      "family": "CS-A22",
+      "detail": "muster_receiver",
+      "value": null
+    },
+    {
+      "profile": "cs_apr22_absolute_mississippi",
+      "family": "CS-A22",
+      "detail": "muster_receiver",
+      "value": null
+    },
+    {
+      "profile": "cs_apr22_absolute_north_carolina",
+      "family": "CS-A22-N",
+      "detail": "muster_receiver",
+      "value": null
+    },
+    {
+      "profile": "cs_apr22_absolute_tennessee",
+      "family": "CS-A22-N",
+      "detail": "muster_receiver",
+      "value": null
+    },
+    {
+      "profile": "cs_mar09_alabama",
+      "family": "CS-M09",
+      "detail": "rejection_return_support",
+      "value": null
+    },
+    {
+      "profile": "cs_mar09_florida",
+      "family": "CS-M09",
+      "detail": "rejection_return_support",
+      "value": null
+    },
+    {
+      "profile": "cs_mar09_georgia",
+      "family": "CS-M09",
+      "detail": "rejection_return_support",
+      "value": null
+    },
+    {
+      "profile": "cs_mar09_louisiana",
+      "family": "CS-M09",
+      "detail": "rejection_return_support",
+      "value": null
+    },
+    {
+      "profile": "cs_mar09_mississippi",
+      "family": "CS-M09",
+      "detail": "rejection_return_support",
+      "value": null
+    },
+    {
+      "profile": "cs_mar09_south_carolina",
+      "family": "CS-M09",
+      "detail": "rejection_return_support",
+      "value": null
+    },
+    {
+      "profile": "cs_mar09_texas",
+      "family": "CS-M09",
+      "detail": "rejection_return_support",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_arkansas",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_connecticut",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_delaware",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_illinois",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_indiana",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_iowa",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_kentucky",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_maine",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_maryland",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_massachusetts",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_michigan",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_minnesota",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_missouri",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_new_hampshire",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_new_jersey",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_new_york",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_north_carolina",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_ohio",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_pennsylvania",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_rhode_island",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_tennessee",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_vermont",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_virginia",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    },
+    {
+      "profile": "us_apr15_wisconsin",
+      "family": "US-A15",
+      "detail": "purpose_detail",
+      "value": null
+    }
+  ]
+}

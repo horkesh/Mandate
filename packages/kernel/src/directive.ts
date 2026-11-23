@@ -1,5 +1,6 @@
 import type { ValueId } from './people.ts';
 import type { Permille } from './permille.ts';
+import type { CallInformation, StateCondition } from './knowledge/evidence-types.ts';
 
 /**
  * The terms of a directive as the proxy reads them (P2). A directive is a
@@ -54,6 +55,7 @@ export interface DirectiveClause {
 }
 
 export interface ReservationGround {
+  readonly groundFact?: CallInformation['detail'] | StateCondition['conditionFact'];
   readonly groundKind: 'offended_value' | 'course_judgment' | 'structural_condition' | 'resource_report' | 'information_request';
   /** Held value, reason, event, report or information sought, according to groundKind. */
   readonly groundReference: string;
@@ -62,10 +64,10 @@ export interface ReservationGround {
 }
 
 /** Actor-side evidence explicitly tied to the request; adapters supply information the actor actually received. */
-export type QualificationInput =
+export type QualificationInput = { readonly fact?: ReservationGround['groundFact'] } & (
   | { readonly clause: string; readonly evidence: 'information_request'; readonly reference: string; readonly treatment: 'clarify' }
   | { readonly clause: string; readonly evidence: 'structural_condition'; readonly reference: string; readonly treatment: 'protest' | 'request_support'; readonly stateOfKnowledge?: 'observed' | 'reported' | 'inferred'; readonly prerequisite?: string; readonly stage?: string; readonly mechanism?: string }
-  | { readonly clause: string; readonly evidence: 'resource_report'; readonly reference: string; readonly reportedDay: number; readonly receivedDay: number; readonly treatment: 'request_support' };
+  | { readonly clause: string; readonly evidence: 'resource_report'; readonly reference: string; readonly reportedDay: number; readonly receivedDay: number; readonly treatment: 'request_support' });
 
 export interface Reservation<ReservationEffect> {
   readonly clause: string;

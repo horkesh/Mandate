@@ -1,0 +1,564 @@
+[
+  {
+    "row": "U01",
+    "side": "union",
+    "actor": "scott_winfield",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: a scoped feasibility assessment answering a particular proposed course",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-I:197 https://archive.org/details/cu31924077725913/page/n216/mode/1up; Lincoln-II:16 https://archive.org/details/abrahamlincolnco02linco"
+  },
+  {
+    "row": "U02",
+    "side": "union",
+    "actor": "scott_winfield",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: consultation rounds and the proposed course each advice act addresses",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-I:200 https://archive.org/details/cu31924077725913/page/n219/mode/1up; OR-I-I:201 https://archive.org/details/cu31924077725913/page/n220/mode/1up"
+  },
+  {
+    "row": "U03a",
+    "side": "union",
+    "actor": "seward_william_h",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: consultation rounds and the proposed course each advice act addresses",
+    "orders": [],
+    "answerIds": [],
+    "cite": "Lincoln-II:11 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:12 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:13 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:14 https://archive.org/details/abrahamlincolnco02linco"
+  },
+  {
+    "row": "U03b",
+    "side": "union",
+    "actor": "cameron_simon",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: consultation rounds and the proposed course each advice act addresses",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-I:196 https://archive.org/details/cu31924077725913/page/n215/mode/1up; OR-I-I:197 https://archive.org/details/cu31924077725913/page/n216/mode/1up; Lincoln-II:16 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:17 https://archive.org/details/abrahamlincolnco02linco"
+  },
+  {
+    "row": "U03c",
+    "side": "union",
+    "actor": "welles_gideon",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: consultation rounds and the proposed course each advice act addresses",
+    "orders": [],
+    "answerIds": [],
+    "cite": "Lincoln-II:17 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:18 https://archive.org/details/abrahamlincolnco02linco"
+  },
+  {
+    "row": "U03d",
+    "side": "union",
+    "actor": "smith_caleb_b",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: consultation rounds and the proposed course each advice act addresses",
+    "orders": [],
+    "answerIds": [],
+    "cite": "Lincoln-II:18 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:19 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:20 https://archive.org/details/abrahamlincolnco02linco"
+  },
+  {
+    "row": "U03e",
+    "side": "union",
+    "actor": "bates_edward",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: consultation rounds and the proposed course each advice act addresses",
+    "orders": [],
+    "answerIds": [],
+    "cite": "Lincoln-II:21 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:22 https://archive.org/details/abrahamlincolnco02linco"
+  },
+  {
+    "row": "U04",
+    "side": "union",
+    "actor": "seward_william_h",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: consultation rounds and the proposed course each advice act addresses",
+    "orders": [],
+    "answerIds": [],
+    "cite": "Lincoln-II:26 https://archive.org/details/abrahamlincolnco02linco"
+  },
+  {
+    "row": "U05",
+    "side": "union",
+    "actor": "blair_montgomery",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: consultation rounds and the proposed course each advice act addresses",
+    "orders": [],
+    "answerIds": [],
+    "cite": "Lincoln-II:27 https://archive.org/details/abrahamlincolnco02linco"
+  },
+  {
+    "row": "U14",
+    "side": "union",
+    "actor": "seward_william_h",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: an unsolicited policy programme and delegation proposal with an answer",
+    "orders": [],
+    "answerIds": [],
+    "cite": "Lincoln-II:29 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:30 https://archive.org/details/abrahamlincolnco02linco"
+  },
+  {
+    "row": "U25a",
+    "side": "union",
+    "actor": "hicks_thomas_h",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: civil troop-transit negotiation and alternative-route consent",
+    "orders": [],
+    "answerIds": [],
+    "cite": "Lincoln-II:36 https://archive.org/details/abrahamlincolnco02linco; Lincoln-II:37 https://archive.org/details/abrahamlincolnco02linco; OR-I-II:581 https://archive.org/details/cu31924077730186/page/n600/mode/1up"
+  },
+  {
+    "row": "U25b",
+    "side": "union",
+    "actor": "brown_george_w",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: a civic addressee and conditional troop-protection undertaking",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-II:581 https://archive.org/details/cu31924077730186/page/n600/mode/1up; OR-I-II:582 https://archive.org/details/cu31924077730186/page/n601/mode/1up; Lincoln-II:36 https://archive.org/details/abrahamlincolnco02linco"
+  },
+  {
+    "row": "U32",
+    "side": "union",
+    "actor": "patterson_robert",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: a depot/base-of-supply change request and counterproposal",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-II:164 https://archive.org/details/cu31924077730186/page/n183/mode/1up; OR-I-II:165 https://archive.org/details/cu31924077730186/page/n184/mode/1up"
+  },
+  {
+    "row": "U33",
+    "side": "union",
+    "actor": "patterson_robert",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: an attack-or-demonstrate instruction and its answer",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-II:166 https://archive.org/details/cu31924077730186/page/n185/mode/1up; OR-I-II:167 https://archive.org/details/cu31924077730186/page/n186/mode/1up"
+  },
+  {
+    "row": "U34",
+    "side": "union",
+    "actor": "patterson_robert",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: an attack-or-demonstrate instruction and its answer",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-II:167 https://archive.org/details/cu31924077730186/page/n186/mode/1up; OR-I-II:168 https://archive.org/details/cu31924077730186/page/n187/mode/1up; OR-I-II:169 https://archive.org/details/cu31924077730186/page/n188/mode/1up"
+  },
+  {
+    "row": "U39",
+    "side": "union",
+    "actor": "morgan_edwin_d",
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "exposureCause": "answered",
+    "verdict": "matched",
+    "cause": "Received original lacks the promised purpose detail; generated purpose question accompanies the original undertaking.",
+    "orders": [
+      {
+        "order": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "issuedDay": 41,
+        "receivedDays": [
+          41
+        ]
+      }
+    ],
+    "answerIds": [
+      "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|comply_with_reservations|41"
+    ],
+    "cite": "OR-III-I:72 https://archive.org/details/warofrebellion0301rootrich/page/n88/mode/1up; OR-III-I:85 https://archive.org/details/warofrebellion0301rootrich/page/n101/mode/1up"
+  },
+  {
+    "row": "U40",
+    "side": "union",
+    "actor": "mccauley_charles_s",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: a naval vessel removal/readiness instruction and repeated deferral",
+    "orders": [],
+    "answerIds": [],
+    "cite": "ORN-I-IV:275 https://archive.org/details/cu31924079893859/page/n306/mode/1up; ORN-I-IV:281 https://archive.org/details/cu31924079893859/page/n312/mode/1up; ORN-I-IV:288 https://archive.org/details/cu31924079893859/page/n319/mode/1up; ORN-I-IV:289 https://archive.org/details/cu31924079893859/page/n320/mode/1up"
+  },
+  {
+    "row": "U42",
+    "side": "union",
+    "actor": "scott_winfield",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: a scoped feasibility assessment answering a particular proposed course",
+    "orders": [],
+    "answerIds": [],
+    "cite": "LOC-0779200:1-6 https://www.loc.gov/resource/mal.0779200/?st=text"
+  },
+  {
+    "row": "C01",
+    "side": "confederate",
+    "actor": "brown_joseph_e",
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "exposureCause": "answered",
+    "verdict": "matched",
+    "cause": "Original on-arrival muster leaves rejected-men return support unspecified; generated clarification, no finance balance or new value.",
+    "orders": [
+      {
+        "order": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "issuedDay": 4,
+        "receivedDays": [
+          4
+        ]
+      }
+    ],
+    "answerIds": [
+      "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|4"
+    ],
+    "cite": "OR-IV-I:135 https://archive.org/details/cu31924079579524/page/n150/mode/1up; OR-IV-I:207 https://archive.org/details/cu31924079579524/page/n222/mode/1up; OR-IV-I:214 https://archive.org/details/cu31924079579524/page/n229/mode/1up"
+  },
+  {
+    "row": "C02",
+    "side": "confederate",
+    "actor": "brown_joseph_e",
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "exposureCause": "answered",
+    "verdict": "matched",
+    "cause": "Original leaves the receiving officer unspecified; generated muster question. No Augusta appointment, company method, consent or acceptance inferred.",
+    "orders": [
+      {
+        "order": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "issuedDay": 48,
+        "receivedDays": [
+          48
+        ]
+      }
+    ],
+    "answerIds": [
+      "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|48"
+    ],
+    "cite": "OR-IV-I:234 https://archive.org/details/cu31924079579524/page/n249/mode/1up"
+  },
+  {
+    "row": "C03",
+    "side": "confederate",
+    "actor": "moore_thomas_o",
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "exposureCause": "answered",
+    "verdict": "mismatch",
+    "cause": "Received and answered, but only an officer-information question. No admissible pre-call camp-finance record; resource_report/camp_finance_limited required.",
+    "orders": [
+      {
+        "order": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "issuedDay": 48,
+        "receivedDays": [
+          48
+        ]
+      }
+    ],
+    "answerIds": [
+      "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|comply_with_reservations|48"
+    ],
+    "cite": "OR-IV-I:232 https://archive.org/details/cu31924079579524/page/n247/mode/1up; OR-IV-I:233 https://archive.org/details/cu31924079579524/page/n248/mode/1up; OR-IV-I:235 https://archive.org/details/cu31924079579524/page/n250/mode/1up"
+  },
+  {
+    "row": "C04",
+    "side": "confederate",
+    "actor": "pickens_francis_w",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: organisation integrity and gubernatorial consent terms on a troop transfer",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-IV-I:233 https://archive.org/details/cu31924079579524/page/n248/mode/1up; OR-IV-I:235 https://archive.org/details/cu31924079579524/page/n250/mode/1up; OR-IV-I:236 https://archive.org/details/cu31924079579524/page/n251/mode/1up"
+  },
+  {
+    "row": "C05",
+    "side": "confederate",
+    "actor": "harris_isham_g",
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "exposureCause": "answered",
+    "verdict": "mismatch",
+    "cause": "April22 three-regiment/365-day profile verified, actually issued day120 and answered day122. Only a muster question; no received pre-call authority/organisation condition.",
+    "orders": [
+      {
+        "order": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "issuedDay": 120,
+        "receivedDays": [
+          122
+        ]
+      }
+    ],
+    "answerIds": [
+      "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g|addressee|comply_with_reservations|122"
+    ],
+    "cite": "OR-IV-I:232 https://archive.org/details/cu31924079579524/page/n247/mode/1up; OR-IV-I:233 https://archive.org/details/cu31924079579524/page/n248/mode/1up"
+  },
+  {
+    "row": "C06",
+    "side": "confederate",
+    "actor": "bragg_braxton",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: dock interception of naval reinforcement with supply/transport qualifications",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-I:456 https://archive.org/details/cu31924077725913/page/n475/mode/1up; OR-I-I:457 https://archive.org/details/cu31924077725913/page/n476/mode/1up; OR-I-I:458 https://archive.org/details/cu31924077725913/page/n477/mode/1up"
+  },
+  {
+    "row": "C07",
+    "side": "confederate",
+    "actor": "letcher_john",
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "exposureCause": "answered",
+    "verdict": "mismatch",
+    "cause": "Original undertaking has no held-value ground for an appointment protest; judgment input unchanged.",
+    "orders": [
+      {
+        "order": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "issuedDay": 120,
+        "receivedDays": [
+          120
+        ]
+      }
+    ],
+    "answerIds": [
+      "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|comply|120"
+    ],
+    "cite": "OR-IV-I:419 https://archive.org/details/cu31924079579524/page/n434/mode/1up; OR-IV-I:420 https://archive.org/details/cu31924079579524/page/n435/mode/1up"
+  },
+  {
+    "row": "C09",
+    "side": "confederate",
+    "actor": "pickens_francis_w",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_absent",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: unrepresented matter",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-IV-I:420 https://archive.org/details/cu31924079579524/page/n435/mode/1up; OR-IV-I:421 https://archive.org/details/cu31924079579524/page/n436/mode/1up"
+  },
+  {
+    "row": "C10",
+    "side": "confederate",
+    "actor": "brown_joseph_e",
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "exposureCause": "answered",
+    "verdict": "mismatch",
+    "cause": "Reserve willingness remains -178 with the original value cost; no reserve undertaking. Another call cannot supply it.",
+    "orders": [
+      {
+        "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+        "issuedDay": 117,
+        "receivedDays": [
+          117
+        ]
+      }
+    ],
+    "answerIds": [
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|object|117"
+    ],
+    "cite": "OR-IV-I:421 https://archive.org/details/cu31924079579524/page/n436/mode/1up; OR-IV-I:422 https://archive.org/details/cu31924079579524/page/n437/mode/1up"
+  },
+  {
+    "row": "C11",
+    "side": "confederate",
+    "actor": "moore_thomas_o",
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "exposureCause": "answered",
+    "verdict": "mismatch",
+    "cause": "Reserve willingness remains -187 with the original value cost; no reserve undertaking. Another call cannot supply it.",
+    "orders": [
+      {
+        "order": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "issuedDay": 117,
+        "receivedDays": [
+          117
+        ]
+      }
+    ],
+    "answerIds": [
+      "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|object|117"
+    ],
+    "cite": "OR-IV-I:422 https://archive.org/details/cu31924079579524/page/n437/mode/1up; OR-IV-I:423 https://archive.org/details/cu31924079579524/page/n438/mode/1up; OR-IV-I:478 https://archive.org/details/cu31924079579524/page/n493/mode/1up"
+  },
+  {
+    "row": "C12",
+    "side": "confederate",
+    "actor": "brown_joseph_e",
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "exposureCause": "answered",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: unrepresented matter",
+    "orders": [
+      {
+        "order": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "issuedDay": 120,
+        "receivedDays": [
+          120
+        ]
+      }
+    ],
+    "answerIds": [
+      "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply|120"
+    ],
+    "cite": "OR-IV-I:424 https://archive.org/details/cu31924079579524/page/n439/mode/1up"
+  },
+  {
+    "row": "C14",
+    "side": "confederate",
+    "actor": "holmes_theophilus_h",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_absent",
+    "verdict": "not_observed",
+    "cause": "Report only under 0120 item5; missing instruction/expedition identity. No substituted target or transfer.",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-II:959 https://archive.org/details/cu31924077730186/page/n978/mode/1up"
+  },
+  {
+    "row": "C15",
+    "side": "confederate",
+    "actor": "johnston_joseph_e",
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "exposureCause": "answered",
+    "verdict": "not_observed",
+    "cause": "Hold issued day90, received/answered comply day96; no goal-proposal. An absent challenge is distinct from an absent demand.",
+    "orders": [
+      {
+        "order": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "issuedDay": 90,
+        "receivedDays": [
+          96
+        ]
+      }
+    ],
+    "answerIds": [
+      "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e|addressee|comply|96"
+    ],
+    "cite": "OR-I-II:896 https://archive.org/details/cu31924077730186/page/n915/mode/1up; OR-I-II:897 https://archive.org/details/cu31924077730186/page/n916/mode/1up; OR-I-II:907 https://archive.org/details/cu31924077730186/page/n926/mode/1up; OR-I-II:908 https://archive.org/details/cu31924077730186/page/n927/mode/1up; OR-I-II:910 https://archive.org/details/cu31924077730186/page/n929/mode/1up"
+  },
+  {
+    "row": "C16",
+    "side": "confederate",
+    "actor": "holmes_theophilus_h",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_not_representable",
+    "verdict": "representation_gap",
+    "cause": "Retained representation gap: conditional withdrawal tied to an enemy landing, with commander responsibility",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-II:959 https://archive.org/details/cu31924077730186/page/n978/mode/1up; OR-I-II:975 https://archive.org/details/cu31924077730186/page/n994/mode/1up; OR-I-II:976 https://archive.org/details/cu31924077730186/page/n995/mode/1up"
+  },
+  {
+    "row": "C25",
+    "side": "confederate",
+    "actor": "holmes_theophilus_h",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "exposureCause": "request_absent",
+    "verdict": "not_observed",
+    "cause": "Appointment issued/received day92 and acknowledged day95, but no hold dispatched: no assigned force or organisation template admits this post to the existing field menu.",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-II:907 https://archive.org/details/cu31924077730186/page/n926/mode/1up; OR-I-II:929 https://archive.org/details/cu31924077730186/page/n948/mode/1up; OR-I-II:932 https://archive.org/details/cu31924077730186/page/n951/mode/1up"
+  }
+]

@@ -17,6 +17,7 @@ import type { PlanNote } from '../plans/notes.ts';
 import type { PlanPaper } from './plan-paper.ts';
 import type { DirectiveReservation, DirectiveResponse, Reason, ReservationGap } from '../directive.ts';
 import type { DiscretionCondition, PlanGoal } from '../plans/goal.ts';
+import type { CallInformation, StateCondition } from './evidence-types.ts';
 
 /** The report types of 0032, plus advice (0040). Each is a pack-tunable template (`ReportTemplate`). */
 export const REPORT_TYPES = [
@@ -202,6 +203,11 @@ export interface DiscretionReport {
 
 /** What a report says. Shared by a message in transit and the report as a seat holds it. */
 export interface ReportBody {
+  /** Original received call details; never copied from the addressee's answer. */
+  readonly reportCallInformation?: readonly CallInformation[];
+  readonly reportCallCites?: readonly (readonly [source: string, page: number])[];
+  /** Dated own-state evidence; no capacity number is inferred from a qualitative limitation. */
+  readonly reportStateCondition?: StateCondition;
   /** What the author actually stated about the terms of this answer. */
   readonly reportQualification?: ReportQualification;
   readonly reportProposal?: GoalProposal;

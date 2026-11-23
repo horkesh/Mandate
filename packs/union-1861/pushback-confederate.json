@@ -41,7 +41,9 @@
             "effects": [
               "request",
               "statement"
-            ]
+            ],
+            "groundKind": "information_request",
+            "groundFact": "rejection_return_support"
           }
         ]
       }
@@ -84,14 +86,18 @@
             "effects": [
               "statement",
               "request"
-            ]
+            ],
+            "groundKind": "information_request",
+            "groundFact": "muster_receiver"
           },
           {
             "subject": "muster",
             "effects": [
               "statement",
               "request"
-            ]
+            ],
+            "groundKind": "information_request",
+            "groundFact": "muster_receiver"
           }
         ]
       }
@@ -133,13 +139,17 @@
             "subject": "muster",
             "effects": [
               "request"
-            ]
+            ],
+            "groundKind": "resource_report",
+            "groundFact": "camp_finance_limited"
           },
           {
             "subject": "support",
             "effects": [
               "request"
-            ]
+            ],
+            "groundKind": "resource_report",
+            "groundFact": "camp_finance_limited"
           }
         ]
       }
@@ -215,7 +225,9 @@
             "subject": "authority",
             "effects": [
               "statement"
-            ]
+            ],
+            "groundKind": "structural_condition",
+            "groundFact": "external_order_authority_absent"
           }
         ]
       }

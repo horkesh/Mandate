@@ -210,6 +210,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
     msgTruth: null,
   });
   fire(ctx, 'messages.sent');
+  ctx.requestDispatches?.push(ctx.outbox.at(-1)!);
   if (cmd.route === 'special-messenger') {
     fire(ctx, 'messages.special_messenger');
     ctx.prices.push({ seat, attention: world.rules.latency.specialMessengerPrice, why: 'special-messenger' });

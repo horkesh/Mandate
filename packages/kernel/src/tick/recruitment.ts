@@ -28,6 +28,7 @@ import type { TransitMessage } from '../messages/transit.ts';
 import { placeAndRemove, type MusterPlacement } from '../movement/movement.ts';
 import { recordResponse, responseKey, responseOf } from '../proxy/responses.ts';
 import { reportQualificationOf } from '../knowledge/report.ts';
+import { callQualifications, receiveCallInformation } from '../knowledge/call-evidence.ts';
 import { term } from '../knowledge/truth.ts';
 import { answerOrder } from '../reading/orders.ts';
 import { callDirective, type RecruitmentRules } from '../recruitment/rules.ts';
@@ -116,8 +117,12 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   if (!raisingPost(ctx,start,post)) return returnDispatch(ctx,start,msg,'not_raising_post');
   const rules = world.map.world.rules.recruitment;
   // He answers watched from where he stands (lane 1.4's oversight: his courier days from the caller, and the wire).
-  const answer = answerOrder(world, start, governor, order.orderIssuer, callDirective(rules, call), { oversight: oversightOf(ctx, start, governor, order.orderIssuer).value });
-  let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: governor, post, role: 'addressee', day, kind: 'call', ...(call.callId === undefined ? {} : { callId: call.callId }) }));
+  const received = receiveCallInformation(start, msg, day);
+  const terms = callDirective(rules, call);
+  const qualifications = callQualifications(received, governor, msg.msgOrigin, order.orderIssuedDay, terms, day);
+  const answer = answerOrder(world, received, governor, order.orderIssuer, terms, { oversight: oversightOf(ctx, received, governor, order.orderIssuer).value,
+    ...(qualifications.length === 0 ? {} : { qualifications, receivedDay: day }) });
+  let state = recordResponse(received, responseOf(answer, { order: msg.msgOrigin, person: governor, post, role: 'addressee', day, kind: 'call', ...(call.callId === undefined ? {} : { callId: call.callId }) }));
   const side = postFaction(world, state, post);
   const region = state.postStates[post]!.postSeat;
   const loyalty = side === null || region === null ? null : loyaltyOf(state, region, side);

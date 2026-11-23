@@ -11,7 +11,7 @@
 import { ids, phase0, world as w } from '@mandate/kernel';
 import { z } from 'zod';
 import { COMPLIANCE_RUNGS, DISCRETION_CONDITIONS } from '@mandate/kernel';
-import { CallProfileSchema } from './call-profiles.ts';
+import { CallProfileSchema, StateConditionSchema } from './call-profiles.ts';
 
 type IdKind = ids.IdKind;
 
@@ -426,6 +426,10 @@ export const RulesSchema = z.strictObject({
     .describe('Goals and plans (0040, 0062): design parameters the pack states.'),
   recruitment: z
     .strictObject({
+      stateConditions: z.array(z.strictObject({
+        recordId: termId, recordActor: idOf('person'), recordPost: idOf('post'), recordDate: isoDate,
+        recordCondition: StateConditionSchema,
+      })).optional(),
       callProfiles: z.array(CallProfileSchema).optional().describe('Per-paper values and recorded, unscored conditions. Missing profile uses the explicit callTerms fallback.'),
       callTerms: z
         .strictObject({ boldness: permille, honours: z.array(termId), offends: z.array(termId) })

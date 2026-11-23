@@ -80,7 +80,10 @@ function isReportArrival(msg: TransitMessage): boolean {
 function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State {
   fire(ctx, 'messages.delivered');
   // Lane 1.5: a people verb's letter reaches its man.
-  if (msg.msgVerb !== null) return arriveVerb(ctx, state, msg);
+  if (msg.msgVerb !== null) {
+    ctx.requestReceipts?.push(msg);
+    return arriveVerb(ctx, state, msg);
+  }
   if (msg.msgOrder !== null) {
     if (msg.msgOfficeAddress === true) {
       const holder = msg.msgToPost === null ? null : state.postStates[msg.msgToPost]?.postHolder ?? null;
@@ -91,6 +94,7 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
       const failure = destinationFailure(ctx,state,msg.msgToPost,msg.msgTo,msg.msgOrder!.orderIssuer,msg.msgOrder!.orderKind === 'call');
       if (failure !== null) return returnDispatch(ctx,state,msg,failure);
     }
+    ctx.requestReceipts?.push(msg);
     if (msg.msgRole === 'relay') return relayOrder(ctx, state, msg);
     if (msg.msgOrder?.orderKind === 'call') return arriveCall(ctx, state, msg);
     return arriveOrder(ctx, state, msg);

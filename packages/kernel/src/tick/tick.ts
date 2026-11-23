@@ -36,8 +36,9 @@ import type { BattleOrders } from '../combat/order-kinds.ts';
 import { createDerivedMapCache, type DerivedMap, type DerivedMapCache } from '../control-index/derived.ts';
 import type { ForceBlockId, PostId } from '../ids.ts';
 import { pruneKnowledge } from '../knowledge/knowledge.ts';
+import { fileStateConditions } from '../knowledge/call-evidence.ts';
 import { entryProblems, type LogEntry } from '../log/log.ts';
-import { createIdMint, sendMessages } from '../messages/transit.ts';
+import { createIdMint, sendMessages, type TransitMessage } from '../messages/transit.ts';
 import type { State } from '../root-state.ts';
 import type { OptionView } from '../seats/api.ts';
 import { applyPeopleChanges, type PeopleChange } from '../people/people.ts';
@@ -127,6 +128,8 @@ export interface TickOptions {
 }
 
 export interface TickResult {
+  readonly requestDispatches?: readonly TransitMessage[];
+  readonly requestReceipts?: readonly TransitMessage[];
   readonly state: State;
   readonly day: number;
   readonly rejections: readonly Rejection[];
@@ -158,6 +161,8 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
     mint: createIdMint(state),
     telemetry: options.telemetry,
     outbox: [],
+    requestDispatches: [],
+    requestReceipts: [],
     rejections: [],
     events: [],
     proposals: [],
@@ -265,6 +270,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   state = applyPhase(sendMessages(state, ctx.outbox.splice(0)));
 
   // 2. Deliveries.
+  state = applyPhase(fileStateConditions(state, world.map.world.rules.recruitment.stateConditions ?? [], world.start.startDate, day));
   state = applyPhase(deliverDue(ctx, state));
 
   // 2b. People apply the changes proposed to them so far today (lane 1.1): a bypassed relay holds a grievance.
@@ -358,7 +364,7 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
   // 8. The invariant barrier.
   mapBarrier(ctx, state, dayMap, options.deepChecks === true);
 
-  return { state, day, rejections: ctx.rejections, events: ctx.events, proposals: ctx.proposals, prices: ctx.prices, decisionPoints: ctx.decisionPoints, mapEvents: ctx.mapEvents, map: dayMap };
+  return { state, day, requestDispatches: ctx.requestDispatches, requestReceipts: ctx.requestReceipts, rejections: ctx.rejections, events: ctx.events, proposals: ctx.proposals, prices: ctx.prices, decisionPoints: ctx.decisionPoints, mapEvents: ctx.mapEvents, map: dayMap };
 }
 
 /**

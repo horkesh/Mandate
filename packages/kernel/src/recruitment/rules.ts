@@ -6,6 +6,7 @@
 import { COMPLIANCE_RUNGS, type ComplianceRung, type DirectiveClause, type DirectiveTerms, type ReservationSubject } from '../directive.ts';
 import type { FactionId, RegionId } from '../ids.ts';
 import type { CallSpec } from '../messages/transit.ts';
+import type { CallInformation, StateConditionRecord } from '../knowledge/evidence-types.ts';
 
 /** A rung that raises men, and how: permille of the quota, and days added to the muster. */
 export interface RaisingRung {
@@ -16,6 +17,8 @@ export interface RaisingRung {
 
 /** Clauses of the issuer's paper. Recorded only; neither these nor demand imply available means. */
 export interface CallProfile {
+  /** Typed readings of original issuer details. Omitted metadata makes no claim of unknownness. */
+  readonly information?: readonly CallInformation[];
   readonly id: string;
   /** Identity of the shared researched text profile; instances retain their own clauses. */
   readonly sourceProfile: string;
@@ -46,6 +49,11 @@ export interface CallValueClauseLink {
 
 export function callValueLinkProblems(profile: CallProfile): string[] {
   const problems: string[] = [];
+  const details = new Set<string>();
+  for (const info of profile.information ?? []) {
+    if (!['purpose_detail','muster_receiver','rejection_return_support'].includes(info.detail) || details.has(info.detail) || (info.value !== null && !info.value.trim())) problems.push(`invalid or duplicate call information ${info.detail}`);
+    details.add(info.detail);
+  }
   const ids = new Set(['course', 'purpose', 'service_term', 'organisation', 'muster',
     ...profile.conditions.map((c, i) => `condition:${c.kind}:${i}`),
     ...profile.materialDemand.map((d, i) => `demand:${d.resource}:${i}`)]);
@@ -64,6 +72,8 @@ export function callValueLinkProblems(profile: CallProfile): string[] {
 }
 
 export interface RecruitmentRules {
+  /** Dated sourced own-state records, filed with their named holder; never historical replies. */
+  readonly stateConditions?: readonly StateConditionRecord[];
   /** Model planning size [I], never a historical norm. At most four regiments. */
   readonly planningRegiments?: number;
   /** Legacy boldness is retained for pack compatibility but is inapplicable to calls under 0119. Values remain pack data. */
@@ -145,6 +155,13 @@ const whole = (problems: string[], name: string, v: number, min: number, max: nu
 /** Problems with the recruitment rules, as the validator checks them. */
 export function recruitmentRuleProblems(r: RecruitmentRules): string[] {
   const problems: string[] = [];
+  const records = new Set<string>();
+  for (const record of r.stateConditions ?? []) {
+    if (!/^[a-z][a-z0-9_]*$/.test(record.recordId) || records.has(record.recordId)) problems.push(`invalid or duplicate state condition ${record.recordId}`);
+    records.add(record.recordId);
+    const condition = record.recordCondition;
+    if (!condition.conditionCites.length || condition.conditionCites.some(([source,page]) => !source.trim() || !Number.isSafeInteger(page) || page < 1)) problems.push(`state condition ${record.recordId} needs printed-page provenance`);
+  }
   whole(problems, 'recruitment rule callTerms.boldness', r.callTerms.boldness, 0, 1000);
   const profiles = new Set<string>();
   for (const p of r.callProfiles ?? []) {
@@ -207,6 +224,7 @@ export function callDirective(rules: RecruitmentRules, call: CallSpec): Directiv
     { clauseId: 'service_term', clauseSubject: 'service_term' },
     { clauseId: 'organisation', clauseSubject: 'organisation' },
     { clauseId: 'muster', clauseSubject: 'muster' },
+    { clauseId: 'authority', clauseSubject: 'authority' },
   ];
   for (const [index, condition] of (profile?.conditions ?? []).entries()) clauses.push({
     clauseId: `condition:${condition.kind}:${index}`,

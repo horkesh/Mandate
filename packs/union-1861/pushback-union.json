@@ -1364,7 +1364,9 @@
             "subject": "purpose",
             "effects": [
               "request"
-            ]
+            ],
+            "groundKind": "information_request",
+            "groundFact": "purpose_detail"
           }
         ]
       }

@@ -738,6 +738,7 @@
 "seed": 1861,
 "startDate": "1861-03-05",
 "temporaryPosts": [
+{"department":"cs_war","holder":"holmes_theophilus_h","id":"cs_cmd_fredericksburg","kind":"army_command","name":"post.cs_cmd_fredericksburg.name","operation":"fredericksburg_command","parent":"cs_war_adjutant_inspector_general","region":"fredericksburg"},
 {"department":"cs_war","holder":"johnston_joseph_e","id":"cs_cmd_harpers_ferry","kind":"army_command","name":"post.cs_cmd_harpers_ferry.name","operation":"shenandoah_command","parent":"cs_war_adjutant_inspector_general","region":"harpers_ferry"},
 {"department":"cs_war","holder":"beauregard_pierre_g_t","id":"cs_cmd_manassas","kind":"army_command","name":"post.cs_cmd_manassas.name","operation":"alexandria_command","parent":"cs_war_adjutant_inspector_general","region":"manassas"},
 {"department":"st_virginia","holder":"harper_kenton","id":"st_va_harpers_ferry","kind":"temporary_command","name":"post.st_va_harpers_ferry.name","operation":"st_va_harpers_ferry","parent":"st_gov_virginia","region":"harpers_ferry"},

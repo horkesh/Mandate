@@ -1,8 +1,20 @@
 import { z } from 'zod';
 import { callValueLinkProblems } from '../../kernel/src/recruitment/rules.ts';
 
+const conditionCites = z.array(z.tuple([z.string().min(1), z.number().int().min(1)])).min(1);
+export const StateConditionSchema = z.discriminatedUnion('conditionKind', [
+  z.strictObject({ conditionKind: z.literal('resource_limit'), conditionSubject: z.enum(['muster','support','arms_equipment']),
+    conditionFact: z.enum(['camp_finance_limited','resource_unavailable']), conditionCites }),
+  z.strictObject({ conditionKind: z.literal('structural_condition'), conditionSubject: z.enum(['authority','organisation']),
+    conditionFact: z.enum(['external_order_authority_absent','organisation_incomplete']), conditionCites }),
+]);
+
 /** Issuer clauses, recorded without executing a contract or inventing available capacity. */
 export const CallProfileSchema = z.strictObject({
+  information: z.array(z.strictObject({
+    detail: z.enum(['purpose_detail', 'muster_receiver', 'rejection_return_support']),
+    value: z.string().min(1).nullable(),
+  })).max(3).optional(),
   id: z.string().regex(/^[a-z][a-z0-9_]*$/),
   sourceProfile: z.string().min(1),
   honours: z.array(z.string().min(1)), offends: z.array(z.string().min(1)),

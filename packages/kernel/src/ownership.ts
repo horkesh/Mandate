@@ -215,6 +215,8 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   'CallSpec',
   // The call's sourced paper is an immutable value, carried unchanged by messages.
   'CallProfile',
+  'CallInformation',
+  'StateCondition',
   'CallProfile.callProvenance',
   'CallProfile.conditions',
   'CallProfile.materialDemand',

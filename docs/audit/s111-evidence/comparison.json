@@ -1,0 +1,91 @@
+{
+  "testbed": {
+    "changedHashes": 120,
+    "totalHashes": 120,
+    "firstChangedDay": 1,
+    "changedCounters": 0,
+    "countersWithChangedDays": 0,
+    "initialHashBefore": "ffff8656261d854e720cfd5d70d89562cc1d6cf551634e5fa603cea5481dc5ba",
+    "initialHashAfter": "ffff8656261d854e720cfd5d70d89562cc1d6cf551634e5fa603cea5481dc5ba",
+    "finalHashBefore": "a47c07d586bd647eefdb908317b59790e09fb88a254c3c8ffb2e8708bef927e8",
+    "finalHashAfter": "bf799ac4143c7c25e110237ed692b0c64aaafa5e32df2392e1f222376163f6cc",
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "bf799ac4143c7c25e110237ed692b0c64aaafa5e32df2392e1f222376163f6cc",
+      "matches": true,
+      "savedLogReplays": true
+    }
+  },
+  "union-1861": {
+    "changedHashes": 145,
+    "totalHashes": 148,
+    "firstChangedDay": 4,
+    "changedCounters": 7,
+    "countersWithChangedDays": 6,
+    "initialHashBefore": "d3d5b0757e9e135456233db93645a841a7e69342a771de3ce95836a4d2be95af",
+    "initialHashAfter": "d3d5b0757e9e135456233db93645a841a7e69342a771de3ce95836a4d2be95af",
+    "finalHashBefore": "ac1fd1133acf8f6fb6f3f83e70bc0cccdd590225f0f0097d542a8c2e02fcb1cf",
+    "finalHashAfter": "aa1b2e0cec1bd1e72ceccca49c28db2e8eb1a60d4e9a9e2707ff0b4670f934d6",
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "aa1b2e0cec1bd1e72ceccca49c28db2e8eb1a60d4e9a9e2707ff0b4670f934d6",
+      "matches": true,
+      "savedLogReplays": true
+    }
+  },
+  "coverageBefore": {
+    "representation_gap": 22,
+    "mismatch": 8,
+    "not_observed": 3
+  },
+  "coverageAfter": {
+    "representation_gap": 22,
+    "matched": 3,
+    "mismatch": 5,
+    "not_observed": 3
+  },
+  "rawActsBefore": 258,
+  "rawActsAfter": 259,
+  "changedResponses": 100,
+  "strengthBefore": {
+    "confederate": {
+      "known": 86452,
+      "unknownBlocks": 23,
+      "knownLotMen": 86452,
+      "unknownLots": 23
+    },
+    "union": {
+      "known": 121566,
+      "unknownBlocks": 7,
+      "knownLotMen": 121566,
+      "unknownLots": 7
+    }
+  },
+  "strengthAfter": {
+    "confederate": {
+      "known": 86452,
+      "unknownBlocks": 23,
+      "knownLotMen": 86452,
+      "unknownLots": 23
+    },
+    "union": {
+      "known": 121566,
+      "unknownBlocks": 7,
+      "knownLotMen": 121566,
+      "unknownLots": 7
+    }
+  },
+  "failedBands": 0,
+  "changedBands": 7,
+  "totalBands": 328
+}

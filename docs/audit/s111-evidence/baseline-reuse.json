@@ -1,0 +1,31 @@
+{
+  "head": "60323786c16184d638047acc81e4c582356eeccf",
+  "reuse": "S108 retained reference and binding done-check agreement; no baseline rerun",
+  "inputs": [
+    {
+      "path": "runs\\s108\\references\\result.json",
+      "sha256": "3ad52904e2549cb3d5062ccd95a38e872d972424d55f2d71e78be88b7d21cc9b",
+      "bytes": 978
+    },
+    {
+      "path": "runs\\s108\\references\\coverage.json",
+      "sha256": "69619ac74802907e4a5e22c9ebce0f4ddaadb8184e63fb10d8f3b43109d56945",
+      "bytes": 664994
+    },
+    {
+      "path": "runs\\s108\\references\\scores.json",
+      "sha256": "c7313f07994d89fda191dea86b39fbc2761a8e043aa185399c792afa6da8c636",
+      "bytes": 177522
+    },
+    {
+      "path": "runs\\s108\\references\\testbed-summary.json",
+      "sha256": "e45fb591f5fc78d727dd314dbc2edaad81ace44b9148de82eb68b800b80926f8",
+      "bytes": 83552
+    },
+    {
+      "path": "runs\\s108\\references\\union-1861-summary.json",
+      "sha256": "07fdc75fccad8e251e8f76b6cc72baf174bddb41b031e188882b1151983e6ce4",
+      "bytes": 135959
+    }
+  ]
+}

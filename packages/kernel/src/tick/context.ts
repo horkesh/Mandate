@@ -152,6 +152,9 @@ export type MapEvent =
   | { readonly event: 'pocket_closed' | 'pocket_relieved' | 'pocket_lost'; readonly faction: FactionId; readonly pocket: string; readonly regions: readonly RegionId[]; readonly cut: Cut | null };
 
 export interface TickContext {
+  /** Optional observational traces, never State or inputs to a decision. */
+  readonly requestDispatches?: TransitMessage[];
+  readonly requestReceipts?: TransitMessage[];
   readonly world: SeatsWorld;
   /** Inverse holder lookups shared by this tick's report routes; keyed by the exact post table. */
   readonly postHolders?: HeldPostCache;

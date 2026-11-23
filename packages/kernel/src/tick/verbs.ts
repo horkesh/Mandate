@@ -76,6 +76,7 @@ function sendVerb(ctx: TickContext, state: State, issuer: PersonId, to: PersonId
     msgTruth: null,
   });
   fire(ctx, 'messages.sent');
+  ctx.requestDispatches?.push(ctx.outbox.at(-1)!);
   if (route === 'special-messenger') {
     fire(ctx, 'messages.special_messenger');
     ctx.prices.push({ seat: seatIdFor(issuer), attention: ctx.world.rules.latency.specialMessengerPrice, why: 'special-messenger' });
