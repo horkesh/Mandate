@@ -1521,5 +1521,53 @@
     "observed": 9,
     "cause": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted operational channel adds Cooper forwarding Davis's junction letter on day142, message m.142.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry. The eight existing Cameron/Scott relays remain; recentre only this reference band with around(9).",
     "evidence": "docs/audit/s90-evidence/liveness-ruling.json#ordersRelayed"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/plans.goal_proposed",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+    },
+    "observed": 0,
+    "cause": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted.",
+    "evidence": "docs/audit/s96-evidence/liveness-review.json#plans.goal_proposed"
+  },
+  {
+    "key": "union-1861, war by decision, 148 days/plans.discretion_exercised",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+    },
+    "observed": 0,
+    "cause": "S96 /0114: no received conditional authority is exercised in either normal reference. Johnston fully complies with his June hold, so no proposal enables the sourced grant; the July goal remains in transit past July. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert.",
+    "evidence": "docs/audit/s96-evidence/liveness-review.json#plans.discretion_exercised"
+  },
+  {
+    "key": "testbed, 120 days/plans.goal_proposed",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+    },
+    "observed": 0,
+    "cause": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted.",
+    "evidence": "docs/audit/s96-evidence/liveness-review.json#plans.goal_proposed"
+  },
+  {
+    "key": "testbed, 120 days/plans.discretion_exercised",
+    "before": null,
+    "after": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+    },
+    "observed": 0,
+    "cause": "S96 /0114: no received conditional authority is exercised in either normal reference. Johnston fully complies with his June hold, so no proposal enables the sourced grant; the July goal remains in transit past July. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert.",
+    "evidence": "docs/audit/s96-evidence/liveness-review.json#plans.discretion_exercised"
   }
 ]

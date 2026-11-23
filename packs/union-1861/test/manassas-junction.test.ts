@@ -15,7 +15,7 @@ it('the junction doctrine waits for a received advance notice and remembers only
   const projection = (state: typeof initial) => {
     const request = phase0.pendingRequests(world, state).find(r => r.requestSeat === seat)!;
     if (request.menu.menuKind !== 'principal') throw Error('principal required');
-    return request.menu.doctrine.offensives.find(o => o.post === post)!;
+    return request.menu.doctrine.offensives.find(o => o.post === post && o.objective === 'manassas')!;
   };
   expect(projection(initial)).toMatchObject({ day: 134, ready: false, issued: false });
   const hidden = { ...initial, situationFlags: { ...initial.situationFlags, manassas_advance_received: 136 } };

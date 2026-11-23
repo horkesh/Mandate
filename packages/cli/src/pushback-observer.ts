@@ -10,6 +10,17 @@ export function observePushback() {
   const onTick = (world: phase0.SeatsWorld, r: phase0.TickResult) => {
     const sideOfIssuer = (person: string | undefined): string | null => world.factionIds.find(f => world.faction(f).principal === person) ?? null;
     const merge = (id: string, data: Matter) => matters.set(id, { ...matters.get(id), ...data });
+    const proposal = (body: phase0.ReportBody) => {
+      if (body.reportProposal === undefined || body.reportAnswers === null || body.reportDay > r.day) return;
+      const order = body.reportAnswers;
+      const id = `${order}|${body.reportAuthor}|goal-proposal|${body.reportDay}`;
+      if (acts.has(id)) return;
+      // The paper answers the original order. Its proposed destination must not
+      // replace the matter being challenged, and the answer cannot buy a second credit.
+      acts.set(id, { id, creditKey: `${order}|${body.reportAuthor}|addressee|`, order, side: null,
+        actor: body.reportAuthor, role: 'addressee', kind: 'goal-proposal', actual: 'propose', declared: 'propose', day: body.reportDay,
+        ...(body.reportAuthorPost === null ? {} : { post: body.reportAuthorPost }) });
+    };
     for (const m of r.state.messagesInTransit) {
       const order = m.msgOrder;
       const verb = m.msgVerb;
@@ -21,6 +32,7 @@ export function observePushback() {
       });
       if (verb !== null) merge(m.msgOrigin, { side: sideOfIssuer(verb.verbIssuer), subject: verb.verbSubject ?? undefined, post: verb.verbPost ?? undefined, to: verb.verbTo ?? undefined });
       if (m.msgReport !== null && m.msgReport !== undefined) {
+        proposal(m.msgReport);
         const recipient = m.msgPending.at(-1)?.hopPerson ?? m.msgTo;
         const side = sideOfIssuer(recipient);
         if (side !== null) merge(m.msgOrigin, { side, subject: m.msgReport.reportSubjectId });
@@ -36,6 +48,7 @@ export function observePushback() {
       const held = r.state.knowledgeBySeat[phase0.seatIdFor(world.faction(f).principal)];
       for (const sent of held?.knownSentOrders ?? []) merge(sent.sentMessage, { side: f, ...(sent.sentGoal === undefined ? {} : { objective: sent.sentGoal.goalObjective ?? undefined, posture: sent.sentGoal.goalPosture }) });
       for (const report of held?.knownReports ?? []) {
+        if (report.knownReceivedDay <= r.day) proposal(report.knownBody);
         const b = report.knownBody;
         if (b.reportAnswers !== null) {
           merge(b.reportAnswers, { side: f });

@@ -20,6 +20,7 @@ import { ORDER_ROUTES, routeLatency, type LatencyMap } from '../messages/latency
 import { mintMessageId } from '../messages/transit.ts';
 import type { MarchGround } from '../movement/march.ts';
 import { candidateOf, postsInStatus } from '../plans/plans.ts';
+import { termsOfGoal } from '../plans/goal.ts';
 import { isCallAnswer } from '../proxy/responses.ts';
 import { knowledgeOf, unansweredAppointments } from '../knowledge/knowledge.ts';
 import { capitalOf } from '../command/capitals.ts';
@@ -31,12 +32,12 @@ import { passageOf } from '../tick/passage.ts';
 import { choosingMenus, optionView, planKey } from '../tick/plans.ts';
 import { createViewCache, viewFor, type ViewCache } from '../view/view.ts';
 import { dateOfDay, daysFromCivil, formatIsoDate, parseIsoDate } from '../world/calendar.ts';
-import type { BattleMenu, Candidate, CommandablePost, DelegatedMenu, DoctrineView, PlanMenu, RaisingPost, Vacancy, PlanReview, PrincipalMenu, RouteOption, SeatRequest, SituationChoice } from './api.ts';
+import type { BattleMenu, Candidate, CommandablePost, DelegatedMenu, DoctrineView, PlanMenu, RaisingPost, Vacancy, PlanReview, PrincipalMenu, ProposalOffer, RouteOption, SeatRequest, SituationChoice } from './api.ts';
 import { seatIdFor } from './seats.ts';
 import { attentionLeft } from './attention.ts';
 import { latencyMapFor, type SeatsWorld } from './world.ts';
 import type { SeatView } from '../view/types.ts';
-import { receivedCandidates, receivedStrength, receivedPlanPapers, receivedDepartmentSides, receivedPostSide } from './received.ts';
+import { answersGoal, latestSentGoal, receivedCandidates, receivedConditionalGoal, receivedStrength, receivedPlanPapers, receivedProposalPapers, receivedDepartmentSides, receivedPostSide } from './received.ts';
 
 /** What a day's menus are judged on: the march ground and the latency of the morning's map. */
 export interface MorningGround {
@@ -138,7 +139,7 @@ function appointmentDispatchesByDay(state: State, principal: PersonId): Readonly
 }
 
 /** The pack's doctrine for a faction's principal, its offensives' dates as days of the run (day 0 is the start's date). */
-function doctrineView(world: SeatsWorld, state: State, faction: FactionId, receivedView: SeatView, sides: ReadonlyMap<DepartmentId, FactionId | null>): DoctrineView {
+function doctrineView(world: SeatsWorld, state: State, faction: FactionId, receivedView: SeatView, sides: ReadonlyMap<DepartmentId, FactionId | null>, proposals: readonly ProposalOffer[]): DoctrineView {
   const row = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === faction);
   // No row: no doctrine (he answers his commanders and orders nothing of his own; a pack states one for every faction).
   if (row === undefined) return { crossNeutral: false, concentrateAt: null, calls: [], offensives: [], inquireEveryDays: 0, appointKinds: { land: [], naval: [] } };
@@ -149,6 +150,7 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId, recei
     .sort((a, b) => strictCompare(b.fromDate, a.fromDate) || strictCompare(a.post, b.post));
   const concentration = concentrations[0];
   const transfers = new Map<PostId, PostId>();
+  const sent = state.knowledgeBySeat[seatIdFor(world.faction(faction).principal)]?.knownSentOrders ?? [];
   for (const c of concentrations) for (const from of c.fromPosts) if (!transfers.has(from)) transfers.set(from, c.post);
   return {
     crossNeutral: row.crossNeutral,
@@ -165,14 +167,20 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId, recei
     })),
     offensives: row.offensives.map((o) => {
       const day = daysFromCivil(parseIsoDate(o.fromDate)) - start;
-      if (o.requiresNotice === undefined) return { post: o.post, objective: o.objective, day, ...(o.posture === undefined ? {} : { posture: o.posture }) };
-      const heard = receivedView.reports.some(r => r.subjectKind === 'situation' && r.subjectId === o.requiresNotice && r.day <= state.stateDay && r.receivedDay <= state.stateDay);
+      const entry = { post: o.post, objective: o.objective, day, ...(o.id === undefined ? {} : { id: o.id }),
+        ...(o.posture === undefined ? {} : { posture: o.posture }), ...(o.discretion === undefined ? {} : { discretion: o.discretion }) };
+      if (o.requiresNotice === undefined && o.id === undefined) return entry;
+      const heard = o.requiresNotice === undefined || receivedView.reports.some(r => r.subjectKind === 'situation' && r.subjectId === o.requiresNotice && r.day <= state.stateDay && r.receivedDay <= state.stateDay);
       // The principal remembers his own dispatch, never the addressee's private plan or operation.
       // A later personal order to the same command supersedes this automatic doctrine as well.
-      const sent = state.knowledgeBySeat[seatIdFor(world.faction(faction).principal)]?.knownSentOrders ?? [];
-      return { post: o.post, objective: o.objective, day, ...(o.posture === undefined ? {} : { posture: o.posture }), ready: heard,
+      return { ...entry, ready: heard,
         issued: sent.some(s => s.sentPost === o.post && s.sentKind === 'goal' && s.sentDay >= day) };
     }),
+    ...(row.proposalAnswers === undefined ? {} : { proposalAnswers: row.proposalAnswers.flatMap(a => {
+      const proposal = proposals.find(p => p.post === a.post && sent.some(s => answersGoal(s, p.order) && s.sentDoctrine === a.answers));
+      if (proposal === undefined) return [];
+      return [{ ...a, day: daysFromCivil(parseIsoDate(a.fromDate)) - start, paper: proposal.paper, ordered: proposal.ordered }];
+    }) }),
     inquireEveryDays: row.inquireEveryDays,
     appointKinds: { land: [...row.appointKinds.land], naval: [...row.appointKinds.naval] },
   };
@@ -354,9 +362,28 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     });
     situations.push({ ...situationChoice(def, r.sitOpenOptions, def.delegableTo, null), consultPosts });
   }
-  const awaiting = postsInStatus(state, 'ready').filter((p) => state.planRecords[p]!.planIssuer === f.principal && !answerInTransit(state, f.principal, p, ['go']));
   const d = world.map.world.rules.plans.goalDefaults;
-  const doctrine = doctrineView(world, state, faction, receivedView, sides);
+  const knowledge = knowledgeOf(state, seatIdFor(f.principal));
+  const sentOrders = knowledge.knownSentOrders ?? [];
+  const conditional = new Map(commandable.flatMap(c => {
+    if (!sentOrders.some(o => o.sentPost === c.post && o.sentGoal?.goalDiscretion !== undefined)) return [];
+    const terms = receivedConditionalGoal(state, f.principal, c.post, c.holder);
+    return terms === undefined ? [] : [[c.post, terms] as const];
+  }));
+  const awaiting = [...postsInStatus(state, 'ready').filter(p => !conditional.has(p) &&
+    state.planRecords[p]!.planIssuer === f.principal && !answerInTransit(state, f.principal, p, ['go'])),
+    ...[...conditional].filter(([, g]) => g.ready).map(([p]) => p),
+  ].sort(strictCompare);
+  const proposals = receivedProposalPapers(state, f.principal).flatMap(paper => {
+    const body = paper.knownBody;
+    const ordered = latestSentGoal(sentOrders, knowledge.knownReports, body.reportAuthorPost!);
+    if (ordered?.sentGoal === undefined || !commandable.some(c => c.post === ordered.sentPost && c.holder === body.reportAuthor)) return [];
+    return [{
+      paper: paper.id, order: body.reportAnswers!, post: ordered.sentPost, author: body.reportAuthor,
+      ordered: termsOfGoal(ordered.sentGoal), goal: termsOfGoal(body.reportProposal!.goal), reasons: body.reportProposal!.reasons,
+    }];
+  });
+  const doctrine = doctrineView(world, state, faction, receivedView, sides, proposals);
   const appointments = world.map.world.rules.ruleSeats.principals.find(r => r.faction === faction)?.appointments;
   const receivedPosts = receivedView.posts;
   const appointmentView = appointments?.filter(a => 'fromDate' in a).map(a => ({
@@ -379,16 +406,16 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
     commandable,
     situations,
     reviews: reviewsFor(state, f.principal),
+    ...(proposals.length === 0 ? {} : { proposals }),
     awaiting,
     goalDefaults: { risk: d.risk, deadlineDays: d.deadlineDays, rail: d.rail, river: d.river, sea: d.sea, neutral: d.neutral, awaitWord: d.awaitWord, approveAsDrafted: d.approveAsDrafted },
-    sentGoals: (knowledgeOf(state, seatIdFor(f.principal)).knownSentOrders ?? []).flatMap(s => {
+    sentGoals: sentOrders.flatMap(s => {
       const g = s.sentGoal;
       if (s.sentKind !== 'goal' || s.sentDay > state.stateDay || g === undefined) return [];
-      return [{ post: s.sentPost, message: s.sentMessage, goal: {
-        objective: g.goalObjective, posture: g.goalPosture, risk: g.goalRisk, deadlineDays: g.goalDeadlineDays,
-        rail: g.goalRail, river: g.goalRiver, sea: g.goalSea, neutral: g.goalNeutral,
-        committed: [...g.goalCommitted], awaitWord: g.goalAwaitWord, approveAsDrafted: g.goalApproveAsDrafted,
-      } }];
+      return [{ post: s.sentPost, message: s.sentMessage, goal: termsOfGoal(g),
+        ...(s.sentDoctrine === undefined ? {} : { doctrine: s.sentDoctrine }),
+        ...(s.sentProposal === undefined ? {} : { proposalReply: true as const }),
+      }];
     }),
   };
 }

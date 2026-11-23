@@ -16,6 +16,8 @@ export * from './serialize/hash.ts';
 export * from './serialize/save.ts';
 export * from './telemetry.ts';
 export * from './ownership.ts';
+export { DISCRETION_CONDITIONS } from './plans/goal.ts';
+export { conditionalDoctrineProblems } from './world/doctrine.ts';
 // Phase 0 lane 0.6: seats, knowledge, messages in transit, the command log and replay.
 export * as phase0 from './phase0.ts';
 // Phase 1 lane 1.2: the planner (0062).

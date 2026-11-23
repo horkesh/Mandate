@@ -38,6 +38,7 @@ import { politicsRulesProblems } from '../politics/rules.ts';
 import { otherEnd, type WorldIndex } from '../world/index.ts';
 import type { ScenarioStart } from '../world/scenario.ts';
 import type { PostKindRole, World } from '../world/world.ts';
+import { conditionalDoctrineProblems } from '../world/doctrine.ts';
 
 /**
  * The rules the seats layer reads, all the pack's (`WorldRules`, 0072), read from the World it was indexed with, never
@@ -373,6 +374,7 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
   }
   rows.forEach((r, i) => {
     const at = `rules.ruleSeats.principals[${i}]`;
+    for (const p of conditionalDoctrineProblems(r, id => map.regions.has(id))) problems.push(`${at}.${p.field}: ${p.message}`);
     const onSide = (post: string, what: string) => {
       if (!posts.has(post)) problems.push(`${at}.${what}: ${post} is not a start post`);
       else if (postSides.get(post)?.faction !== r.faction) problems.push(`${at}.${what}: ${post} is not on ${r.faction}'s side at the start`);

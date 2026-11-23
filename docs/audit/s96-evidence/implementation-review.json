@@ -1,0 +1,46 @@
+{
+  "scope": "One bounded independent author-QA review plus targeted corrections; not the lead's deferred whole-branch or gate review",
+  "reviewerModel": "gpt-6.2-sol, medium",
+  "findings": [
+    {
+      "problem": "Successive proposal replies could overwrite their active goal ancestry",
+      "resolution": "Bounded sender goal ancestry retained separately from decline/reply metadata; reaffirmation correlation retained."
+    },
+    {
+      "problem": "A full fallback with different await-word terms could neither obtain a valid go nor conceal its readiness until reported",
+      "resolution": "Received switch/readiness papers choose effective terms; go carries plan correlation and is checked on arrival."
+    },
+    {
+      "problem": "An unjoined stronger reinforcement could displace the condition's command position",
+      "resolution": "Use canonical joined headquarters, joined colocated strength and the same retreat-line origin; paired controls."
+    },
+    {
+      "problem": "Alternative-goal searches were bounded but absent from search telemetry",
+      "resolution": "Count and report auxiliary searches under the existing cap."
+    },
+    {
+      "problem": "Extreme existing tolerance values could produce a negative superiority threshold",
+      "resolution": "Clamp negative tolerance and short-circuit at or above1000; strict superiority boundary, with no new default."
+    },
+    {
+      "problem": "Fresh objections to reaffirmed or conflict-kept goals did not generate proposals",
+      "resolution": "Separate bounded PlanChallenge and explicit active-authority correlation; active plan identity/clocks preserved; stale reply controls."
+    }
+  ],
+  "verification": [
+    {
+      "path": "runs/s96/grammar/lifecycle-current.log",
+      "passed": 13
+    },
+    {
+      "path": "runs/s96/grammar/challenge-final.log",
+      "passed": 47
+    },
+    {
+      "path": "runs/s96/final-focused.log",
+      "passed": 107
+    }
+  ],
+  "unmetHistoricalChain": "Johnston complies with the hold and no June proposal or received discretion grant is observed. No trait/date/route or source knowledge is fitted.",
+  "referenceReuse": "Dedicated references predate the last exceptional challenge correction; reuse awaits exact268-hash and complete-counter confirmation by the single binding done check."
+}

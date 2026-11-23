@@ -16,14 +16,14 @@ import { term } from '../knowledge/truth.ts';
 import { senderFor } from '../seats/sender.ts';
 import { knowledgeOf } from '../knowledge/knowledge.ts';
 import { seatIdFor } from '../seats/seats.ts';
-import { receivedPlanPapers } from '../seats/received.ts';
+import { latestSentGoal, receivedConditionalGoal, receivedPlanPapers, receivedProposalPapers } from '../seats/received.ts';
 import type { ReportBody, ReportClaim } from '../knowledge/report.ts';
-import type { EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewCommand } from '../log/commands.ts';
+import type { AnswerProposalCommand, EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewCommand } from '../log/commands.ts';
 import type { Hop, OrderBody, TransitMessage } from '../messages/transit.ts';
 import { mintMessageId } from '../messages/transit.ts';
 import { ORDER_ROUTES } from '../messages/latency.ts';
 import { editIssues, goalKindOf, goalProblems, sameGoal, type EditSpec, type GoalKind, type PlanGoal } from '../plans/goal.ts';
-import { approve, planOf, receiveCounter, release, sendBack, setGoal, type PlanRecord, type NoteReading } from '../plans/plans.ts';
+import { approve, challengeGoal, finishChallenge, planOf, receiveCounter, release, sendBack, setGoal, type PlanRecord, type NoteReading } from '../plans/plans.ts';
 import { copyNote, noteProblems } from '../plans/notes.ts';
 import type { State } from '../root-state.ts';
 import { answerOrder, goalTerms, relayAction, resolveOrderConflict } from '../reading/orders.ts';
@@ -47,6 +47,7 @@ export function goalOf(t: GoalTerms): PlanGoal {
     goalCommitted: [...t.committed],
     goalAwaitWord: t.awaitWord,
     goalApproveAsDrafted: t.approveAsDrafted,
+    ...(t.discretion === undefined ? {} : { goalDiscretion: { condition: t.discretion.condition, fallback: goalOf(t.discretion.fallback) } }),
   };
 }
 
@@ -77,7 +78,9 @@ function objectiveOf(state: State, order: OrderBody): ReportClaim['claimRegion']
  * Only a principal sends orders (review F3): a seat may make a principal's choices or choose among options the kernel
  * judged consistent, never issue commands of its own (decision 0015, FOUNDATION section 8).
  */
-export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: OrderCommand | ReviewCommand | GoCommand): RejectionReason | null {
+type OrderEnclosure = Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes' | 'orderProposal' | 'orderDoctrine' | 'orderPlan'>;
+
+export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: OrderCommand | AnswerProposalCommand | ReviewCommand | GoCommand): RejectionReason | null {
   const { world } = ctx;
   const assignment = state.seatAssignments[seat];
   if (assignment === undefined) return 'unknown_seat';
@@ -94,28 +97,53 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
   // Only the routes the principal's menu offers (review N1): an order "in person" would be a visit, a verb of its own.
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
 
-  let body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes'>;
-  if (cmd.cmd === 'order') {
-    const goal = goalOf(cmd.goal);
-    if (goalProblems(goal).length > 0) return 'bad_goal';
-    if (goal.goalObjective !== null && !world.regionIds.includes(goal.goalObjective)) return 'bad_goal';
+  let body: OrderEnclosure;
+  if (cmd.cmd === 'order' || cmd.cmd === 'answer_proposal') {
+    const proposal = cmd.cmd === 'answer_proposal'
+      ? receivedProposalPapers(state, issuer.id).find(p => p.id === cmd.proposal && p.knownBody.reportSubjectId === cmd.to)
+      : undefined;
+    if (cmd.cmd === 'answer_proposal' && (proposal === undefined || proposal.knownBody.reportAuthor !== sender.holder(cmd.to) ||
+      ctx.outbox.some(m => m.msgOrder?.orderProposal?.replyPaper === cmd.proposal))) return 'no_proposal';
+    const goal = cmd.cmd === 'order' || cmd.action === 'discretion' ? goalOf(cmd.goal)
+      : cmd.action === 'accept' ? proposal!.knownBody.reportProposal!.goal : null;
     const commands = allCommandedBlocks(ctx.world.map, state, cmd.to);
-    if (!goal.goalCommitted.every((b) => commands.includes(b))) return 'bad_goal';
-    body = { orderKind: 'goal', orderGoal: goal, orderEdit: null, orderCall: null };
+    if (goal !== null && goalProblems(goal).length > 0) return 'bad_goal';
+    for (let term = goal; term !== null; term = term.goalDiscretion?.fallback ?? null) {
+      if (term.goalObjective !== null && !world.regionIds.includes(term.goalObjective)) return 'bad_goal';
+      if (!term.goalCommitted.every(b => commands.includes(b))) return 'bad_goal';
+    }
+    if (cmd.doctrine !== undefined) {
+      const doctrine = world.map.world.rules.ruleSeats.principals.find(r => r.faction === sender.faction);
+      const rows = cmd.cmd === 'order' ? doctrine?.offensives : doctrine?.proposalAnswers;
+      if (!rows?.some(r => r.id === cmd.doctrine && r.post === cmd.to)) return 'bad_goal';
+    }
+    body = { orderKind: goal === null ? 'decline_proposal' : 'goal', orderGoal: goal, orderEdit: null, orderCall: null,
+      ...(cmd.doctrine === undefined ? {} : { orderDoctrine: cmd.doctrine }),
+      ...(cmd.cmd === 'answer_proposal' ? { orderProposal: {
+        replyPaper: cmd.proposal, replyOrder: proposal!.knownBody.reportAnswers!, replyAction: cmd.action,
+        ...(proposal!.knownBody.reportProposal!.proposalBasis === undefined ? {} : { replyBasis: proposal!.knownBody.reportProposal!.proposalBasis }),
+      } } : {}),
+    };
   } else {
-    const sent = knowledgeOf(state,seatIdFor(issuer.id)).knownSentOrders ?? [];
-    const goal = sent.find(o => o.sentPost === cmd.to && o.sentKind === 'goal');
+    const knowledge = knowledgeOf(state, seatIdFor(issuer.id));
+    const sent = knowledge.knownSentOrders ?? [];
+    const goal = latestSentGoal(sent, knowledge.knownReports.filter(r => r.knownReceivedDay <= state.stateDay && r.knownBody.reportDay <= state.stateDay), cmd.to);
+    const conditional = receivedConditionalGoal(state, issuer.id, cmd.to, sender.holder(cmd.to));
     const review = sent.find(o => o.sentPost === cmd.to && (o.sentKind === 'approve' || o.sentKind === 'edit') && o.sentDay >= (goal?.sentDay ?? 0));
-    const approved = goal?.sentGoal?.goalApproveAsDrafted === true || review !== undefined;
+    const approved = conditional === undefined
+      ? goal?.sentGoal?.goalApproveAsDrafted === true || review !== undefined
+      : conditional.ready || conditional.goal.goalApproveAsDrafted || review?.sentPlan === conditional.order;
     if (cmd.cmd === 'go') {
-      if (goal?.sentGoal?.goalAwaitWord !== true || !approved) return 'no_plan';
-      body = { orderKind: 'go', orderGoal: null, orderEdit: null, orderCall: null };
+      if ((conditional?.goal ?? goal?.sentGoal)?.goalAwaitWord !== true || !approved || (conditional !== undefined && !conditional.ready)) return 'no_plan';
+      body = { orderKind: 'go', orderGoal: null, orderEdit: null, orderCall: null,
+        ...(conditional === undefined ? {} : { orderPlan: conditional.order }) };
     } else if (cmd.action === 'edit') {
       if (paper === undefined && !approved) return 'no_plan';
       const edit = editOf(cmd.edit!);
       if (editIssues(edit).length > 0) return 'bad_review';
       if ([edit.editRegion, ...edit.editVia].some((r) => r !== null && !world.regionIds.includes(r))) return 'bad_review';
-      body = { orderKind: 'edit', orderGoal: null, orderEdit: edit, orderCall: null };
+      body = { orderKind: 'edit', orderGoal: null, orderEdit: edit, orderCall: null,
+        ...(conditional === undefined ? {} : { orderPlan: conditional.order }) };
     } else {
       if (paper === undefined) return 'no_plan';
       const notes = cmd.notes;
@@ -128,7 +156,8 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
           if (!paper.knownBody.reportPlan!.paperChosen.candAxes.some(a => a.axisName === n.markAxis)) return 'bad_review';
         }
       }
-      body = { orderKind: cmd.action, orderGoal: null, orderEdit: null, orderCall: null, ...(notes === undefined ? {} : { orderNotes: notes.map(copyNote) }) };
+      body = { orderKind: cmd.action, orderGoal: null, orderEdit: null, orderCall: null, ...(notes === undefined ? {} : { orderNotes: notes.map(copyNote) }),
+        ...(conditional === undefined ? {} : { orderPlan: conditional.order }) };
     }
   }
 
@@ -140,7 +169,7 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
  * Send a validated order down the chain (or around it): the hops, the first leg, a special messenger's price and each
  * bypassed relay's grievance. Shared by goals, reviews, the word to go and calls (lane 1.7).
  */
-export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issuerId: PersonId, to: PostId, route: OrderCommand['route'], bypass: boolean, body: Pick<OrderBody, 'orderKind' | 'orderGoal' | 'orderEdit' | 'orderCall' | 'orderNotes'>, requisition?: PostId): MessageId {
+export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issuerId: PersonId, to: PostId, route: OrderCommand['route'], bypass: boolean, body: OrderEnclosure, requisition?: PostId): MessageId {
   const { world } = ctx;
   const cmd = { to, route, bypass };
   const issuer = { id: issuerId };
@@ -257,11 +286,13 @@ export function answerBody(
   author: PersonId,
   authorPost: PostId | null,
   day: number,
-  partial: Pick<ReportBody, 'reportType' | 'reportSubtype' | 'reportClaims' | 'reportAdvice' | 'reportNotes' | 'reportPlan'> & { readonly answers: MessageId; readonly about: PostId },
+  partial: Pick<ReportBody, 'reportType' | 'reportSubtype' | 'reportClaims' | 'reportAdvice' | 'reportNotes' | 'reportPlan' | 'reportProposal' | 'reportDiscretion'> & { readonly answers: MessageId; readonly about: PostId },
 ): ReportBody {
   return {
     ...(partial.reportPlan === undefined ? {} : { reportPlan: partial.reportPlan }),
     ...(partial.reportNotes === undefined ? {} : { reportNotes: partial.reportNotes }),
+    ...(partial.reportProposal === undefined ? {} : { reportProposal: partial.reportProposal }),
+    ...(partial.reportDiscretion === undefined ? {} : { reportDiscretion: partial.reportDiscretion }),
     reportType: partial.reportType,
     reportSubtype: partial.reportSubtype,
     reportAuthor: author,
@@ -354,6 +385,20 @@ function acknowledge(ctx: TickContext, state: State, msg: TransitMessage, token:
   });
 }
 
+/** A conditional plan's readiness is a paper, like notice of the switch that authorised it. */
+export function reportConditionalReady(ctx: TickContext, state: State, post: PostId): void {
+  const record = planOf(state, post)!;
+  if (record.planStatus !== 'ready' || (record.planGoal.goalDiscretion === undefined && record.planDiscretionOrder === undefined)) return;
+  const holder = state.postStates[post]!.postHolder!;
+  sendReport(ctx, state, {
+    body: answerBody(holder, post, ctx.day, {
+      reportType: 'wire-dispatch', reportSubtype: null, reportAdvice: null, answers: record.planOrder, about: post,
+      reportClaims: [{ claimKind: 'goal-status', claimRegion: record.planGoal.goalObjective, claimValue: 1, claimToken: 'ready', claimConfidence: 1000 }],
+    }),
+    truth: { truthTerms: [], truthTrimmed: [] }, to: record.planIssuer, tag: `ready.${post}`,
+  });
+}
+
 /**
  * Two goals conflict (0040) when they differ, the one he holds is less than the pack's conflict window old
  * (`WorldRules.standing.conflictWindowDays`), and one came down his chain while the other went around it (with relays
@@ -394,15 +439,39 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
   if (order.orderKind === 'support') return arriveSupport(ctx, state, msg);
   const post = msg.msgToPost!;
   const plan = planOf(state, post);
+  if (order.orderPlan !== undefined && plan?.planOrder !== order.orderPlan) {
+    acknowledge(ctx, state, msg, 'stale', false);
+    return state;
+  }
+  const reply = order.orderProposal;
+  if (reply !== undefined) {
+    const stillHeld = plan?.planOrder === (reply.replyBasis ?? reply.replyOrder);
+    const stillChallenged = reply.replyBasis === undefined || (plan?.planChallenge?.challengeOrder === reply.replyOrder &&
+      plan.planChallenge.challengeIssuer === order.orderIssuer && plan.planChallenge.challengePending === undefined);
+    if (!stillHeld || !stillChallenged) {
+      acknowledge(ctx, state, msg, 'stale', false);
+      return state;
+    }
+  }
+  if (order.orderKind === 'decline_proposal') {
+    acknowledge(ctx, state, msg, 'decline_proposal', true);
+    return reply?.replyBasis === undefined ? state : finishChallenge(state, post, false);
+  }
   if (order.orderKind === 'goal') {
     const goal = order.orderGoal!;
     const reaffirmed = plan !== undefined && plan.planIssuer === order.orderIssuer && sameGoal(plan.planGoal, goal);
     const outcome = conflictOf(ctx, state, msg, plan);
     const answer = answerOrder(ctx.world, state, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, goalKindOf(goal)), { oversight: oversightOf(ctx, state, msg.msgTo, order.orderIssuer).value });
     let next = recordResponse(state, responseOf(answer, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day, kind: order.orderKind }));
+    const response = responseKey(msg.msgOrigin, msg.msgTo);
+    const propose = answer.declared === 'comply_with_reservations' || answer.declared === 'object' || answer.declared === 'refuse';
     if (outcome.obeyed === 'new' && !reaffirmed) {
-      const set = { id: msg.msgOrigin, issuer: order.orderIssuer, goal, viaChain: !order.orderBypass, issuedDay: order.orderIssuedDay, response: responseKey(msg.msgOrigin, msg.msgTo) };
+      const set = { id: msg.msgOrigin, issuer: order.orderIssuer, goal, viaChain: !order.orderBypass,
+        issuedDay: order.orderIssuedDay, response, propose };
       next = setGoal(next, post, set, ctx.day);
+    } else if (propose) {
+      next = challengeGoal(next, post, { challengeOrder: msg.msgOrigin, challengeIssuer: order.orderIssuer,
+        challengeGoal: goal, challengeResponse: response, challengePending: true });
     }
     fire(ctx, 'orders.obeyed', outcome.obeyed === 'new' ? 1 : 0);
     if (outcome.obeyed === 'new' && !reaffirmed) fire(ctx, 'plans.goal_set');
@@ -436,6 +505,7 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
     readings.push({ readingMark: n, readingResponse: responseKey(msg.msgOrigin, msg.msgTo, index) });
   }
   const changed = order.orderKind === 'approve' ? approve(answered, post) : order.orderKind === 'send_back' ? sendBack(answered, post, readings) : release(answered, post);
+  if (order.orderKind === 'approve') reportConditionalReady(ctx, changed, post);
   fire(ctx, order.orderKind === 'approve' ? 'plans.approved' : order.orderKind === 'send_back' ? 'plans.sent_back' : 'plans.released');
   acknowledge(ctx, changed, msg, order.orderKind, true);
   return changed;

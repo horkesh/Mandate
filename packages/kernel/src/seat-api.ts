@@ -13,8 +13,8 @@ export type { FactionId, MessageId, PersonId, PostId, RegionId, SeatId } from '.
 export type { ClaimKind, ReportType, SubjectKind } from './knowledge/report.ts';
 export type { NoteAccount } from './knowledge/report.ts';
 export { ADVICE_SUBTYPES, CLAIM_KINDS, INFORMAL_SUBTYPES, REPORT_TYPES } from './knowledge/report.ts';
-export type { BattleCommand, CallCommand, ChooseCommand, Command, DecideCommand, DelegateCommand, EditTerms, GoCommand, GoalTerms, OrderCommand, ReviewAction, ReviewCommand, SeatCommand } from './log/commands.ts';
-export { REVIEW_ACTIONS } from './log/commands.ts';
+export type { AnswerProposalCommand, BattleCommand, CallCommand, ChooseCommand, Command, DecideCommand, DelegateCommand, EditTerms, GoCommand, GoalTerms, OrderCommand, ProposalAction, ReviewAction, ReviewCommand, SeatCommand } from './log/commands.ts';
+export { PROPOSAL_ACTIONS, REVIEW_ACTIONS } from './log/commands.ts';
 export { NOTE_KINDS } from './plans/notes.ts';
 export type { PlanNote, NoteKind } from './plans/notes.ts';
 export type { BattleOrders, CutOffChoice, NightChoice, Pursuit } from './combat/order-kinds.ts';
@@ -25,8 +25,8 @@ export { COMMAND_KINDS, RELIEF_MODES } from './log/commands.ts';
 export type { CounterKind, CounterTerms } from './audience/counters.ts';
 export { COUNTER_KINDS } from './audience/counters.ts';
 export type { RouteKind } from './messages/latency.ts';
-export type { EditKind, PlanStatus, Posture } from './plans/goal.ts';
-export { EDIT_KINDS, PLAN_STATUSES, POSTURES } from './plans/goal.ts';
+export type { Discretion, EditKind, PlanStatus, Posture } from './plans/goal.ts';
+export { DISCRETION_CONDITIONS, EDIT_KINDS, MAX_FALLBACKS, PLAN_STATUSES, POSTURES } from './plans/goal.ts';
 export type {
   AxisView,
   BattleMenu,
@@ -41,6 +41,7 @@ export type {
   PlanMenu,
   PlanReview,
   PrincipalMenu,
+  ProposalOffer,
   RouteOption,
   Seat,
   SeatAnswer,

@@ -11,6 +11,7 @@
  */
 import type { SeatId } from '../ids.ts';
 import { copyNote } from '../plans/notes.ts';
+import { MAX_FALLBACKS } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 import type { Seat, SeatRequest } from '../seats/api.ts';
 import { pendingRequests } from '../seats/requests.ts';
@@ -22,6 +23,7 @@ import { createFreezeLedger, deepFreeze } from '../tick/freeze.ts';
 import { tick, type TickResult } from '../tick/tick.ts';
 import { createViewCache } from '../view/view.ts';
 import { checkedLog, entriesForDay, type LogEntry } from './log.ts';
+import type { GoalTerms } from './commands.ts';
 
 export interface DayHash {
   readonly day: number;
@@ -56,6 +58,19 @@ function hashDue(options: PlayOptions, day: number, last: boolean): boolean {
 /** Whoever sits in each seat. Throws for a seat with nobody in it. */
 export type SeatTable = (seat: SeatId) => Seat;
 
+function copyGoal(g: GoalTerms, depth = 0): GoalTerms {
+  return {
+    objective: g.objective, posture: g.posture, risk: g.risk, deadlineDays: g.deadlineDays, rail: g.rail,
+    river: g.river, sea: g.sea, neutral: g.neutral, committed: [...g.committed], awaitWord: g.awaitWord,
+    approveAsDrafted: g.approveAsDrafted,
+    // Preserve the presence of an overflowing fallback so log validation rejects it.
+    ...(g.discretion === undefined ? {} : { discretion: {
+      condition: g.discretion.condition,
+      fallback: depth >= MAX_FALLBACKS ? g.discretion.fallback : copyGoal(g.discretion.fallback, depth + 1),
+    } }),
+  };
+}
+
 /** Turn one seat's answer into log entries. A seat that has nothing to order logs nothing. */
 export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
   const answer = seat.respond(request);
@@ -67,6 +82,14 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
     if (c.cmd === 'decide') return { day, seat, command: { cmd: 'decide', situation: c.situation, options: [...c.options] } };
     if (c.cmd === 'delegate') return { day, seat, command: { cmd: 'delegate', situation: c.situation, to: c.to } };
     if (c.cmd === 'go') return { day, seat, command: { cmd: 'go', to: c.to, route: c.route, bypass: c.bypass } };
+    if (c.cmd === 'answer_proposal') {
+      const routing = { cmd: c.cmd, to: c.to, proposal: c.proposal, route: c.route, bypass: c.bypass,
+        ...(c.doctrine === undefined ? {} : { doctrine: c.doctrine }) };
+      const command = c.action === 'discretion'
+        ? { ...routing, action: c.action, goal: copyGoal(c.goal) as typeof c.goal }
+        : { ...routing, action: c.action };
+      return { day, seat, command };
+    }
     if (c.cmd === 'battle') return { day, seat, command: { cmd: 'battle', post: c.post, commit: c.commit, night: c.night, cutOff: c.cutOff, pursue: c.pursue } };
     if (c.cmd === 'call') return { day, seat, command: { cmd: 'call', to: c.to, regiments: c.regiments, termDays: c.termDays, route: c.route, bypass: c.bypass, ...(c.men === undefined ? {} : { men: c.men }), ...(c.callId === undefined ? {} : { callId: c.callId }), ...(c.arm === undefined ? {} : { arm: c.arm }), ...(c.readiness === undefined ? {} : { readiness: c.readiness }) } };
     if (c.cmd === 'review') {
@@ -97,21 +120,8 @@ export function answerEntries(request: SeatRequest, seat: Seat): LogEntry[] {
       case 'address':
         return { day, seat, command: { cmd: 'address', bloc: c.bloc } };
     }
-    const g = c.goal;
-    const goal = {
-      objective: g.objective,
-      posture: g.posture,
-      risk: g.risk,
-      deadlineDays: g.deadlineDays,
-      rail: g.rail,
-      river: g.river,
-      sea: g.sea,
-      neutral: g.neutral,
-      committed: [...g.committed],
-      awaitWord: g.awaitWord,
-      approveAsDrafted: g.approveAsDrafted,
-    };
-    return { day, seat, command: { cmd: 'order', to: c.to, goal, route: c.route, bypass: c.bypass } };
+    return { day, seat, command: { cmd: 'order', to: c.to, goal: copyGoal(c.goal), route: c.route, bypass: c.bypass,
+      ...(c.doctrine === undefined ? {} : { doctrine: c.doctrine }) } };
   });
 }
 

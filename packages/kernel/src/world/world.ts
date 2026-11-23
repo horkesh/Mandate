@@ -13,6 +13,7 @@ import type { OrganisationTemplate } from './organisation.ts';
 import type { DepartmentId, FactionId, PersonId, PostId, RegionId, SituationId } from '../ids.ts';
 import type { ComplianceRung } from '../directive.ts';
 import type { NoteKind } from '../plans/notes.ts';
+import type { DoctrineDiscretion, DoctrineProposalAnswer, Posture } from '../plans/goal.ts';
 import type {
   CensusRecord,
   DepotRecord,
@@ -132,7 +133,8 @@ export interface PrincipalDoctrine {
    */
   readonly calls: readonly { readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly fromDate: string; readonly atPeace?: boolean; readonly source: string }[];
   /** The offensive goals he gives, each on its day (or the day after war, if later): a post to take a region. */
-  readonly offensives: readonly { readonly post: PostId; readonly objective: RegionId; readonly fromDate: string; readonly posture?: 'hold' | 'relieve' | 'take'; readonly requiresNotice?: SituationId; readonly source: string }[];
+  readonly offensives: readonly { readonly id?: string; readonly post: PostId; readonly objective: RegionId; readonly fromDate: string; readonly posture?: Posture; readonly discretion?: DoctrineDiscretion; readonly requiresNotice?: SituationId; readonly source: string }[];
+  readonly proposalAnswers?: readonly DoctrineProposalAnswer[];
   /** How often he asks each army where it stands and what it faces (an inquiry costs no attention), in days. */
   readonly inquireEveryDays: number;
   /** The person kinds he appoints to a vacant post commanding land troops, and naval ones (the pack's person kinds). */

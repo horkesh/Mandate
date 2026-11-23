@@ -1,0 +1,160 @@
+{
+  "register": "C:/Pyrrhic/sprint-research-military/docs/research/S94/johnston-register.csv",
+  "pages": [
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 472,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p472.txt",
+      "sha256": "376533e18e8aa740b0e3663ffb5df4e30adc42fadba8ee692a7805ecc96bf557",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n491/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 473,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p473.txt",
+      "sha256": "cb9c84c3d5b6389936f7bfca161f8e10eb6dea2274d66674dc2724a433e88476",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n492/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 478,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p478.txt",
+      "sha256": "79bacb1af1b96a6760bb758ea3e882b4c180a2370f584882ac93f5637602799d",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n497/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 897,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p897.txt",
+      "sha256": "9b6302b5d857fdca6af455b945c1d378e200ef47d699cafc87c468f20c5bfa13",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n916/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 898,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p898.txt",
+      "sha256": "b04b6914740eca1d75248f89233f28c4413c762c3b63270d480bbe51b5a93103",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n917/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 901,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p901.txt",
+      "sha256": "d52419d2654c33e2b67ddc0a0904dfccebd1e8eb4c207dc3eca020a069409bf7",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n920/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 907,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p907.txt",
+      "sha256": "0092a6f587c370bce0b004ebf5d4f8eb41e10df164e302d1b1fa43ab436990e3",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n926/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 908,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p908.txt",
+      "sha256": "7a67d125051482695ebb2be0ee0d9d5f691f2be947bf0d9bceb3e2a95f7b6462",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n927/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 910,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p910.txt",
+      "sha256": "4a42af8f7c090a87062c609fd3a9170b44b2bd4595abd4a46ddc826629808817",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n929/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 923,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p923.txt",
+      "sha256": "2af8538853e0533e179f00996116339e6f1d79de3c54a27f8b31a027e2736108",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n942/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 924,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p924.txt",
+      "sha256": "ff756cc6eb223fe0d7b7e7c966f2c39530e566706c4c669816e2d6b6bac24a63",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n943/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 925,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p925.txt",
+      "sha256": "30ca0607da63422562ebddba40f8ac2331ccc579ecb8b467f7fab5d55439e5ab",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n944/mode/1up"
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 895,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p895.txt",
+      "sha256": "9163d1661a23711c5955bd30162081e864a00770af3cf9d3e97d7a50008923d8",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n914/mode/1up",
+      "scope": "Read to diagnose the missing historical intelligence input; no report or force truth authored from it."
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "page": 896,
+      "readArtifact": "C:\\Pyrrhic\\mandate-research-sources\\S94\\OR-I-II-p896.txt",
+      "sha256": "a39ff032b678b3d0f6bbd2a7d30ad389489cb0558639d7f08969b744ef2e2105",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n915/mode/1up",
+      "scope": "Read to diagnose the missing historical intelligence input; no report or force truth authored from it."
+    }
+  ],
+  "coverageReassessmentPages": [
+    {
+      "page": 166,
+      "pdfIndex": 185,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p166.txt",
+      "sha256": "c0a07b19d321fd63fef921530cfa0c2b2f701dbbd4731f510f1f1aba2afd3637"
+    },
+    {
+      "page": 167,
+      "pdfIndex": 186,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p167.txt",
+      "sha256": "18ba5b1586139e54a3770a6b8086f1cd8a267bb5d9020f85936651a36259ccae"
+    },
+    {
+      "page": 168,
+      "pdfIndex": 187,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p168.txt",
+      "sha256": "6e6fbebf3795e124e67f2d74f809359330bcfeb9841fdb842bc0fde61fbc5212"
+    },
+    {
+      "page": 169,
+      "pdfIndex": 188,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p169.txt",
+      "sha256": "2ea1e035bb702661c2a8add55acd0e468b2a213d0070936222e4e075d1c899e9"
+    },
+    {
+      "page": 975,
+      "pdfIndex": 994,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p975.txt",
+      "sha256": "1dc9a538a20705809c68eb1f1f43a2f3c3bd0748693cfdf5b6cd3058f3a5ca34"
+    },
+    {
+      "page": 976,
+      "pdfIndex": 995,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p976.txt",
+      "sha256": "d658078e18020deb256812cddb56e1a7b5cc711909e3e5cc893c63e6ab449fe5"
+    },
+    {
+      "page": 929,
+      "pdfIndex": 948,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p929.txt",
+      "sha256": "dfa609991117186edb05c200e5d553786e6bd509c168a04ee82c7874dfea0e37"
+    },
+    {
+      "page": 930,
+      "pdfIndex": 949,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S96\\OR-I-II-p930.txt",
+      "sha256": "f12c76285306da6b6eaac22e6714b9880b018fa2c2a3f83822b526d293b852bd"
+    }
+  ],
+  "upstreamPdf": {
+    "path": "C:/Pyrrhic/mandate-research-sources/S4/warofrebellion02secrrich/warofrebellion02secrrich.pdf",
+    "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+    "pageIndexOffset": 19
+  }
+}

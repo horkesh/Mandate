@@ -20,6 +20,7 @@ const KINDS_MATCH: Same<Command['cmd'], (typeof COMMAND_KINDS)[number]> = true;
 
 const entry = (command: unknown) => ({ day: 1, seat: 'seat.a_lead', command });
 const WELL_FORMED: Readonly<Record<(typeof COMMAND_KINDS)[number], unknown>> = {
+  answer_proposal: { cmd: 'answer_proposal', to: 'a_army', proposal: 'm.proposal', action: 'accept', route: 'wire', bypass: false },
   call: { cmd: 'call', to: 'a_army', regiments: 2, termDays: 90, route: 'wire', bypass: false },
   battle: { cmd: 'battle', post: 'a_army', commit: 'probe', night: 'judge', cutOff: 'break_out', pursue: 'judge' },
   choose: { cmd: 'choose', request: 'plan:a_army:1', option: 'direct:least_cost:a_front>b_front' },
@@ -50,7 +51,7 @@ const WELL_FORMED: Readonly<Record<(typeof COMMAND_KINDS)[number], unknown>> = {
 describe("the new kernel's command list (the verb-list test, 0072; lane 1.2)", () => {
   it('is exactly the plan commands, lane 1.7’s call, lane 1.5’s people verbs and lane 1.12’s battle orders', () => {
     expect(KINDS_MATCH).toBe(true);
-    expect([...COMMAND_KINDS]).toEqual(['address', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer']);
+    expect([...COMMAND_KINDS]).toEqual(['address', 'answer_proposal', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer']);
   });
 
   it('the log accepts each, well formed', () => {
@@ -83,7 +84,7 @@ describe("the new kernel's command list (the verb-list test, 0072; lane 1.2)", (
 
   it('the tick handles every kind and no other', () => {
     const tick = readFileSync(new URL('../src/tick/tick.ts', import.meta.url), 'utf8');
-    const branched = [...tick.matchAll(/c\.cmd === '([a-z]+)'/g)].map((m) => m[1]);
+    const branched = [...tick.matchAll(/c\.cmd === '([a-z_]+)'/g)].map((m) => m[1]);
     // `choose` is the tick's last branch: whatever is not an order, a review, a go, a decision or a delegation.
     expect([...new Set(branched), 'choose'].sort()).toEqual([...COMMAND_KINDS]);
   });

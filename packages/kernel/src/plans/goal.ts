@@ -8,17 +8,52 @@
  *
  * Lane 1.4 retired the standing goal: an approved plan is executed by an operation (`operations/`, `tick/operations.ts`).
  */
-import type { ForceBlockId, RegionId } from '../ids.ts';
+import type { ForceBlockId, PostId, RegionId } from '../ids.ts';
+import type { GoalTerms } from '../log/commands.ts';
 
 /** What the goal asks of him: take the objective, relieve it (reach it and hold it for a garrison there), or hold it. */
 export const POSTURES = ['hold', 'relieve', 'take'] as const;
 export type Posture = (typeof POSTURES)[number];
+
+export const DISCRETION_CONDITIONS = ['turned', 'outmatched'] as const;
+export type DiscretionCondition = (typeof DISCRETION_CONDITIONS)[number];
+/** Grammar bound for nesting in a dated row, a player's order or a replay entry. */
+export const MAX_FALLBACKS = 3;
+
+export interface Discretion<Goal> {
+  readonly condition: DiscretionCondition;
+  readonly fallback: Goal;
+}
+
+interface DoctrineGoal {
+  readonly objective: RegionId | null;
+  readonly posture: Posture;
+}
+
+/** Goals in sourced doctrine rows inherit the other terms of the letter. */
+export type DoctrineDiscretion = Discretion<DoctrineGoal & { readonly discretion?: Discretion<
+  DoctrineGoal & { readonly discretion?: Discretion<DoctrineGoal> }
+> }>;
+
+export type DoctrineProposalAnswer = {
+  readonly id: string;
+  readonly post: PostId;
+  readonly fromDate: string;
+  readonly answers: string;
+  readonly source: string;
+} & ({ readonly action: 'accept' | 'decline' } | {
+  readonly action: 'discretion';
+  readonly objective?: RegionId | null;
+  readonly posture?: Posture;
+  readonly discretion: DoctrineDiscretion;
+});
 
 /**
  * A goal as `plans` holds it and an order carries it. Immutable: replaced whole.
  * `goalObjective` is null only for "hold where he stands".
  */
 export interface PlanGoal {
+  readonly goalDiscretion?: Discretion<PlanGoal>;
   readonly goalObjective: RegionId | null;
   readonly goalPosture: Posture;
   /** 0..1000: the risk the principal accepts; it scales the exposure the commander will tolerate. */
@@ -64,19 +99,42 @@ export function sameGoal(a: PlanGoal, b: PlanGoal): boolean {
     a.goalAwaitWord === b.goalAwaitWord &&
     a.goalApproveAsDrafted === b.goalApproveAsDrafted &&
     a.goalCommitted.length === b.goalCommitted.length &&
-    a.goalCommitted.every((x, i) => x === b.goalCommitted[i])
+    a.goalCommitted.every((x, i) => x === b.goalCommitted[i]) &&
+    (a.goalDiscretion === undefined ? b.goalDiscretion === undefined :
+      a.goalDiscretion.condition === b.goalDiscretion?.condition && sameGoal(a.goalDiscretion.fallback, b.goalDiscretion.fallback))
   );
 }
 
 /** Problems with a goal's values (the tick refuses an order whose goal has any). */
-export function goalProblems(goal: PlanGoal): string[] {
+export function goalProblems(goal: PlanGoal, depth = 0): string[] {
   const problems: string[] = [];
   if (!(POSTURES as readonly string[]).includes(goal.goalPosture)) problems.push(`posture must be one of ${POSTURES.join(', ')}`);
   if (goal.goalObjective === null && goal.goalPosture !== 'hold') problems.push('only a hold may name no objective');
   if (!Number.isSafeInteger(goal.goalRisk) || goal.goalRisk < 0 || goal.goalRisk > 1000) problems.push('risk must be a permille');
   if (!Number.isSafeInteger(goal.goalDeadlineDays) || goal.goalDeadlineDays < 1) problems.push('deadline must be a whole number of days, at least 1');
   if (new Set(goal.goalCommitted).size !== goal.goalCommitted.length) problems.push('a block is committed twice');
+  const discretion = goal.goalDiscretion;
+  if (discretion !== undefined) {
+    if (depth >= MAX_FALLBACKS) problems.push(`at most ${MAX_FALLBACKS} fallbacks`);
+    else {
+      if (!DISCRETION_CONDITIONS.includes(discretion.condition)) problems.push('unknown discretion condition');
+      problems.push(...goalProblems(discretion.fallback, depth + 1).map(p => `fallback: ${p}`));
+    }
+  }
   return problems;
+}
+
+/** A goal as an issuer may copy it into a letter. */
+export function termsOfGoal(goal: PlanGoal): GoalTerms {
+  return {
+    objective: goal.goalObjective, posture: goal.goalPosture, risk: goal.goalRisk, deadlineDays: goal.goalDeadlineDays,
+    rail: goal.goalRail, river: goal.goalRiver, sea: goal.goalSea, neutral: goal.goalNeutral, committed: [...goal.goalCommitted],
+    awaitWord: goal.goalAwaitWord, approveAsDrafted: goal.goalApproveAsDrafted,
+    ...(goal.goalDiscretion === undefined ? {} : { discretion: {
+      condition: goal.goalDiscretion.condition,
+      fallback: termsOfGoal(goal.goalDiscretion.fallback),
+    } }),
+  };
 }
 
 /**

@@ -48,7 +48,7 @@ it('keeps the typed refusal while the console prints the supplied string-table w
 
 it('supplies wording for every typed refusal, including the S27 supplemental cases', () => {
   const reasons: Record<phase0.RejectionReason, true> = {
-    bad_goal:true,bad_review:true,bad_selection:true,no_plan:true,not_delegable:true,not_the_decider:true,
+    bad_goal:true,bad_review:true,bad_selection:true,no_plan:true,no_proposal:true,not_delegable:true,not_the_decider:true,
     situation_not_open:true,duplicate_choice:true,malformed:true,no_such_request:true,not_a_principal:true,
     not_an_option:true,not_field_post:true,not_raising_post:true,bad_call:true,other_side:true,player_seat:true,
     route_unavailable:true,unknown_post:true,unknown_seat:true,vacant_post:true,wrong_day:true,

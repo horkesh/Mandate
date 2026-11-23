@@ -2,7 +2,7 @@ import { createTelemetry, ids, phase0 } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { describe, expect, it } from 'vitest';
 import { seatsWorld } from '../src/seats-world.ts';
-import { observeRun, operationsFought, operationScore, unknownStrengthScore } from '../src/history-run.ts';
+import { dayOfDate, observeRun, operationsFought, operationScore, unknownStrengthScore } from '../src/history-run.ts';
 
 describe('the sourced opening of the bombardment (R78)', () => {
   it('issues the 10 April authorization once, wires the bypass, and evacuates Anderson on 13 April', () => {
@@ -26,13 +26,17 @@ describe('the sourced opening of the bombardment (R78)', () => {
     const confederate = ids.toId('faction', 'confederate');
     const doctrine = world.map.world.rules.ruleSeats.principals.find((d) => d.faction === confederate)!;
     const seat = phase0.seatIdFor(world.faction(confederate).principal);
-    // S68: S52 declares a later offensive. None may activate through Anderson's evacuation on 13 April.
+    // Later doctrine includes a hold as well as an offensive. Both wait for
+    // their sourced lower bounds; an offensive also requires received news.
     for (const { day, state: early } of days.filter((d) => d.day <= 39)) {
       for (const offensive of doctrine.offensives) {
-        expect(offensive.requiresNotice, `day ${day}: offensive requires a notice`).toBeDefined();
-        expect(world.situations.find((s) => s.id === offensive.requiresNotice)).toMatchObject({ kind: 'notice', faction: confederate });
-        expect(phase0.knowledgeOf(early, seat).knownReports.some((r) => r.knownBody.reportSubjectKind === 'situation'
-          && r.knownBody.reportSubjectId === offensive.requiresNotice && r.knownReceivedDay <= day), `day ${day}: notice unreceived`).toBe(false);
+        expect(day, 'a later mission cannot predate its sourced lower bound').toBeLessThan(dayOfDate(world.start.startDate, offensive.fromDate));
+        if (offensive.requiresNotice === undefined) expect(offensive.posture).toBe('hold');
+        else {
+          expect(world.situations.find((s) => s.id === offensive.requiresNotice)).toMatchObject({ kind: 'notice', faction: confederate });
+          expect(phase0.knowledgeOf(early, seat).knownReports.some((r) => r.knownBody.reportSubjectKind === 'situation'
+            && r.knownBody.reportSubjectId === offensive.requiresNotice && r.knownReceivedDay <= day), `day ${day}: notice unreceived`).toBe(false);
+        }
         expect(Object.values(early.operationRecords).some((o) => o.opPost === offensive.post), `day ${day}: no active offensive`).toBe(false);
       }
     }

@@ -54,8 +54,21 @@ export interface PendingCounter {
   readonly pendingOrder: MessageId;
 }
 
+/** A received goal the holder challenged while retaining the plan he already held. */
+export interface PlanChallenge {
+  readonly challengeOrder: MessageId;
+  readonly challengeIssuer: PersonId;
+  readonly challengeGoal: PlanGoal;
+  readonly challengeResponse: string;
+  readonly challengePending?: true;
+}
+
 /** A post's goal and its plan. Immutable: `plans` replaces it whole. */
 export interface PlanRecord {
+  /** The delivered authority behind a fallback; its local switch report identifies the replacement plan. */
+  readonly planDiscretionOrder?: MessageId;
+  readonly planProposalPending?: true;
+  readonly planChallenge?: PlanChallenge;
   readonly planNotes?: readonly NoteReading[];
   readonly planGoal: PlanGoal;
   readonly planIssuer: PersonId;
@@ -93,6 +106,10 @@ export function postsInStatus(state: State, status: PlanStatus): PostId[] {
   return (Object.keys(state.planRecords) as PostId[]).filter((p) => state.planRecords[p]!.planStatus === status).sort();
 }
 
+export function plannedPosts(state: State): PostId[] {
+  return (Object.keys(state.planRecords) as PostId[]).sort();
+}
+
 function put(state: State, post: PostId, record: PlanRecord): State {
   return { ...state, planRecords: { ...state.planRecords, [post]: record } };
 }
@@ -109,7 +126,7 @@ export function candidateOf(record: PlanRecord, id: string): PlanCandidate | und
 export function setGoal(
   state: State,
   post: PostId,
-  order: { readonly id: MessageId; readonly issuer: PersonId; readonly goal: PlanGoal; readonly viaChain: boolean; readonly issuedDay: number; readonly response: string },
+  order: { readonly id: MessageId; readonly issuer: PersonId; readonly goal: PlanGoal; readonly viaChain: boolean; readonly issuedDay: number; readonly response: string; readonly propose?: boolean },
   day: number,
 ): State {
   const holdHere = order.goal.goalObjective === null;
@@ -128,7 +145,33 @@ export function setGoal(
     planSubmitted: null,
     planCounters: [],
     planPending: null,
+    ...(order.propose ? { planProposalPending: true } : {}),
   });
+}
+
+/** A received grant authorises a fresh local plan without changing the order that conferred authority. */
+export function switchGoal(state: State, post: PostId, report: MessageId, day: number): State {
+  const current = state.planRecords[post]!;
+  const next = setGoal(state, post, { id: report, issuer: current.planIssuer, goal: current.planGoal.goalDiscretion!.fallback,
+    viaChain: current.planViaChain, issuedDay: current.planIssuedDay, response: current.planResponse }, day);
+  return put(next, post, { ...next.planRecords[post]!, planDiscretionOrder: current.planDiscretionOrder ?? current.planOrder });
+}
+
+export function finishProposal(state: State, post: PostId): State {
+  const { planProposalPending: _pending, ...record } = state.planRecords[post]!;
+  return put(state, post, record);
+}
+
+/** Only the most recent challenge to the held plan remains relevant to a new reply. */
+export function challengeGoal(state: State, post: PostId, challenge: PlanChallenge): State {
+  return put(state, post, { ...state.planRecords[post]!, planChallenge: challenge });
+}
+
+export function finishChallenge(state: State, post: PostId, proposed: boolean): State {
+  const { planChallenge, ...record } = state.planRecords[post]!;
+  if (planChallenge === undefined) return state;
+  const { challengePending: _pending, ...challenge } = planChallenge;
+  return put(state, post, proposed ? { ...record, planChallenge: challenge } : record);
 }
 
 /** Save a draft set on its request day: his seat chooses tomorrow. A draft with no candidate (no force to plan with) leaves him holding. */

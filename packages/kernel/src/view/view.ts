@@ -15,6 +15,7 @@ import type { EdgeId, FactionId, PersonId, RegionId, SeatId } from '../ids.ts';
 import { latestEnemyClaims, latestObstructionClaims, latestWorksClaims, perceived } from '../knowledge/beliefs.ts';
 import { knowledgeOf, reportsForView, type KnowledgeCache, type OpeningReportCache, type KnownReport, type SeatKnowledge } from '../knowledge/knowledge.ts';
 import type { PlanRecord } from '../plans/plans.ts';
+import { termsOfGoal, type PlanGoal } from '../plans/goal.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
 import { attentionLeft } from '../seats/attention.ts';
@@ -24,7 +25,7 @@ import { capitalOf } from '../command/capitals.ts';
 import { mainBody } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { WorldIndex } from '../world/index.ts';
-import { createFreezeLedger, type FreezeLedger } from '../tick/freeze.ts';
+import { createFreezeLedger, deepFreeze, type FreezeLedger } from '../tick/freeze.ts';
 import { claimedControlView } from './claimed-control.ts';
 import { controlEvidence } from '../knowledge/control-beliefs.ts';
 import { nextPeopleChange, peopleProjection, seatIdentity, type PeopleProjection } from './people.ts';
@@ -65,6 +66,14 @@ function freeze<T extends object>(o: T): T {
   return Object.freeze(o);
 }
 
+function paperGoal(goal: PlanGoal): PlanGoal {
+  return freeze({ ...goal, goalCommitted: freeze([...goal.goalCommitted]),
+    ...(goal.goalDiscretion === undefined ? {} : { goalDiscretion: freeze({
+      condition: goal.goalDiscretion.condition, fallback: paperGoal(goal.goalDiscretion.fallback),
+    }) }),
+  });
+}
+
 /** Build once, then freeze: absent battle fields need no temporary objects on ordinary claims. */
 function claimView(c: ReportClaim): ClaimView {
   if (c.claimBattle === undefined && c.claimBattleDays === undefined && c.claimCommander === undefined) return freeze({
@@ -86,6 +95,9 @@ function reportView(r: KnownReport, world: SeatsWorld): ReportView {
     : undefined;
   return freeze({
     id: r.id,
+    ...(b.reportProposal === undefined ? {} : { proposal: freeze({ ...b.reportProposal, goal: paperGoal(b.reportProposal.goal),
+      reasons: freeze(b.reportProposal.reasons.map(r => freeze({ ...r }))), }) }),
+    ...(b.reportDiscretion === undefined ? {} : { discretion: freeze({ ...b.reportDiscretion, switchGoal: paperGoal(b.reportDiscretion.switchGoal) }) }),
     ...(notice === undefined ? {} : { text: notice.text }),
     ...(b.reportNotes === undefined ? {} : { notes: freeze(b.reportNotes.map(n => freeze({ ...n, accountMark: freeze({ ...n.accountMark, markVia: freeze([...n.accountMark.markVia]) }), accountReasons: freeze(n.accountReasons.map(s => freeze({ ...s }))) }))) }),
     type: b.reportType,
@@ -129,6 +141,7 @@ function goalView(r: PlanRecord): GoalView {
     viaChain: r.planViaChain,
     setDay: r.planSetDay,
     status: r.planStatus,
+    ...(g.goalDiscretion === undefined ? {} : { discretion: deepFreeze(termsOfGoal(g).discretion!) }),
   });
 }
 

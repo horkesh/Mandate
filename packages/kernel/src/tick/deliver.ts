@@ -124,7 +124,7 @@ function reportDecisionPoints(ctx: TickContext, state: State, msg: TransitMessag
     // Lane 1.4: a battle's first casualty return, a commander cut off, and a plan submitted for review (FOUNDATION section 9).
     if (report.reportType === 'casualty-return' && report.reportClaims.some((c) => c.claimToken === 'first')) ctx.decisionPoints.push({ point: 'battle-report', seat, report: msg.msgOrigin, situation: null });
     if (report.reportClaims.some((c) => c.claimKind === 'pocket')) ctx.decisionPoints.push({ point: 'pocket-closed', seat, report: msg.msgOrigin, situation: null });
-    if (report.reportClaims.some((c) => c.claimKind === 'plan-submitted')) ctx.decisionPoints.push({ point: 'plan-review', seat, report: msg.msgOrigin, situation: null });
+    if (report.reportProposal !== undefined || report.reportClaims.some((c) => c.claimKind === 'plan-submitted')) ctx.decisionPoints.push({ point: 'plan-review', seat, report: msg.msgOrigin, situation: null });
     if (report.reportClaims.some((c) => c.claimKind === 'order-obeyed' && c.claimToken !== null && c.claimToken.startsWith('conflict'))) {
       ctx.decisionPoints.push({ point: 'order-conflict', seat, report: msg.msgOrigin, situation: null });
     }
