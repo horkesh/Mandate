@@ -132,5 +132,26 @@
     "exit": 1,
     "seconds": 1587.748,
     "log": "runs/s105/done.log"
+  },
+  "projection-proof-check": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s105/projection-proof.ts"
+    ],
+    "exit": 0,
+    "seconds": 14.536,
+    "log": "runs/s105/projection-proof-check.log"
+  },
+  "status-dry-run": {
+    "command": [
+      "python",
+      "runs/s105/append_status.py",
+      "--dry-run"
+    ],
+    "exit": 0,
+    "seconds": 0.134,
+    "log": "runs/s105/status-dry-run.log"
   }
 }

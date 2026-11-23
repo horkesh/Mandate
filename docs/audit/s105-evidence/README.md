@@ -128,6 +128,15 @@ responses to the registers, widening the willingness window, fabricated means,
 or waiving a failed gate. Formal whole-branch/gate review is deferred under
 0106/0107; nothing is signed or cleared for main.
 
+The final evidence correction restores detailed projection proof rows after the
+command logger overwrote their original filename with its receipt. The same
+collision affected the recovery proof, making the first status formatter stop
+before appending. The original recovery proof survives verbatim in its log and
+its patch SHA256 was reverified. A read-only comparison of the original97c85037
+and final source restores both projection rows and proves exact protected reader
+identities and declared hashes. Proof/receipt paths are now distinct; the status
+formatter passes a dry run before appending. No runtime or campaign repeat.
+
 ## Findings outside my scope
 
 S104 conditional compliance, S99's sourced Union moves, unread originals and

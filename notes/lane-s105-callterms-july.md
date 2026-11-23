@@ -53,6 +53,11 @@ Reject fitted values/traits/weights/strength, widened reservation windows,
 reply-derived issuer terms, invented means, raw-count coverage credit and
 acceptance waivers. Conditional compliance remains S104's separate proposal.
 
+A final evidence correction restores the two detailed projection proof rows after
+a logger filename collision had replaced them with a command receipt. The status
+formatter stopped before any append on the analogous recovery collision. Proofs
+and command receipts now have distinct paths; runtime/campaign evidence is unchanged.
+
 ## For the lead
 
 1. Review the integration and retained measurements; pushing remains yours.
