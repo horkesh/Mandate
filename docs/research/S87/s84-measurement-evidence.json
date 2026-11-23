@@ -1,0 +1,189 @@
+{
+  "scorer_commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+  "response_groups": {
+    "('confederate', 'slow_walk', 'call')": 9,
+    "('union', 'slow_walk', 'call')": 9,
+    "('union', 'comply_with_reservations', 'call')": 11,
+    "('confederate', 'comply_with_reservations', 'call')": 4,
+    "('confederate', 'comply_with_reservations', 'verb:appoint')": 1
+  },
+  "addressee_counts": {
+    "comply": 135,
+    "object": 39,
+    "slow_walk": 18,
+    "comply_with_reservations": 16
+  },
+  "excluded_relay_slowwalks": [
+    {
+      "respOrder": "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respRole": "relay",
+      "respKind": "goal",
+      "respDay": 133,
+      "respActual": "slow_walk",
+      "respDeclared": "comply",
+      "respWillingness": -16,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -66
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 50
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    {
+      "respOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "respPerson": "cameron_simon",
+      "respPost": "us_secretary_war",
+      "respRole": "relay",
+      "respKind": "goal",
+      "respDay": 140,
+      "respActual": "slow_walk",
+      "respDeclared": "comply",
+      "respWillingness": -9,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -14
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 50
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": -45
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "holds_grievance",
+          "grievance": "bypassed",
+          "weight": 150
+        }
+      ],
+      "respStated": [],
+      "respConditions": []
+    }
+  ],
+  "filter_rules": {
+    "candidAt": 500,
+    "holdFor": [
+      {
+        "days": 1,
+        "value": "order"
+      }
+    ],
+    "trimFor": [
+      {
+        "claimKinds": [
+          "own-losses"
+        ],
+        "value": "reputation"
+      }
+    ]
+  },
+  "filter_telemetry": [
+    {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    }
+  ],
+  "seward_candour": 604,
+  "trimmed_claims_retained": 0,
+  "reconstruction": {
+    "tracked_fields": [
+      "departmentFactions",
+      "forceAssignments",
+      "forceBlockStates",
+      "forceJoins",
+      "forceLocations",
+      "forceRaisedIdentities",
+      "operationRecords",
+      "orderResponses",
+      "personRanks",
+      "personService",
+      "personStatus",
+      "planRecords",
+      "postLevies",
+      "postStates",
+      "regionControl",
+      "regionGovernments",
+      "situationStates"
+    ],
+    "all_tracked_fields_exact": true,
+    "untracked_different_keys": [
+      "closedGovernments",
+      "factionCapitals",
+      "messagesInTransit",
+      "knowledgeBySeat",
+      "reportTruth",
+      "situationFlags",
+      "regionFortification",
+      "regionReachedUnionLines",
+      "personStanding",
+      "personGrievances",
+      "personStances",
+      "personInquiries",
+      "seatAttention",
+      "seatInitiatives",
+      "personRungs",
+      "battleRecords",
+      "blocSupport",
+      "chamberStates",
+      "congressLedger",
+      "warFraming"
+    ]
+  },
+  "known_total": 86894,
+  "known_losses": 8749
+}

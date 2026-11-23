@@ -1,0 +1,423 @@
+{
+  "reference_commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+  "reference_final_hash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+  "policy": "Proposed named-case coverage; not an implemented acceptance score or a full replacement catalogue.",
+  "s84_rows": 34,
+  "all_observed_addressee_responses": 208,
+  "raw_counts": [
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "count": 16
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply_with_reservations",
+      "count": 4
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "count": 19
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "count": 9
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "object",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "count": 2
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply_with_reservations",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "count": 22
+    },
+    {
+      "side": "confederate",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "count": 29
+    },
+    {
+      "side": "confederate",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "object",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "count": 10
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply_with_reservations",
+      "count": 11
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "count": 18
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "count": 9
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "policy",
+      "actual": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "count": 6
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "count": 5
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "count": 25
+    },
+    {
+      "side": "union",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "count": 16
+    },
+    {
+      "side": "union",
+      "role": "relay",
+      "kind": "call",
+      "actual": "comply",
+      "count": 3
+    },
+    {
+      "side": "union",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "comply",
+      "count": 3
+    },
+    {
+      "side": "union",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "slow_walk",
+      "count": 2
+    }
+  ],
+  "accepted_s82_pushback": {
+    "problems": [
+      "trims: 0, below the record's 1",
+      "compliance with reservations: 16, above 9",
+      "slow walks: 18, above 9"
+    ],
+    "evidence": [
+      "relay objections: 3 (band 0..6)",
+      "relay holds: 2 (band 1..4)",
+      "filter holds: 0 (band 0..6)",
+      "trims: 0 (band 1..4)",
+      "compliance with reservations: 16 (band 1..9)",
+      "slow walks: 18 (band 2..9)",
+      "objections to a plan: 39 (band 10..42)"
+    ]
+  },
+  "matches": [
+    {
+      "case": "X-04",
+      "band": "reservations",
+      "wanted_actual": "comply_with_reservations",
+      "verdict": "matched",
+      "count": 1,
+      "candidates": [
+        {
+          "side": "union",
+          "actor": "morgan_edwin_d",
+          "role": "addressee",
+          "kind": "call",
+          "actual": "comply_with_reservations",
+          "day": 41,
+          "post": "st_gov_new_york",
+          "order": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+          "call_id": "",
+          "declared": "comply_with_reservations"
+        }
+      ],
+      "limits": "Hand-scored bounded matter; day 41 identifies April mobilisation provenance, not an imposed response date. Patterson receives hold goals, not the recorded fresh Winchester attack/demonstration direction. No operation-delay inference from a response alone.",
+      "nearby_commands": []
+    },
+    {
+      "case": "N3-26",
+      "band": "reservations",
+      "wanted_actual": "comply_with_reservations",
+      "verdict": "not_observed",
+      "count": 0,
+      "candidates": [],
+      "limits": "Hand-scored bounded matter; day 41 identifies April mobilisation provenance, not an imposed response date. Patterson receives hold goals, not the recorded fresh Winchester attack/demonstration direction. No operation-delay inference from a response alone.",
+      "nearby_commands": []
+    },
+    {
+      "case": "N3-33",
+      "band": "plan_objections",
+      "wanted_actual": "object",
+      "verdict": "exposure_mismatch",
+      "count": 0,
+      "candidates": [
+        {
+          "side": "union",
+          "actor": "patterson_robert",
+          "role": "addressee",
+          "kind": "goal",
+          "actual": "comply",
+          "day": 112,
+          "post": "us_dept_pennsylvania",
+          "order": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "call_id": "",
+          "declared": "comply"
+        },
+        {
+          "side": "union",
+          "actor": "patterson_robert",
+          "role": "addressee",
+          "kind": "goal",
+          "actual": "comply",
+          "day": 142,
+          "post": "us_dept_pennsylvania",
+          "order": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "call_id": "",
+          "declared": "comply"
+        }
+      ],
+      "limits": "Hand-scored bounded matter; day 41 identifies April mobilisation provenance, not an imposed response date. Patterson receives hold goals, not the recorded fresh Winchester attack/demonstration direction. No operation-delay inference from a response alone.",
+      "nearby_commands": [
+        {
+          "issued_day": 112,
+          "command": {
+            "cmd": "order",
+            "to": "us_dept_pennsylvania",
+            "goal": {
+              "risk": 500,
+              "deadlineDays": 30,
+              "rail": true,
+              "river": false,
+              "sea": false,
+              "neutral": false,
+              "awaitWord": false,
+              "approveAsDrafted": true,
+              "objective": "lower_valley",
+              "posture": "hold",
+              "committed": []
+            },
+            "route": "wire",
+            "bypass": false
+          }
+        },
+        {
+          "issued_day": 140,
+          "command": {
+            "cmd": "order",
+            "to": "us_dept_pennsylvania",
+            "goal": {
+              "risk": 500,
+              "deadlineDays": 30,
+              "rail": true,
+              "river": false,
+              "sea": false,
+              "neutral": false,
+              "awaitWord": false,
+              "approveAsDrafted": true,
+              "objective": "harpers_ferry",
+              "posture": "hold",
+              "committed": []
+            },
+            "route": "wire",
+            "bypass": false
+          }
+        }
+      ]
+    },
+    {
+      "case": "N3-34",
+      "band": "slow_walk",
+      "wanted_actual": "slow_walk",
+      "verdict": "exposure_mismatch",
+      "count": 0,
+      "candidates": [
+        {
+          "side": "union",
+          "actor": "patterson_robert",
+          "role": "addressee",
+          "kind": "goal",
+          "actual": "comply",
+          "day": 112,
+          "post": "us_dept_pennsylvania",
+          "order": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "call_id": "",
+          "declared": "comply"
+        },
+        {
+          "side": "union",
+          "actor": "patterson_robert",
+          "role": "addressee",
+          "kind": "goal",
+          "actual": "comply",
+          "day": 142,
+          "post": "us_dept_pennsylvania",
+          "order": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "call_id": "",
+          "declared": "comply"
+        }
+      ],
+      "limits": "Hand-scored bounded matter; day 41 identifies April mobilisation provenance, not an imposed response date. Patterson receives hold goals, not the recorded fresh Winchester attack/demonstration direction. No operation-delay inference from a response alone.",
+      "nearby_commands": [
+        {
+          "issued_day": 112,
+          "command": {
+            "cmd": "order",
+            "to": "us_dept_pennsylvania",
+            "goal": {
+              "risk": 500,
+              "deadlineDays": 30,
+              "rail": true,
+              "river": false,
+              "sea": false,
+              "neutral": false,
+              "awaitWord": false,
+              "approveAsDrafted": true,
+              "objective": "lower_valley",
+              "posture": "hold",
+              "committed": []
+            },
+            "route": "wire",
+            "bypass": false
+          }
+        },
+        {
+          "issued_day": 140,
+          "command": {
+            "cmd": "order",
+            "to": "us_dept_pennsylvania",
+            "goal": {
+              "risk": 500,
+              "deadlineDays": 30,
+              "rail": true,
+              "river": false,
+              "sea": false,
+              "neutral": false,
+              "awaitWord": false,
+              "approveAsDrafted": true,
+              "objective": "harpers_ferry",
+              "posture": "hold",
+              "committed": []
+            },
+            "route": "wire",
+            "bypass": false
+          }
+        }
+      ]
+    },
+    {
+      "case": "N3-14",
+      "band": "plan_objections",
+      "wanted_actual": "object",
+      "verdict": "not_observed",
+      "count": 0,
+      "candidates": [],
+      "limits": "Hand-scored bounded matter; day 41 identifies April mobilisation provenance, not an imposed response date. Patterson receives hold goals, not the recorded fresh Winchester attack/demonstration direction. No operation-delay inference from a response alone.",
+      "nearby_commands": []
+    }
+  ],
+  "matched_by_band": {
+    "relay_objections": 0,
+    "relay_holds": 0,
+    "filter_holds": 0,
+    "trims": 0,
+    "reservations": 1,
+    "slow_walk": 0,
+    "plan_objections": 0
+  },
+  "unmatched_s84_rows": 33,
+  "no_pass_declared": true
+}

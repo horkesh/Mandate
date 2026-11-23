@@ -1,0 +1,17 @@
+{
+  "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S84\\pushback-responses.csv": {
+    "sha256": "9a509a4e2219be2c2ab62d5b1d66b8f27955c13c463a95cb7ea34124cd1ec7e0",
+    "bytes": 19159,
+    "snapshot_sha256": "f9afbeb00ebfe9274661b7b3d62eace9d0be01b39138c930def552be76b55975"
+  },
+  "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S84\\measurement-evidence.json": {
+    "sha256": "d57929f7b3687a91c0d18b445efeb579e602e5ffd5eeb01bca8edcfbe8c07ed4",
+    "bytes": 4609,
+    "snapshot_sha256": "24760ac9aa1ee7f2250e29d83d0baf3e4343687be583178bb92dc623f28ea28d"
+  },
+  "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S84\\reference-inputs.json": {
+    "sha256": "c0eabdebc2832d8fb6c544148ae9743c5304b043338bb406b76871fe2c80decd",
+    "bytes": 1373,
+    "snapshot_sha256": "7af6e0ba4eadc4414481e3a6ce2667f09ed938c1570c17daa28b5bbb805111cb"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "sources": [
+    {
+      "work": "Welles, Fort Pickens, Galaxy 11(1), January 1871",
+      "printed_pages": "95-97",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\galaxy-1871-01.xml",
+      "sha256": "61a5e17c887aa81a0c589f480eeccdb790bafeaeca1c0e77b9ef1774854c96d9",
+      "url": "https://archive.org/download/sim_galaxy_1871-01_11_1/sim_galaxy_1871-01_11_1_djvu.xml",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Official Records I-III",
+      "printed_pages": "374-376,381",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\or-i3.xml",
+      "sha256": "a5639bae848dc9dd06a1eaf861a58cf30abf8e06ea4a3f678f63d3a621b98d43",
+      "url": "https://archive.org/download/warofrebellionco03unit/warofrebellionco03unit_djvu.xml",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Nicolay and Hay, Lincoln Complete Works II, 1894 edition",
+      "printed_pages": "29-30,47-48",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\lincoln-works2.txt",
+      "sha256": "0aa94ec41fab888f027af48c6491f31c92ad65c432c817141a7bbfba8160eb5f",
+      "url": "https://archive.org/download/abrahamlincolnco02linco/abrahamlincolnco02linco_djvu.txt",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Richardson, Messages and Papers of the Confederacy I, 1905",
+      "printed_pages": "85-88,93-97",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\confederacy-messages1.txt",
+      "sha256": "a460466f113697f0df2df71bf865daff2fa0e421e35fa84e38b3f40bbdaf6dbc",
+      "url": "https://archive.org/download/compmessages01richrich/compmessages01richrich_djvu.txt",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Burlingame II ch.22, online manuscript",
+      "printed_pages": "2349-2351,2392",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\burlingame-ch22.pdf",
+      "sha256": "d68684364db93073ad66d715171d212813c7680090366a739013c2cf134f333f",
+      "url": "https://www.knox.edu/documents/LincolnStudies/BurlingameVol2Chap22.pdf",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Official Records III-I",
+      "printed_pages": "85,87",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\or-iii1-correct.txt",
+      "sha256": "db2df410494a49bee01c6a683a129abfed05a7aaccc61a068363b9aa8cbf6bff",
+      "url": "https://archive.org/download/warofrebellion0301rootrich/warofrebellion0301rootrich_djvu.txt",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Official Records I-II",
+      "printed_pages": "166",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S78\\OR-I-2-p166.txt",
+      "sha256": "c0a07b19d321fd63fef921530cfa0c2b2f701dbbd4731f510f1f1aba2afd3637",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n185/mode/1up",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Official Records I-II",
+      "printed_pages": "167",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S78\\OR-I-2-p167.txt",
+      "sha256": "18ba5b1586139e54a3770a6b8086f1cd8a267bb5d9020f85936651a36259ccae",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n186/mode/1up",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Official Records I-II",
+      "printed_pages": "168",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S78\\OR-I-2-p168.txt",
+      "sha256": "6e6fbebf3795e124e67f2d74f809359330bcfeb9841fdb842bc0fde61fbc5212",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n187/mode/1up",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Official Records I-II",
+      "printed_pages": "169",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S78\\OR-I-2-p169.txt",
+      "sha256": "2ea1e035bb702661c2a8add55acd0e468b2a213d0070936222e4e075d1c899e9",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n188/mode/1up",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Official Records III-I",
+      "printed_pages": "72",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\reading\\OR-III-1-p72.txt",
+      "sha256": "0fe82d4d84235116732460de65ec8ba0897f1e3446d4b309d073e4679c48f715",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/n88/mode/1up",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Official Records III-I",
+      "printed_pages": "86",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\reading\\OR-III-1-p86.txt",
+      "sha256": "28b0de934e478012bf538a7994901daf4389ba5f2cf3b16b3ab4918aa09af4f9",
+      "url": "https://archive.org/details/warofrebellion0301rootrich/page/n102/mode/1up",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    },
+    {
+      "work": "Official Records, Navy I-IV",
+      "printed_pages": "90",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\reading\\ORN-I-4-p90.txt",
+      "sha256": "6366b371180f8bcadf746d04bd402dec1cbd012c3347df43ae12d4ed99f05c2d",
+      "url": "https://archive.org/details/cu31924079893859/page/n119/mode/1up",
+      "reading": "Relevant passages and printed boundaries read; not an entire-volume reading."
+    }
+  ],
+  "extracts": {
+    "burlingame-pdf23.txt": "54b14734e5326c27f9a599ebf084b4a6140dcc08ff721ce36fa2544316b3246f",
+    "burlingame-pdf24.txt": "d94650fc118d16d504312ac16c83d74235f8da2c28ce8e4928e8238aba40d190",
+    "burlingame-pdf25.txt": "2f7d3ec55d498f4cea08704bc44a8cff0aa3b18a92e1f02e6b301d27795f3ca5",
+    "burlingame-pdf66.txt": "ad569e3f922dab584241e290a7c554b2df16d6d171dd0776e7fc29548a40f2d0",
+    "campbell-context.txt": "d74f369a9fee25550e7630100e567a6960acf24a627976de8bcf7440947b7111",
+    "galaxy-1871-01.xml-p95.txt": "4fefd899724e225ae516c27d12a7d22041aeef81ca22bb6583b78bcf5a6dd49a",
+    "galaxy-1871-01.xml-p96.txt": "e7b0e2cd0d5777cb05da231f25978f5f8fd78ec9c9e6db00c667bb87b9e2a824",
+    "galaxy-1871-01.xml-p97.txt": "3b6fd6a0b3292d578ea977e8f4ffd376e9b274fd215c8091f20d0a8bdacb3692",
+    "lincoln-p29-30.txt": "8c80e6fffeab6375391ca7f91f7cedba9462f68cb7b8062f66ca33bf9d5e6ab1",
+    "lincoln-p47-48.txt": "50582aff5a7803cb7a22ca0c1f9300e6fb9e4a3ab4912b3df72233511272c38e",
+    "or-i3.xml-p374.txt": "f42a9f1c2e854127b32cb3d1a1e23ccf489b56e0c08b20f4f013e4e7d477ac9a",
+    "or-i3.xml-p375.txt": "b3bad5b00ab8ee260f7683ca116de58a1347f06bac50211329ea0a619d4aa267",
+    "or-i3.xml-p376.txt": "7d6f8cb6992f7261e491d9437ca779320ea0581eb447fafbb486a88628fcf262",
+    "or-i3.xml-p381.txt": "d2047ab33be2b53bbbf906d1e30146f5ae9d9d2f854f696e8dcabcbd4b54a2cd",
+    "or-iii1-p85-morgan.txt": "4e9ae394cd94454c7aaac446eadffec356b18a2fffdb4c926b0f6963275547f0",
+    "or-iii1-p87-correct.txt": "d1194fe255ccd50d737a71998bdb243cfc5521887224a7b043620f30fd4ef931"
+  },
+  "exclusions": [
+    {
+      "path": "runs/s87/reading/or-iii1-p87.txt",
+      "reason": "Initial numeric search selected unrelated table; excluded. Correct Morgan excerpt separately retained."
+    },
+    {
+      "source": "OR I-LIII pp.162-163",
+      "reason": "Two web opens failed; not read; five/ten-day variant not settled."
+    }
+  ],
+  "catalogue_read": "Appendix C all 41 rows and method read as prior research claims. Other underlying pages not freshly read remain held."
+}

@@ -1,0 +1,12 @@
+side,actor,role,kind,actual,day,post,order,call_id,declared
+union,cameron_simon,relay,goal,comply,112,us_secretary_war,m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania,,comply
+union,scott_winfield,relay,goal,comply,112,us_general_in_chief,m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania,,comply
+union,cameron_simon,relay,goal,slow_walk,133,us_secretary_war,m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia,,comply
+union,scott_winfield,relay,goal,object,135,us_general_in_chief,m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia,,object
+union,cameron_simon,relay,goal,slow_walk,140,us_secretary_war,m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania,,comply
+union,scott_winfield,relay,goal,comply,142,us_general_in_chief,m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania,,comply
+confederate,walker_leroy_p,relay,goal,object,142,cs_secretary_war,m.142.davis_jefferson.walker_leroy_p.order.cs_cmd_harpers_ferry,,object
+confederate,walker_leroy_p,relay,goal,object,36,cs_secretary_war,m.36.davis_jefferson.walker_leroy_p.order.cs_cmd_charleston,,object
+union,cameron_simon,relay,call,comply,60,us_secretary_war,m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.2,us_may04_regular_cavalry,comply
+union,cameron_simon,relay,call,comply,60,us_secretary_war,m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.3,us_may04_regular_artillery,comply
+union,cameron_simon,relay,call,comply,60,us_secretary_war,m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service,us_may04_regular_infantry,comply

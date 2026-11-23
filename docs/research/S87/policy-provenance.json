@@ -1,0 +1,7 @@
+{
+  "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+  "path": "packs/union-1861/situations/fort_monroe_arrivals.json",
+  "sha256": "8168b73f2c70b952adaa98bf6b6524e96b1c27e89dfffb980b11c6d5336d5b3f",
+  "faction": "union",
+  "use": "One policy response has no issuer name in its order ID; read owning situation faction rather than infer actor allegiance."
+}
