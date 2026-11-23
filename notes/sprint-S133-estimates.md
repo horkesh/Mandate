@@ -26,13 +26,16 @@ pack, band, criterion, accepted decision, historical lot or other-lane edit.
    Winchester" (OR I-II p.166) focuses the narrower `lower_valley` duty. The
    broad geography cannot fit D1's two-region cap without a new ruling; it
    must never follow Johnston's location in a run.
-3. **Capture-access limit:** committed S126 packet/kernel read at `4b45f4e1`;
-   S130 kernel/acceptance records read at `74e821eb`. S129's captures and S130's
-   full two-capture record are absent from those committed states. Their staged
-   contents and ignored runs were not read. Main CODEX's S129/S130 summaries
-   are explicitly attributed coordination evidence, not independently verified
-   captures. Committed record IDs were requested. The detailed comparison
-   remains open until those IDs exist; no replacement campaign was run.
+3. Committed S126 packet/kernel read at `4b45f4e1`; S129's newly committed
+   three-capture packet/kernel read at `7bc4afce`. Its readiness repair restores
+   Johnston and Patterson's day140 opposition5,695 and time driver; actual
+   Harpers Ferry combat is5,340 against1,732 with no unknown blocks. McDowell's
+   day140 Manassas fight is59,754 against6,490; later unknown combatants still
+   fail. **Remaining limit:** S130 kernel/acceptance records read at `74e821eb`,
+   but its full two-capture record is absent from that committed state. Staged
+   contents and ignored runs were not read. Main CODEX's S130 summaries are
+   attributed coordination evidence. Its committed record ID was requested;
+   the detailed S130 comparison remains open. No replacement campaign ran.
 
 Cheap preservation, UTF-8/local links, workspace aliases, boundary and rules
 checks pass. Typecheck and the ordinary hook have their actual final receipts
@@ -49,7 +52,7 @@ For the lead:
    offensives, with the rejected alternatives in the proposal.
 2. Keep the broad geographic referent separate from the bounded Winchester
    duty, or supersede D1 before demanding whole-Valley operational coverage.
-3. Route committed S129/S130 record IDs for the remaining capture comparison;
+3. Route S130's committed record ID for the remaining capture comparison;
    implementation and measurement need their own bounded brief.
 
 Findings outside my scope

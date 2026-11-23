@@ -59,10 +59,12 @@ read S130's committed kernel and its three committed acceptance/preservation
 records from `C:/Pyrrhic/sprint-demonstrate` at
 `74e821eb` (full revision recorded in the reading record). No sibling working
 file, index blob, staged tree or ignored raw run was used as capture evidence.
-At inspection, **S129 has no committed capture packet, and S130's full capture
-packet and second-capture correction are not in its HEAD**. Their absence
-limits section 5. The lead's messages are read coordination evidence, clearly
-distinguished below from independently read captures. No new simulation ran.
+S129's packet became committed during this task at **`7bc4afce`**, and its
+three captures and relevant kernel were then read at that immutable revision.
+**S130's full capture packet and second-capture correction are not in the
+inspected `74e821eb` HEAD.** That absence limits section 5. The lead's S130
+messages are coordination evidence, distinguished below from independently
+read captures. No new simulation ran.
 
 ## 2. What an observer can estimate [I]
 
@@ -146,6 +148,10 @@ uses a favorable ratio when it is zero, and derives shortfall and waiting.
 Thus the unknown marker does not invalidate the old numeric belief; the
 remaining numeric components can supply the small opposition. Do not fix
 only the final division, or only the detention planner's special report set.
+At S129's separate `7bc4afce` kernel, `tick/generate.ts` still emits numeric
+`enemy-strength` from the counted enemy sum, and `viewGround` still projects
+numeric values. It does not contain S130's new unknown-contact branch. Keep
+those producer differences separate when interpreting the three baselines.
 
 ## 4. What candidates do [I]
 
@@ -199,9 +205,9 @@ Rejected alternatives:
 | Matter | Evidence actually read | Consequence of the recommendation [I] |
 | --- | --- | --- |
 | McDowell at Manassas | **Committed S126** `docs/audit/s126-evidence/criteria.json`, `operation` after: his day135 direct operation is associated with `battle:manassas:140`. `unknownStrength` after lists three unknown North Carolina lots on days141–143 and146 | An unquantified enemy remainder will not confer a ratio bonus or automatically forbid his ordinary offensive. His actual choice must be measured after a build. The observer's estimate does not fill those three lots; their unknown-strength non-pass remains |
-| Patterson | **Committed S126** same packet: direct operation141 associated with Harpers Ferry battle146. **Coordination only:** S129 corrected-capture status in main CODEX reports day140 opposition 4,630→0 and direct score140→859, with appointment readiness suppressing Johnston; the next lead message attributes the change to that defect | Do not preserve either number as an acceptance target. Separate appointment availability, target location, numerical uncertainty and scoring. A repaired estimate cannot appoint Johnston, create authority, move troops or supply target attribution |
+| Patterson | **Committed S126** same packet: direct operation141 associated with Harpers Ferry battle146. **Committed S129 `7bc4afce`**, `README.md`, `three-way-summary.json` and `readiness/plan-changes.json`: the first two captures have no Johnston appointment and opposition0; the readiness repair restores his appointment and Patterson's day140 opposition5,695, direct/hold scores106/11. Removing time gives-194/311; withdrawal/repulse/time each return to1 | Do not preserve any opposition number as an acceptance target. The unknown fallback and the earlier appointment defect are distinct causes. A repaired estimate cannot appoint Johnston, create authority, move troops or supply target attribution |
 | Patterson after the demonstration build | **Lead's read final message and preceding S130 status**, not an independently read committed capture: opposition4,630→532; the three demands arrive and get compliant answers; no demonstration executes because no received target attribution places the command in `lower_valley`; direct Harper course141 is unchanged | Correct the legacy knowledge boundary generally. Do not promise the historical objection, slow walk or detention. U33/U34 remain mismatches in the lead's accepted record; missing target attribution is an independent blocker |
-| Johnston | **Committed S126** criterion associates his direct operation144 with Harpers Ferry battle146. **Coordination only:** S129 corrected status reports the vacant national command and wholly unknown contingent; S130 status reports ordinary estimates, no demonstration activity, and Manassas course144 | Received counts/unknowns/activity remain his own picture. Location without men is useful; no sighting of a demonstration can be fabricated. He can choose to stay or leave under ordinary policy. Neither a true presence nor a reported departure establishes causal detention |
+| Johnston | **Committed S126** criterion associates his direct operation144 with Harpers Ferry battle146. **Committed S129 `7bc4afce`**, `readiness-driver-evidence.json` and `readiness/plan-changes.json`: supply_line to Lynchburg wins104; his final147 Lynchburg draft perceives0 and remains in review. The repaired capture's operation142 fights at Harpers Ferry146. **Coordination only:** S130 status reports ordinary estimates, no demonstration activity, and Manassas course144 | Keep these different received-picture trajectories separate. Location without men is useful; no sighting of a demonstration can be fabricated. He can choose to stay or leave under ordinary policy. Neither a true presence nor a reported departure establishes causal detention |
 | Operation and both sides fighting | **Committed S126** `operation` has no problems and lists four linked operations: Sumter38, Johnston144, McDowell135 and Patterson141. The same packet separately fails unknown combatants at Harpers Ferry and Manassas. The committed scorer links an operation to a battle and checks loss-breakdown sums | Preserve a path from lawful ordinary offensive to genuine opposed combat, while retaining truthful unknown-strength failures. A scout estimate affects choice only. If a side is wholly unknown, 0110 gives unresolved contact and this does not establish both sides fighting. Source recovery is still required for unknown historical combatants |
 
 The design keeps the **operation reachable**, not guaranteed or newly passed:
@@ -215,13 +221,25 @@ scorer checks. That alone must not be presented as independent proof that an
 unresolved contact was opposed fighting. Audit the actual sides/outcome in a
 future implementation's acceptance evidence; no scorer change is made here.
 
-**Evidence gap:** the three-way S129 capture, S130's two detailed captures,
-Patterson's exact retained candidate breakdown, and Johnston's received-paper
-lists cannot be independently compared under the committed-only restriction
-until their records have commit IDs. They were requested during this task.
-The lead's summaries above support conditional design reasoning, not a claim
-that those captures or the proposed counterfactual have been verified. No
-new winner, liveness count, band, detention effect or milestone result is claimed.
+**Committed S129 cross-check:** `three-way-criteria.json` retains McDowell's
+Manassas-linked operation135 in all three captures. `readiness/battle-changes.json`
+shows actual day140 combat: Union59,754 against Confederate6,490, both with
+empty unknown-block lists, Union gaining ground and Confederates routed.
+The repaired Harpers Ferry contact146 has Johnston5,340 against Patterson1,732,
+both with empty unknown lists; Patterson withdraws. This is distinct from the
+first two S129 captures' wholly unknown Confederate contact. The readiness
+criterion still has four unknown-strength problems at later Manassas contacts;
+the restored Harpers Ferry fight does not waive them. These actual model
+records show why the operation path must survive and why a planner estimate
+cannot be used to certify combatant truth. They do not measure this proposal.
+
+**Remaining evidence gap:** S130's two detailed captures, Patterson's S130
+retained candidate breakdown and Johnston's received-paper lists cannot be
+independently compared under the committed-only restriction until their record
+has a commit ID. It was requested during this task. The lead's S130 summaries
+support conditional reasoning, not a claim that those captures or the proposed
+counterfactual have been verified. No new winner, liveness count, band, detention
+effect or milestone result is claimed.
 
 ## 6. The Valley is territory, not a moving target
 
