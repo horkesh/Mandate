@@ -43,9 +43,9 @@ Status: accepted (2026-11-23). From S113's research (`docs/research/2026-11-23-S
    - **What a call offends.** Offences stay as each call's text gives them.
      - Where a Union call's text names the suppression of the combinations or insurrection it raises troops against, it offends `confederate_independence`.
      - This is the same text rule under which eighteen Confederate profiles offend `union`.
-6. **The pack's call errors S113 found are corrected** from OR IV-I pp.231–232:
-   - **Four destinations:** Georgia's and Louisiana's absolute calls of 22 April name Richmond, Kentucky's names Harpers Ferry and North Carolina's names Richmond, where the pack says Lynchburg;
-   - **Tennessee's count:** the shared clause must keep the distribution note's three regiments.
+6. **The call errors S113 reported are checked against OR IV-I pp.231–232.**
+   - **Four destinations.** S113 reported Lynchburg where Georgia's and Louisiana's absolute calls of 22 April name Richmond, Kentucky's Harpers Ferry and North Carolina's Richmond. The build found the pack already gives the printed destinations, so none changed.
+   - **Tennessee's count.** Tennessee's organisation clause now states the distribution note's three regiments.
 
 Rejected:
 - **A cause value for every Confederate by faction.**
