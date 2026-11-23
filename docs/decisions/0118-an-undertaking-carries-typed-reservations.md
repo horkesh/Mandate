@@ -1,6 +1,6 @@
 # 0118: An undertaking carries typed reservations
 
-Status: accepted (2026-11-23). From S104's proposal (`docs/research/2026-11-23-S104-conditional-compliance.md` and `docs/research/S104/` on `sprint/pushback` at `a403817c`), with S102's measurements (`docs/audit/s102-evidence/` on `sprint/callterms` at `e12a85fb`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Refines the compliance machinery FOUNDATION describes (the people core carried over from M1 and M2): how a response's rung is chosen.
+Status: accepted (2026-11-23). From S104's proposal (`docs/research/2026-11-23-S104-conditional-compliance.md` and `docs/research/S104/` on `sprint/pushback` at `a403817c`), with S102's measurements (`docs/audit/s102-evidence/` on `sprint/callterms` at `e12a85fb`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Refines the compliance machinery FOUNDATION describes (the people core carried over from M1 and M2): how a response's rung is chosen. Clarified by 0119 (a call for troops asks no temperament).
 
 ## Context
 
