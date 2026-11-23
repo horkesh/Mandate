@@ -1,6 +1,6 @@
 # 0020: Generals have hidden stats that battle changes; the player sees an assessment
 
-Status: accepted (2026-11-14). The owner asked for "stats that change with battles lost or won. Traits too", chose the staff's assessment over true numbers, asked for staff observers and hidden gems, and chose "history's shadow" as the default. Clarifies 0007. Amended by 0026 (the 1864 rival general; cited stat centres). Design: `docs/design/FOUNDATION.md` section 6; evidence in `docs/research/2026-11-14-union-command-and-promotion.md`. Amended by 0040 (first-month walkthrough revisions).
+Status: accepted (2026-11-14). The owner asked for "stats that change with battles lost or won. Traits too", chose the staff's assessment over true numbers, asked for staff observers and hidden gems, and chose "history's shadow" as the default. Clarifies 0007. Amended by 0026 (the 1864 rival general; cited stat centres). Design: `docs/design/FOUNDATION.md` section 6; evidence in `docs/research/2026-11-14-union-command-and-promotion.md`. Amended by 0040 (first-month walkthrough revisions). Clarified by 0113 (a judgment without evidence adds no term to a response).
 
 ## Context
 

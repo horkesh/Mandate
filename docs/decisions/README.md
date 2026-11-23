@@ -23,7 +23,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0017](0017-real-time-with-pause.md) | Real time with pause on a daily tick | superseded by 0027; amended by 0026 |
 | [0018](0018-civil-war-scope.md) | The American Civil War, 1861–65; the engine's promise is wars with fronts | accepted; amended by 0028 |
 | [0019](0019-regions-over-a-typed-graph.md) | The map is regions over a typed graph; fronts and pockets are derived | accepted; extended by 0031 |
-| [0020](0020-people-hidden-stats-and-assessment.md) | Generals have hidden stats that battle changes; the player sees an assessment | accepted; amended by 0026, 0040 |
+| [0020](0020-people-hidden-stats-and-assessment.md) | Generals have hidden stats that battle changes; the player sees an assessment | accepted; amended by 0026, 0040; clarified by 0113 |
 | [0021](0021-sensitive-history-gate.md) | A sensitive-history gate; no Lost Cause framing; enslaved people as agents | accepted; amended by 0026 |
 | [0022](0022-voice-is-never-state.md) | AI text is voice, never state | accepted; amended by 0038 |
 | [0023](0023-the-home-front.md) | The home front: a light economy through people, elections, and history as situations | accepted; amended by 0026, 0028, 0040 |
@@ -116,3 +116,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0110](0110-unknown-defenders-and-joining-blocks.md) | A force of unknown strength is not an empty field, and a block on its way doesn't move headquarters | accepted |
 | [0111](0111-pushback-is-measured-by-named-acts.md) | Pushback is measured by named acts, not by every response | accepted |
 | [0112](0112-the-pushback-registers-and-what-1a-requires.md) | The pushback registers, and what 1A requires of them | accepted |
+| [0113](0113-a-judgment-without-evidence-adds-no-term.md) | A judgment nobody has evidence for adds no term to a response | accepted |
