@@ -59,14 +59,24 @@ it.each(['law-and-practice', 'principal-initiative'] as const)('copies and deepl
   expect(exposed.cites[0]!.at).toBe('p. 4');
 });
 
-it('refreshes the principal’s cached post when location and goal stay the same', () => {
+it('refreshes the principal’s cached post on a received appointment when location and goal stay the same', () => {
   const world = indexedFixture();
   const state = createState(world, { seed: 1 });
-  const appointed = {
+  const hidden = {
     ...state, postStates: { ...state.postStates, [office]: { ...state.postStates[office]!, postHolder: principal } },
   };
+  const appointed = deliverReport(hidden, seat, {
+    id: toId('message', 'own-appointment'), knownReceivedDay: 0, knownRoute: 'in-person', knownVia: [],
+    knownBody: {
+      reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: principal, reportAuthorPost: office,
+      reportSubjectKind: 'post', reportSubjectId: office, reportDay: 0, reportHour: null,
+      reportClaims: [{ claimKind: 'verb-answered', claimRegion: null, claimValue: 1, claimToken: 'appoint:accepted', claimConfidence: 1000 }],
+      reportAdvice: null, reportAnswers: null,
+    },
+  }, NO_TRUTH);
   const cache = createViewCache();
   const before = viewFor(world, state, seat, cache);
+  expect(viewFor(world, hidden, seat, cache)).toEqual(before);
   const fresh = viewFor(world, appointed, seat);
   expect([before.post, fresh.post]).toEqual([null, office]);
   expect([fresh.region, fresh.goal]).toEqual([before.region, before.goal]);

@@ -29,6 +29,21 @@ export function peopleProjection(
   if (faction === null || !world.factionIds.includes(faction) || world.faction(faction).principal !== principal) {
     return Object.freeze({ posts: Object.freeze([]), people: Object.freeze([]) });
   }
+  const { posts, people } = establishmentProjection(world, principal, faction, reports, standingFor, day, calendar);
+  return Object.freeze({ posts, people });
+}
+
+/** A seat's opening office and side, changed only by papers it has received. */
+export function seatIdentity(world: SeatsWorld, person: PersonId, reports: readonly ReportView[], day: number, calendar: string | null): { post: PostId | null; faction: FactionId | null } {
+  const openingSide = world.person(person).faction;
+  const known = establishmentProjection(world, person, openingSide, reports, () => null, day, calendar);
+  return { post: known.posts.find(p => p.holder === person)?.post ?? null, faction: known.sides.has(person) ? known.sides.get(person)! : openingSide };
+}
+
+function establishmentProjection(
+  world: SeatsWorld, principal: PersonId, faction: FactionId | null, reports: readonly ReportView[],
+  standingFor: (person: PersonId) => number | null, day: number, calendar: string | null,
+): PeopleProjection & { readonly sides: ReadonlyMap<PersonId, FactionId | null> } {
   const departments = new Set(world.map.world.departments.filter(d => d.faction === faction).map(d => d.id));
   const posts = new Map<PostId, KnownPostView>();
   const knownSides = new Map<DepartmentId, FactionId>();
@@ -126,6 +141,7 @@ export function peopleProjection(
       }
     }
   }
+  const sides = new Map<PersonId, FactionId | null>();
   const personViews: KnownPersonView[] = [...people].sort(strictCompare).map(person => {
     let side = world.personIds.includes(person) ? world.person(person).faction : null;
     for (const post of posts.values()) {
@@ -135,6 +151,7 @@ export function peopleProjection(
     }
     // An explicit service choice supersedes the side inferred from a government's posts (0101, R76).
     if (serviceSides.has(person)) side = serviceSides.get(person)!;
+    sides.set(person, side);
     const stances: KnownStanceView[] = [];
     const assessments: KnownPersonView['assessments'][number][] = [];
     for (const r of chronological) {
@@ -146,6 +163,7 @@ export function peopleProjection(
     return Object.freeze({ person, standing: side === faction ? standingFor(person) : null, stances: Object.freeze(stances), assessments: Object.freeze(assessments) });
   });
   return Object.freeze({
+    sides,
     posts: Object.freeze([...posts.values()].sort((a, b) => strictCompare(a.post, b.post)).map(p => Object.freeze({ ...p, observerReports: Object.freeze([...p.observerReports]) }))),
     people: Object.freeze(personViews),
   });

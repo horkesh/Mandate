@@ -194,6 +194,8 @@ export interface PrincipalMenu {
   readonly candidates: readonly Candidate[];
   /** His attention left this week, and what each kind of command costs (the pack's table, 0025, 0040); null left: no budget. */
   readonly attention: { readonly left: number | null; readonly costs: Readonly<Record<string, number>>; readonly specialMessenger: number };
+  /** Public names of the own-side blocs he may address (0084), without support or private rule weights. */
+  readonly politicalBlocs?: readonly { readonly id: string; readonly name: string }[];
   readonly commandable: readonly CommandablePost[];
   readonly situations: readonly SituationChoice[];
   /** Plans his commanders submitted that have reached him and wait for his review (approve, send back, edit). */

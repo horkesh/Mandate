@@ -18,23 +18,26 @@ import type { PlanRecord } from '../plans/plans.ts';
 import type { State } from '../root-state.ts';
 import { seatOf } from '../seats/seats.ts';
 import { attentionLeft } from '../seats/attention.ts';
-import { perceptionBias, traitsOf } from '../people/traits.ts';
-import { heldPost, sideOfPerson } from '../command/command.ts';
-import { whereIsPerson } from '../seats/posts.ts';
+import { perceptionBias, valuesOf } from '../people/traits.ts';
+import { trueOf } from '../people/people.ts';
+import { capitalOf } from '../command/capitals.ts';
+import { mainBody } from '../seats/posts.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import type { WorldIndex } from '../world/index.ts';
 import { createFreezeLedger, type FreezeLedger } from '../tick/freeze.ts';
 import { claimedControlView } from './claimed-control.ts';
 import { controlEvidence } from '../knowledge/control-beliefs.ts';
-import { nextPeopleChange, peopleProjection, type PeopleProjection } from './people.ts';
+import { nextPeopleChange, peopleProjection, seatIdentity, type PeopleProjection } from './people.ts';
 import type { ReportClaim } from '../knowledge/report.ts';
+import { promiseProjection } from './promises.ts';
+import { politicsProjection } from './politics.ts';
 import {attentionBudget, audienceProjection, congressProjection} from './desk.ts';
 import type { Candidate } from '../seats/api.ts';
 import { isProposalBasis } from '../situations/types.ts';
 import type { BeliefView, ClaimView, GoalView, ObstructionView, ReportView, SeatView, SituationView, WorksView } from './types.ts';
 
 export interface ViewCache {
-  readonly desk: Map<SeatId, {world:SeatsWorld; day:number; budget:State['seatAttention'][SeatId]|undefined; chambers:State['chamberStates']; messages:State['messagesInTransit']; reports:readonly ReportView[]; situations:readonly SituationView[]; projection:Pick<SeatView,'attentionBudget'|'congress'|'audiences'>}>;
+  readonly desk: Map<SeatId, {world:SeatsWorld; day:number; budget:State['seatAttention'][SeatId]|undefined; chambers:State['chamberStates']; messages:State['messagesInTransit']; reports:readonly ReportView[]; situations:readonly SituationView[]; projection:Pick<SeatView,'attentionBudget'|'congress'|'audiences'|'politics'|'promises'>}>;
   /** Request graphs already deeply frozen by this caller; shared view children need no second walk. */
   readonly requestFreeze: FreezeLedger;
   /** The available roster follows received papers and posts, never hidden command or service truth. */
@@ -136,7 +139,6 @@ function same<T>(a: readonly T[], b: readonly T[]): boolean {
 /** What `seat` may see the morning after `state.stateDay`. Pass a cache to get stable references for unchanged data. */
 export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: ViewCache = createViewCache()): SeatView {
   const person = world.person(seatOf(state, seat).seatPerson);
-  const post = heldPost(state, person.id);
   const knowledge = knowledgeOf(state, seat, cache.knowledge, cache.openings);
 
   let reports = cache.lists.get(knowledge);
@@ -155,7 +157,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
   }
 
   let beliefs = cache.beliefs.get(seat);
-  const bias = perceptionBias(world.rules.traits, traitsOf(world, state, person.id)).permille;
+  const bias = perceptionBias(world.rules.traits, { id: person.id, boldness: trueOf(state, person.id).trueBoldness, values: valuesOf(world.map, person.id) }).permille;
   if (beliefs === undefined || beliefs.knowledge !== knowledge || beliefs.perception !== bias) {
     const out: Record<RegionId, BeliefView> = {};
     for (const [region, { report, value }] of latestEnemyClaims(knowledge)) {
@@ -186,6 +188,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     controlOnMap.set(knowledge, control);
   }
 
+  const { post, faction } = seatIdentity(world, person.id, reports, state.stateDay, state.calendarStart);
   let goal: GoalView | null = null;
   const record = post === null ? undefined : state.planRecords[post];
   if (record !== undefined) {
@@ -196,11 +199,19 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     }
   }
 
-  const region = whereIsPerson(world, state, person.id);
+  // A principal knows his capital; a field holder knows his own main body's position.
+  // Office placement comes from the public establishment, never the hidden post table.
+  const principalSide = world.start.factions.find(f => f.principal === person.id)?.faction;
+  const openingPost = world.start.posts.find(p => p.id === post) ?? world.start.temporaryPosts.find(p => p.id === post);
+  const office = openingPost !== undefined && world.roleOf(openingPost.kind) === 'office';
+  const body = post === null || office ? null : mainBody(state, post, world.map.forceTotalsCache, world.map);
+  const region = principalSide !== undefined ? capitalOf(state, principalSide)
+    : office && faction !== null ? capitalOf(state, faction)
+    : body !== null ? state.forceLocations[body]!.locRegion
+    : world.start.posts.find(p => p.id === post)?.region ?? world.start.temporaryPosts.find(p => p.id === post)?.region
+      ?? (faction === null ? null : state.factionCapitals[faction]);
+  if (region === null || region === undefined) throw new RangeError(`${person.id} holds no post and has no side's capital to stand in`);
   const situations = situationViews(world, state, seat, person.id, cache);
-  // A principal knows which government he leads from his own declared office (S62), not a hidden department change.
-  // Other seats retain their own current service identity (0052; 0065).
-  const faction = world.start.factions.find(f => f.principal === person.id)?.faction ?? sideOfPerson(world.map, state, person.id);
   // Lane 1.13: his own week's attention (0025), which he always knows; null for a seat that keeps none.
   const attention = attentionLeft(state, seat);
   let people = cache.people.get(seat);
@@ -216,7 +227,7 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
   let desk=cache.desk.get(seat);
   if(desk===undefined||desk.world!==world||desk.day!==state.stateDay||desk.budget!==state.seatAttention[seat]||desk.chambers!==state.chamberStates||desk.messages!==state.messagesInTransit||desk.reports!==reports||desk.situations!==situations){
     const principal=world.start.factions.some(f=>f.principal===person.id);
-    const projection={attentionBudget:attentionBudget(world,state,seat),congress:congressProjection(world,state,person.id,reports,situations),audiences:principal?audienceProjection(state,person.id,reports):Object.freeze([])};
+    const projection={promises:principal?promiseProjection(person.id,state.stateDay,reports):Object.freeze([]),politics:politicsProjection(world,person.id,state.stateDay,reports,faction),attentionBudget:attentionBudget(world,state,seat),congress:congressProjection(world,state,person.id,reports,situations),audiences:principal?audienceProjection(state,person.id,reports):Object.freeze([])};
     desk={world,day:state.stateDay,budget:state.seatAttention[seat],chambers:state.chamberStates,messages:state.messagesInTransit,reports,situations,projection};
     cache.desk.set(seat,desk);
   }
@@ -226,6 +237,8 @@ export function viewFor(world: SeatsWorld, state: State, seat: SeatId, cache: Vi
     previous.attention === attention &&
     previous.attentionBudget === desk.projection.attentionBudget &&
     previous.congress === desk.projection.congress &&
+    previous.politics === desk.projection.politics &&
+    previous.promises === desk.projection.promises &&
     previous.audiences === desk.projection.audiences &&
     previous.posts === people.projection.posts &&
     previous.people === people.projection.people &&

@@ -1,0 +1,96 @@
+{
+  "reason": "Do not have a non-serving recipient author a new expiry letter; private promise expiry/grievance mechanics unchanged. No institutional death settlement invented.",
+  "changedAfterCampaign": [
+    {
+      "path": "packages/kernel/src/tick/people-week.ts",
+      "beforeSHA256": "11680fdd4b496e235ff93dbd972f6827615444fe9678a842723a8916a9da54e8",
+      "afterSHA256": "35291e0269c315620cd994de1c067adbb851490f82914894663f6f2d9226b3a8",
+      "delta": "Serving-status guard on the new report producer only"
+    },
+    {
+      "path": "packages/kernel/test/s54-promises.test.ts",
+      "beforeSHA256": "c8b7e4566bd9a20e3d45572f0b60605796d6f5b7deb9fc45a760c9633116ad37",
+      "afterSHA256": "991b314c7470ffeac6cd2752887b3b45848ddb0eb73d0fc6bf633ac8f555e4c3",
+      "delta": "One appended failing-then-passing killed-author regression"
+    }
+  ],
+  "red": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s54-promises.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 5.27,
+    "log": "runs/s54/expiry-author-red.log"
+  },
+  "green": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s54-promises.test.ts",
+      "packages/kernel/test/people-verbs.test.ts",
+      "packages/kernel/test/s54-public-records.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 4.47,
+    "log": "runs/s54/expiry-author-green.log"
+  },
+  "greenTests": 51,
+  "typecheck": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 3.16,
+    "log": "runs/s54/corrected-typecheck.log"
+  },
+  "referencePromiseMechanics": [
+    {
+      "pack": "union-1861",
+      "mechanics": [
+        {
+          "mechanic": "people.promise_broken",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "people.promise_kept",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "verbs.audience",
+          "fires": 0,
+          "magnitude": 0
+        }
+      ]
+    },
+    {
+      "pack": "testbed",
+      "mechanics": [
+        {
+          "mechanic": "people.promise_broken",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "people.promise_kept",
+          "fires": 0,
+          "magnitude": 0
+        },
+        {
+          "mechanic": "verbs.audience",
+          "fires": 0,
+          "magnitude": 0
+        }
+      ]
+    }
+  ],
+  "doneCheckRepeated": false,
+  "evidenceReuse": "Reference branches never made a promise/audience; the guard changes only authorship of a newly added expiry account. Default rule seats and the gated-choice sweep do not issue promises. Campaign evidence is reused for those unaffected paths; the new killed-author path is validated by the targeted test, not represented as freshly campaign-measured."
+}

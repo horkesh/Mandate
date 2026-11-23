@@ -1,0 +1,74 @@
+{
+  "stage": "politics",
+  "head": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+  "node": "v22.23.2",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "workspaceKernel": "C:\\Pyrrhic\\sprint-july\\packages\\kernel",
+  "startingTrackedPaths": 2212,
+  "allStartingPathsPresent": true,
+  "protectedRunFiles": 6141,
+  "protectedRunEvidenceByteExact": true,
+  "changedSharedNodeModulesCaches": [
+    "runs/s82/worker/s78-tree/node_modules/.vite/vitest/da39a3ee5e6b4b0d3255bfef95601890afd80709/results.json"
+  ],
+  "stagedInputPatchByteExact": true,
+  "sourceBranchesUnchanged": true,
+  "protectedRuntimePathsExact": true,
+  "changedPaths": [
+    "docs/audit/s54-evidence/checks.json",
+    "docs/audit/s54-evidence/done-check.json",
+    "docs/audit/s54-evidence/drafting.json",
+    "docs/audit/s54-evidence/expiry-author-correction.json",
+    "docs/audit/s54-evidence/material-policy-trace.json",
+    "docs/audit/s54-evidence/measurement-preservation.json",
+    "docs/audit/s54-evidence/preservation.json",
+    "docs/audit/s54-evidence/reference-comparison.json",
+    "docs/audit/s54-evidence/rules-problems.json",
+    "docs/audit/s54-evidence/runtime-diagnostics.json",
+    "docs/audit/s54-evidence/s63-view-read.json",
+    "docs/audit/s54-evidence/source-inputs.json",
+    "docs/design/FOUNDATION.md",
+    "notes/lane-s54-politics-gaps.md",
+    "packages/kernel/src/knowledge/knowledge.ts",
+    "packages/kernel/src/knowledge/report.ts",
+    "packages/kernel/src/seats/api.ts",
+    "packages/kernel/src/seats/requests.ts",
+    "packages/kernel/src/tick/people-week.ts",
+    "packages/kernel/src/tick/promise-reports.ts",
+    "packages/kernel/src/tick/verbs.ts",
+    "packages/kernel/src/view/desk.ts",
+    "packages/kernel/src/view/people.ts",
+    "packages/kernel/src/view/politics.ts",
+    "packages/kernel/src/view/promises.ts",
+    "packages/kernel/src/view/types.ts",
+    "packages/kernel/src/view/view.ts",
+    "packages/kernel/test/capitals.test.ts",
+    "packages/kernel/test/s54-congress.test.ts",
+    "packages/kernel/test/s54-politics-view.test.ts",
+    "packages/kernel/test/s54-promises.test.ts",
+    "packages/kernel/test/s54-public-records.test.ts",
+    "packages/kernel/test/seat-view-contracts.test.ts",
+    "packages/pack-format/schemas/situation.schema.json",
+    "tools/rules/projection-derivations.json"
+  ],
+  "runtimePackages": [
+    {
+      "path": "packages/cli/package.json",
+      "sha256": "9831538271a75c8bd564d21b3906ec0172ffa1612706168445c376be082f76b0"
+    },
+    {
+      "path": "packages/kernel/package.json",
+      "sha256": "cadb9be3b77f4cf7ea8c485c35ff589e428559039368fa02b78e5a8046dc825f"
+    },
+    {
+      "path": "packages/pack-format/package.json",
+      "sha256": "7e49c716a4f78134a943f21f25fc93e88ecf8bc1bea8e852ab4f78365fe43d33"
+    },
+    {
+      "path": "packages/rule-seats/package.json",
+      "sha256": "08755847f8bdaf29965239b2f6cfa2c40a0565906d1d34162b27aaf75d365ef8"
+    }
+  ],
+  "browserOrDesktopUsed": false,
+  "packageBuilt": false
+}

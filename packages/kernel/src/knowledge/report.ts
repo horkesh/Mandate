@@ -127,6 +127,10 @@ export const CLAIM_KINDS = [
   'position',
   'present-and-absent',
   'present-for-duty',
+  // Commitment accounts: token is the kind; value is the promised due day. The subject (or author of a reply) names the recipient.
+  'promise-made',
+  'promise-kept',
+  'promise-broken',
   'support-answer',
   'verb-answered',
   'works',

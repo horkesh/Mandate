@@ -1,0 +1,53 @@
+[
+  {
+    "flag": "sumter_withdrawn",
+    "exit": 0,
+    "references": [
+      "packs\\union-1861\\situations\\sumter_garrison.json:32:          \"setFlag\": \"sumter_withdrawn\"",
+      "packs\\union-1861\\situations\\sumter_garrison.json:88:          \"setFlag\": \"sumter_withdrawn\""
+    ]
+  },
+  {
+    "flag": "pickens_given_up",
+    "exit": 0,
+    "references": [
+      "packs\\union-1861\\situations\\pickens_reinforcement.json:29:          \"setFlag\": \"pickens_given_up\"",
+      "packs\\union-1861\\situations\\sumter_garrison.json:35:          \"setFlag\": \"pickens_given_up\""
+    ]
+  },
+  {
+    "flag": "annapolis_route",
+    "exit": 0,
+    "references": [
+      "packs\\union-1861\\situations\\washington_cut_off.json:31:          \"setFlag\": \"annapolis_route\""
+    ]
+  },
+  {
+    "flag": "no_troops_through_maryland",
+    "exit": 0,
+    "references": [
+      "packs\\union-1861\\situations\\washington_cut_off.json:47:          \"setFlag\": \"no_troops_through_maryland\""
+    ]
+  },
+  {
+    "flag": "kentucky_unionists_armed",
+    "exit": 0,
+    "references": [
+      "packs\\union-1861\\situations\\kentucky_neutrality.json:32:          \"setFlag\": \"kentucky_unionists_armed\""
+    ]
+  },
+  {
+    "flag": "kentucky_entered",
+    "exit": 0,
+    "references": [
+      "packs\\union-1861\\situations\\kentucky_neutrality.json:50:          \"setFlag\": \"kentucky_entered\""
+    ]
+  },
+  {
+    "flag": "kentucky_left_alone",
+    "exit": 0,
+    "references": [
+      "packs\\union-1861\\situations\\kentucky_neutrality.json:69:          \"setFlag\": \"kentucky_left_alone\""
+    ]
+  }
+]

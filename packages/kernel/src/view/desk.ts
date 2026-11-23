@@ -3,7 +3,7 @@ import {strictCompare} from '../compare.ts';
 import type {PersonId, SeatId} from '../ids.ts';
 import type {State} from '../root-state.ts';
 import type {SeatsWorld} from '../seats/world.ts';
-import type {AttentionBudgetView, AudienceView, CongressView, ReportView, SituationView} from './types.ts';
+import type {AttentionBudgetView, AudienceView, CongressAccountView, CongressView, ReportView, SituationView} from './types.ts';
 import {daysFromCivil,parseIsoDate} from '../world/calendar.ts';
 
 export function attentionBudget(world:SeatsWorld,state:State,seat:SeatId):AttentionBudgetView|null {
@@ -35,7 +35,7 @@ export function congressProjection(world:SeatsWorld,state:State,person:PersonId,
   if(!own&&source===undefined)return [];
   const selected=own?def.options.filter(o=>record.sitChosen.includes(o.id)):[];
   const effects=source?def.effects: selected.length?selected.flatMap(o=>[...o.effects,...o.lockedCosts]):def.inaction?.effects??[];
-  return effects.flatMap(e=>'propose' in e&&e.propose.owner==='politics'?[{p:e.propose,day:source?.day??record!.sitDecidedDay!,situation:def.id,option:source?null:selected.find(o=>o.effects.includes(e)||o.lockedCosts.includes(e))?.id??null,source:source?.id??null}]:[]);
+  return effects.flatMap(e=>'propose' in e&&e.propose.owner==='politics'?[{p:e.propose,day:source?.day??record!.sitDecidedDay!,situation:def.id,option:source?null:selected.find(o=>o.effects.includes(e)||o.lockedCosts.includes(e))?.id??null,source:source?.id??null,text:source?def.text:selected.find(o=>o.effects.includes(e)||o.lockedCosts.includes(e))?.label??def.inaction!.text}]:[]);
  }).sort((a,b)=>a.day-b.day||strictCompare(a.situation,b.situation));
  const origin=state.calendarStart===null?null:daysFromCivil(parseIsoDate(state.calendarStart));
  const dayOf=(date:string)=>origin===null?null:daysFromCivil(parseIsoDate(date))-origin;
@@ -50,7 +50,8 @@ export function congressProjection(world:SeatsWorld,state:State,person:PersonId,
    const met=intervals.filter(i=>i.closes>=event.day&&i.opens<=state.stateDay).map(i=>Math.max(event.day,i.opens));
    ledger.push({act:p.subject,day:event.day,situation:event.situation,option:event.option,metDay:met.length?Math.min(...met):null,answeredDay:null,source:event.source});
   }else if(p.field==='ledger-answer'){
-   for(let i=0;i<ledger.length;i++){const e=ledger[i]!;if((p.subject===null||p.subject===e.act)&&e.metDay!==null&&e.metDay<=event.day&&e.answeredDay===null)ledger[i]={...e,answeredDay:event.day};}
+   const account:CongressAccountView=Object.freeze({kind:event.source===null?'principal-account':'received-account',day:event.day,situation:event.situation,option:event.option,text:event.text,source:event.source});
+   for(let i=0;i<ledger.length;i++){const e=ledger[i]!;if((p.subject===null||p.subject===e.act)&&e.metDay!==null&&e.metDay<=event.day&&e.answeredDay===null)ledger[i]={...e,answeredDay:event.day,account};}
   }
  }
  ledger.sort((a,b)=>a.day-b.day||strictCompare(a.act,b.act));

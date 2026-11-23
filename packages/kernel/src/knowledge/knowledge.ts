@@ -259,6 +259,10 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
       if (b.reportDay > day || r.knownReceivedDay > day) continue;
       const keys: string[] = [];
       if (b.reportSubjectKind === 'situation' && b.reportType === 'wire-dispatch' && b.reportSubtype === null) keys.push(`notice:${b.reportSubjectId}`);
+      // Promise terms and settlement are received contract evidence, kept independently of routine dispatch aging.
+      for (const c of b.reportClaims) if (c.claimKind === 'promise-made' || c.claimKind === 'promise-kept' || c.claimKind === 'promise-broken') {
+        keys.push(`promise:${b.reportAuthor}:${b.reportSubjectKind}:${b.reportSubjectId}:${c.claimToken}:${c.claimValue}:${c.claimKind}`);
+      }
       if (b.reportSubjectKind === 'person' && b.reportSubjectId === b.reportAuthor && b.reportClaims.some(c => c.claimKind === 'service-choice')) keys.push(`service:${b.reportAuthor}`);
       if (b.reportSubjectKind === 'post') {
         if (b.reportClaims.some(c => c.claimKind === 'verb-answered' && c.claimValue === 1 && c.claimToken?.startsWith('appoint:'))) keys.push(`appointment:${b.reportSubjectId}`);

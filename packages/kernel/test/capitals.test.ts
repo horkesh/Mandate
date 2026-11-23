@@ -18,6 +18,7 @@ import { encodeSave, decodeSave } from '../src/serialize/save.ts';
 import { canonicalHash } from '../src/serialize/hash.ts';
 import type { State } from '../src/root-state.ts';
 import { seatIdFor } from '../src/seats/seats.ts';
+import { viewFor } from '../src/view/view.ts';
 import { indexedFixture, F, P, POST, R, fixtureMap, fixtureStart } from './support/seats-fixture.ts';
 
 describe('the capital has one State owner', () => {
@@ -94,8 +95,10 @@ describe('S71 institutional offices', () => {
     const { world, state } = fixture();
     expect(headquartersOf(world, state, POST('a_office'))).toBe(R('a_cap'));
     expect(whereIsPerson(world, state, P('a_sec'))).toBe(R('a_cap'));
+    expect(viewFor(world, state, seatIdFor(P('a_sec'))).region).toBe(R('a_cap'));
     expect(world.startHeadquarters(POST('a_office'))).toBe(R('a_cap'));
     expect(headquartersOf(world, state, POST('a_army'))).toBe(R('a_front'));
+    expect(viewFor(world, state, seatIdFor(P('a_gen'))).region).toBe(R('a_front'));
     expect(fieldPosts(world, state)).not.toContain(POST('a_office'));
     expect(offices(world, state)).toContain(POST('a_office'));
     const menu = principalMenu(world, state, F('a'), morningGround(world, state, 1));
@@ -111,6 +114,7 @@ describe('S71 institutional offices', () => {
     const moved = applyCommandProposals(world.map, heard, [{ owner: 'command', field: 'faction_capital', subject: R('b_cap'), side: F('a'), delta: 0, origin: 'notice' }], 2);
     expect(moved.refused).toEqual([]);
     expect(headquartersOf(world, moved.state, POST('a_office'))).toBe(R('b_cap'));
+    expect(viewFor(world, moved.state, seatIdFor(P('a_sec'))).region).toBe(R('b_cap'));
     expect(headquartersOf(world, heard, POST('a_office'))).toBe(R('a_cap'));
     expect(moved.state.postStates).toBe(heard.postStates);
     expect(moved.state.forceLocations).toBe(heard.forceLocations);

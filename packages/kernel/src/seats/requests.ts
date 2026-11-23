@@ -314,6 +314,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   return {
     menuKind: 'principal',
     faction,
+    politicalBlocs: receivedView.politics?.blocs ?? [],
     atWarSince: warSince(world, state, faction),
     doctrine: appointmentView === undefined ? doctrine : { ...doctrine, appointments: appointmentView },
     ...(history ? { historicalAppointments, historicalAppointees } : {}),

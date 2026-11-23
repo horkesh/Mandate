@@ -1,0 +1,232 @@
+[
+  {
+    "name": "politics-boundary",
+    "command": [
+      "node",
+      "tools/check-pack-boundary.mjs"
+    ],
+    "exit": 0,
+    "seconds": 0.167
+  },
+  {
+    "name": "politics-decisions",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-decisions-index.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.127
+  },
+  {
+    "name": "politics-final-rules",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.329
+  },
+  {
+    "name": "politics-final-typecheck",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.976
+  },
+  {
+    "name": "politics-fixtures-corrected",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "packages/kernel/test/s54-promises.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.045
+  },
+  {
+    "name": "politics-focused",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "packages/kernel/test/s54-public-records.test.ts",
+      "packages/kernel/test/s54-politics-view.test.ts",
+      "packages/kernel/test/s54-congress.test.ts",
+      "packages/kernel/test/s54-promises.test.ts",
+      "packages/kernel/test/seat-view-contracts.test.ts",
+      "packages/kernel/test/seat-people.test.ts",
+      "packages/kernel/test/seats-orders.test.ts",
+      "packages/kernel/test/s25-view.test.ts",
+      "packages/kernel/test/press-view.test.ts",
+      "packages/kernel/test/people-verbs.test.ts",
+      "packages/kernel/test/believed-posts.test.ts",
+      "packages/kernel/test/s74-organisation.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 5.595
+  },
+  {
+    "name": "politics-full-suite",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "--reporter=json",
+      "--outputFile=runs/s83/politics-full-suite.json"
+    ],
+    "exit": 1,
+    "seconds": 559.688
+  },
+  {
+    "name": "politics-licences",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-licences.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.127
+  },
+  {
+    "name": "politics-office-verification",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "packages/kernel/test/capitals.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.924
+  },
+  {
+    "name": "politics-opening-corrected",
+    "command": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "--maxWorkers=1",
+      "packages/kernel/test/state-data.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 13.93
+  },
+  {
+    "name": "politics-rules-corrected",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.295
+  },
+  {
+    "name": "politics-rules-final",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 0,
+    "seconds": 1.611
+  },
+  {
+    "name": "politics-rules",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "tools/check-rules.ts"
+    ],
+    "exit": 1,
+    "seconds": 1.325
+  },
+  {
+    "name": "politics-schema",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "packages/cli/src/pack.ts",
+      "schemas"
+    ],
+    "exit": 0,
+    "seconds": 0.981
+  },
+  {
+    "name": "politics-smoke",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s83/references.ts",
+      "union-1861",
+      "politics",
+      "--smoke"
+    ],
+    "exit": 0,
+    "seconds": 4.87
+  },
+  {
+    "name": "politics-staged-history",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s83/stage-check.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.814
+  },
+  {
+    "name": "politics-testbed-reference",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s83/references.ts",
+      "testbed",
+      "politics"
+    ],
+    "exit": 0,
+    "seconds": 8.137
+  },
+  {
+    "name": "politics-typecheck",
+    "command": [
+      "node",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "exit": 0,
+    "seconds": 0.971
+  },
+  {
+    "name": "politics-union-reference",
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s83/references.ts",
+      "union-1861",
+      "politics"
+    ],
+    "exit": 0,
+    "seconds": 74.54
+  }
+]

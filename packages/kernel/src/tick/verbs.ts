@@ -12,6 +12,7 @@ import { formationPost } from '../command/organisation.ts';
  * Nothing here moves a division or names a place outside an order to a person (hard rule 1): a transfer names two posts
  * and an amount, and the sending commander picks the blocks (0033).
  */
+import { fileSpokenPromise } from './promise-reports.ts';
 import { strictCompare } from '../compare.ts';
 import { appointHolder, CommandError, createTemporaryPost, declaredAppointment, heldPost, relieveHolder, sideOfPerson, transferForce } from '../command/command.ts';
 import { noteLetter, postObserver, recallObserver } from '../command/observers.ts';
@@ -187,7 +188,9 @@ export function applyVerb(ctx: TickContext, start: State, seat: SeatId, c: VerbC
       if (!knownPerson(ctx, c.person) || !knownOwnPerson(c.person) || c.person === principal) return reject('unknown_person');
       if ((start.personPromises[c.person] ?? []).some((p) => p.promiseKind === 'advancement')) return reject('already_promised');
       fire(ctx, 'verbs.in_washington');
-      return { state: applyPeopleChanges(start, [{ change: 'promise', person: c.person, kind: 'advancement', due: ctx.day + rules.verbs.promise.dueDays }, { change: 'clear_grievances', person: c.person, kinds: ['passed_over'] }], ctx.day, rules, world.map.world.vocabularies.ranks), reason: null };
+      const due = ctx.day + rules.verbs.promise.dueDays;
+      const promised = applyPeopleChanges(start, [{ change: 'promise', person: c.person, kind: 'advancement', due }, { change: 'clear_grievances', person: c.person, kinds: ['passed_over'] }], ctx.day, rules, world.map.world.vocabularies.ranks);
+      return { state: fileSpokenPromise(ctx, promised, principal, c.person, 'advancement', due), reason: null };
     }
     case 'pressure': {
       if (!knownPerson(ctx, c.person) || !knownOwnPerson(c.person) || c.person === principal) return reject('unknown_person');
@@ -249,6 +252,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
   let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: me, post: establishment ? v.verbPost : msg.msgToPost, role: 'addressee', day: ctx.day, kind: `verb:${v.verbKind}` }));
   fire(ctx, 'verbs.answered');
   const changes: PeopleChange[] = [];
+  const promiseAccounts: ReportClaim[] = [];
   let done = !DECLINES.has(answer.actual);
   let appointmentRefusal: AppointmentRefusal | null = null;
   const myPost = heldPost(state, me);
@@ -294,6 +298,13 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
           changes.push({ change: 'rank', person: me, kind, rank: v.verbRank, since: dateOf(state, ctx.day) });
         }
         if ((state.personPromises[me] ?? []).some((p) => p.promiseKind === 'advancement')) {
+          const pending = state.personPromises[me]!.find(p => p.promiseKind === 'advancement')!;
+          // The successful appointment reply carries only the commitment already known to its recipient.
+          if (knowledgeOf(state, seatIdFor(v.verbIssuer)).knownReports.some(r =>
+            r.knownBody.reportClaims.some(c => c.claimKind === 'promise-made' && c.claimToken === pending.promiseKind && c.claimValue === pending.promiseDue)
+            && (r.knownBody.reportSubjectKind === 'person' ? r.knownBody.reportSubjectId === me : r.knownBody.reportAuthor === me))) {
+            promiseAccounts.push({ claimKind: 'promise-kept', claimRegion: null, claimToken: pending.promiseKind, claimValue: pending.promiseDue, claimConfidence: 1000 });
+          }
           changes.push({ change: 'promise_settled', person: me, kind: 'advancement' });
           fire(ctx, 'people.promise_kept');
         }
@@ -408,7 +419,7 @@ export function arriveVerb(ctx: TickContext, start: State, msg: TransitMessage):
     reportTo([answered(false), { claimKind: 'appointment-refused', claimRegion: null, claimValue: 0, claimToken: appointmentRefusal, claimConfidence: 1000 }]);
   } else if (!done && DECLINES.has(answer.actual)) {
     reportTo([answered(false)], { adviceRecommends: 'withdraw-order', adviceReasons: stated(answer), adviceConfidence: ctx.world.map.world.rules.reportConfidence.verbObjection }, 'advice', 'memorandum');
-  } else reportTo([answered(done)]);
+  } else reportTo([answered(done), ...promiseAccounts]);
   return state;
 }
 
@@ -470,6 +481,9 @@ function holdAudience(ctx: TickContext, start: State, msg: TransitMessage): Stat
   sendReport(ctx, state, {
     body: answerBody(holder, post, ctx.day, key, { kind: 'post', id: post }, [
       { claimKind: 'verb-answered', claimRegion: null, claimValue: 1, claimToken: `audience:${outcome.declared}`, claimConfidence: 1000 },
+      ...outcome.changes.filter((c): c is Extract<PeopleChange, { change: 'promise' }> => c.change === 'promise').map(c => ({
+        claimKind: 'promise-made' as const, claimRegion: null, claimToken: c.kind, claimValue: c.due, claimConfidence: 1000,
+      })),
     ], { adviceRecommends: outcome.declared, adviceReasons: stated(outcome.response), adviceConfidence: 1000 }),
     truth: { truthTerms: outcome.response.contributions.map(k => term('relay_term', k.amount, { person: holder, post, rule: k.term })), truthTrimmed: [] },
     to: principal, tag: `answer.audience.${post}`, route: 'in-person',

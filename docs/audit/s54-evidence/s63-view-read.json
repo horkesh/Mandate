@@ -1,0 +1,143 @@
+{
+  "request": "S63 only",
+  "date": "2026-11-22",
+  "branch": "sprint/politics-gaps",
+  "base": "5b4212b45c2e34658c02428a84ee60d1d5670d9d",
+  "implementation": [
+    "Opening establishment and received institutional papers supply seat side and office.",
+    "Public political eligibility uses that known side.",
+    "Perception reads only its required boldness and values, preserving the bias calculation without live service/post reads.",
+    "Own main-body position and capital remain physical self records; no institutional headquarters role was introduced."
+  ],
+  "tests": {
+    "originalS54TestsRetained": 19,
+    "addedS54Regressions": 2,
+    "focused": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/s54-public-records.test.ts",
+        "packages/kernel/test/s54-politics-view.test.ts",
+        "packages/kernel/test/s54-congress.test.ts",
+        "packages/kernel/test/s54-promises.test.ts",
+        "packages/kernel/test/seat-view-contracts.test.ts",
+        "packages/kernel/test/seat-people.test.ts",
+        "packages/kernel/test/seats-orders.test.ts",
+        "packages/kernel/test/s25-view.test.ts",
+        "packages/kernel/test/s25-knowledge.test.ts",
+        "packages/kernel/test/s25-seats.test.ts",
+        "packages/kernel/test/press-view.test.ts",
+        "packages/kernel/test/people-verbs.test.ts",
+        "packages/kernel/test/seats-log.test.ts",
+        "packages/kernel/test/banned-apis.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 10.001,
+      "log": "runs/s63/final-focused.log"
+    },
+    "passed": 162,
+    "files": 14,
+    "existingCacheContract": "Same refresh assertion; fixture now delivers an appointment account and checks that hidden appointment alone is invisible."
+  },
+  "gates": [
+    {
+      "name": "check",
+      "command": [
+        "npm.cmd",
+        "run",
+        "check"
+      ],
+      "exit": 1,
+      "seconds": 84.186,
+      "log": "runs/s63/final-check.log"
+    },
+    {
+      "name": "boundary",
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.997,
+      "log": "runs/s63/final-boundary.log"
+    },
+    {
+      "name": "licences",
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:licences"
+      ],
+      "exit": 0,
+      "seconds": 0.87,
+      "log": "runs/s63/final-licences.log"
+    },
+    {
+      "name": "decisions",
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:decisions"
+      ],
+      "exit": 0,
+      "seconds": 0.949,
+      "log": "runs/s63/final-decisions.log"
+    }
+  ],
+  "rules": {
+    "exit": 1,
+    "diagnosticCount": 4,
+    "unresolvedRoots": [
+      "principalMenu",
+      "pendingRequests"
+    ],
+    "problems": [
+      "NEW projection-truth packages/kernel/src/seats/requests.ts: principalMenu reaches packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates) [ad964f1998daaf9c44d5631fff868fd00554ba433193227ec550251850d8fe48]",
+      "NEW projection-truth packages/kernel/src/seats/requests.ts: pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:declaredAppointment (postStates); packages/kernel/src/command/command.ts:departmentSide (departmentFactions); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postIdsOf (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/believed.ts:believedHolder (postStates); packages/kernel/src/seats/believed.ts:vacancyUnreported (postStates); packages/kernel/src/seats/posts.ts:fieldPosts (postStates); packages/kernel/src/seats/requests.ts:pendingRequests (postStates); packages/kernel/src/seats/requests.ts:principalMenu (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates) [e3ee76e413094fac93b20b0fcc6581ab1b18ac62beca88a7034200b1df31a09b]",
+      "STALE baseline projection-truth packages/kernel/src/seats/requests.ts: remove the resolved entry; do not refresh a changed defect",
+      "STALE baseline projection-truth packages/kernel/src/seats/requests.ts: remove the resolved entry; do not refresh a changed defect"
+    ],
+    "viewForFinding": false
+  },
+  "fullSuite": "Not reached: root check stops at inherited rules failures. No passing full-suite or hook is claimed.",
+  "doneCheck": "Not run, per S63. S54 campaign remains historical evidence, not fresh validation of this corrected tree.",
+  "preservation": {
+    "beforeHead": "5b4212b45c2e34658c02428a84ee60d1d5670d9d",
+    "head": "5b4212b45c2e34658c02428a84ee60d1d5670d9d",
+    "originalIndexedPaths": 1925,
+    "missingOriginalPaths": [],
+    "initialStagedBlobsChangedBeforeFinalStage": [],
+    "s63SourceAndTestPaths": [
+      "packages/kernel/src/view/people.ts",
+      "packages/kernel/src/view/politics.ts",
+      "packages/kernel/src/view/view.ts",
+      "packages/kernel/test/s54-politics-view.test.ts",
+      "packages/kernel/test/seat-view-contracts.test.ts"
+    ],
+    "originalStagedPatchSha256": "a9886dd198faa43b997196f731551a14a296503c4b1d8f6fd02d7430a47ce62c",
+    "nodeVersion": "v22.23.2",
+    "kernelLink": "C:\\Pyrrhic\\sprint-politics\\packages\\kernel",
+    "hashes": {
+      "packages/kernel/src/view/people.ts": "7b7683d64aeb550d594dffa0a8149d0a57556a41f2ea2abf4d402cc5920cf7d0",
+      "packages/kernel/src/view/politics.ts": "0a0319b4c3972e48bdd5968aedd2116fe1a5a451e6fd854d585069e37dee4e38",
+      "packages/kernel/src/view/view.ts": "aa3a7c86fad832ca01a5b6a2a919202fc45db633dc22ded9831c495df00d6084",
+      "packages/kernel/test/s54-politics-view.test.ts": "a94931a09446ee23f874bb5ea2ca401f5b9ac736d4920dcc2b470e3f102fadee",
+      "packages/kernel/test/seat-view-contracts.test.ts": "395e6c0565cf33e540961ed289e9c380d2f4b5c99741c838826d8fc437fa3265"
+    }
+  },
+  "proposedRulings": "None beyond the lead's S63 ruling. S62 repair and baseline removal remain with their owner.",
+  "logSha256": {
+    "check.log": "367bfc6f8c00220dbf7d3eec3ccaec6adad3d08a135cf789e67c732f772ce972",
+    "final-boundary.log": "9c5838a0807fd604abb1d19c820189585e5cf327429ac34ec10363ff4fd6cf0c",
+    "final-check.log": "839e45c4571d88ef3f13662bdf189d4650a3cdd2f75056d823bc7f38783d74e7",
+    "final-decisions.log": "713cd183528ecdc00925c9399ffd03223d9e8b0a123e17b529b4635ad089976d",
+    "final-focused.log": "2a3ec737b0b51b473cfd6baea7d1ef32a3378a13a48ea49ab52411b0c61b4b87",
+    "final-licences.log": "12e684aa3e94c228bf2b150563d0871b5e20c9d922b5482a06f0f3b9c8dbc029",
+    "focused-first.log": "fda1107a98fcdb4e2090d24e2180d3476900863b6f7f7a79d6800f721757d747",
+    "focused.log": "d6e14ec5d0a0ad65b8643a8ba792d26c0c0faa7393cbd8bcfbe320688f4e08e1",
+    "npm-ci.log": "a368e50874dc2ccf98c3d8404221bc7601fdd801249899e0c2f8ce10758b4b5e",
+    "red.log": "2c1e95316110aae85ac83d3a958faaf67dce3fa8fcb5a485641080aea443fb47"
+  }
+}

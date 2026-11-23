@@ -1,0 +1,216 @@
+{
+  "command": [
+    "npm.cmd",
+    "run",
+    "run:done-check",
+    "--",
+    "--milestone",
+    "1a",
+    "--label",
+    "s54-done"
+  ],
+  "exit": 1,
+  "seconds": 2733.91,
+  "log": "runs/s54/done.log",
+  "phase0Passed": 5,
+  "phase0Total": 6,
+  "milestone1aPassed": 4,
+  "milestone1aTotal": 6,
+  "criteria": [
+    {
+      "milestone": "phase0",
+      "id": "behaviour",
+      "passed": true,
+      "text": "rule seats giving goals, whose commanders draft and execute plans, move divisions, change control through battles and occupation (a battle-day or an occupation, and a control change), and derive fronts, pockets and supply",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 601 arrivals, 3 battle-days, 89 control changes, confederate 3 front segments 75 supplied 3 pockets; union 3 front segments 38 supplied 0 pockets",
+        "testbed, 120 days: 27 arrivals, 4 battle-days, 35 control changes, north 13 front segments 13 supplied 1 pockets; south 13 front segments 1 supplied 1 pockets"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "id": "hash",
+      "passed": true,
+      "text": "the same state hash on every run, with State frozen or not (Linux against Windows is the CI determinism job, over the summaries this writes)",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 148 daily hashes, final 73721980e915ae2e",
+        "testbed, 120 days: 120 daily hashes, final 9480a41da773d3d5"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "id": "resume",
+      "passed": true,
+      "text": "a mid-run save, loaded, resumes to the continuous run’s final hash, and the log replays to every hash",
+      "evidence": [
+        "union-1861, war by decision, 148 days: from day 60, matches",
+        "testbed, 120 days: from day 40, matches"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "id": "liveness",
+      "passed": true,
+      "text": "every Phase 0 mechanic is inside its band in the reference runs, or quiet for a stated reason",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 162 mechanics inside their bands",
+        "testbed, 120 days: 162 mechanics inside their bands",
+        "testbed, commanders silent, 120 days: 1 mechanics inside their bands",
+        "testbed, the principal edits every plan, 120 days: 6 mechanics inside their bands",
+        "union-1861 before the opening decisions, 30 days (the war gate, 0064): 9 mechanics inside their bands"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "id": "section-ten",
+      "passed": true,
+      "text": "the tests named in FOUNDATION section 10 are present and none is skipped (that they pass is the suite’s)",
+      "evidence": [
+        "packages/kernel/test/compliance.test.ts",
+        "packages/kernel/test/rng.test.ts",
+        "packages/kernel/test/banned-apis.test.ts",
+        "packages/kernel/test/people-verbs.test.ts"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "phase0",
+      "id": "budget",
+      "passed": false,
+      "text": "the day's cost stays inside the 40 ms tick budget (median), and its slowest days inside 4 times it (p95), measured with the planner, people and situations running (1A)",
+      "evidence": [
+        "union-1861, war by decision, 148 days: median 53.34 ms, p95 90.25 ms, max 153.98 ms over 148 days (plans.drafted 2, ladder.moved 9, situations.fired 65)",
+        "testbed, 120 days: median 5.76 ms, p95 11.39 ms, max 16.09 ms over 120 days (plans.drafted 3, ladder.moved 6, situations.fired 6)",
+        "union-1861 history run, 148 days to 1861-07-31: median 49.91 ms, p95 73.76 ms, max 106.27 ms over 148 days (plans.drafted 2, ladder.moved 9, situations.fired 65)"
+      ],
+      "problems": [
+        "union-1861, war by decision, 148 days: median 53.3 ms a day, over the 40 ms budget",
+        "union-1861 history run, 148 days to 1861-07-31: median 49.9 ms a day, over the 40 ms budget"
+      ]
+    },
+    {
+      "milestone": "1A",
+      "id": "checkpoints",
+      "passed": true,
+      "text": "the history run reaches its last checkpoint with each side at war by its own decision (no --at-war), and every checkpoint falls inside its sourced band: states seceded, the sides of the governments that could change, Washington held, men under arms, planned operations fought",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+        "union-1861 history run, 148 days to 1861-07-31: side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+        "union-1861 history run, 148 days to 1861-07-31: side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+        "union-1861 history run, 148 days to 1861-07-31: side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+        "union-1861 history run, 148 days to 1861-07-31: washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+        "union-1861 history run, 148 days to 1861-07-31: men_union (1861-07-31, day 148): union 97207 men of known strength, 4 blocks of unknown strength (band 95000..250000)",
+        "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate 130239 men of known strength, 17 blocks of unknown strength (band 100000..200000)",
+        "union-1861 history run, 148 days to 1861-07-31: operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:137 at manassas",
+        "union-1861 history run, 148 days to 1861-07-31: operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+        "union-1861 history run, 148 days to 1861-07-31: confederate at war since day 36",
+        "union-1861 history run, 148 days to 1861-07-31: union at war since day 41"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1A",
+      "id": "operation",
+      "passed": true,
+      "text": "at least one operation drafted by the kernel planner, chosen by its commander’s seat, approved, executed and fought with the battle model, with a breakdown",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: op:cs_cmd_charleston:38 (confederate, bombard) fought battle battle:fort_sumter:38",
+        "union-1861 history run, 148 days to 1861-07-31: op:us_dept_northeastern_virginia:137 (union, direct) fought battle battle:manassas:146"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1A",
+      "id": "pushback",
+      "passed": false,
+      "text": "pushback fires inside its bands: lower bounds from the record’s sourced cases (S01–S21), upper bounds the lead’s",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: relay objections: 2 (band 0..6)",
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 1 (band 2..6)",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0 (band 1..4)",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17 (band 1..9)",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 18 (band 2..9)",
+        "union-1861 history run, 148 days to 1861-07-31: objections to a plan: 38 (band 10..42)"
+      ],
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: relay holds: 1, below the record's 2",
+        "union-1861 history run, 148 days to 1861-07-31: filter holds: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1",
+        "union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 17, above 9",
+        "union-1861 history run, 148 days to 1861-07-31: slow walks: 18, above 9"
+      ]
+    },
+    {
+      "milestone": "1A",
+      "id": "unknown-strength",
+      "passed": true,
+      "text": "no block fights with unknown strength: every battle record, in every run, lists none unknown",
+      "evidence": [
+        "union-1861, war by decision, 148 days: 2 battles, 3 battle-days read",
+        "testbed, 120 days: 4 battles, 4 battle-days read",
+        "union-1861 history run, 148 days to 1861-07-31: 2 battles, 3 battle-days read"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1A",
+      "id": "stand-ins",
+      "passed": true,
+      "text": "the eight stand-ins Phase 0 labelled are gone, and any stand-in left in the code is labelled and owned by a 1B lane",
+      "evidence": [
+        "standing goals: gone (lane 1.4’s operations (4a64082))",
+        "the consistency judgement: gone (lane 1.2’s planner (0062))",
+        "the trait adapter: gone (lane 1.1’s people recast (`standin/traits.ts` deleted))",
+        "weakest-first transfers: gone (lane 1.5’s people verbs (0079: the sender’s answer picks the blocks))",
+        "conflicts resolved by department: gone (lane 1.1’s compliance (`resolveConflict`))",
+        "the simple contest: gone (lane 1.3’s battle model (0076))",
+        "the generic rule-seat principal: no label names it, so it is gone",
+        "the capital as objective: no label names it, so it is gone",
+        "other stand-ins: packages/kernel/src/forces/stores.ts:74 (owner 1B, ships' stores), packages/kernel/src/planner/route.ts:127 (owner 1B, ships' stores), packages/kernel/src/recruitment/renewal.ts:3 (owner 1B, recruitment and service), packages/kernel/src/situations/types.ts:74 (owner 1B, conventions and legislatures), packages/pack-format/src/situations.ts:68 (owner 1B, conventions and legislatures)",
+        "pack values carried from M2, for calibration: union-1861 rules.politics.drift, union-1861 rules.politics.address, union-1861 rules.politics.ladder, union-1861 rules.politics.credibility, union-1861 rules.politics.press.standing"
+      ],
+      "problems": []
+    },
+    {
+      "milestone": "1A",
+      "id": "lever-sweep",
+      "passed": false,
+      "text": "the lever sweep (D6): no watched option, nor an atrocity-class decision’s inaction, is the victory-only bot’s best choice in more than a quarter of the seeds; no floor goes unpaid; recruitment is active",
+      "evidence": [
+        "union-1861 history run, 148 days to 1861-07-31: 8 seeds, 8 gated decisions weighed, 744 calls for regiments in the base runs",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: return best in 1 of 8 seeds weighed"
+      ],
+      "problems": [
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d)",
+        "union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b)"
+      ]
+    }
+  ],
+  "timing": [
+    "union-1861, war by decision, 148 days: median 53.34 ms, p95 90.25 ms, max 153.98 ms over 148 days",
+    "testbed, 120 days: median 5.76 ms, p95 11.39 ms, max 16.09 ms over 120 days",
+    "union-1861 history run, 148 days to 1861-07-31: median 49.91 ms, p95 73.76 ms, max 106.27 ms over 148 days"
+  ],
+  "settings": {
+    "milestone": "1a",
+    "seeds": 8,
+    "capDays": 400,
+    "drafting": true,
+    "unchangedReruns": 0,
+    "initialHorizonDays": 30
+  },
+  "postRunCorrection": "expiry-author-correction.json",
+  "postRunCorrectionCampaignRerun": false
+}

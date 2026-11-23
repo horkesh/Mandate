@@ -93,6 +93,12 @@ export function peopleWeek(ctx: TickContext, start: State): State {
       changes.push({ change: 'promise_settled', person: p, kind: promise.promiseKind });
       changes.push({ change: 'grievance', person: p, kind: 'promise_broken', weight: rules.verbs.promise.brokenWeight, against: principal, cause: promise.promiseKind });
       if (principal !== null && principal !== p) changes.push({ change: 'regard', person: p, toward: principal, delta: rules.verbs.promise.brokenRegard });
+      if (principal !== null && start.personStatus[p]?.statusKind === 'serving') sendReport(ctx, start, {
+        body: { reportType: 'wire-dispatch', reportSubtype: null, reportAuthor: p, reportAuthorPost: heldPost(start, p),
+          reportSubjectKind: 'person', reportSubjectId: p, reportDay: ctx.day, reportHour: null, reportAdvice: null, reportAnswers: null,
+          reportClaims: [{ claimKind: 'promise-broken', claimRegion: null, claimToken: promise.promiseKind, claimValue: promise.promiseDue, claimConfidence: 1000 }] },
+        truth: { truthTerms: [], truthTrimmed: [] }, to: principal, tag: `promise.expired.${p}.${promise.promiseKind}.${promise.promiseDue}`,
+      });
       fire(ctx, 'people.promise_broken');
     }
   }

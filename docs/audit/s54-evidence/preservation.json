@@ -1,0 +1,19 @@
+{
+  "base": "f19b6f007267997a652d06d18497118977e46c69",
+  "headAfterProjectionCommit": "d139118da8f2fed5646ea768389d36a678dbf7fb",
+  "originalTrackedPaths": 1906,
+  "missingOriginalPaths": [],
+  "measuredInputs": 681,
+  "changedMeasuredInputs": [
+    "packages/kernel/src/tick/people-week.ts",
+    "packages/kernel/test/s54-promises.test.ts"
+  ],
+  "postMeasurementTestAddition": "packages/kernel/test/s54-public-records.test.ts",
+  "changedProtectedPaths": [],
+  "kernelWorkspaceTarget": "C:\\Pyrrhic\\sprint-politics\\packages\\kernel",
+  "builtPackage": false,
+  "browserOrServerStarted": false,
+  "changedDuringCampaign": [],
+  "postCampaignCorrection": "expiry-author-correction.json",
+  "headAfterCloseoutCommit": "5b4212b45c2e34658c02428a84ee60d1d5670d9d"
+}

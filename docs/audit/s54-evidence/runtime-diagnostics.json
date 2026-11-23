@@ -1,0 +1,65 @@
+{
+  "packs": [
+    {
+      "pack": "union-1861",
+      "worldHash": "4b32adff541b87ead6e64b1112bf80c89ce6606cc73c4921be22bfc936756ff1",
+      "baselineWorldHash": "4b32adff541b87ead6e64b1112bf80c89ce6606cc73c4921be22bfc936756ff1",
+      "initialHash": "cf2b9c789c8782bebd9d911714d898c4c17970982ccd264f3b776857aacc86c2",
+      "baselineInitialHash": "cf2b9c789c8782bebd9d911714d898c4c17970982ccd264f3b776857aacc86c2",
+      "oneDayRejections": []
+    },
+    {
+      "pack": "testbed",
+      "worldHash": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5",
+      "baselineWorldHash": "712959b385a5e4734ec82826639291b92a744b720f2f327c6ada1bfd5c327da5",
+      "initialHash": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b",
+      "baselineInitialHash": "e8c1b5c7d8e59bb974677f859b43ee5b4660e1ddf60cacc0875993a8f24dee7b",
+      "oneDayRejections": []
+    }
+  ],
+  "navy": {
+    "post": "us_secretary_navy",
+    "kind": "cabinet",
+    "seat": "washington",
+    "headquarters": "pennsylvania_north",
+    "field": true,
+    "fieldList": true,
+    "officeList": false,
+    "assignments": [
+      {
+        "block": "fb_us_ship_michigan",
+        "post": "us_secretary_navy",
+        "region": "pennsylvania_north"
+      }
+    ]
+  },
+  "political": {
+    "blocs": [
+      {
+        "id": "army",
+        "name": "bloc.army"
+      },
+      {
+        "id": "border_unionists",
+        "name": "bloc.border_unionists"
+      },
+      {
+        "id": "moderates",
+        "name": "bloc.moderates"
+      },
+      {
+        "id": "peace_democrats",
+        "name": "bloc.peace_democrats"
+      },
+      {
+        "id": "radicals",
+        "name": "bloc.radicals"
+      },
+      {
+        "id": "war_democrats",
+        "name": "bloc.war_democrats"
+      }
+    ],
+    "evidence": []
+  }
+}

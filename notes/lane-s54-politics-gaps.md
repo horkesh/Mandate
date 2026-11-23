@@ -1,0 +1,219 @@
+# S54: politics gaps
+
+S54 only, `C:/Pyrrhic/sprint-politics`, branch `sprint/politics-gaps`, from
+`f19b6f0`. Root `npm ci` passed before edits. Read the main coordination rules,
+0106, S1 to S10, S54, S47's report and the named accepted decisions. Headless
+command-line tools only. No push, history rewrite, signatures, server, browser,
+other-lane write or advance-plan edit.
+
+## Delivery and commit boundary
+
+**Committed `d139118da8f2fed5646ea768389d36a678dbf7fb`**, through the actual hook:
+claim vocabulary, optional public record types, pure political/promise
+projections and six direct tests. The private staged snapshot passed **207
+files / 1,936 tests**, with four existing conditional skips, and typecheck,
+rules, boundary, licences and 106 decision records. This commit does not
+activate the new projections in the seat view or principal menu.
+
+**The integration remains staged for the lead, not committed.** Its first
+actual commit attempt failed `check:rules` before the suite. Final standalone
+rules still reports five problems: three changed derivation fingerprints and
+two stale inherited menu entries. S54's full-closure changes invalidate the
+two inherited menu findings and the approved own-seat view derivation. This
+is an integration gate failure, not clearance from the paired-State tests.
+No baseline, allowlist, checker or defect was refreshed to make it pass.
+The code subset passed only after excluding the blocked active wiring from
+its staged tree. Coordinate the menu integration with S48; do not waive or
+refresh a changed defect. The Foundation edits travel with that wiring.
+
+The evidence and this hand-over's measured-result version were committed as
+**`5b4212b4`**, through the documentation-only hook: 207 files / 1,936 tests pass,
+four conditional skips; exit 0 in 262.32 seconds. Its post-commit receipt is
+`runs/s54/closeout-commit.json`. The late correction and the corresponding
+hand-over/evidence supplements remain staged with the blocked integration. That documentation commit uses the already checked `d139118d` source/test
+tree. The full suite repeats there only because every commit must pass the
+repository's unchanged hook. No second done check is authorized or run.
+
+| S47 gap | S54 result |
+|---|---|
+| K47-1, material policies | Confirmed seven flag families have no execution consumer; proposed physical orders/constraints below. No material effect claimed. |
+| K47-2, Congress | Staged immutable `account`: exact own chosen option or received notice text, day, situation, option and source. `answeredDay` retains 0084 semantics. It certifies no legislative assent. A distinct Congress reply remains proposed. |
+| K47-3, political audience/assessment | Pure catalogue/evidence projection committed; seat/menu wiring staged. Own-side public bloc IDs/names, plus received press framing with author, dates, source and confidence. No private support, mandate, credibility, weights or invented editorial. Staff support assessments remain proposed. |
+| K47-4, promises | Pure projection/vocabulary committed; producers, received settlement, retention and view wiring staged. Own spoken terms are known at issue; audience terms, appointment settlement and weekly expiry follow received accounts. No private grievance/regard is exposed. Legacy/issuer limits remain below. |
+| K47-5, office headquarters | Reproduced and proposed a role extension. Existing 0058 and main-body headquarters rules are not silently superseded. |
+| K47-6, advance wording | Untouched; S48 owns it. |
+
+Staged implementation: `view/desk.ts`, `view/view.ts`, `seats/api.ts`,
+`seats/requests.ts`, `tick/verbs.ts`, `tick/people-week.ts`,
+`tick/promise-reports.ts`, `knowledge/knowledge.ts`, under
+`packages/kernel/src`, and the Foundation account. Three integration test files
+are `s54-congress.test.ts`, `s54-politics-view.test.ts`, `s54-promises.test.ts`.
+The committed direct tests are `s54-public-records.test.ts`.
+
+There are **19 new tests** across the four files. They cover own and received
+Congress accounts, no hidden ratification/delegated account, future receipt,
+public own-side audiences, received press, direct and audience promises,
+appointment/expiry receipt, duplicate refusal, distinct later terms, retention,
+freeze and canonical save/load. Paired States alter hidden ledger, support,
+framing, private promises/reactions/responses while preserving the new public
+records. The appointment test removes the received reply while leaving private
+settlement in place and proves the displayed commitment stays pending.
+New claims reuse existing immutable ReportClaim/knowledge ownership; no new
+root State field, saved record shape or kernel default was introduced.
+
+## Validation and unchanged evidence
+
+The fixed plan was focused red/green and paired-State checks, cheap startup,
+typecheck/rules/invariants before hooks, a hook per coherent committable step,
+and one default binding done check. Failures stop unchanged expensive retries.
+The original 20-25 minute done-check estimate was exceeded; actual cost is
+retained rather than concealed or shortened.
+
+- Focused/invariant preflight: **81 passed**. Final worktree typecheck,
+  boundary, licences and decision index pass. The final integrated rules
+  check fails with the five retained problems.
+- Full working-tree no-Git suite: **208 files pass / one fails; 1,942 tests
+  pass / one fails / three existing timing skips**. The sole failure was the
+  published situation schema after adding the three claim kinds. Regeneration
+  changed only that schema; **13 schema/promise verification tests pass**.
+  Reuse the other 208 passing files, not a fabricated fresh full-suite pass.
+  The six subsequently added direct projection tests also pass.
+- Projection commit's actual hook: **exit 0, 471.93 seconds**, exact private
+  index snapshot. The fourth skip is the unchanged LFS executable-bit test
+  when `.git` is absent; the working-tree suite exercised that read-only test.
+  The standing `MANDATE_NO_GIT=1` excludes the unchanged Git-writing fixtures.
+- One `npm run run:done-check -- --milestone 1a --label s54-done`:
+  **exit 1, 2,733.91 seconds (45.6 minutes); Phase 0 5/6, 1A 4/6**.
+  Eight default seeds, initial 30-day horizon and unchanged 400-day cap,
+  with drafting. No replay of the unchanged campaign.
+
+| Retained failure | Measurement |
+|---|---|
+| Budget | War median/p95 **53.34/90.25 ms**; history **49.91/73.76 ms**, against unchanged **40/160** limits. Testbed **5.76/11.39 ms**. |
+| Pushback | Relay holds **1**, minimum **2**; filter holds **0**, minimum **1**; trims **0**, minimum **1**; reservations **17**, maximum **9**; slow walks **18**, maximum **9**. |
+| D6 | Return best **1/8**; the victory measure omits people/grievance, and no border governor answers within the 24 weighed moves. Recruitment's 744 base-run calls do not clear that missing chain. |
+
+Checkpoints, a fought operation, known battle strengths and owned stand-ins
+pass. Shared-host timings do not establish an unloaded comparison, a cause
+for the timing difference or Linux CI clearance. Nothing was tuned to fit a
+band, and no criterion was waived.
+
+**Every reference hash, counter and checkpoint matches S42**: 148 Union and
+120 testbed daily hashes; zero reference rejections; both replay checks,
+both saved-log replays and both resumed finals match. Final hashes:
+Union `73721980e915ae2ea7f01ee5c82d08fbb4f2176e5f203c0153367b3ae1d9d8f8`;
+testbed `9480a41da773d3d532d38d8966f526feb7a6ccea608ab39b9d8aa242ae7f10c4`.
+World and initial hashes match the retained S42 summaries. There are **no
+moved reference bands, hashes or counters to explain**. New human commitment
+accounts are exercised by the fictional integration tests, not claimed as a
+political human playthrough or a newly measured physical policy consequence.
+
+Runtime diagnostics and preservation checks preceded this final-result prose.
+All **1,906 original tracked paths remain**; **681 measured inputs** stayed
+unchanged throughout the campaign. One direct-test file was added afterward.
+The subsequent author guard and its appended regression change exactly two of
+the measured files; `expiry-author-correction.json` proves the precise deltas
+against the recorded input hashes. No other measured input changed. Packs, lockfiles, gate/signature data,
+rules baselines/checkers, liveness limits, scoring, CI, hooks, save fixtures
+and the advance situation are unchanged. Workspace `@mandate/kernel` resolves
+to this worktree. No package was built and no server started.
+
+Portable evidence: [s54-evidence](../docs/audit/s54-evidence/), especially
+`checks.json`, `done-check.json`, `reference-comparison.json`,
+`rules-problems.json`, `runtime-diagnostics.json`, `material-policy-trace.json`,
+`preservation.json` and `source-inputs.json`. Raw logs, exits, saves, source
+inventories, isolated-index preflight and integration patch remain in
+`runs/s54/`, `runs/s54-done/` and `runs/s54-done-drafting/`.
+
+## Targeted correction after the campaign
+
+Final source review caught an uncommitted expiry producer that could have a
+killed recipient author a letter. The new regression failed before correction.
+A serving-status guard now suppresses that letter, without changing the old
+private promise settlement or grievance mechanics. **51 affected tests pass**,
+and corrected typecheck passes. No death/void settlement is invented; that
+institutional rule remains proposed with issuer/legacy handling.
+
+Both reference summaries have zero promise-kept, promise-broken and audience
+fires. Default rule seats and the gated-choice sweep issue no promises. Reuse
+the campaign evidence for those unaffected paths [I]; the new killed-author
+case is established by its targeted regression, not claimed as a freshly
+campaign-measured result. No second done check or full-suite retry was run.
+This correction is not in either passed commit: it belongs to the staged active
+wiring, which still fails the ratchet. Its supplementary evidence and hand-over
+updates are staged alongside it, rather than adding another process commit.
+
+## Proposed rulings
+
+Unsigned proposals [I], for the lead:
+
+1. Keep `ledger-answer` as the president accounting for his acts under 0084. Use the new account text/source. A separate legislative answer needs its own author, cause, vote/outcome vocabulary and receipt, not a renamed presidential marker. Reject inventing ratification or conflating a message with assent.
+2. Accept the public own-side bloc catalogue and received press framing. Before qualitative support assessments, author the staff/editor reports and their uncertainty. Reject true support/mandate meters and generated UI editorials (0084, 0103).
+3. Accept the promise account route under 0079. Do not backfill legacy unrecorded terms from private State. The existing active record has no issuer identity: original-issuer responsibility after a service-side change, and appointment replies arriving after legacy terms have gone, need an explicit persistence/routing rule. Reject silently changing grievance ownership in S54. Do not infer a death/void settlement from hidden status; define any such institutional closure separately.
+4. Extend 0058 with a pack-declared institutional office role, then make headquarters use the office seat/capital and make its reports office reports even with directly assigned forces. Keep field headquarters following the main body. Reject checking a cabinet kind name in the kernel, always preferring post seats (which freezes armies), relocating the ship, or inventing a new ship commander/post. Old received wires must remain dated evidence; never silently relocate an already held report. Diagnostic confirms the Navy secretary's Washington seat resolves to northern Pennsylvania, is in the field list and absent from offices because USS Michigan is directly assigned.
+5. Material policies remain proposals because the accepted records do not settle the physical execution:
+   - Fort withdrawal: an addressed evacuation order, compliance, transport/destination, empty-fort consequences and a received completion account. Existing `hold`/`take`/`relieve` goals and a battle surrender result do not define a peaceful evacuation. Reject teleporting the garrison or equating a signed choice with departure.
+   - Maryland: a side-specific presidential troop-routing/restraint order and its duration/cancellation/violation rules, not the neutral government's closure of passage to every side. An Annapolis route needs its physical network action and receipt. Reject closing both sides' access as a proxy.
+   - Kentucky: separate arms distribution from a troop-entry order and from restraint; source recipients, quantities, delivery and equipment ownership before applying them. Reject turning weapons into recruited men or treating a flag as armed people or deployed troops.
+
+Source authority: accepted 0079, 0084, 0100 (especially item 16), 0103, 0032 and 0058; current situation definitions `sumter_garrison`, `pickens_reinforcement`, `washington_cut_off`, `kentucky_neutrality`; `PersonPromise`; post headquarters/report code and the scenario CSV. These are design inferences and model observations, not a new independent primary-source history review. Historical pinpoints remain those carried by the existing pack; no newly sourced historical number is applied. No accepted decision or gate signature is authored by this lane.
+
+## S63: seat identity follows received knowledge (22 November)
+
+S63 only, resumed after the host interruption. HEAD remains `5b4212b4`; no
+commit was made. The initial 17-path S54 index was backed up before edits in
+`runs/s63/before-staged.patch` (SHA-256
+`a9886dd198faa43b997196f731551a14a296503c4b1d8f6fd02d7430a47ce62c`).
+Recovery confirmed that no hook or done check had been interrupted and no S63
+status had already been appended. Completed evidence was retained and reused.
+
+The view now derives its seat's side and office from the opening establishment
+and received institutional papers, sharing the existing people projection's
+interpretation. Political eligibility uses that known side. Its perception
+calculation reads only the boldness and values it actually consumes, avoiding
+the unrelated live service/post lookup inside `traitsOf`. Own capital and
+main-body position remain physical self records. No institutional office role,
+headquarters relocation, State field or historical quantity was added.
+
+All original **19 S54 tests remain**, with two new regressions: paired hidden
+post/service States under fresh caches and both shared-cache orders; and a
+future receipt becoming a received service account. The prior own-post cache
+contract keeps its refresh assertion but delivers an appointment account first;
+it also checks that a hidden appointment alone does not refresh the view.
+The paired-State regression failed on the original wiring before correction.
+Final affected tests: **162/162 pass across 14 files**, exit 0, 10.001 seconds.
+
+The required `MANDATE_NO_GIT=1 npm run check` exits **1**, after successful
+typecheck, at rules. This supersedes S54's earlier five-diagnostic gate state:
+**four diagnostics remain**, consisting of changed `principalMenu` and
+`pendingRequests` findings plus their two stale baseline entries. **`viewFor`
+is no longer reported.** No checker, derivation allowance, fingerprint or
+baseline was changed. S62 owns the two menu repairs and baseline removals.
+The root chain did not reach its full suite. Boundary, dependency licences and
+all 106 decision records pass separately, each exit 0. No passing full-suite or
+hook is claimed for the active wiring.
+
+No done check was run, as S63 directs. S54's campaign is retained as historical
+evidence; it is not fresh simulation validation of the corrected tree. No
+campaign, budget clearance, signature or main clearance is claimed. The next
+integration and commit remain with the lead after S62.
+
+All **1,925 original indexed paths** remain. Before final staging, every initial
+index blob was exact. Only five source/test paths were edited by S63; the
+hand-over and portable evidence accompany them. Packs, lockfiles, baselines,
+checkers, hooks, bands, scoring, gate data and the remaining S54 wiring are
+unchanged. `@mandate/kernel` resolves to this worktree. Runtime diagnostics and
+preservation checks preceded this closeout. Portable receipt:
+[the S63 view read](../docs/audit/s54-evidence/s63-view-read.json); raw logs,
+command exits and original/final index patches: `runs/s63/`. No new proposed
+ruling, commit, push, browser or desktop use.
+
+## Findings outside my scope
+
+For the lead: resolve the active integration's ratchet dependency with the menu
+owner; rule on the above unsigned execution/institutional proposals; route the
+existing pushback and performance failures to S53/S59, and D6's incomplete
+victory/chain to its gate and 1B owners. S48 retains advance wording. Desk
+consumption of the new records, branch-whole review, gate review/signing, Linux
+CI, integration, pushing and release retain their owners. No item is cleared
+or signed by this lane.

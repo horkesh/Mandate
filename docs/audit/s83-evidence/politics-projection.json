@@ -1,0 +1,55 @@
+{
+  "updates": [
+    {
+      "symbol": "viewFor",
+      "path": "packages/kernel/src/view/view.ts",
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/view/view.ts",
+        "hash": "42d13256f97fd74085ccb23fab37efccde0e769b36178b0b4000bff08dd49446",
+        "detail": "viewFor reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/view/view.ts",
+        "hash": "8e7d8cfb0cdb67e53c895684116eb44c9e87e70ff00da1132d569a28c8cc59fa",
+        "detail": "viewFor reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+      },
+      "protectedReadersNarrowed": true
+    },
+    {
+      "symbol": "principalMenu",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "c35c98626f1f79b84cf3f12cfeb0ec4677d7bfa72f8ecf631176d5f5a2871a26",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/seats/posts.ts:headquartersOf (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "54b5f1d3c707c1a39fe50ca47f14dd4d8a3858b1b25bd6a4f9e24d0bd00b0776",
+        "detail": "principalMenu reaches packages/kernel/src/command/command.ts:postStateOf (postStates)"
+      },
+      "protectedReadersNarrowed": true
+    },
+    {
+      "symbol": "pendingRequests",
+      "path": "packages/kernel/src/seats/requests.ts",
+      "before": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "a51ed13f884eac71e9fb9b8297a0d7c2c98b81adcc63da3cd81ea25fa7d94906",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/seats/posts.ts:headquartersOf (postStates); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      "after": {
+        "rule": "projection-truth",
+        "path": "packages/kernel/src/seats/requests.ts",
+        "hash": "44d42601a3fe36238770c762d20e3d652d51601bdfcae657caf19e3ff6353385",
+        "detail": "pendingRequests reaches packages/kernel/src/combat/battle.ts:sideCommand (postStates); packages/kernel/src/combat/records.ts:openBattleIn (battleRecords); packages/kernel/src/command/command.ts:factionOfPost (departmentFactions); packages/kernel/src/command/command.ts:governmentRailOf (departmentFactions); packages/kernel/src/command/command.ts:heldPost (postStates); packages/kernel/src/command/command.ts:neutralGroundOf (departmentFactions); packages/kernel/src/command/command.ts:postStateOf (postStates); packages/kernel/src/command/command.ts:sideOfPerson (personService); packages/kernel/src/forces/forces.ts:factionOfBlock (departmentFactions); packages/kernel/src/tick/plans.ts:choosingMenus (postStates); packages/kernel/src/tick/plans.ts:choosingPosts (postStates)"
+      },
+      "protectedReadersNarrowed": true
+    }
+  ]
+}
