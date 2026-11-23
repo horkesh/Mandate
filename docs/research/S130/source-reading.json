@@ -1,0 +1,30 @@
+[
+  {
+    "source": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S115\\readings\\OR-I-II-p166.txt",
+    "sha256": "d0fd3894376f31c3b998c4327a187f1f52eb56e88fdd36d3f17557fa1a0c1137",
+    "bytes": 2853,
+    "read": "retained primary page OCR, read in full; no fresh scan or receipt-clock verification",
+    "retained": "docs/research/S130/OR-I-II-p166.txt"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S115\\readings\\OR-I-II-p167.txt",
+    "sha256": "3f4e1ed8ec8ec0ffbd17e49b6c3b60e1c3f433210d849701f0f02780ee42b4ad",
+    "bytes": 3252,
+    "read": "retained primary page OCR, read in full; no fresh scan or receipt-clock verification",
+    "retained": "docs/research/S130/OR-I-II-p167.txt"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S115\\readings\\OR-I-II-p168.txt",
+    "sha256": "e4cf7b37f756bb7068d7155ed353195131a7fd9b14a88c426842115bb087856d",
+    "bytes": 2774,
+    "read": "retained primary page OCR, read in full; no fresh scan or receipt-clock verification",
+    "retained": "docs/research/S130/OR-I-II-p168.txt"
+  },
+  {
+    "source": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S115\\readings\\OR-I-II-p169.txt",
+    "sha256": "b6e8dc77bb9048bff1eace34e34813493dae85fc9e9b5e61f11aa077547b79e5",
+    "bytes": 3877,
+    "read": "retained primary page OCR, read in full; no fresh scan or receipt-clock verification",
+    "retained": "docs/research/S130/OR-I-II-p169.txt"
+  }
+]

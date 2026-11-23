@@ -19,9 +19,17 @@ it('the July junction carries if-practicable authority and retains the received 
   expect(row.source).toContain('p.478');
 });
 
-it('keeps the landing and demonstrate conditions as explicit gaps after 0114', () => {
+it('keeps the landing condition as a gap and binds the demonstration matters after S130', () => {
   const read = (side: string) => JSON.parse(readFileSync(new URL(`../pushback-${side}.json`, import.meta.url), 'utf8'));
   expect(read('confederate').rows.find((r: {id: string}) => r.id === 'C15').match).toEqual({ kind: 'goal-proposal', objective: 'harpers_ferry', posture: 'hold', actual: 'propose' });
   expect(read('confederate').rows.find((r: {id: string}) => r.id === 'C16').gap.reason).toContain('0114');
-  for (const id of ['U33', 'U34']) expect(read('union').rows.find((r: {id: string}) => r.id === id).gap.reason).toContain('demonstrate posture');
+  for (const [id, detentionEvidence, keys] of [
+    ['U33', 'course_challenge', ['scott_patterson_jul13']],
+    ['U34', 'actual_deferral', ['scott_patterson_jul17', 'scott_patterson_jul18']],
+  ] as const) {
+    const row = read('union').rows.find((r: {id: string}) => r.id === id);
+    expect(row.gap).toBeUndefined();
+    expect(row.match).toEqual({ kind: 'goal', purpose: 'attack_or_demonstrate', target: 'cs_cmd_harpers_ferry',
+      letters: keys.map(key => ({ namespace: 'us_army_orders', key, revision: 1 })), detentionEvidence });
+  }
 });

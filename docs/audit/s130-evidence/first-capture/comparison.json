@@ -1,0 +1,50 @@
+{
+  "baseline": "Retained S126 at4b45f4e1, C:/Pyrrhic/sprint-july/runs/s126/capture; hashes reverified, no baseline run",
+  "capture": "runs/s130/capture",
+  "finalHash": "40f672528c0588cf99468c5b2639e2e0ed7268130deb9356b7492e0e5f457ef4",
+  "rejections": 0,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "40f672528c0588cf99468c5b2639e2e0ed7268130deb9356b7492e0e5f457ef4",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "rows": 33,
+  "verdictsBefore": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 3,
+    "not_observed": 3
+  },
+  "verdictsAfter": {
+    "representation_gap": 20,
+    "unresolved": 2,
+    "matched": 5,
+    "mismatch": 3,
+    "not_observed": 3
+  },
+  "changedVerdicts": [
+    "U33",
+    "U34"
+  ],
+  "finalLotsChanged": 0,
+  "lifetimeLotsChanged": 0,
+  "changedLivenessCounts": 2,
+  "detentionPapers": 0,
+  "initialGates": [
+    {
+      "mechanic": "planner.term.time",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+      }
+    }
+  ]
+}

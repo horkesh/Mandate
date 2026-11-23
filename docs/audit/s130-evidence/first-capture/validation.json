@@ -1,0 +1,321 @@
+{
+  "kernelCommit": {
+    "commit": "74e821eb9ca033cd3e54dc2fc2b89f59dd2fdd02",
+    "tree": "5f11be9325679b5d691bc649376af685ebe6e992",
+    "parent": "4b45f4e1e6b858771d6ea205fb5155edde88eb90",
+    "hook": {
+      "command": [
+        "git",
+        "commit",
+        "-F",
+        "runs/s130/kernel-retry-message.txt"
+      ],
+      "exit": 0,
+      "seconds": 240.848,
+      "log": "runs/s130/kernel-retry-commit.log"
+    },
+    "testSummaries": [
+      "Test Files  271 passed (271)",
+      "Tests  2392 passed | 3 skipped (2395)",
+      "Duration  233.09s (tests 80%, import 19%, transform 1%)"
+    ],
+    "prehookFiles": 3007,
+    "allPrehookBytesPreserved": true,
+    "clean": true,
+    "pushed": false,
+    "recoverySha256": "d4f4d9b9cb262e10abdab37210a59281d23ed03d66e1272d2dcdbac2bac0eae9"
+  },
+  "firstHookFailure": {
+    "command": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s130/kernel-message.txt"
+    ],
+    "exit": 1,
+    "seconds": 231.967,
+    "log": "runs/s130/kernel-commit.log"
+  },
+  "firstHookCorrection": "A synthetic proposal report omitted required reportClaims; added empty arrays, unchanged assertions. All35 neighboring observer checks passed before ordinary retry.",
+  "recordCheapChecks": {
+    "kernel-prehook-boundary": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 2.365,
+      "log": "runs/s130/kernel-prehook-boundary.log"
+    },
+    "kernel-prehook-rules": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 6.354,
+      "log": "runs/s130/kernel-prehook-rules.log"
+    },
+    "kernel-prehook-types": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 5.944,
+      "log": "runs/s130/kernel-prehook-types.log"
+    },
+    "kernel-licences": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:licences"
+      ],
+      "exit": 0,
+      "seconds": 1.167,
+      "log": "runs/s130/kernel-licences.log"
+    },
+    "kernel-decisions": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:decisions"
+      ],
+      "exit": 0,
+      "seconds": 1.163,
+      "log": "runs/s130/kernel-decisions.log"
+    },
+    "kernel-retry-boundary": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.625,
+      "log": "runs/s130/kernel-retry-boundary.log"
+    },
+    "kernel-retry-rules": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 2.003,
+      "log": "runs/s130/kernel-retry-rules.log"
+    },
+    "record-generate": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "pack:generate",
+        "--",
+        "union-1861"
+      ],
+      "exit": 0,
+      "seconds": 2.21,
+      "log": "runs/s130/record-generate.log"
+    },
+    "record-validate": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "pack:validate",
+        "--",
+        "union-1861"
+      ],
+      "exit": 0,
+      "seconds": 2.554,
+      "log": "runs/s130/record-validate.log"
+    },
+    "record-typecheck": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.993,
+      "log": "runs/s130/record-typecheck.log"
+    },
+    "record-final-types": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ],
+      "exit": 0,
+      "seconds": 1.697,
+      "log": "runs/s130/record-final-types.log"
+    },
+    "record-boundary": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ],
+      "exit": 0,
+      "seconds": 0.765,
+      "log": "runs/s130/record-boundary.log"
+    },
+    "record-rules": {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ],
+      "exit": 0,
+      "seconds": 2.592,
+      "log": "runs/s130/record-rules.log"
+    },
+    "record-focused": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/cli/test/s130-record.test.ts",
+        "packages/cli/test/s130-detention-coverage.test.ts",
+        "packages/cli/test/s111-exposure.test.ts",
+        "packages/cli/test/s106-reservation-coverage.test.ts",
+        "packages/cli/test/register-coverage.test.ts",
+        "packages/cli/test/pushback-coverage.test.ts",
+        "packages/cli/test/goal-proposal-observer.test.ts"
+      ],
+      "exit": 1,
+      "seconds": 3.487,
+      "log": "runs/s130/record-focused.log"
+    },
+    "record-correction": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/cli/test/s130-record.test.ts",
+        "packages/cli/test/s130-detention-coverage.test.ts",
+        "packages/cli/test/s111-exposure.test.ts",
+        "packages/cli/test/s106-reservation-coverage.test.ts",
+        "packages/cli/test/register-coverage.test.ts",
+        "packages/cli/test/pushback-coverage.test.ts",
+        "packages/cli/test/goal-proposal-observer.test.ts",
+        "packages/kernel/test/demonstration.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 3.597,
+      "log": "runs/s130/record-correction.log"
+    },
+    "record-smoke": {
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s130/capture.ts",
+        "--smoke"
+      ],
+      "exit": 0,
+      "seconds": 6.04,
+      "log": "runs/s130/record-smoke.log"
+    },
+    "observer-correction": {
+      "command": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/cli/test/s130-detention-coverage.test.ts",
+        "packages/cli/test/s111-exposure.test.ts",
+        "packages/cli/test/s106-reservation-coverage.test.ts",
+        "packages/cli/test/register-coverage.test.ts",
+        "packages/cli/test/pushback-coverage.test.ts",
+        "packages/cli/test/goal-proposal-observer.test.ts"
+      ],
+      "exit": 0,
+      "seconds": 2.542,
+      "log": "runs/s130/observer-correction.log"
+    }
+  },
+  "recordCorrection": "Startup caught later declared opposing posts missing from the declaration validator; resolve their declared department side without opening posts or inventing holders. Audit also retains same-day detention claims received by a commanding issuer.",
+  "capture": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s130/capture.ts"
+    ],
+    "exit": 1,
+    "seconds": 81.494,
+    "log": "runs/s130/measure.log"
+  },
+  "captureResult": {
+    "result": [
+      {
+        "validationFailures": [],
+        "pack": "union-1861",
+        "days": 148,
+        "finalHash": "40f672528c0588cf99468c5b2639e2e0ed7268130deb9356b7492e0e5f457ef4",
+        "rejections": 0,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 60,
+          "finalHash": "40f672528c0588cf99468c5b2639e2e0ed7268130deb9356b7492e0e5f457ef4",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "gates": [
+          {
+            "mechanic": "planner.term.time",
+            "problem": "dead",
+            "fires": 0,
+            "band": {
+              "minFires": 1,
+              "maxFires": 4,
+              "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+            }
+          }
+        ]
+      }
+    ],
+    "bandProblems": []
+  },
+  "capturePasses": [
+    "zero rejected commands",
+    "all daily replay hashes exact",
+    "day60 resume exact",
+    "saved-log replay exact"
+  ],
+  "unmet": [
+    "planner.term.time0 against binding1..4",
+    "zero typed Scott dispatches: received placement/address-book gap",
+    "U33/U34 binding but unresolved/unexposed; no credit"
+  ],
+  "secondCommit": {
+    "status": "not committed; ordinary hook not attempted",
+    "reason": "The retained capture cheaply proves a failing mandatory full-reference test. One capture is exhausted; no code/policy fitting, quiet waiver, hook bypass or expensive unchanged retry."
+  },
+  "evidenceReuse": [
+    "S126 retained comparison capture; hashes reverified, no separate baseline capture",
+    "kernel full ordinary hook271files2392passed3skipped",
+    "earlier146-test regression set; later changed paths covered by17 fictional and35 observer checks",
+    "59 ownership/banned-API tests; no saved shape change in record integration",
+    "testbed runtime inputs unchanged; short startup/replay/resume and first hook retained"
+  ],
+  "lossControl": "No independent loss simulator; withhold an actual produced in-flight report to establish non-delivery.",
+  "review": "Formal branch/gate review remains deferred under0106/0107; no signature or main integration.",
+  "authorization": "Only S130 in sprint/demonstrate; no S129 import, other-lane write, browser, push or history rewrite. The one final main CODEX append is separately authorized.",
+  "proposalOnly": {
+    "applied": false,
+    "patch": "proposal/scoped-detention-address.patch",
+    "interpretation": "proposal/PROPOSAL.md",
+    "focusedTests": 22,
+    "typecheckExit": 0,
+    "retainedStateOnly": true,
+    "newTicks": 0,
+    "productionRestoration": "proposal/restoration.json",
+    "decision": "Lead to approve received-placement interpretation and one additional capture. No band waiver requested or installed."
+  }
+}

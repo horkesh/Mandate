@@ -22,7 +22,7 @@
 import { checkLiveness, phase0, type LivenessBand, type LivenessFailure, type LivenessRow } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { seatsMechanics } from './seats-world.ts';
-import { S124_SUPPLY_QUIET_WHY } from '../../../tools/rules/liveness-causes.ts';
+import { S124_SUPPLY_QUIET_WHY, S130_TIME_QUIET_WHY } from '../../../tools/rules/liveness-causes.ts';
 
 export interface GateBand extends LivenessBand {
   /** Required when `minFires` is 0: why this mechanic is quiet in this run. */
@@ -129,6 +129,7 @@ const FEW_BATTLE_DAYS = 'the reference runs fight only a few battle-days (two bo
 
 /** Mechanics that fire in neither reference run: the reason, and the kernel test that proves the mechanic is alive. */
 export const QUIET: Readonly<Record<string, QuietReason>> = {
+  "planner.term.time": { why: S130_TIME_QUIET_WHY, test: "packages/cli/test/planner.test.ts", needle: "S41 time live control: dropping time changes the chosen candidate" },
   'forces.landing_refused': {"why":"S124: the sole situation landing is now a whole-company move, so no numeric split is attempted or refused. Unknown strength remains unknown. The paired fictional control still drives one numeric landing and one unknown-parent numeric refusal.","test":"packages/cli/test/situation-landing.test.ts","needle":"drives forces.landed_by_situation from a quantified fictional parent and refuses an unknown parent"},
   "planner.term.caution": {"why":"S119: Patterson day140 changes from the S116 holding pick (caution/force_ratio/supply each decisive) to direct. Dropping caution from his corrected retained scores leaves direct first. Other retained drafts also keep their pick; daily telemetry records0. No temperament or scoring weight changed.","test":"packages/cli/test/planner.test.ts","needle":"counts every scoring term live"},
   "planner.term.force_ratio": {"why":"S119: Patterson day140 changes from S116 holding to direct. Dropping force_ratio from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. No strength/default, assault margin or scoring weight was fitted.","test":"packages/cli/test/planner.test.ts","needle":"counts every scoring term live"},
@@ -239,7 +240,7 @@ function planBands(n: { readonly drafts: number; readonly reviewed: number; read
 const UNION_BANDS: Record<string, GateBand> = {
   "forces.landing_refused": {"minFires":0,"maxFires":0,"why":"S124: the sole situation landing is now a whole-company move, so no numeric split is attempted or refused. Unknown strength remains unknown. The paired fictional control still drives one numeric landing and one unknown-parent numeric refusal."},
   "orders.returned": {"minFires": 0, "maxFires": 0, "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."},
-  "planner.term.time": { ...around(1), why: "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed." },
+  "planner.term.time": quiet(S130_TIME_QUIET_WHY),
   'people.resigned': { ...around(15), why: "S77 lead ruling 3 (CODEX.md, 2026-11-23): S74 adds Elzey's sourced departure under S69/0101 to the fourteen existing resignations; recentre only this band with around(15). No other quiet band is changed." },
   // R82: an integrated government notice offers one officer his choice; he stays.
   'people.stayed': around(1),
@@ -266,7 +267,7 @@ const UNION_BANDS: Record<string, GateBand> = {
   'combat.works_stormed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
   'operations.ended': around(2), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
   "operations.opened": { ...around(6), why: "S119 integrated correction changes Patterson day140 planner pick from holding to direct. His additional operation opens day141; five other openings remain, giving6. No operation quota or planner weight changed." },
-  "operations.stage": {"minFires": 9, "maxFires": 38},
+  "operations.stage": { ...around(24), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires24; no behavior or numeric input changed." },
   'operations.works': { ...around(7), why: "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works." },
   'orders.responses_pruned': around(27), // S1 national [I]: new command and transfer responses alter the ordinary retained/pruned response set.
   "reports.battle_dispatch": around(42),
@@ -278,31 +279,31 @@ const UNION_BANDS: Record<string, GateBand> = {
   'knowledge.pruned_superseded': around(146),
   'map.pocket_relieved': { ...around(1), why: "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved." },
   'map.recomputed': around(52), // S1 national [I]: changed command journeys, occupation and retreat require the existing map owner to recompute.
-  'messages.courier_delay': around(154),
+  "messages.courier_delay": { ...around(99), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires99; no behavior or numeric input changed." },
   'messages.mail_delay': around(2856),
-  'messages.delivered': around(14240),
-  'messages.sent': around(15047),
+  "messages.delivered": { ...around(14443), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires14443; no behavior or numeric input changed." },
+  "messages.sent": { ...around(15214), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires15214; no behavior or numeric input changed." },
   'messages.special_messenger': quiet("S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."),
   'orders.bypassed': around(4),
   'movement.arrived': around(638), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
   'movement.leg_started': around(310), // S1 national [I]: the declared command headquarters and ordinary transfers change joining destinations and paths.
-  "orders.obeyed": {"minFires":3,"maxFires":14,"why":"S122 /0125/0127 [I]: sourced call establishments and unknown historical quantities change the ordinary command and received-picture trajectory. Seven orders are obeyed; response records and exact identities are retained."},
+  "orders.obeyed": { ...around(9), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed." },
   "orders.relay_held": quiet("0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."),
   'orders.relay_objected': around(3),
   'orders.relayed': around(20), // S123: five mandate and four local-review relays join the eleven inherited relays; retained event proof accompanies the band.
-  'plans.goal_reached': around(2), // S1 national [I]: the integrated sourced build changes this existing counter through its normal owner.
+  "plans.goal_reached": { ...around(3), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires3; no behavior or numeric input changed." },
   'politics.adjourned': around(1),
   'politics.front_page': around(63),
   'politics.support': around(85), // S1 national [I]: the emerged field movements and reports change ordinary political inputs; no troop notice directly writes support.
   'politics.opened': around(2),
   'regions.self_emancipation': around(3097), // S1 national [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.
   'regions.reached_lines': around(274), // S1 national [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.
-  "seats.choices": {"minFires": 3, "maxFires": 12},
-  "planner.candidates": {"minFires": 3, "maxFires": 12},
-  "planner.searches": {"minFires": 3, "maxFires": 12},
-  "plans.drafted": {"minFires": 3, "maxFires": 12},
+  "seats.choices": { ...around(11), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires11; no behavior or numeric input changed." },
+  "planner.candidates": { ...around(8), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed." },
+  "planner.searches": { ...around(8), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed." },
+  "plans.drafted": { ...around(8), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires8; no behavior or numeric input changed." },
   "plans.chosen": {"minFires": 3, "maxFires": 12},
-  "plans.goal_set": {"minFires":3,"maxFires":14,"why":"S122 /0125/0127 [I]: ordinary command and planning respond to the changed strength picture; seven goals are set. No authored goal, term weight or scheduling rule changed."},
+  "plans.goal_set": { ...around(9), why: "[I] Three newly addressable authored orders, their ordinary receipts/acknowledgments and the departure report replace the prior hold with two empty, gated detention drafts. Principal regional order140 then restores the same candidate/movement/combat trajectory. Counts and per-day deltas are retained; this is the combined received-address followup, without isolated causal credit. S130 standing recenter: retained corrected reference fires9; no behavior or numeric input changed." },
   "plans.went_ahead": {"minFires": 3, "maxFires": 12},
   'plans.approved': notHere("both chosen plans go ahead as drafted without review; the editing exercise drives plan review"),
   'plans.submitted': notHere("both chosen plans go ahead as drafted without review; the editing exercise drives plan review"),

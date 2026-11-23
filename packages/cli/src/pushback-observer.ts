@@ -69,6 +69,13 @@ export function observePushback() {
     // service term and issuer, but its number raised must never stand for the number asked.
     for (const levy of Object.values(r.state.postLevies)) merge(levy.levyCall, { side: sideOfIssuer(levy.levyIssuer), termDays: levy.levyTermDays });
     for (const e of r.events) if (e.event === 'policy' && e.message !== null) merge(e.message, { side: sideOfIssuer(e.person) });
+    // This is the offline audit, not a seat projection. A same-day report to a
+    // commanding issuer can leave transit without ever reaching a principal.
+    for (const held of Object.values(r.state.knowledgeBySeat)) for (const report of held.knownReports ?? []) {
+      if (report.knownReceivedDay <= r.day && report.knownBody.reportClaims?.some(c => c.claimKind === 'detention-course')) {
+        proposal(report.knownBody);
+      }
+    }
     for (const f of world.factionIds) {
       const held = r.state.knowledgeBySeat[phase0.seatIdFor(world.faction(f).principal)];
       for (const sent of held?.knownSentOrders ?? []) merge(sent.sentMessage, { side: f, ...(sent.sentGoal === undefined ? {} : goalMatter(sent.sentGoal)) });

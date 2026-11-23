@@ -126,16 +126,17 @@ export function localOptions(world: SeatsWorld, state: State, person: PersonId, 
     const dispatched = new Map((knowledge.knownDoctrineDispatches ?? []).map(d => [letterKey(d.dispatchLetter), d.dispatchOrigin]));
     const since = warSince(world, state, doctrine.faction);
     const start = daysFromCivil(parseIsoDate(state.calendarStart));
-    const sender = senderFor(world, state, seatIdFor(person), undefined, undefined, post);
     const selected = new Set<PostId>();
     for (const row of orderedLetters(doctrine.offensives)) {
       if (row.issuer !== person || row.purpose === undefined || row.letter === undefined || row.post === post ||
         since === null || day <= since || day < daysFromCivil(parseIsoDate(row.fromDate)) - start ||
-        selected.has(row.post) || dispatched.has(letterKey(row.letter)) || sender?.holder(row.post) == null ||
+        selected.has(row.post) || dispatched.has(letterKey(row.letter)) ||
         !letterDependencies(row).every(d => dispatched.has(letterKey(d))) ||
         !hasRequiredPapers(row.requiresPapers, knowledge, state.stateDay, world.rules.templates) ||
         (row.requiresNotice !== undefined && !knowledge.knownReports.some(r => r.knownReceivedDay <= state.stateDay &&
           r.knownBody.reportSubjectKind === 'situation' && r.knownBody.reportSubjectId === row.requiresNotice))) continue;
+      const sender = senderFor(world, state, seatIdFor(person), undefined, undefined, post, row.post);
+      if (sender?.holder(row.post) == null || sender.side(row.post) !== side) continue;
       const blocks = allCommandedBlocks(world.map, state, row.post);
       for (const authority of active) {
         const grant = authority.authorityGrant;

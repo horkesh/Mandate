@@ -71,5 +71,11 @@ it('archives same-day subordinate-authored demands by their real issuer, purpose
     } } } as unknown as phase0.TickResult;
   observer.onTick(world, later);
   expect(observer.observations()[0]).toMatchObject({ courseGrounds: ['insufficient_stores'], deferredIntervals: 1 });
+  const received = { ...later, day: 3, state: { ...later.state, messagesInTransit: [],
+    knowledgeBySeat: { ...later.state.knowledgeBySeat, 'seat:a_sec': { knownReports: [{ knownReceivedDay: 3,
+      knownBody: { ...report.msgReport, reportDay: 3, reportClaims: [{ claimKind: 'detention-course', claimToken: 'no_route' }] } }] } },
+  } } as unknown as phase0.TickResult;
+  observer.onTick(world, received);
+  expect(observer.observations()[0]!.courseGrounds).toEqual(['insufficient_stores', 'no_route']);
   expect(score([observer.observations()[0]!])).not.toBe('matched');
 });

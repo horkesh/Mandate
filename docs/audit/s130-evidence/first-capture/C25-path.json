@@ -1,0 +1,34 @@
+{
+  "row": {
+    "row": "C25",
+    "actor": "holmes_theophilus_h",
+    "side": "confederate",
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "beforeVerdict": "not_observed",
+    "verdict": "not_observed",
+    "cause": "No act observed for this actor, role and represented matter.",
+    "orders": [],
+    "answerIds": [],
+    "cite": "OR-I-II:907 https://archive.org/details/cu31924077730186/page/n926/mode/1up; OR-I-II:929 https://archive.org/details/cu31924077730186/page/n948/mode/1up; OR-I-II:932 https://archive.org/details/cu31924077730186/page/n951/mode/1up",
+    "citationScope": "Accepted register citations carried forward; only S130 primary pages are newly read in this lane."
+  },
+  "exposure": {
+    "id": "C25",
+    "side": "confederate",
+    "actor": "holmes_theophilus_h",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_absent",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.92.davis_jefferson.holmes_theophilus_h.verb.appoint.cs_cmd_fredericksburg"
+    ],
+    "limitation": null
+  },
+  "scope": "S129 is not merged; this lane retains S126 historical onward gaps."
+}

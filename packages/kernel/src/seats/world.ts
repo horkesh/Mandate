@@ -488,7 +488,10 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
       onDeclaredSide(o.post, `offensives[${j}].post`);
       if (o.purpose !== undefined) {
         const goalAt = `${at}.offensives[${j}]`;
-        const opposing = postSides.get(o.purpose.target.post)?.faction;
+        const target = o.purpose.target.post;
+        const declaredTarget = posts.get(target) ?? declared.get(target);
+        const opposing = posts.has(target) ? postSides.get(target)?.faction :
+          map.world.departments.find(d => d.id === declaredTarget?.department)?.faction;
         if (opposing == null || opposing === r.faction) problems.push(`${goalAt}: target must be a declared opposing command`);
         if (o.letter === undefined) problems.push(`${goalAt}: detention directive requires its authored identity`);
         if (o.issuer !== undefined && !hasPerson(o.issuer)) problems.push(`${goalAt}: unknown issuer`);

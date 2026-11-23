@@ -1,0 +1,62 @@
+{
+  "status": "Address correction approved and applied, all three authored papers issued and received.",
+  "proof": {
+    "snapshotDay": 148,
+    "source": {
+      "id": "m.131.patterson_robert.scott_winfield.return.us_dept_pennsylvania",
+      "written": 131,
+      "received": 139
+    },
+    "retained": {
+      "withinActualSubtree": true,
+      "known": true,
+      "holder": "patterson_robert",
+      "chain": [
+        "us_dept_pennsylvania"
+      ],
+      "principalPlacementKnown": true,
+      "option": {
+        "namespace": "us_army_orders",
+        "key": "scott_patterson_jul13",
+        "revision": 1
+      },
+      "reason": null,
+      "envelope": {
+        "to": "patterson_robert",
+        "post": "us_dept_pennsylvania",
+        "letter": {
+          "namespace": "us_army_orders",
+          "key": "scott_patterson_jul13",
+          "revision": 1
+        },
+        "issuer": "scott_winfield"
+      }
+    },
+    "withheld": {
+      "withinActualSubtree": true,
+      "known": false,
+      "holder": null,
+      "chain": [
+        "us_dept_pennsylvania"
+      ],
+      "principalPlacementKnown": true,
+      "option": null,
+      "reason": null,
+      "envelope": null
+    },
+    "hiddenLiveChange": {
+      "withinActualSubtree": false,
+      "known": true,
+      "holder": "patterson_robert",
+      "chain": [
+        "us_dept_pennsylvania"
+      ],
+      "principalPlacementKnown": true,
+      "option": null,
+      "reason": null,
+      "envelope": null
+    }
+  },
+  "correspondence": "correspondence-side-by-side.json",
+  "remaining": "No fresh received target attribution in lower_valley for the two retained detention drafts; this operational gate is distinct from addressability."
+}

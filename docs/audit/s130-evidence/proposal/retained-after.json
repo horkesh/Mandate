@@ -1,0 +1,57 @@
+{
+  "snapshotDay": 148,
+  "source": {
+    "id": "m.131.patterson_robert.scott_winfield.return.us_dept_pennsylvania",
+    "written": 131,
+    "received": 139
+  },
+  "retained": {
+    "withinActualSubtree": true,
+    "known": true,
+    "holder": "patterson_robert",
+    "chain": [
+      "us_dept_pennsylvania"
+    ],
+    "principalPlacementKnown": true,
+    "option": {
+      "namespace": "us_army_orders",
+      "key": "scott_patterson_jul13",
+      "revision": 1
+    },
+    "reason": null,
+    "envelope": {
+      "to": "patterson_robert",
+      "post": "us_dept_pennsylvania",
+      "letter": {
+        "namespace": "us_army_orders",
+        "key": "scott_patterson_jul13",
+        "revision": 1
+      },
+      "issuer": "scott_winfield"
+    }
+  },
+  "withheld": {
+    "withinActualSubtree": true,
+    "known": false,
+    "holder": null,
+    "chain": [
+      "us_dept_pennsylvania"
+    ],
+    "principalPlacementKnown": true,
+    "option": null,
+    "reason": null,
+    "envelope": null
+  },
+  "hiddenLiveChange": {
+    "withinActualSubtree": false,
+    "known": true,
+    "holder": "patterson_robert",
+    "chain": [
+      "us_dept_pennsylvania"
+    ],
+    "principalPlacementKnown": true,
+    "option": null,
+    "reason": null,
+    "envelope": null
+  }
+}

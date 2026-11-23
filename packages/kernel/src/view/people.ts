@@ -36,8 +36,23 @@ export function peopleProjection(
 /** A received assignment opens only its named command's public establishment.
  * This reads opening assignments and received corrections, never live holders.
  */
-export function commandProjection(world: SeatsWorld, person: PersonId, faction: FactionId | null, reports: readonly ReportView[], day: number, calendar: string | null, scope: readonly PostId[]): PeopleProjection {
-  const known = establishmentProjection(world,person,faction,reports,() => null,day,calendar);
+export function commandProjection(world: SeatsWorld, person: PersonId, faction: FactionId | null, reports: readonly ReportView[], day: number, calendar: string | null, scope: readonly PostId[], detentionAddress?: PostId): PeopleProjection {
+  const establishment = establishmentProjection(world,person,faction,reports,() => null,day,calendar);
+  const known = detentionAddress === undefined ? establishment : {
+    ...establishment, posts: establishment.posts.map(p => {
+      if (p.post !== detentionAddress || p.placementKnown || p.status !== 'held' || p.holder === null) return p;
+      const declared = world.start.temporaryPosts.find(t => t.id === p.post);
+      if (declared === undefined || declared.parent === null ||
+        world.map.world.departments.find(d => d.id === declared.department)?.faction !== faction) return p;
+      // A received self-attributed strength return can identify the commander's address.
+      // Its declared placement supplies the route; it grants no live mandate or appointment.
+      const evidenced = reports.some(r => r.id === p.source && r.type === 'strength-return' && r.subtype === null &&
+        r.day <= day && r.receivedDay <= day && r.author === p.holder && r.authorPost === p.post &&
+        r.subjectKind === 'post' && r.subjectId === p.post &&
+        r.claims.some(c => c.kind === 'present-for-duty' && c.confidence > 0));
+      return evidenced ? { ...p, parent: declared.parent, placementKnown: true } : p;
+    }),
+  };
   const byPost = new Map(known.posts.map(p => [p.post,p]));
   const own = known.posts.find(p => p.holder === person)?.post;
   const inside = (post: PostId) => {

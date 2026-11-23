@@ -1198,10 +1198,18 @@
         "reason": "Materially new July 13 direction after U32; not counted from every subsequent mention.",
         "model_matter": "patterson_advance"
       },
-      "gap": {
-        "mechanism": "an attack-or-demonstrate instruction and its answer",
-        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
-        "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination."
+      "match": {
+        "kind": "goal",
+        "purpose": "attack_or_demonstrate",
+        "target": "cs_cmd_harpers_ferry",
+        "letters": [
+          {
+            "namespace": "us_army_orders",
+            "key": "scott_patterson_jul13",
+            "revision": 1
+          }
+        ],
+        "detentionEvidence": "course_challenge"
       }
     },
     {
@@ -1232,10 +1240,23 @@
         "reason": "Delay inferred from response and reported conduct, not secret intent. Fresh July 17-18 instruction separates this act from U33; repeated telegram copies add zero.",
         "model_matter": "patterson_advance"
       },
-      "gap": {
-        "mechanism": "an attack-or-demonstrate instruction and its answer",
-        "location": "packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts",
-        "reason": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination."
+      "match": {
+        "kind": "goal",
+        "purpose": "attack_or_demonstrate",
+        "target": "cs_cmd_harpers_ferry",
+        "letters": [
+          {
+            "namespace": "us_army_orders",
+            "key": "scott_patterson_jul17",
+            "revision": 1
+          },
+          {
+            "namespace": "us_army_orders",
+            "key": "scott_patterson_jul18",
+            "revision": 1
+          }
+        ],
+        "detentionEvidence": "actual_deferral"
       }
     },
     {

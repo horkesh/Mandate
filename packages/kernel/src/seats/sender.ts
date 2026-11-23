@@ -21,7 +21,7 @@ export function receivedPostDefinition(world: SeatsWorld, view: SeatView, id: Po
   return { ...declared, department: schedule?.department ?? declared.department };
 }
 
-export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisition?: PostId, cache?: ViewCache, localPost?: PostId) {
+export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisition?: PostId, cache?: ViewCache, localPost?: PostId, detentionAddress?: PostId) {
   const person = state.seatAssignments[seat]?.seatPerson;
   const principalOffice = world.start.factions.find(f => f.principal === person);
   if (principalOffice !== undefined) localPost = undefined;
@@ -33,7 +33,7 @@ export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisi
   const scope = localPost === undefined ? [] : currentMandates(state,localPost)
     .filter(a => activeMandate(world.map,state,a,state.stateDay+1)).flatMap(a => a.authorityGrant.mandateRecipients).concat((world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person && p.grant.mandateIssuerPost === localPost && p.grant.mandateParent === null).map(p => p.grant.mandatePost));
   const view = localPost === undefined ? baseView : { ...baseView,
-    posts: commandProjection(world,person!,baseView.faction,baseView.reports,state.stateDay,state.calendarStart,scope).posts };
+    posts: commandProjection(world,person!,baseView.faction,baseView.reports,state.stateDay,state.calendarStart,scope,detentionAddress).posts };
   const posts = new Map(view.posts.map(p => [p.post,p]));
   const sides = receivedDepartmentSides(world, view);
   const definition = (post: PostId) => receivedPostDefinition(world, view, post);
