@@ -1,0 +1,5 @@
+{
+  "runs\\s106\\references\\testbed-summary.json": "fd48983af176c947e62e6c3987771935748a8e75d88f4a07d2f52f4f888809db",
+  "runs\\s106\\references\\union-1861-summary.json": "c99c1d0cb5aa4e7e9ea9f994aa317b7919c9bbf2a69ccd2c0a59a8f27158215a",
+  "basis": "S106 capture agrees with its binding done check on all 268 daily hashes/non-clock fields; the final matcher correction also reproduces the exact coverage packet without another simulation. Base bac25980 retained reference and binding done-check agreement; no baseline rerun. Baseline is reused, never rerun."
+}

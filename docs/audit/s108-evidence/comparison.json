@@ -1,0 +1,70 @@
+{
+  "testbed": {
+    "hashes": 120,
+    "changedHashes": 120,
+    "firstChangedDay": 1,
+    "changedCounters": 0,
+    "rowsWithDailyChanges": 0,
+    "changedCheckpointScores": 0,
+    "initialHashBefore": "ffff8656261d854e720cfd5d70d89562cc1d6cf551634e5fa603cea5481dc5ba",
+    "initialHashAfter": "ffff8656261d854e720cfd5d70d89562cc1d6cf551634e5fa603cea5481dc5ba",
+    "finalHashBefore": "749121d774144072f835b6c6d5ff18d8d1c919deb9f7d8591a58fe18164c6acf",
+    "finalHashAfter": "a47c07d586bd647eefdb908317b59790e09fb88a254c3c8ffb2e8708bef927e8",
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "a47c07d586bd647eefdb908317b59790e09fb88a254c3c8ffb2e8708bef927e8",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0
+  },
+  "union-1861": {
+    "hashes": 148,
+    "changedHashes": 145,
+    "firstChangedDay": 4,
+    "changedCounters": 30,
+    "rowsWithDailyChanges": 27,
+    "changedCheckpointScores": 7,
+    "initialHashBefore": "d3d5b0757e9e135456233db93645a841a7e69342a771de3ce95836a4d2be95af",
+    "initialHashAfter": "d3d5b0757e9e135456233db93645a841a7e69342a771de3ce95836a4d2be95af",
+    "finalHashBefore": "e3c72bbb39e41cae123157c70f64926f84097f2056c997cc192e822e7b3d266d",
+    "finalHashAfter": "ac1fd1133acf8f6fb6f3f83e70bc0cccdd590225f0f0097d542a8c2e02fcb1cf",
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "ac1fd1133acf8f6fb6f3f83e70bc0cccdd590225f0f0097d542a8c2e02fcb1cf",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "rejections": 0
+  },
+  "coverageBefore": {
+    "representation_gap": 22,
+    "mismatch": 8,
+    "not_observed": 3
+  },
+  "coverageAfter": {
+    "representation_gap": 22,
+    "mismatch": 8,
+    "not_observed": 3
+  },
+  "rawActsBefore": 251,
+  "rawActsAfter": 258,
+  "changedResponses": 115,
+  "strengthBefore": {
+    "known": 82329,
+    "unknownBlocks": 22
+  },
+  "strengthAfter": {
+    "known": 86452,
+    "unknownBlocks": 23
+  },
+  "failedBands": 0
+}

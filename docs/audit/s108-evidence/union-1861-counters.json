@@ -1,0 +1,5808 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "before": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.battle_day",
+    "before": {
+      "mechanic": "combat.battle_day",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "combat.battle_day",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "before": {
+      "mechanic": "combat.battle_opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.battle_opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.bombardment",
+    "before": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.breakout",
+    "before": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.captured",
+    "before": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 2352
+    },
+    "after": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 2415
+    },
+    "changed": true,
+    "changedDays": [],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "combat.cut_off",
+    "before": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.destroyed",
+    "before": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.evacuated",
+    "before": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "before": {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "before": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "before": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 21784
+    },
+    "after": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 22642
+    },
+    "changed": true,
+    "changedDays": [],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "combat.missing",
+    "before": {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 6655
+    },
+    "after": {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 6820
+    },
+    "changed": true,
+    "changedDays": [],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "combat.occupation",
+    "before": {
+      "mechanic": "combat.occupation",
+      "fires": 290,
+      "magnitude": 14760
+    },
+    "after": {
+      "mechanic": "combat.occupation",
+      "fires": 294,
+      "magnitude": 14780
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 67,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 68,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 128,
+        "before": 6,
+        "after": 5
+      },
+      {
+        "day": 129,
+        "before": 8,
+        "after": 7
+      },
+      {
+        "day": 130,
+        "before": 8,
+        "after": 7
+      },
+      {
+        "day": 131,
+        "before": 5,
+        "after": 4
+      },
+      {
+        "day": 132,
+        "before": 8,
+        "after": 7
+      },
+      {
+        "day": 133,
+        "before": 8,
+        "after": 7
+      },
+      {
+        "day": 139,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 140,
+        "before": 6,
+        "after": 7
+      },
+      {
+        "day": 141,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 142,
+        "before": 3,
+        "after": 4
+      },
+      {
+        "day": 144,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 145,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 146,
+        "before": 3,
+        "after": 4
+      },
+      {
+        "day": 147,
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "combat.pursuit_chosen",
+    "before": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.records_pruned",
+    "before": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.routed",
+    "before": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.surrendered",
+    "before": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.withdrew",
+    "before": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.works_stormed",
+    "before": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_closed",
+    "before": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_established",
+    "before": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_reopened",
+    "before": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.post_succeeded",
+    "before": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.proposal_refused",
+    "before": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.side_changed",
+    "before": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.temporary_post_opened",
+    "before": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "commands.rejected",
+    "before": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "control.changed",
+    "before": {
+      "mechanic": "control.changed",
+      "fires": 296,
+      "magnitude": 17560
+    },
+    "after": {
+      "mechanic": "control.changed",
+      "fires": 300,
+      "magnitude": 17580
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 67,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 68,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 128,
+        "before": 6,
+        "after": 5
+      },
+      {
+        "day": 129,
+        "before": 8,
+        "after": 7
+      },
+      {
+        "day": 130,
+        "before": 8,
+        "after": 7
+      },
+      {
+        "day": 131,
+        "before": 5,
+        "after": 4
+      },
+      {
+        "day": 132,
+        "before": 8,
+        "after": 7
+      },
+      {
+        "day": 133,
+        "before": 8,
+        "after": 7
+      },
+      {
+        "day": 139,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 140,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 141,
+        "before": 6,
+        "after": 7
+      },
+      {
+        "day": 142,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 144,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 145,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 146,
+        "before": 3,
+        "after": 4
+      },
+      {
+        "day": 147,
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "control.threshold_crossed",
+    "before": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 59,
+      "magnitude": 59
+    },
+    "after": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 59,
+      "magnitude": 59
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 58,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 61,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 92,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 95,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 132,
+        "before": 2,
+        "after": 1
+      },
+      {
+        "day": 133,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 134,
+        "before": 2,
+        "after": 1
+      },
+      {
+        "day": 135,
+        "before": 2,
+        "after": 1
+      },
+      {
+        "day": 136,
+        "before": 4,
+        "after": 2
+      },
+      {
+        "day": 137,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 138,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 139,
+        "before": 1,
+        "after": 3
+      },
+      {
+        "day": 140,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 141,
+        "before": 2,
+        "after": 3
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "forces.landed_by_situation",
+    "before": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.landing_refused",
+    "before": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.stores_fell",
+    "before": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2409,
+      "magnitude": 2392255
+    },
+    "after": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2871,
+      "magnitude": 2850214
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 55,
+        "before": 8,
+        "after": 7
+      },
+      {
+        "day": 56,
+        "before": 9,
+        "after": 10
+      },
+      {
+        "day": 58,
+        "before": 9,
+        "after": 15
+      },
+      {
+        "day": 59,
+        "before": 8,
+        "after": 11
+      },
+      {
+        "day": 60,
+        "before": 8,
+        "after": 13
+      },
+      {
+        "day": 61,
+        "before": 10,
+        "after": 16
+      },
+      {
+        "day": 62,
+        "before": 10,
+        "after": 16
+      },
+      {
+        "day": 63,
+        "before": 7,
+        "after": 13
+      },
+      {
+        "day": 64,
+        "before": 9,
+        "after": 16
+      },
+      {
+        "day": 65,
+        "before": 8,
+        "after": 13
+      },
+      {
+        "day": 66,
+        "before": 8,
+        "after": 14
+      },
+      {
+        "day": 67,
+        "before": 7,
+        "after": 15
+      },
+      {
+        "day": 68,
+        "before": 9,
+        "after": 17
+      },
+      {
+        "day": 69,
+        "before": 11,
+        "after": 13
+      },
+      {
+        "day": 70,
+        "before": 7,
+        "after": 16
+      },
+      {
+        "day": 72,
+        "before": 7,
+        "after": 16
+      },
+      {
+        "day": 73,
+        "before": 9,
+        "after": 13
+      },
+      {
+        "day": 74,
+        "before": 12,
+        "after": 16
+      },
+      {
+        "day": 75,
+        "before": 6,
+        "after": 13
+      },
+      {
+        "day": 76,
+        "before": 11,
+        "after": 16
+      },
+      {
+        "day": 77,
+        "before": 9,
+        "after": 13
+      },
+      {
+        "day": 78,
+        "before": 6,
+        "after": 14
+      },
+      {
+        "day": 79,
+        "before": 10,
+        "after": 13
+      },
+      {
+        "day": 80,
+        "before": 8,
+        "after": 14
+      },
+      {
+        "day": 81,
+        "before": 8,
+        "after": 14
+      },
+      {
+        "day": 82,
+        "before": 11,
+        "after": 15
+      },
+      {
+        "day": 83,
+        "before": 12,
+        "after": 17
+      },
+      {
+        "day": 84,
+        "before": 9,
+        "after": 15
+      },
+      {
+        "day": 85,
+        "before": 12,
+        "after": 14
+      },
+      {
+        "day": 86,
+        "before": 6,
+        "after": 15
+      },
+      {
+        "day": 87,
+        "before": 11,
+        "after": 14
+      },
+      {
+        "day": 88,
+        "before": 9,
+        "after": 15
+      },
+      {
+        "day": 89,
+        "before": 6,
+        "after": 13
+      },
+      {
+        "day": 90,
+        "before": 10,
+        "after": 14
+      },
+      {
+        "day": 91,
+        "before": 10,
+        "after": 15
+      },
+      {
+        "day": 92,
+        "before": 22,
+        "after": 29
+      },
+      {
+        "day": 93,
+        "before": 27,
+        "after": 30
+      },
+      {
+        "day": 95,
+        "before": 26,
+        "after": 37
+      },
+      {
+        "day": 96,
+        "before": 33,
+        "after": 38
+      },
+      {
+        "day": 97,
+        "before": 36,
+        "after": 42
+      },
+      {
+        "day": 98,
+        "before": 35,
+        "after": 44
+      },
+      {
+        "day": 99,
+        "before": 33,
+        "after": 45
+      },
+      {
+        "day": 100,
+        "before": 38,
+        "after": 46
+      },
+      {
+        "day": 101,
+        "before": 35,
+        "after": 43
+      },
+      {
+        "day": 102,
+        "before": 39,
+        "after": 43
+      },
+      {
+        "day": 103,
+        "before": 34,
+        "after": 45
+      },
+      {
+        "day": 104,
+        "before": 40,
+        "after": 46
+      },
+      {
+        "day": 105,
+        "before": 35,
+        "after": 45
+      },
+      {
+        "day": 106,
+        "before": 37,
+        "after": 45
+      },
+      {
+        "day": 107,
+        "before": 35,
+        "after": 46
+      },
+      {
+        "day": 108,
+        "before": 36,
+        "after": 45
+      },
+      {
+        "day": 109,
+        "before": 41,
+        "after": 45
+      },
+      {
+        "day": 110,
+        "before": 33,
+        "after": 44
+      },
+      {
+        "day": 111,
+        "before": 37,
+        "after": 48
+      },
+      {
+        "day": 112,
+        "before": 35,
+        "after": 43
+      },
+      {
+        "day": 113,
+        "before": 38,
+        "after": 45
+      },
+      {
+        "day": 114,
+        "before": 33,
+        "after": 42
+      },
+      {
+        "day": 115,
+        "before": 44,
+        "after": 50
+      },
+      {
+        "day": 116,
+        "before": 38,
+        "after": 46
+      },
+      {
+        "day": 117,
+        "before": 38,
+        "after": 48
+      },
+      {
+        "day": 118,
+        "before": 39,
+        "after": 45
+      },
+      {
+        "day": 119,
+        "before": 41,
+        "after": 51
+      },
+      {
+        "day": 120,
+        "before": 46,
+        "after": 51
+      },
+      {
+        "day": 121,
+        "before": 37,
+        "after": 52
+      },
+      {
+        "day": 122,
+        "before": 46,
+        "after": 50
+      },
+      {
+        "day": 123,
+        "before": 42,
+        "after": 52
+      },
+      {
+        "day": 124,
+        "before": 42,
+        "after": 55
+      },
+      {
+        "day": 125,
+        "before": 41,
+        "after": 48
+      },
+      {
+        "day": 126,
+        "before": 46,
+        "after": 50
+      },
+      {
+        "day": 127,
+        "before": 40,
+        "after": 48
+      },
+      {
+        "day": 128,
+        "before": 42,
+        "after": 54
+      },
+      {
+        "day": 129,
+        "before": 46,
+        "after": 52
+      },
+      {
+        "day": 130,
+        "before": 47,
+        "after": 51
+      },
+      {
+        "day": 131,
+        "before": 44,
+        "after": 48
+      },
+      {
+        "day": 132,
+        "before": 39,
+        "after": 55
+      },
+      {
+        "day": 133,
+        "before": 46,
+        "after": 49
+      },
+      {
+        "day": 134,
+        "before": 46,
+        "after": 26
+      },
+      {
+        "day": 135,
+        "before": 45,
+        "after": 25
+      },
+      {
+        "day": 136,
+        "before": 28,
+        "after": 21
+      },
+      {
+        "day": 137,
+        "before": 21,
+        "after": 25
+      },
+      {
+        "day": 138,
+        "before": 31,
+        "after": 27
+      },
+      {
+        "day": 139,
+        "before": 26,
+        "after": 27
+      },
+      {
+        "day": 140,
+        "before": 40,
+        "after": 26
+      },
+      {
+        "day": 141,
+        "before": 34,
+        "after": 18
+      },
+      {
+        "day": 142,
+        "before": 31,
+        "after": 38
+      },
+      {
+        "day": 143,
+        "before": 24,
+        "after": 21
+      },
+      {
+        "day": 144,
+        "before": 28,
+        "after": 32
+      },
+      {
+        "day": 145,
+        "before": 25,
+        "after": 26
+      },
+      {
+        "day": 146,
+        "before": 21,
+        "after": 32
+      },
+      {
+        "day": 147,
+        "before": 32,
+        "after": 27
+      },
+      {
+        "day": 148,
+        "before": 18,
+        "after": 28
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "forces.stores_low",
+    "before": {
+      "mechanic": "forces.stores_low",
+      "fires": 131,
+      "magnitude": 131
+    },
+    "after": {
+      "mechanic": "forces.stores_low",
+      "fires": 107,
+      "magnitude": 107
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 119,
+        "before": 0,
+        "after": 5
+      },
+      {
+        "day": 120,
+        "before": 0,
+        "after": 20
+      },
+      {
+        "day": 121,
+        "before": 0,
+        "after": 30
+      },
+      {
+        "day": 122,
+        "before": 0,
+        "after": 20
+      },
+      {
+        "day": 123,
+        "before": 2,
+        "after": 9
+      },
+      {
+        "day": 133,
+        "before": 6,
+        "after": 0
+      },
+      {
+        "day": 134,
+        "before": 23,
+        "after": 1
+      },
+      {
+        "day": 135,
+        "before": 21,
+        "after": 0
+      },
+      {
+        "day": 136,
+        "before": 19,
+        "after": 3
+      },
+      {
+        "day": 137,
+        "before": 9,
+        "after": 0
+      },
+      {
+        "day": 138,
+        "before": 14,
+        "after": 0
+      },
+      {
+        "day": 139,
+        "before": 8,
+        "after": 0
+      },
+      {
+        "day": 140,
+        "before": 11,
+        "after": 1
+      },
+      {
+        "day": 141,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 142,
+        "before": 1,
+        "after": 3
+      },
+      {
+        "day": 144,
+        "before": 3,
+        "after": 1
+      },
+      {
+        "day": 145,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "forces.stores_refilled",
+    "before": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2235,
+      "magnitude": 2214467
+    },
+    "after": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2460,
+      "magnitude": 2439793
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 46,
+        "before": 20,
+        "after": 25
+      },
+      {
+        "day": 47,
+        "before": 20,
+        "after": 25
+      },
+      {
+        "day": 48,
+        "before": 15,
+        "after": 20
+      },
+      {
+        "day": 49,
+        "before": 15,
+        "after": 20
+      },
+      {
+        "day": 50,
+        "before": 20,
+        "after": 25
+      },
+      {
+        "day": 51,
+        "before": 19,
+        "after": 24
+      },
+      {
+        "day": 52,
+        "before": 15,
+        "after": 20
+      },
+      {
+        "day": 53,
+        "before": 18,
+        "after": 25
+      },
+      {
+        "day": 54,
+        "before": 19,
+        "after": 26
+      },
+      {
+        "day": 55,
+        "before": 15,
+        "after": 23
+      },
+      {
+        "day": 56,
+        "before": 14,
+        "after": 20
+      },
+      {
+        "day": 57,
+        "before": 17,
+        "after": 23
+      },
+      {
+        "day": 58,
+        "before": 15,
+        "after": 16
+      },
+      {
+        "day": 59,
+        "before": 16,
+        "after": 19
+      },
+      {
+        "day": 60,
+        "before": 15,
+        "after": 18
+      },
+      {
+        "day": 61,
+        "before": 14,
+        "after": 15
+      },
+      {
+        "day": 62,
+        "before": 14,
+        "after": 15
+      },
+      {
+        "day": 63,
+        "before": 17,
+        "after": 18
+      },
+      {
+        "day": 65,
+        "before": 26,
+        "after": 28
+      },
+      {
+        "day": 66,
+        "before": 25,
+        "after": 26
+      },
+      {
+        "day": 67,
+        "before": 27,
+        "after": 26
+      },
+      {
+        "day": 68,
+        "before": 25,
+        "after": 23
+      },
+      {
+        "day": 69,
+        "before": 24,
+        "after": 29
+      },
+      {
+        "day": 70,
+        "before": 28,
+        "after": 26
+      },
+      {
+        "day": 71,
+        "before": 22,
+        "after": 29
+      },
+      {
+        "day": 72,
+        "before": 28,
+        "after": 26
+      },
+      {
+        "day": 73,
+        "before": 25,
+        "after": 27
+      },
+      {
+        "day": 74,
+        "before": 22,
+        "after": 24
+      },
+      {
+        "day": 75,
+        "before": 28,
+        "after": 27
+      },
+      {
+        "day": 76,
+        "before": 25,
+        "after": 28
+      },
+      {
+        "day": 77,
+        "before": 31,
+        "after": 37
+      },
+      {
+        "day": 78,
+        "before": 34,
+        "after": 36
+      },
+      {
+        "day": 79,
+        "before": 29,
+        "after": 37
+      },
+      {
+        "day": 80,
+        "before": 32,
+        "after": 36
+      },
+      {
+        "day": 81,
+        "before": 33,
+        "after": 37
+      },
+      {
+        "day": 82,
+        "before": 30,
+        "after": 36
+      },
+      {
+        "day": 83,
+        "before": 38,
+        "after": 43
+      },
+      {
+        "day": 84,
+        "before": 32,
+        "after": 36
+      },
+      {
+        "day": 85,
+        "before": 25,
+        "after": 33
+      },
+      {
+        "day": 86,
+        "before": 31,
+        "after": 32
+      },
+      {
+        "day": 87,
+        "before": 25,
+        "after": 33
+      },
+      {
+        "day": 88,
+        "before": 28,
+        "after": 32
+      },
+      {
+        "day": 89,
+        "before": 30,
+        "after": 33
+      },
+      {
+        "day": 90,
+        "before": 26,
+        "after": 32
+      },
+      {
+        "day": 91,
+        "before": 27,
+        "after": 32
+      },
+      {
+        "day": 92,
+        "before": 24,
+        "after": 27
+      },
+      {
+        "day": 93,
+        "before": 20,
+        "after": 27
+      },
+      {
+        "day": 94,
+        "before": 18,
+        "after": 28
+      },
+      {
+        "day": 95,
+        "before": 21,
+        "after": 20
+      },
+      {
+        "day": 96,
+        "before": 14,
+        "after": 19
+      },
+      {
+        "day": 97,
+        "before": 16,
+        "after": 17
+      },
+      {
+        "day": 98,
+        "before": 18,
+        "after": 15
+      },
+      {
+        "day": 99,
+        "before": 20,
+        "after": 15
+      },
+      {
+        "day": 100,
+        "before": 14,
+        "after": 15
+      },
+      {
+        "day": 102,
+        "before": 14,
+        "after": 18
+      },
+      {
+        "day": 103,
+        "before": 17,
+        "after": 16
+      },
+      {
+        "day": 104,
+        "before": 11,
+        "after": 15
+      },
+      {
+        "day": 106,
+        "before": 14,
+        "after": 15
+      },
+      {
+        "day": 107,
+        "before": 16,
+        "after": 15
+      },
+      {
+        "day": 108,
+        "before": 15,
+        "after": 16
+      },
+      {
+        "day": 109,
+        "before": 10,
+        "after": 15
+      },
+      {
+        "day": 110,
+        "before": 18,
+        "after": 17
+      },
+      {
+        "day": 112,
+        "before": 16,
+        "after": 18
+      },
+      {
+        "day": 113,
+        "before": 12,
+        "after": 15
+      },
+      {
+        "day": 114,
+        "before": 18,
+        "after": 19
+      },
+      {
+        "day": 115,
+        "before": 10,
+        "after": 13
+      },
+      {
+        "day": 116,
+        "before": 16,
+        "after": 17
+      },
+      {
+        "day": 118,
+        "before": 15,
+        "after": 19
+      },
+      {
+        "day": 119,
+        "before": 14,
+        "after": 13
+      },
+      {
+        "day": 120,
+        "before": 11,
+        "after": 16
+      },
+      {
+        "day": 121,
+        "before": 21,
+        "after": 17
+      },
+      {
+        "day": 122,
+        "before": 15,
+        "after": 22
+      },
+      {
+        "day": 124,
+        "before": 18,
+        "after": 14
+      },
+      {
+        "day": 125,
+        "before": 23,
+        "after": 25
+      },
+      {
+        "day": 126,
+        "before": 17,
+        "after": 22
+      },
+      {
+        "day": 127,
+        "before": 23,
+        "after": 25
+      },
+      {
+        "day": 128,
+        "before": 22,
+        "after": 19
+      },
+      {
+        "day": 129,
+        "before": 18,
+        "after": 21
+      },
+      {
+        "day": 130,
+        "before": 15,
+        "after": 19
+      },
+      {
+        "day": 131,
+        "before": 18,
+        "after": 23
+      },
+      {
+        "day": 132,
+        "before": 22,
+        "after": 15
+      },
+      {
+        "day": 133,
+        "before": 17,
+        "after": 18
+      },
+      {
+        "day": 134,
+        "before": 17,
+        "after": 20
+      },
+      {
+        "day": 135,
+        "before": 17,
+        "after": 21
+      },
+      {
+        "day": 136,
+        "before": 23,
+        "after": 18
+      },
+      {
+        "day": 137,
+        "before": 29,
+        "after": 25
+      },
+      {
+        "day": 138,
+        "before": 21,
+        "after": 24
+      },
+      {
+        "day": 139,
+        "before": 25,
+        "after": 24
+      },
+      {
+        "day": 140,
+        "before": 9,
+        "after": 10
+      },
+      {
+        "day": 141,
+        "before": 17,
+        "after": 24
+      },
+      {
+        "day": 142,
+        "before": 20,
+        "after": 14
+      },
+      {
+        "day": 143,
+        "before": 25,
+        "after": 29
+      },
+      {
+        "day": 144,
+        "before": 21,
+        "after": 19
+      },
+      {
+        "day": 145,
+        "before": 23,
+        "after": 25
+      },
+      {
+        "day": 146,
+        "before": 27,
+        "after": 19
+      },
+      {
+        "day": 147,
+        "before": 23,
+        "after": 31
+      },
+      {
+        "day": 148,
+        "before": 37,
+        "after": 30
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "before": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 176,
+      "magnitude": 2287
+    },
+    "after": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 184,
+      "magnitude": 2261
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 141,
+        "before": 4,
+        "after": 3
+      },
+      {
+        "day": 142,
+        "before": 4,
+        "after": 3
+      },
+      {
+        "day": 143,
+        "before": 4,
+        "after": 3
+      },
+      {
+        "day": 144,
+        "before": 40,
+        "after": 43
+      },
+      {
+        "day": 145,
+        "before": 40,
+        "after": 43
+      },
+      {
+        "day": 146,
+        "before": 4,
+        "after": 3
+      },
+      {
+        "day": 147,
+        "before": 40,
+        "after": 43
+      },
+      {
+        "day": 148,
+        "before": 40,
+        "after": 43
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "infrastructure.changed",
+    "before": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "before": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1444
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1463
+    },
+    "changed": true,
+    "changedDays": [],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "before": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 11712
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 11989
+    },
+    "changed": true,
+    "changedDays": [],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "ladder.moved",
+    "before": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "after": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "ladder.rival",
+    "before": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.pocket_closed",
+    "before": {
+      "mechanic": "map.pocket_closed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "map.pocket_closed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 136,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "map.pocket_lost",
+    "before": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "before": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [
+      {
+        "day": 136,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 137,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "map.recomputed",
+    "before": {
+      "mechanic": "map.recomputed",
+      "fires": 52,
+      "magnitude": 58
+    },
+    "after": {
+      "mechanic": "map.recomputed",
+      "fires": 51,
+      "magnitude": 57
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 61,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 68,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 92,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 95,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 133,
+        "before": 1,
+        "after": 0
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "before": {
+      "mechanic": "messages.courier_delay",
+      "fires": 109,
+      "magnitude": 109
+    },
+    "after": {
+      "mechanic": "messages.courier_delay",
+      "fires": 107,
+      "magnitude": 107
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 41,
+        "before": 2,
+        "after": 1
+      },
+      {
+        "day": 98,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 117,
+        "before": 4,
+        "after": 3
+      },
+      {
+        "day": 137,
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 14067,
+      "magnitude": 14067
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 14391,
+      "magnitude": 14391
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 41,
+        "before": 85,
+        "after": 88
+      },
+      {
+        "day": 46,
+        "before": 93,
+        "after": 92
+      },
+      {
+        "day": 47,
+        "before": 97,
+        "after": 100
+      },
+      {
+        "day": 48,
+        "before": 53,
+        "after": 61
+      },
+      {
+        "day": 49,
+        "before": 70,
+        "after": 72
+      },
+      {
+        "day": 50,
+        "before": 81,
+        "after": 92
+      },
+      {
+        "day": 51,
+        "before": 82,
+        "after": 81
+      },
+      {
+        "day": 54,
+        "before": 78,
+        "after": 86
+      },
+      {
+        "day": 55,
+        "before": 53,
+        "after": 52
+      },
+      {
+        "day": 59,
+        "before": 111,
+        "after": 112
+      },
+      {
+        "day": 62,
+        "before": 64,
+        "after": 63
+      },
+      {
+        "day": 71,
+        "before": 88,
+        "after": 89
+      },
+      {
+        "day": 72,
+        "before": 112,
+        "after": 114
+      },
+      {
+        "day": 76,
+        "before": 67,
+        "after": 66
+      },
+      {
+        "day": 77,
+        "before": 65,
+        "after": 66
+      },
+      {
+        "day": 78,
+        "before": 128,
+        "after": 134
+      },
+      {
+        "day": 79,
+        "before": 96,
+        "after": 99
+      },
+      {
+        "day": 80,
+        "before": 144,
+        "after": 148
+      },
+      {
+        "day": 81,
+        "before": 93,
+        "after": 96
+      },
+      {
+        "day": 82,
+        "before": 97,
+        "after": 103
+      },
+      {
+        "day": 83,
+        "before": 67,
+        "after": 70
+      },
+      {
+        "day": 84,
+        "before": 105,
+        "after": 111
+      },
+      {
+        "day": 85,
+        "before": 94,
+        "after": 97
+      },
+      {
+        "day": 86,
+        "before": 131,
+        "after": 137
+      },
+      {
+        "day": 87,
+        "before": 129,
+        "after": 134
+      },
+      {
+        "day": 88,
+        "before": 118,
+        "after": 122
+      },
+      {
+        "day": 89,
+        "before": 70,
+        "after": 72
+      },
+      {
+        "day": 90,
+        "before": 76,
+        "after": 80
+      },
+      {
+        "day": 91,
+        "before": 74,
+        "after": 76
+      },
+      {
+        "day": 92,
+        "before": 110,
+        "after": 115
+      },
+      {
+        "day": 93,
+        "before": 97,
+        "after": 100
+      },
+      {
+        "day": 94,
+        "before": 144,
+        "after": 148
+      },
+      {
+        "day": 95,
+        "before": 97,
+        "after": 99
+      },
+      {
+        "day": 96,
+        "before": 82,
+        "after": 85
+      },
+      {
+        "day": 97,
+        "before": 64,
+        "after": 67
+      },
+      {
+        "day": 98,
+        "before": 125,
+        "after": 131
+      },
+      {
+        "day": 99,
+        "before": 96,
+        "after": 98
+      },
+      {
+        "day": 100,
+        "before": 131,
+        "after": 135
+      },
+      {
+        "day": 101,
+        "before": 137,
+        "after": 141
+      },
+      {
+        "day": 102,
+        "before": 139,
+        "after": 146
+      },
+      {
+        "day": 103,
+        "before": 84,
+        "after": 87
+      },
+      {
+        "day": 104,
+        "before": 104,
+        "after": 107
+      },
+      {
+        "day": 105,
+        "before": 78,
+        "after": 80
+      },
+      {
+        "day": 106,
+        "before": 123,
+        "after": 127
+      },
+      {
+        "day": 107,
+        "before": 100,
+        "after": 102
+      },
+      {
+        "day": 108,
+        "before": 168,
+        "after": 173
+      },
+      {
+        "day": 109,
+        "before": 128,
+        "after": 130
+      },
+      {
+        "day": 110,
+        "before": 109,
+        "after": 113
+      },
+      {
+        "day": 111,
+        "before": 66,
+        "after": 68
+      },
+      {
+        "day": 112,
+        "before": 135,
+        "after": 139
+      },
+      {
+        "day": 113,
+        "before": 97,
+        "after": 99
+      },
+      {
+        "day": 114,
+        "before": 130,
+        "after": 134
+      },
+      {
+        "day": 115,
+        "before": 147,
+        "after": 149
+      },
+      {
+        "day": 116,
+        "before": 160,
+        "after": 165
+      },
+      {
+        "day": 117,
+        "before": 87,
+        "after": 91
+      },
+      {
+        "day": 118,
+        "before": 105,
+        "after": 110
+      },
+      {
+        "day": 119,
+        "before": 85,
+        "after": 87
+      },
+      {
+        "day": 120,
+        "before": 140,
+        "after": 144
+      },
+      {
+        "day": 121,
+        "before": 104,
+        "after": 106
+      },
+      {
+        "day": 122,
+        "before": 199,
+        "after": 207
+      },
+      {
+        "day": 123,
+        "before": 136,
+        "after": 137
+      },
+      {
+        "day": 124,
+        "before": 112,
+        "after": 118
+      },
+      {
+        "day": 125,
+        "before": 75,
+        "after": 78
+      },
+      {
+        "day": 126,
+        "before": 122,
+        "after": 125
+      },
+      {
+        "day": 127,
+        "before": 121,
+        "after": 122
+      },
+      {
+        "day": 128,
+        "before": 147,
+        "after": 157
+      },
+      {
+        "day": 129,
+        "before": 162,
+        "after": 167
+      },
+      {
+        "day": 130,
+        "before": 173,
+        "after": 175
+      },
+      {
+        "day": 131,
+        "before": 79,
+        "after": 82
+      },
+      {
+        "day": 132,
+        "before": 119,
+        "after": 125
+      },
+      {
+        "day": 133,
+        "before": 98,
+        "after": 100
+      },
+      {
+        "day": 134,
+        "before": 149,
+        "after": 156
+      },
+      {
+        "day": 135,
+        "before": 127,
+        "after": 131
+      },
+      {
+        "day": 136,
+        "before": 176,
+        "after": 177
+      },
+      {
+        "day": 137,
+        "before": 137,
+        "after": 141
+      },
+      {
+        "day": 138,
+        "before": 113,
+        "after": 119
+      },
+      {
+        "day": 139,
+        "before": 73,
+        "after": 76
+      },
+      {
+        "day": 140,
+        "before": 130,
+        "after": 139
+      },
+      {
+        "day": 141,
+        "before": 121,
+        "after": 125
+      },
+      {
+        "day": 142,
+        "before": 177,
+        "after": 188
+      },
+      {
+        "day": 143,
+        "before": 173,
+        "after": 174
+      },
+      {
+        "day": 144,
+        "before": 178,
+        "after": 183
+      },
+      {
+        "day": 145,
+        "before": 70,
+        "after": 73
+      },
+      {
+        "day": 146,
+        "before": 107,
+        "after": 113
+      },
+      {
+        "day": 147,
+        "before": 102,
+        "after": 107
+      },
+      {
+        "day": 148,
+        "before": 137,
+        "after": 146
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "messages.mail_delay",
+    "before": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2847,
+      "magnitude": 2847
+    },
+    "after": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2858,
+      "magnitude": 2858
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 81,
+        "before": 11,
+        "after": 13
+      },
+      {
+        "day": 91,
+        "before": 143,
+        "after": 144
+      },
+      {
+        "day": 101,
+        "before": 11,
+        "after": 12
+      },
+      {
+        "day": 111,
+        "before": 19,
+        "after": 21
+      },
+      {
+        "day": 121,
+        "before": 18,
+        "after": 20
+      },
+      {
+        "day": 131,
+        "before": 13,
+        "after": 14
+      },
+      {
+        "day": 141,
+        "before": 14,
+        "after": 16
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 14829,
+      "magnitude": 14829
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 15159,
+      "magnitude": 15159
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 46,
+        "before": 41,
+        "after": 44
+      },
+      {
+        "day": 47,
+        "before": 71,
+        "after": 77
+      },
+      {
+        "day": 48,
+        "before": 35,
+        "after": 38
+      },
+      {
+        "day": 49,
+        "before": 305,
+        "after": 311
+      },
+      {
+        "day": 50,
+        "before": 40,
+        "after": 46
+      },
+      {
+        "day": 53,
+        "before": 59,
+        "after": 63
+      },
+      {
+        "day": 54,
+        "before": 32,
+        "after": 36
+      },
+      {
+        "day": 58,
+        "before": 28,
+        "after": 29
+      },
+      {
+        "day": 61,
+        "before": 73,
+        "after": 72
+      },
+      {
+        "day": 76,
+        "before": 29,
+        "after": 30
+      },
+      {
+        "day": 77,
+        "before": 337,
+        "after": 343
+      },
+      {
+        "day": 78,
+        "before": 67,
+        "after": 70
+      },
+      {
+        "day": 79,
+        "before": 81,
+        "after": 87
+      },
+      {
+        "day": 80,
+        "before": 42,
+        "after": 45
+      },
+      {
+        "day": 81,
+        "before": 111,
+        "after": 120
+      },
+      {
+        "day": 82,
+        "before": 39,
+        "after": 42
+      },
+      {
+        "day": 83,
+        "before": 81,
+        "after": 87
+      },
+      {
+        "day": 84,
+        "before": 316,
+        "after": 319
+      },
+      {
+        "day": 85,
+        "before": 101,
+        "after": 107
+      },
+      {
+        "day": 86,
+        "before": 42,
+        "after": 45
+      },
+      {
+        "day": 87,
+        "before": 86,
+        "after": 92
+      },
+      {
+        "day": 88,
+        "before": 36,
+        "after": 38
+      },
+      {
+        "day": 89,
+        "before": 66,
+        "after": 70
+      },
+      {
+        "day": 90,
+        "before": 36,
+        "after": 38
+      },
+      {
+        "day": 91,
+        "before": 372,
+        "after": 378
+      },
+      {
+        "day": 92,
+        "before": 52,
+        "after": 55
+      },
+      {
+        "day": 93,
+        "before": 72,
+        "after": 76
+      },
+      {
+        "day": 94,
+        "before": 34,
+        "after": 36
+      },
+      {
+        "day": 95,
+        "before": 67,
+        "after": 70
+      },
+      {
+        "day": 96,
+        "before": 39,
+        "after": 41
+      },
+      {
+        "day": 97,
+        "before": 95,
+        "after": 99
+      },
+      {
+        "day": 98,
+        "before": 343,
+        "after": 345
+      },
+      {
+        "day": 99,
+        "before": 101,
+        "after": 105
+      },
+      {
+        "day": 100,
+        "before": 49,
+        "after": 53
+      },
+      {
+        "day": 101,
+        "before": 126,
+        "after": 135
+      },
+      {
+        "day": 102,
+        "before": 42,
+        "after": 45
+      },
+      {
+        "day": 103,
+        "before": 89,
+        "after": 92
+      },
+      {
+        "day": 104,
+        "before": 44,
+        "after": 46
+      },
+      {
+        "day": 105,
+        "before": 390,
+        "after": 394
+      },
+      {
+        "day": 106,
+        "before": 63,
+        "after": 65
+      },
+      {
+        "day": 107,
+        "before": 90,
+        "after": 94
+      },
+      {
+        "day": 108,
+        "before": 44,
+        "after": 46
+      },
+      {
+        "day": 109,
+        "before": 86,
+        "after": 90
+      },
+      {
+        "day": 110,
+        "before": 44,
+        "after": 46
+      },
+      {
+        "day": 111,
+        "before": 129,
+        "after": 135
+      },
+      {
+        "day": 112,
+        "before": 352,
+        "after": 354
+      },
+      {
+        "day": 113,
+        "before": 107,
+        "after": 111
+      },
+      {
+        "day": 114,
+        "before": 48,
+        "after": 50
+      },
+      {
+        "day": 115,
+        "before": 86,
+        "after": 90
+      },
+      {
+        "day": 116,
+        "before": 50,
+        "after": 52
+      },
+      {
+        "day": 117,
+        "before": 109,
+        "after": 113
+      },
+      {
+        "day": 118,
+        "before": 45,
+        "after": 47
+      },
+      {
+        "day": 119,
+        "before": 393,
+        "after": 397
+      },
+      {
+        "day": 120,
+        "before": 82,
+        "after": 84
+      },
+      {
+        "day": 121,
+        "before": 138,
+        "after": 147
+      },
+      {
+        "day": 122,
+        "before": 54,
+        "after": 59
+      },
+      {
+        "day": 123,
+        "before": 97,
+        "after": 101
+      },
+      {
+        "day": 124,
+        "before": 48,
+        "after": 51
+      },
+      {
+        "day": 125,
+        "before": 101,
+        "after": 105
+      },
+      {
+        "day": 126,
+        "before": 354,
+        "after": 356
+      },
+      {
+        "day": 127,
+        "before": 127,
+        "after": 133
+      },
+      {
+        "day": 128,
+        "before": 59,
+        "after": 64
+      },
+      {
+        "day": 129,
+        "before": 104,
+        "after": 112
+      },
+      {
+        "day": 130,
+        "before": 54,
+        "after": 53
+      },
+      {
+        "day": 131,
+        "before": 142,
+        "after": 151
+      },
+      {
+        "day": 132,
+        "before": 50,
+        "after": 52
+      },
+      {
+        "day": 133,
+        "before": 404,
+        "after": 409
+      },
+      {
+        "day": 134,
+        "before": 76,
+        "after": 80
+      },
+      {
+        "day": 135,
+        "before": 107,
+        "after": 114
+      },
+      {
+        "day": 136,
+        "before": 59,
+        "after": 56
+      },
+      {
+        "day": 137,
+        "before": 96,
+        "after": 103
+      },
+      {
+        "day": 138,
+        "before": 49,
+        "after": 53
+      },
+      {
+        "day": 139,
+        "before": 93,
+        "after": 101
+      },
+      {
+        "day": 140,
+        "before": 371,
+        "after": 375
+      },
+      {
+        "day": 141,
+        "before": 180,
+        "after": 192
+      },
+      {
+        "day": 142,
+        "before": 70,
+        "after": 75
+      },
+      {
+        "day": 143,
+        "before": 114,
+        "after": 118
+      },
+      {
+        "day": 144,
+        "before": 48,
+        "after": 49
+      },
+      {
+        "day": 145,
+        "before": 92,
+        "after": 98
+      },
+      {
+        "day": 146,
+        "before": 59,
+        "after": 62
+      },
+      {
+        "day": 147,
+        "before": 402,
+        "after": 408
+      },
+      {
+        "day": 148,
+        "before": 73,
+        "after": 78
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "messages.special_messenger",
+    "before": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "movement.arrived",
+    "before": {
+      "mechanic": "movement.arrived",
+      "fires": 598,
+      "magnitude": 598
+    },
+    "after": {
+      "mechanic": "movement.arrived",
+      "fires": 702,
+      "magnitude": 702
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 48,
+        "before": 8,
+        "after": 10
+      },
+      {
+        "day": 49,
+        "before": 19,
+        "after": 20
+      },
+      {
+        "day": 51,
+        "before": 11,
+        "after": 14
+      },
+      {
+        "day": 52,
+        "before": 13,
+        "after": 14
+      },
+      {
+        "day": 53,
+        "before": 15,
+        "after": 17
+      },
+      {
+        "day": 54,
+        "before": 16,
+        "after": 18
+      },
+      {
+        "day": 55,
+        "before": 10,
+        "after": 15
+      },
+      {
+        "day": 56,
+        "before": 11,
+        "after": 18
+      },
+      {
+        "day": 57,
+        "before": 11,
+        "after": 17
+      },
+      {
+        "day": 58,
+        "before": 6,
+        "after": 14
+      },
+      {
+        "day": 59,
+        "before": 7,
+        "after": 11
+      },
+      {
+        "day": 60,
+        "before": 6,
+        "after": 11
+      },
+      {
+        "day": 61,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 62,
+        "before": 2,
+        "after": 4
+      },
+      {
+        "day": 63,
+        "before": 2,
+        "after": 4
+      },
+      {
+        "day": 65,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 66,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 67,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 68,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 69,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 70,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 71,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 72,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 73,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 74,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 75,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 76,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 77,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 89,
+        "before": 21,
+        "after": 23
+      },
+      {
+        "day": 92,
+        "before": 22,
+        "after": 24
+      },
+      {
+        "day": 93,
+        "before": 23,
+        "after": 25
+      },
+      {
+        "day": 94,
+        "before": 22,
+        "after": 24
+      },
+      {
+        "day": 95,
+        "before": 21,
+        "after": 23
+      },
+      {
+        "day": 96,
+        "before": 6,
+        "after": 8
+      },
+      {
+        "day": 97,
+        "before": 6,
+        "after": 8
+      },
+      {
+        "day": 98,
+        "before": 6,
+        "after": 8
+      },
+      {
+        "day": 123,
+        "before": 3,
+        "after": 2
+      },
+      {
+        "day": 128,
+        "before": 8,
+        "after": 9
+      },
+      {
+        "day": 130,
+        "before": 10,
+        "after": 11
+      },
+      {
+        "day": 131,
+        "before": 6,
+        "after": 7
+      },
+      {
+        "day": 133,
+        "before": 9,
+        "after": 10
+      },
+      {
+        "day": 134,
+        "before": 13,
+        "after": 15
+      },
+      {
+        "day": 135,
+        "before": 9,
+        "after": 10
+      },
+      {
+        "day": 136,
+        "before": 13,
+        "after": 14
+      },
+      {
+        "day": 137,
+        "before": 12,
+        "after": 13
+      },
+      {
+        "day": 139,
+        "before": 14,
+        "after": 15
+      },
+      {
+        "day": 140,
+        "before": 38,
+        "after": 43
+      },
+      {
+        "day": 141,
+        "before": 9,
+        "after": 11
+      },
+      {
+        "day": 142,
+        "before": 8,
+        "after": 10
+      },
+      {
+        "day": 143,
+        "before": 9,
+        "after": 10
+      },
+      {
+        "day": 144,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 145,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 146,
+        "before": 9,
+        "after": 11
+      },
+      {
+        "day": 147,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "movement.join_blocked",
+    "before": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "movement.joined",
+    "before": {
+      "mechanic": "movement.joined",
+      "fires": 58,
+      "magnitude": 58
+    },
+    "after": {
+      "mechanic": "movement.joined",
+      "fires": 66,
+      "magnitude": 66
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 58,
+        "before": 5,
+        "after": 4
+      },
+      {
+        "day": 59,
+        "before": 0,
+        "after": 3
+      },
+      {
+        "day": 61,
+        "before": 3,
+        "after": 6
+      },
+      {
+        "day": 64,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 78,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 99,
+        "before": 5,
+        "after": 7
+      },
+      {
+        "day": 140,
+        "before": 3,
+        "after": 2
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "before": {
+      "mechanic": "movement.leg_started",
+      "fires": 314,
+      "magnitude": 314
+    },
+    "after": {
+      "mechanic": "movement.leg_started",
+      "fires": 355,
+      "magnitude": 355
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 47,
+        "before": 9,
+        "after": 11
+      },
+      {
+        "day": 49,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 50,
+        "before": 8,
+        "after": 11
+      },
+      {
+        "day": 52,
+        "before": 6,
+        "after": 7
+      },
+      {
+        "day": 53,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 54,
+        "before": 8,
+        "after": 11
+      },
+      {
+        "day": 55,
+        "before": 6,
+        "after": 7
+      },
+      {
+        "day": 56,
+        "before": 5,
+        "after": 7
+      },
+      {
+        "day": 57,
+        "before": 6,
+        "after": 9
+      },
+      {
+        "day": 58,
+        "before": 5,
+        "after": 8
+      },
+      {
+        "day": 59,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 61,
+        "before": 3,
+        "after": 4
+      },
+      {
+        "day": 63,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 64,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 66,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 67,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 68,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 69,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 70,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 71,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 72,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 73,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 74,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 75,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 76,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 77,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 122,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 123,
+        "before": 3,
+        "after": 2
+      },
+      {
+        "day": 124,
+        "before": 2,
+        "after": 1
+      },
+      {
+        "day": 128,
+        "before": 7,
+        "after": 6
+      },
+      {
+        "day": 130,
+        "before": 9,
+        "after": 8
+      },
+      {
+        "day": 133,
+        "before": 8,
+        "after": 7
+      },
+      {
+        "day": 135,
+        "before": 7,
+        "after": 8
+      },
+      {
+        "day": 140,
+        "before": 6,
+        "after": 7
+      },
+      {
+        "day": 141,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 142,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 143,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 145,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 146,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 147,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 148,
+        "before": 2,
+        "after": 3
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "operations.ended",
+    "before": {
+      "mechanic": "operations.ended",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "operations.ended",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.landed",
+    "before": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.opened",
+    "before": {
+      "mechanic": "operations.opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "operations.opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "before": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.stage",
+    "before": {
+      "mechanic": "operations.stage",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "after": {
+      "mechanic": "operations.stage",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_answered",
+    "before": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_refused",
+    "before": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_sent",
+    "before": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.works",
+    "before": {
+      "mechanic": "operations.works",
+      "fires": 13,
+      "magnitude": 650
+    },
+    "after": {
+      "mechanic": "operations.works",
+      "fires": 13,
+      "magnitude": 650
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.bypassed",
+    "before": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.conflict",
+    "before": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.obeyed",
+    "before": {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relay_held",
+    "before": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relay_objected",
+    "before": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relayed",
+    "before": {
+      "mechanic": "orders.relayed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "orders.relayed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.responses_pruned",
+    "before": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 22,
+      "magnitude": 54
+    },
+    "after": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 23,
+      "magnitude": 60
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 111,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "orders.returned",
+    "before": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.grievances_faded",
+    "before": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "after": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.promise_broken",
+    "before": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.promise_kept",
+    "before": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.resigned",
+    "before": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "after": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.stayed",
+    "before": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.candidates",
+    "before": {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    "after": {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.searches",
+    "before": {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 36
+    },
+    "after": {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 36
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.caution",
+    "before": {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.coordination",
+    "before": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.dependence",
+    "before": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.exposure",
+    "before": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.force_ratio",
+    "before": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.glory",
+    "before": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.goal_fit",
+    "before": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.haste",
+    "before": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.notes",
+    "before": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.supply",
+    "before": {
+      "mechanic": "planner.term.supply",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.supply",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.time",
+    "before": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.approved",
+    "before": {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.chosen",
+    "before": {
+      "mechanic": "plans.chosen",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.chosen",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.discretion_exercised",
+    "before": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.draft_deferred",
+    "before": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.drafted",
+    "before": {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_answered",
+    "before": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_invalid",
+    "before": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_objected",
+    "before": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_received",
+    "before": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_shirked",
+    "before": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.goal_proposed",
+    "before": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.goal_reached",
+    "before": {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.goal_set",
+    "before": {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.released",
+    "before": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.sent_back",
+    "before": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.submitted",
+    "before": {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.went_ahead",
+    "before": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.act",
+    "before": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.adjourned",
+    "before": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.answered",
+    "before": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.called",
+    "before": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.framing",
+    "before": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.front_page",
+    "before": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "after": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.met",
+    "before": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.opened",
+    "before": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.press_silent",
+    "before": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.refused",
+    "before": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.support",
+    "before": {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "after": {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.answered",
+    "before": {
+      "mechanic": "recruitment.answered",
+      "fires": 74,
+      "magnitude": 74
+    },
+    "after": {
+      "mechanic": "recruitment.answered",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 41,
+        "before": 13,
+        "after": 16
+      },
+      {
+        "day": 48,
+        "before": 2,
+        "after": 4
+      },
+      {
+        "day": 71,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 72,
+        "before": 6,
+        "after": 8
+      },
+      {
+        "day": 98,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 116,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 117,
+        "before": 6,
+        "after": 7
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "recruitment.called",
+    "before": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "after": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.disbanded",
+    "before": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 136,
+        "before": 19,
+        "after": 24
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "recruitment.lapsed",
+    "before": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.men",
+    "before": {
+      "mechanic": "recruitment.men",
+      "fires": 51,
+      "magnitude": 193700
+    },
+    "after": {
+      "mechanic": "recruitment.men",
+      "fires": 61,
+      "magnitude": 234700
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 46,
+        "before": 13,
+        "after": 16
+      },
+      {
+        "day": 53,
+        "before": 2,
+        "after": 4
+      },
+      {
+        "day": 76,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 77,
+        "before": 6,
+        "after": 8
+      },
+      {
+        "day": 103,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 121,
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "recruitment.muster_blocked",
+    "before": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.mustered",
+    "before": {
+      "mechanic": "recruitment.mustered",
+      "fires": 58,
+      "magnitude": 58
+    },
+    "after": {
+      "mechanic": "recruitment.mustered",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 46,
+        "before": 13,
+        "after": 16
+      },
+      {
+        "day": 53,
+        "before": 2,
+        "after": 4
+      },
+      {
+        "day": 76,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 77,
+        "before": 6,
+        "after": 8
+      },
+      {
+        "day": 103,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 121,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 122,
+        "before": 6,
+        "after": 7
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "recruitment.refused",
+    "before": {
+      "mechanic": "recruitment.refused",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "recruitment.refused",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 41,
+        "before": 5,
+        "after": 2
+      },
+      {
+        "day": 48,
+        "before": 2,
+        "after": 0
+      },
+      {
+        "day": 71,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 72,
+        "before": 2,
+        "after": 0
+      },
+      {
+        "day": 98,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 116,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 117,
+        "before": 4,
+        "after": 3
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "recruitment.renewed",
+    "before": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.slow_walked",
+    "before": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "regions.reached_lines",
+    "before": {
+      "mechanic": "regions.reached_lines",
+      "fires": 261,
+      "magnitude": 261
+    },
+    "after": {
+      "mechanic": "regions.reached_lines",
+      "fires": 272,
+      "magnitude": 272
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 78,
+        "before": 11,
+        "after": 12
+      },
+      {
+        "day": 85,
+        "before": 11,
+        "after": 12
+      },
+      {
+        "day": 92,
+        "before": 12,
+        "after": 13
+      },
+      {
+        "day": 99,
+        "before": 11,
+        "after": 12
+      },
+      {
+        "day": 106,
+        "before": 12,
+        "after": 13
+      },
+      {
+        "day": 113,
+        "before": 12,
+        "after": 13
+      },
+      {
+        "day": 120,
+        "before": 12,
+        "after": 13
+      },
+      {
+        "day": 127,
+        "before": 12,
+        "after": 13
+      },
+      {
+        "day": 134,
+        "before": 12,
+        "after": 13
+      },
+      {
+        "day": 141,
+        "before": 12,
+        "after": 13
+      },
+      {
+        "day": 148,
+        "before": 13,
+        "after": 14
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "regions.self_emancipation",
+    "before": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3104,
+      "magnitude": 3104
+    },
+    "after": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3104,
+      "magnitude": 3104
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "before": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 42,
+      "magnitude": 42
+    },
+    "after": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 42,
+      "magnitude": 42
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.casualty_return",
+    "before": {
+      "mechanic": "reports.casualty_return",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "reports.casualty_return",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "before": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.filtered",
+    "before": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.governor_wire",
+    "before": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.observer_letter",
+    "before": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.pocket",
+    "before": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.trimmed",
+    "before": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_refilled",
+    "before": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "after": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_refused",
+    "before": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_spent",
+    "before": {
+      "mechanic": "seats.attention_spent",
+      "fires": 164,
+      "magnitude": 164
+    },
+    "after": {
+      "mechanic": "seats.attention_spent",
+      "fires": 171,
+      "magnitude": 171
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 50,
+        "before": 0,
+        "after": 3
+      },
+      {
+        "day": 54,
+        "before": 3,
+        "after": 5
+      },
+      {
+        "day": 87,
+        "before": 9,
+        "after": 10
+      },
+      {
+        "day": 122,
+        "before": 1,
+        "after": 2
+      },
+      {
+        "day": 123,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 128,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 129,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 130,
+        "before": 2,
+        "after": 0
+      },
+      {
+        "day": 134,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 135,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 136,
+        "before": 4,
+        "after": 2
+      },
+      {
+        "day": 141,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 142,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 143,
+        "before": 3,
+        "after": 2
+      },
+      {
+        "day": 144,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 148,
+        "before": 4,
+        "after": 5
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "before": {
+      "mechanic": "seats.battle_orders",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "seats.battle_orders",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.choices",
+    "before": {
+      "mechanic": "seats.choices",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "seats.choices",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.defaulted",
+    "before": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.initiative",
+    "before": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.decided",
+    "before": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "after": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.delegated",
+    "before": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.fired",
+    "before": {
+      "mechanic": "situations.fired",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "after": {
+      "mechanic": "situations.fired",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.lapsed",
+    "before": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.notice_reports",
+    "before": {
+      "mechanic": "situations.notice_reports",
+      "fires": 70,
+      "magnitude": 70
+    },
+    "after": {
+      "mechanic": "situations.notice_reports",
+      "fires": 70,
+      "magnitude": 70
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.noticed",
+    "before": {
+      "mechanic": "situations.noticed",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "after": {
+      "mechanic": "situations.noticed",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.options_changed",
+    "before": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.orders",
+    "before": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "after": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.policy",
+    "before": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "after": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.policy_unpaid",
+    "before": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.proposals",
+    "before": {
+      "mechanic": "situations.proposals",
+      "fires": 73,
+      "magnitude": 637
+    },
+    "after": {
+      "mechanic": "situations.proposals",
+      "fires": 73,
+      "magnitude": 637
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.resurfaced",
+    "before": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.staff_lines",
+    "before": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "after": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.surfaced",
+    "before": {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "after": {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.waiting",
+    "before": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.answered",
+    "before": {
+      "mechanic": "verbs.answered",
+      "fires": 136,
+      "magnitude": 136
+    },
+    "after": {
+      "mechanic": "verbs.answered",
+      "fires": 143,
+      "magnitude": 143
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 50,
+        "before": 0,
+        "after": 3
+      },
+      {
+        "day": 54,
+        "before": 3,
+        "after": 5
+      },
+      {
+        "day": 87,
+        "before": 9,
+        "after": 10
+      },
+      {
+        "day": 122,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 123,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 128,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 129,
+        "before": 3,
+        "after": 4
+      },
+      {
+        "day": 130,
+        "before": 2,
+        "after": 0
+      },
+      {
+        "day": 134,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 135,
+        "before": 5,
+        "after": 6
+      },
+      {
+        "day": 136,
+        "before": 4,
+        "after": 2
+      },
+      {
+        "day": 141,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 142,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 143,
+        "before": 3,
+        "after": 2
+      },
+      {
+        "day": 144,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 148,
+        "before": 4,
+        "after": 5
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "verbs.audience",
+    "before": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.consulted",
+    "before": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.declined",
+    "before": {
+      "mechanic": "verbs.declined",
+      "fires": 31,
+      "magnitude": 31
+    },
+    "after": {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "changed": true,
+    "changedDays": [
+      {
+        "day": 128,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 129,
+        "before": 2,
+        "after": 3
+      },
+      {
+        "day": 130,
+        "before": 2,
+        "after": 0
+      },
+      {
+        "day": 134,
+        "before": 3,
+        "after": 4
+      },
+      {
+        "day": 135,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 136,
+        "before": 4,
+        "after": 2
+      },
+      {
+        "day": 141,
+        "before": 4,
+        "after": 5
+      },
+      {
+        "day": 142,
+        "before": 3,
+        "after": 4
+      },
+      {
+        "day": 143,
+        "before": 3,
+        "after": 2
+      },
+      {
+        "day": 144,
+        "before": 1,
+        "after": 0
+      },
+      {
+        "day": 148,
+        "before": 3,
+        "after": 4
+      }
+    ],
+    "cause": "0119 makes temperament inapplicable to troop calls at every chain reading, removing only that contribution and its rash/timid reasons. S108 links existing held-value offences to sourced received clauses, projecting qualified undertakings by 0118 while keeping their value costs. Changed call willingness/rungs and resulting recruitment, relay and later operational effects propagate downstream. Added immutable clause/link records also change canonical hashes without changing action. [I] Mechanism-level causal path, not an isolated additive experiment. All before/after fields, call packets, responses, events and strength origins are retained; traits, weights, thresholds, quotas and original strength are unchanged."
+  },
+  {
+    "mechanic": "verbs.in_washington",
+    "before": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changed": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  }
+]

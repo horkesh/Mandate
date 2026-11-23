@@ -21,8 +21,10 @@ export interface CallProfile {
   readonly sourceProfile: string;
   readonly honours: readonly string[];
   readonly offends: readonly string[];
+  /** Sourced links for either value array. An absent link leaves the value on the whole paper. */
+  readonly valueClauseLinks?: readonly CallValueClauseLink[];
   readonly callProvenance: readonly { readonly source: string; readonly page: number }[];
-  readonly conditions: readonly { readonly kind: 'service_term' | 'organisation' | 'appointments' | 'arms_equipment' | 'destination' | 'other_conditions'; readonly clauseText: string }[];
+  readonly conditions: readonly { readonly kind: 'service_term' | 'organisation' | 'appointments' | 'arms_equipment' | 'destination' | 'other_conditions' | 'purpose' | 'authority'; readonly clauseText: string }[];
   readonly materialDemand: readonly {
     readonly resource: 'arms' | 'equipment' | 'horses' | 'clothing' | 'transport' | 'subsistence';
     readonly obligation: 'required' | 'as_practicable' | 'not_required' | 'unspecified';
@@ -34,10 +36,37 @@ export interface CallProfile {
   readonly limits: string;
 }
 
+/** Immutable issuer metadata; it neither cancels the value's cost nor asserts an actor's protest. */
+export interface CallValueClauseLink {
+  readonly linkValue: string;
+  readonly linkClause: string;
+  readonly linkCites: readonly (readonly [source: string, page: number])[];
+  readonly linkRationale: string;
+}
+
+export function callValueLinkProblems(profile: CallProfile): string[] {
+  const problems: string[] = [];
+  const ids = new Set(['course', 'purpose', 'service_term', 'organisation', 'muster',
+    ...profile.conditions.map((c, i) => `condition:${c.kind}:${i}`),
+    ...profile.materialDemand.map((d, i) => `demand:${d.resource}:${i}`)]);
+  const values = new Set([...profile.honours, ...profile.offends]);
+  const seen = new Set<string>();
+  for (const link of profile.valueClauseLinks ?? []) {
+    if (!ids.has(link.linkClause)) problems.push(`unknown value clause ${link.linkClause}`);
+    if (!values.has(link.linkValue)) problems.push(`unassigned linked value ${link.linkValue}`);
+    const key = `${link.linkValue}|${link.linkClause}`;
+    if (seen.has(key)) problems.push(`duplicate value clause link ${key}`);
+    seen.add(key);
+    if (!link.linkRationale.trim()) problems.push(`value clause ${key} needs a rationale`);
+    if (!link.linkCites.length || link.linkCites.some(([source, page]) => !source.trim() || !Number.isSafeInteger(page) || page < 1)) problems.push(`value clause ${key} needs printed-page provenance`);
+  }
+  return problems;
+}
+
 export interface RecruitmentRules {
   /** Model planning size [I], never a historical norm. At most four regiments. */
   readonly planningRegiments?: number;
-  /** How a governor reads a call: its boldness and the values it honours and offends (pack data). */
+  /** Legacy boldness is retained for pack compatibility but is inapplicable to calls under 0119. Values remain pack data. */
   readonly callTerms: { readonly boldness: number; readonly honours: readonly string[]; readonly offends: readonly string[] };
   /** Per-paper values and unscored clauses. Absence of a profile explicitly uses callTerms. */
   readonly callProfiles?: readonly CallProfile[];
@@ -119,6 +148,7 @@ export function recruitmentRuleProblems(r: RecruitmentRules): string[] {
   whole(problems, 'recruitment rule callTerms.boldness', r.callTerms.boldness, 0, 1000);
   const profiles = new Set<string>();
   for (const p of r.callProfiles ?? []) {
+    problems.push(...callValueLinkProblems(p).map(problem => `recruitment callProfiles.${p.id}: ${problem}`));
     if (!/^[a-z][a-z0-9_]*$/.test(p.id) || profiles.has(p.id)) problems.push(`recruitment callProfiles: invalid or duplicate id ${p.id}`);
     profiles.add(p.id);
     if (p.callProvenance.length === 0) problems.push(`recruitment callProfiles.${p.id}: callProvenance with printed pages is required`);
@@ -158,7 +188,7 @@ export function selfEmancipationRuleProblems(r: SelfEmancipationRules): string[]
 export function callTerms(rules: RecruitmentRules, profile?: CallProfile): DirectiveTerms {
   const values = profile ?? rules.callTerms;
   // No complete, dated means balance: material clauses must not invent a capacity term.
-  return { boldness: rules.callTerms.boldness, honours: values.honours as DirectiveTerms['honours'], offends: values.offends as DirectiveTerms['offends'], required: 0 };
+  return { boldness: null, honours: values.honours as DirectiveTerms['honours'], offends: values.offends as DirectiveTerms['offends'], required: 0 };
 }
 
 const MATERIAL_SUBJECTS: Readonly<Record<CallProfile['materialDemand'][number]['resource'], ReservationSubject>> = {
@@ -188,5 +218,7 @@ export function callDirective(rules: RecruitmentRules, call: CallSpec): Directiv
     clauseId: `demand:${demand.resource}:${index}`, clauseSubject: MATERIAL_SUBJECTS[demand.resource],
     clauseWording: demand.demandText, clauseObligation: demand.obligation, ...provenance,
   });
-  return { ...callTerms(rules, profile), clauses };
+  return { ...callTerms(rules, profile), clauses,
+    ...(profile?.valueClauseLinks === undefined ? {} : { valueClauseLinks: profile.valueClauseLinks.map(link => [link.linkValue, link.linkClause] as const) }),
+  };
 }

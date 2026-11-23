@@ -1,0 +1,1211 @@
+{
+  "testbed": [],
+  "union-1861": [
+    {
+      "day": 128,
+      "before": [
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.128.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.128.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "event": "objected",
+          "person": "brown_joseph_e",
+          "post": "st_gov_georgia",
+          "message": "m.128.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "brown_joseph_e",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 22,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.128.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.128.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    },
+    {
+      "day": 129,
+      "before": [
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.129.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.129.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "event": "objected",
+          "person": "brown_joseph_e",
+          "post": "st_gov_georgia",
+          "message": "m.129.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "brown_joseph_e",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 22,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.129.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.129.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    },
+    {
+      "day": 130,
+      "before": [
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.130.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.130.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    },
+    {
+      "day": 134,
+      "before": [
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.134.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.134.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.134.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "event": "objected",
+          "person": "brown_joseph_e",
+          "post": "st_gov_georgia",
+          "message": "m.134.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "brown_joseph_e",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 22,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.134.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.134.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.134.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    },
+    {
+      "day": 135,
+      "before": [
+        {
+          "event": "objected",
+          "person": "ellis_john_w",
+          "post": "st_gov_north_carolina",
+          "message": "m.135.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "ellis_john_w",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 60,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.135.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.135.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.135.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "event": "objected",
+          "person": "brown_joseph_e",
+          "post": "st_gov_georgia",
+          "message": "m.135.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "brown_joseph_e",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 22,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "ellis_john_w",
+          "post": "st_gov_north_carolina",
+          "message": "m.135.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "ellis_john_w",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 60,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.135.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.135.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.135.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    },
+    {
+      "day": 136,
+      "before": [
+        {
+          "event": "objected",
+          "person": "ellis_john_w",
+          "post": "st_gov_north_carolina",
+          "message": "m.136.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "ellis_john_w",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 60,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.136.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.136.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.136.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "event": "objected",
+          "person": "brown_joseph_e",
+          "post": "st_gov_georgia",
+          "message": "m.136.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "brown_joseph_e",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 22,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.136.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    },
+    {
+      "day": 141,
+      "before": [
+        {
+          "event": "relayed",
+          "person": "cooper_samuel",
+          "post": "cs_war_adjutant_inspector_general",
+          "message": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 32,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "ellis_john_w",
+          "post": "st_gov_north_carolina",
+          "message": "m.141.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "ellis_john_w",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 60,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.141.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.141.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.141.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "event": "objected",
+          "person": "brown_joseph_e",
+          "post": "st_gov_georgia",
+          "message": "m.141.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "brown_joseph_e",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 22,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "relayed",
+          "person": "cooper_samuel",
+          "post": "cs_war_adjutant_inspector_general",
+          "message": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+          "terms": [
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "values"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "regard"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 32,
+              "termRule": "deterrence"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "capacity"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "disposition"
+            },
+            {
+              "termKind": "relay_term",
+              "termPerson": "cooper_samuel",
+              "termPost": "cs_war_adjutant_inspector_general",
+              "termRegion": null,
+              "termValue": 0,
+              "termRule": "grievances"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "ellis_john_w",
+          "post": "st_gov_north_carolina",
+          "message": "m.141.davis_jefferson.ellis_john_w.verb.transfer.st_gov_north_carolina",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "ellis_john_w",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 60,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.141.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.141.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.141.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    },
+    {
+      "day": 142,
+      "before": [
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.142.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.142.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.142.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "event": "objected",
+          "person": "brown_joseph_e",
+          "post": "st_gov_georgia",
+          "message": "m.142.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "brown_joseph_e",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 22,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.142.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.142.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.142.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    },
+    {
+      "day": 143,
+      "before": [
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.143.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.143.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.143.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "event": "objected",
+          "person": "brown_joseph_e",
+          "post": "st_gov_georgia",
+          "message": "m.143.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "brown_joseph_e",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 22,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.143.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    },
+    {
+      "day": 144,
+      "before": [
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.144.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    },
+    {
+      "day": 148,
+      "before": [
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.148.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.148.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.148.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "event": "objected",
+          "person": "brown_joseph_e",
+          "post": "st_gov_georgia",
+          "message": "m.148.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "brown_joseph_e",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 22,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "harris_isham_g",
+          "post": "st_gov_tennessee",
+          "message": "m.148.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "harris_isham_g",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "moore_andrew_b",
+          "post": "st_gov_alabama",
+          "message": "m.148.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "moore_andrew_b",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        },
+        {
+          "event": "objected",
+          "person": "pettus_john_j",
+          "post": "st_gov_mississippi",
+          "message": "m.148.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+          "terms": [
+            {
+              "termKind": "relay_objection",
+              "termPerson": "pettus_john_j",
+              "termPost": null,
+              "termRegion": null,
+              "termValue": 13,
+              "termRule": "comply"
+            }
+          ]
+        }
+      ],
+      "cause": "Changed call actions and immutable paper records propagate through ordinary recruitment, message and operation owners [I]; no isolated additive attribution."
+    }
+  ]
+}

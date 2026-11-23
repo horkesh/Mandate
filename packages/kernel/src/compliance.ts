@@ -169,12 +169,13 @@ export function resolveDirective(
   // the directive is a plan (lane 0.9 finding 2), else against his temperament.
   // 0113: unknown boldness makes no claim about his preferred action. Repeat the stated order/plan in a
   // counterproposal and read its resource condition on that basis, so neither leaks the unsupported draw.
-  const knownBoldness = proxy.evidence?.boldness !== false;
-  const boldness = knownBoldness ? proxy.boldness : terms.ownBest ?? terms.boldness;
+  // 0119: null is an inapplicable term, including for relays; never substitute a draw or a neutral 500.
+  const knownBoldness = terms.boldness !== null && proxy.evidence?.boldness !== false;
+  const boldness = terms.boldness === null ? null : knownBoldness ? proxy.boldness : terms.ownBest ?? terms.boldness;
   const reference = terms.ownBest ?? boldness;
-  const boldnessGap = knownBoldness ? Math.abs(terms.boldness - reference) : 0;
+  const boldnessGap = knownBoldness && terms.boldness !== null && reference !== null ? Math.abs(terms.boldness - reference) : 0;
   const temperament = 0 - scale(boldnessGap, rules.temperamentWeight);
-  if (knownBoldness && boldnessGap >= rules.temperamentReasonAt) {
+  if (knownBoldness && terms.boldness !== null && reference !== null && boldnessGap >= rules.temperamentReasonAt) {
     reasons.push(
       terms.boldness > reference
         ? { kind: 'too_rash', gap: boldnessGap }
@@ -308,7 +309,7 @@ export function resolveDirective(
   const conditions: ResponseCondition[] = [];
   if (actual !== 'refuse' && actual !== 'object') {
     // A shortfall past the share a man of his boldness tolerates: "move when reinforced" (lane 0.9 finding 8).
-    const tolerated = rules.reinforceShareTimid + scale(boldness, Math.max(0, rules.reinforceShareBold - rules.reinforceShareTimid));
+    const tolerated = boldness === null ? 0 : rules.reinforceShareTimid + scale(boldness, Math.max(0, rules.reinforceShareBold - rules.reinforceShareTimid));
     if (shortfall > 0 && shortfall * 1000 > tolerated * terms.required) conditions.push({ kind: 'when_reinforced', shortfall });
     const promised = new Set(context.supportPromised ?? []);
     const needs = [...(terms.support ?? [])].sort((a, b) => strictCompare(a.supportKind, b.supportKind) || strictCompare(a.supportFrom ?? '', b.supportFrom ?? ''));
@@ -414,7 +415,7 @@ function validate(proxy: ProxyProfile, terms: DirectiveTerms, context: CommandCo
   assertPermille(proxy.candour, 'proxy.candour');
   assertPermille(proxy.standing, 'proxy.standing');
   assertSignedPermille(proxy.regard, 'proxy.regard');
-  assertPermille(terms.boldness, 'terms.boldness');
+  if (terms.boldness !== null) assertPermille(terms.boldness, 'terms.boldness');
   assertPermille(terms.required, 'terms.required');
   if (terms.ownBest !== undefined) assertPermille(terms.ownBest, 'terms.ownBest');
   if (terms.departure !== undefined) assertPermille(terms.departure, 'terms.departure');

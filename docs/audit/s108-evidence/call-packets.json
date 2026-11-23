@@ -1,0 +1,1426 @@
+{
+  "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "us_apr15_maryland",
+        "sourceProfile": "US-A15",
+        "honours": [
+          "union",
+          "order"
+        ],
+        "offends": [
+          "state_autonomy"
+        ],
+        "valueClauseLinks": [
+          {
+            "linkValue": "union",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "order",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:purpose:7",
+            "linkCites": [
+              [
+                "OR-III-I",
+                68
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-III-I",
+            "page": 67
+          },
+          {
+            "source": "OR-III-I",
+            "page": 68
+          },
+          {
+            "source": "OR-III-I",
+            "page": 69
+          },
+          {
+            "source": "OR-III-I",
+            "page": 76
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "Three months unless sooner discharged."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Detached militia as infantry or foot riflemen; April16 plan gives ten-company regiments, brigades4+regiments, divisions2+brigades."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "Call and April16 organisation sheet do not specify appointment authority. Do not retrofit May4 volunteer governor-appointment plan onto this militia call."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Frederick City/Baltimore"
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Immediate detachment; governor gives expected rendezvous date; US officer musters/oath every officer/man; enlisted age18-45 and physical strength. Proclamation orders dispersal in20days, avoids devastation/interference with property/disturbance of peaceful citizens consistently with object."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Suppress the combinations obstructing United States law, execute the laws and maintain the National Union."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "The probable first service is repossession of the forts, places and property seized from the Union, with the stated restraint toward property and peaceful citizens."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "resource": "equipment",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          }
+        ],
+        "rationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value.",
+        "limits": "75000 proclamation is distinct from73391 quota aggregate; PA16 reduced14 April16. Hypothetical larger_longer option has no separate historical call text. Both historical militia_call and hypothetical larger_longer contain same24militia calls; enumerated once. Larger/longer alternative is not additional historical source evidence."
+      },
+      "callRegiments": 4,
+      "callTermDays": 90
+    },
+    "orderIssuer": "lincoln_abraham",
+    "orderTarget": "st_gov_maryland",
+    "orderBypass": false,
+    "orderIssuedDay": 41
+  },
+  "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "us_apr15_missouri",
+        "sourceProfile": "US-A15",
+        "honours": [
+          "union",
+          "order"
+        ],
+        "offends": [
+          "state_autonomy"
+        ],
+        "valueClauseLinks": [
+          {
+            "linkValue": "union",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "order",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:purpose:7",
+            "linkCites": [
+              [
+                "OR-III-I",
+                68
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-III-I",
+            "page": 67
+          },
+          {
+            "source": "OR-III-I",
+            "page": 68
+          },
+          {
+            "source": "OR-III-I",
+            "page": 69
+          },
+          {
+            "source": "OR-III-I",
+            "page": 76
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "Three months unless sooner discharged."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Detached militia as infantry or foot riflemen; April16 plan gives ten-company regiments, brigades4+regiments, divisions2+brigades."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "Call and April16 organisation sheet do not specify appointment authority. Do not retrofit May4 volunteer governor-appointment plan onto this militia call."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Saint Louis"
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Immediate detachment; governor gives expected rendezvous date; US officer musters/oath every officer/man; enlisted age18-45 and physical strength. Proclamation orders dispersal in20days, avoids devastation/interference with property/disturbance of peaceful citizens consistently with object."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Suppress the combinations obstructing United States law, execute the laws and maintain the National Union."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "The probable first service is repossession of the forts, places and property seized from the Union, with the stated restraint toward property and peaceful citizens."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "resource": "equipment",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          }
+        ],
+        "rationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value.",
+        "limits": "75000 proclamation is distinct from73391 quota aggregate; PA16 reduced14 April16. Hypothetical larger_longer option has no separate historical call text. Both historical militia_call and hypothetical larger_longer contain same24militia calls; enumerated once. Larger/longer alternative is not additional historical source evidence."
+      },
+      "callRegiments": 4,
+      "callTermDays": 90
+    },
+    "orderIssuer": "lincoln_abraham",
+    "orderTarget": "st_gov_missouri",
+    "orderBypass": false,
+    "orderIssuedDay": 41
+  },
+  "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "us_apr15_kentucky",
+        "sourceProfile": "US-A15",
+        "honours": [
+          "union",
+          "order"
+        ],
+        "offends": [
+          "state_autonomy"
+        ],
+        "valueClauseLinks": [
+          {
+            "linkValue": "union",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "order",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:purpose:7",
+            "linkCites": [
+              [
+                "OR-III-I",
+                68
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-III-I",
+            "page": 67
+          },
+          {
+            "source": "OR-III-I",
+            "page": 68
+          },
+          {
+            "source": "OR-III-I",
+            "page": 69
+          },
+          {
+            "source": "OR-III-I",
+            "page": 76
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "Three months unless sooner discharged."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Detached militia as infantry or foot riflemen; April16 plan gives ten-company regiments, brigades4+regiments, divisions2+brigades."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "Call and April16 organisation sheet do not specify appointment authority. Do not retrofit May4 volunteer governor-appointment plan onto this militia call."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Lexington"
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Immediate detachment; governor gives expected rendezvous date; US officer musters/oath every officer/man; enlisted age18-45 and physical strength. Proclamation orders dispersal in20days, avoids devastation/interference with property/disturbance of peaceful citizens consistently with object."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Suppress the combinations obstructing United States law, execute the laws and maintain the National Union."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "The probable first service is repossession of the forts, places and property seized from the Union, with the stated restraint toward property and peaceful citizens."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "resource": "equipment",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          }
+        ],
+        "rationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value.",
+        "limits": "75000 proclamation is distinct from73391 quota aggregate; PA16 reduced14 April16. Hypothetical larger_longer option has no separate historical call text. Both historical militia_call and hypothetical larger_longer contain same24militia calls; enumerated once. Larger/longer alternative is not additional historical source evidence."
+      },
+      "callRegiments": 4,
+      "callTermDays": 90
+    },
+    "orderIssuer": "lincoln_abraham",
+    "orderTarget": "st_gov_kentucky",
+    "orderBypass": false,
+    "orderIssuedDay": 41
+  },
+  "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "us_apr15_tennessee",
+        "sourceProfile": "US-A15",
+        "honours": [
+          "union",
+          "order"
+        ],
+        "offends": [
+          "state_autonomy"
+        ],
+        "valueClauseLinks": [
+          {
+            "linkValue": "union",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "order",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:purpose:7",
+            "linkCites": [
+              [
+                "OR-III-I",
+                68
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-III-I",
+            "page": 67
+          },
+          {
+            "source": "OR-III-I",
+            "page": 68
+          },
+          {
+            "source": "OR-III-I",
+            "page": 69
+          },
+          {
+            "source": "OR-III-I",
+            "page": 76
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "Three months unless sooner discharged."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Detached militia as infantry or foot riflemen; April16 plan gives ten-company regiments, brigades4+regiments, divisions2+brigades."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "Call and April16 organisation sheet do not specify appointment authority. Do not retrofit May4 volunteer governor-appointment plan onto this militia call."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Knoxville/Nashville"
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Immediate detachment; governor gives expected rendezvous date; US officer musters/oath every officer/man; enlisted age18-45 and physical strength. Proclamation orders dispersal in20days, avoids devastation/interference with property/disturbance of peaceful citizens consistently with object."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Suppress the combinations obstructing United States law, execute the laws and maintain the National Union."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "The probable first service is repossession of the forts, places and property seized from the Union, with the stated restraint toward property and peaceful citizens."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "resource": "equipment",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          }
+        ],
+        "rationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value.",
+        "limits": "75000 proclamation is distinct from73391 quota aggregate; PA16 reduced14 April16. Hypothetical larger_longer option has no separate historical call text. Both historical militia_call and hypothetical larger_longer contain same24militia calls; enumerated once. Larger/longer alternative is not additional historical source evidence."
+      },
+      "callRegiments": 2,
+      "callTermDays": 90
+    },
+    "orderIssuer": "lincoln_abraham",
+    "orderTarget": "st_gov_tennessee",
+    "orderBypass": false,
+    "orderIssuedDay": 41
+  },
+  "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_arkansas": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "us_apr15_arkansas",
+        "sourceProfile": "US-A15",
+        "honours": [
+          "union",
+          "order"
+        ],
+        "offends": [
+          "state_autonomy"
+        ],
+        "valueClauseLinks": [
+          {
+            "linkValue": "union",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "order",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:purpose:7",
+            "linkCites": [
+              [
+                "OR-III-I",
+                68
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-III-I",
+            "page": 67
+          },
+          {
+            "source": "OR-III-I",
+            "page": 68
+          },
+          {
+            "source": "OR-III-I",
+            "page": 69
+          },
+          {
+            "source": "OR-III-I",
+            "page": 76
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "Three months unless sooner discharged."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Detached militia as infantry or foot riflemen; April16 plan gives ten-company regiments, brigades4+regiments, divisions2+brigades."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "Call and April16 organisation sheet do not specify appointment authority. Do not retrofit May4 volunteer governor-appointment plan onto this militia call."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Little Rock"
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Immediate detachment; governor gives expected rendezvous date; US officer musters/oath every officer/man; enlisted age18-45 and physical strength. Proclamation orders dispersal in20days, avoids devastation/interference with property/disturbance of peaceful citizens consistently with object."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Suppress the combinations obstructing United States law, execute the laws and maintain the National Union."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "The probable first service is repossession of the forts, places and property seized from the Union, with the stated restraint toward property and peaceful citizens."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "resource": "equipment",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          }
+        ],
+        "rationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value.",
+        "limits": "75000 proclamation is distinct from73391 quota aggregate; PA16 reduced14 April16. Hypothetical larger_longer option has no separate historical call text. Both historical militia_call and hypothetical larger_longer contain same24militia calls; enumerated once. Larger/longer alternative is not additional historical source evidence."
+      },
+      "callRegiments": 1,
+      "callTermDays": 90
+    },
+    "orderIssuer": "lincoln_abraham",
+    "orderTarget": "st_gov_arkansas",
+    "orderBypass": false,
+    "orderIssuedDay": 41
+  },
+  "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_north_carolina": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "us_apr15_north_carolina",
+        "sourceProfile": "US-A15",
+        "honours": [
+          "union",
+          "order"
+        ],
+        "offends": [
+          "state_autonomy"
+        ],
+        "valueClauseLinks": [
+          {
+            "linkValue": "union",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "order",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-III-I",
+                67
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:purpose:7",
+            "linkCites": [
+              [
+                "OR-III-I",
+                68
+              ]
+            ],
+            "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-III-I",
+            "page": 67
+          },
+          {
+            "source": "OR-III-I",
+            "page": 68
+          },
+          {
+            "source": "OR-III-I",
+            "page": 69
+          },
+          {
+            "source": "OR-III-I",
+            "page": 76
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "Three months unless sooner discharged."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Detached militia as infantry or foot riflemen; April16 plan gives ten-company regiments, brigades4+regiments, divisions2+brigades."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "Call and April16 organisation sheet do not specify appointment authority. Do not retrofit May4 volunteer governor-appointment plan onto this militia call."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Raleigh"
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Immediate detachment; governor gives expected rendezvous date; US officer musters/oath every officer/man; enlisted age18-45 and physical strength. Proclamation orders dispersal in20days, avoids devastation/interference with property/disturbance of peaceful citizens consistently with object."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Suppress the combinations obstructing United States law, execute the laws and maintain the National Union."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "The probable first service is repossession of the forts, places and property seized from the Union, with the stated restraint toward property and peaceful citizens."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          },
+          {
+            "resource": "equipment",
+            "obligation": "unspecified",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced."
+          }
+        ],
+        "rationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value.",
+        "limits": "75000 proclamation is distinct from73391 quota aggregate; PA16 reduced14 April16. Hypothetical larger_longer option has no separate historical call text. Both historical militia_call and hypothetical larger_longer contain same24militia calls; enumerated once. Larger/longer alternative is not additional historical source evidence."
+      },
+      "callRegiments": 2,
+      "callTermDays": 90
+    },
+    "orderIssuer": "lincoln_abraham",
+    "orderTarget": "st_gov_north_carolina",
+    "orderBypass": false,
+    "orderIssuedDay": 41
+  },
+  "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "cs_apr22_absolute_arkansas",
+        "sourceProfile": "CS-A22-N",
+        "honours": [
+          "state_autonomy"
+        ],
+        "offends": [
+          "union"
+        ],
+        "valueClauseLinks": [
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                231
+              ],
+              [
+                "OR-IV-I",
+                232
+              ]
+            ],
+            "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:appointments:2",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                232
+              ]
+            ],
+            "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+          },
+          {
+            "linkValue": "union",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                231
+              ],
+              [
+                "OR-IV-I",
+                232
+              ]
+            ],
+            "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-IV-I",
+            "page": 231
+          },
+          {
+            "source": "OR-IV-I",
+            "page": 232
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "Not less than twelve months unless sooner discharged."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "Officers except staff appointed according to State law; staff by Confederate President."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Lynchburg;1regiment"
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "required",
+            "provider": "national",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "resource": "clothing",
+            "obligation": "required",
+            "provider": "volunteer",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "resource": "transport",
+            "obligation": "required",
+            "provider": "national",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "resource": "subsistence",
+            "obligation": "required",
+            "provider": "national",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          }
+        ],
+        "rationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented.",
+        "limits": "State permission to raise/send and Confederate military authority are distinct. The letter itself does not prove Tennessee legal authority existed."
+      },
+      "callRegiments": 1,
+      "callTermDays": 365,
+      "callId": "cs_apr22_absolute_arkansas"
+    },
+    "orderIssuer": "davis_jefferson",
+    "orderTarget": "st_gov_arkansas",
+    "orderBypass": false,
+    "orderIssuedDay": 71
+  },
+  "m.85.davis_jefferson.ellis_john_w.call.st_gov_north_carolina": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "cs_apr22_absolute_north_carolina",
+        "sourceProfile": "CS-A22-N",
+        "honours": [
+          "state_autonomy"
+        ],
+        "offends": [
+          "union"
+        ],
+        "valueClauseLinks": [
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                231
+              ],
+              [
+                "OR-IV-I",
+                232
+              ]
+            ],
+            "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:appointments:2",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                232
+              ]
+            ],
+            "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+          },
+          {
+            "linkValue": "union",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                231
+              ],
+              [
+                "OR-IV-I",
+                232
+              ]
+            ],
+            "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-IV-I",
+            "page": 231
+          },
+          {
+            "source": "OR-IV-I",
+            "page": 232
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "Not less than twelve months unless sooner discharged."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "Officers except staff appointed according to State law; staff by Confederate President."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Richmond;1regiment"
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "required",
+            "provider": "national",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "resource": "clothing",
+            "obligation": "required",
+            "provider": "volunteer",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "resource": "transport",
+            "obligation": "required",
+            "provider": "national",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "resource": "subsistence",
+            "obligation": "required",
+            "provider": "national",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          }
+        ],
+        "rationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented.",
+        "limits": "State permission to raise/send and Confederate military authority are distinct. The letter itself does not prove Tennessee legal authority existed."
+      },
+      "callRegiments": 1,
+      "callTermDays": 365,
+      "callId": "cs_apr22_absolute_north_carolina"
+    },
+    "orderIssuer": "davis_jefferson",
+    "orderTarget": "st_gov_north_carolina",
+    "orderBypass": false,
+    "orderIssuedDay": 85
+  },
+  "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "cs_apr22_absolute_tennessee",
+        "sourceProfile": "CS-A22-N",
+        "honours": [
+          "state_autonomy"
+        ],
+        "offends": [
+          "union"
+        ],
+        "valueClauseLinks": [
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                231
+              ],
+              [
+                "OR-IV-I",
+                232
+              ]
+            ],
+            "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:appointments:2",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                232
+              ]
+            ],
+            "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+          },
+          {
+            "linkValue": "union",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                231
+              ],
+              [
+                "OR-IV-I",
+                232
+              ]
+            ],
+            "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-IV-I",
+            "page": 231
+          },
+          {
+            "source": "OR-IV-I",
+            "page": 232
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "Not less than twelve months unless sooner discharged."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "Officers except staff appointed according to State law; staff by Confederate President."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Lynchburg;3regiments"
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "required",
+            "provider": "national",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "resource": "clothing",
+            "obligation": "required",
+            "provider": "volunteer",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "resource": "transport",
+            "obligation": "required",
+            "provider": "national",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          },
+          {
+            "resource": "subsistence",
+            "obligation": "required",
+            "provider": "national",
+            "quantity": null,
+            "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+          }
+        ],
+        "rationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented.",
+        "limits": "State permission to raise/send and Confederate military authority are distinct. The letter itself does not prove Tennessee legal authority existed."
+      },
+      "callRegiments": 3,
+      "callTermDays": 365,
+      "callId": "cs_apr22_absolute_tennessee"
+    },
+    "orderIssuer": "davis_jefferson",
+    "orderTarget": "st_gov_tennessee",
+    "orderBypass": false,
+    "orderIssuedDay": 120
+  },
+  "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "cs_jun30_cavalry_tennessee",
+        "sourceProfile": "CS-J30-C",
+        "honours": [
+          "caution",
+          "order"
+        ],
+        "offends": [],
+        "valueClauseLinks": [
+          {
+            "linkValue": "caution",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                412
+              ]
+            ],
+            "linkRationale": "[I] Purpose is completing the precautionary corps. No explicit cavalry field-appointment clause supports automatically copying infantry autonomy offence."
+          },
+          {
+            "linkValue": "order",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                412
+              ]
+            ],
+            "linkRationale": "[I] Purpose is completing the precautionary corps. No explicit cavalry field-appointment clause supports automatically copying infantry autonomy offence."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-IV-I",
+            "page": 412
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "[I] Supplemental companies for the same war corps; cavalry paragraph does not separately restate duration."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Two cavalry companies per AL/AR/GA/MS/TN;60-100 privates each, captain/first lieutenant/two seconds/four sergeants/four corporals/farrier/blacksmith/two musicians."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "Cavalry paragraph silent on field appointments; company forms, no guaranteed State regimental command."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Corinth, Mississippi, with companies from other States; expressly not State instruction camps."
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Supplement to infantry reserve; drilled by suitable officers before field service."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Complete the precautionary reserved army corps contemplated in the same letter."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "required",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated."
+          },
+          {
+            "resource": "equipment",
+            "obligation": "required",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated."
+          },
+          {
+            "resource": "horses",
+            "obligation": "required",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated."
+          }
+        ],
+        "rationale": "[I] Purpose is completing the precautionary corps. No explicit cavalry field-appointment clause supports automatically copying infantry autonomy offence.",
+        "limits": "Do not use infantry no-arms prerequisite for cavalry or invent fixed200 men/State."
+      },
+      "callRegiments": null,
+      "callTermDays": null,
+      "callMen": null,
+      "callId": "cs_jun30_cavalry_tennessee",
+      "callArm": "cavalry"
+    },
+    "orderIssuer": "davis_jefferson",
+    "orderTarget": "st_gov_tennessee",
+    "orderBypass": false,
+    "orderIssuedDay": 120
+  },
+  "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3": {
+    "orderKind": "call",
+    "orderGoal": null,
+    "orderEdit": null,
+    "orderCall": {
+      "callProfile": {
+        "id": "cs_jun30_reserve_tennessee",
+        "sourceProfile": "CS-J30-R",
+        "honours": [
+          "caution",
+          "order"
+        ],
+        "offends": [
+          "state_autonomy"
+        ],
+        "valueClauseLinks": [
+          {
+            "linkValue": "caution",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                412
+              ]
+            ],
+            "linkRationale": "[I] Own text stresses precaution and public safety; federal assembly and field appointment displace State control. No union reward and no promise to retain State brigade commanders."
+          },
+          {
+            "linkValue": "order",
+            "linkClause": "condition:purpose:6",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                412
+              ]
+            ],
+            "linkRationale": "[I] Own text stresses precaution and public safety; federal assembly and field appointment displace State control. No union reward and no promise to retain State brigade commanders."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:organisation:1",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                412
+              ]
+            ],
+            "linkRationale": "[I] Own text stresses precaution and public safety; federal assembly and field appointment displace State control. No union reward and no promise to retain State brigade commanders."
+          },
+          {
+            "linkValue": "state_autonomy",
+            "linkClause": "condition:appointments:2",
+            "linkCites": [
+              [
+                "OR-IV-I",
+                412
+              ]
+            ],
+            "linkRationale": "[I] Own text stresses precaution and public safety; federal assembly and field appointment displace State control. No union reward and no promise to retain State brigade commanders."
+          }
+        ],
+        "callProvenance": [
+          {
+            "source": "OR-IV-I",
+            "page": 302
+          },
+          {
+            "source": "OR-IV-I",
+            "page": 412
+          }
+        ],
+        "conditions": [
+          {
+            "kind": "service_term",
+            "clauseText": "For the war."
+          },
+          {
+            "kind": "organisation",
+            "clauseText": "Independent companies,64-100 privates plus named company staff; muster by companies in two accessible State camps, one in Florida. President later forms battalions/regiments (Florida a regiment)."
+          },
+          {
+            "kind": "appointments",
+            "clauseText": "President assigns camp officers and appoints field and staff. Company-officer selection not restated in call; May8 act has company election/Presidential commissioning [legal context only]."
+          },
+          {
+            "kind": "arms_equipment",
+            "clauseText": "Arms explicitly NOT prerequisite to acceptance. Camp control War Department; original call does not explicitly allocate every camp subsistence invoice."
+          },
+          {
+            "kind": "destination",
+            "clauseText": "Accessible camps in each State, selected by governor; no permanent front destination specified."
+          },
+          {
+            "kind": "other_conditions",
+            "clauseText": "Precaution for public safety; national30000;3000 each except TX2000/FL1000. Federal camp control and instruction."
+          },
+          {
+            "kind": "purpose",
+            "clauseText": "Precautionary provision for casualties and public safety by forming a reserved army corps."
+          }
+        ],
+        "materialDemand": [
+          {
+            "resource": "arms",
+            "obligation": "not_required",
+            "provider": "unspecified",
+            "quantity": null,
+            "demandText": "Arms explicitly NOT prerequisite to acceptance. Camp control War Department; original call does not explicitly allocate every camp subsistence invoice."
+          }
+        ],
+        "rationale": "[I] Own text stresses precaution and public safety; federal assembly and field appointment displace State control. No union reward and no promise to retain State brigade commanders.",
+        "limits": "Do not convert hopes that many are armed into a mandatory State arms demand, or Moore/Brown later support conditions into original text."
+      },
+      "callRegiments": 3,
+      "callTermDays": null,
+      "callMen": 3000,
+      "callId": "cs_jun30_reserve_tennessee"
+    },
+    "orderIssuer": "davis_jefferson",
+    "orderTarget": "st_gov_tennessee",
+    "orderBypass": false,
+    "orderIssuedDay": 120
+  }
+}

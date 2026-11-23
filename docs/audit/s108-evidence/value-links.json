@@ -1,0 +1,786 @@
+[
+  {
+    "sourceProfile": "CS-M09",
+    "honours": [
+      "state_autonomy"
+    ],
+    "offends": [],
+    "addedConditions": [
+      {
+        "kind": "authority",
+        "clauseText": "The incorporated February 28 act receives State forces tendered by the States or volunteering with their State consent."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:appointments:2",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            117
+          ]
+        ],
+        "linkRationale": "[I] Incorporated act requires State consent and retains officers. No union honour: these are Confederate provisional forces. Mere fort destination does not warrant glory/caution tags."
+      },
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:authority:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            117
+          ],
+          [
+            "OR-IV-I",
+            134
+          ],
+          [
+            "OR-IV-I",
+            135
+          ]
+        ],
+        "linkRationale": "[I] Incorporated act requires State consent and retains officers. No union honour: these are Confederate provisional forces. Mere fort destination does not warrant glory/caution tags."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Incorporated act requires State consent and retains officers. No union honour: these are Confederate provisional forces. Mere fort destination does not warrant glory/caution tags.",
+    "limits": "Charleston3000 and Texas1000 are requirements, not individually addressed governor quotas in printed distribution note; those two model allocations remain [I]. No invented equipment obligation."
+  },
+  {
+    "sourceProfile": "CS-A08",
+    "honours": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "union"
+    ],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "Prepare resistance to coercive measures of the Washington Administration."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            211
+          ]
+        ],
+        "linkRationale": "[I] Text expressly prepares resistance to Washington coercion. The autonomy reading concerns that stated purpose, not a governor answer; incorporated State appointments remain explicit."
+      },
+      {
+        "linkValue": "union",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            211
+          ]
+        ],
+        "linkRationale": "[I] Text expressly prepares resistance to Washington coercion. The autonomy reading concerns that stated purpose, not a governor answer; incorporated State appointments remain explicit."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Text expressly prepares resistance to Washington coercion. The autonomy reading concerns that stated purpose, not a governor answer; incorporated State appointments remain explicit.",
+    "limits": "Do not create active levy on readiness or infer an actual date of departure."
+  },
+  {
+    "sourceProfile": "CS-A16",
+    "honours": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "union"
+    ],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "Additional readiness is required in view of the stated hostile purpose of the Washington Government; the call incorporates the April 8 terms."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            211
+          ],
+          [
+            "OR-IV-I",
+            221
+          ],
+          [
+            "OR-IV-I",
+            222
+          ]
+        ],
+        "linkRationale": "[I] Own text says hostile Washington purpose and incorporates the earlier resistance call. Do not turn readiness into a glory demand."
+      },
+      {
+        "linkValue": "union",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            211
+          ],
+          [
+            "OR-IV-I",
+            221
+          ],
+          [
+            "OR-IV-I",
+            222
+          ]
+        ],
+        "linkRationale": "[I] Own text says hostile Washington purpose and incorporates the earlier resistance call. Do not turn readiness into a glory demand."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Own text says hostile Washington purpose and incorporates the earlier resistance call. Do not turn readiness into a glory demand.",
+    "limits": "Full equipment is requested with practicability qualification, not an absolute arms admission bar."
+  },
+  {
+    "sourceProfile": "CS-A22",
+    "honours": [],
+    "offends": [],
+    "addedConditions": [],
+    "valueClauseLinks": [],
+    "wholePaperValues": [],
+    "basis": "[I] Minimal own-text mapping: a regiment to a destination alone supplies no universal union/duty/glory tag. State officer rights belong to the incorporated law and can be represented structurally without presuming every clause is a value reward.",
+    "limits": "Do not import Brown April23 election/Augusta proposal or Moore camp finance complaint into the April22 issuer text."
+  },
+  {
+    "sourceProfile": "CS-A22-N",
+    "honours": [
+      "state_autonomy"
+    ],
+    "offends": [
+      "union"
+    ],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            231
+          ],
+          [
+            "OR-IV-I",
+            232
+          ]
+        ],
+        "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+      },
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:appointments:2",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            232
+          ]
+        ],
+        "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+      },
+      {
+        "linkValue": "union",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            231
+          ],
+          [
+            "OR-IV-I",
+            232
+          ]
+        ],
+        "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented.",
+    "limits": "State permission to raise/send and Confederate military authority are distinct. The letter itself does not prove Tennessee legal authority existed."
+  },
+  {
+    "sourceProfile": "CS-J29",
+    "honours": [
+      "order"
+    ],
+    "offends": [],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "Protect the Mississippi Valley."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "order",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            411
+          ]
+        ],
+        "linkRationale": "[I] Explicit protection of the Mississippi Valley supports order. No named appointment or arms clause permits an autonomy offence or equipment bar here."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Explicit protection of the Mississippi Valley supports order. No named appointment or arms clause permits an autonomy offence or equipment bar here.",
+    "limits": "Later Moore reply says Memphis and dates his received requisition June30; preserve difference, not a correction to original Corinth/June29."
+  },
+  {
+    "sourceProfile": "CS-J30-R",
+    "honours": [
+      "caution",
+      "order"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "Precautionary provision for casualties and public safety by forming a reserved army corps."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "caution",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            412
+          ]
+        ],
+        "linkRationale": "[I] Own text stresses precaution and public safety; federal assembly and field appointment displace State control. No union reward and no promise to retain State brigade commanders."
+      },
+      {
+        "linkValue": "order",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            412
+          ]
+        ],
+        "linkRationale": "[I] Own text stresses precaution and public safety; federal assembly and field appointment displace State control. No union reward and no promise to retain State brigade commanders."
+      },
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:organisation:1",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            412
+          ]
+        ],
+        "linkRationale": "[I] Own text stresses precaution and public safety; federal assembly and field appointment displace State control. No union reward and no promise to retain State brigade commanders."
+      },
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:appointments:2",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            412
+          ]
+        ],
+        "linkRationale": "[I] Own text stresses precaution and public safety; federal assembly and field appointment displace State control. No union reward and no promise to retain State brigade commanders."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Own text stresses precaution and public safety; federal assembly and field appointment displace State control. No union reward and no promise to retain State brigade commanders.",
+    "limits": "Do not convert hopes that many are armed into a mandatory State arms demand, or Moore/Brown later support conditions into original text."
+  },
+  {
+    "sourceProfile": "CS-J30-C",
+    "honours": [
+      "caution",
+      "order"
+    ],
+    "offends": [],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "Complete the precautionary reserved army corps contemplated in the same letter."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "caution",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            412
+          ]
+        ],
+        "linkRationale": "[I] Purpose is completing the precautionary corps. No explicit cavalry field-appointment clause supports automatically copying infantry autonomy offence."
+      },
+      {
+        "linkValue": "order",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            412
+          ]
+        ],
+        "linkRationale": "[I] Purpose is completing the precautionary corps. No explicit cavalry field-appointment clause supports automatically copying infantry autonomy offence."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Purpose is completing the precautionary corps. No explicit cavalry field-appointment clause supports automatically copying infantry autonomy offence.",
+    "limits": "Do not use infantry no-arms prerequisite for cavalry or invent fixed200 men/State."
+  },
+  {
+    "sourceProfile": "CS-J01",
+    "honours": [
+      "state_autonomy"
+    ],
+    "offends": [],
+    "addedConditions": [],
+    "valueClauseLinks": [
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:appointments:2",
+        "linkCites": [
+          [
+            "OR-IV-I",
+            416
+          ]
+        ],
+        "linkRationale": "[I] Own text explicitly preserves selection of regimental officers. Federal staff appointment alone is not treated as identical to reserve field appointments; no inferred union honour."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Own text explicitly preserves selection of regimental officers. Federal staff appointment alone is not treated as identical to reserve field appointments; no inferred union honour.",
+    "limits": "No requirement to break an existing State brigade in this letter. Brown interpretation is separate; July12 specific demand is separate."
+  },
+  {
+    "sourceProfile": "US-A15",
+    "honours": [
+      "union",
+      "order"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "Suppress the combinations obstructing United States law, execute the laws and maintain the National Union."
+      },
+      {
+        "kind": "purpose",
+        "clauseText": "The probable first service is repossession of the forts, places and property seized from the Union, with the stated restraint toward property and peaceful citizens."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "union",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            67
+          ]
+        ],
+        "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+      },
+      {
+        "linkValue": "order",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            67
+          ]
+        ],
+        "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+      },
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:purpose:7",
+        "linkCites": [
+          [
+            "OR-III-I",
+            68
+          ]
+        ],
+        "linkRationale": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Proclamation expressly preserves National Union and executes its laws; armed repossession overrides claimed State control of seized federal property. Autonomy offence is this objective [I], not a claim that all governors disputed their own appointments. Peaceful-citizen restraint is retained structurally; no inferred abolition or slavery value.",
+    "limits": "75000 proclamation is distinct from73391 quota aggregate; PA16 reduced14 April16. Hypothetical larger_longer option has no separate historical call text."
+  },
+  {
+    "sourceProfile": "US-M03",
+    "honours": [
+      "union",
+      "order"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "Preserve the National Union through suppression of insurrectionary combinations, enforcement of constitutional laws and restoration of peace and order."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "union",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            145
+          ],
+          [
+            "OR-III-I",
+            146
+          ]
+        ],
+        "linkRationale": "[I] Proclamation explicitly preserves Union and suppresses insurrection. National coercive purpose persists; unit officer State appointment is preserved structurally rather than cancelling the objective."
+      },
+      {
+        "linkValue": "order",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            145
+          ],
+          [
+            "OR-III-I",
+            146
+          ]
+        ],
+        "linkRationale": "[I] Proclamation explicitly preserves Union and suppresses insurrection. National coercive purpose persists; unit officer State appointment is preserved structurally rather than cancelling the objective."
+      },
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            145
+          ],
+          [
+            "OR-III-I",
+            146
+          ]
+        ],
+        "linkRationale": "[I] Proclamation explicitly preserves Union and suppresses insurrection. National coercive purpose persists; unit officer State appointment is preserved structurally rather than cancelling the objective."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Proclamation explicitly preserves Union and suppresses insurrection. National coercive purpose persists; unit officer State appointment is preserved structurally rather than cancelling the objective.",
+    "limits": "Do not allocate42034 as another levy alongside state quotas or add seamen to governor infantry calls."
+  },
+  {
+    "sourceProfile": "US-NY2",
+    "honours": [],
+    "offends": [],
+    "addedConditions": [],
+    "valueClauseLinks": [],
+    "wholePaperValues": [],
+    "basis": "[I] Accepted tender text contains no explicit Union preservation/objective or officer-rights clause; leave value arrays empty rather than borrow from neighbouring proclamation or later answer.",
+    "limits": "Acceptance of tender, not a uniform national three-year call."
+  },
+  {
+    "sourceProfile": "US-M04-REG",
+    "honours": [],
+    "offends": [],
+    "addedConditions": [],
+    "valueClauseLinks": [],
+    "wholePaperValues": [],
+    "basis": "[I] Administrative regular organisation carries no explicit state appointment deprivation or named value beyond referenced proclamation. Avoid new temperament/loyalty inference.",
+    "limits": "Model1095-day representation is not sourced by GO16 volunteer analogy; original regular force has unknown actual strength."
+  },
+  {
+    "sourceProfile": "US-M15",
+    "honours": [
+      "union",
+      "order"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "The enclosed General Orders No. 15 calls volunteers to aid enforcement of the laws and suppression of insurrection."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "union",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            151
+          ],
+          [
+            "OR-III-I",
+            203
+          ],
+          [
+            "OR-III-I",
+            204
+          ]
+        ],
+        "linkRationale": "[I] Enclosed GO15 explicitly enforces laws/suppresses insurrection. Scope is incorporated plan, not the governor response. No automatic career/glory tag for officer vacancies."
+      },
+      {
+        "linkValue": "order",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            151
+          ],
+          [
+            "OR-III-I",
+            203
+          ],
+          [
+            "OR-III-I",
+            204
+          ]
+        ],
+        "linkRationale": "[I] Enclosed GO15 explicitly enforces laws/suppresses insurrection. Scope is incorporated plan, not the governor response. No automatic career/glory tag for officer vacancies."
+      },
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            151
+          ],
+          [
+            "OR-III-I",
+            203
+          ],
+          [
+            "OR-III-I",
+            204
+          ]
+        ],
+        "linkRationale": "[I] Enclosed GO15 explicitly enforces laws/suppresses insurrection. Scope is incorporated plan, not the governor response. No automatic career/glory tag for officer vacancies."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Enclosed GO15 explicitly enforces laws/suppresses insurrection. Scope is incorporated plan, not the governor response. No automatic career/glory tag for officer vacancies.",
+    "limits": "No Governor reply used to infer extra terms; New York14 explicitly additional to prior long-term tender, p208."
+  },
+  {
+    "sourceProfile": "US-IN11",
+    "honours": [
+      "union",
+      "order"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "The expressly incorporated General Orders No. 15 calls volunteers to aid enforcement of the laws and suppression of insurrection."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "union",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            151
+          ],
+          [
+            "OR-III-I",
+            263
+          ],
+          [
+            "OR-III-I",
+            265
+          ]
+        ],
+        "linkRationale": "[I] Express GO15incorporation imports its enforcement/suppression purpose. Preserve specified colonel regiments/four gubernatorial designations structurally; no fit to Morton later answer."
+      },
+      {
+        "linkValue": "order",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            151
+          ],
+          [
+            "OR-III-I",
+            263
+          ],
+          [
+            "OR-III-I",
+            265
+          ]
+        ],
+        "linkRationale": "[I] Express GO15incorporation imports its enforcement/suppression purpose. Preserve specified colonel regiments/four gubernatorial designations structurally; no fit to Morton later answer."
+      },
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            151
+          ],
+          [
+            "OR-III-I",
+            263
+          ],
+          [
+            "OR-III-I",
+            265
+          ]
+        ],
+        "linkRationale": "[I] Express GO15incorporation imports its enforcement/suppression purpose. Preserve specified colonel regiments/four gubernatorial designations structurally; no fit to Morton later answer."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Express GO15incorporation imports its enforcement/suppression purpose. Preserve specified colonel regiments/four gubernatorial designations structurally; no fit to Morton later answer.",
+    "limits": "Original issuer texts recovered pp263and265. Do not use Morton later protest to add unprinted equipment obligations or erase four designations reserved to him. Original call includes named regiments, not an unlimited governor choice."
+  },
+  {
+    "sourceProfile": "US-NY25",
+    "honours": [],
+    "offends": [],
+    "addedConditions": [],
+    "valueClauseLinks": [],
+    "wholePaperValues": [],
+    "basis": "[I] State organisation text supports officer-selection procedure; no explicit national political purpose in GO78 beyond US service. Do not borrow Union/duty reward solely to fit Morgan.",
+    "limits": "Original Presidential requisition/proclamation not separately recovered; GO78 is implementing State text, explicitly distinguished. One artillery regiment within25, plus July30extras."
+  },
+  {
+    "sourceProfile": "US-NY30",
+    "honours": [],
+    "offends": [],
+    "addedConditions": [],
+    "valueClauseLinks": [],
+    "wholePaperValues": [],
+    "basis": "[I] Minimal acceptance has no additional named value; no arms-quantity assumption or actor-conditioned offence.",
+    "limits": "Cavalry/artillery distinct instances; do not count July law ceiling as troops raised."
+  },
+  {
+    "sourceProfile": "US-M15-KNM",
+    "honours": [
+      "union",
+      "order"
+    ],
+    "offends": [
+      "state_autonomy"
+    ],
+    "addedConditions": [
+      {
+        "kind": "purpose",
+        "clauseText": "The expressly forwarded General Orders No. 15 calls volunteers to aid enforcement of the laws and suppression of insurrection."
+      }
+    ],
+    "valueClauseLinks": [
+      {
+        "linkValue": "union",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            151
+          ],
+          [
+            "OR-III-I",
+            204
+          ]
+        ],
+        "linkRationale": "[I] Enclosed GO15 explicitly enforces laws/suppresses insurrection. Scope is incorporated plan, not the governor response. No automatic career/glory tag for officer vacancies."
+      },
+      {
+        "linkValue": "order",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            151
+          ],
+          [
+            "OR-III-I",
+            204
+          ]
+        ],
+        "linkRationale": "[I] Enclosed GO15 explicitly enforces laws/suppresses insurrection. Scope is incorporated plan, not the governor response. No automatic career/glory tag for officer vacancies."
+      },
+      {
+        "linkValue": "state_autonomy",
+        "linkClause": "condition:purpose:6",
+        "linkCites": [
+          [
+            "OR-III-I",
+            151
+          ],
+          [
+            "OR-III-I",
+            204
+          ]
+        ],
+        "linkRationale": "[I] Enclosed GO15 explicitly enforces laws/suppresses insurrection. Scope is incorporated plan, not the governor response. No automatic career/glory tag for officer vacancies."
+      }
+    ],
+    "wholePaperValues": [],
+    "basis": "[I] Enclosed GO15 explicitly enforces laws/suppresses insurrection. Scope is incorporated plan, not the governor response. No automatic career/glory tag for officer vacancies.",
+    "limits": "MN quota separately credited by model renewal; KS/NE additional regiments. Actual remuster consent and original expiry not re-audited here."
+  },
+  {
+    "sourceProfile": "US-M15-RI",
+    "honours": [],
+    "offends": [],
+    "addedConditions": [],
+    "valueClauseLinks": [],
+    "wholePaperValues": [],
+    "basis": "[I] Specific acceptance/rejection letter is about term and personnel arrangements, not an explicit political objective; empty arrays rather than importing the national profile.",
+    "limits": "Original Sprague proposal unread. Cameron rejection of its rolling-term plan is his own text. General GO15 organisation is context, not a restated bespoke Rhode Island clause."
+  },
+  {
+    "sourceProfile": "US-M15-NY",
+    "honours": [],
+    "offends": [],
+    "addedConditions": [],
+    "valueClauseLinks": [],
+    "wholePaperValues": [],
+    "basis": "[I] Specific send/hold orders do not restate a political value; no governor answer is used to supply one.",
+    "limits": "Specific order to Morgan and clarification carry their own terms, without copying all provisions of the separate allocation circular."
+  }
+]

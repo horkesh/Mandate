@@ -121,4 +121,5 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0115](0115-the-tick-budget-is-measured-on-its-own.md) | The tick budget is measured on its own | accepted; amends 0106; clarified by 0117 |
 | [0116](0116-a-commander-may-propose-while-he-complies.md) | A commander may propose while he complies | accepted; amends 0114 |
 | [0117](0117-the-budget-binds-on-linux.md) | The tick budget binds on Linux; Windows reports it | accepted; clarifies 0115 |
-| [0118](0118-an-undertaking-carries-typed-reservations.md) | An undertaking carries typed reservations | accepted |
+| [0118](0118-an-undertaking-carries-typed-reservations.md) | An undertaking carries typed reservations | accepted; clarified by 0119 |
+| [0119](0119-a-call-for-troops-asks-no-temperament.md) | A call for troops asks no temperament | accepted; clarifies 0118 |

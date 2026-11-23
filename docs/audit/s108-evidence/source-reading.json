@@ -1,0 +1,172 @@
+{
+  "inputs": {
+    "value-mapping.csv": "3f67ec2af6206e779743d18a0d4d39a69b0c5bc370d10492e5d68617063c6b3c",
+    "call-terms.json": "a886171613144c87a71f28466a01d8141a293ce122e8b8fd1e89cbf29ce8f9d7",
+    "mapping.md": "e16261e84108462f620ff53ba2001031a03238a58bf6c14c5c8237eb2ce57ac1",
+    "source-reading.json": "3d51821bd707deaf4646dd7fdc661ed33c6bf27d8c7e96adcc11de872ce81093"
+  },
+  "profiles": 20,
+  "receipts": [
+    {
+      "source": "OR-III-I",
+      "page": 67,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p67.txt",
+      "sha256": "3fc0557c4367bb25be82798a21387b9c57c9c829c655647c538e2b06f340bb0f",
+      "url": "https://archive.org/details/cu31924079622175/page/n82/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-III-I",
+      "page": 68,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p68.txt",
+      "sha256": "39995b8a3f0424662b61f4e38253ad46befb76106ce1f66e5b7188c87af9bc73",
+      "url": "https://archive.org/details/cu31924079622175/page/n83/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-III-I",
+      "page": 145,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p145.txt",
+      "sha256": "a147dd520036a4467709d267cb0500b2d8a4a45d30c3d5b962196c2d84d1255e",
+      "url": "https://archive.org/details/cu31924079622175/page/n160/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-III-I",
+      "page": 146,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p146.txt",
+      "sha256": "9614e63bab60d9c0533fc3bad96e949544514557150e34ca1d6de906ec179468",
+      "url": "https://archive.org/details/cu31924079622175/page/n161/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-III-I",
+      "page": 151,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p151.txt",
+      "sha256": "01d527b0d4a1e554798355bfe4ade2f677619db01118d76f6c39d0a3cc4ffc61",
+      "url": "https://archive.org/details/cu31924079622175/page/n166/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-III-I",
+      "page": 203,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p203.txt",
+      "sha256": "60762241c35b3e44e5849709661c1dd7182cdb28cfc4ae9f4632938022f70d85",
+      "url": "https://archive.org/details/cu31924079622175/page/n218/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-III-I",
+      "page": 204,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p204.txt",
+      "sha256": "0836276f2a1ff5958c8b4acd6b6a6381a0bd4a61435009f2d36cdbdb2f2085af",
+      "url": "https://archive.org/details/cu31924079622175/page/n219/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-III-I",
+      "page": 263,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p263.txt",
+      "sha256": "8a6f62cf4fbc11edbaa37cd210f182c6734a343f3020ca7c651840772474b91a",
+      "url": "https://archive.org/details/cu31924079622175/page/n278/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-III-I",
+      "page": 265,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p265.txt",
+      "sha256": "3cc10e1966b9b908bcfc280aaf3fa287b9d578549ca7d71f3da737e6583d458d",
+      "url": "https://archive.org/details/cu31924079622175/page/n280/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 117,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p117.txt",
+      "sha256": "4546e75beb84f15430a16959dc277cba329c1eedcf81ff373c175bc2babc3cc0",
+      "url": "https://archive.org/details/cu31924079579524/page/n132/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 134,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p134.txt",
+      "sha256": "9de9c62fc1888390095cf7ffb74a1a6e91fbc1968a2c51bad27cf06df14086b2",
+      "url": "https://archive.org/details/cu31924079579524/page/n149/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 135,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p135.txt",
+      "sha256": "01d166834652e5c471428fde8d95b4191d08196ac664877ed28c553dcf2a9034",
+      "url": "https://archive.org/details/cu31924079579524/page/n150/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 211,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p211.txt",
+      "sha256": "90d47fafa88465585d10eef54db443efac25ccb4074a5fbb44f730be7b4b3393",
+      "url": "https://archive.org/details/cu31924079579524/page/n226/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 221,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p221.txt",
+      "sha256": "037aae182add37df38b11c20ea13eb1ec7b54eba4fc62f90b6972d1329b3bfcc",
+      "url": "https://archive.org/details/cu31924079579524/page/n236/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 222,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p222.txt",
+      "sha256": "4a0e4bf0913633ebf39af2d2c2532f87b1dbc2f716bb33186df8d2ebde4fe8bb",
+      "url": "https://archive.org/details/cu31924079579524/page/n237/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 231,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p231.txt",
+      "sha256": "9c8e7dd3be9d78fd09b4bfb9d7232178d72e548d6d0c2db2a4c060f974c64599",
+      "url": "https://archive.org/details/cu31924079579524/page/n246/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 232,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p232.txt",
+      "sha256": "d4d646cb602b9f79f1b6328c7f0ab6008914860ea34bd2ebe5e22a166b262371",
+      "url": "https://archive.org/details/cu31924079579524/page/n247/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 411,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p411.txt",
+      "sha256": "04e4a2ddc7668c603b879cec6e418be3710b4d5f6b716f27dccb27cedfee8dd2",
+      "url": "https://archive.org/details/cu31924079579524/page/n426/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 412,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p412.txt",
+      "sha256": "c7c037b8b29b5d8aa5901366d5b3fbee0afe95608c46bff9f96d45063d17934f",
+      "url": "https://archive.org/details/cu31924079579524/page/n427/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    },
+    {
+      "source": "OR-IV-I",
+      "page": 416,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p416.txt",
+      "sha256": "b0cee67a861de6c782cad969b5ae2f3585016b5cd6587bfab24d6073d00d6548",
+      "url": "https://archive.org/details/cu31924079579524/page/n431/mode/1up",
+      "scope": "Named issuer paper or incorporated law read as retained OCR; no fresh scan inspection or live identity check."
+    }
+  ],
+  "status": "S101 input rationale and retained primary extracts read locally; facts paraphrased, value links are inferences [I]. No live lookup, missing-original closure or reply-derived issuer term."
+}

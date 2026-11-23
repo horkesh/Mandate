@@ -52,7 +52,7 @@ describe('per-call terms travel with the paper', () => {
   it('keeps an explicitly empty profile empty, while unprofiled calls use the fallback', () => {
     const { rules } = fixture();
     expect(callTerms(rules, profile('empty', [], []))).toMatchObject({ honours: [], offends: [], required: 0 });
-    expect(callTerms(rules)).toMatchObject({ ...rules.callTerms, required: 0 });
+    expect(callTerms(rules)).toMatchObject({ ...rules.callTerms, boldness: null, required: 0 });
   });
 
   it('publishes a grounded protest without delaying muster', () => {
@@ -98,6 +98,10 @@ describe('per-call terms travel with the paper', () => {
       return { ctx, msg, response: Object.values(next.orderResponses)[0]! };
     };
     const kept = route('retained'), displaced = route('displaced');
+    for (const reply of [kept.response, displaced.response]) {
+      expect(reply.respTerms.some(t => t.respTermName === 'temperament')).toBe(false);
+      expect(reply.respReasons.some(r => r.kind === 'too_rash' || r.kind === 'too_timid')).toBe(false);
+    }
     expect(kept.response.respWillingness).toBeGreaterThan(displaced.response.respWillingness);
     expect(kept.ctx.outbox.find(m => m.msgOrder !== null)!.msgOrder).toEqual(kept.msg.msgOrder);
   });

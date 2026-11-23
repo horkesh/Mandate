@@ -166,6 +166,7 @@ export const PLAN_HOLDS = 500;
  * and each support the plan asks of another post is a `SupportNeed` (an "if supported" condition unless promised).
  */
 export function editDirective(input: PlannerInput, set: DraftSet, edited: PlanCandidate, distance: number, holdingRisk: number, base: DirectiveTerms): DirectiveTerms {
+  if (base.boldness === null) throw new RangeError('an operational plan requires an applicable boldness');
   const best = set.draftCandidates[0] ?? edited;
   const ctx = makeCtx(input);
   const strength = edited.candAxes.reduce((s, a) => s + a.axisStrength, 0);

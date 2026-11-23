@@ -14,8 +14,8 @@ export interface DirectiveTerms {
   readonly clauses?: readonly DirectiveClause[];
   /** A specific clause bears a value cost. Without a link the cost applies only to the whole course. */
   readonly valueClauseLinks?: readonly (readonly [value: ValueId, clause: string])[];
-  /** 0..1000: how bold the directive is (0 = hold at all costs, 1000 = all-out offensive). */
-  readonly boldness: Permille;
+  /** 0..1000 for an operational course; null means temperament is inapplicable (0119 troop calls). */
+  readonly boldness: Permille | null;
   /** Values this directive serves. A pack derives these from the directive's intent. */
   readonly honours: readonly ValueId[];
   /** Values this directive violates. */
@@ -209,7 +209,8 @@ export interface Contribution {
 
 /** What the proxy proposes instead when it objects. */
 export interface CounterProposal {
-  readonly boldness: Permille;
+  /** Null when the original request has no operational boldness (0119). */
+  readonly boldness: Permille | null;
   readonly required: Permille;
 }
 

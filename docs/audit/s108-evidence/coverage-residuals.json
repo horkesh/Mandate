@@ -1,0 +1,245 @@
+[
+  {
+    "row": "C07",
+    "response": {
+      "identity": {
+        "respOrder": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "respCallId": "cs_jun30_reserve_virginia",
+        "respPerson": "letcher_john",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respDay": 120
+      },
+      "willingness": 67,
+      "actual": "comply",
+      "declared": "comply",
+      "undertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "clauses": [
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia"
+      },
+      "declaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "clauses": [
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia"
+      },
+      "reservations": [],
+      "declaredReservations": [],
+      "gaps": [],
+      "declaredGaps": [],
+      "terms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "reasons": []
+    },
+    "coverage": {
+      "id": "C07",
+      "side": "confederate",
+      "actor": "letcher_john",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Reserve corps organization and appointments",
+      "cite": "OR-IV-I:419 https://archive.org/details/cu31924079579524/page/n434/mode/1up; OR-IV-I:420 https://archive.org/details/cu31924079579524/page/n435/mode/1up",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|comply|120"
+      ],
+      "matched": null
+    },
+    "inference": "Unchanged held-value data grounds no offence on C07; C10/C11 lack a nonnegative undertaking. Adding a historical protest or a favourable value would exceed S108. No new historical fact or credit inferred [I]."
+  },
+  {
+    "row": "C10",
+    "response": {
+      "identity": {
+        "respOrder": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+        "respCallId": "cs_jun30_reserve_georgia",
+        "respPerson": "brown_joseph_e",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respDay": 117
+      },
+      "willingness": -178,
+      "actual": "object",
+      "declared": "object",
+      "undertaking": null,
+      "declaredUndertaking": null,
+      "reservations": [],
+      "declaredReservations": [],
+      "gaps": [],
+      "declaredGaps": [],
+      "terms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "reasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ]
+    },
+    "coverage": {
+      "id": "C10",
+      "side": "confederate",
+      "actor": "brown_joseph_e",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Reserve corps and appointment authority",
+      "cite": "OR-IV-I:421 https://archive.org/details/cu31924079579524/page/n436/mode/1up; OR-IV-I:422 https://archive.org/details/cu31924079579524/page/n437/mode/1up",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|object|117"
+      ],
+      "matched": null
+    },
+    "inference": "Unchanged held-value data grounds no offence on C07; C10/C11 lack a nonnegative undertaking. Adding a historical protest or a favourable value would exceed S108. No new historical fact or credit inferred [I]."
+  },
+  {
+    "row": "C11",
+    "response": {
+      "identity": {
+        "respOrder": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "respCallId": "cs_jun30_reserve_louisiana",
+        "respPerson": "moore_thomas_o",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respDay": 117
+      },
+      "willingness": -187,
+      "actual": "object",
+      "declared": "object",
+      "undertaking": null,
+      "declaredUndertaking": null,
+      "reservations": [],
+      "declaredReservations": [],
+      "gaps": [],
+      "declaredGaps": [],
+      "terms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "reasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ]
+    },
+    "coverage": {
+      "id": "C11",
+      "side": "confederate",
+      "actor": "moore_thomas_o",
+      "role": "addressee",
+      "band": "reservations",
+      "matter": "Reserve corps raising and support",
+      "cite": "OR-IV-I:422 https://archive.org/details/cu31924079579524/page/n437/mode/1up; OR-IV-I:423 https://archive.org/details/cu31924079579524/page/n438/mode/1up; OR-IV-I:478 https://archive.org/details/cu31924079579524/page/n493/mode/1up",
+      "verdict": "mismatch",
+      "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+      "candidates": [
+        "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|object|117"
+      ],
+      "matched": null
+    },
+    "inference": "Unchanged held-value data grounds no offence on C07; C10/C11 lack a nonnegative undertaking. Adding a historical protest or a favourable value would exceed S108. No new historical fact or credit inferred [I]."
+  }
+]

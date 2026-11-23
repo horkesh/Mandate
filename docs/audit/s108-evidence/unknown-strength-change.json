@@ -1,0 +1,42 @@
+{
+  "before": 22,
+  "after": 23,
+  "added": {
+    "raised.st_gov_georgia.d122": {
+      "fbName": "raised.st_gov_georgia",
+      "fbKind": "block",
+      "fbParent": null,
+      "fbDepartment": "st_georgia",
+      "fbArm": "cavalry",
+      "fbLots": [
+        {
+          "lotId": "unidentified.raised.st_gov_georgia.d122",
+          "lotRegiment": null,
+          "lotGenerated": false,
+          "lotArm": "cavalry",
+          "lotMen": null,
+          "lotStragglers": 0,
+          "lotService": {
+            "enlPost": "st_gov_georgia",
+            "enlRaisedBy": "brown_joseph_e",
+            "enlCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+            "enlRegiments": null,
+            "enlMusterDay": 122,
+            "enlEndsDay": null,
+            "enlCallId": "cs_jun30_cavalry_georgia"
+          }
+        }
+      ],
+      "fbNonCombatants": 0,
+      "fbStoresMilli": 10000,
+      "fbStoresAssumed": false,
+      "fbMorale": 600,
+      "fbExperience": 400,
+      "fbEquipment": 600,
+      "fbRoutedDay": null,
+      "fbSurrenderedDay": null
+    }
+  },
+  "removed": [],
+  "inference": "The newly admitted Georgia cavalry call creates an unidentified lot on day 122. Its men remain unknown; no known-strength amount is assigned [I]."
+}
