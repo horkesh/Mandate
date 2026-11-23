@@ -19,7 +19,7 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0013](0013-the-staff-map.md) | The map is the staff's map: hand-drawn, procedural, drawn from claims | accepted; extended by 0019, confirmed by 0035 |
 | [0014](0014-licence.md) | Source-available under the PolyForm Noncommercial licence | accepted |
 | [0015](0015-seats.md) | Every person is a seat; rules first; the command log is the truth | accepted; refined by 0032 |
-| [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026, 0033, 0040 |
+| [0016](0016-goals-plans-and-arrows.md) | Goals, plans and arrow edits: places are targeted only through a person | accepted; amended by 0026, 0033, 0040; extended by 0114 |
 | [0017](0017-real-time-with-pause.md) | Real time with pause on a daily tick | superseded by 0027; amended by 0026 |
 | [0018](0018-civil-war-scope.md) | The American Civil War, 1861–65; the engine's promise is wars with fronts | accepted; amended by 0028 |
 | [0019](0019-regions-over-a-typed-graph.md) | The map is regions over a typed graph; fronts and pockets are derived | accepted; extended by 0031 |
@@ -117,3 +117,4 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0111](0111-pushback-is-measured-by-named-acts.md) | Pushback is measured by named acts, not by every response | accepted |
 | [0112](0112-the-pushback-registers-and-what-1a-requires.md) | The pushback registers, and what 1A requires of them | accepted |
 | [0113](0113-a-judgment-without-evidence-adds-no-term.md) | A judgment nobody has evidence for adds no term to a response | accepted |
+| [0114](0114-commanders-propose-and-orders-carry-discretion.md) | A commander may propose another goal, and a goal may carry conditional discretion | accepted |
