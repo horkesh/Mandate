@@ -1,0 +1,15 @@
+side,band,required,matched,unresolved,mismatched,exposure_mismatch,not_observed,qualified_source_extra,result
+union,relay_objections,0,0,0,0,0,0,0,no_required_case
+union,relay_holds,0,0,0,0,0,0,0,no_required_case
+union,filter_holds,0,0,0,0,0,0,0,no_required_case
+union,trims,0,0,0,0,0,0,0,no_required_case
+union,reservations,2,1,0,0,0,1,0,unmet
+union,slow_walk,2,0,0,0,1,1,0,unmet
+union,plan_objections,14,0,8,0,2,4,2,unmet
+confederate,relay_objections,0,0,0,0,0,0,0,no_required_case
+confederate,relay_holds,0,0,0,0,0,0,0,no_required_case
+confederate,filter_holds,0,0,0,0,0,0,0,no_required_case
+confederate,trims,0,0,0,0,0,0,0,no_required_case
+confederate,reservations,12,0,1,8,0,3,0,unmet
+confederate,slow_walk,0,0,0,0,0,0,0,no_required_case
+confederate,plan_objections,3,0,0,0,1,2,1,unmet

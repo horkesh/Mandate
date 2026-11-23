@@ -1,0 +1,194 @@
+{
+  "sources": [
+    {
+      "work": "OR-I-I",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+      "sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+      "url": "https://archive.org/download/cu31924077725913/cu31924077725913_djvu.xml"
+    },
+    {
+      "work": "OR-I-I page-map metadata",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_scandata.xml",
+      "sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+      "url": "https://archive.org/download/cu31924077725913/cu31924077725913_scandata.xml"
+    },
+    {
+      "work": "OR-I-II",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_djvu.xml",
+      "sha256": "e0b9faec94a7201f78266fd2aec835f492a9b38a0da28e3fed4df2c25d647db2",
+      "url": "https://archive.org/download/cu31924077730186/cu31924077730186_djvu.xml"
+    },
+    {
+      "work": "OR-I-II page-map metadata",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-2_scandata.xml",
+      "sha256": "0e7b33ec02bc822abc182816364c0d8f3b3ba0e1841fe73061fac43c3e20068a",
+      "url": "https://archive.org/download/cu31924077730186/cu31924077730186_scandata.xml"
+    },
+    {
+      "work": "OR-I-III",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\or-i3.xml",
+      "sha256": "a5639bae848dc9dd06a1eaf861a58cf30abf8e06ea4a3f678f63d3a621b98d43",
+      "url": "https://archive.org/download/warofrebellionco03unit/warofrebellionco03unit_djvu.xml"
+    },
+    {
+      "work": "OR-III-I",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-III-1_djvu.xml",
+      "sha256": "c02b84a52766f1ca05bc80996c34e3f1d1fd3c378794feabf6c972e6e32d3b3e",
+      "url": "https://archive.org/download/warofrebellion0301rootrich/warofrebellion0301rootrich_djvu.xml"
+    },
+    {
+      "work": "OR-IV-I",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-IV-1_djvu.xml",
+      "sha256": "4d1757fbfe19d20e918d48d9977f3623050e9b5ef8de5c5c9e0e8eb3d961796a",
+      "url": "https://archive.org/download/cu31924079579524/cu31924079579524_djvu.xml"
+    },
+    {
+      "work": "OR-IV-I page-map metadata",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-IV-1_scandata.xml",
+      "sha256": "4c9e7652ffdce187bff18d2ff7149921be7c202bf1a399e5f7e467ce801ba312",
+      "url": "https://archive.org/download/cu31924079579524/cu31924079579524_scandata.xml"
+    },
+    {
+      "work": "ORN-I-IV",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\ORN-I-4_djvu.xml",
+      "sha256": "b296398bd020f9c6ac2a7c6887fb2ec2d0a0ac771b59a9a873e19f350b18a2fd",
+      "url": "https://archive.org/download/cu31924079893859/cu31924079893859_djvu.xml"
+    },
+    {
+      "work": "ORN-I-IV page-map metadata",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\ORN-I-4_scandata.xml",
+      "sha256": "5f0ed897e45dfcda13cee589959c72c21f765233713554c73e6b0aaa6f6dfb87",
+      "url": "https://archive.org/download/cu31924079893859/cu31924079893859_scandata.xml"
+    },
+    {
+      "work": "Lincoln-II",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\lincoln-works2.txt",
+      "sha256": "0aa94ec41fab888f027af48c6491f31c92ad65c432c817141a7bbfba8160eb5f",
+      "url": "https://archive.org/download/abrahamlincolnco02linco/abrahamlincolnco02linco_djvu.txt"
+    },
+    {
+      "work": "Burlingame-22",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\burlingame-ch22.pdf",
+      "sha256": "d68684364db93073ad66d715171d212813c7680090366a739013c2cf134f333f",
+      "url": "https://www.knox.edu/documents/LincolnStudies/BurlingameVol2Chap22.pdf"
+    },
+    {
+      "work": "Burlingame-23",
+      "path": "C:\\Pyrrhic\\sprint-pushback\\runs\\s88\\reading\\Burlingame-ch23.pdf",
+      "sha256": "cfc9ba7166796966a8fb1f38edf0d9888fb7c6c04e7a56324bc86947481edbb0",
+      "url": "https://www.knox.edu/documents/LincolnStudies/BurlingameVol2Chap23.pdf"
+    },
+    {
+      "work": "Welles-Galaxy",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\galaxy-1871-01.xml",
+      "sha256": "61a5e17c887aa81a0c589f480eeccdb790bafeaeca1c0e77b9ef1774854c96d9",
+      "url": "https://archive.org/download/sim_galaxy_1871-01_11_1/sim_galaxy_1871-01_11_1_djvu.xml"
+    },
+    {
+      "work": "Taney-Reports",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\Taney.txt",
+      "sha256": "9a4119fd4d36f3090c1375678d386c26c9bed66df080626b70fb5708dbb46c30",
+      "url": "https://archive.org/details/cu31924068531247"
+    },
+    {
+      "work": "Richardson-I",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S37\\confederacy-messages1.txt",
+      "sha256": "a460466f113697f0df2df71bf865daff2fa0e421e35fa84e38b3f40bbdaf6dbc",
+      "url": "https://archive.org/download/compmessages01richrich/compmessages01richrich_djvu.txt"
+    },
+    {
+      "work": "0111",
+      "path": "C:/Pyrrhic/ByOrderOfThePresident/docs/decisions/0111-pushback-is-measured-by-named-acts.md",
+      "sha256": "f8050c00a7e52cd44179b5fa208d3915704cf6ddd9489618f10cc4291989f049",
+      "url": "main decision 0111, read locally"
+    }
+  ],
+  "web_receipts": [
+    {
+      "path": "runs\\s88\\reading\\web-Blair29.json",
+      "sha256": "3934542338f3855c4dd104dace7640f17a0640f501d0b466a21980e1d02d7aa3",
+      "url": "https://www2.tulane.edu/~sumter/Hesitation/Blair29.html",
+      "title": "Blair29.html",
+      "status": 200
+    },
+    {
+      "path": "runs\\s88\\reading\\web-Cameron-contracts.json",
+      "sha256": "3fbb9b35f2b55b6bf5d0bc62f9735b427ef7ccb99a5994008116cc28fdbed463",
+      "url": "https://www.americanheritage.com/lincolns-corrupt-war-department",
+      "title": "Lincoln's Corrupt War Department (Feb 21,Vol:66 Issue:2)",
+      "status": 200
+    },
+    {
+      "path": "runs\\s88\\reading\\web-Holt-Scott-LOC.json",
+      "sha256": "83db7c56d5de718ad8190d821cfcfae3ff85b1511ec0eb600fb00a316c01c41c",
+      "url": "https://www.loc.gov/resource/mal.0779200/?st=text",
+      "title": "Image 1 of Abraham Lincoln papers: Series 1. General Correspondence. 1833-1916: Joseph Holt and Winfield Scott to Abraham Lincoln, Tuesday, March 05, 1861 (Fort Sumter)  | Library of Congress",
+      "status": 200
+    },
+    {
+      "path": "runs\\s88\\reading\\web-IBatesAdvice.json",
+      "sha256": "6030b2f936ef7f16037574580a79bb3b035abcdfd743b2861e1a6447d225c4e2",
+      "url": "https://www2.tulane.edu/~sumter/InitialProb/IBatesAdvice.html",
+      "title": "Advice: Edward Bates",
+      "status": 200
+    },
+    {
+      "path": "runs\\s88\\reading\\web-ICameronAdvice.json",
+      "sha256": "0c3ee8050011ce9cc8aff4e2ce2a67d81e2decc99d78813fdee668eae353a448",
+      "url": "https://www2.tulane.edu/~sumter/InitialProb/ICameronAdvice.html",
+      "title": "Advice: Simon Cameron",
+      "status": 200
+    },
+    {
+      "path": "runs\\s88\\reading\\web-ISewardAdvice.json",
+      "sha256": "2999d5396a564a63edbe7dbb3405fe8b85d4591a0e235342d87a0feb3036eb09",
+      "url": "https://www2.tulane.edu/~sumter/InitialProb/ISewardAdvice.html",
+      "title": "ISewardAdvice.html",
+      "status": 200
+    },
+    {
+      "path": "runs\\s88\\reading\\web-ISmithAdvice.json",
+      "sha256": "6db80287b077533c52090ab51e0b4e64d9f29b0a407414b1e40acf9b1806f5cb",
+      "url": "https://www2.tulane.edu/~sumter/InitialProb/ISmithAdvice.html",
+      "title": "Advice: Caleb B. Smith",
+      "status": 200
+    },
+    {
+      "path": "runs\\s88\\reading\\web-IWellesAdvice.json",
+      "sha256": "e27e8e435e44bd45f303cad8e81ba37b4d0f83db6f52a8bca698c07ca677e14d",
+      "url": "https://www2.tulane.edu/~sumter/InitialProb/IWellesAdvice.html",
+      "title": "Advice: Gideon Welles",
+      "status": 200
+    },
+    {
+      "path": "runs\\s88\\reading\\web-Seward29.json",
+      "sha256": "6702cfa1f09cf7fc68fb87369e61b07600070949db6b3e5672a36188f2c571ac",
+      "url": "https://www2.tulane.edu/~sumter/Hesitation/Seward29.html",
+      "title": "Seward29.html",
+      "status": 200
+    },
+    {
+      "path": "runs\\s88\\reading\\web-SumterHoltScottLincoln0305.json",
+      "sha256": "ece0afa063af0bb4f9e51a9f8b5dda4439a3ee7d53756d302051fb0cbe0f07a3",
+      "url": "https://www.jfepperson.org/SumterHoltScottLincoln0305.htm",
+      "title": "Holt and Scott pass along Anderson's message of March 4.",
+      "status": 200
+    },
+    {
+      "path": "runs\\s88\\reading\\web-SumterScottAbandonPickens.json",
+      "sha256": "458fa81fa1be93cb5c14cd7e5c985d9cb3e78abbbde247589d968b99267b2d9d",
+      "url": "https://www.jfepperson.org/SumterScottAbandonPickens.htm",
+      "title": "General Scott wants to Abandon Both Sumter and Pickens",
+      "status": 200
+    }
+  ],
+  "scope": "Only specifically cited pages/passages read; search index is discovery, not reading.",
+  "exclusions": [
+    "Initial III-I and I-III guessed object offsets rejected; final running heads inspected and corrected before registration.",
+    "Initial Lincoln page 19 extract overwritten by OCR G19 (619) rejected; actual printed 19 restored.",
+    "Initial Richardson keyword-context extract ended on p.85, not p.88; replaced by printed-header extraction before factual use.",
+    "LoC PDF direct HTTP read timed out, web PDF open failed, and direct IIIF manifest returned HTTP 403. Successful LoC/Knox HTML transcript used instead; no individual manuscript scan reading claimed.",
+    "Web advice summary pages are discovery only where local full primary answers are cited.",
+    "Cameron-contracts secondary is unpaginated and supplies no primary refusal document; cannot supply a verified president-issued act."
+  ]
+}

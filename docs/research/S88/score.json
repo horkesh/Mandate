@@ -1,0 +1,215 @@
+{
+  "reference_commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+  "reference_final_hash": "97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c",
+  "scope": "Frozen S84/S87 evidence only; no July/perf3 worktree reads, no simulation, production scorer or band change.",
+  "raw_events": 219,
+  "raw_addressees": 208,
+  "raw_relays": 11,
+  "s84_response_rows": 34,
+  "raw_reservations": {
+    "union": 11,
+    "confederate": 5
+  },
+  "raw_slow_walks": {
+    "union": 9,
+    "confederate": 9
+  },
+  "filter_telemetry": [
+    {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    }
+  ],
+  "coverage": [
+    {
+      "side": "union",
+      "band": "relay_objections",
+      "required": 0,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 0,
+      "not_observed": 0,
+      "qualified_source_extra": 0,
+      "result": "no_required_case"
+    },
+    {
+      "side": "union",
+      "band": "relay_holds",
+      "required": 0,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 0,
+      "not_observed": 0,
+      "qualified_source_extra": 0,
+      "result": "no_required_case"
+    },
+    {
+      "side": "union",
+      "band": "filter_holds",
+      "required": 0,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 0,
+      "not_observed": 0,
+      "qualified_source_extra": 0,
+      "result": "no_required_case"
+    },
+    {
+      "side": "union",
+      "band": "trims",
+      "required": 0,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 0,
+      "not_observed": 0,
+      "qualified_source_extra": 0,
+      "result": "no_required_case"
+    },
+    {
+      "side": "union",
+      "band": "reservations",
+      "required": 2,
+      "matched": 1,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 0,
+      "not_observed": 1,
+      "qualified_source_extra": 0,
+      "result": "unmet"
+    },
+    {
+      "side": "union",
+      "band": "slow_walk",
+      "required": 2,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 1,
+      "not_observed": 1,
+      "qualified_source_extra": 0,
+      "result": "unmet"
+    },
+    {
+      "side": "union",
+      "band": "plan_objections",
+      "required": 14,
+      "matched": 0,
+      "unresolved": 8,
+      "mismatched": 0,
+      "exposure_mismatch": 2,
+      "not_observed": 4,
+      "qualified_source_extra": 2,
+      "result": "unmet"
+    },
+    {
+      "side": "confederate",
+      "band": "relay_objections",
+      "required": 0,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 0,
+      "not_observed": 0,
+      "qualified_source_extra": 0,
+      "result": "no_required_case"
+    },
+    {
+      "side": "confederate",
+      "band": "relay_holds",
+      "required": 0,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 0,
+      "not_observed": 0,
+      "qualified_source_extra": 0,
+      "result": "no_required_case"
+    },
+    {
+      "side": "confederate",
+      "band": "filter_holds",
+      "required": 0,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 0,
+      "not_observed": 0,
+      "qualified_source_extra": 0,
+      "result": "no_required_case"
+    },
+    {
+      "side": "confederate",
+      "band": "trims",
+      "required": 0,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 0,
+      "not_observed": 0,
+      "qualified_source_extra": 0,
+      "result": "no_required_case"
+    },
+    {
+      "side": "confederate",
+      "band": "reservations",
+      "required": 12,
+      "matched": 0,
+      "unresolved": 1,
+      "mismatched": 8,
+      "exposure_mismatch": 0,
+      "not_observed": 3,
+      "qualified_source_extra": 0,
+      "result": "unmet"
+    },
+    {
+      "side": "confederate",
+      "band": "slow_walk",
+      "required": 0,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 0,
+      "not_observed": 0,
+      "qualified_source_extra": 0,
+      "result": "no_required_case"
+    },
+    {
+      "side": "confederate",
+      "band": "plan_objections",
+      "required": 3,
+      "matched": 0,
+      "unresolved": 0,
+      "mismatched": 0,
+      "exposure_mismatch": 1,
+      "not_observed": 2,
+      "qualified_source_extra": 1,
+      "result": "unmet"
+    }
+  ],
+  "matched_cases": [
+    "U39"
+  ],
+  "primary_obligations": 33,
+  "qualified_source_extras": 3,
+  "qualified_matches": 1,
+  "unmatched_s84_responses": 33,
+  "verdict_counts": {
+    "unresolved": 9,
+    "not_observed": 14,
+    "exposure_mismatch": 4,
+    "matched_qualified": 1,
+    "mismatch": 8
+  },
+  "binding_position": "0111 retains old obligations except trims 0-3. Raw 16 reservations and 18 slow walks still fail existing ceilings; no acceptance pass declared.",
+  "no_pass_declared": true
+}

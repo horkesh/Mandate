@@ -1,0 +1,57 @@
+[
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S88\\union-register.csv",
+    "sha256": "5b9bc19dc87c88c909c73d37a92033871a05fcd24af6e0a0257cfff6bd0cd4cf",
+    "bytes": 23884
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S88\\confederate-register.csv",
+    "sha256": "093070343fc81a1626d323ba48120dcf8edc91bf0fef25ac7458a1f3f08d9d95",
+    "bytes": 14272
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S88\\coverage-proposal.csv",
+    "sha256": "61bcec72a34163fd5e95b4709949c2f64e39b6a1a4baca4814f41d28cb8c2cde",
+    "bytes": 3346
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S87\\all-response-diagnostics.csv",
+    "sha256": "4051e17228e066d5eab33163fe6c48692dabf42df76029de4582b67b4a7ba521",
+    "bytes": 32669
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S87\\relay-response-diagnostics.csv",
+    "sha256": "1e313635c73e18c9c3803549a12e3a3bba4ee04ab38fef3ba7feb69e78db9eb6",
+    "bytes": 1610
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S87\\s84-pushback-responses.csv",
+    "sha256": "f9afbeb00ebfe9274661b7b3d62eace9d0be01b39138c930def552be76b55975",
+    "bytes": 19124
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S87\\score.json",
+    "sha256": "2910c1f691a08c8723870982f0c442a7a8f998761ac831410b53191358cf31dc",
+    "bytes": 11432
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\research\\S87\\s84-measurement-evidence.json",
+    "sha256": "24760ac9aa1ee7f2250e29d83d0baf3e4343687be583178bb92dc623f28ea28d",
+    "bytes": 4420
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s84\\call-compact.json",
+    "sha256": "b570159f712ab232c3af8c2150cfc96b355b642ed03b6aa7d1cf7faf4e457859",
+    "bytes": 26551
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s84\\junction.json",
+    "sha256": "70a643752595dd711e1055d4ace85e9cff10d2451355f1a5ca1a3fb7d1528800",
+    "bytes": 4995017
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S84\\measurement-evidence.json",
+    "sha256": "d57929f7b3687a91c0d18b445efeb579e602e5ffd5eeb01bca8edcfbe8c07ed4",
+    "bytes": 4609
+  }
+]
