@@ -1,0 +1,22 @@
+id,lot_candidate,record_date,observation_kind,quantity,quantity_kind,observation,source_keys
+H-O01,H01;H09,1861-05-25,transfer_order,,,SO119 orders Bate Second Tennessee to Fredericksburg next day and directs return of two First Virginia companies upon arrival.,OR-I-LI2:107
+H-O02,H01;H03,1861-05-30?,reported_detachment,700,approximate combined men,Ruggles takes about700 with intention to bring remaining500. Both TN regiment and volunteer battalion comprise force; no allocation. Source date May30[?].,OR-I-II:55
+H-O03,H01;H03,1861-05-30?,reported_remainder,500,combined men remaining,"Do not turn700+500 into either regiment return, exact district strength, or June15 total.",OR-I-II:55
+H-O04,H01;H03,1861-06-01,command_report,4,local infantry companies,Four infantry and one cavalry company from vicinity accompany Bate regiment; Bate transferred to Brooke Station. Company strengths unreported.,OR-I-II:56
+H-O05,H05,1861-06-01,action_report,6,gun calibre pounds,Walker rifle guns brought into preceding day action; no gun count or personnel count inferred.,OR-I-II:56
+H-O06,H07,1861-06-02,command_report,,,Lynch and other naval officers command batteries; Bate commands covering force until Ruggles arrival.,OR-I-II:56
+H-O07,H02,1861-06-04,presence_report,,,Fagan Arkansas regiment now at Camp Jackson; intended future movement to Chopawamsic is not completion.,OR-I-II:57
+H-O08,H06,1861-06-04,presence_report,6,gun calibre pounds,Fredericksburg Artillery named; no returned personnel count.,OR-I-II:57
+H-O09,H01;H05;H08,1861-06-11,own_report,,,"Bate describes one regiment company in battery, remainder in reserve, Walker battery support and mounted detail; later asks about separately promised field battery.",OR-I-II:57;OR-I-II:58
+H-O10,H08,1861-06-01,witness_report,1,company,"Cluskey names Captain Hunt Carolina Greys garrisoning new battery, part of his regiment.",OR-I-II:58;OR-I-II:59
+H-O11,command,1861-06-05,assignment_order,,,SO64 IV sends Holmes to assume troops near Fredericksburg; not proof of arrival on same date.,OR-I-II:907
+H-O12,command,1861-06-15,own_proposal,3,volunteer regiments offered,Holmes says he can march at short notice with three volunteer regiments and two batteries after leaving sufficient battery guard. No names or men listed.,OR-I-II:929
+H-O13,command,1861-06-15,own_proposal,2,artillery batteries offered,"Component of H-O12, not plus three-regiment force from another return.",OR-I-II:929
+H-O14,command,1861-06-15,proposed_guard,500,men proposed,Proposed sufficient guard is not a returned garrison strength.,OR-I-II:929
+H-O15,H07,1861-06-15,armament_statement,12,guns at Aquia,Lee June15 statement of preparations to transfer date; not June17 manpower return.,OR-I-II:927;OR-I-II:928
+H-O16,command;H04,1861-06-17,reply_and_report,,,Lee retains force; mentions Brockenbrough at Mathias Point. Separate from June18 Holmes opposition to Beauregard detachment.,OR-I-II:932;OR-I-II:933
+H-O17,H03,1861-07-06,organisation_approval,,,Deas letter approves organisation Holmes made of Virginia regiment; original organising paper and constituent companies not supplied.,OR-I-II:963;OR-I-II:964
+H-O18,H04,1861-07-10,place_force_estimate,1500,men at Mathias Point,Holmes says about1500 and a battery; not a named-regiment return or a June figure.,OR-I-II:973
+H-O19,command,1861-07-17,support_order,3,regiments ordered,Cooper orders three and a light battery; Ruggles left district; SO224 preserves district security and return. No automatic arrival.,OR-I-II:980;OR-I-II:981
+H-O20,H01;H02;H05,1861-07-26,retrospective_action_report,2,regiments marched,"Holmes names Second Tennessee, First Arkansas and Walker battery; says Wednesday18July, a weekday/date conflict retained, not silently corrected.",OR-I-II:565;OR-I-II:566
+H-O21,command,1861-05-30,area_estimate,2700,conjectured regional men,Garnett says Fredericksburg including lower Rappahannock/Potomac counties number not known; an area estimate not sum of June regimental returns.,OR-I-II:895

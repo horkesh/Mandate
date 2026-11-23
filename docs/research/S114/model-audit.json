@@ -1,0 +1,506 @@
+{
+  "kind": "Read-only frozen model, not historical evidence",
+  "source_commit": "488a4a8af407c923fd5aab3d83f4b18f7cde5187",
+  "provenance": "Every Git-tracked input re-read with git show at exact S111 commit. The first live copies and comparison are retained in runs/s114/model-live-first and model-provenance.json; evolving sibling HEAD is not used as provenance.",
+  "s111_capture": "runs/s111/references/union-1861-final-state.json",
+  "files": [
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\data__scenarios__march_1861.json",
+      "sha256": "f0389694ce1ed892baaec3121e54364614bb1f49a97b1666fa1258fb2b821004",
+      "bytes": 174429
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\data__world.json",
+      "sha256": "b8b6fe5c535066d6eca2da7ae87b0cb0c87418f939f927542af7d9332a27f52b",
+      "bytes": 2019177
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\organisations.json",
+      "sha256": "e43f9f235c6e4388aede2a2715143ddca6a4c798c1f9ff813bdccaf51c21f266",
+      "bytes": 17855
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\pack.json",
+      "sha256": "eaa66c8d361be8f3a2d2fb31d993c63b2a7a43004a7c7340163f05a6bc404255",
+      "bytes": 617315
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\regiments.json",
+      "sha256": "f66b946963716fa72e2012d94d0962ed882bd1b4b0486ef09bf1a820c84e251f",
+      "bytes": 1024146
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\s111-final-state.json",
+      "sha256": "52544cc0b50101618d9630d995a1bc8e109ed94fc431688ebb6477f07ee47730",
+      "bytes": 5220209
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\situations__arkansas_forces_transferred.json",
+      "sha256": "4640620f555bf55dc232cf780ad8117d17911cf34fae9ec285b4654e83a05a05",
+      "bytes": 2876
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\situations__tennessee_forces_transferred.json",
+      "sha256": "b66d34906a4633c665ea024eba9f9ae326dd7a80991ec85313d6773b3b85e447",
+      "bytes": 2388
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\situations__virginia_forces_transferred.json",
+      "sha256": "013b05f7f824a1041ca20926de28dd88c32c084c4363d9537b38f51fd29cec6a",
+      "bytes": 3941
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\situations__virginia_manassas_state_forces.json",
+      "sha256": "bfb3c05b988a337846fc518a1ebcb1a5d35b447001d212f0b412e248cb2b3fee",
+      "bytes": 2281
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\source__scenarios__march_1861__force_blocks.csv",
+      "sha256": "25d96f82d97388c8edfbd6528097961840ffa26dad861f4904281f1e9fb27606",
+      "bytes": 63700
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\source__scenarios__march_1861__posts.csv",
+      "sha256": "e84924de7bea0a9ac854a0fe2b3a2e63daf3d5c2d7cb8c5bada99d3cdf9cdbae",
+      "bytes": 76338
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-research-military\\runs\\s114\\model\\source__scenarios__march_1861__temporary_posts.csv",
+      "sha256": "2f5f875a00ddc516e45aff6126e73ccf2295aa02572c4f47a75846ac7fe947a1",
+      "bytes": 6771
+    }
+  ],
+  "counts": {
+    "catalogue": 214,
+    "templates": 4,
+    "blocks": 176,
+    "lots": 290
+  },
+  "holmes_assigned": [],
+  "ruggles_posts": [],
+  "holmes_templates": [],
+  "selected_lots": [
+    {
+      "block": "state-forces.va_richmond",
+      "assignment": "st_va_richmond",
+      "location": {
+        "locRegion": "richmond",
+        "locAboard": null,
+        "locSinceDay": 52,
+        "locMarch": null
+      },
+      "lotId": "unidentified.state-forces.va_richmond",
+      "lotRegiment": null,
+      "lotGenerated": false,
+      "lotArm": "infantry",
+      "lotMen": null,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_virginia",
+        "enlRaisedBy": "letcher_john",
+        "enlCall": "state-act.virginia_richmond_state_forces.va_richmond",
+        "enlRegiments": null,
+        "enlMusterDay": 52,
+        "enlEndsDay": null,
+        "enlSourceAct": "virginia_richmond_state_forces",
+        "enlTermUnknown": true
+      }
+    },
+    {
+      "block": "state-forces.va_harpers_ferry",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 54,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lotId": "unidentified.state-forces.va_harpers_ferry",
+      "lotRegiment": null,
+      "lotGenerated": false,
+      "lotArm": "infantry",
+      "lotMen": null,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_virginia",
+        "enlRaisedBy": "letcher_john",
+        "enlCall": "state-act.virginia_harpers_jackson.va_harpers_ferry",
+        "enlRegiments": null,
+        "enlMusterDay": 54,
+        "enlEndsDay": null,
+        "enlSourceAct": "virginia_harpers_jackson",
+        "enlTermUnknown": true
+      }
+    },
+    {
+      "block": "state-forces.va_manassas_preston",
+      "assignment": "cs_cmd_manassas",
+      "location": {
+        "locRegion": "loudoun_fauquier",
+        "locAboard": null,
+        "locSinceDay": 140,
+        "locMarch": null
+      },
+      "lotId": "unidentified.state-forces.va_manassas_preston",
+      "lotRegiment": null,
+      "lotGenerated": false,
+      "lotArm": "infantry",
+      "lotMen": null,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_virginia",
+        "enlRaisedBy": "letcher_john",
+        "enlCall": "state-act.virginia_manassas_state_forces.va_manassas_preston",
+        "enlRegiments": null,
+        "enlMusterDay": 71,
+        "enlEndsDay": null,
+        "enlSourceAct": "virginia_manassas_state_forces",
+        "enlTermUnknown": true
+      }
+    },
+    {
+      "block": "raised.st_gov_arkansas.d79",
+      "assignment": "st_gov_arkansas",
+      "location": {
+        "locRegion": "little_rock",
+        "locAboard": null,
+        "locSinceDay": 79,
+        "locMarch": null
+      },
+      "lotId": "generated.raised.st_gov_arkansas.d79.1",
+      "lotRegiment": "generated.raised.st_gov_arkansas.d79.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+        "enlRegiments": 1,
+        "enlMusterDay": 79,
+        "enlEndsDay": 444,
+        "enlCallId": "cs_apr22_absolute_arkansas"
+      }
+    },
+    {
+      "block": "state-forces.cs_tn_infantry_tennessee",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 139,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lotId": "unidentified.state-forces.cs_tn_infantry_tennessee",
+      "lotRegiment": null,
+      "lotGenerated": false,
+      "lotArm": "infantry",
+      "lotMen": 22000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "state-act.tennessee_forces_transferred.cs_tn_infantry_tennessee",
+        "enlRegiments": 22,
+        "enlMusterDay": 116,
+        "enlEndsDay": null,
+        "enlSourceAct": "tennessee_forces_transferred",
+        "enlTermUnknown": true
+      }
+    },
+    {
+      "block": "raised.st_gov_tennessee.d127",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 146,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lotId": "generated.raised.st_gov_tennessee.d127.1",
+      "lotRegiment": "generated.raised.st_gov_tennessee.d127.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 127,
+        "enlEndsDay": 492,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    },
+    {
+      "block": "raised.st_gov_tennessee.d127",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 146,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lotId": "generated.raised.st_gov_tennessee.d127.2",
+      "lotRegiment": "generated.raised.st_gov_tennessee.d127.2",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 127,
+        "enlEndsDay": 492,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    },
+    {
+      "block": "raised.st_gov_tennessee.d127",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 146,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lotId": "generated.raised.st_gov_tennessee.d127.3",
+      "lotRegiment": "generated.raised.st_gov_tennessee.d127.3",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_tennessee",
+        "enlRaisedBy": "harris_isham_g",
+        "enlCall": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "enlRegiments": 3,
+        "enlMusterDay": 127,
+        "enlEndsDay": 492,
+        "enlCallId": "cs_apr22_absolute_tennessee"
+      }
+    },
+    {
+      "block": "state-forces.cs_ar_infantry_arkansas",
+      "assignment": "st_gov_arkansas",
+      "location": {
+        "locRegion": "little_rock",
+        "locAboard": null,
+        "locSinceDay": 132,
+        "locMarch": null
+      },
+      "lotId": "generated.state-forces.cs_ar_infantry_arkansas.1",
+      "lotRegiment": "generated.state-forces.cs_ar_infantry_arkansas.1",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "state-act.arkansas_forces_transferred.cs_ar_infantry_arkansas",
+        "enlRegiments": 7,
+        "enlMusterDay": 132,
+        "enlEndsDay": null,
+        "enlSourceAct": "arkansas_forces_transferred",
+        "enlTermUnknown": true
+      }
+    },
+    {
+      "block": "state-forces.cs_ar_infantry_arkansas",
+      "assignment": "st_gov_arkansas",
+      "location": {
+        "locRegion": "little_rock",
+        "locAboard": null,
+        "locSinceDay": 132,
+        "locMarch": null
+      },
+      "lotId": "generated.state-forces.cs_ar_infantry_arkansas.2",
+      "lotRegiment": "generated.state-forces.cs_ar_infantry_arkansas.2",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "state-act.arkansas_forces_transferred.cs_ar_infantry_arkansas",
+        "enlRegiments": 7,
+        "enlMusterDay": 132,
+        "enlEndsDay": null,
+        "enlSourceAct": "arkansas_forces_transferred",
+        "enlTermUnknown": true
+      }
+    },
+    {
+      "block": "state-forces.cs_ar_infantry_arkansas",
+      "assignment": "st_gov_arkansas",
+      "location": {
+        "locRegion": "little_rock",
+        "locAboard": null,
+        "locSinceDay": 132,
+        "locMarch": null
+      },
+      "lotId": "generated.state-forces.cs_ar_infantry_arkansas.3",
+      "lotRegiment": "generated.state-forces.cs_ar_infantry_arkansas.3",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "state-act.arkansas_forces_transferred.cs_ar_infantry_arkansas",
+        "enlRegiments": 7,
+        "enlMusterDay": 132,
+        "enlEndsDay": null,
+        "enlSourceAct": "arkansas_forces_transferred",
+        "enlTermUnknown": true
+      }
+    },
+    {
+      "block": "state-forces.cs_ar_infantry_arkansas",
+      "assignment": "st_gov_arkansas",
+      "location": {
+        "locRegion": "little_rock",
+        "locAboard": null,
+        "locSinceDay": 132,
+        "locMarch": null
+      },
+      "lotId": "generated.state-forces.cs_ar_infantry_arkansas.4",
+      "lotRegiment": "generated.state-forces.cs_ar_infantry_arkansas.4",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "state-act.arkansas_forces_transferred.cs_ar_infantry_arkansas",
+        "enlRegiments": 7,
+        "enlMusterDay": 132,
+        "enlEndsDay": null,
+        "enlSourceAct": "arkansas_forces_transferred",
+        "enlTermUnknown": true
+      }
+    },
+    {
+      "block": "state-forces.cs_ar_infantry_arkansas",
+      "assignment": "st_gov_arkansas",
+      "location": {
+        "locRegion": "little_rock",
+        "locAboard": null,
+        "locSinceDay": 132,
+        "locMarch": null
+      },
+      "lotId": "generated.state-forces.cs_ar_infantry_arkansas.5",
+      "lotRegiment": "generated.state-forces.cs_ar_infantry_arkansas.5",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "state-act.arkansas_forces_transferred.cs_ar_infantry_arkansas",
+        "enlRegiments": 7,
+        "enlMusterDay": 132,
+        "enlEndsDay": null,
+        "enlSourceAct": "arkansas_forces_transferred",
+        "enlTermUnknown": true
+      }
+    },
+    {
+      "block": "state-forces.cs_ar_infantry_arkansas",
+      "assignment": "st_gov_arkansas",
+      "location": {
+        "locRegion": "little_rock",
+        "locAboard": null,
+        "locSinceDay": 132,
+        "locMarch": null
+      },
+      "lotId": "generated.state-forces.cs_ar_infantry_arkansas.6",
+      "lotRegiment": "generated.state-forces.cs_ar_infantry_arkansas.6",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "state-act.arkansas_forces_transferred.cs_ar_infantry_arkansas",
+        "enlRegiments": 7,
+        "enlMusterDay": 132,
+        "enlEndsDay": null,
+        "enlSourceAct": "arkansas_forces_transferred",
+        "enlTermUnknown": true
+      }
+    },
+    {
+      "block": "state-forces.cs_ar_infantry_arkansas",
+      "assignment": "st_gov_arkansas",
+      "location": {
+        "locRegion": "little_rock",
+        "locAboard": null,
+        "locSinceDay": 132,
+        "locMarch": null
+      },
+      "lotId": "generated.state-forces.cs_ar_infantry_arkansas.7",
+      "lotRegiment": "generated.state-forces.cs_ar_infantry_arkansas.7",
+      "lotGenerated": true,
+      "lotArm": "infantry",
+      "lotMen": 1000,
+      "lotStragglers": 0,
+      "lotService": {
+        "enlPost": "st_gov_arkansas",
+        "enlRaisedBy": "rector_henry_m",
+        "enlCall": "state-act.arkansas_forces_transferred.cs_ar_infantry_arkansas",
+        "enlRegiments": 7,
+        "enlMusterDay": 132,
+        "enlEndsDay": null,
+        "enlSourceAct": "arkansas_forces_transferred",
+        "enlTermUnknown": true
+      }
+    }
+  ],
+  "scope": "Full retained final State lots/assignments and catalogue aliases inspected, plus starting posts/forces, temporary post, organisations and Virginia/AR/TN origins. No simulation rerun or same-date June model State claimed."
+}

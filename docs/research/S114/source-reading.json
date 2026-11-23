@@ -1,0 +1,598 @@
+{
+  "request": "S114 only",
+  "date": "2026-11-23",
+  "policy": "Facts only from sources read, cited by printed page. [M] model; [I] joins/proposals. Unknown is not zero. Replies never seed the call.",
+  "read": [
+    {
+      "key": "OR-I-II:42",
+      "work": "OR-I-II",
+      "printed_page": "42",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p42.txt",
+      "sha256": "52f813fc409037c149fb0892102bc43b7bde2af50f67fd3737dedd88027a5bbc",
+      "bytes": 2803,
+      "url": "https://archive.org/details/cu31924077730186/page/n61/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:55",
+      "work": "OR-I-II",
+      "printed_page": "55",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p55.txt",
+      "sha256": "82467df6a8e50ac3faf022273b93d4e675b3259b01c78013f6ffee05e3123b74",
+      "bytes": 3173,
+      "url": "https://archive.org/details/cu31924077730186/page/n74/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:56",
+      "work": "OR-I-II",
+      "printed_page": "56",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p56.txt",
+      "sha256": "4451fba13e7411a120ba63ef067a088cda33678580f9d753d88287a15288fada",
+      "bytes": 3470,
+      "url": "https://archive.org/details/cu31924077730186/page/n75/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:57",
+      "work": "OR-I-II",
+      "printed_page": "57",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p57.txt",
+      "sha256": "0136894de1e8523bc5d226bb4faff7930407814b40c970329267806df333b328",
+      "bytes": 3741,
+      "url": "https://archive.org/details/cu31924077730186/page/n76/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:58",
+      "work": "OR-I-II",
+      "printed_page": "58",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p58.txt",
+      "sha256": "a3dda4ec465673d2233f9910c78a0e5952fd3d2a511f134e7ada2506727010e6",
+      "bytes": 3592,
+      "url": "https://archive.org/details/cu31924077730186/page/n77/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:59",
+      "work": "OR-I-II",
+      "printed_page": "59",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p59.txt",
+      "sha256": "c3961f9e26796ec68e087b513d293a5d6a4396d5c07871a6699a39e0c6c51189",
+      "bytes": 3285,
+      "url": "https://archive.org/details/cu31924077730186/page/n78/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:565",
+      "work": "OR-I-II",
+      "printed_page": "565",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p565.txt",
+      "sha256": "8e5ae8633ff034c4229a7b834cfc4b1e8398177ea6b6daa78abfb0537c74f966",
+      "bytes": 3961,
+      "url": "https://archive.org/details/cu31924077730186/page/n584/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:566",
+      "work": "OR-I-II",
+      "printed_page": "566",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p566.txt",
+      "sha256": "6dba5df6e1e1535f46ae3989d3b921a4bf180c710176196816ebd21de82b73d5",
+      "bytes": 3744,
+      "url": "https://archive.org/details/cu31924077730186/page/n585/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:826",
+      "work": "OR-I-II",
+      "printed_page": "826",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p826.txt",
+      "sha256": "4ca951f213c13d24f68f8a9b677bd18083f890b3de6ca7c65079591a2168b20b",
+      "bytes": 3279,
+      "url": "https://archive.org/details/cu31924077730186/page/n845/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:841",
+      "work": "OR-I-II",
+      "printed_page": "841",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p841.txt",
+      "sha256": "f8fef2b57d152e568f020ecf538bc3b30e0a8dca4e36dcbbb4108da870794d6d",
+      "bytes": 4163,
+      "url": "https://archive.org/details/cu31924077730186/page/n860/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:879",
+      "work": "OR-I-II",
+      "printed_page": "879",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p879.txt",
+      "sha256": "128e2843d2a3a12194ec751dfe6fd73e98153b84bf71f455e689a5b0d10d7558",
+      "bytes": 2999,
+      "url": "https://archive.org/details/cu31924077730186/page/n898/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:895",
+      "work": "OR-I-II",
+      "printed_page": "895",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p895.txt",
+      "sha256": "2a9553fff53b69c3c170f1af7d00052c093f9f25d68605fb5a210144d2c5238d",
+      "bytes": 3103,
+      "url": "https://archive.org/details/cu31924077730186/page/n914/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:907",
+      "work": "OR-I-II",
+      "printed_page": "907",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p907.txt",
+      "sha256": "5b004f911b8fca5595c45eb0b0ce260ff62f51af291f019150ad3b35483be0ab",
+      "bytes": 3155,
+      "url": "https://archive.org/details/cu31924077730186/page/n926/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:927",
+      "work": "OR-I-II",
+      "printed_page": "927",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p927.txt",
+      "sha256": "5bd07717371b1511d0b3f01547f27d116fe558c5125ab9c3b148da63b52bd2f1",
+      "bytes": 3373,
+      "url": "https://archive.org/details/cu31924077730186/page/n946/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:928",
+      "work": "OR-I-II",
+      "printed_page": "928",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p928.txt",
+      "sha256": "bbaee3986336db5353b02caa2eea5fa2dd3d9dc7a4172bb93bddbb1c60b25bb8",
+      "bytes": 4278,
+      "url": "https://archive.org/details/cu31924077730186/page/n947/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:929",
+      "work": "OR-I-II",
+      "printed_page": "929",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p929.txt",
+      "sha256": "8f2d692b0b0430e24b74a28a64860daa18265efdb72d61a50cb118468e7699a5",
+      "bytes": 3203,
+      "url": "https://archive.org/details/cu31924077730186/page/n948/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:932",
+      "work": "OR-I-II",
+      "printed_page": "932",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p932.txt",
+      "sha256": "5e52fedc5a4e991ca16334b655f20e573ab2631eec2f2c05b597a406fa829508",
+      "bytes": 3409,
+      "url": "https://archive.org/details/cu31924077730186/page/n951/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:933",
+      "work": "OR-I-II",
+      "printed_page": "933",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p933.txt",
+      "sha256": "1ed008c9a0c62674cb2f21e7209405ffefd7c5f6e8615a2fc7639b8721b5fcd4",
+      "bytes": 3360,
+      "url": "https://archive.org/details/cu31924077730186/page/n952/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:944",
+      "work": "OR-I-II",
+      "printed_page": "944",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p944.txt",
+      "sha256": "fe94f99f1e6a352224640a085cd1c3d5bfc5c8e619d6d918d3293a47b88e3108",
+      "bytes": 3035,
+      "url": "https://archive.org/details/cu31924077730186/page/n963/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:963",
+      "work": "OR-I-II",
+      "printed_page": "963",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p963.txt",
+      "sha256": "f21140f7cc04385c5c69448cf9d0c481275051e6448d4beb09923277e0d36484",
+      "bytes": 2831,
+      "url": "https://archive.org/details/cu31924077730186/page/n982/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:964",
+      "work": "OR-I-II",
+      "printed_page": "964",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p964.txt",
+      "sha256": "12c5a027ea2538598d85ae2718d6423542d9937587a588ae64c3543da497cf4a",
+      "bytes": 3814,
+      "url": "https://archive.org/details/cu31924077730186/page/n983/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:973",
+      "work": "OR-I-II",
+      "printed_page": "973",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p973.txt",
+      "sha256": "0e357db295235bbcdd67793bed625841e8e2b23b0ce5c685f6f65b20765c03d4",
+      "bytes": 3298,
+      "url": "https://archive.org/details/cu31924077730186/page/n992/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:974",
+      "work": "OR-I-II",
+      "printed_page": "974",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p974.txt",
+      "sha256": "45f07fb8326a52cf9e1d37c2958892d0983622de4b05bfdcc0b4b02dff8d4494",
+      "bytes": 3335,
+      "url": "https://archive.org/details/cu31924077730186/page/n993/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:980",
+      "work": "OR-I-II",
+      "printed_page": "980",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p980.txt",
+      "sha256": "2160dd0bd7bd07e1a9cbd3ced9b637fa124f1338bf1d58376dafd0389f1ad14a",
+      "bytes": 2503,
+      "url": "https://archive.org/details/cu31924077730186/page/n999/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-II:981",
+      "work": "OR-I-II",
+      "printed_page": "981",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p981.txt",
+      "sha256": "90600459a11cb693a9137ede04daf199f6e158d94c8fcf0ceae2140ee3348a79",
+      "bytes": 2686,
+      "url": "https://archive.org/details/cu31924077730186/page/n1000/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-LI2:107",
+      "work": "OR-I-LI2",
+      "printed_page": "107",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-LI2-p107.txt",
+      "sha256": "779de8af152214debf4d2ad08c45f2f9cac307f45d6bc5051c590917e7fab13a",
+      "bytes": 3234,
+      "url": "https://archive.org/details/warofrebellion512unit/page/n115/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-LI2:111",
+      "work": "OR-I-LI2",
+      "printed_page": "111",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-LI2-p111.txt",
+      "sha256": "3ae2f6e0fc158d58dee68817c484924fa0d1f4241963cc3fe6e73db25a61b083",
+      "bytes": 4292,
+      "url": "https://archive.org/details/warofrebellion512unit/page/n119/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-LI2:112",
+      "work": "OR-I-LI2",
+      "printed_page": "112",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-LI2-p112.txt",
+      "sha256": "7a4fbdba699c2dfec56066d51f50b8dc92c84eda7430b842fecc1db28d1564d7",
+      "bytes": 3938,
+      "url": "https://archive.org/details/warofrebellion512unit/page/n120/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-LI2:123",
+      "work": "OR-I-LI2",
+      "printed_page": "123",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-LI2-p123.txt",
+      "sha256": "4d7389a9fca749987a18c594018e290856de901d154e7fd08b7f0caba2be7447",
+      "bytes": 3377,
+      "url": "https://archive.org/details/warofrebellion512unit/page/n131/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-IV-I:172",
+      "work": "OR-IV-I",
+      "printed_page": "172",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-IV-I-p172.txt",
+      "sha256": "da37574ccc141bc19028f0ee9190d0e900017f4f5f56e4978e662380b3bb0f37",
+      "bytes": 3637,
+      "url": "https://archive.org/details/cu31924079579524/page/n187/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-IV-I:173",
+      "work": "OR-IV-I",
+      "printed_page": "173",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-IV-I-p173.txt",
+      "sha256": "0e6bd274a6f06919d315844dcc5fc7bb8ff278c763d6255b586ebfb88f1aef68",
+      "bytes": 2713,
+      "url": "https://archive.org/details/cu31924079579524/page/n188/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-IV-I:232",
+      "work": "OR-IV-I",
+      "printed_page": "232",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-IV-I-p232.txt",
+      "sha256": "b6d8dcac304f1fdd673bfc4be760c3c78e468446524a9e5a35ec7b1d55867fc2",
+      "bytes": 2911,
+      "url": "https://archive.org/details/cu31924079579524/page/n247/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-IV-I:233",
+      "work": "OR-IV-I",
+      "printed_page": "233",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-IV-I-p233.txt",
+      "sha256": "fb99b4c4185d62a5cac6b08676a829422ec9dbc048d66aa89498235dd643c5fb",
+      "bytes": 2364,
+      "url": "https://archive.org/details/cu31924079579524/page/n248/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-IV-I:235",
+      "work": "OR-IV-I",
+      "printed_page": "235",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-IV-I-p235.txt",
+      "sha256": "f03a65d13f648e6240ce7d541245b19a24da3f37ae1870799364cf1784026581",
+      "bytes": 2378,
+      "url": "https://archive.org/details/cu31924079579524/page/n250/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-IV-I:411",
+      "work": "OR-IV-I",
+      "printed_page": "411",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-IV-I-p411.txt",
+      "sha256": "2c900a7b93f88f7df96529b73ce915a679e1b7d79915470d94c9384aed5a3002",
+      "bytes": 2558,
+      "url": "https://archive.org/details/cu31924079579524/page/n426/mode/1up",
+      "read_scope": "Printed heading and cited passage read; retained OCR/text, not an entire-volume reading."
+    },
+    {
+      "key": "OR-I-III:609",
+      "work": "OR I-III",
+      "printed_page": "609",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-III-p609.txt",
+      "sha256": "f6d5bc0c2824212c90e6a94290ea0ae35bde62606a73a3d48bdec2301d774182",
+      "bytes": 3464,
+      "url": "https://archive.org/details/warofrebellion03secrrich/page/n630/mode/1up",
+      "read_scope": "Read retained primary PDF page text; PDF page is printed+22, verified running heads."
+    },
+    {
+      "key": "OR-I-III:610",
+      "work": "OR I-III",
+      "printed_page": "610",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-III-p610.txt",
+      "sha256": "bbb9a568f19c1205c8d21c218313e490b9263d0a6cca02aa0ac7cf098485b179",
+      "bytes": 3753,
+      "url": "https://archive.org/details/warofrebellion03secrrich/page/n631/mode/1up",
+      "read_scope": "Read retained primary PDF page text; PDF page is printed+22, verified running heads."
+    },
+    {
+      "key": "OR-I-LIII:636",
+      "work": "OR I-LIII",
+      "printed_page": "636",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-LIII-p636.txt",
+      "sha256": "9812be7129ab20b5b3c0efd107bb1a4ae35e4942e4b9701bcf9ec24b8a67f825",
+      "bytes": 3822,
+      "url": "https://archive.org/details/warofrebellion0153rootrich",
+      "read_scope": "Printed running head and Moore March13 paper read in retained full OCR. Viewer leaf not established; page636 is the locator."
+    },
+    {
+      "key": "TN-CODE:111",
+      "work": "Code of Tennessee (1858)",
+      "printed_page": "111",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\tncode111.json",
+      "sha256": "5daff3a76de43f078701e4ca167cefe304167cae512071adf1a32f0c0f72a150",
+      "bytes": 6686,
+      "url": "https://babel.hathitrust.org/cgi/ssd?id=mdp.35112103368272;seq=147",
+      "read_scope": "Original state-code page text via HathiTrust public text-only endpoint; printed head read; no image claim."
+    },
+    {
+      "key": "TN-CODE:112",
+      "work": "Code of Tennessee (1858)",
+      "printed_page": "112",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\tncode112.json",
+      "sha256": "04b6263e4fe755a2c67bdeb6e5bfe4652c06e98bbf7801927551bbe524ce23ce",
+      "bytes": 7662,
+      "url": "https://babel.hathitrust.org/cgi/ssd?id=mdp.35112103368272;seq=148",
+      "read_scope": "Original state-code page text via HathiTrust public text-only endpoint; printed head read; no image claim."
+    },
+    {
+      "key": "TN-CODE:113",
+      "work": "Code of Tennessee (1858)",
+      "printed_page": "113",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\tncode113.json",
+      "sha256": "cae94c4926a14334c534cc37086112f26301eebd4611fedd3bec09e6b9e7b695",
+      "bytes": 7584,
+      "url": "https://babel.hathitrust.org/cgi/ssd?id=mdp.35112103368272;seq=149",
+      "read_scope": "Original state-code page text via HathiTrust public text-only endpoint; printed head read; no image claim."
+    },
+    {
+      "key": "TN-CODE:156",
+      "work": "Code of Tennessee (1858)",
+      "printed_page": "156",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\tncode156.json",
+      "sha256": "2e02918b8f93dfe1f412dd642446978dbab28d99bb2ecf7cecc3584ef173ba64",
+      "bytes": 7019,
+      "url": "https://babel.hathitrust.org/cgi/ssd?id=mdp.35112103368272;seq=192",
+      "read_scope": "Original state-code page text via HathiTrust public text-only endpoint; printed head read; no image claim."
+    },
+    {
+      "key": "TN-CODE:157",
+      "work": "Code of Tennessee (1858)",
+      "printed_page": "157",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\tncode157.json",
+      "sha256": "752b56732e9fbb24aef3b0cf6aaaf77d31063384d1c42a369cf2f2a4583f987d",
+      "bytes": 7677,
+      "url": "https://babel.hathitrust.org/cgi/ssd?id=mdp.35112103368272;seq=193",
+      "read_scope": "Original state-code page text via HathiTrust public text-only endpoint; printed head read; no image claim."
+    },
+    {
+      "key": "TN-JAN:6",
+      "work": "Tennessee Senate Journal, extra session January1861",
+      "printed_page": "6",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\tnjanuary6.json",
+      "sha256": "6a093831ceecade143ae949e7a9a10cfe14dcf9d98ca219418c5aca813fb0d35",
+      "bytes": 6037,
+      "url": "https://babel.hathitrust.org/cgi/ssd?id=uiug.30112039311805;seq=12",
+      "read_scope": "Original journal page text read headlessly. Title at seq7 and January7 sitting at seq9; message begins p6 and closes with Harris signature p19. No whole-message or image-reading claim."
+    },
+    {
+      "key": "TN-JAN:16",
+      "work": "Tennessee Senate Journal, extra session January1861",
+      "printed_page": "16",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\tnjanuary16.json",
+      "sha256": "b5fd72ee9676317566d172d9840d88126bc2b54195e776bab8054672e80f8dfa",
+      "bytes": 6037,
+      "url": "https://babel.hathitrust.org/cgi/ssd?id=uiug.30112039311805;seq=22",
+      "read_scope": "Original journal page text read headlessly. Title at seq7 and January7 sitting at seq9; message begins p6 and closes with Harris signature p19. No whole-message or image-reading claim."
+    },
+    {
+      "key": "TN-JAN:17",
+      "work": "Tennessee Senate Journal, extra session January1861",
+      "printed_page": "17",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\tnjanuary17.json",
+      "sha256": "c8fe0e55309cd717ed03ca4a7fe9aa084e3c643a31e215d82823036501eae8f7",
+      "bytes": 6670,
+      "url": "https://babel.hathitrust.org/cgi/ssd?id=uiug.30112039311805;seq=23",
+      "read_scope": "Original journal page text read headlessly. Title at seq7 and January7 sitting at seq9; message begins p6 and closes with Harris signature p19. No whole-message or image-reading claim."
+    },
+    {
+      "key": "TN-JAN:18",
+      "work": "Tennessee Senate Journal, extra session January1861",
+      "printed_page": "18",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\tnjanuary18.json",
+      "sha256": "bb4a85258f30e97bf16b41cd5c71eca2ae150c3733485d5a77617c168fea3069",
+      "bytes": 5911,
+      "url": "https://babel.hathitrust.org/cgi/ssd?id=uiug.30112039311805;seq=24",
+      "read_scope": "Original journal page text read headlessly. Title at seq7 and January7 sitting at seq9; message begins p6 and closes with Harris signature p19. No whole-message or image-reading claim."
+    },
+    {
+      "key": "TN-JAN:19",
+      "work": "Tennessee Senate Journal, extra session January1861",
+      "printed_page": "19",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\tnjanuary19.json",
+      "sha256": "68c09cd867a7d92f901856f228d3cb1ddcbee322788146061536b7440a6fb1a6",
+      "bytes": 4902,
+      "url": "https://babel.hathitrust.org/cgi/ssd?id=uiug.30112039311805;seq=25",
+      "read_scope": "Original journal page text read headlessly. Title at seq7 and January7 sitting at seq9; message begins p6 and closes with Harris signature p19. No whole-message or image-reading claim."
+    },
+    {
+      "key": "LA-MB:6",
+      "work": "Louisiana Military Board, Special Report (1861)",
+      "printed_page": "6",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\LA-Military-p6.txt",
+      "sha256": "0cb6245507771197d268a0fabd3ef27039e00d23db6064ea975539c02cbf81de",
+      "bytes": 3287,
+      "url": "https://archive.org/details/specialreportofm01loui/page/n6/mode/1up",
+      "read_scope": "Primary report text read; corresponding printed-page image independently inspected. Report signed by Moore and closing date February14 1861 on p6; p7 warrant table."
+    },
+    {
+      "key": "LA-MB:7",
+      "work": "Louisiana Military Board, Special Report (1861)",
+      "printed_page": "7",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\LA-Military-p7.txt",
+      "sha256": "8693ca1fde5e3229922798545e26c0f0dcb41ba9a8cb4a01997e15c062c2b80c",
+      "bytes": 1431,
+      "url": "https://archive.org/details/specialreportofm01loui/page/n7/mode/1up",
+      "read_scope": "Primary report text read; corresponding printed-page image independently inspected. Report signed by Moore and closing date February14 1861 on p6; p7 warrant table."
+    },
+    {
+      "key": "LA-MB:6:image",
+      "work": "Louisiana Military Board, Special Report (1861)",
+      "printed_page": "6",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\LA-Military-printed6.jpg",
+      "sha256": "8478da8a3c629190b39e424f5ba3c18e2ba7677c7cb3308f973bdd936427c410",
+      "bytes": 984717,
+      "url": "https://archive.org/download/specialreportofm01loui/page/n6.jpg",
+      "read_scope": "Full original printed-page image inspected; p7 table columns and printed date typo retained."
+    },
+    {
+      "key": "LA-MB:7:image",
+      "work": "Louisiana Military Board, Special Report (1861)",
+      "printed_page": "7",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\LA-Military-printed7.jpg",
+      "sha256": "f7867c5661f9b51eee669c9c873ec85a2258a463c356b8bfc32594f2adc8639f",
+      "bytes": 516139,
+      "url": "https://archive.org/download/specialreportofm01loui/page/n7.jpg",
+      "read_scope": "Full original printed-page image inspected; p7 table columns and printed date typo retained."
+    },
+    {
+      "key": "AL-MOORE:6-7",
+      "work": "A.B. Moore, Message to Alabama Senate, January14 1861",
+      "printed_page": "6-7",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\AL-Moore-jan14-p4.txt",
+      "sha256": "298ae62e43ecef2946ec31539670cc30662da7d0fef3c7f2750346c0d565ea56",
+      "bytes": 4725,
+      "url": "https://digital.archives.alabama.gov/digital/api/collection/cwrg/id/26772/download",
+      "read_scope": "Primary PDF spread4, printed6-7, text and rendered page inspected; conditional loan distinguished from cash balance."
+    },
+    {
+      "key": "AL-MOORE:date",
+      "work": "A.B. Moore, Message to Alabama Senate, January14 1861",
+      "printed_page": "3",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\AL-Moore-jan14-p2.txt",
+      "sha256": "f7b39a9f034cf39c5a41d05f2f92104f4a329159d35b12f60a8e366103305441",
+      "bytes": 1696,
+      "url": "https://digital.archives.alabama.gov/digital/collection/cwrg/id/26772/",
+      "read_scope": "Date/author opening read in primary PDF2; catalogue independently identifies A.B. Moore."
+    },
+    {
+      "key": "OR-I-II:42:image",
+      "work": "OR I-II original page image",
+      "printed_page": "42",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p42.jpg",
+      "sha256": "2b482104a4eb7a8567af494e799c4e8480b57e488297ddf3a9abbeb608bc46e9",
+      "bytes": 498385,
+      "url": "https://archive.org/download/cu31924077730186/page/n61.jpg",
+      "read_scope": "Full printed page inspected: May25 seven-company departure, and May10 order naming J.F. Preston."
+    },
+    {
+      "key": "OR-I-II:879:image",
+      "work": "OR I-II original page image",
+      "printed_page": "879",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\OR-I-II-p879.jpg",
+      "sha256": "a76e84cb3d0b9b88b4ed58bda324577995641a4aea5a1b5f45665911038cb73f",
+      "bytes": 561315,
+      "url": "https://archive.org/download/cu31924077730186/page/n898.jpg",
+      "read_scope": "Full printed page inspected: May25 seven-company departure, and May10 order naming J.F. Preston."
+    },
+    {
+      "key": "FBG-1883:16",
+      "work": "Fredericksburg Ordinances (1883), historical preface",
+      "printed_page": "16",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\Fredericksburg-Ordinances-p7.txt",
+      "sha256": "579cf0bf50cddf46e21f11567e79092fddc1d1877b5082ac3295fd7f24e1df79",
+      "bytes": 4165,
+      "url": "https://hisp.umw.edu/wp-content/uploads/2021/04/fbgordinances18831.pdf",
+      "read_scope": "Reformatted transcription PDF7 contains original printed16 marker and passage. Retrospective municipal narrative, identity lead only; no June return/date claim or celebratory assessment adopted."
+    },
+    {
+      "key": "TN-APR:12",
+      "work": "Tennessee Senate Journal, second extra session April1861",
+      "printed_page": "12",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S114\\TN-Senate-April-p12.txt",
+      "sha256": "e2c27904d6f76ec94ff1e6f9f872d3b3aa6da2ecc0de43fd9d3ceeac5e3d102e",
+      "bytes": 2922,
+      "url": "https://docsouth.unc.edu/imls/tennessee/tennessee.html#p12",
+      "read_scope": "Later April25 message read as exclusion/control only; never a pre-April22 input."
+    }
+  ],
+  "excluded": [
+    "The modern Harris transcription (civilwarcauses.org) was a locator lead. Its reported pp6-18 were superseded by original Senate journal pp6,17,19; signature is on p19.",
+    "Initial LI.2 leaf mapping +7 was one page high. Corrected to +8 and printed heads checked before any delivery citation.",
+    "Initial LA Military image labelled p6 was actually printed7. Renamed, then p6 acquired and inspected before batch use.",
+    "Initial LA Convention image candidate p14 was printed20. Not cited; corrected printed14 inspected, but convention material is unnecessary to final conclusions.",
+    "1859 Harris message selected searches found no relevant military passage. No whole-volume reading claimed.",
+    "April22/23 replies OR IV-I pp233,235 are measured answers only. April25 message and May military act cannot seed them.",
+    "Live LVA Cooke transcript URLs returned404; web cache read shows June13 dateline versus June15 editorial citation. No unit/return facts adopted.",
+    "warofrebellion53secrrich metadata was empty and OCR503. Correct series1 vol53 identifier recovered; European OCR host timed out, metadata-designated US host succeeded. No unchanged retry.",
+    "Tennessee source acquisitions: one scandata404, another timeout; Boston legacy API TLS failure and alternate-host403; Google Books API429. No completeness inference from failures."
+  ]
+}
