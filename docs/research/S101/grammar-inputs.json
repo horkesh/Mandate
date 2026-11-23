@@ -1,0 +1,58 @@
+{
+  "root": "C:\\Pyrrhic\\sprint-july",
+  "head_at_read": "87d56665d860339fa7bf0ed84bbc7b1ddf8c729e",
+  "inputs": [
+    {
+      "path": "packs/union-1861/data/world.json",
+      "sha256": "a5c2b6b2d9e529801c491b1ff7695ae64c19b95a7a7d794a45c952bb8ddc033e"
+    },
+    {
+      "path": "packs/union-1861/calls-1861.json",
+      "sha256": "634b20276e8dfafe0ce9afecffdf00cf87c2991d740ddcece744832b80e3cff9"
+    },
+    {
+      "path": "packs/union-1861/pushback-union.json",
+      "sha256": "e433fdb9b00eb678cf05cea0cc00d147e27b2e98a84458ff311fdbaf2762df12"
+    },
+    {
+      "path": "packs/union-1861/pushback-confederate.json",
+      "sha256": "3b6c6e64ceaf911ffb8f211d17ee622267e81b11156108c7df6eb017d7c3d6c8"
+    },
+    {
+      "path": "packs/union-1861/source/drafts/calls/union-calls-1861.csv",
+      "sha256": "9a6365ae8eb0d576f6c995649faa8029ad1da260ff3e8a8b48208bf3593f9322"
+    },
+    {
+      "path": "packages/kernel/src/directive.ts",
+      "sha256": "ce8998286cc4aa41fc843d786fc43d57b253e195dab3de175b74419bdfa8309b"
+    },
+    {
+      "path": "packages/kernel/src/recruitment/rules.ts",
+      "sha256": "785f7300a257b13cde190896019086df25517548a6be12a990e21879e19b2722"
+    },
+    {
+      "path": "packages/kernel/src/tick/recruitment.ts",
+      "sha256": "3dcfe2f040dcef5303e3d2e8801577ab0485b9eb34f4166b4d3ab2a6f0f597ac"
+    },
+    {
+      "path": "packages/kernel/src/messages/transit.ts",
+      "sha256": "452d750a4bab95185c8591268b283bde8f795bcae700e8a6c7a0852949b00572"
+    },
+    {
+      "path": "docs/decisions/0112-the-pushback-registers-and-what-1a-requires.md",
+      "sha256": "36364435f3694386354b80a225341ad182ca16765a72c7848a0a86bca02f69c7"
+    },
+    {
+      "path": "packs/union-1861/situations/call_for_troops.json",
+      "sha256": "ee36fd6dd300b3fba2c5a2177e7b97e198e1086c8e60f1335dc814eb1acb5df6"
+    },
+    {
+      "path": "packages/kernel/src/compliance.ts",
+      "sha256": "f10a9c6b001450dd9dff10712149494978690c499697258288bc518c00c07ecb"
+    },
+    {
+      "path": "packages/kernel/src/reading/orders.ts",
+      "sha256": "d46e58e2d11380e7304a06993bea210aeacbbfee4142d0e36a0ffe4ca6a5630c"
+    }
+  ]
+}

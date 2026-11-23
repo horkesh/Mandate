@@ -1,0 +1,724 @@
+{
+  "request": "S101 only",
+  "sources": [
+    {
+      "work": "Official Records, series IV, volume I",
+      "identifier": "cu31924079579524",
+      "ocr_xml": "C:\\Pyrrhic\\mandate-research-sources\\S101\\cu31924079579524_djvu.xml",
+      "ocr_sha256": "4d1757fbfe19d20e918d48d9977f3623050e9b5ef8de5c5c9e0e8eb3d961796a",
+      "ocr_sha1_matches_live_metadata": true,
+      "live_metadata_url": "https://archive.org/metadata/cu31924079579524",
+      "metadata_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\cu31924079579524-metadata.json",
+      "metadata_sha256": "20b4db3e9d2b9d6de17f6f3622a0535ae394d003ee9ae03a72f15b183d7d3759",
+      "scandata": "C:\\Pyrrhic\\mandate-research-sources\\S75\\cu31924079579524_scandata.xml",
+      "scandata_sha256": "4c9e7652ffdce187bff18d2ff7149921be7c202bf1a399e5f7e467ce801ba312",
+      "status": "Primary documents printed in later official compilation; OCR selected papers read, not whole volume. No later editorial character judgment adopted."
+    },
+    {
+      "work": "Official Records, series III, volume I",
+      "identifier": "cu31924079622175",
+      "ocr_xml": "C:\\Pyrrhic\\mandate-research-sources\\S101\\cu31924079622175_djvu.xml",
+      "ocr_sha256": "dd62237d6ac6fde96efba2d5b84858881c1e62451eef48d90821f35ee62ffc8e",
+      "ocr_sha1_matches_live_metadata": true,
+      "live_metadata_url": "https://archive.org/metadata/cu31924079622175",
+      "metadata_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\cu31924079622175-metadata.json",
+      "metadata_sha256": "98880efb7c722d3e1bbaa77bcc346fda2f840ad08c769978cf7905e9be5ec490",
+      "scandata": "C:\\Pyrrhic\\mandate-research-sources\\S6\\OR-III-1_scandata.xml",
+      "scandata_sha256": "f4b0cbbb4da968638ce420d61b80d0381a1f6e699ce8cbe076b87b4dc024793a",
+      "status": "Primary documents printed in later official compilation; OCR selected papers read, not whole volume. No later editorial character judgment adopted."
+    },
+    {
+      "work": "Official Records, series I, volume II",
+      "pdf": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+      "pdf_sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+      "status": "Existing local source; printed581 PDF index600, Hicks April20reply read by headless extraction; no new live identity claim for this PDF."
+    }
+  ],
+  "locators": [
+    {
+      "source_ref": "OR-IV-I:117",
+      "printed_page": 117,
+      "leaf": 132,
+      "url": "https://archive.org/details/cu31924079579524/page/n132/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p117.txt",
+      "extract_sha256": "4546e75beb84f15430a16959dc277cba329c1eedcf81ff373c175bc2babc3cc0",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:126",
+      "printed_page": 126,
+      "leaf": 141,
+      "url": "https://archive.org/details/cu31924079579524/page/n141/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p126.txt",
+      "extract_sha256": "b08fa87b2415ffc877bbda45903a9ea88c9ec76a1e190c178a1f88f934d1e29b",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:127",
+      "printed_page": 127,
+      "leaf": 142,
+      "url": "https://archive.org/details/cu31924079579524/page/n142/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p127.txt",
+      "extract_sha256": "5579b1b4d450c56ee90a01677d801af6c6e26b13dfa114f02656c16e2a97f00f",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:134",
+      "printed_page": 134,
+      "leaf": 149,
+      "url": "https://archive.org/details/cu31924079579524/page/n149/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p134.txt",
+      "extract_sha256": "9de9c62fc1888390095cf7ffb74a1a6e91fbc1968a2c51bad27cf06df14086b2",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:135",
+      "printed_page": 135,
+      "leaf": 150,
+      "url": "https://archive.org/details/cu31924079579524/page/n150/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p135.txt",
+      "extract_sha256": "01d166834652e5c471428fde8d95b4191d08196ac664877ed28c553dcf2a9034",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:207",
+      "printed_page": 207,
+      "leaf": 222,
+      "url": "https://archive.org/details/cu31924079579524/page/n222/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p207.txt",
+      "extract_sha256": "5303a257bc0edca319f1a5c289da79c768cb54c6ed7aa081c304d0520eaab1be",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:211",
+      "printed_page": 211,
+      "leaf": 226,
+      "url": "https://archive.org/details/cu31924079579524/page/n226/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p211.txt",
+      "extract_sha256": "90d47fafa88465585d10eef54db443efac25ccb4074a5fbb44f730be7b4b3393",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:214",
+      "printed_page": 214,
+      "leaf": 229,
+      "url": "https://archive.org/details/cu31924079579524/page/n229/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p214.txt",
+      "extract_sha256": "db309822c8d4418a3733cb91782381d71b08dc623d030d843b8992f4d4fdcf6d",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:221",
+      "printed_page": 221,
+      "leaf": 236,
+      "url": "https://archive.org/details/cu31924079579524/page/n236/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p221.txt",
+      "extract_sha256": "037aae182add37df38b11c20ea13eb1ec7b54eba4fc62f90b6972d1329b3bfcc",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:222",
+      "printed_page": 222,
+      "leaf": 237,
+      "url": "https://archive.org/details/cu31924079579524/page/n237/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p222.txt",
+      "extract_sha256": "4a0e4bf0913633ebf39af2d2c2532f87b1dbc2f716bb33186df8d2ebde4fe8bb",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:231",
+      "printed_page": 231,
+      "leaf": 246,
+      "url": "https://archive.org/details/cu31924079579524/page/n246/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p231.txt",
+      "extract_sha256": "9c8e7dd3be9d78fd09b4bfb9d7232178d72e548d6d0c2db2a4c060f974c64599",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:232",
+      "printed_page": 232,
+      "leaf": 247,
+      "url": "https://archive.org/details/cu31924079579524/page/n247/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p232.txt",
+      "extract_sha256": "d4d646cb602b9f79f1b6328c7f0ab6008914860ea34bd2ebe5e22a166b262371",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:233",
+      "printed_page": 233,
+      "leaf": 248,
+      "url": "https://archive.org/details/cu31924079579524/page/n248/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p233.txt",
+      "extract_sha256": "550ddaf8d452ac2d74190b751e08869b809d9f99f26bd22e8f470624d8e56604",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:234",
+      "printed_page": 234,
+      "leaf": 249,
+      "url": "https://archive.org/details/cu31924079579524/page/n249/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p234.txt",
+      "extract_sha256": "3e84d5ff8ac711bdcaaed3c1c6aafe16047eb3c2af38ae04a5ce7ad2a4758690",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:235",
+      "printed_page": 235,
+      "leaf": 250,
+      "url": "https://archive.org/details/cu31924079579524/page/n250/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p235.txt",
+      "extract_sha256": "72bab3b55b825784bddc7ea7c863b323813ea9f1df5c7b4b33549567bdc45ed1",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:236",
+      "printed_page": 236,
+      "leaf": 251,
+      "url": "https://archive.org/details/cu31924079579524/page/n251/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p236.txt",
+      "extract_sha256": "871eac0b075ba52b30d56aab46c0f16a12f2bb47016e148a735d486762b4a548",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:295",
+      "printed_page": 295,
+      "leaf": 310,
+      "url": "https://archive.org/details/cu31924079579524/page/n310/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p295.txt",
+      "extract_sha256": "2a45cdadf9224f650f649ebdea3927ec122004cf5cc9b98e42cbd03090b686d9",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:302",
+      "printed_page": 302,
+      "leaf": 317,
+      "url": "https://archive.org/details/cu31924079579524/page/n317/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p302.txt",
+      "extract_sha256": "12620cc9e8c7bb625b7dac99eb77a46e07e299a4d4106229a9bd50339bec73e1",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:303",
+      "printed_page": 303,
+      "leaf": 318,
+      "url": "https://archive.org/details/cu31924079579524/page/n318/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p303.txt",
+      "extract_sha256": "1c942c010ac3e151882bf2a45d5203eddcff11af5602762f98a0843c38e8fb0d",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:355",
+      "printed_page": 355,
+      "leaf": 370,
+      "url": "https://archive.org/details/cu31924079579524/page/n370/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p355.txt",
+      "extract_sha256": "a63e680e65401999d53852a42515a3e8ea30fadd024aaee08a65f67d527fa5a2",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:411",
+      "printed_page": 411,
+      "leaf": 426,
+      "url": "https://archive.org/details/cu31924079579524/page/n426/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p411.txt",
+      "extract_sha256": "04e4a2ddc7668c603b879cec6e418be3710b4d5f6b716f27dccb27cedfee8dd2",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:412",
+      "printed_page": 412,
+      "leaf": 427,
+      "url": "https://archive.org/details/cu31924079579524/page/n427/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p412.txt",
+      "extract_sha256": "c7c037b8b29b5d8aa5901366d5b3fbee0afe95608c46bff9f96d45063d17934f",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:416",
+      "printed_page": 416,
+      "leaf": 431,
+      "url": "https://archive.org/details/cu31924079579524/page/n431/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p416.txt",
+      "extract_sha256": "b0cee67a861de6c782cad969b5ae2f3585016b5cd6587bfab24d6073d00d6548",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:419",
+      "printed_page": 419,
+      "leaf": 434,
+      "url": "https://archive.org/details/cu31924079579524/page/n434/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p419.txt",
+      "extract_sha256": "abdb4f4a9cad7e8d074ae7b8cbc921f03e00134bede57735761b1a69e5821ac9",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:420",
+      "printed_page": 420,
+      "leaf": 435,
+      "url": "https://archive.org/details/cu31924079579524/page/n435/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p420.txt",
+      "extract_sha256": "cd143077c709f2c5bfbf64be91ef1f6413abb76d20e29526bb218413f70658eb",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:421",
+      "printed_page": 421,
+      "leaf": 436,
+      "url": "https://archive.org/details/cu31924079579524/page/n436/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p421.txt",
+      "extract_sha256": "c44840246543e73df3d17b319bc302efd46829fd3a51124f3e10e821b0af8232",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:422",
+      "printed_page": 422,
+      "leaf": 437,
+      "url": "https://archive.org/details/cu31924079579524/page/n437/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p422.txt",
+      "extract_sha256": "a985a86de7f3c25b14592fb2b33666af6fa2d875a22c7f687f280a1d2a58d300",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:423",
+      "printed_page": 423,
+      "leaf": 438,
+      "url": "https://archive.org/details/cu31924079579524/page/n438/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p423.txt",
+      "extract_sha256": "8b01e1e1060d4c597168620c2fa2b42387e2185e07bab708bbe9e71b929b4e93",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:424",
+      "printed_page": 424,
+      "leaf": 439,
+      "url": "https://archive.org/details/cu31924079579524/page/n439/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p424.txt",
+      "extract_sha256": "79511bb15018d3a7b7638478cf694914b7cdd44190d47620ea98db6e682684fd",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:466",
+      "printed_page": 466,
+      "leaf": 481,
+      "url": "https://archive.org/details/cu31924079579524/page/n481/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p466.txt",
+      "extract_sha256": "623bd64a260b0dec78c588379e35aa37c27a0ab30915cc77dcc4f93d3f36f76c",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:477",
+      "printed_page": 477,
+      "leaf": 492,
+      "url": "https://archive.org/details/cu31924079579524/page/n492/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p477.txt",
+      "extract_sha256": "83a273d54e0b41e8f1a7f7681cde50c54ba8f73d4a0dc961f4ed1501979ac88f",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-IV-I:478",
+      "printed_page": 478,
+      "leaf": 493,
+      "url": "https://archive.org/details/cu31924079579524/page/n493/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p478.txt",
+      "extract_sha256": "37675e068e00588a4d936d5a31b79f7abc97a4d882a548ec3024b6e72e916ed7",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:145",
+      "printed_page": 145,
+      "leaf": 160,
+      "url": "https://archive.org/details/cu31924079622175/page/n160/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p145.txt",
+      "extract_sha256": "a147dd520036a4467709d267cb0500b2d8a4a45d30c3d5b962196c2d84d1255e",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:146",
+      "printed_page": 146,
+      "leaf": 161,
+      "url": "https://archive.org/details/cu31924079622175/page/n161/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p146.txt",
+      "extract_sha256": "9614e63bab60d9c0533fc3bad96e949544514557150e34ca1d6de906ec179468",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:151",
+      "printed_page": 151,
+      "leaf": 166,
+      "url": "https://archive.org/details/cu31924079622175/page/n166/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p151.txt",
+      "extract_sha256": "01d527b0d4a1e554798355bfe4ade2f677619db01118d76f6c39d0a3cc4ffc61",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:152",
+      "printed_page": 152,
+      "leaf": 167,
+      "url": "https://archive.org/details/cu31924079622175/page/n167/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p152.txt",
+      "extract_sha256": "36a3ced9c3712085e2ff47ac6b4a7df85e2c30047d6441cdde0c07815091929b",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:153",
+      "printed_page": 153,
+      "leaf": 168,
+      "url": "https://archive.org/details/cu31924079622175/page/n168/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p153.txt",
+      "extract_sha256": "bd6fc70fe9283df7e5a8b8770768e930b428741725611e4da5a4c7b4a27fa804",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:154",
+      "printed_page": 154,
+      "leaf": 169,
+      "url": "https://archive.org/details/cu31924079622175/page/n169/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p154.txt",
+      "extract_sha256": "4d13a31976c29c8f0559b2efe1f9512bec3ac37993c2dcd234fe96526663dfbb",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:155",
+      "printed_page": 155,
+      "leaf": 170,
+      "url": "https://archive.org/details/cu31924079622175/page/n170/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p155.txt",
+      "extract_sha256": "744834854d2ee54c73677c95e61ca45704c3f1e8286990b6e9b8b8f3afa7c6cb",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:156",
+      "printed_page": 156,
+      "leaf": 171,
+      "url": "https://archive.org/details/cu31924079622175/page/n171/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p156.txt",
+      "extract_sha256": "a370f3b64ab48122d3b86111ac749cba21e35e94faa4d8f73befbb8bb277dac8",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:157",
+      "printed_page": 157,
+      "leaf": 172,
+      "url": "https://archive.org/details/cu31924079622175/page/n172/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p157.txt",
+      "extract_sha256": "734fe3b4854f313d8ca5cc2419533ef2a61eb540984fd94b06c9d8a97f32b1fd",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:203",
+      "printed_page": 203,
+      "leaf": 218,
+      "url": "https://archive.org/details/cu31924079622175/page/n218/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p203.txt",
+      "extract_sha256": "60762241c35b3e44e5849709661c1dd7182cdb28cfc4ae9f4632938022f70d85",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:204",
+      "printed_page": 204,
+      "leaf": 219,
+      "url": "https://archive.org/details/cu31924079622175/page/n219/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p204.txt",
+      "extract_sha256": "0836276f2a1ff5958c8b4acd6b6a6381a0bd4a61435009f2d36cdbdb2f2085af",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:207",
+      "printed_page": 207,
+      "leaf": 222,
+      "url": "https://archive.org/details/cu31924079622175/page/n222/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p207.txt",
+      "extract_sha256": "93471a78a477ed27d519cc7c8f3922063c530b97be2518b724ea95e210463c81",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:208",
+      "printed_page": 208,
+      "leaf": 223,
+      "url": "https://archive.org/details/cu31924079622175/page/n223/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p208.txt",
+      "extract_sha256": "2dc5ed725b43724f7b9635f887f7093e0bde44e369f0b6c231fc30a8189c0c3a",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:263",
+      "printed_page": 263,
+      "leaf": 278,
+      "url": "https://archive.org/details/cu31924079622175/page/n278/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p263.txt",
+      "extract_sha256": "8a6f62cf4fbc11edbaa37cd210f182c6734a343f3020ca7c651840772474b91a",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:265",
+      "printed_page": 265,
+      "leaf": 280,
+      "url": "https://archive.org/details/cu31924079622175/page/n280/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p265.txt",
+      "extract_sha256": "3cc10e1966b9b908bcfc280aaf3fa287b9d578549ca7d71f3da737e6583d458d",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:290",
+      "printed_page": 290,
+      "leaf": 305,
+      "url": "https://archive.org/details/cu31924079622175/page/n305/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p290.txt",
+      "extract_sha256": "6591d140f988ee92dcccb1979641ddff916a9a38132f5b5ee4fe43d694f2808f",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:369",
+      "printed_page": 369,
+      "leaf": 384,
+      "url": "https://archive.org/details/cu31924079622175/page/n384/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p369.txt",
+      "extract_sha256": "5be913f3fb75f22b5c2c15074177544fcbffb4cfe8523bbb66a6e9abf8ebea72",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:370",
+      "printed_page": 370,
+      "leaf": 385,
+      "url": "https://archive.org/details/cu31924079622175/page/n385/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p370.txt",
+      "extract_sha256": "4b48af36eb79de40e7aa558168f1c74c86177650b701e4d35249ddaf7e30c018",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:371",
+      "printed_page": 371,
+      "leaf": 386,
+      "url": "https://archive.org/details/cu31924079622175/page/n386/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p371.txt",
+      "extract_sha256": "6e7c0c17fc454c2ed181ffb9345f4540a7d9ff8695def7845be4fcd7a89566e1",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:372",
+      "printed_page": 372,
+      "leaf": 387,
+      "url": "https://archive.org/details/cu31924079622175/page/n387/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p372.txt",
+      "extract_sha256": "dbf435cd650cbc9600bf060368f280d18bb77fbdace2f275cc6fa41556284e40",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:373",
+      "printed_page": 373,
+      "leaf": 388,
+      "url": "https://archive.org/details/cu31924079622175/page/n388/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p373.txt",
+      "extract_sha256": "207e658b88be3075fb0f0446a122d7f89596e37a26e261f7298ffed312defebb",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:374",
+      "printed_page": 374,
+      "leaf": 389,
+      "url": "https://archive.org/details/cu31924079622175/page/n389/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p374.txt",
+      "extract_sha256": "a0b1f3b29309c934238a0b37af4794b511a445ab069b762107792530bf927452",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:376",
+      "printed_page": 376,
+      "leaf": 391,
+      "url": "https://archive.org/details/cu31924079622175/page/n391/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p376.txt",
+      "extract_sha256": "51a3cb2b5f72d29cc541a1c86621ed3a2685a391169b68d0de091211c4f215b6",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:380",
+      "printed_page": 380,
+      "leaf": 395,
+      "url": "https://archive.org/details/cu31924079622175/page/n395/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p380.txt",
+      "extract_sha256": "edefcc72cc25bb07c08fc428328f32014798ef50ed1fd89b8d61c488f9fea3c8",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:381",
+      "printed_page": 381,
+      "leaf": 396,
+      "url": "https://archive.org/details/cu31924079622175/page/n396/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p381.txt",
+      "extract_sha256": "c4f4fa584da1d67ce23b4960f003c9614974d4f7aa2c673f93739a96c1588afd",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:382",
+      "printed_page": 382,
+      "leaf": 397,
+      "url": "https://archive.org/details/cu31924079622175/page/n397/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p382.txt",
+      "extract_sha256": "874dbdb70ca9173f867240ac3d747b2ac0c239f1e72363518fc3b0999b0fdffa",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:383",
+      "printed_page": 383,
+      "leaf": 398,
+      "url": "https://archive.org/details/cu31924079622175/page/n398/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p383.txt",
+      "extract_sha256": "3b4850913a7724fb948d6e9190ed3ab4e99d47520c0d352c77494ec64c89fb3b",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:67",
+      "printed_page": 67,
+      "leaf": 82,
+      "url": "https://archive.org/details/cu31924079622175/page/n82/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p67.txt",
+      "extract_sha256": "3fc0557c4367bb25be82798a21387b9c57c9c829c655647c538e2b06f340bb0f",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:68",
+      "printed_page": 68,
+      "leaf": 83,
+      "url": "https://archive.org/details/cu31924079622175/page/n83/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p68.txt",
+      "extract_sha256": "39995b8a3f0424662b61f4e38253ad46befb76106ce1f66e5b7188c87af9bc73",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:69",
+      "printed_page": 69,
+      "leaf": 84,
+      "url": "https://archive.org/details/cu31924079622175/page/n84/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p69.txt",
+      "extract_sha256": "a3a1dc6d388f5e59bb9e39fbad43d8384ad90aa2f518534990d7b40ec3151076",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:70",
+      "printed_page": 70,
+      "leaf": 85,
+      "url": "https://archive.org/details/cu31924079622175/page/n85/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p70.txt",
+      "extract_sha256": "7044bd4ca6eaebe39288d06aa986fdecd097781bc7d7ecc41dc791bc8336866b",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:72",
+      "printed_page": 72,
+      "leaf": 87,
+      "url": "https://archive.org/details/cu31924079622175/page/n87/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p72.txt",
+      "extract_sha256": "795564e687623057e4ce88cf5ab5221546906a6dfc4275c6921fa99a142596fe",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:76",
+      "printed_page": 76,
+      "leaf": 91,
+      "url": "https://archive.org/details/cu31924079622175/page/n91/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p76.txt",
+      "extract_sha256": "aa0430389db940c1e51d5b38e368c21e1e4faab834a2416f388f697508674dbf",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:81",
+      "printed_page": 81,
+      "leaf": 96,
+      "url": "https://archive.org/details/cu31924079622175/page/n96/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p81.txt",
+      "extract_sha256": "7a7a2d7b22365bd2f5e7b93a3ca5461661ba209d86082501bd198c9fb10c9cf3",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:82",
+      "printed_page": 82,
+      "leaf": 97,
+      "url": "https://archive.org/details/cu31924079622175/page/n97/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p82.txt",
+      "extract_sha256": "a7f5f537c527cace3b925a6ab6db38e0a5a8cf094538b9219f4190e4c9c6719f",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:83",
+      "printed_page": 83,
+      "leaf": 98,
+      "url": "https://archive.org/details/cu31924079622175/page/n98/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p83.txt",
+      "extract_sha256": "7a961426c8dc49fd2780083b0c24b7b190e45cc57334bc1bf6512da3c99fc0fe",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:85",
+      "printed_page": 85,
+      "leaf": 100,
+      "url": "https://archive.org/details/cu31924079622175/page/n100/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p85.txt",
+      "extract_sha256": "785b6dfcd4a070a1f71c6f1fed37889112fe8fd6ff1a8d0e1576a47b5363d993",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:91",
+      "printed_page": 91,
+      "leaf": 106,
+      "url": "https://archive.org/details/cu31924079622175/page/n106/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p91.txt",
+      "extract_sha256": "95c39266831fdba9648a21bf50294722855bf50d55621f4bb841dee0f792a8a0",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:92",
+      "printed_page": 92,
+      "leaf": 107,
+      "url": "https://archive.org/details/cu31924079622175/page/n107/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p92.txt",
+      "extract_sha256": "9bdb603f37a6270fcb990e6a6c09e3ceacb5b7ce4b7b5df88a08b0f000360092",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-III-I:99",
+      "printed_page": 99,
+      "leaf": 114,
+      "url": "https://archive.org/details/cu31924079622175/page/n114/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p99.txt",
+      "extract_sha256": "8b1f4ddd61249872225e55db0e6ef89b5a621f858ace1e27a90891149e9a195f",
+      "reading_scope": "Named relevant call, law, reply or continuation on page; unrelated matter not adopted. Printed page number confirmed against running head; no whole-page visual claim."
+    },
+    {
+      "source_ref": "OR-I-II:581",
+      "printed_page": 581,
+      "leaf": 600,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n600/mode/1up",
+      "extract_path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-I-II-p581.txt",
+      "extract_sha256": "6f528485e3df032d7599302aec84fcbd41888e09eb9904ecc7d91f4f9beac0b7",
+      "reading_scope": "Hicks April20call reply and same-page context."
+    }
+  ],
+  "inspected_images": [
+    {
+      "source_ref": "OR-III-I:151",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-III-I-p151.jpg",
+      "sha256": "9aa7117c610cdb35c40eb7df63f32ed62b4f3acb9a3bbf980553e1be75c32608",
+      "url": "https://archive.org/download/cu31924079622175/page/n166.jpg",
+      "inspection": "Local page image inspected headlessly. May3acceptance/May4GO15dates confirmed against OCRmisreading."
+    },
+    {
+      "source_ref": "OR-IV-I:420",
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\OR-IV-I-p420.jpg",
+      "sha256": "a3818a97eede7c44d594c1c151be6ff61aa5db2b176bdb6e7a4d5fec60960ae8",
+      "url": "https://archive.org/download/cu31924079579524/page/n435.jpg",
+      "inspection": "Local page image inspected headlessly. Moore printed one-regiment/no-arms-to-arm-one tension confirmed, not corrected."
+    }
+  ],
+  "bounded_search": {
+    "path": "C:\\Pyrrhic\\mandate-research-sources\\S101\\Indiana-original-search.txt",
+    "sha256": "911e492a404b5c95bb5705fb5d62c5a13c11560b3fc0044ecade04fef803f1ba",
+    "scope": "Keyword scan III-I242-278located Indiana original on265and Lincoln instruction263; those two papers then read in full. Earlier268-282scan did not locate it."
+  },
+  "limits": [
+    "No exhaustive archive claim; selected correspondence only.",
+    "Original SouthCarolina July1letter not recovered; AL/GAprint and Pickens reply not silently joined as identical original.",
+    "Original messages behind C18/C21and Brown own reply behind C22not recovered.",
+    "Register-only dispositions C06/U09/U25a/U28are scope metadata, not newly read historical papers.",
+    "OCRis fallible; images verify only the two named pages. Other numeric details not used for a fitted capacity score."
+  ]
+}
