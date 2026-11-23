@@ -1,3 +1,5 @@
+> This file preserves the earlier staged S92 snapshot. The accepted continuation and final evidence are in [continuation/README.md](continuation/README.md). Its earlier no-commit/no-band-change hold is superseded by the lead’s continuation ruling.
+
 # S92: evidence-backed responses to orders
 
 For the lead: 3 items. S92 is implemented locally on `sprint/unknowns` from `117b8ac8`; **the required hook rejects the build, so no S92 commit was made**. The decision’s evidence semantics and six approved cells are applied. No band/threshold was changed and no gate was waived. The lead must resolve the band/commit conflict before this is ready for integration.

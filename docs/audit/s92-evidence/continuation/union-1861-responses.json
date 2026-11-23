@@ -1,0 +1,114 @@
+[
+  {
+    "identity": [
+      "m.142.davis_jefferson.twiggs_david_e.verb.appoint.st_gov_texas",
+      "twiggs_david_e",
+      "addressee",
+      "verb:appoint",
+      null
+    ],
+    "before": {
+      "key": "m.142.davis_jefferson.twiggs_david_e.verb.appoint.st_gov_texas|twiggs_david_e",
+      "side": "confederate",
+      "respOrder": "m.142.davis_jefferson.twiggs_david_e.verb.appoint.st_gov_texas",
+      "respPerson": "twiggs_david_e",
+      "respPost": null,
+      "respRole": "addressee",
+      "respKind": "verb:appoint",
+      "respDay": 142,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 43,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 43
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": null
+  },
+  {
+    "identity": [
+      "m.143.lincoln_abraham.abercrombie_john_j.verb.appoint.us_dept_texas",
+      "abercrombie_john_j",
+      "addressee",
+      "verb:appoint",
+      null
+    ],
+    "before": {
+      "key": "m.143.lincoln_abraham.abercrombie_john_j.verb.appoint.us_dept_texas|abercrombie_john_j",
+      "side": "union",
+      "respOrder": "m.143.lincoln_abraham.abercrombie_john_j.verb.appoint.us_dept_texas",
+      "respPerson": "abercrombie_john_j",
+      "respPost": null,
+      "respRole": "addressee",
+      "respKind": "verb:appoint",
+      "respDay": 143,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 64,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 64
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "staged": {
+    "knownStrength": {
+      "confederate": 93710,
+      "union": 122860
+    },
+    "unknownBlocks": {
+      "confederate": 22,
+      "union": 7
+    },
+    "rawResponses": 238,
+    "responseCounts": [
+      {
+        "role": "addressee",
+        "actual": "comply",
+        "declared": "comply",
+        "count": 214
+      },
+      {
+        "role": "addressee",
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "count": 1
+      },
+      {
+        "role": "addressee",
+        "actual": "object",
+        "declared": "object",
+        "count": 12
+      },
+      {
+        "role": "relay",
+        "actual": "comply",
+        "declared": "comply",
+        "count": 7
+      },
+      {
+        "role": "relay",
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "count": 1
+      },
+      {
+        "role": "relay",
+        "actual": "object",
+        "declared": "object",
+        "count": 3
+      }
+    ],
+    "levies": 70,
+    "people": {
+      "clark_edward": {
+        "statusKind": "killed",
+        "statusDay": 137
+      },
+      "waite_carlos_a": {
+        "statusKind": "wounded",
+        "statusDay": 137
+      },
+      "beauregard_pierre_g_t": {
+        "statusKind": "wounded",
+        "statusDay": 140
+      }
+    },
+    "texasReserve": 1334
+  },
+  "final": {
+    "knownStrength": {
+      "confederate": 94376,
+      "union": 118497
+    },
+    "unknownBlocks": {
+      "confederate": 22,
+      "union": 7
+    },
+    "rawResponses": 236,
+    "responseCounts": [
+      {
+        "role": "addressee",
+        "actual": "comply",
+        "declared": "comply",
+        "count": 212
+      },
+      {
+        "role": "addressee",
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "count": 1
+      },
+      {
+        "role": "addressee",
+        "actual": "object",
+        "declared": "object",
+        "count": 12
+      },
+      {
+        "role": "relay",
+        "actual": "comply",
+        "declared": "comply",
+        "count": 7
+      },
+      {
+        "role": "relay",
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "count": 1
+      },
+      {
+        "role": "relay",
+        "actual": "object",
+        "declared": "object",
+        "count": 3
+      }
+    ],
+    "levies": 70,
+    "people": {
+      "clark_edward": {
+        "statusKind": "serving",
+        "statusDay": 0
+      },
+      "waite_carlos_a": {
+        "statusKind": "serving",
+        "statusDay": 0
+      },
+      "beauregard_pierre_g_t": {
+        "statusKind": "wounded",
+        "statusDay": 140
+      }
+    },
+    "texasReserve": 2000
+  }
+}

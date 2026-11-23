@@ -1,0 +1,340 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "before": {
+      "mechanic": "combat.battle_closed",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    }
+  },
+  {
+    "mechanic": "combat.battle_day",
+    "before": {
+      "mechanic": "combat.battle_day",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "after": {
+      "mechanic": "combat.battle_day",
+      "fires": 7,
+      "magnitude": 7
+    }
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "before": {
+      "mechanic": "combat.battle_opened",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "after": {
+      "mechanic": "combat.battle_opened",
+      "fires": 5,
+      "magnitude": 5
+    }
+  },
+  {
+    "mechanic": "combat.captured",
+    "before": {
+      "mechanic": "combat.captured",
+      "fires": 6,
+      "magnitude": 2042
+    },
+    "after": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 2041
+    }
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "before": {
+      "mechanic": "combat.flank_broken",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    }
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "before": {
+      "mechanic": "combat.general_hit",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    }
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "before": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 50,
+      "magnitude": 15587
+    },
+    "after": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 14509
+    }
+  },
+  {
+    "mechanic": "combat.missing",
+    "before": {
+      "mechanic": "combat.missing",
+      "fires": 49,
+      "magnitude": 4979
+    },
+    "after": {
+      "mechanic": "combat.missing",
+      "fires": 9,
+      "magnitude": 4860
+    }
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "before": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1442
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1445
+    }
+  },
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "before": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12099
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 11897
+    }
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "before": {
+      "mechanic": "messages.courier_delay",
+      "fires": 176,
+      "magnitude": 176
+    },
+    "after": {
+      "mechanic": "messages.courier_delay",
+      "fires": 154,
+      "magnitude": 154
+    }
+  },
+  {
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 14512,
+      "magnitude": 14512
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 14240,
+      "magnitude": 14240
+    }
+  },
+  {
+    "mechanic": "messages.mail_delay",
+    "before": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2857,
+      "magnitude": 2857
+    },
+    "after": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2856,
+      "magnitude": 2856
+    }
+  },
+  {
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 15376,
+      "magnitude": 15376
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 15047,
+      "magnitude": 15047
+    }
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "before": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 182,
+      "magnitude": 182
+    },
+    "after": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 42,
+      "magnitude": 42
+    }
+  },
+  {
+    "mechanic": "reports.casualty_return",
+    "before": {
+      "mechanic": "reports.casualty_return",
+      "fires": 76,
+      "magnitude": 76
+    },
+    "after": {
+      "mechanic": "reports.casualty_return",
+      "fires": 20,
+      "magnitude": 20
+    }
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "before": {
+      "mechanic": "reports.commander_lost",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    }
+  },
+  {
+    "mechanic": "reports.governor_wire",
+    "before": {
+      "mechanic": "reports.governor_wire",
+      "fires": 21,
+      "magnitude": 21
+    },
+    "after": {
+      "mechanic": "reports.governor_wire",
+      "fires": 6,
+      "magnitude": 6
+    }
+  },
+  {
+    "mechanic": "seats.attention_spent",
+    "before": {
+      "mechanic": "seats.attention_spent",
+      "fires": 155,
+      "magnitude": 156
+    },
+    "after": {
+      "mechanic": "seats.attention_spent",
+      "fires": 153,
+      "magnitude": 154
+    }
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "before": {
+      "mechanic": "seats.battle_orders",
+      "fires": 93,
+      "magnitude": 93
+    },
+    "after": {
+      "mechanic": "seats.battle_orders",
+      "fires": 10,
+      "magnitude": 10
+    }
+  },
+  {
+    "mechanic": "situations.fired",
+    "before": {
+      "mechanic": "situations.fired",
+      "fires": 82,
+      "magnitude": 82
+    },
+    "after": {
+      "mechanic": "situations.fired",
+      "fires": 88,
+      "magnitude": 88
+    }
+  },
+  {
+    "mechanic": "situations.notice_reports",
+    "before": {
+      "mechanic": "situations.notice_reports",
+      "fires": 64,
+      "magnitude": 64
+    },
+    "after": {
+      "mechanic": "situations.notice_reports",
+      "fires": 70,
+      "magnitude": 70
+    }
+  },
+  {
+    "mechanic": "situations.noticed",
+    "before": {
+      "mechanic": "situations.noticed",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "after": {
+      "mechanic": "situations.noticed",
+      "fires": 69,
+      "magnitude": 69
+    }
+  },
+  {
+    "mechanic": "situations.proposals",
+    "before": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "after": {
+      "mechanic": "situations.proposals",
+      "fires": 73,
+      "magnitude": 637
+    }
+  },
+  {
+    "mechanic": "situations.surfaced",
+    "before": {
+      "mechanic": "situations.surfaced",
+      "fires": 81,
+      "magnitude": 81
+    },
+    "after": {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    }
+  },
+  {
+    "mechanic": "verbs.answered",
+    "before": {
+      "mechanic": "verbs.answered",
+      "fires": 125,
+      "magnitude": 125
+    },
+    "after": {
+      "mechanic": "verbs.answered",
+      "fires": 123,
+      "magnitude": 123
+    }
+  }
+]
