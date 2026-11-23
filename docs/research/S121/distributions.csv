@@ -1,0 +1,15 @@
+id,side,call_kind,arm,scope,sample_n,minimum,median,maximum,observation_ids,interpretation
+D01,union,April15,infantry,regiment initial muster,1,779,779,779,M01,One Maine regiment; no population estimate.
+D02,union,April-origin / three-year,infantry,company initial muster,1,75,75,75,M02,One company of Second Maine; not May GO15 or a regiment sample.
+D03,union,May3 organization,infantry,company initial muster,1,95,95,95,M03,One Third Maine company; no multiplying by ten or nationwide average.
+D04,union,May3,infantry,whole unit exact original muster,0,,,,,NOT FOUND in read material. Establishments and noninitial observations remain separately exposed; blank is not zero.
+D05,union,May3,cavalry,whole unit exact original muster,0,,,,,NOT FOUND in read material. Establishments and noninitial observations remain separately exposed; blank is not zero.
+D06,union,May Regular increase,infantry,whole unit exact original muster,0,,,,,NOT FOUND in read material. Establishments and noninitial observations remain separately exposed; blank is not zero.
+D07,union,May Regular increase,cavalry,whole unit exact original muster,0,,,,,NOT FOUND in read material. Establishments and noninitial observations remain separately exposed; blank is not zero.
+D08,union,May Regular increase,artillery,whole unit exact original muster,0,,,,,NOT FOUND in read material. Establishments and noninitial observations remain separately exposed; blank is not zero.
+D09,confederate,March6 / April22,infantry,whole unit exact original muster,0,,,,,NOT FOUND in read material. Establishments and noninitial observations remain separately exposed; blank is not zero.
+D10,confederate,March6 / April22,cavalry,whole unit exact original muster,0,,,,,NOT FOUND in read material. Establishments and noninitial observations remain separately exposed; blank is not zero.
+D11,confederate,March6 / April22,artillery,whole unit exact original muster,0,,,,,NOT FOUND in read material. Establishments and noninitial observations remain separately exposed; blank is not zero.
+D12,union,April15 service,infantry,regiment annual service aggregate,5,444,685,823,M26;M27;M28;M29;M30,"Comparison only: five Massachusetts regiments, NOT exact initial musters. Battalion and battery excluded."
+D13,confederate,April22 candidate,infantry,dated near-muster regiment report,1,900,900,900,M33,900 reported after muster; no known muster date or national distribution.
+D14,confederate,Louisiana State transfer,infantry,annual group quantity,1,14949,14949,14949,M34,"14949 describes exactly named17-regiment aggregate, not17 samples and not divided."

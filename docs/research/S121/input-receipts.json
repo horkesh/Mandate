@@ -1,0 +1,79 @@
+{
+  "base": "c63aac4f398b8dc6940a42b4624880f8162edcd7",
+  "july_commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+  "inputs": [
+    {
+      "source": "docs/research/S120/lot-inventory.csv",
+      "read_from": "sprint-pushback",
+      "path": "runs\\s121\\inputs\\lot-inventory.csv",
+      "sha256": "ff13100866ee6b579810cd964361f1b0ff4fd746efffe89ad9df9e371f71e891"
+    },
+    {
+      "source": "docs/research/S120/origin-inventory.csv",
+      "read_from": "sprint-pushback",
+      "path": "runs\\s121\\inputs\\origin-inventory.csv",
+      "sha256": "cddff48fcbdd11c584efc1bccda5f1f3be6349fdfa322f145720d166c392ec2e"
+    },
+    {
+      "source": "docs/research/S120/lot-universe.csv",
+      "read_from": "sprint-pushback",
+      "path": "runs\\s121\\inputs\\lot-universe.csv",
+      "sha256": "7b0a7b6e7a74e34cde06ddfd553a7c025c88b6661dcd48f842ef59dba2d0511f"
+    },
+    {
+      "source": "docs/research/S120/capture-proof.json",
+      "read_from": "sprint-pushback",
+      "path": "runs\\s121\\inputs\\capture-proof.json",
+      "sha256": "debf43022213dae22fb0062f38a9c3ff008fb170711a3ec6c8f69a09e9730b1d"
+    },
+    {
+      "source": "docs/research/2026-11-23-S120-strength-under-honest-unknowns.md",
+      "read_from": "sprint-pushback",
+      "path": "runs\\s121\\inputs\\2026-11-23-S120-strength-under-honest-unknowns.md",
+      "sha256": "da66f9d56c58b1f62f770b7da96a007d79152114873e83d04d17faf7c848c818"
+    },
+    {
+      "source": "packs/union-1861/pack.json",
+      "read_from": "git show a360803f7bd02dacce450fded56f6c749dab991f",
+      "path": "runs\\s121\\inputs\\packs__union-1861__pack.json",
+      "sha256": "e896867fd1d9797faa8df913e62ea70d0a01a62ead913db307b8123d3c48ec3b"
+    },
+    {
+      "source": "packs/union-1861/situations/arkansas_forces_transferred.json",
+      "read_from": "git show a360803f7bd02dacce450fded56f6c749dab991f",
+      "path": "runs\\s121\\inputs\\packs__union-1861__situations__arkansas_forces_transferred.json",
+      "sha256": "4640620f555bf55dc232cf780ad8117d17911cf34fae9ec285b4654e83a05a05"
+    },
+    {
+      "source": "packs/union-1861/situations/north_carolina_forces_transferred.json",
+      "read_from": "git show a360803f7bd02dacce450fded56f6c749dab991f",
+      "path": "runs\\s121\\inputs\\packs__union-1861__situations__north_carolina_forces_transferred.json",
+      "sha256": "7e441a9173e2dc959216c4595be01b528fbb0a58d0b025b829ffdb51446c5fe1"
+    },
+    {
+      "source": "packs/union-1861/situations/virginia_forces_return.json",
+      "read_from": "git show a360803f7bd02dacce450fded56f6c749dab991f",
+      "path": "runs\\s121\\inputs\\packs__union-1861__situations__virginia_forces_return.json",
+      "sha256": "5c989cda696c13f03e3351be7e574a4d36d89e1961b76128015ff03bf1dc8d07"
+    },
+    {
+      "source": "packs/union-1861/situations/virginia_forces_transferred.json",
+      "read_from": "git show a360803f7bd02dacce450fded56f6c749dab991f",
+      "path": "runs\\s121\\inputs\\packs__union-1861__situations__virginia_forces_transferred.json",
+      "sha256": "013b05f7f824a1041ca20926de28dd88c32c084c4363d9537b38f51fd29cec6a"
+    },
+    {
+      "source": "packs/union-1861/situations/virginia_manassas_state_forces.json",
+      "read_from": "git show a360803f7bd02dacce450fded56f6c749dab991f",
+      "path": "runs\\s121\\inputs\\packs__union-1861__situations__virginia_manassas_state_forces.json",
+      "sha256": "bfb3c05b988a337846fc518a1ebcb1a5d35b447001d212f0b412e248cb2b3fee"
+    },
+    {
+      "source": "packs/union-1861/source/world/regiments.json",
+      "read_from": "git show a360803f7bd02dacce450fded56f6c749dab991f",
+      "path": "runs\\s121\\inputs\\packs__union-1861__source__world__regiments.json",
+      "sha256": "f66b946963716fa72e2012d94d0962ed882bd1b4b0486ef09bf1a820c84e251f"
+    }
+  ],
+  "method": "July inputs only git show; S120 retained extraction reused, not replayed. Input artifact paths under ignored runs/s121; hashes retained here."
+}
