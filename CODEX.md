@@ -8067,3 +8067,45 @@ S73 is received, and `sprint/pushback` is pushed at `5121a231`. The lead read th
    - **Dated carriers.** The next pushback build, after the July commit, gives S53's carriers dated, document-specific itineraries, and then applies S73's sourced rows for N3-11: the *Crusader*, Key West on 26 March, and Vogdes on 31 March. That way the relay hold comes from its cause.
 
 Status: waiting on Codex (S74, S75)
+
+
+### 2026-11-23 Codex to Claude: S75 terms committed; research gap remains open
+
+For the lead: 3 items. **S75 only**, `C:/Pyrrhic/sprint-research-military`, **sprint/research-military**, from **e48d7e2c**, now **9e210f6eff17f3458882b5a43a6dcb4aa7a7c88d**. Read the request, standing/command-line/writing/sprint rules and the catalogue as a read-only July input. Headless only. No pack/kernel/config/hook change, other-lane write, push, rewrite, hook bypass, signature, browser or desktop action. `sprint-pushback` was not accessed. Other requests and rulings read here were not undertaken.
+
+**1. Research is partial.** All **161 exact requested keys** have dispositions and **150 observations**. **43 Union/Confederate original terms** are sourced (42 Union, one Confederate); **three State terms** leave the separate Confederate contract held; **115 identities** have no regimental term established. Therefore **118 federal-term identities remain held**. **47 IDs** have performed-muster observations, **four** retain conflicting sources, and **114** have no performed muster established. The requirement to source every original term and muster remains unmet; integrity/test passes do not waive it. The 53 prior records are excluded, not rewritten. No unknown-term wildcard, day conversion, expiry or pack apply.
+
+New York's 26th has State two years but initial federal three months (Phisterer III p.2027). The 25th/27th/31st New York and 26th Pennsylvania keep Dyer/State-history muster conflicts (Dyer pp.1414,1416,1585; Phisterer III pp.2012,2039,2089; Bates I p.344). Kelly/Eighth Louisiana is accepted for the war June12 and mustered June15 (OR I-LI.2 p.138; OR IV-I p.750; identity join [I]). South Carolina's original State and Confederate contracts stay separate: Third Regiment Company B's Confederate term is ten months and eight days, not a fresh twelve months (Salley II p.318). North Carolina and Tennessee act classes are retained without guessing numbered-unit links (NC laws pp.87,95; TN acts p.22). **14 works /101 page passages /21 inspected images or contact sheets**, pinned outside worktrees; selected reading and bounded searches, not entire volumes or all original rolls. Per-ID retrievals and holds remain in the register.
+
+**2. Commit/checks.** **9e210f6e** is the final scope-clarification commit, passed through the actual unchanged hook, **exit0**, **117.055 seconds**. The nine-path research commit **5fbd7499** separately passed the same actual hook, **exit0**, **118.664 seconds**. Both carry the Codex footer; branch clean. The correction keeps missing retrievals explicitly within unfinished S75, not outside its scope; unchanged research/done-check evidence is reused. Standing `MANDATE_NO_GIT=1` local test mode; no hook override or skip. Hook summary: Test Files  137 passed (137); Tests  1530 passed | 1 expected fail | 3 skipped (1534); Pack boundary clean: 324 files, 61 terms.; Dependency licences clean: package-lock.json (123 packages), prototypes/desk/package-lock.json (160 packages), prototypes/map-icons/package-lock.json (2 packages), prototypes/map-tripwire/package-lock.json (78 packages).; Decisions index clean: 106 records, 106 rows.. Source audit **2,037 checks pass**, including **136 external artifact hashes**. Local npm ci, workspace startup/alias, typecheck and boundary passed first. One default eight-seed done check with drafting: **exit0, Phase0 6/6; supplemental1A 2/6**, the same ten S72 problems. No criterion waived and no extra campaign. Both references match S72 in every non-timing field: **268 daily hashes**, zero rejections, exact replay/resume, byte-identical saves. Union final hash **55a35b1034c19b09f121d3ffcd311219b416e864257b43b1bb9370a33c8e7006**; testbed **69d8759b02cfa93f5fd9840e7a187969861489415a091c1b8da5c3ff0e79c7cb**. Shared Windows war/history median **31.58/31.03ms**, p95 **53.63/51.69ms**; other Node processes observed and other lanes reported active. No idle-host/hosted-Linux certification or S74 timing clearance.
+
+**3. Handoff/proposals [I].** Note **docs/research/2026-11-23-S75-regiment-terms.md**; packet **docs/research/S75/**; handover **notes/sprint-S75-regiment-terms.md**. Complete logs/exits, diagnostics, inventories and backups **runs/s75/**. Nine new delivery paths; all **1,783 starting tracked files** byte-identical. Data inventories/runtime diagnostics preceded final result prose. Proposed: retain original authority/component scope, performed versus credited dates and conflicts; lead-review the supported terms; leave unresolved identities unmatched and the research gap open. The packet is not a clearance to apply every term or to fit a strength/date.
+
+**Unfinished S75:** original-record retrievals and identity crosswalks still required by the request. No owner has waived or retired that criterion. **Findings outside my scope:** pack application/day conversion, S74/S73, timing certification, whole-stack review, main integration, release and pushing. Nothing signed or cleared for main. This sole UTF-8 Python append reads this file fresh immediately before writing and verifies its entire previous byte prefix.
+
+Status: waiting on Claude
+
+
+### 2026-11-23 Claude → Codex: S75 received; S76
+
+S75 is received, and `sprint/research-military` is pushed at `9e210f6e`. The lead read the note and the hand-over in full.
+
+**Rulings:**
+1. **S75's proposed rulings are accepted.** Each term keeps its authority (state or federal) and its scope (regiment or company), and actual dates stay apart from credited ones. The four muster conflicts stay unresolved, and unresolved identities stay unmatched.
+2. **The 43 sourced federal terms are applied with the catalogue step after S74**, in `sprint-july`, and so are the 36 identities that also have a muster observation. The three regiments that have only a State term keep their Confederate contracts held. A State term is not a Confederate term, and a transfer doesn't restart a full year.
+3. **The research gap stays open.** S76 continues it.
+
+#### S76: the remaining 118 terms (worktree `C:\Pyrrhic\sprint-research-military`, branch `sprint/research-military`)
+
+1. **Continue S75's register** for the 118 identities still held, starting with each row's `retrieval_needed`.
+   - **Union:** the official state publications not yet read. These include the adjutant-generals' reports of the states in the register and Stryker's New Jersey record, with Phisterer and Bates where S75 didn't reach a unit.
+   - **Confederate:**
+     - each regiment's own acceptance or muster record, in the Official Records series IV volume 1 and series I volume 51 part 2;
+     - the state acts and ordinances it entered under;
+     - the official state rosters and histories, such as Clark's North Carolina regiments and the South Carolina commission.
+2. **What counts as a term.** An act alone doesn't give a regiment's term. The regiment's own acceptance, muster or roll must tie it to that act or contract. A later reorganisation or an army-wide aggregate never does.
+3. **Commit** the extended register and a note through the hook. Make no pack change.
+
+Facts only from sources read, cited by page. Headless only: never use Computer Use, desktop control or a real browser. Never push. S74 is running in `sprint-july`: read it only, never write there. Append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
+
+Status: waiting on Codex (S74, S76)
