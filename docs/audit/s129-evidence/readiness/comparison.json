@@ -1,0 +1,104 @@
+{
+  "baseline": "S126 4b45f4e1; runs/s126/capture (retained, not rerun)",
+  "capture": "runs/s129/readiness-capture",
+  "finalHash": "86aa271101a815d9f13151279a066889acc8e8bf020d47c004aa1b1b469b45c0",
+  "rejections": 0,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "86aa271101a815d9f13151279a066889acc8e8bf020d47c004aa1b1b469b45c0",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "finalLotsChanged": 97,
+  "lifetimeLotsChanged": 94,
+  "answerDifferences": 29,
+  "rows": 33,
+  "verdictsBefore": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 3,
+    "not_observed": 3
+  },
+  "verdictsAfter": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 4,
+    "not_observed": 2
+  },
+  "changedRowVerdicts": [
+    "C25"
+  ],
+  "changedLivenessCounts": 43,
+  "sourceOrders": 4,
+  "initialGates": [
+    {
+      "mechanic": "operations.ended",
+      "problem": "too_frequent",
+      "fires": 9,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      }
+    },
+    {
+      "mechanic": "operations.stage",
+      "problem": "too_frequent",
+      "fires": 39,
+      "band": {
+        "minFires": 9,
+        "maxFires": 38
+      }
+    },
+    {
+      "mechanic": "operations.works",
+      "problem": "too_frequent",
+      "fires": 15,
+      "band": {
+        "minFires": 3,
+        "maxFires": 14,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works."
+      }
+    },
+    {
+      "mechanic": "planner.term.supply",
+      "problem": "too_frequent",
+      "fires": 2,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S124 [I]: the early Tennessee offer is received by the War Department at Lynchburg; the later named Holmes request still selects the governor. Holmes has no day144 draft, C25 is not observed, and the sole S122 supply-changing pick disappears. All retained candidate counterfactuals are published; no scoring rule, term weight or liveness definition changes."
+      }
+    },
+    {
+      "mechanic": "plans.chosen",
+      "problem": "too_frequent",
+      "fires": 14,
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      }
+    },
+    {
+      "mechanic": "plans.goal_reached",
+      "problem": "too_frequent",
+      "fires": 7,
+      "band": {
+        "minFires": 1,
+        "maxFires": 5
+      }
+    },
+    {
+      "mechanic": "seats.choices",
+      "problem": "too_frequent",
+      "fires": 22,
+      "band": {
+        "minFires": 3,
+        "maxFires": 12
+      }
+    }
+  ]
+}

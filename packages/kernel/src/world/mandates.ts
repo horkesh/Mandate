@@ -38,8 +38,20 @@ export interface MandatePaper {
   readonly id: string;
   readonly fromDate: string;
   readonly source: string;
+  /** A read assignment opens the declared command on accepted receipt (0129). */
+  readonly assignment?: CommandAssignment;
   readonly requiresPapers?: readonly PaperSelector[];
   readonly grant: MandateGrant;
+}
+
+export interface CommandAssignment {
+  readonly replaces?: PostId;
+  /** A second received command may explicitly retain these concurrent offices (0129). */
+  readonly concurrentWith?: readonly PostId[];
+  /** Declared commands subordinate to this territorial command; never invented holders. */
+  readonly commands?: readonly PostId[];
+  /** Administrative receiving offices whose already national troops in scope it commands. */
+  readonly intake?: readonly PostId[];
 }
 
 /** Kernel adapters are checked too; rank and missing fields cannot create a root. */
@@ -61,6 +73,14 @@ export function mandateProblems(world: World, start: ScenarioStart): string[] {
     if (typeof paper.source !== 'string' || paper.source.trim().length === 0) problems.push(`${at}: source required`);
     const g = paper.grant;
     if (g == null) { problems.push(`${at}: enclosure required`); continue; }
+    if(paper.assignment!==undefined) {
+      const a=paper.assignment, template=start.temporaryPosts.find(p=>p.id===g.mandatePost);
+      if(template===undefined || template.holder!==g.mandateHolder || g.mandateParent!==null || g.mandateRevoke ||
+        world.vocabularies.postKinds.find(k=>k.id===template.kind)?.creatable!=='appoint')problems.push(`${at}: assignment requires its declared root command and holder`);
+      const refs=[...(a.commands??[]),...(a.intake??[]),...(a.concurrentWith??[]),...(a.replaces===undefined?[]:[a.replaces])];
+      if(refs.some(id=>!posts.has(id)||id===g.mandatePost) || new Set(refs).size!==refs.length)problems.push(`${at}: invalid assignment lineage`);
+      for(const id of a.commands??[])if(!g.mandateRegions.includes(posts.get(id)?.region!))problems.push(`${at}: assigned command outside territory`);
+    }
     const family = `${g.mandatePost}:${g.mandateKey}`;
     const issuer = familyIssuers.get(family);
     if (issuer !== undefined && issuer !== g.mandateIssuer) problems.push(`${at}: a mandate family cannot change granting issuer`);

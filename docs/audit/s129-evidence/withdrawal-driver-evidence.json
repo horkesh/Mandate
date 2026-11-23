@@ -1,0 +1,20 @@
+{
+  "kind": "single fictional phase, not a reference capture",
+  "fixture": "packages/kernel/test/combat.test.ts: a night order holds him or takes him off the field, whatever his traits would do",
+  "sides": [
+    {
+      "faction": "a",
+      "result": "withdrew",
+      "retreat": "a2"
+    },
+    {
+      "faction": "b",
+      "result": "routed",
+      "retreat": "b2"
+    }
+  ],
+  "telemetry": {
+    "fires": 1,
+    "magnitude": 1
+  }
+}

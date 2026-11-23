@@ -63,7 +63,7 @@ export function activeMandate(map: WorldIndex, state: State, a: EnactedMandate, 
     return map.world.people.some(p => p.id === g.mandateIssuer) &&
       sideOfPerson(map, state, g.mandateIssuer) === factionOfPost(map, state, g.mandatePost);
   }
-  if (heldPost(state, g.mandateIssuer) !== g.mandateIssuerPost ||
+  if (state.postStates[g.mandateIssuerPost]?.postHolder !== g.mandateIssuer ||
     (state.personStatus[g.mandateIssuer]?.statusKind ?? 'serving') !== 'serving' ||
     !inSubtree(state, g.mandatePost, g.mandateIssuerPost) ||
     factionOfPost(map, state, g.mandateIssuerPost) !== factionOfPost(map, state, g.mandatePost)) return false;
@@ -128,7 +128,11 @@ function put(state: State, post: PostId, row: EnactedMandate): State {
 function liveUse(state: State, u: AuthorityUse): boolean {
   return state.messagesInTransit.some(m => m.msgOrigin === u.useOrder && m.msgOrder !== null) ||
     (u.useAssignment === true && u.useBlocks.some(b => state.forceJoins[b]?.joinAssignment?.assignmentOrder === u.useOrder)) ||
-    Object.values(state.planRecords).some(p => p.planOrder === u.useOrder);
+    Object.values(state.planRecords).some(p => {
+      if(p.planOrder!==u.useOrder)return false;
+      const operations=Object.values(state.operationRecords).filter(op=>op.opOrder===u.useOrder);
+      return operations.length===0 || operations.some(op=>op.opEndDay===null);
+    });
 }
 export function authorityFamily(state: State, a: EnactedMandate): EnactedMandate[] {
   const result: EnactedMandate[] = [a];

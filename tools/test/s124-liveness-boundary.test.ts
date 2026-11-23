@@ -15,7 +15,11 @@ it('authorises only the two exact S124 zero records, preserving each cause, evid
  for(const p of frozen){
   const r=p.record;expect(p.fingerprint).toBe(fingerprint(r));expect(history).toContainEqual(r);
   const mechanic=r.key.slice(r.key.indexOf('/')+1);
-  expect(REFERENCE_RUNS.find(s=>r.key.startsWith(s.name+'/'))!.bands[mechanic]).toEqual(r.after);
+  const current=REFERENCE_RUNS.find(s=>r.key.startsWith(s.name+'/'))!.bands[mechanic];
+  if(current===undefined)throw new Error(`missing current band: ${r.key}`);
+  // The historical zero stays frozen. A later positive recenter must follow it through the ordinary ledger checks.
+  const later=history.slice(history.findIndex((row:unknown)=>fingerprint(row)===p.fingerprint)+1).filter((row:{key:string})=>row.key===r.key);
+  expect(livenessProblems({[r.key]:r.after},{[r.key]:current},later)).toEqual([]);
   expect(livenessProblems({[r.key]:r.before},{[r.key]:r.after},[r])).toEqual([]);
   for(const changed of [{...r,cause:'another cause'},{...r,evidence:'elsewhere'},{...r,key:'testbed, 120 days/'+mechanic},{...r,observed:1},{...r,after:{...r.after,maxFires:1}}])
    expect(livenessProblems({[changed.key]:changed.before},{[changed.key]:changed.after},[changed])).not.toEqual([]);

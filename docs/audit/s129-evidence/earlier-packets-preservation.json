@@ -1,0 +1,174 @@
+[
+  {
+    "path": "docs/audit/s129-evidence/corrected/C25-path.json",
+    "sha256": "7b132d8014ef462a2fed8f92bb0c09b07719b3fda69481e0c26f9b8b63a14217"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/answer-changes.json",
+    "sha256": "65e7b7814ae060f81994ce4ff36bd0c56d755e27b32d7ac57d1d136175d4f400"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/battle-changes.json",
+    "sha256": "83ec9e3e7edf0dfce75c58c556fc0c362bd518fc5bc9531807ca8d035c44778c"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/command-paths.json",
+    "sha256": "c5d3f6657b690083caca6515c4c753ba1793f80e1c72d3ba44eb30021f6029e8"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/comparison.json",
+    "sha256": "1d252658b8db24dc06d2a9073c0691dcd060adc69db4a1768340f0ffb005b70c"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/coverage.json",
+    "sha256": "6c3044825e79c63b1e7d566448aa693b2f421f6418c10405ba70a8aa6e44f8a7"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/criteria.json",
+    "sha256": "6899d696a501d27f9dd8b409e1aeea9644565e55588b44b5fff5aa8c8d954c4c"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/execution-events.json",
+    "sha256": "af2943bbabb9e48dd7591716712da816035638c5c12761c52e7ef1ceef059bed"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/exposure.json",
+    "sha256": "3d17a869868aa5b6942a2cb1043c1fe20e6ea9cd97f516a95fececfae0d40c24"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/issued-correspondence.json",
+    "sha256": "ac906fcded74cda0a580394c43fb126dda70ca8114035960dbcd84cf7402cf9d"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/lifetime-lot-changes.json",
+    "sha256": "f62902a9861a0aa833c3fcadf62ed9776ff792a18fe45a4952f7558e3fdec7aa"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/liveness-counts.json",
+    "sha256": "9ce94ea5340acf98afe9f74cfd5e8e84219df126f5736095bfcd0db2616e47c5"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/local-choices.json",
+    "sha256": "96831494e0f8d1a8787aa3b86108dfde5a29355333be38340d7236dd6f2adb68"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/lot-changes.json",
+    "sha256": "2c1f5888017e93c10085366973b9c87f202398316f5b6a989d212b12c1dca3af"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/operation-changes.json",
+    "sha256": "7d65af09aa534a8a3138ff4a48a399dd7cbcf0dcd6b0cd8265dbf7bf00849d3a"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/plan-changes.json",
+    "sha256": "127967b31d89271c7bb0dd01b55df5977de2e18d408c93d4777676455f079c30"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/rows.csv",
+    "sha256": "f243553aec67268e7a7d175bd2995c59281ba6b7a615a82309af8aec3edf73ee"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/rows.json",
+    "sha256": "d915e80312c9cf11fac299e803c286abde8e7f20be76c65ca0fa2c3f5974b26e"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/source-correspondence.json",
+    "sha256": "60d42d6dea2e4a951b19c9ac8c8e3adb9c9bae913d79cb9dd989108f5be2e414"
+  },
+  {
+    "path": "docs/audit/s129-evidence/corrected/strength-comparison.json",
+    "sha256": "35602a40b8b85ff40008d9b1a9b46465924fe288dfd3865e687e67696ef30684"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/C25-path.json",
+    "sha256": "2465e3b0c96a55e9a5fd868b7984a5718511b8499d593fdccb1d723d0c305b77"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/README.md",
+    "sha256": "981004fac6e7cb8e859acc7ab06bd14d5e2b1919a17290661e055d8735e0210e"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/answer-changes.json",
+    "sha256": "b8bf091b26642f4adb2de892bb7d17767ed03b67a75ca10021b4d34dabeff29e"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/battle-changes.json",
+    "sha256": "b7217a3acddf055aeb808aa0bf31d781a6216c413542ac69f978babd05a451c5"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/command-paths.json",
+    "sha256": "8aee07d23e9b2c1c188772a1b94c6af8b2455ed5817508c25a87a6688dc79f6e"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/comparison.json",
+    "sha256": "3810743c7740c0df2b0915672600108e8b020b7089d9400045792ed15ad21774"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/coverage.json",
+    "sha256": "3475b0b6f2bf579a7f24a748ca7312f377ee6619d31f28211fae59602fafa7e8"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/criteria.json",
+    "sha256": "5cfe61f167360cd8997194ac617aac842934e2d401755c068e1ac8e6ee6255c4"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/execution-events.json",
+    "sha256": "d778be2f1434e479f6a802d0f8499bf2141595d22506b18eafb12c965d027c62"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/exposure.json",
+    "sha256": "50717aea6a0ed21593ff44d956b4fe8f7776c3179ca1843fca657e2214dd3bbb"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/issued-correspondence.json",
+    "sha256": "2959c6ba617c406b8f579c48f301c2b6b0effd0f4fa203e75e75f830811dbd5c"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/lifetime-lot-changes.json",
+    "sha256": "3ff91afdf08689a40da60c7c90110cbf0a511611d97fa315cb288c2c44f5d024"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/liveness-counts.json",
+    "sha256": "7d3caa9abce14e328ca2ed923da4e0f32de34cff853e6f69b9f16f3ddfac35bb"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/local-choices.json",
+    "sha256": "3d1b861e495702c7baada1e3f985eb5c90c01c0f43dc5becb1ecdb02fe2b0fee"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/lot-changes.json",
+    "sha256": "8ab38bdd90d6267cd5d6ceb8d240c25108302405c06ddec1fc589c4d01aa4fb1"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/measured-source-preservation.json",
+    "sha256": "2798310dea88bdbb0654cb6c6655bcc3960c87e522ad2dd1a8e7cc75eba5d8e9"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/operation-changes.json",
+    "sha256": "7d65af09aa534a8a3138ff4a48a399dd7cbcf0dcd6b0cd8265dbf7bf00849d3a"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/plan-changes.json",
+    "sha256": "8e93730df44ac3da2edb1fe1ea666059ef24ce02e08857028221045590de9275"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/projection-proof.json",
+    "sha256": "12428d4f1de7922039569f414ff71eab3061cdf7049611a2ee2047e0d44d7542"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/rows.csv",
+    "sha256": "f243553aec67268e7a7d175bd2995c59281ba6b7a615a82309af8aec3edf73ee"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/rows.json",
+    "sha256": "d915e80312c9cf11fac299e803c286abde8e7f20be76c65ca0fa2c3f5974b26e"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/source-correspondence.json",
+    "sha256": "33a928ac5e3a83fbbb2a152bddf9a886394f984ab84d6bb946bdc835e837c557"
+  },
+  {
+    "path": "docs/audit/s129-evidence/original/strength-comparison.json",
+    "sha256": "70f2cdcedabbc6bfbf003b5a9d8ee78a2572c920d40f51f0e33de6f452511077"
+  }
+]

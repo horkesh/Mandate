@@ -1,0 +1,55 @@
+{
+  "request": "S129",
+  "primaryReadings": [
+    {
+      "input": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S117\\sources\\OR-I-II-p775.txt",
+      "inputSha256": "07fb853c1294e9ddf47ca042f5ebec920cda183561ca7f166cfa4edf4d5602f2",
+      "path": "docs/research/S129/sources/OR-I-II-p775.txt",
+      "sha256": "33f56e491ef05176aadcd6b4a1aec6fd0b386bb050931a2d7733c695e5d9436c",
+      "citation": "OR I-II p.775",
+      "scope": "Retained primary OCR read; no new scan inspection claimed."
+    },
+    {
+      "input": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S117\\sources\\OR-I-II-p776.txt",
+      "inputSha256": "2f017b2174ad769bd1dd32abd85821af7ed7ac1d446666f9f9a3514b2d223b3b",
+      "path": "docs/research/S129/sources/OR-I-II-p776.txt",
+      "sha256": "a2dc3e31e1759434791fe38d5201a414b5c44f2ddee745f6bb34440077505a28",
+      "citation": "OR I-II p.776",
+      "scope": "Retained primary OCR read; no new scan inspection claimed."
+    },
+    {
+      "input": "C:\\Pyrrhic\\sprint-research-authority\\docs\\research\\S117\\sources\\OR-I-II-p827.txt",
+      "inputSha256": "50662c4bd18fe19d1ca78b07f8ef74d20b701bed37c66556e173b37f83818197",
+      "path": "docs/research/S129/sources/OR-I-II-p827.txt",
+      "sha256": "0e614940c862e447c890abed36ac69fc1bfc08c5c6b256e858b28da61d524d5d",
+      "citation": "OR I-II p.827",
+      "scope": "Retained primary OCR read; no new scan inspection claimed."
+    },
+    {
+      "input": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\read\\IV1-p272.txt",
+      "inputSha256": "f41abacd89ce5cdd62a3a5bda64532821161f982fdad5f847a529aec828ce078",
+      "path": "docs/research/S129/sources/IV1-p272.txt",
+      "sha256": "60c0b7f46edea39cd1345a5937c22da10003e6979f159e2a2101aa128b08369f",
+      "citation": "OR IV-I p.272",
+      "scope": "Retained primary OCR read; no new scan inspection claimed."
+    },
+    {
+      "input": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\read\\IV1-p275.txt",
+      "inputSha256": "66aa992a7c81bb22797b0e6cdb4eec3f61e8c2939fe9c344ec015b3fab0b633d",
+      "path": "docs/research/S129/sources/IV1-p275.txt",
+      "sha256": "15e83d7be4c589f9243fd2ac148d3dbfcfa85e7b70855ad3fa11d25de7e27d6d",
+      "citation": "OR IV-I p.275",
+      "scope": "Retained primary OCR read; no new scan inspection claimed."
+    },
+    {
+      "input": "C:\\Pyrrhic\\mandate-research-sources\\S129\\Public-Laws-cp-s1.pdf",
+      "inputSha256": "c4299effda2c76c142f907f90b5bb72d3da1924a80b73c57ff4adda7eb98ebb3",
+      "url": "https://dheller.org/Timeline-files/US-Statutes/CSA/cp/Public-Laws-cp-s1.pdf",
+      "path": "docs/research/S129/sources/Statutes-p32.txt",
+      "sha256": "8824dfb830e84cd4bb1d8ca9476fd2e8a409a3f8c439cb442e255643d65f71fd",
+      "citation": "Statutes at Large, Provisional Government, ch.IX, 21 February1861, p.32, sections1-3",
+      "scope": "Printed p.32 OCR extracted from PDF leaf6; primary act text read."
+    }
+  ],
+  "reusedReadings": "S126/source-reading.json: SO119 pp.107-108; Lee pp.897-898; Regulations1857 pp.57-60. These texts were reread for S129."
+}

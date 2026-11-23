@@ -157,7 +157,7 @@ function establishmentProjection(
       else if (c.kind === 'commander-lost' || (c.kind === 'order-returned' && c.token === 'vacant_post') || (c.kind === 'verb-answered' && c.token?.startsWith('relieve:') && c.value === 1)) tell(post, null, 'vacant', r);
       else if (c.kind === 'appointment-refused' && c.token === 'post_held') tell(post, null, 'unknown', r);
       else if (c.kind === 'order-returned' && ['holder_changed','not_serving','other_side','not_raising_post'].includes(c.token ?? '')) tell(post, null, 'unknown', r);
-      else if (c.kind === 'verb-answered' && c.token?.startsWith('appoint:') && c.value === 1) {
+      else if ((c.kind==='command-assigned' || c.kind === 'verb-answered' && c.token?.startsWith('appoint:')) && c.value === 1) {
         // A received acceptance of our declared establishment identifies its public parent, never a live chain.
         const declared = world.start.temporaryPosts.find(p => p.id === post);
         if (declared !== undefined && (departments.has(declared.department) || knownSides.get(declared.department) === faction)) {
@@ -165,6 +165,13 @@ function establishmentProjection(
           posts.set(post,{ ...ensure(post), parent:declared.parent, placementKnown:true });
         }
         tell(post, r.author, 'held', r);
+        if(c.kind==='command-assigned') {
+          const paper=world.map.world.rules.mandates?.find(p=>p.id===c.token && p.assignment!==undefined && p.grant.mandatePost===post && p.grant.mandateHolder===r.author);
+          if(paper!==undefined) {
+            if(paper.assignment?.replaces!==undefined)tell(paper.assignment.replaces,null,'vacant',r);
+            for(const child of paper.assignment?.commands??[])posts.set(child,{...ensure(child),parent:post,placementKnown:true});
+          }
+        }
       }
     }
   }

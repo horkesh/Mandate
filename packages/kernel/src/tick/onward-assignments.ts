@@ -27,6 +27,7 @@ export function arriveAssignment(ctx: TickContext, state: State, msg: TransitMes
   const enclosure = order.orderAssignment;
   const paper = ctx.world.map.world.rules.onwardAssignments?.find(p => p.id === enclosure?.paper);
   if (enclosure === undefined || paper === undefined || order.orderIssuer !== paper.issuer || order.orderTarget !== paper.to ||
+    (paper.recipient!==undefined && msg.msgTo!==paper.recipient) ||
     msg.msgToPost !== paper.to || enclosure.destination !== paper.destination || order.orderLetter === undefined ||
     letterKey(order.orderLetter) !== letterKey(assignmentLetter(paper)) || order.orderAuthority?.basisPost !== paper.from ||
     order.orderAuthority.basisKey !== paper.mandate ||
@@ -49,7 +50,7 @@ export function arriveAssignment(ctx: TickContext, state: State, msg: TransitMes
 function pendingScope(ctx: TickContext, state: State, block: ForceBlockId, journey: AssignmentJourney) {
   const paper = ctx.world.map.world.rules.onwardAssignments?.find(p => p.id === journey.assignmentPaper);
   if (paper === undefined || !receivedRegiment(state,paper,block) ||
-    destinationFailure(ctx,state,paper.to,journey.assignmentRecipient,paper.issuer) !== null) return undefined;
+    (paper.address!=='office' && destinationFailure(ctx,state,paper.to,journey.assignmentRecipient,paper.issuer) !== null)) return undefined;
   const authority = assignmentAuthority(ctx.world,state,paper,block,ctx.day,journey.assignmentOrder);
   return authority === undefined ? undefined : {paper,grant:authority.authorityGrant};
 }
@@ -60,6 +61,7 @@ export function assignmentPassage(ctx: TickContext, state: State, block: ForceBl
   if (scope === undefined) return null;
   const grant = scope.grant;
   return leg => grant.mandateModes.includes(leg.type === 'road' ? 'land' : leg.type) &&
+    (scope.paper.modes===undefined || scope.paper.modes.includes(leg.type==='road'?'land':leg.type)) &&
     grant.mandateRegions.includes(leg.from) && grant.mandateRegions.includes(leg.to);
 }
 
@@ -74,12 +76,12 @@ export function receiveAssignments(ctx: TickContext, start: State): State {
     const {paper} = scope;
     const loc = state.forceLocations[block];
     if (loc?.locRegion !== paper.destination || loc.locMarch !== null || loc.locAboard !== null ||
-      whereIs(ctx,state,journey.assignmentRecipient) !== paper.destination) continue;
+      (paper.address==='office' ? state.postStates[paper.to]?.postHolder==null || whereIs(ctx,state,state.postStates[paper.to]!.postHolder!)!==paper.destination : whereIs(ctx,state,journey.assignmentRecipient) !== paper.destination)) continue;
     state = regroupAssignments(state,[],[{block,post:paper.to}]);
     state = endJoins(state,[block]);
     fire(ctx,'movement.joined');
     sendReport(ctx,state,{
-      body:answerBody(journey.assignmentRecipient,paper.to,ctx.day,{
+      body:answerBody(paper.address==='office'?state.postStates[paper.to]!.postHolder!:journey.assignmentRecipient,paper.to,ctx.day,{
         reportType:'wire-dispatch',reportSubtype:null,reportAdvice:null,answers:journey.assignmentOrder,about:paper.to,
         reportClaims:[{claimKind:'arrived',claimRegion:paper.destination,claimValue:1,claimToken:'assignment_received',claimConfidence:1000}],
       }),

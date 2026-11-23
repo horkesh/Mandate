@@ -16265,7 +16265,7 @@
       {
         "id": "s123_lee_state",
         "fromDate": "1861-04-23",
-        "source": "OR I-II pp.775-776, Letcher assignment and Lee assumption, 23 April 1861; pp.911-912, state-force transfer proclamation and Lee transmission, 6-8 June.  [I] Executable standing-field permissions, own-command recipients, transport modes and plan review are the separate pack declaration under 0124, not an enumeration quoted from the instrument. The existing force owner supplies troops; no numeric ceiling, guard, duration or receipt is invented. This state-post root reaches only forces still assigned under the governor; it gives no national-command power after actual transfer. The declared Lee command is unopened: a sourced appointment and assigned-command lineage are a named gap, not supplied by this mandate.",
+        "source": "OR I-II pp.775-776, Letcher assignment and Lee assumption,23April1861; pp.911-912, state-force transfer. 0124/0129 [I]: this read assignment opens the declared Virginia command only on accepted receipt. State troops in the declared Virginia territory pass from the governor to his command, without new troops, physical movement or national ownership. Standing-field permissions and available modes are model mappings, not quoted enumerations. The governor root covers no nationally received forces. No receipt is prefilled.",
         "grant": {
           "mandateKey": "lee_state_command",
           "mandateRevision": 1,
@@ -16278,7 +16278,8 @@
             "hold",
             "relieve",
             "take",
-            "approve"
+            "approve",
+            "assign"
           ],
           "mandateRecipients": [
             "st_va_general_in_chief"
@@ -16334,6 +16335,14 @@
           ],
           "mandateOnward": true,
           "mandateRevoke": false
+        },
+        "assignment": {
+          "concurrentWith": [
+            "cs_forces_virginia"
+          ],
+          "intake": [
+            "st_gov_virginia"
+          ]
         }
       },
       {
@@ -16423,6 +16432,126 @@
           "mandateOnward": true,
           "mandateRevoke": false
         }
+      },
+      {
+        "id": "s129_lee_national",
+        "fromDate": "1861-05-10",
+        "source": "OR I-II p.827, Walker10May telegram published as Lee GO13: control Confederate forces in Virginia and assign duties until further orders. Statutes at Large, Provisional Government, ch.IX,21February1861,p.32,sections1-2: Secretary acts under President direction/control. 0129 [I]: runtime government root is the principal, not Walker as a new principal; no President-to-Walker instruction is reconstructed. Read assignments may retain the separately received state command. Scope/lineage maps the two declared Virginia receiving commands and national troops received at the War Department within Virginia; no troops, holder for Fredericksburg or historical receipt is invented. See docs/research/S129/assignments.md.",
+        "grant": {
+          "mandateKey": "lee_confederate_virginia",
+          "mandateRevision": 1,
+          "mandateIssuer": "davis_jefferson",
+          "mandateIssuerPost": null,
+          "mandateHolder": "lee_robert_e",
+          "mandatePost": "cs_forces_virginia",
+          "mandateParent": null,
+          "mandateActions": [
+            "hold",
+            "relieve",
+            "take",
+            "approve",
+            "assign"
+          ],
+          "mandateRecipients": [
+            "cs_forces_virginia",
+            "cs_cmd_fredericksburg",
+            "cs_cmd_harpers_ferry"
+          ],
+          "mandateRegions": [
+            "charlottesville",
+            "chesterfield",
+            "culpeper_orange",
+            "danville",
+            "fort_monroe",
+            "fredericksburg",
+            "grafton",
+            "hanover",
+            "harpers_ferry",
+            "kanawha",
+            "loudoun_fauquier",
+            "lower_valley",
+            "lynchburg",
+            "manassas",
+            "middle_valley",
+            "norfolk",
+            "northern_virginia",
+            "parkersburg",
+            "peninsula",
+            "petersburg",
+            "potomac_highlands",
+            "richmond",
+            "roanoke_new_river",
+            "rockbridge_highlands",
+            "southside",
+            "southside_tidewater",
+            "southwest_virginia",
+            "upper_valley",
+            "virginia_necks",
+            "wheeling",
+            "wv_central",
+            "wv_south"
+          ],
+          "mandateModes": [
+            "land",
+            "rail",
+            "river",
+            "sea"
+          ],
+          "mandateCeiling": {
+            "ceilingPost": "cs_forces_virginia",
+            "ceilingMen": null
+          },
+          "mandateGuard": null,
+          "mandateExpires": null,
+          "mandateReports": [
+            "operations_and_position"
+          ],
+          "mandateOnward": true,
+          "mandateRevoke": false
+        },
+        "assignment": {
+          "concurrentWith": [
+            "st_va_general_in_chief"
+          ],
+          "commands": [
+            "cs_cmd_fredericksburg",
+            "cs_cmd_harpers_ferry"
+          ],
+          "intake": [
+            "cs_secretary_war"
+          ]
+        }
+      }
+    ],
+    "onwardAssignments": [
+      {
+        "id": "s129_so119_bate",
+        "source": "OR I-LI.2 pp.107-108,SO119,25May1861,paragraph2: Second Tennessee,Bate,to Fredericksburg by rail,report Ruggles; by order Lee,Garnett transmitting. 0129 [I]: office address is the Fredericksburg command; no Ruggles holder is fabricated, and Holmes is not the named historical addressee. Model departure starts from the actually received rendezvous, not an invented Richmond arrival.",
+        "fromDate": "1861-05-25",
+        "issuer": "lee_robert_e",
+        "from": "cs_forces_virginia",
+        "to": "cs_cmd_fredericksburg",
+        "destination": "fredericksburg",
+        "mandate": "lee_confederate_virginia",
+        "call": "cs_apr22_absolute_tennessee",
+        "regiment": "tn_2_infantry",
+        "address": "office",
+        "modes": [
+          "rail"
+        ]
+      },
+      {
+        "id": "s129_turney_johnston",
+        "source": "OR I-II pp.897-898,Lee1June reinforcement letter to Johnston: First Tennessee,Turney,has been directed to report as soon as practicable. 0129 [I]: this contemporary attestation declares the direction with those terms only. Separate instruction and historical receipt unread; no date, route, extra regiment or headcount is reconstructed.",
+        "fromDate": "1861-06-01",
+        "issuer": "lee_robert_e",
+        "from": "cs_forces_virginia",
+        "to": "cs_cmd_harpers_ferry",
+        "recipient": "johnston_joseph_e",
+        "destination": "harpers_ferry",
+        "mandate": "lee_confederate_virginia",
+        "call": "cs_apr22_absolute_tennessee",
+        "regiment": "tn_1_infantry"
       }
     ]
   },

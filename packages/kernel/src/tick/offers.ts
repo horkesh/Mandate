@@ -11,6 +11,7 @@ import type { State } from '../root-state.ts';
 import { postFaction } from '../seats/posts.ts';
 import { answerBody } from './orders.ts';
 import { sendReport, type TickContext, type RejectionReason } from './context.ts';
+import { commandIntake } from '../command/command-assignment.ts';
 
 export function recallOffer(ctx: TickContext, state: State, seat: SeatId, id: MessageId): { state: State; reason: RejectionReason | null } {
  const offer = state.neutralOffers?.[id];
@@ -50,5 +51,5 @@ export function receiveOffers(ctx: TickContext, start: State): State {
   state=putOffer(state,{...offer,offerReceived:received,offerStatus:received.length===offer.offerBlocks.length?'received':'offered',offerReceiptDays:{...offer.offerReceiptDays,...Object.fromEntries(blocks.map(b=>[b,ctx.day]))}});
   sendReport(ctx,state,{body:answerBody(receiver.postHolder,offer.offerReceiver,ctx.day,{reportType:'wire-dispatch',reportSubtype:null,reportAdvice:null,reportRequisition:offer.offerCallId,answers:offer.offerCall,about:offer.offerOwner,reportClaims:[{claimKind:'arrived',claimRegion:offer.offerRegion,claimValue:blocks.length,claimToken:'offer_received',claimConfidence:1000}]}),truth:{truthTerms:[],truthTrimmed:[]},to:offer.offerIssuer,tag:`offer-received.${offer.offerCallId}`});
  }
- return state;
+ return commandIntake(ctx.world,state,ctx.day);
 }

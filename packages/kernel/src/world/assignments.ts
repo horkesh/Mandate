@@ -15,6 +15,9 @@ export interface OnwardAssignment {
   readonly mandate: string;
   readonly call: string;
   readonly regiment: string;
+  readonly address?: 'office';
+  readonly recipient?: PersonId;
+  readonly modes?: readonly ('land' | 'rail' | 'river' | 'sea')[];
 }
 
 export function assignmentProblems(world: World, start: ScenarioStart): string[] {
@@ -25,6 +28,8 @@ export function assignmentProblems(world: World, start: ScenarioStart): string[]
     const at = `onwardAssignments.${paper.id}`;
     if (!paper.id || ids.has(paper.id) || !paper.source.trim()) problems.push(`${at}: a unique sourced instrument is required`);
     ids.add(paper.id);
+    if(paper.recipient!==undefined && (!world.people.some(p=>p.id===paper.recipient) || paper.address==='office'))problems.push(`${at}: invalid named recipient`);
+    if(paper.address!==undefined && paper.address!=='office' || paper.modes!==undefined && (paper.modes.length===0 || new Set(paper.modes).size!==paper.modes.length || paper.modes.some(m=>!['land','rail','river','sea'].includes(m))))problems.push(`${at}: invalid address or movement modes`);
     try { parseIsoDate(paper.fromDate); } catch { problems.push(`${at}: invalid earliest date`); }
     if (paper.from === paper.to || !posts.has(paper.from) || !posts.has(paper.to) ||
       !world.regions.some(r => r.id === paper.destination) || !world.people.some(p => p.id === paper.issuer) ||

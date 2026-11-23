@@ -9,12 +9,14 @@ import type { State } from '../root-state.ts';
 import type { OrganisationTemplate } from '../world/organisation.ts';
 import type { SeatsWorld } from '../seats/world.ts';
 import { sendReport, type TickContext } from './context.ts';
+import { partitionOfferReceipts } from '../command/offers.ts';
 
 /** The transaction uses local copies; any owner rejection leaves the input untouched. */
 export function repartition(state:State,sources:readonly ForceBlockId[],groups:readonly LotGroup[],posts:readonly (PostId|null)[]):State {
   let next=regroupLocations(state,sources,groups);
   next=regroupForces(next,sources,groups);
-  return regroupAssignments(next,sources,groups.map((g,i)=>({block:g.block,post:posts[i]!})));
+  next=regroupAssignments(next,sources,groups.map((g,i)=>({block:g.block,post:posts[i]!})));
+  return partitionOfferReceipts(next,state,sources,groups);
 }
 
 /** Planning bundles [I]. Opaque historical aggregates cannot be partitioned into regiments. */

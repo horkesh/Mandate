@@ -1,0 +1,52 @@
+{
+  "original": {
+    "seconds": 106.874,
+    "exit": 1,
+    "finalHash": "46575420f5abaab7ae05c0246ad47c75b72743e8da57083fb254b26c28972a28",
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "46575420f5abaab7ae05c0246ad47c75b72743e8da57083fb254b26c28972a28",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "verdicts": {
+      "representation_gap": 22,
+      "matched": 5,
+      "mismatch": 3,
+      "not_observed": 3
+    }
+  },
+  "corrected": {
+    "seconds": 97.46,
+    "exit": 1,
+    "finalHash": "8a0138ae3c21f8448aad005408f42743c1b6b15682bb045e47842d3176b5462f",
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "8a0138ae3c21f8448aad005408f42743c1b6b15682bb045e47842d3176b5462f",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "verdicts": {
+      "representation_gap": 22,
+      "matched": 5,
+      "mismatch": 3,
+      "not_observed": 3
+    }
+  },
+  "originalCaptureFilesPreserved": 22,
+  "correctedRuntimeInputsPreserved": 842,
+  "changedLotsBetweenCaptures": 88,
+  "hookRun": false,
+  "commit": null,
+  "newZeroRulingPending": true
+}

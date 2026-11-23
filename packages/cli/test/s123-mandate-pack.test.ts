@@ -3,10 +3,10 @@ import { seatsWorld } from '../src/seats-world.ts';
 import { createState } from '../../kernel/src/tick/setup.ts';
 
 describe('S123 sourced standing assignments', () => {
-  it('declares the four standing commands with explicit source, bounds and referenced forces', () => {
+  it('declares five standing offices for the four commanders with explicit source, bounds and referenced forces', () => {
     const {world}=seatsWorld('union-1861');
     const papers=world.map.world.rules.mandates ?? [];
-    expect(papers.filter(p => p.grant.mandateRevision===1)).toHaveLength(4);
+    expect(papers.filter(p => p.grant.mandateRevision===1)).toHaveLength(5);
     expect(papers.map(p => p.grant.mandateHolder)).toEqual(expect.arrayContaining(['scott_winfield','patterson_robert','lee_robert_e','johnston_joseph_e']));
     for (const p of papers) {
       expect(p.source).toMatch(/p\.|pp\./);

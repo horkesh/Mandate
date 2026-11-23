@@ -1,0 +1,784 @@
+[
+  {
+    "id": "op:cs_cmd_fredericksburg:107",
+    "before": null,
+    "after": {
+      "opPost": "cs_cmd_fredericksburg",
+      "opCommander": "holmes_theophilus_h",
+      "opOrder": "m.96.lee_robert_e.holmes_theophilus_h.order.cs_cmd_fredericksburg",
+      "opPlan": "supply_line:depot_steps:fredericksburg>hanover>charlottesville>lynchburg",
+      "opMethod": "supply_line",
+      "opPosture": "hold",
+      "opObjective": "lynchburg",
+      "opStartDay": 107,
+      "opEndDay": 117,
+      "opOutcome": "objective_reached",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_fredericksburg",
+          "oaxBlocks": [
+            "raised.st_gov_tennessee.d55.assignment.s129_so119_bate"
+          ],
+          "oaxRoute": {
+            "routeFrom": "fredericksburg",
+            "routeTo": "lynchburg",
+            "routeLegs": [
+              {
+                "legEdge": "rail:fredericksburg:hanover:richmond_fredericksburg_and_potomac",
+                "legFrom": "fredericksburg",
+                "legTo": "hanover",
+                "legType": "rail",
+                "legDays": 1000,
+                "legThreat": 0,
+                "legSupply": 1000,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "rail:charlottesville:hanover:virginia_central",
+                "legFrom": "hanover",
+                "legTo": "charlottesville",
+                "legType": "rail",
+                "legDays": 1000,
+                "legThreat": 0,
+                "legSupply": 1000,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "rail:charlottesville:lynchburg:orange_and_alexandria",
+                "legFrom": "charlottesville",
+                "legTo": "lynchburg",
+                "legType": "rail",
+                "legDays": 1000,
+                "legThreat": 0,
+                "legSupply": 1000,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 6000,
+            "routeDays": 3000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 2000,
+              "phaseRegion": "fredericksburg"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 2000,
+              "phaseDays": 1000,
+              "phaseRegion": "hanover"
+            },
+            {
+              "phaseKind": "depot_step",
+              "phaseStart": 3000,
+              "phaseDays": 2000,
+              "phaseRegion": "hanover"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 5000,
+              "phaseDays": 1000,
+              "phaseRegion": "charlottesville"
+            },
+            {
+              "phaseKind": "depot_step",
+              "phaseStart": 6000,
+              "phaseDays": 2000,
+              "phaseRegion": "charlottesville"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 8000,
+              "phaseDays": 1000,
+              "phaseRegion": "lynchburg"
+            }
+          ],
+          "oaxObjective": "lynchburg",
+          "oaxStage": "end",
+          "oaxSince": 117,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [
+            "hanover",
+            "charlottesville"
+          ],
+          "oaxArrived": 116,
+          "oaxLog": [
+            {
+              "axevDay": 107,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "fredericksburg"
+            },
+            {
+              "axevDay": 109,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "fredericksburg"
+            },
+            {
+              "axevDay": 110,
+              "axevStage": "pause",
+              "axevReason": "depot_step",
+              "axevRegion": "hanover"
+            },
+            {
+              "axevDay": 112,
+              "axevStage": "march",
+              "axevReason": "pause_over",
+              "axevRegion": "hanover"
+            },
+            {
+              "axevDay": 113,
+              "axevStage": "pause",
+              "axevReason": "depot_step",
+              "axevRegion": "charlottesville"
+            },
+            {
+              "axevDay": 115,
+              "axevStage": "march",
+              "axevReason": "pause_over",
+              "axevRegion": "charlottesville"
+            },
+            {
+              "axevDay": 116,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 117,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "lynchburg"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "op:cs_cmd_harpers_ferry:114",
+    "before": null,
+    "after": {
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.99.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "opPlan": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+      "opMethod": "supply_line",
+      "opPosture": "hold",
+      "opObjective": "lynchburg",
+      "opStartDay": 114,
+      "opEndDay": 125,
+      "opOutcome": "objective_reached",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "lynchburg",
+            "routeLegs": [
+              {
+                "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                "legFrom": "harpers_ferry",
+                "legTo": "loudoun_fauquier",
+                "legType": "road",
+                "legDays": 4000,
+                "legThreat": 0,
+                "legSupply": 4000,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "rail:culpeper_orange:loudoun_fauquier:orange_and_alexandria",
+                "legFrom": "loudoun_fauquier",
+                "legTo": "culpeper_orange",
+                "legType": "rail",
+                "legDays": 1000,
+                "legThreat": 0,
+                "legSupply": 1000,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "rail:charlottesville:culpeper_orange:virginia_central",
+                "legFrom": "culpeper_orange",
+                "legTo": "charlottesville",
+                "legType": "rail",
+                "legDays": 1000,
+                "legThreat": 0,
+                "legSupply": 1000,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "rail:charlottesville:lynchburg:orange_and_alexandria",
+                "legFrom": "charlottesville",
+                "legTo": "lynchburg",
+                "legType": "rail",
+                "legDays": 1000,
+                "legThreat": 0,
+                "legSupply": 1000,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 14000,
+            "routeDays": 7000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 2000,
+              "phaseRegion": "harpers_ferry"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 2000,
+              "phaseDays": 4000,
+              "phaseRegion": "loudoun_fauquier"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 6000,
+              "phaseDays": 1000,
+              "phaseRegion": "culpeper_orange"
+            },
+            {
+              "phaseKind": "depot_step",
+              "phaseStart": 7000,
+              "phaseDays": 1000,
+              "phaseRegion": "culpeper_orange"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 8000,
+              "phaseDays": 1000,
+              "phaseRegion": "charlottesville"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 9000,
+              "phaseDays": 1000,
+              "phaseRegion": "lynchburg"
+            }
+          ],
+          "oaxObjective": "lynchburg",
+          "oaxStage": "end",
+          "oaxSince": 125,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [
+            "culpeper_orange"
+          ],
+          "oaxArrived": 124,
+          "oaxLog": [
+            {
+              "axevDay": 114,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 116,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 121,
+              "axevStage": "pause",
+              "axevReason": "depot_step",
+              "axevRegion": "culpeper_orange"
+            },
+            {
+              "axevDay": 122,
+              "axevStage": "march",
+              "axevReason": "pause_over",
+              "axevRegion": "culpeper_orange"
+            },
+            {
+              "axevDay": 124,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 125,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "lynchburg"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "op:cs_cmd_harpers_ferry:142",
+    "before": null,
+    "after": {
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "opPlan": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+      "opMethod": "direct",
+      "opPosture": "relieve",
+      "opObjective": "manassas",
+      "opStartDay": 142,
+      "opEndDay": 147,
+      "opOutcome": "superseded",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "raised.st_gov_georgia.d122.2",
+            "raised.st_gov_georgia.d125",
+            "organised.s74_johnston_brigade_3.1",
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "manassas",
+            "routeLegs": [
+              {
+                "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                "legFrom": "harpers_ferry",
+                "legTo": "loudoun_fauquier",
+                "legType": "road",
+                "legDays": 4000,
+                "legThreat": 219,
+                "legSupply": 0,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "road:loudoun_fauquier:manassas",
+                "legFrom": "loudoun_fauquier",
+                "legTo": "manassas",
+                "legType": "road",
+                "legDays": 3000,
+                "legThreat": 0,
+                "legSupply": 0,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 7219,
+            "routeDays": 7000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 7000,
+              "phaseRegion": "harpers_ferry"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 7000,
+              "phaseDays": 4000,
+              "phaseRegion": "loudoun_fauquier"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 11000,
+              "phaseDays": 3000,
+              "phaseRegion": "manassas"
+            }
+          ],
+          "oaxObjective": "manassas",
+          "oaxStage": "end",
+          "oaxSince": 147,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": null,
+          "oaxLog": [
+            {
+              "axevDay": 142,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 147,
+              "axevStage": "end",
+              "axevReason": "superseded",
+              "axevRegion": "manassas"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "op:cs_cmd_harpers_ferry:144",
+    "before": {
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "opPlan": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+      "opMethod": "direct",
+      "opPosture": "relieve",
+      "opObjective": "manassas",
+      "opStartDay": 144,
+      "opEndDay": null,
+      "opOutcome": null,
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "raised.st_gov_georgia.d122.2",
+            "raised.st_gov_georgia.d125",
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "manassas",
+            "routeLegs": [
+              {
+                "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                "legFrom": "harpers_ferry",
+                "legTo": "loudoun_fauquier",
+                "legType": "road",
+                "legDays": 4000,
+                "legThreat": 219,
+                "legSupply": 0,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "road:loudoun_fauquier:manassas",
+                "legFrom": "loudoun_fauquier",
+                "legTo": "manassas",
+                "legType": "road",
+                "legDays": 3000,
+                "legThreat": 0,
+                "legSupply": 0,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 7219,
+            "routeDays": 7000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 4000,
+              "phaseRegion": "harpers_ferry"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 4000,
+              "phaseDays": 4000,
+              "phaseRegion": "loudoun_fauquier"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 8000,
+              "phaseDays": 3000,
+              "phaseRegion": "manassas"
+            }
+          ],
+          "oaxObjective": "manassas",
+          "oaxStage": "march",
+          "oaxSince": 148,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": null,
+          "oaxLog": [
+            {
+              "axevDay": 144,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 148,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "after": null,
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "op:cs_cmd_harpers_ferry:96",
+    "before": {
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "opPlan": "direct:least_cost:harpers_ferry",
+      "opMethod": "direct",
+      "opPosture": "hold",
+      "opObjective": "harpers_ferry",
+      "opStartDay": 96,
+      "opEndDay": 143,
+      "opOutcome": "superseded",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "harpers_ferry",
+            "routeLegs": [],
+            "routeCost": 0,
+            "routeDays": 0
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 2000,
+              "phaseRegion": "harpers_ferry"
+            }
+          ],
+          "oaxObjective": "harpers_ferry",
+          "oaxStage": "end",
+          "oaxSince": 143,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": 99,
+          "oaxLog": [
+            {
+              "axevDay": 96,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 98,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 99,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 143,
+              "axevStage": "end",
+              "axevReason": "superseded",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "after": {
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "opPlan": "direct:least_cost:harpers_ferry",
+      "opMethod": "direct",
+      "opPosture": "hold",
+      "opObjective": "harpers_ferry",
+      "opStartDay": 96,
+      "opEndDay": 104,
+      "opOutcome": "superseded",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "harpers_ferry",
+            "routeLegs": [],
+            "routeCost": 0,
+            "routeDays": 0
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 2000,
+              "phaseRegion": "harpers_ferry"
+            }
+          ],
+          "oaxObjective": "harpers_ferry",
+          "oaxStage": "end",
+          "oaxSince": 104,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": 99,
+          "oaxLog": [
+            {
+              "axevDay": 96,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 98,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 99,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 104,
+              "axevStage": "end",
+              "axevReason": "superseded",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "op:cs_forces_virginia:81",
+    "before": null,
+    "after": {
+      "opPost": "cs_forces_virginia",
+      "opCommander": "lee_robert_e",
+      "opOrder": "m.79.lee_robert_e.lee_robert_e.local.goal:f22497e2c2872534aade541e",
+      "opPlan": "direct:least_cost:lynchburg",
+      "opMethod": "direct",
+      "opPosture": "hold",
+      "opObjective": "lynchburg",
+      "opStartDay": 81,
+      "opEndDay": 86,
+      "opOutcome": "objective_reached",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_forces_virginia",
+          "oaxBlocks": [
+            "raised.st_gov_tennessee.d55"
+          ],
+          "oaxRoute": {
+            "routeFrom": "lynchburg",
+            "routeTo": "lynchburg",
+            "routeLegs": [],
+            "routeCost": 0,
+            "routeDays": 0
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 3000,
+              "phaseRegion": "lynchburg"
+            }
+          ],
+          "oaxObjective": "lynchburg",
+          "oaxStage": "end",
+          "oaxSince": 86,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": 85,
+          "oaxLog": [
+            {
+              "axevDay": 81,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 84,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 85,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 86,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "lynchburg"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  }
+]

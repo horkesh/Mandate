@@ -1,0 +1,287 @@
+{
+  "scope": "Offline retained-State menu and sending controls only. No tick, no changed trajectory, no captured dispatch.",
+  "rows": [
+    {
+      "status": "unknown",
+      "appointments": [
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "person": "johnston_joseph_e",
+          "from": null,
+          "ready": true,
+          "issued": false,
+          "routes": [
+            {
+              "route": "courier",
+              "typicalDays": 6,
+              "price": 0
+            },
+            {
+              "route": "special-messenger",
+              "typicalDays": 3,
+              "price": 1
+            },
+            {
+              "route": "wire",
+              "typicalDays": 2,
+              "price": 0
+            }
+          ]
+        },
+        {
+          "post": "cs_cmd_fredericksburg",
+          "person": "holmes_theophilus_h",
+          "from": null,
+          "ready": true,
+          "issued": false,
+          "routes": [
+            {
+              "route": "courier",
+              "typicalDays": 2,
+              "price": 0
+            },
+            {
+              "route": "special-messenger",
+              "typicalDays": 1,
+              "price": 1
+            },
+            {
+              "route": "wire",
+              "typicalDays": 2,
+              "price": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "status": "vacant",
+      "appointments": [
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "person": "johnston_joseph_e",
+          "from": null,
+          "ready": true,
+          "issued": false,
+          "routes": [
+            {
+              "route": "courier",
+              "typicalDays": 6,
+              "price": 0
+            },
+            {
+              "route": "special-messenger",
+              "typicalDays": 3,
+              "price": 1
+            },
+            {
+              "route": "wire",
+              "typicalDays": 2,
+              "price": 0
+            }
+          ]
+        },
+        {
+          "post": "cs_cmd_fredericksburg",
+          "person": "holmes_theophilus_h",
+          "from": null,
+          "ready": true,
+          "issued": false,
+          "routes": [
+            {
+              "route": "courier",
+              "typicalDays": 2,
+              "price": 0
+            },
+            {
+              "route": "special-messenger",
+              "typicalDays": 1,
+              "price": 1
+            },
+            {
+              "route": "wire",
+              "typicalDays": 2,
+              "price": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "status": "held",
+      "appointments": [
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "person": "johnston_joseph_e",
+          "from": null,
+          "ready": false,
+          "issued": false,
+          "routes": [
+            {
+              "route": "courier",
+              "typicalDays": 6,
+              "price": 0
+            },
+            {
+              "route": "special-messenger",
+              "typicalDays": 3,
+              "price": 1
+            },
+            {
+              "route": "wire",
+              "typicalDays": 2,
+              "price": 0
+            }
+          ]
+        },
+        {
+          "post": "cs_cmd_fredericksburg",
+          "person": "holmes_theophilus_h",
+          "from": null,
+          "ready": false,
+          "issued": false,
+          "routes": [
+            {
+              "route": "courier",
+              "typicalDays": 2,
+              "price": 0
+            },
+            {
+              "route": "special-messenger",
+              "typicalDays": 1,
+              "price": 1
+            },
+            {
+              "route": "wire",
+              "typicalDays": 2,
+              "price": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "status": "absent",
+      "appointments": [
+        {
+          "post": "cs_cmd_harpers_ferry",
+          "person": "johnston_joseph_e",
+          "from": null,
+          "ready": true,
+          "issued": false,
+          "routes": [
+            {
+              "route": "courier",
+              "typicalDays": 6,
+              "price": 0
+            },
+            {
+              "route": "special-messenger",
+              "typicalDays": 3,
+              "price": 1
+            },
+            {
+              "route": "wire",
+              "typicalDays": 2,
+              "price": 0
+            }
+          ]
+        },
+        {
+          "post": "cs_cmd_fredericksburg",
+          "person": "holmes_theophilus_h",
+          "from": null,
+          "ready": true,
+          "issued": false,
+          "routes": [
+            {
+              "route": "courier",
+              "typicalDays": 2,
+              "price": 0
+            },
+            {
+              "route": "special-messenger",
+              "typicalDays": 1,
+              "price": 1
+            },
+            {
+              "route": "wire",
+              "typicalDays": 2,
+              "price": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sending": [
+    {
+      "post": "cs_cmd_harpers_ferry",
+      "person": "johnston_joseph_e",
+      "from": null,
+      "ready": true,
+      "reason": null,
+      "dispatch": {
+        "id": "m.149.davis_jefferson.johnston_joseph_e.verb.appoint.cs_cmd_harpers_ferry",
+        "msgOrigin": "m.149.davis_jefferson.johnston_joseph_e.verb.appoint.cs_cmd_harpers_ferry",
+        "msgFrom": "davis_jefferson",
+        "msgTo": "johnston_joseph_e",
+        "msgToPost": null,
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 149,
+        "msgArriveDay": 149,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": null,
+        "msgVerb": {
+          "verbKind": "appoint",
+          "verbPost": "cs_cmd_harpers_ferry",
+          "verbTo": null,
+          "verbMode": null,
+          "verbAmount": null,
+          "verbRank": null,
+          "verbSubject": null,
+          "verbIssuer": "davis_jefferson",
+          "verbIssuedDay": 149
+        },
+        "msgReport": null,
+        "msgTruth": null
+      }
+    },
+    {
+      "post": "cs_cmd_fredericksburg",
+      "person": "holmes_theophilus_h",
+      "from": null,
+      "ready": true,
+      "reason": null,
+      "dispatch": {
+        "id": "m.149.davis_jefferson.holmes_theophilus_h.verb.appoint.cs_cmd_fredericksburg",
+        "msgOrigin": "m.149.davis_jefferson.holmes_theophilus_h.verb.appoint.cs_cmd_fredericksburg",
+        "msgFrom": "davis_jefferson",
+        "msgTo": "holmes_theophilus_h",
+        "msgToPost": null,
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 149,
+        "msgArriveDay": 149,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": null,
+        "msgVerb": {
+          "verbKind": "appoint",
+          "verbPost": "cs_cmd_fredericksburg",
+          "verbTo": null,
+          "verbMode": null,
+          "verbAmount": null,
+          "verbRank": null,
+          "verbSubject": null,
+          "verbIssuer": "davis_jefferson",
+          "verbIssuedDay": 149
+        },
+        "msgReport": null,
+        "msgTruth": null
+      }
+    }
+  ]
+}

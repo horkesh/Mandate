@@ -1,0 +1,2671 @@
+[
+  {
+    "day": 1,
+    "events": [
+      {
+        "event": "relayed",
+        "person": "cameron_simon",
+        "post": "us_secretary_war",
+        "message": "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 48,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 2,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "cooper_samuel",
+        "post": "us_war_adjutant_general",
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "cooper_samuel",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "cooper_samuel",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "cooper_samuel",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 2,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 3,
+    "events": []
+  },
+  {
+    "day": 4,
+    "events": [
+      {
+        "event": "relayed",
+        "person": "cameron_simon",
+        "post": "us_secretary_war",
+        "message": "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 48,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 5,
+    "events": []
+  },
+  {
+    "day": 6,
+    "events": []
+  },
+  {
+    "day": 7,
+    "events": [
+      {
+        "event": "initiative",
+        "person": "seward_william_h",
+        "post": "us_secretary_state",
+        "message": null,
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 200,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 35,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 8,
+    "events": []
+  },
+  {
+    "day": 9,
+    "events": []
+  },
+  {
+    "day": 10,
+    "events": []
+  },
+  {
+    "day": 11,
+    "events": []
+  },
+  {
+    "day": 12,
+    "events": []
+  },
+  {
+    "day": 13,
+    "events": []
+  },
+  {
+    "day": 14,
+    "events": []
+  },
+  {
+    "day": 15,
+    "events": []
+  },
+  {
+    "day": 16,
+    "events": []
+  },
+  {
+    "day": 17,
+    "events": []
+  },
+  {
+    "day": 18,
+    "events": []
+  },
+  {
+    "day": 19,
+    "events": []
+  },
+  {
+    "day": 20,
+    "events": []
+  },
+  {
+    "day": 21,
+    "events": []
+  },
+  {
+    "day": 22,
+    "events": []
+  },
+  {
+    "day": 23,
+    "events": []
+  },
+  {
+    "day": 24,
+    "events": []
+  },
+  {
+    "day": 25,
+    "events": []
+  },
+  {
+    "day": 26,
+    "events": []
+  },
+  {
+    "day": 27,
+    "events": []
+  },
+  {
+    "day": 28,
+    "events": []
+  },
+  {
+    "day": 29,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "gorgas_josiah",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "gorgas_josiah",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "gorgas_josiah",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "gorgas_josiah",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 29,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 30,
+    "events": []
+  },
+  {
+    "day": 31,
+    "events": []
+  },
+  {
+    "day": 32,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "smith_edmund_k",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "smith_edmund_k",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "smith_edmund_k",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "smith_edmund_k",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 32,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 33,
+    "events": []
+  },
+  {
+    "day": 34,
+    "events": []
+  },
+  {
+    "day": 35,
+    "events": []
+  },
+  {
+    "day": 36,
+    "events": [
+      {
+        "event": "objected",
+        "person": "walker_leroy_p",
+        "post": "cs_secretary_war",
+        "message": "m.36.davis_jefferson.walker_leroy_p.order.cs_cmd_charleston",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": -164,
+            "termRule": "object"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": -200,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": -105,
+            "termRule": "temperament"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": 90,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": 51,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 37,
+    "events": []
+  },
+  {
+    "day": 38,
+    "events": []
+  },
+  {
+    "day": 39,
+    "events": []
+  },
+  {
+    "day": 40,
+    "events": []
+  },
+  {
+    "day": 41,
+    "events": []
+  },
+  {
+    "day": 42,
+    "events": []
+  },
+  {
+    "day": 43,
+    "events": []
+  },
+  {
+    "day": 44,
+    "events": []
+  },
+  {
+    "day": 45,
+    "events": []
+  },
+  {
+    "day": 46,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "magruder_john_b",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "magruder_john_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "magruder_john_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "magruder_john_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 46,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 47,
+    "events": []
+  },
+  {
+    "day": 48,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "johnston_joseph_e",
+        "post": "us_war_quartermaster_general",
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "johnston_joseph_e",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "johnston_joseph_e",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "johnston_joseph_e",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 48,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 49,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "thomas_george_h",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "thomas_george_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "thomas_george_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 50,
+    "events": []
+  },
+  {
+    "day": 51,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "elzey_arnold",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "elzey_arnold",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "elzey_arnold",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "elzey_arnold",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 51,
+            "termRule": "historical_date"
+          }
+        ]
+      },
+      {
+        "event": "service_choice",
+        "person": "lee_robert_e",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "lee_robert_e",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "lee_robert_e",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -300,
+            "termRule": "value:duty"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "lee_robert_e",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 800,
+            "termRule": "value:native_state"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "lee_robert_e",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "lee_robert_e",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 51,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 52,
+    "events": []
+  },
+  {
+    "day": 53,
+    "events": []
+  },
+  {
+    "day": 54,
+    "events": [
+      {
+        "event": "relayed",
+        "person": "cameron_simon",
+        "post": "us_secretary_war",
+        "message": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 50,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      },
+      {
+        "event": "relayed",
+        "person": "scott_winfield",
+        "post": "us_general_in_chief",
+        "message": "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 200,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 34,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 55,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "pemberton_john_c",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "pemberton_john_c",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "pemberton_john_c",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "pemberton_john_c",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 55,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 56,
+    "events": []
+  },
+  {
+    "day": 57,
+    "events": []
+  },
+  {
+    "day": 58,
+    "events": []
+  },
+  {
+    "day": 59,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "johnston_albert_s",
+        "post": "us_dept_pacific",
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "johnston_albert_s",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "johnston_albert_s",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "johnston_albert_s",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 59,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 60,
+    "events": [
+      {
+        "event": "relayed",
+        "person": "cameron_simon",
+        "post": "us_secretary_war",
+        "message": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 50,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      },
+      {
+        "event": "relayed",
+        "person": "cameron_simon",
+        "post": "us_secretary_war",
+        "message": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.2",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 50,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      },
+      {
+        "event": "relayed",
+        "person": "cameron_simon",
+        "post": "us_secretary_war",
+        "message": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.3",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 50,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 61,
+    "events": []
+  },
+  {
+    "day": 62,
+    "events": []
+  },
+  {
+    "day": 63,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "ewell_richard_s",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "ewell_richard_s",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "ewell_richard_s",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "ewell_richard_s",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 63,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 64,
+    "events": []
+  },
+  {
+    "day": 65,
+    "events": []
+  },
+  {
+    "day": 66,
+    "events": []
+  },
+  {
+    "day": 67,
+    "events": []
+  },
+  {
+    "day": 68,
+    "events": []
+  },
+  {
+    "day": 69,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "loring_william_w",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "loring_william_w",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "loring_william_w",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "loring_william_w",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 69,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 70,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "stuart_james_e_b",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "stuart_james_e_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "stuart_james_e_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "stuart_james_e_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 70,
+            "termRule": "historical_date"
+          }
+        ]
+      },
+      {
+        "event": "initiative",
+        "person": "seward_william_h",
+        "post": "us_secretary_state",
+        "message": null,
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 200,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 36,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 71,
+    "events": []
+  },
+  {
+    "day": 72,
+    "events": []
+  },
+  {
+    "day": 73,
+    "events": []
+  },
+  {
+    "day": 74,
+    "events": []
+  },
+  {
+    "day": 75,
+    "events": []
+  },
+  {
+    "day": 76,
+    "events": []
+  },
+  {
+    "day": 77,
+    "events": []
+  },
+  {
+    "day": 78,
+    "events": []
+  },
+  {
+    "day": 79,
+    "events": []
+  },
+  {
+    "day": 80,
+    "events": [
+      {
+        "event": "policy",
+        "person": "lincoln_abraham",
+        "post": null,
+        "message": "m.80.policy.fort_monroe_arrivals.approve_holding",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "mcclellan_george_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 200,
+            "termRule": "pushback:values"
+          }
+        ]
+      },
+      {
+        "event": "service_choice",
+        "person": "holmes_theophilus_h",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "holmes_theophilus_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "holmes_theophilus_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "holmes_theophilus_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 80,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 81,
+    "events": [
+      {
+        "event": "relayed",
+        "person": "walker_leroy_p",
+        "post": "cs_secretary_war",
+        "message": "m.81.davis_jefferson.walker_leroy_p.approve.cs_forces_virginia",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": 200,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": -25,
+            "termRule": "temperament"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": 90,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": 51,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "walker_leroy_p",
+            "termPost": "cs_secretary_war",
+            "termRegion": null,
+            "termValue": -8,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 82,
+    "events": []
+  },
+  {
+    "day": 83,
+    "events": []
+  },
+  {
+    "day": 84,
+    "events": []
+  },
+  {
+    "day": 85,
+    "events": []
+  },
+  {
+    "day": 86,
+    "events": []
+  },
+  {
+    "day": 87,
+    "events": []
+  },
+  {
+    "day": 88,
+    "events": [
+      {
+        "event": "relayed",
+        "person": "cameron_simon",
+        "post": "us_secretary_war",
+        "message": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 50,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      },
+      {
+        "event": "relayed",
+        "person": "scott_winfield",
+        "post": "us_general_in_chief",
+        "message": "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 200,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 34,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      },
+      {
+        "event": "service_choice",
+        "person": "longstreet_james",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "longstreet_james",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "longstreet_james",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "longstreet_james",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 88,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 89,
+    "events": []
+  },
+  {
+    "day": 90,
+    "events": []
+  },
+  {
+    "day": 91,
+    "events": []
+  },
+  {
+    "day": 92,
+    "events": []
+  },
+  {
+    "day": 93,
+    "events": []
+  },
+  {
+    "day": 94,
+    "events": []
+  },
+  {
+    "day": 95,
+    "events": []
+  },
+  {
+    "day": 96,
+    "events": []
+  },
+  {
+    "day": 97,
+    "events": [
+      {
+        "event": "service_choice",
+        "person": "crittenden_george_b",
+        "post": null,
+        "message": null,
+        "terms": [
+          {
+            "termKind": "service_term",
+            "termPerson": "crittenden_george_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "base"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "crittenden_george_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": -500,
+            "termRule": "threshold"
+          },
+          {
+            "termKind": "service_term",
+            "termPerson": "crittenden_george_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 97,
+            "termRule": "historical_date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 98,
+    "events": []
+  },
+  {
+    "day": 99,
+    "events": []
+  },
+  {
+    "day": 100,
+    "events": []
+  },
+  {
+    "day": 101,
+    "events": []
+  },
+  {
+    "day": 102,
+    "events": []
+  },
+  {
+    "day": 103,
+    "events": []
+  },
+  {
+    "day": 104,
+    "events": []
+  },
+  {
+    "day": 105,
+    "events": []
+  },
+  {
+    "day": 106,
+    "events": []
+  },
+  {
+    "day": 107,
+    "events": []
+  },
+  {
+    "day": 108,
+    "events": []
+  },
+  {
+    "day": 109,
+    "events": []
+  },
+  {
+    "day": 110,
+    "events": []
+  },
+  {
+    "day": 111,
+    "events": []
+  },
+  {
+    "day": 112,
+    "events": [
+      {
+        "event": "relayed",
+        "person": "cameron_simon",
+        "post": "us_secretary_war",
+        "message": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 50,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      },
+      {
+        "event": "relayed",
+        "person": "scott_winfield",
+        "post": "us_general_in_chief",
+        "message": "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 200,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 34,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 113,
+    "events": []
+  },
+  {
+    "day": 114,
+    "events": []
+  },
+  {
+    "day": 115,
+    "events": []
+  },
+  {
+    "day": 116,
+    "events": []
+  },
+  {
+    "day": 117,
+    "events": []
+  },
+  {
+    "day": 118,
+    "events": []
+  },
+  {
+    "day": 119,
+    "events": []
+  },
+  {
+    "day": 120,
+    "events": []
+  },
+  {
+    "day": 121,
+    "events": []
+  },
+  {
+    "day": 122,
+    "events": []
+  },
+  {
+    "day": 123,
+    "events": []
+  },
+  {
+    "day": 124,
+    "events": []
+  },
+  {
+    "day": 125,
+    "events": []
+  },
+  {
+    "day": 126,
+    "events": []
+  },
+  {
+    "day": 127,
+    "events": [
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.127.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 128,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.128.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.128.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 129,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.129.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.129.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 130,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.130.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.130.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 131,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.131.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.131.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 132,
+    "events": []
+  },
+  {
+    "day": 133,
+    "events": [
+      {
+        "event": "relayed",
+        "person": "cameron_simon",
+        "post": "us_secretary_war",
+        "message": "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 50,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "scott_winfield",
+        "post": "us_general_in_chief",
+        "message": "m.133.lincoln_abraham.cameron_simon.order.us_dept_northeastern_virginia",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": -166,
+            "termRule": "object"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": -200,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 34,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      },
+      {
+        "event": "initiative",
+        "person": "seward_william_h",
+        "post": "us_secretary_state",
+        "message": null,
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 200,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 36,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "seward_william_h",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 134,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.134.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.134.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 135,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.135.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.135.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 136,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.136.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.136.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 137,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.137.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.137.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 138,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.138.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.138.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 139,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.139.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 140,
+    "events": [
+      {
+        "event": "relayed",
+        "person": "cameron_simon",
+        "post": "us_secretary_war",
+        "message": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 50,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "cameron_simon",
+            "termPost": "us_secretary_war",
+            "termRegion": null,
+            "termValue": -45,
+            "termRule": "grievances"
+          }
+        ]
+      },
+      {
+        "event": "relayed",
+        "person": "scott_winfield",
+        "post": "us_general_in_chief",
+        "message": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "terms": [
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 200,
+            "termRule": "values"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "regard"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 34,
+            "termRule": "deterrence"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "capacity"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": 0,
+            "termRule": "disposition"
+          },
+          {
+            "termKind": "relay_term",
+            "termPerson": "scott_winfield",
+            "termPost": "us_general_in_chief",
+            "termRegion": null,
+            "termValue": -45,
+            "termRule": "grievances"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 141,
+    "events": [
+      {
+        "event": "objected",
+        "person": "moore_andrew_b",
+        "post": "st_gov_alabama",
+        "message": "m.141.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "moore_andrew_b",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      },
+      {
+        "event": "objected",
+        "person": "pettus_john_j",
+        "post": "st_gov_mississippi",
+        "message": "m.141.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "terms": [
+          {
+            "termKind": "relay_objection",
+            "termPerson": "pettus_john_j",
+            "termPost": null,
+            "termRegion": null,
+            "termValue": 13,
+            "termRule": "comply"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "day": 142,
+    "events": []
+  },
+  {
+    "day": 143,
+    "events": []
+  },
+  {
+    "day": 144,
+    "events": []
+  },
+  {
+    "day": 145,
+    "events": []
+  },
+  {
+    "day": 146,
+    "events": []
+  },
+  {
+    "day": 147,
+    "events": []
+  },
+  {
+    "day": 148,
+    "events": []
+  }
+]

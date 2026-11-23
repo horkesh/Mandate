@@ -61,7 +61,8 @@ export function senderFor(world: SeatsWorld, state: State, seat: SeatId, requisi
   const mayEstablish = (post: PostId) => {
     const template = world.start.temporaryPosts.find(p => p.id === post);
     const kind = world.map.world.vocabularies.postKinds.find(k => k.id === template?.kind);
-    return template !== undefined && !posts.has(post) && sides.get(template.department) === faction &&
+    // Knowing the declared address is not knowing that someone holds it. Receipt still checks the actual holder.
+    return template !== undefined && posts.get(post)?.status !== 'held' && sides.get(template.department) === faction &&
       kind?.creatable === 'appoint' && kind.temporary &&
       (template.parent === null || (posts.has(template.parent) && side(template.parent) === faction));
   };

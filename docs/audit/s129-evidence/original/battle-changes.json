@@ -1,0 +1,3693 @@
+[
+  {
+    "id": "battle:harpers_ferry:146",
+    "before": {
+      "battleRegion": "harpers_ferry",
+      "battleStartDay": 146,
+      "battleEndDay": 146,
+      "battleFactions": [
+        "confederate",
+        "union"
+      ],
+      "battleCauses": [
+        "cs_cmd_harpers_ferry",
+        "us_dept_pennsylvania"
+      ],
+      "battleDays": [
+        {
+          "bdayDay": 146,
+          "bdayNumber": 1,
+          "bdayType": "attack_hasty",
+          "bdayAttacker": "confederate",
+          "bdayFrontage": 50000,
+          "bdayContact": 1732,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_harpers_ferry",
+              "bsideCommander": "johnston_joseph_e",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "raised.st_gov_georgia.d122.2",
+                "raised.st_gov_georgia.d125",
+                "state-forces.va_harpers_ferry"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_harpers_ferry"
+              ],
+              "bsidePresent": 4560,
+              "bsideCommitted": 3192,
+              "bsideEngaged": 3192,
+              "bsideBase": 190,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -22,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -93,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 49,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 934,
+              "bsideKw": 307,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 329,
+                  "btermSource": "attack_hasty"
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -7,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -31,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 16,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 46,
+              "bsideWounded": 261,
+              "bsideMissing": 24,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_gained_ground",
+                  "btermValue": 24,
+                  "btermSource": "gained_ground"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 511,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 495,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -100,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "nerve",
+                  "btermValue": 25,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -30,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 2632,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 694,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 2763,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 600,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "pursue_believed_ratio",
+                  "btermValue": 2763,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 694,
+                  "btermSource": "johnston_joseph_e"
+                }
+              ],
+              "bsideResult": "gained_ground",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": "follow",
+              "bsideLosses": [
+                {
+                  "blossBlock": "raised.st_gov_georgia.d122.2",
+                  "blossKilled": 30,
+                  "blossWounded": 172,
+                  "blossMissing": 16,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_georgia.d125",
+                  "blossKilled": 16,
+                  "blossWounded": 89,
+                  "blossMissing": 8,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 670,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_pennsylvania",
+              "bsideCommander": "patterson_robert",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "raised.st_gov_wisconsin.d83"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 1732,
+              "bsideCommitted": 1732,
+              "bsideEngaged": 1732,
+              "bsideBase": 95,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 22,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 93,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 61,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1176,
+              "bsideKw": 193,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 164,
+                  "btermSource": "attack_hasty"
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 4,
+                  "btermSource": "johnston_joseph_e"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 15,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 10,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 28,
+              "bsideWounded": 165,
+              "bsideMissing": 49,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_withdrew",
+                  "btermValue": 57,
+                  "btermSource": "withdrew"
+                },
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": -8,
+                  "btermSource": null
+                }
+              ],
+              "bsideCaptured": 8,
+              "bsideCapturedParts": [
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": 8,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankDraw": 344,
+              "bsideFlankThreshold": 174,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 124,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 411,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -166,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "nerve",
+                  "btermValue": 7,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -30,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 278,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1244,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 870,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 264,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 746,
+                  "btermSource": "patterson_robert"
+                }
+              ],
+              "bsideResult": "withdrew",
+              "bsideCutOff": null,
+              "bsideRetreatTo": "lower_valley",
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "raised.st_gov_wisconsin.d83",
+                  "blossKilled": 28,
+                  "blossWounded": 165,
+                  "blossMissing": 49,
+                  "blossCaptured": 8,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 492,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    },
+    "after": {
+      "battleRegion": "harpers_ferry",
+      "battleStartDay": 146,
+      "battleEndDay": null,
+      "battleFactions": [
+        "confederate",
+        "union"
+      ],
+      "battleCauses": [
+        "st_va_harpers_ferry",
+        "us_dept_pennsylvania"
+      ],
+      "battleDays": [
+        {
+          "bdayDay": 146,
+          "bdayNumber": 1,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 50000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "st_va_harpers_ferry",
+              "bsideCommander": "jackson_thomas_j",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_harpers_ferry"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_harpers_ferry"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -101,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 49,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1098,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 511,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1212,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 848,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 670,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_pennsylvania",
+              "bsideCommander": "patterson_robert",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "raised.st_gov_wisconsin.d83"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 1732,
+              "bsideCommitted": 1212,
+              "bsideEngaged": 1212,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 101,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 61,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1012,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 344,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1244,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 378,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 492,
+              "bsideHit": null
+            }
+          ]
+        },
+        {
+          "bdayDay": 147,
+          "bdayNumber": 2,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 50000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "st_va_harpers_ferry",
+              "bsideCommander": "jackson_thomas_j",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_harpers_ferry"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_harpers_ferry"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -101,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -100,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -24,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 925,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 151,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1212,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 848,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 83,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_pennsylvania",
+              "bsideCommander": "patterson_robert",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "raised.st_gov_wisconsin.d83"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 1732,
+              "bsideCommitted": 1212,
+              "bsideEngaged": 1212,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 101,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -100,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 851,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 767,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1244,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 378,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 798,
+              "bsideHit": null
+            }
+          ]
+        },
+        {
+          "bdayDay": 148,
+          "bdayNumber": 3,
+          "bdayType": "attack_open",
+          "bdayAttacker": "union",
+          "bdayFrontage": 50000,
+          "bdayContact": 0,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "st_va_harpers_ferry",
+              "bsideCommander": "jackson_thomas_j",
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "state-forces.va_harpers_ferry"
+              ],
+              "bsideUnknown": [
+                "state-forces.va_harpers_ferry"
+              ],
+              "bsidePresent": 0,
+              "bsideCommitted": 0,
+              "bsideEngaged": 0,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": -101,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -200,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -21,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 828,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 436,
+              "bsideFlankThreshold": 250,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 200,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 0,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1212,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 848,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 269,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_pennsylvania",
+              "bsideCommander": "patterson_robert",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "raised.st_gov_wisconsin.d83"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 1732,
+              "bsideCommitted": 1212,
+              "bsideEngaged": 1212,
+              "bsideBase": 170,
+              "bsideTerms": [
+                {
+                  "btermKind": "competence",
+                  "btermValue": 101,
+                  "btermSource": "jackson_thomas_j"
+                },
+                {
+                  "btermKind": "successive_day",
+                  "btermValue": -200,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -150,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -49,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 702,
+              "bsideKw": 0,
+              "bsideKwParts": [],
+              "bsideKilled": 0,
+              "bsideWounded": 0,
+              "bsideMissing": 0,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_held",
+                  "btermValue": 0,
+                  "btermSource": "held"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 251,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 600,
+              "bsideMoraleAfter": 600,
+              "bsideMoraleTerms": [],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 1000000,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1244,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 378,
+                  "btermSource": "patterson_robert"
+                },
+                {
+                  "btermKind": "unresolved_contact",
+                  "btermValue": 0,
+                  "btermSource": "0110"
+                }
+              ],
+              "bsideResult": "held",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": null,
+              "bsideLosses": [],
+              "bsideHitDraw": 742,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "battle:manassas:143",
+    "before": {
+      "battleRegion": "manassas",
+      "battleStartDay": 143,
+      "battleEndDay": 143,
+      "battleFactions": [
+        "confederate",
+        "union"
+      ],
+      "battleCauses": [
+        "cs_cmd_manassas",
+        "s74_mcdowell_division_1_brigade_2",
+        "s74_mcdowell_division_1_brigade_3",
+        "s74_mcdowell_division_1_brigade_4",
+        "s74_mcdowell_division_2_brigade_1",
+        "s74_mcdowell_division_2_brigade_2",
+        "s74_mcdowell_division_3_brigade_2",
+        "s74_mcdowell_division_3_brigade_3",
+        "s74_mcdowell_division_4_reserve",
+        "s74_mcdowell_division_5_brigade_1",
+        "s74_mcdowell_division_5_brigade_2",
+        "us_dept_northeastern_virginia"
+      ],
+      "battleDays": [
+        {
+          "bdayDay": 143,
+          "bdayNumber": 1,
+          "bdayType": "meeting",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 3868,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": null,
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "raised.st_gov_alabama.d125",
+                "raised.st_gov_mississippi.d121",
+                "raised.st_gov_north_carolina.d125",
+                "raised.st_gov_north_carolina.d93",
+                "state-forces.cs_nc_additional_north_carolina",
+                "state-forces.cs_nc_state_transfer_north_carolina",
+                "state-forces.cs_nc_volunteers_north_carolina"
+              ],
+              "bsideUnknown": [
+                "state-forces.cs_nc_additional_north_carolina",
+                "state-forces.cs_nc_state_transfer_north_carolina",
+                "state-forces.cs_nc_volunteers_north_carolina"
+              ],
+              "bsidePresent": 3868,
+              "bsideCommitted": 3868,
+              "bsideEngaged": 3868,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "quality",
+                  "btermValue": 40,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 27,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 300,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 139,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -39,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1467,
+              "bsideKw": 907,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 618,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "quality",
+                  "btermValue": 25,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 17,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 185,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 86,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -24,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 136,
+              "bsideWounded": 771,
+              "bsideMissing": 318,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_routed",
+                  "btermValue": 453,
+                  "btermSource": "routed"
+                },
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": -135,
+                  "btermSource": null
+                }
+              ],
+              "bsideCaptured": 135,
+              "bsideCapturedParts": [
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": 135,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankDraw": 563,
+              "bsideFlankThreshold": 256,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 186,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_quality",
+                  "btermValue": 20,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 331,
+              "bsideMoraleAfter": 0,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -351,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -21,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "clamp",
+                  "btermValue": 41,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 67,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": null
+                }
+              ],
+              "bsideResult": "routed",
+              "bsideCutOff": null,
+              "bsideRetreatTo": "loudoun_fauquier",
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "raised.st_gov_alabama.d125",
+                  "blossKilled": 55,
+                  "blossWounded": 311,
+                  "blossMissing": 128,
+                  "blossCaptured": 55,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_mississippi.d121",
+                  "blossKilled": 32,
+                  "blossWounded": 184,
+                  "blossMissing": 75,
+                  "blossCaptured": 32,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_north_carolina.d125",
+                  "blossKilled": 39,
+                  "blossWounded": 219,
+                  "blossMissing": 91,
+                  "blossCaptured": 38,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_north_carolina.d93",
+                  "blossKilled": 10,
+                  "blossWounded": 57,
+                  "blossMissing": 24,
+                  "blossCaptured": 10,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 346,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_1_brigade_4.2",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_2_brigade_2.2",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_3.1",
+                "organised.s74_mcdowell_division_4_reserve.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d77",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_michigan.d77",
+                "raised.st_gov_new_york.d64",
+                "raised.st_gov_new_york.d64.bundle.10",
+                "raised.st_gov_new_york.d64.bundle.2",
+                "raised.st_gov_new_york.d64.bundle.3",
+                "raised.st_gov_new_york.d64.bundle.4",
+                "raised.st_gov_new_york.d64.bundle.5",
+                "raised.st_gov_new_york.d64.bundle.6",
+                "raised.st_gov_new_york.d64.bundle.7",
+                "raised.st_gov_new_york.d64.bundle.8",
+                "raised.st_gov_new_york.d64.bundle.9",
+                "raised.st_gov_new_york.d83",
+                "raised.st_gov_new_york.d83.bundle.2",
+                "raised.st_gov_new_york.d83.bundle.3",
+                "raised.st_gov_new_york.d83.bundle.4"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 57191,
+              "bsideCommitted": 40033,
+              "bsideEngaged": 40033,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "quality",
+                  "btermValue": -40,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -27,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -139,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 34,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 828,
+              "bsideKw": 512,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 619,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "quality",
+                  "btermValue": -25,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -17,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -86,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 21,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 76,
+              "bsideWounded": 436,
+              "bsideMissing": 40,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_gained_ground",
+                  "btermValue": 40,
+                  "btermSource": "gained_ground"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 272,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 374,
+              "bsideMoraleAfter": 373,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -12,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "nerve",
+                  "btermValue": 14,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -3,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 12594,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 16305,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 669,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "pursue_believed_ratio",
+                  "btermValue": 16305,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                }
+              ],
+              "bsideResult": "gained_ground",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": "none",
+              "bsideLosses": [
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_2.1",
+                  "blossKilled": 1,
+                  "blossWounded": 6,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_3.1",
+                  "blossKilled": 1,
+                  "blossWounded": 6,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_4.1",
+                  "blossKilled": 1,
+                  "blossWounded": 6,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_4.2",
+                  "blossKilled": 1,
+                  "blossWounded": 6,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_1.1",
+                  "blossKilled": 1,
+                  "blossWounded": 6,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_2.1",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_2.2",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_3_brigade_2.1",
+                  "blossKilled": 2,
+                  "blossWounded": 13,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_3_brigade_3.1",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_4_reserve.1",
+                  "blossKilled": 4,
+                  "blossWounded": 18,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_1.1",
+                  "blossKilled": 2,
+                  "blossWounded": 13,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_1.2",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_2.1",
+                  "blossKilled": 5,
+                  "blossWounded": 25,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_connecticut.d77",
+                  "blossKilled": 1,
+                  "blossWounded": 6,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_maine.d77",
+                  "blossKilled": 1,
+                  "blossWounded": 6,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_massachusetts.d76",
+                  "blossKilled": 3,
+                  "blossWounded": 19,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_massachusetts.d76.bundle.2",
+                  "blossKilled": 2,
+                  "blossWounded": 13,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_michigan.d77",
+                  "blossKilled": 2,
+                  "blossWounded": 13,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64",
+                  "blossKilled": 2,
+                  "blossWounded": 13,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.10",
+                  "blossKilled": 2,
+                  "blossWounded": 13,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.2",
+                  "blossKilled": 3,
+                  "blossWounded": 19,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.3",
+                  "blossKilled": 5,
+                  "blossWounded": 25,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.4",
+                  "blossKilled": 1,
+                  "blossWounded": 6,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.5",
+                  "blossKilled": 3,
+                  "blossWounded": 19,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.6",
+                  "blossKilled": 3,
+                  "blossWounded": 19,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.7",
+                  "blossKilled": 5,
+                  "blossWounded": 25,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.8",
+                  "blossKilled": 5,
+                  "blossWounded": 25,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.9",
+                  "blossKilled": 5,
+                  "blossWounded": 25,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83",
+                  "blossKilled": 1,
+                  "blossWounded": 6,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.2",
+                  "blossKilled": 3,
+                  "blossWounded": 19,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.3",
+                  "blossKilled": 5,
+                  "blossWounded": 25,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.4",
+                  "blossKilled": 2,
+                  "blossWounded": 13,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 300,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    },
+    "after": {
+      "battleRegion": "manassas",
+      "battleStartDay": 143,
+      "battleEndDay": 143,
+      "battleFactions": [
+        "confederate",
+        "union"
+      ],
+      "battleCauses": [
+        "cs_cmd_manassas",
+        "s74_mcdowell_division_1_brigade_2",
+        "s74_mcdowell_division_1_brigade_3",
+        "s74_mcdowell_division_1_brigade_4",
+        "s74_mcdowell_division_2_brigade_1",
+        "s74_mcdowell_division_2_brigade_2",
+        "s74_mcdowell_division_3_brigade_2",
+        "s74_mcdowell_division_3_brigade_3",
+        "s74_mcdowell_division_4_reserve",
+        "s74_mcdowell_division_5_brigade_1",
+        "s74_mcdowell_division_5_brigade_2",
+        "us_dept_northeastern_virginia"
+      ],
+      "battleDays": [
+        {
+          "bdayDay": 143,
+          "bdayNumber": 1,
+          "bdayType": "meeting",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 6868,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": null,
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "raised.st_gov_alabama.d125",
+                "raised.st_gov_mississippi.d121",
+                "raised.st_gov_mississippi.d122.2",
+                "raised.st_gov_north_carolina.d125",
+                "raised.st_gov_north_carolina.d93",
+                "state-forces.cs_nc_additional_north_carolina",
+                "state-forces.cs_nc_state_transfer_north_carolina",
+                "state-forces.cs_nc_volunteers_north_carolina"
+              ],
+              "bsideUnknown": [
+                "state-forces.cs_nc_additional_north_carolina",
+                "state-forces.cs_nc_state_transfer_north_carolina",
+                "state-forces.cs_nc_volunteers_north_carolina"
+              ],
+              "bsidePresent": 6868,
+              "bsideCommitted": 6868,
+              "bsideEngaged": 6868,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "quality",
+                  "btermValue": 10,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 27,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 300,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 131,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -39,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1429,
+              "bsideKw": 1570,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 1099,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "quality",
+                  "btermValue": 11,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 30,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 329,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 144,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -43,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 235,
+              "bsideWounded": 1335,
+              "bsideMissing": 550,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_routed",
+                  "btermValue": 785,
+                  "btermSource": "routed"
+                },
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": -235,
+                  "btermSource": null
+                }
+              ],
+              "bsideCaptured": 235,
+              "bsideCapturedParts": [
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": 235,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankDraw": 563,
+              "bsideFlankThreshold": 230,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 175,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_quality",
+                  "btermValue": 5,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 448,
+              "bsideMoraleAfter": 81,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -342,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -25,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 120,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "probe_at",
+                  "btermValue": 700,
+                  "btermSource": null
+                }
+              ],
+              "bsideResult": "routed",
+              "bsideCutOff": null,
+              "bsideRetreatTo": "loudoun_fauquier",
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "raised.st_gov_alabama.d125",
+                  "blossKilled": 53,
+                  "blossWounded": 304,
+                  "blossMissing": 125,
+                  "blossCaptured": 53,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_mississippi.d121",
+                  "blossKilled": 31,
+                  "blossWounded": 179,
+                  "blossMissing": 74,
+                  "blossCaptured": 31,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_mississippi.d122.2",
+                  "blossKilled": 103,
+                  "blossWounded": 583,
+                  "blossMissing": 240,
+                  "blossCaptured": 103,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_north_carolina.d125",
+                  "blossKilled": 38,
+                  "blossWounded": 214,
+                  "blossMissing": 88,
+                  "blossCaptured": 38,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_north_carolina.d93",
+                  "blossKilled": 10,
+                  "blossWounded": 55,
+                  "blossMissing": 23,
+                  "blossCaptured": 10,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 346,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_1_brigade_4.2",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_2_brigade_2.2",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_3.1",
+                "organised.s74_mcdowell_division_4_reserve.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d77",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_michigan.d77",
+                "raised.st_gov_new_york.d64",
+                "raised.st_gov_new_york.d64.bundle.10",
+                "raised.st_gov_new_york.d64.bundle.2",
+                "raised.st_gov_new_york.d64.bundle.3",
+                "raised.st_gov_new_york.d64.bundle.4",
+                "raised.st_gov_new_york.d64.bundle.5",
+                "raised.st_gov_new_york.d64.bundle.6",
+                "raised.st_gov_new_york.d64.bundle.7",
+                "raised.st_gov_new_york.d64.bundle.8",
+                "raised.st_gov_new_york.d64.bundle.9",
+                "raised.st_gov_new_york.d83",
+                "raised.st_gov_new_york.d83.bundle.2",
+                "raised.st_gov_new_york.d83.bundle.3",
+                "raised.st_gov_new_york.d83.bundle.4"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 57191,
+              "bsideCommitted": 40033,
+              "bsideEngaged": 40033,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "quality",
+                  "btermValue": -10,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -27,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -131,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 34,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 866,
+              "bsideKw": 951,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 1098,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "quality",
+                  "btermValue": -11,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -29,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -144,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": 37,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 142,
+              "bsideWounded": 809,
+              "bsideMissing": 76,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_gained_ground",
+                  "btermValue": 76,
+                  "btermSource": "gained_ground"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 272,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 374,
+              "bsideMoraleAfter": 361,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -24,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "nerve",
+                  "btermValue": 14,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -3,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 7093,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 9043,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 669,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "pursue_believed_ratio",
+                  "btermValue": 9043,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                }
+              ],
+              "bsideResult": "gained_ground",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": "none",
+              "bsideLosses": [
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_2.1",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_3.1",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_4.1",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_4.2",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_1.1",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_2.1",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_2.2",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_3_brigade_2.1",
+                  "blossKilled": 4,
+                  "blossWounded": 24,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_3_brigade_3.1",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_4_reserve.1",
+                  "blossKilled": 6,
+                  "blossWounded": 35,
+                  "blossMissing": 4,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_1.1",
+                  "blossKilled": 4,
+                  "blossWounded": 24,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_1.2",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_2.1",
+                  "blossKilled": 9,
+                  "blossWounded": 46,
+                  "blossMissing": 5,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_connecticut.d77",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_maine.d77",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_massachusetts.d76",
+                  "blossKilled": 6,
+                  "blossWounded": 35,
+                  "blossMissing": 3,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_massachusetts.d76.bundle.2",
+                  "blossKilled": 4,
+                  "blossWounded": 24,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_michigan.d77",
+                  "blossKilled": 4,
+                  "blossWounded": 24,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64",
+                  "blossKilled": 4,
+                  "blossWounded": 23,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.10",
+                  "blossKilled": 4,
+                  "blossWounded": 23,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.2",
+                  "blossKilled": 6,
+                  "blossWounded": 35,
+                  "blossMissing": 3,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.3",
+                  "blossKilled": 9,
+                  "blossWounded": 46,
+                  "blossMissing": 5,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.4",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.5",
+                  "blossKilled": 6,
+                  "blossWounded": 35,
+                  "blossMissing": 3,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.6",
+                  "blossKilled": 6,
+                  "blossWounded": 35,
+                  "blossMissing": 3,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.7",
+                  "blossKilled": 9,
+                  "blossWounded": 46,
+                  "blossMissing": 5,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.8",
+                  "blossKilled": 9,
+                  "blossWounded": 46,
+                  "blossMissing": 5,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.9",
+                  "blossKilled": 8,
+                  "blossWounded": 47,
+                  "blossMissing": 5,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.2",
+                  "blossKilled": 6,
+                  "blossWounded": 35,
+                  "blossMissing": 3,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.3",
+                  "blossKilled": 8,
+                  "blossWounded": 47,
+                  "blossMissing": 5,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.4",
+                  "blossKilled": 4,
+                  "blossWounded": 23,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 300,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "battle:manassas:146",
+    "before": {
+      "battleRegion": "manassas",
+      "battleStartDay": 146,
+      "battleEndDay": 146,
+      "battleFactions": [
+        "confederate",
+        "union"
+      ],
+      "battleCauses": [
+        "cs_cmd_manassas",
+        "s74_mcdowell_division_1_brigade_2",
+        "s74_mcdowell_division_1_brigade_3",
+        "s74_mcdowell_division_1_brigade_4",
+        "s74_mcdowell_division_2_brigade_1",
+        "s74_mcdowell_division_2_brigade_2",
+        "s74_mcdowell_division_3_brigade_2",
+        "s74_mcdowell_division_3_brigade_3",
+        "s74_mcdowell_division_4_reserve",
+        "s74_mcdowell_division_5_brigade_1",
+        "s74_mcdowell_division_5_brigade_2",
+        "us_dept_northeastern_virginia"
+      ],
+      "battleDays": [
+        {
+          "bdayDay": 146,
+          "bdayNumber": 1,
+          "bdayType": "meeting",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 2731,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": null,
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "raised.st_gov_alabama.d125",
+                "raised.st_gov_mississippi.d121",
+                "raised.st_gov_north_carolina.d125",
+                "raised.st_gov_north_carolina.d93",
+                "state-forces.cs_nc_additional_north_carolina",
+                "state-forces.cs_nc_state_transfer_north_carolina",
+                "state-forces.cs_nc_volunteers_north_carolina"
+              ],
+              "bsideUnknown": [
+                "state-forces.cs_nc_additional_north_carolina",
+                "state-forces.cs_nc_state_transfer_north_carolina",
+                "state-forces.cs_nc_volunteers_north_carolina"
+              ],
+              "bsidePresent": 2731,
+              "bsideCommitted": 2731,
+              "bsideEngaged": 2731,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "quality",
+                  "btermValue": 96,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 27,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 300,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 142,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -88,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1477,
+              "bsideKw": 645,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 437,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "quality",
+                  "btermValue": 42,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 12,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 131,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 62,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -39,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 96,
+              "bsideWounded": 549,
+              "bsideMissing": 226,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_routed",
+                  "btermValue": 322,
+                  "btermSource": "routed"
+                },
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": -96,
+                  "btermSource": null
+                }
+              ],
+              "bsideCaptured": 96,
+              "bsideCapturedParts": [
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": 96,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankDraw": 324,
+              "bsideFlankThreshold": 288,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 190,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_quality",
+                  "btermValue": 48,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 150,
+              "bsideMoraleAfter": 0,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -354,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -12,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "clamp",
+                  "btermValue": 216,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 48,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "may_not_attack",
+                  "btermValue": 0,
+                  "btermSource": null
+                }
+              ],
+              "bsideResult": "routed",
+              "bsideCutOff": null,
+              "bsideRetreatTo": "loudoun_fauquier",
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "raised.st_gov_alabama.d125",
+                  "blossKilled": 36,
+                  "blossWounded": 208,
+                  "blossMissing": 86,
+                  "blossCaptured": 36,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_mississippi.d121",
+                  "blossKilled": 23,
+                  "blossWounded": 130,
+                  "blossMissing": 53,
+                  "blossCaptured": 23,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_north_carolina.d125",
+                  "blossKilled": 29,
+                  "blossWounded": 168,
+                  "blossMissing": 69,
+                  "blossCaptured": 29,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_north_carolina.d93",
+                  "blossKilled": 8,
+                  "blossWounded": 43,
+                  "blossMissing": 18,
+                  "blossCaptured": 8,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 734,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_1_brigade_4.2",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_2_brigade_2.2",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_3.1",
+                "organised.s74_mcdowell_division_4_reserve.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d77",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_michigan.d77",
+                "raised.st_gov_new_york.d64",
+                "raised.st_gov_new_york.d64.bundle.10",
+                "raised.st_gov_new_york.d64.bundle.2",
+                "raised.st_gov_new_york.d64.bundle.3",
+                "raised.st_gov_new_york.d64.bundle.4",
+                "raised.st_gov_new_york.d64.bundle.5",
+                "raised.st_gov_new_york.d64.bundle.6",
+                "raised.st_gov_new_york.d64.bundle.7",
+                "raised.st_gov_new_york.d64.bundle.8",
+                "raised.st_gov_new_york.d64.bundle.9",
+                "raised.st_gov_new_york.d83",
+                "raised.st_gov_new_york.d83.bundle.2",
+                "raised.st_gov_new_york.d83.bundle.3",
+                "raised.st_gov_new_york.d83.bundle.4"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 56703,
+              "bsideCommitted": 39692,
+              "bsideEngaged": 39692,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "quality",
+                  "btermValue": -96,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -27,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -142,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -20,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 715,
+              "bsideKw": 312,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 437,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "quality",
+                  "btermValue": -42,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -12,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -62,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -9,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 46,
+              "bsideWounded": 266,
+              "bsideMissing": 24,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_gained_ground",
+                  "btermValue": 24,
+                  "btermSource": "gained_ground"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 122,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 373,
+              "bsideMoraleAfter": 386,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -7,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "nerve",
+                  "btermValue": 14,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": 6,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 17686,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 23035,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 669,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "pursue_believed_ratio",
+                  "btermValue": 23035,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                }
+              ],
+              "bsideResult": "gained_ground",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": "none",
+              "bsideLosses": [
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_2.1",
+                  "blossKilled": 1,
+                  "blossWounded": 3,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_3.1",
+                  "blossKilled": 1,
+                  "blossWounded": 3,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_4.1",
+                  "blossKilled": 1,
+                  "blossWounded": 3,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_4.2",
+                  "blossKilled": 1,
+                  "blossWounded": 3,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_1.1",
+                  "blossKilled": 0,
+                  "blossWounded": 4,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_2.1",
+                  "blossKilled": 1,
+                  "blossWounded": 4,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_2.2",
+                  "blossKilled": 1,
+                  "blossWounded": 4,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_3_brigade_2.1",
+                  "blossKilled": 1,
+                  "blossWounded": 8,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_3_brigade_3.1",
+                  "blossKilled": 1,
+                  "blossWounded": 4,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_4_reserve.1",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_1.1",
+                  "blossKilled": 1,
+                  "blossWounded": 8,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_1.2",
+                  "blossKilled": 1,
+                  "blossWounded": 4,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_2.1",
+                  "blossKilled": 3,
+                  "blossWounded": 15,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_connecticut.d77",
+                  "blossKilled": 1,
+                  "blossWounded": 4,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_maine.d77",
+                  "blossKilled": 0,
+                  "blossWounded": 4,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_massachusetts.d76",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_massachusetts.d76.bundle.2",
+                  "blossKilled": 1,
+                  "blossWounded": 8,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_michigan.d77",
+                  "blossKilled": 1,
+                  "blossWounded": 8,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64",
+                  "blossKilled": 1,
+                  "blossWounded": 8,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.10",
+                  "blossKilled": 1,
+                  "blossWounded": 8,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.2",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.3",
+                  "blossKilled": 3,
+                  "blossWounded": 15,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.4",
+                  "blossKilled": 0,
+                  "blossWounded": 4,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.5",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.6",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.7",
+                  "blossKilled": 3,
+                  "blossWounded": 15,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.8",
+                  "blossKilled": 3,
+                  "blossWounded": 15,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.9",
+                  "blossKilled": 3,
+                  "blossWounded": 15,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83",
+                  "blossKilled": 0,
+                  "blossWounded": 4,
+                  "blossMissing": 0,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.2",
+                  "blossKilled": 2,
+                  "blossWounded": 12,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.3",
+                  "blossKilled": 3,
+                  "blossWounded": 15,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.4",
+                  "blossKilled": 1,
+                  "blossWounded": 8,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 171,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    },
+    "after": {
+      "battleRegion": "manassas",
+      "battleStartDay": 146,
+      "battleEndDay": 146,
+      "battleFactions": [
+        "confederate",
+        "union"
+      ],
+      "battleCauses": [
+        "cs_cmd_manassas",
+        "s74_mcdowell_division_1_brigade_2",
+        "s74_mcdowell_division_1_brigade_3",
+        "s74_mcdowell_division_1_brigade_4",
+        "s74_mcdowell_division_2_brigade_1",
+        "s74_mcdowell_division_2_brigade_2",
+        "s74_mcdowell_division_3_brigade_2",
+        "s74_mcdowell_division_3_brigade_3",
+        "s74_mcdowell_division_4_reserve",
+        "s74_mcdowell_division_5_brigade_1",
+        "s74_mcdowell_division_5_brigade_2",
+        "us_dept_northeastern_virginia"
+      ],
+      "battleDays": [
+        {
+          "bdayDay": 146,
+          "bdayNumber": 1,
+          "bdayType": "meeting",
+          "bdayAttacker": "union",
+          "bdayFrontage": 60000,
+          "bdayContact": 4779,
+          "bdayDraws": 6,
+          "bdaySides": [
+            {
+              "bsideFaction": "confederate",
+              "bsidePost": "cs_cmd_manassas",
+              "bsideCommander": null,
+              "bsideCommit": "defend",
+              "bsideBlocks": [
+                "raised.st_gov_alabama.d125",
+                "raised.st_gov_mississippi.d121",
+                "raised.st_gov_mississippi.d122.2",
+                "raised.st_gov_north_carolina.d125",
+                "raised.st_gov_north_carolina.d93",
+                "state-forces.cs_nc_additional_north_carolina",
+                "state-forces.cs_nc_state_transfer_north_carolina",
+                "state-forces.cs_nc_volunteers_north_carolina"
+              ],
+              "bsideUnknown": [
+                "state-forces.cs_nc_additional_north_carolina",
+                "state-forces.cs_nc_state_transfer_north_carolina",
+                "state-forces.cs_nc_volunteers_north_carolina"
+              ],
+              "bsidePresent": 4779,
+              "bsideCommitted": 4779,
+              "bsideEngaged": 4779,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "quality",
+                  "btermValue": 88,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 27,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 300,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 137,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -88,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 1464,
+              "bsideKw": 1119,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 764,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "quality",
+                  "btermValue": 67,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": 21,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "surprise",
+                  "btermValue": 229,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": 105,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -67,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 167,
+              "bsideWounded": 952,
+              "bsideMissing": 392,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_routed",
+                  "btermValue": 559,
+                  "btermSource": "routed"
+                },
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": -167,
+                  "btermSource": null
+                }
+              ],
+              "bsideCaptured": 167,
+              "bsideCapturedParts": [
+                {
+                  "btermKind": "captured_on_field",
+                  "btermValue": 167,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankDraw": 324,
+              "bsideFlankThreshold": 277,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_numbers",
+                  "btermValue": 183,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "enemy_quality",
+                  "btermValue": 44,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 150,
+              "bsideMoraleAfter": 0,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -351,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": -15,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "clamp",
+                  "btermValue": 216,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 84,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1000,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "may_not_attack",
+                  "btermValue": 0,
+                  "btermSource": null
+                }
+              ],
+              "bsideResult": "routed",
+              "bsideCutOff": null,
+              "bsideRetreatTo": "loudoun_fauquier",
+              "bsidePursue": null,
+              "bsideLosses": [
+                {
+                  "blossBlock": "raised.st_gov_alabama.d125",
+                  "blossKilled": 37,
+                  "blossWounded": 208,
+                  "blossMissing": 86,
+                  "blossCaptured": 36,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_mississippi.d121",
+                  "blossKilled": 23,
+                  "blossWounded": 130,
+                  "blossMissing": 53,
+                  "blossCaptured": 23,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_mississippi.d122.2",
+                  "blossKilled": 70,
+                  "blossWounded": 402,
+                  "blossMissing": 166,
+                  "blossCaptured": 70,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_north_carolina.d125",
+                  "blossKilled": 29,
+                  "blossWounded": 169,
+                  "blossMissing": 69,
+                  "blossCaptured": 30,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_north_carolina.d93",
+                  "blossKilled": 8,
+                  "blossWounded": 43,
+                  "blossMissing": 18,
+                  "blossCaptured": 8,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 734,
+              "bsideHit": null
+            },
+            {
+              "bsideFaction": "union",
+              "bsidePost": "us_dept_northeastern_virginia",
+              "bsideCommander": "mcdowell_irvin",
+              "bsideCommit": "main",
+              "bsideBlocks": [
+                "organised.s74_mcdowell_division_1_brigade_2.1",
+                "organised.s74_mcdowell_division_1_brigade_3.1",
+                "organised.s74_mcdowell_division_1_brigade_4.1",
+                "organised.s74_mcdowell_division_1_brigade_4.2",
+                "organised.s74_mcdowell_division_2_brigade_1.1",
+                "organised.s74_mcdowell_division_2_brigade_2.1",
+                "organised.s74_mcdowell_division_2_brigade_2.2",
+                "organised.s74_mcdowell_division_3_brigade_2.1",
+                "organised.s74_mcdowell_division_3_brigade_3.1",
+                "organised.s74_mcdowell_division_4_reserve.1",
+                "organised.s74_mcdowell_division_5_brigade_1.1",
+                "organised.s74_mcdowell_division_5_brigade_1.2",
+                "organised.s74_mcdowell_division_5_brigade_2.1",
+                "raised.st_gov_connecticut.d77",
+                "raised.st_gov_maine.d77",
+                "raised.st_gov_massachusetts.d76",
+                "raised.st_gov_massachusetts.d76.bundle.2",
+                "raised.st_gov_michigan.d77",
+                "raised.st_gov_new_york.d64",
+                "raised.st_gov_new_york.d64.bundle.10",
+                "raised.st_gov_new_york.d64.bundle.2",
+                "raised.st_gov_new_york.d64.bundle.3",
+                "raised.st_gov_new_york.d64.bundle.4",
+                "raised.st_gov_new_york.d64.bundle.5",
+                "raised.st_gov_new_york.d64.bundle.6",
+                "raised.st_gov_new_york.d64.bundle.7",
+                "raised.st_gov_new_york.d64.bundle.8",
+                "raised.st_gov_new_york.d64.bundle.9",
+                "raised.st_gov_new_york.d83",
+                "raised.st_gov_new_york.d83.bundle.2",
+                "raised.st_gov_new_york.d83.bundle.3",
+                "raised.st_gov_new_york.d83.bundle.4"
+              ],
+              "bsideUnknown": [],
+              "bsidePresent": 56234,
+              "bsideCommitted": 39363,
+              "bsideEngaged": 39363,
+              "bsideBase": 160,
+              "bsideTerms": [
+                {
+                  "btermKind": "quality",
+                  "btermValue": -88,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -27,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -137,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -20,
+                  "btermSource": null
+                }
+              ],
+              "bsideMultiplier": 728,
+              "bsideKw": 556,
+              "bsideKwParts": [
+                {
+                  "btermKind": "base",
+                  "btermValue": 764,
+                  "btermSource": "meeting"
+                },
+                {
+                  "btermKind": "quality",
+                  "btermValue": -67,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "competence",
+                  "btermValue": -21,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "numbers",
+                  "btermValue": -105,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "noise",
+                  "btermValue": -15,
+                  "btermSource": null
+                }
+              ],
+              "bsideKilled": 83,
+              "bsideWounded": 473,
+              "bsideMissing": 44,
+              "bsideMissingParts": [
+                {
+                  "btermKind": "result_gained_ground",
+                  "btermValue": 44,
+                  "btermSource": "gained_ground"
+                }
+              ],
+              "bsideCaptured": 0,
+              "bsideCapturedParts": [],
+              "bsideFlankDraw": 122,
+              "bsideFlankThreshold": 50,
+              "bsideFlankTerms": [
+                {
+                  "btermKind": "flank_base",
+                  "btermValue": 50,
+                  "btermSource": null
+                }
+              ],
+              "bsideFlankBroken": false,
+              "bsideMoraleBefore": 361,
+              "bsideMoraleAfter": 368,
+              "bsideMoraleTerms": [
+                {
+                  "btermKind": "losses",
+                  "btermValue": -13,
+                  "btermSource": null
+                },
+                {
+                  "btermKind": "nerve",
+                  "btermValue": 14,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "experience",
+                  "btermValue": 6,
+                  "btermSource": null
+                }
+              ],
+              "bsideDecisions": [
+                {
+                  "btermKind": "believed_ratio",
+                  "btermValue": 10023,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "demand",
+                  "btermValue": 1116,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "night_believed_ratio",
+                  "btermValue": 12960,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "hold_at",
+                  "btermValue": 669,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "pursue_believed_ratio",
+                  "btermValue": 12960,
+                  "btermSource": "mcdowell_irvin"
+                },
+                {
+                  "btermKind": "boldness",
+                  "btermValue": 442,
+                  "btermSource": "mcdowell_irvin"
+                }
+              ],
+              "bsideResult": "gained_ground",
+              "bsideCutOff": null,
+              "bsideRetreatTo": null,
+              "bsidePursue": "none",
+              "bsideLosses": [
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_2.1",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_3.1",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_4.1",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_1_brigade_4.2",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_1.1",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_2.1",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_2_brigade_2.2",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_3_brigade_2.1",
+                  "blossKilled": 3,
+                  "blossWounded": 13,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_3_brigade_3.1",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_4_reserve.1",
+                  "blossKilled": 4,
+                  "blossWounded": 20,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_1.1",
+                  "blossKilled": 3,
+                  "blossWounded": 13,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_1.2",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "organised.s74_mcdowell_division_5_brigade_2.1",
+                  "blossKilled": 5,
+                  "blossWounded": 28,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_connecticut.d77",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_maine.d77",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_massachusetts.d76",
+                  "blossKilled": 4,
+                  "blossWounded": 20,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_massachusetts.d76.bundle.2",
+                  "blossKilled": 2,
+                  "blossWounded": 14,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_michigan.d77",
+                  "blossKilled": 2,
+                  "blossWounded": 14,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64",
+                  "blossKilled": 2,
+                  "blossWounded": 14,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.10",
+                  "blossKilled": 2,
+                  "blossWounded": 14,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.2",
+                  "blossKilled": 4,
+                  "blossWounded": 20,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.3",
+                  "blossKilled": 5,
+                  "blossWounded": 28,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.4",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.5",
+                  "blossKilled": 4,
+                  "blossWounded": 20,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.6",
+                  "blossKilled": 4,
+                  "blossWounded": 20,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.7",
+                  "blossKilled": 5,
+                  "blossWounded": 28,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.8",
+                  "blossKilled": 5,
+                  "blossWounded": 27,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d64.bundle.9",
+                  "blossKilled": 5,
+                  "blossWounded": 27,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83",
+                  "blossKilled": 1,
+                  "blossWounded": 7,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.2",
+                  "blossKilled": 4,
+                  "blossWounded": 20,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.3",
+                  "blossKilled": 5,
+                  "blossWounded": 28,
+                  "blossMissing": 2,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                },
+                {
+                  "blossBlock": "raised.st_gov_new_york.d83.bundle.4",
+                  "blossKilled": 2,
+                  "blossWounded": 14,
+                  "blossMissing": 1,
+                  "blossCaptured": 0,
+                  "blossStragglersCaptured": 0
+                }
+              ],
+              "bsideHitDraw": 171,
+              "bsideHit": null
+            }
+          ]
+        }
+      ]
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  }
+]

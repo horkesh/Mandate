@@ -280,8 +280,9 @@ export function sendReport(
   const from = report.body.reportAuthor;
   const fromRegion = report.fromRegion ?? whereIs(ctx, state, from);
   const route = report.route ?? templateFor(world.rules.templates, report.body.reportType, report.body.reportSubtype).templateRoute;
-  const faction = world.faction(sideOf(ctx, state, report.to));
-  const filterId = report.to === faction.principal ? filterPostOf(world, state, faction.id) : null;
+  const side = sideOfPerson(world.map, state, report.to, ctx.postHolders);
+  const faction = side === null ? null : world.faction(side);
+  const filterId = faction !== null && report.to === faction.principal ? filterPostOf(world, state, faction.id) : null;
   const filterHolder = filterId === null ? null : state.postStates[filterId]!.postHolder;
   const filter = filterId !== null && filterHolder !== null && filterHolder !== from ? { id: filterId, holder: filterHolder } : undefined;
   const toPost = heldPost(state, report.to, ctx.postHolders);

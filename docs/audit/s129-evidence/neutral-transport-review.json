@@ -1,0 +1,41 @@
+{
+  "scope": "Two newly reached neutral-office transport branches after the failed ordinary hook. No new reference capture.",
+  "firstHook": {
+    "exit": 1,
+    "seconds": 247.898,
+    "filesPassed": 269,
+    "testsPassed": 2387,
+    "testsFailed": 1,
+    "skipped": 3,
+    "failure": "desk-scheduled-calls: neutral command-assignment issuer has no side"
+  },
+  "changes": [
+    "packages/kernel/src/tick/orders.ts",
+    "packages/kernel/src/tick/context.ts"
+  ],
+  "allOtherSimulationAndPackInputsUnchanged": 462,
+  "capturedEquivalence": [
+    "Old dispatchOrder passed recipient=null into hop. travelSide then required its sender own side to be non-null, or threw. Every successful old captured dispatch therefore had own!=null. Passing its existing first.hopPerson changes no return value, route, message identity, latency or stream input when own!=null.",
+    "Old sendReport required sideOf(recipient), which threw on a neutral recipient. Every successful old captured report therefore had a non-null recipient side. The new nullable lookup yields the same faction and filter for all those reports; only formerly throwing neutral recipients bypass the nonexistent faction filter.",
+    "By earliest-difference induction from the same initial State and log, neither neutral-only correction changes any state or counter in the already successful148-day capture. This is a branch-domain proof, not another simulated trajectory."
+  ],
+  "controls": {
+    "test": "packages/kernel/test/s129-command-assignments.test.ts",
+    "newCases": [
+      "neutral raising office sends command assignment",
+      "refusal reports to neutral issuer without faction filter"
+    ],
+    "ownSideHopMatchesPriorPath": true,
+    "previouslyFailedConsoleCase": "packs/union-1861/test/desk-scheduled-calls.test.ts",
+    "log": "runs/s129/neutral-paths-verified.log",
+    "exit": 0,
+    "testsPassed": 15
+  },
+  "cheapGates": {
+    "typecheck": 0,
+    "boundary": 0,
+    "rules": 0
+  },
+  "noHookBypass": true,
+  "noAdditionalCapture": true
+}

@@ -122,6 +122,7 @@ export const CLAIM_KINDS = [
   'operation',
   'order-objected',
   'order-obeyed',
+  'command-assigned',
   // Lane 1.12: a dispatch returned undelivered (token: vacant_post, or holder_changed); the subject is the post.
   'order-returned',
   'own-losses',

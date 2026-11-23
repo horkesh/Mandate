@@ -389,7 +389,7 @@ export function pruneKnowledge(state: State, templates: readonly ReportTemplate[
       }
       if (b.reportSubjectKind === 'person' && b.reportSubjectId === b.reportAuthor && b.reportClaims.some(c => c.claimKind === 'service-choice')) keys.push(`service:${b.reportAuthor}`);
       if (b.reportSubjectKind === 'post') {
-        if (b.reportClaims.some(c => c.claimKind === 'verb-answered' && c.claimValue === 1 && c.claimToken?.startsWith('appoint:'))) keys.push(`appointment:${b.reportSubjectId}`);
+        if (b.reportClaims.some(c => c.claimValue === 1 && (c.claimKind==='command-assigned' || c.claimKind === 'verb-answered' && c.claimToken?.startsWith('appoint:')))) keys.push(`appointment:${b.reportSubjectId}`);
         if (b.reportClaims.some(c => (c.claimKind === 'appointment-refused' && c.claimToken === 'post_held') || c.claimKind === 'commander-lost' || (c.claimKind === 'order-returned' && (c.claimToken === 'vacant_post' || ['holder_changed','not_serving','other_side','not_raising_post'].includes(c.claimToken ?? ''))) || (c.claimKind === 'verb-answered' && c.claimValue === 1 && c.claimToken?.startsWith('relieve:')))) keys.push(`vacancy:${b.reportSubjectId}`);
       }
       for (const key of keys) {

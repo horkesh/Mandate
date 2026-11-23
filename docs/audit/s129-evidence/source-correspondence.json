@@ -1,0 +1,430 @@
+[
+  {
+    "origin": "m.49.letcher_john.lee_robert_e.letter.authority.letcher_john.lee_state_command.1",
+    "issuer": "letcher_john",
+    "fromPerson": "letcher_john",
+    "to": "lee_robert_e",
+    "kind": "mandate",
+    "target": "st_va_general_in_chief",
+    "issuedDay": 49,
+    "issuedDate": "1861-04-23",
+    "letter": {
+      "namespace": "authority.letcher_john",
+      "key": "lee_state_command",
+      "revision": 1
+    },
+    "body": {
+      "orderKind": "mandate",
+      "orderMandate": {
+        "mandateKey": "lee_state_command",
+        "mandateRevision": 1,
+        "mandateIssuer": "letcher_john",
+        "mandateIssuerPost": "st_gov_virginia",
+        "mandateHolder": "lee_robert_e",
+        "mandatePost": "st_va_general_in_chief",
+        "mandateParent": null,
+        "mandateActions": [
+          "hold",
+          "relieve",
+          "take",
+          "approve",
+          "assign"
+        ],
+        "mandateRecipients": [
+          "st_va_general_in_chief"
+        ],
+        "mandateRegions": [
+          "charlottesville",
+          "chesterfield",
+          "culpeper_orange",
+          "danville",
+          "fort_monroe",
+          "fredericksburg",
+          "grafton",
+          "hanover",
+          "harpers_ferry",
+          "kanawha",
+          "loudoun_fauquier",
+          "lower_valley",
+          "lynchburg",
+          "manassas",
+          "middle_valley",
+          "norfolk",
+          "northern_virginia",
+          "parkersburg",
+          "peninsula",
+          "petersburg",
+          "potomac_highlands",
+          "richmond",
+          "roanoke_new_river",
+          "rockbridge_highlands",
+          "southside",
+          "southside_tidewater",
+          "southwest_virginia",
+          "upper_valley",
+          "virginia_necks",
+          "wheeling",
+          "wv_central",
+          "wv_south"
+        ],
+        "mandateModes": [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        "mandateCeiling": {
+          "ceilingPost": "st_gov_virginia",
+          "ceilingMen": null
+        },
+        "mandateGuard": null,
+        "mandateExpires": null,
+        "mandateReports": [
+          "operations_and_position"
+        ],
+        "mandateOnward": true,
+        "mandateRevoke": false
+      },
+      "orderLetter": {
+        "namespace": "authority.letcher_john",
+        "key": "lee_state_command",
+        "revision": 1
+      },
+      "orderGoal": null,
+      "orderEdit": null,
+      "orderCall": null,
+      "orderIssuer": "letcher_john",
+      "orderTarget": "st_va_general_in_chief",
+      "orderBypass": false,
+      "orderIssuedDay": 49
+    },
+    "receipts": [],
+    "answers": []
+  },
+  {
+    "origin": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1",
+    "issuer": "davis_jefferson",
+    "fromPerson": "davis_jefferson",
+    "to": "lee_robert_e",
+    "kind": "mandate",
+    "target": "cs_forces_virginia",
+    "issuedDay": 66,
+    "issuedDate": "1861-05-10",
+    "letter": {
+      "namespace": "authority.davis_jefferson",
+      "key": "lee_confederate_virginia",
+      "revision": 1
+    },
+    "body": {
+      "orderKind": "mandate",
+      "orderMandate": {
+        "mandateKey": "lee_confederate_virginia",
+        "mandateRevision": 1,
+        "mandateIssuer": "davis_jefferson",
+        "mandateIssuerPost": null,
+        "mandateHolder": "lee_robert_e",
+        "mandatePost": "cs_forces_virginia",
+        "mandateParent": null,
+        "mandateActions": [
+          "hold",
+          "relieve",
+          "take",
+          "approve",
+          "assign"
+        ],
+        "mandateRecipients": [
+          "cs_forces_virginia",
+          "cs_cmd_fredericksburg",
+          "cs_cmd_harpers_ferry"
+        ],
+        "mandateRegions": [
+          "charlottesville",
+          "chesterfield",
+          "culpeper_orange",
+          "danville",
+          "fort_monroe",
+          "fredericksburg",
+          "grafton",
+          "hanover",
+          "harpers_ferry",
+          "kanawha",
+          "loudoun_fauquier",
+          "lower_valley",
+          "lynchburg",
+          "manassas",
+          "middle_valley",
+          "norfolk",
+          "northern_virginia",
+          "parkersburg",
+          "peninsula",
+          "petersburg",
+          "potomac_highlands",
+          "richmond",
+          "roanoke_new_river",
+          "rockbridge_highlands",
+          "southside",
+          "southside_tidewater",
+          "southwest_virginia",
+          "upper_valley",
+          "virginia_necks",
+          "wheeling",
+          "wv_central",
+          "wv_south"
+        ],
+        "mandateModes": [
+          "land",
+          "rail",
+          "river",
+          "sea"
+        ],
+        "mandateCeiling": {
+          "ceilingPost": "cs_forces_virginia",
+          "ceilingMen": null
+        },
+        "mandateGuard": null,
+        "mandateExpires": null,
+        "mandateReports": [
+          "operations_and_position"
+        ],
+        "mandateOnward": true,
+        "mandateRevoke": false
+      },
+      "orderLetter": {
+        "namespace": "authority.davis_jefferson",
+        "key": "lee_confederate_virginia",
+        "revision": 1
+      },
+      "orderGoal": null,
+      "orderEdit": null,
+      "orderCall": null,
+      "orderIssuer": "davis_jefferson",
+      "orderTarget": "cs_forces_virginia",
+      "orderBypass": false,
+      "orderIssuedDay": 66
+    },
+    "receipts": [
+      {
+        "id": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1",
+        "msgOrigin": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1",
+        "msgFrom": "davis_jefferson",
+        "msgTo": "lee_robert_e",
+        "msgToPost": "cs_forces_virginia",
+        "msgRole": "addressee",
+        "msgRoute": "courier",
+        "msgSentDay": 66,
+        "msgArriveDay": 78,
+        "msgVia": [],
+        "msgPending": [],
+        "msgOrder": {
+          "orderKind": "mandate",
+          "orderMandate": {
+            "mandateKey": "lee_confederate_virginia",
+            "mandateRevision": 1,
+            "mandateIssuer": "davis_jefferson",
+            "mandateIssuerPost": null,
+            "mandateHolder": "lee_robert_e",
+            "mandatePost": "cs_forces_virginia",
+            "mandateParent": null,
+            "mandateActions": [
+              "hold",
+              "relieve",
+              "take",
+              "approve",
+              "assign"
+            ],
+            "mandateRecipients": [
+              "cs_forces_virginia",
+              "cs_cmd_fredericksburg",
+              "cs_cmd_harpers_ferry"
+            ],
+            "mandateRegions": [
+              "charlottesville",
+              "chesterfield",
+              "culpeper_orange",
+              "danville",
+              "fort_monroe",
+              "fredericksburg",
+              "grafton",
+              "hanover",
+              "harpers_ferry",
+              "kanawha",
+              "loudoun_fauquier",
+              "lower_valley",
+              "lynchburg",
+              "manassas",
+              "middle_valley",
+              "norfolk",
+              "northern_virginia",
+              "parkersburg",
+              "peninsula",
+              "petersburg",
+              "potomac_highlands",
+              "richmond",
+              "roanoke_new_river",
+              "rockbridge_highlands",
+              "southside",
+              "southside_tidewater",
+              "southwest_virginia",
+              "upper_valley",
+              "virginia_necks",
+              "wheeling",
+              "wv_central",
+              "wv_south"
+            ],
+            "mandateModes": [
+              "land",
+              "rail",
+              "river",
+              "sea"
+            ],
+            "mandateCeiling": {
+              "ceilingPost": "cs_forces_virginia",
+              "ceilingMen": null
+            },
+            "mandateGuard": null,
+            "mandateExpires": null,
+            "mandateReports": [
+              "operations_and_position"
+            ],
+            "mandateOnward": true,
+            "mandateRevoke": false
+          },
+          "orderLetter": {
+            "namespace": "authority.davis_jefferson",
+            "key": "lee_confederate_virginia",
+            "revision": 1
+          },
+          "orderGoal": null,
+          "orderEdit": null,
+          "orderCall": null,
+          "orderIssuer": "davis_jefferson",
+          "orderTarget": "cs_forces_virginia",
+          "orderBypass": false,
+          "orderIssuedDay": 66
+        },
+        "msgVerb": null,
+        "msgReport": null,
+        "msgTruth": null
+      }
+    ],
+    "answers": [
+      {
+        "key": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1|lee_robert_e",
+        "respOrder": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1",
+        "respPerson": "lee_robert_e",
+        "respPost": "cs_forces_virginia",
+        "respRole": "addressee",
+        "respKind": "mandate",
+        "respDay": 78,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 31,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 31
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "shielded_by_standing"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "assign",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "command",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "hold",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "onward",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "relieve",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "take",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1",
+          "clauses": [
+            "approve",
+            "assign",
+            "command",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1",
+          "clauses": [
+            "approve",
+            "assign",
+            "command",
+            "course",
+            "hold",
+            "onward",
+            "relieve",
+            "take"
+          ],
+          "undertakingRevision": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    ]
+  }
+]

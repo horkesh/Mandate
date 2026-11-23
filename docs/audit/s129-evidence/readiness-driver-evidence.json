@@ -1,0 +1,1017 @@
+{
+  "scope": "Offline reads of the sole third capture; no simulation or new outcomes",
+  "supply": [
+    {
+      "post": "cs_cmd_fredericksburg",
+      "day": 100,
+      "chosen": "supply_line:depot_steps:fredericksburg>hanover>charlottesville>lynchburg",
+      "withoutSupply": "direct:least_cost:fredericksburg>hanover>charlottesville>lynchburg",
+      "rows": [
+        {
+          "id": "supply_line:depot_steps:fredericksburg>hanover>charlottesville>lynchburg",
+          "method": "supply_line",
+          "score": 894,
+          "supply": -207
+        },
+        {
+          "id": "direct:least_cost:fredericksburg>hanover>charlottesville>lynchburg",
+          "method": "direct",
+          "score": 776,
+          "supply": -325
+        },
+        {
+          "id": "holding:hold:lynchburg",
+          "method": "holding",
+          "score": -54,
+          "supply": 0
+        }
+      ],
+      "without": [
+        {
+          "id": "direct:least_cost:fredericksburg>hanover>charlottesville>lynchburg",
+          "method": "direct",
+          "score": 1101,
+          "supply": -325
+        },
+        {
+          "id": "supply_line:depot_steps:fredericksburg>hanover>charlottesville>lynchburg",
+          "method": "supply_line",
+          "score": 1101,
+          "supply": -207
+        },
+        {
+          "id": "holding:hold:lynchburg",
+          "method": "holding",
+          "score": -54,
+          "supply": 0
+        }
+      ]
+    },
+    {
+      "post": "cs_cmd_harpers_ferry",
+      "day": 104,
+      "chosen": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+      "withoutSupply": "direct:least_cost:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+      "rows": [
+        {
+          "id": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+          "method": "supply_line",
+          "score": 935,
+          "supply": -203
+        },
+        {
+          "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+          "method": "direct",
+          "score": 854,
+          "supply": -284
+        },
+        {
+          "id": "holding:hold:lynchburg",
+          "method": "holding",
+          "score": -147,
+          "supply": 0
+        }
+      ],
+      "without": [
+        {
+          "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+          "method": "direct",
+          "score": 1138,
+          "supply": -284
+        },
+        {
+          "id": "supply_line:depot_steps:harpers_ferry>loudoun_fauquier>culpeper_orange>charlottesville>lynchburg",
+          "method": "supply_line",
+          "score": 1138,
+          "supply": -203
+        },
+        {
+          "id": "holding:hold:lynchburg",
+          "method": "holding",
+          "score": -147,
+          "supply": 0
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "op:us_general_in_chief:4",
+      "post": "us_general_in_chief",
+      "commander": "scott_winfield",
+      "method": "direct",
+      "objective": "washington",
+      "start": 4,
+      "end": 9,
+      "outcome": "objective_reached",
+      "axes": [
+        {
+          "name": "main",
+          "log": [
+            {
+              "axevDay": 4,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "washington"
+            },
+            {
+              "axevDay": 7,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "washington"
+            },
+            {
+              "axevDay": 8,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "washington"
+            },
+            {
+              "axevDay": 9,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "washington"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "op:cs_cmd_charleston:38",
+      "post": "cs_cmd_charleston",
+      "commander": "beauregard_pierre_g_t",
+      "method": "bombard",
+      "objective": "fort_sumter",
+      "start": 38,
+      "end": 40,
+      "outcome": "objective_reached",
+      "axes": [
+        {
+          "name": "main",
+          "log": [
+            {
+              "axevDay": 38,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "charleston"
+            },
+            {
+              "axevDay": 38,
+              "axevStage": "bombard",
+              "axevReason": "bombarding",
+              "axevRegion": "charleston"
+            },
+            {
+              "axevDay": 39,
+              "axevStage": "bombard",
+              "axevReason": "garrison_surrendered",
+              "axevRegion": "fort_sumter"
+            },
+            {
+              "axevDay": 40,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "fort_sumter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "op:cs_forces_virginia:81",
+      "post": "cs_forces_virginia",
+      "commander": "lee_robert_e",
+      "method": "direct",
+      "objective": "lynchburg",
+      "start": 81,
+      "end": 86,
+      "outcome": "objective_reached",
+      "axes": [
+        {
+          "name": "main",
+          "log": [
+            {
+              "axevDay": 81,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 84,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 85,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 86,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "lynchburg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "op:cs_cmd_harpers_ferry:96",
+      "post": "cs_cmd_harpers_ferry",
+      "commander": "johnston_joseph_e",
+      "method": "direct",
+      "objective": "harpers_ferry",
+      "start": 96,
+      "end": 104,
+      "outcome": "superseded",
+      "axes": [
+        {
+          "name": "main",
+          "log": [
+            {
+              "axevDay": 96,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 98,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 99,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 104,
+              "axevStage": "end",
+              "axevReason": "superseded",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "op:cs_cmd_fredericksburg:107",
+      "post": "cs_cmd_fredericksburg",
+      "commander": "holmes_theophilus_h",
+      "method": "supply_line",
+      "objective": "lynchburg",
+      "start": 107,
+      "end": 117,
+      "outcome": "objective_reached",
+      "axes": [
+        {
+          "name": "main",
+          "log": [
+            {
+              "axevDay": 107,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "fredericksburg"
+            },
+            {
+              "axevDay": 109,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "fredericksburg"
+            },
+            {
+              "axevDay": 110,
+              "axevStage": "pause",
+              "axevReason": "depot_step",
+              "axevRegion": "hanover"
+            },
+            {
+              "axevDay": 112,
+              "axevStage": "march",
+              "axevReason": "pause_over",
+              "axevRegion": "hanover"
+            },
+            {
+              "axevDay": 113,
+              "axevStage": "pause",
+              "axevReason": "depot_step",
+              "axevRegion": "charlottesville"
+            },
+            {
+              "axevDay": 115,
+              "axevStage": "march",
+              "axevReason": "pause_over",
+              "axevRegion": "charlottesville"
+            },
+            {
+              "axevDay": 116,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 117,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "lynchburg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "op:us_dept_pennsylvania:113",
+      "post": "us_dept_pennsylvania",
+      "commander": "patterson_robert",
+      "method": "direct",
+      "objective": "lower_valley",
+      "start": 113,
+      "end": 137,
+      "outcome": "objective_reached",
+      "axes": [
+        {
+          "name": "main",
+          "log": [
+            {
+              "axevDay": 113,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "philadelphia"
+            },
+            {
+              "axevDay": 116,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "philadelphia"
+            },
+            {
+              "axevDay": 123,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "lower_valley"
+            },
+            {
+              "axevDay": 137,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "lower_valley"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "op:cs_cmd_harpers_ferry:114",
+      "post": "cs_cmd_harpers_ferry",
+      "commander": "johnston_joseph_e",
+      "method": "supply_line",
+      "objective": "lynchburg",
+      "start": 114,
+      "end": 125,
+      "outcome": "objective_reached",
+      "axes": [
+        {
+          "name": "main",
+          "log": [
+            {
+              "axevDay": 114,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 116,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 121,
+              "axevStage": "pause",
+              "axevReason": "depot_step",
+              "axevRegion": "culpeper_orange"
+            },
+            {
+              "axevDay": 122,
+              "axevStage": "march",
+              "axevReason": "pause_over",
+              "axevRegion": "culpeper_orange"
+            },
+            {
+              "axevDay": 124,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 125,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "lynchburg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "op:us_dept_northeastern_virginia:135",
+      "post": "us_dept_northeastern_virginia",
+      "commander": "mcdowell_irvin",
+      "method": "direct",
+      "objective": "manassas",
+      "start": 135,
+      "end": 145,
+      "outcome": "objective_reached",
+      "axes": [
+        {
+          "name": "main",
+          "log": [
+            {
+              "axevDay": 135,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "northern_virginia"
+            },
+            {
+              "axevDay": 138,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "northern_virginia"
+            },
+            {
+              "axevDay": 141,
+              "axevStage": "assault",
+              "axevReason": "enemy_ahead",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 141,
+              "axevStage": "works",
+              "axevReason": "enemy_gone",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 142,
+              "axevStage": "assault",
+              "axevReason": "enemy_ahead",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 142,
+              "axevStage": "works",
+              "axevReason": "enemy_gone",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 143,
+              "axevStage": "assault",
+              "axevReason": "enemy_ahead",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 143,
+              "axevStage": "works",
+              "axevReason": "enemy_gone",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 144,
+              "axevStage": "assault",
+              "axevReason": "enemy_ahead",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 144,
+              "axevStage": "works",
+              "axevReason": "enemy_gone",
+              "axevRegion": "manassas"
+            },
+            {
+              "axevDay": 145,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "manassas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "op:us_dept_pennsylvania:141",
+      "post": "us_dept_pennsylvania",
+      "commander": "patterson_robert",
+      "method": "direct",
+      "objective": "harpers_ferry",
+      "start": 141,
+      "end": null,
+      "outcome": null,
+      "axes": [
+        {
+          "name": "main",
+          "log": [
+            {
+              "axevDay": 141,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "lower_valley"
+            },
+            {
+              "axevDay": 144,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "lower_valley"
+            },
+            {
+              "axevDay": 147,
+              "axevStage": "withdraw",
+              "axevReason": "repulsed",
+              "axevRegion": "lower_valley"
+            },
+            {
+              "axevDay": 148,
+              "axevStage": "pause",
+              "axevReason": "repulsed",
+              "axevRegion": "lower_valley"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "op:cs_cmd_harpers_ferry:142",
+      "post": "cs_cmd_harpers_ferry",
+      "commander": "johnston_joseph_e",
+      "method": "direct",
+      "objective": "manassas",
+      "start": 142,
+      "end": 147,
+      "outcome": "superseded",
+      "axes": [
+        {
+          "name": "main",
+          "log": [
+            {
+              "axevDay": 142,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 147,
+              "axevStage": "end",
+              "axevReason": "superseded",
+              "axevRegion": "manassas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": [
+    {
+      "mechanic": "operations.ended",
+      "fires": 9,
+      "days": [
+        {
+          "day": 9,
+          "fires": 1
+        },
+        {
+          "day": 40,
+          "fires": 1
+        },
+        {
+          "day": 86,
+          "fires": 1
+        },
+        {
+          "day": 104,
+          "fires": 1
+        },
+        {
+          "day": 117,
+          "fires": 1
+        },
+        {
+          "day": 125,
+          "fires": 1
+        },
+        {
+          "day": 137,
+          "fires": 1
+        },
+        {
+          "day": 145,
+          "fires": 1
+        },
+        {
+          "day": 147,
+          "fires": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "operations.stage",
+      "fires": 39,
+      "days": [
+        {
+          "day": 7,
+          "fires": 1
+        },
+        {
+          "day": 8,
+          "fires": 1
+        },
+        {
+          "day": 9,
+          "fires": 1
+        },
+        {
+          "day": 38,
+          "fires": 1
+        },
+        {
+          "day": 39,
+          "fires": 1
+        },
+        {
+          "day": 40,
+          "fires": 1
+        },
+        {
+          "day": 84,
+          "fires": 1
+        },
+        {
+          "day": 85,
+          "fires": 1
+        },
+        {
+          "day": 86,
+          "fires": 1
+        },
+        {
+          "day": 98,
+          "fires": 1
+        },
+        {
+          "day": 99,
+          "fires": 1
+        },
+        {
+          "day": 109,
+          "fires": 1
+        },
+        {
+          "day": 110,
+          "fires": 1
+        },
+        {
+          "day": 112,
+          "fires": 1
+        },
+        {
+          "day": 113,
+          "fires": 1
+        },
+        {
+          "day": 115,
+          "fires": 1
+        },
+        {
+          "day": 116,
+          "fires": 3
+        },
+        {
+          "day": 117,
+          "fires": 1
+        },
+        {
+          "day": 121,
+          "fires": 1
+        },
+        {
+          "day": 122,
+          "fires": 1
+        },
+        {
+          "day": 123,
+          "fires": 1
+        },
+        {
+          "day": 124,
+          "fires": 1
+        },
+        {
+          "day": 125,
+          "fires": 1
+        },
+        {
+          "day": 137,
+          "fires": 1
+        },
+        {
+          "day": 138,
+          "fires": 1
+        },
+        {
+          "day": 141,
+          "fires": 2
+        },
+        {
+          "day": 142,
+          "fires": 2
+        },
+        {
+          "day": 143,
+          "fires": 2
+        },
+        {
+          "day": 144,
+          "fires": 3
+        },
+        {
+          "day": 145,
+          "fires": 1
+        },
+        {
+          "day": 147,
+          "fires": 1
+        },
+        {
+          "day": 148,
+          "fires": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "operations.works",
+      "fires": 15,
+      "days": [
+        {
+          "day": 9,
+          "fires": 1
+        },
+        {
+          "day": 86,
+          "fires": 1
+        },
+        {
+          "day": 100,
+          "fires": 1
+        },
+        {
+          "day": 101,
+          "fires": 1
+        },
+        {
+          "day": 102,
+          "fires": 1
+        },
+        {
+          "day": 103,
+          "fires": 1
+        },
+        {
+          "day": 117,
+          "fires": 1
+        },
+        {
+          "day": 124,
+          "fires": 1
+        },
+        {
+          "day": 125,
+          "fires": 2
+        },
+        {
+          "day": 126,
+          "fires": 1
+        },
+        {
+          "day": 127,
+          "fires": 1
+        },
+        {
+          "day": 128,
+          "fires": 1
+        },
+        {
+          "day": 129,
+          "fires": 1
+        },
+        {
+          "day": 145,
+          "fires": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "planner.term.supply",
+      "fires": 2,
+      "days": [
+        {
+          "day": 100,
+          "fires": 1
+        },
+        {
+          "day": 104,
+          "fires": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "plans.chosen",
+      "fires": 14,
+      "days": [
+        {
+          "day": 3,
+          "fires": 1
+        },
+        {
+          "day": 38,
+          "fires": 1
+        },
+        {
+          "day": 56,
+          "fires": 1
+        },
+        {
+          "day": 80,
+          "fires": 1
+        },
+        {
+          "day": 87,
+          "fires": 1
+        },
+        {
+          "day": 96,
+          "fires": 1
+        },
+        {
+          "day": 100,
+          "fires": 1
+        },
+        {
+          "day": 101,
+          "fires": 1
+        },
+        {
+          "day": 105,
+          "fires": 1
+        },
+        {
+          "day": 113,
+          "fires": 1
+        },
+        {
+          "day": 135,
+          "fires": 1
+        },
+        {
+          "day": 141,
+          "fires": 1
+        },
+        {
+          "day": 142,
+          "fires": 1
+        },
+        {
+          "day": 148,
+          "fires": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "plans.goal_reached",
+      "fires": 7,
+      "days": [
+        {
+          "day": 9,
+          "fires": 1
+        },
+        {
+          "day": 40,
+          "fires": 1
+        },
+        {
+          "day": 86,
+          "fires": 1
+        },
+        {
+          "day": 117,
+          "fires": 1
+        },
+        {
+          "day": 125,
+          "fires": 1
+        },
+        {
+          "day": 137,
+          "fires": 1
+        },
+        {
+          "day": 145,
+          "fires": 1
+        }
+      ]
+    },
+    {
+      "mechanic": "seats.choices",
+      "fires": 22,
+      "days": [
+        {
+          "day": 2,
+          "fires": 1
+        },
+        {
+          "day": 38,
+          "fires": 1
+        },
+        {
+          "day": 49,
+          "fires": 1
+        },
+        {
+          "day": 55,
+          "fires": 1
+        },
+        {
+          "day": 79,
+          "fires": 1
+        },
+        {
+          "day": 86,
+          "fires": 1
+        },
+        {
+          "day": 87,
+          "fires": 1
+        },
+        {
+          "day": 88,
+          "fires": 1
+        },
+        {
+          "day": 96,
+          "fires": 2
+        },
+        {
+          "day": 99,
+          "fires": 1
+        },
+        {
+          "day": 100,
+          "fires": 1
+        },
+        {
+          "day": 101,
+          "fires": 1
+        },
+        {
+          "day": 104,
+          "fires": 1
+        },
+        {
+          "day": 105,
+          "fires": 1
+        },
+        {
+          "day": 109,
+          "fires": 1
+        },
+        {
+          "day": 113,
+          "fires": 1
+        },
+        {
+          "day": 135,
+          "fires": 1
+        },
+        {
+          "day": 141,
+          "fires": 1
+        },
+        {
+          "day": 142,
+          "fires": 2
+        },
+        {
+          "day": 148,
+          "fires": 1
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "operationEnds": true,
+    "goalReaches": true,
+    "stageMoves": true,
+    "supplyPivots": true
+  }
+}

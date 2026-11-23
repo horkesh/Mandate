@@ -127,8 +127,9 @@ These are numbered, never reused, and changed only by a new record that supersed
 | [0121](0121-letters-receipts-and-authority-a-commander-receives.md) | Authored letters, their receipt, and the authority a commander receives | accepted; clarified by 0124, 0128 |
 | [0122](0122-the-confederate-cause-is-a-value.md) | The Confederate cause is a value, and a signed undertaking shows who held it | accepted |
 | [0123](0123-attack-or-demonstrate-is-a-duty-to-detain.md) | Attack or demonstrate is a duty to detain | accepted; clarified by 0128 |
-| [0124](0124-standing-authority-comes-from-an-assignment.md) | Standing authority comes from an assignment to command, read with the regulations | accepted; clarified by 0126 |
+| [0124](0124-standing-authority-comes-from-an-assignment.md) | Standing authority comes from an assignment to command, read with the regulations | accepted; clarified by 0126, 0129 |
 | [0125](0125-a-strength-is-a-return-an-estimate-a-rule-or-unknown.md) | A strength is a return, an estimate, a rule's output or unknown | accepted; clarified by 0127 |
 | [0126](0126-a-call-addressed-to-an-office-reaches-its-holder.md) | A call addressed to an office reaches whoever holds it | accepted |
 | [0127](0127-a-raised-regiment-has-its-calls-legal-minimum.md) | A raised regiment has its call's legal minimum establishment | accepted |
 | [0128](0128-the-bounds-of-a-sortie-and-a-demonstration.md) | The bounds of a limited sortie and a demonstration | accepted |
+| [0129](0129-an-assignment-to-command-opens-the-post.md) | A received assignment to command opens the post, and a lot keeps its read identity | accepted |

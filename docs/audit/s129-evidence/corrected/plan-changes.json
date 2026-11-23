@@ -1,0 +1,2696 @@
+[
+  {
+    "id": "cs_cmd_harpers_ferry",
+    "before": {
+      "planGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "relieve",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true,
+        "goalDiscretion": {
+          "condition": "outmatched",
+          "fallback": {
+            "goalObjective": null,
+            "goalPosture": "hold",
+            "goalRisk": 500,
+            "goalDeadlineDays": 30,
+            "goalRail": true,
+            "goalRiver": false,
+            "goalSea": false,
+            "goalNeutral": false,
+            "goalCommitted": [],
+            "goalAwaitWord": false,
+            "goalApproveAsDrafted": true
+          }
+        }
+      },
+      "planIssuer": "davis_jefferson",
+      "planViaChain": true,
+      "planSetDay": 143,
+      "planIssuedDay": 141,
+      "planOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "planResponse": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "planStatus": "approved",
+      "planDraft": {
+        "draftCommander": "johnston_joseph_e",
+        "draftPost": "cs_cmd_harpers_ferry",
+        "draftFaction": "confederate",
+        "draftDay": 143,
+        "draftCandidates": [
+          {
+            "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "cs_cmd_harpers_ferry",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "manassas",
+                  "routeLegs": [
+                    {
+                      "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                      "legFrom": "harpers_ferry",
+                      "legTo": "loudoun_fauquier",
+                      "legType": "road",
+                      "legDays": 4000,
+                      "legThreat": 219,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    },
+                    {
+                      "legEdge": "road:loudoun_fauquier:manassas",
+                      "legFrom": "loudoun_fauquier",
+                      "legTo": "manassas",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": 0,
+                      "legSupply": 0,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 7219,
+                  "routeDays": 7000
+                },
+                "axisBlocks": [
+                  "raised.st_gov_georgia.d122.2",
+                  "raised.st_gov_georgia.d125",
+                  "state-forces.va_harpers_ferry"
+                ],
+                "axisStrength": 4560,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 4000,
+                    "phaseRegion": "harpers_ferry"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 4000,
+                    "phaseDays": 4000,
+                    "phaseRegion": "loudoun_fauquier"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 8000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "manassas"
+                  }
+                ],
+                "axisArrival": 11000,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 1,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches manassas"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1000"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 19000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": -8,
+                "contribWhy": "433 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 138,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 1130,
+            "candPerceived": 0,
+            "candRatio": 10000
+          },
+          {
+            "id": "holding:await:harpers_ferry",
+            "candMethod": "holding",
+            "candVariant": "await",
+            "candAxes": [
+              {
+                "axisName": "await",
+                "axisPost": "cs_cmd_harpers_ferry",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "raised.st_gov_georgia.d122.2",
+                  "raised.st_gov_georgia.d125",
+                  "state-forces.va_harpers_ferry"
+                ],
+                "axisStrength": 4560,
+                "axisPhases": [
+                  {
+                    "phaseKind": "await",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 1,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 153,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": -147,
+            "candPerceived": 0,
+            "candRatio": 10000
+          }
+        ],
+        "draftRejected": [
+          {
+            "rejMethod": "flank",
+            "rejVariant": "penalty",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "alternative shares 1000 permille of the direct route"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "with_partner",
+            "rejGates": [
+              {
+                "gateKind": "staging_not_adjacent",
+                "gateHard": true,
+                "gateDetail": "his own staging harpers_ferry is not beside manassas"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "two_axis",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "second route repeats the first"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "clear_first",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "run_in",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "supply_line",
+            "rejVariant": "depot_steps",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "repeats direct:least_cost:harpers_ferry>loudoun_fauquier>manassas"
+              }
+            ]
+          }
+        ],
+        "draftSearches": 8,
+        "draftGenerated": 3,
+        "draftDeduplicated": 1
+      },
+      "planChosen": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+      "planApproved": {
+        "id": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "cs_cmd_harpers_ferry",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "harpers_ferry",
+              "routeTo": "manassas",
+              "routeLegs": [
+                {
+                  "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                  "legFrom": "harpers_ferry",
+                  "legTo": "loudoun_fauquier",
+                  "legType": "road",
+                  "legDays": 4000,
+                  "legThreat": 219,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                },
+                {
+                  "legEdge": "road:loudoun_fauquier:manassas",
+                  "legFrom": "loudoun_fauquier",
+                  "legTo": "manassas",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 0,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 7219,
+              "routeDays": 7000
+            },
+            "axisBlocks": [
+              "raised.st_gov_georgia.d122.2",
+              "raised.st_gov_georgia.d125",
+              "state-forces.va_harpers_ferry"
+            ],
+            "axisStrength": 4560,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 4000,
+                "phaseRegion": "harpers_ferry"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 4000,
+                "phaseDays": 4000,
+                "phaseRegion": "loudoun_fauquier"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 8000,
+                "phaseDays": 3000,
+                "phaseRegion": "manassas"
+              }
+            ],
+            "axisArrival": 11000,
+            "axisOutOfSupply": 0,
+            "axisStoresDays": 1,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches manassas"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": 300,
+            "contribWhy": "ratio 10000 over his demand 1000"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 19000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": 0,
+            "contribWhy": "0 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": -8,
+            "contribWhy": "433 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 138,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 1130,
+        "candPerceived": 0,
+        "candRatio": 10000
+      },
+      "planSubmitted": null,
+      "planCounters": [],
+      "planPending": null
+    },
+    "after": null,
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "cs_forces_virginia",
+    "before": null,
+    "after": {
+      "planAuthority": {
+        "basisPost": "cs_forces_virginia",
+        "basisKey": "lee_confederate_virginia"
+      },
+      "planGoal": {
+        "goalObjective": "lynchburg",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": true,
+        "goalSea": true,
+        "goalNeutral": false,
+        "goalCommitted": [
+          "raised.st_gov_tennessee.d55"
+        ],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": false
+      },
+      "planIssuer": "davis_jefferson",
+      "planViaChain": true,
+      "planSetDay": 79,
+      "planIssuedDay": 79,
+      "planOrder": "m.79.lee_robert_e.lee_robert_e.local.goal:f22497e2c2872534aade541e",
+      "planResponse": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1|lee_robert_e",
+      "planStatus": "approved",
+      "planDraft": {
+        "draftCommander": "lee_robert_e",
+        "draftPost": "cs_forces_virginia",
+        "draftFaction": "confederate",
+        "draftDay": 79,
+        "draftCandidates": [
+          {
+            "id": "direct:least_cost:lynchburg",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "cs_forces_virginia",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "lynchburg",
+                  "routeTo": "lynchburg",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "raised.st_gov_tennessee.d55"
+                ],
+                "axisStrength": 2340,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "lynchburg"
+                  }
+                ],
+                "axisArrival": 3000,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 0,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches lynchburg"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1080"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 27000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 92,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 1092,
+            "candPerceived": 0,
+            "candRatio": 10000
+          }
+        ],
+        "draftRejected": [],
+        "draftSearches": 0,
+        "draftGenerated": 1,
+        "draftDeduplicated": 0
+      },
+      "planChosen": "direct:least_cost:lynchburg",
+      "planApproved": {
+        "id": "direct:least_cost:lynchburg",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "cs_forces_virginia",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "lynchburg",
+              "routeTo": "lynchburg",
+              "routeLegs": [],
+              "routeCost": 0,
+              "routeDays": 0
+            },
+            "axisBlocks": [
+              "raised.st_gov_tennessee.d55"
+            ],
+            "axisStrength": 2340,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "lynchburg"
+              }
+            ],
+            "axisArrival": 3000,
+            "axisOutOfSupply": 0,
+            "axisStoresDays": 0,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches lynchburg"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": 300,
+            "contribWhy": "ratio 10000 over his demand 1080"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 27000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": 0,
+            "contribWhy": "0 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": 0,
+            "contribWhy": "0 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 92,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 1092,
+        "candPerceived": 0,
+        "candRatio": 10000
+      },
+      "planSubmitted": "m.80.lee_robert_e.davis_jefferson.plan.cs_forces_virginia",
+      "planCounters": [],
+      "planPending": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "st_va_general_in_chief",
+    "before": null,
+    "after": {
+      "planAuthority": {
+        "basisPost": "st_va_general_in_chief",
+        "basisKey": "lee_state_command"
+      },
+      "planGoal": {
+        "goalObjective": "richmond",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": true,
+        "goalSea": true,
+        "goalNeutral": false,
+        "goalCommitted": [
+          "raised.st_gov_virginia.d46"
+        ],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": false
+      },
+      "planIssuer": "letcher_john",
+      "planViaChain": true,
+      "planSetDay": 55,
+      "planIssuedDay": 55,
+      "planOrder": "m.55.lee_robert_e.lee_robert_e.local.goal:cf8a16c8c634e5120cc03ac1",
+      "planResponse": "m.49.letcher_john.lee_robert_e.letter.authority.letcher_john.lee_state_command.1|lee_robert_e",
+      "planStatus": "review",
+      "planDraft": {
+        "draftCommander": "lee_robert_e",
+        "draftPost": "st_va_general_in_chief",
+        "draftFaction": "confederate",
+        "draftDay": 55,
+        "draftCandidates": [
+          {
+            "id": "direct:least_cost:richmond",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "st_va_general_in_chief",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "richmond",
+                  "routeTo": "richmond",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "raised.st_gov_virginia.d46"
+                ],
+                "axisStrength": 2340,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "richmond"
+                  }
+                ],
+                "axisArrival": 3000,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 9,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches richmond"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1080"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 27000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": 0,
+                "contribWhy": "0 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 92,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 1092,
+            "candPerceived": 0,
+            "candRatio": 10000
+          }
+        ],
+        "draftRejected": [],
+        "draftSearches": 0,
+        "draftGenerated": 1,
+        "draftDeduplicated": 0
+      },
+      "planChosen": "direct:least_cost:richmond",
+      "planApproved": null,
+      "planSubmitted": "m.56.lee_robert_e.letcher_john.plan.st_va_general_in_chief",
+      "planCounters": [],
+      "planPending": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "us_dept_northeastern_virginia",
+    "before": {
+      "planGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "planIssuer": "lincoln_abraham",
+      "planViaChain": false,
+      "planSetDay": 134,
+      "planIssuedDay": 134,
+      "planOrder": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+      "planResponse": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia|mcdowell_irvin",
+      "planStatus": "approved",
+      "planDraft": {
+        "draftCommander": "mcdowell_irvin",
+        "draftPost": "us_dept_northeastern_virginia",
+        "draftFaction": "union",
+        "draftDay": 134,
+        "draftCandidates": [
+          {
+            "id": "direct:least_cost:northern_virginia>manassas",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "us_dept_northeastern_virginia",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "northern_virginia",
+                  "routeTo": "manassas",
+                  "routeLegs": [
+                    {
+                      "legEdge": "road:manassas:northern_virginia",
+                      "legFrom": "northern_virginia",
+                      "legTo": "manassas",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": 0,
+                      "legSupply": 1974,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 4974,
+                  "routeDays": 3000
+                },
+                "axisBlocks": [
+                  "organised.s74_mcdowell_division_5_brigade_2.1",
+                  "raised.st_gov_new_york.d64.bundle.3",
+                  "raised.st_gov_new_york.d64.bundle.7",
+                  "raised.st_gov_new_york.d64.bundle.8",
+                  "raised.st_gov_new_york.d64.bundle.9",
+                  "raised.st_gov_new_york.d83.bundle.3",
+                  "organised.s74_mcdowell_division_4_reserve.1",
+                  "raised.st_gov_massachusetts.d76",
+                  "raised.st_gov_new_york.d64.bundle.2",
+                  "raised.st_gov_new_york.d64.bundle.5",
+                  "raised.st_gov_new_york.d64.bundle.6",
+                  "raised.st_gov_new_york.d83.bundle.2",
+                  "organised.s74_mcdowell_division_3_brigade_2.1",
+                  "organised.s74_mcdowell_division_5_brigade_1.1",
+                  "raised.st_gov_massachusetts.d76.bundle.2",
+                  "raised.st_gov_michigan.d77",
+                  "raised.st_gov_new_york.d64",
+                  "raised.st_gov_new_york.d64.bundle.10",
+                  "raised.st_gov_new_york.d83.bundle.4",
+                  "organised.s74_mcdowell_division_1_brigade_2.1",
+                  "organised.s74_mcdowell_division_1_brigade_3.1",
+                  "organised.s74_mcdowell_division_1_brigade_4.1",
+                  "organised.s74_mcdowell_division_1_brigade_4.2",
+                  "organised.s74_mcdowell_division_2_brigade_1.1",
+                  "organised.s74_mcdowell_division_2_brigade_2.1",
+                  "organised.s74_mcdowell_division_2_brigade_2.2",
+                  "organised.s74_mcdowell_division_3_brigade_3.1",
+                  "organised.s74_mcdowell_division_5_brigade_1.2",
+                  "raised.st_gov_connecticut.d77",
+                  "raised.st_gov_maine.d77",
+                  "raised.st_gov_new_york.d64.bundle.4",
+                  "raised.st_gov_new_york.d83"
+                ],
+                "axisStrength": 59754,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "northern_virginia"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 3000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "manassas"
+                  },
+                  {
+                    "phaseKind": "assault",
+                    "phaseStart": 6000,
+                    "phaseDays": 1000,
+                    "phaseRegion": "manassas"
+                  }
+                ],
+                "axisArrival": 7000,
+                "axisOutOfSupply": 3000,
+                "axisStoresDays": 8,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches manassas"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 14584 over his demand 1116"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 23000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -197,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 88,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 891,
+            "candPerceived": 4097,
+            "candRatio": 14584
+          },
+          {
+            "id": "holding:hold:northern_virginia",
+            "candMethod": "holding",
+            "candVariant": "hold",
+            "candAxes": [
+              {
+                "axisName": "hold",
+                "axisPost": "us_dept_northeastern_virginia",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "northern_virginia",
+                  "routeTo": "northern_virginia",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "organised.s74_mcdowell_division_5_brigade_2.1",
+                  "raised.st_gov_new_york.d64.bundle.3",
+                  "raised.st_gov_new_york.d64.bundle.7",
+                  "raised.st_gov_new_york.d64.bundle.8",
+                  "raised.st_gov_new_york.d64.bundle.9",
+                  "raised.st_gov_new_york.d83.bundle.3",
+                  "organised.s74_mcdowell_division_4_reserve.1",
+                  "raised.st_gov_massachusetts.d76",
+                  "raised.st_gov_new_york.d64.bundle.2",
+                  "raised.st_gov_new_york.d64.bundle.5",
+                  "raised.st_gov_new_york.d64.bundle.6",
+                  "raised.st_gov_new_york.d83.bundle.2",
+                  "organised.s74_mcdowell_division_3_brigade_2.1",
+                  "organised.s74_mcdowell_division_5_brigade_1.1",
+                  "raised.st_gov_massachusetts.d76.bundle.2",
+                  "raised.st_gov_michigan.d77",
+                  "raised.st_gov_new_york.d64",
+                  "raised.st_gov_new_york.d64.bundle.10",
+                  "raised.st_gov_new_york.d83.bundle.4",
+                  "organised.s74_mcdowell_division_1_brigade_2.1",
+                  "organised.s74_mcdowell_division_1_brigade_3.1",
+                  "organised.s74_mcdowell_division_1_brigade_4.1",
+                  "organised.s74_mcdowell_division_1_brigade_4.2",
+                  "organised.s74_mcdowell_division_2_brigade_1.1",
+                  "organised.s74_mcdowell_division_2_brigade_2.1",
+                  "organised.s74_mcdowell_division_2_brigade_2.2",
+                  "organised.s74_mcdowell_division_3_brigade_3.1",
+                  "organised.s74_mcdowell_division_5_brigade_1.2",
+                  "raised.st_gov_connecticut.d77",
+                  "raised.st_gov_maine.d77",
+                  "raised.st_gov_new_york.d64.bundle.4",
+                  "raised.st_gov_new_york.d83"
+                ],
+                "axisStrength": 59754,
+                "axisPhases": [
+                  {
+                    "phaseKind": "hold",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "northern_virginia"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 8,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 279,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": -21,
+            "candPerceived": 4097,
+            "candRatio": 14584
+          }
+        ],
+        "draftRejected": [
+          {
+            "rejMethod": "flank",
+            "rejVariant": "penalty",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "alternative shares 1000 permille of the direct route"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "with_partner",
+            "rejGates": [
+              {
+                "gateKind": "staging_not_adjacent",
+                "gateHard": true,
+                "gateDetail": "no partner whose holder would answer stages beside manassas"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "two_axis",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "second route repeats the first"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "clear_first",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "run_in",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "supply_line",
+            "rejVariant": "depot_steps",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "repeats direct:least_cost:northern_virginia>manassas"
+              }
+            ]
+          }
+        ],
+        "draftSearches": 6,
+        "draftGenerated": 3,
+        "draftDeduplicated": 1
+      },
+      "planChosen": "direct:least_cost:northern_virginia>manassas",
+      "planApproved": {
+        "id": "direct:least_cost:northern_virginia>manassas",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "us_dept_northeastern_virginia",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "northern_virginia",
+              "routeTo": "manassas",
+              "routeLegs": [
+                {
+                  "legEdge": "road:manassas:northern_virginia",
+                  "legFrom": "northern_virginia",
+                  "legTo": "manassas",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 1974,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 4974,
+              "routeDays": 3000
+            },
+            "axisBlocks": [
+              "organised.s74_mcdowell_division_5_brigade_2.1",
+              "raised.st_gov_new_york.d64.bundle.3",
+              "raised.st_gov_new_york.d64.bundle.7",
+              "raised.st_gov_new_york.d64.bundle.8",
+              "raised.st_gov_new_york.d64.bundle.9",
+              "raised.st_gov_new_york.d83.bundle.3",
+              "organised.s74_mcdowell_division_4_reserve.1",
+              "raised.st_gov_massachusetts.d76",
+              "raised.st_gov_new_york.d64.bundle.2",
+              "raised.st_gov_new_york.d64.bundle.5",
+              "raised.st_gov_new_york.d64.bundle.6",
+              "raised.st_gov_new_york.d83.bundle.2",
+              "organised.s74_mcdowell_division_3_brigade_2.1",
+              "organised.s74_mcdowell_division_5_brigade_1.1",
+              "raised.st_gov_massachusetts.d76.bundle.2",
+              "raised.st_gov_michigan.d77",
+              "raised.st_gov_new_york.d64",
+              "raised.st_gov_new_york.d64.bundle.10",
+              "raised.st_gov_new_york.d83.bundle.4",
+              "organised.s74_mcdowell_division_1_brigade_2.1",
+              "organised.s74_mcdowell_division_1_brigade_3.1",
+              "organised.s74_mcdowell_division_1_brigade_4.1",
+              "organised.s74_mcdowell_division_1_brigade_4.2",
+              "organised.s74_mcdowell_division_2_brigade_1.1",
+              "organised.s74_mcdowell_division_2_brigade_2.1",
+              "organised.s74_mcdowell_division_2_brigade_2.2",
+              "organised.s74_mcdowell_division_3_brigade_3.1",
+              "organised.s74_mcdowell_division_5_brigade_1.2",
+              "raised.st_gov_connecticut.d77",
+              "raised.st_gov_maine.d77",
+              "raised.st_gov_new_york.d64.bundle.4",
+              "raised.st_gov_new_york.d83"
+            ],
+            "axisStrength": 59754,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "northern_virginia"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 3000,
+                "phaseRegion": "manassas"
+              },
+              {
+                "phaseKind": "assault",
+                "phaseStart": 6000,
+                "phaseDays": 1000,
+                "phaseRegion": "manassas"
+              }
+            ],
+            "axisArrival": 7000,
+            "axisOutOfSupply": 3000,
+            "axisStoresDays": 8,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches manassas"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": 300,
+            "contribWhy": "ratio 14584 over his demand 1116"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 23000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": -197,
+            "contribWhy": "3000 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": 0,
+            "contribWhy": "0 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 88,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 891,
+        "candPerceived": 4097,
+        "candRatio": 14584
+      },
+      "planSubmitted": null,
+      "planCounters": [],
+      "planPending": null
+    },
+    "after": {
+      "planGoal": {
+        "goalObjective": "manassas",
+        "goalPosture": "take",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "planIssuer": "lincoln_abraham",
+      "planViaChain": false,
+      "planSetDay": 134,
+      "planIssuedDay": 134,
+      "planOrder": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia",
+      "planResponse": "m.134.lincoln_abraham.mcdowell_irvin.order.us_dept_northeastern_virginia|mcdowell_irvin",
+      "planStatus": "approved",
+      "planDraft": {
+        "draftCommander": "mcdowell_irvin",
+        "draftPost": "us_dept_northeastern_virginia",
+        "draftFaction": "union",
+        "draftDay": 134,
+        "draftCandidates": [
+          {
+            "id": "direct:least_cost:northern_virginia>manassas",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "us_dept_northeastern_virginia",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "northern_virginia",
+                  "routeTo": "manassas",
+                  "routeLegs": [
+                    {
+                      "legEdge": "road:manassas:northern_virginia",
+                      "legFrom": "northern_virginia",
+                      "legTo": "manassas",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": 0,
+                      "legSupply": 1974,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 4974,
+                  "routeDays": 3000
+                },
+                "axisBlocks": [
+                  "organised.s74_mcdowell_division_5_brigade_2.1",
+                  "raised.st_gov_new_york.d64.bundle.3",
+                  "raised.st_gov_new_york.d64.bundle.7",
+                  "raised.st_gov_new_york.d64.bundle.8",
+                  "raised.st_gov_new_york.d64.bundle.9",
+                  "raised.st_gov_new_york.d83.bundle.3",
+                  "organised.s74_mcdowell_division_4_reserve.1",
+                  "raised.st_gov_massachusetts.d76",
+                  "raised.st_gov_new_york.d64.bundle.2",
+                  "raised.st_gov_new_york.d64.bundle.5",
+                  "raised.st_gov_new_york.d64.bundle.6",
+                  "raised.st_gov_new_york.d83.bundle.2",
+                  "organised.s74_mcdowell_division_3_brigade_2.1",
+                  "organised.s74_mcdowell_division_5_brigade_1.1",
+                  "raised.st_gov_massachusetts.d76.bundle.2",
+                  "raised.st_gov_michigan.d77",
+                  "raised.st_gov_new_york.d64",
+                  "raised.st_gov_new_york.d64.bundle.10",
+                  "raised.st_gov_new_york.d83.bundle.4",
+                  "organised.s74_mcdowell_division_1_brigade_2.1",
+                  "organised.s74_mcdowell_division_1_brigade_3.1",
+                  "organised.s74_mcdowell_division_1_brigade_4.1",
+                  "organised.s74_mcdowell_division_1_brigade_4.2",
+                  "organised.s74_mcdowell_division_2_brigade_1.1",
+                  "organised.s74_mcdowell_division_2_brigade_2.1",
+                  "organised.s74_mcdowell_division_2_brigade_2.2",
+                  "organised.s74_mcdowell_division_3_brigade_3.1",
+                  "organised.s74_mcdowell_division_5_brigade_1.2",
+                  "raised.st_gov_connecticut.d77",
+                  "raised.st_gov_maine.d77",
+                  "raised.st_gov_new_york.d64.bundle.4",
+                  "raised.st_gov_new_york.d83"
+                ],
+                "axisStrength": 59754,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "northern_virginia"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 3000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "manassas"
+                  },
+                  {
+                    "phaseKind": "assault",
+                    "phaseStart": 6000,
+                    "phaseDays": 1000,
+                    "phaseRegion": "manassas"
+                  }
+                ],
+                "axisArrival": 7000,
+                "axisOutOfSupply": 3000,
+                "axisStoresDays": 8,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches manassas"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 103920 over his demand 1116"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 23000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -197,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 88,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 891,
+            "candPerceived": 575,
+            "candRatio": 103920
+          },
+          {
+            "id": "holding:hold:northern_virginia",
+            "candMethod": "holding",
+            "candVariant": "hold",
+            "candAxes": [
+              {
+                "axisName": "hold",
+                "axisPost": "us_dept_northeastern_virginia",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "northern_virginia",
+                  "routeTo": "northern_virginia",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "organised.s74_mcdowell_division_5_brigade_2.1",
+                  "raised.st_gov_new_york.d64.bundle.3",
+                  "raised.st_gov_new_york.d64.bundle.7",
+                  "raised.st_gov_new_york.d64.bundle.8",
+                  "raised.st_gov_new_york.d64.bundle.9",
+                  "raised.st_gov_new_york.d83.bundle.3",
+                  "organised.s74_mcdowell_division_4_reserve.1",
+                  "raised.st_gov_massachusetts.d76",
+                  "raised.st_gov_new_york.d64.bundle.2",
+                  "raised.st_gov_new_york.d64.bundle.5",
+                  "raised.st_gov_new_york.d64.bundle.6",
+                  "raised.st_gov_new_york.d83.bundle.2",
+                  "organised.s74_mcdowell_division_3_brigade_2.1",
+                  "organised.s74_mcdowell_division_5_brigade_1.1",
+                  "raised.st_gov_massachusetts.d76.bundle.2",
+                  "raised.st_gov_michigan.d77",
+                  "raised.st_gov_new_york.d64",
+                  "raised.st_gov_new_york.d64.bundle.10",
+                  "raised.st_gov_new_york.d83.bundle.4",
+                  "organised.s74_mcdowell_division_1_brigade_2.1",
+                  "organised.s74_mcdowell_division_1_brigade_3.1",
+                  "organised.s74_mcdowell_division_1_brigade_4.1",
+                  "organised.s74_mcdowell_division_1_brigade_4.2",
+                  "organised.s74_mcdowell_division_2_brigade_1.1",
+                  "organised.s74_mcdowell_division_2_brigade_2.1",
+                  "organised.s74_mcdowell_division_2_brigade_2.2",
+                  "organised.s74_mcdowell_division_3_brigade_3.1",
+                  "organised.s74_mcdowell_division_5_brigade_1.2",
+                  "raised.st_gov_connecticut.d77",
+                  "raised.st_gov_maine.d77",
+                  "raised.st_gov_new_york.d64.bundle.4",
+                  "raised.st_gov_new_york.d83"
+                ],
+                "axisStrength": 59754,
+                "axisPhases": [
+                  {
+                    "phaseKind": "hold",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "northern_virginia"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 8,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 279,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": -21,
+            "candPerceived": 575,
+            "candRatio": 103920
+          }
+        ],
+        "draftRejected": [
+          {
+            "rejMethod": "flank",
+            "rejVariant": "penalty",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "alternative shares 1000 permille of the direct route"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "with_partner",
+            "rejGates": [
+              {
+                "gateKind": "staging_not_adjacent",
+                "gateHard": true,
+                "gateDetail": "no partner whose holder would answer stages beside manassas"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "two_axis",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "second route repeats the first"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "clear_first",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "run_in",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "supply_line",
+            "rejVariant": "depot_steps",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "repeats direct:least_cost:northern_virginia>manassas"
+              }
+            ]
+          }
+        ],
+        "draftSearches": 6,
+        "draftGenerated": 3,
+        "draftDeduplicated": 1
+      },
+      "planChosen": "direct:least_cost:northern_virginia>manassas",
+      "planApproved": {
+        "id": "direct:least_cost:northern_virginia>manassas",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "us_dept_northeastern_virginia",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "northern_virginia",
+              "routeTo": "manassas",
+              "routeLegs": [
+                {
+                  "legEdge": "road:manassas:northern_virginia",
+                  "legFrom": "northern_virginia",
+                  "legTo": "manassas",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 1974,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 4974,
+              "routeDays": 3000
+            },
+            "axisBlocks": [
+              "organised.s74_mcdowell_division_5_brigade_2.1",
+              "raised.st_gov_new_york.d64.bundle.3",
+              "raised.st_gov_new_york.d64.bundle.7",
+              "raised.st_gov_new_york.d64.bundle.8",
+              "raised.st_gov_new_york.d64.bundle.9",
+              "raised.st_gov_new_york.d83.bundle.3",
+              "organised.s74_mcdowell_division_4_reserve.1",
+              "raised.st_gov_massachusetts.d76",
+              "raised.st_gov_new_york.d64.bundle.2",
+              "raised.st_gov_new_york.d64.bundle.5",
+              "raised.st_gov_new_york.d64.bundle.6",
+              "raised.st_gov_new_york.d83.bundle.2",
+              "organised.s74_mcdowell_division_3_brigade_2.1",
+              "organised.s74_mcdowell_division_5_brigade_1.1",
+              "raised.st_gov_massachusetts.d76.bundle.2",
+              "raised.st_gov_michigan.d77",
+              "raised.st_gov_new_york.d64",
+              "raised.st_gov_new_york.d64.bundle.10",
+              "raised.st_gov_new_york.d83.bundle.4",
+              "organised.s74_mcdowell_division_1_brigade_2.1",
+              "organised.s74_mcdowell_division_1_brigade_3.1",
+              "organised.s74_mcdowell_division_1_brigade_4.1",
+              "organised.s74_mcdowell_division_1_brigade_4.2",
+              "organised.s74_mcdowell_division_2_brigade_1.1",
+              "organised.s74_mcdowell_division_2_brigade_2.1",
+              "organised.s74_mcdowell_division_2_brigade_2.2",
+              "organised.s74_mcdowell_division_3_brigade_3.1",
+              "organised.s74_mcdowell_division_5_brigade_1.2",
+              "raised.st_gov_connecticut.d77",
+              "raised.st_gov_maine.d77",
+              "raised.st_gov_new_york.d64.bundle.4",
+              "raised.st_gov_new_york.d83"
+            ],
+            "axisStrength": 59754,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "northern_virginia"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 3000,
+                "phaseRegion": "manassas"
+              },
+              {
+                "phaseKind": "assault",
+                "phaseStart": 6000,
+                "phaseDays": 1000,
+                "phaseRegion": "manassas"
+              }
+            ],
+            "axisArrival": 7000,
+            "axisOutOfSupply": 3000,
+            "axisStoresDays": 8,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches manassas"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": 300,
+            "contribWhy": "ratio 103920 over his demand 1116"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 23000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": -197,
+            "contribWhy": "3000 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": 0,
+            "contribWhy": "0 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 88,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 891,
+        "candPerceived": 575,
+        "candRatio": 103920
+      },
+      "planSubmitted": null,
+      "planCounters": [],
+      "planPending": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "us_dept_pennsylvania",
+    "before": {
+      "planGoal": {
+        "goalObjective": "harpers_ferry",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "planIssuer": "lincoln_abraham",
+      "planViaChain": true,
+      "planSetDay": 140,
+      "planIssuedDay": 140,
+      "planOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "planResponse": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|patterson_robert",
+      "planStatus": "approved",
+      "planDraft": {
+        "draftCommander": "patterson_robert",
+        "draftPost": "us_dept_pennsylvania",
+        "draftFaction": "union",
+        "draftDay": 140,
+        "draftCandidates": [
+          {
+            "id": "direct:least_cost:lower_valley>harpers_ferry",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "lower_valley",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [
+                    {
+                      "legEdge": "road:harpers_ferry:lower_valley",
+                      "legFrom": "lower_valley",
+                      "legTo": "harpers_ferry",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": 0,
+                      "legSupply": 2166,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 5166,
+                  "routeDays": 3000
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "lower_valley"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 3000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 6000,
+                "axisOutOfSupply": 3000,
+                "axisStoresDays": 9,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [
+              {
+                "reqKind": "reinforcement",
+                "reqPost": null,
+                "reqHolder": null,
+                "reqMen": 4027,
+                "reqFrom": null,
+                "reqObjective": "harpers_ferry",
+                "reqArriveFrom": 0,
+                "reqArriveTo": 0,
+                "reqCarrier": null,
+                "reqEdges": []
+              }
+            ],
+            "candConditions": [
+              {
+                "gateKind": "move_when_reinforced",
+                "gateHard": false,
+                "gateDetail": "4027 men short of his demand"
+              }
+            ],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches harpers_ferry"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": -419,
+                "contribWhy": "ratio 374 under his demand 1244; short 4027 men"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 24000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -216,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 75,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 140,
+            "candPerceived": 4630,
+            "candRatio": 374
+          },
+          {
+            "id": "holding:hold:harpers_ferry",
+            "candMethod": "holding",
+            "candVariant": "hold",
+            "candAxes": [
+              {
+                "axisName": "hold",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "hold",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 9,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 311,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": 11,
+            "candPerceived": 4630,
+            "candRatio": 374
+          }
+        ],
+        "draftRejected": [
+          {
+            "rejMethod": "flank",
+            "rejVariant": "penalty",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "alternative shares 1000 permille of the direct route"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "with_partner",
+            "rejGates": [
+              {
+                "gateKind": "max_axes",
+                "gateHard": true,
+                "gateDetail": "he runs at most 1 axis"
+              },
+              {
+                "gateKind": "staging_not_adjacent",
+                "gateHard": true,
+                "gateDetail": "no partner whose holder would answer stages beside harpers_ferry"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "two_axis",
+            "rejGates": [
+              {
+                "gateKind": "max_axes",
+                "gateHard": true,
+                "gateDetail": "he runs at most 1 axis"
+              },
+              {
+                "gateKind": "no_forces",
+                "gateHard": true,
+                "gateDetail": "fewer than two blocks to split"
+              },
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "second route repeats the first"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "clear_first",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "run_in",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "supply_line",
+            "rejVariant": "depot_steps",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "repeats direct:least_cost:lower_valley>harpers_ferry"
+              }
+            ]
+          }
+        ],
+        "draftSearches": 6,
+        "draftGenerated": 3,
+        "draftDeduplicated": 1
+      },
+      "planChosen": "direct:least_cost:lower_valley>harpers_ferry",
+      "planApproved": {
+        "id": "direct:least_cost:lower_valley>harpers_ferry",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "us_dept_pennsylvania",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "lower_valley",
+              "routeTo": "harpers_ferry",
+              "routeLegs": [
+                {
+                  "legEdge": "road:harpers_ferry:lower_valley",
+                  "legFrom": "lower_valley",
+                  "legTo": "harpers_ferry",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 2166,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 5166,
+              "routeDays": 3000
+            },
+            "axisBlocks": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "axisStrength": 1732,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "lower_valley"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 3000,
+                "phaseRegion": "harpers_ferry"
+              }
+            ],
+            "axisArrival": 6000,
+            "axisOutOfSupply": 3000,
+            "axisStoresDays": 9,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [
+          {
+            "reqKind": "reinforcement",
+            "reqPost": null,
+            "reqHolder": null,
+            "reqMen": 4027,
+            "reqFrom": null,
+            "reqObjective": "harpers_ferry",
+            "reqArriveFrom": 0,
+            "reqArriveTo": 0,
+            "reqCarrier": null,
+            "reqEdges": []
+          }
+        ],
+        "candConditions": [
+          {
+            "gateKind": "move_when_reinforced",
+            "gateHard": false,
+            "gateDetail": "4027 men short of his demand"
+          }
+        ],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches harpers_ferry"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": -419,
+            "contribWhy": "ratio 374 under his demand 1244; short 4027 men"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 24000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": -216,
+            "contribWhy": "3000 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": 0,
+            "contribWhy": "0 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 75,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 140,
+        "candPerceived": 4630,
+        "candRatio": 374
+      },
+      "planSubmitted": null,
+      "planCounters": [],
+      "planPending": null
+    },
+    "after": {
+      "planGoal": {
+        "goalObjective": "harpers_ferry",
+        "goalPosture": "hold",
+        "goalRisk": 500,
+        "goalDeadlineDays": 30,
+        "goalRail": true,
+        "goalRiver": false,
+        "goalSea": false,
+        "goalNeutral": false,
+        "goalCommitted": [],
+        "goalAwaitWord": false,
+        "goalApproveAsDrafted": true
+      },
+      "planIssuer": "lincoln_abraham",
+      "planViaChain": true,
+      "planSetDay": 140,
+      "planIssuedDay": 140,
+      "planOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "planResponse": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|patterson_robert",
+      "planStatus": "approved",
+      "planDraft": {
+        "draftCommander": "patterson_robert",
+        "draftPost": "us_dept_pennsylvania",
+        "draftFaction": "union",
+        "draftDay": 140,
+        "draftCandidates": [
+          {
+            "id": "direct:least_cost:lower_valley>harpers_ferry",
+            "candMethod": "direct",
+            "candVariant": "least_cost",
+            "candAxes": [
+              {
+                "axisName": "main",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "lower_valley",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [
+                    {
+                      "legEdge": "road:harpers_ferry:lower_valley",
+                      "legFrom": "lower_valley",
+                      "legTo": "harpers_ferry",
+                      "legType": "road",
+                      "legDays": 3000,
+                      "legThreat": 0,
+                      "legSupply": 2166,
+                      "legObstacleDays": 0,
+                      "legObstacle": null,
+                      "legHeld": false
+                    }
+                  ],
+                  "routeCost": 5166,
+                  "routeDays": 3000
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "concentrate",
+                    "phaseStart": 0,
+                    "phaseDays": 3000,
+                    "phaseRegion": "lower_valley"
+                  },
+                  {
+                    "phaseKind": "march",
+                    "phaseStart": 3000,
+                    "phaseDays": 3000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 6000,
+                "axisOutOfSupply": 3000,
+                "axisStoresDays": 9,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 400,
+                "contribWhy": "reaches harpers_ferry"
+              },
+              {
+                "contribTerm": "force_ratio",
+                "contribAmount": 300,
+                "contribWhy": "ratio 10000 over his demand 1244"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": 300,
+                "contribWhy": "arrives 24000 permille days early"
+              },
+              {
+                "contribTerm": "haste",
+                "contribAmount": 0,
+                "contribWhy": "concentrated as he wants"
+              },
+              {
+                "contribTerm": "supply",
+                "contribAmount": -216,
+                "contribWhy": "3000 permille days outside supply"
+              },
+              {
+                "contribTerm": "exposure",
+                "contribAmount": 0,
+                "contribWhy": "0 perceived men along the route"
+              },
+              {
+                "contribTerm": "coordination",
+                "contribAmount": 0,
+                "contribWhy": "one axis"
+              },
+              {
+                "contribTerm": "dependence",
+                "contribAmount": 0,
+                "contribWhy": "0 support request(s) to other holders"
+              },
+              {
+                "contribTerm": "glory",
+                "contribAmount": 75,
+                "contribWhy": "his name on the objective"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 0,
+                "contribWhy": "commits the force"
+              }
+            ],
+            "candScore": 859,
+            "candPerceived": 0,
+            "candRatio": 10000
+          },
+          {
+            "id": "holding:hold:harpers_ferry",
+            "candMethod": "holding",
+            "candVariant": "hold",
+            "candAxes": [
+              {
+                "axisName": "hold",
+                "axisPost": "us_dept_pennsylvania",
+                "axisMode": "land",
+                "axisRoute": {
+                  "routeFrom": "harpers_ferry",
+                  "routeTo": "harpers_ferry",
+                  "routeLegs": [],
+                  "routeCost": 0,
+                  "routeDays": 0
+                },
+                "axisBlocks": [
+                  "raised.st_gov_wisconsin.d83"
+                ],
+                "axisStrength": 1732,
+                "axisPhases": [
+                  {
+                    "phaseKind": "hold",
+                    "phaseStart": 0,
+                    "phaseDays": 30000,
+                    "phaseRegion": "harpers_ferry"
+                  }
+                ],
+                "axisArrival": 0,
+                "axisOutOfSupply": 0,
+                "axisStoresDays": 9,
+                "axisStoresAssumed": false
+              }
+            ],
+            "candRequests": [],
+            "candConditions": [],
+            "candTerms": [
+              {
+                "contribTerm": "goal_fit",
+                "contribAmount": 0,
+                "contribWhy": "does not move on the objective"
+              },
+              {
+                "contribTerm": "time",
+                "contribAmount": -300,
+                "contribWhy": "the deadline passes with nothing attempted"
+              },
+              {
+                "contribTerm": "caution",
+                "contribAmount": 311,
+                "contribWhy": "keeps the force whole"
+              }
+            ],
+            "candScore": 11,
+            "candPerceived": 0,
+            "candRatio": 10000
+          }
+        ],
+        "draftRejected": [
+          {
+            "rejMethod": "flank",
+            "rejVariant": "penalty",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "alternative shares 1000 permille of the direct route"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "with_partner",
+            "rejGates": [
+              {
+                "gateKind": "max_axes",
+                "gateHard": true,
+                "gateDetail": "he runs at most 1 axis"
+              },
+              {
+                "gateKind": "staging_not_adjacent",
+                "gateHard": true,
+                "gateDetail": "no partner whose holder would answer stages beside harpers_ferry"
+              }
+            ]
+          },
+          {
+            "rejMethod": "pincer",
+            "rejVariant": "two_axis",
+            "rejGates": [
+              {
+                "gateKind": "max_axes",
+                "gateHard": true,
+                "gateDetail": "he runs at most 1 axis"
+              },
+              {
+                "gateKind": "no_forces",
+                "gateHard": true,
+                "gateDetail": "fewer than two blocks to split"
+              },
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "second route repeats the first"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "clear_first",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "by_water",
+            "rejVariant": "run_in",
+            "rejGates": [
+              {
+                "gateKind": "needs_permission",
+                "gateHard": true,
+                "gateDetail": "neither river nor sea is permitted"
+              },
+              {
+                "gateKind": "no_carrier",
+                "gateHard": true,
+                "gateDetail": "no ship or boat to carry his troops"
+              }
+            ]
+          },
+          {
+            "rejMethod": "supply_line",
+            "rejVariant": "depot_steps",
+            "rejGates": [
+              {
+                "gateKind": "duplicate",
+                "gateHard": true,
+                "gateDetail": "repeats direct:least_cost:lower_valley>harpers_ferry"
+              }
+            ]
+          }
+        ],
+        "draftSearches": 6,
+        "draftGenerated": 3,
+        "draftDeduplicated": 1
+      },
+      "planChosen": "direct:least_cost:lower_valley>harpers_ferry",
+      "planApproved": {
+        "id": "direct:least_cost:lower_valley>harpers_ferry",
+        "candMethod": "direct",
+        "candVariant": "least_cost",
+        "candAxes": [
+          {
+            "axisName": "main",
+            "axisPost": "us_dept_pennsylvania",
+            "axisMode": "land",
+            "axisRoute": {
+              "routeFrom": "lower_valley",
+              "routeTo": "harpers_ferry",
+              "routeLegs": [
+                {
+                  "legEdge": "road:harpers_ferry:lower_valley",
+                  "legFrom": "lower_valley",
+                  "legTo": "harpers_ferry",
+                  "legType": "road",
+                  "legDays": 3000,
+                  "legThreat": 0,
+                  "legSupply": 2166,
+                  "legObstacleDays": 0,
+                  "legObstacle": null,
+                  "legHeld": false
+                }
+              ],
+              "routeCost": 5166,
+              "routeDays": 3000
+            },
+            "axisBlocks": [
+              "raised.st_gov_wisconsin.d83"
+            ],
+            "axisStrength": 1732,
+            "axisPhases": [
+              {
+                "phaseKind": "concentrate",
+                "phaseStart": 0,
+                "phaseDays": 3000,
+                "phaseRegion": "lower_valley"
+              },
+              {
+                "phaseKind": "march",
+                "phaseStart": 3000,
+                "phaseDays": 3000,
+                "phaseRegion": "harpers_ferry"
+              }
+            ],
+            "axisArrival": 6000,
+            "axisOutOfSupply": 3000,
+            "axisStoresDays": 9,
+            "axisStoresAssumed": false
+          }
+        ],
+        "candRequests": [],
+        "candConditions": [],
+        "candTerms": [
+          {
+            "contribTerm": "goal_fit",
+            "contribAmount": 400,
+            "contribWhy": "reaches harpers_ferry"
+          },
+          {
+            "contribTerm": "force_ratio",
+            "contribAmount": 300,
+            "contribWhy": "ratio 10000 over his demand 1244"
+          },
+          {
+            "contribTerm": "time",
+            "contribAmount": 300,
+            "contribWhy": "arrives 24000 permille days early"
+          },
+          {
+            "contribTerm": "haste",
+            "contribAmount": 0,
+            "contribWhy": "concentrated as he wants"
+          },
+          {
+            "contribTerm": "supply",
+            "contribAmount": -216,
+            "contribWhy": "3000 permille days outside supply"
+          },
+          {
+            "contribTerm": "exposure",
+            "contribAmount": 0,
+            "contribWhy": "0 perceived men along the route"
+          },
+          {
+            "contribTerm": "coordination",
+            "contribAmount": 0,
+            "contribWhy": "one axis"
+          },
+          {
+            "contribTerm": "dependence",
+            "contribAmount": 0,
+            "contribWhy": "0 support request(s) to other holders"
+          },
+          {
+            "contribTerm": "glory",
+            "contribAmount": 75,
+            "contribWhy": "his name on the objective"
+          },
+          {
+            "contribTerm": "caution",
+            "contribAmount": 0,
+            "contribWhy": "commits the force"
+          }
+        ],
+        "candScore": 859,
+        "candPerceived": 0,
+        "candRatio": 10000
+      },
+      "planSubmitted": null,
+      "planCounters": [],
+      "planPending": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  }
+]

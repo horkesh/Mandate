@@ -1,0 +1,167 @@
+{
+  "requiresLeadRuling": true,
+  "recommendation": "Repair the appointment readiness suppression before approving quiet bands. A received command address is not proof that its holder’s sourced assignment was dispatched or received. No runtime fix or additional capture is authorized by this report.",
+  "gates": [
+    {
+      "mechanic": "combat.withdrew",
+      "s126": {
+        "mechanic": "combat.withdrew",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "original": {
+        "mechanic": "combat.withdrew",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "corrected": {
+        "mechanic": "combat.withdrew",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": {
+        "mechanic": "combat.withdrew",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4,
+          "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+        }
+      },
+      "cause": "S126 resolved the day146 Harpers Ferry contact with Johnston, numeric Georgia reinforcements and the opaque Virginia contingent; Patterson withdrew. In both S129 captures the national receiving command stays vacant, the Georgia blocks instead reach Charleston, and Jackson remains with the wholly unknown Virginia contingent. Days146-148 are explicitly unresolved_contact under0110, with held results and no retreat. This is a real command/force/knowledge-path regression, not evidence that withdrawal is broken or may be retired.",
+      "liveDriver": {
+        "test": "packages/kernel/test/combat.test.ts",
+        "needle": "a night order holds him or takes him off the field, whatever his traits would do",
+        "log": "runs/s129/withdrawal-ordered-live-driver.log",
+        "script": "runs/s129/withdrawal-driver.ts",
+        "exactCounterEvidence": "withdrawal-driver-evidence.json"
+      },
+      "driverPassed": true,
+      "installedBandChange": false,
+      "proposedPositiveBand": null
+    },
+    {
+      "mechanic": "operations.repulsed",
+      "s126": {
+        "mechanic": "operations.repulsed",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "original": {
+        "mechanic": "operations.repulsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "corrected": {
+        "mechanic": "operations.repulsed",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": {
+        "mechanic": "operations.repulsed",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4,
+          "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+        }
+      },
+      "cause": "The producer requires yesterday’s recorded retreat. S126 Patterson’s day146 retreat makes his axis repulsed on day147. Both S129 runs have unresolved held contact and no retreat; his axis is therefore not repulsed. No operation rule changed.",
+      "liveDriver": {
+        "test": "packages/kernel/test/operations.test.ts",
+        "needle": "driven back, an axis withdraws, pauses and tries again, until it has been driven back too often and fails",
+        "log": "runs/s129/live-drivers.log"
+      },
+      "driverPassed": true,
+      "installedBandChange": false,
+      "proposedPositiveBand": null
+    },
+    {
+      "mechanic": "orders.returned",
+      "s126": {
+        "mechanic": "orders.returned",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "original": {
+        "mechanic": "orders.returned",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "corrected": {
+        "mechanic": "orders.returned",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "failure": {
+        "mechanic": "orders.returned",
+        "problem": "too_frequent",
+        "fires": 1,
+        "band": {
+          "minFires": 0,
+          "maxFires": 0,
+          "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."
+        }
+      },
+      "cause": "The count1 conceals different papers: original S129 returned Letcher’s assignment on day49; corrected S129 accepts that paper on day54 but returns Turney’s named Johnston order at the vacant Harpers Ferry command on day93. Lee receives the return report on day99. Bate’s office letter keeps its original identity and waits at the vacant Fredericksburg command through day148. Positive recenter candidate is around(1)=1..4; not installed while the command-readiness defect and zero rulings remain open.",
+      "liveDriver": {
+        "test": "packages/kernel/test/believed-posts.test.ts",
+        "needle": "an order sent before the report arrives is accepted, and bounces on arrival as a returned dispatch, typed",
+        "log": "runs/s129/returned-live-driver.log"
+      },
+      "driverPassed": true,
+      "installedBandChange": false,
+      "proposedPositiveBand": {
+        "minFires": 1,
+        "maxFires": 4
+      }
+    },
+    {
+      "mechanic": "planner.term.time",
+      "s126": {
+        "mechanic": "planner.term.time",
+        "fires": 1,
+        "magnitude": 1
+      },
+      "original": {
+        "mechanic": "planner.term.time",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "corrected": {
+        "mechanic": "planner.term.time",
+        "fires": 0,
+        "magnitude": 0
+      },
+      "failure": {
+        "mechanic": "planner.term.time",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4,
+          "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+        }
+      },
+      "cause": "Patterson’s day140 direct pick remains direct. S126 perceived4630 and scored direct140,holding11; removing time gives direct-160,holding311, so time was pivotal. Both S129 captures perceive0 and score direct859,holding11; removing time gives direct559,holding311, so it is no longer pivotal. The +719 difference is exactly force_ratio -419 -> +300. The time contributions remain +300/-300 and no weight or live-term definition changed.",
+      "liveDriver": {
+        "test": "packages/cli/test/planner.test.ts",
+        "needle": "counts every scoring term live in some case",
+        "log": "runs/s129/live-drivers.log"
+      },
+      "driverPassed": true,
+      "installedBandChange": false,
+      "proposedPositiveBand": null
+    }
+  ],
+  "sourceMechanismsUnchanged": [
+    "packages/kernel/src/planner/draft.ts",
+    "packages/kernel/src/tick/operations.ts",
+    "packages/kernel/src/combat/records.ts"
+  ],
+  "selectorEvidence": "offline-evidence.json",
+  "selectorCondition": "packages/kernel/src/seats/requests.ts: appointmentView.ready includes !receivedPosts.some(p=>p.post===a.post). Received Lee command-assigned acknowledgement introduces both command addresses on day78; dated appointments then never become ready.",
+  "selectorControl": "In the corrected final public view both addresses are status unknown, both men are eligible, both sourced appointments have issued=false and ready=false. Removing only those two public addresses makes both ready=true in the offline control. This is not a new simulated trajectory."
+}

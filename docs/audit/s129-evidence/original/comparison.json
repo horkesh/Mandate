@@ -1,0 +1,77 @@
+{
+  "baseline": "S126 4b45f4e1; runs/s126/capture (retained, not rerun)",
+  "capture": "runs/s129/capture",
+  "finalHash": "46575420f5abaab7ae05c0246ad47c75b72743e8da57083fb254b26c28972a28",
+  "rejections": 0,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "46575420f5abaab7ae05c0246ad47c75b72743e8da57083fb254b26c28972a28",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "finalLotsChanged": 98,
+  "lifetimeLotsChanged": 87,
+  "answerDifferences": 53,
+  "rows": 33,
+  "verdictsBefore": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 3,
+    "not_observed": 3
+  },
+  "verdictsAfter": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 3,
+    "not_observed": 3
+  },
+  "changedRowVerdicts": [],
+  "changedLivenessCounts": 54,
+  "sourceOrders": 2,
+  "initialGates": [
+    {
+      "mechanic": "combat.withdrew",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+      }
+    },
+    {
+      "mechanic": "operations.repulsed",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+      }
+    },
+    {
+      "mechanic": "orders.returned",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."
+      }
+    },
+    {
+      "mechanic": "planner.term.time",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+      }
+    }
+  ]
+}

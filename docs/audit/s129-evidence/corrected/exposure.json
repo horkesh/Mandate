@@ -1,0 +1,798 @@
+[
+  {
+    "id": "U01",
+    "side": "union",
+    "actor": "scott_winfield",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+      "m.2.lincoln_abraham.scott_winfield.verb.consult.sumter_garrison.us_general_in_chief",
+      "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief"
+    ],
+    "limitation": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries."
+  },
+  {
+    "id": "U02",
+    "side": "union",
+    "actor": "scott_winfield",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+      "m.2.lincoln_abraham.scott_winfield.verb.consult.sumter_garrison.us_general_in_chief",
+      "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief"
+    ],
+    "limitation": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+  },
+  {
+    "id": "U03a",
+    "side": "union",
+    "actor": "seward_william_h",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.2.lincoln_abraham.seward_william_h.verb.consult.sumter_garrison.us_secretary_state"
+    ],
+    "limitation": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+  },
+  {
+    "id": "U03b",
+    "side": "union",
+    "actor": "cameron_simon",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.2.lincoln_abraham.cameron_simon.verb.consult.sumter_garrison.us_secretary_war"
+    ],
+    "limitation": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+  },
+  {
+    "id": "U03c",
+    "side": "union",
+    "actor": "welles_gideon",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [],
+    "limitation": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+  },
+  {
+    "id": "U03d",
+    "side": "union",
+    "actor": "smith_caleb_b",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.2.lincoln_abraham.smith_caleb_b.verb.consult.sumter_garrison.us_secretary_interior"
+    ],
+    "limitation": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+  },
+  {
+    "id": "U03e",
+    "side": "union",
+    "actor": "bates_edward",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.2.lincoln_abraham.bates_edward.verb.consult.sumter_garrison.us_attorney_general"
+    ],
+    "limitation": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+  },
+  {
+    "id": "U04",
+    "side": "union",
+    "actor": "seward_william_h",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.2.lincoln_abraham.seward_william_h.verb.consult.sumter_garrison.us_secretary_state"
+    ],
+    "limitation": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+  },
+  {
+    "id": "U05",
+    "side": "union",
+    "actor": "blair_montgomery",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [],
+    "limitation": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent."
+  },
+  {
+    "id": "U14",
+    "side": "union",
+    "actor": "seward_william_h",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.2.lincoln_abraham.seward_william_h.verb.consult.sumter_garrison.us_secretary_state"
+    ],
+    "limitation": "Consultation option advice has no structured unsolicited administration programme or transfer of policy direction."
+  },
+  {
+    "id": "U25a",
+    "side": "union",
+    "actor": "hicks_thomas_h",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland"
+    ],
+    "limitation": "A field commander goal and a governor troop-raising call do not carry a governor alternative for troop transit through his state."
+  },
+  {
+    "id": "U25b",
+    "side": "union",
+    "actor": "brown_george_w",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [],
+    "limitation": "The mayor is absent from the cast; no civic request carries his conditional protection undertaking. Adding a person alone would not encode the matter."
+  },
+  {
+    "id": "U32",
+    "side": "union",
+    "actor": "patterson_robert",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.53.lincoln_abraham.patterson_robert.verb.appoint.us_dept_pennsylvania",
+      "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+      "m.56.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.63.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.70.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.77.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.84.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+      "m.91.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.98.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.105.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "m.112.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.119.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.126.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.133.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "m.140.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.147.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+    ],
+    "limitation": "Goals hold, take or relieve a place; they do not ask a commander to change his depot and supply base before an advance."
+  },
+  {
+    "id": "U33",
+    "side": "union",
+    "actor": "patterson_robert",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.53.lincoln_abraham.patterson_robert.verb.appoint.us_dept_pennsylvania",
+      "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+      "m.56.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.63.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.70.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.77.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.84.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+      "m.91.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.98.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.105.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "m.112.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.119.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.126.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.133.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "m.140.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.147.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+    ],
+    "limitation": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination."
+  },
+  {
+    "id": "U34",
+    "side": "union",
+    "actor": "patterson_robert",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.53.lincoln_abraham.patterson_robert.verb.appoint.us_dept_pennsylvania",
+      "m.54.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.patterson_department_command.1",
+      "m.56.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.63.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.70.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.77.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.84.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.88.lincoln_abraham.cameron_simon.approve.us_dept_pennsylvania",
+      "m.91.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.98.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.105.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.112.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "m.112.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.119.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.126.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.133.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "m.140.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania",
+      "m.147.lincoln_abraham.patterson_robert.verb.inquire.us_dept_pennsylvania"
+    ],
+    "limitation": "0114 can carry an outmatched fallback and a commander proposal, but has no demonstrate posture or operational goal to detain another army by threats and demonstrations (OR I-II pp.166-169). A hold fallback would erase the alternative duty; the existing hold orders still do not expose the attack-or-demonstrate demand. S96 grants no coverage from approximate timing or destination."
+  },
+  {
+    "id": "U39",
+    "side": "union",
+    "actor": "morgan_edwin_d",
+    "horizon": 148,
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "cause": "answered",
+    "orders": [
+      {
+        "order": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "side": "union",
+        "kind": "call",
+        "actor": "morgan_edwin_d",
+        "issuedDay": 41,
+        "receivedDays": [
+          41
+        ],
+        "post": "st_gov_new_york",
+        "callId": null,
+        "regiments": 17,
+        "termDays": 90
+      }
+    ],
+    "answers": [
+      "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|comply_with_reservations|41"
+    ],
+    "nearbyRequests": [
+      "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "m.47.lincoln_abraham.morgan_edwin_d.verb.transfer.st_gov_new_york",
+      "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "m.78.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "m.87.lincoln_abraham.morgan_edwin_d.verb.transfer.st_gov_new_york",
+      "m.142.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york.2",
+      "m.148.lincoln_abraham.morgan_edwin_d.verb.transfer.st_gov_new_york"
+    ],
+    "limitation": null
+  },
+  {
+    "id": "U40",
+    "side": "union",
+    "actor": "mccauley_charles_s",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [],
+    "limitation": "Land force transfers do not carry a named warship removal and engineering-readiness matter."
+  },
+  {
+    "id": "U42",
+    "side": "union",
+    "actor": "scott_winfield",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.1.lincoln_abraham.cameron_simon.letter.authority.lincoln_abraham.scott_army_command.1",
+      "m.2.lincoln_abraham.scott_winfield.verb.consult.sumter_garrison.us_general_in_chief",
+      "m.4.lincoln_abraham.cameron_simon.approve.us_general_in_chief"
+    ],
+    "limitation": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries."
+  },
+  {
+    "id": "C01",
+    "side": "confederate",
+    "actor": "brown_joseph_e",
+    "horizon": 148,
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "cause": "answered",
+    "orders": [
+      {
+        "order": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "side": "confederate",
+        "kind": "call",
+        "actor": "brown_joseph_e",
+        "issuedDay": 4,
+        "receivedDays": [
+          4
+        ],
+        "post": "st_gov_georgia",
+        "callId": "cs_mar09_georgia",
+        "regiments": 2,
+        "termDays": 365
+      }
+    ],
+    "answers": [
+      "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|4"
+    ],
+    "nearbyRequests": [
+      "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.37.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.54.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+      "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.142.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia"
+    ],
+    "limitation": null
+  },
+  {
+    "id": "C02",
+    "side": "confederate",
+    "actor": "brown_joseph_e",
+    "horizon": 148,
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "cause": "answered",
+    "orders": [
+      {
+        "order": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "side": "confederate",
+        "kind": "call",
+        "actor": "brown_joseph_e",
+        "issuedDay": 48,
+        "receivedDays": [
+          48
+        ],
+        "post": "st_gov_georgia",
+        "callId": "cs_apr22_absolute_georgia",
+        "regiments": 2,
+        "termDays": 365
+      }
+    ],
+    "answers": [
+      "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply_with_reservations|48"
+    ],
+    "nearbyRequests": [
+      "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.37.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.54.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+      "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.142.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia"
+    ],
+    "limitation": null
+  },
+  {
+    "id": "C03",
+    "side": "confederate",
+    "actor": "moore_thomas_o",
+    "horizon": 148,
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "cause": "answered",
+    "orders": [
+      {
+        "order": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "side": "confederate",
+        "kind": "call",
+        "actor": "moore_thomas_o",
+        "issuedDay": 48,
+        "receivedDays": [
+          48
+        ],
+        "post": "st_gov_louisiana",
+        "callId": "cs_apr22_absolute_louisiana",
+        "regiments": 1,
+        "termDays": 365
+      }
+    ],
+    "answers": [
+      "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|comply_with_reservations|48"
+    ],
+    "nearbyRequests": [
+      "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.37.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+      "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.54.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+      "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.122.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana"
+    ],
+    "limitation": null
+  },
+  {
+    "id": "C04",
+    "side": "confederate",
+    "actor": "pickens_francis_w",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "m.37.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina",
+      "m.43.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "m.127.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina"
+    ],
+    "limitation": "The transfer grammar carries force and destination but no regiment-integrity or permanent-service consent terms."
+  },
+  {
+    "id": "C05",
+    "side": "confederate",
+    "actor": "harris_isham_g",
+    "horizon": 148,
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "cause": "answered",
+    "orders": [
+      {
+        "order": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "side": "confederate",
+        "kind": "call",
+        "actor": "harris_isham_g",
+        "issuedDay": 50,
+        "receivedDays": [
+          50
+        ],
+        "post": "st_gov_tennessee",
+        "callId": "cs_apr22_absolute_tennessee",
+        "regiments": 3,
+        "termDays": 365
+      }
+    ],
+    "answers": [
+      "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee|harris_isham_g|addressee|comply_with_reservations|50"
+    ],
+    "nearbyRequests": [
+      "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+      "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2"
+    ],
+    "limitation": null
+  },
+  {
+    "id": "C06",
+    "side": "confederate",
+    "actor": "bragg_braxton",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [],
+    "limitation": "Land goals do not express stopping shipborne reinforcement at its dock without an island landing."
+  },
+  {
+    "id": "C07",
+    "side": "confederate",
+    "actor": "letcher_john",
+    "horizon": 148,
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "cause": "answered",
+    "orders": [
+      {
+        "order": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "side": "confederate",
+        "kind": "call",
+        "actor": "letcher_john",
+        "issuedDay": 120,
+        "receivedDays": [
+          120
+        ],
+        "post": "st_gov_virginia",
+        "callId": "cs_jun30_reserve_virginia",
+        "regiments": 3,
+        "termDays": null
+      }
+    ],
+    "answers": [
+      "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|comply_with_reservations|120"
+    ],
+    "nearbyRequests": [
+      "m.54.davis_jefferson.letcher_john.verb.transfer.st_gov_virginia",
+      "m.120.davis_jefferson.letcher_john.call.st_gov_virginia"
+    ],
+    "limitation": null
+  },
+  {
+    "id": "C09",
+    "side": "confederate",
+    "actor": "pickens_francis_w",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_absent",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [
+      "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "m.37.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina",
+      "m.43.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "m.127.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina"
+    ],
+    "limitation": null
+  },
+  {
+    "id": "C10",
+    "side": "confederate",
+    "actor": "brown_joseph_e",
+    "horizon": 148,
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "cause": "answered",
+    "orders": [
+      {
+        "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+        "side": "confederate",
+        "kind": "call",
+        "actor": "brown_joseph_e",
+        "issuedDay": 117,
+        "receivedDays": [
+          117
+        ],
+        "post": "st_gov_georgia",
+        "callId": "cs_jun30_reserve_georgia",
+        "regiments": 3,
+        "termDays": null
+      }
+    ],
+    "answers": [
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|comply_with_reservations|117"
+    ],
+    "nearbyRequests": [
+      "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.37.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.54.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+      "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.142.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia"
+    ],
+    "limitation": null
+  },
+  {
+    "id": "C11",
+    "side": "confederate",
+    "actor": "moore_thomas_o",
+    "horizon": 148,
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "cause": "answered",
+    "orders": [
+      {
+        "order": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "side": "confederate",
+        "kind": "call",
+        "actor": "moore_thomas_o",
+        "issuedDay": 117,
+        "receivedDays": [
+          117
+        ],
+        "post": "st_gov_louisiana",
+        "callId": "cs_jun30_reserve_louisiana",
+        "regiments": 3,
+        "termDays": null
+      }
+    ],
+    "answers": [
+      "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|object|117"
+    ],
+    "nearbyRequests": [
+      "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.37.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+      "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.54.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+      "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "m.122.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana"
+    ],
+    "limitation": null
+  },
+  {
+    "id": "C12",
+    "side": "confederate",
+    "actor": "brown_joseph_e",
+    "horizon": 148,
+    "issued": true,
+    "received": true,
+    "answered": true,
+    "cause": "answered",
+    "orders": [
+      {
+        "order": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "side": "confederate",
+        "kind": "call",
+        "actor": "brown_joseph_e",
+        "issuedDay": 120,
+        "receivedDays": [
+          120
+        ],
+        "post": "st_gov_georgia",
+        "callId": "cs_jul01_extra_georgia",
+        "regiments": 2,
+        "termDays": null
+      }
+    ],
+    "answers": [
+      "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply|120"
+    ],
+    "nearbyRequests": [
+      "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.37.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.54.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+      "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "m.142.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia"
+    ],
+    "limitation": null
+  },
+  {
+    "id": "C14",
+    "side": "confederate",
+    "actor": "holmes_theophilus_h",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_absent",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [],
+    "limitation": null
+  },
+  {
+    "id": "C15",
+    "side": "confederate",
+    "actor": "johnston_joseph_e",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_absent",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [],
+    "limitation": null
+  },
+  {
+    "id": "C16",
+    "side": "confederate",
+    "actor": "holmes_theophilus_h",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_not_representable",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [],
+    "limitation": "0114 adds received conditional goals and commander proposals, but its turned/outmatched conditions do not express a duty to prevent an enemy landing after withdrawal. OR I-II p.976 makes that responsibility the disputed condition; p.959 supplies battery-site context. No landing condition or Mathias Point mission is authored by S96, so generic fallback permission does not cover this act."
+  },
+  {
+    "id": "C25",
+    "side": "confederate",
+    "actor": "holmes_theophilus_h",
+    "horizon": 148,
+    "issued": false,
+    "received": false,
+    "answered": false,
+    "cause": "request_absent",
+    "orders": [],
+    "answers": [],
+    "nearbyRequests": [],
+    "limitation": null
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "authority": "2026-11-24 lead: repair readiness, one more capture; positive moved bands use the standing around rule. No new zero remains. Seven breaches were brought to the lead before any hook.",
+  "capturedResult": "runs/s129/readiness-capture/result.json",
+  "liveDriverLog": "runs/s129/readiness-live-drivers.log",
+  "exactCounterEvidence": "readiness-driver-evidence.json",
+  "remainingZeros": [],
+  "records": [
+    {
+      "key": "union-1861, war by decision, 148 days/operations.ended",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 4,
+        "maxFires": 18,
+        "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.ended."
+      },
+      "observed": 9,
+      "cause": "S129 [I]: received command assignments plus repaired appointment readiness restore Johnston/Holmes commands and both onward handoffs. Seven objectives end held (days9,40,86,117,125,137,145); Johnston is superseded on104 and147. Nine actual ends, without changing the lifecycle rule.",
+      "evidence": "docs/audit/s129-evidence/readiness-band-review.json#operations.ended",
+      "driver": {
+        "test": "packages/kernel/test/operations.test.ts",
+        "needle": "runs its whole lifecycle: assemble, march, assault, pursue, march, works, end with the objective held"
+      },
+      "driverPassed": true
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/operations.stage",
+      "before": {
+        "minFires": 9,
+        "maxFires": 38
+      },
+      "after": {
+        "minFires": 19,
+        "maxFires": 78,
+        "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.stage."
+      },
+      "observed": 39,
+      "cause": "S129 [I]: the restored receiving commanders execute the resulting goals. The ten retained operations have39 axis move events after excluding opened and superseded entries. Supply-line routes add their ordinary depot pauses; no stage rule changes.",
+      "evidence": "docs/audit/s129-evidence/readiness-band-review.json#operations.stage",
+      "driver": {
+        "test": "packages/kernel/test/operations.test.ts",
+        "needle": "runs its whole lifecycle: assemble, march, assault, pursue, march, works, end with the objective held"
+      },
+      "driverPassed": true
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/operations.works",
+      "before": {
+        "minFires": 3,
+        "maxFires": 14,
+        "why": "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works."
+      },
+      "after": {
+        "minFires": 7,
+        "maxFires": 30,
+        "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.works."
+      },
+      "observed": 15,
+      "cause": "S129 [I]: the received-command and onward-handoff trajectory creates15 ordinary fortification changes on days9,86,100-103,117,124-129,145 (two on125). Retained daily counts and operation logs identify the expanded holds; no per-night rate or cap changes.",
+      "evidence": "docs/audit/s129-evidence/readiness-band-review.json#operations.works",
+      "driver": {
+        "test": "packages/kernel/test/operations.test.ts",
+        "needle": "runs its whole lifecycle: assemble, march, assault, pursue, march, works, end with the objective held"
+      },
+      "driverPassed": true
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/planner.term.supply",
+      "before": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S124 [I]: the early Tennessee offer is received by the War Department at Lynchburg; the later named Holmes request still selects the governor. Holmes has no day144 draft, C25 is not observed, and the sole S122 supply-changing pick disappears. All retained candidate counterfactuals are published; no scoring rule, term weight or liveness definition changes."
+      },
+      "after": {
+        "minFires": 1,
+        "maxFires": 5,
+        "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#planner.term.supply."
+      },
+      "observed": 2,
+      "cause": "S129 [I]: restored appointments and onward handoffs allow Holmes day100 and Johnston day104 to draft their responses to Lee. Each selects supply_line; dropping supply makes direct win in its retained candidates. Both exact counterfactuals are retained. No scoring term, weight, live-term definition or C25 verdict is fitted.",
+      "evidence": "docs/audit/s129-evidence/readiness-band-review.json#planner.term.supply",
+      "driver": {
+        "test": "packages/cli/test/planner.test.ts",
+        "needle": "counts every scoring term live"
+      },
+      "driverPassed": true
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.chosen",
+      "before": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "after": {
+        "minFires": 7,
+        "maxFires": 28,
+        "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#plans.chosen."
+      },
+      "observed": 14,
+      "cause": "S129 [I]: the restored Johnston/Holmes command paths and their local goals/proposals produce14 ordinary plan selections on the retained14 days. These include repeated review/draft picks; they are not14 new operations. No planner selection rule changes.",
+      "evidence": "docs/audit/s129-evidence/readiness-band-review.json#plans.chosen",
+      "driver": {
+        "test": "packages/kernel/test/plans.test.ts",
+        "needle": "drafts on the day the goal arrives"
+      },
+      "driverPassed": true
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/plans.goal_reached",
+      "before": {
+        "minFires": 1,
+        "maxFires": 5
+      },
+      "after": {
+        "minFires": 3,
+        "maxFires": 14,
+        "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#plans.goal_reached."
+      },
+      "observed": 7,
+      "cause": "S129 [I]: seven retained operations finish objective_reached: Scott9, Charleston40, Lee86, Holmes117, Johnston125, Patterson137 and the northeastern department145. Earlier readiness suppression prevented these downstream commands. No completion test changes.",
+      "evidence": "docs/audit/s129-evidence/readiness-band-review.json#plans.goal_reached",
+      "driver": {
+        "test": "packages/kernel/test/operations.test.ts",
+        "needle": "runs its whole lifecycle: assemble, march, assault, pursue, march, works, end with the objective held"
+      },
+      "driverPassed": true
+    },
+    {
+      "key": "union-1861, war by decision, 148 days/seats.choices",
+      "before": {
+        "minFires": 3,
+        "maxFires": 12
+      },
+      "after": {
+        "minFires": 11,
+        "maxFires": 44,
+        "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#seats.choices."
+      },
+      "observed": 22,
+      "cause": "S129 [I]: twelve recorded bounded local choices and ten explicit plan-menu picks produce22 ordinary choices, including the two onward orders and Lee’s reviews of Holmes/Johnston proposals. Four other plan selections are automatic. No menu cap or choice-counter rule changes.",
+      "evidence": "docs/audit/s129-evidence/readiness-band-review.json#seats.choices",
+      "driver": {
+        "test": "packages/kernel/test/plans.test.ts",
+        "needle": "counts a commander"
+      },
+      "driverPassed": true
+    }
+  ],
+  "measurementRerun": false,
+  "postCaptureChanges": "Seven gate bands and append-only causes only; no simulation mechanism or pack input changed."
+}

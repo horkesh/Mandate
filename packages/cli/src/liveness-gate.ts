@@ -22,7 +22,6 @@
 import { checkLiveness, phase0, type LivenessBand, type LivenessFailure, type LivenessRow } from '@mandate/kernel';
 import { createRuleSeat } from '@mandate/rule-seats';
 import { seatsMechanics } from './seats-world.ts';
-import { S124_SUPPLY_QUIET_WHY } from '../../../tools/rules/liveness-causes.ts';
 
 export interface GateBand extends LivenessBand {
   /** Required when `minFires` is 0: why this mechanic is quiet in this run. */
@@ -264,10 +263,10 @@ const UNION_BANDS: Record<string, GateBand> = {
   "combat.flank_broken": around(3),
   "combat.routed": {"minFires": 2, "maxFires": 10},
   'combat.works_stormed': notHere("R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."),
-  'operations.ended': around(2), // S1 national [I]: the actual holder and headquarters change the existing goal's chosen plan and stage progression.
+  "operations.ended": {"minFires": 4, "maxFires": 18, "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.ended."},
   "operations.opened": { ...around(6), why: "S119 integrated correction changes Patterson day140 planner pick from holding to direct. His additional operation opens day141; five other openings remain, giving6. No operation quota or planner weight changed." },
-  "operations.stage": {"minFires": 9, "maxFires": 38},
-  'operations.works': { ...around(7), why: "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works." },
+  "operations.stage": {"minFires": 19, "maxFires": 78, "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.stage."},
+  "operations.works": {"minFires": 7, "maxFires": 30, "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#operations.works."},
   'orders.responses_pruned': around(27), // S1 national [I]: new command and transfer responses alter the ordinary retained/pruned response set.
   "reports.battle_dispatch": around(42),
   "reports.casualty_return": around(20),
@@ -290,24 +289,24 @@ const UNION_BANDS: Record<string, GateBand> = {
   "orders.relay_held": quiet("0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."),
   'orders.relay_objected': around(3),
   'orders.relayed': around(20), // S123: five mandate and four local-review relays join the eleven inherited relays; retained event proof accompanies the band.
-  'plans.goal_reached': around(2), // S1 national [I]: the integrated sourced build changes this existing counter through its normal owner.
+  "plans.goal_reached": {"minFires": 3, "maxFires": 14, "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#plans.goal_reached."},
   'politics.adjourned': around(1),
   'politics.front_page': around(63),
   'politics.support': around(85), // S1 national [I]: the emerged field movements and reports change ordinary political inputs; no troop notice directly writes support.
   'politics.opened': around(2),
   'regions.self_emancipation': around(3097), // S1 national [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.
   'regions.reached_lines': around(274), // S1 national [I]: the changed Union positions change the existing derived lines/arrival process, without a new policy effect.
-  "seats.choices": {"minFires": 3, "maxFires": 12},
+  "seats.choices": {"minFires": 11, "maxFires": 44, "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#seats.choices."},
   "planner.candidates": {"minFires": 3, "maxFires": 12},
   "planner.searches": {"minFires": 3, "maxFires": 12},
   "plans.drafted": {"minFires": 3, "maxFires": 12},
-  "plans.chosen": {"minFires": 3, "maxFires": 12},
+  "plans.chosen": {"minFires": 7, "maxFires": 28, "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#plans.chosen."},
   "plans.goal_set": {"minFires":3,"maxFires":14,"why":"S122 /0125/0127 [I]: ordinary command and planning respond to the changed strength picture; seven goals are set. No authored goal, term weight or scheduling rule changed."},
   "plans.went_ahead": {"minFires": 3, "maxFires": 12},
   'plans.approved': notHere("both chosen plans go ahead as drafted without review; the editing exercise drives plan review"),
   'plans.submitted': notHere("both chosen plans go ahead as drafted without review; the editing exercise drives plan review"),
   'planner.term.goal_fit': notHere("dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"),
-  "planner.term.supply": {minFires:0,maxFires:0,why:S124_SUPPLY_QUIET_WHY},
+  "planner.term.supply": {"minFires": 1, "maxFires": 5, "why": "S129 [I]: repaired appointment readiness and received onward assignments change this count through its existing owner; exact events, day counts and live driver: docs/audit/s129-evidence/readiness-band-review.json#planner.term.supply."},
   'planner.term.haste': quiet("an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"),
   'plans.edit_received': quiet("only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"),
   'plans.edit_answered': quiet("only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"),

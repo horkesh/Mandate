@@ -187,11 +187,13 @@ const term = z.strictObject({ id: termId, name: stringKey });
 
 export const RulesSchema = z.strictObject({
   onwardAssignments: z.array(z.strictObject({
+    address: z.literal('office').optional(), recipient: idOf('person').optional(), modes: z.array(z.enum(['land','rail','river','sea'])).min(1).optional(),
     id: termId, source: z.string().min(1), fromDate: historicalDate,
     issuer: idOf('person'), from: idOf('post'), to: idOf('post'), destination: idOf('region'),
     mandate: termId, call: termId, regiment: termId,
   })).optional(),
   mandates: z.array(z.strictObject({
+    assignment: z.strictObject({ replaces: idOf('post').optional(), concurrentWith: z.array(idOf('post')).optional(), commands: z.array(idOf('post')).optional(), intake: z.array(idOf('post')).optional() }).optional(),
     id: termId, fromDate: isoDate, source: z.string().min(1),
     requiresPapers: z.array(paperSelector).max(16).optional(),
     grant: z.strictObject({

@@ -83,6 +83,9 @@ function isReportArrival(msg: TransitMessage): boolean {
 }
 
 function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State {
+  // An office-addressed onward paper waits at the command, with its original dispatch identity.
+  if(msg.msgOfficeAddress===true && msg.msgOrder?.orderKind==='assignment' && msg.msgToPost!==null && state.postStates[msg.msgToPost]?.postHolder==null)
+    return sendMessages(state,[{...msg,msgArriveDay:ctx.day+1}]);
   fire(ctx, 'messages.delivered');
   // Lane 1.5: a people verb's letter reaches its man.
   if (msg.msgVerb !== null) {
@@ -95,7 +98,8 @@ function deliverOne(ctx: TickContext, state: State, msg: TransitMessage): State 
       if (holder === null) return returnDispatch(ctx,state,msg,'vacant_post');
       msg = { ...msg, msgTo: holder };
     }
-    if (msg.msgOrder!.orderKind !== 'support' && msg.msgToPost !== null) {
+    const opening=msg.msgRole==='addressee' && msg.msgOrder!.orderKind==='mandate' && ctx.world.map.world.rules.mandates?.some(p=>p.assignment!==undefined && p.grant.mandatePost===msg.msgToPost && p.grant.mandateHolder===msg.msgTo);
+    if (msg.msgOrder!.orderKind !== 'support' && msg.msgToPost !== null && !opening) {
       const failure = destinationFailure(ctx,state,msg.msgToPost,msg.msgTo,msg.msgOrder!.orderIssuer,(msg.msgOrder!.orderKind === 'call' || msg.msgOrder!.orderKind === 'mandate'));
       if (failure !== null) return returnDispatch(ctx,state,msg,failure);
     }

@@ -216,13 +216,14 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   // The whole chain of posts between the principal's own post and the target relays his order.
   const sender = senderFor(world, state, seat, requisition, ctx.senderViews, body.orderAuthority === undefined && body.orderMandate === undefined ? undefined : heldPost(state,issuerId) ?? undefined)!;
   const officeAddress = requisition !== undefined && (resolveOffice || sender.holder(cmd.to) === null);
+  const namedAssignment=body.orderAssignment===undefined?undefined:world.map.world.rules.onwardAssignments?.find(p=>p.id===body.orderAssignment!.paper)?.recipient;
   const chain = officeAddress ? [cmd.to] : sender.chain(cmd.to);
   // Vacant relay posts cannot relay: the order skips them.
   const relays = chain.slice(0, -1).filter((p) => sender.holder(p) !== null);
   // The addressee is the man the issuer believes holds the post (lane 1.12): its holder, or the commander a battle took
   // whose loss has not been reported to him.
   const hops: Hop[] = [...(cmd.bypass ? [] : relays), cmd.to].map((p, i, all) => ({
-    hopPerson: i === all.length - 1 ? (officeAddress ? issuer.id : body.orderMandate?.mandateHolder ?? sender.holder(p) ?? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === p)?.knownBody.reportAuthor)! : sender.holder(p)!,
+    hopPerson: i === all.length - 1 ? (officeAddress ? issuer.id : body.orderMandate?.mandateHolder ?? namedAssignment ?? sender.holder(p) ?? receivedPlanPapers(state,issuer.id).find(r => r.knownBody.reportPlan?.paperPost === p)?.knownBody.reportAuthor)! : sender.holder(p)!,
     hopPost: p,
     hopRole: i === all.length - 1 ? 'addressee' : 'relay',
   }));
@@ -230,7 +231,7 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
   const tag = body.orderLetter === undefined ? (body.orderKind === 'goal' ? `order.${cmd.to}` : `${body.orderKind}.${cmd.to}`)
     : `letter.${letterKey(body.orderLetter)}${body.orderPriorDispatch === undefined ? '' : `.${body.orderPriorDispatch}`}`;
   const id = mintMessageId(ctx.mint, ctx.day, issuer.id, first.hopPerson, tag);
-  const leg = hop(ctx, state, cmd.route, issuer.id, whereIs(ctx, state, issuer.id), hopRegion(ctx, state, first), id);
+  const leg = hop(ctx, state, cmd.route, issuer.id, whereIs(ctx, state, issuer.id), orderHopRegion(ctx,state,first,body), id, 0, first.hopPerson);
   ctx.outbox.push({
     id,
     msgOrigin: id,
@@ -271,6 +272,12 @@ export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issu
 function hopRegion(ctx: TickContext, state: State, h: Hop): RegionId {
   if (h.hopPost !== null && state.postStates[h.hopPost]?.postHolder !== h.hopPerson) return addressRegion(ctx,state,h.hopPost,h.hopPerson);
   return whereIs(ctx, state, h.hopPerson);
+}
+
+/** A read command assignment is addressed to its person, as an appointment is, before the command exists. */
+function orderHopRegion(ctx: TickContext, state: State, h: Hop, order: OrderEnclosure): RegionId {
+  const assignment=order.orderKind==='mandate' && ctx.world.map.world.rules.mandates?.some(p=>p.assignment!==undefined && p.grant.mandatePost===order.orderMandate?.mandatePost && p.grant.mandateKey===order.orderMandate?.mandateKey);
+  return assignment && h.hopRole==='addressee' ? whereIs(ctx,state,h.hopPerson) : hopRegion(ctx,state,h);
 }
 
 /** Kernel transport still follows physical geography; a dissolved post is sought at its declared address. */
@@ -396,7 +403,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
   const next = msg.msgPending[0]!;
   const id = mintMessageId(ctx.mint, ctx.day, relayer.id, next.hopPerson,
     order.orderLetter === undefined ? `order.${order.orderTarget}` : `letter.${letterKey(order.orderLetter)}.${msg.msgOrigin}`);
-  const leg = hop(ctx, state, msg.msgRoute, relayer.id, whereIs(ctx, state, relayer.id), hopRegion(ctx, state, next), id, decision.holdDays);
+  const leg = hop(ctx, state, msg.msgRoute, relayer.id, whereIs(ctx, state, relayer.id), orderHopRegion(ctx,state,next,order), id, decision.holdDays);
   fire(ctx, 'orders.relayed');
   if (decision.holdDays > 0) fire(ctx, 'orders.relay_held', decision.holdDays);
   ctx.events.push({ event: 'relayed', person: relayer.id, post, message: msg.msgOrigin, terms: decision.terms });
@@ -418,14 +425,15 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
 }
 
 /** The acknowledgement he wires back: which order he obeyed, or that an answer to his plan found it already changed. */
-export function acknowledge(ctx: TickContext, state: State, msg: TransitMessage, token: string, obeyed: boolean, response?: DirectiveResponse): void {
+export function acknowledge(ctx: TickContext, state: State, msg: TransitMessage, token: string, obeyed: boolean, response?: DirectiveResponse, assignment?: string): void {
   const order = msg.msgOrder!;
   const post = msg.msgToPost!;
   sendReport(ctx, state, {
     body: answerBody(msg.msgTo, post, ctx.day, {
       reportType: 'wire-dispatch',
       reportSubtype: null,
-      reportClaims: [{ claimKind: 'order-obeyed', claimRegion: objectiveOf(state, order), claimValue: obeyed ? 1 : 0, claimToken: token, claimConfidence: 1000 }],
+      reportClaims: [{ claimKind: 'order-obeyed', claimRegion: objectiveOf(state, order), claimValue: obeyed ? 1 : 0, claimToken: token, claimConfidence: 1000 },
+        ...(assignment===undefined?[]:[{claimKind:'command-assigned' as const,claimRegion:null,claimValue:1,claimToken:assignment,claimConfidence:1000}])],
       reportAdvice: null,
       ...(order.orderLetter === undefined ? {} : { reportLetter: order.orderLetter }),
       ...(response === undefined ? {} : reportQualificationOf(response)),

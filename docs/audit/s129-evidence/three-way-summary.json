@@ -1,0 +1,243 @@
+{
+  "original": {
+    "seconds": 106.874,
+    "exit": 1,
+    "days": 148,
+    "finalHash": "46575420f5abaab7ae05c0246ad47c75b72743e8da57083fb254b26c28972a28",
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "46575420f5abaab7ae05c0246ad47c75b72743e8da57083fb254b26c28972a28",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "verdicts": {
+      "representation_gap": 22,
+      "matched": 5,
+      "mismatch": 3,
+      "not_observed": 3
+    },
+    "C25": "not_observed",
+    "deltaFromS126": {
+      "finalLotsChanged": 98,
+      "lifetimeLotsChanged": 87,
+      "answerDifferences": 53,
+      "changedLivenessCounts": 54
+    },
+    "gates": [
+      {
+        "mechanic": "combat.withdrew",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4,
+          "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+        }
+      },
+      {
+        "mechanic": "operations.repulsed",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4,
+          "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+        }
+      },
+      {
+        "mechanic": "orders.returned",
+        "problem": "too_frequent",
+        "fires": 1,
+        "band": {
+          "minFires": 0,
+          "maxFires": 0,
+          "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."
+        }
+      },
+      {
+        "mechanic": "planner.term.time",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4,
+          "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+        }
+      }
+    ]
+  },
+  "corrected": {
+    "seconds": 97.46,
+    "exit": 1,
+    "days": 148,
+    "finalHash": "8a0138ae3c21f8448aad005408f42743c1b6b15682bb045e47842d3176b5462f",
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "8a0138ae3c21f8448aad005408f42743c1b6b15682bb045e47842d3176b5462f",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "verdicts": {
+      "representation_gap": 22,
+      "matched": 5,
+      "mismatch": 3,
+      "not_observed": 3
+    },
+    "C25": "not_observed",
+    "deltaFromS126": {
+      "finalLotsChanged": 108,
+      "lifetimeLotsChanged": 99,
+      "answerDifferences": 56,
+      "changedLivenessCounts": 54
+    },
+    "gates": [
+      {
+        "mechanic": "combat.withdrew",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4,
+          "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+        }
+      },
+      {
+        "mechanic": "operations.repulsed",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4,
+          "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+        }
+      },
+      {
+        "mechanic": "orders.returned",
+        "problem": "too_frequent",
+        "fires": 1,
+        "band": {
+          "minFires": 0,
+          "maxFires": 0,
+          "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."
+        }
+      },
+      {
+        "mechanic": "planner.term.time",
+        "problem": "dead",
+        "fires": 0,
+        "band": {
+          "minFires": 1,
+          "maxFires": 4,
+          "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+        }
+      }
+    ]
+  },
+  "readiness": {
+    "seconds": 85.196,
+    "exit": 1,
+    "days": 148,
+    "finalHash": "86aa271101a815d9f13151279a066889acc8e8bf020d47c004aa1b1b469b45c0",
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "86aa271101a815d9f13151279a066889acc8e8bf020d47c004aa1b1b469b45c0",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "verdicts": {
+      "representation_gap": 22,
+      "matched": 5,
+      "mismatch": 4,
+      "not_observed": 2
+    },
+    "C25": "mismatch",
+    "deltaFromS126": {
+      "finalLotsChanged": 97,
+      "lifetimeLotsChanged": 94,
+      "answerDifferences": 29,
+      "changedLivenessCounts": 43
+    },
+    "gates": [
+      {
+        "mechanic": "operations.ended",
+        "problem": "too_frequent",
+        "fires": 9,
+        "band": {
+          "minFires": 1,
+          "maxFires": 5
+        }
+      },
+      {
+        "mechanic": "operations.stage",
+        "problem": "too_frequent",
+        "fires": 39,
+        "band": {
+          "minFires": 9,
+          "maxFires": 38
+        }
+      },
+      {
+        "mechanic": "operations.works",
+        "problem": "too_frequent",
+        "fires": 15,
+        "band": {
+          "minFires": 3,
+          "maxFires": 14,
+          "why": "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works."
+        }
+      },
+      {
+        "mechanic": "planner.term.supply",
+        "problem": "too_frequent",
+        "fires": 2,
+        "band": {
+          "minFires": 0,
+          "maxFires": 0,
+          "why": "S124 [I]: the early Tennessee offer is received by the War Department at Lynchburg; the later named Holmes request still selects the governor. Holmes has no day144 draft, C25 is not observed, and the sole S122 supply-changing pick disappears. All retained candidate counterfactuals are published; no scoring rule, term weight or liveness definition changes."
+        }
+      },
+      {
+        "mechanic": "plans.chosen",
+        "problem": "too_frequent",
+        "fires": 14,
+        "band": {
+          "minFires": 3,
+          "maxFires": 12
+        }
+      },
+      {
+        "mechanic": "plans.goal_reached",
+        "problem": "too_frequent",
+        "fires": 7,
+        "band": {
+          "minFires": 1,
+          "maxFires": 5
+        }
+      },
+      {
+        "mechanic": "seats.choices",
+        "problem": "too_frequent",
+        "fires": 22,
+        "band": {
+          "minFires": 3,
+          "maxFires": 12
+        }
+      }
+    ]
+  }
+}

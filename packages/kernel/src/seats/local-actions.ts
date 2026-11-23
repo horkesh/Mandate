@@ -39,7 +39,7 @@ export function availableMandatePapers(world: SeatsWorld, state: State, person: 
   const addresses = world.start.factions.some(f => f.principal === person) ? view.posts :
     commandProjection(world,person,view.faction,view.reports,state.stateDay,state.calendarStart,declared.map(p => p.grant.mandatePost)).posts;
   return (world.map.world.rules.mandates ?? []).filter(p => p.grant.mandateIssuer === person &&
-    addresses.some(a => a.post === p.grant.mandatePost && a.status === 'held' && a.holder === p.grant.mandateHolder) &&
+    (p.assignment !== undefined || addresses.some(a => a.post === p.grant.mandatePost && a.status === 'held' && a.holder === p.grant.mandateHolder)) &&
     day >= daysFromCivil(parseIsoDate(p.fromDate)) - daysFromCivil(parseIsoDate(world.start.startDate)) &&
     !knowledge.knownDoctrineDispatches?.some(d => letterKey(d.dispatchLetter) === letterKey(mandateLetter(p))) &&
     hasRequiredPapers(p.requiresPapers,knowledge,state.stateDay,world.rules.templates))
@@ -74,10 +74,15 @@ export type LocalOption =
   { readonly id: string; readonly authority: EnactedMandate; readonly kind: 'goal'; readonly target: PostId; readonly goal: PlanGoal; readonly candidate: PlanCandidate };
 
 export function localOptions(world: SeatsWorld, state: State, person: PersonId, day: number): LocalOption[] {
-  const post = heldPost(state,person);
-  if (post === null || world.start.factions.some(f => f.principal === person)) return [];
+  if (world.start.factions.some(f => f.principal === person)) return [];
+  const posts=Object.keys(state.postStates).filter(id=>state.postStates[id as PostId]!.postHolder===person).sort(strictCompare) as PostId[];
+  const options=posts.flatMap(post=>localOptionsAt(world,state,person,day,post));
+  const rank={assignment:0,grant:0,review:1,goal:2};
+  return [...new Map(options.map(o=>[o.id,o])).values()].sort((a,b)=>rank[a.kind]-rank[b.kind] || (a.kind==='goal' && b.kind==='goal'?b.candidate.candScore-a.candidate.candScore:0) || strictCompare(a.id,b.id)).slice(0,world.map.world.rules.planner.topN);
+}
+function localOptionsAt(world: SeatsWorld, state: State, person: PersonId, day: number, post: PostId): LocalOption[] {
   const active = currentMandates(state,post).filter(a => activeMandate(world.map,state,a,day));
-  const out: LocalOption[] = assignmentOptions(world,state,person,day);
+  const out: LocalOption[] = assignmentOptions(world,state,person,day).filter(o=>o.paper.from===post);
   for (const paper of availableMandatePapers(world,state,person,day)) {
     if (paper.grant.mandateParent === null && paper.grant.mandateIssuerPost === post &&
       world.map.world.rules.recruitment.raisingPostKinds.includes(state.postStates[post]!.postKind)) {

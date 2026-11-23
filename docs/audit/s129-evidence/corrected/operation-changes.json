@@ -1,0 +1,459 @@
+[
+  {
+    "id": "op:cs_cmd_harpers_ferry:144",
+    "before": {
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "opPlan": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+      "opMethod": "direct",
+      "opPosture": "relieve",
+      "opObjective": "manassas",
+      "opStartDay": 144,
+      "opEndDay": null,
+      "opOutcome": null,
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "raised.st_gov_georgia.d122.2",
+            "raised.st_gov_georgia.d125",
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "manassas",
+            "routeLegs": [
+              {
+                "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                "legFrom": "harpers_ferry",
+                "legTo": "loudoun_fauquier",
+                "legType": "road",
+                "legDays": 4000,
+                "legThreat": 219,
+                "legSupply": 0,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "road:loudoun_fauquier:manassas",
+                "legFrom": "loudoun_fauquier",
+                "legTo": "manassas",
+                "legType": "road",
+                "legDays": 3000,
+                "legThreat": 0,
+                "legSupply": 0,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 7219,
+            "routeDays": 7000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 4000,
+              "phaseRegion": "harpers_ferry"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 4000,
+              "phaseDays": 4000,
+              "phaseRegion": "loudoun_fauquier"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 8000,
+              "phaseDays": 3000,
+              "phaseRegion": "manassas"
+            }
+          ],
+          "oaxObjective": "manassas",
+          "oaxStage": "march",
+          "oaxSince": 148,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": null,
+          "oaxLog": [
+            {
+              "axevDay": 144,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 148,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "after": null,
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "op:cs_cmd_harpers_ferry:96",
+    "before": {
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "opPlan": "direct:least_cost:harpers_ferry",
+      "opMethod": "direct",
+      "opPosture": "hold",
+      "opObjective": "harpers_ferry",
+      "opStartDay": 96,
+      "opEndDay": 143,
+      "opOutcome": "superseded",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "harpers_ferry",
+            "routeLegs": [],
+            "routeCost": 0,
+            "routeDays": 0
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 2000,
+              "phaseRegion": "harpers_ferry"
+            }
+          ],
+          "oaxObjective": "harpers_ferry",
+          "oaxStage": "end",
+          "oaxSince": 143,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": 99,
+          "oaxLog": [
+            {
+              "axevDay": 96,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 98,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 99,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "harpers_ferry"
+            },
+            {
+              "axevDay": 143,
+              "axevStage": "end",
+              "axevReason": "superseded",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "after": null,
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "op:cs_forces_virginia:81",
+    "before": null,
+    "after": {
+      "opPost": "cs_forces_virginia",
+      "opCommander": "lee_robert_e",
+      "opOrder": "m.79.lee_robert_e.lee_robert_e.local.goal:f22497e2c2872534aade541e",
+      "opPlan": "direct:least_cost:lynchburg",
+      "opMethod": "direct",
+      "opPosture": "hold",
+      "opObjective": "lynchburg",
+      "opStartDay": 81,
+      "opEndDay": 86,
+      "opOutcome": "objective_reached",
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_forces_virginia",
+          "oaxBlocks": [
+            "raised.st_gov_tennessee.d55"
+          ],
+          "oaxRoute": {
+            "routeFrom": "lynchburg",
+            "routeTo": "lynchburg",
+            "routeLegs": [],
+            "routeCost": 0,
+            "routeDays": 0
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 3000,
+              "phaseRegion": "lynchburg"
+            }
+          ],
+          "oaxObjective": "lynchburg",
+          "oaxStage": "end",
+          "oaxSince": 86,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": 85,
+          "oaxLog": [
+            {
+              "axevDay": 81,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 84,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 85,
+              "axevStage": "works",
+              "axevReason": "objective_reached",
+              "axevRegion": "lynchburg"
+            },
+            {
+              "axevDay": 86,
+              "axevStage": "end",
+              "axevReason": "objective_held",
+              "axevRegion": "lynchburg"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "id": "op:us_dept_pennsylvania:141",
+    "before": {
+      "opPost": "us_dept_pennsylvania",
+      "opCommander": "patterson_robert",
+      "opOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "opPlan": "direct:least_cost:lower_valley>harpers_ferry",
+      "opMethod": "direct",
+      "opPosture": "hold",
+      "opObjective": "harpers_ferry",
+      "opStartDay": 141,
+      "opEndDay": null,
+      "opOutcome": null,
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "us_dept_pennsylvania",
+          "oaxBlocks": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "oaxRoute": {
+            "routeFrom": "lower_valley",
+            "routeTo": "harpers_ferry",
+            "routeLegs": [
+              {
+                "legEdge": "road:harpers_ferry:lower_valley",
+                "legFrom": "lower_valley",
+                "legTo": "harpers_ferry",
+                "legType": "road",
+                "legDays": 3000,
+                "legThreat": 0,
+                "legSupply": 2166,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 5166,
+            "routeDays": 3000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 3000,
+              "phaseRegion": "lower_valley"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 3000,
+              "phaseDays": 3000,
+              "phaseRegion": "harpers_ferry"
+            }
+          ],
+          "oaxObjective": "harpers_ferry",
+          "oaxStage": "pause",
+          "oaxSince": 148,
+          "oaxUntil": 151,
+          "oaxRepulses": 1,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": null,
+          "oaxLog": [
+            {
+              "axevDay": 141,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "lower_valley"
+            },
+            {
+              "axevDay": 144,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "lower_valley"
+            },
+            {
+              "axevDay": 147,
+              "axevStage": "withdraw",
+              "axevReason": "repulsed",
+              "axevRegion": "lower_valley"
+            },
+            {
+              "axevDay": 148,
+              "axevStage": "pause",
+              "axevReason": "repulsed",
+              "axevRegion": "lower_valley"
+            }
+          ]
+        }
+      ],
+      "opRequests": [
+        {
+          "oreqKind": "reinforcement",
+          "oreqPost": null,
+          "oreqHolder": null,
+          "oreqAxis": null,
+          "oreqMessage": null,
+          "oreqSentDay": 141,
+          "oreqAnswer": "to_principal",
+          "oreqRung": null,
+          "oreqResponse": null,
+          "oreqAnswerDay": null,
+          "oreqFrom": null
+        }
+      ],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "after": {
+      "opPost": "us_dept_pennsylvania",
+      "opCommander": "patterson_robert",
+      "opOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+      "opPlan": "direct:least_cost:lower_valley>harpers_ferry",
+      "opMethod": "direct",
+      "opPosture": "hold",
+      "opObjective": "harpers_ferry",
+      "opStartDay": 141,
+      "opEndDay": null,
+      "opOutcome": null,
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "us_dept_pennsylvania",
+          "oaxBlocks": [
+            "raised.st_gov_wisconsin.d83"
+          ],
+          "oaxRoute": {
+            "routeFrom": "lower_valley",
+            "routeTo": "harpers_ferry",
+            "routeLegs": [
+              {
+                "legEdge": "road:harpers_ferry:lower_valley",
+                "legFrom": "lower_valley",
+                "legTo": "harpers_ferry",
+                "legType": "road",
+                "legDays": 3000,
+                "legThreat": 0,
+                "legSupply": 2166,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 5166,
+            "routeDays": 3000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 3000,
+              "phaseRegion": "lower_valley"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 3000,
+              "phaseDays": 3000,
+              "phaseRegion": "harpers_ferry"
+            }
+          ],
+          "oaxObjective": "harpers_ferry",
+          "oaxStage": "assault",
+          "oaxSince": 147,
+          "oaxUntil": null,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": null,
+          "oaxLog": [
+            {
+              "axevDay": 141,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "lower_valley"
+            },
+            {
+              "axevDay": 144,
+              "axevStage": "march",
+              "axevReason": "concentrated",
+              "axevRegion": "lower_valley"
+            },
+            {
+              "axevDay": 147,
+              "axevStage": "assault",
+              "axevReason": "enemy_ahead",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    },
+    "cause": "[I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  }
+]

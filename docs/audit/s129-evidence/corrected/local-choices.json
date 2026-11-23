@@ -1,0 +1,516 @@
+[
+  {
+    "day": 2,
+    "seat": "seat:scott_winfield",
+    "request": "local:us_general_in_chief:2",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "us_general_in_chief",
+      "options": [
+        {
+          "optionId": "goal:05c4f8e170b7b123600f5753",
+          "mandate": "scott_army_command",
+          "to": "us_general_in_chief",
+          "plan": {
+            "optionId": "direct:least_cost:washington",
+            "method": "direct",
+            "variant": "least_cost",
+            "score": 1078,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 400
+              },
+              {
+                "term": "force_ratio",
+                "amount": 300
+              },
+              {
+                "term": "time",
+                "amount": 300
+              },
+              {
+                "term": "haste",
+                "amount": 0
+              },
+              {
+                "term": "supply",
+                "amount": 0
+              },
+              {
+                "term": "exposure",
+                "amount": 0
+              },
+              {
+                "term": "coordination",
+                "amount": 0
+              },
+              {
+                "term": "dependence",
+                "amount": 0
+              },
+              {
+                "term": "glory",
+                "amount": 78
+              },
+              {
+                "term": "caution",
+                "amount": 0
+              }
+            ],
+            "axes": [
+              {
+                "name": "main",
+                "post": "us_general_in_chief",
+                "mode": "land",
+                "regions": [
+                  "washington"
+                ],
+                "strength": 0,
+                "phases": [
+                  "concentrate"
+                ],
+                "arrival": 3000
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        },
+        {
+          "optionId": "goal:0062c8e2e043ca6dd6eec24c",
+          "mandate": "scott_army_command",
+          "to": "us_general_in_chief",
+          "plan": {
+            "optionId": "holding:hold:washington",
+            "method": "holding",
+            "variant": "hold",
+            "score": 4,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 304
+              }
+            ],
+            "axes": [
+              {
+                "name": "hold",
+                "post": "us_general_in_chief",
+                "mode": "land",
+                "regions": [
+                  "washington"
+                ],
+                "strength": 0,
+                "phases": [
+                  "hold"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "goal:05c4f8e170b7b123600f5753"
+    }
+  },
+  {
+    "day": 49,
+    "seat": "seat:letcher_john",
+    "request": "local:st_gov_virginia:49",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "st_gov_virginia",
+      "options": [
+        {
+          "optionId": "grant:s123_lee_state",
+          "mandate": "lee_state_command",
+          "paper": "s123_lee_state"
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "grant:s123_lee_state"
+    }
+  },
+  {
+    "day": 55,
+    "seat": "seat:lee_robert_e",
+    "request": "local:st_va_general_in_chief:55",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "st_va_general_in_chief",
+      "options": [
+        {
+          "optionId": "goal:cf8a16c8c634e5120cc03ac1",
+          "mandate": "lee_state_command",
+          "to": "st_va_general_in_chief",
+          "plan": {
+            "optionId": "direct:least_cost:richmond",
+            "method": "direct",
+            "variant": "least_cost",
+            "score": 1092,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 400
+              },
+              {
+                "term": "force_ratio",
+                "amount": 300
+              },
+              {
+                "term": "time",
+                "amount": 300
+              },
+              {
+                "term": "haste",
+                "amount": 0
+              },
+              {
+                "term": "supply",
+                "amount": 0
+              },
+              {
+                "term": "exposure",
+                "amount": 0
+              },
+              {
+                "term": "coordination",
+                "amount": 0
+              },
+              {
+                "term": "dependence",
+                "amount": 0
+              },
+              {
+                "term": "glory",
+                "amount": 92
+              },
+              {
+                "term": "caution",
+                "amount": 0
+              }
+            ],
+            "axes": [
+              {
+                "name": "main",
+                "post": "st_va_general_in_chief",
+                "mode": "land",
+                "regions": [
+                  "richmond"
+                ],
+                "strength": 2340,
+                "phases": [
+                  "concentrate"
+                ],
+                "arrival": 3000
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        },
+        {
+          "optionId": "goal:9b00e605388e2a1c4b158d80",
+          "mandate": "lee_state_command",
+          "to": "st_va_general_in_chief",
+          "plan": {
+            "optionId": "holding:hold:richmond",
+            "method": "holding",
+            "variant": "hold",
+            "score": -30,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 270
+              }
+            ],
+            "axes": [
+              {
+                "name": "hold",
+                "post": "st_va_general_in_chief",
+                "mode": "land",
+                "regions": [
+                  "richmond"
+                ],
+                "strength": 2340,
+                "phases": [
+                  "hold"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "goal:cf8a16c8c634e5120cc03ac1"
+    }
+  },
+  {
+    "day": 79,
+    "seat": "seat:lee_robert_e",
+    "request": "local:cs_forces_virginia:79",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "cs_forces_virginia",
+      "options": [
+        {
+          "optionId": "goal:f22497e2c2872534aade541e",
+          "mandate": "lee_confederate_virginia",
+          "to": "cs_forces_virginia",
+          "plan": {
+            "optionId": "direct:least_cost:lynchburg",
+            "method": "direct",
+            "variant": "least_cost",
+            "score": 1092,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 400
+              },
+              {
+                "term": "force_ratio",
+                "amount": 300
+              },
+              {
+                "term": "time",
+                "amount": 300
+              },
+              {
+                "term": "haste",
+                "amount": 0
+              },
+              {
+                "term": "supply",
+                "amount": 0
+              },
+              {
+                "term": "exposure",
+                "amount": 0
+              },
+              {
+                "term": "coordination",
+                "amount": 0
+              },
+              {
+                "term": "dependence",
+                "amount": 0
+              },
+              {
+                "term": "glory",
+                "amount": 92
+              },
+              {
+                "term": "caution",
+                "amount": 0
+              }
+            ],
+            "axes": [
+              {
+                "name": "main",
+                "post": "cs_forces_virginia",
+                "mode": "land",
+                "regions": [
+                  "lynchburg"
+                ],
+                "strength": 2340,
+                "phases": [
+                  "concentrate"
+                ],
+                "arrival": 3000
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        },
+        {
+          "optionId": "goal:eccd16b4d6d36df7245a3031",
+          "mandate": "lee_confederate_virginia",
+          "to": "cs_forces_virginia",
+          "plan": {
+            "optionId": "holding:hold:lynchburg",
+            "method": "holding",
+            "variant": "hold",
+            "score": -30,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 270
+              }
+            ],
+            "axes": [
+              {
+                "name": "hold",
+                "post": "cs_forces_virginia",
+                "mode": "land",
+                "regions": [
+                  "lynchburg"
+                ],
+                "strength": 2340,
+                "phases": [
+                  "hold"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "goal:f22497e2c2872534aade541e"
+    }
+  },
+  {
+    "day": 86,
+    "seat": "seat:patterson_robert",
+    "request": "local:us_dept_pennsylvania:86",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "us_dept_pennsylvania",
+      "options": [
+        {
+          "optionId": "goal:7c00bbad440b168663602741",
+          "mandate": "patterson_department_command",
+          "to": "us_dept_pennsylvania",
+          "plan": {
+            "optionId": "holding:hold:philadelphia",
+            "method": "holding",
+            "variant": "hold",
+            "score": 11,
+            "terms": [
+              {
+                "term": "goal_fit",
+                "amount": 0
+              },
+              {
+                "term": "time",
+                "amount": -300
+              },
+              {
+                "term": "caution",
+                "amount": 311
+              }
+            ],
+            "axes": [
+              {
+                "name": "hold",
+                "post": "us_dept_pennsylvania",
+                "mode": "land",
+                "regions": [
+                  "philadelphia"
+                ],
+                "strength": 1732,
+                "phases": [
+                  "hold"
+                ],
+                "arrival": 0
+              }
+            ],
+            "requests": [],
+            "conditions": [],
+            "perceivedEnemy": 0,
+            "ratio": 10000
+          }
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "goal:7c00bbad440b168663602741"
+    }
+  },
+  {
+    "day": 87,
+    "seat": "seat:lee_robert_e",
+    "request": "local:cs_forces_virginia:87",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "cs_forces_virginia",
+      "options": [
+        {
+          "optionId": "assignment:s129_so119_bate",
+          "mandate": "lee_confederate_virginia",
+          "paper": "s129_so119_bate",
+          "to": "cs_cmd_fredericksburg"
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "assignment:s129_so119_bate"
+    }
+  },
+  {
+    "day": 88,
+    "seat": "seat:lee_robert_e",
+    "request": "local:cs_forces_virginia:88",
+    "menu": {
+      "menuKind": "local-action",
+      "post": "cs_forces_virginia",
+      "options": [
+        {
+          "optionId": "assignment:s129_turney_johnston",
+          "mandate": "lee_confederate_virginia",
+          "paper": "s129_turney_johnston",
+          "to": "cs_cmd_harpers_ferry"
+        }
+      ]
+    },
+    "answer": {
+      "answerKind": "choose",
+      "option": "assignment:s129_turney_johnston"
+    }
+  }
+]

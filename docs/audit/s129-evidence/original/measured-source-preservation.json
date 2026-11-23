@@ -1,0 +1,3677 @@
+[
+  {
+    "path": "packages/cli/package.json",
+    "expected": "9831538271a75c8bd564d21b3906ec0172ffa1612706168445c376be082f76b0",
+    "actual": "9831538271a75c8bd564d21b3906ec0172ffa1612706168445c376be082f76b0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/console/game.ts",
+    "expected": "36ce13edbb1b75cdb9fdfe87d12b0bf7f524532bb16624f4131e7913d9bf800b",
+    "actual": "36ce13edbb1b75cdb9fdfe87d12b0bf7f524532bb16624f4131e7913d9bf800b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/console/preview-text.ts",
+    "expected": "ac41448c15575af55b69def47bba69552322af6b556d8bb173ffe6413cfb4c2c",
+    "actual": "ac41448c15575af55b69def47bba69552322af6b556d8bb173ffe6413cfb4c2c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/console/session.ts",
+    "expected": "4398f131855bbf0dcb03541726ac3b6b349b767a061a4ec948ca069fb70adb8c",
+    "actual": "4398f131855bbf0dcb03541726ac3b6b349b767a061a4ec948ca069fb70adb8c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/demo.ts",
+    "expected": "36c9819cdd7403b07c9bc295186ac831ee14d1da126c1ea212952d58e1dd4b67",
+    "actual": "36c9819cdd7403b07c9bc295186ac831ee14d1da126c1ea212952d58e1dd4b67",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/desk/commands.ts",
+    "expected": "e60c165a7cbac8ec8ec12dc8d3061377aab705cecff6dac6468683e4ed499667",
+    "actual": "e60c165a7cbac8ec8ec12dc8d3061377aab705cecff6dac6468683e4ed499667",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/desk/dispatches.ts",
+    "expected": "78ecded5b2724f1f6c40c1d1d258ece573c0bcfb9fec0da3c71c69b43f164a74",
+    "actual": "78ecded5b2724f1f6c40c1d1d258ece573c0bcfb9fec0da3c71c69b43f164a74",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/desk/notes.ts",
+    "expected": "4a9d72d5b6aa73e6769c3e8dcc420074f8480444873fb5e10d8b98461c20da2d",
+    "actual": "4a9d72d5b6aa73e6769c3e8dcc420074f8480444873fb5e10d8b98461c20da2d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/desk/press.ts",
+    "expected": "39ad17cbb74af40decd2b8675a22eb6efd9fb2dddc37a93b32fa3fade1ee238d",
+    "actual": "39ad17cbb74af40decd2b8675a22eb6efd9fb2dddc37a93b32fa3fade1ee238d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/desk/render.ts",
+    "expected": "58bb240a7e6a12dc281383b487058171f1057d8f101776aabd40dad18186d38c",
+    "actual": "58bb240a7e6a12dc281383b487058171f1057d8f101776aabd40dad18186d38c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/desk/strings.ts",
+    "expected": "52dbcd027821bad93a438c52a150b3c27ab2ffbade7785bf7982150a6acd3e31",
+    "actual": "52dbcd027821bad93a438c52a150b3c27ab2ffbade7785bf7982150a6acd3e31",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/done-check.ts",
+    "expected": "de48d8003895b04f8e92ba714d3cd8db3cf6ac7cc38ab500f4410d6ef8f0a84c",
+    "actual": "de48d8003895b04f8e92ba714d3cd8db3cf6ac7cc38ab500f4410d6ef8f0a84c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/drafting-measure.ts",
+    "expected": "45164aa53397686c027d9b681183f58eb3b2c270ddbd51eb4168732ad15591c7",
+    "actual": "45164aa53397686c027d9b681183f58eb3b2c270ddbd51eb4168732ad15591c7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/history-run.ts",
+    "expected": "af29e8e77d769792043021d9ed0a477372d9dc23e15d6adca9293c249192ca3d",
+    "actual": "af29e8e77d769792043021d9ed0a477372d9dc23e15d6adca9293c249192ca3d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/io/atomic.ts",
+    "expected": "dd246031f3e65b19a71c4aa8b3e6c4700165fc3631fd395e6a61a51089c88e22",
+    "actual": "dd246031f3e65b19a71c4aa8b3e6c4700165fc3631fd395e6a61a51089c88e22",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/io/packs.ts",
+    "expected": "7c7af7c0c3e0f2bf46b39d7fbc86195f5a42f0950f1ad23516f17e336e2b390f",
+    "actual": "7c7af7c0c3e0f2bf46b39d7fbc86195f5a42f0950f1ad23516f17e336e2b390f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/io/runs.ts",
+    "expected": "8c3dc6e9515db1c7d8adea580d71d93b60ea4365d1052380818eeebef0c0bf4b",
+    "actual": "8c3dc6e9515db1c7d8adea580d71d93b60ea4365d1052380818eeebef0c0bf4b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/io/saves.ts",
+    "expected": "930f1111948fb66fef104d73f4659b89ba79250d30785993a79afacdabb64c76",
+    "actual": "930f1111948fb66fef104d73f4659b89ba79250d30785993a79afacdabb64c76",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/lever-moves.ts",
+    "expected": "bc0105eff41b2f40408a62a1b2fc0c2d414f4761c49ad26b244e673a0f50b135",
+    "actual": "bc0105eff41b2f40408a62a1b2fc0c2d414f4761c49ad26b244e673a0f50b135",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/lever-sweep.ts",
+    "expected": "638691798364fdbbd0841e8402844968a201498336b6357b5e397554dfc016c0",
+    "actual": "638691798364fdbbd0841e8402844968a201498336b6357b5e397554dfc016c0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/liveness-gate.ts",
+    "expected": "d8838751199f185bdaaa2558cb23dfff82c52e685ecdc6837411d93b99c1a6b1",
+    "actual": "d8838751199f185bdaaa2558cb23dfff82c52e685ecdc6837411d93b99c1a6b1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/pack-files.ts",
+    "expected": "036a3a0087fc7a33e09c9d2eb3a9c00214da24185e4d2a9216e7b9df04585c19",
+    "actual": "036a3a0087fc7a33e09c9d2eb3a9c00214da24185e4d2a9216e7b9df04585c19",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/pack-text.ts",
+    "expected": "9dbb3a9623695415d5e1d84ce7e799923f606cb4da328a6e62a8a1efe2ed4479",
+    "actual": "9dbb3a9623695415d5e1d84ce7e799923f606cb4da328a6e62a8a1efe2ed4479",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/pack.ts",
+    "expected": "e05c0f59ed62b0378c852a0aec6d11d303be80a4e5938b5cd70ade1e83fe61a5",
+    "actual": "e05c0f59ed62b0378c852a0aec6d11d303be80a4e5938b5cd70ade1e83fe61a5",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/phase0-run.ts",
+    "expected": "764b1b1a29cde3f49c5ed22aa3458a226fed46a57bc4118659bd626c757ca56c",
+    "actual": "764b1b1a29cde3f49c5ed22aa3458a226fed46a57bc4118659bd626c757ca56c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/phase0-scores.ts",
+    "expected": "440e8c12d45ad1f9f531fc2992851b8dd4a5446d663135193f646ba14dd9fc54",
+    "actual": "440e8c12d45ad1f9f531fc2992851b8dd4a5446d663135193f646ba14dd9fc54",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/planner-cases.ts",
+    "expected": "57aa8221b657b51bdbaf2933a8a249c7142541b2c4074d09826ec4701ef8b79d",
+    "actual": "57aa8221b657b51bdbaf2933a8a249c7142541b2c4074d09826ec4701ef8b79d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/play.ts",
+    "expected": "3cb678e1585366f294b5d630535ed8b423207e037e62e39c01bc20d4774d36d8",
+    "actual": "3cb678e1585366f294b5d630535ed8b423207e037e62e39c01bc20d4774d36d8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/pushback-coverage.ts",
+    "expected": "0444495542cef963c216f1d2aee1d90fdf55b93ffe64ce4c098e941efd8dbd4c",
+    "actual": "0444495542cef963c216f1d2aee1d90fdf55b93ffe64ce4c098e941efd8dbd4c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/pushback-exposure.ts",
+    "expected": "4ce22974064bfa316e6fddc08639eb2497eb5151ef7681c3d9b8ab14eb597301",
+    "actual": "4ce22974064bfa316e6fddc08639eb2497eb5151ef7681c3d9b8ab14eb597301",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/pushback-observer.ts",
+    "expected": "51269e76184f6b8a14aefe8e629689480e34f4a554bf62055a3dd508defb3f3f",
+    "actual": "51269e76184f6b8a14aefe8e629689480e34f4a554bf62055a3dd508defb3f3f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/register-coverage.ts",
+    "expected": "247c1edb05184619247e2483db49d78d47ed4d1f5e04c2f52c8e88ce149668e4",
+    "actual": "247c1edb05184619247e2483db49d78d47ed4d1f5e04c2f52c8e88ce149668e4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/run-done-check.ts",
+    "expected": "2f9c43540334c7f9617814b529ae51ca6f36162df245ca37505250d2b46d50e1",
+    "actual": "2f9c43540334c7f9617814b529ae51ca6f36162df245ca37505250d2b46d50e1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/run-phase0.ts",
+    "expected": "36ea91dea2c465f2fc7c04f2b1f00b86ef135907814a685e09b9b7425d736f6b",
+    "actual": "36ea91dea2c465f2fc7c04f2b1f00b86ef135907814a685e09b9b7425d736f6b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/run-planner-cases.ts",
+    "expected": "bc9b7d05c7727f42558fa4ca0258630dbd6a2975bdd68f0a9d9fd51a6ec515ad",
+    "actual": "bc9b7d05c7727f42558fa4ca0258630dbd6a2975bdd68f0a9d9fd51a6ec515ad",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/run-seats.ts",
+    "expected": "a122ab407ae8304a3e6fec1feeab42855606421b17535afb90f03c60cee74411",
+    "actual": "a122ab407ae8304a3e6fec1feeab42855606421b17535afb90f03c60cee74411",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/seats-run.ts",
+    "expected": "e76ab459943ed1b72513c66ac30d3b9556c6471451d308aa09aab560534cb2be",
+    "actual": "e76ab459943ed1b72513c66ac30d3b9556c6471451d308aa09aab560534cb2be",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/seats-world.ts",
+    "expected": "376cec0b46179801372a3b90eb2a77620df6ecd85aa1b2f76bad23522a53c6ff",
+    "actual": "376cec0b46179801372a3b90eb2a77620df6ecd85aa1b2f76bad23522a53c6ff",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/stand-ins.ts",
+    "expected": "2013da54c20159969c2d90f47d02e6469f6f42774f8f5e8da026014bf7dd475c",
+    "actual": "2013da54c20159969c2d90f47d02e6469f6f42774f8f5e8da026014bf7dd475c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/cli/src/victory.ts",
+    "expected": "8d58655788fe22bb3502523e18a8ee879e311f328d1549dff6c46b6c43d89ff0",
+    "actual": "8d58655788fe22bb3502523e18a8ee879e311f328d1549dff6c46b6c43d89ff0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/package.json",
+    "expected": "cadb9be3b77f4cf7ea8c485c35ff589e428559039368fa02b78e5a8046dc825f",
+    "actual": "cadb9be3b77f4cf7ea8c485c35ff589e428559039368fa02b78e5a8046dc825f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/audience/audience.ts",
+    "expected": "56fd622296a3ea9b693a645b1df767d0f19be9ecb83bf6b2800306f0fe7f650c",
+    "actual": "56fd622296a3ea9b693a645b1df767d0f19be9ecb83bf6b2800306f0fe7f650c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/audience/counters.ts",
+    "expected": "9b71a835dce6d62190e91ea121727708beb60afdf9e65422cb6fc10c4757cb0f",
+    "actual": "9b71a835dce6d62190e91ea121727708beb60afdf9e65422cb6fc10c4757cb0f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/combat/battle.ts",
+    "expected": "2be2097b4d0a3c22545c04e8f6b485cf7e55d99f4a6f8758a060547761ebbc50",
+    "actual": "2be2097b4d0a3c22545c04e8f6b485cf7e55d99f4a6f8758a060547761ebbc50",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/combat/bombard.ts",
+    "expected": "0178f3de6a1e57b419310184cf7783a8c6090c0504830d8c92557a6feb8a5c16",
+    "actual": "0178f3de6a1e57b419310184cf7783a8c6090c0504830d8c92557a6feb8a5c16",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/combat/decide.ts",
+    "expected": "7f9c3b160a4c8c02aa5336f6fd6d77c4ab2ac2d3ac80ec3c2226085791d9a0ac",
+    "actual": "7f9c3b160a4c8c02aa5336f6fd6d77c4ab2ac2d3ac80ec3c2226085791d9a0ac",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/combat/order-kinds.ts",
+    "expected": "bc97c140f577667e4fc6848f28ae9bca7c4573d87a813846889b4fdc253bce32",
+    "actual": "bc97c140f577667e4fc6848f28ae9bca7c4573d87a813846889b4fdc253bce32",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/combat/orders.ts",
+    "expected": "8a4eb26c12be4384ba617900e65eb590c6cd781f011c040772441af644f52844",
+    "actual": "8a4eb26c12be4384ba617900e65eb590c6cd781f011c040772441af644f52844",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/combat/records.ts",
+    "expected": "bdb08101581d091004fa2067ce6e5d417c3c238de5435acdbf2e5a5f9420ab79",
+    "actual": "bdb08101581d091004fa2067ce6e5d417c3c238de5435acdbf2e5a5f9420ab79",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/combat/resolve.ts",
+    "expected": "30603af41db9f62972a50cf38fa8f3c090487d7c0245a2de0a6048b94c0cacdb",
+    "actual": "30603af41db9f62972a50cf38fa8f3c090487d7c0245a2de0a6048b94c0cacdb",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/combat/rules.ts",
+    "expected": "493fda166977d70edbf015aaeb16a53e8ca65c8609e2291a6cc31998cfdac351",
+    "actual": "493fda166977d70edbf015aaeb16a53e8ca65c8609e2291a6cc31998cfdac351",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/combat/shape.ts",
+    "expected": "dac5a5025f35de604923bee430d0aac2a10d816e2c975eae9d3fc8a6ded2901d",
+    "actual": "dac5a5025f35de604923bee430d0aac2a10d816e2c975eae9d3fc8a6ded2901d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/command/authority.ts",
+    "expected": "b930393677237e7934719d940f38c7eaa3ddf1d28c7041c592a3fbc9f34da12a",
+    "actual": "b930393677237e7934719d940f38c7eaa3ddf1d28c7041c592a3fbc9f34da12a",
+    "preserved": true,
+    "archive": true
+  },
+  {
+    "path": "packages/kernel/src/command/capitals.ts",
+    "expected": "ef24ec8221d6f4e5034e387160452af6629eb42667f876bd56d88a82a9ce7d72",
+    "actual": "ef24ec8221d6f4e5034e387160452af6629eb42667f876bd56d88a82a9ce7d72",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/command/command-assignment.ts",
+    "expected": "66ef86586bb4ffad69f348d8b3fd66cc433fde45a8463fba923c263e0f1cede2",
+    "actual": "66ef86586bb4ffad69f348d8b3fd66cc433fde45a8463fba923c263e0f1cede2",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/command/command.ts",
+    "expected": "452653b53de63569ce984c1b1284fa90d36a9e90ea7f9fce0ff5cfd3f99af14d",
+    "actual": "452653b53de63569ce984c1b1284fa90d36a9e90ea7f9fce0ff5cfd3f99af14d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/command/levies.ts",
+    "expected": "9a312211b06e981ca3740c617f81ef70f89ea8c0dfb9b71e5cc06723024d72e4",
+    "actual": "9a312211b06e981ca3740c617f81ef70f89ea8c0dfb9b71e5cc06723024d72e4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/command/observers.ts",
+    "expected": "5ff01d8fa1204e9a818ed22c5284efcbb01efa00d847004ebf871558e8151251",
+    "actual": "5ff01d8fa1204e9a818ed22c5284efcbb01efa00d847004ebf871558e8151251",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/command/offers.ts",
+    "expected": "fb2b00a101f65e89862ab407430ca4c44e3d8b73ead9c96d434a2591c1fc8684",
+    "actual": "fb2b00a101f65e89862ab407430ca4c44e3d8b73ead9c96d434a2591c1fc8684",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/command/organisation.ts",
+    "expected": "83b4f44569438603d094e4d75c9a9dfd007ca49e5a174539a09b51a1668b44ec",
+    "actual": "83b4f44569438603d094e4d75c9a9dfd007ca49e5a174539a09b51a1668b44ec",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/compare.ts",
+    "expected": "baa99c5a780105008186d197f5d95097082bd24d9f596193dc5d983f12289808",
+    "actual": "baa99c5a780105008186d197f5d95097082bd24d9f596193dc5d983f12289808",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/compliance.ts",
+    "expected": "90e091f07a07e481a41331c9e00b1fbfc5d63a89a9918a1f826935f386595123",
+    "actual": "90e091f07a07e481a41331c9e00b1fbfc5d63a89a9918a1f826935f386595123",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/control-index/control-index.ts",
+    "expected": "a97052895b544caf26d5b771602993f910accdfd9fbf1d9903e29e3652fbe0d5",
+    "actual": "a97052895b544caf26d5b771602993f910accdfd9fbf1d9903e29e3652fbe0d5",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/control-index/derived.ts",
+    "expected": "3962aa51ad80270b9a3f2f907db6dfa7943dd0afd6def0e2f86fdb8ab8d214bb",
+    "actual": "3962aa51ad80270b9a3f2f907db6dfa7943dd0afd6def0e2f86fdb8ab8d214bb",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/control/control.ts",
+    "expected": "feb5743486dd242025797b385b58a67c0e5861319cf97debcc052a844eab6fa1",
+    "actual": "feb5743486dd242025797b385b58a67c0e5861319cf97debcc052a844eab6fa1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/control/vocabulary.ts",
+    "expected": "27ce0c624957d314249c97d4ebb0d1978a218e7e558af9b2f04c5af75874499b",
+    "actual": "27ce0c624957d314249c97d4ebb0d1978a218e7e558af9b2f04c5af75874499b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/directive.ts",
+    "expected": "35280da61ca705907686d4c77986e5d992c0d66db706b4374e0a1e78c61686c2",
+    "actual": "35280da61ca705907686d4c77986e5d992c0d66db706b4374e0a1e78c61686c2",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/forces/detachments.ts",
+    "expected": "9b020e8d6db4a36ee97655ee7b203f9d753772d7d77a8a6172551db4762e9df9",
+    "actual": "9b020e8d6db4a36ee97655ee7b203f9d753772d7d77a8a6172551db4762e9df9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/forces/enlistment.ts",
+    "expected": "da4fda7cba3497f4eecb9a226457cbde928b92b886fdaabea19edf046816a113",
+    "actual": "da4fda7cba3497f4eecb9a226457cbde928b92b886fdaabea19edf046816a113",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/forces/forces.ts",
+    "expected": "c8ca43c1c3a7c334e0eae07aee4a936b2ec379557608aee22fcb90ae32ca62a9",
+    "actual": "c8ca43c1c3a7c334e0eae07aee4a936b2ec379557608aee22fcb90ae32ca62a9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/forces/lots.ts",
+    "expected": "980b9345943e3dabaf56c67e6961846890e98c4bc1de8c7244566e3957febe2e",
+    "actual": "980b9345943e3dabaf56c67e6961846890e98c4bc1de8c7244566e3957febe2e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/forces/migrations.ts",
+    "expected": "aa4a98b966533a10d7bc722cc43585c9c93bb74f8443240f95ea7e0a092f9f20",
+    "actual": "aa4a98b966533a10d7bc722cc43585c9c93bb74f8443240f95ea7e0a092f9f20",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/forces/offers.ts",
+    "expected": "1acd55d93600b9097cecdc75f57ce414116bb269bc1336e0100d97eb22a6a15e",
+    "actual": "1acd55d93600b9097cecdc75f57ce414116bb269bc1336e0100d97eb22a6a15e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/forces/regroup.ts",
+    "expected": "b6b6e7c208ecc503bd4498c95d0eec7ee6aac1fa2ab090636a8f55d474b54d94",
+    "actual": "b6b6e7c208ecc503bd4498c95d0eec7ee6aac1fa2ab090636a8f55d474b54d94",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/forces/stores.ts",
+    "expected": "51bd712b0040f31e31389bbc98dd13fe1cea44cfff5e27addf9aca2d2fc6c039",
+    "actual": "51bd712b0040f31e31389bbc98dd13fe1cea44cfff5e27addf9aca2d2fc6c039",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/forces/stragglers.ts",
+    "expected": "82207dcde36b94bdd4c7497921da951408aa71ba4263f16d9405096da1720001",
+    "actual": "82207dcde36b94bdd4c7497921da951408aa71ba4263f16d9405096da1720001",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/forces/withdrawal.ts",
+    "expected": "e82cd079723a86bfebf74b3320670b6269a5de00f2ea83893e3604bdde64cae7",
+    "actual": "e82cd079723a86bfebf74b3320670b6269a5de00f2ea83893e3604bdde64cae7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/heap.ts",
+    "expected": "6b1da4062619ca3b8dec867852da36c2b4841c70e015c6ad9838b2f9d8c2b3c5",
+    "actual": "6b1da4062619ca3b8dec867852da36c2b4841c70e015c6ad9838b2f9d8c2b3c5",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/ids.ts",
+    "expected": "05da24194d7e7959b38578f7a16071814302828f484d1b122093c1f242b3fdb8",
+    "actual": "05da24194d7e7959b38578f7a16071814302828f484d1b122093c1f242b3fdb8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/index.ts",
+    "expected": "affe61b767ff7dcc491818a8c32f9d69fecbf870c4b41164e638da7c089ea4bd",
+    "actual": "affe61b767ff7dcc491818a8c32f9d69fecbf870c4b41164e638da7c089ea4bd",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/infrastructure/infrastructure.ts",
+    "expected": "477738d11e682e3e4d9e440b6d72810c53c14847bc18697d6babf8a000e183b7",
+    "actual": "477738d11e682e3e4d9e440b6d72810c53c14847bc18697d6babf8a000e183b7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/invariants/map.ts",
+    "expected": "8cf893a1bd343af2a3d99f5e5c9f0eb8bf20284f10ffe9003b8bc928c10b8965",
+    "actual": "8cf893a1bd343af2a3d99f5e5c9f0eb8bf20284f10ffe9003b8bc928c10b8965",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/beliefs.ts",
+    "expected": "be7a595e977a3182f6eea83622a59c568deb22bb7eb284495f92dbcdb736a882",
+    "actual": "be7a595e977a3182f6eea83622a59c568deb22bb7eb284495f92dbcdb736a882",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/call-evidence.ts",
+    "expected": "fc217925b7464c3cd8e6aae2d7a6b022fdcd23040c533dae3e3f5c7051ca0670",
+    "actual": "fc217925b7464c3cd8e6aae2d7a6b022fdcd23040c533dae3e3f5c7051ca0670",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/confidence.ts",
+    "expected": "76f9dec62f609036ea5e6126c547b3adffecb45d37f1b2d28b9a0ece4f2bba22",
+    "actual": "76f9dec62f609036ea5e6126c547b3adffecb45d37f1b2d28b9a0ece4f2bba22",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/control-beliefs.ts",
+    "expected": "a9114cd92f75568ce2d1409b2fe3396955362df0a14079a70a6f740b5dc7bb3b",
+    "actual": "a9114cd92f75568ce2d1409b2fe3396955362df0a14079a70a6f740b5dc7bb3b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/control-claims.ts",
+    "expected": "4cd5136f0173e55b8d0065a078c9de220244dab33338be676a18c5b0e37294d7",
+    "actual": "4cd5136f0173e55b8d0065a078c9de220244dab33338be676a18c5b0e37294d7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/evidence-types.ts",
+    "expected": "c5ccbaa649d963221c7357ab12fb8b85f6ea2a3dd83a53bd8162c562daac0826",
+    "actual": "c5ccbaa649d963221c7357ab12fb8b85f6ea2a3dd83a53bd8162c562daac0826",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/knowledge.ts",
+    "expected": "d123e698033f7e9e8ca58671ef815b5524643ca553b79e4bf8d5d911268df4d3",
+    "actual": "d123e698033f7e9e8ca58671ef815b5524643ca553b79e4bf8d5d911268df4d3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/opening-control.ts",
+    "expected": "67dc35ad2c1d4d641a755b157e7bc7410b7ecd229b7eeba971e98ba18a4de7ff",
+    "actual": "67dc35ad2c1d4d641a755b157e7bc7410b7ecd229b7eeba971e98ba18a4de7ff",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/papers.ts",
+    "expected": "6c161e5c98da8a7559ac53c773ac306179127f9a000b43a6d96d8ed7465e264d",
+    "actual": "6c161e5c98da8a7559ac53c773ac306179127f9a000b43a6d96d8ed7465e264d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/plan-paper.ts",
+    "expected": "ededaa0ae882ea8e44c598e329e32c9567dc8afad83175a0f7d92753af0124d6",
+    "actual": "ededaa0ae882ea8e44c598e329e32c9567dc8afad83175a0f7d92753af0124d6",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/records.ts",
+    "expected": "cb11cdfd3b3806117fddb77c262027926eb34a8c83ee56ef117ba8e283a8fa11",
+    "actual": "cb11cdfd3b3806117fddb77c262027926eb34a8c83ee56ef117ba8e283a8fa11",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/report.ts",
+    "expected": "d4f0eacc29099bbc4beeb560c27e22cf341fef30bd687b0f5e3c1b0ae20f14ad",
+    "actual": "d4f0eacc29099bbc4beeb560c27e22cf341fef30bd687b0f5e3c1b0ae20f14ad",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/templates.ts",
+    "expected": "c8d9f7e34d01dba782ecf84377f07762752f60c88c63aabd33b68c55e0d630e3",
+    "actual": "c8d9f7e34d01dba782ecf84377f07762752f60c88c63aabd33b68c55e0d630e3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/knowledge/truth.ts",
+    "expected": "d1a841966cdb860563f68cfcc8bcad03a798211a0efe3cfdbcf33359d5e7c252",
+    "actual": "d1a841966cdb860563f68cfcc8bcad03a798211a0efe3cfdbcf33359d5e7c252",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/ladder/ladder.ts",
+    "expected": "49b231243ba4fa6a1892af3c097145a81ab3b376596e1fa94ee54deffd7a9faf",
+    "actual": "49b231243ba4fa6a1892af3c097145a81ab3b376596e1fa94ee54deffd7a9faf",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/log/commands.ts",
+    "expected": "45e337486e4bcaacf868cab826f738bb5f80e7235db4e81956a18ebb5f7895d4",
+    "actual": "45e337486e4bcaacf868cab826f738bb5f80e7235db4e81956a18ebb5f7895d4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/log/log.ts",
+    "expected": "5b53149456cad6b7d7ba11672f241ef2575833a1a478a46cc6203ea8daf3e982",
+    "actual": "5b53149456cad6b7d7ba11672f241ef2575833a1a478a46cc6203ea8daf3e982",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/log/session.ts",
+    "expected": "62187a68ebb544d54c603028064a14066ed3cd6d806224ea9c8debabfcbda0f8",
+    "actual": "62187a68ebb544d54c603028064a14066ed3cd6d806224ea9c8debabfcbda0f8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/messages/latency.ts",
+    "expected": "5b60d01149cc7cba15b159035f1b3e70c4fd8f4133a0f9e33dcd03d7d2ddde32",
+    "actual": "5b60d01149cc7cba15b159035f1b3e70c4fd8f4133a0f9e33dcd03d7d2ddde32",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/messages/transit.ts",
+    "expected": "ab7a556b06d9ae6a86edb5bfcaab79f3567d8e92c10336556939d5adca3cfd37",
+    "actual": "ab7a556b06d9ae6a86edb5bfcaab79f3567d8e92c10336556939d5adca3cfd37",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/movement/join.ts",
+    "expected": "f585882332da666fcf7e2c42b78f4862486a57d6f1382c66938f18065d0dea85",
+    "actual": "f585882332da666fcf7e2c42b78f4862486a57d6f1382c66938f18065d0dea85",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/movement/march.ts",
+    "expected": "4096d4d7dc824e7b6ec611e98d31474336a504ecab55c5b3600cff24c7010da7",
+    "actual": "4096d4d7dc824e7b6ec611e98d31474336a504ecab55c5b3600cff24c7010da7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/movement/movement.ts",
+    "expected": "ab317f26c7d123086ee36b70bf8d3e3402a87017abfb3bb4d5e21615a91b2ff0",
+    "actual": "ab317f26c7d123086ee36b70bf8d3e3402a87017abfb3bb4d5e21615a91b2ff0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/movement/regroup.ts",
+    "expected": "182c4442a2aaf553fc15c002931887244ef2c7dde78b6cb834642f329762b1df",
+    "actual": "182c4442a2aaf553fc15c002931887244ef2c7dde78b6cb834642f329762b1df",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/operations/operations.ts",
+    "expected": "6cd8db966ccae2e04a373200bf5682b1c181014191181f452e69117036172920",
+    "actual": "6cd8db966ccae2e04a373200bf5682b1c181014191181f452e69117036172920",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/operations/rules.ts",
+    "expected": "72b12ad7e5a6f9cf900e6f768a8a19fdf7eefadff23382588a83aa3b61277d1d",
+    "actual": "72b12ad7e5a6f9cf900e6f768a8a19fdf7eefadff23382588a83aa3b61277d1d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/ownership.ts",
+    "expected": "8f604780d0b2b2fc7d693a3aa448988ba9f98560cfedd6fd4b4b971b060e0ca0",
+    "actual": "8f604780d0b2b2fc7d693a3aa448988ba9f98560cfedd6fd4b4b971b060e0ca0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/people.ts",
+    "expected": "3ad8559ee6514f1db0365520a056de842e0e8d9872c8f118732f7787fc60feff",
+    "actual": "3ad8559ee6514f1db0365520a056de842e0e8d9872c8f118732f7787fc60feff",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/people/commissions.ts",
+    "expected": "6cbccd915964f2a37d0f0df5e6b1099ad880ef0152919f9eaed0244f9cded6ca",
+    "actual": "6cbccd915964f2a37d0f0df5e6b1099ad880ef0152919f9eaed0244f9cded6ca",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/people/people.ts",
+    "expected": "9def059d43fa83b8b217856854930af7225368b7a4abfa51c97079bad92ee3e9",
+    "actual": "9def059d43fa83b8b217856854930af7225368b7a4abfa51c97079bad92ee3e9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/people/ranks.ts",
+    "expected": "97013ecc944c352091aa70549b6f84898dd6f3e848208e0007bd8d48458a0f46",
+    "actual": "97013ecc944c352091aa70549b6f84898dd6f3e848208e0007bd8d48458a0f46",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/people/resignation.ts",
+    "expected": "5d725aa58b1f2b45c55590cebc0c8c024e12784307fe93c5bede287c396e4a27",
+    "actual": "5d725aa58b1f2b45c55590cebc0c8c024e12784307fe93c5bede287c396e4a27",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/people/rules.ts",
+    "expected": "48c7f700392d5d0e77bec6d3d83eee0035ad551c18aa27e9f75f6873c3a9ace2",
+    "actual": "48c7f700392d5d0e77bec6d3d83eee0035ad551c18aa27e9f75f6873c3a9ace2",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/people/traits.ts",
+    "expected": "855a8b4769f4ea912d3066a9ff608b93a06b2053c56daafd3b7d8d163b174f8c",
+    "actual": "855a8b4769f4ea912d3066a9ff608b93a06b2053c56daafd3b7d8d163b174f8c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/people/verb-rules.ts",
+    "expected": "e07a90119745600745c5ec195cba20aafc46534a53b8b196b4aadf0648b22ae6",
+    "actual": "e07a90119745600745c5ec195cba20aafc46534a53b8b196b4aadf0648b22ae6",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/permille.ts",
+    "expected": "511f62b3f502d0abb07300d09835700ac4d00357d0f17cd5eefa9dd06da25331",
+    "actual": "511f62b3f502d0abb07300d09835700ac4d00357d0f17cd5eefa9dd06da25331",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/phase0.ts",
+    "expected": "e68f3b9e957c6a1a2845dd01969c5d63587af60628ab382ac33036d1e6bd52fe",
+    "actual": "e68f3b9e957c6a1a2845dd01969c5d63587af60628ab382ac33036d1e6bd52fe",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/axes.ts",
+    "expected": "2b59454b6069c0fb9c92fd990c01bb8ea6bd1f9c8170c83bce424c2f1f630a90",
+    "actual": "2b59454b6069c0fb9c92fd990c01bb8ea6bd1f9c8170c83bce424c2f1f630a90",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/context.ts",
+    "expected": "8275158b34d2fd4a0047cbdcc03742852aa9cd67b29fa1848e2378b8f19b6079",
+    "actual": "8275158b34d2fd4a0047cbdcc03742852aa9cd67b29fa1848e2378b8f19b6079",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/discretion.ts",
+    "expected": "a1902b0421e8312e8d8ea2e54f2f4763edc03db7979d8e3a3198ace31416ffbe",
+    "actual": "a1902b0421e8312e8d8ea2e54f2f4763edc03db7979d8e3a3198ace31416ffbe",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/draft.ts",
+    "expected": "265bb5408106891dce2976f54482df18ff85a7843082331e202067d99e157be7",
+    "actual": "265bb5408106891dce2976f54482df18ff85a7843082331e202067d99e157be7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/edits.ts",
+    "expected": "2e578a6aee39411a6cb2d2db5566fc34ba2ee4cf470c5d681a1c9ce59c53cbb2",
+    "actual": "2e578a6aee39411a6cb2d2db5566fc34ba2ee4cf470c5d681a1c9ce59c53cbb2",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/index.ts",
+    "expected": "5c86d329423c0d0218b3d13f0612a126c9f788087bcb4352b92480a91a394f74",
+    "actual": "5c86d329423c0d0218b3d13f0612a126c9f788087bcb4352b92480a91a394f74",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/input.ts",
+    "expected": "4ba7ab2c6a485ffb9d09d7c3692b789a5686e7efc6530c095c25f03d8f8c3d9d",
+    "actual": "4ba7ab2c6a485ffb9d09d7c3692b789a5686e7efc6530c095c25f03d8f8c3d9d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/methods.ts",
+    "expected": "863e571b127c315f243a029e05f9d598bff426d2ff17056b00e7854732bf4564",
+    "actual": "863e571b127c315f243a029e05f9d598bff426d2ff17056b00e7854732bf4564",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/notes.ts",
+    "expected": "2058c55e7c3b6486595888cb837a2370e2bc0e866bbc59005398fb46a45370d8",
+    "actual": "2058c55e7c3b6486595888cb837a2370e2bc0e866bbc59005398fb46a45370d8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/paper.ts",
+    "expected": "f52f56e4577e97e9d4d7ed0b917210952e6b3038906e3dfc95456a9158db7e23",
+    "actual": "f52f56e4577e97e9d4d7ed0b917210952e6b3038906e3dfc95456a9158db7e23",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/profile.ts",
+    "expected": "6fd2307349315033fd0e0f0885dd21b2d6e6608351f14bf40300a28da79747e1",
+    "actual": "6fd2307349315033fd0e0f0885dd21b2d6e6608351f14bf40300a28da79747e1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/route.ts",
+    "expected": "b2d641f2a9752dd982c36e7146a58ab56972dfac67b39fa217c46ed6d1867f9d",
+    "actual": "b2d641f2a9752dd982c36e7146a58ab56972dfac67b39fa217c46ed6d1867f9d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/score.ts",
+    "expected": "9a28132fce0687d4834610bd735e8c03db40417cb0ede6d69178e28b1faf121f",
+    "actual": "9a28132fce0687d4834610bd735e8c03db40417cb0ede6d69178e28b1faf121f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/planner/types.ts",
+    "expected": "8a9ed06d810e97eb006ed09927dd2583d03990f6052ef39919b41873ce42a7de",
+    "actual": "8a9ed06d810e97eb006ed09927dd2583d03990f6052ef39919b41873ce42a7de",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/plans/goal.ts",
+    "expected": "0ac5eee64b75287abf1f48730ffd713ec3655915f3fc0afab1dab116feb1ba9b",
+    "actual": "0ac5eee64b75287abf1f48730ffd713ec3655915f3fc0afab1dab116feb1ba9b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/plans/note-rules.ts",
+    "expected": "0d9197aecbc0f85f15c8cb15d616bdb7129b1de31b70884e30de58b2455b37d7",
+    "actual": "0d9197aecbc0f85f15c8cb15d616bdb7129b1de31b70884e30de58b2455b37d7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/plans/notes.ts",
+    "expected": "cda8297efdc99a4aa8518547bdc87f7b88b9cb455c959d710b2993d5afcb2fb8",
+    "actual": "cda8297efdc99a4aa8518547bdc87f7b88b9cb455c959d710b2993d5afcb2fb8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/plans/plans.ts",
+    "expected": "e0f8cb80a550193ed41cb917640a31fd976a9fec32d548b9223c6ac3fcb50b96",
+    "actual": "e0f8cb80a550193ed41cb917640a31fd976a9fec32d548b9223c6ac3fcb50b96",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/politics/politics.ts",
+    "expected": "16b4892205e88f5f87ecc91f6a32d421e5c1790309fb65a55431b0ce76d611b2",
+    "actual": "16b4892205e88f5f87ecc91f6a32d421e5c1790309fb65a55431b0ce76d611b2",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/politics/press.ts",
+    "expected": "7356de5b4cc4e3e441685ad7fac42ae784545f2b828c7d466185f2c9fbebe777",
+    "actual": "7356de5b4cc4e3e441685ad7fac42ae784545f2b828c7d466185f2c9fbebe777",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/politics/rules.ts",
+    "expected": "5cca4792a63e0562ed65910dd332fd0f9151d1c9d5dbb5f94b9684dee834fe2f",
+    "actual": "5cca4792a63e0562ed65910dd332fd0f9151d1c9d5dbb5f94b9684dee834fe2f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/proxy/responses.ts",
+    "expected": "7cebfd149d4708ff3353ab6bd25c99befffa542c25c55546647addba78f542ee",
+    "actual": "7cebfd149d4708ff3353ab6bd25c99befffa542c25c55546647addba78f542ee",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/reading/orders.ts",
+    "expected": "753212a69703a6e74c4e3f839817ecf91b45aeee368ec407846eadc233684e06",
+    "actual": "753212a69703a6e74c4e3f839817ecf91b45aeee368ec407846eadc233684e06",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/recruitment/renewal.ts",
+    "expected": "dc1650441717b4476d9ae32c000bd9b3e18c46647c9be745eee1111cb2d803d1",
+    "actual": "dc1650441717b4476d9ae32c000bd9b3e18c46647c9be745eee1111cb2d803d1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/recruitment/rules.ts",
+    "expected": "99d1ecd3fe678f15e3d19c522efe9b42e6fbf4d3a919a83f7c465e2c16f4a86a",
+    "actual": "99d1ecd3fe678f15e3d19c522efe9b42e6fbf4d3a919a83f7c465e2c16f4a86a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/regions/regions.ts",
+    "expected": "a138a2fafd882ec98e70b0787ddfe606e4dce8091250eb938340756df661a47b",
+    "actual": "a138a2fafd882ec98e70b0787ddfe606e4dce8091250eb938340756df661a47b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/regions/self-emancipation.ts",
+    "expected": "6f93793dbe3c4c4157c7137817ce7062fa143812a51c32474b6f519caa10c188",
+    "actual": "6f93793dbe3c4c4157c7137817ce7062fa143812a51c32474b6f519caa10c188",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/reservations.ts",
+    "expected": "8c0fde16f6613def1056ce57255d3ba00bc5aece05caeb062c11a866bc4f10e8",
+    "actual": "8c0fde16f6613def1056ce57255d3ba00bc5aece05caeb062c11a866bc4f10e8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/rng.ts",
+    "expected": "3698c90f3387d32fa70febbbd71dc466528f71193ec8bea8cf2c420dc2863217",
+    "actual": "3698c90f3387d32fa70febbbd71dc466528f71193ec8bea8cf2c420dc2863217",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/root-state.ts",
+    "expected": "6e2607a55f4e5bc57fa79f29630c1f0c44a57305964dfc20bf7fac849f862d43",
+    "actual": "6e2607a55f4e5bc57fa79f29630c1f0c44a57305964dfc20bf7fac849f862d43",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seat-api.ts",
+    "expected": "8be2b8865928b90f176467166b5b1e2640d79c8cf67f6330ceda1f7975a437af",
+    "actual": "8be2b8865928b90f176467166b5b1e2640d79c8cf67f6330ceda1f7975a437af",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/api.ts",
+    "expected": "2c2dc6bc204c1f1d56e7bf7c9e1b630e206344fd5eaf4e080bf3e0424babace2",
+    "actual": "2c2dc6bc204c1f1d56e7bf7c9e1b630e206344fd5eaf4e080bf3e0424babace2",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/attention.ts",
+    "expected": "5c9ef196655164a846b3de80cf460a9d360836c5f8a5a87a089657c091d9ddab",
+    "actual": "5c9ef196655164a846b3de80cf460a9d360836c5f8a5a87a089657c091d9ddab",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/believed.ts",
+    "expected": "8c1436e3ea14396041f6e1895e8fcd996c6eeffcb27722d3312d6780a0f82340",
+    "actual": "8c1436e3ea14396041f6e1895e8fcd996c6eeffcb27722d3312d6780a0f82340",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/local-actions.ts",
+    "expected": "d398fa2eaaafe99127ed1fecb1858875588269a8edd28c36a94c4259fb21a4ac",
+    "actual": "d398fa2eaaafe99127ed1fecb1858875588269a8edd28c36a94c4259fb21a4ac",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/onward-assignments.ts",
+    "expected": "a601ba8238626dcbb2bd42255e24284578f26bd57166b52d1b26ede6b472ce35",
+    "actual": "a601ba8238626dcbb2bd42255e24284578f26bd57166b52d1b26ede6b472ce35",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/posts.ts",
+    "expected": "b102a1dc5149d42ead2324077ef5fbc05aef4fcf27686d93d047430b0ef47112",
+    "actual": "b102a1dc5149d42ead2324077ef5fbc05aef4fcf27686d93d047430b0ef47112",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/received.ts",
+    "expected": "c47b6188cf6f94e93d4b78b1f7fa90abb6de89e9fb9ffe4787e9d7df865f9bc8",
+    "actual": "c47b6188cf6f94e93d4b78b1f7fa90abb6de89e9fb9ffe4787e9d7df865f9bc8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/requests.ts",
+    "expected": "eee3882dd7f8f18825fb3834544965ca9cc09a1bd144226ea77b1108a06b37d8",
+    "actual": "eee3882dd7f8f18825fb3834544965ca9cc09a1bd144226ea77b1108a06b37d8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/seats.ts",
+    "expected": "ab887b5a4d506f1e7403845dc3b9d4e5749b499227159699c0b350ce005cbb8a",
+    "actual": "ab887b5a4d506f1e7403845dc3b9d4e5749b499227159699c0b350ce005cbb8a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/sender.ts",
+    "expected": "e78557a07a19a21b784e7f2c7e4c566dfe2d21388261f6fd991d14db9fc56cec",
+    "actual": "e78557a07a19a21b784e7f2c7e4c566dfe2d21388261f6fd991d14db9fc56cec",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/turn-stops.ts",
+    "expected": "b507d0217b5d39bce9071eb1a731b5ff9bb0e821b07de7129d75f1c7b2e5e0d6",
+    "actual": "b507d0217b5d39bce9071eb1a731b5ff9bb0e821b07de7129d75f1c7b2e5e0d6",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/seats/world.ts",
+    "expected": "1fdb3c352fcc29f7e8ed0042ac8b8fbd1c91bbf1655312c68aca455dff5baaac",
+    "actual": "1fdb3c352fcc29f7e8ed0042ac8b8fbd1c91bbf1655312c68aca455dff5baaac",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/serialize/canonical.ts",
+    "expected": "02fc54d941cbd3a1327c57f1e430338e8a86811dda4c089b6ef431a046ae37b9",
+    "actual": "02fc54d941cbd3a1327c57f1e430338e8a86811dda4c089b6ef431a046ae37b9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/serialize/hash.ts",
+    "expected": "a3a4da78fbd4ea3a6f9c1f136ac83bb23c08d2a8c1ea7bf264e0a2aa06a2a133",
+    "actual": "a3a4da78fbd4ea3a6f9c1f136ac83bb23c08d2a8c1ea7bf264e0a2aa06a2a133",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/serialize/save.ts",
+    "expected": "6e4a63d2ca0ed65a051aa3f49fdbba8acb553f3be98759b31a577b988602e13e",
+    "actual": "6e4a63d2ca0ed65a051aa3f49fdbba8acb553f3be98759b31a577b988602e13e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/serialize/sha256.ts",
+    "expected": "70c0d2f549d862ef2eb888a789237a48450f7d62d0d178b890e98c71c749eea2",
+    "actual": "70c0d2f549d862ef2eb888a789237a48450f7d62d0d178b890e98c71c749eea2",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/situations/conditions.ts",
+    "expected": "841122be70571db9d39d1d4aef652799b1ab18b1bd0f725c6d64f6ba7adff760",
+    "actual": "841122be70571db9d39d1d4aef652799b1ab18b1bd0f725c6d64f6ba7adff760",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/situations/references.ts",
+    "expected": "52200daf49a4d327ba9a8bf49ef8e339cfb4ce39d549eef187bba97752e801c8",
+    "actual": "52200daf49a4d327ba9a8bf49ef8e339cfb4ce39d549eef187bba97752e801c8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/situations/situations.ts",
+    "expected": "a31d8ea0d884eed1f1fff08ef50ccd9385796af2bd97a5cfda229d6d4e4c7200",
+    "actual": "a31d8ea0d884eed1f1fff08ef50ccd9385796af2bd97a5cfda229d6d4e4c7200",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/situations/types.ts",
+    "expected": "15272e59258c88d544c1f455ec5010af83d3cb944d2240480776a9d9061daa59",
+    "actual": "15272e59258c88d544c1f455ec5010af83d3cb944d2240480776a9d9061daa59",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/supply/supply.ts",
+    "expected": "926a6e2a838dc5743939ffd68e21e6791899e83b5b04b49212f570f6807cd313",
+    "actual": "926a6e2a838dc5743939ffd68e21e6791899e83b5b04b49212f570f6807cd313",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/telemetry.ts",
+    "expected": "0099052c6b2005db37fae9c97a7b1bb711d1cc50e0d0a591ca27043911fae405",
+    "actual": "0099052c6b2005db37fae9c97a7b1bb711d1cc50e0d0a591ca27043911fae405",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/attention.ts",
+    "expected": "8bf527bef7f57d957e766c9b75a589ac979692e82c83926a0dfe7664ce5542af",
+    "actual": "8bf527bef7f57d957e766c9b75a589ac979692e82c83926a0dfe7664ce5542af",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/audience-plan.ts",
+    "expected": "5677b3d626e7b566c9ac2e52d8c4130e23f7157615b745ee83e1cb46752036ed",
+    "actual": "5677b3d626e7b566c9ac2e52d8c4130e23f7157615b745ee83e1cb46752036ed",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/battle-reports.ts",
+    "expected": "8ad3dbae0ba68bdc823e928d0336273541b55d622b54c28c95320ebaf98954aa",
+    "actual": "8ad3dbae0ba68bdc823e928d0336273541b55d622b54c28c95320ebaf98954aa",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/bombard.ts",
+    "expected": "e8f35fd7fba979f6d4cd441261875c846f95ec9787584f9819e7c95699b2aee1",
+    "actual": "e8f35fd7fba979f6d4cd441261875c846f95ec9787584f9819e7c95699b2aee1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/commander-losses.ts",
+    "expected": "6fd23cf82356df3b6cea9013be361e02d06fb4ec1b2495d2f75e2cf87635b72d",
+    "actual": "6fd23cf82356df3b6cea9013be361e02d06fb4ec1b2495d2f75e2cf87635b72d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/context.ts",
+    "expected": "3d1665bb7f5df19ee74e1239706ee1260fd5239d0c156a00eaeead7b3951e426",
+    "actual": "3d1665bb7f5df19ee74e1239706ee1260fd5239d0c156a00eaeead7b3951e426",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/control-reports.ts",
+    "expected": "96f9ba7663363542c70ff962451b74ea8fe90de635cf690b4d7afeb258048454",
+    "actual": "96f9ba7663363542c70ff962451b74ea8fe90de635cf690b4d7afeb258048454",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/deliver.ts",
+    "expected": "317f32aeb74eeca9a05a52db8d7ae446ba616c14cbf54cddc1280243accee3e3",
+    "actual": "317f32aeb74eeca9a05a52db8d7ae446ba616c14cbf54cddc1280243accee3e3",
+    "preserved": true,
+    "archive": true
+  },
+  {
+    "path": "packages/kernel/src/tick/detachments.ts",
+    "expected": "b3011246e6861b65b5ea5a1cc8ddda5b30caf268451c99f4b823fa2cf351c9b2",
+    "actual": "b3011246e6861b65b5ea5a1cc8ddda5b30caf268451c99f4b823fa2cf351c9b2",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/edit-preview.ts",
+    "expected": "d5c6c19361362a80f1d4a12e60bd93de175e2e04d11f3bc0e767dceac5425630",
+    "actual": "d5c6c19361362a80f1d4a12e60bd93de175e2e04d11f3bc0e767dceac5425630",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/forces.ts",
+    "expected": "47cf5c60a8bf7c5cf5936c981936ceb6053896d1246da3883833d5a9abb916fd",
+    "actual": "47cf5c60a8bf7c5cf5936c981936ceb6053896d1246da3883833d5a9abb916fd",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/freeze.ts",
+    "expected": "5945c7ac8b6edcdebcbdc0b45317242dcf32c69398d6da3b3f04fc0970a0ea7d",
+    "actual": "5945c7ac8b6edcdebcbdc0b45317242dcf32c69398d6da3b3f04fc0970a0ea7d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/generate.ts",
+    "expected": "37b34806c82f61493739238a7120cff16b12be025643cbc1d0c8a5ed34c87b7c",
+    "actual": "37b34806c82f61493739238a7120cff16b12be025643cbc1d0c8a5ed34c87b7c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/lot-transfer.ts",
+    "expected": "fa3899abb5aee7bc07400ca960a1c7ddcef758983657f1702c68f97c868618ff",
+    "actual": "fa3899abb5aee7bc07400ca960a1c7ddcef758983657f1702c68f97c868618ff",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/mandates.ts",
+    "expected": "5cc3de589f13c2d1a282fbf3a1293966acc48cd499e007d28d39c6a5a4faaf24",
+    "actual": "5cc3de589f13c2d1a282fbf3a1293966acc48cd499e007d28d39c6a5a4faaf24",
+    "preserved": true,
+    "archive": true
+  },
+  {
+    "path": "packages/kernel/src/tick/map.ts",
+    "expected": "29629312348e42258b0cdc94eaa1966961a459caf5ba1c564421fb4bed0e4857",
+    "actual": "29629312348e42258b0cdc94eaa1966961a459caf5ba1c564421fb4bed0e4857",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/offers.ts",
+    "expected": "d20ad6b02883182ddff51194ad8a9d8b3f2e33f70dc27507f92a82d45fde4f78",
+    "actual": "d20ad6b02883182ddff51194ad8a9d8b3f2e33f70dc27507f92a82d45fde4f78",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/onward-assignments.ts",
+    "expected": "c0c46e6b7f19e46c42c9552bfbdfa01e00682f972fc7cf25e3c36faf86703c6c",
+    "actual": "c0c46e6b7f19e46c42c9552bfbdfa01e00682f972fc7cf25e3c36faf86703c6c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/operations.ts",
+    "expected": "5af4d988a350748b085a8584e56622610a01d7ddab555055f2cb1f6bc2a2d79b",
+    "actual": "5af4d988a350748b085a8584e56622610a01d7ddab555055f2cb1f6bc2a2d79b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/orders.ts",
+    "expected": "51b5a314bf27bd425c5b02ece3323534be7bbf3f3e6e4a77a6ea7a58b720a990",
+    "actual": "51b5a314bf27bd425c5b02ece3323534be7bbf3f3e6e4a77a6ea7a58b720a990",
+    "preserved": true,
+    "archive": true
+  },
+  {
+    "path": "packages/kernel/src/tick/organisation.ts",
+    "expected": "b50aa6b8edb1c99f63e43adc9810a6db44226aefe655b37a742bec8584dd0559",
+    "actual": "b50aa6b8edb1c99f63e43adc9810a6db44226aefe655b37a742bec8584dd0559",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/passage.ts",
+    "expected": "fd9e7261463c444fa724750d9dde48aef99ac0aa55b4e8f158f247c04266c0a8",
+    "actual": "fd9e7261463c444fa724750d9dde48aef99ac0aa55b4e8f158f247c04266c0a8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/people-week.ts",
+    "expected": "c36c61339929462cd6c31e09b9a0bad7ea842ff3be697a396d59af37a74fb2ec",
+    "actual": "c36c61339929462cd6c31e09b9a0bad7ea842ff3be697a396d59af37a74fb2ec",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/plans.ts",
+    "expected": "73e0d0931d7eb7fb66bfd0f0537f1af513ef5726ed2be83e1db4e2623f5b9dfc",
+    "actual": "73e0d0931d7eb7fb66bfd0f0537f1af513ef5726ed2be83e1db4e2623f5b9dfc",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/policy.ts",
+    "expected": "dab689ae33ada2b6ff0972916893d497340a81b6b7654499b97c939cdb96833d",
+    "actual": "dab689ae33ada2b6ff0972916893d497340a81b6b7654499b97c939cdb96833d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/politics.ts",
+    "expected": "b822d62f0da19d420903bccfd3f62d27d2217fda467ccbaa58dd797ac0ffc8ef",
+    "actual": "b822d62f0da19d420903bccfd3f62d27d2217fda467ccbaa58dd797ac0ffc8ef",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/promise-reports.ts",
+    "expected": "ad4af3bd5ffdc32a8a141106494b96680c350d4b5dff6578e340ce10675131f5",
+    "actual": "ad4af3bd5ffdc32a8a141106494b96680c350d4b5dff6578e340ce10675131f5",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/recruitment.ts",
+    "expected": "3d8ce4c7b05da14ebd9af7515c2d89eb636f52b8f58c9a6b59d27c1e556f4c4b",
+    "actual": "3d8ce4c7b05da14ebd9af7515c2d89eb636f52b8f58c9a6b59d27c1e556f4c4b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/regions.ts",
+    "expected": "e2d54d4f8adb7d5cc578f8b529a60a837fa7a638728fb179af16f5c2ef4b08da",
+    "actual": "e2d54d4f8adb7d5cc578f8b529a60a837fa7a638728fb179af16f5c2ef4b08da",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/setup.ts",
+    "expected": "ac7d2cd66604e68b81e89fbc7ff269bbb2c61b3479856d9b330c6e6c035c2520",
+    "actual": "ac7d2cd66604e68b81e89fbc7ff269bbb2c61b3479856d9b330c6e6c035c2520",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/situations.ts",
+    "expected": "e793d1ac3625104fc5fcb3dcfeec2158eb0e42aafed7c919f014cb63d35a0332",
+    "actual": "e793d1ac3625104fc5fcb3dcfeec2158eb0e42aafed7c919f014cb63d35a0332",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/support.ts",
+    "expected": "cc3d208a164d9325259b3441ba3baf22c197976c9fa2961e41e504962505ff19",
+    "actual": "cc3d208a164d9325259b3441ba3baf22c197976c9fa2961e41e504962505ff19",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/tick.ts",
+    "expected": "9eb28fa4f974825923bb11528d924981a71abcb20d0c80cd7e28484d06c4192c",
+    "actual": "9eb28fa4f974825923bb11528d924981a71abcb20d0c80cd7e28484d06c4192c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/tick/verbs.ts",
+    "expected": "ac7f11064ce6bbb3e7909c808158663db901f206f4d09ac63bd8419d2aa5ff28",
+    "actual": "ac7f11064ce6bbb3e7909c808158663db901f206f4d09ac63bd8419d2aa5ff28",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/view/claimed-control.ts",
+    "expected": "1070d4c506526c998b57690a2d7bfcee42f2eafdd3f43730c0eafe1a271f25c0",
+    "actual": "1070d4c506526c998b57690a2d7bfcee42f2eafdd3f43730c0eafe1a271f25c0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/view/desk.ts",
+    "expected": "24798a75b24adac2bf4412dc0845d434f76629d9bf72037e620335dbd9b8ff64",
+    "actual": "24798a75b24adac2bf4412dc0845d434f76629d9bf72037e620335dbd9b8ff64",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/view/people.ts",
+    "expected": "024653f1cebeb22a63633ee0cfd5b047624d7b3c1a87c7adcd2893b5e3277113",
+    "actual": "024653f1cebeb22a63633ee0cfd5b047624d7b3c1a87c7adcd2893b5e3277113",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/view/politics.ts",
+    "expected": "b7b011e7333e7c4b6d6cb0ada96f200b99cf2e8c8735bf82174054cfd8c894a9",
+    "actual": "b7b011e7333e7c4b6d6cb0ada96f200b99cf2e8c8735bf82174054cfd8c894a9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/view/promises.ts",
+    "expected": "acfa8daeaa1725bba9d71f0d96df3405a181bea66734e18ac5492f2704ec26ed",
+    "actual": "acfa8daeaa1725bba9d71f0d96df3405a181bea66734e18ac5492f2704ec26ed",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/view/types.ts",
+    "expected": "ca96b396fb7a01640db7e3c365abc0d2ba6f39a7eddf7908e2d663f3cf44a2fe",
+    "actual": "ca96b396fb7a01640db7e3c365abc0d2ba6f39a7eddf7908e2d663f3cf44a2fe",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/view/view.ts",
+    "expected": "dc4a1ce87511b9310a212b8f486e03d6fb1ee240c84e30926f8c24afdba791f8",
+    "actual": "dc4a1ce87511b9310a212b8f486e03d6fb1ee240c84e30926f8c24afdba791f8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/assignments.ts",
+    "expected": "7ca1784a4f2973d8272e6f9677023a5dd719931d629a35788cf6e335feeb9f5d",
+    "actual": "7ca1784a4f2973d8272e6f9677023a5dd719931d629a35788cf6e335feeb9f5d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/calendar.ts",
+    "expected": "59c93944c80d4a4f6e4f075cec0a31fac97e4ae5dfef6cbc984d5b30525aaf1f",
+    "actual": "59c93944c80d4a4f6e4f075cec0a31fac97e4ae5dfef6cbc984d5b30525aaf1f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/doctrine.ts",
+    "expected": "19f6ea1291f904840c8bd349c2fa0420788814658c28f770bd591d3607bec8c3",
+    "actual": "19f6ea1291f904840c8bd349c2fa0420788814658c28f770bd591d3607bec8c3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/graph.ts",
+    "expected": "89b530eee9e31c1900a8e2313d34121da31b0d9d05c77de7cd1ad211e3307743",
+    "actual": "89b530eee9e31c1900a8e2313d34121da31b0d9d05c77de7cd1ad211e3307743",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/index.ts",
+    "expected": "1297d96ad12177eef484d577ca09295cdea64f9481acb16920b8a243777044a4",
+    "actual": "1297d96ad12177eef484d577ca09295cdea64f9481acb16920b8a243777044a4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/letters.ts",
+    "expected": "4adbfc4c1e73a90eee8a2d49710cd182b0fd873f77070d6ff4694de5de65bedf",
+    "actual": "4adbfc4c1e73a90eee8a2d49710cd182b0fd873f77070d6ff4694de5de65bedf",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/mandates.ts",
+    "expected": "8330e9e5bacb6fd876eabed9b685cdd54f10628b760b016bde699d50a79c5b9c",
+    "actual": "8330e9e5bacb6fd876eabed9b685cdd54f10628b760b016bde699d50a79c5b9c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/organisation.ts",
+    "expected": "207bfa689ceca1112c154d5ef74ec8cc33d529e2658aa97a6b6fd6b304938a0b",
+    "actual": "207bfa689ceca1112c154d5ef74ec8cc33d529e2658aa97a6b6fd6b304938a0b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/paper-selectors.ts",
+    "expected": "3371482cc23e9ecb8718700faf7491f6e19dea69caaa47520c6f3bd92d9959ef",
+    "actual": "3371482cc23e9ecb8718700faf7491f6e19dea69caaa47520c6f3bd92d9959ef",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/people.ts",
+    "expected": "559a7cdb41f144b5dcca558bede6288d3c9e1fbbf08c828156790c0ab84ddba3",
+    "actual": "559a7cdb41f144b5dcca558bede6288d3c9e1fbbf08c828156790c0ab84ddba3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/regiments.ts",
+    "expected": "8754590cab276382c47a0494a4f9be418be62a39c8e987ccea9baa7ce5040c49",
+    "actual": "8754590cab276382c47a0494a4f9be418be62a39c8e987ccea9baa7ce5040c49",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/scenario.ts",
+    "expected": "c699646ee33a3fd5412931d0b1b0cc44fee835d94e70164507614156e5ae5be0",
+    "actual": "c699646ee33a3fd5412931d0b1b0cc44fee835d94e70164507614156e5ae5be0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/kernel/src/world/world.ts",
+    "expected": "c5c0e1c58ab25785b89cb93ced1750770af80e5d00986d74f31910ba20f5f10c",
+    "actual": "c5c0e1c58ab25785b89cb93ced1750770af80e5d00986d74f31910ba20f5f10c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/package.json",
+    "expected": "7e49c716a4f78134a943f21f25fc93e88ecf8bc1bea8e852ab4f78365fe43d33",
+    "actual": "7e49c716a4f78134a943f21f25fc93e88ecf8bc1bea8e852ab4f78365fe43d33",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/checkpoints.schema.json",
+    "expected": "a6238483be17c813764c6a8640552d47b95c07e8e6d0c6fd25bd449254ab95c6",
+    "actual": "a6238483be17c813764c6a8640552d47b95c07e8e6d0c6fd25bd449254ab95c6",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-anachronisms.schema.json",
+    "expected": "5dd89d1614637cc3758d55f465245b293ed5a126084e9bd7f17af5fef7aec170",
+    "actual": "5dd89d1614637cc3758d55f465245b293ed5a126084e9bd7f17af5fef7aec170",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-checklist.schema.json",
+    "expected": "84da41634d08d924eb2dcb872b1f011947fee9664cb29a5f18d681d4d9cd1f79",
+    "actual": "84da41634d08d924eb2dcb872b1f011947fee9664cb29a5f18d681d4d9cd1f79",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-classes.schema.json",
+    "expected": "7921e8f6bcc3698b6cca716dd0bb5f4ea3ae0ca5154afd488717af63e61b394a",
+    "actual": "7921e8f6bcc3698b6cca716dd0bb5f4ea3ae0ca5154afd488717af63e61b394a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-forbidden.schema.json",
+    "expected": "dca2ad925270c767bbc78785b1065050ef82ffbeaf30c061c7067387d4047bf1",
+    "actual": "dca2ad925270c767bbc78785b1065050ef82ffbeaf30c061c7067387d4047bf1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-register.schema.json",
+    "expected": "667640e54adfc6521f43dac687ad71d46b81a54096ad8b16b4b01bfc39af7f0c",
+    "actual": "667640e54adfc6521f43dac687ad71d46b81a54096ad8b16b4b01bfc39af7f0c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-release.schema.json",
+    "expected": "335bf1a7db42a22f1fe7ce613264e040db9b471f53442cc23145ffaf4ec0c4d3",
+    "actual": "335bf1a7db42a22f1fe7ce613264e040db9b471f53442cc23145ffaf4ec0c4d3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-reviewers.schema.json",
+    "expected": "2ed455d22215dda2b7d7a3abb7d9508522fa486c34ffb94b36e5625d624212cd",
+    "actual": "2ed455d22215dda2b7d7a3abb7d9508522fa486c34ffb94b36e5625d624212cd",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-source-policy.schema.json",
+    "expected": "6b6d7bc420b0d5811b89b96839c928b51ae5eaa666dc0ca71ff875f77b7cb0d9",
+    "actual": "6b6d7bc420b0d5811b89b96839c928b51ae5eaa666dc0ca71ff875f77b7cb0d9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/gate-triggers.schema.json",
+    "expected": "6d9b8b2975edfeb969e86626249f33738a3ebe9c2fe8ad9b04f4a383eaa31c44",
+    "actual": "6d9b8b2975edfeb969e86626249f33738a3ebe9c2fe8ad9b04f4a383eaa31c44",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/pack.schema.json",
+    "expected": "7de8132c1ce66700a1ff07341ed50cfdc475affacef332335277c4ba29404b4b",
+    "actual": "7de8132c1ce66700a1ff07341ed50cfdc475affacef332335277c4ba29404b4b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/provenance.schema.json",
+    "expected": "ed8cffc4c672e8d0365ba57c24dc20c93089c6d21c8a9bc03655a112ccd19648",
+    "actual": "ed8cffc4c672e8d0365ba57c24dc20c93089c6d21c8a9bc03655a112ccd19648",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/pushback-register.schema.json",
+    "expected": "dfc9231bc06a5693f343783e2964802d74d07fc7c8e6b31edc730e7416711bb8",
+    "actual": "dfc9231bc06a5693f343783e2964802d74d07fc7c8e6b31edc730e7416711bb8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/scenario-header.schema.json",
+    "expected": "b9132b311c60c921b148998a03b308242e2aff7d9e0b1c04f0ae020ed8d61771",
+    "actual": "b9132b311c60c921b148998a03b308242e2aff7d9e0b1c04f0ae020ed8d61771",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/scenario.schema.json",
+    "expected": "7901670e201faeb76d2f317320df2eebd6bdcb2c1c9e9189b16b46faa7713a5b",
+    "actual": "7901670e201faeb76d2f317320df2eebd6bdcb2c1c9e9189b16b46faa7713a5b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/situation.schema.json",
+    "expected": "5939f6c00805c5a277e9eeec92bd38f6b9d1202046bf5b1981b9f954753b9ca0",
+    "actual": "5939f6c00805c5a277e9eeec92bd38f6b9d1202046bf5b1981b9f954753b9ca0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/strings.schema.json",
+    "expected": "23ab1ab6beee390de2822206648bf6d1f61d8701d24ec807d6be42360774ed4e",
+    "actual": "23ab1ab6beee390de2822206648bf6d1f61d8701d24ec807d6be42360774ed4e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/schemas/world.schema.json",
+    "expected": "2f77b2f535ab520b7153eed7f9f2eb84d42fc51f6a7eca7a0e9f06d467799c78",
+    "actual": "2f77b2f535ab520b7153eed7f9f2eb84d42fc51f6a7eca7a0e9f06d467799c78",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/banned-sources.ts",
+    "expected": "cde47956d0aad3bb51e3306783085bbeecce37205fcd5ee9004f5f22ca16289a",
+    "actual": "cde47956d0aad3bb51e3306783085bbeecce37205fcd5ee9004f5f22ca16289a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/call-profiles.ts",
+    "expected": "535103e106f3454d242ad7ba6672bebff82eca35310acd8faf647690005504d7",
+    "actual": "535103e106f3454d242ad7ba6672bebff82eca35310acd8faf647690005504d7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/cells.ts",
+    "expected": "da8bcf0705d49b331317bf8b4970e1dd1ff54061f3f1f1b7b7cee6044bd99ca0",
+    "actual": "da8bcf0705d49b331317bf8b4970e1dd1ff54061f3f1f1b7b7cee6044bd99ca0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/checkpoints.ts",
+    "expected": "84ce4ff68f1f66ce49bb000d7fe7ff42577a47495687406d26ca889a478822cf",
+    "actual": "84ce4ff68f1f66ce49bb000d7fe7ff42577a47495687406d26ca889a478822cf",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/csv.ts",
+    "expected": "dd195b827a69df0228303bc19c7e860d725e76864b3eb85fe9eefc77e4b380df",
+    "actual": "dd195b827a69df0228303bc19c7e860d725e76864b3eb85fe9eefc77e4b380df",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/format.ts",
+    "expected": "7abac222a396cba916b71b89f5ba2a110bc22737d603a8ef44581ca75e346500",
+    "actual": "7abac222a396cba916b71b89f5ba2a110bc22737d603a8ef44581ca75e346500",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/gate.ts",
+    "expected": "4e7ddd4eb6c795ea019746153172317552e5c218144301ecccad9c538a5a8e31",
+    "actual": "4e7ddd4eb6c795ea019746153172317552e5c218144301ecccad9c538a5a8e31",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/generate.ts",
+    "expected": "a5f355652ff5af381af5a14ced2b71bbeec68f47d541ef7dae03847586076f67",
+    "actual": "a5f355652ff5af381af5a14ced2b71bbeec68f47d541ef7dae03847586076f67",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/index.ts",
+    "expected": "03c2c70419b9c50ef6ae1718e2ce37e0678453c0b7f37217d50a019c1519bead",
+    "actual": "03c2c70419b9c50ef6ae1718e2ce37e0678453c0b7f37217d50a019c1519bead",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/issues.ts",
+    "expected": "d402ab532ddff82fee173df5627619d2905cf90869ef360a2f994c1d6f73ed6c",
+    "actual": "d402ab532ddff82fee173df5627619d2905cf90869ef360a2f994c1d6f73ed6c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/layout.ts",
+    "expected": "5cc8683c708cdbccbc17d700ad6b816721a1ca595076c7ad1c8ccfbab604d948",
+    "actual": "5cc8683c708cdbccbc17d700ad6b816721a1ca595076c7ad1c8ccfbab604d948",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/licences.ts",
+    "expected": "bbd4f62f63486177b94e293aad067f0e9665287744b24347c1ef232180d16093",
+    "actual": "bbd4f62f63486177b94e293aad067f0e9665287744b24347c1ef232180d16093",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/load.ts",
+    "expected": "3d7bb83bbab5f90012248d32b0c701ba319bb61c36134a1c12db4dd6a0a7cee3",
+    "actual": "3d7bb83bbab5f90012248d32b0c701ba319bb61c36134a1c12db4dd6a0a7cee3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/published.ts",
+    "expected": "66bc797be56f066f7953bfd877b24568ccb20c05f80323132689582cc5476416",
+    "actual": "66bc797be56f066f7953bfd877b24568ccb20c05f80323132689582cc5476416",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/pushback-register.ts",
+    "expected": "a779757daba354a96640225b56bb4dd150f9102c5fa4a041c6274ebb7dfaa39a",
+    "actual": "a779757daba354a96640225b56bb4dd150f9102c5fa4a041c6274ebb7dfaa39a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/schemas.ts",
+    "expected": "9da5aa9f4dce1248f7bcca5f082ffa2caaf606b196651a4aff7ca80b662c711c",
+    "actual": "9da5aa9f4dce1248f7bcca5f082ffa2caaf606b196651a4aff7ca80b662c711c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/situation-layer.ts",
+    "expected": "67d4b5427352d9ca8c149c63f38b44626250a3cdcf61655a00da4bb14083b6ce",
+    "actual": "67d4b5427352d9ca8c149c63f38b44626250a3cdcf61655a00da4bb14083b6ce",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/situations.ts",
+    "expected": "89e5f06ec075bd38b5981b2a64ea50d0ffa205b7fe32ce9da7e65a6d881f40e5",
+    "actual": "89e5f06ec075bd38b5981b2a64ea50d0ffa205b7fe32ce9da7e65a6d881f40e5",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/strings.ts",
+    "expected": "491d5d1485949c82508bacdefc22720a553b3bfae078e227c9176dcf188737fa",
+    "actual": "491d5d1485949c82508bacdefc22720a553b3bfae078e227c9176dcf188737fa",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/pack-format/src/validate.ts",
+    "expected": "f1f3a9b89c7f3a11d74dc3c0c2790181eb9c624cd172ff0e4bd3be6c06c8055d",
+    "actual": "f1f3a9b89c7f3a11d74dc3c0c2790181eb9c624cd172ff0e4bd3be6c06c8055d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/rule-seats/package.json",
+    "expected": "08755847f8bdaf29965239b2f6cfa2c40a0565906d1d34162b27aaf75d365ef8",
+    "actual": "08755847f8bdaf29965239b2f6cfa2c40a0565906d1d34162b27aaf75d365ef8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packages/rule-seats/src/index.ts",
+    "expected": "5695f6f81283e559bac53e9178dc5ef896ef7c743e47d6c14c23d1c7583513ed",
+    "actual": "5695f6f81283e559bac53e9178dc5ef896ef7c743e47d6c14c23d1c7583513ed",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/README.md",
+    "expected": "52c4130c1a186a97a13fa9bb49ee5f61ee76e827efb0ce75b2c01877a21728d1",
+    "actual": "52c4130c1a186a97a13fa9bb49ee5f61ee76e827efb0ce75b2c01877a21728d1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/PROVENANCE.json",
+    "expected": "2c57f17bfad2a10aae8af5e6429d908beaf01bce5d0cc8d6f0516075e68bf252",
+    "actual": "2c57f17bfad2a10aae8af5e6429d908beaf01bce5d0cc8d6f0516075e68bf252",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/README.md",
+    "expected": "d3245648c8ad162f37151f3cabc082135ff24dc29bd60f18bf2ff88d81c0f575",
+    "actual": "d3245648c8ad162f37151f3cabc082135ff24dc29bd60f18bf2ff88d81c0f575",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/data/GENERATED.md",
+    "expected": "51593e36d133d507e7a5d69e49d4477a1fc8e584910908a7b755a2c3e5d254ae",
+    "actual": "51593e36d133d507e7a5d69e49d4477a1fc8e584910908a7b755a2c3e5d254ae",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/data/scenarios/opening.json",
+    "expected": "c75f07feabd391fbf198f29275d17bba2bd04ec4569476cdf030bc52337f5db1",
+    "actual": "c75f07feabd391fbf198f29275d17bba2bd04ec4569476cdf030bc52337f5db1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/data/scenarios/summer_front.json",
+    "expected": "09e5c812cb8584cc051c2dc4d45868279cef914cf963725d475bb7e83b050fe9",
+    "actual": "09e5c812cb8584cc051c2dc4d45868279cef914cf963725d475bb7e83b050fe9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/data/strings/en.json",
+    "expected": "77ba5333ef7ad272aaed508d4efeb4e16247191f63434821df17ff0b78bf008e",
+    "actual": "77ba5333ef7ad272aaed508d4efeb4e16247191f63434821df17ff0b78bf008e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/data/world.json",
+    "expected": "7938364140a352113ca91bf94875f7b7ace37b1d6cbf435f1c701233e8f18927",
+    "actual": "7938364140a352113ca91bf94875f7b7ace37b1d6cbf435f1c701233e8f18927",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/gate/anachronisms.json",
+    "expected": "bdf2030d7f72de5c4e184b059f2f3d59b5c120aa3169b0de87f5daab83a33d1e",
+    "actual": "bdf2030d7f72de5c4e184b059f2f3d59b5c120aa3169b0de87f5daab83a33d1e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/gate/checklist.json",
+    "expected": "75fa8649ad26baa129c3b0ceee94d35e9c8c142b58ea3aa9dcc7d46d14924c0a",
+    "actual": "75fa8649ad26baa129c3b0ceee94d35e9c8c142b58ea3aa9dcc7d46d14924c0a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/gate/classes.json",
+    "expected": "f115ed874cd4cd9269e2f7c8692f120beb6d239702681daf461095158a117eba",
+    "actual": "f115ed874cd4cd9269e2f7c8692f120beb6d239702681daf461095158a117eba",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/gate/forbidden.json",
+    "expected": "7ae42aa1d62c73622b57186049681c64f6fa081974e1f8c9bfbb2659597ae6fc",
+    "actual": "7ae42aa1d62c73622b57186049681c64f6fa081974e1f8c9bfbb2659597ae6fc",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/gate/register.json",
+    "expected": "1ec795f9497997ebfd52d5b188c8e1a9a247deb329f1039505a9893cf01cac9e",
+    "actual": "1ec795f9497997ebfd52d5b188c8e1a9a247deb329f1039505a9893cf01cac9e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/gate/release.json",
+    "expected": "a601be0009cf289f19b0e7e26bfe8daafca47e2641cff07f889b768e3ade1cb9",
+    "actual": "a601be0009cf289f19b0e7e26bfe8daafca47e2641cff07f889b768e3ade1cb9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/gate/reviewers.json",
+    "expected": "a287e3d5c5de8fd3b1a2dc7e8249fdf42e1368bec4cef6bc6400b1a1219452fc",
+    "actual": "a287e3d5c5de8fd3b1a2dc7e8249fdf42e1368bec4cef6bc6400b1a1219452fc",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/gate/source-policy.json",
+    "expected": "5b282f86b6703464a9bd2544c8009d9fcfce7e475f3942cf8e06a570374a5a7c",
+    "actual": "5b282f86b6703464a9bd2544c8009d9fcfce7e475f3942cf8e06a570374a5a7c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/gate/triggers.json",
+    "expected": "c2cd27e50f1182e47de2f1748d6294a1d84fd31985b668282f3ad5ad9922d7fe",
+    "actual": "c2cd27e50f1182e47de2f1748d6294a1d84fd31985b668282f3ad5ad9922d7fe",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/pack.json",
+    "expected": "736cd72fff2c4d59bfd7a58dcb3585ad6a8f9794449e6cd197b997640829b943",
+    "actual": "736cd72fff2c4d59bfd7a58dcb3585ad6a8f9794449e6cd197b997640829b943",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/situations/eastwatch_followup.json",
+    "expected": "9fefeee20ebab402d481b4dcd58b81d293983fb9b75a69fce297af1b88a4e7e0",
+    "actual": "9fefeee20ebab402d481b4dcd58b81d293983fb9b75a69fce297af1b88a4e7e0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/situations/eastwatch_stalls.json",
+    "expected": "9ef5170f7f4d6dda0d094184b2685a15e5d65c247d0273e4cfd3cfc81285e769",
+    "actual": "9ef5170f7f4d6dda0d094184b2685a15e5d65c247d0273e4cfd3cfc81285e769",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/situations/fen_arrivals.json",
+    "expected": "2aa3499c7a6a660adccd4a0145eb7da0eda678bd53f903a881a9375134abb9c4",
+    "actual": "2aa3499c7a6a660adccd4a0145eb7da0eda678bd53f903a881a9375134abb9c4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/situations/fen_crossing.json",
+    "expected": "a7e5e8b179974bdac616b7f9a88ac2ab2eace09212e55afc5be6ec44ec247035",
+    "actual": "a7e5e8b179974bdac616b7f9a88ac2ab2eace09212e55afc5be6ec44ec247035",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/situations/harbour_burning.json",
+    "expected": "7d0bf9cadb9b2b0e6dfb5522c94e5c0e2e2a7945884c2c616566e99b45dd8588",
+    "actual": "7d0bf9cadb9b2b0e6dfb5522c94e5c0e2e2a7945884c2c616566e99b45dd8588",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/situations/sanctuary_act.json",
+    "expected": "8ad270285e84f46bb34b1ee4e47bda2bb581dd1f5575d4a600ae1816ff192001",
+    "actual": "8ad270285e84f46bb34b1ee4e47bda2bb581dd1f5575d4a600ae1816ff192001",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/control.csv",
+    "expected": "33762c78570148cde02fca0b233bd56212b155c471d23dac7752405ffd7f5a91",
+    "actual": "33762c78570148cde02fca0b233bd56212b155c471d23dac7752405ffd7f5a91",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/department_changes.csv",
+    "expected": "07b83b00c4297fc40199aa7c7f6b15fe6d465e407054fc2e47478f0d143df3c4",
+    "actual": "07b83b00c4297fc40199aa7c7f6b15fe6d465e407054fc2e47478f0d143df3c4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/depot_conditions.csv",
+    "expected": "3241c6695705d01c0929a7ba87b1da851754e88244bb092fe1a0e39257a4e1cd",
+    "actual": "3241c6695705d01c0929a7ba87b1da851754e88244bb092fe1a0e39257a4e1cd",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/edge_conditions.csv",
+    "expected": "f8cb01faeaf505d82bf58b05c3822fed06c5eb6281c9f15ad31893abe0a140fb",
+    "actual": "f8cb01faeaf505d82bf58b05c3822fed06c5eb6281c9f15ad31893abe0a140fb",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/force_blocks.csv",
+    "expected": "ecb7d2293ffee28f27fce08408c87ddeb1d9e767fbbf1d4475bbac4b2de048df",
+    "actual": "ecb7d2293ffee28f27fce08408c87ddeb1d9e767fbbf1d4475bbac4b2de048df",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/fortification.csv",
+    "expected": "6040dedb3c150155372b1d28bd87f73d3163767676d9cb283a7763ea875877e0",
+    "actual": "6040dedb3c150155372b1d28bd87f73d3163767676d9cb283a7763ea875877e0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/governments.csv",
+    "expected": "e581c19a25027eccefe319f0623c3a25411d589f8987e9e661e6e26274042f7a",
+    "actual": "e581c19a25027eccefe319f0623c3a25411d589f8987e9e661e6e26274042f7a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/holders.csv",
+    "expected": "ec32c201693f05ca18380b26a33ff88f0f991379db9389a65d2fb4f0462c7b5f",
+    "actual": "ec32c201693f05ca18380b26a33ff88f0f991379db9389a65d2fb4f0462c7b5f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/loyalty.csv",
+    "expected": "3b1bed7ff9340553eb5b8da3de4fa08fa8b2f969aae046ade72569996ccff0f8",
+    "actual": "3b1bed7ff9340553eb5b8da3de4fa08fa8b2f969aae046ade72569996ccff0f8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/obstructions.csv",
+    "expected": "3c6c9c382bdcaa70cefd4ee405bf92dd2bf8556a0bc6ed6a4727f620493b1e05",
+    "actual": "3c6c9c382bdcaa70cefd4ee405bf92dd2bf8556a0bc6ed6a4727f620493b1e05",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/post_links.csv",
+    "expected": "a366aa5a3d2f815fc34ef2fd7cb6e8e38ca4e2c74054ffcc7e3744e85b8bc681",
+    "actual": "a366aa5a3d2f815fc34ef2fd7cb6e8e38ca4e2c74054ffcc7e3744e85b8bc681",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/posts.csv",
+    "expected": "038653478ee3df4323594bcfb0c57d864eeaffb26124fc013377b35b2e538831",
+    "actual": "038653478ee3df4323594bcfb0c57d864eeaffb26124fc013377b35b2e538831",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/scenario.json",
+    "expected": "852aab3227350509de6c07330deb67a2f74fa40637102b820b3ceb9e579e33cc",
+    "actual": "852aab3227350509de6c07330deb67a2f74fa40637102b820b3ceb9e579e33cc",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/opening/standing_orders.csv",
+    "expected": "55c2369277843f95d3058219c228459ea80356fd1516403fbd3080b3dcf3736f",
+    "actual": "55c2369277843f95d3058219c228459ea80356fd1516403fbd3080b3dcf3736f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/control.csv",
+    "expected": "728ebe1f62460f18cd67abba77c0d39fa0f86648d74cfd9af880e68d13cc790f",
+    "actual": "728ebe1f62460f18cd67abba77c0d39fa0f86648d74cfd9af880e68d13cc790f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/force_blocks.csv",
+    "expected": "94b877e5935673d69fefead05ae7001bb4bcc17d302600d932d11e434ddc35a9",
+    "actual": "94b877e5935673d69fefead05ae7001bb4bcc17d302600d932d11e434ddc35a9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/fortification.csv",
+    "expected": "536a401d5895dcddec9979ca9734b0da9bc5aacae3aee5ada63d65164e14b703",
+    "actual": "536a401d5895dcddec9979ca9734b0da9bc5aacae3aee5ada63d65164e14b703",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/governments.csv",
+    "expected": "aa2df08078d672268e9c5d5bee5517161b1fd2b84126291511b64a59f109d7df",
+    "actual": "aa2df08078d672268e9c5d5bee5517161b1fd2b84126291511b64a59f109d7df",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/holders.csv",
+    "expected": "602bd851b88a287fe173d1d4d7ed85a89eba0f1c76fea62d298f2a542b5351dc",
+    "actual": "602bd851b88a287fe173d1d4d7ed85a89eba0f1c76fea62d298f2a542b5351dc",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/obstructions.csv",
+    "expected": "f03d49a8d20b59ee50bc872f78a797129f8cd76f3588a9185d0fd018b26fd3a1",
+    "actual": "f03d49a8d20b59ee50bc872f78a797129f8cd76f3588a9185d0fd018b26fd3a1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/posts.csv",
+    "expected": "be81838299b585a1c50e9515cafe6f9cf342c2bc90ade5f0000fdb7e03587c61",
+    "actual": "be81838299b585a1c50e9515cafe6f9cf342c2bc90ade5f0000fdb7e03587c61",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/scenarios/summer_front/scenario.json",
+    "expected": "faec5bb3fc7863a078a4d7f91542e8c07a48c076d69439939f67aa917ae4da67",
+    "actual": "faec5bb3fc7863a078a4d7f91542e8c07a48c076d69439939f67aa917ae4da67",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/world/census.csv",
+    "expected": "46c6510d755561c6d1b81b1ecc6db0721b289861e46948454a11ca50cc7187e7",
+    "actual": "46c6510d755561c6d1b81b1ecc6db0721b289861e46948454a11ca50cc7187e7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/world/departments.csv",
+    "expected": "32318427d538296d4e78e067dfb48f662d5ffa5d1eab77bb618d12e45082798b",
+    "actual": "32318427d538296d4e78e067dfb48f662d5ffa5d1eab77bb618d12e45082798b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/world/depots.csv",
+    "expected": "2948bec2852bc195efb2d92dad3c13d73062069df6482e52104da2da3dba9f91",
+    "actual": "2948bec2852bc195efb2d92dad3c13d73062069df6482e52104da2da3dba9f91",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/world/edges.csv",
+    "expected": "e8e125cf1bc70f36d374ec7107c06cee2e42bb54f5b73ee47cfb6fbfd0c84fe7",
+    "actual": "e8e125cf1bc70f36d374ec7107c06cee2e42bb54f5b73ee47cfb6fbfd0c84fe7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/world/installations.csv",
+    "expected": "b4fb46701534fa16ce4524d99e9f966b037400c39bbee947fde4de7f59be9bed",
+    "actual": "b4fb46701534fa16ce4524d99e9f966b037400c39bbee947fde4de7f59be9bed",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/world/people.csv",
+    "expected": "1e4aeff84d619d3ef2f10aeceea293b097a57e278fff56c6d1bc86430efcf30f",
+    "actual": "1e4aeff84d619d3ef2f10aeceea293b097a57e278fff56c6d1bc86430efcf30f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/world/rail_lines.csv",
+    "expected": "8e98ba341b1b8c2a22e39327275385b95225eaaf3c8c7afc906a8ad1bf4f4535",
+    "actual": "8e98ba341b1b8c2a22e39327275385b95225eaaf3c8c7afc906a8ad1bf4f4535",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/world/regions.csv",
+    "expected": "f66a0d8d63ad9209ac4b2aa49d294b843ce299eb52ee568731cbe99893e7b5cd",
+    "actual": "f66a0d8d63ad9209ac4b2aa49d294b843ce299eb52ee568731cbe99893e7b5cd",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/source/world/weather_zones.csv",
+    "expected": "b2a4a416e3f5a2976135c2133beee8db0b56215229d38d79332641658b062e5f",
+    "actual": "b2a4a416e3f5a2976135c2133beee8db0b56215229d38d79332641658b062e5f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/testbed/strings/en.json",
+    "expected": "029ab4e8442cde478042a75ab05b95e7dcfd467bea93f16841ad7343ae379ea9",
+    "actual": "029ab4e8442cde478042a75ab05b95e7dcfd467bea93f16841ad7343ae379ea9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/PROVENANCE.json",
+    "expected": "5c7486ce661db1b6e7de19782e87585f0fc9be2a5f8f11e0d2284057ba786a12",
+    "actual": "5c7486ce661db1b6e7de19782e87585f0fc9be2a5f8f11e0d2284057ba786a12",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/README.md",
+    "expected": "83aa9d9cd61909f3da30473ac9c3315ab9a03c8190ecb2b06e05b5094d68ac6f",
+    "actual": "83aa9d9cd61909f3da30473ac9c3315ab9a03c8190ecb2b06e05b5094d68ac6f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/calls-1861.json",
+    "expected": "a28eb70d0e8b97d9c499a43b27b56b6ce5de3cf982e69d94e2ec36c513b874e7",
+    "actual": "a28eb70d0e8b97d9c499a43b27b56b6ce5de3cf982e69d94e2ec36c513b874e7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/checkpoints.json",
+    "expected": "121e97ec90fb9ec31756c0e7250d77ef795869c450a4ede68f7649071d002afd",
+    "actual": "121e97ec90fb9ec31756c0e7250d77ef795869c450a4ede68f7649071d002afd",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/data/GENERATED.md",
+    "expected": "803e5173f49d5223354046ee94b7f05c714c50137c6886780389a853a0e8b805",
+    "actual": "803e5173f49d5223354046ee94b7f05c714c50137c6886780389a853a0e8b805",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/data/scenarios/march_1861.json",
+    "expected": "94da76d36be9150a541c828c8b81913fdb775349cb26ecd18fc9fd205d7399d9",
+    "actual": "94da76d36be9150a541c828c8b81913fdb775349cb26ecd18fc9fd205d7399d9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/data/strings/en.json",
+    "expected": "ed80207745a26579d49b8c465dda3fc24a3e43f113df87b8db43dfd28901a056",
+    "actual": "ed80207745a26579d49b8c465dda3fc24a3e43f113df87b8db43dfd28901a056",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/data/world.json",
+    "expected": "8e783780ff9dfe100f8478c8b8e67a2dc40b32d944b9baedd7fd01a0bc24bd13",
+    "actual": "8e783780ff9dfe100f8478c8b8e67a2dc40b32d944b9baedd7fd01a0bc24bd13",
+    "preserved": true,
+    "archive": true
+  },
+  {
+    "path": "packs/union-1861/gate/anachronisms.json",
+    "expected": "6815417aca239ff2c1d78755fc6734f3e5eb73bc58afccc9cb457ae8f9c3ce44",
+    "actual": "6815417aca239ff2c1d78755fc6734f3e5eb73bc58afccc9cb457ae8f9c3ce44",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/gate/checklist.json",
+    "expected": "75fa8649ad26baa129c3b0ceee94d35e9c8c142b58ea3aa9dcc7d46d14924c0a",
+    "actual": "75fa8649ad26baa129c3b0ceee94d35e9c8c142b58ea3aa9dcc7d46d14924c0a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/gate/classes.json",
+    "expected": "8f6633af861a289b9eb96999e69bf2ea6b35f93c7b9ce62179875f2d0a766461",
+    "actual": "8f6633af861a289b9eb96999e69bf2ea6b35f93c7b9ce62179875f2d0a766461",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/gate/forbidden.json",
+    "expected": "f6e1e7221377004ee8ce624a185a534b6442a04243b8aa3cad304e6a486d83d2",
+    "actual": "f6e1e7221377004ee8ce624a185a534b6442a04243b8aa3cad304e6a486d83d2",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/gate/register.json",
+    "expected": "11587c14e1cc40aa33fd3dca5bf3289d8d4a26f335ee6ba503dbc8cbe3eabb95",
+    "actual": "11587c14e1cc40aa33fd3dca5bf3289d8d4a26f335ee6ba503dbc8cbe3eabb95",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/gate/reviewers.json",
+    "expected": "a287e3d5c5de8fd3b1a2dc7e8249fdf42e1368bec4cef6bc6400b1a1219452fc",
+    "actual": "a287e3d5c5de8fd3b1a2dc7e8249fdf42e1368bec4cef6bc6400b1a1219452fc",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/gate/source-policy.json",
+    "expected": "3044c446843d5db58ec2bbfd2a3da96e53c504efa4ef14a3bfeca4612455808c",
+    "actual": "3044c446843d5db58ec2bbfd2a3da96e53c504efa4ef14a3bfeca4612455808c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/gate/triggers.json",
+    "expected": "cc15707d4fe2fa20317183a434da3f1ca418da793843f8ee6ddf1e2a8ae9d6e9",
+    "actual": "cc15707d4fe2fa20317183a434da3f1ca418da793843f8ee6ddf1e2a8ae9d6e9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/pack.json",
+    "expected": "d9189ed917a008d09c23e3edeafd21a036716bd04e337407fbf77378d9ae4ff5",
+    "actual": "d9189ed917a008d09c23e3edeafd21a036716bd04e337407fbf77378d9ae4ff5",
+    "preserved": true,
+    "archive": true
+  },
+  {
+    "path": "packs/union-1861/pushback-confederate.json",
+    "expected": "073e993e8052d8d9ea078374a71707ae5318003fab6f7fa5b7d078be94ff2d43",
+    "actual": "073e993e8052d8d9ea078374a71707ae5318003fab6f7fa5b7d078be94ff2d43",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/pushback-union.json",
+    "expected": "ced1c3006268e635f8933154100a59040d4d51de6dedd1336b237ff490aa2376",
+    "actual": "ced1c3006268e635f8933154100a59040d4d51de6dedd1336b237ff490aa2376",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/arkansas_forces_transferred.json",
+    "expected": "dd378a6183dd35a492cb16f973cb84d1f21d59cf346a57b48abc36d682f4184c",
+    "actual": "dd378a6183dd35a492cb16f973cb84d1f21d59cf346a57b48abc36d682f4184c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/arkansas_secedes.json",
+    "expected": "4b25073e53205ca7536553ff2abc7d0935cead80ed6f2c406f194fb67a04fa10",
+    "actual": "4b25073e53205ca7536553ff2abc7d0935cead80ed6f2c406f194fb67a04fa10",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/baltimore_route_closed.json",
+    "expected": "8ca8a9a37f8b86aa24358d9f0f627c18646d15de236298143bb4c3e0fa7d88f3",
+    "actual": "8ca8a9a37f8b86aa24358d9f0f627c18646d15de236298143bb4c3e0fa7d88f3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/bates_fugitive_law_opinion.json",
+    "expected": "704540c2aa47854006c1eaae6bc5ddf5acb63c657f0a4b7a9592944c2a368a16",
+    "actual": "704540c2aa47854006c1eaae6bc5ddf5acb63c657f0a4b7a9592944c2a368a16",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/black_volunteer_offers.json",
+    "expected": "b1cc139e07bff97385b2cd7d2c946ab794d761d02762759fc0dfd1b569c82ede",
+    "actual": "b1cc139e07bff97385b2cd7d2c946ab794d761d02762759fc0dfd1b569c82ede",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/blockade_or_closure.json",
+    "expected": "8b95ed78c15accc251396c7f5a2076d788824f6027f1cf98c6cf86480648f0c9",
+    "actual": "8b95ed78c15accc251396c7f5a2076d788824f6027f1cf98c6cf86480648f0c9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/call_for_troops.json",
+    "expected": "87343ac2c352ed2d2d021e46089dac3c57bf8c072081f6c20df9406edf1cf1b8",
+    "actual": "87343ac2c352ed2d2d021e46089dac3c57bf8c072081f6c20df9406edf1cf1b8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/camp_jackson_deaths.json",
+    "expected": "80bae2612b449b041a2e012822cdbe4434ec2f52c0bf338fb566c9976f00c867",
+    "actual": "80bae2612b449b041a2e012822cdbe4434ec2f52c0bf338fb566c9976f00c867",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/charleston_anderson_command.json",
+    "expected": "6a07a22200977f83a9f0e4648b31c5d8843fc34b36f8d241de3d93d8a26c02e4",
+    "actual": "6a07a22200977f83a9f0e4648b31c5d8843fc34b36f8d241de3d93d8a26c02e4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/cherokee_neutrality.json",
+    "expected": "6fc6b23600221f414afabfb7b9d613f7e63ee7e1424bf807ded4da1820a1d24b",
+    "actual": "6fc6b23600221f414afabfb7b9d613f7e63ee7e1424bf807ded4da1820a1d24b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/chickasaw_treaty.json",
+    "expected": "c6288db9dab9a346382a452919d4e70228d92dde15b364b5c23654579515baca",
+    "actual": "c6288db9dab9a346382a452919d4e70228d92dde15b364b5c23654579515baca",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/choctaw_treaty.json",
+    "expected": "dcf21dedb00b992e27607d6ae3e0f2e1817114223e8e559ac39525c19dc4f4a9",
+    "actual": "dcf21dedb00b992e27607d6ae3e0f2e1817114223e8e559ac39525c19dc4f4a9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_capital_moved.json",
+    "expected": "52f469e80f72ac96c2f4b6b1ac81b66458a8e83523cd65f0784a19cb6c68bcd8",
+    "actual": "52f469e80f72ac96c2f4b6b1ac81b66458a8e83523cd65f0784a19cb6c68bcd8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_commissioners.json",
+    "expected": "0345707ec3052d3f6013f4deda730fe1b9c938f190d12f41d7c8637dcb0b6ae1",
+    "actual": "0345707ec3052d3f6013f4deda730fe1b9c938f190d12f41d7c8637dcb0b6ae1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_opening.json",
+    "expected": "80909b7a68db3628041dac1528e419b5c70526bfb74b575587ba2d11d47b3eeb",
+    "actual": "80909b7a68db3628041dac1528e419b5c70526bfb74b575587ba2d11d47b3eeb",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/confederate_protection_act.json",
+    "expected": "40bd7d93c82de5458280ab5a058c3ce823db3fd4bdc9adc2d1ff65209ddfeda4",
+    "actual": "40bd7d93c82de5458280ab5a058c3ce823db3fd4bdc9adc2d1ff65209ddfeda4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/drafts/chickasaw_treaty.json",
+    "expected": "8aa7d22f334908b3a41777492631b692cf160bae31c31b9cf207f3678c8fdf3f",
+    "actual": "8aa7d22f334908b3a41777492631b692cf160bae31c31b9cf207f3678c8fdf3f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/drafts/choctaw_treaty.json",
+    "expected": "7f5859854e9187796cb507651f8bc0c52db2d9e8a449c5a7837d5e7d3275cc68",
+    "actual": "7f5859854e9187796cb507651f8bc0c52db2d9e8a449c5a7837d5e7d3275cc68",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/drafts/merryman_answer.json",
+    "expected": "c15862591643dca18be932366ecb8be5a3781ab143ec39d932569658df5824ce",
+    "actual": "c15862591643dca18be932366ecb8be5a3781ab143ec39d932569658df5824ce",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/drafts/muscogee_treaty.json",
+    "expected": "f6e89239e6c38a4b267cfafa22586a52bb31c1e4cd4ba7ec49efd00a84507b37",
+    "actual": "f6e89239e6c38a4b267cfafa22586a52bb31c1e4cd4ba7ec49efd00a84507b37",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_arrivals.json",
+    "expected": "8168b73f2c70b952adaa98bf6b6524e96b1c27e89dfffb980b11c6d5336d5b3f",
+    "actual": "8168b73f2c70b952adaa98bf6b6524e96b1c27e89dfffb980b11c6d5336d5b3f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_escape.json",
+    "expected": "99aa7c1f3f1196bca900f584b1bf937de4fdc773b1370eb9aacffe1f4e39e67e",
+    "actual": "99aa7c1f3f1196bca900f584b1bf937de4fdc773b1370eb9aacffe1f4e39e67e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/fort_monroe_escape_asked.json",
+    "expected": "93d7e40fa7aedf79f757ed6f6d8b704d77e3795c67ccc6bc456c382da01513a3",
+    "actual": "93d7e40fa7aedf79f757ed6f6d8b704d77e3795c67ccc6bc456c382da01513a3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/gosport_yard.json",
+    "expected": "cf021f179cc1533a82d85987514efc7cd0abe11ecdc94363a02835f8d58973c6",
+    "actual": "cf021f179cc1533a82d85987514efc7cd0abe11ecdc94363a02835f8d58973c6",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/habeas_on_the_line.json",
+    "expected": "87ec35d47de726691f43b247aadd5edf3d7b21ab431820abee6f2c1bd3bdcd4c",
+    "actual": "87ec35d47de726691f43b247aadd5edf3d7b21ab431820abee6f2c1bd3bdcd4c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/harpers_ferry_assignment_notice.json",
+    "expected": "eea0c3a0cca5266fb911c089fbf58abcff7f00b3d37d55854744dae1e0869f65",
+    "actual": "eea0c3a0cca5266fb911c089fbf58abcff7f00b3d37d55854744dae1e0869f65",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/houston_confederate_obligations.json",
+    "expected": "5236931c98b05411b23a21f57191b1a18b5e928065ac252d8796d0f855032947",
+    "actual": "5236931c98b05411b23a21f57191b1a18b5e928065ac252d8796d0f855032947",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/indian_territory_posts_given_up.json",
+    "expected": "bf20ddcda7f25965ad9829882bedb7910a58cacb32a48e438d62888696f368cc",
+    "actual": "bf20ddcda7f25965ad9829882bedb7910a58cacb32a48e438d62888696f368cc",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/kentucky_neutrality.json",
+    "expected": "236344d7da7fb37987a85412df87e4bf8201a5177e0bb1f4bf4f59c04cefdb16",
+    "actual": "236344d7da7fb37987a85412df87e4bf8201a5177e0bb1f4bf4f59c04cefdb16",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/kentucky_neutrality_proclaimed.json",
+    "expected": "b7cd3bee2898a427c467c0cfcd55581c8323948fd67fce57ab5f320787832fa0",
+    "actual": "b7cd3bee2898a427c467c0cfcd55581c8323948fd67fce57ab5f320787832fa0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/lamon_promise.json",
+    "expected": "00bcb47652aa4f67bf8189e4f14c358d997534ccc37543d45a00e596c6a170dd",
+    "actual": "00bcb47652aa4f67bf8189e4f14c358d997534ccc37543d45a00e596c6a170dd",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/manassas_advance_received.json",
+    "expected": "c77bbded7dbae8a579f0680dd854c0c640013a5c5b810a5b5655a0c05bc133ec",
+    "actual": "c77bbded7dbae8a579f0680dd854c0c640013a5c5b810a5b5655a0c05bc133ec",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/manassas_reinforcement_notice.json",
+    "expected": "2ff37628c8a38b8602134361797c2d9cec4a6e1f3aca282cbc9f88cca1d8ac8f",
+    "actual": "2ff37628c8a38b8602134361797c2d9cec4a6e1f3aca282cbc9f88cca1d8ac8f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/maryland_legislature.json",
+    "expected": "a11e2ad5363658f886510756b2e3b52373e3c646a5b51bc7bfe014e5ee7bbc0a",
+    "actual": "a11e2ad5363658f886510756b2e3b52373e3c646a5b51bc7bfe014e5ee7bbc0a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/mcclellan_proclamation.json",
+    "expected": "6d308fdc2bfd7f1f3c3f41642bbcda6c385c0fd9d0d9928fc6ebab16bb7d7347",
+    "actual": "6d308fdc2bfd7f1f3c3f41642bbcda6c385c0fd9d0d9928fc6ebab16bb7d7347",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/mcdowell_advance.json",
+    "expected": "70aad9ae701322baf25c32562045542220067a5642dc0231b6c55297a0fcc1e4",
+    "actual": "70aad9ae701322baf25c32562045542220067a5642dc0231b6c55297a0fcc1e4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/merryman_writ.json",
+    "expected": "33de8607f4d9dc505ff6898c88bc355f1e649b92be92b24702c920c9f0410fb1",
+    "actual": "33de8607f4d9dc505ff6898c88bc355f1e649b92be92b24702c920c9f0410fb1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/minnesota_first_remuster.json",
+    "expected": "a27bf3035d3b9f596aada30c5ecb2bd31381912b44467bef9795dc60a00b513d",
+    "actual": "a27bf3035d3b9f596aada30c5ecb2bd31381912b44467bef9795dc60a00b513d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/missouri_arsenal.json",
+    "expected": "608841144589f1c203adc14e5d474afbda2a73c51e02427f07bc772a964c6d70",
+    "actual": "608841144589f1c203adc14e5d474afbda2a73c51e02427f07bc772a964c6d70",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/missouri_provisional_government.json",
+    "expected": "42e6f4f7f463648d800a9ef23560f823318c16eeb86b80bd6a52c2317fe2de96",
+    "actual": "42e6f4f7f463648d800a9ef23560f823318c16eeb86b80bd6a52c2317fe2de96",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/muscogee_treaty.json",
+    "expected": "f9dc9a73c0b3be37118c7aa88a06fa86a5824f382350472dc90709663d04b6a1",
+    "actual": "f9dc9a73c0b3be37118c7aa88a06fa86a5824f382350472dc90709663d04b6a1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/nelson_arrest_power.json",
+    "expected": "b06055aa9c8891f0ad8bfd25b322213886f9c5ebd25237b3be162c14b9b6c7e7",
+    "actual": "b06055aa9c8891f0ad8bfd25b322213886f9c5ebd25237b3be162c14b9b6c7e7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/north_carolina_forces_transferred.json",
+    "expected": "32030201a0c8a9645b7c6b6f0bc8399dd07c9ce9afb220873a85cebf14c88b18",
+    "actual": "32030201a0c8a9645b7c6b6f0bc8399dd07c9ce9afb220873a85cebf14c88b18",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/north_carolina_secedes.json",
+    "expected": "0415cc429cbb1e9b28990092dcae5970ee52504def73c241e2c859b7f361205b",
+    "actual": "0415cc429cbb1e9b28990092dcae5970ee52504def73c241e2c859b7f361205b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/officer_resignation.json",
+    "expected": "991741466c1fc2c4a165b3fe16e8dd090d0466bd6a9497b2ce3b3d5f2afce36e",
+    "actual": "991741466c1fc2c4a165b3fe16e8dd090d0466bd6a9497b2ce3b3d5f2afce36e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/patterson_martial_law.json",
+    "expected": "e993d0d942a6d9b13356b90ce6d547079e27ad61df2e4a7ad32263018e149439",
+    "actual": "e993d0d942a6d9b13356b90ce6d547079e27ad61df2e4a7ad32263018e149439",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/pickens_refusal_received.json",
+    "expected": "4f573324d0545a7d3ed2ad9523b6e00e797eed8d1141471170a52c264e8e3927",
+    "actual": "4f573324d0545a7d3ed2ad9523b6e00e797eed8d1141471170a52c264e8e3927",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/pickens_refused.json",
+    "expected": "babd45a82e6749839e40191353d3921864914eb1a90b8affbc04fe5d49b81dd5",
+    "actual": "babd45a82e6749839e40191353d3921864914eb1a90b8affbc04fe5d49b81dd5",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/pickens_reinforcement.json",
+    "expected": "c1bcfc6b01d3876873946a0ee36dacef041edb7596cf013862071a211263fd31",
+    "actual": "c1bcfc6b01d3876873946a0ee36dacef041edb7596cf013862071a211263fd31",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/pierpont_aid_requested.json",
+    "expected": "af92216531c3f4eff18d1d7450c0748e7f85e0c45b1fe078067844f2e4f8ea00",
+    "actual": "af92216531c3f4eff18d1d7450c0748e7f85e0c45b1fe078067844f2e4f8ea00",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/pierpont_elected.json",
+    "expected": "c13ebabe7aa684ec43d836285d432119d3c712ed73619812ab08bbe610bac05e",
+    "actual": "c13ebabe7aa684ec43d836285d432119d3c712ed73619812ab08bbe610bac05e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/pratt_street_deaths.json",
+    "expected": "dde10a77c01f648a63373fb2804ee45d397c68323e4e43b99770fa641b357a27",
+    "actual": "dde10a77c01f648a63373fb2804ee45d397c68323e4e43b99770fa641b357a27",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/seward_memorandum.json",
+    "expected": "f4758685496e04c305265785e35e4dc633a2f91a8feeec95ebfe361d9bccdc02",
+    "actual": "f4758685496e04c305265785e35e4dc633a2f91a8feeec95ebfe361d9bccdc02",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/special_session.json",
+    "expected": "a1ba2a3d3ddbcf545b31e4a0eeeaa06ff77645627138985deb80b55fefbae501",
+    "actual": "a1ba2a3d3ddbcf545b31e4a0eeeaa06ff77645627138985deb80b55fefbae501",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_evacuated.json",
+    "expected": "269b2a002a89711bd263ceca8af7df65b3a04e8f5878de96e39b36565421424b",
+    "actual": "269b2a002a89711bd263ceca8af7df65b3a04e8f5878de96e39b36565421424b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_fired_upon.json",
+    "expected": "539090473588ee957b21bb81e780c6df456b5c4064e80aa5fd01f6c20c49e711",
+    "actual": "539090473588ee957b21bb81e780c6df456b5c4064e80aa5fd01f6c20c49e711",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/sumter_garrison.json",
+    "expected": "25f3646dec87f805ba296eebb60ac8d3689bdade5969717bf47671a02c0e380e",
+    "actual": "25f3646dec87f805ba296eebb60ac8d3689bdade5969717bf47671a02c0e380e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_forces_receiving_procedure.json",
+    "expected": "2febcb70acf82b6e0b2258c5231ecf91f413f8a6964fe3f399516b615af75fcc",
+    "actual": "2febcb70acf82b6e0b2258c5231ecf91f413f8a6964fe3f399516b615af75fcc",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_forces_return.json",
+    "expected": "0506d230ebbb08e331ce60553a8241774103caec50c9a1ae843e3f331c34f763",
+    "actual": "0506d230ebbb08e331ce60553a8241774103caec50c9a1ae843e3f331c34f763",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_forces_state_order.json",
+    "expected": "e0165e803203049c7a13b5c91f6b554fa70433c233123f6c40007e39fd3cc461",
+    "actual": "e0165e803203049c7a13b5c91f6b554fa70433c233123f6c40007e39fd3cc461",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_forces_transferred.json",
+    "expected": "62a21a10fef09ecd72324d473c1c77eb3c9aa95412b0bfb025712bdabb77ec02",
+    "actual": "62a21a10fef09ecd72324d473c1c77eb3c9aa95412b0bfb025712bdabb77ec02",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_military_league.json",
+    "expected": "933c13cb33d70e73f60fc8b09eb694eb62740141bfad0908b7dd8d39fe7625a5",
+    "actual": "933c13cb33d70e73f60fc8b09eb694eb62740141bfad0908b7dd8d39fe7625a5",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/tennessee_secedes.json",
+    "expected": "13110b0fe3a50797e6e987f377ff90eecad21b382c006308904e655cd027bd13",
+    "actual": "13110b0fe3a50797e6e987f377ff90eecad21b382c006308904e655cd027bd13",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/texas_evacuation_terms.json",
+    "expected": "cc6ee102019857d91cdae007314214d1104416e60395f6db37a121ee7b3c179c",
+    "actual": "cc6ee102019857d91cdae007314214d1104416e60395f6db37a121ee7b3c179c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/texas_exit_1st_inf.json",
+    "expected": "1321fb68e99894f109d537168a6d66932d718eaf478dd4eee35268ed3539243f",
+    "actual": "1321fb68e99894f109d537168a6d66932d718eaf478dd4eee35268ed3539243f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/texas_exit_2nd_cav.json",
+    "expected": "54235d3d15c3fcc1753172d1e1a3c98f2bbf7fd5bb2d4978c9972c994ef4fa1c",
+    "actual": "54235d3d15c3fcc1753172d1e1a3c98f2bbf7fd5bb2d4978c9972c994ef4fa1c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/texas_exit_2nd_cav_eg.json",
+    "expected": "8034dc38b94205a7cb2b528aea92c9bac705b75485c905400320e45752fa52d3",
+    "actual": "8034dc38b94205a7cb2b528aea92c9bac705b75485c905400320e45752fa52d3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/texas_exit_3rd_inf.json",
+    "expected": "956bd804cbed2e6abcc70c57639b7d27253a77e95df541da7b16dc95671af170",
+    "actual": "956bd804cbed2e6abcc70c57639b7d27253a77e95df541da7b16dc95671af170",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/texas_exit_8th_inf.json",
+    "expected": "760500d1d1876b4177b582a9fd7ce3466cf46d57eb4d75fd67e68ce8fd1428fd",
+    "actual": "760500d1d1876b4177b582a9fd7ce3466cf46d57eb4d75fd67e68ce8fd1428fd",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/texas_governor_changed.json",
+    "expected": "4a79bbe78ff8443bbfa22ec25242cb2d9df3a1dc90c232410e78d574c0a4d6b6",
+    "actual": "4a79bbe78ff8443bbfa22ec25242cb2d9df3a1dc90c232410e78d574c0a4d6b6",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/thomson_martial_law.json",
+    "expected": "93b507cbf26dd64832472896a18e081dc0e558a543c4be67952b635140544cf0",
+    "actual": "93b507cbf26dd64832472896a18e081dc0e558a543c4be67952b635140544cf0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/townsend_fugitive_order.json",
+    "expected": "08e1dedd80ecd325f7bfc98a13625d0a971b8ff7dfd34513444e124d72d29d35",
+    "actual": "08e1dedd80ecd325f7bfc98a13625d0a971b8ff7dfd34513444e124d72d29d35",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_forces_return.json",
+    "expected": "5c989cda696c13f03e3351be7e574a4d36d89e1961b76128015ff03bf1dc8d07",
+    "actual": "5c989cda696c13f03e3351be7e574a4d36d89e1961b76128015ff03bf1dc8d07",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_forces_transferred.json",
+    "expected": "2246e2fcb6a068e1c8cbbd19fa003951a251979c971b4e33bdace1a50c55e017",
+    "actual": "2246e2fcb6a068e1c8cbbd19fa003951a251979c971b4e33bdace1a50c55e017",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_harpers_jackson.json",
+    "expected": "6f2cfa45d5d5eabc953d11b5121480281442d124ac1fd4aba1f8677c9887cd4c",
+    "actual": "6f2cfa45d5d5eabc953d11b5121480281442d124ac1fd4aba1f8677c9887cd4c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_harpers_state_forces.json",
+    "expected": "7300b13f0c1c16c3bbd60336d0abcf255525e8193866513429123d5dc3d7b138",
+    "actual": "7300b13f0c1c16c3bbd60336d0abcf255525e8193866513429123d5dc3d7b138",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_manassas_garland_return.json",
+    "expected": "887cec7d9d129e2c39f479c3ffa6464ada601bf407538b9dbc8875588c2648e7",
+    "actual": "887cec7d9d129e2c39f479c3ffa6464ada601bf407538b9dbc8875588c2648e7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_manassas_state_forces.json",
+    "expected": "a7c869eb2a0c80c7972725983b1e355979de97dcf1a30829fb02d5c64d186787",
+    "actual": "a7c869eb2a0c80c7972725983b1e355979de97dcf1a30829fb02d5c64d186787",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_military_convention.json",
+    "expected": "cee51268e08d64d3225f7c03202e4c57a29f3b8041d57c4221811cc25e0283d2",
+    "actual": "cee51268e08d64d3225f7c03202e4c57a29f3b8041d57c4221811cc25e0283d2",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_norfolk_gwynn.json",
+    "expected": "9341cfd9af4d6f6e01d02d09413b1503f7ba3facacb6618b0557b4324e8246fd",
+    "actual": "9341cfd9af4d6f6e01d02d09413b1503f7ba3facacb6618b0557b4324e8246fd",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_norfolk_huger.json",
+    "expected": "c59531ec4f1ecfc01956998897693b47c755674cc5b3c52e14b109a17fc7c0fa",
+    "actual": "c59531ec4f1ecfc01956998897693b47c755674cc5b3c52e14b109a17fc7c0fa",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_norfolk_state_forces.json",
+    "expected": "354fc1d5d15f786370760ab9cea72653c4b326fa5e907f7820d9340af0ee1cdb",
+    "actual": "354fc1d5d15f786370760ab9cea72653c4b326fa5e907f7820d9340af0ee1cdb",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_peninsula_state_forces.json",
+    "expected": "b6233b8a8d96d8c4d1992c5ca9974356c767b79eb814c891a069d3518d88cff0",
+    "actual": "b6233b8a8d96d8c4d1992c5ca9974356c767b79eb814c891a069d3518d88cff0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_potomac_command.json",
+    "expected": "4357a9d13553286faf4a9d33dc99feb9a696aa2e6f945547f344f4a535d72a33",
+    "actual": "4357a9d13553286faf4a9d33dc99feb9a696aa2e6f945547f344f4a535d72a33",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_richmond_magruder.json",
+    "expected": "8691ef03294873e9f9316645b7a925b2bf66886f8ed1ae84f470c798f8e4876e",
+    "actual": "8691ef03294873e9f9316645b7a925b2bf66886f8ed1ae84f470c798f8e4876e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_richmond_state_forces.json",
+    "expected": "4775c9fe0cdb44dba72b1c683db57df0ad2ebcafcc3c75ba23528b373ac4e4bc",
+    "actual": "4775c9fe0cdb44dba72b1c683db57df0ad2ebcafcc3c75ba23528b373ac4e4bc",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_secedes.json",
+    "expected": "10733065e6b11ca2a0cacdd616cab147e67ccd2fdd8bb4790b0200cfce517a6a",
+    "actual": "10733065e6b11ca2a0cacdd616cab147e67ccd2fdd8bb4790b0200cfce517a6a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_state_calls.json",
+    "expected": "f75a9c0dbc67e903a12b10382d60861b85cecac187023c0dbf645e8c20f9ea3a",
+    "actual": "f75a9c0dbc67e903a12b10382d60861b85cecac187023c0dbf645e8c20f9ea3a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/virginia_unionists.json",
+    "expected": "7218c40e08d030d83de7b3689a2fb559e8b2bae38f472a6d8c5831dd2a76acd4",
+    "actual": "7218c40e08d030d83de7b3689a2fb559e8b2bae38f472a6d8c5831dd2a76acd4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/washington_cut_off.json",
+    "expected": "3c67db5e9c02acb831a75cc455672dc292c4b412abb0ca123dce484385a26e34",
+    "actual": "3c67db5e9c02acb831a75cc455672dc292c4b412abb0ca123dce484385a26e34",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/western_virginia.json",
+    "expected": "dad2020d3333a6c99609f01cde876e5030491dbe0afd24a379be82d538dc43ca",
+    "actual": "dad2020d3333a6c99609f01cde876e5030491dbe0afd24a379be82d538dc43ca",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_convention.json",
+    "expected": "ff5a24bb536f1e24c53d467ba9743ee9d9088deb58a18505bd2bf73d8db9630d",
+    "actual": "ff5a24bb536f1e24c53d467ba9743ee9d9088deb58a18505bd2bf73d8db9630d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_legislature.json",
+    "expected": "3d6190e887297589f6c9dadf66d05ddff18d446b5225d9dedc6cadfded2c052d",
+    "actual": "3d6190e887297589f6c9dadf66d05ddff18d446b5225d9dedc6cadfded2c052d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_ordinance.json",
+    "expected": "8f3bc8472646e423643c8cdf2dee74d3e158d0852a55a0eda6d31261ac4c1ad3",
+    "actual": "8f3bc8472646e423643c8cdf2dee74d3e158d0852a55a0eda6d31261ac4c1ad3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/situations/wheeling_recognition_letter.json",
+    "expected": "eb07fddd32a455cc34d5f78ee53fb9181fb803ba7e02b864e65e3dd6dadd2f0e",
+    "actual": "eb07fddd32a455cc34d5f78ee53fb9181fb803ba7e02b864e65e3dd6dadd2f0e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/calls/README.md",
+    "expected": "4a5bbff34df90fa24eb7a0f54861a3e548ddee9bea3aa8c4ac4b3409ab0579d0",
+    "actual": "4a5bbff34df90fa24eb7a0f54861a3e548ddee9bea3aa8c4ac4b3409ab0579d0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/calls/union-calls-1861.csv",
+    "expected": "9a6365ae8eb0d576f6c995649faa8029ad1da260ff3e8a8b48208bf3593f9322",
+    "actual": "9a6365ae8eb0d576f6c995649faa8029ad1da260ff3e8a8b48208bf3593f9322",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/README.md",
+    "expected": "d3f6a67d83120ae7bff8de220af3e68752d239fe5faf15896061c1b2f77a2d4e",
+    "actual": "d3f6a67d83120ae7bff8de220af3e68752d239fe5faf15896061c1b2f77a2d4e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/aggregate-report.txt",
+    "expected": "3bd27d64be3c7411daef8b97d434a600d8c12255a0403bd7b5ac223e93a84303",
+    "actual": "3bd27d64be3c7411daef8b97d434a600d8c12255a0403bd7b5ac223e93a84303",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/aggregate.mjs",
+    "expected": "b894591bf22bdeaeab736bc9ced625bad30b6bc25dca0c3bfba22041c2f8e538",
+    "actual": "b894591bf22bdeaeab736bc9ced625bad30b6bc25dca0c3bfba22041c2f8e538",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/enslaved-1860-by-region.csv",
+    "expected": "906b7e2cb6a66c604405c705c5243cc2e5240bc6bf166e46f0374357418b3ffe",
+    "actual": "906b7e2cb6a66c604405c705c5243cc2e5240bc6bf166e46f0374357418b3ffe",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/kennedy-baltimore-split-1860.csv",
+    "expected": "12a3803376dcc0252cbae69e1d2347ef588feb3096bd42defb0f3f5cef7b8cc9",
+    "actual": "12a3803376dcc0252cbae69e1d2347ef588feb3096bd42defb0f3f5cef7b8cc9",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/kennedy-county-1860.csv",
+    "expected": "5541b65965f0f0e2bd3995aa0b1e0736a69f14e0d65f5d92b768ac9a23ddb8fa",
+    "actual": "5541b65965f0f0e2bd3995aa0b1e0736a69f14e0d65f5d92b768ac9a23ddb8fa",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/census/kennedy-state-summary-1860.csv",
+    "expected": "2ed96181278a2796acc7f069247f8956070c99e2088bbfcbf7482c59ed977b7a",
+    "actual": "2ed96181278a2796acc7f069247f8956070c99e2088bbfcbf7482c59ed977b7a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/map/README.md",
+    "expected": "044425f3c41a494cda5b6ca0429b8eaf8e023aa371346441ea5643798adb4654",
+    "actual": "044425f3c41a494cda5b6ca0429b8eaf8e023aa371346441ea5643798adb4654",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/map/edges.csv",
+    "expected": "3df69008f1ff48dd2a34c56d354667fd3177b801cf104c847760b2b5a13af991",
+    "actual": "3df69008f1ff48dd2a34c56d354667fd3177b801cf104c847760b2b5a13af991",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/map/regions.csv",
+    "expected": "96fd635eb6a8a6936a07bf8c2a95955c3c85f92b496844a78df883c9eaf97fef",
+    "actual": "96fd635eb6a8a6936a07bf8c2a95955c3c85f92b496844a78df883c9eaf97fef",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/README.md",
+    "expected": "ca603b43b5511d92304e1ac587efd843c14ce26eb5a8cb01b842531dc6625c66",
+    "actual": "ca603b43b5511d92304e1ac587efd843c14ce26eb5a8cb01b842531dc6625c66",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/force_blocks.csv",
+    "expected": "a6dd384b3376dabd0157fbd55249f134b4ad258139d61a8ac7e6ae6837916b23",
+    "actual": "a6dd384b3376dabd0157fbd55249f134b4ad258139d61a8ac7e6ae6837916b23",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/people_in_posts.csv",
+    "expected": "b70feba63d4700c0c8f1352caf0501d409d74dc4cc8f8c69f59531e97a690e08",
+    "actual": "b70feba63d4700c0c8f1352caf0501d409d74dc4cc8f8c69f59531e97a690e08",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/posts.csv",
+    "expected": "91b5fa49236b81de2d524f6276fb250856910d7137711ab88b94c9141bbc2e97",
+    "actual": "91b5fa49236b81de2d524f6276fb250856910d7137711ab88b94c9141bbc2e97",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/oob/strengths-stores-1861.csv",
+    "expected": "ae50f8669a1effb60ddd8274cc40c11ffb2e778d3482c4573e6d9247dc514f7a",
+    "actual": "ae50f8669a1effb60ddd8274cc40c11ffb2e778d3482c4573e6d9247dc514f7a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/README.md",
+    "expected": "e6b8db761d8fa8a5f14670b99c72809edfc59fd8382b27177c3244c0afa88a4a",
+    "actual": "e6b8db761d8fa8a5f14670b99c72809edfc59fd8382b27177c3244c0afa88a4a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/cast-1861.csv",
+    "expected": "f74feaf569fc9599eea3b14680135bed592a68ed48cded3870bafbffc5921735",
+    "actual": "f74feaf569fc9599eea3b14680135bed592a68ed48cded3870bafbffc5921735",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/held-back-blocs-1861.csv",
+    "expected": "10e9fc07e5f4e115b631eb31dd3552d557c90a4de87c145ebf875723d4bd21e4",
+    "actual": "10e9fc07e5f4e115b631eb31dd3552d557c90a4de87c145ebf875723d4bd21e4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/held-back-judgments-1861.csv",
+    "expected": "70a56c9e5088535b7f6678f08bf52c062765b59c231a971bb419e147f5b197f0",
+    "actual": "70a56c9e5088535b7f6678f08bf52c062765b59c231a971bb419e147f5b197f0",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/held-back-resourced-1861.csv",
+    "expected": "6257938a9eff6f04103a04a7751f70b9d963e0a0c06e1630d813206370c64c94",
+    "actual": "6257938a9eff6f04103a04a7751f70b9d963e0a0c06e1630d813206370c64c94",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/people-sources.md",
+    "expected": "8e43b6786db0cb2c412d07471bdbf8ebfae8541366f461b3eb27b0225ac334ea",
+    "actual": "8e43b6786db0cb2c412d07471bdbf8ebfae8541366f461b3eb27b0225ac334ea",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/people.csv",
+    "expected": "39002d114be871b8f4a34c83ff2975bd7e3087c9eec3f1f7113861f5449ede06",
+    "actual": "39002d114be871b8f4a34c83ff2975bd7e3087c9eec3f1f7113861f5449ede06",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/drafts/people/s9-people-gate.json",
+    "expected": "c4a333e4c41791cf707cb49cf30c428d26982972d3ac720f3fa42de24687c00f",
+    "actual": "c4a333e4c41791cf707cb49cf30c428d26982972d3ac720f3fa42de24687c00f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/evidence/s118/lot-candidates.csv",
+    "expected": "1eb7ec6069b1fc6048e144c6b6df72dd4c7947a1e8748d21192f31f9d085705e",
+    "actual": "1eb7ec6069b1fc6048e144c6b6df72dd4c7947a1e8748d21192f31f9d085705e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/evidence/s118/receiving-commands.csv",
+    "expected": "07912c8a49694529706394a60c5c597cfabe07d8f9020076cfdc201d7559d879",
+    "actual": "07912c8a49694529706394a60c5c597cfabe07d8f9020076cfdc201d7559d879",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/import/import-drafts.mjs",
+    "expected": "fc4836c4ba5760abcd66f3c331cd96bfe5bf0adaef836a77b07953cf96aa1d2a",
+    "actual": "fc4836c4ba5760abcd66f3c331cd96bfe5bf0adaef836a77b07953cf96aa1d2a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/import/import-people-oob.mjs",
+    "expected": "4d831bac57d886075d4bdead052c896a76095f9513bf5cd1953ee9e776ab8b40",
+    "actual": "4d831bac57d886075d4bdead052c896a76095f9513bf5cd1953ee9e776ab8b40",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/import/places.mjs",
+    "expected": "1f4ac3f4939b2236433984bea2bc36aa6047e3ca90e62a31f916370538ded7ba",
+    "actual": "1f4ac3f4939b2236433984bea2bc36aa6047e3ca90e62a31f916370538ded7ba",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/import/registry.mjs",
+    "expected": "0822e8b1ed5ed9e77f65bfcc40be7a232212bbe3a928629189e95dabe9d27223",
+    "actual": "0822e8b1ed5ed9e77f65bfcc40be7a232212bbe3a928629189e95dabe9d27223",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/import/vocab.mjs",
+    "expected": "5dc72f53ab27604225b0fadf0acd44e9e664701f036778135381bec505075e02",
+    "actual": "5dc72f53ab27604225b0fadf0acd44e9e664701f036778135381bec505075e02",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/control.csv",
+    "expected": "f2b45598b35a2047b4f23cd5d5a874ec8a44b12892f194ecf08834bed484d4e1",
+    "actual": "f2b45598b35a2047b4f23cd5d5a874ec8a44b12892f194ecf08834bed484d4e1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/declared_governments.csv",
+    "expected": "d80e321989ae6ef8e2daec6e595c61eadcd3b5b5d9b52a016383e26d905a3734",
+    "actual": "d80e321989ae6ef8e2daec6e595c61eadcd3b5b5d9b52a016383e26d905a3734",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/force_blocks.csv",
+    "expected": "90f5e48de50044f428d14174e2ed91a7e64e1e1ecc4c3a56a3476987129baa74",
+    "actual": "90f5e48de50044f428d14174e2ed91a7e64e1e1ecc4c3a56a3476987129baa74",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/governments.csv",
+    "expected": "4affa4cd894b5a3cfc3edc9783e53714ce5f295b3e33783fe40b084aabdf495e",
+    "actual": "4affa4cd894b5a3cfc3edc9783e53714ce5f295b3e33783fe40b084aabdf495e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/holders.csv",
+    "expected": "b0a12b266223eef8e1d26af9f77e1ebd6e75786d7e42cd40a76576d1444c4bca",
+    "actual": "b0a12b266223eef8e1d26af9f77e1ebd6e75786d7e42cd40a76576d1444c4bca",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/loyalty.csv",
+    "expected": "67f0b034b32e832b9c26719fc72e7f075bc224d6926797346a4958b776b9a44c",
+    "actual": "67f0b034b32e832b9c26719fc72e7f075bc224d6926797346a4958b776b9a44c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/obstructions.csv",
+    "expected": "13dda28df9127daf53ecb2ef751006d85be1d9ad2eee34a6b9dc064443ccd8ea",
+    "actual": "13dda28df9127daf53ecb2ef751006d85be1d9ad2eee34a6b9dc064443ccd8ea",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/posts.csv",
+    "expected": "2cb4d3390700cf7ac63b8d2180937d1294f352871f78df443e4fd8971499efe6",
+    "actual": "2cb4d3390700cf7ac63b8d2180937d1294f352871f78df443e4fd8971499efe6",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/scenario.json",
+    "expected": "978e08f81c1e28f34ac1beab2d0f76d6bdddd2c8bdc56cc9d9ae53df40be1879",
+    "actual": "978e08f81c1e28f34ac1beab2d0f76d6bdddd2c8bdc56cc9d9ae53df40be1879",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/standing_orders.csv",
+    "expected": "1063fe70ac447b436fcd83e625f49a1564fbd6e087f89ca4a6a3ab4a69a069f7",
+    "actual": "1063fe70ac447b436fcd83e625f49a1564fbd6e087f89ca4a6a3ab4a69a069f7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/scenarios/march_1861/temporary_posts.csv",
+    "expected": "7c57829b472dfb3a78d55fc3a6a4becdc094bae41a914e284febdc0b43e71d5c",
+    "actual": "7c57829b472dfb3a78d55fc3a6a4becdc094bae41a914e284febdc0b43e71d5c",
+    "preserved": true,
+    "archive": true
+  },
+  {
+    "path": "packs/union-1861/source/world/census.csv",
+    "expected": "b7396af608d21a3fc384da80408a584faea1137dc6db01e43e8e628ed5bcd5cf",
+    "actual": "b7396af608d21a3fc384da80408a584faea1137dc6db01e43e8e628ed5bcd5cf",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/world/departments.csv",
+    "expected": "8647370157244340a552c84bcc950a3dfaf23d2c64b1283c924ba31b6557b21d",
+    "actual": "8647370157244340a552c84bcc950a3dfaf23d2c64b1283c924ba31b6557b21d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/world/depots.csv",
+    "expected": "0ba1846320f7c138e42f04ca5c8b32852eae8623cad5bd0d629ce1592b436170",
+    "actual": "0ba1846320f7c138e42f04ca5c8b32852eae8623cad5bd0d629ce1592b436170",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/world/edges.csv",
+    "expected": "03a60cdc6da6770e13d095df6f7f03403a8198d3d0f97188d0a322b2d33fbe28",
+    "actual": "03a60cdc6da6770e13d095df6f7f03403a8198d3d0f97188d0a322b2d33fbe28",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/world/installations.csv",
+    "expected": "609a29b736e56249df6b528c7d2512ceb5d029b177fbad0c6a296d5db93c4f7b",
+    "actual": "609a29b736e56249df6b528c7d2512ceb5d029b177fbad0c6a296d5db93c4f7b",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/world/organisations.json",
+    "expected": "eacc22f1d86de937bfab62b1e0a6f5905d025109cd3d8f3f145697d107742ed4",
+    "actual": "eacc22f1d86de937bfab62b1e0a6f5905d025109cd3d8f3f145697d107742ed4",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/world/people.csv",
+    "expected": "73564057349b91e4b2b70f8401711a66550372d6e4b51c62538eaec619a5e883",
+    "actual": "73564057349b91e4b2b70f8401711a66550372d6e4b51c62538eaec619a5e883",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/world/rail_lines.csv",
+    "expected": "70c3119450e804b2cc25c649a50b11877e142bca3005a31e2493e8152b06f60f",
+    "actual": "70c3119450e804b2cc25c649a50b11877e142bca3005a31e2493e8152b06f60f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/world/regiments.json",
+    "expected": "57f61b4d4b6fffac2b9e09c8d3631185f9e28a34783f080be16d673a17307e5d",
+    "actual": "57f61b4d4b6fffac2b9e09c8d3631185f9e28a34783f080be16d673a17307e5d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/source/world/regions.csv",
+    "expected": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+    "actual": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "packs/union-1861/strings/en.json",
+    "expected": "3b864d93505556ccbd93aed5282ae064bdd463ae045f15ffb752f6ddc1409bed",
+    "actual": "3b864d93505556ccbd93aed5282ae064bdd463ae045f15ffb752f6ddc1409bed",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/audit-rules.ts",
+    "expected": "63dcb2b08a1f041e9e1bd12fd31725a23aba22d24615234bb2439a03e4803604",
+    "actual": "63dcb2b08a1f041e9e1bd12fd31725a23aba22d24615234bb2439a03e4803604",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/check-decisions-index.ts",
+    "expected": "ed12dfe5f5729aa5aa1750396c370c795ef09e1a06a6d8935e7aacf54ddb0485",
+    "actual": "ed12dfe5f5729aa5aa1750396c370c795ef09e1a06a6d8935e7aacf54ddb0485",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/check-licences.ts",
+    "expected": "060d933d7152f84ec7c3e2423560ac0bd88a4dbfa3ca34fae926208df7ccf03a",
+    "actual": "060d933d7152f84ec7c3e2423560ac0bd88a4dbfa3ca34fae926208df7ccf03a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/check-pack-boundary.mjs",
+    "expected": "062cfaced8b030ea9a20c02ec70de8e93259bdb5173e4cc955ed793ac07ca94c",
+    "actual": "062cfaced8b030ea9a20c02ec70de8e93259bdb5173e4cc955ed793ac07ca94c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/check-rules.ts",
+    "expected": "ec764d424a1c7bdab9fa97a6b18802cc9b261fb6ecb2db7922e5dee140ce39b1",
+    "actual": "ec764d424a1c7bdab9fa97a6b18802cc9b261fb6ecb2db7922e5dee140ce39b1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/compare-runs.ts",
+    "expected": "259657b7ea359cc5310ccf2dfdcdecd1000ef2f979ba9fbb7b84093da7867b7f",
+    "actual": "259657b7ea359cc5310ccf2dfdcdecd1000ef2f979ba9fbb7b84093da7867b7f",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/decisions-index.ts",
+    "expected": "14112ae3e6bf25a92deed7432ffdd39b6d9a7a93ef4193383481db40683bef9d",
+    "actual": "14112ae3e6bf25a92deed7432ffdd39b6d9a7a93ef4193383481db40683bef9d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/lfs-check.ts",
+    "expected": "e046e8cb26b997b393657d319b8aa715615ce21325897525b3adc2b9305cd66c",
+    "actual": "e046e8cb26b997b393657d319b8aa715615ce21325897525b3adc2b9305cd66c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/licences.ts",
+    "expected": "0c1bf654884421a14ddad3a4a5557165eac086eb62d0a854428f9fe88303f56e",
+    "actual": "0c1bf654884421a14ddad3a4a5557165eac086eb62d0a854428f9fe88303f56e",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/make-save-fixture.ts",
+    "expected": "0a31e232c7b004a180cc401bc8635bef2550716aa35f1773b75290128b2d88f3",
+    "actual": "0a31e232c7b004a180cc401bc8635bef2550716aa35f1773b75290128b2d88f3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/no-skips.ts",
+    "expected": "58fa7577ffc284efd3fb6dfc9e3b6168afe29024488e84adbc589fc40d88d1a3",
+    "actual": "58fa7577ffc284efd3fb6dfc9e3b6168afe29024488e84adbc589fc40d88d1a3",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/pack-terms.txt",
+    "expected": "ab312635d7d6f3ad3048e75f29bcdd6a4c9a38db246d5e6f993e188c262e45f6",
+    "actual": "ab312635d7d6f3ad3048e75f29bcdd6a4c9a38db246d5e6f993e188c262e45f6",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rule-history.ts",
+    "expected": "4a4e7d8cbc1119ab528ba40f0a13fd79fc862d6f5edd88e531b7301a7808668c",
+    "actual": "4a4e7d8cbc1119ab528ba40f0a13fd79fc862d6f5edd88e531b7301a7808668c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/cause-exemptions.json",
+    "expected": "3b7abba4d69a9573bc0971fd31e7835abb6aeee5589bc26e560a092c6ddf88fc",
+    "actual": "3b7abba4d69a9573bc0971fd31e7835abb6aeee5589bc26e560a092c6ddf88fc",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/common.ts",
+    "expected": "eaff494dfcd4012c7ca0794d100d8de55e8487e7ec4642bd1cf47749ba44aeda",
+    "actual": "eaff494dfcd4012c7ca0794d100d8de55e8487e7ec4642bd1cf47749ba44aeda",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/existing-findings.json",
+    "expected": "61a8fc08a8ffc79321f4ceba09af1e2fdfddd662468b62abef2cf80e3a2ec84c",
+    "actual": "61a8fc08a8ffc79321f4ceba09af1e2fdfddd662468b62abef2cf80e3a2ec84c",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/inherited-quiet-bands.json",
+    "expected": "6542f630d09fb1f6be81379de0274e8fa228aa21e19553ba3b2a39408ef7c11d",
+    "actual": "6542f630d09fb1f6be81379de0274e8fa228aa21e19553ba3b2a39408ef7c11d",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/liveness-causes.ts",
+    "expected": "66749c079ca5632b53ac5ddaf465cd1aee257a9f59cc23a1d01d3880db6fd7db",
+    "actual": "66749c079ca5632b53ac5ddaf465cd1aee257a9f59cc23a1d01d3880db6fd7db",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/liveness-changes.json",
+    "expected": "e31f18031ed94d48aab29381e6ea49f51d5544579dba19cc9f574945cd7a03e1",
+    "actual": "e31f18031ed94d48aab29381e6ea49f51d5544579dba19cc9f574945cd7a03e1",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/liveness-origin.json",
+    "expected": "aac9e2078a34826d7a9d8827a7bac1a54fe2aaed848d10489bf80f2ee994c309",
+    "actual": "aac9e2078a34826d7a9d8827a7bac1a54fe2aaed848d10489bf80f2ee994c309",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/liveness-snapshot.ts",
+    "expected": "bcd1e5b3f2966b6c9f6ff0838c1bd86d4f4dd04e430fce347a1c5eed1af90912",
+    "actual": "bcd1e5b3f2966b6c9f6ff0838c1bd86d4f4dd04e430fce347a1c5eed1af90912",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/pack-content.ts",
+    "expected": "1297ca0b9e02b67cc55e8b9e2514e3e96de01ef32c5f7e2b7c141ce602e909ae",
+    "actual": "1297ca0b9e02b67cc55e8b9e2514e3e96de01ef32c5f7e2b7c141ce602e909ae",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/projection-derivations.json",
+    "expected": "ba3435d9356f9312ca637e4a7df1268de9e374507f2f78e6d2106902114019ce",
+    "actual": "ba3435d9356f9312ca637e4a7df1268de9e374507f2f78e6d2106902114019ce",
+    "preserved": true,
+    "archive": true
+  },
+  {
+    "path": "tools/rules/projection-truth.ts",
+    "expected": "9484d0506e6ecc1d18946add5255a18987919fe77572b9de17a53b9d0e782bfb",
+    "actual": "9484d0506e6ecc1d18946add5255a18987919fe77572b9de17a53b9d0e782bfb",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/signed-inventory.json",
+    "expected": "5559d4c166339533f758ff2bd5c6cef35717276278dc1745f463bea9d781913a",
+    "actual": "5559d4c166339533f758ff2bd5c6cef35717276278dc1745f463bea9d781913a",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/signed-pack.ts",
+    "expected": "10c65a7eb6562495ee68dce4eceb6702ed7fbe7277b46c3dbd13ccf9f4715d78",
+    "actual": "10c65a7eb6562495ee68dce4eceb6702ed7fbe7277b46c3dbd13ccf9f4715d78",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/signed-situations.ts",
+    "expected": "cadafdc37e1a28d0ab40f03bf13483ab5727988c75df3fa0c009ccac8a3422f5",
+    "actual": "cadafdc37e1a28d0ab40f03bf13483ab5727988c75df3fa0c009ccac8a3422f5",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/rules/situation-causes.ts",
+    "expected": "5a1669f86cdb616b3ac610988eb880bdf6a88d3fa5d31dcdb34762e77dc5a0cd",
+    "actual": "5a1669f86cdb616b3ac610988eb880bdf6a88d3fa5d31dcdb34762e77dc5a0cd",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/s123-kernel-equivalence.ts",
+    "expected": "3c21e4c92aea211b048de1802787920062ad4e0c810f9e160070acad5a7c7d86",
+    "actual": "3c21e4c92aea211b048de1802787920062ad4e0c810f9e160070acad5a7c7d86",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/s123-measure-mandates.ts",
+    "expected": "d4050791d03b0d20f3dce5ba7a93716c512a659056c4f433c5669a9dc851e0f8",
+    "actual": "d4050791d03b0d20f3dce5ba7a93716c512a659056c4f433c5669a9dc851e0f8",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/s123-projection-evidence.ts",
+    "expected": "de714ba52d93f724e922c3c7c9f88ef3efef48140dabb499b1dd416a1c677d47",
+    "actual": "de714ba52d93f724e922c3c7c9f88ef3efef48140dabb499b1dd416a1c677d47",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/serve-static.mjs",
+    "expected": "2a07020f769e7a1c9dcc0e4d513fa47754df87adab4a061ef193980344537334",
+    "actual": "2a07020f769e7a1c9dcc0e4d513fa47754df87adab4a061ef193980344537334",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/staged-check.ts",
+    "expected": "b338776583ebf96c5a36cb9c25dfd9a2cb3713f65267089f45befd18bda3a3d7",
+    "actual": "b338776583ebf96c5a36cb9c25dfd9a2cb3713f65267089f45befd18bda3a3d7",
+    "preserved": true,
+    "archive": false
+  },
+  {
+    "path": "tools/workspace-links.ts",
+    "expected": "790c8edce278111f2a83d65a5f2f65cfbac568e78d87f5618506bac8e7872a59",
+    "actual": "790c8edce278111f2a83d65a5f2f65cfbac568e78d87f5618506bac8e7872a59",
+    "preserved": true,
+    "archive": false
+  }
+]

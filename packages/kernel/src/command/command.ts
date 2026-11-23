@@ -229,7 +229,7 @@ export function createHeldPostCache(): HeldPostCache {
   return new WeakMap();
 }
 
-/** The post a person holds, or null. A caller may reuse the inverse of an unchanged post table. */
+/** The first held post in code-unit order, or null. Explicit received concurrent assignments (0129) keep separate mandates. */
 export function heldPost(state: State, person: PersonId, cache?: HeldPostCache): PostId | null {
   if (cache !== undefined) {
     let holders = cache.get(state.postStates);
@@ -247,7 +247,7 @@ export function heldPost(state: State, person: PersonId, cache?: HeldPostCache):
     return holders.get(person) ?? null;
   }
   // A lookup need not sort the entire table. Keep the same first-in-code-unit-order
-  // result even for a malformed table in which a person holds more than one post.
+  // result for a person with separately received concurrent commands.
   let first: PostId | null = null;
   for (const id of Object.keys(state.postStates) as PostId[]) {
     if (state.postStates[id]!.postHolder === person && (first === null || strictCompare(id, first) < 0)) first = id;

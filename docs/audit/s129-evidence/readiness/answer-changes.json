@@ -1,0 +1,3585 @@
+[
+  {
+    "identity": [
+      "m.100.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      103
+    ],
+    "before": null,
+    "after": {
+      "key": "m.100.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.100.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 103,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 54,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 54
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.100.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.100.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.100.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.100.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 54
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.107.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      110
+    ],
+    "before": null,
+    "after": {
+      "key": "m.107.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.107.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 110,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 60,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 60
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.107.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.107.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.107.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.107.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 60
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.114.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      116
+    ],
+    "before": null,
+    "after": {
+      "key": "m.114.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.114.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 116,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.114.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.114.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.114.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.114.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 67
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.121.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      125
+    ],
+    "before": null,
+    "after": {
+      "key": "m.121.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.121.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 125,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.121.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.121.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.121.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.121.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 67
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      121
+    ],
+    "before": null,
+    "after": {
+      "key": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 121,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 47
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      124
+    ],
+    "before": {
+      "key": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 124,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.121.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 47,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.127.davis_jefferson.letcher_john.verb.transfer.st_gov_virginia",
+      "letcher_john",
+      "addressee",
+      127
+    ],
+    "before": {
+      "key": "m.127.davis_jefferson.letcher_john.verb.transfer.st_gov_virginia|letcher_john",
+      "respOrder": "m.127.davis_jefferson.letcher_john.verb.transfer.st_gov_virginia",
+      "respPerson": "letcher_john",
+      "respPost": "st_gov_virginia",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 127,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 267,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.127.davis_jefferson.letcher_john.verb.transfer.st_gov_virginia",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.127.davis_jefferson.letcher_john.verb.transfer.st_gov_virginia"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.127.davis_jefferson.letcher_john.verb.transfer.st_gov_virginia",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.127.davis_jefferson.letcher_john.verb.transfer.st_gov_virginia"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 67,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 200,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.128.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      131
+    ],
+    "before": null,
+    "after": {
+      "key": "m.128.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.128.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 131,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.128.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.128.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.128.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.128.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 67
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      128
+    ],
+    "before": null,
+    "after": {
+      "key": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 128,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 47
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      131
+    ],
+    "before": {
+      "key": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 131,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.128.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 47,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.130.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "brown_joseph_e",
+      "addressee",
+      130
+    ],
+    "before": null,
+    "after": {
+      "key": "m.130.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.130.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 130,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 22,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.130.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.130.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.130.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.130.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 22
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "temperament",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.135.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      139
+    ],
+    "before": null,
+    "after": {
+      "key": "m.135.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.135.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 139,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.135.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.135.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.135.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.135.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 67
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      135
+    ],
+    "before": null,
+    "after": {
+      "key": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 135,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 47
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      138
+    ],
+    "before": {
+      "key": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 138,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.135.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 47,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      141
+    ],
+    "before": null,
+    "after": {
+      "key": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 141,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "discretion",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "discretion",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "discretion",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 47
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      143
+    ],
+    "before": {
+      "key": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 143,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "discretion",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "discretion",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "discretion",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 47,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      146
+    ],
+    "before": null,
+    "after": {
+      "key": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 146,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 67
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      142
+    ],
+    "before": null,
+    "after": {
+      "key": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 142,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 47
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      144
+    ],
+    "before": {
+      "key": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 144,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 47,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.142.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      147
+    ],
+    "before": null,
+    "after": {
+      "key": "m.142.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.142.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 147,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 54,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 54
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.142.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.142.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 54
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.49.letcher_john.lee_robert_e.letter.authority.letcher_john.lee_state_command.1",
+      "lee_robert_e",
+      "addressee",
+      54
+    ],
+    "before": null,
+    "after": {
+      "key": "m.49.letcher_john.lee_robert_e.letter.authority.letcher_john.lee_state_command.1|lee_robert_e",
+      "respOrder": "m.49.letcher_john.lee_robert_e.letter.authority.letcher_john.lee_state_command.1",
+      "respPerson": "lee_robert_e",
+      "respPost": "st_va_general_in_chief",
+      "respRole": "addressee",
+      "respKind": "mandate",
+      "respDay": 54,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 31,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 31
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "assign",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "command",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "hold",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "onward",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "relieve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "take",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.49.letcher_john.lee_robert_e.letter.authority.letcher_john.lee_state_command.1",
+        "clauses": [
+          "approve",
+          "assign",
+          "command",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.49.letcher_john.lee_robert_e.letter.authority.letcher_john.lee_state_command.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.49.letcher_john.lee_robert_e.letter.authority.letcher_john.lee_state_command.1",
+        "clauses": [
+          "approve",
+          "assign",
+          "command",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.49.letcher_john.lee_robert_e.letter.authority.letcher_john.lee_state_command.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 31
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1",
+      "lee_robert_e",
+      "addressee",
+      78
+    ],
+    "before": null,
+    "after": {
+      "key": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1|lee_robert_e",
+      "respOrder": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1",
+      "respPerson": "lee_robert_e",
+      "respPost": "cs_forces_virginia",
+      "respRole": "addressee",
+      "respKind": "mandate",
+      "respDay": 78,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 31,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 31
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "assign",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "command",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "hold",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "onward",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "relieve",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "take",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1",
+        "clauses": [
+          "approve",
+          "assign",
+          "command",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1",
+        "clauses": [
+          "approve",
+          "assign",
+          "command",
+          "course",
+          "hold",
+          "onward",
+          "relieve",
+          "take"
+        ],
+        "undertakingRevision": "m.66.davis_jefferson.lee_robert_e.letter.authority.davis_jefferson.lee_confederate_virginia.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 31
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.81.davis_jefferson.walker_leroy_p.approve.cs_forces_virginia",
+      "walker_leroy_p",
+      "relay",
+      81
+    ],
+    "before": null,
+    "after": {
+      "key": "m.81.davis_jefferson.walker_leroy_p.approve.cs_forces_virginia|walker_leroy_p",
+      "respOrder": "m.81.davis_jefferson.walker_leroy_p.approve.cs_forces_virginia",
+      "respPerson": "walker_leroy_p",
+      "respPost": "cs_secretary_war",
+      "respRole": "relay",
+      "respKind": "approve",
+      "respDay": 81,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 308,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -25
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 90
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": -8
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "caution"
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "caution"
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.81.davis_jefferson.walker_leroy_p.approve.cs_forces_virginia",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.81.davis_jefferson.walker_leroy_p.approve.cs_forces_virginia"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.81.davis_jefferson.walker_leroy_p.approve.cs_forces_virginia",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.81.davis_jefferson.walker_leroy_p.approve.cs_forces_virginia"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 51
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": -8
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 90
+      },
+      {
+        "term": "temperament",
+        "before": null,
+        "after": -25
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 200
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1",
+      "holmes_theophilus_h",
+      "addressee",
+      93
+    ],
+    "before": null,
+    "after": {
+      "key": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1|holmes_theophilus_h",
+      "respOrder": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "assignment",
+      "respDay": 93,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.87.lee_robert_e.lee_robert_e.letter.assignment.lee_robert_e.s129_so119_bate.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 67
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1",
+      "johnston_joseph_e",
+      "addressee",
+      93
+    ],
+    "before": null,
+    "after": {
+      "key": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1|johnston_joseph_e",
+      "respOrder": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "assignment",
+      "respDay": 93,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 33,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.88.lee_robert_e.johnston_joseph_e.letter.assignment.lee_robert_e.s129_turney_johnston.1"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 33
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+      "cooper_samuel",
+      "relay",
+      96
+    ],
+    "before": null,
+    "after": {
+      "key": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg|cooper_samuel",
+      "respOrder": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+      "respPerson": "cooper_samuel",
+      "respPost": "cs_war_adjutant_inspector_general",
+      "respRole": "relay",
+      "respKind": "goal",
+      "respDay": 96,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 32,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 32
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      99
+    ],
+    "before": null,
+    "after": {
+      "key": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 99,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 54,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 54
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.96.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 54
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.96.lee_robert_e.holmes_theophilus_h.order.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      100
+    ],
+    "before": null,
+    "after": {
+      "key": "m.96.lee_robert_e.holmes_theophilus_h.order.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.96.lee_robert_e.holmes_theophilus_h.order.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 100,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 67,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 67
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.96.lee_robert_e.holmes_theophilus_h.order.cs_cmd_fredericksburg",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.96.lee_robert_e.holmes_theophilus_h.order.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.96.lee_robert_e.holmes_theophilus_h.order.cs_cmd_fredericksburg",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.96.lee_robert_e.holmes_theophilus_h.order.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 67
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  },
+  {
+    "identity": [
+      "m.99.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      104
+    ],
+    "before": null,
+    "after": {
+      "key": "m.99.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.99.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 104,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 54,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 54
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.99.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.99.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.99.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.99.lee_robert_e.johnston_joseph_e.order.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 54
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent in one trajectory. [I] Combined S129 trajectory: actual received state/national command assignments, separate territorial force lineage, named whole-lot selection, office/named-person onward orders, and subsequent ordinary planning, reports and combat. This before/after comparison is not a one-factor experiment."
+  }
+]

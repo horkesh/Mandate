@@ -1,0 +1,4662 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "s126": {
+      "mechanic": "combat.battle_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "original": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "corrected": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "readiness": {
+      "mechanic": "combat.battle_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "combat.battle_day",
+    "band": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "s126": {
+      "mechanic": "combat.battle_day",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "original": {
+      "mechanic": "combat.battle_day",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "corrected": {
+      "mechanic": "combat.battle_day",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "readiness": {
+      "mechanic": "combat.battle_day",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "s126": {
+      "mechanic": "combat.battle_opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "original": {
+      "mechanic": "combat.battle_opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "combat.battle_opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "readiness": {
+      "mechanic": "combat.battle_opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.bombardment",
+    "band": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "s126": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "original": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "readiness": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.breakout",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a cut-off force breaks out only when its commander believes it can fight free; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force is cut off"
+    },
+    "s126": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.captured",
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "s126": {
+      "mechanic": "combat.captured",
+      "fires": 6,
+      "magnitude": 954
+    },
+    "original": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 1117
+    },
+    "corrected": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 1010
+    },
+    "readiness": {
+      "mechanic": "combat.captured",
+      "fires": 6,
+      "magnitude": 848
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "combat.cut_off",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98: none of the five field routs at the objective is cut off; each has a legal retreat. The island fort remains a bombardment surrender, outside this field counter. The trapped-garrison control remains live."
+    },
+    "s126": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.destroyed",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a force is destroyed only when the breakout its commander chose fails; the reference runs fight only a few battle-days (two bombardment days in the Union run, four field-battle days in the testbed run), and no force breaks out"
+    },
+    "s126": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.evacuated",
+    "band": {
+      "minFires": 1,
+      "maxFires": 1
+    },
+    "s126": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "band": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "s126": {
+      "mechanic": "combat.flank_broken",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "original": {
+      "mechanic": "combat.flank_broken",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "corrected": {
+      "mechanic": "combat.flank_broken",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "readiness": {
+      "mechanic": "combat.flank_broken",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "band": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "s126": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 12,
+      "magnitude": 8575
+    },
+    "original": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 9895
+    },
+    "corrected": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 8968
+    },
+    "readiness": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 12,
+      "magnitude": 7645
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "combat.missing",
+    "band": {
+      "minFires": 4,
+      "maxFires": 18
+    },
+    "s126": {
+      "mechanic": "combat.missing",
+      "fires": 12,
+      "magnitude": 2633
+    },
+    "original": {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 3014
+    },
+    "corrected": {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 2730
+    },
+    "readiness": {
+      "mechanic": "combat.missing",
+      "fires": 12,
+      "magnitude": 2350
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "combat.occupation",
+    "band": {
+      "minFires": 157,
+      "maxFires": 628
+    },
+    "s126": {
+      "mechanic": "combat.occupation",
+      "fires": 338,
+      "magnitude": 12963
+    },
+    "original": {
+      "mechanic": "combat.occupation",
+      "fires": 309,
+      "magnitude": 11853
+    },
+    "corrected": {
+      "mechanic": "combat.occupation",
+      "fires": 317,
+      "magnitude": 11913
+    },
+    "readiness": {
+      "mechanic": "combat.occupation",
+      "fires": 408,
+      "magnitude": 13817
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "combat.pursuit_chosen",
+    "band": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "s126": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "combat.records_pruned",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a closed battle is pruned after the pack's battleDays (120), longer than either reference run"
+    },
+    "s126": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.routed",
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "s126": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "original": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "corrected": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "readiness": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.surrendered",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "combat.withdrew",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119 integrated sourced allocation/Preston deduplication changes the force and received-picture trajectory. Patterson chooses direct at day140 instead of the S116 holding pick and meets the opposing commander at Harpers Ferry day146: 2000 attackers against 5000 known defenders plus opaque Harpers Ferry contingent; Union records withdrew. Combat and decision rules are unchanged."
+    },
+    "s126": {
+      "mechanic": "combat.withdrew",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "combat.withdrew",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "combat.works_stormed",
+    "band": {
+      "minFires": 0,
+      "why": "R98: northern field combat is now possible in this reference; this latent band retains no minimum, with its separate driving checks unchanged."
+    },
+    "s126": {
+      "mechanic": "combat.works_stormed",
+      "fires": 1,
+      "magnitude": 150
+    },
+    "original": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "combat.works_stormed",
+      "fires": 1,
+      "magnitude": 150
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "command.government_closed",
+    "band": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "s126": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "original": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "readiness": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "command.government_established",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "command.government_reopened",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no pack situation reopens one yet"
+    },
+    "s126": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "command.post_succeeded",
+    "band": {
+      "minFires": 2,
+      "maxFires": 10,
+      "why": "S68 lead ruling 4 (CODEX.md, 2026-11-22): S46 adds four sourced institutional successions to the existing one. S67 observes five on days 11, 52, 54, 64 and 79; around(5). Each source and page is checked in notes/lane-s68-residuals.md#sourced-successions and the append-only liveness cause record."
+    },
+    "s126": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "original": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "readiness": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "command.proposal_refused",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal that cannot be applied; honest situations propose none"
+    },
+    "s126": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "command.side_changed",
+    "band": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "s126": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "original": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "corrected": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "readiness": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "command.temporary_post_opened",
+    "band": {
+      "minFires": 3,
+      "maxFires": 14
+    },
+    "s126": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 14,
+      "magnitude": 14
+    },
+    "original": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 12,
+      "magnitude": 12
+    },
+    "corrected": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 12,
+      "magnitude": 12
+    },
+    "readiness": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 12,
+      "magnitude": 12
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "commands.rejected",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "rule seats send only commands the menu offers; a bad command is a seat bug"
+    },
+    "s126": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "control.changed",
+    "band": {
+      "minFires": 160,
+      "maxFires": 640
+    },
+    "s126": {
+      "mechanic": "control.changed",
+      "fires": 345,
+      "magnitude": 15963
+    },
+    "original": {
+      "mechanic": "control.changed",
+      "fires": 315,
+      "magnitude": 14653
+    },
+    "corrected": {
+      "mechanic": "control.changed",
+      "fires": 323,
+      "magnitude": 14713
+    },
+    "readiness": {
+      "mechanic": "control.changed",
+      "fires": 414,
+      "magnitude": 16617
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "control.threshold_crossed",
+    "band": {
+      "minFires": 19,
+      "maxFires": 78
+    },
+    "s126": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 48,
+      "magnitude": 48
+    },
+    "original": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 44,
+      "magnitude": 44
+    },
+    "corrected": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 43,
+      "magnitude": 43
+    },
+    "readiness": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 49,
+      "magnitude": 49
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "forces.landed_by_situation",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S124/0126: a whole represented company lands without a numeric split. The block and its lots keep unknown men (OR I-I pp.352-353); the situation fires one landing on day33."
+    },
+    "s126": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "forces.landing_refused",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S124: the sole situation landing is now a whole-company move, so no numeric split is attempted or refused. Unknown strength remains unknown. The paired fictional control still drives one numeric landing and one unknown-parent numeric refusal."
+    },
+    "s126": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "forces.stores_fell",
+    "band": {
+      "minFires": 1444,
+      "maxFires": 5776,
+      "why": "S116 /0122 [I]: cause honours change Brown and Perry reserve refusals to original undertakings at day117; ordinary muster adds Georgia 3000 and Florida 1000 at day122. Recruitment, transfer, control and supply then run unchanged. Retained daily telemetry shows exactly one extra stores-fell firing on each day132-148: 2871 -> 2888 fires, magnitude 2850214 -> 2867214. The integrated additional-force/supply trajectory breaches the former max2886 by two; no initial strength, stores rule or threshold is fitted."
+    },
+    "s126": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2638,
+      "magnitude": 2609571
+    },
+    "original": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2610,
+      "magnitude": 2583336
+    },
+    "corrected": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2603,
+      "magnitude": 2576783
+    },
+    "readiness": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2627,
+      "magnitude": 2597712
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "forces.stores_low",
+    "band": {
+      "minFires": 51,
+      "maxFires": 206
+    },
+    "s126": {
+      "mechanic": "forces.stores_low",
+      "fires": 102,
+      "magnitude": 102
+    },
+    "original": {
+      "mechanic": "forces.stores_low",
+      "fires": 95,
+      "magnitude": 95
+    },
+    "corrected": {
+      "mechanic": "forces.stores_low",
+      "fires": 100,
+      "magnitude": 100
+    },
+    "readiness": {
+      "mechanic": "forces.stores_low",
+      "fires": 100,
+      "magnitude": 100
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "forces.stores_refilled",
+    "band": {
+      "minFires": 1200,
+      "maxFires": 4800
+    },
+    "s126": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2943,
+      "magnitude": 2898839
+    },
+    "original": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2950,
+      "magnitude": 2906431
+    },
+    "corrected": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2953,
+      "magnitude": 2910413
+    },
+    "readiness": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2974,
+      "magnitude": 2928161
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "band": {
+      "minFires": 92,
+      "maxFires": 368
+    },
+    "s126": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 178,
+      "magnitude": 1021
+    },
+    "original": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 180,
+      "magnitude": 1137
+    },
+    "corrected": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 172,
+      "magnitude": 987
+    },
+    "readiness": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 172,
+      "magnitude": 881
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "infrastructure.changed",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "nothing proposes it yet: situations, raids and operations arrive in Phase 1; the kernel test drives it"
+    },
+    "s126": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "band": {
+      "minFires": 53,
+      "maxFires": 214
+    },
+    "s126": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 106,
+      "magnitude": 1518
+    },
+    "original": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 106,
+      "magnitude": 1509
+    },
+    "corrected": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 106,
+      "magnitude": 1508
+    },
+    "readiness": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 107,
+      "magnitude": 1535
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "band": {
+      "minFires": 73,
+      "maxFires": 292
+    },
+    "s126": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12000
+    },
+    "original": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12071
+    },
+    "corrected": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12224
+    },
+    "readiness": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12348
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "ladder.moved",
+    "band": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "s126": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "original": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "corrected": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "readiness": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "ladder.rival",
+    "band": {
+      "minFires": 0,
+      "why": "no holder reaches a rival rung with the required standing in the merged 148-day history run; the testbed run fires it"
+    },
+    "s126": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "map.pocket_closed",
+    "band": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "S106 /0118 [I]: the same reserve undertakes without the retired three-day numeric-rung delay; earlier muster changes the existing control, supply and passage sequence. Three pocket closures remain at days 79, 87 and 128; the former day-136 closure disappears. No passage/control rule, original strength or gameplay threshold changes."
+    },
+    "s126": {
+      "mechanic": "map.pocket_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "original": {
+      "mechanic": "map.pocket_closed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "corrected": {
+      "mechanic": "map.pocket_closed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "readiness": {
+      "mechanic": "map.pocket_closed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "map.pocket_lost",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires map.pocket_relieved 1 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#map.pocket_relieved."
+    },
+    "s126": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "map.recomputed",
+    "band": {
+      "minFires": 26,
+      "maxFires": 104
+    },
+    "s126": {
+      "mechanic": "map.recomputed",
+      "fires": 52,
+      "magnitude": 59
+    },
+    "original": {
+      "mechanic": "map.recomputed",
+      "fires": 48,
+      "magnitude": 55
+    },
+    "corrected": {
+      "mechanic": "map.recomputed",
+      "fires": 47,
+      "magnitude": 54
+    },
+    "readiness": {
+      "mechanic": "map.recomputed",
+      "fires": 55,
+      "magnitude": 62
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "band": {
+      "minFires": 77,
+      "maxFires": 308
+    },
+    "s126": {
+      "mechanic": "messages.courier_delay",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "original": {
+      "mechanic": "messages.courier_delay",
+      "fires": 104,
+      "magnitude": 104
+    },
+    "corrected": {
+      "mechanic": "messages.courier_delay",
+      "fires": 152,
+      "magnitude": 152
+    },
+    "readiness": {
+      "mechanic": "messages.courier_delay",
+      "fires": 158,
+      "magnitude": 158
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "messages.delivered",
+    "band": {
+      "minFires": 7120,
+      "maxFires": 28480
+    },
+    "s126": {
+      "mechanic": "messages.delivered",
+      "fires": 14436,
+      "magnitude": 14436
+    },
+    "original": {
+      "mechanic": "messages.delivered",
+      "fires": 14452,
+      "magnitude": 14452
+    },
+    "corrected": {
+      "mechanic": "messages.delivered",
+      "fires": 14610,
+      "magnitude": 14610
+    },
+    "readiness": {
+      "mechanic": "messages.delivered",
+      "fires": 14842,
+      "magnitude": 14842
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "messages.mail_delay",
+    "band": {
+      "minFires": 1428,
+      "maxFires": 5712
+    },
+    "s126": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2858,
+      "magnitude": 2858
+    },
+    "original": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2862,
+      "magnitude": 2862
+    },
+    "corrected": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2867,
+      "magnitude": 2867
+    },
+    "readiness": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2869,
+      "magnitude": 2869
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "messages.sent",
+    "band": {
+      "minFires": 7523,
+      "maxFires": 30094
+    },
+    "s126": {
+      "mechanic": "messages.sent",
+      "fires": 15207,
+      "magnitude": 15207
+    },
+    "original": {
+      "mechanic": "messages.sent",
+      "fires": 15232,
+      "magnitude": 15232
+    },
+    "corrected": {
+      "mechanic": "messages.sent",
+      "fires": 15396,
+      "magnitude": 15396
+    },
+    "readiness": {
+      "mechanic": "messages.sent",
+      "fires": 15620,
+      "magnitude": 15620
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "messages.special_messenger",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S90 continuation ruling 4 (CODEX.md, 2026-11-23): the accepted Cooper operational channel removes Walker's junction objection and its sole bypass trip. The Union reference is quiet; packages/kernel/test/seats-orders.test.ts, \"goes around the chain by special messenger\", drives the mechanic independently. The testbed remains live."
+    },
+    "s126": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "movement.arrived",
+    "band": {
+      "minFires": 319,
+      "maxFires": 1276
+    },
+    "s126": {
+      "mechanic": "movement.arrived",
+      "fires": 701,
+      "magnitude": 701
+    },
+    "original": {
+      "mechanic": "movement.arrived",
+      "fires": 707,
+      "magnitude": 707
+    },
+    "corrected": {
+      "mechanic": "movement.arrived",
+      "fires": 696,
+      "magnitude": 696
+    },
+    "readiness": {
+      "mechanic": "movement.arrived",
+      "fires": 704,
+      "magnitude": 704
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "movement.join_blocked",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every block a transfer hands over in the reference runs finds a route to its post’s seat; the kernel test drives the wait"
+    },
+    "s126": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "movement.joined",
+    "band": {
+      "minFires": 32,
+      "maxFires": 128
+    },
+    "s126": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "original": {
+      "mechanic": "movement.joined",
+      "fires": 66,
+      "magnitude": 66
+    },
+    "corrected": {
+      "mechanic": "movement.joined",
+      "fires": 64,
+      "magnitude": 64
+    },
+    "readiness": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "band": {
+      "minFires": 155,
+      "maxFires": 620
+    },
+    "s126": {
+      "mechanic": "movement.leg_started",
+      "fires": 385,
+      "magnitude": 385
+    },
+    "original": {
+      "mechanic": "movement.leg_started",
+      "fires": 373,
+      "magnitude": 373
+    },
+    "corrected": {
+      "mechanic": "movement.leg_started",
+      "fires": 362,
+      "magnitude": 362
+    },
+    "readiness": {
+      "mechanic": "movement.leg_started",
+      "fires": 387,
+      "magnitude": 387
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "operations.ended",
+    "band": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "s126": {
+      "mechanic": "operations.ended",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "original": {
+      "mechanic": "operations.ended",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "corrected": {
+      "mechanic": "operations.ended",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "readiness": {
+      "mechanic": "operations.ended",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "operations.landed",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft goes by water (no troops start aboard a ship the planner picks)"
+    },
+    "s126": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "operations.opened",
+    "band": {
+      "minFires": 3,
+      "maxFires": 12,
+      "why": "S119 integrated correction changes Patterson day140 planner pick from holding to direct. His additional operation opens day141; five other openings remain, giving6. No operation quota or planner weight changed."
+    },
+    "s126": {
+      "mechanic": "operations.opened",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "original": {
+      "mechanic": "operations.opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "corrected": {
+      "mechanic": "operations.opened",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "readiness": {
+      "mechanic": "operations.opened",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119: the additional Patterson operation after his day140 direct pick loses the Harpers Ferry contact day146 and its axis records repulsed day147. The previous S116 path held; ordinary operation execution now fires once."
+    },
+    "s126": {
+      "mechanic": "operations.repulsed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "operations.repulsed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "operations.stage",
+    "band": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "s126": {
+      "mechanic": "operations.stage",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "original": {
+      "mechanic": "operations.stage",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "corrected": {
+      "mechanic": "operations.stage",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "readiness": {
+      "mechanic": "operations.stage",
+      "fires": 39,
+      "magnitude": 39
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "operations.support_answered",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "s126": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "operations.support_refused",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "s126": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "operations.support_sent",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no plan the reference runs draft asks another holder for an axis (no pincer is drafted)"
+    },
+    "s126": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "operations.works",
+    "band": {
+      "minFires": 3,
+      "maxFires": 14,
+      "why": "S82 ruling 2: the accepted sourced command/concentration path fires operations.works 7 times. Named events and diagnosis: docs/audit/s82-evidence/liveness-review.json#operations.works."
+    },
+    "s126": {
+      "mechanic": "operations.works",
+      "fires": 14,
+      "magnitude": 700
+    },
+    "original": {
+      "mechanic": "operations.works",
+      "fires": 9,
+      "magnitude": 450
+    },
+    "corrected": {
+      "mechanic": "operations.works",
+      "fires": 9,
+      "magnitude": 450
+    },
+    "readiness": {
+      "mechanic": "operations.works",
+      "fires": 15,
+      "magnitude": 750
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "orders.bypassed",
+    "band": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "s126": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "original": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "corrected": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "readiness": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "orders.conflict",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a conflict needs two issuers, a chain order and one sent around it; here only the principal orders"
+    },
+    "s126": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "orders.obeyed",
+    "band": {
+      "minFires": 3,
+      "maxFires": 14,
+      "why": "S122 /0125/0127 [I]: sourced call establishments and unknown historical quantities change the ordinary command and received-picture trajectory. Seven orders are obeyed; response records and exact identities are retained."
+    },
+    "s126": {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "original": {
+      "mechanic": "orders.obeyed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "corrected": {
+      "mechanic": "orders.obeyed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "readiness": {
+      "mechanic": "orders.obeyed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "orders.relay_held",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "0113: no evidence-backed covert relay delay occurs on this Union reference. Cameron openly reserves; the fictional relayer control still produces a two-day hold."
+    },
+    "s126": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "orders.relay_objected",
+    "band": {
+      "minFires": 1,
+      "maxFires": 6
+    },
+    "s126": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "original": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "readiness": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "orders.relayed",
+    "band": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "s126": {
+      "mechanic": "orders.relayed",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "original": {
+      "mechanic": "orders.relayed",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "corrected": {
+      "mechanic": "orders.relayed",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "readiness": {
+      "mechanic": "orders.relayed",
+      "fires": 20,
+      "magnitude": 20
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "orders.responses_pruned",
+    "band": {
+      "minFires": 13,
+      "maxFires": 54
+    },
+    "s126": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 27,
+      "magnitude": 66
+    },
+    "original": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 28,
+      "magnitude": 67
+    },
+    "corrected": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 28,
+      "magnitude": 67
+    },
+    "readiness": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 28,
+      "magnitude": 67
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "orders.returned",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S98: no dispatch arrives at a vacant post. The former day-145 return answered the principal's day-142 inquiry to the wounded commander; that inquiry is absent on the changed received-paper path. The vacant-post control still returns a dispatch."
+    },
+    "s126": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "orders.returned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "orders.returned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "people.grievances_faded",
+    "band": {
+      "minFires": 15,
+      "maxFires": 60
+    },
+    "s126": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "original": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "corrected": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "readiness": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "people.promise_broken",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "s126": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "people.promise_kept",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "s126": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "people.resigned",
+    "band": {
+      "minFires": 7,
+      "maxFires": 30,
+      "why": "S77 lead ruling 3 (CODEX.md, 2026-11-23): S74 adds Elzey's sourced departure under S69/0101 to the fourteen existing resignations; recentre only this band with around(15). No other quiet band is changed."
+    },
+    "s126": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "original": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "corrected": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "readiness": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "people.stayed",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "planner.candidates",
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "s126": {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    "original": {
+      "mechanic": "planner.candidates",
+      "fires": 4,
+      "magnitude": 8
+    },
+    "corrected": {
+      "mechanic": "planner.candidates",
+      "fires": 4,
+      "magnitude": 8
+    },
+    "readiness": {
+      "mechanic": "planner.candidates",
+      "fires": 10,
+      "magnitude": 22
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "planner.searches",
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "s126": {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 34
+    },
+    "original": {
+      "mechanic": "planner.searches",
+      "fires": 4,
+      "magnitude": 20
+    },
+    "corrected": {
+      "mechanic": "planner.searches",
+      "fires": 4,
+      "magnitude": 20
+    },
+    "readiness": {
+      "mechanic": "planner.searches",
+      "fires": 10,
+      "magnitude": 62
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "planner.term.caution",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S119: Patterson day140 changes from the S116 holding pick (caution/force_ratio/supply each decisive) to direct. Dropping caution from his corrected retained scores leaves direct first. Other retained drafts also keep their pick; daily telemetry records0. No temperament or scoring weight changed."
+    },
+    "s126": {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.caution",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "planner.term.coordination",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a two-axis plan close enough to the best for coordination to decide it"
+    },
+    "s126": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "planner.term.dependence",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run drafts a support request close enough to the best for dependence to decide it"
+    },
+    "s126": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "planner.term.exposure",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run meets a perceived enemy on the way, and the editing exercise’s “move now” changes no exposure since lane 1.1’s perception"
+    },
+    "s126": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "planner.term.force_ratio",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S119: Patterson day140 changes from S116 holding to direct. Dropping force_ratio from his corrected retained scores leaves direct first; all other retained drafts keep their pick and daily telemetry records0. No strength/default, assault margin or scoring weight was fitted."
+    },
+    "s126": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "planner.term.glory",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "few drafts in the reference runs, and none where dropping glory alone changes the pick"
+    },
+    "s126": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "planner.term.goal_fit",
+    "band": {
+      "minFires": 0,
+      "why": "dropping goal fit never changes a draft's chosen plan in the merged history run; the testbed run fires it"
+    },
+    "s126": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "planner.term.haste",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "an edit-only term (lane 0.9: drafts always concentrate as long as he wants): only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "s126": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "planner.term.notes",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the reference principals send no notes; the send-back driver makes a timing note change the pick"
+    },
+    "s126": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "planner.term.supply",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S124 [I]: the early Tennessee offer is received by the War Department at Lynchburg; the later named Holmes request still selects the governor. Holmes has no day144 draft, C25 is not observed, and the sole S122 supply-changing pick disappears. All retained candidate counterfactuals are published; no scoring rule, term weight or liveness definition changes."
+    },
+    "s126": {
+      "mechanic": "planner.term.supply",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "planner.term.supply",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.supply",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.supply",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "planner.term.time",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4,
+      "why": "S119: Patterson day140 chooses direct; deleting time from the retained candidate scores changes his top candidate to holding. This exact live contribution fires once; no score, clock weight or live-term definition changed."
+    },
+    "s126": {
+      "mechanic": "planner.term.time",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "planner.term.time",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "plans.approved",
+    "band": {
+      "minFires": 0,
+      "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+    },
+    "s126": {
+      "mechanic": "plans.approved",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "original": {
+      "mechanic": "plans.approved",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "corrected": {
+      "mechanic": "plans.approved",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "readiness": {
+      "mechanic": "plans.approved",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "plans.chosen",
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "s126": {
+      "mechanic": "plans.chosen",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "original": {
+      "mechanic": "plans.chosen",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "corrected": {
+      "mechanic": "plans.chosen",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "readiness": {
+      "mechanic": "plans.chosen",
+      "fires": 14,
+      "magnitude": 14
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "plans.discretion_exercised",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: no received conditional authority is exercised in either normal reference. The named command complies with its hold, so no proposal enables the sourced grant; the later conditional goal remains in transit beyond the scoring horizon. Generic paired-State controls exercise a received fallback on own enemy knowledge and keep unseen truth and unjoined reinforcements inert."
+    },
+    "s126": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "plans.draft_deferred",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no reference run asks for more plans in a day than the pack’s cap of three (0062)"
+    },
+    "s126": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "plans.drafted",
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "s126": {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "original": {
+      "mechanic": "plans.drafted",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "corrected": {
+      "mechanic": "plans.drafted",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "readiness": {
+      "mechanic": "plans.drafted",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "plans.edit_answered",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "s126": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "plans.edit_invalid",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the editing exercise edits only a moving axis’s timing, which can always be made"
+    },
+    "s126": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "plans.edit_objected",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "s126": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "plans.edit_received",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "only the editing exercise run reviews and edits plans; the rule-seat principal approves them as drafted"
+    },
+    "s126": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "plans.edit_shirked",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the testbed’s commanders answer the edits the exercise makes by complying or objecting, never covertly"
+    },
+    "s126": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "plans.goal_proposed",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S96 /0114: neither normal reference produces a qualifying planner alternative after an objection or reservation. The unchanged generic live control sends an order-correlated complete proposal from the commander, then exercises all three received replies. No historical proposal is authored or fitted."
+    },
+    "s126": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "plans.goal_reached",
+    "band": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "s126": {
+      "mechanic": "plans.goal_reached",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "original": {
+      "mechanic": "plans.goal_reached",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "corrected": {
+      "mechanic": "plans.goal_reached",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "readiness": {
+      "mechanic": "plans.goal_reached",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "plans.goal_set",
+    "band": {
+      "minFires": 3,
+      "maxFires": 14,
+      "why": "S122 /0125/0127 [I]: ordinary command and planning respond to the changed strength picture; seven goals are set. No authored goal, term weight or scheduling rule changed."
+    },
+    "s126": {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "original": {
+      "mechanic": "plans.goal_set",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "corrected": {
+      "mechanic": "plans.goal_set",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "readiness": {
+      "mechanic": "plans.goal_set",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "plans.released",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no goal here says \"prepare, await my word\"; the editing exercise run gives the word"
+    },
+    "s126": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "plans.sent_back",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no rule seat sends a plan back: the rule-seat principal approves, the editing exercise edits"
+    },
+    "s126": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "plans.submitted",
+    "band": {
+      "minFires": 0,
+      "why": "both chosen plans go ahead as drafted without review; the editing exercise drives plan review"
+    },
+    "s126": {
+      "mechanic": "plans.submitted",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "original": {
+      "mechanic": "plans.submitted",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "corrected": {
+      "mechanic": "plans.submitted",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "readiness": {
+      "mechanic": "plans.submitted",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "plans.went_ahead",
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "s126": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "original": {
+      "mechanic": "plans.went_ahead",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "corrected": {
+      "mechanic": "plans.went_ahead",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "readiness": {
+      "mechanic": "plans.went_ahead",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "politics.act",
+    "band": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "s126": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "original": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "readiness": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "politics.adjourned",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "politics.answered",
+    "band": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "s126": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "original": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "readiness": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "politics.called",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "politics.framing",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "politics.front_page",
+    "band": {
+      "minFires": 31,
+      "maxFires": 126
+    },
+    "s126": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "original": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "corrected": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "readiness": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "politics.met",
+    "band": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "s126": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "original": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "readiness": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "politics.opened",
+    "band": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "s126": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "original": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "readiness": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "politics.press_silent",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "every paper’s editor serves on his paper’s side throughout both runs"
+    },
+    "s126": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "politics.refused",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a refusal needs a proposal politics cannot apply; honest situations propose none"
+    },
+    "s126": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "politics.support",
+    "band": {
+      "minFires": 42,
+      "maxFires": 170
+    },
+    "s126": {
+      "mechanic": "politics.support",
+      "fires": 103,
+      "magnitude": 103
+    },
+    "original": {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "corrected": {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "readiness": {
+      "mechanic": "politics.support",
+      "fires": 103,
+      "magnitude": 103
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "recruitment.answered",
+    "band": {
+      "minFires": 30,
+      "maxFires": 122
+    },
+    "s126": {
+      "mechanic": "recruitment.answered",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "original": {
+      "mechanic": "recruitment.answered",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "corrected": {
+      "mechanic": "recruitment.answered",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "readiness": {
+      "mechanic": "recruitment.answered",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "recruitment.called",
+    "band": {
+      "minFires": 48,
+      "maxFires": 194
+    },
+    "s126": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "original": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "corrected": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "readiness": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "recruitment.disbanded",
+    "band": {
+      "minFires": 7,
+      "maxFires": 30
+    },
+    "s126": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "original": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "corrected": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "readiness": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "recruitment.lapsed",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a levy lapses only after waiting on enemy ground past the pack’s days, and none waits in either run"
+    },
+    "s126": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "recruitment.men",
+    "band": {
+      "minFires": 23,
+      "maxFires": 92
+    },
+    "s126": {
+      "mechanic": "recruitment.men",
+      "fires": 66,
+      "magnitude": 225300
+    },
+    "original": {
+      "mechanic": "recruitment.men",
+      "fires": 66,
+      "magnitude": 225300
+    },
+    "corrected": {
+      "mechanic": "recruitment.men",
+      "fires": 66,
+      "magnitude": 225300
+    },
+    "readiness": {
+      "mechanic": "recruitment.men",
+      "fires": 66,
+      "magnitude": 225300
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "recruitment.muster_blocked",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "no governor called in either run has his seat region in enemy hands when his levy falls due"
+    },
+    "s126": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "recruitment.mustered",
+    "band": {
+      "minFires": 25,
+      "maxFires": 100
+    },
+    "s126": {
+      "mechanic": "recruitment.mustered",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "original": {
+      "mechanic": "recruitment.mustered",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "corrected": {
+      "mechanic": "recruitment.mustered",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "readiness": {
+      "mechanic": "recruitment.mustered",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "recruitment.refused",
+    "band": {
+      "minFires": 6,
+      "maxFires": 24
+    },
+    "s126": {
+      "mechanic": "recruitment.refused",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "original": {
+      "mechanic": "recruitment.refused",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "corrected": {
+      "mechanic": "recruitment.refused",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "readiness": {
+      "mechanic": "recruitment.refused",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "recruitment.renewed",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "recruitment.slow_walked",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "S106 /0118: the reserve answer at willingness 7 has no grounded reservation. Retiring the numeric window removes its old three-day reservation delay. No actual slow_walk or reinterpret call occurs in this Union reference. The unchanged testbed still fires recruitment.slow_walked once."
+    },
+    "s126": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "regions.reached_lines",
+    "band": {
+      "minFires": 137,
+      "maxFires": 548
+    },
+    "s126": {
+      "mechanic": "regions.reached_lines",
+      "fires": 271,
+      "magnitude": 271
+    },
+    "original": {
+      "mechanic": "regions.reached_lines",
+      "fires": 271,
+      "magnitude": 271
+    },
+    "corrected": {
+      "mechanic": "regions.reached_lines",
+      "fires": 271,
+      "magnitude": 271
+    },
+    "readiness": {
+      "mechanic": "regions.reached_lines",
+      "fires": 271,
+      "magnitude": 271
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "regions.self_emancipation",
+    "band": {
+      "minFires": 1548,
+      "maxFires": 6194
+    },
+    "s126": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3081,
+      "magnitude": 3081
+    },
+    "original": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3077,
+      "magnitude": 3077
+    },
+    "corrected": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3077,
+      "magnitude": 3077
+    },
+    "readiness": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3081,
+      "magnitude": 3081
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "band": {
+      "minFires": 21,
+      "maxFires": 84
+    },
+    "s126": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 50,
+      "magnitude": 50
+    },
+    "original": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 48,
+      "magnitude": 48
+    },
+    "corrected": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 48,
+      "magnitude": 48
+    },
+    "readiness": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 50,
+      "magnitude": 50
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "reports.casualty_return",
+    "band": {
+      "minFires": 10,
+      "maxFires": 40
+    },
+    "s126": {
+      "mechanic": "reports.casualty_return",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "original": {
+      "mechanic": "reports.casualty_return",
+      "fires": 28,
+      "magnitude": 28
+    },
+    "corrected": {
+      "mechanic": "reports.casualty_return",
+      "fires": 28,
+      "magnitude": 28
+    },
+    "readiness": {
+      "mechanic": "reports.casualty_return",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "original": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "corrected": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "readiness": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "reports.filtered",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "s126": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "reports.governor_wire",
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "s126": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "original": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "corrected": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "readiness": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "reports.observer_letter",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "s126": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "reports.pocket",
+    "band": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "R97 [I]: the field engagement adds hour-stamped battle dispatches and casualty returns; the new movements and pocket changes generate their ordinary reports."
+    },
+    "s126": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "original": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "corrected": {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "readiness": {
+      "mechanic": "reports.pocket",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "reports.trimmed",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "both packs start with their filter posts (the wire offices) empty (0040: the filter post is empty in the March 1861 start), so no wire meets a filter; lane 1.1 made the filter read its holder’s values, and the kernel test drives it with a held post"
+    },
+    "s126": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "seats.attention_refilled",
+    "band": {
+      "minFires": 10,
+      "maxFires": 42
+    },
+    "s126": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "original": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "corrected": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "readiness": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "seats.attention_refused",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal prices each command by the pack’s table and sends only what his week’s attention pays for (lane 1.12), so the kernel refuses him nothing; the kernel test drives it"
+    },
+    "s126": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "seats.attention_spent",
+    "band": {
+      "minFires": 76,
+      "maxFires": 306
+    },
+    "s126": {
+      "mechanic": "seats.attention_spent",
+      "fires": 176,
+      "magnitude": 176
+    },
+    "original": {
+      "mechanic": "seats.attention_spent",
+      "fires": 163,
+      "magnitude": 163
+    },
+    "corrected": {
+      "mechanic": "seats.attention_spent",
+      "fires": 163,
+      "magnitude": 163
+    },
+    "readiness": {
+      "mechanic": "seats.attention_spent",
+      "fires": 178,
+      "magnitude": 178
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "band": {
+      "minFires": 5,
+      "maxFires": 20
+    },
+    "s126": {
+      "mechanic": "seats.battle_orders",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "original": {
+      "mechanic": "seats.battle_orders",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "corrected": {
+      "mechanic": "seats.battle_orders",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "readiness": {
+      "mechanic": "seats.battle_orders",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "seats.choices",
+    "band": {
+      "minFires": 3,
+      "maxFires": 12
+    },
+    "s126": {
+      "mechanic": "seats.choices",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "original": {
+      "mechanic": "seats.choices",
+      "fires": 8,
+      "magnitude": 8
+    },
+    "corrected": {
+      "mechanic": "seats.choices",
+      "fires": 11,
+      "magnitude": 11
+    },
+    "readiness": {
+      "mechanic": "seats.choices",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "seats.defaulted",
+    "band": {
+      "minFires": 0,
+      "why": "every request is answered in this run; the silent-seats exercise run fires it"
+    },
+    "s126": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "seats.initiative",
+    "band": {
+      "minFires": 1,
+      "maxFires": 6,
+      "why": "S16 dating holds remove two cabinet officers' conciliation motives and their three initiatives each; the deferred secretary retains his memorandum and three cooldown firings. The threshold and historical assertions are unchanged. See runs/s16/initiative-cause.json and band-reconciliation.json."
+    },
+    "s126": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "original": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "corrected": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "readiness": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.decided",
+    "band": {
+      "minFires": 9,
+      "maxFires": 38
+    },
+    "s126": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "original": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "corrected": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "readiness": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.delegated",
+    "band": {
+      "minFires": 0,
+      "why": "no authored Union situation in this window names a delegate as its historical default; the testbed run fires it"
+    },
+    "s126": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.fired",
+    "band": {
+      "minFires": 44,
+      "maxFires": 176
+    },
+    "s126": {
+      "mechanic": "situations.fired",
+      "fires": 90,
+      "magnitude": 90
+    },
+    "original": {
+      "mechanic": "situations.fired",
+      "fires": 90,
+      "magnitude": 90
+    },
+    "corrected": {
+      "mechanic": "situations.fired",
+      "fires": 90,
+      "magnitude": 90
+    },
+    "readiness": {
+      "mechanic": "situations.fired",
+      "fires": 90,
+      "magnitude": 90
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.lapsed",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a lapse needs every option to expire unanswered; a rule-driven principal takes defaults at once (0057)"
+    },
+    "s126": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.notice_reports",
+    "band": {
+      "minFires": 35,
+      "maxFires": 140
+    },
+    "s126": {
+      "mechanic": "situations.notice_reports",
+      "fires": 72,
+      "magnitude": 72
+    },
+    "original": {
+      "mechanic": "situations.notice_reports",
+      "fires": 72,
+      "magnitude": 72
+    },
+    "corrected": {
+      "mechanic": "situations.notice_reports",
+      "fires": 72,
+      "magnitude": 72
+    },
+    "readiness": {
+      "mechanic": "situations.notice_reports",
+      "fires": 72,
+      "magnitude": 72
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.noticed",
+    "band": {
+      "minFires": 34,
+      "maxFires": 138
+    },
+    "s126": {
+      "mechanic": "situations.noticed",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "original": {
+      "mechanic": "situations.noticed",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "corrected": {
+      "mechanic": "situations.noticed",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "readiness": {
+      "mechanic": "situations.noticed",
+      "fires": 71,
+      "magnitude": 71
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.options_changed",
+    "band": {
+      "minFires": 2,
+      "maxFires": 8
+    },
+    "s126": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "original": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "corrected": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "readiness": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.orders",
+    "band": {
+      "minFires": 12,
+      "maxFires": 50
+    },
+    "s126": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "original": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "corrected": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "readiness": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.policy",
+    "band": {
+      "minFires": 1,
+      "maxFires": 4
+    },
+    "s126": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "original": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "corrected": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "readiness": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.policy_unpaid",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "a floor cost falls on the principal only when the floored row has no stakeholder or carrier of its own, and the chosen reference-run policy pays its floor through stakeholders; the gate reviewer requires it never to fire in one"
+    },
+    "s126": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.proposals",
+    "band": {
+      "minFires": 36,
+      "maxFires": 146
+    },
+    "s126": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "original": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "corrected": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "readiness": {
+      "mechanic": "situations.proposals",
+      "fires": 68,
+      "magnitude": 632
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.resurfaced",
+    "band": {
+      "minFires": 1,
+      "maxFires": 5
+    },
+    "s126": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "original": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "corrected": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "readiness": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.staff_lines",
+    "band": {
+      "minFires": 9,
+      "maxFires": 36
+    },
+    "s126": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "original": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "corrected": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "readiness": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.surfaced",
+    "band": {
+      "minFires": 43,
+      "maxFires": 174
+    },
+    "s126": {
+      "mechanic": "situations.surfaced",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "original": {
+      "mechanic": "situations.surfaced",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "corrected": {
+      "mechanic": "situations.surfaced",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "readiness": {
+      "mechanic": "situations.surfaced",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "situations.waiting",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "waiting is an option a human takes; the rule-driven principal takes the historical default (0057)"
+    },
+    "s126": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "verbs.answered",
+    "band": {
+      "minFires": 61,
+      "maxFires": 246
+    },
+    "s126": {
+      "mechanic": "verbs.answered",
+      "fires": 145,
+      "magnitude": 145
+    },
+    "original": {
+      "mechanic": "verbs.answered",
+      "fires": 128,
+      "magnitude": 128
+    },
+    "corrected": {
+      "mechanic": "verbs.answered",
+      "fires": 128,
+      "magnitude": 128
+    },
+    "readiness": {
+      "mechanic": "verbs.answered",
+      "fires": 152,
+      "magnitude": 152
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "verbs.audience",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "s126": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "verbs.consulted",
+    "band": {
+      "minFires": 2,
+      "maxFires": 10
+    },
+    "s126": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "original": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "corrected": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "readiness": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedByReadiness": false
+  },
+  {
+    "mechanic": "verbs.declined",
+    "band": {
+      "minFires": 0,
+      "why": "every army asked in the merged history run answers; recruitment refusals are counted separately; the testbed run fires it"
+    },
+    "s126": {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "original": {
+      "mechanic": "verbs.declined",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "corrected": {
+      "mechanic": "verbs.declined",
+      "fires": 24,
+      "magnitude": 24
+    },
+    "readiness": {
+      "mechanic": "verbs.declined",
+      "fires": 34,
+      "magnitude": 34
+    },
+    "changedByReadiness": true
+  },
+  {
+    "mechanic": "verbs.in_washington",
+    "band": {
+      "minFires": 0,
+      "maxFires": 0,
+      "why": "the rule-seat principal uses appoint, transfer, inquire, call and consult (lane 1.12); audience, observer, promise, pressure, address and relieve have no doctrine yet (notes/lane-1.12-rule-seats.md); the kernel test drives it"
+    },
+    "s126": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "original": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "corrected": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "readiness": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedByReadiness": false
+  }
+]

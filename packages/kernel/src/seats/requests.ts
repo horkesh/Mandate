@@ -440,7 +440,8 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
   const receivedPosts = receivedView.posts;
   const appointmentView = appointments?.filter(a => 'fromDate' in a).map(a => ({
     post: a.post, person: a.person, from: a.fromPost,
-    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && sides.get(a.requiresDepartment) === faction && receivedCandidates(world,state,f.principal,faction,a.fromPost,receivedView).some(p=>p.person===a.person) && !receivedPosts.some(p=>p.post===a.post),
+    // A received command address does not establish a holder; a received held post blocks the nomination.
+    ready: state.stateDay + 1 >= daysFromCivil(parseIsoDate(a.fromDate)) - daysFromCivil(parseIsoDate(state.calendarStart!)) && sides.get(a.requiresDepartment) === faction && receivedCandidates(world,state,f.principal,faction,a.fromPost,receivedView).some(p=>p.person===a.person) && !receivedPosts.some(p=>p.post===a.post && p.status==='held'),
     issued: state.messagesInTransit.some(m => m.msgVerb?.verbKind === 'appoint' && m.msgVerb.verbIssuer === f.principal && m.msgVerb.verbPost === a.post) || Object.values(state.orderResponses).some(r => r.respKind === 'verb:appoint' && r.respPost === a.post && r.respPerson === a.person),
     routes: routesTo(a.fromPost ?? a.post),
   }));
