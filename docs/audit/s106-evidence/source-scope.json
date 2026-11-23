@@ -1,0 +1,13 @@
+{
+  "pinned0118SHA256": "46d8f5215d23f5d5e5e0c54fe7faca9560b41a3160531c0d66ba8fde5dabcee5",
+  "currentMain0118SHA256": "576885074209a9fcedb106bbd5547394a391c7424d73e8ccb9aab94b05419779",
+  "change": "Only the status-line link to decision 0119 was appended on main during S106. The lead explicitly schedules its build after S106 in the next request.",
+  "scope": "S106 only; 0119 not applied; original willingness/temperament terms retained",
+  "prematureHook": {
+    "result": "stopped before commit",
+    "reason": "The audit correctly rejected comparison with a moving main source, but PowerShell continued to git commit despite the nonzero exit. Only the verified task runner and its descendants were stopped. The local decision is exact against its pinned receipt; current main adds only the 0119 clarification link. No source rollback, hook bypass or simulation retry.",
+    "head": "ede4877e98edca3e79d152d214c696cdc9d0fd1a",
+    "log": "runs/s106/premature-hook.log",
+    "logSHA256": "6e2cc91cc64b30f4f4da00b9e911c1a85f2ae8a3706fdeebe14d2e6a6d1284da"
+  }
+}

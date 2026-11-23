@@ -63,6 +63,10 @@ export function coverageScore(registers: readonly PushbackRegister[], acts: read
       if (row.gap !== undefined) { add('representation_gap', `${row.gap.reason}; needed: ${row.gap.mechanism} in ${row.gap.location}`); continue; }
       const m = row.match;
       if (m === undefined) { add('unresolved', 'No matcher or representation mechanism was supplied.'); continue; }
+      if (row.band === 'reservations' && m.qualification === undefined) {
+        add('unresolved', 'The register lacks subject and compatible-effect requirements; a rung alone supplies no qualification credit.');
+        continue;
+      }
       if (m.qualification !== undefined && m.qualification.every(q => q.effects.every(e => e === 'gate' || e === 'offer'))) {
         add('representation_gap', `Qualification requires ${m.qualification.flatMap(q => q.effects.map(e => `${q.subject}/${e}`)).join(', ')}; needed: acceptance, consent or prerequisite execution in the recruitment, transfer, enlistment or operation owner. Recording a reservation does not execute it.`);
         continue;

@@ -1,0 +1,9 @@
+{
+  "simulationRerun": false,
+  "acceptedReservationMatchers": 11,
+  "rows": 33,
+  "diagnostics": 251,
+  "completeCoverageExact": true,
+  "problemsExact": true,
+  "evidenceExact": true
+}

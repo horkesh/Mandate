@@ -5,9 +5,9 @@ import { canonicalHash, phase0 } from '@mandate/kernel';
 import { indexedFixture } from '../../kernel/test/support/seats-fixture.ts';
 import { observeRun } from '../src/history-run.ts';
 
-const row = (id: string, over = {}) => ({ id, side: 'north', actor: 'governor', role: 'addressee', band: 'reservations', matter: 'first contingent', act: 'undertakes with a qualification', status: 'eligible', cite: 'original letter, pages 12–13', match: { kind: 'call', callId: 'first_call', actual: 'comply_with_reservations' }, ...over });
+const row = (id: string, over = {}) => ({ id, side: 'north', actor: 'governor', role: 'addressee', band: 'reservations', matter: 'first contingent', act: 'undertakes with a qualification', status: 'eligible', cite: 'original letter, pages 12–13', match: { kind: 'call', callId: 'first_call', actual: 'comply_with_reservations', qualification: [{ subject: 'appointments', effects: ['statement'] }] }, ...over });
 const register = (...rows: ReturnType<typeof row>[]) => ({ side: 'north', through: '1861-07-31', cite: 'accepted register, decision and original pages', rows }) as PushbackRegister;
-const act = (over: Partial<CoverageAct> = {}): CoverageAct => ({ id: 'answer_one', order: 'opaque', side: 'north', actor: 'governor', role: 'addressee', kind: 'call', actual: 'comply_with_reservations', declared: 'comply', day: 3, callId: 'first_call', ...over });
+const act = (over: Partial<CoverageAct> = {}): CoverageAct => ({ id: 'answer_one', order: 'opaque', side: 'north', actor: 'governor', role: 'addressee', kind: 'call', actual: 'comply_with_reservations', declared: 'comply', day: 3, callId: 'first_call', undertaking: { undertakingKind: 'original', undertakingRequest: 'opaque', clauses: ['appointment'] }, reservations: [{ clause: 'appointment', subject: 'appointments', effect: 'statement' }], ...over });
 const score = (r: PushbackRegister, acts: CoverageAct[], lastDay = 148) => coverageScore([r], acts, '1861-03-05', lastDay);
 
 describe('named pushback coverage (observations, never counts)', () => {

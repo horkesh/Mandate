@@ -1,0 +1,1136 @@
+{
+  "sharedOrderActorRoleIdentities": 250,
+  "earlierTransfer": {
+    "before": {
+      "key": "m.129.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina|pickens_francis_w",
+      "respOrder": "m.129.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina",
+      "respPerson": "pickens_francis_w",
+      "respPost": "st_gov_south_carolina",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 129,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 40,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.127.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina|pickens_francis_w",
+      "respOrder": "m.127.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina",
+      "respPerson": "pickens_francis_w",
+      "respPost": "st_gov_south_carolina",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 127,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 40,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.127.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.127.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.127.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.127.davis_jefferson.pickens_francis_w.verb.transfer.st_gov_south_carolina"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "cause": "[I] The same governor/post and transfer form is issued two days earlier after the reserve no longer has the numeric-rung muster delay. Both answers are compliance at 40 with exact original contributions; full order identities and records are retained."
+  },
+  "correspondingResponses": 251,
+  "allOriginalWillingnessAndTermsExact": true,
+  "changedForms": [
+    {
+      "before": {
+        "key": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w",
+        "respOrder": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "respPerson": "pickens_francis_w",
+        "respPost": "st_gov_south_carolina",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respCallId": "cs_jun30_reserve_south_carolina",
+        "respDay": 120,
+        "respActual": "comply_with_reservations",
+        "respDeclared": "comply_with_reservations",
+        "respWillingness": 7,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -33
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": []
+      },
+      "after": {
+        "key": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w",
+        "respOrder": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "respPerson": "pickens_francis_w",
+        "respPost": "st_gov_south_carolina",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respCallId": "cs_jun30_reserve_south_carolina",
+        "respDay": 120,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 7,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -33
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "condition:appointments:2",
+            "clauseSubject": "appointments",
+            "clauseWording": "President assigns camp officers and appoints field and staff. Company-officer selection not restated in call; May8 act has company election/Presidential commissioning [legal context only].",
+            "clauseProvenance": [
+              [
+                "OR-IV-I",
+                302
+              ],
+              [
+                "OR-IV-I",
+                412
+              ]
+            ]
+          },
+          {
+            "clauseId": "condition:arms_equipment:3",
+            "clauseSubject": "arms_equipment",
+            "clauseWording": "Arms explicitly NOT prerequisite to acceptance. Camp control War Department; original call does not explicitly allocate every camp subsistence invoice.",
+            "clauseProvenance": [
+              [
+                "OR-IV-I",
+                302
+              ],
+              [
+                "OR-IV-I",
+                412
+              ]
+            ]
+          },
+          {
+            "clauseId": "condition:destination:4",
+            "clauseSubject": "destination",
+            "clauseWording": "Accessible camps in each State, selected by governor; no permanent front destination specified.",
+            "clauseProvenance": [
+              [
+                "OR-IV-I",
+                302
+              ],
+              [
+                "OR-IV-I",
+                412
+              ]
+            ]
+          },
+          {
+            "clauseId": "condition:organisation:1",
+            "clauseSubject": "organisation",
+            "clauseWording": "Independent companies,64-100 privates plus named company staff; muster by companies in two accessible State camps, one in Florida. President later forms battalions/regiments (Florida a regiment).",
+            "clauseProvenance": [
+              [
+                "OR-IV-I",
+                302
+              ],
+              [
+                "OR-IV-I",
+                412
+              ]
+            ]
+          },
+          {
+            "clauseId": "condition:other_conditions:5",
+            "clauseSubject": "course",
+            "clauseWording": "Precaution for public safety; national30000;3000 each except TX2000/FL1000. Federal camp control and instruction.",
+            "clauseProvenance": [
+              [
+                "OR-IV-I",
+                302
+              ],
+              [
+                "OR-IV-I",
+                412
+              ]
+            ]
+          },
+          {
+            "clauseId": "condition:service_term:0",
+            "clauseSubject": "service_term",
+            "clauseWording": "For the war.",
+            "clauseProvenance": [
+              [
+                "OR-IV-I",
+                302
+              ],
+              [
+                "OR-IV-I",
+                412
+              ]
+            ]
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course",
+            "clauseProvenance": [
+              [
+                "OR-IV-I",
+                302
+              ],
+              [
+                "OR-IV-I",
+                412
+              ]
+            ]
+          },
+          {
+            "clauseId": "demand:arms:0",
+            "clauseSubject": "arms_equipment",
+            "clauseWording": "Arms explicitly NOT prerequisite to acceptance. Camp control War Department; original call does not explicitly allocate every camp subsistence invoice.",
+            "clauseObligation": "not_required",
+            "clauseProvenance": [
+              [
+                "OR-IV-I",
+                302
+              ],
+              [
+                "OR-IV-I",
+                412
+              ]
+            ]
+          },
+          {
+            "clauseId": "muster",
+            "clauseSubject": "muster"
+          },
+          {
+            "clauseId": "organisation",
+            "clauseSubject": "organisation"
+          },
+          {
+            "clauseId": "purpose",
+            "clauseSubject": "purpose",
+            "clauseProvenance": [
+              [
+                "OR-IV-I",
+                302
+              ],
+              [
+                "OR-IV-I",
+                412
+              ]
+            ]
+          },
+          {
+            "clauseId": "service_term",
+            "clauseSubject": "service_term"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+          "clauses": [
+            "condition:appointments:2",
+            "condition:arms_equipment:3",
+            "condition:destination:4",
+            "condition:organisation:1",
+            "condition:other_conditions:5",
+            "condition:service_term:0",
+            "course",
+            "demand:arms:0",
+            "muster",
+            "organisation",
+            "purpose",
+            "service_term"
+          ],
+          "undertakingRevision": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+          "clauses": [
+            "condition:appointments:2",
+            "condition:arms_equipment:3",
+            "condition:destination:4",
+            "condition:organisation:1",
+            "condition:other_conditions:5",
+            "condition:service_term:0",
+            "course",
+            "demand:arms:0",
+            "muster",
+            "organisation",
+            "purpose",
+            "service_term"
+          ],
+          "undertakingRevision": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    },
+    {
+      "before": {
+        "key": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|cameron_simon",
+        "respOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "respPerson": "cameron_simon",
+        "respPost": "us_secretary_war",
+        "respRole": "relay",
+        "respKind": "goal",
+        "respDay": 140,
+        "respActual": "comply_with_reservations",
+        "respDeclared": "comply_with_reservations",
+        "respWillingness": 5,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": -45
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "holds_grievance",
+            "grievance": "bypassed",
+            "weight": 150
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "holds_grievance",
+            "grievance": "bypassed",
+            "weight": 150
+          }
+        ],
+        "respConditions": []
+      },
+      "after": {
+        "key": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania|cameron_simon",
+        "respOrder": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+        "respPerson": "cameron_simon",
+        "respPost": "us_secretary_war",
+        "respRole": "relay",
+        "respKind": "goal",
+        "respDay": 140,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 5,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": -45
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "holds_grievance",
+            "grievance": "bypassed",
+            "weight": 150
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "holds_grievance",
+            "grievance": "bypassed",
+            "weight": 150
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "approval",
+            "clauseSubject": "authority"
+          },
+          {
+            "clauseId": "commitment",
+            "clauseSubject": "organisation"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          },
+          {
+            "clauseId": "deadline",
+            "clauseSubject": "timing"
+          },
+          {
+            "clauseId": "objective",
+            "clauseSubject": "destination"
+          },
+          {
+            "clauseId": "routes",
+            "clauseSubject": "transport"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania",
+          "clauses": [
+            "approval",
+            "commitment",
+            "course",
+            "deadline",
+            "objective",
+            "routes"
+          ],
+          "undertakingRevision": "m.140.lincoln_abraham.cameron_simon.order.us_dept_pennsylvania"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    },
+    {
+      "before": {
+        "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland|hicks_thomas_h",
+        "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+        "respPerson": "hicks_thomas_h",
+        "respPost": "st_gov_maryland",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respDay": 43,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 50,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "union"
+          },
+          {
+            "kind": "values_offended",
+            "value": "state_autonomy"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "union"
+          },
+          {
+            "kind": "values_offended",
+            "value": "state_autonomy"
+          }
+        ],
+        "respConditions": []
+      },
+      "after": {
+        "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland|hicks_thomas_h",
+        "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+        "respPerson": "hicks_thomas_h",
+        "respPost": "st_gov_maryland",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respDay": 43,
+        "respActual": "comply_with_reservations",
+        "respDeclared": "comply_with_reservations",
+        "respWillingness": 50,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "union"
+          },
+          {
+            "kind": "values_offended",
+            "value": "state_autonomy"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "union"
+          },
+          {
+            "kind": "values_offended",
+            "value": "state_autonomy"
+          }
+        ],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "condition:appointments:2",
+            "clauseSubject": "appointments",
+            "clauseWording": "Call and April16 organisation sheet do not specify appointment authority. Do not retrofit May4 volunteer governor-appointment plan onto this militia call.",
+            "clauseProvenance": [
+              [
+                "OR-III-I",
+                67
+              ],
+              [
+                "OR-III-I",
+                68
+              ],
+              [
+                "OR-III-I",
+                69
+              ],
+              [
+                "OR-III-I",
+                76
+              ]
+            ]
+          },
+          {
+            "clauseId": "condition:arms_equipment:3",
+            "clauseSubject": "arms_equipment",
+            "clauseWording": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced.",
+            "clauseProvenance": [
+              [
+                "OR-III-I",
+                67
+              ],
+              [
+                "OR-III-I",
+                68
+              ],
+              [
+                "OR-III-I",
+                69
+              ],
+              [
+                "OR-III-I",
+                76
+              ]
+            ]
+          },
+          {
+            "clauseId": "condition:destination:4",
+            "clauseSubject": "destination",
+            "clauseWording": "Frederick City/Baltimore",
+            "clauseProvenance": [
+              [
+                "OR-III-I",
+                67
+              ],
+              [
+                "OR-III-I",
+                68
+              ],
+              [
+                "OR-III-I",
+                69
+              ],
+              [
+                "OR-III-I",
+                76
+              ]
+            ]
+          },
+          {
+            "clauseId": "condition:organisation:1",
+            "clauseSubject": "organisation",
+            "clauseWording": "Detached militia as infantry or foot riflemen; April16 plan gives ten-company regiments, brigades4+regiments, divisions2+brigades.",
+            "clauseProvenance": [
+              [
+                "OR-III-I",
+                67
+              ],
+              [
+                "OR-III-I",
+                68
+              ],
+              [
+                "OR-III-I",
+                69
+              ],
+              [
+                "OR-III-I",
+                76
+              ]
+            ]
+          },
+          {
+            "clauseId": "condition:other_conditions:5",
+            "clauseSubject": "course",
+            "clauseWording": "Immediate detachment; governor gives expected rendezvous date; US officer musters/oath every officer/man; enlisted age18-45 and physical strength. Proclamation orders dispersal in20days, avoids devastation/interference with property/disturbance of peaceful citizens consistently with object.",
+            "clauseProvenance": [
+              [
+                "OR-III-I",
+                67
+              ],
+              [
+                "OR-III-I",
+                68
+              ],
+              [
+                "OR-III-I",
+                69
+              ],
+              [
+                "OR-III-I",
+                76
+              ]
+            ]
+          },
+          {
+            "clauseId": "condition:service_term:0",
+            "clauseSubject": "service_term",
+            "clauseWording": "Three months unless sooner discharged.",
+            "clauseProvenance": [
+              [
+                "OR-III-I",
+                67
+              ],
+              [
+                "OR-III-I",
+                68
+              ],
+              [
+                "OR-III-I",
+                69
+              ],
+              [
+                "OR-III-I",
+                76
+              ]
+            ]
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course",
+            "clauseProvenance": [
+              [
+                "OR-III-I",
+                67
+              ],
+              [
+                "OR-III-I",
+                68
+              ],
+              [
+                "OR-III-I",
+                69
+              ],
+              [
+                "OR-III-I",
+                76
+              ]
+            ]
+          },
+          {
+            "clauseId": "demand:arms:0",
+            "clauseSubject": "arms_equipment",
+            "clauseWording": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced.",
+            "clauseObligation": "unspecified",
+            "clauseProvenance": [
+              [
+                "OR-III-I",
+                67
+              ],
+              [
+                "OR-III-I",
+                68
+              ],
+              [
+                "OR-III-I",
+                69
+              ],
+              [
+                "OR-III-I",
+                76
+              ]
+            ]
+          },
+          {
+            "clauseId": "demand:equipment:1",
+            "clauseSubject": "arms_equipment",
+            "clauseWording": "Call itself silent on who supplies arms/equipment/uniforms; subsequent correspondence must be separately sourced.",
+            "clauseObligation": "unspecified",
+            "clauseProvenance": [
+              [
+                "OR-III-I",
+                67
+              ],
+              [
+                "OR-III-I",
+                68
+              ],
+              [
+                "OR-III-I",
+                69
+              ],
+              [
+                "OR-III-I",
+                76
+              ]
+            ]
+          },
+          {
+            "clauseId": "muster",
+            "clauseSubject": "muster"
+          },
+          {
+            "clauseId": "organisation",
+            "clauseSubject": "organisation"
+          },
+          {
+            "clauseId": "purpose",
+            "clauseSubject": "purpose",
+            "clauseProvenance": [
+              [
+                "OR-III-I",
+                67
+              ],
+              [
+                "OR-III-I",
+                68
+              ],
+              [
+                "OR-III-I",
+                69
+              ],
+              [
+                "OR-III-I",
+                76
+              ]
+            ]
+          },
+          {
+            "clauseId": "service_term",
+            "clauseSubject": "service_term"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+          "clauses": [
+            "condition:appointments:2",
+            "condition:arms_equipment:3",
+            "condition:destination:4",
+            "condition:organisation:1",
+            "condition:other_conditions:5",
+            "condition:service_term:0",
+            "course",
+            "demand:arms:0",
+            "demand:equipment:1",
+            "muster",
+            "organisation",
+            "purpose",
+            "service_term"
+          ],
+          "undertakingRevision": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+          "clauses": [
+            "condition:appointments:2",
+            "condition:arms_equipment:3",
+            "condition:destination:4",
+            "condition:organisation:1",
+            "condition:other_conditions:5",
+            "condition:service_term:0",
+            "course",
+            "demand:arms:0",
+            "demand:equipment:1",
+            "muster",
+            "organisation",
+            "purpose",
+            "service_term"
+          ],
+          "undertakingRevision": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland"
+        },
+        "respReservations": [
+          {
+            "clause": "course",
+            "subject": "course",
+            "grounds": {
+              "groundKind": "offended_value",
+              "groundReference": "state_autonomy"
+            },
+            "treatment": "protest",
+            "effect": "statement",
+            "reservationProvenance": "received_paper",
+            "knowledge": "inferred"
+          }
+        ],
+        "respDeclaredReservations": [
+          {
+            "clause": "course",
+            "subject": "course",
+            "grounds": {
+              "groundKind": "offended_value",
+              "groundReference": "state_autonomy"
+            },
+            "treatment": "protest",
+            "effect": "statement",
+            "reservationProvenance": "received_paper",
+            "knowledge": "inferred"
+          }
+        ],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    },
+    {
+      "before": {
+        "key": "m.77.davis_jefferson.magruder_john_b.verb.appoint.st_va_peninsula|magruder_john_b",
+        "respOrder": "m.77.davis_jefferson.magruder_john_b.verb.appoint.st_va_peninsula",
+        "respPerson": "magruder_john_b",
+        "respPost": "st_va_peninsula",
+        "respRole": "addressee",
+        "respKind": "verb:appoint",
+        "respDay": 77,
+        "respActual": "comply_with_reservations",
+        "respDeclared": "comply_with_reservations",
+        "respWillingness": 9,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 9
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": []
+      },
+      "after": {
+        "key": "m.77.davis_jefferson.magruder_john_b.verb.appoint.st_va_peninsula|magruder_john_b",
+        "respOrder": "m.77.davis_jefferson.magruder_john_b.verb.appoint.st_va_peninsula",
+        "respPerson": "magruder_john_b",
+        "respPost": "st_va_peninsula",
+        "respRole": "addressee",
+        "respKind": "verb:appoint",
+        "respDay": 77,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 9,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 9
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": [],
+        "respClauses": [
+          {
+            "clauseId": "appointment",
+            "clauseSubject": "appointments"
+          },
+          {
+            "clauseId": "course",
+            "clauseSubject": "course"
+          }
+        ],
+        "respUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.77.davis_jefferson.magruder_john_b.verb.appoint.st_va_peninsula",
+          "clauses": [
+            "appointment",
+            "course"
+          ],
+          "undertakingRevision": "m.77.davis_jefferson.magruder_john_b.verb.appoint.st_va_peninsula"
+        },
+        "respDeclaredUndertaking": {
+          "undertakingKind": "original",
+          "undertakingRequest": "m.77.davis_jefferson.magruder_john_b.verb.appoint.st_va_peninsula",
+          "clauses": [
+            "appointment",
+            "course"
+          ],
+          "undertakingRevision": "m.77.davis_jefferson.magruder_john_b.verb.appoint.st_va_peninsula"
+        },
+        "respReservations": [],
+        "respDeclaredReservations": [],
+        "respReservationGaps": [],
+        "respDeclaredReservationGaps": []
+      }
+    }
+  ]
+}

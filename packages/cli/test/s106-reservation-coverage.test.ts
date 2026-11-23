@@ -27,6 +27,13 @@ describe('0118 qualification coverage', () => {
   it('does not grant a bare legacy rung typed qualification credit', () => {
     expect(score(act({ undertaking: undefined, reservations: undefined })).rows[0]!.verdict).toBe('unresolved');
   });
+  it('fails closed when the register omits the required subject and effect', () => {
+    const r = register();
+    const incomplete = { ...r, rows: r.rows.map(row => ({ ...row, match: { kind: 'call', callId: 'one', actual: 'comply_with_reservations' } })) };
+    const s = coverageScore([incomplete], [act()], '1861-03-05', 148);
+    expect(s.rows[0]!.verdict).toBe('unresolved');
+    expect(s.matched).toBe(0);
+  });
   it('keeps unsupported offers as named gaps and cannot turn them into executed compliance', () => {
     const s = score(act({ undertaking: null, reservations: [] }), ['offer']);
     expect(s.rows[0]!.verdict).toBe('representation_gap');

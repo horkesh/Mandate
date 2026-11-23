@@ -1,0 +1,11 @@
+{
+  "changedAfterCampaign": [
+    "packages/cli/src/pushback-coverage.ts",
+    "packages/cli/test/pushback-coverage.test.ts",
+    "packages/cli/test/s106-reservation-coverage.test.ts"
+  ],
+  "allOtherCampaignTrackedFilesExact": 2631,
+  "simulationInputsExact": true,
+  "classification": "The only production change fails closed for reservation rows without qualification requirements. All eleven accepted matchers have them; complete accepted coverage is exactly reproduced from retained diagnostics without another simulation.",
+  "matcherProof": "final-matcher-proof.json"
+}
