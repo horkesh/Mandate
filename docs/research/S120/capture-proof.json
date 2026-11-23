@@ -1,0 +1,36 @@
+{
+  "request": "S120 only; documentation proposal, no code/pack/threshold change",
+  "base": "429a073fbd0defdf68a4e2eb08ddbe79517bd2a3",
+  "frozen_commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+  "method": "Committed source read with git show; isolated git archive materialisation. Two148-day extraction traversals, replay:false: first wrong-cwd output then failure; corrected successful extraction. Both output artifacts byte-identical. Reuse S116 replay/save-resume evidence without rerun. No sibling working files read.",
+  "daily_hashes_matched": 148,
+  "final_hash": "6e8d3fa675359b4be87f506b6787761cfdf605093a719b1edbdb24ecac2f58dc",
+  "rejections": 0,
+  "universe_lots": 368,
+  "inventory_lots": 309,
+  "final_lots": 294,
+  "inventory_battle_lots": 103,
+  "sources": 58,
+  "extract_sha256": "ed87ba52ae554144a686f5f89277b13ec9f1a7a9fd55954c2d6b37af918aa315",
+  "scope": "Lifetime lots days1..148, including expired lots and actual detachment identities. Current criterion projections reclassify quantities on fixed S116 final blocks and battle attendance only; no counterfactual simulation or invented population.",
+  "extraction_correction": "First invocation completed148 days but wrote C:/Pyrrhic/extract-148.json, then failed its wrong-cwd receipt read. Script-relative output/module checks corrected and cheap startup repeated. Final preservation check identified the stray artifact by exact byte equality, retained it under runs/s120/first-invocation-extract-148.json and removed the task-created stray file. First terminal error log was overwritten, so exact error text is not retained. Two traversals disclosed; no input change.",
+  "inherited_unknown_strength": {
+    "problems": [
+      "union-1861: battle battle:manassas:140 at manassas, day 140: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston)"
+    ],
+    "evidence": [
+      "union-1861: 6 battles, 7 battle-days read"
+    ]
+  },
+  "removed_block_presence_recovery": [
+    {
+      "battle": "battle:fort_sumter:38",
+      "day": 39,
+      "block": "fb_us_sumter_garrison",
+      "lots": [
+        "initial.fb_us_sumter_garrison"
+      ],
+      "basis": "Same block previous observed battle-day; final-day block removed by combat. Read-only identity recovery, not strength reconstruction."
+    }
+  ]
+}

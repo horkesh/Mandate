@@ -1,0 +1,122 @@
+[
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "docs/audit/s116-evidence/README.md",
+    "bytes": 26172,
+    "sha256": "8b2cc6a9313de7998e8e5340133de82fad37789fc147fd817cd88c862d20fd5d"
+  },
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "docs/audit/s116-evidence/strength-origins.json",
+    "bytes": 36184,
+    "sha256": "1d3f937e7aa7e1f7b3cf4a609386c632b51457f6c4e0da3af4dd8b5908592120"
+  },
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "docs/audit/s116-evidence/scores.json",
+    "bytes": 215741,
+    "sha256": "1016796c3d4ddba620d1e952c09282e67036c32064c73d6394c9161aaabd29d6"
+  },
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "docs/audit/s116-evidence/union-1861-hashes.json",
+    "bytes": 32992,
+    "sha256": "8079edaf81b9734d6416a6ffa4bb167012cbcbbef96e9b0ee18e53c4be682ac8"
+  },
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "docs/audit/s116-evidence/capture-result.json",
+    "bytes": 1201,
+    "sha256": "8a7e963a106988818eda06610e8a6d28dbe514fbba332e3d348c33e70667d58d"
+  },
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "packs/union-1861/pack.json",
+    "bytes": 692203,
+    "sha256": "e896867fd1d9797faa8df913e62ea70d0a01a62ead913db307b8123d3c48ec3b"
+  },
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "packs/union-1861/checkpoints.json",
+    "bytes": 8759,
+    "sha256": "5033872e63c7fec4a47a19798b658d8f6234b3eb00db3a402aaf0bf0e9035b28"
+  },
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "packages/cli/src/history-run.ts",
+    "bytes": 16941,
+    "sha256": "ad137208226e3d9e4213890ef93d7644c759ea62cbf19bc8608f02ae17221bbe"
+  },
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "packages/kernel/src/tick/recruitment.ts",
+    "bytes": 26644,
+    "sha256": "bf0932f3324f044d48a10d158469b73c479549855508fef8581906ea88d06657"
+  },
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "packages/kernel/src/forces/lots.ts",
+    "bytes": 4367,
+    "sha256": "26e9fe5ad7ccf1490b162128522d5f38e8948314f61d71372a398e7e69e9cf76"
+  },
+  {
+    "commit": "a360803f7bd02dacce450fded56f6c749dab991f",
+    "path": "packs/union-1861/source/scenarios/march_1861/force_blocks.csv",
+    "bytes": 63700,
+    "sha256": "25d96f82d97388c8edfbd6528097961840ffa26dad861f4904281f1e9fb27606"
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0108-the-july-armies-are-named-brigades-of-regiments.md",
+    "bytes": 7288,
+    "sha256": "8d083b1ef43fe6ae547f2c83fccdeedcba2b20bae952be600262fcbefa82e934",
+    "purpose": "Lead accepted decision read in main; no copy or edit."
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0110-unknown-defenders-and-joining-blocks.md",
+    "bytes": 3956,
+    "sha256": "56d17c138c124902fa4e69b71056a5e7ba7183a8a694c7a90b19c9f3b2c3c619",
+    "purpose": "Lead accepted decision read in main; no copy or edit."
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0112-the-pushback-registers-and-what-1a-requires.md",
+    "bytes": 4782,
+    "sha256": "36364435f3694386354b80a225341ad182ca16765a72c7848a0a86bca02f69c7",
+    "purpose": "Lead accepted decision read in main; no copy or edit."
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0113-a-judgment-without-evidence-adds-no-term.md",
+    "bytes": 4697,
+    "sha256": "4369ee50dc3a3bc34c42a29fabb0b92044d3084d5573bb1d60dc5c8373cbdad3",
+    "purpose": "Lead accepted decision read in main; no copy or edit."
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0121-letters-receipts-and-authority-a-commander-receives.md",
+    "bytes": 9716,
+    "sha256": "56d409275911d7f7e002873d15ffd3f3ecee3407a04ac7b38433e83d69b97aa5",
+    "purpose": "Lead accepted decision read in main; no copy or edit."
+  },
+  {
+    "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0124-standing-authority-comes-from-an-assignment.md",
+    "bytes": 7204,
+    "sha256": "60e1130d10893fbb6ad92b5124a4106dc9805871a87aa7098061637b73ef7ac0",
+    "purpose": "Lead accepted decision read in main; no copy or edit."
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\2026-11-23-S118-tennessee-holmes-preston.md",
+    "bytes": 22907,
+    "sha256": "689a00f57a39da28dbf476eaea3223e0d9fe0e3e51ee96ea7e6de6d3e29873df",
+    "purpose": "S118 research read only."
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\model-audit.json",
+    "bytes": 30100,
+    "sha256": "61e4de3c4453db74c5d825a3b707b19c76ae1d7cae45ab40b97827363c3bd39d",
+    "purpose": "S118 research read only."
+  },
+  {
+    "path": "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S118\\pack-corrections.csv",
+    "bytes": 3957,
+    "sha256": "fd03d98743974140ff85a9a5e71761889ea818007a0541c37fea84eca556b47a",
+    "purpose": "S118 research read only."
+  }
+]
