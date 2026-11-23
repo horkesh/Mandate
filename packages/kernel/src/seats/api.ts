@@ -154,7 +154,7 @@ export interface DoctrineView {
   readonly namedConcentrationDonors?: readonly PostId[];
   readonly namedConcentrationTransfers?: readonly { readonly id: string; readonly from: PostId; readonly to: PostId; readonly regiments: readonly string[] }[];
   readonly appointments?: readonly { readonly post: PostId; readonly person: PersonId; readonly from: PostId | null; readonly ready: boolean; readonly issued: boolean; readonly routes: readonly RouteOption[] }[];
-  readonly calls: readonly { readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly day: number; readonly atPeace?: boolean; readonly issued?: boolean; readonly ready?: boolean }[];
+  readonly calls: readonly { readonly address?: 'office'; readonly officeRoutes?: readonly RouteOption[]; readonly termsId?: string; readonly id?: string; readonly post: PostId; readonly regiments: number | null; readonly men?: number | null; readonly arm?: string; readonly readiness?: boolean; readonly termDays: number | null; readonly day: number; readonly atPeace?: boolean; readonly issued?: boolean; readonly ready?: boolean }[];
   readonly offensives: readonly { readonly id?: string; readonly letter?: LetterIdentity; readonly post: PostId; readonly objective: RegionId; readonly day: number; readonly posture?: 'hold' | 'relieve' | 'take'; readonly discretion?: DoctrineDiscretion; readonly ready?: boolean; readonly issued?: boolean }[];
   readonly proposalAnswers?: readonly (DoctrineProposalAnswer & { readonly day: number; readonly paper: MessageId; readonly ordered: GoalTerms })[];
   readonly inquireEveryDays: number;

@@ -207,13 +207,13 @@ export function issueOrder(ctx: TickContext, state: State, seat: SeatId, cmd: Or
  * Send a validated order down the chain (or around it): the hops, the first leg, a special messenger's price and each
  * bypassed relay's grievance. Shared by goals, reviews, the word to go and calls (lane 1.7).
  */
-export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issuerId: PersonId, to: PostId, route: OrderCommand['route'], bypass: boolean, body: OrderEnclosure, requisition?: PostId): MessageId {
+export function dispatchOrder(ctx: TickContext, state: State, seat: SeatId, issuerId: PersonId, to: PostId, route: OrderCommand['route'], bypass: boolean, body: OrderEnclosure, requisition?: PostId, resolveOffice = false): MessageId {
   const { world } = ctx;
   const cmd = { to, route, bypass };
   const issuer = { id: issuerId };
   // The whole chain of posts between the principal's own post and the target relays his order.
   const sender = senderFor(world, state, seat, requisition, ctx.senderViews)!;
-  const officeAddress = requisition !== undefined && sender.holder(cmd.to) === null;
+  const officeAddress = requisition !== undefined && (resolveOffice || sender.holder(cmd.to) === null);
   const chain = officeAddress ? [cmd.to] : sender.chain(cmd.to);
   // Vacant relay posts cannot relay: the order skips them.
   const relays = chain.slice(0, -1).filter((p) => sender.holder(p) !== null);

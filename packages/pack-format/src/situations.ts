@@ -110,7 +110,7 @@ export const EffectSchema = z.union([
     }),
   }),
   z
-    .strictObject({ landing: z.strictObject({ parent: idOf('forceBlock'), men: positive, region: idOf('region') }) })
+    .strictObject({ landing: z.strictObject({ parent: idOf('forceBlock'), men: z.union([positive,z.literal('all')]), region: idOf('region') }) })
     .describe('A landing (lane 1.11, on lane 1.4b’s detachment path): this many men of a block aboard ship go ashore in the region, across an edge from the ship; forces applies or refuses it in phase 4c.'),
 ]);
 

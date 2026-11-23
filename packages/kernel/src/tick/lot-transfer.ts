@@ -10,7 +10,7 @@ import { repartition } from './organisation.ts';
 
 export function transferLots(map:WorldIndex,state:State,from:PostId,to:PostId,amount:number,pick:TransferPick,day:number,regiments?:readonly string[]):TransferResult{
   if(from===to||factionOfPost(map,state,from)!==factionOfPost(map,state,to)||!Number.isSafeInteger(amount)||amount<1)throw new CommandError(['invalid regiment transfer']);
-  const own=commandedBlocks(state,from).filter(id=>state.forceBlockStates[id]!.fbKind==='block'&&state.forceBlockStates[id]!.fbSurrenderedDay===null);
+  const own=commandedBlocks(state,from).filter(b => !Object.values(state.neutralOffers ?? {}).some(o=>o.offerStatus==='offered' && o.offerBlocks.includes(b) && !o.offerReceived.includes(b))).filter(id=>state.forceBlockStates[id]!.fbKind==='block'&&state.forceBlockStates[id]!.fbSurrenderedDay===null);
   const candidates=own.flatMap(block=>state.forceBlockStates[block]!.fbLots.map(lot=>({block,lot})))
     .filter(x=>{
       if(regiments!==undefined)return x.lot.lotMen!==0 && x.lot.lotRegiment!==null && !x.lot.lotGenerated && regiments.includes(x.lot.lotRegiment);

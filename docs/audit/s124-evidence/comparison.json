@@ -1,0 +1,988 @@
+{
+  "baseline": "S122 at223e1bd7, runs/s122/capture",
+  "capture": "runs/s124/capture",
+  "finalHash": "354b2d14831250ee8d79fc77686838c20d3adb8e0870feb071f65946e3b2ec14",
+  "rejections": 0,
+  "replay": {
+    "matches": true,
+    "firstDifferentDay": null
+  },
+  "resume": {
+    "atTurn": 60,
+    "finalHash": "354b2d14831250ee8d79fc77686838c20d3adb8e0870feb071f65946e3b2ec14",
+    "matches": true,
+    "savedLogReplays": true
+  },
+  "finalLotsChanged": 15,
+  "lifetimeLotsChanged": 8,
+  "answerDifferences": 22,
+  "rows": 33,
+  "verdictsBefore": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 4,
+    "not_observed": 2
+  },
+  "verdictsAfter": {
+    "representation_gap": 22,
+    "matched": 5,
+    "mismatch": 3,
+    "not_observed": 3
+  },
+  "changedRowVerdicts": [
+    "C25"
+  ],
+  "bandRows": 328,
+  "changedBandCounts": 33,
+  "sides": {
+    "confederate": {
+      "byKind": {
+        "return": 3501,
+        "estimate": 0,
+        "rule": 42856,
+        "unknown": null
+      },
+      "counted": 46357,
+      "unknownLots": [
+        "initial.fb_cs_charleston",
+        "initial.fb_cs_charleston_guard_steamers",
+        "initial.fb_st_charleston_1st_infantry_regulars",
+        "initial.fb_st_charleston_2nd_artillery_battalion",
+        "initial.fb_st_charleston_hagood_regiment",
+        "initial.fb_st_charleston_kershaw_regiment",
+        "initial.fb_st_charleston_morris_island",
+        "initial.fb_st_charleston_rion_battalion",
+        "initial.fb_st_fort_morgan",
+        "initial.fb_st_la_forts_jackson_st_philip",
+        "initial.fb_st_tx_ford_regiment",
+        "initial.fb_st_tx_galveston_batteries",
+        "initial.fb_st_tx_northwest_frontier_companies",
+        "unidentified.state-forces.va_norfolk",
+        "unidentified.state-forces.va_richmond",
+        "unidentified.state-forces.va_harpers_ferry",
+        "unidentified.state-forces.va_peninsula",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.1",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.2",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.3",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.4",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.5",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.6",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.7",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.8",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.9",
+        "generated.state-forces.cs_nc_state_transfer_north_carolina.10",
+        "generated.state-forces.cs_nc_volunteers_north_carolina.1",
+        "generated.state-forces.cs_nc_volunteers_north_carolina.2",
+        "generated.state-forces.cs_nc_volunteers_north_carolina.3",
+        "generated.state-forces.cs_nc_additional_north_carolina.1",
+        "generated.state-forces.cs_nc_additional_north_carolina.2",
+        "unidentified.state-forces.cs_tn_infantry_tennessee",
+        "unidentified.state-forces.cs_tn_cavalry_tennessee",
+        "unidentified.state-forces.cs_tn_river_artillery_tennessee",
+        "unidentified.raised.st_gov_georgia.d122",
+        "unidentified.raised.st_gov_alabama.d122",
+        "unidentified.raised.st_gov_mississippi.d122",
+        "unidentified.raised.st_gov_arkansas.d122",
+        "unidentified.raised.st_gov_tennessee.d129",
+        "generated.state-forces.cs_ar_infantry_arkansas.1",
+        "generated.state-forces.cs_ar_infantry_arkansas.2",
+        "generated.state-forces.cs_ar_infantry_arkansas.3",
+        "generated.state-forces.cs_ar_infantry_arkansas.4",
+        "generated.state-forces.cs_ar_infantry_arkansas.5",
+        "generated.state-forces.cs_ar_infantry_arkansas.6",
+        "generated.state-forces.cs_ar_infantry_arkansas.7",
+        "generated.state-forces.cs_ar_cavalry_arkansas.1",
+        "unidentified.state-forces.cs_ar_cavalry_battalion_arkansas",
+        "unidentified.state-forces.cs_ar_artillery_arkansas"
+      ],
+      "unknownBlocks": [
+        "fb_cs_charleston",
+        "fb_cs_charleston_guard_steamers",
+        "fb_st_charleston_1st_infantry_regulars",
+        "fb_st_charleston_2nd_artillery_battalion",
+        "fb_st_charleston_hagood_regiment",
+        "fb_st_charleston_kershaw_regiment",
+        "fb_st_charleston_morris_island",
+        "fb_st_charleston_rion_battalion",
+        "fb_st_fort_morgan",
+        "fb_st_la_forts_jackson_st_philip",
+        "fb_st_tx_ford_regiment",
+        "fb_st_tx_galveston_batteries",
+        "fb_st_tx_northwest_frontier_companies",
+        "state-forces.va_norfolk",
+        "state-forces.va_richmond",
+        "state-forces.va_harpers_ferry",
+        "state-forces.va_peninsula",
+        "state-forces.cs_nc_state_transfer_north_carolina",
+        "state-forces.cs_nc_volunteers_north_carolina",
+        "state-forces.cs_nc_additional_north_carolina",
+        "state-forces.cs_tn_infantry_tennessee",
+        "state-forces.cs_tn_cavalry_tennessee",
+        "state-forces.cs_tn_river_artillery_tennessee",
+        "raised.st_gov_georgia.d122",
+        "raised.st_gov_alabama.d122",
+        "raised.st_gov_mississippi.d122",
+        "raised.st_gov_arkansas.d122",
+        "raised.st_gov_tennessee.d129",
+        "state-forces.cs_ar_infantry_arkansas",
+        "state-forces.cs_ar_cavalry_arkansas",
+        "state-forces.cs_ar_cavalry_battalion_arkansas",
+        "state-forces.cs_ar_artillery_arkansas"
+      ]
+    },
+    "union": {
+      "byKind": {
+        "return": 6371,
+        "estimate": 490,
+        "rule": 119165,
+        "unknown": null
+      },
+      "counted": 126026,
+      "unknownLots": [
+        "initial.fb_us_dc_militia",
+        "initial.fb_us_fort_monroe_garrison",
+        "initial.fb_us_marines_philadelphia_yard",
+        "initial.fb_us_marines_washington_barracks",
+        "initial.fb_us_new_mexico_troops",
+        "initial.fb_us_pacific_troops",
+        "initial.fb_us_pickens_garrison",
+        "initial.fb_us_pickens_vogdes_co_a",
+        "initial.fb_us_ship_anacostia",
+        "initial.fb_us_ship_michigan",
+        "initial.fb_us_ship_water_witch",
+        "initial.fb_us_washington_regulars"
+      ],
+      "unknownBlocks": [
+        "fb_us_dc_militia",
+        "fb_us_fort_monroe_garrison",
+        "fb_us_marines_philadelphia_yard",
+        "fb_us_marines_washington_barracks",
+        "fb_us_new_mexico_troops",
+        "fb_us_pacific_troops",
+        "fb_us_pickens_garrison",
+        "fb_us_pickens_vogdes_co_a",
+        "fb_us_ship_anacostia",
+        "fb_us_ship_michigan",
+        "fb_us_ship_water_witch",
+        "fb_us_washington_regulars"
+      ]
+    }
+  },
+  "initialGates": [
+    {
+      "mechanic": "forces.landed_by_situation",
+      "problem": "too_frequent",
+      "fires": 1,
+      "band": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S122 /0125: unsupported parent strength becomes unknown, so the existing landing cannot detach a known number of men."
+      }
+    },
+    {
+      "mechanic": "forces.landing_refused",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S122 /0125: the unsupported opening company count becomes unknown; the existing situation landing refuses an unquantified parent. No default headcount or landing rule changed."
+      }
+    },
+    {
+      "mechanic": "planner.term.supply",
+      "problem": "dead",
+      "fires": 0,
+      "band": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S122 /0125/0127 [I]: the changed force quantities restore one live supply contribution among retained planner candidates. No supply weight, candidate score or definition of a live term changed."
+      }
+    }
+  ],
+  "timing": [
+    {
+      "callId": "cs_apr22_absolute_tennessee",
+      "issuedDay": 50,
+      "issuedDate": "1861-04-24",
+      "beforeAnswers": [
+        {
+          "day": 124,
+          "date": "1861-07-07",
+          "actual": "comply_with_reservations"
+        }
+      ],
+      "answers": [
+        {
+          "day": 50,
+          "date": "1861-04-24",
+          "actual": "comply_with_reservations",
+          "declared": "comply_with_reservations"
+        }
+      ],
+      "offer": {
+        "offerCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "offerCallId": "cs_apr22_absolute_tennessee",
+        "offerOwner": "st_gov_tennessee",
+        "offerGovernor": "harris_isham_g",
+        "offerIssuer": "davis_jefferson",
+        "offerReceiver": "cs_secretary_war",
+        "offerRegion": "lynchburg",
+        "offerBlocks": [
+          "raised.st_gov_tennessee.d55"
+        ],
+        "offerReceived": [
+          "raised.st_gov_tennessee.d55"
+        ],
+        "offerStatus": "received",
+        "offerResponse": {
+          "respOrder": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+          "respPerson": "harris_isham_g",
+          "respPost": "st_gov_tennessee",
+          "respRole": "addressee",
+          "respKind": "call",
+          "respCallId": "cs_apr22_absolute_tennessee",
+          "respDay": 50,
+          "respActual": "comply_with_reservations",
+          "respDeclared": "comply_with_reservations",
+          "respWillingness": 211,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 200
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 11
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [
+            {
+              "kind": "values_honoured",
+              "value": "state_autonomy"
+            }
+          ],
+          "respStated": [
+            {
+              "kind": "values_honoured",
+              "value": "state_autonomy"
+            }
+          ],
+          "respConditions": [],
+          "respClauses": [
+            {
+              "clauseId": "authority",
+              "clauseSubject": "authority"
+            },
+            {
+              "clauseId": "condition:appointments:2",
+              "clauseSubject": "appointments",
+              "clauseWording": "Officers except staff appointed according to State law; staff by Confederate President.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:arms_equipment:3",
+              "clauseSubject": "arms_equipment",
+              "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:destination:4",
+              "clauseSubject": "destination",
+              "clauseWording": "Lynchburg;3regiments",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:organisation:1",
+              "clauseSubject": "organisation",
+              "clauseWording": "Three regiments (distribution note, OR IV-I p.232), each of ten infantry companies. Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:other_conditions:5",
+              "clauseSubject": "course",
+              "clauseWording": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:purpose:6",
+              "clauseSubject": "purpose",
+              "clauseWording": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:service_term:0",
+              "clauseSubject": "service_term",
+              "clauseWording": "Not less than twelve months unless sooner discharged.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "course",
+              "clauseSubject": "course",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "demand:arms:0",
+              "clauseSubject": "arms_equipment",
+              "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+              "clauseObligation": "required",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "demand:clothing:1",
+              "clauseSubject": "arms_equipment",
+              "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+              "clauseObligation": "required",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "demand:subsistence:3",
+              "clauseSubject": "support",
+              "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+              "clauseObligation": "required",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "demand:transport:2",
+              "clauseSubject": "transport",
+              "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+              "clauseObligation": "required",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "muster",
+              "clauseSubject": "muster"
+            },
+            {
+              "clauseId": "organisation",
+              "clauseSubject": "organisation"
+            },
+            {
+              "clauseId": "purpose",
+              "clauseSubject": "purpose",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "service_term",
+              "clauseSubject": "service_term"
+            }
+          ],
+          "respUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+            "clauses": [
+              "authority",
+              "condition:appointments:2",
+              "condition:arms_equipment:3",
+              "condition:destination:4",
+              "condition:organisation:1",
+              "condition:other_conditions:5",
+              "condition:purpose:6",
+              "condition:service_term:0",
+              "course",
+              "demand:arms:0",
+              "demand:clothing:1",
+              "demand:subsistence:3",
+              "demand:transport:2",
+              "muster",
+              "organisation",
+              "purpose",
+              "service_term"
+            ],
+            "undertakingRevision": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee"
+          },
+          "respDeclaredUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+            "clauses": [
+              "authority",
+              "condition:appointments:2",
+              "condition:arms_equipment:3",
+              "condition:destination:4",
+              "condition:organisation:1",
+              "condition:other_conditions:5",
+              "condition:purpose:6",
+              "condition:service_term:0",
+              "course",
+              "demand:arms:0",
+              "demand:clothing:1",
+              "demand:subsistence:3",
+              "demand:transport:2",
+              "muster",
+              "organisation",
+              "purpose",
+              "service_term"
+            ],
+            "undertakingRevision": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee"
+          },
+          "respReservations": [
+            {
+              "clause": "muster",
+              "subject": "muster",
+              "grounds": {
+                "groundKind": "information_request",
+                "groundReference": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee:muster_receiver",
+                "groundFact": "muster_receiver"
+              },
+              "treatment": "clarify",
+              "effect": "request",
+              "reservationProvenance": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee:muster_receiver",
+              "knowledge": "reported"
+            }
+          ],
+          "respDeclaredReservations": [
+            {
+              "clause": "muster",
+              "subject": "muster",
+              "grounds": {
+                "groundKind": "information_request",
+                "groundReference": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee:muster_receiver",
+                "groundFact": "muster_receiver"
+              },
+              "treatment": "clarify",
+              "effect": "request",
+              "reservationProvenance": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee:muster_receiver",
+              "knowledge": "reported"
+            }
+          ],
+          "respReservationGaps": [],
+          "respDeclaredReservationGaps": []
+        },
+        "offerReceiptDays": {
+          "raised.st_gov_tennessee.d55": 65
+        }
+      },
+      "receipts": [
+        {
+          "block": "raised.st_gov_tennessee.d55",
+          "day": 65,
+          "date": "1861-05-09",
+          "lots": [
+            "tn_1_infantry",
+            "tn_2_infantry",
+            "generated.raised.st_gov_tennessee.d55.3"
+          ]
+        }
+      ]
+    },
+    {
+      "callId": "cs_apr22_absolute_arkansas",
+      "issuedDay": 48,
+      "issuedDate": "1861-04-22",
+      "beforeAnswers": [
+        {
+          "day": 74,
+          "date": "1861-05-18",
+          "actual": "comply_with_reservations"
+        }
+      ],
+      "answers": [
+        {
+          "day": 51,
+          "date": "1861-04-25",
+          "actual": "comply_with_reservations",
+          "declared": "comply_with_reservations"
+        }
+      ],
+      "offer": {
+        "offerCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+        "offerCallId": "cs_apr22_absolute_arkansas",
+        "offerOwner": "st_gov_arkansas",
+        "offerGovernor": "rector_henry_m",
+        "offerIssuer": "davis_jefferson",
+        "offerReceiver": "cs_secretary_war",
+        "offerRegion": "lynchburg",
+        "offerBlocks": [
+          "raised.st_gov_arkansas.d56"
+        ],
+        "offerReceived": [
+          "raised.st_gov_arkansas.d56"
+        ],
+        "offerStatus": "received",
+        "offerResponse": {
+          "respOrder": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+          "respPerson": "rector_henry_m",
+          "respPost": "st_gov_arkansas",
+          "respRole": "addressee",
+          "respKind": "call",
+          "respCallId": "cs_apr22_absolute_arkansas",
+          "respDay": 51,
+          "respActual": "comply_with_reservations",
+          "respDeclared": "comply_with_reservations",
+          "respWillingness": 22,
+          "respTerms": [
+            {
+              "respTermName": "values",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "regard",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "deterrence",
+              "respTermAmount": 22
+            },
+            {
+              "respTermName": "capacity",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "disposition",
+              "respTermAmount": 0
+            },
+            {
+              "respTermName": "grievances",
+              "respTermAmount": 0
+            }
+          ],
+          "respReasons": [],
+          "respStated": [],
+          "respConditions": [],
+          "respClauses": [
+            {
+              "clauseId": "authority",
+              "clauseSubject": "authority"
+            },
+            {
+              "clauseId": "condition:appointments:2",
+              "clauseSubject": "appointments",
+              "clauseWording": "Officers except staff appointed according to State law; staff by Confederate President.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:arms_equipment:3",
+              "clauseSubject": "arms_equipment",
+              "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:destination:4",
+              "clauseSubject": "destination",
+              "clauseWording": "Lynchburg;1regiment",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:organisation:1",
+              "clauseSubject": "organisation",
+              "clauseWording": "Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:other_conditions:5",
+              "clauseSubject": "course",
+              "clauseWording": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:purpose:6",
+              "clauseSubject": "purpose",
+              "clauseWording": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "condition:service_term:0",
+              "clauseSubject": "service_term",
+              "clauseWording": "Not less than twelve months unless sooner discharged.",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "course",
+              "clauseSubject": "course",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "demand:arms:0",
+              "clauseSubject": "arms_equipment",
+              "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+              "clauseObligation": "required",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "demand:clothing:1",
+              "clauseSubject": "arms_equipment",
+              "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+              "clauseObligation": "required",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "demand:subsistence:3",
+              "clauseSubject": "support",
+              "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+              "clauseObligation": "required",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "demand:transport:2",
+              "clauseSubject": "transport",
+              "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+              "clauseObligation": "required",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "muster",
+              "clauseSubject": "muster"
+            },
+            {
+              "clauseId": "organisation",
+              "clauseSubject": "organisation"
+            },
+            {
+              "clauseId": "purpose",
+              "clauseSubject": "purpose",
+              "clauseProvenance": [
+                [
+                  "OR-IV-I",
+                  231
+                ],
+                [
+                  "OR-IV-I",
+                  232
+                ]
+              ]
+            },
+            {
+              "clauseId": "service_term",
+              "clauseSubject": "service_term"
+            }
+          ],
+          "respUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+            "clauses": [
+              "authority",
+              "condition:appointments:2",
+              "condition:arms_equipment:3",
+              "condition:destination:4",
+              "condition:organisation:1",
+              "condition:other_conditions:5",
+              "condition:purpose:6",
+              "condition:service_term:0",
+              "course",
+              "demand:arms:0",
+              "demand:clothing:1",
+              "demand:subsistence:3",
+              "demand:transport:2",
+              "muster",
+              "organisation",
+              "purpose",
+              "service_term"
+            ],
+            "undertakingRevision": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas"
+          },
+          "respDeclaredUndertaking": {
+            "undertakingKind": "original",
+            "undertakingRequest": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+            "clauses": [
+              "authority",
+              "condition:appointments:2",
+              "condition:arms_equipment:3",
+              "condition:destination:4",
+              "condition:organisation:1",
+              "condition:other_conditions:5",
+              "condition:purpose:6",
+              "condition:service_term:0",
+              "course",
+              "demand:arms:0",
+              "demand:clothing:1",
+              "demand:subsistence:3",
+              "demand:transport:2",
+              "muster",
+              "organisation",
+              "purpose",
+              "service_term"
+            ],
+            "undertakingRevision": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas"
+          },
+          "respReservations": [
+            {
+              "clause": "muster",
+              "subject": "muster",
+              "grounds": {
+                "groundKind": "information_request",
+                "groundReference": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas:muster_receiver",
+                "groundFact": "muster_receiver"
+              },
+              "treatment": "clarify",
+              "effect": "request",
+              "reservationProvenance": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas:muster_receiver",
+              "knowledge": "reported"
+            }
+          ],
+          "respDeclaredReservations": [
+            {
+              "clause": "muster",
+              "subject": "muster",
+              "grounds": {
+                "groundKind": "information_request",
+                "groundReference": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas:muster_receiver",
+                "groundFact": "muster_receiver"
+              },
+              "treatment": "clarify",
+              "effect": "request",
+              "reservationProvenance": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas:muster_receiver",
+              "knowledge": "reported"
+            }
+          ],
+          "respReservationGaps": [],
+          "respDeclaredReservationGaps": []
+        },
+        "offerReceiptDays": {
+          "raised.st_gov_arkansas.d56": 105
+        }
+      },
+      "receipts": [
+        {
+          "block": "raised.st_gov_arkansas.d56",
+          "day": 105,
+          "date": "1861-06-18",
+          "lots": [
+            "generated.raised.st_gov_arkansas.d56.1"
+          ]
+        }
+      ]
+    }
+  ],
+  "reusedTestbedRows": 164
+}

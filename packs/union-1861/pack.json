@@ -936,8 +936,13 @@
               "regiments": 1,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota.",
-              "termsId": "cs_apr22_absolute_arkansas"
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S124/0126: office address from OR I-I pp.687-688. [I] The War Department is the administrative receiving post at the named Lynchburg rendezvous; no receiving officer or historical receipt is reconstructed.",
+              "termsId": "cs_apr22_absolute_arkansas",
+              "address": "office",
+              "offer": {
+                "region": "lynchburg",
+                "receiver": "cs_secretary_war"
+              }
             },
             {
               "id": "cs_apr22_absolute_georgia",
@@ -990,8 +995,13 @@
               "regiments": 3,
               "termDays": 365,
               "fromDate": "1861-04-22",
-              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S119: the known quota is three regiments; Harris does not report an actual number of men or stragglers (OR IV-I pp.272,275). S122/0125/0127: the model-raised lots keep their own legal-minimum rule quantity; historical naming supplies no personnel return.",
-              "termsId": "cs_apr22_absolute_tennessee"
+              "source": "OR IV-1 pp.231-233 (https://ehistory.osu.edu/books/official-records/127/0232): absolute requisition, at least twelve months; through governors, including those not yet members. [I] Draws on conditional readiness, rather than adding the conditional totals to active service. Louisiana's second regiment is optional if ready, not another unconditional quota. S119: the known quota is three regiments; Harris does not report an actual number of men or stragglers (OR IV-I pp.272,275). S122/0125/0127: the model-raised lots keep their own legal-minimum rule quantity; historical naming supplies no personnel return. S124/0126: office address from OR IV-I p.272. [I] The War Department is the administrative receiving post at the named Lynchburg rendezvous; no receiving officer or historical receipt is reconstructed.",
+              "termsId": "cs_apr22_absolute_tennessee",
+              "address": "office",
+              "offer": {
+                "region": "lynchburg",
+                "receiver": "cs_secretary_war"
+              }
             },
             {
               "id": "cs_jun29_extra_louisiana",
@@ -1403,6 +1413,14 @@
           "fromDate": "1861-07-17",
           "throughDate": "1861-07-31",
           "source": "OR I-II p.473: Johnston reports receiving a telegraphic dispatch about 1 a.m. on 18 July; p.478, Davis endorsement reproduces Cooper telegram of 17 July headed Richmond to Johnston at Winchester; p.982, Johnston acknowledgement headed Winchester, 18 July (OCR damaged). [I] lower_valley contains Winchester (Frederick County), not Harpers Ferry. Declare documented office access from 17 July through the scenario horizon; 31 July is a model availability horizon, not an evidenced closure. Physical wire alignment and earlier opening are unestablished. No commander, message or troop arrival is moved."
+        },
+        {
+          "from": "montgomery",
+          "to": "nashville",
+          "faction": "confederate",
+          "fromDate": "1861-04-22",
+          "throughDate": "1861-04-30",
+          "source": "OR IV-I p.272, Harris to Walker 30 April: acknowledges Walker's telegram of22 April. [I] Public-office access for this read exchange only,22-30 April; no same-day receipt or later continued route inferred. No physical wire-control claim."
         }
       ]
     },

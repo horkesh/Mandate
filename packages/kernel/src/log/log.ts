@@ -55,6 +55,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
   const c = e.command as Partial<Record<string, unknown>> | undefined;
   if (typeof c !== 'object' || c === null || !(COMMAND_KINDS as readonly unknown[]).includes(c.cmd)) return [...problems, `${at}: unknown command`];
   const FIELDS: Readonly<Record<string, readonly string[]>> = {
+    recall_offer: ['cmd', 'offer'],
     order: ['bypass', 'cmd', 'goal', 'route', 'to'],
     answer_proposal: ['action', 'bypass', 'cmd', 'proposal', 'route', 'to'],
     review: ['action', 'bypass', 'cmd', 'edit', 'route', 'to'],
@@ -82,7 +83,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
     ...(c.cmd === 'answer_proposal' && c.action === 'discretion' ? ['goal'] : []),
     ...(c.cmd === 'review' && Object.hasOwn(c, 'notes') ? ['notes'] : []),
     ...(c.cmd === 'review' && Object.hasOwn(c, 'paper') ? ['paper'] : []),
-    ...(c.cmd === 'call' ? ['men', 'callId', 'arm', 'readiness', 'termsId'].filter(k => Object.hasOwn(c, k)) : []),
+    ...(c.cmd === 'call' ? ['men', 'callId', 'arm', 'readiness', 'termsId', 'address'].filter(k => Object.hasOwn(c, k)) : []),
     ...(c.cmd === 'appoint' && Object.hasOwn(c, 'from') ? ['from'] : []),
     ...(c.cmd === 'transfer' ? ['regiments', 'concentration'].filter(k => Object.hasOwn(c, k)) : []),
   ].sort(strictCompare);
@@ -95,7 +96,9 @@ export function entryProblems(raw: unknown, i: number): string[] {
     if (typeof c.bypass !== 'boolean') problems.push(`${at}: ${String(c.cmd)}.bypass must be true or false`);
   };
   if (Object.hasOwn(c, 'doctrine') && !id(c.doctrine)) problems.push(`${at}: doctrine must name a doctrine row`);
-  if (c.cmd === 'order') {
+  if (c.cmd === 'recall_offer') {
+    if (!id(c.offer)) problems.push(`${at}: recall_offer.offer must be a message id`);
+  } else if (c.cmd === 'order') {
     routed();
     if (Object.hasOwn(c, 'letter') && (!isLetterIdentity(c.letter) || c.doctrine !== undefined)) problems.push(`${at}: invalid authored letter identity`);
     if (Object.hasOwn(c, 'retryOf') && (!id(c.retryOf) || !isLetterIdentity(c.letter))) problems.push(`${at}: retryOf must identify a dispatch of the authored letter`);
@@ -125,6 +128,7 @@ export function entryProblems(raw: unknown, i: number): string[] {
     if (c.regiments !== null && (typeof c.regiments !== 'number' || !Number.isSafeInteger(c.regiments) || c.regiments < 1)) problems.push(`${at}: call.regiments must be positive whole regiments or null for unknown`);
     if (c.termDays !== null && (typeof c.termDays !== 'number' || !Number.isSafeInteger(c.termDays) || c.termDays < 1)) problems.push(`${at}: call.termDays must be positive whole days or null for the war`);
     if (Object.hasOwn(c, 'men') && c.men !== null && (typeof c.men !== 'number' || !Number.isSafeInteger(c.men) || c.men < 1)) problems.push(`${at}: call.men must be positive whole men or null for unknown strength`);
+    if (Object.hasOwn(c, 'address') && c.address !== 'office') problems.push(`${at}: invalid call address`);
     if (Object.hasOwn(c, 'callId') && (typeof c.callId !== 'string' || !/^[a-z][a-z0-9_]*$/.test(c.callId))) problems.push(`${at}: call.callId must be a pack call id`);
     if (Object.hasOwn(c, 'termsId') && (typeof c.termsId !== 'string' || !/^[a-z][a-z0-9_]*$/.test(c.termsId))) problems.push(`${at}: call.termsId must be a pack profile id`);
     if (Object.hasOwn(c,'arm') && !id(c.arm)) problems.push(`${at}: call.arm must name an arm`);

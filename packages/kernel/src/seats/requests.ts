@@ -143,7 +143,7 @@ function appointmentDispatchesByDay(state: State, principal: PersonId): Readonly
 }
 
 /** The pack's doctrine for a faction's principal, its offensives' dates as days of the run (day 0 is the start's date). */
-function doctrineView(world: SeatsWorld, state: State, faction: FactionId, receivedView: SeatView, sides: ReadonlyMap<DepartmentId, FactionId | null>, proposals: readonly ProposalOffer[]): DoctrineView {
+function doctrineView(world: SeatsWorld, state: State, faction: FactionId, receivedView: SeatView, sides: ReadonlyMap<DepartmentId, FactionId | null>, proposals: readonly ProposalOffer[], officeRoutes: (post: PostId) => readonly RouteOption[]): DoctrineView {
   const row = world.map.world.rules.ruleSeats.principals.find((r) => r.faction === faction);
   // No row: no doctrine (he answers his commanders and orders nothing of his own; a pack states one for every faction).
   if (row === undefined) return { crossNeutral: false, concentrateAt: null, calls: [], offensives: [], inquireEveryDays: 0, appointKinds: { land: [], naval: [] } };
@@ -192,7 +192,7 @@ function doctrineView(world: SeatsWorld, state: State, faction: FactionId, recei
     }),
     ...(namedTransfers.length === 0 ? {} : { namedConcentrationTransfers: namedTransfers }),
     ...(namedDonors.length === 0 ? {} : { namedConcentrationDonors: namedDonors }),
-    calls: row.calls.map((c) => ({ ...(c.termsId === undefined ? {} : { termsId: c.termsId }), post: c.post, regiments: c.regiments, termDays: c.termDays, day: daysFromCivil(parseIsoDate(c.fromDate)) - start,
+    calls: row.calls.map((c) => ({ ...(c.address === undefined ? {} : { address: c.address, officeRoutes: officeRoutes(c.post) }), ...(c.termsId === undefined ? {} : { termsId: c.termsId }), post: c.post, regiments: c.regiments, termDays: c.termDays, day: daysFromCivil(parseIsoDate(c.fromDate)) - start,
       ...(c.men === undefined ? {} : { men: c.men }), ...(c.atPeace === undefined ? {} : { atPeace: c.atPeace }),
       ...(c.arm === undefined ? {} : { arm: c.arm }),
       ...(c.readiness === undefined ? {} : { readiness: c.readiness }),
@@ -434,7 +434,7 @@ export function principalMenu(world: SeatsWorld, state: State, faction: FactionI
       ordered, goal: termsOfGoal(body.reportProposal!.goal), reasons: body.reportProposal!.reasons,
     }];
   });
-  const doctrine = doctrineView(world, state, faction, receivedView, sides, proposals);
+  const doctrine = doctrineView(world, state, faction, receivedView, sides, proposals, routesTo);
   const appointments = world.map.world.rules.ruleSeats.principals.find(r => r.faction === faction)?.appointments;
   const receivedPosts = receivedView.posts;
   const appointmentView = appointments?.filter(a => 'fromDate' in a).map(a => ({

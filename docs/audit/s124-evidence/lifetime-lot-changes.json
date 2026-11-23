@@ -1,0 +1,695 @@
+{
+  "changedLots": 8,
+  "beforeIdentities": 372,
+  "afterIdentities": 372,
+  "rows": [
+    {
+      "id": "generated.raised.st_gov_arkansas.d56.1",
+      "before": [],
+      "after": [
+        {
+          "day": 56,
+          "before": null,
+          "after": {
+            "blockId": "raised.st_gov_arkansas.d56",
+            "department": "st_arkansas",
+            "lot": {
+              "lotId": "generated.raised.st_gov_arkansas.d56.1",
+              "lotRegiment": "generated.raised.st_gov_arkansas.d56.1",
+              "lotGenerated": true,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_arkansas",
+                "enlRaisedBy": "rector_henry_m",
+                "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+                "enlRegiments": 1,
+                "enlMusterDay": 56,
+                "enlEndsDay": 421,
+                "enlCallId": "cs_apr22_absolute_arkansas"
+              }
+            }
+          }
+        },
+        {
+          "day": 105,
+          "before": {
+            "blockId": "raised.st_gov_arkansas.d56",
+            "department": "st_arkansas",
+            "lot": {
+              "lotId": "generated.raised.st_gov_arkansas.d56.1",
+              "lotRegiment": "generated.raised.st_gov_arkansas.d56.1",
+              "lotGenerated": true,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_arkansas",
+                "enlRaisedBy": "rector_henry_m",
+                "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+                "enlRegiments": 1,
+                "enlMusterDay": 56,
+                "enlEndsDay": 421,
+                "enlCallId": "cs_apr22_absolute_arkansas"
+              }
+            }
+          },
+          "after": {
+            "blockId": "raised.st_gov_arkansas.d56",
+            "department": "cs_war",
+            "lot": {
+              "lotId": "generated.raised.st_gov_arkansas.d56.1",
+              "lotRegiment": "generated.raised.st_gov_arkansas.d56.1",
+              "lotGenerated": true,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_arkansas",
+                "enlRaisedBy": "rector_henry_m",
+                "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+                "enlRegiments": 1,
+                "enlMusterDay": 56,
+                "enlEndsDay": 421,
+                "enlCallId": "cs_apr22_absolute_arkansas"
+              }
+            }
+          }
+        }
+      ],
+      "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+    },
+    {
+      "id": "generated.raised.st_gov_arkansas.d79.1",
+      "before": [
+        {
+          "day": 79,
+          "before": null,
+          "after": {
+            "blockId": "raised.st_gov_arkansas.d79",
+            "department": "st_arkansas",
+            "lot": {
+              "lotId": "generated.raised.st_gov_arkansas.d79.1",
+              "lotRegiment": "generated.raised.st_gov_arkansas.d79.1",
+              "lotGenerated": true,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_arkansas",
+                "enlRaisedBy": "rector_henry_m",
+                "enlCall": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+                "enlRegiments": 1,
+                "enlMusterDay": 79,
+                "enlEndsDay": 444,
+                "enlCallId": "cs_apr22_absolute_arkansas"
+              }
+            }
+          }
+        }
+      ],
+      "after": [],
+      "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+    },
+    {
+      "id": "generated.raised.st_gov_tennessee.d129.3",
+      "before": [
+        {
+          "day": 129,
+          "before": null,
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d129",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "generated.raised.st_gov_tennessee.d129.3",
+              "lotRegiment": "generated.raised.st_gov_tennessee.d129.3",
+              "lotGenerated": true,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 129,
+                "enlEndsDay": 494,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        }
+      ],
+      "after": [],
+      "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+    },
+    {
+      "id": "generated.raised.st_gov_tennessee.d55.3",
+      "before": [],
+      "after": [
+        {
+          "day": 55,
+          "before": null,
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d55",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "generated.raised.st_gov_tennessee.d55.3",
+              "lotRegiment": "generated.raised.st_gov_tennessee.d55.3",
+              "lotGenerated": true,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 55,
+                "enlEndsDay": 420,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        },
+        {
+          "day": 65,
+          "before": {
+            "blockId": "raised.st_gov_tennessee.d55",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "generated.raised.st_gov_tennessee.d55.3",
+              "lotRegiment": "generated.raised.st_gov_tennessee.d55.3",
+              "lotGenerated": true,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 55,
+                "enlEndsDay": 420,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          },
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d55",
+            "department": "cs_war",
+            "lot": {
+              "lotId": "generated.raised.st_gov_tennessee.d55.3",
+              "lotRegiment": "generated.raised.st_gov_tennessee.d55.3",
+              "lotGenerated": true,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 55,
+                "enlEndsDay": 420,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        }
+      ],
+      "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+    },
+    {
+      "id": "tn_1_infantry",
+      "before": [
+        {
+          "day": 129,
+          "before": null,
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d129",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "tn_1_infantry",
+              "lotRegiment": "tn_1_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 129,
+                "enlEndsDay": 494,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        },
+        {
+          "day": 141,
+          "before": {
+            "blockId": "raised.st_gov_tennessee.d129",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "tn_1_infantry",
+              "lotRegiment": "tn_1_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 129,
+                "enlEndsDay": 494,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          },
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d129.transfer.141.2",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "tn_1_infantry",
+              "lotRegiment": "tn_1_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 129,
+                "enlEndsDay": 494,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        }
+      ],
+      "after": [
+        {
+          "day": 55,
+          "before": null,
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d55",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "tn_1_infantry",
+              "lotRegiment": "tn_1_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 55,
+                "enlEndsDay": 420,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        },
+        {
+          "day": 65,
+          "before": {
+            "blockId": "raised.st_gov_tennessee.d55",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "tn_1_infantry",
+              "lotRegiment": "tn_1_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 55,
+                "enlEndsDay": 420,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          },
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d55",
+            "department": "cs_war",
+            "lot": {
+              "lotId": "tn_1_infantry",
+              "lotRegiment": "tn_1_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 55,
+                "enlEndsDay": 420,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        }
+      ],
+      "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+    },
+    {
+      "id": "tn_2_infantry",
+      "before": [
+        {
+          "day": 129,
+          "before": null,
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d129",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "tn_2_infantry",
+              "lotRegiment": "tn_2_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 129,
+                "enlEndsDay": 494,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        },
+        {
+          "day": 141,
+          "before": {
+            "blockId": "raised.st_gov_tennessee.d129",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "tn_2_infantry",
+              "lotRegiment": "tn_2_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 129,
+                "enlEndsDay": 494,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          },
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d129.transfer.141.1",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "tn_2_infantry",
+              "lotRegiment": "tn_2_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 129,
+                "enlEndsDay": 494,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        }
+      ],
+      "after": [
+        {
+          "day": 55,
+          "before": null,
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d55",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "tn_2_infantry",
+              "lotRegiment": "tn_2_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 55,
+                "enlEndsDay": 420,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        },
+        {
+          "day": 65,
+          "before": {
+            "blockId": "raised.st_gov_tennessee.d55",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "tn_2_infantry",
+              "lotRegiment": "tn_2_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 55,
+                "enlEndsDay": 420,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          },
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d55",
+            "department": "cs_war",
+            "lot": {
+              "lotId": "tn_2_infantry",
+              "lotRegiment": "tn_2_infantry",
+              "lotGenerated": false,
+              "lotArm": "infantry",
+              "lotMen": 780,
+              "lotStrength": {
+                "strengthKind": "rule",
+                "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+                "enlRegiments": 3,
+                "enlMusterDay": 55,
+                "enlEndsDay": 420,
+                "enlCallId": "cs_apr22_absolute_tennessee"
+              }
+            }
+          }
+        }
+      ],
+      "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+    },
+    {
+      "id": "unidentified.raised.st_gov_tennessee.d129",
+      "before": [],
+      "after": [
+        {
+          "day": 129,
+          "before": null,
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d129",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "unidentified.raised.st_gov_tennessee.d129",
+              "lotRegiment": null,
+              "lotGenerated": false,
+              "lotArm": "cavalry",
+              "lotMen": null,
+              "lotStrength": {
+                "strengthKind": "unknown",
+                "strengthSource": "call:cs_jun30_cavalry_tennessee; OR-IV-I p.412",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+                "enlRegiments": null,
+                "enlMusterDay": 129,
+                "enlEndsDay": null,
+                "enlCallId": "cs_jun30_cavalry_tennessee"
+              }
+            }
+          }
+        }
+      ],
+      "cause": "Original origin cs_jun30_cavalry_tennessee retained; altered request/assignment/route/attrition trajectory is explicit in the before/after rows. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+    },
+    {
+      "id": "unidentified.raised.st_gov_tennessee.d129.2",
+      "before": [
+        {
+          "day": 129,
+          "before": null,
+          "after": {
+            "blockId": "raised.st_gov_tennessee.d129.2",
+            "department": "st_tennessee",
+            "lot": {
+              "lotId": "unidentified.raised.st_gov_tennessee.d129.2",
+              "lotRegiment": null,
+              "lotGenerated": false,
+              "lotArm": "cavalry",
+              "lotMen": null,
+              "lotStrength": {
+                "strengthKind": "unknown",
+                "strengthSource": "call:cs_jun30_cavalry_tennessee; OR-IV-I p.412",
+                "strengthDate": null
+              },
+              "lotStragglers": 0,
+              "lotService": {
+                "enlPost": "st_gov_tennessee",
+                "enlRaisedBy": "harris_isham_g",
+                "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+                "enlRegiments": null,
+                "enlMusterDay": 129,
+                "enlEndsDay": null,
+                "enlCallId": "cs_jun30_cavalry_tennessee"
+              }
+            }
+          }
+        }
+      ],
+      "after": [],
+      "cause": "Original origin cs_jun30_cavalry_tennessee retained; altered request/assignment/route/attrition trajectory is explicit in the before/after rows. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+    }
+  ]
+}

@@ -104,7 +104,10 @@ export interface GoCommand {
  * A call for regiments to a governor's post (lane 1.7): an order through people. He answers by his own compliance with
  * the pack's call terms; his answer sets how many regiments he raises and when they muster (`tick/recruitment.ts`).
  */
+export interface RecallOfferCommand { readonly cmd: 'recall_offer'; readonly offer: MessageId; }
+
 export interface CallCommand {
+  readonly address?: 'office';
   /** Select a sourced pack profile; a dated call retains its registered profile, otherwise omission uses the fallback. */
   readonly termsId?: string;
   readonly cmd: 'call';
@@ -255,8 +258,8 @@ export interface AddressCommand {
 export type VerbCommand = AppointCommand | RelieveCommand | TransferCommand | InquireCommand | ConsultCommand | AudienceCommand | ObserverCommand | PromiseCommand | PressureCommand | AddressCommand;
 
 /** What a seat may send in a `commands` answer. */
-export type SeatCommand = OrderCommand | AnswerProposalCommand | ReviewCommand | GoCommand | CallCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
+export type SeatCommand = OrderCommand | AnswerProposalCommand | ReviewCommand | GoCommand | CallCommand | RecallOfferCommand | DecideCommand | DelegateCommand | VerbCommand | BattleCommand;
 
 export type Command = SeatCommand | ChooseCommand;
 
-export const COMMAND_KINDS = ['address', 'answer_proposal', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'relieve', 'review', 'transfer'] as const;
+export const COMMAND_KINDS = ['address', 'answer_proposal', 'appoint', 'audience', 'battle', 'call', 'choose', 'consult', 'decide', 'delegate', 'go', 'inquire', 'observer', 'order', 'pressure', 'promise', 'recall_offer', 'relieve', 'review', 'transfer'] as const;

@@ -102,7 +102,7 @@ function landingsPhase(ctx: TickContext, state: State): State {
   if (landings.length === 0) return state;
   const proposals: DetachmentProposal[] = landings.map((p) => ({ kind: 'landing', parent: p.parent, men: p.men, region: p.region, post: null, cause: 'situations' }));
   const result = applyDetachmentProposals(ctx.world.map, state, proposals, ctx.day);
-  if (result.made.length > 0) fire(ctx, 'forces.landed_by_situation', result.made.length);
+  if (result.made.length + result.landed.length > 0) fire(ctx, 'forces.landed_by_situation', result.made.length + result.landed.length);
   for (const { reason, why } of result.refused) {
     ctx.mapEvents.push({ event: 'proposal_refused', owner: 'forces', reason, why });
     fire(ctx, 'forces.landing_refused');

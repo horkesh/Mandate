@@ -183,6 +183,7 @@ export function blockIds(state: State): ForceBlockId[] {
 
 /** The faction whose forces a block is, through its department's side today (0050, 0065); null for a neutral government's. */
 export function factionOfBlock(_map: WorldIndex, state: State, id: ForceBlockId): FactionId | null {
+  if (Object.values(state.neutralOffers ?? {}).some(o => o.offerStatus === 'offered' && o.offerBlocks.includes(id) && !o.offerReceived.includes(id))) return null;
   const dept = blockOf(state, id).fbDepartment;
   if (!Object.prototype.hasOwnProperty.call(state.departmentFactions, dept)) throw new ForcesError([`force block ${id}: department ${dept} is not in the World`]);
   return state.departmentFactions[dept]!;

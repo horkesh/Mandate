@@ -1,0 +1,38 @@
+{
+  "captureInputs": 494,
+  "changedInputs": [
+    "packages/cli/src/liveness-gate.ts",
+    "packages/kernel/src/command/levies.ts",
+    "packages/kernel/src/tick/offers.ts"
+  ],
+  "allOtherInputsByteExact": true,
+  "unchangedNonRecallFunctions": [
+    {
+      "path": "packages/kernel/src/command/levies.ts",
+      "symbol": "levyKey",
+      "hash": "3e2204eeddec42bfab24c89f2c5293e2efcdf193fcd014c0b2994d7ba1681eaf"
+    },
+    {
+      "path": "packages/kernel/src/command/levies.ts",
+      "symbol": "recordLevy",
+      "hash": "cdfec3c9785092c59cf4f07c4aaeeb0a3dbac2cdaab033e149a8fbfffe0b5efa"
+    },
+    {
+      "path": "packages/kernel/src/command/levies.ts",
+      "symbol": "leviesDue",
+      "hash": "2da20dff8046e4ef03f35938c6bd9d5266ec1ee9ba620ccdfe2af1a63a3705cd"
+    },
+    {
+      "path": "packages/kernel/src/command/levies.ts",
+      "symbol": "musterAssignments",
+      "hash": "99602d58a8a31395a8a93c1eec761e22a12a190bb771988d387631f708b39e3b"
+    },
+    {
+      "path": "packages/kernel/src/tick/offers.ts",
+      "symbol": "receiveOffers",
+      "hash": "ce474b9f84d38118693760638e675e1de8e232a3eeba4029d33d8ceb2a226fd5"
+    }
+  ],
+  "correction": "Only the governor recall command gains pre-muster cancellation. The rule-seat source has no recall command emitter; the measured trace contains no recalled offer. The reference capture/replay/resume is reused; no second campaign.",
+  "testbed": "S122 and S124 two-day startup hashes equal; new office/offer/whole-landing branches are not adopted by testbed. Retain S119 testbed reference evidence, not a new full-done claim."
+}

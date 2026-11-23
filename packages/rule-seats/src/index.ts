@@ -163,9 +163,9 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
     for (const call of menu.doctrine.calls) {
       if (day < call.day || (peaceOnly && call.atPeace !== true)) continue;
       const r = menu.raising.find(x => x.post === call.post);
-      const route = r === undefined ? undefined : quickest(r.routes);
-      if (call.ready === false || r === undefined || route === undefined || (call.id === undefined ? r.called : call.issued === true)) continue;
-      send({ cmd: 'call', to: r.post, regiments: call.regiments, termDays: call.termDays, route: route.route, bypass: false,
+      const route = quickest(call.address === 'office' ? call.officeRoutes ?? [] : r?.routes ?? []);
+      if (call.ready === false || (r === undefined && call.address !== 'office') || route === undefined || (call.id === undefined ? r?.called : call.issued === true)) continue;
+      send({ cmd: 'call', to: call.post, ...(call.address === undefined ? {} : { address: call.address }), regiments: call.regiments, termDays: call.termDays, route: route.route, bypass: false,
         ...(call.termsId === undefined ? {} : { termsId: call.termsId }), ...(call.id === undefined ? {} : { callId: call.id }), ...(call.men === undefined ? {} : { men: call.men }), ...(call.arm === undefined ? {} : { arm: call.arm }), ...(call.readiness === undefined ? {} : { readiness: call.readiness }) });
     }
   };

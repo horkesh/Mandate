@@ -112,3 +112,10 @@ export function placeAndRemove(map: WorldIndex, state: State, placements: readon
   if (problems.length > 0) throw new MovementError(problems);
   return { ...state, forceLocations: next };
 }
+/** Debark a whole existing block: its lots and unknown strength are unchanged. */
+export function landWholeBlock(map: WorldIndex, state: State, block: ForceBlockId, region: RegionId, day: number): State {
+ const loc=state.forceLocations[block];
+ const target=map.regions.get(region);
+ if (loc===undefined || loc.locAboard===null || loc.locMarch!==null || (target?.kind!=='land' && target?.kind!=='key_point')) throw new MovementError(['invalid whole-block landing']);
+ return {...state,forceLocations:{...state.forceLocations,[block]:{locRegion:region,locAboard:null,locSinceDay:day,locMarch:null}}};
+}

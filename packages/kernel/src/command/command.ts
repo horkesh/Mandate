@@ -422,7 +422,7 @@ export function transferForce(map: WorldIndex, state: State, from: PostId, to: P
     if (chainBelow(state, null, to).includes(force.corps)) throw new CommandError([`${to} is under ${force.corps}; the chain would loop`]);
     return { state: withPost(state, force.corps, { ...corps, postParent: to }), moved: [], menSent: 0, rule: 'corps_as_bundle' };
   }
-  const own = commandedBlocks(state, from);
+  const own = commandedBlocks(state, from).filter(b => !Object.values(state.neutralOffers ?? {}).some(o => o.offerStatus === 'offered' && o.offerBlocks.includes(b) && !o.offerReceived.includes(b)));
   const blocks = own
     .filter((id) => state.forceBlockStates[id]!.fbKind === 'block' && forceTotals(state.forceBlockStates[id]!, map.forceTotalsCache).fbStrength !== 0)
     .sort((a, b) => {

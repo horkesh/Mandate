@@ -22,8 +22,14 @@ describe('S122 authorised landing zero', () => {
   it('binds the Union zero and its fingerprint to the paired fictional driver', () => {
     const review = JSON.parse(readFileSync(new URL('../../docs/audit/s122-evidence/band-review.json', import.meta.url), 'utf8'));
     expect(review.quietFingerprints).toEqual([{ key: record.key, fingerprint: fingerprint(record) }]);
-    expect(REFERENCE_RUNS.find(r => r.name === 'union-1861, war by decision, 148 days')!.bands['forces.landed_by_situation']).toEqual(record.after);
-    expect(QUIET['forces.landed_by_situation']).toEqual({ why: record.cause, ...receipt.driver });
+    const history = JSON.parse(readFileSync(new URL('../rules/liveness-changes.json', import.meta.url), 'utf8'));
+    expect(history).toContainEqual(record);
+    const restoration = history.find((r: { key: string; evidence: string }) => r.key === record.key && r.evidence.startsWith('docs/audit/s124-evidence/'));
+    expect(restoration.before).toEqual(record.after);
+    expect(restoration.observed).toBe(1);
+    expect(restoration.after).toMatchObject({minFires:1,maxFires:4});
+    expect(REFERENCE_RUNS.find(r => r.name === 'union-1861, war by decision, 148 days')!.bands['forces.landed_by_situation']).toEqual(restoration.after);
+    expect(QUIET['forces.landed_by_situation']).toBeUndefined();
     expect(readFileSync(new URL('../../' + receipt.driver.test, import.meta.url), 'utf8')).toContain(receipt.driver.needle);
   });
 });

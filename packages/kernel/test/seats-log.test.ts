@@ -361,6 +361,7 @@ describe('ownership of the new State (0044)', () => {
       'infraObstructions:infrastructure',
       'knowledgeBySeat:knowledge',
       'messagesInTransit:messages',
+      'neutralOffers:command',
       'observerPostings:command',
       'openingControlClaims:knowledge',
       'openingControlReports:knowledge',

@@ -179,6 +179,8 @@ export function commandText(c: SeatCommand, t: DeskStrings): string {
     case 'address':
       return t('console.command.address', { bloc: c.bloc });
     // A commander’s battle orders. The kernel refuses them from a player’s seat.
+    case 'recall_offer':
+      return t('console.command.recall-offer', {offer:c.offer});
     case 'battle':
       return t('console.command.battle', { post: c.post, commit: String(c.commit), night: String(c.night), cutOff: String(c.cutOff), pursue: String(c.pursue) });
   }

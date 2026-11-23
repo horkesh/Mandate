@@ -1,4 +1,5 @@
 import { withinCommand } from '../command/command.ts';
+import { receiveOffers } from './offers.ts';
 import { forceTotals, type ForceTotalsCache } from '../forces/lots.ts';
 /**
  * Day-tick phase 3 (FOUNDATION section 10; lane 1.4): operations, then movement. It replaces Phase 0's standing-goal
@@ -251,7 +252,7 @@ export function operationsPhase(ctx: TickContext, start: State): State {
   const marched = advanceMarches(state, day);
   state = marched.state;
   for (const a of marched.arrivals) fire(ctx, 'movement.arrived', 1 + a.carried.length);
-  return state;
+  return receiveOffers(ctx,state);
 }
 
 /**
@@ -268,7 +269,7 @@ function joinStep(ctx: TickContext, start: State, ground: MarchGround): State {
   if (ids.length === 0) return state;
   const inOperation = new Set(openOperations(state).flatMap((id) => state.operationRecords[id]!.opAxes.filter((a) => a.oaxStage !== 'end').flatMap((a) => a.oaxBlocks)));
   const ended: ForceBlockId[] = [];
-  const groups = new Map<string, { readonly from: RegionId; readonly to: RegionId; readonly naval: boolean; readonly blocks: ForceBlockId[] }>();
+  const groups = new Map<string, { readonly from: RegionId; readonly to: RegionId; readonly naval: boolean; readonly side: FactionId | null; readonly blocks: ForceBlockId[] }>();
   for (const b of ids) {
     const j = state.forceJoins[b]!;
     const loc = state.forceLocations[b];
@@ -284,14 +285,17 @@ function joinStep(ctx: TickContext, start: State, ground: MarchGround): State {
       continue;
     }
     const naval = isNaval(ctx.world.map, state, b);
-    const key = `${loc.locRegion}|${j.joinRegion}|${naval ? 'n' : 'l'}`;
-    const g = groups.get(key) ?? { from: loc.locRegion, to: j.joinRegion, naval, blocks: [] };
+    const offer = j.joinOffer === undefined ? undefined : state.neutralOffers?.[j.joinOffer];
+    // Voluntary transit uses the recipient's access policy; service and assignment stay the governor's.
+    const side = offer === undefined ? factionOfBlock(ctx.world.map,state,b) : postFaction(ctx.world,state,offer.offerReceiver);
+    const key = `${loc.locRegion}|${j.joinRegion}|${naval ? 'n' : 'l'}|${side}`;
+    const g = groups.get(key) ?? { from: loc.locRegion, to: j.joinRegion, naval, side, blocks: [] };
     g.blocks.push(b);
     groups.set(key, g);
   }
   for (const key of [...groups.keys()].sort(strictCompare)) {
     const g = groups.get(key)!;
-    const side = factionOfBlock(ctx.world.map, state, g.blocks[0]!);
+    const side = g.side;
     const leg = side === null ? null : (marchSteps(ground, g.from, g.to, side, g.naval)[0]?.leg ?? null);
     if (side === null || leg === null) {
       state = markJoins(state, g.blocks, 'no_route');

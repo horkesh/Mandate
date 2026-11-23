@@ -19,7 +19,7 @@ import { canonicalHash } from './hash.ts';
 export const SAVE_FORMAT = 'mandate-save';
 
 /** Bump this, and add a migration and a fixture, whenever the saved shape changes. */
-export const CURRENT_SAVE_SCHEMA = 4;
+export const CURRENT_SAVE_SCHEMA = 5;
 
 export interface SaveEnvelope {
   readonly format: typeof SAVE_FORMAT;
@@ -69,6 +69,10 @@ export const SAVE_MIGRATIONS: readonly SaveMigration[] = [{
   from: 3, to: 4,
   change: 'Label model-raised lots as rule; historical quantities without saved provenance become unknown. Never invent a return.',
   migrate: ({state,log}) => ({state:migrateStrengthKinds(state),log}),
+}, {
+  from: 4, to: 5,
+  change: 'Optional neutral governor offers, office call addresses and whole-block landings. Absent offers stay empty; never fabricate an undertaking or receipt for an old call.',
+  migrate: save => save,
 }];
 
 export type SaveProblem =

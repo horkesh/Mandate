@@ -136,7 +136,7 @@ export type Effect =
    * A landing (lane 1.11, on lane 1.4b's detachment path): `men` of a block aboard ship go ashore in `region`, across an
    * edge from the ship. `forces` applies it, or refuses it with a typed reason, in phase 4c beside `command`'s proposals.
    */
-  | { readonly landing: { readonly parent: ForceBlockId; readonly men: number; readonly region: RegionId } };
+  | { readonly landing: { readonly parent: ForceBlockId; readonly men: number | 'all'; readonly region: RegionId } };
 
 /** An existing contingent's bounded theatre exit; no captive count or destination is asserted. */
 export interface ForceWithdrawal {

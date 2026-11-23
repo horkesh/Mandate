@@ -67,6 +67,7 @@ import { applyVerb, observerLetters, VERB_MECHANICS } from './verbs.ts';
 import { isPeopleWeek, peopleWeek, serviceChoices, WEEK_MECHANICS } from './people-week.ts';
 import { attentionLeft, refillAttention, spendAttention } from '../seats/attention.ts';
 import { attentionPrice } from './attention.ts';
+import { recallOffer } from './offers.ts';
 import { issueCall, recruitmentPhase, RECRUITMENT_MECHANICS } from './recruitment.ts';
 import { regionsPhase, REGIONS_MECHANICS } from './regions.ts';
 import { politicsPhase, POLITICS_MECHANICS } from './politics.ts';
@@ -220,6 +221,12 @@ export function tick(world: SeatsWorld, start: State, entries: readonly LogEntry
         fire(ctx, 'seats.attention_spent', cost);
       }
     };
+    if (c.cmd === 'recall_offer') {
+      const result = recallOffer(ctx,state,entry.seat,c.offer);
+      state = applyPhase(result.state);
+      if (result.reason !== null) reject(result.reason);
+      return;
+    }
     if (c.cmd === 'call') {
       const reason = issueCall(ctx, state, entry.seat, c);
       if (reason !== null) reject(reason);

@@ -1,3 +1,5 @@
+import { putOffer } from '../command/offers.ts';
+import { orderOfferJoins } from '../movement/join.ts';
 import { enlistmentsOf } from '../forces/enlistment.ts';
 import { sideOfPerson } from '../command/command.ts';
 import { forceTotals, strengthBasisProblems } from '../forces/lots.ts';
@@ -60,7 +62,13 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
   const { world } = ctx;
   const assignment = state.seatAssignments[seat];
   if (assignment === undefined) return 'unknown_seat';
-  const sender = senderFor(world, state, seat, requisition ? cmd.to : undefined, ctx.senderViews);
+  const principal = state.seatAssignments[seat]?.seatPerson;
+  const own = world.map.world.rules.ruleSeats.principals.find(p => world.start.factions.some(f => f.principal === principal && f.faction === p.faction));
+  const instrument = own?.calls.find(c => c.id !== undefined && c.id === cmd.callId && c.post === cmd.to);
+  if (cmd.address === 'office' && instrument?.address !== 'office') return 'bad_call';
+  if (cmd.address === 'office' && instrument !== undefined && (cmd.regiments !== instrument.regiments || cmd.termDays !== instrument.termDays || cmd.men !== instrument.men || cmd.arm !== instrument.arm || cmd.readiness !== instrument.readiness || (cmd.termsId !== undefined && cmd.termsId !== instrument.termsId))) return 'bad_call';
+  const office = requisition || cmd.address === 'office';
+  const sender = senderFor(world, state, seat, office ? cmd.to : undefined, ctx.senderViews);
   if (sender === null) return 'not_a_principal';
   const issuer = { id: sender.principal };
   const target = sender.definition(cmd.to);
@@ -73,7 +81,7 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
   const dept = world.map.world.departments.find(d => d.id === target.department);
   const kind = world.map.world.vocabularies.departmentKinds.find(k => k.id === dept?.kind);
   if (!world.map.world.rules.recruitment.raisingPostKinds.includes(target.kind) || target.region === null || kind?.selfGoverning === true) return 'not_raising_post';
-  if (sender.holder(cmd.to) === null && (!requisition || sender.posts.get(cmd.to)?.status === 'vacant')) return 'vacant_post';
+  if (sender.holder(cmd.to) === null && (!office || sender.posts.get(cmd.to)?.status === 'vacant')) return 'vacant_post';
   if (!ORDER_ROUTES.includes(cmd.route)) return 'route_unavailable';
   if (cmd.termDays !== null && cmd.termDays > world.map.world.rules.recruitment.maxTermDays) return 'bad_call';
   if (cmd.arm !== undefined && !world.map.world.vocabularies.arms.some(a => a.id === cmd.arm && !a.naval)) return 'bad_call';
@@ -89,7 +97,7 @@ export function issueCall(ctx: TickContext, state: State, seat: SeatId, cmd: Cal
   const termsId = cmd.termsId ?? registered;
   const profile = termsId === undefined ? undefined : rules.callProfiles?.find(p => p.id === termsId);
   if (termsId !== undefined && profile === undefined) return 'bad_call';
-  dispatchOrder(ctx, state, seat, issuer.id, cmd.to, cmd.route, cmd.bypass, { orderKind: 'call', orderGoal: null, orderEdit: null, orderCall: { ...(profile === undefined ? {} : { callProfile: profile }), callRegiments: cmd.regiments, callTermDays: cmd.termDays, ...(cmd.men === undefined ? {} : { callMen: cmd.men }), ...(cmd.callId === undefined ? {} : { callId: cmd.callId }), ...(cmd.arm === undefined ? {} : { callArm: cmd.arm }), ...(cmd.readiness === undefined ? {} : { callReadiness: cmd.readiness }) } }, requisition ? cmd.to : undefined);
+  dispatchOrder(ctx, state, seat, issuer.id, cmd.to, cmd.route, cmd.bypass, { orderKind: 'call', orderGoal: null, orderEdit: null, orderCall: { ...(profile === undefined ? {} : { callProfile: profile }), callRegiments: cmd.regiments, callTermDays: cmd.termDays, ...(cmd.men === undefined ? {} : { callMen: cmd.men }), ...(cmd.callId === undefined ? {} : { callId: cmd.callId }), ...(cmd.arm === undefined ? {} : { callArm: cmd.arm }), ...(cmd.readiness === undefined ? {} : { callReadiness: cmd.readiness }) } }, office ? cmd.to : undefined, cmd.address === 'office');
   fire(ctx, 'recruitment.called');
   return null;
 }
@@ -144,6 +152,10 @@ export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage):
   if (actual === null || actual.regiments === 0) fire(ctx, 'recruitment.refused');
   else {
     if (call.callReadiness !== true) state = recordLevy(state, {
+      ...(side !== null || call.callId === undefined ? {} : (() => {
+        const offer = world.map.world.rules.ruleSeats.principals.flatMap(p => p.calls).find(c => c.id === call.callId && c.post === post)?.offer;
+        return offer === undefined ? {} : { levyOfferRegion: offer.region, levyOfferReceiver: offer.receiver, levyOfferResponse: state.orderResponses[responseKey(msg.msgOrigin, governor)]! };
+      })()),
       levyPost: post,
       levyGovernor: governor,
       levyIssuer: order.orderIssuer,
@@ -287,7 +299,16 @@ export function recruitmentPhase(ctx: TickContext, start: State): State {
   const forces = applyMusters(world.map, start, deltas);
   for (const _ of forces.disbanded) fire(ctx, 'recruitment.disbanded');
   const moved = placeAndRemove(world.map, forces.state, placements, forces.disbanded);
-  return musterAssignments(moved, [...due, ...lapsed], assign, forces.disbanded);
+  let next = musterAssignments(moved, [...due, ...lapsed], assign, forces.disbanded);
+  for (const key of due) {
+    const levy = start.postLevies[key]!;
+    const block = assign.find(a => next.forceBlockStates[a.block]?.fbLots.some(l => l.lotService?.enlCall === levy.levyCall))?.block;
+    const response = levy.levyOfferResponse ?? start.orderResponses[levy.levyResponse];
+    if (levy.levyOfferRegion === undefined || levy.levyOfferReceiver === undefined || block === undefined || response === undefined || levy.levyCallId === undefined) continue;
+    next = putOffer(next, { offerCall: levy.levyCall, offerCallId: levy.levyCallId, offerOwner: levy.levyPost, offerGovernor: levy.levyGovernor, offerIssuer: levy.levyIssuer, offerReceiver: levy.levyOfferReceiver, offerRegion: levy.levyOfferRegion, offerBlocks: [block], offerReceived: [], offerStatus: 'offered', offerResponse: response, offerReceiptDays: {} });
+    next = orderOfferJoins(next, [block], levy.levyPost, levy.levyOfferRegion, day, levy.levyCall);
+  }
+  return next;
 }
 
 /** A notice may renew a qualifying existing unit's term; forces owns the only changed field. */

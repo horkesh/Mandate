@@ -1,0 +1,4492 @@
+[
+  {
+    "identity": [
+      "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      124
+    ],
+    "before": {
+      "key": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr22_absolute_tennessee",
+      "respDay": 124,
+      "respActual": "comply_with_reservations",
+      "respDeclared": "comply_with_reservations",
+      "respWillingness": 213,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "authority",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "condition:appointments:2",
+          "clauseSubject": "appointments",
+          "clauseWording": "Officers except staff appointed according to State law; staff by Confederate President.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:arms_equipment:3",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:destination:4",
+          "clauseSubject": "destination",
+          "clauseWording": "Lynchburg;3regiments",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:organisation:1",
+          "clauseSubject": "organisation",
+          "clauseWording": "Three regiments (distribution note, OR IV-I p.232), each of ten infantry companies. Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:other_conditions:5",
+          "clauseSubject": "course",
+          "clauseWording": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:purpose:6",
+          "clauseSubject": "purpose",
+          "clauseWording": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:service_term:0",
+          "clauseSubject": "service_term",
+          "clauseWording": "Not less than twelve months unless sooner discharged.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:arms:0",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:clothing:1",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:subsistence:3",
+          "clauseSubject": "support",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:transport:2",
+          "clauseSubject": "transport",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "muster",
+          "clauseSubject": "muster"
+        },
+        {
+          "clauseId": "organisation",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "purpose",
+          "clauseSubject": "purpose",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "service_term",
+          "clauseSubject": "service_term"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:clothing:1",
+          "demand:subsistence:3",
+          "demand:transport:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:clothing:1",
+          "demand:subsistence:3",
+          "demand:transport:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee"
+      },
+      "respReservations": [
+        {
+          "clause": "muster",
+          "subject": "muster",
+          "grounds": {
+            "groundKind": "information_request",
+            "groundReference": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee:muster_receiver",
+            "groundFact": "muster_receiver"
+          },
+          "treatment": "clarify",
+          "effect": "request",
+          "reservationProvenance": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee:muster_receiver",
+          "knowledge": "reported"
+        }
+      ],
+      "respDeclaredReservations": [
+        {
+          "clause": "muster",
+          "subject": "muster",
+          "grounds": {
+            "groundKind": "information_request",
+            "groundReference": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee:muster_receiver",
+            "groundFact": "muster_receiver"
+          },
+          "treatment": "clarify",
+          "effect": "request",
+          "reservationProvenance": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee:muster_receiver",
+          "knowledge": "reported"
+        }
+      ],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": {
+      "key": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_cavalry_tennessee",
+      "respDay": 124,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "authority",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "condition:appointments:2",
+          "clauseSubject": "appointments",
+          "clauseWording": "Cavalry paragraph silent on field appointments; company forms, no guaranteed State regimental command.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:arms_equipment:3",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:destination:4",
+          "clauseSubject": "destination",
+          "clauseWording": "Corinth, Mississippi, with companies from other States; expressly not State instruction camps.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:organisation:1",
+          "clauseSubject": "organisation",
+          "clauseWording": "Two cavalry companies per AL/AR/GA/MS/TN;60-100 privates each, captain/first lieutenant/two seconds/four sergeants/four corporals/farrier/blacksmith/two musicians.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:other_conditions:5",
+          "clauseSubject": "course",
+          "clauseWording": "Supplement to infantry reserve; drilled by suitable officers before field service.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:purpose:6",
+          "clauseSubject": "purpose",
+          "clauseWording": "Complete the precautionary reserved army corps contemplated in the same letter.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:service_term:0",
+          "clauseSubject": "service_term",
+          "clauseWording": "[I] Supplemental companies for the same war corps; cavalry paragraph does not separately restate duration.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:arms:0",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:equipment:1",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:horses:2",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "muster",
+          "clauseSubject": "muster"
+        },
+        {
+          "clauseId": "organisation",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "purpose",
+          "clauseSubject": "purpose",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "service_term",
+          "clauseSubject": "service_term"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:equipment:1",
+          "demand:horses:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:equipment:1",
+          "demand:horses:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "values",
+        "before": 200,
+        "after": 0
+      }
+    ],
+    "cause": "Same request identity; additive terms shown. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+      "harris_isham_g",
+      "addressee",
+      124
+    ],
+    "before": {
+      "key": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2|harris_isham_g",
+      "respOrder": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_cavalry_tennessee",
+      "respDay": 124,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "authority",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "condition:appointments:2",
+          "clauseSubject": "appointments",
+          "clauseWording": "Cavalry paragraph silent on field appointments; company forms, no guaranteed State regimental command.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:arms_equipment:3",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:destination:4",
+          "clauseSubject": "destination",
+          "clauseWording": "Corinth, Mississippi, with companies from other States; expressly not State instruction camps.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:organisation:1",
+          "clauseSubject": "organisation",
+          "clauseWording": "Two cavalry companies per AL/AR/GA/MS/TN;60-100 privates each, captain/first lieutenant/two seconds/four sergeants/four corporals/farrier/blacksmith/two musicians.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:other_conditions:5",
+          "clauseSubject": "course",
+          "clauseWording": "Supplement to infantry reserve; drilled by suitable officers before field service.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:purpose:6",
+          "clauseSubject": "purpose",
+          "clauseWording": "Complete the precautionary reserved army corps contemplated in the same letter.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:service_term:0",
+          "clauseSubject": "service_term",
+          "clauseWording": "[I] Supplemental companies for the same war corps; cavalry paragraph does not separately restate duration.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:arms:0",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:equipment:1",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:horses:2",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Must be armed and equipped to be received. Mounted supplies/horses necessary; precise State/individual reimbursement not restated.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "muster",
+          "clauseSubject": "muster"
+        },
+        {
+          "clauseId": "organisation",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "purpose",
+          "clauseSubject": "purpose",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "service_term",
+          "clauseSubject": "service_term"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:equipment:1",
+          "demand:horses:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:equipment:1",
+          "demand:horses:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": {
+      "key": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2|harris_isham_g",
+      "respOrder": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_tennessee",
+      "respDay": 124,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -187,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "authority",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "condition:appointments:2",
+          "clauseSubject": "appointments",
+          "clauseWording": "President assigns camp officers and appoints field and staff. Company-officer selection not restated in call; May8 act has company election/Presidential commissioning [legal context only].",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:arms_equipment:3",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Arms explicitly NOT prerequisite to acceptance. Camp control War Department; original call does not explicitly allocate every camp subsistence invoice.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:destination:4",
+          "clauseSubject": "destination",
+          "clauseWording": "Accessible camps in each State, selected by governor; no permanent front destination specified.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:organisation:1",
+          "clauseSubject": "organisation",
+          "clauseWording": "Independent companies,64-100 privates plus named company staff; muster by companies in two accessible State camps, one in Florida. President later forms battalions/regiments (Florida a regiment).",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:other_conditions:5",
+          "clauseSubject": "course",
+          "clauseWording": "Precaution for public safety; national30000;3000 each except TX2000/FL1000. Federal camp control and instruction.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:purpose:6",
+          "clauseSubject": "purpose",
+          "clauseWording": "Precautionary provision for casualties and public safety by forming a reserved army corps.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:service_term:0",
+          "clauseSubject": "service_term",
+          "clauseWording": "For the war.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:arms:0",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Arms explicitly NOT prerequisite to acceptance. Camp control War Department; original call does not explicitly allocate every camp subsistence invoice.",
+          "clauseObligation": "not_required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "muster",
+          "clauseSubject": "muster"
+        },
+        {
+          "clauseId": "organisation",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "purpose",
+          "clauseSubject": "purpose",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "service_term",
+          "clauseSubject": "service_term"
+        }
+      ],
+      "respUndertaking": null,
+      "respDeclaredUndertaking": null,
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "values",
+        "before": 0,
+        "after": -200
+      }
+    ],
+    "cause": "Same request identity; additive terms shown. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3",
+      "harris_isham_g",
+      "addressee",
+      124
+    ],
+    "before": {
+      "key": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3|harris_isham_g",
+      "respOrder": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_tennessee",
+      "respDay": 124,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -187,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "authority",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "condition:appointments:2",
+          "clauseSubject": "appointments",
+          "clauseWording": "President assigns camp officers and appoints field and staff. Company-officer selection not restated in call; May8 act has company election/Presidential commissioning [legal context only].",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:arms_equipment:3",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Arms explicitly NOT prerequisite to acceptance. Camp control War Department; original call does not explicitly allocate every camp subsistence invoice.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:destination:4",
+          "clauseSubject": "destination",
+          "clauseWording": "Accessible camps in each State, selected by governor; no permanent front destination specified.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:organisation:1",
+          "clauseSubject": "organisation",
+          "clauseWording": "Independent companies,64-100 privates plus named company staff; muster by companies in two accessible State camps, one in Florida. President later forms battalions/regiments (Florida a regiment).",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:other_conditions:5",
+          "clauseSubject": "course",
+          "clauseWording": "Precaution for public safety; national30000;3000 each except TX2000/FL1000. Federal camp control and instruction.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:purpose:6",
+          "clauseSubject": "purpose",
+          "clauseWording": "Precautionary provision for casualties and public safety by forming a reserved army corps.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:service_term:0",
+          "clauseSubject": "service_term",
+          "clauseWording": "For the war.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:arms:0",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Arms explicitly NOT prerequisite to acceptance. Camp control War Department; original call does not explicitly allocate every camp subsistence invoice.",
+          "clauseObligation": "not_required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "muster",
+          "clauseSubject": "muster"
+        },
+        {
+          "clauseId": "organisation",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "purpose",
+          "clauseSubject": "purpose",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              302
+            ],
+            [
+              "OR-IV-I",
+              412
+            ]
+          ]
+        },
+        {
+          "clauseId": "service_term",
+          "clauseSubject": "service_term"
+        }
+      ],
+      "respUndertaking": null,
+      "respDeclaredUndertaking": null,
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 13,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": -200,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.123.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "brown_joseph_e",
+      "addressee",
+      123
+    ],
+    "before": null,
+    "after": {
+      "key": "m.123.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.123.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 123,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 22,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.123.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.123.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.123.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.123.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 22
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "temperament",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.141.davis_jefferson.harris_isham_g.verb.transfer.fredericksburg_bate_named.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      141
+    ],
+    "before": {
+      "key": "m.141.davis_jefferson.harris_isham_g.verb.transfer.fredericksburg_bate_named.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.141.davis_jefferson.harris_isham_g.verb.transfer.fredericksburg_bate_named.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 141,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.141.davis_jefferson.harris_isham_g.verb.transfer.fredericksburg_bate_named.st_gov_tennessee",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.141.davis_jefferson.harris_isham_g.verb.transfer.fredericksburg_bate_named.st_gov_tennessee"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.141.davis_jefferson.harris_isham_g.verb.transfer.fredericksburg_bate_named.st_gov_tennessee",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.141.davis_jefferson.harris_isham_g.verb.transfer.fredericksburg_bate_named.st_gov_tennessee"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 13,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.141.davis_jefferson.harris_isham_g.verb.transfer.johnston_tennessee_named.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      141
+    ],
+    "before": {
+      "key": "m.141.davis_jefferson.harris_isham_g.verb.transfer.johnston_tennessee_named.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.141.davis_jefferson.harris_isham_g.verb.transfer.johnston_tennessee_named.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 141,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.141.davis_jefferson.harris_isham_g.verb.transfer.johnston_tennessee_named.st_gov_tennessee",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.141.davis_jefferson.harris_isham_g.verb.transfer.johnston_tennessee_named.st_gov_tennessee"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.141.davis_jefferson.harris_isham_g.verb.transfer.johnston_tennessee_named.st_gov_tennessee",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.141.davis_jefferson.harris_isham_g.verb.transfer.johnston_tennessee_named.st_gov_tennessee"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 13,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+      "cooper_samuel",
+      "relay",
+      142
+    ],
+    "before": {
+      "key": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg|cooper_samuel",
+      "respOrder": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+      "respPerson": "cooper_samuel",
+      "respPost": "cs_war_adjutant_inspector_general",
+      "respRole": "relay",
+      "respKind": "goal",
+      "respDay": 142,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 32,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 32,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      144
+    ],
+    "before": {
+      "key": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 144,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 54,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 54
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.cooper_samuel.order.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 54,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "holmes_theophilus_h",
+      "addressee",
+      145
+    ],
+    "before": {
+      "key": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg|holmes_theophilus_h",
+      "respOrder": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+      "respPerson": "holmes_theophilus_h",
+      "respPost": "cs_cmd_fredericksburg",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 145,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 54,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 54
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.142.davis_jefferson.holmes_theophilus_h.verb.inquire.cs_cmd_fredericksburg"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 54,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.143.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+      "pettus_john_j",
+      "addressee",
+      143
+    ],
+    "before": null,
+    "after": {
+      "key": "m.143.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi|pettus_john_j",
+      "respOrder": "m.143.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+      "respPerson": "pettus_john_j",
+      "respPost": "st_gov_mississippi",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 143,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.143.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.143.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.143.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.143.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 13
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.144.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "brown_joseph_e",
+      "addressee",
+      144
+    ],
+    "before": null,
+    "after": {
+      "key": "m.144.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.144.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 144,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 22,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.144.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.144.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.144.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.144.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 22
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "temperament",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.144.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+      "moore_andrew_b",
+      "addressee",
+      144
+    ],
+    "before": null,
+    "after": {
+      "key": "m.144.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama|moore_andrew_b",
+      "respOrder": "m.144.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+      "respPerson": "moore_andrew_b",
+      "respPost": "st_gov_alabama",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 144,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.144.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.144.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.144.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.144.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 13
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+      "rector_henry_m",
+      "addressee",
+      51
+    ],
+    "before": null,
+    "after": {
+      "key": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas|rector_henry_m",
+      "respOrder": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+      "respPerson": "rector_henry_m",
+      "respPost": "st_gov_arkansas",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr22_absolute_arkansas",
+      "respDay": 51,
+      "respActual": "comply_with_reservations",
+      "respDeclared": "comply_with_reservations",
+      "respWillingness": 22,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "authority",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "condition:appointments:2",
+          "clauseSubject": "appointments",
+          "clauseWording": "Officers except staff appointed according to State law; staff by Confederate President.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:arms_equipment:3",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:destination:4",
+          "clauseSubject": "destination",
+          "clauseWording": "Lynchburg;1regiment",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:organisation:1",
+          "clauseSubject": "organisation",
+          "clauseWording": "Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:other_conditions:5",
+          "clauseSubject": "course",
+          "clauseWording": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:purpose:6",
+          "clauseSubject": "purpose",
+          "clauseWording": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:service_term:0",
+          "clauseSubject": "service_term",
+          "clauseWording": "Not less than twelve months unless sooner discharged.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:arms:0",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:clothing:1",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:subsistence:3",
+          "clauseSubject": "support",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:transport:2",
+          "clauseSubject": "transport",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "muster",
+          "clauseSubject": "muster"
+        },
+        {
+          "clauseId": "organisation",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "purpose",
+          "clauseSubject": "purpose",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "service_term",
+          "clauseSubject": "service_term"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:clothing:1",
+          "demand:subsistence:3",
+          "demand:transport:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:clothing:1",
+          "demand:subsistence:3",
+          "demand:transport:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas"
+      },
+      "respReservations": [
+        {
+          "clause": "muster",
+          "subject": "muster",
+          "grounds": {
+            "groundKind": "information_request",
+            "groundReference": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas:muster_receiver",
+            "groundFact": "muster_receiver"
+          },
+          "treatment": "clarify",
+          "effect": "request",
+          "reservationProvenance": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas:muster_receiver",
+          "knowledge": "reported"
+        }
+      ],
+      "respDeclaredReservations": [
+        {
+          "clause": "muster",
+          "subject": "muster",
+          "grounds": {
+            "groundKind": "information_request",
+            "groundReference": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas:muster_receiver",
+            "groundFact": "muster_receiver"
+          },
+          "treatment": "clarify",
+          "effect": "request",
+          "reservationProvenance": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas:muster_receiver",
+          "knowledge": "reported"
+        }
+      ],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 22
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      50
+    ],
+    "before": null,
+    "after": {
+      "key": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr22_absolute_tennessee",
+      "respDay": 50,
+      "respActual": "comply_with_reservations",
+      "respDeclared": "comply_with_reservations",
+      "respWillingness": 211,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 11
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "authority",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "condition:appointments:2",
+          "clauseSubject": "appointments",
+          "clauseWording": "Officers except staff appointed according to State law; staff by Confederate President.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:arms_equipment:3",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:destination:4",
+          "clauseSubject": "destination",
+          "clauseWording": "Lynchburg;3regiments",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:organisation:1",
+          "clauseSubject": "organisation",
+          "clauseWording": "Three regiments (distribution note, OR IV-I p.232), each of ten infantry companies. Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:other_conditions:5",
+          "clauseSubject": "course",
+          "clauseWording": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:purpose:6",
+          "clauseSubject": "purpose",
+          "clauseWording": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:service_term:0",
+          "clauseSubject": "service_term",
+          "clauseWording": "Not less than twelve months unless sooner discharged.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:arms:0",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:clothing:1",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:subsistence:3",
+          "clauseSubject": "support",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:transport:2",
+          "clauseSubject": "transport",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "muster",
+          "clauseSubject": "muster"
+        },
+        {
+          "clauseId": "organisation",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "purpose",
+          "clauseSubject": "purpose",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "service_term",
+          "clauseSubject": "service_term"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:clothing:1",
+          "demand:subsistence:3",
+          "demand:transport:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:clothing:1",
+          "demand:subsistence:3",
+          "demand:transport:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee"
+      },
+      "respReservations": [
+        {
+          "clause": "muster",
+          "subject": "muster",
+          "grounds": {
+            "groundKind": "information_request",
+            "groundReference": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee:muster_receiver",
+            "groundFact": "muster_receiver"
+          },
+          "treatment": "clarify",
+          "effect": "request",
+          "reservationProvenance": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee:muster_receiver",
+          "knowledge": "reported"
+        }
+      ],
+      "respDeclaredReservations": [
+        {
+          "clause": "muster",
+          "subject": "muster",
+          "grounds": {
+            "groundKind": "information_request",
+            "groundReference": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee:muster_receiver",
+            "groundFact": "muster_receiver"
+          },
+          "treatment": "clarify",
+          "effect": "request",
+          "reservationProvenance": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee:muster_receiver",
+          "knowledge": "reported"
+        }
+      ],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 11
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 200
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+      "rector_henry_m",
+      "addressee",
+      74
+    ],
+    "before": {
+      "key": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas|rector_henry_m",
+      "respOrder": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+      "respPerson": "rector_henry_m",
+      "respPost": "st_gov_arkansas",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr22_absolute_arkansas",
+      "respDay": 74,
+      "respActual": "comply_with_reservations",
+      "respDeclared": "comply_with_reservations",
+      "respWillingness": 27,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 27
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "authority",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "condition:appointments:2",
+          "clauseSubject": "appointments",
+          "clauseWording": "Officers except staff appointed according to State law; staff by Confederate President.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:arms_equipment:3",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:destination:4",
+          "clauseSubject": "destination",
+          "clauseWording": "Lynchburg;1regiment",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:organisation:1",
+          "clauseSubject": "organisation",
+          "clauseWording": "Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:other_conditions:5",
+          "clauseSubject": "course",
+          "clauseWording": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:purpose:6",
+          "clauseSubject": "purpose",
+          "clauseWording": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "condition:service_term:0",
+          "clauseSubject": "service_term",
+          "clauseWording": "Not less than twelve months unless sooner discharged.",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:arms:0",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:clothing:1",
+          "clauseSubject": "arms_equipment",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:subsistence:3",
+          "clauseSubject": "support",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "demand:transport:2",
+          "clauseSubject": "transport",
+          "clauseWording": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure.",
+          "clauseObligation": "required",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "muster",
+          "clauseSubject": "muster"
+        },
+        {
+          "clauseId": "organisation",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "purpose",
+          "clauseSubject": "purpose",
+          "clauseProvenance": [
+            [
+              "OR-IV-I",
+              231
+            ],
+            [
+              "OR-IV-I",
+              232
+            ]
+          ]
+        },
+        {
+          "clauseId": "service_term",
+          "clauseSubject": "service_term"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:clothing:1",
+          "demand:subsistence:3",
+          "demand:transport:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+        "clauses": [
+          "authority",
+          "condition:appointments:2",
+          "condition:arms_equipment:3",
+          "condition:destination:4",
+          "condition:organisation:1",
+          "condition:other_conditions:5",
+          "condition:purpose:6",
+          "condition:service_term:0",
+          "course",
+          "demand:arms:0",
+          "demand:clothing:1",
+          "demand:subsistence:3",
+          "demand:transport:2",
+          "muster",
+          "organisation",
+          "purpose",
+          "service_term"
+        ],
+        "undertakingRevision": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas"
+      },
+      "respReservations": [
+        {
+          "clause": "muster",
+          "subject": "muster",
+          "grounds": {
+            "groundKind": "information_request",
+            "groundReference": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas:muster_receiver",
+            "groundFact": "muster_receiver"
+          },
+          "treatment": "clarify",
+          "effect": "request",
+          "reservationProvenance": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas:muster_receiver",
+          "knowledge": "reported"
+        }
+      ],
+      "respDeclaredReservations": [
+        {
+          "clause": "muster",
+          "subject": "muster",
+          "grounds": {
+            "groundKind": "information_request",
+            "groundReference": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas:muster_receiver",
+            "groundFact": "muster_receiver"
+          },
+          "treatment": "clarify",
+          "effect": "request",
+          "reservationProvenance": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas:muster_receiver",
+          "knowledge": "reported"
+        }
+      ],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 27,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.85.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry",
+      "jackson_thomas_j",
+      "addressee",
+      90
+    ],
+    "before": null,
+    "after": {
+      "key": "m.85.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry|jackson_thomas_j",
+      "respOrder": "m.85.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry",
+      "respPerson": "jackson_thomas_j",
+      "respPost": "st_va_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 90,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.85.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.85.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.85.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.85.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 47
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.86.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry",
+      "jackson_thomas_j",
+      "addressee",
+      93
+    ],
+    "before": {
+      "key": "m.86.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry|jackson_thomas_j",
+      "respOrder": "m.86.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry",
+      "respPerson": "jackson_thomas_j",
+      "respPost": "st_va_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 93,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 27,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 27
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "destination",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "detail",
+          "clauseSubject": "organisation"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.86.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.86.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.86.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry",
+        "clauses": [
+          "course",
+          "destination",
+          "detail"
+        ],
+        "undertakingRevision": "m.86.davis_jefferson.jackson_thomas_j.verb.transfer.st_va_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 27,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      91
+    ],
+    "before": null,
+    "after": {
+      "key": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 91,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 47
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      93
+    ],
+    "before": {
+      "key": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 93,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 27,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 27
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.86.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 27,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      95
+    ],
+    "before": null,
+    "after": {
+      "key": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 95,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 47
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      96
+    ],
+    "before": {
+      "key": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 96,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 27,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 27
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "approval",
+          "clauseSubject": "authority"
+        },
+        {
+          "clauseId": "commitment",
+          "clauseSubject": "organisation"
+        },
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        },
+        {
+          "clauseId": "deadline",
+          "clauseSubject": "timing"
+        },
+        {
+          "clauseId": "objective",
+          "clauseSubject": "destination"
+        },
+        {
+          "clauseId": "routes",
+          "clauseSubject": "transport"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "clauses": [
+          "approval",
+          "commitment",
+          "course",
+          "deadline",
+          "objective",
+          "routes"
+        ],
+        "undertakingRevision": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "after": null,
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "deterrence",
+        "before": 27,
+        "after": null
+      },
+      {
+        "term": "disposition",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "grievances",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "regard",
+        "before": 0,
+        "after": null
+      },
+      {
+        "term": "values",
+        "before": 0,
+        "after": null
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "identity": [
+      "m.93.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      98
+    ],
+    "before": null,
+    "after": {
+      "key": "m.93.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.93.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "verb:inquire",
+      "respDay": 98,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": [],
+      "respClauses": [
+        {
+          "clauseId": "course",
+          "clauseSubject": "course"
+        }
+      ],
+      "respUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.93.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.93.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respDeclaredUndertaking": {
+        "undertakingKind": "original",
+        "undertakingRequest": "m.93.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry",
+        "clauses": [
+          "course"
+        ],
+        "undertakingRevision": "m.93.davis_jefferson.johnston_joseph_e.verb.inquire.cs_cmd_harpers_ferry"
+      },
+      "respReservations": [],
+      "respDeclaredReservations": [],
+      "respReservationGaps": [],
+      "respDeclaredReservationGaps": []
+    },
+    "changedTerms": [
+      {
+        "term": "capacity",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "deterrence",
+        "before": null,
+        "after": 47
+      },
+      {
+        "term": "disposition",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "grievances",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "regard",
+        "before": null,
+        "after": 0
+      },
+      {
+        "term": "values",
+        "before": null,
+        "after": 0
+      }
+    ],
+    "cause": "Exact request absent from one trajectory; no cross-day willingness comparison. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  }
+]

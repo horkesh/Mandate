@@ -11,13 +11,14 @@
  * operations, which then moves it. A block that finds no route waits, re-checked each day, with the typed reason.
  */
 import { strictCompare } from '../compare.ts';
-import type { ForceBlockId, PostId, RegionId } from '../ids.ts';
+import type { ForceBlockId, MessageId, PostId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 
 /** Why a joining block is not on its way today; null while it can march. */
 export type JoinBar = 'no_route';
 
 export interface ForceJoin {
+  readonly joinOffer?: MessageId;
   readonly joinPost: PostId;
   readonly joinRegion: RegionId;
   readonly joinSinceDay: number;
@@ -51,4 +52,12 @@ export function markJoins(state: State, blocks: readonly ForceBlockId[], bar: Jo
   const next: Record<ForceBlockId, ForceJoin> = { ...state.forceJoins };
   for (const b of change) next[b] = { ...next[b]!, joinBlocked: bar };
   return { ...state, forceJoins: next };
+}
+
+/** The destination is the call's, while the join post remains the governor's. */
+export function orderOfferJoins(state: State, blocks: readonly ForceBlockId[], owner: PostId, region: RegionId, day: number, offer: MessageId): State {
+ const next = orderJoins(state,blocks,owner,region,day);
+ const joins = {...next.forceJoins};
+ for (const b of blocks) joins[b] = {...joins[b]!,joinOffer:offer};
+ return {...next,forceJoins:joins};
 }

@@ -18,7 +18,7 @@ import { deskStrings } from '../src/pack-text.ts';
  * (his battle orders), never the principal's, and the kernel refuses it from a player's seat (hard rule 1).
  */
 export function kernelVerbs(): string[] {
-  return phase0.COMMAND_KINDS.filter((k) => k !== 'choose' && k !== 'battle')
+  return phase0.COMMAND_KINDS.filter((k) => k !== 'choose' && k !== 'battle' && k !== 'recall_offer')
     .flatMap((k) => (k === 'review' ? phase0.REVIEW_ACTIONS.map((a) => `review:${a}`) : [k]))
     .sort();
 }

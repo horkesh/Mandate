@@ -41,6 +41,7 @@ function keyOf(world: SeatsWorld, c: Command): AttentionKey | null {
     case 'answer_proposal':
       return c.action === 'decline' ? 'review_send_back' : 'order';
     // A commander's battle orders cost no attention: commanders have none (lane 1.12).
+    case 'recall_offer':
     case 'battle':
     case 'choose':
       return null;

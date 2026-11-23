@@ -35,7 +35,7 @@
         {
           "landing": {
             "parent": "fb_us_pickens_vogdes_co_a",
-            "men": 90,
+            "men": "all",
             "region": "fort_pickens"
           }
         },
@@ -62,7 +62,7 @@
         {
           "landing": {
             "parent": "fb_us_pickens_vogdes_co_a",
-            "men": 90,
+            "men": "all",
             "region": "fort_pickens"
           }
         },
@@ -120,6 +120,7 @@
     "none": "orders to a squadron and a fort; no gate topic"
   },
   "citations": [
+    {"source":"OR","at":"I-I pp.352-353: Vogdes embarks with his company, and the company is to be landed. [I] The whole represented company lands; no numeric split or recovered strength is claimed (S124)."},
     {
       "source": "ORN",
       "at": "I-4 p. 112 (Porter to Seward, 6 April: \"I received my orders from the President and shall proceed and execute them\"); pp. 109 to 110 (Adams's refusal)"

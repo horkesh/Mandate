@@ -1,5 +1,8 @@
 import { fingerprint } from './common.ts';
 
+/** Setting-specific explanation for the exact S124 supply record; tooling metadata, unchanged. */
+export const S124_SUPPLY_QUIET_WHY = "S124 [I]: the early Tennessee offer is received by the War Department at Lynchburg; the later named Holmes request still selects the governor. Holmes has no day144 draft, C25 is not observed, and the sole S122 supply-changing pick disappears. All retained candidate counterfactuals are published; no scoring rule, term weight or liveness definition changes.";
+
 export interface Band { readonly minFires: number; readonly maxFires?: number; readonly why?: string; readonly driver?: { readonly test: string; readonly needle: string } }
 export type Bands = Readonly<Record<string, Band>>;
 export function collectBands(runs: readonly { readonly name: string; readonly bands: Bands }[]): Bands {
@@ -79,7 +82,13 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
       // CODEX 2026-11-23: S122's one landing zero is authorised with its paired driver.
       // The complete record is frozen; no other zero or cause is admitted.
       const s122Quiet = fingerprint(r) === 'd88f7c043e717692f3fe541b545a1385efaca2bfeda16a1cba32d6a20c8e2652';
-      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet && !s96Quiet && !s106Quiet && !s119Quiet && !s122Quiet) {
+      // CODEX 2026-11-23: S124's two exact Union zeros are authorised.
+      // Causes, evidence, observations and bounds remain frozen with their live drivers.
+      const s124Quiet = [
+        '8f5b474a9bddfda65a3f98307d26aff9726521425f90a93f8e1357def5d185bf',
+        '7020d4917a1c23b18a1d733bc5c059322f60fd2c920ada328446904178def11c',
+      ].includes(fingerprint(r));
+      if (!inherited && !s82Quiet && !s90Quiet && !s92Quiet && !s98Quiet && !s96Quiet && !s106Quiet && !s119Quiet && !s122Quiet && !s124Quiet) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
         else if (fingerprint({ minFires: r.after.minFires, maxFires: r.after.maxFires }) !== fingerprint({ minFires: Math.max(1, Math.floor(n / 2)), maxFires: Math.max(n * 2, n + 3) })) problems.push(`${where}: after band is not around(observed)`);
       }

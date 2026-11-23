@@ -1,0 +1,15 @@
+# S124: office calls, neutral offers and whole-company landing
+
+For the lead: 3 items. **Built/measured, staged and uncommitted. Two new zeros require your ruling before the hook.** S124 only on `sprint/july` from223e1bd7; no S123 work or push. [Full packet and all33 rows](../docs/audit/s124-evidence/README.md).
+
+1. Explicit sourced office calls preserve identity, terms and compliance without a general holder book. Exactly Tennessee/Arkansas April22 move. A read Tennessee telegraph window follows existing latency. Governor-owned offers travel to Lynchburg, preserve reservations and become national only on receiving receipt; logged recall works before muster and during travel. Schema5 preserves old saves. The whole represented Vogdes company lands without counting or splitting unknown men (OR I-I pp.352-353). Sources and representation limits are in the packet.
+2. One148-day measurement,65.010s, no rejections, exact replay/day60 resume/saved-log replay. C05 answers day50/April24 versus S122day124/July7. Tennessee receipt day65/May9; Arkansas day105/June18. Confederate46357 and Union126026, totals by kind unchanged. C25 alone moves mismatch->not_observed: the downstream Holmes selection still names the governor after the April lots were received by the War Department. No new1A credit. All33 rows,15 final lot changes,8 lifetime changes,22 answer differences and328 liveness observations retained.
+3. Approve exactly the two proposed Union1..4->0..0 records in `band-review.json`: `forces.landing_refused` and `planner.term.supply`, with their causes, fingerprints and independent controls. Both are unapplied. One positive landing recenter is applied under the standing rule. Ordinary hook/commit remains pending; no bypass. After ruling, exact record/test update, retained re-evaluation, boundary/rules, then ordinary hook and commit; no campaign rerun.
+
+137/137 final focused checks;67/67 rules checks;33 passed/1 skipped independent fictional planner/landing controls. Boundary/rules/typecheck/schemas/licences/decisions pass. The pre-muster recall correction is isolated to a command the measured rule seats never emit; five non-recall functions and all other captured inputs (apart from liveness metadata) are preserved. Evidence reuse is explicit; full-suite/budget and inherited unmet criteria are not certified or waived.
+
+Proposed representation [I]: the War Department is the receiving post for the named Lynchburg rendezvous, without reconstructing a local officer or claiming a historical receipt. Reject immediate national ownership, hidden holder disclosure, unsourced Arkansas wire, shorter global delays and date-scripted departure. Read facts are cited by page; formal review remains deferred under0106/0107. Headless only. Other worktrees read only except the sole requested fresh-read UTF-8 Python CODEX status append. Recovery and stage receipts: `runs/s124/`.
+
+Outside scope: sourced onward allocation from Lynchburg; S123; C05/Rector authority/means gaps; Vogdes return; historical personnel recovery; review/signatures, main integration and release.
+
+Findings outside my scope

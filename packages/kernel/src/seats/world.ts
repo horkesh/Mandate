@@ -457,6 +457,8 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
       if (p !== undefined && (!recruitment.raisingPostKinds.includes(p.kind) || (dept !== undefined && selfGoverning.has(dept.kind)))) problems.push(`${at}.calls[${j}]: ${c.post} does not raise regiments (rules.recruitment.raisingPostKinds)`);
       if (c.termDays !== null && c.termDays > recruitment.maxTermDays) problems.push(`${at}.calls[${j}]: a term of ${c.termDays} days is longer than the pack's ${recruitment.maxTermDays}`);
       if (c.arm !== undefined && !map.world.vocabularies.arms.some(a => a.id === c.arm && !a.naval)) problems.push(`${at}.calls[${j}]: ${c.arm} is not a land arm`);
+      if (c.address !== undefined && (c.address !== 'office' || c.id === undefined || c.source.trim().length === 0)) problems.push(`${at}.calls[${j}]: an office call needs an identity and source`);
+      if (c.offer !== undefined && (!map.regions.has(c.offer.region) || !posts.has(c.offer.receiver) || postSides.get(c.offer.receiver)?.faction !== r.faction)) problems.push(`${at}.calls[${j}]: an offer needs a known destination and this side's receiving office`);
       const key = c.id ?? c.post;
       if (c.termsId !== undefined && !recruitment.callProfiles?.some(p => p.id === c.termsId)) problems.push(`${at}.calls[${j}]: unknown call profile ${c.termsId}`);
       if (c.id !== undefined) {

@@ -7,8 +7,9 @@
  * proposal makes the block, and `command`'s part of it is the block's post: the governor's. When the men's term ends
  * and the block disbands, `command` takes the assignment away.
  */
+import type { OrderResponse } from '../proxy/responses.ts';
 import { strictCompare } from '../compare.ts';
-import type { ForceBlockId, MessageId, PersonId, PostId } from '../ids.ts';
+import type { ForceBlockId, MessageId, PersonId, PostId, RegionId } from '../ids.ts';
 import type { State } from '../root-state.ts';
 import { CommandError } from './command.ts';
 
@@ -31,6 +32,9 @@ export interface Levy {
   readonly levyTermDays: number | null;
   readonly levyArm?: string;
   readonly levyCallId?: string;
+  readonly levyOfferResponse?: OrderResponse;
+  readonly levyOfferRegion?: RegionId;
+  readonly levyOfferReceiver?: PostId;
   /** The day they muster. */
   readonly levyMusterDay: number;
   /** His response to the call (`proxy`'s key). */
@@ -80,4 +84,11 @@ export function musterAssignments(state: State, mustered: readonly string[], ass
   }
   if (problems.length > 0) throw new CommandError(problems);
   return { ...state, postLevies: levies, forceAssignments: assignments };
+}
+
+/** Only the governor's recall path cancels an accepted but unmustered offer. */
+export function cancelPendingLevy(state: State, call: MessageId): State {
+ const levies = {...state.postLevies};
+ delete levies[call];
+ return {...state,postLevies:levies};
 }

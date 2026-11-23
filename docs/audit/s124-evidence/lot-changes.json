@@ -1,0 +1,888 @@
+[
+  {
+    "id": "generated.raised.st_gov_arkansas.d56.1",
+    "before": null,
+    "after": {
+      "block": "raised.st_gov_arkansas.d56",
+      "department": "cs_war",
+      "assignment": "cs_secretary_war",
+      "location": {
+        "locRegion": "lynchburg",
+        "locAboard": null,
+        "locSinceDay": 105,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_arkansas.d56.1",
+        "lotRegiment": "generated.raised.st_gov_arkansas.d56.1",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 780,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_arkansas",
+          "enlRaisedBy": "rector_henry_m",
+          "enlCall": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+          "enlRegiments": 1,
+          "enlMusterDay": 56,
+          "enlEndsDay": 421,
+          "enlCallId": "cs_apr22_absolute_arkansas"
+        }
+      }
+    },
+    "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "generated.raised.st_gov_arkansas.d79.1",
+    "before": {
+      "block": "raised.st_gov_arkansas.d79",
+      "department": "st_arkansas",
+      "assignment": "st_gov_arkansas",
+      "location": {
+        "locRegion": "little_rock",
+        "locAboard": null,
+        "locSinceDay": 79,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_arkansas.d79.1",
+        "lotRegiment": "generated.raised.st_gov_arkansas.d79.1",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 780,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_arkansas",
+          "enlRaisedBy": "rector_henry_m",
+          "enlCall": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+          "enlRegiments": 1,
+          "enlMusterDay": 79,
+          "enlEndsDay": 444,
+          "enlCallId": "cs_apr22_absolute_arkansas"
+        }
+      }
+    },
+    "after": null,
+    "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "generated.raised.st_gov_georgia.d122.2.1",
+    "before": {
+      "block": "raised.st_gov_georgia.d122.2",
+      "department": "st_georgia",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 143,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_georgia.d122.2.1",
+        "lotRegiment": "generated.raised.st_gov_georgia.d122.2.1",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 725,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "call:cs_jun30_reserve_georgia; OR-IV-I p.302; OR-IV-I p.412",
+          "strengthDate": null
+        },
+        "lotStragglers": 3,
+        "lotService": {
+          "enlPost": "st_gov_georgia",
+          "enlRaisedBy": "brown_joseph_e",
+          "enlCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+          "enlRegiments": 3,
+          "enlMusterDay": 122,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jun30_reserve_georgia"
+        }
+      }
+    },
+    "after": {
+      "block": "raised.st_gov_georgia.d122.2",
+      "department": "st_georgia",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 139,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_georgia.d122.2.1",
+        "lotRegiment": "generated.raised.st_gov_georgia.d122.2.1",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 725,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "call:cs_jun30_reserve_georgia; OR-IV-I p.302; OR-IV-I p.412",
+          "strengthDate": null
+        },
+        "lotStragglers": 3,
+        "lotService": {
+          "enlPost": "st_gov_georgia",
+          "enlRaisedBy": "brown_joseph_e",
+          "enlCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+          "enlRegiments": 3,
+          "enlMusterDay": 122,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jun30_reserve_georgia"
+        }
+      }
+    },
+    "cause": "Original origin cs_jun30_reserve_georgia retained; altered request/assignment/route/attrition trajectory is explicit in the before/after rows. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "generated.raised.st_gov_georgia.d122.2.2",
+    "before": {
+      "block": "raised.st_gov_georgia.d122.2",
+      "department": "st_georgia",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 143,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_georgia.d122.2.2",
+        "lotRegiment": "generated.raised.st_gov_georgia.d122.2.2",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 723,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "call:cs_jun30_reserve_georgia; OR-IV-I p.302; OR-IV-I p.412",
+          "strengthDate": null
+        },
+        "lotStragglers": 4,
+        "lotService": {
+          "enlPost": "st_gov_georgia",
+          "enlRaisedBy": "brown_joseph_e",
+          "enlCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+          "enlRegiments": 3,
+          "enlMusterDay": 122,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jun30_reserve_georgia"
+        }
+      }
+    },
+    "after": {
+      "block": "raised.st_gov_georgia.d122.2",
+      "department": "st_georgia",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 139,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_georgia.d122.2.2",
+        "lotRegiment": "generated.raised.st_gov_georgia.d122.2.2",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 723,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "call:cs_jun30_reserve_georgia; OR-IV-I p.302; OR-IV-I p.412",
+          "strengthDate": null
+        },
+        "lotStragglers": 4,
+        "lotService": {
+          "enlPost": "st_gov_georgia",
+          "enlRaisedBy": "brown_joseph_e",
+          "enlCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+          "enlRegiments": 3,
+          "enlMusterDay": 122,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jun30_reserve_georgia"
+        }
+      }
+    },
+    "cause": "Original origin cs_jun30_reserve_georgia retained; altered request/assignment/route/attrition trajectory is explicit in the before/after rows. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "generated.raised.st_gov_georgia.d122.2.3",
+    "before": {
+      "block": "raised.st_gov_georgia.d122.2",
+      "department": "st_georgia",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 143,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_georgia.d122.2.3",
+        "lotRegiment": "generated.raised.st_gov_georgia.d122.2.3",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 1336,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "call:cs_jun30_reserve_georgia; OR-IV-I p.302; OR-IV-I p.412",
+          "strengthDate": null
+        },
+        "lotStragglers": 7,
+        "lotService": {
+          "enlPost": "st_gov_georgia",
+          "enlRaisedBy": "brown_joseph_e",
+          "enlCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+          "enlRegiments": 3,
+          "enlMusterDay": 122,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jun30_reserve_georgia"
+        }
+      }
+    },
+    "after": {
+      "block": "raised.st_gov_georgia.d122.2",
+      "department": "st_georgia",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 139,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_georgia.d122.2.3",
+        "lotRegiment": "generated.raised.st_gov_georgia.d122.2.3",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 1336,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "call:cs_jun30_reserve_georgia; OR-IV-I p.302; OR-IV-I p.412",
+          "strengthDate": null
+        },
+        "lotStragglers": 7,
+        "lotService": {
+          "enlPost": "st_gov_georgia",
+          "enlRaisedBy": "brown_joseph_e",
+          "enlCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+          "enlRegiments": 3,
+          "enlMusterDay": 122,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jun30_reserve_georgia"
+        }
+      }
+    },
+    "cause": "Original origin cs_jun30_reserve_georgia retained; altered request/assignment/route/attrition trajectory is explicit in the before/after rows. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "generated.raised.st_gov_georgia.d125.1",
+    "before": {
+      "block": "raised.st_gov_georgia.d125",
+      "department": "st_georgia",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 143,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_georgia.d125.1",
+        "lotRegiment": "generated.raised.st_gov_georgia.d125.1",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 725,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 3,
+        "lotService": {
+          "enlPost": "st_gov_georgia",
+          "enlRaisedBy": "brown_joseph_e",
+          "enlCall": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+          "enlRegiments": 2,
+          "enlMusterDay": 125,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jul01_extra_georgia"
+        }
+      }
+    },
+    "after": {
+      "block": "raised.st_gov_georgia.d125",
+      "department": "st_georgia",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 143,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_georgia.d125.1",
+        "lotRegiment": "generated.raised.st_gov_georgia.d125.1",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 725,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 3,
+        "lotService": {
+          "enlPost": "st_gov_georgia",
+          "enlRaisedBy": "brown_joseph_e",
+          "enlCall": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+          "enlRegiments": 2,
+          "enlMusterDay": 125,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jul01_extra_georgia"
+        }
+      }
+    },
+    "cause": "Original origin cs_jul01_extra_georgia retained; altered request/assignment/route/attrition trajectory is explicit in the before/after rows. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "generated.raised.st_gov_georgia.d125.2",
+    "before": {
+      "block": "raised.st_gov_georgia.d125",
+      "department": "st_georgia",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 143,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_georgia.d125.2",
+        "lotRegiment": "generated.raised.st_gov_georgia.d125.2",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 724,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 3,
+        "lotService": {
+          "enlPost": "st_gov_georgia",
+          "enlRaisedBy": "brown_joseph_e",
+          "enlCall": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+          "enlRegiments": 2,
+          "enlMusterDay": 125,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jul01_extra_georgia"
+        }
+      }
+    },
+    "after": {
+      "block": "raised.st_gov_georgia.d125",
+      "department": "st_georgia",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 143,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_georgia.d125.2",
+        "lotRegiment": "generated.raised.st_gov_georgia.d125.2",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 724,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 3,
+        "lotService": {
+          "enlPost": "st_gov_georgia",
+          "enlRaisedBy": "brown_joseph_e",
+          "enlCall": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+          "enlRegiments": 2,
+          "enlMusterDay": 125,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jul01_extra_georgia"
+        }
+      }
+    },
+    "cause": "Original origin cs_jul01_extra_georgia retained; altered request/assignment/route/attrition trajectory is explicit in the before/after rows. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "generated.raised.st_gov_tennessee.d129.3",
+    "before": {
+      "block": "raised.st_gov_tennessee.d129",
+      "department": "st_tennessee",
+      "assignment": "st_gov_tennessee",
+      "location": {
+        "locRegion": "nashville",
+        "locAboard": null,
+        "locSinceDay": 129,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_tennessee.d129.3",
+        "lotRegiment": "generated.raised.st_gov_tennessee.d129.3",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 780,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_tennessee",
+          "enlRaisedBy": "harris_isham_g",
+          "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+          "enlRegiments": 3,
+          "enlMusterDay": 129,
+          "enlEndsDay": 494,
+          "enlCallId": "cs_apr22_absolute_tennessee"
+        }
+      }
+    },
+    "after": null,
+    "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "generated.raised.st_gov_tennessee.d55.3",
+    "before": null,
+    "after": {
+      "block": "raised.st_gov_tennessee.d55",
+      "department": "cs_war",
+      "assignment": "cs_secretary_war",
+      "location": {
+        "locRegion": "lynchburg",
+        "locAboard": null,
+        "locSinceDay": 65,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "generated.raised.st_gov_tennessee.d55.3",
+        "lotRegiment": "generated.raised.st_gov_tennessee.d55.3",
+        "lotGenerated": true,
+        "lotArm": "infantry",
+        "lotMen": 780,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_tennessee",
+          "enlRaisedBy": "harris_isham_g",
+          "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+          "enlRegiments": 3,
+          "enlMusterDay": 55,
+          "enlEndsDay": 420,
+          "enlCallId": "cs_apr22_absolute_tennessee"
+        }
+      }
+    },
+    "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "initial.fb_us_pickens_vogdes_co_a",
+    "before": {
+      "block": "fb_us_pickens_vogdes_co_a",
+      "department": "us_war",
+      "assignment": "us_fort_pickens",
+      "location": {
+        "locRegion": "pensacola_coast",
+        "locAboard": "fb_us_ship_brooklyn",
+        "locSinceDay": 0,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "initial.fb_us_pickens_vogdes_co_a",
+        "lotRegiment": null,
+        "lotGenerated": false,
+        "lotArm": "artillery",
+        "lotMen": null,
+        "lotStrength": {
+          "strengthKind": "unknown",
+          "strengthSource": "OR I-1 pp.353, 357, 395; SecNav1861 4 July 1861 (msg_jul1861) p.5; OR I-1 p.352; no dated strength at this lot scope; recover a dated unit return or estimate",
+          "strengthDate": "1861-03-05"
+        },
+        "lotStragglers": 0,
+        "lotService": null
+      }
+    },
+    "after": {
+      "block": "fb_us_pickens_vogdes_co_a",
+      "department": "us_war",
+      "assignment": "us_fort_pickens",
+      "location": {
+        "locRegion": "fort_pickens",
+        "locAboard": null,
+        "locSinceDay": 33,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "initial.fb_us_pickens_vogdes_co_a",
+        "lotRegiment": null,
+        "lotGenerated": false,
+        "lotArm": "artillery",
+        "lotMen": null,
+        "lotStrength": {
+          "strengthKind": "unknown",
+          "strengthSource": "OR I-1 pp.353, 357, 395; SecNav1861 4 July 1861 (msg_jul1861) p.5; OR I-1 p.352; no dated strength at this lot scope; recover a dated unit return or estimate",
+          "strengthDate": "1861-03-05"
+        },
+        "lotStragglers": 0,
+        "lotService": null
+      }
+    },
+    "cause": "Whole company lands as the same block on day33; no split, replacement lot or personnel count. OR I-I pp.352-353. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "tn_1_infantry",
+    "before": {
+      "block": "raised.st_gov_tennessee.d129.transfer.141.2",
+      "department": "st_tennessee",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "chattanooga",
+        "locAboard": null,
+        "locSinceDay": 143,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "tn_1_infantry",
+        "lotRegiment": "tn_1_infantry",
+        "lotGenerated": false,
+        "lotArm": "infantry",
+        "lotMen": 780,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_tennessee",
+          "enlRaisedBy": "harris_isham_g",
+          "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+          "enlRegiments": 3,
+          "enlMusterDay": 129,
+          "enlEndsDay": 494,
+          "enlCallId": "cs_apr22_absolute_tennessee"
+        }
+      }
+    },
+    "after": {
+      "block": "raised.st_gov_tennessee.d55",
+      "department": "cs_war",
+      "assignment": "cs_secretary_war",
+      "location": {
+        "locRegion": "lynchburg",
+        "locAboard": null,
+        "locSinceDay": 65,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "tn_1_infantry",
+        "lotRegiment": "tn_1_infantry",
+        "lotGenerated": false,
+        "lotArm": "infantry",
+        "lotMen": 780,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_tennessee",
+          "enlRaisedBy": "harris_isham_g",
+          "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+          "enlRegiments": 3,
+          "enlMusterDay": 55,
+          "enlEndsDay": 420,
+          "enlCallId": "cs_apr22_absolute_tennessee"
+        }
+      }
+    },
+    "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "tn_2_infantry",
+    "before": {
+      "block": "raised.st_gov_tennessee.d129.transfer.141.1",
+      "department": "st_tennessee",
+      "assignment": "cs_cmd_fredericksburg",
+      "location": {
+        "locRegion": "tn_holston",
+        "locAboard": null,
+        "locSinceDay": 148,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "tn_2_infantry",
+        "lotRegiment": "tn_2_infantry",
+        "lotGenerated": false,
+        "lotArm": "infantry",
+        "lotMen": 780,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_tennessee",
+          "enlRaisedBy": "harris_isham_g",
+          "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+          "enlRegiments": 3,
+          "enlMusterDay": 129,
+          "enlEndsDay": 494,
+          "enlCallId": "cs_apr22_absolute_tennessee"
+        }
+      }
+    },
+    "after": {
+      "block": "raised.st_gov_tennessee.d55",
+      "department": "cs_war",
+      "assignment": "cs_secretary_war",
+      "location": {
+        "locRegion": "lynchburg",
+        "locAboard": null,
+        "locSinceDay": 65,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "tn_2_infantry",
+        "lotRegiment": "tn_2_infantry",
+        "lotGenerated": false,
+        "lotArm": "infantry",
+        "lotMen": 780,
+        "lotStrength": {
+          "strengthKind": "rule",
+          "strengthSource": "cs_public_defense_infantry: OR IV-I p.126; OR IV-I p.127; OR IV-I p.367",
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_tennessee",
+          "enlRaisedBy": "harris_isham_g",
+          "enlCall": "m.50.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+          "enlRegiments": 3,
+          "enlMusterDay": 55,
+          "enlEndsDay": 420,
+          "enlCallId": "cs_apr22_absolute_tennessee"
+        }
+      }
+    },
+    "cause": "Office call lineage: earlier response/muster, governor-owned journey and receiving receipt at Lynchburg. Men retain their originating rule quantity. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "unidentified.raised.st_gov_tennessee.d129",
+    "before": null,
+    "after": {
+      "block": "raised.st_gov_tennessee.d129",
+      "department": "st_tennessee",
+      "assignment": "st_gov_tennessee",
+      "location": {
+        "locRegion": "nashville",
+        "locAboard": null,
+        "locSinceDay": 129,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "unidentified.raised.st_gov_tennessee.d129",
+        "lotRegiment": null,
+        "lotGenerated": false,
+        "lotArm": "cavalry",
+        "lotMen": null,
+        "lotStrength": {
+          "strengthKind": "unknown",
+          "strengthSource": "call:cs_jun30_cavalry_tennessee; OR-IV-I p.412",
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_tennessee",
+          "enlRaisedBy": "harris_isham_g",
+          "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+          "enlRegiments": null,
+          "enlMusterDay": 129,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jun30_cavalry_tennessee"
+        }
+      }
+    },
+    "cause": "Original origin cs_jun30_cavalry_tennessee retained; altered request/assignment/route/attrition trajectory is explicit in the before/after rows. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "unidentified.raised.st_gov_tennessee.d129.2",
+    "before": {
+      "block": "raised.st_gov_tennessee.d129.2",
+      "department": "st_tennessee",
+      "assignment": "st_gov_tennessee",
+      "location": {
+        "locRegion": "nashville",
+        "locAboard": null,
+        "locSinceDay": 129,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "unidentified.raised.st_gov_tennessee.d129.2",
+        "lotRegiment": null,
+        "lotGenerated": false,
+        "lotArm": "cavalry",
+        "lotMen": null,
+        "lotStrength": {
+          "strengthKind": "unknown",
+          "strengthSource": "call:cs_jun30_cavalry_tennessee; OR-IV-I p.412",
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_tennessee",
+          "enlRaisedBy": "harris_isham_g",
+          "enlCall": "m.122.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+          "enlRegiments": null,
+          "enlMusterDay": 129,
+          "enlEndsDay": null,
+          "enlCallId": "cs_jun30_cavalry_tennessee"
+        }
+      }
+    },
+    "after": null,
+    "cause": "Original origin cs_jun30_cavalry_tennessee retained; altered request/assignment/route/attrition trajectory is explicit in the before/after rows. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  },
+  {
+    "id": "unidentified.state-forces.va_harpers_ferry",
+    "before": {
+      "block": "state-forces.va_harpers_ferry",
+      "department": "cs_war",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 54,
+        "locMarch": null
+      },
+      "lot": {
+        "lotId": "unidentified.state-forces.va_harpers_ferry",
+        "lotRegiment": null,
+        "lotGenerated": false,
+        "lotArm": "infantry",
+        "lotMen": null,
+        "lotStrength": {
+          "strengthKind": "unknown",
+          "strengthSource": null,
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_virginia",
+          "enlRaisedBy": "letcher_john",
+          "enlCall": "state-act.virginia_harpers_jackson.va_harpers_ferry",
+          "enlRegiments": null,
+          "enlMusterDay": 54,
+          "enlEndsDay": null,
+          "enlSourceAct": "virginia_harpers_jackson",
+          "enlTermUnknown": true
+        }
+      }
+    },
+    "after": {
+      "block": "state-forces.va_harpers_ferry",
+      "department": "cs_war",
+      "assignment": "cs_cmd_harpers_ferry",
+      "location": {
+        "locRegion": "harpers_ferry",
+        "locAboard": null,
+        "locSinceDay": 54,
+        "locMarch": {
+          "marchEdge": "road:harpers_ferry:loudoun_fauquier",
+          "marchFrom": "harpers_ferry",
+          "marchTo": "loudoun_fauquier",
+          "marchNeedMilli": 4000,
+          "marchDoneMilli": 1000,
+          "marchStartDay": 148
+        }
+      },
+      "lot": {
+        "lotId": "unidentified.state-forces.va_harpers_ferry",
+        "lotRegiment": null,
+        "lotGenerated": false,
+        "lotArm": "infantry",
+        "lotMen": null,
+        "lotStrength": {
+          "strengthKind": "unknown",
+          "strengthSource": null,
+          "strengthDate": null
+        },
+        "lotStragglers": 0,
+        "lotService": {
+          "enlPost": "st_gov_virginia",
+          "enlRaisedBy": "letcher_john",
+          "enlCall": "state-act.virginia_harpers_jackson.va_harpers_ferry",
+          "enlRegiments": null,
+          "enlMusterDay": 54,
+          "enlEndsDay": null,
+          "enlSourceAct": "virginia_harpers_jackson",
+          "enlTermUnknown": true
+        }
+      }
+    },
+    "cause": "Original origin virginia_harpers_jackson retained; altered request/assignment/route/attrition trajectory is explicit in the before/after rows. [I] S124 moves only the read Arkansas/Tennessee April22 calls to office addresses, adds the documented Tennessee wire window, and sends accepted neutral offers to Lynchburg under the governor until receipt. The whole represented Vogdes company lands with unknown men. Ordinary attention, compliance, recruitment, received knowledge, transfers, planning, movement and combat propagate these changes; no one-factor isolation or fitted number is claimed."
+  }
+]

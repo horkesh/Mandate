@@ -1,0 +1,527 @@
+{
+  "bands": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s124/bands.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.904,
+    "log": "runs/s124/bands.log"
+  },
+  "boundary-1": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.573,
+    "log": "runs/s124/boundary-1.log"
+  },
+  "boundary-premeasure": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.602,
+    "log": "runs/s124/boundary-premeasure.log"
+  },
+  "capture-reuse-corrected": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s124/reuse-proof.ts"
+    ],
+    "exit": 0,
+    "seconds": 0.532,
+    "log": "runs/s124/capture-reuse-corrected.log"
+  },
+  "capture-reuse": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s124/reuse-proof.ts"
+    ],
+    "exit": 1,
+    "seconds": 0.224,
+    "log": "runs/s124/capture-reuse.log"
+  },
+  "correction-focused": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/save.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/s124-office-offers.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 8.039,
+    "log": "runs/s124/correction-focused.log"
+  },
+  "final-boundary-after-rules": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.597,
+    "log": "runs/s124/final-boundary-after-rules.log"
+  },
+  "final-boundary": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ],
+    "exit": 0,
+    "seconds": 0.574,
+    "log": "runs/s124/final-boundary.log"
+  },
+  "final-decisions": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:decisions"
+    ],
+    "exit": 0,
+    "seconds": 0.678,
+    "log": "runs/s124/final-decisions.log"
+  },
+  "final-licences": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:licences"
+    ],
+    "exit": 0,
+    "seconds": 0.827,
+    "log": "runs/s124/final-licences.log"
+  },
+  "final-rules-after-bands": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 1.952,
+    "log": "runs/s124/final-rules-after-bands.log"
+  },
+  "final-rules": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 1.91,
+    "log": "runs/s124/final-rules.log"
+  },
+  "final-targeted": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s124-office-offers.test.ts",
+      "packages/kernel/test/detachments.test.ts",
+      "packages/kernel/test/command-kinds.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/banned-apis.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/save.test.ts",
+      "packages/kernel/test/s122-strength.test.ts",
+      "packages/cli/test/verb-list.test.ts",
+      "packages/pack-format/test/schemas.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 21.45,
+    "log": "runs/s124/final-targeted.log"
+  },
+  "final-types": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.435,
+    "log": "runs/s124/final-types.log"
+  },
+  "focused-1": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/detachments.test.ts",
+      "packages/kernel/test/s124-office-offers.test.ts",
+      "packages/kernel/test/command-kinds.test.ts",
+      "packages/cli/test/verb-list.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.807,
+    "log": "runs/s124/focused-1.log"
+  },
+  "focused-2": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/detachments.test.ts",
+      "packages/kernel/test/s124-office-offers.test.ts",
+      "packages/kernel/test/command-kinds.test.ts",
+      "packages/cli/test/verb-list.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/banned-apis.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 8.223,
+    "log": "runs/s124/focused-2.log"
+  },
+  "focused-premeasure": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s124-office-offers.test.ts",
+      "packages/kernel/test/detachments.test.ts",
+      "packages/kernel/test/command-kinds.test.ts",
+      "packages/kernel/test/one-writer.test.ts",
+      "packages/kernel/test/banned-apis.test.ts",
+      "packages/kernel/test/s65-sender-belief.test.ts",
+      "packages/kernel/test/save.test.ts",
+      "packages/kernel/test/s122-strength.test.ts",
+      "packages/cli/test/situation-landing.test.ts",
+      "packages/cli/test/verb-list.test.ts",
+      "packages/pack-format/test/schemas.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 8.519,
+    "log": "runs/s124/focused-premeasure.log"
+  },
+  "generate": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861"
+    ],
+    "exit": 0,
+    "seconds": 2.419,
+    "log": "runs/s124/generate.log"
+  },
+  "green-office": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s124-office-offers.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.265,
+    "log": "runs/s124/green-office.log"
+  },
+  "measure": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s124/capture.ts"
+    ],
+    "exit": 1,
+    "seconds": 65.01,
+    "log": "runs/s124/measure.log"
+  },
+  "npm-ci": {
+    "command": [
+      "npm.cmd",
+      "ci"
+    ],
+    "exit": 0,
+    "seconds": 3.314,
+    "log": "runs/s124/npm-ci.log"
+  },
+  "obsolete-s122-expectation": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "tools/test/s122-liveness-ruling.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 5.349,
+    "log": "runs/s124/obsolete-s122-expectation.log"
+  },
+  "office-and-types": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s124-office-offers.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.202,
+    "log": "runs/s124/office-and-types.log"
+  },
+  "office-startup": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s124/office-startup.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.875,
+    "log": "runs/s124/office-startup.log"
+  },
+  "positive-controls": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/cli/test/planner.test.ts",
+      "packages/cli/test/situation-landing.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 19.845,
+    "log": "runs/s124/positive-controls.log"
+  },
+  "preflight": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s124/preflight.ts"
+    ],
+    "exit": 0,
+    "seconds": 4.823,
+    "log": "runs/s124/preflight.log"
+  },
+  "projection-final": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s124/projection.ts"
+    ],
+    "exit": 0,
+    "seconds": 3.34,
+    "log": "runs/s124/projection-final.log"
+  },
+  "projection": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s124/projection.ts"
+    ],
+    "exit": 0,
+    "seconds": 3.844,
+    "log": "runs/s124/projection.log"
+  },
+  "recall-correction": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s124-office-offers.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.106,
+    "log": "runs/s124/recall-correction.log"
+  },
+  "recall-log-and-strength": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s124-office-offers.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 2.211,
+    "log": "runs/s124/recall-log-and-strength.log"
+  },
+  "recall-types": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.439,
+    "log": "runs/s124/recall-types.log"
+  },
+  "red-altered-terms": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s124-office-offers.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.096,
+    "log": "runs/s124/red-altered-terms.log"
+  },
+  "red-office-valid": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s124-office-offers.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.154,
+    "log": "runs/s124/red-office-valid.log"
+  },
+  "red-office": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s124-office-offers.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.951,
+    "log": "runs/s124/red-office.log"
+  },
+  "red-recall-before-muster": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/s124-office-offers.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.164,
+    "log": "runs/s124/red-recall-before-muster.log"
+  },
+  "red-whole-landing": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "packages/kernel/test/detachments.test.ts",
+      "packages/kernel/test/s124-office-offers.test.ts"
+    ],
+    "exit": 1,
+    "seconds": 2.134,
+    "log": "runs/s124/red-whole-landing.log"
+  },
+  "reevaluate": {
+    "command": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s124/reevaluate.ts"
+    ],
+    "exit": 1,
+    "seconds": 0.889,
+    "log": "runs/s124/reevaluate.log"
+  },
+  "rules-1": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 1,
+    "seconds": 2.323,
+    "log": "runs/s124/rules-1.log"
+  },
+  "rules-premeasure": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ],
+    "exit": 0,
+    "seconds": 2.216,
+    "log": "runs/s124/rules-premeasure.log"
+  },
+  "rules-tests": {
+    "command": [
+      "npx.cmd",
+      "vitest",
+      "run",
+      "tools/test/liveness-causes.test.ts",
+      "tools/test/rule-history.test.ts",
+      "tools/test/projection-truth.test.ts",
+      "tools/test/situation-causes.test.ts",
+      "tools/test/s122-liveness-ruling.test.ts",
+      "tools/test/s124-liveness-boundary.test.ts"
+    ],
+    "exit": 0,
+    "seconds": 5.645,
+    "log": "runs/s124/rules-tests.log"
+  },
+  "schemas-check": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:schemas",
+      "--",
+      "--check"
+    ],
+    "exit": 0,
+    "seconds": 1.159,
+    "log": "runs/s124/schemas-check.log"
+  },
+  "schemas": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "pack:schemas"
+    ],
+    "exit": 0,
+    "seconds": 1.111,
+    "log": "runs/s124/schemas.log"
+  },
+  "typecheck-1": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 1,
+    "seconds": 1.454,
+    "log": "runs/s124/typecheck-1.log"
+  },
+  "typecheck-premeasure": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.528,
+    "log": "runs/s124/typecheck-premeasure.log"
+  },
+  "types-2": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 1,
+    "seconds": 1.49,
+    "log": "runs/s124/types-2.log"
+  },
+  "types-3": {
+    "command": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ],
+    "exit": 0,
+    "seconds": 1.461,
+    "log": "runs/s124/types-3.log"
+  }
+}

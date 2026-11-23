@@ -817,5 +817,6 @@
   "value.slavery_defence": "defence of slavery",
   "value.slavery_noninterference": "non-interference with slavery",
   "value.state_autonomy": "state autonomy",
-  "value.union": "union"
+  "value.union": "union",
+  "console.command.recall-offer": "recall offered troops ({offer})"
 }

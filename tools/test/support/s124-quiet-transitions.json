@@ -1,0 +1,49 @@
+[
+  {
+    "record": {
+      "key": "union-1861, war by decision, 148 days/forces.landing_refused",
+      "before": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S122 /0125: the unsupported opening company count becomes unknown; the existing situation landing refuses an unquantified parent. No default headcount or landing rule changed."
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S124: the sole situation landing is now a whole-company move, so no numeric split is attempted or refused. Unknown strength remains unknown. The paired fictional control still drives one numeric landing and one unknown-parent numeric refusal."
+      },
+      "observed": 0,
+      "cause": "S124: the sole situation landing is now a whole-company move, so no numeric split is attempted or refused. Unknown strength remains unknown. The paired fictional control still drives one numeric landing and one unknown-parent numeric refusal.",
+      "evidence": "docs/audit/s124-evidence/band-review.json#forces.landing_refused"
+    },
+    "fingerprint": "8f5b474a9bddfda65a3f98307d26aff9726521425f90a93f8e1357def5d185bf",
+    "driver": {
+      "test": "packages/cli/test/situation-landing.test.ts",
+      "needle": "drives forces.landed_by_situation from a quantified fictional parent and refuses an unknown parent"
+    }
+  },
+  {
+    "record": {
+      "key": "union-1861, war by decision, 148 days/planner.term.supply",
+      "before": {
+        "minFires": 1,
+        "maxFires": 4,
+        "why": "S122 /0125/0127 [I]: the changed force quantities restore one live supply contribution among retained planner candidates. No supply weight, candidate score or definition of a live term changed."
+      },
+      "after": {
+        "minFires": 0,
+        "maxFires": 0,
+        "why": "S124 [I]: the early Tennessee offer is received by the War Department at Lynchburg; the later named Holmes request still selects the governor. Holmes has no day144 draft, C25 is not observed, and the sole S122 supply-changing pick disappears. All retained candidate counterfactuals are published; no scoring rule, term weight or liveness definition changes."
+      },
+      "observed": 0,
+      "cause": "S124 [I]: the early Tennessee offer is received by the War Department at Lynchburg; the later named Holmes request still selects the governor. Holmes has no day144 draft, C25 is not observed, and the sole S122 supply-changing pick disappears. All retained candidate counterfactuals are published; no scoring rule, term weight or liveness definition changes.",
+      "evidence": "docs/audit/s124-evidence/band-review.json#planner.term.supply"
+    },
+    "fingerprint": "7020d4917a1c23b18a1d733bc5c059322f60fd2c920ada328446904178def11c",
+    "driver": {
+      "test": "packages/cli/test/planner.test.ts",
+      "needle": "counts every scoring term live in some case",
+      "retainedTelemetry": "runs/s119/references/testbed-summary.json: planner.term.supply fires2"
+    }
+  }
+]

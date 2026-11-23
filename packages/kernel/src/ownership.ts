@@ -119,6 +119,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // links, scheduled changes and standing orders (`command/command.ts`), so the `command`
   // rows for standing orders and a post's department below share it.
   field('people in posts; temporary posts', 'command', ['appoint', 'relieve', 'promotion lists', "an operation's end", 'combat (a commander killed, wounded or captured leaves his post vacant, lane 1.3)', 'local organisation (persistent formations, 0108)'], [at('State', 'postStates')]),
+  field('neutral governor offers and receiving receipts', 'command', ['recruitment', 'governor recall', 'movement arrival'], [at('State', 'neutralOffers')]),
   field('standing agreements and prior orders on a post', 'command', ['verbs', 'situations', "orders from the holder's own department", "a call a governor answered (his levy in hand)"], [at('State', 'postLevies')]),
   // Lane 1.1: people as State. True stats and temperament are drawn at setup by history's shadow; the rest start from the World.
   field("a person's stats, traits, standing, grievances, regard", 'people', ['combat results', 'the press', 'verbs', 'ladder', 'a bypassed relay'], [
@@ -214,6 +215,7 @@ export const IMMUTABLE_RECORDS: readonly string[] = [
   // Lane 1.12: a block's order to join its post, replaced whole by `movement`.
   'ForceJoin',
   'Levy',
+  'NeutralOffer',
   'CallSpec',
   // The call's sourced paper is an immutable value, carried unchanged by messages.
   'CallProfile',

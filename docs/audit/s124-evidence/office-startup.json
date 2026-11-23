@@ -1,0 +1,386 @@
+[
+  {
+    "command": {
+      "cmd": "call",
+      "to": "st_gov_arkansas",
+      "address": "office",
+      "regiments": 1,
+      "termDays": 365,
+      "route": "wire",
+      "bypass": false,
+      "termsId": "cs_apr22_absolute_arkansas",
+      "callId": "cs_apr22_absolute_arkansas"
+    },
+    "dispatch": {
+      "id": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+      "msgOrigin": "m.48.davis_jefferson.davis_jefferson.call.st_gov_arkansas",
+      "msgOfficeAddress": true,
+      "msgFrom": "davis_jefferson",
+      "msgTo": "davis_jefferson",
+      "msgToPost": "st_gov_arkansas",
+      "msgRole": "addressee",
+      "msgRoute": "wire",
+      "msgSentDay": 48,
+      "msgArriveDay": 51,
+      "msgVia": [],
+      "msgPending": [],
+      "msgOrder": {
+        "orderKind": "call",
+        "orderGoal": null,
+        "orderEdit": null,
+        "orderCall": {
+          "callProfile": {
+            "callEstablishment": "cs_public_defense_infantry",
+            "information": [
+              {
+                "detail": "muster_receiver",
+                "value": null
+              }
+            ],
+            "id": "cs_apr22_absolute_arkansas",
+            "sourceProfile": "CS-A22-N",
+            "honours": [
+              "state_autonomy",
+              "confederate_independence"
+            ],
+            "offends": [
+              "union"
+            ],
+            "valueClauseLinks": [
+              {
+                "linkValue": "state_autonomy",
+                "linkClause": "condition:purpose:6",
+                "linkCites": [
+                  [
+                    "OR-IV-I",
+                    231
+                  ],
+                  [
+                    "OR-IV-I",
+                    232
+                  ]
+                ],
+                "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+              },
+              {
+                "linkValue": "state_autonomy",
+                "linkClause": "condition:appointments:2",
+                "linkCites": [
+                  [
+                    "OR-IV-I",
+                    232
+                  ]
+                ],
+                "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+              },
+              {
+                "linkValue": "union",
+                "linkClause": "condition:purpose:6",
+                "linkCites": [
+                  [
+                    "OR-IV-I",
+                    231
+                  ],
+                  [
+                    "OR-IV-I",
+                    232
+                  ]
+                ],
+                "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+              },
+              {
+                "linkValue": "confederate_independence",
+                "linkClause": "condition:purpose:6",
+                "linkCites": [
+                  [
+                    "OR-IV-I",
+                    231
+                  ],
+                  [
+                    "OR-IV-I",
+                    232
+                  ]
+                ],
+                "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
+              }
+            ],
+            "callProvenance": [
+              {
+                "source": "OR-IV-I",
+                "page": 231
+              },
+              {
+                "source": "OR-IV-I",
+                "page": 232
+              }
+            ],
+            "conditions": [
+              {
+                "kind": "service_term",
+                "clauseText": "Not less than twelve months unless sooner discharged."
+              },
+              {
+                "kind": "organisation",
+                "clauseText": "Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians."
+              },
+              {
+                "kind": "appointments",
+                "clauseText": "Officers except staff appointed according to State law; staff by Confederate President."
+              },
+              {
+                "kind": "arms_equipment",
+                "clauseText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+              },
+              {
+                "kind": "destination",
+                "clauseText": "Lynchburg;1regiment"
+              },
+              {
+                "kind": "other_conditions",
+                "clauseText": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments."
+              },
+              {
+                "kind": "purpose",
+                "clauseText": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States."
+              }
+            ],
+            "materialDemand": [
+              {
+                "resource": "arms",
+                "obligation": "required",
+                "provider": "national",
+                "quantity": null,
+                "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+              },
+              {
+                "resource": "clothing",
+                "obligation": "required",
+                "provider": "volunteer",
+                "quantity": null,
+                "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+              },
+              {
+                "resource": "transport",
+                "obligation": "required",
+                "provider": "national",
+                "quantity": null,
+                "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+              },
+              {
+                "resource": "subsistence",
+                "obligation": "required",
+                "provider": "national",
+                "quantity": null,
+                "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+              }
+            ],
+            "rationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented.",
+            "limits": "State permission to raise/send and Confederate military authority are distinct. The letter itself does not prove Tennessee legal authority existed."
+          },
+          "callRegiments": 1,
+          "callTermDays": 365,
+          "callId": "cs_apr22_absolute_arkansas"
+        },
+        "orderIssuer": "davis_jefferson",
+        "orderTarget": "st_gov_arkansas",
+        "orderBypass": false,
+        "orderIssuedDay": 48
+      },
+      "msgVerb": null,
+      "msgReport": null,
+      "msgTruth": null
+    }
+  },
+  {
+    "command": {
+      "cmd": "call",
+      "to": "st_gov_tennessee",
+      "address": "office",
+      "regiments": 3,
+      "termDays": 365,
+      "route": "wire",
+      "bypass": false,
+      "termsId": "cs_apr22_absolute_tennessee",
+      "callId": "cs_apr22_absolute_tennessee"
+    },
+    "dispatch": {
+      "id": "m.48.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+      "msgOrigin": "m.48.davis_jefferson.davis_jefferson.call.st_gov_tennessee",
+      "msgOfficeAddress": true,
+      "msgFrom": "davis_jefferson",
+      "msgTo": "davis_jefferson",
+      "msgToPost": "st_gov_tennessee",
+      "msgRole": "addressee",
+      "msgRoute": "wire",
+      "msgSentDay": 48,
+      "msgArriveDay": 50,
+      "msgVia": [],
+      "msgPending": [],
+      "msgOrder": {
+        "orderKind": "call",
+        "orderGoal": null,
+        "orderEdit": null,
+        "orderCall": {
+          "callProfile": {
+            "callEstablishment": "cs_public_defense_infantry",
+            "information": [
+              {
+                "detail": "muster_receiver",
+                "value": null
+              }
+            ],
+            "id": "cs_apr22_absolute_tennessee",
+            "sourceProfile": "CS-A22-N",
+            "honours": [
+              "state_autonomy",
+              "confederate_independence"
+            ],
+            "offends": [
+              "union"
+            ],
+            "valueClauseLinks": [
+              {
+                "linkValue": "state_autonomy",
+                "linkClause": "condition:purpose:6",
+                "linkCites": [
+                  [
+                    "OR-IV-I",
+                    231
+                  ],
+                  [
+                    "OR-IV-I",
+                    232
+                  ]
+                ],
+                "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+              },
+              {
+                "linkValue": "state_autonomy",
+                "linkClause": "condition:appointments:2",
+                "linkCites": [
+                  [
+                    "OR-IV-I",
+                    232
+                  ]
+                ],
+                "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+              },
+              {
+                "linkValue": "union",
+                "linkClause": "condition:purpose:6",
+                "linkCites": [
+                  [
+                    "OR-IV-I",
+                    231
+                  ],
+                  [
+                    "OR-IV-I",
+                    232
+                  ]
+                ],
+                "linkRationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented."
+              },
+              {
+                "linkValue": "confederate_independence",
+                "linkClause": "condition:purpose:6",
+                "linkCites": [
+                  [
+                    "OR-IV-I",
+                    231
+                  ],
+                  [
+                    "OR-IV-I",
+                    232
+                  ]
+                ],
+                "linkRationale": "[I] 0122 by-kind troop-call rule: this request for troops for its side honours its common war purpose; no contrary own text recovered. This applies to preparation, activation, reserve and release, including silent-purpose papers; no actor or register-row exception."
+              }
+            ],
+            "callProvenance": [
+              {
+                "source": "OR-IV-I",
+                "page": 231
+              },
+              {
+                "source": "OR-IV-I",
+                "page": 232
+              }
+            ],
+            "conditions": [
+              {
+                "kind": "service_term",
+                "clauseText": "Not less than twelve months unless sooner discharged."
+              },
+              {
+                "kind": "organisation",
+                "clauseText": "Three regiments (distribution note, OR IV-I p.232), each of ten infantry companies. Ten infantry companies of at least64 men each; colonel/lieutenant-colonel/major, adjutant from lieutenants and sergeant-major from enlisted; each company captain/first lieutenant/two seconds/four sergeants/four corporals/two musicians."
+              },
+              {
+                "kind": "appointments",
+                "clauseText": "Officers except staff appointed according to State law; staff by Confederate President."
+              },
+              {
+                "kind": "arms_equipment",
+                "clauseText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+              },
+              {
+                "kind": "destination",
+                "clauseText": "Lynchburg;3regiments"
+              },
+              {
+                "kind": "other_conditions",
+                "clauseText": "Aid Virginia against stated common Southern enemy; answer whether and when; KY1/AR1/NC1/TN3 regiments."
+              },
+              {
+                "kind": "purpose",
+                "clauseText": "Aid Virginia in repelling the stated common Southern enemy and opposing United States coercion of the Confederate States."
+              }
+            ],
+            "materialDemand": [
+              {
+                "resource": "arms",
+                "obligation": "required",
+                "provider": "national",
+                "quantity": null,
+                "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+              },
+              {
+                "resource": "clothing",
+                "obligation": "required",
+                "provider": "volunteer",
+                "quantity": null,
+                "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+              },
+              {
+                "resource": "transport",
+                "obligation": "required",
+                "provider": "national",
+                "quantity": null,
+                "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+              },
+              {
+                "resource": "subsistence",
+                "obligation": "required",
+                "provider": "national",
+                "quantity": null,
+                "demandText": "Volunteers furnish uniform with commutation; Confederate arms/ammunition sent to Harpers Ferry or governor-designated point; transport and subsistence from departure."
+              }
+            ],
+            "rationale": "[I] The KY letter explicitly opposes US coercion of Confederate States and preserves State-law unit appointments; adapted AR/NC/TN letters share its terms. No actor-specific legality penalty invented.",
+            "limits": "State permission to raise/send and Confederate military authority are distinct. The letter itself does not prove Tennessee legal authority existed."
+          },
+          "callRegiments": 3,
+          "callTermDays": 365,
+          "callId": "cs_apr22_absolute_tennessee"
+        },
+        "orderIssuer": "davis_jefferson",
+        "orderTarget": "st_gov_tennessee",
+        "orderBypass": false,
+        "orderIssuedDay": 48
+      },
+      "msgVerb": null,
+      "msgReport": null,
+      "msgTruth": null
+    }
+  }
+]

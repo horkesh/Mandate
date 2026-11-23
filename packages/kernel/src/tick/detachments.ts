@@ -15,14 +15,15 @@ import { strictCompare } from '../compare.ts';
 import { musterAssignments } from '../command/levies.ts';
 import { applyDetachments, detachmentProblems, type DetachmentCause, type DetachmentDelta } from '../forces/detachments.ts';
 import type { ForceBlockId, PostId, RegionId } from '../ids.ts';
-import { placeAndRemove, type MusterPlacement } from '../movement/movement.ts';
+import { regroupAssignments } from '../command/organisation.ts';
+import { landWholeBlock, placeAndRemove, type MusterPlacement } from '../movement/movement.ts';
 import type { State } from '../root-state.ts';
 import type { WorldIndex } from '../world/index.ts';
 import { otherEnd } from '../world/index.ts';
 
 export type DetachmentProposal =
   | { readonly kind: 'garrison'; readonly parent: ForceBlockId; readonly men: number; readonly post: PostId | null; readonly cause: DetachmentCause }
-  | { readonly kind: 'landing'; readonly parent: ForceBlockId; readonly men: number; readonly region: RegionId; readonly post: PostId | null; readonly cause: DetachmentCause }
+  | { readonly kind: 'landing'; readonly parent: ForceBlockId; readonly men: number | 'all'; readonly region: RegionId; readonly post: PostId | null; readonly cause: DetachmentCause }
   | { readonly kind: 'rejoin'; readonly detachment: ForceBlockId; readonly cause: DetachmentCause }
   | { readonly kind: 'stand_alone'; readonly detachment: ForceBlockId; readonly cause: DetachmentCause };
 
@@ -33,6 +34,8 @@ export interface DetachmentResult {
   readonly state: State;
   /** Detachments made (garrisons and landings), in the order proposed. */
   readonly made: readonly ForceBlockId[];
+  /** Existing blocks landed whole, with their lot identity unchanged. */
+  readonly landed: readonly ForceBlockId[];
   readonly rejoined: readonly ForceBlockId[];
   readonly freed: readonly ForceBlockId[];
   readonly refused: readonly { readonly proposal: DetachmentProposal; readonly reason: DetachmentRefusal; readonly why: string }[];
@@ -61,6 +64,7 @@ export function madeToday(detachment: ForceBlockId, parent: ForceBlockId, day: n
 export function applyDetachmentProposals(map: WorldIndex, start: State, proposals: readonly DetachmentProposal[], day: number): DetachmentResult {
   let state = start;
   const made: ForceBlockId[] = [];
+  const landed: ForceBlockId[] = [];
   const rejoined: ForceBlockId[] = [];
   const freed: ForceBlockId[] = [];
   const refused: DetachmentResult['refused'][number][] = [];
@@ -108,8 +112,14 @@ export function applyDetachmentProposals(map: WorldIndex, start: State, proposal
         refuse('no_post', `no post commands ${p.parent}, and none was named`);
         continue;
       }
+      if (p.kind === 'landing' && p.men === 'all') {
+        state = landWholeBlock(map,state,p.parent,region,day);
+        if (state.forceAssignments[p.parent] !== post) state = regroupAssignments(state,[],[{block:p.parent,post}]);
+        landed.push(p.parent);
+        continue;
+      }
       const detachment = detachmentId(state, p.parent, day, taken);
-      const delta: DetachmentDelta = { change: 'detach', parent: p.parent, detachment, men: p.men, name: `detachment.${p.parent}`, cause: p.cause };
+      const delta: DetachmentDelta = { change: 'detach', parent: p.parent, detachment, men: p.men as number, name: `detachment.${p.parent}`, cause: p.cause };
       const problems = detachmentProblems(state, delta);
       if (problems.length > 0) {
         refuse('forces', problems.join('; '));
@@ -151,5 +161,5 @@ export function applyDetachmentProposals(map: WorldIndex, start: State, proposal
     // Its id is spent: no detachment made later today takes it again.
     rejoined.push(p.detachment);
   }
-  return { state, made, rejoined: rejoined.sort(strictCompare), freed: freed.sort(strictCompare), refused };
+  return { state, made, landed, rejoined: rejoined.sort(strictCompare), freed: freed.sort(strictCompare), refused };
 }

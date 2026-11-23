@@ -55,6 +55,20 @@ const men = (s: State, roots: readonly string[]) =>
 const SHIP = [block('a_ship', { department: 'a_war', region: 'w', arm: 'naval', strength: 300, post: P('a_navy') }), block('a_troops', { department: 'a_war', region: 'w', aboard: B('a_ship'), strength: 600, storesDays: 10, post: P('a_army') })];
 
 describe('a landing: men go ashore from a ship as a detachment (lane 1.4b)', () => {
+  it('lands a whole unknown block without splitting, counting or replacing its lots; numeric splitting still refuses it', () => {
+    const g=game(SHIP);const id=B('a_troops'),b=g.state.forceBlockStates[id]!;
+    const unknown:State={...g.state,forceBlockStates:{...g.state.forceBlockStates,[id]:{...b,fbLots:b.fbLots.map(l=>({...l,lotMen:null,lotStrength:{strengthKind:'unknown' as const,strengthSource:null,strengthDate:null}}))}}};
+    const split=applyDetachmentProposals(MAP,unknown,[{kind:'landing',parent:id,men:100,region:R('b2'),post:null,cause:'situations'}],5);
+    expect(split.refused).toHaveLength(1);expect(split.state).toBe(unknown);
+    const whole=applyDetachmentProposals(MAP,unknown,[{kind:'landing',parent:id,men:'all',region:R('b2'),post:null,cause:'situations'}],5);
+    expect(whole.refused).toEqual([]);expect(whole.landed).toEqual([id]);expect(whole.made).toEqual([]);
+    expect(whole.state.forceBlockStates).toBe(unknown.forceBlockStates);
+    expect(whole.state.forceBlockStates[id]!.fbLots).toBe(unknown.forceBlockStates[id]!.fbLots);
+    expect(forceTotals(whole.state.forceBlockStates[id]!).fbStrength).toBeNull();
+    expect(whole.state.forceLocations[id]).toEqual({locRegion:R('b2'),locAboard:null,locSinceDay:5,locMarch:null});
+    expect(whole.state.forceAssignments).toBe(unknown.forceAssignments);
+  });
+
   it('lands across an edge from the ship\'s region, under the parent\'s post, arriving that day; the parent stays aboard', () => {
     const g = game(SHIP);
     const r = applyDetachmentProposals(MAP, g.state, [{ kind: 'landing', parent: B('a_troops'), men: 450, region: R('b2'), post: null, cause: 'operations' }], 5);

@@ -88,7 +88,7 @@ export type Proposal =
   | { readonly proposal: 'address'; readonly bloc: string; readonly by: PersonId; readonly side: FactionId | null }
   | { readonly proposal: 'grievance'; readonly person: PersonId; readonly cause: 'bypassed'; readonly order: MessageId }
   /** Lane 1.11: a situation's landing, for `forces`' detachment path (lane 1.4b), applied in phase 4c beside `command`'s proposals. */
-  | { readonly proposal: 'landing'; readonly parent: ForceBlockId; readonly men: number; readonly region: RegionId; readonly situation: SituationId; readonly option: string | null }
+  | { readonly proposal: 'landing'; readonly parent: ForceBlockId; readonly men: number | 'all'; readonly region: RegionId; readonly situation: SituationId; readonly option: string | null }
   | {
       readonly proposal: 'effect';
       readonly owner: string;
