@@ -178,7 +178,9 @@ export interface AdviceBody {
 
 export type GoalProposalReason = Reason
   | { readonly kind: 'hold_preferred'; readonly orderedScore: number | null; readonly preferredScore: number }
-  | { readonly kind: 'safer_position'; readonly heldThreat: number; readonly preferredThreat: number };
+  | { readonly kind: 'safer_position'; readonly heldThreat: number; readonly preferredThreat: number }
+  | { readonly kind: 'position_threatened'; readonly condition: DiscretionCondition; readonly region: RegionId;
+      readonly estimate: number; readonly strength: number; readonly threshold: number };
 
 export interface GoalProposal {
   /** The held order the author kept while answering a different letter. */

@@ -1,0 +1,47 @@
+{
+  "dedicatedCapture": {
+    "result": [
+      {
+        "pack": "testbed",
+        "days": 120,
+        "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+        "rejections": 0,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 40,
+          "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "gates": []
+      },
+      {
+        "pack": "union-1861",
+        "days": 148,
+        "finalHash": "cf64a97ac3db0d3380e506885f69cbd48d67809d58f8e975991b532cbe7cc149",
+        "rejections": 0,
+        "replay": {
+          "matches": true,
+          "firstDifferentDay": null
+        },
+        "resume": {
+          "atTurn": 60,
+          "finalHash": "cf64a97ac3db0d3380e506885f69cbd48d67809d58f8e975991b532cbe7cc149",
+          "matches": true,
+          "savedLogReplays": true
+        },
+        "gates": []
+      }
+    ],
+    "bandProblems": []
+  },
+  "allRows": 328,
+  "mergeBandReviewRetained": true,
+  "triggerNeedsNoFurtherBandEdits": true,
+  "old154RecordsRetained": true,
+  "fourS96QuietRecordsRetained": true,
+  "sevenPositiveIntegrationRecords": true
+}

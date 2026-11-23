@@ -14,7 +14,7 @@ import { strictCompare } from '../compare.ts';
 import { deriveMap, type DerivedMap } from '../control-index/derived.ts';
 import type { ComplianceRung, Reason } from '../directive.ts';
 import type { MessageId, PersonId, PostId } from '../ids.ts';
-import type { DiscretionReport, ReportClaim, StatedReason, NoteAccount, GoalProposal } from '../knowledge/report.ts';
+import type { DiscretionReport, ReportClaim, StatedReason, NoteAccount, GoalProposal, GoalProposalReason } from '../knowledge/report.ts';
 import { followsNote } from '../planner/notes.ts';
 import { term } from '../knowledge/truth.ts';
 import { liveTerms, draft } from '../planner/draft.ts';
@@ -221,8 +221,23 @@ function draftProposal(ctx: TickContext, state: State, post: PostId, record: Pla
   const { searches, choice } = preferableGoal(input, set);
   if (searches > 0) fire(ctx, 'planner.searches', searches);
   if (choice === null) return false;
+  const reading: GoalProposalReason[] = [];
+  const challenged = response.respDeclared === 'comply_with_reservations' || OBJECTS.includes(response.respDeclared);
+  if (!challenged) {
+    if (response.respActual !== 'comply' && response.respActual !== 'exceed') return false;
+    const joined = { ...input, forces: input.forces.filter(b => state.forceJoins[b.id] === undefined) };
+    const position = headquartersOf(ctx.world, state, post);
+    for (const condition of ['turned', 'outmatched'] as const) {
+      const threat = discretionThreat(joined, position, { condition, fallback: choice.goal });
+      if (threat !== null) {
+        reading.push({ kind: 'position_threatened', condition, ...threat });
+        break;
+      }
+    }
+    if (reading.length === 0) return false;
+  }
   toIssuer(ctx, state, post, record, [], {
-    proposal: { goal: choice.goal, reasons: [...response.respStated, choice.reason],
+    proposal: { goal: choice.goal, reasons: [...response.respStated, choice.reason, ...reading],
       ...(letter.basis === undefined ? {} : { proposalBasis: letter.basis }) },
     answers: letter.answers,
     issuer: letter.issuer,

@@ -1,0 +1,2770 @@
+[
+  {
+    "mechanic": "combat.battle_closed",
+    "before": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.battle_day",
+    "before": {
+      "mechanic": "combat.battle_day",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "combat.battle_day",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.battle_opened",
+    "before": {
+      "mechanic": "combat.battle_opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.battle_opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.bombardment",
+    "before": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.breakout",
+    "before": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.captured",
+    "before": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 2415
+    },
+    "after": {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 2415
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.cut_off",
+    "before": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.destroyed",
+    "before": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.evacuated",
+    "before": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.flank_broken",
+    "before": {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.general_hit",
+    "before": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.killed_wounded",
+    "before": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 22642
+    },
+    "after": {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 22642
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.missing",
+    "before": {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 6820
+    },
+    "after": {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 6820
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.occupation",
+    "before": {
+      "mechanic": "combat.occupation",
+      "fires": 314,
+      "magnitude": 15800
+    },
+    "after": {
+      "mechanic": "combat.occupation",
+      "fires": 314,
+      "magnitude": 15800
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.pursuit_chosen",
+    "before": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.records_pruned",
+    "before": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.routed",
+    "before": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.surrendered",
+    "before": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.withdrew",
+    "before": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "combat.works_stormed",
+    "before": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_closed",
+    "before": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_established",
+    "before": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.government_reopened",
+    "before": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.post_succeeded",
+    "before": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "after": {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.proposal_refused",
+    "before": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.side_changed",
+    "before": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "command.temporary_post_opened",
+    "before": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "commands.rejected",
+    "before": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "control.changed",
+    "before": {
+      "mechanic": "control.changed",
+      "fires": 320,
+      "magnitude": 18600
+    },
+    "after": {
+      "mechanic": "control.changed",
+      "fires": 320,
+      "magnitude": 18600
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "control.threshold_crossed",
+    "before": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 59,
+      "magnitude": 59
+    },
+    "after": {
+      "mechanic": "control.threshold_crossed",
+      "fires": 59,
+      "magnitude": 59
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.landed_by_situation",
+    "before": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.landing_refused",
+    "before": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.stores_fell",
+    "before": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2794,
+      "magnitude": 2771175
+    },
+    "after": {
+      "mechanic": "forces.stores_fell",
+      "fires": 2794,
+      "magnitude": 2771175
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.stores_low",
+    "before": {
+      "mechanic": "forces.stores_low",
+      "fires": 109,
+      "magnitude": 109
+    },
+    "after": {
+      "mechanic": "forces.stores_low",
+      "fires": 109,
+      "magnitude": 109
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.stores_refilled",
+    "before": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2483,
+      "magnitude": 2467029
+    },
+    "after": {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2483,
+      "magnitude": 2467029
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "forces.stragglers_returned",
+    "before": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 184,
+      "magnitude": 2261
+    },
+    "after": {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 184,
+      "magnitude": 2261
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "infrastructure.changed",
+    "before": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "knowledge.pruned_age",
+    "before": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1470
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1471
+    },
+    "changedAggregate": true,
+    "changedDays": [],
+    "cause": "The added June hold correspondence contributes one additional record aged out by ordinary pruning [I]; the fire count is unchanged and magnitude rises 1470 to 1471."
+  },
+  {
+    "mechanic": "knowledge.pruned_superseded",
+    "before": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 11881
+    },
+    "after": {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 11882
+    },
+    "changedAggregate": true,
+    "changedDays": [],
+    "cause": "The extra hold/correlated correspondence contributes one additional superseded record [I]; fire count is unchanged and magnitude rises 11881 to 11882."
+  },
+  {
+    "mechanic": "ladder.moved",
+    "before": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "after": {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "ladder.rival",
+    "before": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.pocket_closed",
+    "before": {
+      "mechanic": "map.pocket_closed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "map.pocket_closed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.pocket_lost",
+    "before": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.pocket_relieved",
+    "before": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "map.recomputed",
+    "before": {
+      "mechanic": "map.recomputed",
+      "fires": 58,
+      "magnitude": 65
+    },
+    "after": {
+      "mechanic": "map.recomputed",
+      "fires": 58,
+      "magnitude": 65
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "messages.courier_delay",
+    "before": {
+      "mechanic": "messages.courier_delay",
+      "fires": 101,
+      "magnitude": 101
+    },
+    "after": {
+      "mechanic": "messages.courier_delay",
+      "fires": 102,
+      "magnitude": 102
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 96,
+        "before": 1,
+        "after": 2
+      }
+    ],
+    "cause": "The additional June hold acknowledgement adds one courier-delay fire on day 96."
+  },
+  {
+    "mechanic": "messages.delivered",
+    "before": {
+      "mechanic": "messages.delivered",
+      "fires": 14276,
+      "magnitude": 14276
+    },
+    "after": {
+      "mechanic": "messages.delivered",
+      "fires": 14280,
+      "magnitude": 14280
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 90,
+        "before": 77,
+        "after": 78
+      },
+      {
+        "day": 96,
+        "before": 83,
+        "after": 84
+      },
+      {
+        "day": 103,
+        "before": 84,
+        "after": 86
+      }
+    ],
+    "cause": "The added June hold is delivered to the relay on day 90 and the commander on day 96; its acknowledgement and hold arrival report reach the principal on day 103: +4."
+  },
+  {
+    "mechanic": "messages.mail_delay",
+    "before": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2852,
+      "magnitude": 2852
+    },
+    "after": {
+      "mechanic": "messages.mail_delay",
+      "fires": 2852,
+      "magnitude": 2852
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "messages.sent",
+    "before": {
+      "mechanic": "messages.sent",
+      "fires": 15042,
+      "magnitude": 15042
+    },
+    "after": {
+      "mechanic": "messages.sent",
+      "fires": 15046,
+      "magnitude": 15046
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 90,
+        "before": 35,
+        "after": 37
+      },
+      {
+        "day": 96,
+        "before": 39,
+        "after": 40
+      },
+      {
+        "day": 100,
+        "before": 51,
+        "after": 52
+      }
+    ],
+    "cause": "The added June hold and relay send two papers on day 90, its acknowledgement one on day 96 and the hold arrival report one on day 100: +4."
+  },
+  {
+    "mechanic": "messages.special_messenger",
+    "before": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "movement.arrived",
+    "before": {
+      "mechanic": "movement.arrived",
+      "fires": 728,
+      "magnitude": 728
+    },
+    "after": {
+      "mechanic": "movement.arrived",
+      "fires": 728,
+      "magnitude": 728
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "movement.join_blocked",
+    "before": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "movement.joined",
+    "before": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "after": {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "movement.leg_started",
+    "before": {
+      "mechanic": "movement.leg_started",
+      "fires": 398,
+      "magnitude": 398
+    },
+    "after": {
+      "mechanic": "movement.leg_started",
+      "fires": 398,
+      "magnitude": 398
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.ended",
+    "before": {
+      "mechanic": "operations.ended",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "operations.ended",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 141,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "June hold operation op:cs_cmd_harpers_ferry:97 is superseded by the received relief goal on day 141; +1 end."
+  },
+  {
+    "mechanic": "operations.landed",
+    "before": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.opened",
+    "before": {
+      "mechanic": "operations.opened",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "operations.opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 97,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The June hold received on day 96 is chosen on day 97 and opens one additional hold operation."
+  },
+  {
+    "mechanic": "operations.repulsed",
+    "before": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.stage",
+    "before": {
+      "mechanic": "operations.stage",
+      "fires": 17,
+      "magnitude": 17
+    },
+    "after": {
+      "mechanic": "operations.stage",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 99,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 100,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The additional hold advances from assemble to march on day 99 and to works on day 100; +2 transitions, 17 to 19."
+  },
+  {
+    "mechanic": "operations.support_answered",
+    "before": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_refused",
+    "before": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.support_sent",
+    "before": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "operations.works",
+    "before": {
+      "mechanic": "operations.works",
+      "fires": 7,
+      "magnitude": 350
+    },
+    "after": {
+      "mechanic": "operations.works",
+      "fires": 13,
+      "magnitude": 650
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 101,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 102,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 103,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 104,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 105,
+        "before": 0,
+        "after": 1
+      },
+      {
+        "day": 106,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The June hold builds works on days 101–106: +6 fires and +300 magnitude, 7/350 to 13/650."
+  },
+  {
+    "mechanic": "orders.bypassed",
+    "before": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.conflict",
+    "before": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.obeyed",
+    "before": {
+      "mechanic": "orders.obeyed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 96,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "Johnston receives and obeys the June hold on day 96; +1."
+  },
+  {
+    "mechanic": "orders.relay_held",
+    "before": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relay_objected",
+    "before": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.relayed",
+    "before": {
+      "mechanic": "orders.relayed",
+      "fires": 9,
+      "magnitude": 9
+    },
+    "after": {
+      "mechanic": "orders.relayed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 90,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "Cooper forwards the added June hold on day 90; +1 relay."
+  },
+  {
+    "mechanic": "orders.responses_pruned",
+    "before": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 23,
+      "magnitude": 60
+    },
+    "after": {
+      "mechanic": "orders.responses_pruned",
+      "fires": 23,
+      "magnitude": 60
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "orders.returned",
+    "before": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.grievances_faded",
+    "before": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "after": {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.promise_broken",
+    "before": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.promise_kept",
+    "before": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.resigned",
+    "before": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "after": {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "people.stayed",
+    "before": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.candidates",
+    "before": {
+      "mechanic": "planner.candidates",
+      "fires": 5,
+      "magnitude": 10
+    },
+    "after": {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 96,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The added received June hold creates one planning cycle on day 96. Candidates +2 magnitude and searches +6 magnitude; both count one drafting request. Other named terms are unchanged."
+  },
+  {
+    "mechanic": "planner.searches",
+    "before": {
+      "mechanic": "planner.searches",
+      "fires": 5,
+      "magnitude": 28
+    },
+    "after": {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 34
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 96,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The added received June hold creates one planning cycle on day 96. Candidates +2 magnitude and searches +6 magnitude; both count one drafting request. Other named terms are unchanged."
+  },
+  {
+    "mechanic": "planner.term.caution",
+    "before": {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.coordination",
+    "before": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.dependence",
+    "before": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.exposure",
+    "before": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.force_ratio",
+    "before": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.glory",
+    "before": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.goal_fit",
+    "before": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.haste",
+    "before": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.notes",
+    "before": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.supply",
+    "before": {
+      "mechanic": "planner.term.supply",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "planner.term.supply",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "planner.term.time",
+    "before": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.approved",
+    "before": {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.chosen",
+    "before": {
+      "mechanic": "plans.chosen",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "plans.chosen",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 97,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The added June hold draft is chosen and goes ahead on day 97; +1."
+  },
+  {
+    "mechanic": "plans.discretion_exercised",
+    "before": null,
+    "after": {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": true,
+    "changedDays": [],
+    "cause": "S96 grammar adds this diagnostic; its count and magnitude remain exactly zero. Both full references retain the independent live controls."
+  },
+  {
+    "mechanic": "plans.draft_deferred",
+    "before": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.drafted",
+    "before": {
+      "mechanic": "plans.drafted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 96,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The added received June hold creates one planning cycle on day 96. Candidates +2 magnitude and searches +6 magnitude; both count one drafting request. Other named terms are unchanged."
+  },
+  {
+    "mechanic": "plans.edit_answered",
+    "before": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_invalid",
+    "before": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_objected",
+    "before": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_received",
+    "before": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.edit_shirked",
+    "before": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.goal_proposed",
+    "before": null,
+    "after": {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": true,
+    "changedDays": [],
+    "cause": "S96 grammar adds this diagnostic; its count and magnitude remain exactly zero. Both full references retain the independent live controls."
+  },
+  {
+    "mechanic": "plans.goal_reached",
+    "before": {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.goal_set",
+    "before": {
+      "mechanic": "plans.goal_set",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 96,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The added received June hold creates one planning cycle on day 96. Candidates +2 magnitude and searches +6 magnitude; both count one drafting request. Other named terms are unchanged."
+  },
+  {
+    "mechanic": "plans.released",
+    "before": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.sent_back",
+    "before": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.submitted",
+    "before": {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "plans.went_ahead",
+    "before": {
+      "mechanic": "plans.went_ahead",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 97,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The added June hold draft is chosen and goes ahead on day 97; +1."
+  },
+  {
+    "mechanic": "politics.act",
+    "before": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.adjourned",
+    "before": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.answered",
+    "before": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.called",
+    "before": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.framing",
+    "before": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.front_page",
+    "before": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "after": {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.met",
+    "before": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.opened",
+    "before": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.press_silent",
+    "before": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.refused",
+    "before": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "politics.support",
+    "before": {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "after": {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.answered",
+    "before": {
+      "mechanic": "recruitment.answered",
+      "fires": 83,
+      "magnitude": 83
+    },
+    "after": {
+      "mechanic": "recruitment.answered",
+      "fires": 83,
+      "magnitude": 83
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.called",
+    "before": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "after": {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.disbanded",
+    "before": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "after": {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.lapsed",
+    "before": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.men",
+    "before": {
+      "mechanic": "recruitment.men",
+      "fires": 62,
+      "magnitude": 230700
+    },
+    "after": {
+      "mechanic": "recruitment.men",
+      "fires": 62,
+      "magnitude": 230700
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.muster_blocked",
+    "before": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.mustered",
+    "before": {
+      "mechanic": "recruitment.mustered",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "after": {
+      "mechanic": "recruitment.mustered",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.refused",
+    "before": {
+      "mechanic": "recruitment.refused",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "after": {
+      "mechanic": "recruitment.refused",
+      "fires": 13,
+      "magnitude": 13
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.renewed",
+    "before": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "recruitment.slow_walked",
+    "before": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "regions.reached_lines",
+    "before": {
+      "mechanic": "regions.reached_lines",
+      "fires": 261,
+      "magnitude": 261
+    },
+    "after": {
+      "mechanic": "regions.reached_lines",
+      "fires": 261,
+      "magnitude": 261
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "regions.self_emancipation",
+    "before": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3104,
+      "magnitude": 3104
+    },
+    "after": {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3104,
+      "magnitude": 3104
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.battle_dispatch",
+    "before": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 42,
+      "magnitude": 42
+    },
+    "after": {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 42,
+      "magnitude": 42
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.casualty_return",
+    "before": {
+      "mechanic": "reports.casualty_return",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "after": {
+      "mechanic": "reports.casualty_return",
+      "fires": 22,
+      "magnitude": 22
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.commander_lost",
+    "before": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "after": {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.filtered",
+    "before": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.governor_wire",
+    "before": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.observer_letter",
+    "before": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.pocket",
+    "before": {
+      "mechanic": "reports.pocket",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "after": {
+      "mechanic": "reports.pocket",
+      "fires": 4,
+      "magnitude": 4
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "reports.trimmed",
+    "before": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_refilled",
+    "before": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "after": {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_refused",
+    "before": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.attention_spent",
+    "before": {
+      "mechanic": "seats.attention_spent",
+      "fires": 170,
+      "magnitude": 170
+    },
+    "after": {
+      "mechanic": "seats.attention_spent",
+      "fires": 171,
+      "magnitude": 171
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 90,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The extra principal hold order on day 90 spends one additional attention."
+  },
+  {
+    "mechanic": "seats.battle_orders",
+    "before": {
+      "mechanic": "seats.battle_orders",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "after": {
+      "mechanic": "seats.battle_orders",
+      "fires": 7,
+      "magnitude": 7
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.choices",
+    "before": {
+      "mechanic": "seats.choices",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "seats.choices",
+      "fires": 6,
+      "magnitude": 6
+    },
+    "changedAggregate": true,
+    "changedDays": [
+      {
+        "day": 97,
+        "before": 0,
+        "after": 1
+      }
+    ],
+    "cause": "The added June hold draft is chosen and goes ahead on day 97; +1."
+  },
+  {
+    "mechanic": "seats.defaulted",
+    "before": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "seats.initiative",
+    "before": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "after": {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.decided",
+    "before": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "after": {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.delegated",
+    "before": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.fired",
+    "before": {
+      "mechanic": "situations.fired",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "after": {
+      "mechanic": "situations.fired",
+      "fires": 88,
+      "magnitude": 88
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.lapsed",
+    "before": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.notice_reports",
+    "before": {
+      "mechanic": "situations.notice_reports",
+      "fires": 70,
+      "magnitude": 70
+    },
+    "after": {
+      "mechanic": "situations.notice_reports",
+      "fires": 70,
+      "magnitude": 70
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.noticed",
+    "before": {
+      "mechanic": "situations.noticed",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "after": {
+      "mechanic": "situations.noticed",
+      "fires": 69,
+      "magnitude": 69
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.options_changed",
+    "before": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.orders",
+    "before": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "after": {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.policy",
+    "before": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "after": {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.policy_unpaid",
+    "before": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.proposals",
+    "before": {
+      "mechanic": "situations.proposals",
+      "fires": 73,
+      "magnitude": 637
+    },
+    "after": {
+      "mechanic": "situations.proposals",
+      "fires": 73,
+      "magnitude": 637
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.resurfaced",
+    "before": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "after": {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.staff_lines",
+    "before": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "after": {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.surfaced",
+    "before": {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "after": {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "situations.waiting",
+    "before": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.answered",
+    "before": {
+      "mechanic": "verbs.answered",
+      "fires": 143,
+      "magnitude": 143
+    },
+    "after": {
+      "mechanic": "verbs.answered",
+      "fires": 143,
+      "magnitude": 143
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.audience",
+    "before": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.consulted",
+    "before": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "after": {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.declined",
+    "before": {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "after": {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  },
+  {
+    "mechanic": "verbs.in_washington",
+    "before": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "after": {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    },
+    "changedAggregate": false,
+    "changedDays": [],
+    "cause": "unchanged"
+  }
+]

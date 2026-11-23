@@ -346,3 +346,86 @@ it('rejects unknown conditions, extra answer goals and overdeep or cyclic orders
     discretion: { condition: 'unknown', fallback: base.goal },
   } } }, 0)).toEqual(expect.arrayContaining([expect.stringContaining('unknown discretion condition')]));
 });
+
+// 0116: the response and the military reading answer different questions.
+it.each([
+  { threatened: false, regard: 'above', rung: 'comply' },
+  { threatened: true, regard: 'above', rung: 'comply' },
+  { threatened: false, regard: 'high', rung: 'exceed' },
+  { threatened: true, regard: 'high', rung: 'exceed' },
+] as const)('a complying commander proposes only with a received threat ($rung, $threatened)', ({ threatened, regard, rung }) => {
+  const fixture = indexedFixture({ persons: { a_bold: { boldness: 'low', candour: 'high', regard, values: ['caution', 'duty'] } } });
+  let start = createState(fixture, { seed: 7 });
+  start = deliverReport(start, commander, report('m.safe.route', {
+    reportSubjectId: R('a_cap'), reportDay: 0,
+    reportClaims: [{ claimKind: 'control', claimRegion: R('a_cap'), claimValue: 1000, claimToken: 'a', claimConfidence: 1000 }],
+  }, 0), NO_TRUTH);
+  // His cautious perception reads 300 as 720 against his joined 600; the
+  // route to the friendly capital still admits a feasible alternative.
+  const belief = threatened ? enemyReport(start, 'a_mid', 300) : start;
+  const letter = order(post, 'hold', 'a_mid', 'special-messenger', true);
+  const first = playDays(fixture, belief, scriptedSeats({ a: { 1: [letter] } }), 1);
+  const active = first.state.planRecords[post]!;
+  const response = first.state.orderResponses[active.planResponse]!;
+  expect(response.respActual).toBe(rung);
+  expect(response.respDeclared).toBe(rung);
+  expect(active.planGoal).toEqual(goalOf(letter.goal));
+  const papers = first.state.messagesInTransit.filter(m => m.msgReport?.reportProposal);
+  expect(papers).toHaveLength(Number(threatened));
+  if (threatened) {
+    expect(papers[0]!.msgReport).toMatchObject({ reportAnswers: active.planOrder,
+      reportProposal: { goal: { goalPosture: 'hold', goalObjective: R('a_cap') },
+        reasons: expect.arrayContaining([expect.objectContaining({ kind: 'position_threatened', condition: 'outmatched', strength: 600 })]) } });
+    expect(principalMenu(first.state, fixture).proposals).toBeUndefined();
+    const untilReceived = playDays(fixture, first.state, scriptedSeats(), 4).state;
+    expect(untilReceived.planRecords[post]!.planGoal).toEqual(goalOf(letter.goal));
+    expect(principalMenu(untilReceived, fixture).proposals).toHaveLength(1);
+  }
+  expect(replay(fixture, belief, first.log, 1).state).toEqual(first.state);
+});
+
+it('a complying reaffirmation can propose on new received knowledge without resetting the active plan', () => {
+  const fixture = indexedFixture({ persons: { a_bold: { boldness: 'low', candour: 'high', regard: 'above', values: ['caution', 'duty'] } } });
+  const start = deliverReport(createState(fixture, { seed: 7 }), commander, report('m.reaffirm.safe', {
+    reportSubjectId: R('a_cap'), reportDay: 0,
+    reportClaims: [{ claimKind: 'control', claimRegion: R('a_cap'), claimValue: 1000, claimToken: 'a', claimConfidence: 1000 }],
+  }, 0), NO_TRUTH);
+  const letter = order(post, 'hold', 'a_mid', 'special-messenger', true);
+  const original = playDays(fixture, start, scriptedSeats({ a: { 1: [letter] } }), 2).state;
+  const active = original.planRecords[post]!;
+  const prepared = enemyReport(withoutRoutineEstimate(original), 'a_mid', 300);
+  const day = prepared.stateDay + 1;
+  const played = playDays(fixture, prepared, scriptedSeats({ a: { [day]: [letter] } }), 5).state;
+  const offered = principalMenu(played, fixture).proposals?.[0];
+  expect(offered).toBeDefined();
+  expect(offered!.order).not.toBe(active.planOrder);
+  const paper = played.knowledgeBySeat[principal]!.knownReports.find(r => r.id === offered!.paper)!;
+  expect(paper.knownBody.reportProposal?.proposalBasis).toBe(active.planOrder);
+  expect(played.planRecords[post]).toMatchObject({ planOrder: active.planOrder, planSetDay: active.planSetDay,
+    planChosen: active.planChosen, planGoal: active.planGoal });
+  expect(Object.values(played.orderResponses).find(r => r.respOrder === offered!.order && r.respRole === 'addressee')?.respActual).toBe('comply');
+});
+
+it('compliance is not enough when the superior enemy is unseen or known only to the principal', () => {
+  const fixture = indexedFixture({ persons: { a_bold: { boldness: 'low', candour: 'high', regard: 'above', values: ['caution', 'duty'] } } });
+  const start = createState(fixture, { seed: 7 });
+  const letter = order(post, 'hold', 'a_mid', 'special-messenger', true);
+  for (const state of [unseenStrength(start), enemyReport(start, 'a_mid', 40000, principal)]) {
+    const played = playDays(fixture, state, scriptedSeats({ a: { 1: [letter] } }), 1).state;
+    expect(played.orderResponses[played.planRecords[post]!.planResponse]!.respActual).toBe('comply');
+    expect(played.messagesInTransit.some(m => m.msgReport?.reportProposal)).toBe(false);
+    expect(played.planRecords[post]!.planGoal).toEqual(goalOf(letter.goal));
+  }
+});
+
+it('does not propose merely because a complying commander has a different planner preference', () => {
+  const fixture = indexedFixture({ posts: { a_army: { strength: 10000 } }, persons: { a_gen: { boldness: 'low', candour: 'high', regard: 'high', values: ['duty', 'glory'] } } });
+  const letter = order('a_army', 'advance', 'b_cap', 'special-messenger', true);
+  const state = enemyReport(createState(fixture, { seed: 7 }), 'b_cap', 40000, seatIdFor(P('a_gen')));
+  const played = playDays(fixture, state, scriptedSeats({ a: { 1: [letter] } }), 3).state;
+  const plan = played.planRecords[letter.to]!;
+  expect(played.orderResponses[plan.planResponse]!.respActual).toBe('comply');
+  expect(plan.planDraft!.draftCandidates[0]!.candMethod).toBe('holding');
+  expect(played.messagesInTransit.some(m => m.msgReport?.reportProposal)).toBe(false);
+  expect(principalMenu(played, fixture).proposals).toBeUndefined();
+});

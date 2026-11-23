@@ -110,7 +110,7 @@ A field post's headquarters follow its strongest joined block; incoming blocks a
 
 **Proposals.** Any person can submit a candidate plan nobody ordered; the kernel drafts it from his traits and the map. The player adopts it by attaching it to a goal for a holder, who reads it like any order and may resent an outsider's plan. Seats still never invent a plan the kernel has not validated (0026, 0040).
 
-**Commander goal proposals and discretion (0114).** An objection or reservation
+**Commander goal proposals and discretion (0114, 0116).** An objection or reservation
 may carry a complete alternative goal drafted by the commander's planner, with
 typed reasons and the identity of the order it answers. The principal may
 accept, decline, or answer with a goal carrying discretion; each answer is an
@@ -125,6 +125,16 @@ syntax limit, not a timing, strength or compliance default. The headless
 console exposes `proposal <post> <paper> accept|decline|discretion` and
 `fallback=<condition>,<posture>,<region-or->[/...]` on goals and discretion
 answers. A player's command always addresses a person through a post.
+
+A complying commander (including one who exceeds the order) may also propose
+when his own received picture meets `turned` or `outmatched` and his planner
+prefers a different goal (0116). The typed reason names the condition, believed
+enemy, joined own strength and threshold. He continues the ordered goal while
+the proposal travels; sending it grants no authority. The existing bounded
+proposal request also applies to a reaffirmed or conflict-kept incoming goal,
+without resetting the active plan. A different planner preference alone is not
+enough. A later received order or reaffirmation can request a fresh reading;
+this does not add continuous unsolicited replanning.
 
 The plan appears as arrows. The player can:
 - **approve** it as drafted (free: 0025);

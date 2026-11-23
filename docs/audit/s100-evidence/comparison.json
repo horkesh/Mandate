@@ -1,0 +1,82 @@
+{
+  "testbed": {
+    "hashes": 120,
+    "changedHashes": 0,
+    "initialHashBefore": "ffff8656261d854e720cfd5d70d89562cc1d6cf551634e5fa603cea5481dc5ba",
+    "initialHashAfter": "ffff8656261d854e720cfd5d70d89562cc1d6cf551634e5fa603cea5481dc5ba",
+    "finalBefore": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+    "finalAfter": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+    "changedAggregateRows": 2,
+    "rowsWithDailyChanges": 0,
+    "newQuietDiagnostics": [
+      "plans.discretion_exercised",
+      "plans.goal_proposed"
+    ],
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 40,
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "changedCheckpointScores": 0
+  },
+  "union-1861": {
+    "hashes": 148,
+    "changedHashes": 112,
+    "initialHashBefore": "d3d5b0757e9e135456233db93645a841a7e69342a771de3ce95836a4d2be95af",
+    "initialHashAfter": "d3d5b0757e9e135456233db93645a841a7e69342a771de3ce95836a4d2be95af",
+    "finalBefore": "c117a46e2fb38b16118b733942baff549245e9f1512ce3cdf7e700b5209c0e08",
+    "finalAfter": "cf64a97ac3db0d3380e506885f69cbd48d67809d58f8e975991b532cbe7cc149",
+    "changedAggregateRows": 21,
+    "rowsWithDailyChanges": 17,
+    "newQuietDiagnostics": [
+      "plans.discretion_exercised",
+      "plans.goal_proposed"
+    ],
+    "rejections": 0,
+    "replay": {
+      "matches": true,
+      "firstDifferentDay": null
+    },
+    "resume": {
+      "atTurn": 60,
+      "finalHash": "cf64a97ac3db0d3380e506885f69cbd48d67809d58f8e975991b532cbe7cc149",
+      "matches": true,
+      "savedLogReplays": true
+    },
+    "changedCheckpointScores": 0
+  },
+  "coverageBefore": {
+    "representation_gap": 20,
+    "mismatch": 9,
+    "exposure_mismatch": 2,
+    "not_observed": 2
+  },
+  "coverageAfter": {
+    "representation_gap": 20,
+    "mismatch": 9,
+    "exposure_mismatch": 1,
+    "not_observed": 3
+  },
+  "C15": {
+    "id": "C15",
+    "side": "confederate",
+    "actor": "johnston_joseph_e",
+    "role": "addressee",
+    "band": "plan_objections",
+    "matter": "Keeping force at Harpers Ferry",
+    "cite": "OR-I-II:896 https://archive.org/details/cu31924077730186/page/n915/mode/1up; OR-I-II:897 https://archive.org/details/cu31924077730186/page/n916/mode/1up; OR-I-II:907 https://archive.org/details/cu31924077730186/page/n926/mode/1up; OR-I-II:908 https://archive.org/details/cu31924077730186/page/n927/mode/1up; OR-I-II:910 https://archive.org/details/cu31924077730186/page/n929/mode/1up",
+    "verdict": "not_observed",
+    "reason": "No act observed for this actor, role and represented matter.",
+    "candidates": [],
+    "matched": null
+  },
+  "rawBefore": 256,
+  "rawAfter": 258,
+  "changedResponses": 2
+}

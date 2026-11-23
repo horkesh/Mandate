@@ -1,0 +1,1038 @@
+[
+  {
+    "day": 1,
+    "before": "749d054e280499e1ff1fbbd1358dafbac72d0d1d34da7eded3fed18124054765",
+    "after": "749d054e280499e1ff1fbbd1358dafbac72d0d1d34da7eded3fed18124054765",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 2,
+    "before": "a1066579b77dbdcc86cce03f640294645eaf7e45b2cbd1cb2b7693561b0abddb",
+    "after": "a1066579b77dbdcc86cce03f640294645eaf7e45b2cbd1cb2b7693561b0abddb",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 3,
+    "before": "872205a6b071833dee5cf44bbb4cb491f1a43fc99620ffd9e275fdb8e70abdc2",
+    "after": "872205a6b071833dee5cf44bbb4cb491f1a43fc99620ffd9e275fdb8e70abdc2",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 4,
+    "before": "ea58fe4d0424cacc0928a16755c6ea7c956ef926d6f638bf80f094931987adad",
+    "after": "ea58fe4d0424cacc0928a16755c6ea7c956ef926d6f638bf80f094931987adad",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 5,
+    "before": "7ea346738d74b25575b6d231dd3c986a2323fe6719afccc90a572865e3eb1c56",
+    "after": "7ea346738d74b25575b6d231dd3c986a2323fe6719afccc90a572865e3eb1c56",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 6,
+    "before": "000e5f26d2910bf5ec39ec4276b504fd411f770df992e9d3a15a9229d4efa1ed",
+    "after": "000e5f26d2910bf5ec39ec4276b504fd411f770df992e9d3a15a9229d4efa1ed",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 7,
+    "before": "8252eca561ae3e9f72b0292e4756584adc13c569f455527b9383e3a5fd18c2f5",
+    "after": "8252eca561ae3e9f72b0292e4756584adc13c569f455527b9383e3a5fd18c2f5",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 8,
+    "before": "571ab2ecd32494cbd38cb8a802e506684f24687b1d5b02d23ecdfa8899c88b04",
+    "after": "571ab2ecd32494cbd38cb8a802e506684f24687b1d5b02d23ecdfa8899c88b04",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 9,
+    "before": "dc69f712319a4b829d7baa5e696a6788b82fa1de0e4dbec3d676b028e3cb2f2d",
+    "after": "dc69f712319a4b829d7baa5e696a6788b82fa1de0e4dbec3d676b028e3cb2f2d",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 10,
+    "before": "f213bf14b79dd819224705d7d6499e839db44037c03452d61d03f3774683f1dc",
+    "after": "f213bf14b79dd819224705d7d6499e839db44037c03452d61d03f3774683f1dc",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 11,
+    "before": "0cf0cb9f64e315e271aee588eb3ccb1db829e78d98099b587d8c844de09f07e5",
+    "after": "0cf0cb9f64e315e271aee588eb3ccb1db829e78d98099b587d8c844de09f07e5",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 12,
+    "before": "35e76ba7e489d3211507d36d3885bdb4709d97fb4177586038416b799cd7f4e1",
+    "after": "35e76ba7e489d3211507d36d3885bdb4709d97fb4177586038416b799cd7f4e1",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 13,
+    "before": "28ce29b8f96975479494c423f9c4a7bfb9d431393339ee60c774e19b71bafd91",
+    "after": "28ce29b8f96975479494c423f9c4a7bfb9d431393339ee60c774e19b71bafd91",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 14,
+    "before": "46af2d31ce1d6d3ba92f752d970c5e479884b26057b9099953ceb713e61746c5",
+    "after": "46af2d31ce1d6d3ba92f752d970c5e479884b26057b9099953ceb713e61746c5",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 15,
+    "before": "8cbc1a3fee06ea31887361623ffab045d14b3204f923e86ac5d88ba6a0b915ed",
+    "after": "8cbc1a3fee06ea31887361623ffab045d14b3204f923e86ac5d88ba6a0b915ed",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 16,
+    "before": "63efc131424fcaca61b3ac7aecc5e2379833311a93be22dab07b618934168b38",
+    "after": "63efc131424fcaca61b3ac7aecc5e2379833311a93be22dab07b618934168b38",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 17,
+    "before": "28fa44a4913ecc2a1852feda965459ec359b8dc88b08c4b32c020131a7e3c7d7",
+    "after": "28fa44a4913ecc2a1852feda965459ec359b8dc88b08c4b32c020131a7e3c7d7",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 18,
+    "before": "ead5bc85c6a915336b9e155136a6b98581676b6ba4a0ab0e765459aa1e94de60",
+    "after": "ead5bc85c6a915336b9e155136a6b98581676b6ba4a0ab0e765459aa1e94de60",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 19,
+    "before": "31e33b1f863987fe24bddb580fd79835f7734fa71b7ebac838cd57bcfde7fd61",
+    "after": "31e33b1f863987fe24bddb580fd79835f7734fa71b7ebac838cd57bcfde7fd61",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 20,
+    "before": "7ff1f7fd065ccba755fe8a5aa252b0d45f3a7bebbdb64a65b46ecb06d7996883",
+    "after": "7ff1f7fd065ccba755fe8a5aa252b0d45f3a7bebbdb64a65b46ecb06d7996883",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 21,
+    "before": "3225e09ed141e2425489bcebf10b2de60e3f538ca3f470c42914264a0ca0996a",
+    "after": "3225e09ed141e2425489bcebf10b2de60e3f538ca3f470c42914264a0ca0996a",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 22,
+    "before": "60fde3b27faa5903f9d1f851c585e072c91cef12091567bfaeb0f96a472dd791",
+    "after": "60fde3b27faa5903f9d1f851c585e072c91cef12091567bfaeb0f96a472dd791",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 23,
+    "before": "02957886f4c934d1f25341a7f36045f742722d0b401ea272f0e8e66829668090",
+    "after": "02957886f4c934d1f25341a7f36045f742722d0b401ea272f0e8e66829668090",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 24,
+    "before": "587fd1097bc3779a8f9b93b8100774f2eb250d7467ef50593fe0a68d84f3dd04",
+    "after": "587fd1097bc3779a8f9b93b8100774f2eb250d7467ef50593fe0a68d84f3dd04",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 25,
+    "before": "1bd1841adb975c5465e5d14fe07126083b873246eaaef977817728ed3ab00e99",
+    "after": "1bd1841adb975c5465e5d14fe07126083b873246eaaef977817728ed3ab00e99",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 26,
+    "before": "cad64b40184240eccb4fb83148f52f437b8f29b266465b422e3a4eacf9a191e4",
+    "after": "cad64b40184240eccb4fb83148f52f437b8f29b266465b422e3a4eacf9a191e4",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 27,
+    "before": "f2bd02f4d212fd5b5b0064c9de36a2405022723c794b461f41a84adcb069e91d",
+    "after": "f2bd02f4d212fd5b5b0064c9de36a2405022723c794b461f41a84adcb069e91d",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 28,
+    "before": "1330301bac8dd045fb7f133648cd043d33820d36dd31fd165fb36eeb1ad82216",
+    "after": "1330301bac8dd045fb7f133648cd043d33820d36dd31fd165fb36eeb1ad82216",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 29,
+    "before": "69d711d30ae51dbdc3f7620cea21d0eed2735a01e8900aa1e5dc511aed935883",
+    "after": "69d711d30ae51dbdc3f7620cea21d0eed2735a01e8900aa1e5dc511aed935883",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 30,
+    "before": "ae7141dfe1e3381b1419fa349141cbaf5150525b09479d63c40e9922029b30be",
+    "after": "ae7141dfe1e3381b1419fa349141cbaf5150525b09479d63c40e9922029b30be",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 31,
+    "before": "6c476b2c1521e6cf60d14225354f037948010cf2addb32bb65349929a7371096",
+    "after": "6c476b2c1521e6cf60d14225354f037948010cf2addb32bb65349929a7371096",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 32,
+    "before": "9cd42f6481807bda9d89b097291de90df8a9c3ed3c772bb3330e251c6889c03d",
+    "after": "9cd42f6481807bda9d89b097291de90df8a9c3ed3c772bb3330e251c6889c03d",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 33,
+    "before": "7d407cb83b67141375dec2e7cc9c5b30e232869e1b2bd79322be0b87052bd51e",
+    "after": "7d407cb83b67141375dec2e7cc9c5b30e232869e1b2bd79322be0b87052bd51e",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 34,
+    "before": "8e4ec20d2a882c983718bf5d04eead934e7a07b21b22a9999ce60b41dc83c711",
+    "after": "8e4ec20d2a882c983718bf5d04eead934e7a07b21b22a9999ce60b41dc83c711",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 35,
+    "before": "18ed486a6897050f670ad38c531f535902aa9e9a303e0a594d819588d1a1b203",
+    "after": "18ed486a6897050f670ad38c531f535902aa9e9a303e0a594d819588d1a1b203",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 36,
+    "before": "b828d43ed8f776e2a566d000b9c6f9ac3fac0b62caed629925b96c590fbaf58e",
+    "after": "b828d43ed8f776e2a566d000b9c6f9ac3fac0b62caed629925b96c590fbaf58e",
+    "changed": false,
+    "cause": "unchanged"
+  },
+  {
+    "day": 37,
+    "before": "1b2a05bb92d443c1cd8ea727624d10ee178b0cab2fcd1a6c8ed47e5549c1ec60",
+    "after": "90f8200c592cf4a31c4ed0359fe0d38bc5928e7e3ce5752d6b1601cc0214844d",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 38,
+    "before": "356319196fbc6112a7d5831790daf2aa4a66ecd9e0cb18db287e636ba81e9c1d",
+    "after": "96d4e06bf2ef901482821cd26b3a83277396c1c0e5b153ec7292725ed92f3349",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 39,
+    "before": "48c9bfcf15fbf9d50fe378ae823a87b8d97ca7f87897054c2ec24fa82040d28a",
+    "after": "6d5648eb413be46b2c7823fe2ee331ebeb2a3bd0766ffe555a25be3c3060b596",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 40,
+    "before": "23a1e4d000cf4e5c1c4b0b502bbe0a17f29e5c3ca7b20f694599daa32edf069d",
+    "after": "f491b00e83055d3812843fd1f8ffb62148d35b9459f01997ba7a45cd340de3c0",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 41,
+    "before": "d4ab28196b577899130b9756188258eed749af2f4d8a7360712947d203054dcd",
+    "after": "5f904e094f2edd77f83786be999a325e5f93a5e5a84f6640655e1eeb2ab76d14",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 42,
+    "before": "df77ee62e6bb8917a4b51cfac1b1757f0ad8867f4a658f5549f4fce8ea0c9bf7",
+    "after": "4af9bfe164320a306be61498ec4e2bb350c55c9132e1931898505d45fa1346e0",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 43,
+    "before": "5f4067fef436fd65b1699367e3709e1534a4d68befb8d082b0ec1eba734843c2",
+    "after": "655f94e379721654b23104452c1edef5124a8628d05eba072f7d0f579e2c5c89",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 44,
+    "before": "3cb1220bd773c8030ada88acc4a260ce03d4bd219fb79c10fc15ac4bb3f41928",
+    "after": "77eb808a20ad1c8e8e1137d136accd515d69a3d26b92bac17eb31407c5fa2b65",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 45,
+    "before": "7568d243908adf0ec9de55078d3a407c2724fa25e0b674d8ef37b1dbff4c873e",
+    "after": "2f7f9c5a849da8fbc4177067b1b1711897751905eb7ef541c000302b37b1319b",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 46,
+    "before": "263b17915af121c307ccbdadc9161c8a8e36caaa0548c495abfcb00198c2780a",
+    "after": "ce67f35a1496bc4ec31ca721558e0b3efba4f67c40cb737a8c67b8ad608698bc",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 47,
+    "before": "7aad3e4a3382bcf14be243b2913244f52f518980bc9916015cef7dcb2b36a683",
+    "after": "30ab1f97c5de26e3b53868b06e69ea2c5f8bd961a1640c0e56d82243681c37b2",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 48,
+    "before": "0c332b73f9fd09ed0379f163dad156c26a8cfc128c96ed56601f6c61c05e6ab3",
+    "after": "49f08b0cb2cc47b1f1e25bc198aa78b4e9cbffef247b654acad833c4003fd11e",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 49,
+    "before": "9b67069504cc8b34c87d37438dd30d3725c9925499b466eb5c9ff46ffd741828",
+    "after": "d364c2a5ceb8a375f93f74b02a42bc19a4b3d07666ea0fb5933201a7b9335798",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 50,
+    "before": "bc88311d80faa3ee5ffdcf6bbcb61deffc859f3fdd0d8f99c872731b23102539",
+    "after": "07014f0e81540647d1b0a6a38617dd1583956a47e86fd133fa356c0e1926cabf",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 51,
+    "before": "58bc053ec1cb65948e076315a76510bd04f5cae18f8a990bba9f9065b7719360",
+    "after": "3690d443e41832ae5f8ee33430d274751cc0b2494195607dc492311aef999a3e",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 52,
+    "before": "b3df110e7544f66f354ee9da7bae866cf51b0538f3dc479b0953949861a37d1b",
+    "after": "6b6064b5f39717eaf2ecacbc6cbc79efe6e9f2f66110d7eaaf4f8869bad56226",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 53,
+    "before": "2b581473ba4985435131389cb87cd1e17ee69df44883110c28dbf223f5f595cd",
+    "after": "89d8278b934938bf15da7ce8ba36a8d720b054fdb828cb1845b40da535dec89c",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 54,
+    "before": "7ebb42c03ccf886138a3f8840d20f5477ae6ac664c724a6b7f48ab3bcd5895be",
+    "after": "d1019986ac4a8af5e42b88dfe4954aac4562ec423d2cfb4c929a1bdff1788f68",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 55,
+    "before": "9f4e87beb3be7e3d1bd2f12caf3b84e09068e9e6d369405dac14fb5eb5b7d7e5",
+    "after": "96cfe836af4d1beea1ed580b101f03706fa025d4664b3f733d97605ef6788b7a",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 56,
+    "before": "396caa0983808c9a215983fe8a032db13095361469fec6604fea6657234533d9",
+    "after": "b29681a2b19f3f3a73080c761ee36f491b86755f9018d67b9151d2501ea5538d",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 57,
+    "before": "92be6773756413ee86785ddce708a11fb7cfeea39bf21bf0ae0c37de56ab2234",
+    "after": "8edb95a2e3132a8beea169c0446ccb3f97762e8b6c1a85308b49dbd95302d14c",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 58,
+    "before": "7179cddbe4adc2ea1dd44b3277e56183a9468fc1ea3bac6b95e6d47544a8ddd8",
+    "after": "977e56f0f7a1aa8ae2dc5ec6e049826fb062301c5f762fc2a0236b803f99c3fb",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 59,
+    "before": "bcfc4c90a1567ef1a1dcee498512c90a396d3b68f623db461d8c652e7489f3c4",
+    "after": "425a9746dd02f0d9a4622c123389858c0d54a53c19976d93e1cda400db06ea0e",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 60,
+    "before": "2947459a9161f13a667da039700211318704c148f13fb0d6a103b8099f363e3f",
+    "after": "b0b6ca00903cc3b720745f78d189fbebc71a08db65633ac0eb2489b9b68839c8",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 61,
+    "before": "b03e800226a26c9591b1e621090a2d93d3e6e7b5a7cadb9b578bee5b3f3dd4d9",
+    "after": "e31d8ddf4787836fcc60fd920b95d2fea5517efd1541c9c26e3863047fe7e3e0",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 62,
+    "before": "980d731086c28371b7f969b31d3fa439b1e555ca07ddec4618b0b933d9f9e46d",
+    "after": "b3bf5e33c2523132f37de5b4e45a459470c7efe62450e3f92aab9bafa282879a",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 63,
+    "before": "e4a884cb40ed196164b9147c35e6c8aaf3c87701e893d73b9abac3051a0bb1fb",
+    "after": "80787fbb84d121a971fd5bd3939d91b0083c188fe956fb3940e4200cfdd4fd4b",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 64,
+    "before": "20876a6cfa46ae0662c9bb4f27862ee3306eac7df72e9bce934a181f77cf054c",
+    "after": "91ef8b27fb8fed9333f49c771d55183f62ea7e5cbdcb75467f2de8552c756f13",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 65,
+    "before": "a64b284f251b69afddbc6ddf5dfe26cfc1e78e2c0195762442969b0ad2d8fa58",
+    "after": "bd05d554b205c60f5f64b1a0fd85914f11af1b5ff369a790abdf2ccd85709f5c",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 66,
+    "before": "2c075d630b1a3362f5a54ece398fc1ad0d8c66f9fdc58c3a8dfd8dd3280f6c8f",
+    "after": "97551b50ccffe5293d2db0ece06140e30ce9c944c44cbf7d3e22fb2bb4d4665d",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 67,
+    "before": "9a8d420401a207255b775e3ebdd4a52061fd9e5c88c1cd7dc25496bcfa00bb1f",
+    "after": "403fd59db62bb8104415dba83921eb9afd8334f9dee6e26ae274a236665accd3",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 68,
+    "before": "5266cbd41c8268aa5b995a5391753b3a675d5eadf39be3a46609d23c7b5d8b10",
+    "after": "0d8dd09194c01c85d4f5cfc1e6f2941fefff9ebb599677a7494ec01d3820219f",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 69,
+    "before": "b03f069261ee29099cb53b69ad2bb771ece0cd6856de74b8c90b0ea7bcbdc982",
+    "after": "5deb915db8f70ad4f869a8b159332b1fc0a0c34421573ee0d3a9ede3fa32ecac",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 70,
+    "before": "ac1b90893a5ef7d8d7e7371ccc50eb9a7649d59503963ebbd1773f6ef87e5b12",
+    "after": "b478e78cdf791fcffca15f60e1ad385eb7e2d1e4022556499c2fdde945b5fe23",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 71,
+    "before": "735b8be6f167b95deadd8ce9ca510e7c225b0a357424cacb77507d753482fdb6",
+    "after": "3c8f8b061721fa7c9fb2d2e8ac820bfc15d9cfe2f21993022840dd04d5cf62b5",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 72,
+    "before": "638357deeb71c54837ac86ebdc730e1e6373fe6ef467615912bca7d294ed6784",
+    "after": "118f4a14a302deb8415b1e5f082218bb4691b8a93047b56e508ffb45d049747a",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 73,
+    "before": "a3d71d7f4d8988bd90bb78d38a417b9d25a4f1f80a5c7944bcbdd0f0368d8c02",
+    "after": "298dc178c2447f5696a330d143c4e2ef41df3f41fee8ee121639c5be68aef256",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 74,
+    "before": "287821d23d3bae5b3b1946d28436fcda63ff4479c10f6db9248a4098e8fc9e3a",
+    "after": "8cb554bd9132b48a8bdfd4d08b0d11cc401bbbc23daec3f491dbeb5f5f5fd855",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 75,
+    "before": "33da01180e7fa4157636e082af9625fee9f2386fb34118fa3d7bcd439688d689",
+    "after": "ee291ab7e6902315f0a78dbba91fc929cc59f4d56b2b304293d33a52c6718c2d",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 76,
+    "before": "b1fcdd5cd08f1fb736d15561602659c515e95c6a4c433710df92d87f93cbf1ac",
+    "after": "d874d30f9a98f4ae401b450040f660a81f9a62393b21291b7979faf3b5ed85c6",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 77,
+    "before": "151f9c19823e93aa6a80e00355728e16e88f12b5d49d3c4ef81cf5c3826ab6cf",
+    "after": "cc91d89987a9f2efb568366ba18fae9f5686510449a3e9fca8e3f64121a4ef69",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 78,
+    "before": "7b8517336b866c437392f7ea22db507ac8cc646814bc8b4f5fda70a8f9797545",
+    "after": "b5d436ec57f9a5da9d5122a200069572cc1235b5975e3df5f6ab63d36a6fe363",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 79,
+    "before": "c58bdd410e765cae3463028ddecf81e4f5129c312228578382c3bde1ee91df40",
+    "after": "087b4c5b4bb2b3394b2de9bc23cbac876c51c5d17b790dac881e73fce20dc837",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 80,
+    "before": "6efafe27d1f2f0145aafb8341cd22070edd8b62f3a9872e1dd852c8f4018e1a8",
+    "after": "5ab3c7d19354841de3d7dcec2b11b1ab2b127aae533e645a674719a854be9826",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 81,
+    "before": "bdb13a49a2c72c1b03cb60b36d5c0b82a913157c1c14204a435e19896fdf40ff",
+    "after": "7e0984c9e59f665a770924f1347652cadf67f981b1535bbdb144af9a87dac8bd",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 82,
+    "before": "ec2c161ffd0eb2f8aa5d4786109a5f622cb0df0fc48215a8386ca82d469e4f98",
+    "after": "6c4f725aa1c2c58738f9f3fa7882b386c978ebac4ad5578ebf1ea74bd6ec669c",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 83,
+    "before": "843a17376a0aa234cd34ebb9137760660ac53f4ba0993b752710b032ed39a11f",
+    "after": "ddc4c2e298717738d8e08b6df3c35eda2241618f7ebfe830c1898bc8f206a112",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 84,
+    "before": "94856f11d00ee8786de3f1f31cad265fcd12996b67eee0b43b0a507bcdd96b08",
+    "after": "fea80a104c3dbdae4c4a5f5bee4a594611e3c2d8ea787ed616ae20460554c31a",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 85,
+    "before": "ab96825b2fc374e32f03b9d97e3f197afef524a2675f13aacb35844bc766cfb7",
+    "after": "5a5ccca3c64c012795eec6535d81254fb5590bede03c2edf6e2a49471657b247",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 86,
+    "before": "51285fff3568674e22391f96a6fa8fb93224d4ca80d6dd099473e62dbc91f4ea",
+    "after": "bdd690939769e068c2188ecfca7c85d5e5e4214e0a3437bb2d4dc0cc514a855b",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 87,
+    "before": "48d02cad7ac5564e65972eaf678009b0876afebe25c13a392583b3c2e9e816c1",
+    "after": "9b02e8944bbb87b86937dc6d1fff4e27a92e6d4d4b42b06d80018b0a676833a6",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 88,
+    "before": "0fcdbf6809291304d4fea511446ef1d6ec93e8b5d7984c1a9a4639c03c9edbc4",
+    "after": "411034fe674a9337632f7ad58b7d1cd61b36be80b1152b907db50dc6f99f4f81",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 89,
+    "before": "279e06b554de84dc64860fd6fc18fa5589fecc59a0d19498184de8410cbddc64",
+    "after": "0b620e27ba042a1f8f471dfb7526dcf5a41b350402778b6a59037de48a2628cc",
+    "changed": true,
+    "cause": "S96 adds sender-owned sentReaffirms metadata for unchanged repeated goals from day 37; no initial State or checkpoint score changes."
+  },
+  {
+    "day": 90,
+    "before": "a7b7b4cf8fade73b90b98679cb5e5c149c65dc63d38a92a5ca27248262197458",
+    "after": "2816ba09d0d8e53ef77bd0a54608550babb8b9fa41fc15ff98e027359bf18842",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 91,
+    "before": "a0679b319821c8540133b300f94f6a0f7e6a470774c87e4dee38ada5cfdbf665",
+    "after": "4569152a7334b980f025a961ba977c611883be45626c6c6fd9780a5ed7add84b",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 92,
+    "before": "9ac49cd9fc9a65e29593274e1256e5aa7f49babc5497a4cf8d6b2dd5c816d725",
+    "after": "b69e4a7800560be02fd0bd74a6efd8cd97d4a8ddf5c68e597518a72062f83f68",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 93,
+    "before": "764fe589df6f9be3fcc782f2a37ad46f61c59030cfa7f06f8802257284df92e8",
+    "after": "2be654fb126af940cd9e2e9f6d5b2df37be29e818d9939adffa4358090fb80fc",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 94,
+    "before": "18b3f9022514ab946531d48e20b97bbb4e940374dc8ff7427bda996bf1c7f3cf",
+    "after": "f86984ad596728d3dd1de861e9385bf14f95102b1d7654f1b26430bbfb34df95",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 95,
+    "before": "f820c935963db8454d271bd57492c7db8e6b072eedd356be93d013dedcaadbd1",
+    "after": "c663a6a42146567e0d9b90fac5a8c29a6b921ef80194c1b0b0a5d15a6ead49b3",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 96,
+    "before": "8b12c572030b4ebe54fed1be8a7d263c025b617b625d58cfa659fcfdff04fb41",
+    "after": "705a487c0ba4a6ac82b95667c9a36357136ba55b2d865f16eefec391148a6730",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 97,
+    "before": "58cb916b2cec9270c5e7a9619873283283da913220907f6e39a8d270d2c40c66",
+    "after": "0aa48b75b922b50d9e0af55fa71dea38135e7e767f38aaf25c1bf7d8605b48de",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 98,
+    "before": "8f65df87a8b619e39c7c99fe1f4c2ceb1c6aed4c44da48e3354f1f4c728b75bc",
+    "after": "afccb649543e95aa8f1abe9d4dc134a1268b995ee9ca5590ffc844c6d5eeefd2",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 99,
+    "before": "db01a01bc6dc77d617bc09101d41ccd0be84f44a62e99bb5a04fbf5096daaf70",
+    "after": "c1d8bfd3388f638222b7ef7a1a56a9f0efe5e9aaa0eb339c8345ef42feeda3a0",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 100,
+    "before": "26cf263757658a4e79103bb179e7060ce6bccf6ed016b655efa8cdd02ec00b8c",
+    "after": "846ea4fc768c6ef8b400326f0955379739240ca48d20cc4d9dea43e9e6937fc6",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 101,
+    "before": "93ade849ea23e79df27bb61991baa9995a1051dce429e003b93cecbff50ed569",
+    "after": "de872f8d57c67420e509e50d45125b8022157332070a3b27e9213627cf0a7067",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 102,
+    "before": "a6b620e8fe5d4a061be5463046bfe1c38b926d80608a8f7b738ddefe63281026",
+    "after": "fbf3b176575692bb10cb940d835f177615f1550bf7255274ad801f353fa7be67",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 103,
+    "before": "9b651b31d5b1da7cb094c95e0c48a126fa9b184a3afd17089f8036757c5715c0",
+    "after": "9732131f7f355f5a412bc049ac0f8745596c4cb6e58d94da5c7505e92bc64253",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 104,
+    "before": "494da815591a9ffca7f650b04fbd4e068f63bf864299da18aef584071501d2d8",
+    "after": "46e57d05f0812bf21d08cd771def500cc35f8fcf5a730f615f533711c12e12b0",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 105,
+    "before": "148c67458b4fbaed63ee9c48633b64a102fef8a14bcdda96e4f3ed5de75807c8",
+    "after": "e4b6daf020df14db9c25de6b67895c6506a8d4ce9fd4dd5db372d79615e74d0f",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 106,
+    "before": "227d4da0ddda47978e657d8455a6d79a9421ea4f13b0727bdb73a2bc74ee63a1",
+    "after": "d16c4219d594627c7ef49bcb3cb31668f97bbff504d707edd9e518e100814e61",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 107,
+    "before": "29140b95b31d1ef611c932341388c78d5d4d1173ff50ccab079fe04093f38357",
+    "after": "686c600d84097f1e563b74905f46c2ad9cbea4ef25ea2aed10581622e28b0acb",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 108,
+    "before": "a237017e7a566643ea880e40d1b712f995c486b13fa3b0b2f50cb6c394fb659d",
+    "after": "0ad5fd0fac70e06daabf8f5290d4fc35a87f17405c4ca2f6773352352df3f2f6",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 109,
+    "before": "5ec724272cc003c69b229bc6f2b41747091cbc8c718b7e4da09c1a2877772d25",
+    "after": "ee415a5c170fd4994d657662b4d074b026c35cb57141d74820ac1e713eeb7413",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 110,
+    "before": "e36ec0f489fac33506ed1bfe79cbec41b7f69be03356f1a4ae5c60db307224f0",
+    "after": "88c6e0ec1cfae3433cf64edb05e83e425a6d88da0289a96ab400efe1afa9f68a",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 111,
+    "before": "062b01c7857dbc62b20cb06d3cfa8d202b20cd96394bfd73abfee5ff33982760",
+    "after": "4b714a39f7c4d367bac7f18cee1035eec1cba139da44776c28898822c1a8aa47",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 112,
+    "before": "89b26302e3b3bcc8d5ec3ad3a7740bcd102573cf359f22d586d9fe511fa0c2f5",
+    "after": "b1b37db93d5956993245b36c271b9718ccc0a490842df0c49be58ba6645882e0",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 113,
+    "before": "d0ce04364cbec4c36012caaa0ca153e55b0a23b14ca8bad10287a25a8a6df696",
+    "after": "99efce1666b3257af26f2cc897787514ab9cb24624f66cc9e9e853f54672cca1",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 114,
+    "before": "9f50674a45d1a18d48b4d85e505ff87f0d4f5ab7f2773618ab1890c8a77a5116",
+    "after": "b1d13e9b5618ea3f0c9dae6c1e33e49b4eea93364300075e38cac8c6e54c039b",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 115,
+    "before": "8cdc245e4e446bec5ef9e6dcc00dff1455c519c626cde006650d647db14a56fd",
+    "after": "01041e08c0a37e3ee9da68cbb54195d674c0ea988e8c731a9f0fee4c029d8124",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 116,
+    "before": "fe3cbebef5a5df9658ce65cd406b169256169fc2811d0fa863d4ce7630183ee9",
+    "after": "017ff676bfe9ba7ce75fba2d400a38aaa56314af3c46efa7041075167b1fcf02",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 117,
+    "before": "bbfa3ebf300b8a218ab5b66782a46105db9da7a0cf2f19b52f768d0945de76cd",
+    "after": "92aace5ef0b29dc09afa3a3ca339a1107c1ffdd5c02a6e155c7db87ce1740b90",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 118,
+    "before": "f2896a3241c3a236a91ce836c1351f2a30e1da9b55d5d7a2a8ba000c24b0b2b0",
+    "after": "ae9cf295e1e86eacf6861c9c773f277987c493521d069c343520ef8d88a3d151",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 119,
+    "before": "2f11b9e142b30f1d80a0e9fd2b43625a9140587b592d006448e7d530c3dbaf9f",
+    "after": "843f96def96ef370ec84d418bc1ffb7247c3889a96b7c052950e50315a163b03",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 120,
+    "before": "9e09f153ceaf752b3f58e1432adb3615c1d3fc47889861837b57c621a306e809",
+    "after": "7b43869ae793a48c8f1c5b1d9aecfc5cad5a8685bd0463baf93c8a2cc1025ecf",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 121,
+    "before": "43cec30263b4f176b680d7588b54812f0eda67711b93665a9905fcd2f6590169",
+    "after": "656c820a863d6089fb1a45b4658c6fccb45a466cd3e4ff0c691eacac7b500aa1",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 122,
+    "before": "8fe7d8337c4021db256d57c9822a4d770b82cf93b5f1cc7f0500d14618854efd",
+    "after": "6f8bb600067281bbc43949cf37c53ab276d4787fd4deb0022ea571b0e1be7171",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 123,
+    "before": "9f471b510864e86f7bd4df0e0501ac25c23ad8bf621b49a42bf8c6aa2734c7f2",
+    "after": "7849c82fd47466df662e36f4cfc64bc9a1252f9e299ee8a1631dbf7d48487308",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 124,
+    "before": "1405fb63690e09e569d92282d0c5c4c0d1ba2bf61e385f1cce15eb9e4edb1a62",
+    "after": "38308b36be5b3357e12a5fe0753042b6f9d6cb8e2fe89aea1f17ed7164e49bbc",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 125,
+    "before": "b62d5ca1f71e9a03da71331fd4e2252f2bb600638d7eef486c7a183d8b8614e3",
+    "after": "faeac4451ba845de509b5cf3d82e14954047cbd483eb3d6ee49f3b71beac3163",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 126,
+    "before": "291cf5dcf8252bf87dfd8f485b356ab66269770f41bc672574e86740fedca1d5",
+    "after": "135c78e139499cc92241d975527e34137c38ffb738894f678eb6cd429685ce73",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 127,
+    "before": "45abf55d7d718768961a6afeacf15060cfd4e0773c7d68cc1fa71a9e52ccc07e",
+    "after": "063e2efda30d8d549b3740270a30f4ea8491b1c2c95b22a33be6e4415054247a",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 128,
+    "before": "a6afcebd29c27f09068007cbc1e265dea966ee51e2b61623c28fbfd353aeb08b",
+    "after": "9a99bf09dfd0ea87fbb22ad1cda4add4f129987ad627628cf15333297843bce9",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 129,
+    "before": "58b016c00686c3ef0a06f1aa579c7a81d6b35a0dc9e61368e03adcd5af2c0606",
+    "after": "c0e27d831f6467f573627e91b5371a5156a0c3ec2635cd96e585599b1b0ad00c",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 130,
+    "before": "92b9793b421509cf057dbd2b7629a0a0dad1e4b49ed5a3f9db9a802073c4fbd1",
+    "after": "d992139d86ce9c3f48fba00e306f7d79c6a2a720f000c59582a4529abf15eb8f",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 131,
+    "before": "934d54df16ab238b2ec2548774238ee75b035d849a922c7ae93befd911e3ca27",
+    "after": "bf5ff86309e8a1392d26927e17b03ede88863fde052bccb6b69d81fef76d4ae9",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 132,
+    "before": "87ae18e1a94795742af2fd4ffb63522af5f311e8c4caeb7bcbd0c4ce31f8ecaa",
+    "after": "19922b0251b877b9f1193a2fdf96636e94057545e0938c69e10a515443099d45",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 133,
+    "before": "3c94d5141f2f52b97c3e528bce8d686eb6861b8aee55e5bba1434cb1f6b27a23",
+    "after": "dc370dee8bbf63c7b9a46c7793113835bd5eae27d295202070b72e0cf9bbf6e6",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 134,
+    "before": "ac6e2d0ccbf80886dd588529871c9335b55cb85cfd953ecd56bffcad536b660e",
+    "after": "753bd71613918742434ad426a93987c6e5fe3d2d7a9843d0b0bbec941e396ce9",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 135,
+    "before": "8d2d3671a72591d687d1fa9ae36f3f317d287fdb7936c122e1b935a26fac9907",
+    "after": "18e2d494a6d3f9b323956bfe56fc05f57e2c97d0d78a78815d93493a900a217c",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 136,
+    "before": "df06b41a006e4a3f6a90877b6e8c116cbb3344fd9601497a8bbe7583b0592db4",
+    "after": "6d766a54263dcf6742a5993bc6a3073092489ae67c20968f409ce560a90283e1",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 137,
+    "before": "8918cd06f3eae4713b917aa88fb71809e1fb8880434099910c30e6b31e4a2ed9",
+    "after": "20dc7e8f6c7288ce700cb212e66f8028d95e3558c39b2c03c342afeb06de6fb9",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 138,
+    "before": "0b99c9a553bce6c5ea84f443faad2e19fe15e774d81f5e6feb66f64a09e4811a",
+    "after": "8ce7cbd3b9dfa0fe24e82ac76198a52d1ba1ab16201475fa718955fa0b1ea2f1",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 139,
+    "before": "e42bb73aad88565cddfc6ce9a7fd5a19e093f8a1f31694db5b94273fbe9d7c81",
+    "after": "039bfaa7fe03afb1a77cc1f81c59eef3a5eddfd24b54f08372e1a99da7361322",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 140,
+    "before": "cfb4952a4962fb96b817d83b2b727dd4c0002454179eb0ad2f9ed40991c605d0",
+    "after": "ef12a98fd07e6449e9a8a11691d2d55a9ca795f3776da3a0873c6c24412fb98d",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 141,
+    "before": "12fcccf54feabd227f2f96c274f66f2defa5b7f16fa9a3e056ca40406d47841f",
+    "after": "b3b4890e1fa58ab8e25509a50d0f0a96ab48cf0a143fecdbb2cdde92fb198ef9",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 142,
+    "before": "c185bc6e188286beb795922789f89e332b94f0ce1448268f05e288dae1cb65a7",
+    "after": "8889221ebd64244973fa093b806bcbed711bd49815b0a42b44208aa5b29bfb36",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 143,
+    "before": "55be7f2a1dbdbad272effc655de537aa0cd2714e6d35a3bca60f89adf335a136",
+    "after": "5cb39f3752afac7916a8302a709f34b1e5c9efb23b94e3033aff582ea9ab031c",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 144,
+    "before": "03d06decbfba9fb69fabe14a27dcb593ec92d31d4defea0fbcc649b51b666b25",
+    "after": "20c5ccf9bcf1ec72a77d56efd5b23bf31387cf08ff85834790e076f7635227c4",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 145,
+    "before": "1b96df9545dc94c49be7d0e7cd6f7b767b7bc6072914c75c8bffc0aea06724ee",
+    "after": "f89ee014ad83f5c798c49636064f86fa73cb39d792e9af5becc444def2185066",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 146,
+    "before": "5008678b5643624cac66d83354110a2ac762044c89f88a797f77392789505d42",
+    "after": "6c429591d57213362cb1e20ab1a945fbc07eb1cbab8f36b971f80b8e6944d28f",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 147,
+    "before": "3a5429d344b41838e989dba441e4e77204f9b114f2b56efaa3a0fdc13eca0f06",
+    "after": "7928912a1867add46c1517cba2df5e0b79ff9ede8947e96b78b019fe29e76790",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  },
+  {
+    "day": 148,
+    "before": "c117a46e2fb38b16118b733942baff549245e9f1512ce3cdf7e700b5209c0e08",
+    "after": "cf64a97ac3db0d3380e506885f69cbd48d67809d58f8e975991b532cbe7cc149",
+    "changed": true,
+    "cause": "S96 sender-owned reaffirmation/doctrine bookkeeping persists; from day 90 the additional sourced June hold, its response, plan, operation, works and correspondence also enter State. The conditional July relief goal is received on day 141. S98 cast remains exact; 0116 produces no proposal in this captured run."
+  }
+]

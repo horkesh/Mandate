@@ -1,0 +1,18 @@
+{
+  "branch": "sprint/july",
+  "merge": "87d56665d860339fa7bf0ed84bbc7b1ddf8c729e",
+  "namedDiscretionParentRetained": true,
+  "unchangedHook": true,
+  "S98CIAndCastAndProductionSourcesPreserved": true,
+  "WorldOnlyRuleSeatsChanged": true,
+  "ruleSeatsExactS96": true,
+  "packOnlyRuleSeatsChanged": true,
+  "registerRowsSourcesFactsPreserved": true,
+  "priorBandRecords": 154,
+  "exactS96QuietRows": 4,
+  "positiveIntegrationBandReviews": 7,
+  "116Verbatim": true,
+  "proposalTests": "26 cases plus 18 reaffirmation cases; paired comply/exceed, received threat, own-knowledge controls, difference-only rejection, correlated reaffirmation, unchanged goal and replay",
+  "referenceCorrectionReuse": "The no-positive-received-claim guard repairs only needless pending requests. Both retained references have zero proposals, zero switches, zero draft deferrals; all ordered full-reference goals name an objective and already require their draft. With no positive enemy belief, preferableGoal had no alternative and zero extra searches. No dedicated simulation is repeated; the binding done run must establish exact non-clock equality to the capture.",
+  "formalReviewDeferred": true
+}

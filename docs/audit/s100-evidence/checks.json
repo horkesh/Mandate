@@ -1,0 +1,279 @@
+{
+  "install": {
+    "exit": 0,
+    "seconds": 15.862,
+    "args": [
+      "npm.cmd",
+      "ci"
+    ]
+  },
+  "merge": {
+    "exit": 1,
+    "seconds": 0.36,
+    "args": [
+      "git",
+      "merge",
+      "--no-commit",
+      "sprint/discretion"
+    ]
+  },
+  "merge-focused": {
+    "exit": 0,
+    "seconds": 2.077,
+    "args": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s96-discretion.test.ts",
+      "packages/kernel/test/seat-opening.test.ts",
+      "packages/cli/test/goal-proposal-observer.test.ts",
+      "packs/union-1861/test/discretion-chain.test.ts",
+      "tools/test/s96-quiet-transitions.test.ts",
+      "tools/test/s98-quiet-transitions.test.ts"
+    ]
+  },
+  "merge-opening": {
+    "exit": 0,
+    "seconds": 6.614,
+    "args": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/opening-pack.test.ts",
+      "tools/test/liveness-causes.test.ts",
+      "tools/test/staged-check.test.ts",
+      "-t",
+      "opening|exact|staged|history"
+    ]
+  },
+  "merge-generate": {
+    "exit": 0,
+    "seconds": 2.044,
+    "args": [
+      "npm.cmd",
+      "run",
+      "pack:generate",
+      "--",
+      "union-1861"
+    ]
+  },
+  "merge-band-proof": {
+    "exit": 0,
+    "seconds": 8.05,
+    "args": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/cli/test/liveness-gate.test.ts",
+      "-t",
+      "union-1861, war by decision"
+    ]
+  },
+  "merge-rules-final": {
+    "exit": 0,
+    "seconds": 2.203,
+    "args": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ]
+  },
+  "merge-boundary-final": {
+    "exit": 0,
+    "seconds": 0.606,
+    "args": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ]
+  },
+  "merge-decisions-final": {
+    "exit": 0,
+    "seconds": 0.629,
+    "args": [
+      "npm.cmd",
+      "run",
+      "check:decisions"
+    ]
+  },
+  "merge-licences": {
+    "exit": 0,
+    "seconds": 0.605,
+    "args": [
+      "npm.cmd",
+      "run",
+      "check:licences"
+    ]
+  },
+  "commit-merge": {
+    "exit": 1,
+    "seconds": 205.694,
+    "args": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s100/commit-merge.txt"
+    ]
+  },
+  "commit-merge-corrected": {
+    "exit": 0,
+    "seconds": 202.579,
+    "args": [
+      "git",
+      "commit",
+      "-F",
+      "runs/s100/commit-merge.txt"
+    ]
+  },
+  "trigger-red-fixture-corrected": {
+    "exit": 1,
+    "seconds": 1.041,
+    "args": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s96-discretion.test.ts",
+      "-t",
+      "complying commander|compliance is not enough|different planner preference"
+    ]
+  },
+  "trigger-red-final": {
+    "exit": 1,
+    "seconds": 1.019,
+    "args": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s96-discretion.test.ts",
+      "-t",
+      "complying commander|compliance is not enough|different planner preference"
+    ]
+  },
+  "trigger-green-final": {
+    "exit": 0,
+    "seconds": 1.333,
+    "args": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s96-discretion.test.ts",
+      "packages/kernel/test/opening-pack.test.ts",
+      "packages/cli/test/goal-proposal-observer.test.ts",
+      "tools/test/liveness-causes.test.ts"
+    ]
+  },
+  "trigger-pairs-final": {
+    "exit": 0,
+    "seconds": 1.444,
+    "args": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s96-discretion.test.ts"
+    ]
+  },
+  "smoke": {
+    "exit": 0,
+    "seconds": 5.135,
+    "args": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s100/references.ts",
+      "--smoke"
+    ]
+  },
+  "references": {
+    "exit": 0,
+    "seconds": 62.29,
+    "args": [
+      "node",
+      "--import",
+      "tsx",
+      "runs/s100/references.ts"
+    ]
+  },
+  "standing-final": {
+    "exit": 1,
+    "seconds": 162.598,
+    "args": [
+      "npm.cmd",
+      "run",
+      "check"
+    ]
+  },
+  "standing-corrected": {
+    "exit": 0,
+    "seconds": 164.077,
+    "args": [
+      "npm.cmd",
+      "run",
+      "check"
+    ]
+  },
+  "correction-proof": {
+    "exit": 0,
+    "seconds": 1.409,
+    "args": [
+      "node",
+      "node_modules/vitest/vitest.mjs",
+      "run",
+      "packages/kernel/test/s51-reaffirmation.test.ts",
+      "packages/kernel/test/s96-discretion.test.ts",
+      "packages/kernel/test/opening-pack.test.ts"
+    ]
+  },
+  "correction-typecheck": {
+    "exit": 0,
+    "seconds": 1.333,
+    "args": [
+      "npm.cmd",
+      "run",
+      "typecheck"
+    ]
+  },
+  "correction-rules": {
+    "exit": 0,
+    "seconds": 2.127,
+    "args": [
+      "npm.cmd",
+      "run",
+      "check:rules"
+    ]
+  },
+  "correction-boundary": {
+    "exit": 0,
+    "seconds": 0.569,
+    "args": [
+      "npm.cmd",
+      "run",
+      "check:boundary"
+    ]
+  },
+  "correction-licences": {
+    "exit": 0,
+    "seconds": 0.613,
+    "args": [
+      "npm.cmd",
+      "run",
+      "check:licences"
+    ]
+  },
+  "correction-decisions": {
+    "exit": 0,
+    "seconds": 0.603,
+    "args": [
+      "npm.cmd",
+      "run",
+      "check:decisions"
+    ]
+  },
+  "preservation-proof-corrected": {
+    "exit": 0,
+    "seconds": 1.85,
+    "args": [
+      "python",
+      "runs/s100/verify.py"
+    ]
+  }
+}

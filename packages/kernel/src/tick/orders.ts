@@ -464,7 +464,14 @@ export function arriveOrder(ctx: TickContext, state: State, msg: TransitMessage)
     const answer = answerOrder(ctx.world, state, msg.msgTo, order.orderIssuer, goalTerms(ctx.world.rules.people, goalKindOf(goal)), { oversight: oversightOf(ctx, state, msg.msgTo, order.orderIssuer).value });
     let next = recordResponse(state, responseOf(answer, { order: msg.msgOrigin, person: msg.msgTo, post, role: 'addressee', day: ctx.day, kind: order.orderKind }));
     const response = responseKey(msg.msgOrigin, msg.msgTo);
-    const propose = answer.declared === 'comply_with_reservations' || answer.declared === 'object' || answer.declared === 'refuse';
+    // 0116: without any positive received enemy claim, compliance cannot
+    // qualify. Do not disturb an unchanged plan with a needless request.
+    // The planner still judges the condition and the alternative in full.
+    const receivedThreat = (answer.actual === 'comply' || answer.actual === 'exceed') &&
+      knowledgeOf(state, seatIdFor(msg.msgTo)).knownReports.some(r => r.knownReceivedDay <= ctx.day &&
+        r.knownBody.reportDay <= ctx.day && r.knownBody.reportClaims.some(c => c.claimKind === 'enemy-strength' && (c.claimValue ?? 0) > 0));
+    const propose = answer.declared === 'comply_with_reservations' || answer.declared === 'object' || answer.declared === 'refuse'
+      || receivedThreat;
     if (outcome.obeyed === 'new' && !reaffirmed) {
       const set = { id: msg.msgOrigin, issuer: order.orderIssuer, goal, viaChain: !order.orderBypass,
         issuedDay: order.orderIssuedDay, response, propose };

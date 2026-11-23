@@ -1,0 +1,112 @@
+[
+  {
+    "identity": [
+      "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "cooper_samuel",
+      "relay",
+      90
+    ],
+    "before": null,
+    "after": {
+      "key": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|cooper_samuel",
+      "respOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "cooper_samuel",
+      "respPost": "cs_war_adjutant_inspector_general",
+      "respRole": "relay",
+      "respKind": "goal",
+      "respDay": 90,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 32,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "S100 integration/0116 [I]: the S96 doctrine and correlated received-order path run with the retained S98 cast; received replies/plan progress affect subsequent rule-seat decisions. Exact response arithmetic and envelopes are retained. The new trigger does not grant authority."
+  },
+  {
+    "identity": [
+      "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      96
+    ],
+    "before": null,
+    "after": {
+      "key": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.90.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 96,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 27,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 27
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "S100 integration/0116 [I]: the S96 doctrine and correlated received-order path run with the retained S98 cast; received replies/plan progress affect subsequent rule-seat decisions. Exact response arithmetic and envelopes are retained. The new trigger does not grant authority."
+  }
+]

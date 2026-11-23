@@ -1,0 +1,2537 @@
+{
+  "hashes": [
+    {
+      "day": 1,
+      "parent": "c12dbe95cd8e6859ed69c09ef3c8eb524aaaedf5fdeddf92f7b48707901142d6",
+      "S100": "749d054e280499e1ff1fbbd1358dafbac72d0d1d34da7eded3fed18124054765",
+      "changed": true
+    },
+    {
+      "day": 2,
+      "parent": "2835d5675c46e06b5c54b26f2ff112163c3012225d9310469acc34404c5c2369",
+      "S100": "a1066579b77dbdcc86cce03f640294645eaf7e45b2cbd1cb2b7693561b0abddb",
+      "changed": true
+    },
+    {
+      "day": 3,
+      "parent": "b8b065ef19931ba0f27d9e5d8bec63ddf71a8626de4006fcbf34944ff488f942",
+      "S100": "872205a6b071833dee5cf44bbb4cb491f1a43fc99620ffd9e275fdb8e70abdc2",
+      "changed": true
+    },
+    {
+      "day": 4,
+      "parent": "ad0f8593c7eb6c61ecdd893d7781da6a1f62330162f14c073bf9253b2ee85969",
+      "S100": "ea58fe4d0424cacc0928a16755c6ea7c956ef926d6f638bf80f094931987adad",
+      "changed": true
+    },
+    {
+      "day": 5,
+      "parent": "6236cde8ff3b944097266b800556a011402c11d04a37d3368a00d780f7122119",
+      "S100": "7ea346738d74b25575b6d231dd3c986a2323fe6719afccc90a572865e3eb1c56",
+      "changed": true
+    },
+    {
+      "day": 6,
+      "parent": "191973962ebb28178025354c56c6c40c605f8d48870ebbb629e30a4893d5664b",
+      "S100": "000e5f26d2910bf5ec39ec4276b504fd411f770df992e9d3a15a9229d4efa1ed",
+      "changed": true
+    },
+    {
+      "day": 7,
+      "parent": "db92626265e28c5183c99b78413269cd3eafc9f195481d78abc6d2d0dc5a8f09",
+      "S100": "8252eca561ae3e9f72b0292e4756584adc13c569f455527b9383e3a5fd18c2f5",
+      "changed": true
+    },
+    {
+      "day": 8,
+      "parent": "0cea8b499af099307197e3428a006518fd02a98205240cd6f8c235e92f31b609",
+      "S100": "571ab2ecd32494cbd38cb8a802e506684f24687b1d5b02d23ecdfa8899c88b04",
+      "changed": true
+    },
+    {
+      "day": 9,
+      "parent": "a84d83f411024ea5d8b73be6502f6c0bf8d04aa268877c56155af56f6f5f0396",
+      "S100": "dc69f712319a4b829d7baa5e696a6788b82fa1de0e4dbec3d676b028e3cb2f2d",
+      "changed": true
+    },
+    {
+      "day": 10,
+      "parent": "4d45a33278711f616e928e95b29db5a6d607d095428cf20178fcc0e755ecd6a1",
+      "S100": "f213bf14b79dd819224705d7d6499e839db44037c03452d61d03f3774683f1dc",
+      "changed": true
+    },
+    {
+      "day": 11,
+      "parent": "ad26c90e14577bc0cc710cf2ae68a5b4020e31c15d23ce39e88906140bf6160d",
+      "S100": "0cf0cb9f64e315e271aee588eb3ccb1db829e78d98099b587d8c844de09f07e5",
+      "changed": true
+    },
+    {
+      "day": 12,
+      "parent": "23506f87b53f28b14a27c0ba9d0b1ad778e1f2a20f391dcd788f127e9f53bee4",
+      "S100": "35e76ba7e489d3211507d36d3885bdb4709d97fb4177586038416b799cd7f4e1",
+      "changed": true
+    },
+    {
+      "day": 13,
+      "parent": "b2a122023643708b6fb790539da7090f8b5d14184406ad58723058e3544fcc91",
+      "S100": "28ce29b8f96975479494c423f9c4a7bfb9d431393339ee60c774e19b71bafd91",
+      "changed": true
+    },
+    {
+      "day": 14,
+      "parent": "2c2c326f7233b8bddddbbe69614690a063eb2e4dc4684ec5bfe6493696732b70",
+      "S100": "46af2d31ce1d6d3ba92f752d970c5e479884b26057b9099953ceb713e61746c5",
+      "changed": true
+    },
+    {
+      "day": 15,
+      "parent": "a642f9690d3942ccd0476abbca3afaa8451194416e6e2e0741581252e372a804",
+      "S100": "8cbc1a3fee06ea31887361623ffab045d14b3204f923e86ac5d88ba6a0b915ed",
+      "changed": true
+    },
+    {
+      "day": 16,
+      "parent": "7c1912d59ce34edc6372e3c679390a59aee06450c357a401db2d15aea0f1870d",
+      "S100": "63efc131424fcaca61b3ac7aecc5e2379833311a93be22dab07b618934168b38",
+      "changed": true
+    },
+    {
+      "day": 17,
+      "parent": "370eb40fa7ef21df5d975e68386f607c937f00000394d234e88826ff3ddaa1cb",
+      "S100": "28fa44a4913ecc2a1852feda965459ec359b8dc88b08c4b32c020131a7e3c7d7",
+      "changed": true
+    },
+    {
+      "day": 18,
+      "parent": "d6e4a24c99c27cbff5cf48b8fdbc600cdd8475fac300a661682ee7bd9dcb5040",
+      "S100": "ead5bc85c6a915336b9e155136a6b98581676b6ba4a0ab0e765459aa1e94de60",
+      "changed": true
+    },
+    {
+      "day": 19,
+      "parent": "38d908b1efdb983f49a421c52998c1f660ca6b4af839f0199ef1a821c04d12d8",
+      "S100": "31e33b1f863987fe24bddb580fd79835f7734fa71b7ebac838cd57bcfde7fd61",
+      "changed": true
+    },
+    {
+      "day": 20,
+      "parent": "d4002d40f9ff09b7010f65393ba0c909d405a0ff1c6251c2b7718ec2e156f33d",
+      "S100": "7ff1f7fd065ccba755fe8a5aa252b0d45f3a7bebbdb64a65b46ecb06d7996883",
+      "changed": true
+    },
+    {
+      "day": 21,
+      "parent": "e1f98fd94ab3bf3d5ee118a6f988dbd90a09755874ff83e502364c826b4cc632",
+      "S100": "3225e09ed141e2425489bcebf10b2de60e3f538ca3f470c42914264a0ca0996a",
+      "changed": true
+    },
+    {
+      "day": 22,
+      "parent": "b1080dc88492d5783925c35f2d856de82dd74b463a286a1d3f94e0155959429e",
+      "S100": "60fde3b27faa5903f9d1f851c585e072c91cef12091567bfaeb0f96a472dd791",
+      "changed": true
+    },
+    {
+      "day": 23,
+      "parent": "12ccc508baa2307add76eeb8ae142255a6a47603850150a6b8f6114d7e468d24",
+      "S100": "02957886f4c934d1f25341a7f36045f742722d0b401ea272f0e8e66829668090",
+      "changed": true
+    },
+    {
+      "day": 24,
+      "parent": "1768b7d01af1c02c8d460283bae8a8a833c97cc62cbfb37cb295ea36a3f6eaef",
+      "S100": "587fd1097bc3779a8f9b93b8100774f2eb250d7467ef50593fe0a68d84f3dd04",
+      "changed": true
+    },
+    {
+      "day": 25,
+      "parent": "8e374de9bd136f0e37b8cbdfcf55608b47baac8bb165ebf1047b2e8d4e343d10",
+      "S100": "1bd1841adb975c5465e5d14fe07126083b873246eaaef977817728ed3ab00e99",
+      "changed": true
+    },
+    {
+      "day": 26,
+      "parent": "b0bbb0fba5b95a283f776c8924625a1039b0c4846fc3e87d516d996188e69017",
+      "S100": "cad64b40184240eccb4fb83148f52f437b8f29b266465b422e3a4eacf9a191e4",
+      "changed": true
+    },
+    {
+      "day": 27,
+      "parent": "00590ec84e860a89d333a0afcf4d4165b9a6236243695d28ae12126bbc40265e",
+      "S100": "f2bd02f4d212fd5b5b0064c9de36a2405022723c794b461f41a84adcb069e91d",
+      "changed": true
+    },
+    {
+      "day": 28,
+      "parent": "c52c08fa2e37f40a92faa37855844651756c1ee964507d64443437b10c9e5ecf",
+      "S100": "1330301bac8dd045fb7f133648cd043d33820d36dd31fd165fb36eeb1ad82216",
+      "changed": true
+    },
+    {
+      "day": 29,
+      "parent": "727f7cbea7cbaa479c1e68d50e61c2d5c268fd59e16d3dc9a1ab683a0e3c5508",
+      "S100": "69d711d30ae51dbdc3f7620cea21d0eed2735a01e8900aa1e5dc511aed935883",
+      "changed": true
+    },
+    {
+      "day": 30,
+      "parent": "28787357164aa893c9646af0ad028e75d7974bb17c1c0bba1ac58fdd322a3c09",
+      "S100": "ae7141dfe1e3381b1419fa349141cbaf5150525b09479d63c40e9922029b30be",
+      "changed": true
+    },
+    {
+      "day": 31,
+      "parent": "1c8bdfadd0f7361bd744be51772e5f1a57958fdbcf8be986a205aa1c2f1d8fc0",
+      "S100": "6c476b2c1521e6cf60d14225354f037948010cf2addb32bb65349929a7371096",
+      "changed": true
+    },
+    {
+      "day": 32,
+      "parent": "0da67a90014bccfc593465810ac15ed29cf48fbfc38c1df3c693957bdc4d3922",
+      "S100": "9cd42f6481807bda9d89b097291de90df8a9c3ed3c772bb3330e251c6889c03d",
+      "changed": true
+    },
+    {
+      "day": 33,
+      "parent": "2013fb30531a72e1a8b80dd9142b54f96a76cb825c8d8c150756fc1e021d85bf",
+      "S100": "7d407cb83b67141375dec2e7cc9c5b30e232869e1b2bd79322be0b87052bd51e",
+      "changed": true
+    },
+    {
+      "day": 34,
+      "parent": "8c2a646b67f2973c6d6506db3c0a41483b61a10a14125b582647f2567a08ff57",
+      "S100": "8e4ec20d2a882c983718bf5d04eead934e7a07b21b22a9999ce60b41dc83c711",
+      "changed": true
+    },
+    {
+      "day": 35,
+      "parent": "55d8fae95f0883f43d3672affd75cb6686f9032d192703e5b400ef90ec3220c6",
+      "S100": "18ed486a6897050f670ad38c531f535902aa9e9a303e0a594d819588d1a1b203",
+      "changed": true
+    },
+    {
+      "day": 36,
+      "parent": "29e11a042a82be102fac92fe745553363691ac50cf5d597290b1ff0ca133e431",
+      "S100": "b828d43ed8f776e2a566d000b9c6f9ac3fac0b62caed629925b96c590fbaf58e",
+      "changed": true
+    },
+    {
+      "day": 37,
+      "parent": "a5772cc22b88c8a0f418c9591e84635f75c94b9bb0582efcfb1703854108c6bc",
+      "S100": "90f8200c592cf4a31c4ed0359fe0d38bc5928e7e3ce5752d6b1601cc0214844d",
+      "changed": true
+    },
+    {
+      "day": 38,
+      "parent": "9c45bda034b067c41d5a1f34a4e873441f3b8c30c40c70bcc74fdd2de40c229b",
+      "S100": "96d4e06bf2ef901482821cd26b3a83277396c1c0e5b153ec7292725ed92f3349",
+      "changed": true
+    },
+    {
+      "day": 39,
+      "parent": "a5779b764fa796d767c98c0b7d9bada774dd4f15f7189161f2681b2f5378de38",
+      "S100": "6d5648eb413be46b2c7823fe2ee331ebeb2a3bd0766ffe555a25be3c3060b596",
+      "changed": true
+    },
+    {
+      "day": 40,
+      "parent": "ae55cf348208505aa1d34230d51599d78cbb4f71762adbcbb183f0f026ac001f",
+      "S100": "f491b00e83055d3812843fd1f8ffb62148d35b9459f01997ba7a45cd340de3c0",
+      "changed": true
+    },
+    {
+      "day": 41,
+      "parent": "52d98cb57622046d0708383013593fd20168796b44f5e5b5036e91b89f12de7d",
+      "S100": "5f904e094f2edd77f83786be999a325e5f93a5e5a84f6640655e1eeb2ab76d14",
+      "changed": true
+    },
+    {
+      "day": 42,
+      "parent": "1a0c573db29bc5e2a2080dd34cd922e2d7ddd07cf1e6ec51ec1659cc2d444f3c",
+      "S100": "4af9bfe164320a306be61498ec4e2bb350c55c9132e1931898505d45fa1346e0",
+      "changed": true
+    },
+    {
+      "day": 43,
+      "parent": "92206a930002e372e140578df75d9dd0c08cebf88bcd36246884a7d2a2c96d10",
+      "S100": "655f94e379721654b23104452c1edef5124a8628d05eba072f7d0f579e2c5c89",
+      "changed": true
+    },
+    {
+      "day": 44,
+      "parent": "3e0d31e2f715e906da8e06b7bc938065cfdf7b76d87f56210942f1a6ff578d79",
+      "S100": "77eb808a20ad1c8e8e1137d136accd515d69a3d26b92bac17eb31407c5fa2b65",
+      "changed": true
+    },
+    {
+      "day": 45,
+      "parent": "c0ec959b4155e91b8308c22444aeb795224e2562d947df1f64a01243b2dc4d88",
+      "S100": "2f7f9c5a849da8fbc4177067b1b1711897751905eb7ef541c000302b37b1319b",
+      "changed": true
+    },
+    {
+      "day": 46,
+      "parent": "3bd11ed3c090b0afcec2a2b1eee52e78cae4f7f2f32b0c7dc53b9e2d3405c0e2",
+      "S100": "ce67f35a1496bc4ec31ca721558e0b3efba4f67c40cb737a8c67b8ad608698bc",
+      "changed": true
+    },
+    {
+      "day": 47,
+      "parent": "914892b9ee5a61362f542eba6ef31cc41ae0da521da788993b047b26d3933725",
+      "S100": "30ab1f97c5de26e3b53868b06e69ea2c5f8bd961a1640c0e56d82243681c37b2",
+      "changed": true
+    },
+    {
+      "day": 48,
+      "parent": "8889799663e5feb9302046f097d818a45e7cf10eca47d4e97b22a088bf33dfcc",
+      "S100": "49f08b0cb2cc47b1f1e25bc198aa78b4e9cbffef247b654acad833c4003fd11e",
+      "changed": true
+    },
+    {
+      "day": 49,
+      "parent": "f0531ead5e700f567eeac17754a9d88356dfbbf96e8bb0f406f605db4d1c3bea",
+      "S100": "d364c2a5ceb8a375f93f74b02a42bc19a4b3d07666ea0fb5933201a7b9335798",
+      "changed": true
+    },
+    {
+      "day": 50,
+      "parent": "475da78d40840b0839a30b0a9db8e73abddfa220af74fd95e308e040a6c1c3ef",
+      "S100": "07014f0e81540647d1b0a6a38617dd1583956a47e86fd133fa356c0e1926cabf",
+      "changed": true
+    },
+    {
+      "day": 51,
+      "parent": "6fb9b69a3acbce73469207a1dccdce0658a5c7206da574cacd3da68ed03c1b90",
+      "S100": "3690d443e41832ae5f8ee33430d274751cc0b2494195607dc492311aef999a3e",
+      "changed": true
+    },
+    {
+      "day": 52,
+      "parent": "a6626e84246bd7b362840a527ed56fa8793849400874cbcea5bbb2a7479bf686",
+      "S100": "6b6064b5f39717eaf2ecacbc6cbc79efe6e9f2f66110d7eaaf4f8869bad56226",
+      "changed": true
+    },
+    {
+      "day": 53,
+      "parent": "089b694f8c4735bb3ad6460c6ccf6a39c38fb039caa452bc65903c0d209f31e8",
+      "S100": "89d8278b934938bf15da7ce8ba36a8d720b054fdb828cb1845b40da535dec89c",
+      "changed": true
+    },
+    {
+      "day": 54,
+      "parent": "7f46266e3a8530ee3ada082e7c33cc0ab602aae490f6bd2787770087f6328358",
+      "S100": "d1019986ac4a8af5e42b88dfe4954aac4562ec423d2cfb4c929a1bdff1788f68",
+      "changed": true
+    },
+    {
+      "day": 55,
+      "parent": "46752dcb0b30e79d5c9a0df180beb1dd9b18d54f4cac00812169a0dc620fda73",
+      "S100": "96cfe836af4d1beea1ed580b101f03706fa025d4664b3f733d97605ef6788b7a",
+      "changed": true
+    },
+    {
+      "day": 56,
+      "parent": "167adc48f7fda1682ea1606b0e65e2757fa249f62d86b578879d82b942e3b950",
+      "S100": "b29681a2b19f3f3a73080c761ee36f491b86755f9018d67b9151d2501ea5538d",
+      "changed": true
+    },
+    {
+      "day": 57,
+      "parent": "23caba9649df6a0ede0535e35513d46f8dd17d73b2d502e89e0d5d9afab7924f",
+      "S100": "8edb95a2e3132a8beea169c0446ccb3f97762e8b6c1a85308b49dbd95302d14c",
+      "changed": true
+    },
+    {
+      "day": 58,
+      "parent": "25e810154af26b7bcc445d52cd57f733ce5c1001b5b63c4b3e0560b8088df251",
+      "S100": "977e56f0f7a1aa8ae2dc5ec6e049826fb062301c5f762fc2a0236b803f99c3fb",
+      "changed": true
+    },
+    {
+      "day": 59,
+      "parent": "132d6514efd981d4d53aaaf6a52e78817746bcfdd485b29b9088e95c16691efe",
+      "S100": "425a9746dd02f0d9a4622c123389858c0d54a53c19976d93e1cda400db06ea0e",
+      "changed": true
+    },
+    {
+      "day": 60,
+      "parent": "73a5fd3384499fbbeb760a1c57035af8bb5b32d03bf3d50ef674754db8f72e9a",
+      "S100": "b0b6ca00903cc3b720745f78d189fbebc71a08db65633ac0eb2489b9b68839c8",
+      "changed": true
+    },
+    {
+      "day": 61,
+      "parent": "62da1bc6f13bd3e1aeb23858d7edf38b8c438ba3f764d9631a1cac4b97cdccec",
+      "S100": "e31d8ddf4787836fcc60fd920b95d2fea5517efd1541c9c26e3863047fe7e3e0",
+      "changed": true
+    },
+    {
+      "day": 62,
+      "parent": "89c12657a888c75a7f9ff2441457f7e917ac5faf5ed0d31859b6b16fa10d37fa",
+      "S100": "b3bf5e33c2523132f37de5b4e45a459470c7efe62450e3f92aab9bafa282879a",
+      "changed": true
+    },
+    {
+      "day": 63,
+      "parent": "334d68da27eecc41bf5b9b22932fcfb1a76a7fea0054db2b4d8e9cacc4ca08f4",
+      "S100": "80787fbb84d121a971fd5bd3939d91b0083c188fe956fb3940e4200cfdd4fd4b",
+      "changed": true
+    },
+    {
+      "day": 64,
+      "parent": "3bf38f20e7cc33f9688db6a5dc0d5ef9890f630822a3f5e857fa13dee41629e4",
+      "S100": "91ef8b27fb8fed9333f49c771d55183f62ea7e5cbdcb75467f2de8552c756f13",
+      "changed": true
+    },
+    {
+      "day": 65,
+      "parent": "763011d6c846bc0cfb54340fdbf5fa3adfc03a8173ca35f04a27ac692965acfc",
+      "S100": "bd05d554b205c60f5f64b1a0fd85914f11af1b5ff369a790abdf2ccd85709f5c",
+      "changed": true
+    },
+    {
+      "day": 66,
+      "parent": "00bced7d6c446a60a9dead67e2054670af5578a29f179da14501555a84d63b4e",
+      "S100": "97551b50ccffe5293d2db0ece06140e30ce9c944c44cbf7d3e22fb2bb4d4665d",
+      "changed": true
+    },
+    {
+      "day": 67,
+      "parent": "d9745ec6113ca417da24ea93160fdb111d2ed1a94214f1046fd4af087a39de5f",
+      "S100": "403fd59db62bb8104415dba83921eb9afd8334f9dee6e26ae274a236665accd3",
+      "changed": true
+    },
+    {
+      "day": 68,
+      "parent": "cf3ea14d46c1029bff3f91bb76ba4b8c48444f5c19903472e499c88792a74aca",
+      "S100": "0d8dd09194c01c85d4f5cfc1e6f2941fefff9ebb599677a7494ec01d3820219f",
+      "changed": true
+    },
+    {
+      "day": 69,
+      "parent": "b780216658c8eac09078de9dabb012c917f3bc5adf9ea7c4d095065efed51c4a",
+      "S100": "5deb915db8f70ad4f869a8b159332b1fc0a0c34421573ee0d3a9ede3fa32ecac",
+      "changed": true
+    },
+    {
+      "day": 70,
+      "parent": "2fa9ddf6cd73acff36e077bf5848414885eb1e8e396727daee9a0041590bb8f8",
+      "S100": "b478e78cdf791fcffca15f60e1ad385eb7e2d1e4022556499c2fdde945b5fe23",
+      "changed": true
+    },
+    {
+      "day": 71,
+      "parent": "618ece62ad3a7adefcff1daf959070b554eed3f35712162c5a1f50b3b3c42921",
+      "S100": "3c8f8b061721fa7c9fb2d2e8ac820bfc15d9cfe2f21993022840dd04d5cf62b5",
+      "changed": true
+    },
+    {
+      "day": 72,
+      "parent": "39fd1d7173862b9fecb7d615d98677641ef0ae4a7289b8d8c0bb85b374c7d23e",
+      "S100": "118f4a14a302deb8415b1e5f082218bb4691b8a93047b56e508ffb45d049747a",
+      "changed": true
+    },
+    {
+      "day": 73,
+      "parent": "db47e273b3f32f8eaa7c34de9d68eb4dc4c5be930566e9297cb1e868e19c0d1a",
+      "S100": "298dc178c2447f5696a330d143c4e2ef41df3f41fee8ee121639c5be68aef256",
+      "changed": true
+    },
+    {
+      "day": 74,
+      "parent": "758b3f57a3d4b77446ac7255175587b45b007f4befd18f7360d1a1056feae8e0",
+      "S100": "8cb554bd9132b48a8bdfd4d08b0d11cc401bbbc23daec3f491dbeb5f5f5fd855",
+      "changed": true
+    },
+    {
+      "day": 75,
+      "parent": "206a17cbb6b7383258ef9897314fbb032979b3fc07b9a771229b1abd611d21e1",
+      "S100": "ee291ab7e6902315f0a78dbba91fc929cc59f4d56b2b304293d33a52c6718c2d",
+      "changed": true
+    },
+    {
+      "day": 76,
+      "parent": "05de9cfeb72766676df0956daedea0f92c9170a5deaae4fe43142ac9216fce7c",
+      "S100": "d874d30f9a98f4ae401b450040f660a81f9a62393b21291b7979faf3b5ed85c6",
+      "changed": true
+    },
+    {
+      "day": 77,
+      "parent": "1300364060b513930ec13de7e33fb56975ef3d010613ecd691aa6aaa93816013",
+      "S100": "cc91d89987a9f2efb568366ba18fae9f5686510449a3e9fca8e3f64121a4ef69",
+      "changed": true
+    },
+    {
+      "day": 78,
+      "parent": "0fa61f57799377fdc0f3f35a6837924f30ca51dafe197f7e797305f45e2f7be6",
+      "S100": "b5d436ec57f9a5da9d5122a200069572cc1235b5975e3df5f6ab63d36a6fe363",
+      "changed": true
+    },
+    {
+      "day": 79,
+      "parent": "db18c914d61e5782ad912dfacba4ee78389f201b3ba752e340cd64b284c92bf1",
+      "S100": "087b4c5b4bb2b3394b2de9bc23cbac876c51c5d17b790dac881e73fce20dc837",
+      "changed": true
+    },
+    {
+      "day": 80,
+      "parent": "39cd2022db3feeb73e2d1d75d0d2aff3b252f2144c41f8ca97467f0a0ce8477b",
+      "S100": "5ab3c7d19354841de3d7dcec2b11b1ab2b127aae533e645a674719a854be9826",
+      "changed": true
+    },
+    {
+      "day": 81,
+      "parent": "d04088a6da4fc96d8ab04f9158bc0925c199bb9bd96b9091da76c6f49e928130",
+      "S100": "7e0984c9e59f665a770924f1347652cadf67f981b1535bbdb144af9a87dac8bd",
+      "changed": true
+    },
+    {
+      "day": 82,
+      "parent": "d1f3a00908f2fcb3d3f7e721be77dbe7dd33eec3ee134e00e7430212772a2fc8",
+      "S100": "6c4f725aa1c2c58738f9f3fa7882b386c978ebac4ad5578ebf1ea74bd6ec669c",
+      "changed": true
+    },
+    {
+      "day": 83,
+      "parent": "9c705c8d05e7a790472cf411f0872af51a1036ecb9069c13b0cca087c03ec2b9",
+      "S100": "ddc4c2e298717738d8e08b6df3c35eda2241618f7ebfe830c1898bc8f206a112",
+      "changed": true
+    },
+    {
+      "day": 84,
+      "parent": "3d50877f0682bb3ccedc9c94240dbdc7c165ebaf6a1212bca36a76a7b00e0e35",
+      "S100": "fea80a104c3dbdae4c4a5f5bee4a594611e3c2d8ea787ed616ae20460554c31a",
+      "changed": true
+    },
+    {
+      "day": 85,
+      "parent": "f2de7654f83a92bd0c6de5f8df4ffae9a3fcdcbd73edbdf840e4875aae71a723",
+      "S100": "5a5ccca3c64c012795eec6535d81254fb5590bede03c2edf6e2a49471657b247",
+      "changed": true
+    },
+    {
+      "day": 86,
+      "parent": "530f8d913fb07d9fb44148d4663c9602e7f5c466bc1bf142e6bcc94c50a52421",
+      "S100": "bdd690939769e068c2188ecfca7c85d5e5e4214e0a3437bb2d4dc0cc514a855b",
+      "changed": true
+    },
+    {
+      "day": 87,
+      "parent": "a294f223211321eb8c7d55cd1d2bbbb4a02bdcb2a3d32ffb4185be944c876943",
+      "S100": "9b02e8944bbb87b86937dc6d1fff4e27a92e6d4d4b42b06d80018b0a676833a6",
+      "changed": true
+    },
+    {
+      "day": 88,
+      "parent": "31875b099187669137e5b798aace7d27bdd2460908ee3eac4553a12b8d6753f7",
+      "S100": "411034fe674a9337632f7ad58b7d1cd61b36be80b1152b907db50dc6f99f4f81",
+      "changed": true
+    },
+    {
+      "day": 89,
+      "parent": "8d1595f87a55b52cbb0d824b5d5bb93ffdfc0910614b6f13d6d0b724bb6a1711",
+      "S100": "0b620e27ba042a1f8f471dfb7526dcf5a41b350402778b6a59037de48a2628cc",
+      "changed": true
+    },
+    {
+      "day": 90,
+      "parent": "1bad2707274b8ee8dce307f300679fcc826c243cb985d1f81c7ccb9c621cb638",
+      "S100": "2816ba09d0d8e53ef77bd0a54608550babb8b9fa41fc15ff98e027359bf18842",
+      "changed": true
+    },
+    {
+      "day": 91,
+      "parent": "5e3d7f75b3fa1d7bf975aa7adea8d53deb7bf3d590beade3875126d3734753cb",
+      "S100": "4569152a7334b980f025a961ba977c611883be45626c6c6fd9780a5ed7add84b",
+      "changed": true
+    },
+    {
+      "day": 92,
+      "parent": "b75d39cbea3e87d3b70f13130bcd60f4d902c0abe51cbea04a3a5d45c9bd6429",
+      "S100": "b69e4a7800560be02fd0bd74a6efd8cd97d4a8ddf5c68e597518a72062f83f68",
+      "changed": true
+    },
+    {
+      "day": 93,
+      "parent": "3912ff456ea7965a5a301824ca6c070d7968c12c0b0fe14666dc74a94b59a525",
+      "S100": "2be654fb126af940cd9e2e9f6d5b2df37be29e818d9939adffa4358090fb80fc",
+      "changed": true
+    },
+    {
+      "day": 94,
+      "parent": "da945d74f51cb4ff8295227816ad2d9892315410d89ee2a9f6a874640f5a9cd4",
+      "S100": "f86984ad596728d3dd1de861e9385bf14f95102b1d7654f1b26430bbfb34df95",
+      "changed": true
+    },
+    {
+      "day": 95,
+      "parent": "df972e27fa9067e55d3d568e0dec719c258103ef48a920194f6480ad4f697f9c",
+      "S100": "c663a6a42146567e0d9b90fac5a8c29a6b921ef80194c1b0b0a5d15a6ead49b3",
+      "changed": true
+    },
+    {
+      "day": 96,
+      "parent": "6968d9cd820de352fb848aee72ebbd06b096da184226e26d8965643951aa7737",
+      "S100": "705a487c0ba4a6ac82b95667c9a36357136ba55b2d865f16eefec391148a6730",
+      "changed": true
+    },
+    {
+      "day": 97,
+      "parent": "6e32b43f9fde514a43c04823ecc0780292ee550f142b5c375123168aded8adbe",
+      "S100": "0aa48b75b922b50d9e0af55fa71dea38135e7e767f38aaf25c1bf7d8605b48de",
+      "changed": true
+    },
+    {
+      "day": 98,
+      "parent": "9a85753a94530c6d8134b29794a8c5ece289ffe76bf22a691fef1e1848447aab",
+      "S100": "afccb649543e95aa8f1abe9d4dc134a1268b995ee9ca5590ffc844c6d5eeefd2",
+      "changed": true
+    },
+    {
+      "day": 99,
+      "parent": "a7e6569cf3ab3063a0a5bc91235db3080fceba8d725d96f3d45b362c4035a025",
+      "S100": "c1d8bfd3388f638222b7ef7a1a56a9f0efe5e9aaa0eb339c8345ef42feeda3a0",
+      "changed": true
+    },
+    {
+      "day": 100,
+      "parent": "67b09689bcfe3204f973648f0b8b8e6ac511715d85a784fc2ca18592de638385",
+      "S100": "846ea4fc768c6ef8b400326f0955379739240ca48d20cc4d9dea43e9e6937fc6",
+      "changed": true
+    },
+    {
+      "day": 101,
+      "parent": "466f9c2b42b0819babf2396f24df07c398c55c06a54464aaddef5833f9ebe10f",
+      "S100": "de872f8d57c67420e509e50d45125b8022157332070a3b27e9213627cf0a7067",
+      "changed": true
+    },
+    {
+      "day": 102,
+      "parent": "c363f3a712caa2aff346004e4334e5c068269e8389ad0940bc0ae56d52268306",
+      "S100": "fbf3b176575692bb10cb940d835f177615f1550bf7255274ad801f353fa7be67",
+      "changed": true
+    },
+    {
+      "day": 103,
+      "parent": "ffe33a6fe109f0bf1e3fd9e670ef8e1fb5b206784df097087cd537a9b1e7cd78",
+      "S100": "9732131f7f355f5a412bc049ac0f8745596c4cb6e58d94da5c7505e92bc64253",
+      "changed": true
+    },
+    {
+      "day": 104,
+      "parent": "35261c12e7a2af871169c5c2f4a62950ceb9e7b88e9e45a391ed5a63880426cd",
+      "S100": "46e57d05f0812bf21d08cd771def500cc35f8fcf5a730f615f533711c12e12b0",
+      "changed": true
+    },
+    {
+      "day": 105,
+      "parent": "723bb33774917541baa73e5fa54789675d31291ba98e6e180a0ec1550379ce6d",
+      "S100": "e4b6daf020df14db9c25de6b67895c6506a8d4ce9fd4dd5db372d79615e74d0f",
+      "changed": true
+    },
+    {
+      "day": 106,
+      "parent": "0a0b9f119612339dd0cb462a3c8384648cea58f33accb86bbce3cd82a6c901cc",
+      "S100": "d16c4219d594627c7ef49bcb3cb31668f97bbff504d707edd9e518e100814e61",
+      "changed": true
+    },
+    {
+      "day": 107,
+      "parent": "04664b5e47522cd327da8dbc083ea7d5e1ee508ea151110112ea952795056234",
+      "S100": "686c600d84097f1e563b74905f46c2ad9cbea4ef25ea2aed10581622e28b0acb",
+      "changed": true
+    },
+    {
+      "day": 108,
+      "parent": "627ef86d9f6e03d3563591d2e386414f3761964eee8e767c7d0fd46c901b6078",
+      "S100": "0ad5fd0fac70e06daabf8f5290d4fc35a87f17405c4ca2f6773352352df3f2f6",
+      "changed": true
+    },
+    {
+      "day": 109,
+      "parent": "03e848a4f82bd0c7b525afd42fd940ab36c3d7235d639ba5fcac80287767006b",
+      "S100": "ee415a5c170fd4994d657662b4d074b026c35cb57141d74820ac1e713eeb7413",
+      "changed": true
+    },
+    {
+      "day": 110,
+      "parent": "551db6fb5631656554477e95047cd1f1cba04cc68f94ee22bac621f9f99b7db0",
+      "S100": "88c6e0ec1cfae3433cf64edb05e83e425a6d88da0289a96ab400efe1afa9f68a",
+      "changed": true
+    },
+    {
+      "day": 111,
+      "parent": "5f8d1b71fa4ea4585af09e8c3714989388a169c235e56e0c39fcc1f9d7bb767e",
+      "S100": "4b714a39f7c4d367bac7f18cee1035eec1cba139da44776c28898822c1a8aa47",
+      "changed": true
+    },
+    {
+      "day": 112,
+      "parent": "081df7a7497c39723f87d9b502408f485325ee141b6f6298ac494ebd92ad1b73",
+      "S100": "b1b37db93d5956993245b36c271b9718ccc0a490842df0c49be58ba6645882e0",
+      "changed": true
+    },
+    {
+      "day": 113,
+      "parent": "c834cc2c9802a804509f6ce837a6d454654aa7d41c5be2813bebc5cd4a5ebe4d",
+      "S100": "99efce1666b3257af26f2cc897787514ab9cb24624f66cc9e9e853f54672cca1",
+      "changed": true
+    },
+    {
+      "day": 114,
+      "parent": "60128d96f8588537c17c420e6a8555d33f4ec5a947cf1bafb5cf7f50bb57f2b2",
+      "S100": "b1d13e9b5618ea3f0c9dae6c1e33e49b4eea93364300075e38cac8c6e54c039b",
+      "changed": true
+    },
+    {
+      "day": 115,
+      "parent": "c0b04af0f1a6878d9356e0668edad0cac77ad8a14e7cf6042c45e021ab59bd4f",
+      "S100": "01041e08c0a37e3ee9da68cbb54195d674c0ea988e8c731a9f0fee4c029d8124",
+      "changed": true
+    },
+    {
+      "day": 116,
+      "parent": "8ec5b4d443aae1966b80be94361e2a29e5e156d3935c67e251798003d81ec65f",
+      "S100": "017ff676bfe9ba7ce75fba2d400a38aaa56314af3c46efa7041075167b1fcf02",
+      "changed": true
+    },
+    {
+      "day": 117,
+      "parent": "b558a0d74b2eacfe80f3036d95429c458457de75264b44e94f6ac0eaf166bc31",
+      "S100": "92aace5ef0b29dc09afa3a3ca339a1107c1ffdd5c02a6e155c7db87ce1740b90",
+      "changed": true
+    },
+    {
+      "day": 118,
+      "parent": "1afe07a48c6a1063277e5d55d0ed9804395d816e36de6fb45d84068688caea9d",
+      "S100": "ae9cf295e1e86eacf6861c9c773f277987c493521d069c343520ef8d88a3d151",
+      "changed": true
+    },
+    {
+      "day": 119,
+      "parent": "b21e9cf556dc37244ab1fed9a5ded977f162227538da7b3dc1b2e2c905060f86",
+      "S100": "843f96def96ef370ec84d418bc1ffb7247c3889a96b7c052950e50315a163b03",
+      "changed": true
+    },
+    {
+      "day": 120,
+      "parent": "152a7364ecd4d7f8e91b94fd77d205343ea141930efdb5af82c159e433cb9a6d",
+      "S100": "7b43869ae793a48c8f1c5b1d9aecfc5cad5a8685bd0463baf93c8a2cc1025ecf",
+      "changed": true
+    },
+    {
+      "day": 121,
+      "parent": "cd28c36776019cd9f14565a0b1759b7f5552361c7598e0dc1b810e97e20f9872",
+      "S100": "656c820a863d6089fb1a45b4658c6fccb45a466cd3e4ff0c691eacac7b500aa1",
+      "changed": true
+    },
+    {
+      "day": 122,
+      "parent": "5cae997e009fb2f8bc80a2be15f7465bddbe7affc2de8d0ea3df61c7a0eb5ce1",
+      "S100": "6f8bb600067281bbc43949cf37c53ab276d4787fd4deb0022ea571b0e1be7171",
+      "changed": true
+    },
+    {
+      "day": 123,
+      "parent": "1e9b8caad57a488177a5f2696ee80fff65217e3b84ef44c8637161956811ed3f",
+      "S100": "7849c82fd47466df662e36f4cfc64bc9a1252f9e299ee8a1631dbf7d48487308",
+      "changed": true
+    },
+    {
+      "day": 124,
+      "parent": "90ec7e5c7d1700d6ead5b14e4656b6f83de3615d26be44b65e314fa6d7c2d89c",
+      "S100": "38308b36be5b3357e12a5fe0753042b6f9d6cb8e2fe89aea1f17ed7164e49bbc",
+      "changed": true
+    },
+    {
+      "day": 125,
+      "parent": "ca36be4dc8a8ea5a83cd4fb88d7e214cd628e7d1dcf5fe8b48013e66c353e610",
+      "S100": "faeac4451ba845de509b5cf3d82e14954047cbd483eb3d6ee49f3b71beac3163",
+      "changed": true
+    },
+    {
+      "day": 126,
+      "parent": "708e5c407a04d51e7ca6181ed61c34d7f9cda790496fa400625f82ffb6d89d60",
+      "S100": "135c78e139499cc92241d975527e34137c38ffb738894f678eb6cd429685ce73",
+      "changed": true
+    },
+    {
+      "day": 127,
+      "parent": "7bfdad3cea7afe4cc4791192a0939bf28e3bf32d81a58693af871a0267425efb",
+      "S100": "063e2efda30d8d549b3740270a30f4ea8491b1c2c95b22a33be6e4415054247a",
+      "changed": true
+    },
+    {
+      "day": 128,
+      "parent": "779d57455b553a94a8bf7e5745ce1e49485e4676e122af7e0911f865f6573e6b",
+      "S100": "9a99bf09dfd0ea87fbb22ad1cda4add4f129987ad627628cf15333297843bce9",
+      "changed": true
+    },
+    {
+      "day": 129,
+      "parent": "92230a6d0a2320fd0184873fa842254fe2f0042d61cdea966da1afb4a3095156",
+      "S100": "c0e27d831f6467f573627e91b5371a5156a0c3ec2635cd96e585599b1b0ad00c",
+      "changed": true
+    },
+    {
+      "day": 130,
+      "parent": "44e4d3c4651de09a9faa94ff9fedd1e56f7a8dbde697db050ead8f67d30f2677",
+      "S100": "d992139d86ce9c3f48fba00e306f7d79c6a2a720f000c59582a4529abf15eb8f",
+      "changed": true
+    },
+    {
+      "day": 131,
+      "parent": "151437983f72f09266a82951335cfd77f83db710514001c3c9074b38086fb56a",
+      "S100": "bf5ff86309e8a1392d26927e17b03ede88863fde052bccb6b69d81fef76d4ae9",
+      "changed": true
+    },
+    {
+      "day": 132,
+      "parent": "bc8d603b7e2f103b3e1c78d06393bcd7bf0950d4d59e41a3d0fae9a0ac0ab787",
+      "S100": "19922b0251b877b9f1193a2fdf96636e94057545e0938c69e10a515443099d45",
+      "changed": true
+    },
+    {
+      "day": 133,
+      "parent": "f429b15a8d0360a373dd0d23dc8a50ae7d061c8962dafd20fd86507cce84ac2e",
+      "S100": "dc370dee8bbf63c7b9a46c7793113835bd5eae27d295202070b72e0cf9bbf6e6",
+      "changed": true
+    },
+    {
+      "day": 134,
+      "parent": "5f368432a19f4857175a39dfd54104e95c6ddfa0f66ec93bd24f90ce758b1c7c",
+      "S100": "753bd71613918742434ad426a93987c6e5fe3d2d7a9843d0b0bbec941e396ce9",
+      "changed": true
+    },
+    {
+      "day": 135,
+      "parent": "81bcab1742323ac974e9153cf3a10f9df916e65ed297243d3f14fa65abf5b062",
+      "S100": "18e2d494a6d3f9b323956bfe56fc05f57e2c97d0d78a78815d93493a900a217c",
+      "changed": true
+    },
+    {
+      "day": 136,
+      "parent": "971d81ca17ba18fca440ac949baad8cf546ab414014a4fe53a0c9dab1dc085e7",
+      "S100": "6d766a54263dcf6742a5993bc6a3073092489ae67c20968f409ce560a90283e1",
+      "changed": true
+    },
+    {
+      "day": 137,
+      "parent": "ceaf9d467381ded5227090234f63be8316ebaf232bba34d0069fa31f2a411731",
+      "S100": "20dc7e8f6c7288ce700cb212e66f8028d95e3558c39b2c03c342afeb06de6fb9",
+      "changed": true
+    },
+    {
+      "day": 138,
+      "parent": "1b67f0923ee7f4b9a3d2380aadd71cb3809202ecc0e02543a99cf7808a18674e",
+      "S100": "8ce7cbd3b9dfa0fe24e82ac76198a52d1ba1ab16201475fa718955fa0b1ea2f1",
+      "changed": true
+    },
+    {
+      "day": 139,
+      "parent": "6f297f2908150e1007e923ae592035d394d5694ad73aa7f70fbcd820423dbc2d",
+      "S100": "039bfaa7fe03afb1a77cc1f81c59eef3a5eddfd24b54f08372e1a99da7361322",
+      "changed": true
+    },
+    {
+      "day": 140,
+      "parent": "724914a4b674a4581bdba75663d44637ccde5dfdd6ec554f78f1821f21446409",
+      "S100": "ef12a98fd07e6449e9a8a11691d2d55a9ca795f3776da3a0873c6c24412fb98d",
+      "changed": true
+    },
+    {
+      "day": 141,
+      "parent": "eba2f3234b2ada8fb15a98699b1bc77fd535e5a709139dc19fdd5122bfcac0d4",
+      "S100": "b3b4890e1fa58ab8e25509a50d0f0a96ab48cf0a143fecdbb2cdde92fb198ef9",
+      "changed": true
+    },
+    {
+      "day": 142,
+      "parent": "170c6c176250a673c4468b30586b8163b345b99219a90a250fa5d1a69ab22aa2",
+      "S100": "8889221ebd64244973fa093b806bcbed711bd49815b0a42b44208aa5b29bfb36",
+      "changed": true
+    },
+    {
+      "day": 143,
+      "parent": "8eebad981bd6b0dd21c5001fec298f929592d5e4235e9a2e90623a34301e5769",
+      "S100": "5cb39f3752afac7916a8302a709f34b1e5c9efb23b94e3033aff582ea9ab031c",
+      "changed": true
+    },
+    {
+      "day": 144,
+      "parent": "41d0e644dab60852e6c330ff8c9feea63b0d70b257fe2219be8068b5e1ad6e06",
+      "S100": "20c5ccf9bcf1ec72a77d56efd5b23bf31387cf08ff85834790e076f7635227c4",
+      "changed": true
+    },
+    {
+      "day": 145,
+      "parent": "e5a40b8cdb30c1dc971caae9c117aab4e7751b5357abb77bb7a165a315521c1a",
+      "S100": "f89ee014ad83f5c798c49636064f86fa73cb39d792e9af5becc444def2185066",
+      "changed": true
+    },
+    {
+      "day": 146,
+      "parent": "70b47d59a975548f9d666cd1fbb46e20381df5443796a666942c9cfca85f8b82",
+      "S100": "6c429591d57213362cb1e20ab1a945fbc07eb1cbab8f36b971f80b8e6944d28f",
+      "changed": true
+    },
+    {
+      "day": 147,
+      "parent": "02f45b7011eeb287c918448c5abb37f9ea91ea7edc1caedf9538d01c3465fbe5",
+      "S100": "7928912a1867add46c1517cba2df5e0b79ff9ede8947e96b78b019fe29e76790",
+      "changed": true
+    },
+    {
+      "day": 148,
+      "parent": "f1811a7f1a9177ec8dc62de98e56d1219d050c263797bac7934d1fe4810a8e75",
+      "S100": "cf64a97ac3db0d3380e506885f69cbd48d67809d58f8e975991b532cbe7cc149",
+      "changed": true
+    }
+  ],
+  "livenessBefore": [
+    {
+      "mechanic": "combat.battle_closed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "combat.battle_day",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "combat.battle_opened",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.captured",
+      "fires": 3,
+      "magnitude": 989
+    },
+    {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.killed_wounded",
+      "fires": 6,
+      "magnitude": 9284
+    },
+    {
+      "mechanic": "combat.missing",
+      "fires": 6,
+      "magnitude": 3094
+    },
+    {
+      "mechanic": "combat.occupation",
+      "fires": 218,
+      "magnitude": 11804
+    },
+    {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.routed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 13,
+      "magnitude": 13
+    },
+    {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "control.changed",
+      "fires": 223,
+      "magnitude": 14404
+    },
+    {
+      "mechanic": "control.threshold_crossed",
+      "fires": 49,
+      "magnitude": 49
+    },
+    {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "forces.stores_fell",
+      "fires": 1762,
+      "magnitude": 1745493
+    },
+    {
+      "mechanic": "forces.stores_low",
+      "fires": 13,
+      "magnitude": 13
+    },
+    {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2044,
+      "magnitude": 2030959
+    },
+    {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 64,
+      "magnitude": 137
+    },
+    {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1411
+    },
+    {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 12309
+    },
+    {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "map.pocket_closed",
+      "fires": 8,
+      "magnitude": 8
+    },
+    {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "map.recomputed",
+      "fires": 49,
+      "magnitude": 54
+    },
+    {
+      "mechanic": "messages.courier_delay",
+      "fires": 170,
+      "magnitude": 170
+    },
+    {
+      "mechanic": "messages.delivered",
+      "fires": 14594,
+      "magnitude": 14594
+    },
+    {
+      "mechanic": "messages.mail_delay",
+      "fires": 2921,
+      "magnitude": 2921
+    },
+    {
+      "mechanic": "messages.sent",
+      "fires": 15403,
+      "magnitude": 15403
+    },
+    {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "movement.arrived",
+      "fires": 528,
+      "magnitude": 528
+    },
+    {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "movement.joined",
+      "fires": 53,
+      "magnitude": 53
+    },
+    {
+      "mechanic": "movement.leg_started",
+      "fires": 210,
+      "magnitude": 210
+    },
+    {
+      "mechanic": "operations.ended",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.opened",
+      "fires": 4,
+      "magnitude": 4
+    },
+    {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.stage",
+      "fires": 18,
+      "magnitude": 18
+    },
+    {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.works",
+      "fires": 13,
+      "magnitude": 650
+    },
+    {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "orders.obeyed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "orders.relay_held",
+      "fires": 3,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "orders.relayed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    {
+      "mechanic": "orders.responses_pruned",
+      "fires": 24,
+      "magnitude": 47
+    },
+    {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "planner.candidates",
+      "fires": 5,
+      "magnitude": 11
+    },
+    {
+      "mechanic": "planner.searches",
+      "fires": 5,
+      "magnitude": 26
+    },
+    {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.supply",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "planner.term.time",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.chosen",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.drafted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "plans.goal_set",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.went_ahead",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    {
+      "mechanic": "recruitment.answered",
+      "fires": 58,
+      "magnitude": 58
+    },
+    {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    {
+      "mechanic": "recruitment.disbanded",
+      "fires": 26,
+      "magnitude": 26
+    },
+    {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.men",
+      "fires": 43,
+      "magnitude": 181500
+    },
+    {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.mustered",
+      "fires": 47,
+      "magnitude": 47
+    },
+    {
+      "mechanic": "recruitment.refused",
+      "fires": 38,
+      "magnitude": 38
+    },
+    {
+      "mechanic": "recruitment.renewed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 32,
+      "magnitude": 32
+    },
+    {
+      "mechanic": "regions.reached_lines",
+      "fires": 273,
+      "magnitude": 273
+    },
+    {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3110,
+      "magnitude": 3110
+    },
+    {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 26,
+      "magnitude": 26
+    },
+    {
+      "mechanic": "reports.casualty_return",
+      "fires": 14,
+      "magnitude": 14
+    },
+    {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.governor_wire",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.pocket",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.attention_spent",
+      "fires": 137,
+      "magnitude": 137
+    },
+    {
+      "mechanic": "seats.battle_orders",
+      "fires": 61,
+      "magnitude": 61
+    },
+    {
+      "mechanic": "seats.choices",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.fired",
+      "fires": 81,
+      "magnitude": 81
+    },
+    {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.notice_reports",
+      "fires": 63,
+      "magnitude": 63
+    },
+    {
+      "mechanic": "situations.noticed",
+      "fires": 62,
+      "magnitude": 62
+    },
+    {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.proposals",
+      "fires": 67,
+      "magnitude": 631
+    },
+    {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    {
+      "mechanic": "situations.surfaced",
+      "fires": 80,
+      "magnitude": 80
+    },
+    {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "verbs.answered",
+      "fires": 107,
+      "magnitude": 107
+    },
+    {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "verbs.declined",
+      "fires": 13,
+      "magnitude": 13
+    },
+    {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    }
+  ],
+  "livenessAfter": [
+    {
+      "mechanic": "combat.battle_closed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "combat.battle_day",
+      "fires": 7,
+      "magnitude": 7
+    },
+    {
+      "mechanic": "combat.battle_opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "combat.bombardment",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "combat.breakout",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.captured",
+      "fires": 5,
+      "magnitude": 2415
+    },
+    {
+      "mechanic": "combat.cut_off",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.destroyed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.evacuated",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.flank_broken",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "combat.general_hit",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.killed_wounded",
+      "fires": 10,
+      "magnitude": 22642
+    },
+    {
+      "mechanic": "combat.missing",
+      "fires": 10,
+      "magnitude": 6820
+    },
+    {
+      "mechanic": "combat.occupation",
+      "fires": 314,
+      "magnitude": 15800
+    },
+    {
+      "mechanic": "combat.pursuit_chosen",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.records_pruned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.routed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "combat.surrendered",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "combat.withdrew",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "combat.works_stormed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.government_closed",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "command.government_established",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "command.government_reopened",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.post_succeeded",
+      "fires": 6,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "command.proposal_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "command.side_changed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    {
+      "mechanic": "command.temporary_post_opened",
+      "fires": 13,
+      "magnitude": 13
+    },
+    {
+      "mechanic": "commands.rejected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "control.changed",
+      "fires": 320,
+      "magnitude": 18600
+    },
+    {
+      "mechanic": "control.threshold_crossed",
+      "fires": 59,
+      "magnitude": 59
+    },
+    {
+      "mechanic": "forces.landed_by_situation",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "forces.landing_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "forces.stores_fell",
+      "fires": 2794,
+      "magnitude": 2771175
+    },
+    {
+      "mechanic": "forces.stores_low",
+      "fires": 109,
+      "magnitude": 109
+    },
+    {
+      "mechanic": "forces.stores_refilled",
+      "fires": 2483,
+      "magnitude": 2467029
+    },
+    {
+      "mechanic": "forces.stragglers_returned",
+      "fires": 184,
+      "magnitude": 2261
+    },
+    {
+      "mechanic": "infrastructure.changed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "knowledge.pruned_age",
+      "fires": 105,
+      "magnitude": 1471
+    },
+    {
+      "mechanic": "knowledge.pruned_superseded",
+      "fires": 146,
+      "magnitude": 11882
+    },
+    {
+      "mechanic": "ladder.moved",
+      "fires": 9,
+      "magnitude": 9
+    },
+    {
+      "mechanic": "ladder.rival",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "map.pocket_closed",
+      "fires": 4,
+      "magnitude": 4
+    },
+    {
+      "mechanic": "map.pocket_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "map.pocket_relieved",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "map.recomputed",
+      "fires": 58,
+      "magnitude": 65
+    },
+    {
+      "mechanic": "messages.courier_delay",
+      "fires": 102,
+      "magnitude": 102
+    },
+    {
+      "mechanic": "messages.delivered",
+      "fires": 14280,
+      "magnitude": 14280
+    },
+    {
+      "mechanic": "messages.mail_delay",
+      "fires": 2852,
+      "magnitude": 2852
+    },
+    {
+      "mechanic": "messages.sent",
+      "fires": 15046,
+      "magnitude": 15046
+    },
+    {
+      "mechanic": "messages.special_messenger",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "movement.arrived",
+      "fires": 728,
+      "magnitude": 728
+    },
+    {
+      "mechanic": "movement.join_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "movement.joined",
+      "fires": 65,
+      "magnitude": 65
+    },
+    {
+      "mechanic": "movement.leg_started",
+      "fires": 398,
+      "magnitude": 398
+    },
+    {
+      "mechanic": "operations.ended",
+      "fires": 4,
+      "magnitude": 4
+    },
+    {
+      "mechanic": "operations.landed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.opened",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "operations.repulsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.stage",
+      "fires": 19,
+      "magnitude": 19
+    },
+    {
+      "mechanic": "operations.support_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.support_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.support_sent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "operations.works",
+      "fires": 13,
+      "magnitude": 650
+    },
+    {
+      "mechanic": "orders.bypassed",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "orders.conflict",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "orders.obeyed",
+      "fires": 6,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "orders.relay_held",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "orders.relay_objected",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "orders.relayed",
+      "fires": 10,
+      "magnitude": 10
+    },
+    {
+      "mechanic": "orders.responses_pruned",
+      "fires": 23,
+      "magnitude": 60
+    },
+    {
+      "mechanic": "orders.returned",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.grievances_faded",
+      "fires": 30,
+      "magnitude": 30
+    },
+    {
+      "mechanic": "people.promise_broken",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.promise_kept",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "people.resigned",
+      "fires": 15,
+      "magnitude": 15
+    },
+    {
+      "mechanic": "people.stayed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "planner.candidates",
+      "fires": 6,
+      "magnitude": 12
+    },
+    {
+      "mechanic": "planner.searches",
+      "fires": 6,
+      "magnitude": 34
+    },
+    {
+      "mechanic": "planner.term.caution",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "planner.term.coordination",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.dependence",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.exposure",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.force_ratio",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "planner.term.glory",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.goal_fit",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.haste",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.notes",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "planner.term.supply",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "planner.term.time",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.approved",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.chosen",
+      "fires": 6,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "plans.discretion_exercised",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.draft_deferred",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.drafted",
+      "fires": 6,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "plans.edit_answered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_invalid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_objected",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_received",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.edit_shirked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.goal_proposed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.goal_reached",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "plans.goal_set",
+      "fires": 6,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "plans.released",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.sent_back",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.submitted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "plans.went_ahead",
+      "fires": 6,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "politics.act",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.adjourned",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.answered",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.called",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.framing",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "politics.front_page",
+      "fires": 63,
+      "magnitude": 63
+    },
+    {
+      "mechanic": "politics.met",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.opened",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "politics.press_silent",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "politics.support",
+      "fires": 85,
+      "magnitude": 85
+    },
+    {
+      "mechanic": "recruitment.answered",
+      "fires": 83,
+      "magnitude": 83
+    },
+    {
+      "mechanic": "recruitment.called",
+      "fires": 96,
+      "magnitude": 96
+    },
+    {
+      "mechanic": "recruitment.disbanded",
+      "fires": 27,
+      "magnitude": 27
+    },
+    {
+      "mechanic": "recruitment.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.men",
+      "fires": 62,
+      "magnitude": 230700
+    },
+    {
+      "mechanic": "recruitment.muster_blocked",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "recruitment.mustered",
+      "fires": 69,
+      "magnitude": 69
+    },
+    {
+      "mechanic": "recruitment.refused",
+      "fires": 13,
+      "magnitude": 13
+    },
+    {
+      "mechanic": "recruitment.renewed",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "recruitment.slow_walked",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "regions.reached_lines",
+      "fires": 261,
+      "magnitude": 261
+    },
+    {
+      "mechanic": "regions.self_emancipation",
+      "fires": 3104,
+      "magnitude": 3104
+    },
+    {
+      "mechanic": "reports.battle_dispatch",
+      "fires": 42,
+      "magnitude": 42
+    },
+    {
+      "mechanic": "reports.casualty_return",
+      "fires": 22,
+      "magnitude": 22
+    },
+    {
+      "mechanic": "reports.commander_lost",
+      "fires": 1,
+      "magnitude": 1
+    },
+    {
+      "mechanic": "reports.filtered",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.governor_wire",
+      "fires": 7,
+      "magnitude": 7
+    },
+    {
+      "mechanic": "reports.observer_letter",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "reports.pocket",
+      "fires": 4,
+      "magnitude": 4
+    },
+    {
+      "mechanic": "reports.trimmed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.attention_refilled",
+      "fires": 21,
+      "magnitude": 42
+    },
+    {
+      "mechanic": "seats.attention_refused",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.attention_spent",
+      "fires": 171,
+      "magnitude": 171
+    },
+    {
+      "mechanic": "seats.battle_orders",
+      "fires": 7,
+      "magnitude": 7
+    },
+    {
+      "mechanic": "seats.choices",
+      "fires": 6,
+      "magnitude": 6
+    },
+    {
+      "mechanic": "seats.defaulted",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "seats.initiative",
+      "fires": 3,
+      "magnitude": 3
+    },
+    {
+      "mechanic": "situations.decided",
+      "fires": 19,
+      "magnitude": 19
+    },
+    {
+      "mechanic": "situations.delegated",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.fired",
+      "fires": 88,
+      "magnitude": 88
+    },
+    {
+      "mechanic": "situations.lapsed",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.notice_reports",
+      "fires": 70,
+      "magnitude": 70
+    },
+    {
+      "mechanic": "situations.noticed",
+      "fires": 69,
+      "magnitude": 69
+    },
+    {
+      "mechanic": "situations.options_changed",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "situations.orders",
+      "fires": 25,
+      "magnitude": 25
+    },
+    {
+      "mechanic": "situations.policy",
+      "fires": 1,
+      "magnitude": 200
+    },
+    {
+      "mechanic": "situations.policy_unpaid",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "situations.proposals",
+      "fires": 73,
+      "magnitude": 637
+    },
+    {
+      "mechanic": "situations.resurfaced",
+      "fires": 2,
+      "magnitude": 2
+    },
+    {
+      "mechanic": "situations.staff_lines",
+      "fires": 18,
+      "magnitude": 18
+    },
+    {
+      "mechanic": "situations.surfaced",
+      "fires": 87,
+      "magnitude": 87
+    },
+    {
+      "mechanic": "situations.waiting",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "verbs.answered",
+      "fires": 143,
+      "magnitude": 143
+    },
+    {
+      "mechanic": "verbs.audience",
+      "fires": 0,
+      "magnitude": 0
+    },
+    {
+      "mechanic": "verbs.consulted",
+      "fires": 5,
+      "magnitude": 5
+    },
+    {
+      "mechanic": "verbs.declined",
+      "fires": 32,
+      "magnitude": 32
+    },
+    {
+      "mechanic": "verbs.in_washington",
+      "fires": 0,
+      "magnitude": 0
+    }
+  ],
+  "cause": "S96 ran with the pre-S98 cast. S100 retains S98 judgments/bands/CI while integrating S96 and 0116. Checkpoint cadence differs; compare daily hashes and matching score days."
+}
