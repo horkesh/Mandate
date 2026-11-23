@@ -1,0 +1,7935 @@
+[
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "brown_joseph_e",
+    "answers": 7,
+    "rungs": {
+      "comply": 7
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_georgia",
+        "order": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 127,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 45
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_georgia",
+        "order": "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 34,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 127,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 45
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_georgia",
+        "order": "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 42,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 127,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 45
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr22_absolute_georgia",
+        "order": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 48,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 127,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 45
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_cavalry_georgia",
+        "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 104,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 22
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_georgia",
+        "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 104,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 22
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jul01_extra_georgia",
+        "order": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 124,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 104,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 22
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "clark_edward",
+    "answers": 3,
+    "rungs": {
+      "object": 3
+    },
+    "calls": [
+      {
+        "id": "cs_apr08_texas",
+        "order": "m.34.davis_jefferson.clark_edward.call.st_gov_texas",
+        "day": 34,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -12,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -34
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 22
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_texas",
+        "order": "m.43.davis_jefferson.clark_edward.call.st_gov_texas",
+        "day": 43,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -12,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -34
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 22
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_texas",
+        "order": "m.120.davis_jefferson.clark_edward.call.st_gov_texas",
+        "day": 124,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -23,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -34
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 11
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "ellis_john_w",
+    "answers": 2,
+    "rungs": {
+      "object": 2
+    },
+    "calls": [
+      {
+        "id": "cs_jun30_reserve_north_carolina",
+        "order": "m.120.davis_jefferson.ellis_john_w.call.st_gov_north_carolina.2",
+        "day": 124,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -6,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -34
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 28
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr22_absolute_north_carolina",
+        "order": "m.120.davis_jefferson.ellis_john_w.call.st_gov_north_carolina",
+        "day": 125,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -6,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -34
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 28
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "harris_isham_g",
+    "answers": 3,
+    "rungs": {
+      "object": 3
+    },
+    "calls": [
+      {
+        "id": "cs_apr22_absolute_tennessee",
+        "order": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "day": 128,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -125,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -135
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_cavalry_tennessee",
+        "order": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+        "day": 128,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -125,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -135
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_tennessee",
+        "order": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3",
+        "day": 128,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -125,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -135
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "houston_samuel",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_texas",
+        "order": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 233,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 400
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -4
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": -180
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 17
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "letcher_john",
+    "answers": 1,
+    "rungs": {
+      "object": 1
+    },
+    "calls": [
+      {
+        "id": "cs_jun30_reserve_virginia",
+        "order": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "day": 120,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -39,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -81
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 42
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "moore_andrew_b",
+    "answers": 7,
+    "rungs": {
+      "comply": 4,
+      "comply_with_reservations": 3
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_alabama",
+        "order": "m.4.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 48,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -2
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_alabama",
+        "order": "m.34.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 34,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 48,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -2
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_alabama",
+        "order": "m.42.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 42,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 48,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -2
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr22_absolute_alabama",
+        "order": "m.48.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 48,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 48,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -2
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_cavalry_alabama",
+        "order": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 121,
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "willingness": 8,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -2
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_alabama",
+        "order": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama.2",
+        "day": 121,
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "willingness": 8,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -2
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jul01_extra_alabama",
+        "order": "m.120.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 124,
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "willingness": 8,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -2
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "moore_thomas_o",
+    "answers": 6,
+    "rungs": {
+      "object": 6
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_louisiana",
+        "order": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 4,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -49,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_louisiana",
+        "order": "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 34,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -49,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_louisiana",
+        "order": "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 42,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -49,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr22_absolute_louisiana",
+        "order": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 48,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -49,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun29_extra_louisiana",
+        "order": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 120,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -67,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 9
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_louisiana",
+        "order": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 121,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -67,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 9
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "perry_madison_s",
+    "answers": 4,
+    "rungs": {
+      "object": 4
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_florida",
+        "order": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida",
+        "day": 4,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -2,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -37
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 35
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_florida",
+        "order": "m.34.davis_jefferson.perry_madison_s.call.st_gov_florida",
+        "day": 34,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -2,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -37
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 35
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_florida",
+        "order": "m.42.davis_jefferson.perry_madison_s.call.st_gov_florida",
+        "day": 42,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -2,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -37
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 35
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_florida",
+        "order": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida",
+        "day": 121,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -7,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -37
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 30
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "pettus_john_j",
+    "answers": 7,
+    "rungs": {
+      "comply": 4,
+      "slow_walk": 3
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_mississippi",
+        "order": "m.4.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 17,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -24
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 41
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_mississippi",
+        "order": "m.34.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 34,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 17,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -24
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 41
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_mississippi",
+        "order": "m.42.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 42,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 17,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -24
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 41
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr22_absolute_mississippi",
+        "order": "m.48.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 48,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 17,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -24
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 41
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun29_extra_mississippi",
+        "order": "m.116.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 120,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -14,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -24
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_cavalry_mississippi",
+        "order": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 121,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -14,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -24
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_mississippi",
+        "order": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi.2",
+        "day": 121,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -14,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -24
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "pickens_francis_w",
+    "answers": 4,
+    "rungs": {
+      "slow_walk": 4
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_south_carolina",
+        "order": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "day": 4,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -23,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -66
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 43
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_south_carolina",
+        "order": "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "day": 34,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -23,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -66
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 43
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_south_carolina",
+        "order": "m.42.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "day": 42,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -23,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -66
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 43
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_south_carolina",
+        "order": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "day": 124,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -34,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -66
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 32
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "governor": "rector_henry_m",
+    "answers": 3,
+    "rungs": {
+      "comply_with_reservations": 1,
+      "slow_walk": 2
+    },
+    "calls": [
+      {
+        "id": "cs_apr22_absolute_arkansas",
+        "order": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+        "day": 74,
+        "actual": "comply_with_reservations",
+        "declared": "comply",
+        "willingness": 4,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -16
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 20
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_cavalry_arkansas",
+        "order": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+        "day": 121,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -6,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -16
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_arkansas",
+        "order": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas.2",
+        "day": 121,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -6,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -16
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "andrew_john_a",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 189,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -134
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 90
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may15_vol_massachusetts",
+        "order": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+        "day": 71,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 189,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -134
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 90
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "blair_austin",
+    "answers": 2,
+    "rungs": {
+      "object": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+        "day": 41,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -6,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -34
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 28
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_michigan",
+        "order": "m.72.lincoln_abraham.blair_austin.call.st_gov_michigan",
+        "day": 72,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -7,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -34
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "buckingham_william_a",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 15,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -20
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 35
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_connecticut",
+        "order": "m.72.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+        "day": 72,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 15,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -20
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 35
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "burton_william",
+    "answers": 1,
+    "rungs": {
+      "slow_walk": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.burton_william.call.st_gov_delaware",
+        "day": 41,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -42,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 34
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "curtin_andrew_g",
+    "answers": 1,
+    "rungs": {
+      "slow_walk": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.curtin_andrew_g.call.st_gov_pennsylvania",
+        "day": 41,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -44,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -77
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "dennison_william",
+    "answers": 2,
+    "rungs": {
+      "object": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.dennison_william.call.st_gov_ohio",
+        "day": 41,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -27,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -58
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 31
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_ohio",
+        "order": "m.78.lincoln_abraham.dennison_william.call.st_gov_ohio",
+        "day": 78,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -27,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -58
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 31
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "ellis_john_w",
+    "answers": 1,
+    "rungs": {
+      "object": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_north_carolina",
+        "day": 45,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -7,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -34
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "fairbanks_erastus",
+    "answers": 2,
+    "rungs": {
+      "object": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont",
+        "day": 41,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -34,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -67
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_vermont",
+        "order": "m.78.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont",
+        "day": 78,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -34,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -67
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "goodwin_ichabod",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 21,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -20
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 41
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_new_hampshire",
+        "order": "m.72.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+        "day": 72,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 21,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -20
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 41
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "harris_isham_g",
+    "answers": 1,
+    "rungs": {
+      "object": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee",
+        "day": 44,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -126,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -135
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 9
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "hicks_thomas_h",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+        "day": 43,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 220,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -20
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "jackson_claiborne_f",
+    "answers": 1,
+    "rungs": {
+      "slow_walk": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri",
+        "day": 43,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -136,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -148
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 12
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "kirkwood_samuel_j",
+    "answers": 2,
+    "rungs": {
+      "object": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa",
+        "day": 41,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -53,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -71
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 18
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_iowa",
+        "order": "m.72.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa",
+        "day": 72,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -53,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -71
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 18
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "letcher_john",
+    "answers": 1,
+    "rungs": {
+      "object": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_virginia",
+        "day": 41,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -60,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -81
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 21
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "magoffin_beriah",
+    "answers": 1,
+    "rungs": {
+      "comply_with_reservations": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky",
+        "day": 44,
+        "actual": "comply_with_reservations",
+        "declared": "comply",
+        "willingness": 9,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -4
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "morgan_edwin_d",
+    "answers": 6,
+    "rungs": {
+      "comply_with_reservations": 6
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "day": 41,
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "willingness": 8,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 30
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may03_accepted_new_york",
+        "order": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "day": 59,
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "willingness": 8,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 30
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_new_york",
+        "order": "m.78.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "day": 78,
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "willingness": 8,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 30
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_jul25_new_york",
+        "order": "m.142.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "day": 142,
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "willingness": 8,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 30
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_jul30_cavalry_new_york",
+        "order": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "day": 147,
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "willingness": 8,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 30
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_jul30_artillery_new_york",
+        "order": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york.2",
+        "day": 147,
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "willingness": 8,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 30
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "morton_oliver_h_p_t",
+    "answers": 3,
+    "rungs": {
+      "comply": 3
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 86,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -132
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 18
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_indiana",
+        "order": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+        "day": 72,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 86,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -132
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 18
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_jun11_indiana",
+        "order": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+        "day": 98,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 86,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -132
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 18
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "olden_charles_s",
+    "answers": 2,
+    "rungs": {
+      "object": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey",
+        "day": 41,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -36,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_new_jersey",
+        "order": "m.72.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey",
+        "day": 72,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -37,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 39
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "ramsey_alexander",
+    "answers": 1,
+    "rungs": {
+      "object": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.ramsey_alexander.call.st_gov_minnesota",
+        "day": 41,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -3,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -11
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 8
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "randall_alexander_w",
+    "answers": 2,
+    "rungs": {
+      "comply_with_reservations": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+        "day": 41,
+        "actual": "comply_with_reservations",
+        "declared": "comply",
+        "willingness": 2,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -24
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 26
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_wisconsin",
+        "order": "m.78.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+        "day": 78,
+        "actual": "comply_with_reservations",
+        "declared": "comply",
+        "willingness": 2,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -24
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 26
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "rector_henry_m",
+    "answers": 1,
+    "rungs": {
+      "slow_walk": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_arkansas",
+        "day": 45,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -8,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -16
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 8
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "robinson_charles",
+    "answers": 1,
+    "rungs": {
+      "object": 1
+    },
+    "calls": [
+      {
+        "id": "us_may15_vol_kansas",
+        "order": "m.71.lincoln_abraham.robinson_charles.call.st_gov_kansas",
+        "day": 71,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -4,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -12
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 8
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "saunders_alvin",
+    "answers": 1,
+    "rungs": {
+      "slow_walk": 1
+    },
+    "calls": [
+      {
+        "id": "us_may15_vol_nebraska",
+        "order": "m.78.lincoln_abraham.saunders_alvin.call.tr_gov_nebraska",
+        "day": 78,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -6,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -15
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 9
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "smith_charles_f",
+    "answers": 3,
+    "rungs": {
+      "object": 3
+    },
+    "calls": [
+      {
+        "id": "us_may04_regular_infantry",
+        "order": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service",
+        "day": 60,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -24,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -55
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 31
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may04_regular_cavalry",
+        "order": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.2",
+        "day": 60,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -24,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -55
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 31
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may04_regular_artillery",
+        "order": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.3",
+        "day": 60,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -24,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -55
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 31
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "sprague_william",
+    "answers": 2,
+    "rungs": {
+      "comply_with_reservations": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+        "day": 41,
+        "actual": "comply_with_reservations",
+        "declared": "comply",
+        "willingness": 2,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -28
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 30
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may15_vol_rhode_island",
+        "order": "m.71.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+        "day": 71,
+        "actual": "comply_with_reservations",
+        "declared": "comply",
+        "willingness": 2,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -28
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 30
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "washburn_israel",
+    "answers": 2,
+    "rungs": {
+      "slow_walk": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.washburn_israel.call.st_gov_maine",
+        "day": 41,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -37,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -77
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_maine",
+        "order": "m.72.lincoln_abraham.washburn_israel.call.st_gov_maine",
+        "day": 72,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -37,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -77
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "governor": "yates_richard",
+    "answers": 2,
+    "rungs": {
+      "slow_walk": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.yates_richard.call.st_gov_illinois",
+        "day": 41,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -65,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -91
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 26
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_illinois",
+        "order": "m.72.lincoln_abraham.yates_richard.call.st_gov_illinois",
+        "day": 72,
+        "actual": "slow_walk",
+        "declared": "comply",
+        "willingness": -65,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -91
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 26
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "brown_joseph_e",
+    "answers": 7,
+    "rungs": {
+      "comply": 7
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_georgia",
+        "order": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 149,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_georgia",
+        "order": "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 34,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 149,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_georgia",
+        "order": "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 42,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 149,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr22_absolute_georgia",
+        "order": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 48,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 149,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_cavalry_georgia",
+        "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 115,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_georgia",
+        "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 115,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jul01_extra_georgia",
+        "order": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 124,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 115,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "clark_edward",
+    "answers": 3,
+    "rungs": {
+      "comply": 3
+    },
+    "calls": [
+      {
+        "id": "cs_apr08_texas",
+        "order": "m.34.davis_jefferson.clark_edward.call.st_gov_texas",
+        "day": 34,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 27,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_texas",
+        "order": "m.43.davis_jefferson.clark_edward.call.st_gov_texas",
+        "day": 43,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 27,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_texas",
+        "order": "m.120.davis_jefferson.clark_edward.call.st_gov_texas",
+        "day": 124,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 13,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "ellis_john_w",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": "cs_apr22_absolute_north_carolina",
+        "order": "m.85.davis_jefferson.ellis_john_w.call.st_gov_north_carolina",
+        "day": 88,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 40,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_north_carolina",
+        "order": "m.120.davis_jefferson.ellis_john_w.call.st_gov_north_carolina",
+        "day": 125,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 40,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "harris_isham_g",
+    "answers": 3,
+    "rungs": {
+      "object": 3
+    },
+    "calls": [
+      {
+        "id": "cs_apr22_absolute_tennessee",
+        "order": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "day": 128,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -122,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -135
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_cavalry_tennessee",
+        "order": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+        "day": 128,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -122,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -135
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_tennessee",
+        "order": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3",
+        "day": 128,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -122,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -135
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "houston_samuel",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_texas",
+        "order": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 247,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 400
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": -180
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "letcher_john",
+    "answers": 1,
+    "rungs": {
+      "object": 1
+    },
+    "calls": [
+      {
+        "id": "cs_jun30_reserve_virginia",
+        "order": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "day": 120,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -14,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -81
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "moore_andrew_b",
+    "answers": 7,
+    "rungs": {
+      "comply": 7
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_alabama",
+        "order": "m.4.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 67,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_alabama",
+        "order": "m.34.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 34,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 67,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_alabama",
+        "order": "m.42.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 42,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 67,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr22_absolute_alabama",
+        "order": "m.48.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 48,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 67,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_cavalry_alabama",
+        "order": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 13,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_alabama",
+        "order": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama.2",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 13,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jul01_extra_alabama",
+        "order": "m.120.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+        "day": 124,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 13,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "moore_thomas_o",
+    "answers": 6,
+    "rungs": {
+      "comply": 6
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_louisiana",
+        "order": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 144,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -96
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_louisiana",
+        "order": "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 34,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 144,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -96
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_louisiana",
+        "order": "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 42,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 144,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -96
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr22_absolute_louisiana",
+        "order": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 48,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 144,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -96
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun29_extra_louisiana",
+        "order": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 120,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 117,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -96
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_louisiana",
+        "order": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 117,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -96
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "perry_madison_s",
+    "answers": 4,
+    "rungs": {
+      "comply": 4
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_florida",
+        "order": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 199,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -48
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 47
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_florida",
+        "order": "m.34.davis_jefferson.perry_madison_s.call.st_gov_florida",
+        "day": 34,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 199,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -48
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 47
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_florida",
+        "order": "m.42.davis_jefferson.perry_madison_s.call.st_gov_florida",
+        "day": 42,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 199,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -48
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 47
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_florida",
+        "order": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 192,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -48
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "pettus_john_j",
+    "answers": 7,
+    "rungs": {
+      "comply": 7
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_mississippi",
+        "order": "m.4.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 54,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 54
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_mississippi",
+        "order": "m.34.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 34,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 54,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 54
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_mississippi",
+        "order": "m.43.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 43,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 54,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 54
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr22_absolute_mississippi",
+        "order": "m.48.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 48,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 54,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 54
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun29_extra_mississippi",
+        "order": "m.116.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 120,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 13,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_cavalry_mississippi",
+        "order": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 13,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_mississippi",
+        "order": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi.2",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 13,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "pickens_francis_w",
+    "answers": 4,
+    "rungs": {
+      "comply": 4
+    },
+    "calls": [
+      {
+        "id": "cs_mar09_south_carolina",
+        "order": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 54,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 54
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr08_south_carolina",
+        "order": "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "day": 34,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 54,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 54
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_apr16_south_carolina",
+        "order": "m.43.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "day": 43,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 54,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 54
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_south_carolina",
+        "order": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "day": 124,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 40,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "governor": "rector_henry_m",
+    "answers": 3,
+    "rungs": {
+      "comply": 3
+    },
+    "calls": [
+      {
+        "id": "cs_apr22_absolute_arkansas",
+        "order": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+        "day": 74,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 27,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_cavalry_arkansas",
+        "order": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 13,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "cs_jun30_reserve_arkansas",
+        "order": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas.2",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 13,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "andrew_john_a",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 189,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -134
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 90
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may15_vol_massachusetts",
+        "order": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+        "day": 71,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 189,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -134
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 90
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "blair_austin",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 45,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 45
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_michigan",
+        "order": "m.72.lincoln_abraham.blair_austin.call.st_gov_michigan",
+        "day": 72,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 45,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 45
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "buckingham_william_a",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_connecticut",
+        "order": "m.72.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+        "day": 72,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "burton_william",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.burton_william.call.st_gov_delaware",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 58,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 58
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "curtin_andrew_g",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.curtin_andrew_g.call.st_gov_pennsylvania",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 33,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "dennison_william",
+    "answers": 2,
+    "rungs": {
+      "object": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.dennison_william.call.st_gov_ohio",
+        "day": 41,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -20,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -58
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 38
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_ohio",
+        "order": "m.78.lincoln_abraham.dennison_william.call.st_gov_ohio",
+        "day": 78,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -20,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -58
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 38
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "ellis_john_w",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_north_carolina",
+        "day": 45,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 39,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 39
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "fairbanks_erastus",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_vermont",
+        "order": "m.78.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont",
+        "day": 78,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "goodwin_ichabod",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_new_hampshire",
+        "order": "m.72.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+        "day": 72,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "harris_isham_g",
+    "answers": 1,
+    "rungs": {
+      "object": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee",
+        "day": 44,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -124,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -135
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 11
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "hicks_thomas_h",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+        "day": 43,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 250,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 50
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "jackson_claiborne_f",
+    "answers": 1,
+    "rungs": {
+      "object": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri",
+        "day": 43,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -132,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -148
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 16
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "kirkwood_samuel_j",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 25,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 25
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_iowa",
+        "order": "m.72.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa",
+        "day": 72,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 25,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 25
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "letcher_john",
+    "answers": 1,
+    "rungs": {
+      "object": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_virginia",
+        "day": 41,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -48,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -81
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "magoffin_beriah",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky",
+        "day": 44,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 18,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -4
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 22
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "morgan_edwin_d",
+    "answers": 6,
+    "rungs": {
+      "comply": 6
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 29,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may03_accepted_new_york",
+        "order": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "day": 59,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 29,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_new_york",
+        "order": "m.78.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "day": 78,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 29,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_jul25_new_york",
+        "order": "m.142.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "day": 142,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 29,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_jul30_cavalry_new_york",
+        "order": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "day": 147,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 29,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_jul30_artillery_new_york",
+        "order": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york.2",
+        "day": 147,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 29,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -22
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "morton_oliver_h_p_t",
+    "answers": 3,
+    "rungs": {
+      "comply": 3
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 100,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -132
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 32
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_indiana",
+        "order": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+        "day": 72,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 100,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -132
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 32
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_jun11_indiana",
+        "order": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+        "day": 98,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 100,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -132
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 32
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "olden_charles_s",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 58,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 58
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_new_jersey",
+        "order": "m.72.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey",
+        "day": 72,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 57,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 57
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "ramsey_alexander",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.ramsey_alexander.call.st_gov_minnesota",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 12,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 12
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "randall_alexander_w",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 45,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 45
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_wisconsin",
+        "order": "m.78.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+        "day": 78,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 45,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 45
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "rector_henry_m",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_arkansas",
+        "day": 45,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 11,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 11
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "robinson_charles",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": "us_may15_vol_kansas",
+        "order": "m.71.lincoln_abraham.robinson_charles.call.st_gov_kansas",
+        "day": 71,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 12,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 12
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "saunders_alvin",
+    "answers": 1,
+    "rungs": {
+      "comply": 1
+    },
+    "calls": [
+      {
+        "id": "us_may15_vol_nebraska",
+        "order": "m.78.lincoln_abraham.saunders_alvin.call.tr_gov_nebraska",
+        "day": 78,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 12,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 12
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "smith_charles_f",
+    "answers": 3,
+    "rungs": {
+      "comply": 3
+    },
+    "calls": [
+      {
+        "id": "us_may04_regular_infantry",
+        "order": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service",
+        "day": 60,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may04_regular_cavalry",
+        "order": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.2",
+        "day": 60,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may04_regular_artillery",
+        "order": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.3",
+        "day": 60,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "sprague_william",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may15_vol_rhode_island",
+        "order": "m.71.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+        "day": 71,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "washburn_israel",
+    "answers": 2,
+    "rungs": {
+      "comply": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.washburn_israel.call.st_gov_maine",
+        "day": 41,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_maine",
+        "order": "m.72.lincoln_abraham.washburn_israel.call.st_gov_maine",
+        "day": 72,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 51,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 51
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "governor": "yates_richard",
+    "answers": 2,
+    "rungs": {
+      "object": 2
+    },
+    "calls": [
+      {
+        "id": null,
+        "order": "m.41.lincoln_abraham.yates_richard.call.st_gov_illinois",
+        "day": 41,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -59,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -91
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 32
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      },
+      {
+        "id": "us_may16_vol_illinois",
+        "order": "m.72.lincoln_abraham.yates_richard.call.st_gov_illinois",
+        "day": 72,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -59,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -91
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 32
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ]
+  }
+]

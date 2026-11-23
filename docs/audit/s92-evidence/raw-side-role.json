@@ -1,0 +1,149 @@
+[
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "role": "addressee",
+    "rung": "comply",
+    "count": 70
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "role": "addressee",
+    "rung": "comply_with_reservations",
+    "count": 5
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "role": "addressee",
+    "rung": "object",
+    "count": 20
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "role": "addressee",
+    "rung": "slow_walk",
+    "count": 9
+  },
+  {
+    "stage": "baseline",
+    "side": "confederate",
+    "role": "relay",
+    "rung": "object",
+    "count": 2
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "role": "addressee",
+    "rung": "comply",
+    "count": 65
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "role": "addressee",
+    "rung": "comply_with_reservations",
+    "count": 11
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "role": "addressee",
+    "rung": "object",
+    "count": 19
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "role": "addressee",
+    "rung": "slow_walk",
+    "count": 9
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "role": "relay",
+    "rung": "comply",
+    "count": 6
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "role": "relay",
+    "rung": "object",
+    "count": 1
+  },
+  {
+    "stage": "baseline",
+    "side": "union",
+    "role": "relay",
+    "rung": "slow_walk",
+    "count": 2
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "role": "addressee",
+    "rung": "comply",
+    "count": 107
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "role": "addressee",
+    "rung": "comply_with_reservations",
+    "count": 1
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "role": "addressee",
+    "rung": "object",
+    "count": 5
+  },
+  {
+    "stage": "final",
+    "side": "confederate",
+    "role": "relay",
+    "rung": "object",
+    "count": 2
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "role": "addressee",
+    "rung": "comply",
+    "count": 107
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "role": "addressee",
+    "rung": "object",
+    "count": 7
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "role": "relay",
+    "rung": "comply",
+    "count": 7
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "role": "relay",
+    "rung": "comply_with_reservations",
+    "count": 1
+  },
+  {
+    "stage": "final",
+    "side": "union",
+    "role": "relay",
+    "rung": "object",
+    "count": 1
+  }
+]

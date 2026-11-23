@@ -1,0 +1,122 @@
+{
+  "base": "117b8ac8",
+  "matches": true,
+  "before": {
+    "actual": "reinterpret",
+    "declared": "comply",
+    "willingness": -200,
+    "contributions": [
+      {
+        "term": "values",
+        "amount": 0
+      },
+      {
+        "term": "temperament",
+        "amount": -320
+      },
+      {
+        "term": "regard",
+        "amount": 0
+      },
+      {
+        "term": "deterrence",
+        "amount": 130
+      },
+      {
+        "term": "capacity",
+        "amount": -10
+      },
+      {
+        "term": "disposition",
+        "amount": 0
+      },
+      {
+        "term": "grievances",
+        "amount": 0
+      }
+    ],
+    "reasons": [
+      {
+        "kind": "too_rash",
+        "gap": 800
+      },
+      {
+        "kind": "fears_sanction"
+      },
+      {
+        "kind": "shielded_by_standing"
+      },
+      {
+        "kind": "lacks_resources",
+        "shortfall": 20
+      }
+    ],
+    "statedReasons": [],
+    "counterProposal": null,
+    "conditions": [
+      {
+        "kind": "when_reinforced",
+        "shortfall": 20
+      }
+    ]
+  },
+  "after": {
+    "actual": "reinterpret",
+    "declared": "comply",
+    "willingness": -200,
+    "contributions": [
+      {
+        "term": "values",
+        "amount": 0
+      },
+      {
+        "term": "temperament",
+        "amount": -320
+      },
+      {
+        "term": "regard",
+        "amount": 0
+      },
+      {
+        "term": "deterrence",
+        "amount": 130
+      },
+      {
+        "term": "capacity",
+        "amount": -10
+      },
+      {
+        "term": "disposition",
+        "amount": 0
+      },
+      {
+        "term": "grievances",
+        "amount": 0
+      }
+    ],
+    "reasons": [
+      {
+        "kind": "too_rash",
+        "gap": 800
+      },
+      {
+        "kind": "fears_sanction"
+      },
+      {
+        "kind": "shielded_by_standing"
+      },
+      {
+        "kind": "lacks_resources",
+        "shortfall": 20
+      }
+    ],
+    "statedReasons": [],
+    "counterProposal": null,
+    "conditions": [
+      {
+        "kind": "when_reinforced",
+        "shortfall": 20
+      }
+    ]
+  }
+}

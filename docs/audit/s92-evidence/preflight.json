@@ -1,0 +1,30 @@
+{
+  "peopleRows": 298,
+  "castChanges": [
+    {
+      "person": "moore_thomas_o",
+      "columns": [
+        "boldness",
+        "values",
+        "sources",
+        "notes"
+      ]
+    },
+    {
+      "person": "perry_madison_s",
+      "columns": [
+        "boldness",
+        "values",
+        "sources",
+        "notes"
+      ]
+    }
+  ],
+  "sixJudgments": 6,
+  "generatedPeopleChanged": [
+    "moore_thomas_o",
+    "perry_madison_s"
+  ],
+  "protectedFilesByteExact": 25,
+  "schemaAndStateAdded": false
+}

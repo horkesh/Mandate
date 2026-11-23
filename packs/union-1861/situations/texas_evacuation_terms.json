@@ -1,0 +1,94 @@
+{
+  "id": "texas_evacuation_terms",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.texas_evacuation_terms.title",
+  "text": "situation.texas_evacuation_terms.text",
+  "earliest": "1861-03-05",
+  "event": {
+    "all": [
+      {
+        "holds": {
+          "post": "us_dept_texas",
+          "person": "waite_carlos_a"
+        }
+      },
+      {
+        "any": [
+          {
+            "withdrawableForce": {
+              "block": "fb_us_texas_1st_inf",
+              "regions": [
+                "tx_coastal_bend",
+                "brownsville",
+                "tx_san_antonio_austin"
+              ]
+            }
+          },
+          {
+            "withdrawableForce": {
+              "block": "fb_us_texas_2nd_cav",
+              "regions": [
+                "tx_coastal_bend",
+                "brownsville",
+                "tx_san_antonio_austin"
+              ]
+            }
+          },
+          {
+            "withdrawableForce": {
+              "block": "fb_us_texas_2nd_cav_eg",
+              "regions": [
+                "tx_coastal_bend",
+                "brownsville",
+                "tx_san_antonio_austin"
+              ]
+            }
+          },
+          {
+            "withdrawableForce": {
+              "block": "fb_us_texas_3rd_inf",
+              "regions": [
+                "tx_coastal_bend",
+                "brownsville",
+                "tx_san_antonio_austin"
+              ]
+            }
+          },
+          {
+            "withdrawableForce": {
+              "block": "fb_us_texas_8th_inf",
+              "regions": [
+                "tx_coastal_bend",
+                "brownsville",
+                "tx_san_antonio_austin"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "setFlag": "texas_accepted_departure_terms"
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Military theatre departure of the existing contingent under sourced terms only. No prisoner-treatment, exchange, civilian, slavery or security policy is offered or derived; no benefit for such conduct."
+  },
+  "citations": [
+    {
+      "source": "S92-OR-I-I",
+      "at": "pp.502-504,514: February 18 agreement yields posts, retains arms for departure by coast; pp.523-524: February 20 embarkation return; p.552: two transports already sailed by April 17; pp.561-564: Sibley surrendered two First, three Third and two Eighth Infantry companies at Saluria April 25, after Indianola transport failed; pp.567-569,572: Reeve six Eighth companies surrendered May 9, last column. [I] Starting regiment bundles combine different departures/captures. Conservative theatre completion only on the last sourced date: no claim all surrendered together, no invented captive count, destination, exchange or new unit."
+    }
+  ],
+  "namedOnly": "The notice identifies an institutional evacuation agreement, not a living speaker or attributed personal words."
+}

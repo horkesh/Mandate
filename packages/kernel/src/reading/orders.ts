@@ -46,7 +46,10 @@ export function goalTerms(rules: PeopleRules, kind: string): DirectiveTerms {
 /** A man as compliance reads him, with his regard for `toward` (the issuer of the order he reads). */
 export function profileOf(world: ReadingWorld, state: State, person: PersonId, toward: PersonId): ProxyProfile {
   const t = traitsOf(world, state, person);
-  return { id: person, values: t.values, boldness: t.boldness, candour: t.candour, standing: t.standing, regard: toward === person ? 0 : regardOf(peopleRules(world), state, person, toward) };
+  const cast = world.map.world.people.find((p) => p.id === person)!;
+  const cited = (cell: { readonly direction: string | null; readonly cites: readonly unknown[] }): boolean => cell.direction !== null && cell.cites.length > 0;
+  const evidence = { boldness: cited(cast.temperament.boldness), candour: cited(cast.temperament.candour), standing: cited(cast.centres.reputation) };
+  return { id: person, evidence, values: t.values, boldness: t.boldness, candour: t.candour, standing: t.standing, regard: toward === person ? 0 : regardOf(peopleRules(world), state, person, toward) };
 }
 
 /** The circumstances he reads an order in: the pack's oversight and credibility, full means unless the caller says, and his grievances. */

@@ -95,13 +95,13 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // Lane 0.5: from the start (0050), changed only through `applyInfrastructure`.
   field('edge condition', 'infrastructure', ['combat', 'raids', 'repair orders'], [at('State', 'infraEdgeCondition')]),
   // Lane 0.5: a block's region (or the ship it is aboard), from the start (0050).
-  field('division location', 'movement', ['operations', 'recruitment (a new block placed, a disbanded one removed)', 'local organisation (conserved colocated lots)'], [at('State', 'forceLocations')]),
+  field('division location', 'movement', ['operations', 'recruitment (a new block placed, a disbanded one removed)', 'local organisation (conserved colocated lots)', 'situations (sourced theatre exit)'], [at('State', 'forceLocations')]),
   // Lane 1.12: a transfer orders the blocks it hands over to join the receiving post at its seat.
   field("a block's order to join its post at the post's seat", 'movement', ['verbs (a transfer)', 'operations (the day\'s legs)'], [at('State', 'forceJoins')]),
   // Lane 0.5: one record per block or detachment carries strength, stores and
   // non-combatants (`forces/forces.ts`), so the three `forces` rows below share it.
   // Lane 1.3: morale, experience, equipment, stragglers, and the days a block routed or surrendered join the same record.
-  field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment', 'local organisation (0108)'], [at('State', 'forceBlockStates')]),
+  field('division strength, morale, experience, equipment', 'forces', ['combat', 'attrition', 'economy', 'recruitment', 'local organisation (0108)', 'situations (sourced theatre exit)'], [at('State', 'forceBlockStates')]),
   field("a force block's stores on hand", 'forces', ['supply (daily)', 'operations (a sea delivery)']),
   // Lane 1.4b: a detachment is a `forceBlockStates` record of kind `detachment` (its row shares that record); one proposal
   // makes, rejoins or frees it across `forces`, `movement` and `command` (`tick/detachments.ts`).
@@ -113,7 +113,7 @@ export const OWNED_FIELDS: readonly OwnedField[] = [
   // Close-out (0072): copied from the scenario start at setup (0050); nothing changes it in Phase 0.
   field('fortification and entrenchment', 'regions', ['operations', 'combat'], [at('State', 'regionFortification')]),
   // Lane 0.5: which post commands each block; transfers name a force (0033).
-  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments and persistent formation posts (0108)", 'combat (a surrendered block is released, lane 1.3)', 'recruitment (a new block to its governor, a disbanded one away)'], [at('State', 'forceAssignments')]),
+  field('division-to-post assignment', 'command', ['transfers', "the army commander's assignments and persistent formation posts (0108)", 'combat (a surrendered block is released, lane 1.3)', 'recruitment (a new block to its governor, a disbanded one away)', 'situations (sourced theatre exit)'], [at('State', 'forceAssignments')]),
   // Lane 0.5: one record per post carries its holder, chain, department, temporary operation,
   // links, scheduled changes and standing orders (`command/command.ts`), so the `command`
   // rows for standing orders and a post's department below share it.

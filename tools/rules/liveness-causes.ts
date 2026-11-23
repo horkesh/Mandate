@@ -32,7 +32,16 @@ export function livenessProblems(origin: Bands, current: Bands, records: readonl
       // live driver. Bind this single observed transition in full, including
       // its cause/evidence; the immutable inherited baseline is not extended.
       const s82Quiet = fingerprint(r) === '460fa0bdf3671c01fc64013cacdff7506424d57b4054839352b064c5374b6fc9';
-      if (!inherited && !s82Quiet) {
+      // S92 ruling 3 permits four newly quiet Union bands after 0113. Freeze
+      // the complete records, including cause, evidence and exact zero ceiling.
+      // Receipts and live controls: tools/test/support/s92-quiet-transitions.json.
+      const s92Quiet = [
+        "8bdb4ffc7da869dd1bfe69aa9eb4423e745e323d607d7b218e2da663027fa800",
+        "47543daa3889e6fd2ad26ce427befe0126cbe9bb9da626ca67e10b0977975d7e",
+        "2e93b31911e1584cfcc62153fa48095d3800963555bd4ca8394df1e5256e22f7",
+        "369be556873a08393c353c4dc15f1c8bbe28bdbba2eeba9b24c365d60700f336"
+].includes(fingerprint(r));
+      if (!inherited && !s82Quiet && !s92Quiet) {
         if (n === null || !Number.isSafeInteger(n) || n < 1) problems.push(`${where}: positive integer observed count required`);
         else if (fingerprint({ minFires: r.after.minFires, maxFires: r.after.maxFires }) !== fingerprint({ minFires: Math.max(1, Math.floor(n / 2)), maxFires: Math.max(n * 2, n + 3) })) problems.push(`${where}: after band is not around(observed)`);
       }

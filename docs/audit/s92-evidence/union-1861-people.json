@@ -1,0 +1,1180 @@
+[
+  {
+    "side": "confederate",
+    "person": "anderson_richard_h",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "beauregard_pierre_g_t",
+    "changedResponses": 17,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 16
+      },
+      {
+        "before": "comply",
+        "after": "not observed",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "brown_joseph_e",
+    "changedResponses": 14,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 14
+      }
+    ],
+    "causes": [
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "clark_edward",
+    "changedResponses": 4,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 3
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "cocke_philip_st_george",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "ellis_john_w",
+    "changedResponses": 5,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 2
+      },
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter",
+      "Downstream order transit/response timing changed"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "harris_isham_g",
+    "changedResponses": 8,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 5
+      },
+      {
+        "before": "object",
+        "after": "object",
+        "count": 3
+      }
+    ],
+    "causes": [
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "houston_samuel",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "jackson_thomas_j",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "johnston_joseph_e",
+    "changedResponses": 2,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "object",
+        "count": 1
+      },
+      {
+        "before": "object",
+        "after": "not observed",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "letcher_john",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "object",
+        "after": "object",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "magruder_john_b",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "comply_with_reservations",
+        "after": "comply_with_reservations",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "moore_andrew_b",
+    "changedResponses": 18,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 6
+      },
+      {
+        "before": "comply",
+        "after": "not observed",
+        "count": 4
+      },
+      {
+        "before": "comply_with_reservations",
+        "after": "comply",
+        "count": 3
+      },
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 5
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "moore_thomas_o",
+    "changedResponses": 9,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 3
+      },
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 6
+      }
+    ],
+    "causes": [
+      "0113/S89: duty, state_autonomy and cited above boldness applied",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "perry_madison_s",
+    "changedResponses": 5,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 4
+      }
+    ],
+    "causes": [
+      "0113/S89: duty, state_autonomy and cited above boldness applied",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "pettus_john_j",
+    "changedResponses": 14,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 9
+      },
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 2
+      },
+      {
+        "before": "slow_walk",
+        "after": "comply",
+        "count": 3
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter",
+      "Downstream order transit/response timing changed"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "pickens_francis_w",
+    "changedResponses": 7,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "comply",
+        "after": "not observed",
+        "count": 1
+      },
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "slow_walk",
+        "after": "comply",
+        "count": 4
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter",
+      "Downstream order transit/response timing changed"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "rector_henry_m",
+    "changedResponses": 3,
+    "rungs": [
+      {
+        "before": "comply_with_reservations",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "slow_walk",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "twiggs_david_e",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "confederate",
+    "person": "walker_leroy_p",
+    "changedResponses": 2,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "object",
+        "count": 1
+      },
+      {
+        "before": "object",
+        "after": "not observed",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "abercrombie_john_j",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "andrew_john_a",
+    "changedResponses": 2,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: unknown candour declares its actual response openly"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "bates_edward",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "blair_austin",
+    "changedResponses": 4,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 2
+      },
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "buckingham_william_a",
+    "changedResponses": 4,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 4
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "burton_william",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "slow_walk",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "butler_benjamin_f",
+    "changedResponses": 2,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "cameron_simon",
+    "changedResponses": 7,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 5
+      },
+      {
+        "before": "slow_walk",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "slow_walk",
+        "after": "comply_with_reservations",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "curtin_andrew_g",
+    "changedResponses": 3,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "not observed",
+        "count": 1
+      },
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "slow_walk",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "dennison_william",
+    "changedResponses": 2,
+    "rungs": [
+      {
+        "before": "object",
+        "after": "object",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "ellis_john_w",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "fairbanks_erastus",
+    "changedResponses": 4,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 2
+      },
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "goodwin_ichabod",
+    "changedResponses": 4,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 4
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "harris_isham_g",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "object",
+        "after": "object",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "hicks_thomas_h",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "howard_oliver_o",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "jackson_claiborne_f",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "slow_walk",
+        "after": "object",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "kirkwood_samuel_j",
+    "changedResponses": 3,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "letcher_john",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "object",
+        "after": "object",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "magoffin_beriah",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "comply_with_reservations",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "mcdowell_irvin",
+    "changedResponses": 12,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 10
+      },
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "object",
+        "after": "not observed",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "morgan_edwin_d",
+    "changedResponses": 10,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "comply",
+        "after": "not observed",
+        "count": 1
+      },
+      {
+        "before": "comply_with_reservations",
+        "after": "comply",
+        "count": 6
+      },
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "morton_oliver_h_p_t",
+    "changedResponses": 4,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 4
+      }
+    ],
+    "causes": [
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "olden_charles_s",
+    "changedResponses": 4,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 2
+      },
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "patterson_robert",
+    "changedResponses": 17,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 17
+      }
+    ],
+    "causes": [
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream order transit/response timing changed"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "ramsey_alexander",
+    "changedResponses": 2,
+    "rungs": [
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "randall_alexander_w",
+    "changedResponses": 5,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "comply",
+        "after": "not observed",
+        "count": 1
+      },
+      {
+        "before": "comply_with_reservations",
+        "after": "comply",
+        "count": 2
+      },
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "rector_henry_m",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "slow_walk",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "robinson_charles",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "saunders_alvin",
+    "changedResponses": 2,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "slow_walk",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "scott_winfield",
+    "changedResponses": 2,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "object",
+        "after": "object",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "Downstream order transit/response timing changed"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "smith_caleb_b",
+    "changedResponses": 1,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "smith_charles_f",
+    "changedResponses": 4,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "object",
+        "after": "comply",
+        "count": 3
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "sprague_william",
+    "changedResponses": 5,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "comply",
+        "after": "not observed",
+        "count": 1
+      },
+      {
+        "before": "comply_with_reservations",
+        "after": "comply",
+        "count": 2
+      },
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "stone_charles_p",
+    "changedResponses": 2,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "washburn_israel",
+    "changedResponses": 5,
+    "rungs": [
+      {
+        "before": "comply",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "comply",
+        "after": "not observed",
+        "count": 1
+      },
+      {
+        "before": "not observed",
+        "after": "comply",
+        "count": 1
+      },
+      {
+        "before": "slow_walk",
+        "after": "comply",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: no unsupported temperament term or drawn preference",
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection",
+      "Downstream exposure/order sequence differs; unmatched order identities are not asserted to be the same historical matter"
+    ]
+  },
+  {
+    "side": "union",
+    "person": "yates_richard",
+    "changedResponses": 2,
+    "rungs": [
+      {
+        "before": "slow_walk",
+        "after": "object",
+        "count": 2
+      }
+    ],
+    "causes": [
+      "0113: unknown candour declares its actual response openly",
+      "0113: unknown standing supplies no shield or high-standing protection"
+    ]
+  }
+]

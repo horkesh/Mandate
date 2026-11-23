@@ -1,0 +1,1743 @@
+[
+  {
+    "call": "cs_apr22_absolute_alabama",
+    "before": {
+      "levyPost": "st_gov_alabama",
+      "levyGovernor": "moore_andrew_b",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.48.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_apr22_absolute_alabama",
+      "levyMusterDay": 53,
+      "levyResponse": "m.48.davis_jefferson.moore_andrew_b.call.st_gov_alabama|moore_andrew_b"
+    },
+    "after": {
+      "levyPost": "st_gov_alabama",
+      "levyGovernor": "moore_andrew_b",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.48.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_apr22_absolute_alabama",
+      "levyMusterDay": 53,
+      "levyResponse": "m.48.davis_jefferson.moore_andrew_b.call.st_gov_alabama|moore_andrew_b"
+    },
+    "changed": false
+  },
+  {
+    "call": "cs_apr22_absolute_arkansas",
+    "before": {
+      "levyPost": "st_gov_arkansas",
+      "levyGovernor": "rector_henry_m",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_apr22_absolute_arkansas",
+      "levyMusterDay": 82,
+      "levyResponse": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas|rector_henry_m"
+    },
+    "after": {
+      "levyPost": "st_gov_arkansas",
+      "levyGovernor": "rector_henry_m",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_apr22_absolute_arkansas",
+      "levyMusterDay": 79,
+      "levyResponse": "m.71.davis_jefferson.rector_henry_m.call.st_gov_arkansas|rector_henry_m"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_apr22_absolute_georgia",
+    "before": {
+      "levyPost": "st_gov_georgia",
+      "levyGovernor": "brown_joseph_e",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_apr22_absolute_georgia",
+      "levyMusterDay": 53,
+      "levyResponse": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e"
+    },
+    "after": {
+      "levyPost": "st_gov_georgia",
+      "levyGovernor": "brown_joseph_e",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_apr22_absolute_georgia",
+      "levyMusterDay": 53,
+      "levyResponse": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e"
+    },
+    "changed": false
+  },
+  {
+    "call": "cs_apr22_absolute_louisiana",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_louisiana",
+      "levyGovernor": "moore_thomas_o",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_apr22_absolute_louisiana",
+      "levyMusterDay": 53,
+      "levyResponse": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_apr22_absolute_mississippi",
+    "before": {
+      "levyPost": "st_gov_mississippi",
+      "levyGovernor": "pettus_john_j",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.48.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_apr22_absolute_mississippi",
+      "levyMusterDay": 53,
+      "levyResponse": "m.48.davis_jefferson.pettus_john_j.call.st_gov_mississippi|pettus_john_j"
+    },
+    "after": {
+      "levyPost": "st_gov_mississippi",
+      "levyGovernor": "pettus_john_j",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.48.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_apr22_absolute_mississippi",
+      "levyMusterDay": 53,
+      "levyResponse": "m.48.davis_jefferson.pettus_john_j.call.st_gov_mississippi|pettus_john_j"
+    },
+    "changed": false
+  },
+  {
+    "call": "cs_apr22_absolute_north_carolina",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_north_carolina",
+      "levyGovernor": "ellis_john_w",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.85.davis_jefferson.ellis_john_w.call.st_gov_north_carolina",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_apr22_absolute_north_carolina",
+      "levyMusterDay": 93,
+      "levyResponse": "m.85.davis_jefferson.ellis_john_w.call.st_gov_north_carolina|ellis_john_w"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jul01_extra_alabama",
+    "before": {
+      "levyPost": "st_gov_alabama",
+      "levyGovernor": "moore_andrew_b",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.120.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jul01_extra_alabama",
+      "levyMusterDay": 132,
+      "levyResponse": "m.120.davis_jefferson.moore_andrew_b.call.st_gov_alabama|moore_andrew_b"
+    },
+    "after": {
+      "levyPost": "st_gov_alabama",
+      "levyGovernor": "moore_andrew_b",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.120.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jul01_extra_alabama",
+      "levyMusterDay": 129,
+      "levyResponse": "m.120.davis_jefferson.moore_andrew_b.call.st_gov_alabama|moore_andrew_b"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jul01_extra_georgia",
+    "before": {
+      "levyPost": "st_gov_georgia",
+      "levyGovernor": "brown_joseph_e",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jul01_extra_georgia",
+      "levyMusterDay": 129,
+      "levyResponse": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e"
+    },
+    "after": {
+      "levyPost": "st_gov_georgia",
+      "levyGovernor": "brown_joseph_e",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jul01_extra_georgia",
+      "levyMusterDay": 129,
+      "levyResponse": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e"
+    },
+    "changed": false
+  },
+  {
+    "call": "cs_jun29_extra_louisiana",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_louisiana",
+      "levyGovernor": "moore_thomas_o",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun29_extra_louisiana",
+      "levyMusterDay": 125,
+      "levyResponse": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun29_extra_mississippi",
+    "before": {
+      "levyPost": "st_gov_mississippi",
+      "levyGovernor": "pettus_john_j",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.116.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun29_extra_mississippi",
+      "levyMusterDay": 135,
+      "levyResponse": "m.116.davis_jefferson.pettus_john_j.call.st_gov_mississippi|pettus_john_j"
+    },
+    "after": {
+      "levyPost": "st_gov_mississippi",
+      "levyGovernor": "pettus_john_j",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.116.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun29_extra_mississippi",
+      "levyMusterDay": 125,
+      "levyResponse": "m.116.davis_jefferson.pettus_john_j.call.st_gov_mississippi|pettus_john_j"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_cavalry_alabama",
+    "before": {
+      "levyPost": "st_gov_alabama",
+      "levyGovernor": "moore_andrew_b",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": null,
+      "levyArm": "cavalry",
+      "levyCallId": "cs_jun30_cavalry_alabama",
+      "levyMusterDay": 129,
+      "levyResponse": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama|moore_andrew_b"
+    },
+    "after": {
+      "levyPost": "st_gov_alabama",
+      "levyGovernor": "moore_andrew_b",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": null,
+      "levyArm": "cavalry",
+      "levyCallId": "cs_jun30_cavalry_alabama",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama|moore_andrew_b"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_cavalry_arkansas",
+    "before": {
+      "levyPost": "st_gov_arkansas",
+      "levyGovernor": "rector_henry_m",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": null,
+      "levyArm": "cavalry",
+      "levyCallId": "cs_jun30_cavalry_arkansas",
+      "levyMusterDay": 136,
+      "levyResponse": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas|rector_henry_m"
+    },
+    "after": {
+      "levyPost": "st_gov_arkansas",
+      "levyGovernor": "rector_henry_m",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": null,
+      "levyArm": "cavalry",
+      "levyCallId": "cs_jun30_cavalry_arkansas",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas|rector_henry_m"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_cavalry_georgia",
+    "before": {
+      "levyPost": "st_gov_georgia",
+      "levyGovernor": "brown_joseph_e",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": null,
+      "levyArm": "cavalry",
+      "levyCallId": "cs_jun30_cavalry_georgia",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e"
+    },
+    "after": {
+      "levyPost": "st_gov_georgia",
+      "levyGovernor": "brown_joseph_e",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": null,
+      "levyArm": "cavalry",
+      "levyCallId": "cs_jun30_cavalry_georgia",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e"
+    },
+    "changed": false
+  },
+  {
+    "call": "cs_jun30_cavalry_mississippi",
+    "before": {
+      "levyPost": "st_gov_mississippi",
+      "levyGovernor": "pettus_john_j",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": null,
+      "levyArm": "cavalry",
+      "levyCallId": "cs_jun30_cavalry_mississippi",
+      "levyMusterDay": 136,
+      "levyResponse": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi|pettus_john_j"
+    },
+    "after": {
+      "levyPost": "st_gov_mississippi",
+      "levyGovernor": "pettus_john_j",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": null,
+      "levyArm": "cavalry",
+      "levyCallId": "cs_jun30_cavalry_mississippi",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi|pettus_john_j"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_reserve_alabama",
+    "before": {
+      "levyPost": "st_gov_alabama",
+      "levyGovernor": "moore_andrew_b",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama.2",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_alabama",
+      "levyMusterDay": 129,
+      "levyResponse": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama.2|moore_andrew_b"
+    },
+    "after": {
+      "levyPost": "st_gov_alabama",
+      "levyGovernor": "moore_andrew_b",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama.2",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_alabama",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.moore_andrew_b.call.st_gov_alabama.2|moore_andrew_b"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_reserve_arkansas",
+    "before": {
+      "levyPost": "st_gov_arkansas",
+      "levyGovernor": "rector_henry_m",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas.2",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_arkansas",
+      "levyMusterDay": 136,
+      "levyResponse": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas.2|rector_henry_m"
+    },
+    "after": {
+      "levyPost": "st_gov_arkansas",
+      "levyGovernor": "rector_henry_m",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas.2",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_arkansas",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.rector_henry_m.call.st_gov_arkansas.2|rector_henry_m"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_reserve_florida",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_florida",
+      "levyGovernor": "perry_madison_s",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_florida",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_reserve_georgia",
+    "before": {
+      "levyPost": "st_gov_georgia",
+      "levyGovernor": "brown_joseph_e",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_georgia",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e"
+    },
+    "after": {
+      "levyPost": "st_gov_georgia",
+      "levyGovernor": "brown_joseph_e",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_georgia",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e"
+    },
+    "changed": false
+  },
+  {
+    "call": "cs_jun30_reserve_louisiana",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_louisiana",
+      "levyGovernor": "moore_thomas_o",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_louisiana",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_reserve_mississippi",
+    "before": {
+      "levyPost": "st_gov_mississippi",
+      "levyGovernor": "pettus_john_j",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi.2",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_mississippi",
+      "levyMusterDay": 136,
+      "levyResponse": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi.2|pettus_john_j"
+    },
+    "after": {
+      "levyPost": "st_gov_mississippi",
+      "levyGovernor": "pettus_john_j",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi.2",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_mississippi",
+      "levyMusterDay": 126,
+      "levyResponse": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi.2|pettus_john_j"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_reserve_north_carolina",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_north_carolina",
+      "levyGovernor": "ellis_john_w",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.120.davis_jefferson.ellis_john_w.call.st_gov_north_carolina",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_north_carolina",
+      "levyMusterDay": 130,
+      "levyResponse": "m.120.davis_jefferson.ellis_john_w.call.st_gov_north_carolina|ellis_john_w"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_reserve_south_carolina",
+    "before": {
+      "levyPost": "st_gov_south_carolina",
+      "levyGovernor": "pickens_francis_w",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_south_carolina",
+      "levyMusterDay": 139,
+      "levyResponse": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w"
+    },
+    "after": {
+      "levyPost": "st_gov_south_carolina",
+      "levyGovernor": "pickens_francis_w",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_south_carolina",
+      "levyMusterDay": 129,
+      "levyResponse": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_jun30_reserve_texas",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_texas",
+      "levyGovernor": "clark_edward",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.120.davis_jefferson.clark_edward.call.st_gov_texas",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyCallId": "cs_jun30_reserve_texas",
+      "levyMusterDay": 129,
+      "levyResponse": "m.120.davis_jefferson.clark_edward.call.st_gov_texas|clark_edward"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_mar09_alabama",
+    "before": {
+      "levyPost": "st_gov_alabama",
+      "levyGovernor": "moore_andrew_b",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_alabama",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.moore_andrew_b.call.st_gov_alabama|moore_andrew_b"
+    },
+    "after": {
+      "levyPost": "st_gov_alabama",
+      "levyGovernor": "moore_andrew_b",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.moore_andrew_b.call.st_gov_alabama",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_alabama",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.moore_andrew_b.call.st_gov_alabama|moore_andrew_b"
+    },
+    "changed": false
+  },
+  {
+    "call": "cs_mar09_florida",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_florida",
+      "levyGovernor": "perry_madison_s",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "levyRegiments": 1,
+      "levyMen": 500,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_florida",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_mar09_georgia",
+    "before": {
+      "levyPost": "st_gov_georgia",
+      "levyGovernor": "brown_joseph_e",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_georgia",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e"
+    },
+    "after": {
+      "levyPost": "st_gov_georgia",
+      "levyGovernor": "brown_joseph_e",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_georgia",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e"
+    },
+    "changed": false
+  },
+  {
+    "call": "cs_mar09_louisiana",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_louisiana",
+      "levyGovernor": "moore_thomas_o",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "levyRegiments": 2,
+      "levyMen": 1700,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_louisiana",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_mar09_mississippi",
+    "before": {
+      "levyPost": "st_gov_mississippi",
+      "levyGovernor": "pettus_john_j",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+      "levyRegiments": 2,
+      "levyMen": 1500,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_mississippi",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.pettus_john_j.call.st_gov_mississippi|pettus_john_j"
+    },
+    "after": {
+      "levyPost": "st_gov_mississippi",
+      "levyGovernor": "pettus_john_j",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+      "levyRegiments": 2,
+      "levyMen": 1500,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_mississippi",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.pettus_john_j.call.st_gov_mississippi|pettus_john_j"
+    },
+    "changed": false
+  },
+  {
+    "call": "cs_mar09_south_carolina",
+    "before": {
+      "levyPost": "st_gov_south_carolina",
+      "levyGovernor": "pickens_francis_w",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_south_carolina",
+      "levyMusterDay": 19,
+      "levyResponse": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w"
+    },
+    "after": {
+      "levyPost": "st_gov_south_carolina",
+      "levyGovernor": "pickens_francis_w",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_south_carolina",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w"
+    },
+    "changed": true
+  },
+  {
+    "call": "cs_mar09_texas",
+    "before": {
+      "levyPost": "st_gov_texas",
+      "levyGovernor": "houston_samuel",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_texas",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas|houston_samuel"
+    },
+    "after": {
+      "levyPost": "st_gov_texas",
+      "levyGovernor": "houston_samuel",
+      "levyIssuer": "davis_jefferson",
+      "levyCall": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 365,
+      "levyCallId": "cs_mar09_texas",
+      "levyMusterDay": 9,
+      "levyResponse": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas|houston_samuel"
+    },
+    "changed": false
+  },
+  {
+    "call": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+    "before": {
+      "levyPost": "st_gov_massachusetts",
+      "levyGovernor": "andrew_john_a",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts|andrew_john_a"
+    },
+    "after": {
+      "levyPost": "st_gov_massachusetts",
+      "levyGovernor": "andrew_john_a",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts|andrew_john_a"
+    },
+    "changed": false
+  },
+  {
+    "call": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_michigan",
+      "levyGovernor": "blair_austin",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.blair_austin.call.st_gov_michigan|blair_austin"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+    "before": {
+      "levyPost": "st_gov_connecticut",
+      "levyGovernor": "buckingham_william_a",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut|buckingham_william_a"
+    },
+    "after": {
+      "levyPost": "st_gov_connecticut",
+      "levyGovernor": "buckingham_william_a",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut|buckingham_william_a"
+    },
+    "changed": false
+  },
+  {
+    "call": "m.41.lincoln_abraham.curtin_andrew_g.call.st_gov_pennsylvania",
+    "before": {
+      "levyPost": "st_gov_pennsylvania",
+      "levyGovernor": "curtin_andrew_g",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.curtin_andrew_g.call.st_gov_pennsylvania",
+      "levyRegiments": 14,
+      "levyMen": 14000,
+      "levyTermDays": 90,
+      "levyMusterDay": 56,
+      "levyResponse": "m.41.lincoln_abraham.curtin_andrew_g.call.st_gov_pennsylvania|curtin_andrew_g"
+    },
+    "after": {
+      "levyPost": "st_gov_pennsylvania",
+      "levyGovernor": "curtin_andrew_g",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.curtin_andrew_g.call.st_gov_pennsylvania",
+      "levyRegiments": 14,
+      "levyMen": 14000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.curtin_andrew_g.call.st_gov_pennsylvania|curtin_andrew_g"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_vermont",
+      "levyGovernor": "fairbanks_erastus",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont|fairbanks_erastus"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+    "before": {
+      "levyPost": "st_gov_new_hampshire",
+      "levyGovernor": "goodwin_ichabod",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire|goodwin_ichabod"
+    },
+    "after": {
+      "levyPost": "st_gov_new_hampshire",
+      "levyGovernor": "goodwin_ichabod",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire|goodwin_ichabod"
+    },
+    "changed": false
+  },
+  {
+    "call": "m.41.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_iowa",
+      "levyGovernor": "kirkwood_samuel_j",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa|kirkwood_samuel_j"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_arkansas",
+    "before": {
+      "levyPost": "st_gov_arkansas",
+      "levyGovernor": "rector_henry_m",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_arkansas",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 60,
+      "levyResponse": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_arkansas|rector_henry_m"
+    },
+    "after": {
+      "levyPost": "st_gov_arkansas",
+      "levyGovernor": "rector_henry_m",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_arkansas",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 50,
+      "levyResponse": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_arkansas|rector_henry_m"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky",
+    "before": {
+      "levyPost": "st_gov_kentucky",
+      "levyGovernor": "magoffin_beriah",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky",
+      "levyRegiments": 4,
+      "levyMen": 4000,
+      "levyTermDays": 90,
+      "levyMusterDay": 52,
+      "levyResponse": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky|magoffin_beriah"
+    },
+    "after": {
+      "levyPost": "st_gov_kentucky",
+      "levyGovernor": "magoffin_beriah",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky",
+      "levyRegiments": 4,
+      "levyMen": 4000,
+      "levyTermDays": 90,
+      "levyMusterDay": 49,
+      "levyResponse": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky|magoffin_beriah"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+    "before": {
+      "levyPost": "st_gov_maryland",
+      "levyGovernor": "hicks_thomas_h",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+      "levyRegiments": 4,
+      "levyMen": 4000,
+      "levyTermDays": 90,
+      "levyMusterDay": 48,
+      "levyResponse": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland|hicks_thomas_h"
+    },
+    "after": {
+      "levyPost": "st_gov_maryland",
+      "levyGovernor": "hicks_thomas_h",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+      "levyRegiments": 4,
+      "levyMen": 4000,
+      "levyTermDays": 90,
+      "levyMusterDay": 48,
+      "levyResponse": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland|hicks_thomas_h"
+    },
+    "changed": false
+  },
+  {
+    "call": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri",
+    "before": {
+      "levyPost": "st_gov_missouri",
+      "levyGovernor": "jackson_claiborne_f",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri",
+      "levyRegiments": 4,
+      "levyMen": 4000,
+      "levyTermDays": 90,
+      "levyMusterDay": 58,
+      "levyResponse": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri|jackson_claiborne_f"
+    },
+    "after": null,
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_north_carolina",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_north_carolina",
+      "levyGovernor": "ellis_john_w",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_north_carolina",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 90,
+      "levyMusterDay": 50,
+      "levyResponse": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_north_carolina|ellis_john_w"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+    "before": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "levyRegiments": 17,
+      "levyMen": 17000,
+      "levyTermDays": 90,
+      "levyMusterDay": 49,
+      "levyResponse": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d"
+    },
+    "after": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "levyRegiments": 17,
+      "levyMen": 17000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+    "before": {
+      "levyPost": "st_gov_indiana",
+      "levyGovernor": "morton_oliver_h_p_t",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "levyRegiments": 6,
+      "levyMen": 6000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t"
+    },
+    "after": {
+      "levyPost": "st_gov_indiana",
+      "levyGovernor": "morton_oliver_h_p_t",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "levyRegiments": 6,
+      "levyMen": 6000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t"
+    },
+    "changed": false
+  },
+  {
+    "call": "m.41.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_new_jersey",
+      "levyGovernor": "olden_charles_s",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey",
+      "levyRegiments": 4,
+      "levyMen": 4000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey|olden_charles_s"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.ramsey_alexander.call.st_gov_minnesota",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_minnesota",
+      "levyGovernor": "ramsey_alexander",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.ramsey_alexander.call.st_gov_minnesota",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.ramsey_alexander.call.st_gov_minnesota|ramsey_alexander"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+    "before": {
+      "levyPost": "st_gov_wisconsin",
+      "levyGovernor": "randall_alexander_w",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 49,
+      "levyResponse": "m.41.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin|randall_alexander_w"
+    },
+    "after": {
+      "levyPost": "st_gov_wisconsin",
+      "levyGovernor": "randall_alexander_w",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin|randall_alexander_w"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+    "before": {
+      "levyPost": "st_gov_rhode_island",
+      "levyGovernor": "sprague_william",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 49,
+      "levyResponse": "m.41.lincoln_abraham.sprague_william.call.st_gov_rhode_island|sprague_william"
+    },
+    "after": {
+      "levyPost": "st_gov_rhode_island",
+      "levyGovernor": "sprague_william",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.sprague_william.call.st_gov_rhode_island|sprague_william"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.washburn_israel.call.st_gov_maine",
+    "before": {
+      "levyPost": "st_gov_maine",
+      "levyGovernor": "washburn_israel",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.washburn_israel.call.st_gov_maine",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 56,
+      "levyResponse": "m.41.lincoln_abraham.washburn_israel.call.st_gov_maine|washburn_israel"
+    },
+    "after": {
+      "levyPost": "st_gov_maine",
+      "levyGovernor": "washburn_israel",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.washburn_israel.call.st_gov_maine",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 90,
+      "levyMusterDay": 46,
+      "levyResponse": "m.41.lincoln_abraham.washburn_israel.call.st_gov_maine|washburn_israel"
+    },
+    "changed": true
+  },
+  {
+    "call": "m.41.lincoln_abraham.yates_richard.call.st_gov_illinois",
+    "before": {
+      "levyPost": "st_gov_illinois",
+      "levyGovernor": "yates_richard",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.41.lincoln_abraham.yates_richard.call.st_gov_illinois",
+      "levyRegiments": 6,
+      "levyMen": 6000,
+      "levyTermDays": 90,
+      "levyMusterDay": 56,
+      "levyResponse": "m.41.lincoln_abraham.yates_richard.call.st_gov_illinois|yates_richard"
+    },
+    "after": null,
+    "changed": true
+  },
+  {
+    "call": "us_jul25_new_york",
+    "before": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.142.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "levyRegiments": 25,
+      "levyMen": 25000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_jul25_new_york",
+      "levyMusterDay": 150,
+      "levyResponse": "m.142.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d"
+    },
+    "after": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.142.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "levyRegiments": 25,
+      "levyMen": 25000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_jul25_new_york",
+      "levyMusterDay": 147,
+      "levyResponse": "m.142.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_jul30_artillery_new_york",
+    "before": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york.2",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyArm": "artillery",
+      "levyCallId": "us_jul30_artillery_new_york",
+      "levyMusterDay": 155,
+      "levyResponse": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york.2|morgan_edwin_d"
+    },
+    "after": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york.2",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyArm": "artillery",
+      "levyCallId": "us_jul30_artillery_new_york",
+      "levyMusterDay": 152,
+      "levyResponse": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york.2|morgan_edwin_d"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_jul30_cavalry_new_york",
+    "before": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyArm": "cavalry",
+      "levyCallId": "us_jul30_cavalry_new_york",
+      "levyMusterDay": 155,
+      "levyResponse": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d"
+    },
+    "after": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": null,
+      "levyArm": "cavalry",
+      "levyCallId": "us_jul30_cavalry_new_york",
+      "levyMusterDay": 152,
+      "levyResponse": "m.147.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_jun11_indiana",
+    "before": {
+      "levyPost": "st_gov_indiana",
+      "levyGovernor": "morton_oliver_h_p_t",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "levyRegiments": 6,
+      "levyMen": 6000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_jun11_indiana",
+      "levyMusterDay": 103,
+      "levyResponse": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t"
+    },
+    "after": {
+      "levyPost": "st_gov_indiana",
+      "levyGovernor": "morton_oliver_h_p_t",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "levyRegiments": 6,
+      "levyMen": 6000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_jun11_indiana",
+      "levyMusterDay": 103,
+      "levyResponse": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t"
+    },
+    "changed": false
+  },
+  {
+    "call": "us_may03_accepted_new_york",
+    "before": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "levyRegiments": 38,
+      "levyMen": 38000,
+      "levyTermDays": 730,
+      "levyCallId": "us_may03_accepted_new_york",
+      "levyMusterDay": 67,
+      "levyResponse": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d"
+    },
+    "after": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "levyRegiments": 38,
+      "levyMen": 38000,
+      "levyTermDays": 730,
+      "levyCallId": "us_may03_accepted_new_york",
+      "levyMusterDay": 64,
+      "levyResponse": "m.59.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may04_regular_artillery",
+    "before": null,
+    "after": {
+      "levyPost": "us_recruiting_service",
+      "levyGovernor": "smith_charles_f",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.3",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": 1095,
+      "levyArm": "artillery",
+      "levyCallId": "us_may04_regular_artillery",
+      "levyMusterDay": 65,
+      "levyResponse": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.3|smith_charles_f"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may04_regular_cavalry",
+    "before": null,
+    "after": {
+      "levyPost": "us_recruiting_service",
+      "levyGovernor": "smith_charles_f",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.2",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": 1095,
+      "levyArm": "cavalry",
+      "levyCallId": "us_may04_regular_cavalry",
+      "levyMusterDay": 65,
+      "levyResponse": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service.2|smith_charles_f"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may04_regular_infantry",
+    "before": null,
+    "after": {
+      "levyPost": "us_recruiting_service",
+      "levyGovernor": "smith_charles_f",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service",
+      "levyRegiments": null,
+      "levyMen": null,
+      "levyTermDays": 1095,
+      "levyArm": "infantry",
+      "levyCallId": "us_may04_regular_infantry",
+      "levyMusterDay": 65,
+      "levyResponse": "m.60.lincoln_abraham.cameron_simon.call.us_recruiting_service|smith_charles_f"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may15_vol_kansas",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_kansas",
+      "levyGovernor": "robinson_charles",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.71.lincoln_abraham.robinson_charles.call.st_gov_kansas",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may15_vol_kansas",
+      "levyMusterDay": 76,
+      "levyResponse": "m.71.lincoln_abraham.robinson_charles.call.st_gov_kansas|robinson_charles"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may15_vol_massachusetts",
+    "before": {
+      "levyPost": "st_gov_massachusetts",
+      "levyGovernor": "andrew_john_a",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+      "levyRegiments": 6,
+      "levyMen": 6000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may15_vol_massachusetts",
+      "levyMusterDay": 76,
+      "levyResponse": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts|andrew_john_a"
+    },
+    "after": {
+      "levyPost": "st_gov_massachusetts",
+      "levyGovernor": "andrew_john_a",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+      "levyRegiments": 6,
+      "levyMen": 6000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may15_vol_massachusetts",
+      "levyMusterDay": 76,
+      "levyResponse": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts|andrew_john_a"
+    },
+    "changed": false
+  },
+  {
+    "call": "us_may15_vol_nebraska",
+    "before": {
+      "levyPost": "tr_gov_nebraska",
+      "levyGovernor": "saunders_alvin",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.78.lincoln_abraham.saunders_alvin.call.tr_gov_nebraska",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may15_vol_nebraska",
+      "levyMusterDay": 93,
+      "levyResponse": "m.78.lincoln_abraham.saunders_alvin.call.tr_gov_nebraska|saunders_alvin"
+    },
+    "after": {
+      "levyPost": "tr_gov_nebraska",
+      "levyGovernor": "saunders_alvin",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.78.lincoln_abraham.saunders_alvin.call.tr_gov_nebraska",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may15_vol_nebraska",
+      "levyMusterDay": 83,
+      "levyResponse": "m.78.lincoln_abraham.saunders_alvin.call.tr_gov_nebraska|saunders_alvin"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may15_vol_rhode_island",
+    "before": {
+      "levyPost": "st_gov_rhode_island",
+      "levyGovernor": "sprague_william",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.71.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may15_vol_rhode_island",
+      "levyMusterDay": 79,
+      "levyResponse": "m.71.lincoln_abraham.sprague_william.call.st_gov_rhode_island|sprague_william"
+    },
+    "after": {
+      "levyPost": "st_gov_rhode_island",
+      "levyGovernor": "sprague_william",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.71.lincoln_abraham.sprague_william.call.st_gov_rhode_island",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may15_vol_rhode_island",
+      "levyMusterDay": 76,
+      "levyResponse": "m.71.lincoln_abraham.sprague_william.call.st_gov_rhode_island|sprague_william"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may16_vol_connecticut",
+    "before": {
+      "levyPost": "st_gov_connecticut",
+      "levyGovernor": "buckingham_william_a",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_connecticut",
+      "levyMusterDay": 77,
+      "levyResponse": "m.72.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut|buckingham_william_a"
+    },
+    "after": {
+      "levyPost": "st_gov_connecticut",
+      "levyGovernor": "buckingham_william_a",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_connecticut",
+      "levyMusterDay": 77,
+      "levyResponse": "m.72.lincoln_abraham.buckingham_william_a.call.st_gov_connecticut|buckingham_william_a"
+    },
+    "changed": false
+  },
+  {
+    "call": "us_may16_vol_illinois",
+    "before": {
+      "levyPost": "st_gov_illinois",
+      "levyGovernor": "yates_richard",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.yates_richard.call.st_gov_illinois",
+      "levyRegiments": 6,
+      "levyMen": 6000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_illinois",
+      "levyMusterDay": 87,
+      "levyResponse": "m.72.lincoln_abraham.yates_richard.call.st_gov_illinois|yates_richard"
+    },
+    "after": null,
+    "changed": true
+  },
+  {
+    "call": "us_may16_vol_indiana",
+    "before": {
+      "levyPost": "st_gov_indiana",
+      "levyGovernor": "morton_oliver_h_p_t",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "levyRegiments": 4,
+      "levyMen": 4000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_indiana",
+      "levyMusterDay": 77,
+      "levyResponse": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t"
+    },
+    "after": {
+      "levyPost": "st_gov_indiana",
+      "levyGovernor": "morton_oliver_h_p_t",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "levyRegiments": 4,
+      "levyMen": 4000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_indiana",
+      "levyMusterDay": 77,
+      "levyResponse": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t"
+    },
+    "changed": false
+  },
+  {
+    "call": "us_may16_vol_iowa",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_iowa",
+      "levyGovernor": "kirkwood_samuel_j",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_iowa",
+      "levyMusterDay": 77,
+      "levyResponse": "m.72.lincoln_abraham.kirkwood_samuel_j.call.st_gov_iowa|kirkwood_samuel_j"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may16_vol_maine",
+    "before": {
+      "levyPost": "st_gov_maine",
+      "levyGovernor": "washburn_israel",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.washburn_israel.call.st_gov_maine",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_maine",
+      "levyMusterDay": 87,
+      "levyResponse": "m.72.lincoln_abraham.washburn_israel.call.st_gov_maine|washburn_israel"
+    },
+    "after": {
+      "levyPost": "st_gov_maine",
+      "levyGovernor": "washburn_israel",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.washburn_israel.call.st_gov_maine",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_maine",
+      "levyMusterDay": 77,
+      "levyResponse": "m.72.lincoln_abraham.washburn_israel.call.st_gov_maine|washburn_israel"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may16_vol_michigan",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_michigan",
+      "levyGovernor": "blair_austin",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.blair_austin.call.st_gov_michigan",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_michigan",
+      "levyMusterDay": 77,
+      "levyResponse": "m.72.lincoln_abraham.blair_austin.call.st_gov_michigan|blair_austin"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may16_vol_new_hampshire",
+    "before": {
+      "levyPost": "st_gov_new_hampshire",
+      "levyGovernor": "goodwin_ichabod",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_new_hampshire",
+      "levyMusterDay": 77,
+      "levyResponse": "m.72.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire|goodwin_ichabod"
+    },
+    "after": {
+      "levyPost": "st_gov_new_hampshire",
+      "levyGovernor": "goodwin_ichabod",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_new_hampshire",
+      "levyMusterDay": 77,
+      "levyResponse": "m.72.lincoln_abraham.goodwin_ichabod.call.st_gov_new_hampshire|goodwin_ichabod"
+    },
+    "changed": false
+  },
+  {
+    "call": "us_may16_vol_new_jersey",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_new_jersey",
+      "levyGovernor": "olden_charles_s",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.72.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey",
+      "levyRegiments": 3,
+      "levyMen": 3000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_new_jersey",
+      "levyMusterDay": 77,
+      "levyResponse": "m.72.lincoln_abraham.olden_charles_s.call.st_gov_new_jersey|olden_charles_s"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may16_vol_new_york",
+    "before": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.78.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "levyRegiments": 14,
+      "levyMen": 14000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_new_york",
+      "levyMusterDay": 86,
+      "levyResponse": "m.78.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d"
+    },
+    "after": {
+      "levyPost": "st_gov_new_york",
+      "levyGovernor": "morgan_edwin_d",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.78.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+      "levyRegiments": 14,
+      "levyMen": 14000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_new_york",
+      "levyMusterDay": 83,
+      "levyResponse": "m.78.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may16_vol_vermont",
+    "before": null,
+    "after": {
+      "levyPost": "st_gov_vermont",
+      "levyGovernor": "fairbanks_erastus",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.78.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_vermont",
+      "levyMusterDay": 83,
+      "levyResponse": "m.78.lincoln_abraham.fairbanks_erastus.call.st_gov_vermont|fairbanks_erastus"
+    },
+    "changed": true
+  },
+  {
+    "call": "us_may16_vol_wisconsin",
+    "before": {
+      "levyPost": "st_gov_wisconsin",
+      "levyGovernor": "randall_alexander_w",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.78.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_wisconsin",
+      "levyMusterDay": 86,
+      "levyResponse": "m.78.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin|randall_alexander_w"
+    },
+    "after": {
+      "levyPost": "st_gov_wisconsin",
+      "levyGovernor": "randall_alexander_w",
+      "levyIssuer": "lincoln_abraham",
+      "levyCall": "m.78.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 1095,
+      "levyCallId": "us_may16_vol_wisconsin",
+      "levyMusterDay": 83,
+      "levyResponse": "m.78.lincoln_abraham.randall_alexander_w.call.st_gov_wisconsin|randall_alexander_w"
+    },
+    "changed": true
+  }
+]

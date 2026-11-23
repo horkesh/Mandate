@@ -1,0 +1,54 @@
+[
+  {
+    "call": "m.1.n_leader.n_governor.call.n_brenmark_governor",
+    "before": {
+      "levyPost": "n_brenmark_governor",
+      "levyGovernor": "n_governor",
+      "levyIssuer": "n_leader",
+      "levyCall": "m.1.n_leader.n_governor.call.n_brenmark_governor",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 90,
+      "levyMusterDay": 6,
+      "levyResponse": "m.1.n_leader.n_governor.call.n_brenmark_governor|n_governor"
+    },
+    "after": {
+      "levyPost": "n_brenmark_governor",
+      "levyGovernor": "n_governor",
+      "levyIssuer": "n_leader",
+      "levyCall": "m.1.n_leader.n_governor.call.n_brenmark_governor",
+      "levyRegiments": 2,
+      "levyMen": 2000,
+      "levyTermDays": 90,
+      "levyMusterDay": 6,
+      "levyResponse": "m.1.n_leader.n_governor.call.n_brenmark_governor|n_governor"
+    },
+    "changed": false
+  },
+  {
+    "call": "m.1.s_leader.s_governor.call.s_lowmarch_governor",
+    "before": {
+      "levyPost": "s_lowmarch_governor",
+      "levyGovernor": "s_governor",
+      "levyIssuer": "s_leader",
+      "levyCall": "m.1.s_leader.s_governor.call.s_lowmarch_governor",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 365,
+      "levyMusterDay": 11,
+      "levyResponse": "m.1.s_leader.s_governor.call.s_lowmarch_governor|s_governor"
+    },
+    "after": {
+      "levyPost": "s_lowmarch_governor",
+      "levyGovernor": "s_governor",
+      "levyIssuer": "s_leader",
+      "levyCall": "m.1.s_leader.s_governor.call.s_lowmarch_governor",
+      "levyRegiments": 1,
+      "levyMen": 1000,
+      "levyTermDays": 365,
+      "levyMusterDay": 11,
+      "levyResponse": "m.1.s_leader.s_governor.call.s_lowmarch_governor|s_governor"
+    },
+    "changed": false
+  }
+]

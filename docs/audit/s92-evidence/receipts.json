@@ -1,0 +1,190 @@
+{
+  "base": "117b8ac8b9c8644b83091149a7fdd3bda34b6277",
+  "branch": "sprint/unknowns",
+  "checks": [
+    {
+      "command": "npm ci",
+      "exit": 0,
+      "evidence": "npm-ci.log",
+      "vulnerabilities": 0
+    },
+    {
+      "command": "node --import tsx runs/s92/references.ts baseline",
+      "exit": 0,
+      "evidence": "baseline.log",
+      "dailyHashes": 268,
+      "livenessFailures": 0,
+      "note": "No baseline replay repeated; baseline hashes also match retained S83 evidence"
+    },
+    {
+      "command": "npx vitest run packages/kernel/test/unknown-compliance.test.ts",
+      "exit": 1,
+      "evidence": "red-corrected.log",
+      "passed": 1,
+      "failed": 10,
+      "note": "Expected red before implementation; known-profile control passes"
+    },
+    {
+      "command": "npx vitest run packages/kernel/test/unknown-compliance.test.ts packages/kernel/test/compliance.test.ts packages/kernel/test/people.test.ts",
+      "exit": 0,
+      "evidence": "green.log",
+      "passed": 45
+    },
+    {
+      "command": "git commit -F runs/s92/commit-mask.txt",
+      "exit": 1,
+      "evidence": "commit-mask.log",
+      "passed": 2128,
+      "failed": 5,
+      "skipped": 3,
+      "filesPassed": 231,
+      "filesFailed": 3,
+      "note": "Actual unchanged hook rejected commit. Two arithmetic fixture assertions corrected narrowly afterwards; three liveness assertions remain.",
+      "vitestSeconds": 260.24
+    },
+    {
+      "command": "npx vitest run packages/kernel/test/seats-orders.test.ts packages/kernel/test/unknown-compliance.test.ts",
+      "exit": 0,
+      "evidence": "correction.log",
+      "passed": 31
+    },
+    {
+      "command": "python runs/s92/apply-cast.py",
+      "exit": 0,
+      "evidence": "cast-apply.json",
+      "judgmentsApplied": 6,
+      "peopleChanged": 2,
+      "sourceTextsReadAndHashVerified": 9,
+      "note": "Abbreviated research cites expanded to full production citation keys/dates. Unused p445 provenance removed afterwards; judgment citations unchanged."
+    },
+    {
+      "command": "npm run pack:generate -- union-1861",
+      "exit": 0,
+      "evidence": "generate-final.log",
+      "written": 1,
+      "removed": 0,
+      "unchanged": 3
+    },
+    {
+      "command": "MANDATE_NO_GIT=1 npm run check",
+      "exit": 1,
+      "evidence": "check-final.log",
+      "passed": 2109,
+      "failed": 3,
+      "skipped": 3,
+      "filesPassed": 230,
+      "filesFailed": 2,
+      "note": "Final build; all three failures are assertions over unchanged liveness bands. The two Git-writing fixture suites were exercised by the actual hook and remain unchanged. Later chained gates are checked separately.",
+      "vitestSeconds": 205.18
+    },
+    {
+      "command": "node --import tsx runs/s92/references.ts final",
+      "exit": 0,
+      "evidence": "references-final.log",
+      "dailyHashes": 268,
+      "changedUnionHashes": 148,
+      "changedTestbedHashes": 0,
+      "livenessFailures": 21,
+      "replayAndResume": "both exact",
+      "note": "Observer process completes; Union liveness gates remain failed"
+    },
+    {
+      "command": "node --import tsx runs/s92/initial.ts",
+      "exit": 0,
+      "evidence": "initial.json",
+      "changedStatePaths": 2,
+      "newStateKeys": 0
+    },
+    {
+      "command": "node --import tsx runs/s92/legacy-control.ts",
+      "exit": 0,
+      "evidence": "legacy-control.json",
+      "matches": true
+    },
+    {
+      "command": "npx vitest run packages/kernel/test/unknown-compliance.test.ts",
+      "exit": 0,
+      "evidence": "known-golden.log",
+      "passed": 11,
+      "note": "Only a frozen assertion added after final full suite; implementation unchanged; suite-reuse.diff retains exact delta"
+    },
+    {
+      "command": "node --import tsx runs/s92/references.ts final",
+      "exit": 0,
+      "evidence": "references-final.log",
+      "dailyHashes": 268,
+      "unionLivenessFailures": 21,
+      "testbedLivenessFailures": 0,
+      "replayMatches": true,
+      "resumeMatches": true,
+      "note": "Observer completion is not a liveness pass"
+    },
+    {
+      "command": "npm run run:done-check -- --label s92-done --milestone 1a",
+      "exit": 1,
+      "seconds": 1666.0694069,
+      "evidence": "done.log",
+      "seeds": 8,
+      "drafting": true,
+      "note": "Binding, run once; both saved checked summaries match the final reference daily hashes and counters exactly"
+    },
+    {
+      "command": "python runs/s92/preflight.py",
+      "exit": 0,
+      "evidence": "preflight.json"
+    },
+    {
+      "command": "python runs/s92/inventory.py",
+      "exit": 0,
+      "evidence": "preservation.json"
+    },
+    {
+      "command": "npm run typecheck",
+      "exit": 0,
+      "evidence": "final-typecheck.log",
+      "sha256": "6ee13f15916108faa58011f64353837b9ba6cd2d3599c631d3952129f2c61465"
+    },
+    {
+      "command": "npm run check:rules",
+      "exit": 0,
+      "evidence": "final-rules.log",
+      "sha256": "ab8c76a433115f6905b967cc87668ed04caaca0c301075ae70639ef6badf98c6"
+    },
+    {
+      "command": "npm run check:boundary",
+      "exit": 0,
+      "evidence": "final-boundary.log",
+      "sha256": "c7315f42f554e7db68496fac012a746773ff25b49268dbae7891855c297f10a7"
+    },
+    {
+      "command": "npm run check:licences",
+      "exit": 0,
+      "evidence": "licences.log",
+      "sha256": "7d41e5e4301849c17b27df3bd2c2419572a252cda182cce22ec6d0c7f828e1c5"
+    },
+    {
+      "command": "npm run check:decisions",
+      "exit": 0,
+      "evidence": "decisions.log",
+      "sha256": "6a7e8a04b6ffbc9f3918b96e9a6662abbda0292352adabe94e8d9e2d106f6144"
+    },
+    {
+      "command": "npm run pack:generate -- union-1861 --check",
+      "exit": 0,
+      "evidence": "generated-freshness.log",
+      "sha256": "2eb22520abd9cbe57f3f471374b4cfda78ae3fbe3594ddf06d5e2313101f52a7"
+    },
+    {
+      "command": "npm run pack:validate -- union-1861",
+      "exit": 0,
+      "evidence": "pack-validate.log",
+      "sha256": "8063ad89f92766eee14786541aec67583abd567f75d7ddeebcad9b743f13214e"
+    },
+    {
+      "command": "npm run pack:schemas -- --check",
+      "exit": 0,
+      "evidence": "schemas-final.log",
+      "sha256": "bc36b1529cdc954a8dc73e47fb4f7e46bf95f02f102a60ead825c54430a54b4d"
+    }
+  ]
+}

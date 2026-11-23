@@ -1,3 +1,4 @@
+import { withdrawalBlocks } from '../forces/withdrawal.ts';
 import { forceTotals, type ForceTotalsCache } from '../forces/lots.ts';
 /**
  * Evaluating situation conditions (pure; writes nothing).
@@ -76,6 +77,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
       return block !== undefined && block.fbSurrenderedDay === null && forceTotals(block, ctx.forceTotalsCache).fbStrength !== 0 && ctx.state.forceAssignments[id] === a.oaxPost &&
         location !== undefined && (location.locMarch !== null || (location.locSinceDay >= a.oaxSince && location.locRegion !== a.oaxRoute.routeFrom));
     })));
+  if ('withdrawableForce' in c) return withdrawalBlocks(ctx.state, c.withdrawableForce).length > 0;
   if ('renewableEnlistment' in c) return ctx.renewableEnlistment?.(c.renewableEnlistment) ?? false;
   if ('callReceived' in c) {
     const { post, days } = c.callReceived;
@@ -105,7 +107,7 @@ export function holds(c: Condition, ctx: ConditionContext): boolean {
 
 /** The predicate at the top of a condition. */
 export function predicateOf(c: Condition): string {
-  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'advancingOn', 'renewableEnlistment', 'callReceived', 'holds', 'holderPractice', 'clockAtLeast', 'chamber', 'ledger'] as const) if (k in c) return k;
+  for (const k of ['all', 'any', 'not', 'dayAtLeast', 'flag', 'fired', 'decided', 'knows', 'goal', 'headquartersAt', 'advancingOn', 'renewableEnlistment', 'withdrawableForce', 'callReceived', 'holds', 'holderPractice', 'clockAtLeast', 'chamber', 'ledger'] as const) if (k in c) return k;
   return 'unknown';
 }
 

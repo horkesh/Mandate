@@ -79,6 +79,8 @@ export type Condition =
    */
   /** Event-only: an existing live unit qualifies for a sourced voluntary term renewal. */
   | { readonly renewableEnlistment: EnlistmentRenewal }
+  /** Event-only: the named contingent and all its detachments remain in the cited theatre. */
+  | { readonly withdrawableForce: ForceWithdrawal }
   | { readonly callReceived: { readonly post: PostId; readonly days: number } }
   /** The post's holder today is this person (lane 1.11: the post-holder check). */
   | { readonly holds: { readonly post: PostId; readonly person: PersonId } }
@@ -126,6 +128,7 @@ export type Effect =
         /** A state's already raised forces, entering service by its own institutional act. */
         readonly stateForces?: StateForces;
         readonly renewal?: EnlistmentRenewal;
+        readonly withdrawal?: ForceWithdrawal;
       };
     }
   /**
@@ -133,6 +136,12 @@ export type Effect =
    * edge from the ship. `forces` applies it, or refuses it with a typed reason, in phase 4c beside `command`'s proposals.
    */
   | { readonly landing: { readonly parent: ForceBlockId; readonly men: number; readonly region: RegionId } };
+
+/** An existing contingent's bounded theatre exit; no captive count or destination is asserted. */
+export interface ForceWithdrawal {
+  readonly block: ForceBlockId;
+  readonly regions: readonly RegionId[];
+}
 
 /** A whole existing regiment's voluntary remuster; no new men or unit are asserted. */
 export interface EnlistmentRenewal {

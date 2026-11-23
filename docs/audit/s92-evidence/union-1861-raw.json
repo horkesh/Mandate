@@ -1,0 +1,1698 @@
+{
+  "baseline": [
+    {
+      "side": "confederate",
+      "person": "anderson_richard_h",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "beauregard_pierre_g_t",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "beauregard_pierre_g_t",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "beauregard_pierre_g_t",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 15
+    },
+    {
+      "side": "confederate",
+      "person": "brown_joseph_e",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 7
+    },
+    {
+      "side": "confederate",
+      "person": "brown_joseph_e",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 7
+    },
+    {
+      "side": "confederate",
+      "person": "clark_edward",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 3
+    },
+    {
+      "side": "confederate",
+      "person": "clark_edward",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "cocke_philip_st_george",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "ellis_john_w",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 2
+    },
+    {
+      "side": "confederate",
+      "person": "ellis_john_w",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "harris_isham_g",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 3
+    },
+    {
+      "side": "confederate",
+      "person": "harris_isham_g",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 5
+    },
+    {
+      "side": "confederate",
+      "person": "houston_samuel",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "jackson_thomas_j",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "johnston_joseph_e",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "johnston_joseph_e",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "johnston_joseph_e",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 6
+    },
+    {
+      "side": "confederate",
+      "person": "letcher_john",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "magruder_john_b",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply_with_reservations",
+      "declared": "comply_with_reservations",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "moore_andrew_b",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 4
+    },
+    {
+      "side": "confederate",
+      "person": "moore_andrew_b",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply_with_reservations",
+      "declared": "comply_with_reservations",
+      "count": 3
+    },
+    {
+      "side": "confederate",
+      "person": "moore_andrew_b",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 6
+    },
+    {
+      "side": "confederate",
+      "person": "moore_thomas_o",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 6
+    },
+    {
+      "side": "confederate",
+      "person": "perry_madison_s",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 4
+    },
+    {
+      "side": "confederate",
+      "person": "pettus_john_j",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 4
+    },
+    {
+      "side": "confederate",
+      "person": "pettus_john_j",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "confederate",
+      "person": "pettus_john_j",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 5
+    },
+    {
+      "side": "confederate",
+      "person": "pickens_francis_w",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 4
+    },
+    {
+      "side": "confederate",
+      "person": "pickens_francis_w",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "confederate",
+      "person": "rector_henry_m",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply_with_reservations",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "rector_henry_m",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "confederate",
+      "person": "walker_leroy_p",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "object",
+      "declared": "object",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "andrew_john_a",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "andrew_john_a",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "bates_edward",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "blair_austin",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "buckingham_william_a",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "buckingham_william_a",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "burton_william",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "butler_benjamin_f",
+      "role": "addressee",
+      "kind": "policy",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "butler_benjamin_f",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "cameron_simon",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "cameron_simon",
+      "role": "relay",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "union",
+      "person": "cameron_simon",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "cameron_simon",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "curtin_andrew_g",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "curtin_andrew_g",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "dennison_william",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "ellis_john_w",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "fairbanks_erastus",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "goodwin_ichabod",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "goodwin_ichabod",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "harris_isham_g",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "hicks_thomas_h",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "howard_oliver_o",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "jackson_claiborne_f",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "kirkwood_samuel_j",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "letcher_john",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "magoffin_beriah",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply_with_reservations",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "mcdowell_irvin",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "mcdowell_irvin",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "mcdowell_irvin",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 9
+    },
+    {
+      "side": "union",
+      "person": "morgan_edwin_d",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply_with_reservations",
+      "declared": "comply_with_reservations",
+      "count": 6
+    },
+    {
+      "side": "union",
+      "person": "morgan_edwin_d",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "morton_oliver_h_p_t",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "union",
+      "person": "morton_oliver_h_p_t",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "olden_charles_s",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "patterson_robert",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "patterson_robert",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "patterson_robert",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 14
+    },
+    {
+      "side": "union",
+      "person": "ramsey_alexander",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "randall_alexander_w",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply_with_reservations",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "randall_alexander_w",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "rector_henry_m",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "robinson_charles",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "saunders_alvin",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "saunders_alvin",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "scott_winfield",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "scott_winfield",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "scott_winfield",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "seward_william_h",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "smith_caleb_b",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "smith_charles_f",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 3
+    },
+    {
+      "side": "union",
+      "person": "smith_charles_f",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "sprague_william",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply_with_reservations",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "sprague_william",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "stone_charles_p",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "washburn_israel",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "washburn_israel",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "yates_richard",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 2
+    }
+  ],
+  "final": [
+    {
+      "side": "confederate",
+      "person": "anderson_richard_h",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "beauregard_pierre_g_t",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "beauregard_pierre_g_t",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "beauregard_pierre_g_t",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 14
+    },
+    {
+      "side": "confederate",
+      "person": "brown_joseph_e",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 7
+    },
+    {
+      "side": "confederate",
+      "person": "brown_joseph_e",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 7
+    },
+    {
+      "side": "confederate",
+      "person": "clark_edward",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "confederate",
+      "person": "clark_edward",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "cocke_philip_st_george",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "ellis_john_w",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "confederate",
+      "person": "ellis_john_w",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "confederate",
+      "person": "harris_isham_g",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 3
+    },
+    {
+      "side": "confederate",
+      "person": "harris_isham_g",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 5
+    },
+    {
+      "side": "confederate",
+      "person": "houston_samuel",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "jackson_thomas_j",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "johnston_joseph_e",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "johnston_joseph_e",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "johnston_joseph_e",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 6
+    },
+    {
+      "side": "confederate",
+      "person": "letcher_john",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "magruder_john_b",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply_with_reservations",
+      "declared": "comply_with_reservations",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "moore_andrew_b",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 7
+    },
+    {
+      "side": "confederate",
+      "person": "moore_andrew_b",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 7
+    },
+    {
+      "side": "confederate",
+      "person": "moore_thomas_o",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 6
+    },
+    {
+      "side": "confederate",
+      "person": "moore_thomas_o",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "confederate",
+      "person": "perry_madison_s",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 4
+    },
+    {
+      "side": "confederate",
+      "person": "perry_madison_s",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "pettus_john_j",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 7
+    },
+    {
+      "side": "confederate",
+      "person": "pettus_john_j",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 7
+    },
+    {
+      "side": "confederate",
+      "person": "pickens_francis_w",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 4
+    },
+    {
+      "side": "confederate",
+      "person": "pickens_francis_w",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "confederate",
+      "person": "rector_henry_m",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "confederate",
+      "person": "twiggs_david_e",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "confederate",
+      "person": "walker_leroy_p",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "object",
+      "declared": "object",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "abercrombie_john_j",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "andrew_john_a",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "andrew_john_a",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "bates_edward",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "blair_austin",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "blair_austin",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "buckingham_william_a",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "buckingham_william_a",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "burton_william",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "butler_benjamin_f",
+      "role": "addressee",
+      "kind": "policy",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "butler_benjamin_f",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "cameron_simon",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "cameron_simon",
+      "role": "relay",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "union",
+      "person": "cameron_simon",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "cameron_simon",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "comply_with_reservations",
+      "declared": "comply_with_reservations",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "curtin_andrew_g",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "curtin_andrew_g",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "dennison_william",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "ellis_john_w",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "fairbanks_erastus",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "fairbanks_erastus",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "goodwin_ichabod",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "goodwin_ichabod",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "harris_isham_g",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "hicks_thomas_h",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "howard_oliver_o",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "jackson_claiborne_f",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "kirkwood_samuel_j",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "kirkwood_samuel_j",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "letcher_john",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "magoffin_beriah",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "mcdowell_irvin",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "mcdowell_irvin",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "mcdowell_irvin",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 9
+    },
+    {
+      "side": "union",
+      "person": "morgan_edwin_d",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 6
+    },
+    {
+      "side": "union",
+      "person": "morgan_edwin_d",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "union",
+      "person": "morton_oliver_h_p_t",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "union",
+      "person": "morton_oliver_h_p_t",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "olden_charles_s",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "olden_charles_s",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "patterson_robert",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "patterson_robert",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "patterson_robert",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 14
+    },
+    {
+      "side": "union",
+      "person": "ramsey_alexander",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "ramsey_alexander",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "randall_alexander_w",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "randall_alexander_w",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "rector_henry_m",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "robinson_charles",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "saunders_alvin",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "saunders_alvin",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "scott_winfield",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "scott_winfield",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "scott_winfield",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "object",
+      "declared": "object",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "seward_william_h",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "smith_caleb_b",
+      "role": "addressee",
+      "kind": "verb:consult",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "smith_charles_f",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 3
+    },
+    {
+      "side": "union",
+      "person": "smith_charles_f",
+      "role": "addressee",
+      "kind": "verb:appoint",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "union",
+      "person": "sprague_william",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "sprague_william",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "stone_charles_p",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "washburn_israel",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "washburn_israel",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "union",
+      "person": "yates_richard",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "object",
+      "declared": "object",
+      "count": 2
+    }
+  ]
+}

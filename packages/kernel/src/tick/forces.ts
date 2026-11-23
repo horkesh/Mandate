@@ -6,6 +6,10 @@
  * - day-tick phase 6, stores on hand, after control and the derived map, so a
  *   pocket closed today starves its garrison today.
  */
+import { applyMusters } from '../forces/enlistment.ts';
+import { withdrawalBlocks } from '../forces/withdrawal.ts';
+import { musterAssignments } from '../command/levies.ts';
+import { placeAndRemove } from '../movement/movement.ts';
 import { combatDay, type CombatResult } from '../combat/battle.ts';
 import { applyBattleRecords } from '../combat/records.ts';
 import { applyCombatCommand, applyCommandProposals, DEPARTMENT_SIDE_FIELD, FACTION_CAPITAL_FIELD, GOVERNMENT_ESTABLISHED_FIELD, POST_SUCCESSION_FIELD, TEMPORARY_POST_FIELD } from '../command/command.ts';
@@ -20,6 +24,7 @@ import { passageOf, reportPocketChanges } from './passage.ts';
 import { applyRetreats } from '../movement/march.ts';
 import { storesStep } from '../forces/stores.ts';
 import type { State } from '../root-state.ts';
+import type { Condition } from '../situations/types.ts';
 import { fire, type TickContext } from './context.ts';
 import { applyDetachmentProposals, type DetachmentProposal } from './detachments.ts';
 import { dateOfDay } from '../world/calendar.ts';
@@ -59,6 +64,35 @@ export const FORCES_MECHANICS = [
   'forces.stragglers_returned',
 ] as const;
 
+/** Apply only a sourced notice's identical guarded exit, through each field's existing owner.
+ * Departed and captured components may share a coarse starting block: this removes it from
+ * the theatre without fabricating an apportionment, casualty, exchange or destination.
+ */
+export function withdrawalPhase(ctx: TickContext, start: State): State {
+  let state = start;
+  for (const p of ctx.proposals) {
+    if (p.proposal !== 'effect' || p.owner !== 'forces' || p.field !== 'withdraw_from_theatre') continue;
+    const w = p.withdrawal;
+    const source = ctx.world.situations.find(s => s.id === p.situation);
+    const identical = (v: unknown) => JSON.stringify(v) === JSON.stringify(w);
+    const required = (c: Condition): boolean =>
+      'withdrawableForce' in c ? identical(c.withdrawableForce) : 'all' in c && c.all.some(required);
+    const block = w === undefined ? undefined : state.forceBlockStates[w.block];
+    if (w === undefined || source?.kind !== 'notice' || source.citations.length === 0 ||
+        p.origin !== 'notice' || p.option !== null || p.delta !== 1 || p.subject !== w.block || p.side !== source.faction ||
+        block === undefined || state.departmentFactions[block.fbDepartment] !== p.side || !required(source.event) ||
+        !source.effects.some(e => 'propose' in e && e.propose.owner === p.owner && e.propose.field === p.field &&
+          e.propose.subject === p.subject && e.propose.reason === p.reason && identical(e.propose.withdrawal)) ||
+        withdrawalBlocks(state, w).length === 0) {
+      ctx.mapEvents.push({ event: 'proposal_refused', owner: 'forces', reason: p.reason, why: 'invalid_theatre_withdrawal' });
+      continue;
+    }
+    const gone = applyMusters(ctx.world.map, state, [{ change: 'disband', block: w.block, cause: 'evacuated_under_terms' }]);
+    state = musterAssignments(placeAndRemove(ctx.world.map, gone.state, [], gone.disbanded), [], [], gone.disbanded);
+  }
+  return state;
+}
+
 /**
  * Situations' landings (lane 1.11), applied through `forces`' detachment path (lane 1.4b) in the same phase as `command`'s
  * proposals: men of a block aboard go ashore across an edge from the ship. A refusal changes nothing and names its reason.
@@ -86,7 +120,7 @@ function landingsPhase(ctx: TickContext, state: State): State {
  */
 export function commandProposalsPhase(ctx: TickContext, start: State): { readonly state: State; readonly derived: DerivedMap | null } {
   const map = ctx.world.map;
-  const state = landingsPhase(ctx, start);
+  const state = landingsPhase(ctx, withdrawalPhase(ctx, start));
   const mine = ctx.proposals.flatMap((p) => (p.proposal === 'effect' && p.owner === 'command' ? [p] : []));
   if (mine.length === 0) return { state, derived: null };
   const result = applyCommandProposals(

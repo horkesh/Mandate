@@ -1,0 +1,6 @@
+{
+  "base": "117b8ac8",
+  "path": "packages/kernel/src/compliance.ts",
+  "sha256": "a9fa1421835af6c2950cce4c0624222e3ce64325819a8c17c6775f52f244296f",
+  "adaptation": "Relative import paths only, for running retained baseline resolver in ignored runs/s92"
+}

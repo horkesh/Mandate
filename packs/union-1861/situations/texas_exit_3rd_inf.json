@@ -1,0 +1,65 @@
+{
+  "id": "texas_exit_3rd_inf",
+  "kind": "notice",
+  "faction": "union",
+  "title": "situation.texas_exit_3rd_inf.title",
+  "text": "situation.texas_exit_3rd_inf.text",
+  "earliest": "1861-05-09",
+  "event": {
+    "all": [
+      {
+        "dayAtLeast": 65
+      },
+      {
+        "fired": "texas_evacuation_terms"
+      },
+      {
+        "withdrawableForce": {
+          "block": "fb_us_texas_3rd_inf",
+          "regions": [
+            "tx_coastal_bend",
+            "brownsville",
+            "tx_san_antonio_austin"
+          ]
+        }
+      }
+    ]
+  },
+  "effects": [
+    {
+      "propose": {
+        "owner": "forces",
+        "field": "withdraw_from_theatre",
+        "subject": "fb_us_texas_3rd_inf",
+        "delta": 1,
+        "reason": "texas_original_deployment_ended",
+        "side": "union",
+        "withdrawal": {
+          "block": "fb_us_texas_3rd_inf",
+          "regions": [
+            "tx_coastal_bend",
+            "brownsville",
+            "tx_san_antonio_austin"
+          ]
+        }
+      }
+    }
+  ],
+  "report": {
+    "authors": [
+      "us_secretary_war"
+    ],
+    "reportType": "wire-dispatch",
+    "subtype": null
+  },
+  "gate": {
+    "none": "Military theatre departure of the existing contingent under sourced terms only. No prisoner-treatment, exchange, civilian, slavery or security policy is offered or derived; no benefit for such conduct."
+  },
+  "citations": [
+    {
+      "source": "S92-OR-I-I",
+      "at": "pp.502-504,514: February 18 agreement yields posts, retains arms for departure by coast; pp.523-524: February 20 embarkation return; p.552: two transports already sailed by April 17; pp.561-564: Sibley surrendered two First, three Third and two Eighth Infantry companies at Saluria April 25, after Indianola transport failed; pp.567-569,572: Reeve six Eighth companies surrendered May 9, last column. [I] Starting regiment bundles combine different departures/captures. Conservative theatre completion only on the last sourced date: no claim all surrendered together, no invented captive count, destination, exchange or new unit."
+    }
+  ],
+  "namedOnly": "The notice identifies an institutional evacuation agreement, not a living speaker or attributed personal words."
+}

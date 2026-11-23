@@ -1,0 +1,16 @@
+[
+  {
+    "pack": "union-1861",
+    "path": "runs\\s92-done\\20261123-054548-34928-49ed1b\\summary.json",
+    "dailyHashes": 148,
+    "matchesFinalReference": true,
+    "finalHash": "0d2bc6fc48808ca27d1dead127406d03478a229f6f5dfd34e3447fc88ff9bbb9"
+  },
+  {
+    "pack": "testbed",
+    "path": "runs\\s92-done\\20261123-054630-34928-5d8c36\\summary.json",
+    "dailyHashes": 120,
+    "matchesFinalReference": true,
+    "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db"
+  }
+]

@@ -1,0 +1,186 @@
+{
+  "baseline": [
+    {
+      "side": "north",
+      "person": "n_governor",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "north",
+      "person": "n_governor",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "north",
+      "person": "n_organiser",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "refuse",
+      "declared": "refuse",
+      "count": 2
+    },
+    {
+      "side": "north",
+      "person": "n_organiser",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "object",
+      "declared": "object",
+      "count": 17
+    },
+    {
+      "side": "north",
+      "person": "n_secretary",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "south",
+      "person": "s_cavalier",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "south",
+      "person": "s_cavalier",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply_with_reservations",
+      "declared": "comply",
+      "count": 17
+    },
+    {
+      "side": "south",
+      "person": "s_governor",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "reinterpret",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "south",
+      "person": "s_governor",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "reinterpret",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "south",
+      "person": "s_minister",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 1
+    }
+  ],
+  "final": [
+    {
+      "side": "north",
+      "person": "n_governor",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "north",
+      "person": "n_governor",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "north",
+      "person": "n_organiser",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "refuse",
+      "declared": "refuse",
+      "count": 2
+    },
+    {
+      "side": "north",
+      "person": "n_organiser",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "object",
+      "declared": "object",
+      "count": 17
+    },
+    {
+      "side": "north",
+      "person": "n_secretary",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 2
+    },
+    {
+      "side": "south",
+      "person": "s_cavalier",
+      "role": "addressee",
+      "kind": "goal",
+      "actual": "comply",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "south",
+      "person": "s_cavalier",
+      "role": "addressee",
+      "kind": "verb:inquire",
+      "actual": "comply_with_reservations",
+      "declared": "comply",
+      "count": 17
+    },
+    {
+      "side": "south",
+      "person": "s_governor",
+      "role": "addressee",
+      "kind": "call",
+      "actual": "reinterpret",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "south",
+      "person": "s_governor",
+      "role": "addressee",
+      "kind": "verb:transfer",
+      "actual": "reinterpret",
+      "declared": "comply",
+      "count": 1
+    },
+    {
+      "side": "south",
+      "person": "s_minister",
+      "role": "relay",
+      "kind": "goal",
+      "actual": "slow_walk",
+      "declared": "comply",
+      "count": 1
+    }
+  ]
+}
