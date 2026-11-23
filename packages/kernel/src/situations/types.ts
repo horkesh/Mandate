@@ -192,6 +192,7 @@ export interface OptionOrder {
  * goal goes through the order path (`dispatchOrder`). Each governor answers by his own compliance (lane 1.7).
  */
 export interface OptionCall {
+  readonly termsId?: string;
   readonly to: PostId;
   readonly regiments: number;
   readonly termDays: number;

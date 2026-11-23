@@ -13,11 +13,33 @@ export interface RaisingRung {
   readonly delayDays: number;
 }
 
+/** Clauses of the issuer's paper. Recorded only; neither these nor demand imply available means. */
+export interface CallProfile {
+  readonly id: string;
+  /** Identity of the shared researched text profile; instances retain their own clauses. */
+  readonly sourceProfile: string;
+  readonly honours: readonly string[];
+  readonly offends: readonly string[];
+  readonly callProvenance: readonly { readonly source: string; readonly page: number }[];
+  readonly conditions: readonly { readonly kind: 'service_term' | 'organisation' | 'appointments' | 'arms_equipment' | 'destination' | 'other_conditions'; readonly clauseText: string }[];
+  readonly materialDemand: readonly {
+    readonly resource: 'arms' | 'equipment' | 'horses' | 'clothing' | 'transport' | 'subsistence';
+    readonly obligation: 'required' | 'as_practicable' | 'not_required' | 'unspecified';
+    readonly provider: 'state' | 'national' | 'either' | 'volunteer' | 'unspecified';
+    readonly quantity: number | null;
+    readonly demandText: string;
+  }[];
+  readonly rationale: string;
+  readonly limits: string;
+}
+
 export interface RecruitmentRules {
   /** Model planning size [I], never a historical norm. At most four regiments. */
   readonly planningRegiments?: number;
   /** How a governor reads a call: its boldness and the values it honours and offends (pack data). */
   readonly callTerms: { readonly boldness: number; readonly honours: readonly string[]; readonly offends: readonly string[] };
+  /** Per-paper values and unscored clauses. Absence of a profile explicitly uses callTerms. */
+  readonly callProfiles?: readonly CallProfile[];
   /** The post kinds whose holders answer a call (a governor's). A post of a self-governing department never does (SENSITIVE-HISTORY 3.7). */
   readonly raisingPostKinds: readonly string[];
   /** Men in a regiment. */
@@ -94,6 +116,17 @@ const whole = (problems: string[], name: string, v: number, min: number, max: nu
 export function recruitmentRuleProblems(r: RecruitmentRules): string[] {
   const problems: string[] = [];
   whole(problems, 'recruitment rule callTerms.boldness', r.callTerms.boldness, 0, 1000);
+  const profiles = new Set<string>();
+  for (const p of r.callProfiles ?? []) {
+    if (!/^[a-z][a-z0-9_]*$/.test(p.id) || profiles.has(p.id)) problems.push(`recruitment callProfiles: invalid or duplicate id ${p.id}`);
+    profiles.add(p.id);
+    if (p.callProvenance.length === 0) problems.push(`recruitment callProfiles.${p.id}: callProvenance with printed pages is required`);
+    for (const c of p.callProvenance) {
+      if (!c.source.trim()) problems.push(`recruitment callProfiles.${p.id}: source is required`);
+      whole(problems, `recruitment callProfiles.${p.id}.page`, c.page, 1);
+    }
+    for (const d of p.materialDemand) if (d.quantity !== null) whole(problems, `recruitment callProfiles.${p.id}.quantity`, d.quantity, 0);
+  }
   for (const k of ['menPerRegiment', 'maxTermDays'] as const) whole(problems, `recruitment rule ${k}`, r[k], 1);
   for (const k of ['storesDays', 'musterDays', 'musterBlockedDays'] as const) whole(problems, `recruitment rule ${k}`, r[k], 0);
   for (const k of ['loyaltyFull', 'loyaltyWeight'] as const) whole(problems, `recruitment rule ${k}`, r[k], 0, 1000);
@@ -121,6 +154,8 @@ export function selfEmancipationRuleProblems(r: SelfEmancipationRules): string[]
 }
 
 /** How a governor reads a call: the pack's terms, as compliance takes them. */
-export function callTerms(rules: RecruitmentRules): DirectiveTerms {
-  return { boldness: rules.callTerms.boldness, honours: rules.callTerms.honours as DirectiveTerms['honours'], offends: rules.callTerms.offends as DirectiveTerms['offends'], required: 0 };
+export function callTerms(rules: RecruitmentRules, profile?: CallProfile): DirectiveTerms {
+  const values = profile ?? rules.callTerms;
+  // No complete, dated means balance: material clauses must not invent a capacity term.
+  return { boldness: rules.callTerms.boldness, honours: values.honours as DirectiveTerms['honours'], offends: values.offends as DirectiveTerms['offends'], required: 0 };
 }

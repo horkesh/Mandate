@@ -1,0 +1,68 @@
+{
+  "firstBuildHook": {
+    "exit": 1,
+    "elapsedSeconds": 266.12417710002046,
+    "testFilesPassed": 243,
+    "testFilesFailed": 1,
+    "testsPassed": 2179,
+    "testsFailed": 2,
+    "testsSkipped": 5,
+    "failedFile": "packages/kernel/test/one-writer.test.ts",
+    "cause": "The new message-carried CallProfile and its nested records had not entered the immutable-record declaration.",
+    "evidence": "runs/s102/build-commit.log"
+  },
+  "consolidatedDiagnosis": {
+    "nestedRecords": [
+      "CallProfile",
+      "CallProfile.callProvenance",
+      "CallProfile.conditions",
+      "CallProfile.materialDemand"
+    ],
+    "namingCollisions": [
+      "The new generic provenance property conflicted with existing mutable pack-source provenance.",
+      "The two new text properties were not unique across immutable State records."
+    ],
+    "correction": "Declare all four new records immutable; name the packet metadata callProvenance, clauseText and demandText. No scanner or check was weakened.",
+    "selectorGuard": "A dated call retains its registered profile when a selector is omitted and rejects a contradictory selector. Existing reference commands already select the registered profile explicitly.",
+    "cheapVerification": "55/55 focused ownership, governor/relay and pack-schema tests; typecheck, rules and seven-day startup replay pass.",
+    "retainedEvidence": "runs/s102/ownership-diagnosis.log, ownership-correction.log, correction-targeted.log, ownership-consolidated-fix.log, typecheck-corrected.log, rules-corrected.log, smoke-ownership-corrected.log"
+  },
+  "boundedRevalidation": {
+    "question": "Do the completed immutable packet and selector guards replay and resume with unchanged response/counter behavior, while reporting hashes for the final metadata keys?",
+    "command": "npx tsx docs/audit/s102-evidence/measure.ts corrected",
+    "scope": "Union full reference and Union peace exercise only; reuse all sixteen byte-exact unaffected testbed artifacts.",
+    "expectedCost": "A few minutes; no seed sweep or calibration campaign.",
+    "pass": "Replay/resume match, no rejections, all existing bands pass, responses and counters equal the retained pre-correction capture.",
+    "stop": "Any changed behavior or unexpected failure is diagnosed before another long run.",
+    "firstCapture": "runs/s102/references (retained, not discarded)",
+    "correctedCapture": "runs/s102/corrected",
+    "reuseReceipt": "runs/s102/reused-testbed.json"
+  },
+  "verification": [
+    {
+      "run": "0-union-1861",
+      "differentHashDays": [
+        41,
+        42,
+        43,
+        44,
+        71,
+        72,
+        73,
+        85,
+        86,
+        87,
+        120,
+        121
+      ],
+      "allCountersExact": true,
+      "allResponsesExact": true
+    },
+    {
+      "run": "4-union-1861",
+      "differentHashDays": [],
+      "allCountersExact": true,
+      "allResponsesExact": true
+    }
+  ]
+}

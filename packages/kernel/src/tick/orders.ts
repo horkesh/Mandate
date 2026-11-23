@@ -320,7 +320,7 @@ export function relayOrder(ctx: TickContext, start: State, msg: TransitMessage):
   const rules = world.rules.people;
   // A call is read on the pack's call terms (lane 1.7); a goal, an answer to a plan and the word to go on its goal's. He reads it
   // watched from where he stands (lane 1.4's oversight).
-  const terms = order.orderKind === 'call' ? callTerms(world.map.world.rules.recruitment) : goalTerms(rules, relayKindOf(start, order));
+  const terms = order.orderKind === 'call' ? callTerms(world.map.world.rules.recruitment, order.orderCall?.callProfile) : goalTerms(rules, relayKindOf(start, order));
   const answer = answerOrder(world, start, relayer.id, order.orderIssuer, terms, { oversight: oversightOf(ctx, start, relayer.id, order.orderIssuer).value });
   const state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: relayer.id, post, role: 'relay', day: ctx.day, kind: order.orderKind, ...(order.orderCall?.callId === undefined ? {} : { callId: order.orderCall.callId }) }));
   const decision = relayAction(rules, answer, relayer.id, post);

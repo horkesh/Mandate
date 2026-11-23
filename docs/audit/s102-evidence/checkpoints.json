@@ -1,0 +1,25 @@
+{
+  "problems": [
+    "men_confederate (1861-07-31, day 148): confederate has 82329 men, below 100000"
+  ],
+  "evidence": [
+    "seceded (1861-07-31, day 148): 11 of 11 on the confederate side",
+    "side_maryland (1861-07-31, day 148): Maryland is union (band union)",
+    "side_delaware (1861-07-31, day 148): Delaware is union (band union)",
+    "side_kentucky (1861-07-31, day 148): Kentucky is neutral (band neutral)",
+    "side_missouri (1861-07-31, day 148): Missouri is union (band union)",
+    "side_western_virginia (1861-07-31, day 148): western Virginia (the Restored Government at Wheeling) is union (band union)",
+    "side_muscogee (1861-07-31, day 148): the Creek (Muscogee) Nation is confederate (band confederate)",
+    "side_choctaw (1861-07-31, day 148): the Choctaw Nation is confederate (band confederate)",
+    "side_chickasaw (1861-07-31, day 148): the Chickasaw Nation is confederate (band confederate)",
+    "side_cherokee (1861-07-31, day 148): the Cherokee Nation is neutral (band neutral)",
+    "side_seminole (1861-07-31, day 148): the Seminole Nation is neutral (band neutral)",
+    "washington_held (1861-07-31, day 148): washington held by union; not held by union on 0 days",
+    "men_union (1861-07-31, day 148): union 99801 men of known strength, 7 blocks of unknown strength (band 95000..250000)",
+    "men_confederate (1861-07-31, day 148): confederate 82329 men of known strength, 22 blocks of unknown strength (band 100000..200000)",
+    "operations_union (1861-07-31, day 148): union fought 1 planned operations (band 1..26): op:us_dept_northeastern_virginia:135 at manassas",
+    "operations_confederate (1861-07-31, day 148): confederate fought 1 planned operations (band 1..4): op:cs_cmd_charleston:38 at fort_sumter",
+    "confederate at war since day 36",
+    "union at war since day 41"
+  ]
+}

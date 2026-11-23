@@ -179,6 +179,7 @@ export const OptionSchema = z.strictObject({
       z.strictObject({
         to: idOf('post'),
         regiments: int.min(1).describe('Regiments asked of the governor.'),
+        termsId: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(),
         termDays: int.min(1).describe('Days the men are enlisted for, from the muster.'),
         route: z.enum(phase0.ROUTE_KINDS),
       }),
@@ -534,6 +535,7 @@ export function validateSituations(items: readonly { readonly file: string; read
       });
       o.calls.forEach((call, j) => {
         const at = `options[${i}].calls[${j}]`;
+        if (call.termsId !== undefined && !pack.world.rules.recruitment.callProfiles?.some(p => p.id === call.termsId)) err('situation-call', `${at}.termsId`, `unknown call profile "${call.termsId}"`, 'a rules.recruitment.callProfiles id');
         ref(posts, 'post in any scenario', call.to, `${at}.to`);
         // The lead's ruling: a call goes to a state government's raising post, of the calling side or neutral, never to a
         // people who govern themselves (0069, 0070; SENSITIVE-HISTORY 3.7: no seat recruits a nation). The kernel refuses it

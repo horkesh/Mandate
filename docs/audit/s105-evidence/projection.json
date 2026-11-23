@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "runs/s105/projection.ts"
+  ],
+  "exit": 0,
+  "seconds": 14.518,
+  "log": "runs/s105/projection.log"
+}

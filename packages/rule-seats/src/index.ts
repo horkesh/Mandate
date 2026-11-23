@@ -165,7 +165,7 @@ export function principalOrders(menu: PrincipalMenu, reports: readonly ReportVie
       const route = r === undefined ? undefined : quickest(r.routes);
       if (r === undefined || route === undefined || (call.id === undefined ? r.called : call.issued === true)) continue;
       send({ cmd: 'call', to: r.post, regiments: call.regiments, termDays: call.termDays, route: route.route, bypass: false,
-        ...(call.id === undefined ? {} : { callId: call.id }), ...(call.men === undefined ? {} : { men: call.men }), ...(call.arm === undefined ? {} : { arm: call.arm }), ...(call.readiness === undefined ? {} : { readiness: call.readiness }) });
+        ...(call.termsId === undefined ? {} : { termsId: call.termsId }), ...(call.id === undefined ? {} : { callId: call.id }), ...(call.men === undefined ? {} : { men: call.men }), ...(call.arm === undefined ? {} : { arm: call.arm }), ...(call.readiness === undefined ? {} : { readiness: call.readiness }) });
     }
   };
   // 0064, 0066: nothing of his doctrine before the morning after his side is at war.

@@ -11,6 +11,7 @@
 import { ids, phase0, world as w } from '@mandate/kernel';
 import { z } from 'zod';
 import { COMPLIANCE_RUNGS, DISCRETION_CONDITIONS } from '@mandate/kernel';
+import { CallProfileSchema } from './call-profiles.ts';
 
 type IdKind = ids.IdKind;
 
@@ -305,7 +306,7 @@ export const RulesSchema = z.strictObject({
             concentrations: z.array(z.strictObject({ post: idOf('post'), fromDate: historicalDate, requiresDepartment: idOf('department'), fromPosts: z.array(idOf('post')), receiveLevies: z.boolean().optional(), source: z.string().min(1) })).optional().describe('Dated concentration changes after a government joins this side and the receiving command is received. Named sending posts keep independent destinations; receiveLevies false withholds unallocated statewide batches.'),
             appointments: z.array(z.union([z.strictObject({ post: idOf('post'), person: idOf('person'), fromPost: idOf('post').nullable(), fromDate: historicalDate, requiresDepartment: idOf('department'), source: z.string().min(1) }), z.strictObject({ post: idOf('post'), person: idOf('person'), onDate: isoDate, source: z.string().min(1) })])).optional().describe('Sourced appointments establishing declared commands through the existing appointment verb, conditional on government side and commander eligibility.'),
             calls: z
-              .array(z.strictObject({ id: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), post: idOf('post'), regiments: positive.nullable().describe('Regiments requested; null when only an unquantified sub-regimental unit is documented.'), men: positive.nullable().optional().describe('Exact headcount; null preserves an unquantified unit, absent uses menPerRegiment.'), arm: termId.optional(), readiness: z.boolean().optional(), termDays: positive.nullable().describe('Days from muster, or null for the war.'), fromDate: historicalDate, atPeace: z.boolean().optional(), source: z.string().min(1) }))
+              .array(z.strictObject({ termsId: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), id: z.string().regex(/^[a-z][a-z0-9_]*$/).optional(), post: idOf('post'), regiments: positive.nullable().describe('Regiments requested; null when only an unquantified sub-regimental unit is documented.'), men: positive.nullable().optional().describe('Exact headcount; null preserves an unquantified unit, absent uses menPerRegiment.'), arm: termId.optional(), readiness: z.boolean().optional(), termDays: positive.nullable().describe('Days from muster, or null for the war.'), fromDate: historicalDate, atPeace: z.boolean().optional(), source: z.string().min(1) }))
               .describe('Each identified dated requisition goes once; distinct IDs allow repeats to a governor. atPeace permits a cited pre-war call. readiness records an answer without muster. Remove a row when a situation owns the same requisition.'),
             offensives: z
               .array(z.strictObject({ id: termId.optional(), post: idOf('post'), objective: idOf('region'), fromDate: historicalDate, posture: doctrineGoal.shape.posture.optional(), discretion: boundedDiscretion.optional(), requiresNotice: idOf('situation').optional(), source: z.string().min(1) }))
@@ -425,6 +426,7 @@ export const RulesSchema = z.strictObject({
     .describe('Goals and plans (0040, 0062): design parameters the pack states.'),
   recruitment: z
     .strictObject({
+      callProfiles: z.array(CallProfileSchema).optional().describe('Per-paper values and recorded, unscored conditions. Missing profile uses the explicit callTerms fallback.'),
       callTerms: z
         .strictObject({ boldness: permille, honours: z.array(termId), offends: z.array(termId) })
         .describe('How a governor reads a call for regiments: its boldness and the values it honours and offends (pack data; 0074).'),

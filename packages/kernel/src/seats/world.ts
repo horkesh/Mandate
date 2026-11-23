@@ -344,6 +344,7 @@ export function menAndRegionsReferenceProblems(world: World): string[] {
   for (const k of recruitment.raisingPostKinds) if (!v.postKinds.some((p) => p.id === k)) problems.push(`recruitment rule raisingPostKinds: ${k} is not a post kind`);
   const values = new Set((v.values ?? []).map((x) => x.id as string));
   for (const value of [...recruitment.callTerms.honours, ...recruitment.callTerms.offends]) if (!values.has(value)) problems.push(`recruitment rule callTerms: value ${value} is not in the pack's values`);
+  for (const p of recruitment.callProfiles ?? []) for (const value of [...p.honours, ...p.offends]) if (!values.has(value)) problems.push(`recruitment callProfiles.${p.id}: value ${value} is not in the pack's values`);
   if (selfEmancipation.linesFaction !== null && !world.factions.some((f) => f.id === selfEmancipation.linesFaction)) problems.push(`selfEmancipation rule linesFaction ${selfEmancipation.linesFaction} is not a faction`);
   for (const p of selfEmancipation.protectedFlags) for (const r of p.regions) if (!world.regions.some((x) => x.id === r)) problems.push(`selfEmancipation rule protectedFlags.${p.flag}: region ${r} is not in the World`);
   for (const c of world.census) {
@@ -427,6 +428,7 @@ export function doctrineProblems(map: WorldIndex, start: ScenarioStart, factions
       if (c.termDays !== null && c.termDays > recruitment.maxTermDays) problems.push(`${at}.calls[${j}]: a term of ${c.termDays} days is longer than the pack's ${recruitment.maxTermDays}`);
       if (c.arm !== undefined && !map.world.vocabularies.arms.some(a => a.id === c.arm && !a.naval)) problems.push(`${at}.calls[${j}]: ${c.arm} is not a land arm`);
       const key = c.id ?? c.post;
+      if (c.termsId !== undefined && !recruitment.callProfiles?.some(p => p.id === c.termsId)) problems.push(`${at}.calls[${j}]: unknown call profile ${c.termsId}`);
       if (c.id !== undefined) {
         if (callIds.has(c.id)) problems.push(`${at}.calls[${j}]: duplicate pack call id ${c.id}`);
         callIds.add(c.id);

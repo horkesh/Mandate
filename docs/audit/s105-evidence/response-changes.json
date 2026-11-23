@@ -1,0 +1,5184 @@
+[
+  {
+    "identity": [
+      "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "moore_thomas_o",
+      "addressee",
+      116
+    ],
+    "before": {
+      "key": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun29_extra_louisiana",
+      "respDay": 116,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 117,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun29_extra_louisiana",
+      "respDay": 116,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -83,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+      "brown_joseph_e",
+      "addressee",
+      117
+    ],
+    "before": {
+      "key": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e",
+      "respOrder": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_georgia",
+      "respDay": 117,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -96,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -118
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e",
+      "respOrder": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_georgia",
+      "respDay": 117,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -296,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -118
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.117.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      117
+    ],
+    "before": {
+      "key": "m.117.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.117.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_cavalry_tennessee",
+      "respDay": 117,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "moore_thomas_o",
+      "addressee",
+      117
+    ],
+    "before": {
+      "key": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_louisiana",
+      "respDay": 117,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 117,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_louisiana",
+      "respDay": 117,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -283,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "perry_madison_s",
+      "addressee",
+      117
+    ],
+    "before": {
+      "key": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+      "respOrder": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "respPerson": "perry_madison_s",
+      "respPost": "st_gov_florida",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_florida",
+      "respDay": 117,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 192,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -48
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+      "respOrder": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "respPerson": "perry_madison_s",
+      "respPost": "st_gov_florida",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_florida",
+      "respDay": 117,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -208,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -48
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi.2",
+      "pettus_john_j",
+      "addressee",
+      117
+    ],
+    "before": null,
+    "after": {
+      "key": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi.2|pettus_john_j",
+      "respOrder": "m.117.davis_jefferson.pettus_john_j.call.st_gov_mississippi.2",
+      "respPerson": "pettus_john_j",
+      "respPost": "st_gov_mississippi",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_mississippi",
+      "respDay": 117,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "brown_joseph_e",
+      "addressee",
+      120
+    ],
+    "before": {
+      "key": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jul01_extra_georgia",
+      "respDay": 120,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -96,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -118
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jul01_extra_georgia",
+      "respDay": 120,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 104,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -118
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      120
+    ],
+    "before": {
+      "key": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_tennessee",
+      "respDay": 120,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      122
+    ],
+    "before": null,
+    "after": {
+      "key": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr22_absolute_tennessee",
+      "respDay": 122,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 213,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+      "harris_isham_g",
+      "addressee",
+      122
+    ],
+    "before": null,
+    "after": {
+      "key": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2|harris_isham_g",
+      "respOrder": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_cavalry_tennessee",
+      "respDay": 122,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3",
+      "harris_isham_g",
+      "addressee",
+      122
+    ],
+    "before": null,
+    "after": {
+      "key": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3|harris_isham_g",
+      "respOrder": "m.120.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_tennessee",
+      "respDay": 122,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -187,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.120.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      120
+    ],
+    "before": {
+      "key": "m.120.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.120.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 120,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.120.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      122
+    ],
+    "before": null,
+    "after": {
+      "key": "m.120.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.120.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 122,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.120.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+      "pettus_john_j",
+      "addressee",
+      120
+    ],
+    "before": {
+      "key": "m.120.davis_jefferson.pettus_john_j.call.st_gov_mississippi|pettus_john_j",
+      "respOrder": "m.120.davis_jefferson.pettus_john_j.call.st_gov_mississippi",
+      "respPerson": "pettus_john_j",
+      "respPost": "st_gov_mississippi",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_jun30_reserve_mississippi",
+      "respDay": 120,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.121.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      121
+    ],
+    "before": {
+      "key": "m.121.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.121.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 121,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.122.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+      "moore_thomas_o",
+      "addressee",
+      122
+    ],
+    "before": {
+      "key": "m.122.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.122.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 122,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 213,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.123.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+      "moore_andrew_b",
+      "addressee",
+      123
+    ],
+    "before": null,
+    "after": {
+      "key": "m.123.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama|moore_andrew_b",
+      "respOrder": "m.123.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+      "respPerson": "moore_andrew_b",
+      "respPost": "st_gov_alabama",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 123,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.127.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "brown_joseph_e",
+      "addressee",
+      127
+    ],
+    "before": null,
+    "after": {
+      "key": "m.127.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.127.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 127,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 22,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.127.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      127
+    ],
+    "before": {
+      "key": "m.127.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.127.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 127,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.127.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      129
+    ],
+    "before": null,
+    "after": {
+      "key": "m.127.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.127.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 129,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.127.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+      "moore_thomas_o",
+      "addressee",
+      127
+    ],
+    "before": {
+      "key": "m.127.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.127.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 127,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 213,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.128.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      128
+    ],
+    "before": {
+      "key": "m.128.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.128.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 128,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.129.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      129
+    ],
+    "before": {
+      "key": "m.129.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.129.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 129,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.130.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+      "moore_andrew_b",
+      "addressee",
+      130
+    ],
+    "before": null,
+    "after": {
+      "key": "m.130.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama|moore_andrew_b",
+      "respOrder": "m.130.davis_jefferson.moore_andrew_b.verb.transfer.st_gov_alabama",
+      "respPerson": "moore_andrew_b",
+      "respPost": "st_gov_alabama",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 130,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.130.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+      "pettus_john_j",
+      "addressee",
+      130
+    ],
+    "before": null,
+    "after": {
+      "key": "m.130.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi|pettus_john_j",
+      "respOrder": "m.130.davis_jefferson.pettus_john_j.verb.transfer.st_gov_mississippi",
+      "respPerson": "pettus_john_j",
+      "respPost": "st_gov_mississippi",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 130,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 13,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 13
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      141
+    ],
+    "before": {
+      "key": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 141,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "johnston_joseph_e",
+      "addressee",
+      143
+    ],
+    "before": null,
+    "after": {
+      "key": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 143,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "brown_joseph_e",
+      "addressee",
+      34
+    ],
+    "before": {
+      "key": "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr08_georgia",
+      "respDay": 34,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -73,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -118
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.34.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr08_georgia",
+      "respDay": 34,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 127,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -118
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "moore_thomas_o",
+      "addressee",
+      34
+    ],
+    "before": {
+      "key": "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr08_louisiana",
+      "respDay": 34,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 144,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr08_louisiana",
+      "respDay": 34,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 144,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.34.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "perry_madison_s",
+      "addressee",
+      34
+    ],
+    "before": {
+      "key": "m.34.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+      "respOrder": "m.34.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "respPerson": "perry_madison_s",
+      "respPost": "st_gov_florida",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr08_florida",
+      "respDay": 34,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 199,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -48
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.34.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+      "respOrder": "m.34.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "respPerson": "perry_madison_s",
+      "respPost": "st_gov_florida",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr08_florida",
+      "respDay": 34,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 199,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -48
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.37.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "brown_joseph_e",
+      "addressee",
+      37
+    ],
+    "before": null,
+    "after": {
+      "key": "m.37.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.37.davis_jefferson.brown_joseph_e.verb.transfer.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 37,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 45,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.37.davis_jefferson.clark_edward.verb.transfer.st_gov_texas",
+      "clark_edward",
+      "addressee",
+      37
+    ],
+    "before": {
+      "key": "m.37.davis_jefferson.clark_edward.verb.transfer.st_gov_texas|clark_edward",
+      "respOrder": "m.37.davis_jefferson.clark_edward.verb.transfer.st_gov_texas",
+      "respPerson": "clark_edward",
+      "respPost": "st_gov_texas",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 37,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 27,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 27
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "brown_joseph_e",
+      "addressee",
+      4
+    ],
+    "before": {
+      "key": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_mar09_georgia",
+      "respDay": 4,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -73,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -118
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_mar09_georgia",
+      "respDay": 4,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 127,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -118
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.4.davis_jefferson.houston_samuel.call.st_gov_texas",
+      "houston_samuel",
+      "addressee",
+      4
+    ],
+    "before": {
+      "key": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas|houston_samuel",
+      "respOrder": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas",
+      "respPerson": "houston_samuel",
+      "respPost": "st_gov_texas",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_mar09_texas",
+      "respDay": 4,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 247,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 400
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": -180
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 27
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "distrusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        },
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "distrusts_leader"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas|houston_samuel",
+      "respOrder": "m.4.davis_jefferson.houston_samuel.call.st_gov_texas",
+      "respPerson": "houston_samuel",
+      "respPost": "st_gov_texas",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_mar09_texas",
+      "respDay": 4,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -153,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": -180
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 27
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "distrusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "distrusts_leader"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "moore_thomas_o",
+      "addressee",
+      4
+    ],
+    "before": {
+      "key": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_mar09_louisiana",
+      "respDay": 4,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 144,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_mar09_louisiana",
+      "respDay": 4,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 144,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "perry_madison_s",
+      "addressee",
+      4
+    ],
+    "before": {
+      "key": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+      "respOrder": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "respPerson": "perry_madison_s",
+      "respPost": "st_gov_florida",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_mar09_florida",
+      "respDay": 4,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 199,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -48
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+      "respOrder": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "respPerson": "perry_madison_s",
+      "respPost": "st_gov_florida",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_mar09_florida",
+      "respDay": 4,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 199,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -48
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+      "andrew_john_a",
+      "addressee",
+      41
+    ],
+    "before": {
+      "key": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts|andrew_john_a",
+      "respOrder": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+      "respPerson": "andrew_john_a",
+      "respPost": "st_gov_massachusetts",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 41,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 189,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -134
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 90
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 336
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 336
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts|andrew_john_a",
+      "respOrder": "m.41.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+      "respPerson": "andrew_john_a",
+      "respPost": "st_gov_massachusetts",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 41,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -11,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -134
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 90
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 336
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 336
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.41.lincoln_abraham.dennison_william.call.st_gov_ohio",
+      "dennison_william",
+      "addressee",
+      41
+    ],
+    "before": {
+      "key": "m.41.lincoln_abraham.dennison_william.call.st_gov_ohio|dennison_william",
+      "respOrder": "m.41.lincoln_abraham.dennison_william.call.st_gov_ohio",
+      "respPerson": "dennison_william",
+      "respPost": "st_gov_ohio",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 41,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -20,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -58
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 38
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.41.lincoln_abraham.dennison_william.call.st_gov_ohio|dennison_william",
+      "respOrder": "m.41.lincoln_abraham.dennison_william.call.st_gov_ohio",
+      "respPerson": "dennison_william",
+      "respPost": "st_gov_ohio",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 41,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -220,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -58
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 38
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky",
+      "magoffin_beriah",
+      "addressee",
+      44
+    ],
+    "before": {
+      "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky|magoffin_beriah",
+      "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky",
+      "respPerson": "magoffin_beriah",
+      "respPost": "st_gov_kentucky",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 44,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 18,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -4
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky|magoffin_beriah",
+      "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_kentucky",
+      "respPerson": "magoffin_beriah",
+      "respPost": "st_gov_kentucky",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 44,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -182,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -4
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 22
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+      "hicks_thomas_h",
+      "addressee",
+      43
+    ],
+    "before": {
+      "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland|hicks_thomas_h",
+      "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+      "respPerson": "hicks_thomas_h",
+      "respPost": "st_gov_maryland",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 43,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 250,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 50
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland|hicks_thomas_h",
+      "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_maryland",
+      "respPerson": "hicks_thomas_h",
+      "respPost": "st_gov_maryland",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 43,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 50,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 50
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri",
+      "jackson_claiborne_f",
+      "addressee",
+      43
+    ],
+    "before": {
+      "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri|jackson_claiborne_f",
+      "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri",
+      "respPerson": "jackson_claiborne_f",
+      "respPost": "st_gov_missouri",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 43,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -132,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -148
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 16
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "too_timid",
+          "gap": 371
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "too_timid",
+          "gap": 371
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri|jackson_claiborne_f",
+      "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_missouri",
+      "respPerson": "jackson_claiborne_f",
+      "respPost": "st_gov_missouri",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 43,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -332,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -148
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 16
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 371
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 371
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      44
+    ],
+    "before": {
+      "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 44,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 11,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 11
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 44,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -189,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 11
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "morton_oliver_h_p_t",
+      "addressee",
+      41
+    ],
+    "before": {
+      "key": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t",
+      "respOrder": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "respPerson": "morton_oliver_h_p_t",
+      "respPost": "st_gov_indiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 41,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 100,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -132
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t",
+      "respOrder": "m.41.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "respPerson": "morton_oliver_h_p_t",
+      "respPost": "st_gov_indiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respDay": 41,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -100,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -132
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "brown_joseph_e",
+      "addressee",
+      42
+    ],
+    "before": {
+      "key": "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr16_georgia",
+      "respDay": 42,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -73,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -118
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+      "respOrder": "m.42.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+      "respPerson": "brown_joseph_e",
+      "respPost": "st_gov_georgia",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr16_georgia",
+      "respDay": 42,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 127,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -118
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "moore_thomas_o",
+      "addressee",
+      42
+    ],
+    "before": {
+      "key": "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr16_louisiana",
+      "respDay": 42,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 144,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr16_louisiana",
+      "respDay": 42,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 144,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.42.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "perry_madison_s",
+      "addressee",
+      42
+    ],
+    "before": {
+      "key": "m.42.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+      "respOrder": "m.42.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "respPerson": "perry_madison_s",
+      "respPost": "st_gov_florida",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr16_florida",
+      "respDay": 42,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 199,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -48
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.42.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+      "respOrder": "m.42.davis_jefferson.perry_madison_s.call.st_gov_florida",
+      "respPerson": "perry_madison_s",
+      "respPost": "st_gov_florida",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr16_florida",
+      "respDay": 42,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 199,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -48
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.47.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts",
+      "andrew_john_a",
+      "addressee",
+      47
+    ],
+    "before": {
+      "key": "m.47.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts|andrew_john_a",
+      "respOrder": "m.47.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts",
+      "respPerson": "andrew_john_a",
+      "respPost": "st_gov_massachusetts",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 47,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 123,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 90
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.47.lincoln_abraham.fairbanks_erastus.verb.transfer.st_gov_vermont",
+      "fairbanks_erastus",
+      "addressee",
+      47
+    ],
+    "before": null,
+    "after": {
+      "key": "m.47.lincoln_abraham.fairbanks_erastus.verb.transfer.st_gov_vermont|fairbanks_erastus",
+      "respOrder": "m.47.lincoln_abraham.fairbanks_erastus.verb.transfer.st_gov_vermont",
+      "respPerson": "fairbanks_erastus",
+      "respPost": "st_gov_vermont",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 47,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 51,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.47.lincoln_abraham.morton_oliver_h_p_t.verb.transfer.st_gov_indiana",
+      "morton_oliver_h_p_t",
+      "addressee",
+      47
+    ],
+    "before": {
+      "key": "m.47.lincoln_abraham.morton_oliver_h_p_t.verb.transfer.st_gov_indiana|morton_oliver_h_p_t",
+      "respOrder": "m.47.lincoln_abraham.morton_oliver_h_p_t.verb.transfer.st_gov_indiana",
+      "respPerson": "morton_oliver_h_p_t",
+      "respPost": "st_gov_indiana",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 47,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 32,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.47.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin",
+      "randall_alexander_w",
+      "addressee",
+      47
+    ],
+    "before": null,
+    "after": {
+      "key": "m.47.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin|randall_alexander_w",
+      "respOrder": "m.47.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin",
+      "respPerson": "randall_alexander_w",
+      "respPost": "st_gov_wisconsin",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 47,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 45,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "moore_thomas_o",
+      "addressee",
+      48
+    ],
+    "before": {
+      "key": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr22_absolute_louisiana",
+      "respDay": 48,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 144,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr22_absolute_louisiana",
+      "respDay": 48,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -56,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -96
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.50.lincoln_abraham.fairbanks_erastus.verb.transfer.st_gov_vermont",
+      "fairbanks_erastus",
+      "addressee",
+      50
+    ],
+    "before": {
+      "key": "m.50.lincoln_abraham.fairbanks_erastus.verb.transfer.st_gov_vermont|fairbanks_erastus",
+      "respOrder": "m.50.lincoln_abraham.fairbanks_erastus.verb.transfer.st_gov_vermont",
+      "respPerson": "fairbanks_erastus",
+      "respPost": "st_gov_vermont",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 50,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 51,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 51
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.50.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin",
+      "randall_alexander_w",
+      "addressee",
+      50
+    ],
+    "before": {
+      "key": "m.50.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin|randall_alexander_w",
+      "respOrder": "m.50.lincoln_abraham.randall_alexander_w.verb.transfer.st_gov_wisconsin",
+      "respPerson": "randall_alexander_w",
+      "respPost": "st_gov_wisconsin",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 50,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 45,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 45
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.54.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+      "moore_thomas_o",
+      "addressee",
+      54
+    ],
+    "before": {
+      "key": "m.54.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana|moore_thomas_o",
+      "respOrder": "m.54.davis_jefferson.moore_thomas_o.verb.transfer.st_gov_louisiana",
+      "respPerson": "moore_thomas_o",
+      "respPost": "st_gov_louisiana",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 54,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 240,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 40
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "duty"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.68.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      70
+    ],
+    "before": {
+      "key": "m.68.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.68.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "cs_apr22_absolute_tennessee",
+      "respDay": 70,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 33,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.68.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      70
+    ],
+    "before": {
+      "key": "m.68.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.68.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 70,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 33,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+      "andrew_john_a",
+      "addressee",
+      71
+    ],
+    "before": {
+      "key": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts|andrew_john_a",
+      "respOrder": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+      "respPerson": "andrew_john_a",
+      "respPost": "st_gov_massachusetts",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "us_may15_vol_massachusetts",
+      "respDay": 71,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 189,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -134
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 90
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 336
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 336
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts|andrew_john_a",
+      "respOrder": "m.71.lincoln_abraham.andrew_john_a.call.st_gov_massachusetts",
+      "respPerson": "andrew_john_a",
+      "respPost": "st_gov_massachusetts",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "us_may15_vol_massachusetts",
+      "respDay": 71,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -11,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -134
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 90
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 336
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 336
+        },
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "morton_oliver_h_p_t",
+      "addressee",
+      72
+    ],
+    "before": {
+      "key": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t",
+      "respOrder": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "respPerson": "morton_oliver_h_p_t",
+      "respPost": "st_gov_indiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "us_may16_vol_indiana",
+      "respDay": 72,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 100,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -132
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t",
+      "respOrder": "m.72.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "respPerson": "morton_oliver_h_p_t",
+      "respPost": "st_gov_indiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "us_may16_vol_indiana",
+      "respDay": 72,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -100,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -132
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.76.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "harris_isham_g",
+      "addressee",
+      78
+    ],
+    "before": {
+      "key": "m.76.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee|harris_isham_g",
+      "respOrder": "m.76.davis_jefferson.harris_isham_g.verb.transfer.st_gov_tennessee",
+      "respPerson": "harris_isham_g",
+      "respPost": "st_gov_tennessee",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 78,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 33,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.78.lincoln_abraham.dennison_william.call.st_gov_ohio",
+      "dennison_william",
+      "addressee",
+      78
+    ],
+    "before": {
+      "key": "m.78.lincoln_abraham.dennison_william.call.st_gov_ohio|dennison_william",
+      "respOrder": "m.78.lincoln_abraham.dennison_william.call.st_gov_ohio",
+      "respPerson": "dennison_william",
+      "respPost": "st_gov_ohio",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "us_may16_vol_ohio",
+      "respDay": 78,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -20,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -58
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 38
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.78.lincoln_abraham.dennison_william.call.st_gov_ohio|dennison_william",
+      "respOrder": "m.78.lincoln_abraham.dennison_william.call.st_gov_ohio",
+      "respPerson": "dennison_william",
+      "respPost": "st_gov_ohio",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "us_may16_vol_ohio",
+      "respDay": 78,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -220,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -58
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 38
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.87.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts",
+      "andrew_john_a",
+      "addressee",
+      87
+    ],
+    "before": {
+      "key": "m.87.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts|andrew_john_a",
+      "respOrder": "m.87.lincoln_abraham.andrew_john_a.verb.transfer.st_gov_massachusetts",
+      "respPerson": "andrew_john_a",
+      "respPost": "st_gov_massachusetts",
+      "respRole": "addressee",
+      "respKind": "verb:transfer",
+      "respDay": 87,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 123,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 90
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 33
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "trusts_leader"
+        }
+      ],
+      "respConditions": []
+    },
+    "after": null,
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  },
+  {
+    "identity": [
+      "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "morton_oliver_h_p_t",
+      "addressee",
+      98
+    ],
+    "before": {
+      "key": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t",
+      "respOrder": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "respPerson": "morton_oliver_h_p_t",
+      "respPost": "st_gov_indiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "us_jun11_indiana",
+      "respDay": 98,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 100,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -132
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respConditions": []
+    },
+    "after": {
+      "key": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana|morton_oliver_h_p_t",
+      "respOrder": "m.98.lincoln_abraham.morton_oliver_h_p_t.call.st_gov_indiana",
+      "respPerson": "morton_oliver_h_p_t",
+      "respPost": "st_gov_indiana",
+      "respRole": "addressee",
+      "respKind": "call",
+      "respCallId": "us_jun11_indiana",
+      "respDay": 98,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -100,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -132
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_honoured",
+          "value": "union"
+        },
+        {
+          "kind": "values_offended",
+          "value": "state_autonomy"
+        },
+        {
+          "kind": "too_timid",
+          "gap": 331
+        }
+      ],
+      "respConditions": []
+    },
+    "cause": "Each call now carries issuer-authored per-paper values, conditions and provenance. Governors and relays read those values; the willingness formula, cast and draws remain unchanged. [I] Combined causal path, not an isolated additive attribution; exact days, responses and events are retained."
+  }
+]

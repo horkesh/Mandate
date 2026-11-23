@@ -1,0 +1,5 @@
+{
+  "runs\\s100\\references\\testbed-summary.json": "9e2fa20ca7b2c1b45f9c421002ca790e8a6e502e0b6b6de17b091176a6c98877",
+  "runs\\s100\\references\\union-1861-summary.json": "ff0c74c75803bd37d2dfb235ec31fd84875c497bc298ed2546eb03dca11bcf60",
+  "basis": "S100 final capture repeats all 268 hashes/non-clock summary fields in its single final done check. S103 changes only done-check reporting, workflow, tests and decision links; no simulation/pack input changes. Baseline is reused, never rerun."
+}
