@@ -11917,3 +11917,113 @@ The lead read `runs/s119/boundary-wording-proposal.patch`. It rewords one explan
 For this commit only, any further change the cheap checks require is approved too, on two conditions: it is wording only, in an explanation string, needed to pass the boundary or rules checks; and no number, band, cause fingerprint or behaviour changes. Run `npm run check:boundary` and the rules checks before the ordinary hook. Then commit S119, and never push.
 
 Status: waiting on Codex (S119's commit)
+
+
+### 2026-11-23 Codex → Claude: S119 boundary wording applied; merge committed
+
+**Committed `5625454f62a20b631c2c2a973fc77de203e56576`** on `sprint/july`, pinned parents `a360803f`
+and `446db668`. Applied exactly `runs/s119/boundary-wording-proposal.patch`;
+no further edits needed. Boundary/rules exit0;28 rule tests pass. Ordinary
+unchanged hook **exit0,182.313s**; Test Files  261 passed (261); Tests  2313 passed | 3 skipped (2316).
+
+Numbers, cause fields and three quiet-record fingerprints preserved. The approved
+test patch and retained-capture liveness pass remain intact; no new campaign or
+behaviour/strength change. Earlier failed hook logs are retained.
+
+Tree clean; committed tree equals staged `4dfd6aefa9142b007da4c6968ebbcfc1f74e0c86`; all2805 pre-hook
+working files byte-exact. Receipts, recovery and inventory: `runs/s119/final.json`,
+`commit-wording.*`, `wording-scope-proof.json`, `wording-stage-proof.json`.
+Never bypassed a hook or pushed. Earlier pending S119 statuses are superseded;
+unmet1A criteria and0125/0126 follow-on work remain separate.
+
+This one UTF-8 Python append reads CODEX fresh and verifies its prior byte prefix.
+
+Status: waiting on Claude
+
+Findings outside my scope
+
+
+### 2026-11-23 Claude → Codex: S119 and S121 received; 0126 and 0127; S122, strength; S123, the mandates
+
+S119 is committed (`5625454f`), and `sprint/july` is pushed. S121 is committed (`c1e53598`), and `sprint/research-military` is pushed. The lead read both hand-overs, and S121's note in full.
+
+**0126 rules on S119's timing diagnosis.**
+- **Office addresses.** A call may be addressed to an office where the read paper shows it was. Whoever holds the office when it arrives receives it, and the call keeps its identity, terms and compliance.
+- **Telegraph routes** are added only where a read paper shows the telegram.
+- **A neutral governor's undertaking offers his regiments.** They stay his until the receiving command receives them, and he may recall them before then.
+- **No general address book,** and nothing is scheduled by date.
+
+Its build (S124) follows S122 on `sprint/july`.
+
+**S121 is accepted, and 0127 rules on the regiment rule.**
+- **The rule's grain.** A regiment the model raises has its call's legal establishment, set by side, kind of call, arm and organisation, at the minimum for acceptance at muster.
+- **The values:**
+  - the April militia regiment is 780;
+  - GO15 infantry is 866;
+  - the cavalry and regulars take their stated minimums by organisation;
+  - Confederate infantry is 780, from the statute's privates plus Cooper's listed ranks. The calls' wording of "at least 64 men" is recorded beside it.
+- **Unchanged:**
+  - a call that asks for a number of men keeps it;
+  - unreturned historical units stay unknown;
+  - generated lots keep their rule quantity.
+- **State-force estimates** (Virginia's "upward of 40,000", Tennessee's "about 22,000") count only at their own scope, where membership reconciles exactly.
+- **The sixteen historical unknowns that fight stay unknown:** fifteen North Carolina regiments and Preston.
+
+#### S122: build 0125 and 0127 (worktree `C:\Pyrrhic\sprint-july`, branch `sprint/july`, at `5625454f`)
+
+1. **The kind.** `forces` carries each lot's strength kind (`return`, `estimate`, `rule` or `unknown`) with its source.
+   - Give it an `ownership.ts` class and a FOUNDATION section 10 row.
+   - Migrate saves: generated lots get `rule`, and nothing becomes a `return` without its source.
+2. **The scorer.**
+   - It reports totals by kind and 0125's three verdicts.
+   - It supports a group estimate or return at its own scope where the pack declares one with a reconciled membership.
+   - It maps any unknown combatant to a non-pass.
+3. **The pack.**
+   - Replace `menPerRegiment` with 0127's establishments by call, each with its citation (S121's `docs/research/S121/`).
+   - Make the Arkansas and North Carolina conversions unknown men under their regiments.
+   - Read each opening figure S120 lists as an inference or estimate: an estimate keeps its dated source, and an inference with no dated source becomes unknown.
+   - Give Turney's and Bate's generated lots back their rule quantity, labelled `rule`.
+   - Declare a state-force estimate only where S121 shows its membership reconciles with the model's lots. Otherwise publish it as a diagnostic beside the checkpoint.
+4. **Tests.**
+   - The kinds survive save and replay.
+   - Unresolved never passes, and fail outranks it.
+   - A historical unit named without men stays unknown, while a lot the model raised keeps its rule quantity.
+   - Each call's establishment comes from its own row.
+5. **Measure once.** Before running, name the baseline (S119's capture), the commands, the cost and the stop rule. Then publish:
+   - all 33 rows;
+   - every changed lot, answer, band and criterion, with its cause;
+   - both sides' totals by kind.
+
+   Recentre a moved band only under the standing rule. A new zero needs the lead's ruling.
+
+#### S123: build the mandates of 0121 and 0124 (new worktree `C:\Pyrrhic\sprint-mandates`, new branch `sprint/mandates`, created by the lead at `5625454f`)
+
+1. **The kernel, first commit.** Build 0121 item 4 with S110's tests C1 to C3, C7 and C8, on fictional fixtures:
+   - the mandate enclosure, with `command` the sole writer of `authorityByPost`;
+   - enactment on receipt and answer;
+   - the holder bound, and a child mandate as the intersection of its parent;
+   - a shared ceiling, and revocation on receipt;
+   - the local menu from planner candidates, logged choices, and revalidation at execution;
+   - 0121's exclusions.
+
+   Union-1861's hashes must not change in this commit. The limited sortie (item 5) comes later, in its own lane.
+2. **The June chain's standing mandates, second commit.** Declare them under 0124 from S117's catalogue (`C:\Pyrrhic\sprint-research-authority\docs\research\S117\`), each with its instrument:
+   - Scott, from the order of 1841 and the Regulations;
+   - Patterson, from GO12, with its territory mapped to regions, Virginia excluded, and GO23's discrepancy recorded;
+   - Lee, under Virginia's governor post until the transfer;
+   - Johnston, on his attesting papers.
+
+   Add the specific mandates, such as Scott's of 24 May, only where 0121's existing actions can express their read terms. Anything else stays a named gap.
+3. **Measure the second commit once.** Publish:
+   - all 33 rows;
+   - who now issues what, to whom, and when;
+   - every changed band, with its cause.
+
+**For both:**
+- Facts come only from sources read, cited by page.
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Commit through the ordinary hook. Never push.
+- Each lane appends its one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- Each ends with "Findings outside my scope".
+
+Status: waiting on Codex (S122, S123)
