@@ -1,0 +1,210 @@
+{
+  "request": "S110 proposal only",
+  "base": "60323786c16184d638047acc81e4c582356eeccf",
+  "page_receipts": 45,
+  "inputs": [
+    {
+      "path": "packages/kernel/src/root-state.ts",
+      "sha256": "7a9bf4293e6690219ac3ded857a2e7b7b40ed27d0cdd4dc97ddbe59d8b8e0a54",
+      "git_blob": "25e68b5444b137feb5207cebd95c18624cd92ce9",
+      "july_sha256": "d83c10592686e1f60b557e6eaa242a5aa071a0d48ad8e450dde3ef7010e92603",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/ownership.ts",
+      "sha256": "be8776e99a79ba67db1a5ef26c4aaa9efe77daf7dd598172067983337c401648",
+      "git_blob": "fce0ab53b10dfe5952ed72862b5a885fce1255a8",
+      "july_sha256": "62bb2d6c4abe1f8d13e189da3a1fecb7d12b2a3094e188117428b5c837dcec41",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/world/doctrine.ts",
+      "sha256": "7246969073a409e595b04169edbe86af6c6b2df0da6257e18d01d4bddedaef7a",
+      "git_blob": "ea6dceda7584cbf5ceb66940d86e4064621d87c6",
+      "july_sha256": "7246969073a409e595b04169edbe86af6c6b2df0da6257e18d01d4bddedaef7a",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/world/world.ts",
+      "sha256": "6a0e778fe6215079596416fa03577e4715c2efb97ad1e234920a282be9d0a9a0",
+      "git_blob": "74c6b94018040ca94f8b55e58ea334138ab62860",
+      "july_sha256": "6a0e778fe6215079596416fa03577e4715c2efb97ad1e234920a282be9d0a9a0",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "sha256": "97dc0ac5d6a77302652dfee792a2bc69674c07154ca75fad6273135d53807dbc",
+      "git_blob": "d65b6567f08bec63de46b99ab029eb90fd2f2649",
+      "july_sha256": "97dc0ac5d6a77302652dfee792a2bc69674c07154ca75fad6273135d53807dbc",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/seats/received.ts",
+      "sha256": "924e1a3f9c9d706baf918a36239148101a19597d31f75437d5d6bd3c8101f2b3",
+      "git_blob": "3fb0d63f2e8f869ebae410ad46f31dd7bb59fc96",
+      "july_sha256": "924e1a3f9c9d706baf918a36239148101a19597d31f75437d5d6bd3c8101f2b3",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/seats/sender.ts",
+      "sha256": "b9743ce56c789426735773cc7a9edc889c15519ff840d34c119932af0bd74097",
+      "git_blob": "9d11f82e6742823e69d2fb61d2d68ede92a9aa54",
+      "july_sha256": "b9743ce56c789426735773cc7a9edc889c15519ff840d34c119932af0bd74097",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/seats/api.ts",
+      "sha256": "fcea38f118c92f906c2d0edd7f3cc9e31cb01bdff347e661e9482961158fd527",
+      "git_blob": "33623e95836c5364b653d61c748104892002b625",
+      "july_sha256": "fcea38f118c92f906c2d0edd7f3cc9e31cb01bdff347e661e9482961158fd527",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/knowledge/knowledge.ts",
+      "sha256": "6a145e2ff227466958075d7d41a2c0639eedfda8f1897685c65b63874308f808",
+      "git_blob": "38d141a7e8fd64d2fdd1f71702f479229a10cd5a",
+      "july_sha256": "6a145e2ff227466958075d7d41a2c0639eedfda8f1897685c65b63874308f808",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/knowledge/records.ts",
+      "sha256": "cb11cdfd3b3806117fddb77c262027926eb34a8c83ee56ef117ba8e283a8fa11",
+      "git_blob": "411858bb6cf21dff94b458152d390c19be5e6944",
+      "july_sha256": "cb11cdfd3b3806117fddb77c262027926eb34a8c83ee56ef117ba8e283a8fa11",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/knowledge/report.ts",
+      "sha256": "e4deb657f34c6f2c9065b788847fa6471229ffde6a0a8a212eb5cfa87bd3bdcb",
+      "git_blob": "16ed3f8b6034c459fe0036305057299bb613cc5a",
+      "july_sha256": "e4deb657f34c6f2c9065b788847fa6471229ffde6a0a8a212eb5cfa87bd3bdcb",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/messages/transit.ts",
+      "sha256": "f3caaf3280a7cad47b1d07c466b79da9cf09457e6fd61fd4a4944424e871b1b0",
+      "git_blob": "95a453d7fd3fb16b81a13c9e5c9306308059b202",
+      "july_sha256": "f3caaf3280a7cad47b1d07c466b79da9cf09457e6fd61fd4a4944424e871b1b0",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/tick/orders.ts",
+      "sha256": "7024da0509e4a0f9b5c6ab603e005b1f49b35419d941634974efbdfeafefa5d7",
+      "git_blob": "ccadb712c7521b85c7d2cfcff277ac2c69986800",
+      "july_sha256": "7024da0509e4a0f9b5c6ab603e005b1f49b35419d941634974efbdfeafefa5d7",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/tick/tick.ts",
+      "sha256": "5fda01c815af79d7cc3a36616afe78e82f1d5f05c5d71c2288afab9b1f633fc7",
+      "git_blob": "50ca905dd48ea86501066546c97bab138ac7ac49",
+      "july_sha256": "5fda01c815af79d7cc3a36616afe78e82f1d5f05c5d71c2288afab9b1f633fc7",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/tick/plans.ts",
+      "sha256": "4a03e63e52e3442d93882de36516bcc1fe64e4bdaffe9fdbd5348271f1b707e8",
+      "git_blob": "08ed4f468d00be2b3686b8da6113c64960580576",
+      "july_sha256": "4a03e63e52e3442d93882de36516bcc1fe64e4bdaffe9fdbd5348271f1b707e8",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/tick/support.ts",
+      "sha256": "cc3d208a164d9325259b3441ba3baf22c197976c9fa2961e41e504962505ff19",
+      "git_blob": "11fa160122531b715d8c2cf97070e34ffb0e4058",
+      "july_sha256": "cc3d208a164d9325259b3441ba3baf22c197976c9fa2961e41e504962505ff19",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/tick/deliver.ts",
+      "sha256": "0d8f984a8e7fd4a0f76e1356cf03b310c5aeb285eaa1c70905d2d5d67ea74405",
+      "git_blob": "f57ab5834f49b5c91c613d65e283dacdbd0079b0",
+      "july_sha256": "0d8f984a8e7fd4a0f76e1356cf03b310c5aeb285eaa1c70905d2d5d67ea74405",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/tick/detachments.ts",
+      "sha256": "733945786bb6c28656c8911724633d50d0f009d3f5dd89f49d3062c00158b026",
+      "git_blob": "bdfb6322e4f73d3e4733e1efc9b14f163740cda5",
+      "july_sha256": "733945786bb6c28656c8911724633d50d0f009d3f5dd89f49d3062c00158b026",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/planner/discretion.ts",
+      "sha256": "a1902b0421e8312e8d8ea2e54f2f4763edc03db7979d8e3a3198ace31416ffbe",
+      "git_blob": "dc97ff7f44fc1c9961b70a033a5adb04ae4dc3f7",
+      "july_sha256": "a1902b0421e8312e8d8ea2e54f2f4763edc03db7979d8e3a3198ace31416ffbe",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/planner/types.ts",
+      "sha256": "8a9ed06d810e97eb006ed09927dd2583d03990f6052ef39919b41873ce42a7de",
+      "git_blob": "6c012d89317c1459229540925783ee268613dac4",
+      "july_sha256": "8a9ed06d810e97eb006ed09927dd2583d03990f6052ef39919b41873ce42a7de",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/plans/goal.ts",
+      "sha256": "abde14155d440730b8bcd2a82473c3b483bd132d608db2a9b6733430b8b415ee",
+      "git_blob": "ff08e15392dd0911966a9d01e73f983d724758d5",
+      "july_sha256": "abde14155d440730b8bcd2a82473c3b483bd132d608db2a9b6733430b8b415ee",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/forces/detachments.ts",
+      "sha256": "15c1017fa35c41488181974aefce8141ced5bc634bb772e735dccf32e9fa1be7",
+      "git_blob": "a3a5280251556556f71a5db5751fd9abe715ce83",
+      "july_sha256": "f4fc53fc69eafe479fecc9d96b782fb9cc81af5c8143b68ac5c27645c49c9b19",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/operations/operations.ts",
+      "sha256": "6cd8db966ccae2e04a373200bf5682b1c181014191181f452e69117036172920",
+      "git_blob": "d3f35e7aab2b7476a92aa255b93e03c5b93bc5d1",
+      "july_sha256": "6cd8db966ccae2e04a373200bf5682b1c181014191181f452e69117036172920",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/kernel/src/log/commands.ts",
+      "sha256": "5e5ccfc9d0120ae5d5e3bc21527112210797b126d3fa0c7b20e04d4e89509de5",
+      "git_blob": "bc1b49ad6313b710fdc63e623f72979f00753443",
+      "july_sha256": "5e5ccfc9d0120ae5d5e3bc21527112210797b126d3fa0c7b20e04d4e89509de5",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packages/rule-seats/src/index.ts",
+      "sha256": "b5d7e07cbf26cbca476b6d99e1bd48ccf87f51012c934e0c4f9d338cafe60f78",
+      "git_blob": "27c4323007239831bb3a0092c4589669c7a5e387",
+      "july_sha256": "b5d7e07cbf26cbca476b6d99e1bd48ccf87f51012c934e0c4f9d338cafe60f78",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "packs/union-1861/source/world/regions.csv",
+      "sha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+      "git_blob": "e1168cf8d8ef15d830b8de8fb055b88ca358bb11",
+      "july_sha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+      "july_same_text_after_line_ending_normalization_read_only": true
+    },
+    {
+      "path": "C:/Pyrrhic/sprint-research-military/docs/research/2026-11-23-S99-union-june-moves.md",
+      "sha256": "69254b14ce2ad421455c360933ec9e9c0c1e0911df2c64b0e55a68c7128020ca",
+      "read_only": true
+    },
+    {
+      "path": "C:/Pyrrhic/sprint-research-military/docs/research/S99/grammar-inputs.json",
+      "sha256": "ce6cc115a4d6b0a0fe11bcfabf90256b3b4ca1a44e2ba2ebcdfd93333dfcc62a",
+      "read_only": true
+    },
+    {
+      "path": "C:/Pyrrhic/sprint-research-military/docs/research/S99/june-moves-register.csv",
+      "sha256": "5fc5d524da03d6493fcb7a45ad2c440469e165b1d0c9329bb8c3efd222d4b5ed",
+      "read_only": true
+    },
+    {
+      "path": "C:/Pyrrhic/sprint-research-military/docs/research/S99/source-reading.json",
+      "sha256": "370b62be62dd7172692d01a622b0a52d2dd89911252f39e9c7b4932aefcc0eda",
+      "read_only": true
+    }
+  ],
+  "limits": "Retained OCR reading; no fresh scan, live metadata check, original recovery, source-hold closure or simulation recertification."
+}
