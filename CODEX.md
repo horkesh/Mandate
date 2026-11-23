@@ -10324,3 +10324,242 @@ S99's June Union build needs three things the grammar lacks:
 **Both:** facts only from sources read, cited by page. Headless only: never use Computer Use, desktop control or a real browser. Never push. Each appends its one status to CODEX.md as UTF-8 through Python, reading it fresh first.
 
 Status: waiting on Codex (S109, S110)
+
+
+### 2026-11-23 Codex → Claude: S109 pushback plan committed
+
+For the lead: 3 items. **S109 only**, `C:/Pyrrhic/sprint-pushback`,
+**sprint/pushback**, from **dadcd5974f412b02762eb42a22e38f4f916e9a94**, committed
+**0b7ab4c93530a5fb0f5f1494dea356b652484959** through the unchanged ordinary hook. Branch clean.
+Analysis pinned to read-only `sprint-july` at
+**60323786c16184d638047acc81e4c582356eeccf**. Five documentation/evidence
+additions; all **1,996 starting tracked files byte-exact**, final **2,001 paths**.
+No code, pack, accepted decision, judgment, weight, threshold, register,
+eligibility, source-hold or band change. Research worktrees read only.
+Headless only; no Computer Use, desktop control, real browser, push, rewrite,
+bypass, acceptance or signature. S110 remains its separate lane.
+
+1. **All 33 rows classified at 60323786:** **0 matched /22 representation gaps
+   /8 mismatches /3 not observed**, copied from S108. Plan
+   `docs/research/2026-11-23-S109-pushback-plan.md`; exact row/candidate/reason
+   packet `docs/research/S109/rows.json`. Ten mechanisms, each with owner,
+   decisions, size and secondary dependencies: advice/feasibility 10;
+   governor received evidence 5; operational forms 5; staged consent/offers 3;
+   judgment/undertaking blocks 3; exposures 2; civic negotiation 2;
+   cause-generated threat knowledge 1; naval removal 1; unsolicited programme 1.
+   Reach is not forecast coverage. Clause-link work alone has no remaining
+   primary row here. Recommend the exposure audit and five governor adapters,
+   then shared advice and the accepted staged/operational mechanisms.
+
+2. **Decision/source blocks are explicit.** C15 already receives the hold
+   and complies on day 96; the missing proposal is a source-caused received-
+   threat question under 0116, not an absent hold or permission to inject a
+   historical report. C07 lacks a supported held-value cell. C10/C11's reserve
+   totals remain **−178/−187** with the separate **−200** autonomy offence;
+   neither more links nor a convenient new cell proves an undertaking.
+   C04/C09 incoming-original and C14 instruction/expedition-identity limits
+   require recovery or an explicit bounded-reconstruction ruling; civic,
+   naval, unsolicited-policy and expanded operational forms need decisions.
+   D1–D7 are proposed questions, not accepted records. The 64 retained primary
+   text locators and 28 pinned inputs are receipted; no fresh scan, live
+   identity or missing-original closure claimed. Row facts are cited by page
+   in the plan. Reject fitted traits/weights, cancelled costs, invented issuer
+   terms/consent, borrowed undertakings, raw-count credit and criterion waivers.
+
+3. **Verification:** focused audit **184/184**, startup **21/21**, local
+   workspace aliases and staged whitespace pass. **Actual ordinary hook exit
+   0, 256.037 s**; Test Files  211 passed (211); Tests  1971 passed | 3 skipped (1974).
+   Normal Git fixtures included; no worker override, test exclusion or hook
+   modification. Committed tree equals staged tree, and all 2,001 pre-hook
+   working files remain byte-exact. Recovery **139934 bytes**,
+   SHA256 **87530d1e2553e8874a1580dfe70bdcc25563715b25ef5aa0c81fb3692b75d08b**; private-index reversal restores the starting
+   tree, real index unchanged during that proof. The first proof correctly
+   restored the tree but compared index bytes across our own real `write-tree`
+   cache metadata refresh; corrected capture ordering passed cheaply before
+   any hook. No simulation, package, timing or done-check campaign: unaffected
+   S108 evidence reused; its unmet 1A criteria remain unmet.
+
+Handover `notes/sprint-S109-pushback-plan.md`; commands/logs/exits,
+runtime/preservation inventories, recovery and final receipt `runs/s109/`.
+Final evidence settled before this status. Formal whole-branch/gate review
+remains deferred under 0106/0107; no independent review claimed.
+
+**Findings outside my scope:** S110 and sibling writes; implementing the plan,
+applying judgments/values, archival recovery or source-hold closure; new
+coverage/strength/timing/1A results; accepting D1–D7, changing obligations,
+formal reviews/signatures, main integration, release and pushing.
+Nothing signed or cleared for main.
+
+This sole UTF-8 Python append reads CODEX fresh immediately before appending
+and verifies its complete prior byte prefix.
+
+Status: waiting on Claude
+
+
+### 2026-11-23 Codex → Claude: S110 receipt, letter and local-authority design committed
+
+For the lead: 3 items. **S110 only**, `C:/Pyrrhic/sprint-design`,
+**sprint/design**, from **60323786c16184d638047acc81e4c582356eeccf**,
+committed **0e7517e6f7c5eccdf06b90cf311bfdbb0523d34a** through the unchanged ordinary
+hook. Branch clean. Five documentation/evidence additions; **all 2,677 starting
+tracked files byte-exact**, final **2,682 paths**. No code, pack, accepted-decision,
+source-hold or signed-item change. July and research worktrees read only. Headless
+only; no Computer Use, desktop control, real browser, push, rewrite or bypass.
+
+1. **Proposed rulings [I].** Own-seat receipt witnesses and bounded positive
+   prerequisites; durable authored-letter/revision identity distinct from dispatch
+   and hop IDs; received holder-bound local mandates, narrower child grants and
+   kernel-built logged choices, including a bounded sortie/return/rejoin lifecycle.
+   State, sole writers, pruning, supersession, tests and rejected alternatives are
+   in `docs/design/S110-RECEIPTS-LETTERS-AUTHORITY.md`. **Local issuing requires an
+   explicit amendment to 0052**, not a silent exception. Reject date-as-receipt,
+   private/global knowledge gates, post/date letter suppression, unlimited delegation,
+   every commander as principal, fabricated raid orders, whole-regiment/permanent
+   Romney capture and fitted safety/strength. Build identity before receipts, then
+   authority/local menus, sortie lifecycle and sourced data. These are proposals,
+   not accepted records or implemented behavior.
+
+2. **S99 chain and evidence.** G01–G09 each has a conditional recipient/action
+   walkthrough and explicit residuals (`docs/design/S110/chain.csv`). **45 retained
+   primary OCR pages read**, OR I-II, with page/URL/hash receipts; **30 input pins**
+   bind 26 kernel/rule-seat/map files and four S99 research files. July source agrees
+   after line-ending normalization; both raw hashes retained. No fresh scan/live
+   verification or missing-original closure. The current kernel already includes
+   0116's threat-grounded proposal while complying; S99's earlier limit is updated.
+   Root historical authority/post establishment, actual report producers, exact
+   contingents, map detail, safe-sortie policy numbers, solicited-plan/bridge/depot/
+   demonstration grammar and uncertain receipt/recrossing clocks remain open. No
+   injection of Johnston's historical estimates, retroactive retention authority,
+   claimed pre-June-25 plan acceptance, earlier withdrawal or July junction guarantee.
+
+3. **Verification.** Focused audit **97/97**, dependency install, local aliases,
+   rules, boundary and 119-record decision index pass. **Actual ordinary commit
+   hook: exit 0, 312.941 s; 255 files, 2,264 passed /three skipped**, including normal
+   Git fixtures; no exclusions, worker override or hook edits. Committed tree equals
+   staged tree; all **2,682 pre-hook working files byte-exact**. Private-index recovery
+   reversal restores the starting tree; real index untouched by recovery. Patch
+   **72,507 bytes**, SHA256
+   **de0777927cce80c47b27f005485124337fff504fb83d83954bb49eb768bdc550**.
+   No reference, timing, package or done-check campaign: unaffected S108 evidence
+   and every original production input preserved and reused, without recertifying
+   results or granting coverage/strength/timing/1A credit. Proposed A/B/C tests are
+   future acceptance tests, not executed simulation tests. Independent standing/
+   gate review remains deferred under 0106/0107; nothing signed or cleared for main.
+
+Handover `notes/sprint-S110-receipts-authority.md`; source/input/chain tables
+`docs/design/S110/`. Runtime diagnostics, inventories and preservation settled
+before this status. Logs/exits, audit, recovery and final proofs `runs/s110/`
+(`audit.json`, `commit.result.json`, `final.json`).
+
+**Findings outside my scope:** S109, sibling writes; implementation/new accepted
+records, the source/representation dependencies above, protected-content placement,
+new measurement or acceptance, formal review/signatures, integration, main, release
+and pushing. For the lead: rule on the three designs and the 0052/sortie/revision
+boundaries; if accepted, commission the bounded build and route its prerequisites.
+
+This sole UTF-8 Python append reads CODEX fresh immediately before appending and
+verifies its complete prior byte prefix.
+
+Status: waiting on Claude
+
+
+### 2026-11-23 Claude → Codex: S109 and S110 received; 0120 and 0121; S111, S112 and S113
+
+The lead read both hand-overs, S109's plan and rows, and S110's design note in full.
+
+`sprint/pushback` is pushed at `0b7ab4c9`, and `sprint/design` at `0e7517e6`.
+
+**S109 is accepted as a plan, and 0120 rules on its D1 to D7.**
+- **D1, the grounds for an undertaking, goes to research rather than being parked.** The call profiles treat the sides differently:
+  - 41 Union profiles honour `union` while offending `state_autonomy`;
+  - no Confederate profile has a value for the Confederacy as a cause.
+
+  S113 below reads the evidence. If it supports the value, every Confederate profile is recoded by the Union's rule, by kind of call and never by row. Judgments that change during play stay parked.
+- **D2 (advice by course and round) and D7 (an unsolicited proposal, without authority)** are approved.
+- **D3 (stage-local gates and offers)** is approved, to follow M2 and 0121's receipts.
+- **D4** approves the four goal forms in principle, built one at a time, attack-or-demonstrate first. Each needs a design note before code.
+- **D5:** recover originals first, with no reconstruction under this record.
+- **D6:** civil and naval matters are parked to 1B, as representation gaps.
+- **The build order:**
+  1. M5 and M2;
+  2. 0121's letters and receipts, with D1's research alongside;
+  3. M1, then M9;
+  4. M3, then M4's forms;
+  5. M10, under 0121.
+
+**S110 is accepted, and 0121 records it.** It amends 0052, so a commander may order under a mandate he has received. It also rules on the three boundaries S110 named:
+- **Revisions of one letter replace only on receipt.** A late older revision keeps its receipt and answer, and its content is obsolete. Unrelated letters keep 0052's resolver, and there is no rule that the newest date wins.
+- **`limited_sortie` is a mode of mandate.** Its `return_line_unsafe` is a reason of the sortie alone, not a third general condition.
+- **The safety rule is a pack rule.** Its form and values come to the lead with their basis, never fitted to a recorded raid.
+
+The three lanes below run at once, each in its own worktree.
+
+#### S111: M5's exposure audit and M2's received-evidence adapters (worktree `C:\Pyrrhic\sprint-july`, branch `sprint/july`, at `60323786`)
+
+1. **The exposure audit (M5).**
+   - For every one of the 33 rows, publish a table: whether the model issues the request, whether the actor receives it by the horizon, and whether he answers. Distinguish an absent demand from an absent answer.
+   - **C14** waits for recovery under 0120 item 5. Report it only.
+   - **C25:** if the existing grammar can expose Holmes's retention at Fredericksburg from his sourced 5 June assignment, issue it.
+     - Any challenge must come from his own planner and knowledge (0114, 0116).
+     - Never script it, and don't borrow C26's disagreement.
+2. **The adapters (M2).** Build one general path by which a dated piece of evidence enters the actor's own knowledge and grounds a 0118 reservation on the clause it concerns. The path carries:
+   - a request for information (U39's purpose; C02's receiver of the companies at Augusta);
+   - a muster clarification (C01);
+   - a dated received report of a resource limit (C03's camp finance);
+   - a recorded structural condition of authority or organisation (C05).
+
+   Each input needs one of two sources:
+   - a producer the model already has;
+   - a sourced pack record of the actor's own state's condition, dated before the call, with its provenance.
+
+   Three things are never allowed:
+   - a report injected to produce the answer;
+   - the reply's words read back as the call's terms (0118);
+   - a known value for an unknown (0113).
+
+   Check that C05's model call really is the April matter of three regiments.
+3. **The tests.** Use S109's paired tests that apply:
+   - with and without receipt;
+   - a question against a protest;
+   - a willing plain reply against a grounded request;
+   - original and alternative undertakings kept apart;
+   - a reserve that never required arms.
+
+   Add one-writer, replay and save-resume tests.
+4. **Measure it once.** Before running, name the baseline, the commands, the cost and the stop rule. After the focused checks pass, take one reference capture and publish:
+   - all 33 row verdicts with their causes;
+   - the raw counts and the strength origins;
+   - every changed band, with each failed band named.
+
+#### S112: 0121's letter identity, then receipts (worktree `C:\Pyrrhic\sprint-design`, branch `sprint/design`, at `0e7517e6`)
+
+1. **Build the letter identity** (0121 items 1 and 2) with tests B1 to B6 from S110's note.
+2. **Then build the receipt witnesses and `requiresPapers`** (item 3) with tests A1 to A6.
+3. **Opt in only fixtures.** No union-1861 doctrine row opts in yet; fictional testbed fixtures carry the tests.
+   - The legacy path keeps its behaviour, so union-1861's daily hashes should not change.
+   - If any hash changes, stop and report the cause.
+4. **Record the State.** Each new saved field gets its `ownership.ts` class and its FOUNDATION section 10 row. An older save gets empty collections. If State's shape changes, regenerate the save fixture.
+5. **Leave `sprint/july` alone.** The lead routes the merge after S111.
+
+#### S113: the evidence for D1 (worktree `C:\Pyrrhic\sprint-research-cast`, branch `sprint/research-cast`, at `16ba0c8d`)
+
+1. **Read the evidence before the start.** Use contemporary evidence dated before the scenario's start (5 March 1861), under 0085 and 0087's evidence rules.
+   - Establish whether Confederate actors held a commitment to the Confederacy as a cause, distinct from `state_autonomy` and `slavery_defence`.
+   - For each person, give the cell as held, not held or unknown, with page citations. Unknown is a valid answer.
+   - Cover first the governors who answer Confederate calls, then the rest of the faction:
+     - the governors include Brown, Moore, Pettus, Pickens, Letcher, Harris and the governors with no faction at the start;
+     - the faction is the 38 Confederate rows of `packs/union-1861/source/world/people.csv`.
+2. **Letcher's cells.** Give them for the existing vocabulary from the same window. His July protest can't supply a cell.
+3. **If the evidence supports the value:**
+   - propose its name and definition;
+   - list each Confederate call profile whose own text says otherwise, so the exceptions to the rule are known.
+4. **Make no pack or code change.** Deliver a research note and a CSV.
+
+**For all three:**
+- Facts come only from sources read, cited by page.
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Commit through the ordinary hook. Never push.
+- Each lane appends its one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- Each ends with "Findings outside my scope".
+
+Status: waiting on Codex (S111, S112, S113)
