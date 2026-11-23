@@ -1,0 +1,399 @@
+{
+  "request": "S89 only",
+  "policy": "Only listed passages read; extracted but unread pages are not evidence. No whole-volume reading claim. All values, boldness and candour require a contemporary leg before 1861-03-05. Later conduct never backfills them.",
+  "sources": [
+    {
+      "key": "OR-I-I:493",
+      "work": "OR I-I",
+      "page": 493,
+      "leaf": 512,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p493.txt",
+      "sha256": "e355af384fd255ae6250db258c02f1b795abf911bee65c9c42cec992e7935278",
+      "url": "https://ehistory.osu.edu/books/official-records/001/0493",
+      "read_scope": "January 22 heading for Moore message; preceding January 28 Grivot order and February 19 Smith letter kept separate.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-I-I:494",
+      "work": "OR I-I",
+      "page": 494,
+      "leaf": 513,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p494.txt",
+      "sha256": "0c0a96bf20222e7b613530de643067966c45711adf0bdd3b6aacaea553be33f1",
+      "url": "https://ehistory.osu.edu/books/official-records/001/0494",
+      "read_scope": "Moore message, January 22: slaveholding-State interests, immediate resistance and sovereignty. Full page text read; image inspected.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": true,
+      "image": {
+        "key": "OR-I-I:494",
+        "url": "https://archive.org/download/cu31924077725913/page/n513.jpg",
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p494.jpg",
+        "bytes": 902766,
+        "sha256": "7068352329ae82414b2136d3b98bdeec0325c18990eb9e38e21676421adb946e",
+        "ok": true
+      }
+    },
+    {
+      "key": "OR-I-I:495",
+      "work": "OR I-I",
+      "page": 495,
+      "leaf": 514,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p495.txt",
+      "sha256": "2227baf929699e619042663a66161cb0f51f171b05547f91df5d37be063db79e",
+      "url": "https://ehistory.osu.edu/books/official-records/001/0495",
+      "read_scope": "Moore message, January 22: military seizures, responsibility to legislature and arms sent to Mississippi. Full page text read; image inspected.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": true,
+      "image": {
+        "key": "OR-I-I:495",
+        "url": "https://archive.org/download/cu31924077725913/page/n514.jpg",
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p495.jpg",
+        "bytes": 900254,
+        "sha256": "7de37ef1127abbe9c70b10653c60fcf525189b35ed7ee21fb206cbcb7313dc15",
+        "ok": true
+      }
+    },
+    {
+      "key": "OR-I-I:496",
+      "work": "OR I-I",
+      "page": 496,
+      "leaf": 515,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p496.txt",
+      "sha256": "177ac07da2c3362baf3474e8104d08aaed8caaeb46480c434df0e279adb608fe",
+      "url": "https://ehistory.osu.edu/books/official-records/001/0496",
+      "read_scope": "End and signature of Moore message; following January 12 fort-seizure report read separately. No third-party candour judgment inferred.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-I-I:444",
+      "work": "OR I-I",
+      "page": 444,
+      "leaf": 463,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p444.txt",
+      "sha256": "d7e4aa1b015fb6aaec126f2c277eb291248a37c7c732592f8c3a777b92c3f3e5",
+      "url": "https://ehistory.osu.edu/books/official-records/001/0444",
+      "read_scope": "Andrew B. Moore to Alabama convention January 8 reports Perry ordered occupation and sought aid. Perry January 10 cover and senators enclosure distinguished. Image inspected.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": true,
+      "image": {
+        "key": "OR-I-I:444",
+        "url": "https://archive.org/download/cu31924077725913/page/n463.jpg",
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p444.jpg",
+        "bytes": 595364,
+        "sha256": "cd756b8e8e0505f8c1980e1773b4c87aa408526d22e397f14fd968534d4253af",
+        "ok": true
+      }
+    },
+    {
+      "key": "OR-I-I:445",
+      "work": "OR I-I",
+      "page": 445,
+      "leaf": 464,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p445.txt",
+      "sha256": "d6d16ec8ad33b7f4b339b714465e7a0b01d23122b293906c2a8e2bb1de4557c3",
+      "url": "https://ehistory.osu.edu/books/official-records/001/0445",
+      "read_scope": "January 18 and 20 senators advice against assault. Not attributed to Perry as his own undertaking.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-I-I:469",
+      "work": "OR I-I",
+      "page": 469,
+      "leaf": 488,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p469.txt",
+      "sha256": "a48ae1bb111e8f694ea84c7e9d6a18d8d2c798809a2c2035d657131d65644cdb",
+      "url": "https://ehistory.osu.edu/books/official-records/001/0469",
+      "read_scope": "Perry June 1 telegram only; no later August text used. Two thousand raised and unanswered requisition correspondence; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-I-I:621",
+      "work": "OR I-I",
+      "page": 621,
+      "leaf": 640,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p621.txt",
+      "sha256": "c1caaade9beb40aabb6bab63f72ef748f5b21ce4f6931730a534239196fd6367",
+      "url": "https://ehistory.osu.edu/books/official-records/001/0621",
+      "read_scope": "Clark April 4 letter to Davis on mounted regiment and frontier protection. His account and prejudicial characterizations are attributed; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-I-I:616",
+      "work": "OR I-I",
+      "page": 616,
+      "leaf": 635,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-I-I-p616.txt",
+      "sha256": "60e1d8653f569484df8382d9d7f34f2bcd2ab3510279ab2f7fd8014c0d4fd081",
+      "url": "https://ehistory.osu.edu/books/official-records/001/0616",
+      "read_scope": "Waul and March 28 Luckett passages only. Statements by other writers, after start boundary; not a Clark temperament leg.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:85",
+      "work": "OR IV-I",
+      "page": 85,
+      "leaf": 100,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p85.txt",
+      "sha256": "e7e82a4706190c98554a8956d8a27139f0780e87ba11981d56ee39cae9175fb4",
+      "url": "https://ehistory.osu.edu/books/official-records/127/0085",
+      "read_scope": "Perry message heading February 2 and opening sovereignty/public-duty paragraphs. Image inspected. Earlier Georgia declaration on same page explicitly excluded.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": true,
+      "image": {
+        "key": "OR-IV-I:85",
+        "url": "https://archive.org/download/cu31924079579524/page/n100.jpg",
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p85.jpg",
+        "bytes": 828406,
+        "sha256": "12efe224f37fc705d5a35c280099b2a026eb30c37ed72f99d3b27d062aea10d3",
+        "ok": true
+      }
+    },
+    {
+      "key": "OR-IV-I:86",
+      "work": "OR IV-I",
+      "page": 86,
+      "leaf": 101,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p86.txt",
+      "sha256": "8a9103ca94a50a362c3f8af309ba34cce5d80c0d9e28e3f242b7eb2c7a52f4c0",
+      "url": "https://ehistory.osu.edu/books/official-records/127/0086",
+      "read_scope": "Perry message continuation: sovereignty and resistance to Federal force. Political claims are his, not adopted as fact.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:87",
+      "work": "OR IV-I",
+      "page": 87,
+      "leaf": 102,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p87.txt",
+      "sha256": "087eade4e594b68da6c05bc030435caa80b07f19c0b852c7d83b11dfed58c314",
+      "url": "https://archive.org/details/cu31924079579524/page/n102/mode/1up",
+      "read_scope": "Perry message continuation: deprecates war, arms for deterrence, preparation and joint defence; bounded conduct, not unconditional aggression.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:88",
+      "work": "OR IV-I",
+      "page": 88,
+      "leaf": 103,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p88.txt",
+      "sha256": "714ec5d0358e87d83290eb9b214458fd6809104ca5cd0c6b01a0171b0e11f01b",
+      "url": "https://archive.org/details/cu31924079579524/page/n103/mode/1up",
+      "read_scope": "Perry message conclusion: prepare quota, appropriate money, no estimate available; signature. Image inspected. Following Alabama correspondence excluded.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": true,
+      "image": {
+        "key": "OR-IV-I:88",
+        "url": "https://archive.org/download/cu31924079579524/page/n103.jpg",
+        "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p88.jpg",
+        "bytes": 734653,
+        "sha256": "4555b9d6e9dbdd6ef2b4f8c3362bfcf02117eeeae8c3d95a3f9eb3e86259078c",
+        "ok": true
+      }
+    },
+    {
+      "key": "OR-IV-I:102",
+      "work": "OR IV-I",
+      "page": 102,
+      "leaf": 117,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p102.txt",
+      "sha256": "756a4f4ee84282f293edc0cc4172266ef50e592eb7a4873cd86c70895e51f6e2",
+      "url": "https://archive.org/details/cu31924079579524/page/n117/mode/1up",
+      "read_scope": "Perry February 13 message seeks election of Confederate senators; factual/context only, no personal regard inferred.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:164",
+      "work": "OR IV-I",
+      "page": 164,
+      "leaf": 179,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p164.txt",
+      "sha256": "9a06f994d2f90b7bb399dfa03ba083e0a6aa47ee770d9c40df12e4ca61fb4a95",
+      "url": "https://archive.org/details/cu31924079579524/page/n179/mode/1up",
+      "read_scope": "Moore March 14 telegram on March 9 call, term clarification; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:171",
+      "work": "OR IV-I",
+      "page": 171,
+      "leaf": 186,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p171.txt",
+      "sha256": "0382703eb6f9113261bc9c80ea675088b28877aa4f160091b372a4d054609c0a",
+      "url": "https://archive.org/details/cu31924079579524/page/n186/mode/1up",
+      "read_scope": "Moore March 15 orders 1000 men, transfer and transport exchange with Walker; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:172",
+      "work": "OR IV-I",
+      "page": 172,
+      "leaf": 187,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p172.txt",
+      "sha256": "f00298386115effa4618725fd7fdecb543951a20bd86040ff9acbd4d7253d4ab",
+      "url": "https://archive.org/details/cu31924079579524/page/n187/mode/1up",
+      "read_scope": "Moore March 15 compliance letter and questions about organization, transport and ordnance officer; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:175",
+      "work": "OR IV-I",
+      "page": 175,
+      "leaf": 190,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p175.txt",
+      "sha256": "c076725a68a9dafda121e4c622ba52ccdb15f022cf5f9e9c634a55385e09abd1",
+      "url": "https://archive.org/details/cu31924079579524/page/n190/mode/1up",
+      "read_scope": "Moore March 18 letter, extra-regiment offer and artillery question; preceding Brown letter excluded.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:176",
+      "work": "OR IV-I",
+      "page": 176,
+      "leaf": 191,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p176.txt",
+      "sha256": "247edceee5135656a49ea52e4c814a2c5fcf722c225dcbd60ecef98078e4886f",
+      "url": "https://archive.org/details/cu31924079579524/page/n191/mode/1up",
+      "read_scope": "Perry March 19 undertaking and Walker to Moore troop total; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:181",
+      "work": "OR IV-I",
+      "page": 181,
+      "leaf": 196,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p181.txt",
+      "sha256": "343eef716d3fcfc570b640dc03a1d9dc92ecd59ff6a9c7618949048788ac1db6",
+      "url": "https://ehistory.osu.edu/books/official-records/127/0181",
+      "read_scope": "Moore March 20 opening on conflicting communications and sending an agent; continuation not claimed read.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:226",
+      "work": "OR IV-I",
+      "page": 226,
+      "leaf": 241,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p226.txt",
+      "sha256": "bc10b2c598e05fa57b02c4dafcfbcd63081083aa483d7a734d8eaf36692c584a",
+      "url": "https://archive.org/details/cu31924079579524/page/n241/mode/1up",
+      "read_scope": "Perry April 19 raising 1500 and manpower statement, Walker offers revocation if needed; surrounding other actors excluded.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:227",
+      "work": "OR IV-I",
+      "page": 227,
+      "leaf": 242,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p227.txt",
+      "sha256": "84cc6d59ece1d7dfe901e925cb41b7e98e2b05f32b48099a31f2edf45b658ed6",
+      "url": "https://archive.org/details/cu31924079579524/page/n242/mode/1up",
+      "read_scope": "Perry April 20 undertaking only; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:333",
+      "work": "OR IV-I",
+      "page": 333,
+      "leaf": 348,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p333.txt",
+      "sha256": "75fae4c5c74f58ae3b6ad374b61417465df4e030bbae4b692ab782bd72949ae4",
+      "url": "https://archive.org/details/cu31924079579524/page/n348/mode/1up",
+      "read_scope": "Perry May 18 ready regiment and two short of arms/equipment; letter only; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:336",
+      "work": "OR IV-I",
+      "page": 336,
+      "leaf": 351,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p336.txt",
+      "sha256": "82a116f7edd9970ae3f0181562026059a74498eec634272fc309d98adf25e7b2",
+      "url": "https://ehistory.osu.edu/books/official-records/127/0336",
+      "read_scope": "Moore May 20 denial of Trudeau authorization and arms/term constraints, continued on p337; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:337",
+      "work": "OR IV-I",
+      "page": 337,
+      "leaf": 352,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p337.txt",
+      "sha256": "3f59b1770766739cd53102891868222575ccfff3ace366acf471e7307a9e4a29",
+      "url": "https://archive.org/details/cu31924079579524/page/n352/mode/1up",
+      "read_scope": "Moore May 20 home arms reservation and Fifth/Sixth organization; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:322",
+      "work": "OR IV-I",
+      "page": 322,
+      "leaf": 337,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p322.txt",
+      "sha256": "4e8fe897259cf21132bf235b5cb535a5d9589e1230ddf20001119afeac5b650d",
+      "url": "https://archive.org/details/cu31924079579524/page/n337/mode/1up",
+      "read_scope": "Clark May 15 letter transmitting commissioners report; only Clark letter read, enclosure not claimed read; after start boundary.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    },
+    {
+      "key": "OR-IV-I:495",
+      "work": "OR IV-I",
+      "page": 495,
+      "leaf": 510,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S89\\OR-IV-I-p495.txt",
+      "sha256": "3d7a4a8c114f8ceb7f858c65cbbdea6eb40ccd05584e9372ee5e137d056052b5",
+      "url": "https://archive.org/details/cu31924079579524/page/n510/mode/1up",
+      "read_scope": "Moore July 23 clothing/shoes request and Grivot July 23 beginning on Eleventh organization; not an August muster claim.",
+      "evidence_class": "contemporary document printed in the Official Records (0087)",
+      "image_inspected": false
+    }
+  ],
+  "upstream": [
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_scandata.xml",
+      "sha256": "382e82a126ec995b3b7aa14bc3fcb2fb0d892daccaa515c5f81d3e16bfd28e77",
+      "bytes": 275164
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct_djvu.xml",
+      "sha256": "1fb0f47d95db9fa86292b13af36b6d3f63d7c7f31c1cbfaae6e07088d3a5de33",
+      "bytes": 29193431
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-IV-1_scandata.xml",
+      "sha256": "4c9e7652ffdce187bff18d2ff7149921be7c202bf1a399e5f7e467ce801ba312",
+      "bytes": 224888
+    },
+    {
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-IV-1_djvu.xml",
+      "sha256": "4d1757fbfe19d20e918d48d9977f3623050e9b5ef8de5c5c9e0e8eb3d961796a",
+      "bytes": 26219689
+    }
+  ],
+  "discovery_limits": [
+    "Search-result excerpts and sales listings never used as historical evidence.",
+    "Bonnie Blue page returned only a future-document placeholder, excluded.",
+    "Texas Archives Clark finding aid supplies leads, not original letter content or judgment evidence. March 4 Hobby manuscript not read.",
+    "Local scripts initially named inspect.py shadowed Python inspect; renamed before image download. No production code changed.",
+    "No browser, Computer Use or desktop control used."
+  ]
+}

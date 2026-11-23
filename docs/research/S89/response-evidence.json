@@ -1,0 +1,1067 @@
+[
+  {
+    "key": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+    "respOrder": "m.4.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "respPerson": "moore_thomas_o",
+    "respPost": "st_gov_louisiana",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_mar09_louisiana",
+    "respDay": 4,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -49,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -76
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 27
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+    "respOrder": "m.4.davis_jefferson.perry_madison_s.call.st_gov_florida",
+    "respPerson": "perry_madison_s",
+    "respPost": "st_gov_florida",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_mar09_florida",
+    "respDay": 4,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -2,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -37
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 35
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.34.davis_jefferson.clark_edward.call.st_gov_texas|clark_edward",
+    "respOrder": "m.34.davis_jefferson.clark_edward.call.st_gov_texas",
+    "respPerson": "clark_edward",
+    "respPost": "st_gov_texas",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_apr08_texas",
+    "respDay": 34,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -12,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -34
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 22
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+    "respOrder": "m.34.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "respPerson": "moore_thomas_o",
+    "respPost": "st_gov_louisiana",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_apr08_louisiana",
+    "respDay": 34,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -49,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -76
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 27
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.34.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+    "respOrder": "m.34.davis_jefferson.perry_madison_s.call.st_gov_florida",
+    "respPerson": "perry_madison_s",
+    "respPost": "st_gov_florida",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_apr08_florida",
+    "respDay": 34,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -2,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -37
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 35
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_virginia|letcher_john",
+    "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_virginia",
+    "respPerson": "letcher_john",
+    "respPost": "st_gov_virginia",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respDay": 41,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -60,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -81
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 21
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [
+      {
+        "kind": "shielded_by_standing"
+      }
+    ],
+    "respStated": [
+      {
+        "kind": "shielded_by_standing"
+      }
+    ],
+    "respConditions": []
+  },
+  {
+    "key": "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+    "respOrder": "m.42.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "respPerson": "moore_thomas_o",
+    "respPost": "st_gov_louisiana",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_apr16_louisiana",
+    "respDay": 42,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -49,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -76
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 27
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.42.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+    "respOrder": "m.42.davis_jefferson.perry_madison_s.call.st_gov_florida",
+    "respPerson": "perry_madison_s",
+    "respPost": "st_gov_florida",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_apr16_florida",
+    "respDay": 42,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -2,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -37
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 35
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.43.davis_jefferson.clark_edward.call.st_gov_texas|clark_edward",
+    "respOrder": "m.43.davis_jefferson.clark_edward.call.st_gov_texas",
+    "respPerson": "clark_edward",
+    "respPost": "st_gov_texas",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_apr16_texas",
+    "respDay": 43,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -12,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -34
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 22
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee|harris_isham_g",
+    "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_tennessee",
+    "respPerson": "harris_isham_g",
+    "respPost": "st_gov_tennessee",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respDay": 44,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -126,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -135
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 9
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [
+      {
+        "kind": "too_timid",
+        "gap": 338
+      }
+    ],
+    "respStated": [
+      {
+        "kind": "too_timid",
+        "gap": 338
+      }
+    ],
+    "respConditions": []
+  },
+  {
+    "key": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_north_carolina|ellis_john_w",
+    "respOrder": "m.41.lincoln_abraham.lincoln_abraham.call.st_gov_north_carolina",
+    "respPerson": "ellis_john_w",
+    "respPost": "st_gov_north_carolina",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respDay": 45,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -7,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -34
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 27
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+    "respOrder": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "respPerson": "moore_thomas_o",
+    "respPost": "st_gov_louisiana",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_apr22_absolute_louisiana",
+    "respDay": 48,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -49,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -76
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 27
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+    "respOrder": "m.116.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "respPerson": "moore_thomas_o",
+    "respPost": "st_gov_louisiana",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_jun29_extra_louisiana",
+    "respDay": 120,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -67,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -76
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 9
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john",
+    "respOrder": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+    "respPerson": "letcher_john",
+    "respPost": "st_gov_virginia",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_jun30_reserve_virginia",
+    "respDay": 120,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -39,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -81
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 42
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [
+      {
+        "kind": "shielded_by_standing"
+      }
+    ],
+    "respStated": [
+      {
+        "kind": "shielded_by_standing"
+      }
+    ],
+    "respConditions": []
+  },
+  {
+    "key": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+    "respOrder": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+    "respPerson": "moore_thomas_o",
+    "respPost": "st_gov_louisiana",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_jun30_reserve_louisiana",
+    "respDay": 121,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -67,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -76
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 9
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida|perry_madison_s",
+    "respOrder": "m.117.davis_jefferson.perry_madison_s.call.st_gov_florida",
+    "respPerson": "perry_madison_s",
+    "respPost": "st_gov_florida",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_jun30_reserve_florida",
+    "respDay": 121,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -7,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -37
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 30
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.120.davis_jefferson.clark_edward.call.st_gov_texas|clark_edward",
+    "respOrder": "m.120.davis_jefferson.clark_edward.call.st_gov_texas",
+    "respPerson": "clark_edward",
+    "respPost": "st_gov_texas",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_jun30_reserve_texas",
+    "respDay": 124,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -23,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -34
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 11
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.120.davis_jefferson.ellis_john_w.call.st_gov_north_carolina.2|ellis_john_w",
+    "respOrder": "m.120.davis_jefferson.ellis_john_w.call.st_gov_north_carolina.2",
+    "respPerson": "ellis_john_w",
+    "respPost": "st_gov_north_carolina",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_jun30_reserve_north_carolina",
+    "respDay": 124,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -6,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -34
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 28
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.120.davis_jefferson.ellis_john_w.call.st_gov_north_carolina|ellis_john_w",
+    "respOrder": "m.120.davis_jefferson.ellis_john_w.call.st_gov_north_carolina",
+    "respPerson": "ellis_john_w",
+    "respPost": "st_gov_north_carolina",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_apr22_absolute_north_carolina",
+    "respDay": 125,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -6,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -34
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 28
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [],
+    "respStated": [],
+    "respConditions": []
+  },
+  {
+    "key": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2|harris_isham_g",
+    "respOrder": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee.2",
+    "respPerson": "harris_isham_g",
+    "respPost": "st_gov_tennessee",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_jun30_cavalry_tennessee",
+    "respDay": 128,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -125,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -135
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 10
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [
+      {
+        "kind": "too_timid",
+        "gap": 338
+      }
+    ],
+    "respStated": [
+      {
+        "kind": "too_timid",
+        "gap": 338
+      }
+    ],
+    "respConditions": []
+  },
+  {
+    "key": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3|harris_isham_g",
+    "respOrder": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee.3",
+    "respPerson": "harris_isham_g",
+    "respPost": "st_gov_tennessee",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_jun30_reserve_tennessee",
+    "respDay": 128,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -125,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -135
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 10
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [
+      {
+        "kind": "too_timid",
+        "gap": 338
+      }
+    ],
+    "respStated": [
+      {
+        "kind": "too_timid",
+        "gap": 338
+      }
+    ],
+    "respConditions": []
+  },
+  {
+    "key": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g",
+    "respOrder": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+    "respPerson": "harris_isham_g",
+    "respPost": "st_gov_tennessee",
+    "respRole": "addressee",
+    "respKind": "call",
+    "respCallId": "cs_apr22_absolute_tennessee",
+    "respDay": 128,
+    "respActual": "object",
+    "respDeclared": "object",
+    "respWillingness": -125,
+    "respTerms": [
+      {
+        "respTermName": "values",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "temperament",
+        "respTermAmount": -135
+      },
+      {
+        "respTermName": "regard",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "deterrence",
+        "respTermAmount": 10
+      },
+      {
+        "respTermName": "capacity",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "disposition",
+        "respTermAmount": 0
+      },
+      {
+        "respTermName": "grievances",
+        "respTermAmount": 0
+      }
+    ],
+    "respReasons": [
+      {
+        "kind": "too_timid",
+        "gap": 338
+      }
+    ],
+    "respStated": [
+      {
+        "kind": "too_timid",
+        "gap": 338
+      }
+    ],
+    "respConditions": []
+  }
+]

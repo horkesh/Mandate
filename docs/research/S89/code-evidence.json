@@ -1,0 +1,147 @@
+[
+  {
+    "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "path": "packages/kernel/src/people/people.ts",
+    "sha256": "9def059d43fa83b8b217856854930af7225368b7a4abfa51c97079bad92ee3e9",
+    "excerpts": [
+      {
+        "first_line": 97,
+        "last_line": 146,
+        "text": "97:  * One draw of history's shadow: uniform in the centre plus or minus the half-width, clamped to 0..1000. A cited\n98:  * direction draws around its permille centre with the pack's spread; an unknown stat around the unknown centre with the\n99:  * wider unknown spread. Each stat takes one draw from the stream, in every mode (a zero width still draws).\n100:  */\n101: export function drawStat(rules: ShadowRules, centre: StatCentre, mode: ShadowMode, stream: RngStream): number {\n102:   const isKnown = mode !== 'unknown-men' && centre.direction !== null;\n103:   const mid = isKnown ? rules.centrePermille[centre.direction!] : rules.unknownCentre;\n104:   const half = mode === 'as-history' ? 0 : isKnown ? rules.spread : rules.unknownSpread;\n105:   return clampPermille(mid - half + nextInt(stream, 2 * half + 1));\n106: }\n107: \n108: /** A person's starting regard for his principal: the pack's signed permille for its cited direction, or the pack's regard for the unknown. */\n109: export function regardAtStart(rules: ShadowRules, centre: StatCentre): number {\n110:   return clampSignedPermille(centre.direction === null ? rules.regardUnknown : rules.regardPermille[centre.direction]);\n111: }\n112: \n113: /**\n114:  * The people fields at setup (0050: each part of a start is copied once into the field its owner writes from then on).\n115:  * True stats and standing are drawn by history's shadow; regard for the principal comes from the cited centre (none in\n116:  * `unknown-men`); every person is serving on day 0; ranks are those held at the start date, one per kind.\n117:  */\n118: export function initialPeople(map: WorldIndex, start: ScenarioStart, seed: number, mode: ShadowMode): PeopleStart {\n119:   const rules = map.world.rules.people.shadow;\n120:   const principals = new Map(start.factions.filter((f) => f.principal !== null).map((f) => [f.faction, f.principal!]));\n121:   const personTrue: Record<PersonId, PersonTrue> = {};\n122:   const personTraits: Record<PersonId, readonly string[]> = {};\n123:   const personStanding: Record<PersonId, number> = {};\n124:   const personRegard: Record<PersonId, Readonly<Record<PersonId, number>>> = {};\n125:   const personStatus: Record<PersonId, PersonStatus> = {};\n126:   const personRanks: Record<PersonId, Readonly<Record<string, PersonRank>>> = {};\n127:   for (const p of [...map.world.people].sort((a, b) => strictCompare(a.id, b.id))) {\n128:     const stream = createStream(seed, `people/shadow/${p.id}`);\n129:     // A fixed order of draws: three stats, then temperament, then public standing.\n130:     personTrue[p.id] = {\n131:       trueCompetence: drawStat(rules, p.centres.competence, mode, stream),\n132:       trueNerve: drawStat(rules, p.centres.nerve, mode, stream),\n133:       trueExperience: drawStat(rules, p.centres.experience, mode, stream),\n134:       trueBoldness: drawStat(rules, p.temperament.boldness, mode, stream),\n135:       trueCandour: drawStat(rules, p.temperament.candour, mode, stream),\n136:     };\n137:     personStanding[p.id] = drawStat(rules, p.centres.reputation, mode, stream);\n138:     personTraits[p.id] = [...new Set(p.traits.map((t) => t.trait))].sort(strictCompare);\n139:     const principal = p.faction === null ? undefined : principals.get(p.faction);\n140:     const regard = mode === 'unknown-men' ? rules.regardUnknown : regardAtStart(rules, p.regard);\n141:     // Regard is stored only where it differs from the pack's regard for the unknown, which every reader falls back to.\n142:     const row: Record<PersonId, number> = {};\n143:     if (principal !== undefined && principal !== p.id && regard !== rules.regardUnknown) row[principal] = regard;\n144:     // Lane 1.5: his cited regard for others (rivals, partners), by the same rule; none in unknown-men.\n145:     if (mode !== 'unknown-men') for (const o of p.regardOthers) if (o.toward !== p.id) row[o.toward] = clampSignedPermille(rules.regardPermille[o.direction]);\n146:     for (const k of Object.keys(row) as PersonId[]) if (row[k] === rules.regardUnknown) delete row[k];"
+      }
+    ]
+  },
+  {
+    "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "path": "packages/kernel/src/people/traits.ts",
+    "sha256": "855a8b4769f4ea912d3066a9ff608b93a06b2053c56daafd3b7d8d163b174f8c",
+    "excerpts": [
+      {
+        "first_line": 41,
+        "last_line": 61,
+        "text": "41: /** His values as the World cites them, in id order. Throws for a person the World lacks. */\n42: export function valuesOf(map: WorldIndex, person: PersonId): readonly string[] {\n43:   const rec = map.world.people.find((p) => p.id === person);\n44:   if (rec === undefined) throw new RangeError(`unknown person id \"${person}\"`);\n45:   return [...new Set(rec.values.map((v) => v.value))].sort(strictCompare);\n46: }\n47: \n48: /** A man's trait inputs today: from people State (drawn stats, standing, regard) and the World (values). */\n49: export function traitsOf(world: PrincipalLookup, state: State, person: PersonId): PersonTraits {\n50:   const t = trueOf(state, person);\n51:   const side = sideOfPerson(world.map, state, person);\n52:   const principal = side !== null && world.factionIds.includes(side) ? world.faction(side).principal : null;\n53:   return {\n54:     id: person,\n55:     boldness: t.trueBoldness,\n56:     candour: t.trueCandour,\n57:     standing: state.personStanding[person] ?? 0,\n58:     regard: principal === null || principal === person ? 0 : regardOf(world.map.world.rules.people, state, person, principal),\n59:     values: valuesOf(world.map, person),\n60:   };\n61: }"
+      }
+    ]
+  },
+  {
+    "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "path": "packages/kernel/src/reading/orders.ts",
+    "sha256": "54f69a741a7b1d8f7ad0e76ecc287c5c608a2c96263c70a89fca1c995dc2dd29",
+    "excerpts": [
+      {
+        "first_line": 45,
+        "last_line": 49,
+        "text": "45: \n46: /** A man as compliance reads him, with his regard for `toward` (the issuer of the order he reads). */\n47: export function profileOf(world: ReadingWorld, state: State, person: PersonId, toward: PersonId): ProxyProfile {\n48:   const t = traitsOf(world, state, person);\n49:   return { id: person, values: t.values, boldness: t.boldness, candour: t.candour, standing: t.standing, regard: toward === person ? 0 : regardOf(peopleRules(world), state, person, toward) };"
+      },
+      {
+        "first_line": 67,
+        "last_line": 87,
+        "text": "67:   const principal = side !== null && world.factionIds.includes(side) ? world.faction(side).principal : null;\n68:   return credibilityOf(world.map.world.rules.politics, state, side, principal).value;\n69: }\n70: \n71: export function contextFor(world: ReadingWorld, state: State, person: PersonId, means: OrderMeans = {}): CommandContext {\n72:   const rules = peopleRules(world);\n73:   return {\n74:     available: means.available ?? 1000,\n75:     oversight: means.oversight ?? rules.context.oversight,\n76:     leaderCredibility: principalCredibility(world, state, person),\n77:     grievances: (state.personGrievances[person] ?? []).map((g) => ({ kind: g.grievanceKind, weight: g.grievanceWeight })),\n78:     ...(means.supportPromised === undefined ? {} : { supportPromised: means.supportPromised }),\n79:     ...extraContext(world, state, person),\n80:   };\n81: }\n82: \n83: /**\n84:  * Lane 1.5's terms of the context, each present only when it bites: his ladder rung (`disposition`), the pack's\n85:  * cost-only values (0074), and oversight beyond the base stand-in from an observer at his headquarters or recent\n86:  * pressure, each its own typed term (the lead's condition: a replacement of the base keeps them).\n87:  */"
+      },
+      {
+        "first_line": 174,
+        "last_line": 182,
+        "text": "174:  * Pure. Lane 1.2 calls it at an order's arrival with a goal's, a plan's or an edit's terms.\n175:  */\n176: export function answerOrder(world: ReadingWorld, state: State, person: PersonId, issuer: PersonId, terms: DirectiveTerms, means: OrderMeans = {}): DirectiveResponse {\n177:   const rules = peopleRules(world);\n178:   // Lane 1.5b: an order that runs against a practice of his own (the map's `clashes` against his cited practices).\n179:   const own = world.map.world.people.find((p) => p.id === person)?.practices.map((p) => p.practice) ?? [];\n180:   const practiceClashes = [...new Set(terms.clashes ?? [])].filter((c) => own.includes(c)).sort(strictCompare).map((practice) => ({ practice, weight: rules.verbs.practiceWeight }));\n181:   const context = contextFor(world, state, person, means);\n182:   return resolveDirective(profileOf(world, state, person, issuer), terms, practiceClashes.length === 0 ? context : { ...context, practiceClashes }, rules.compliance);"
+      }
+    ]
+  },
+  {
+    "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "path": "packages/kernel/src/recruitment/rules.ts",
+    "sha256": "785f7300a257b13cde190896019086df25517548a6be12a990e21879e19b2722",
+    "excerpts": [
+      {
+        "first_line": 124,
+        "last_line": 126,
+        "text": "124: export function callTerms(rules: RecruitmentRules): DirectiveTerms {\n125:   return { boldness: rules.callTerms.boldness, honours: rules.callTerms.honours as DirectiveTerms['honours'], offends: rules.callTerms.offends as DirectiveTerms['offends'], required: 0 };\n126: }"
+      }
+    ]
+  },
+  {
+    "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "path": "packages/kernel/src/tick/recruitment.ts",
+    "sha256": "76bd3c5eb3a18212efa179810033b65e33361f6a99d56692bec668a0486faac7",
+    "excerpts": [
+      {
+        "first_line": 81,
+        "last_line": 97,
+        "text": "81: export function regimentsRaised(rules: RecruitmentRules, asked: number | null, rung: string, loyalty: number | null, askedMen?: number | null): { readonly regiments: number | null; readonly men: number | null; readonly delayDays: number; readonly loyaltyPermille: number } | null {\n82:   const row = rules.rungs.find((r) => r.rung === rung);\n83:   if (row === undefined) return null;\n84:   const factor = rules.loyaltyWeight === 0 || loyalty === null ? 1000 : 1000 - rules.loyaltyWeight + Math.trunc((rules.loyaltyWeight * Math.min(loyalty, rules.loyaltyFull)) / rules.loyaltyFull);\n85:   const regiments = asked === null ? null : Math.trunc((Math.trunc((asked * row.sharePermille) / 1000) * factor) / 1000);\n86:   if ((askedMen === null || (asked === null && askedMen === undefined)) && row.sharePermille > 0 && factor > 0) return { regiments: null, men: null, delayDays: row.delayDays, loyaltyPermille: factor };\n87:   if (askedMen === null || (asked === null && askedMen === undefined)) return { regiments: 0, men: 0, delayDays: row.delayDays, loyaltyPermille: factor };\n88:   const men = askedMen === undefined ? regiments! * rules.menPerRegiment : Math.trunc((Math.trunc((askedMen * row.sharePermille) / 1000) * factor) / 1000);\n89:   // An explicit headcount can describe a different organization size. Preserve the known nominal quota;\n90:   // converting its men by the pack's default again would invent additional regiments. A positive\n91:   // sub-regimental remainder has unknown whole-unit count, rather than a fabricated extra regiment.\n92:   const nominal = askedMen === undefined || asked !== null ? (men > 0 && regiments === 0 ? null : regiments) : Math.ceil(men / rules.menPerRegiment);\n93:   return { regiments: nominal, men, delayDays: row.delayDays, loyaltyPermille: factor };\n94: }\n95: \n96: /**\n97:  * A call reaches the governor: he answers by his own compliance on the pack's call terms; `proxy` records it. A rung"
+      },
+      {
+        "first_line": 102,
+        "last_line": 141,
+        "text": "102: export function arriveCall(ctx: TickContext, start: State, msg: TransitMessage): State {\n103:   const { world, day } = ctx;\n104:   const order = msg.msgOrder!;\n105:   const call = order.orderCall!;\n106:   const post = msg.msgToPost!;\n107:   const governor = msg.msgTo;\n108:   if (!raisingPost(ctx,start,post)) return returnDispatch(ctx,start,msg,'not_raising_post');\n109:   const rules = world.map.world.rules.recruitment;\n110:   // He answers watched from where he stands (lane 1.4's oversight: his courier days from the caller, and the wire).\n111:   const answer = answerOrder(world, start, governor, order.orderIssuer, callTerms(rules), { oversight: oversightOf(ctx, start, governor, order.orderIssuer).value });\n112:   let state = recordResponse(start, responseOf(answer, { order: msg.msgOrigin, person: governor, post, role: 'addressee', day, kind: 'call', ...(call.callId === undefined ? {} : { callId: call.callId }) }));\n113:   const side = postFaction(world, state, post);\n114:   const region = state.postStates[post]!.postSeat;\n115:   const loyalty = side === null || region === null ? null : loyaltyOf(state, region, side);\n116:   const actual = regimentsRaised(rules, call.callRegiments, answer.actual, loyalty, call.callMen);\n117:   const declared = regimentsRaised(rules, call.callRegiments, answer.declared, loyalty, call.callMen);\n118:   if (actual === null || actual.regiments === 0) fire(ctx, 'recruitment.refused');\n119:   else {\n120:     if (call.callReadiness !== true) state = recordLevy(state, {\n121:       levyPost: post,\n122:       levyGovernor: governor,\n123:       levyIssuer: order.orderIssuer,\n124:       levyCall: msg.msgOrigin,\n125:       levyRegiments: actual.regiments,\n126:       levyMen: actual.men,\n127:       levyTermDays: call.callTermDays,\n128:       ...(call.callArm === undefined ? {} : { levyArm: call.callArm }),\n129:       ...(call.callId === undefined ? {} : { levyCallId: call.callId }),\n130:       levyMusterDay: day + rules.musterDays + actual.delayDays,\n131:       levyResponse: responseKey(msg.msgOrigin, governor),\n132:     });\n133:     fire(ctx, 'recruitment.answered');\n134:     if (actual.delayDays > 0) fire(ctx, 'recruitment.slow_walked');\n135:   }\n136:   const objects = declared === null;\n137:   sendReport(ctx, state, {\n138:     body: answerBody(governor, post, day, {\n139:       reportType: objects ? 'advice' : 'wire-dispatch',\n140:       reportSubtype: objects ? 'memorandum' : null,\n141:       reportClaims: [{ claimKind: 'call-answer', claimRegion: region, claimValue: declared?.regiments ?? 0, claimToken: declared?.men === null ? `${answer.declared}:unknown_strength` : answer.declared, claimConfidence: declared?.men === null ? 0 : 1000 }],"
+      }
+    ]
+  },
+  {
+    "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "path": "packages/kernel/src/tick/context.ts",
+    "sha256": "b67d57525bc612145b42ec7b16a39757d8df59ded55635f9b0a4dc3df13fc7f6",
+    "excerpts": [
+      {
+        "first_line": 215,
+        "last_line": 238,
+        "text": "215: export function oversightOf(ctx: TickContext, state: State, person: PersonId, issuer: PersonId): { readonly value: number; readonly terms: readonly OversightTerm[] } {\n216:   const rules = ctx.world.rules.people.context;\n217:   const base: OversightTerm = { ovKind: 'base', ovValue: rules.oversight };\n218:   const side = sideOfPerson(ctx.world.map, state, issuer);\n219:   if (side === null || person === issuer) return { value: rules.oversight, terms: [base] };\n220:   const from = whereIs(ctx, state, person);\n221:   const to = whereIs(ctx, state, issuer);\n222:   const courier = routeLatency(ctx.latency, ctx.world.rules.latency, 'courier', from, to, side, null);\n223:   if (!courier.ok) return { value: rules.oversightMin, terms: [base, { ovKind: 'floor', ovValue: rules.oversightMin - rules.oversight }] };\n224:   // On the wire: a message between them goes by telegraph, quicker than a courier (the wire route, 0026).\n225:   const wire = routeLatency(ctx.latency, ctx.world.rules.latency, 'wire', from, to, side, null);\n226:   const wired = wire.ok && wire.latency.parts.some((p) => p.part === 'wire');\n227:   const terms: OversightTerm[] = [base, { ovKind: 'distance', ovValue: -courier.latency.days * rules.oversightPerCourierDay }];\n228:   if (wired) terms.push({ ovKind: 'wire', ovValue: rules.oversightWired });\n229:   const raw = terms.reduce((a, x) => a + x.ovValue, 0);\n230:   const value = Math.max(rules.oversightMin, Math.min(1000, raw));\n231:   if (value > raw) terms.push({ ovKind: 'floor', ovValue: value - raw });\n232:   if (value < raw) terms.push({ ovKind: 'ceiling', ovValue: value - raw });\n233:   return { value, terms };\n234: }\n235: \n236: /** The route a message by `route` really takes (a wire sent off the wire goes by courier). No dice drawn. */\n237: export function takenRoute(ctx: TickContext, state: State, route: RouteKind, sender: PersonId, from: RegionId, to: RegionId, recipient: PersonId | null = null): RouteKind {\n238:   if (route !== 'wire' || from === to) return route;"
+      }
+    ]
+  },
+  {
+    "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "path": "packages/kernel/src/compliance.ts",
+    "sha256": "a9fa1421835af6c2950cce4c0624222e3ce64325819a8c17c6775f52f244296f",
+    "excerpts": [
+      {
+        "first_line": 148,
+        "last_line": 169,
+        "text": "148:   const costOnly = new Set(context.costOnly ?? []);\n149:   for (const value of [...new Set(terms.honours)].sort(strictCompare)) {\n150:     // 0074: honouring a cost-only value never helps.\n151:     if (held.has(value) && !costOnly.has(value)) {\n152:       values += rules.valueWeight;\n153:       reasons.push({ kind: 'values_honoured', value });\n154:     }\n155:   }\n156:   for (const value of [...new Set(terms.offends)].sort(strictCompare)) {\n157:     if (held.has(value)) {\n158:       values -= rules.valueWeight;\n159:       reasons.push({ kind: 'values_offended', value });\n160:     }\n161:   }\n162: \n163:   // Temperament: a cautious man ordered to attack, or a bold one ordered to wait. Read against his own best plan when\n164:   // the directive is a plan (lane 0.9 finding 2), else against his temperament.\n165:   const reference = terms.ownBest ?? proxy.boldness;\n166:   const boldnessGap = Math.abs(terms.boldness - reference);\n167:   const temperament = 0 - scale(boldnessGap, rules.temperamentWeight);\n168:   if (boldnessGap >= rules.temperamentReasonAt) {\n169:     reasons.push("
+      },
+      {
+        "first_line": 184,
+        "last_line": 203,
+        "text": "184:   if (proxy.regard <= -rules.regardReasonAt) reasons.push({ kind: 'distrusts_leader' });\n185: \n186:   // Deterrence: the expected cost of shirking, discounted by the proxy's own standing.\n187:   const shield = scale(proxy.standing, rules.standingShield);\n188:   const effectiveCredibility = scale(context.leaderCredibility, PERMILLE_MAX - shield);\n189:   // Oversight beyond the base, each its own term and reason (lane 1.5).\n190:   let oversight = context.oversight;\n191:   for (const t of context.oversightTerms ?? []) {\n192:     oversight += t.amount;\n193:     reasons.push({ kind: 'watched', source: t.source, amount: t.amount });\n194:   }\n195:   const deterrenceLevel = scale(clampPermille(oversight), effectiveCredibility);\n196:   const deterrence = scale(deterrenceLevel, rules.deterrenceWeight);\n197:   if (deterrenceLevel >= rules.fearReasonAt) reasons.push({ kind: 'fears_sanction' });\n198:   if (proxy.standing >= rules.protectedStandingAt) reasons.push({ kind: 'shielded_by_standing' });\n199: \n200:   // Capacity: what the task needs against what the post holds.\n201:   const shortfall = Math.max(0, terms.required - context.available);\n202:   const capacity = 0 - scale(shortfall, rules.shortfallWeight);\n203:   if (shortfall > 0) reasons.push({ kind: 'lacks_resources', shortfall });"
+      },
+      {
+        "first_line": 235,
+        "last_line": 270,
+        "text": "235:     // Only an edit has a judgement term; a plain directive's contributions are unchanged.\n236:     ...(terms.departure === undefined ? [] : [{ term: 'judgement' as const, amount: judgement }]),\n237:     ...((context.practiceClashes ?? []).length === 0 ? [] : [{ term: 'practice' as const, amount: practice }]),\n238:   ];\n239:   const willingness = values + temperament + regard + deterrence + capacity + disposition + grievances + judgement + practice;\n240: \n241:   const honoursAHeldValue = reasons.some((r) => r.kind === 'values_honoured');\n242:   const isProtected =\n243:     proxy.standing >= rules.protectedStandingAt || deterrenceLevel <= rules.protectedDeterrenceAt;\n244:   const isCandid = proxy.candour >= rules.candidAt;\n245: \n246:   let actual: ComplianceRung;\n247:   if (willingness >= rules.exceedAt && shortfall === 0 && honoursAHeldValue) actual = 'exceed';\n248:   else if (willingness >= rules.complyAt) actual = 'comply';\n249:   else if (willingness >= rules.reservationsAt) actual = 'comply_with_reservations';\n250:   else if (willingness < rules.severeBelow && isProtected) actual = 'refuse';\n251:   else if (isCandid) actual = 'object';\n252:   else if (willingness > rules.slowWalkAbove) actual = 'slow_walk';\n253:   else actual = 'reinterpret';\n254: \n255:   // An uncandid proxy covers covert shirking, and his own doubts, with a plain \"yes\".\n256:   let declared: ComplianceRung = actual;\n257:   if (!isCandid && (COVERT.has(actual) || actual === 'comply_with_reservations')) declared = 'comply';\n258: \n259:   const counterProposal: CounterProposal | null =\n260:     actual === 'object'\n261:       ? { boldness: proxy.boldness, required: Math.min(terms.required, context.available) }\n262:       : null;\n263: \n264:   const statedReasons = isCandid ? reasons : statedByUncandid(reasons, declared);\n265: \n266:   // Conditions on acting at all: none for a man who will not act, or who acts on his own terms.\n267:   const conditions: ResponseCondition[] = [];\n268:   if (actual !== 'refuse' && actual !== 'object') {\n269:     // A shortfall past the share a man of his boldness tolerates: \"move when reinforced\" (lane 0.9 finding 8).\n270:     const tolerated = rules.reinforceShareTimid + scale(proxy.boldness, Math.max(0, rules.reinforceShareBold - rules.reinforceShareTimid));"
+      }
+    ]
+  },
+  {
+    "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "path": "packages/kernel/src/politics/politics.ts",
+    "sha256": "16b4892205e88f5f87ecc91f6a32d421e5c1790309fb65a55431b0ce76d611b2",
+    "excerpts": [
+      {
+        "first_line": 105,
+        "last_line": 125,
+        "text": "105: export function credibilityOf(rules: PoliticsRules, state: State, faction: FactionId | null, principal: PersonId | null): { readonly value: number; readonly terms: readonly PoliticsTerm[] } {\n106:   const c = rules.credibility;\n107:   const terms: PoliticsTerm[] = [{ polKind: 'base', polSubject: null, polValue: c.base }];\n108:   if (faction !== null) terms.push({ polKind: 'mandate', polSubject: faction, polValue: scale(mandateOf(rules, state, faction).value, c.mandatePermille) });\n109:   if (principal !== null) {\n110:     let reliefs = 0;\n111:     for (const p of Object.keys(state.personGrievances).sort(strictCompare) as PersonId[]) {\n112:       if (state.personGrievances[p]!.some((g) => g.grievanceKind === 'relieved' && g.grievanceAgainst === principal)) reliefs += 1;\n113:     }\n114:     if (reliefs > 0) terms.push({ polKind: 'reliefs', polSubject: principal, polValue: reliefs * c.perRelief });\n115:   }\n116:   const raw = terms.reduce((a, t) => a + t.polValue, 0);\n117:   const value = Math.max(c.min, Math.min(c.max, raw));\n118:   if (value > raw) terms.push({ polKind: 'floor', polSubject: null, polValue: value - raw });\n119:   if (value < raw) terms.push({ polKind: 'ceiling', polSubject: null, polValue: value - raw });\n120:   return { value, terms };\n121: }\n122: \n123: /** Whether any chamber of `faction` sits today. */\n124: export function sideSits(rules: PoliticsRules, state: State, faction: FactionId): boolean {\n125:   return rules.chambers.some((c) => c.faction === faction && state.chamberStates[c.id]?.chamState === 'sitting');"
+      }
+    ]
+  },
+  {
+    "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "path": "packages/kernel/src/proxy/responses.ts",
+    "sha256": "796a370a6039d3f4c1c840ef89bc02e84f2522e22507c4001deedb559a4ecb2b",
+    "excerpts": [
+      {
+        "first_line": 58,
+        "last_line": 79,
+        "text": "58: export function responseOf(\n59:   answer: DirectiveResponse,\n60:   at: { readonly order: MessageId; readonly person: PersonId; readonly post: PostId | null; readonly role: 'relay' | 'addressee'; readonly day: number; readonly kind: string; readonly note?: number; readonly callId?: string },\n61: ): OrderResponse {\n62:   return {\n63:     ...(at.note === undefined ? {} : { respNote: at.note }),\n64:     respOrder: at.order,\n65:     respPerson: at.person,\n66:     respPost: at.post,\n67:     respRole: at.role,\n68:     respKind: at.kind,\n69:     ...(at.callId === undefined ? {} : { respCallId: at.callId }),\n70:     respDay: at.day,\n71:     respActual: answer.actual,\n72:     respDeclared: answer.declared,\n73:     respWillingness: answer.willingness,\n74:     respTerms: answer.contributions.map((c) => ({ respTermName: c.term, respTermAmount: c.amount })),\n75:     respReasons: answer.reasons,\n76:     respStated: answer.statedReasons,\n77:     respConditions: answer.conditions,\n78:   };\n79: }"
+      }
+    ]
+  },
+  {
+    "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+    "path": "packages/kernel/src/permille.ts",
+    "sha256": "511f62b3f502d0abb07300d09835700ac4d00357d0f17cd5eefa9dd06da25331",
+    "excerpts": [
+      {
+        "first_line": 27,
+        "last_line": 30,
+        "text": "27: export function scale(value: number, weight: Permille): number {\n28:   return Math.trunc((value * weight) / PERMILLE_MAX);\n29: }\n30: "
+      }
+    ]
+  }
+]

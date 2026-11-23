@@ -1,0 +1,99 @@
+{
+  "commit": "e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2",
+  "inputs": {
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\references\\union-1861-initial-state.json": {
+      "sha256": "375ed6ce4d070fd749f47ee5559b1994d52ccb678fab92438d0ce63696bc8d71",
+      "bytes": 447158
+    },
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\references\\union-1861-final-state.json": {
+      "sha256": "28cd026e3c22a1d6c1239fe1cf221c5b711da5e3423600d3a5fb80a390bd003d",
+      "bytes": 4099733
+    },
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\references\\union-1861-trace.json": {
+      "sha256": "d3b7ed703199b4d8fa0e9ff882428984c03d8a629df5cd301003daaf90e66549",
+      "bytes": 40868075
+    },
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\references\\union-1861-summary.json": {
+      "sha256": "54b5104d0a2a5428971b655ec0d0bd213c753392b166b5bc53acd63fd95cebcf",
+      "bytes": 135369
+    },
+    "C:\\Pyrrhic\\sprint-july\\runs\\s82\\done-results.json": {
+      "sha256": "b3c5ce7952f72d9425e39da50f668d94b34976d75ee22e1aa382735fbe1059f9",
+      "bytes": 13894
+    },
+    "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S84\\confederate-calls.csv": {
+      "sha256": "5e02d6aa9ac3e1585a70ffcf1e80266c5b4d8b48b79bf63361959b8f4f5eefed",
+      "bytes": 35627
+    },
+    "C:\\Pyrrhic\\sprint-research-military\\docs\\research\\S84\\reference-inputs.json": {
+      "sha256": "c0eabdebc2832d8fb6c544148ae9743c5304b043338bb406b76871fe2c80decd",
+      "bytes": 1373
+    }
+  },
+  "frozen_code": [
+    {
+      "path": "packages/kernel/src/people/people.ts",
+      "s82_sha256": "9def059d43fa83b8b217856854930af7225368b7a4abfa51c97079bad92ee3e9",
+      "worktree_equal_s82": true
+    },
+    {
+      "path": "packages/kernel/src/people/traits.ts",
+      "s82_sha256": "855a8b4769f4ea912d3066a9ff608b93a06b2053c56daafd3b7d8d163b174f8c",
+      "worktree_equal_s82": true
+    },
+    {
+      "path": "packages/kernel/src/compliance.ts",
+      "s82_sha256": "a9fa1421835af6c2950cce4c0624222e3ce64325819a8c17c6775f52f244296f",
+      "worktree_equal_s82": true
+    },
+    {
+      "path": "packages/kernel/src/reading/orders.ts",
+      "s82_sha256": "54f69a741a7b1d8f7ad0e76ecc287c5c608a2c96263c70a89fca1c995dc2dd29",
+      "worktree_equal_s82": true
+    },
+    {
+      "path": "packages/kernel/src/tick/recruitment.ts",
+      "s82_sha256": "76bd3c5eb3a18212efa179810033b65e33361f6a99d56692bec668a0486faac7",
+      "worktree_equal_s82": false
+    },
+    {
+      "path": "packages/kernel/src/tick/context.ts",
+      "s82_sha256": "b67d57525bc612145b42ec7b16a39757d8df59ded55635f9b0a4dc3df13fc7f6",
+      "worktree_equal_s82": false
+    },
+    {
+      "path": "packages/kernel/src/recruitment/rules.ts",
+      "s82_sha256": "785f7300a257b13cde190896019086df25517548a6be12a990e21879e19b2722",
+      "worktree_equal_s82": false
+    },
+    {
+      "path": "packages/kernel/src/politics/politics.ts",
+      "s82_sha256": "16b4892205e88f5f87ecc91f6a32d421e5c1790309fb65a55431b0ce76d611b2",
+      "worktree_equal_s82": true
+    },
+    {
+      "path": "packages/kernel/src/proxy/responses.ts",
+      "s82_sha256": "796a370a6039d3f4c1c840ef89bc02e84f2522e22507c4001deedb559a4ecb2b",
+      "worktree_equal_s82": false
+    },
+    {
+      "path": "packages/kernel/src/tick/plans.ts",
+      "s82_sha256": "2a2225a62ee0e74371f3c2d718dfd59d95076065b86165a10de798333e3a3d3b",
+      "worktree_equal_s82": false
+    }
+  ],
+  "all_objecting_governors": [
+    "clark_edward",
+    "ellis_john_w",
+    "harris_isham_g",
+    "letcher_john",
+    "moore_thomas_o",
+    "perry_madison_s"
+  ],
+  "all_unknown_objecting_governors": [
+    "clark_edward",
+    "moore_thomas_o",
+    "perry_madison_s"
+  ],
+  "policy": "Frozen S82 evidence only. No simulation rerun; sibling worktrees read only. Existing judgment citations reported as entered, not independently revalidated."
+}
