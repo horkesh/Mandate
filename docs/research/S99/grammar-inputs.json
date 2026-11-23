@@ -1,0 +1,141 @@
+{
+  "request": "S99 grammar reference only",
+  "root": "C:\\Pyrrhic\\sprint-discretion",
+  "head": "e89b03d03bb94fbfea06ba629352a0812a51806b",
+  "inputs": [
+    {
+      "path": "notes/lane-s96-discretion.md",
+      "working_sha256": "4a4cc0ef8e822730b40f222af947cf711e32ded3e6858df7d9a09726cf9afb25",
+      "committed_sha256": "a9b5f432ae78468f1c744b9fbc7c970bc2b9e1f0cd876ce98f2013095f69e1c2",
+      "git_blob": "55533aad74256e2ff929294289ec11258ba3e017",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "Read in full; delivery description and limitations, grammar context only."
+    },
+    {
+      "path": "packages/kernel/src/world/world.ts",
+      "working_sha256": "979edfdcb2cfbb5ff1f26dc2bd3c7e7a0d9133687900474350ec4741d138d8a1",
+      "committed_sha256": "979edfdcb2cfbb5ff1f26dc2bd3c7e7a0d9133687900474350ec4741d138d8a1",
+      "git_blob": "a53a9d8406a1573a123b1f83b8f28cd327eb3010",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "PrincipalDoctrine fields, concentration/offensive and proposal-answer capabilities."
+    },
+    {
+      "path": "packages/kernel/src/plans/goal.ts",
+      "working_sha256": "abde14155d440730b8bcd2a82473c3b483bd132d608db2a9b6733430b8b415ee",
+      "committed_sha256": "abde14155d440730b8bcd2a82473c3b483bd132d608db2a9b6733430b8b415ee",
+      "git_blob": "ff08e15392dd0911966a9d01e73f983d724758d5",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "PlanGoal, GoalTerms relationship, postures, discretion, bounds and DoctrineProposalAnswer."
+    },
+    {
+      "path": "packages/kernel/src/log/commands.ts",
+      "working_sha256": "e6a72044bddfc1ca1c36474de7d89633d1aec3ff1745ad9048666a91d9bc739f",
+      "committed_sha256": "e6a72044bddfc1ca1c36474de7d89633d1aec3ff1745ad9048666a91d9bc739f",
+      "git_blob": "146cfdb57486ee73a4d10c0792cd47f477704f6c",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "Order/reply/transfer/relieve/go/choose types and their authority distinction."
+    },
+    {
+      "path": "packages/kernel/src/seats/requests.ts",
+      "working_sha256": "7e863de2bffba386d18c5fcd7b433f88828c33e28291ce3df8b5893d6a873b56",
+      "committed_sha256": "7e863de2bffba386d18c5fcd7b433f88828c33e28291ce3df8b5893d6a873b56",
+      "git_blob": "266d35a9366ac9fd6ef323c92524b8f300899ef9",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "doctrineView: received-notice readiness, sent-order suppression, proposal correlation."
+    },
+    {
+      "path": "packages/kernel/src/tick/orders.ts",
+      "working_sha256": "51b25bb47e003f4ec20c76dd93297c8592402fb5e7cc5b08e2d6140e80695c7a",
+      "committed_sha256": "51b25bb47e003f4ec20c76dd93297c8592402fb5e7cc5b08e2d6140e80695c7a",
+      "git_blob": "3c768d9e76622929cf8ec493f2b6645c4002dea0",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "issueOrder: principal authorization and doctrine letter/reply correlation."
+    },
+    {
+      "path": "packages/kernel/src/tick/plans.ts",
+      "working_sha256": "5c53326da85e51cd949752a36fdad682e6d3e4b5e3ab99c665d0749ac94d87ff",
+      "committed_sha256": "5c53326da85e51cd949752a36fdad682e6d3e4b5e3ab99c665d0749ac94d87ff",
+      "git_blob": "640b5f36daae36bf9bcf13581cf25f3b545cd6d0",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "draftProposal and correlated toIssuer report."
+    },
+    {
+      "path": "packages/kernel/src/planner/discretion.ts",
+      "working_sha256": "a1902b0421e8312e8d8ea2e54f2f4763edc03db7979d8e3a3198ace31416ffbe",
+      "committed_sha256": "a1902b0421e8312e8d8ea2e54f2f4763edc03db7979d8e3a3198ace31416ffbe",
+      "git_blob": "dc97ff7f44fc1c9961b70a033a5adb04ae4dc3f7",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "Belief-based threat and planner-selected preferable goal; no arbitrary condition vocabulary."
+    },
+    {
+      "path": "packages/kernel/src/planner/methods.ts",
+      "working_sha256": "863e571b127c315f243a029e05f9d598bff426d2ff17056b00e7854732bf4564",
+      "committed_sha256": "863e571b127c315f243a029e05f9d598bff426d2ff17056b00e7854732bf4564",
+      "git_blob": "4e310c31fe0d887f1cbbf0c4a879f6852c1c6977",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "Direct/flank goal-directed physical routing; no arbitrary autonomous raid policy."
+    },
+    {
+      "path": "packages/kernel/src/planner/axes.ts",
+      "working_sha256": "2b59454b6069c0fb9c92fd990c01bb8ea6bd1f9c8170c83bce424c2f1f630a90",
+      "committed_sha256": "2b59454b6069c0fb9c92fd990c01bb8ea6bd1f9c8170c83bce424c2f1f630a90",
+      "git_blob": "d7118be7fba0b2313d072439a723747abf653a82",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "buildAxis march phases and holdingAxis stays at position."
+    },
+    {
+      "path": "packages/rule-seats/src/index.ts",
+      "working_sha256": "a4e657baf13c3226c76fb5c53ef30e69496a4751dc04b419d7579b5c516581bf",
+      "committed_sha256": "a4e657baf13c3226c76fb5c53ef30e69496a4751dc04b419d7579b5c516581bf",
+      "git_blob": "8db44a595130289d53eb1a995e9bf80c74f213fc",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "Rule seat roles, principal reply/goal/transfer issuance and commander candidate choice."
+    },
+    {
+      "path": "docs/design/FOUNDATION.md",
+      "working_sha256": "22568fd0c365bae0ea790c15e8e26cebcf465574705553ad1982415e3bb5de84",
+      "committed_sha256": "22568fd0c365bae0ea790c15e8e26cebcf465574705553ad1982415e3bb5de84",
+      "git_blob": "feea870c26c36a13c0e7ce7342746111db69843d",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "Received knowledge and ownership rows for0114."
+    },
+    {
+      "path": "packs/union-1861/source/world/regions.csv",
+      "working_sha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+      "committed_sha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+      "git_blob": "e1168cf8d8ef15d830b8de8fb055b88ca358bb11",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "Only named S99 graph mappings; no adoption of other historical claims."
+    },
+    {
+      "path": "packs/union-1861/source/world/organisations.json",
+      "working_sha256": "e43f9f235c6e4388aede2a2715143ddca6a4c798c1f9ff813bdccaf51c21f266",
+      "committed_sha256": "e43f9f235c6e4388aede2a2715143ddca6a4c798c1f9ff813bdccaf51c21f266",
+      "git_blob": "f5972c3224e9fe298ed4288629dd3380fc5d6849",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "Patterson hierarchy matches grammar; no historical roster/strength recertification."
+    },
+    {
+      "path": "packs/union-1861/data/world.json",
+      "working_sha256": "18c598bca89fd95b4ca88a7001e9afeb5e953e5dff820c90a3e1ed43360f89e7",
+      "committed_sha256": "18c598bca89fd95b4ca88a7001e9afeb5e953e5dff820c90a3e1ed43360f89e7",
+      "git_blob": "0fc0f92c4ceaa88df5e194808e9669a6415bfe36",
+      "working_text_equals_commit_after_CRLF_normalization": true,
+      "read_scope": "Only ruleSeats schema/appointments context; no cast/call/provenance reapplication."
+    }
+  ],
+  "main_decisions_read": [
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0114-commanders-propose-and-orders-carry-discretion.md",
+      "sha256": "0ff9ac4eb64eca6d945b703378117a5441d000c98cae0eb5062ed77f27dd31ca",
+      "scope": "Read in full; no changes or import."
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0116-a-commander-may-propose-while-he-complies.md",
+      "sha256": "caac1912aaf4cb1939233c99887ac984c7deb3a184df914b3acad358c1c6f857",
+      "scope": "Read in full; no changes or import."
+    }
+  ],
+  "write_authority": "none in sprint-discretion; sprint-july not accessed",
+  "limitation": "0116 accepted in main document, not claimed implemented at S96 head; proposed G identifiers are research-only, not executable rows."
+}

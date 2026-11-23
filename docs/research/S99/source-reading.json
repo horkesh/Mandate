@@ -1,0 +1,476 @@
+{
+  "request": "S99 research/proposals only",
+  "work": "The War of the Rebellion: Official Records of the Union and Confederate Armies, series I, volume II (1880), chapter IX",
+  "pdf": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+  "pdf_sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+  "pdf_sha1": "5181e2d36e7be015b7f8bf6261ca7898ee038005",
+  "live_metadata_url": "https://archive.org/metadata/warofrebellion02secrrich",
+  "metadata_sha256": "2069ed598e16ec7a999e40f455fc19b32a4e5d4affa353d1c5982e0f2cce0fc7",
+  "live_metadata_matches_local_pdf": true,
+  "page_index_rule": "zero-based PDF index = printed page + 19; IA leaf URL uses same index",
+  "reading_scope": "Complete named Patterson/Scott/Porter/Wallace/Johnston papers and continuations on the cited pages; intervening unrelated correspondence not adopted. May24/29 antecedents, June1-24 scope, later reports of those events labeled. Pages931-933 read to check requested range; no Johnston paper on those pages. Not whole-volume/exhaustive-archive research.",
+  "locators": [
+    {
+      "printed_page": 105,
+      "pdf_page_index": 124,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n124/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p105.txt",
+      "extract_sha256": "e15c3938d57495c153ea636947a142f6959c708a990a7678d283cc2a125b7d42"
+    },
+    {
+      "printed_page": 123,
+      "pdf_page_index": 142,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n142/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p123.txt",
+      "extract_sha256": "37e7a31487073891b45331ab8f6bac8c713e5a729f51bed34ab0e3c033595a98"
+    },
+    {
+      "printed_page": 124,
+      "pdf_page_index": 143,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n143/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p124.txt",
+      "extract_sha256": "f91e16d4c752b61ea4a72827146ebaf141044f101c02db110957cdb3d1684a7b"
+    },
+    {
+      "printed_page": 470,
+      "pdf_page_index": 489,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n489/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p470.txt",
+      "extract_sha256": "2f6cc4f4bb581073f9c2ac573add5353b9c31657b81871fdc9d48aace0b8548c"
+    },
+    {
+      "printed_page": 471,
+      "pdf_page_index": 490,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n490/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p471.txt",
+      "extract_sha256": "a6cfd41bcaf5c9ec79bd103b432d254bb04a615d4bc72bfad06cd20ac1af5a61"
+    },
+    {
+      "printed_page": 472,
+      "pdf_page_index": 491,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n491/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p472.txt",
+      "extract_sha256": "376533e18e8aa740b0e3663ffb5df4e30adc42fadba8ee692a7805ecc96bf557"
+    },
+    {
+      "printed_page": 652,
+      "pdf_page_index": 671,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n671/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p652.txt",
+      "extract_sha256": "16aa8fc41831fb0e5c5810bfd28bf9383ee829e805bb3df363580d3784b87288"
+    },
+    {
+      "printed_page": 657,
+      "pdf_page_index": 676,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n676/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p657.txt",
+      "extract_sha256": "4aa3b851f76219dc84159bf8292d90e804a51c9dbf20604e4fe88603ea202e16"
+    },
+    {
+      "printed_page": 658,
+      "pdf_page_index": 677,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n677/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p658.txt",
+      "extract_sha256": "ce29d875f0632871fe75c5a1360731990cdf283d6a6777eaa5a7d48a8958cdf5"
+    },
+    {
+      "printed_page": 659,
+      "pdf_page_index": 678,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n678/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p659.txt",
+      "extract_sha256": "3b60dc9ef43a57e4823c267a15d43a77b5e53e16287098be84f2354564aa685a"
+    },
+    {
+      "printed_page": 660,
+      "pdf_page_index": 679,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n679/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p660.txt",
+      "extract_sha256": "b6c2601c9c14992855f300b315b37ebedf723d952a9d177f5341cf5ad4df1c14"
+    },
+    {
+      "printed_page": 661,
+      "pdf_page_index": 680,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n680/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p661.txt",
+      "extract_sha256": "2d938bf9e4c7798c1541c01dc92c546461e294aa42731f50125f5aaa409beee2"
+    },
+    {
+      "printed_page": 665,
+      "pdf_page_index": 684,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n684/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p665.txt",
+      "extract_sha256": "b3185e3c60c90c6bc4a7179d7f77f621289170c6d6add481f8e7826e2d966882"
+    },
+    {
+      "printed_page": 668,
+      "pdf_page_index": 687,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n687/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p668.txt",
+      "extract_sha256": "3c709dfefb684a61722a742340e4f9f7f8cc0b844a81b55425912d7d4532ac49"
+    },
+    {
+      "printed_page": 669,
+      "pdf_page_index": 688,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n688/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p669.txt",
+      "extract_sha256": "16826758aa099a33f9dc33a70b4badcd4a3b167e51816fb07cd02a6ca712c928"
+    },
+    {
+      "printed_page": 670,
+      "pdf_page_index": 689,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n689/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p670.txt",
+      "extract_sha256": "9830d5527131dfa2a4a0658208e8959b259062ac208dd3cfc151c422872019ed"
+    },
+    {
+      "printed_page": 671,
+      "pdf_page_index": 690,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n690/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p671.txt",
+      "extract_sha256": "b371bc7a42a10ae6764b8a2c752b6eb1df8da164b4faa527dcf9755bcd0fd534"
+    },
+    {
+      "printed_page": 672,
+      "pdf_page_index": 691,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n691/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p672.txt",
+      "extract_sha256": "4242ff7be4559a78afbb059037ccb83d8361c7deafe740447d4dfdeee312fb2e"
+    },
+    {
+      "printed_page": 673,
+      "pdf_page_index": 692,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n692/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p673.txt",
+      "extract_sha256": "7b3e48ddcb0c02b751435de2b52566cf4f1a309c5d87b436220f46407367cfc8"
+    },
+    {
+      "printed_page": 675,
+      "pdf_page_index": 694,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n694/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p675.txt",
+      "extract_sha256": "a65cae1578cf16dd493e5d5b0f86eedbd683f6d1abeb549250fc581734714ae7"
+    },
+    {
+      "printed_page": 676,
+      "pdf_page_index": 695,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n695/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p676.txt",
+      "extract_sha256": "deccc9e315dba3b7f2bb88d482c47010736f26feb0bee7c7e4bba239fa5f82d8"
+    },
+    {
+      "printed_page": 678,
+      "pdf_page_index": 697,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n697/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p678.txt",
+      "extract_sha256": "179694180c73dbb669948ab8efe9d078ab61e3d650acdb88c3bdf06bdf373c0b"
+    },
+    {
+      "printed_page": 679,
+      "pdf_page_index": 698,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n698/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p679.txt",
+      "extract_sha256": "f0654878f14774f2d400d7068635e1903a8704545dee167403e1d4022ad008aa"
+    },
+    {
+      "printed_page": 680,
+      "pdf_page_index": 699,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n699/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p680.txt",
+      "extract_sha256": "9548d9085f02b450f1702c4212d0acee049db7ff567fd5a7852ff4f9a739ba1b"
+    },
+    {
+      "printed_page": 681,
+      "pdf_page_index": 700,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n700/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p681.txt",
+      "extract_sha256": "4a10f56b09f78cbf568cc2bc5becd0a6d819c3e59added47422d7dd4bb4d2c3e"
+    },
+    {
+      "printed_page": 683,
+      "pdf_page_index": 702,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n702/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p683.txt",
+      "extract_sha256": "c5cc4ea3ed2e93780f9e08f56f5921755ac7440f9f7fd8c899c4be5c4680bd05"
+    },
+    {
+      "printed_page": 684,
+      "pdf_page_index": 703,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n703/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p684.txt",
+      "extract_sha256": "cc25af0bc4050c546309151393f3c5e7b8c0eafc268f699a66a9ab9ac396faed"
+    },
+    {
+      "printed_page": 685,
+      "pdf_page_index": 704,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n704/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p685.txt",
+      "extract_sha256": "bd0139759875befd966876120dca70b799198fd356332319a2e35a717f1c09e6"
+    },
+    {
+      "printed_page": 686,
+      "pdf_page_index": 705,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n705/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p686.txt",
+      "extract_sha256": "4d6d590eba2edf0ad114cd020d6268b4b004d954b25f33bd5fd5f1a736366f0f"
+    },
+    {
+      "printed_page": 687,
+      "pdf_page_index": 706,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n706/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p687.txt",
+      "extract_sha256": "71dc831ca9e10d78300b558ce48d396f1f3d146b2fecef032ecb5493e9ec4172"
+    },
+    {
+      "printed_page": 688,
+      "pdf_page_index": 707,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n707/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p688.txt",
+      "extract_sha256": "1c63a5d54730e32518684f77ec3b0c74523fbcbabfd99ffb22ea024a1fa748b5"
+    },
+    {
+      "printed_page": 689,
+      "pdf_page_index": 708,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n708/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p689.txt",
+      "extract_sha256": "fcd494d2a268a87ead0321a56ec7b73ea2642c8e2a4e02ad44053d96bb2d8883"
+    },
+    {
+      "printed_page": 690,
+      "pdf_page_index": 709,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n709/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p690.txt",
+      "extract_sha256": "4d2488a64a6b0e9edef850e901f4540f1b2b844a8a87a1e2ac371be1f67ad800"
+    },
+    {
+      "printed_page": 691,
+      "pdf_page_index": 710,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n710/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p691.txt",
+      "extract_sha256": "46cacac2573b7a99a5e73a371a7a6bf7b5688340e3d9315b56d2b509f2379401"
+    },
+    {
+      "printed_page": 692,
+      "pdf_page_index": 711,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n711/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p692.txt",
+      "extract_sha256": "e8ad13172a3fabf3c1ebc7cf9bbdfa164ba2a4fab1bb3a294f865f15b899385f"
+    },
+    {
+      "printed_page": 693,
+      "pdf_page_index": 712,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n712/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p693.txt",
+      "extract_sha256": "1fb4fc474b007a13e8d856e0378951cb8662f5c80fbc3b4ecab1c2d927f11c0c"
+    },
+    {
+      "printed_page": 694,
+      "pdf_page_index": 713,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n713/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p694.txt",
+      "extract_sha256": "bf38ca1d7eee0e07e60189a4adea3fe37ada85570f0eca9e6508c36d081e2796"
+    },
+    {
+      "printed_page": 695,
+      "pdf_page_index": 714,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n714/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p695.txt",
+      "extract_sha256": "af439544d95cdcfbd268d051fe5f3baa3076f0faadf3f94a281d0a84778d6d78"
+    },
+    {
+      "printed_page": 696,
+      "pdf_page_index": 715,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n715/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p696.txt",
+      "extract_sha256": "e66ce8b11fe7e07b55c9e2171702ba8e2f57d31972dde07814ce837cf4a9fd68"
+    },
+    {
+      "printed_page": 697,
+      "pdf_page_index": 716,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n716/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p697.txt",
+      "extract_sha256": "bd28f6be5ebe6819c2dc79ef5194afc089ecc0bbba33c52ca74ffe6d3158cc89"
+    },
+    {
+      "printed_page": 698,
+      "pdf_page_index": 717,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n717/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p698.txt",
+      "extract_sha256": "33601bb4e2c1b8ea9b5ddc7fa3da591a62076bdbd3110197475cdbbf6f14d033"
+    },
+    {
+      "printed_page": 699,
+      "pdf_page_index": 718,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n718/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p699.txt",
+      "extract_sha256": "e39b6315efc95a06f08e639d03e7181897638ed56f56661d653cfe721f8bd1d3"
+    },
+    {
+      "printed_page": 700,
+      "pdf_page_index": 719,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n719/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p700.txt",
+      "extract_sha256": "b4d930e28d6454f5d75ec2c4884001120b0607581c3a115a5a766dca970df160"
+    },
+    {
+      "printed_page": 701,
+      "pdf_page_index": 720,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n720/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p701.txt",
+      "extract_sha256": "ce4b2a248fee05afe3806e10ab92e9c98965231171bd485bd60a3c0199c3abcd"
+    },
+    {
+      "printed_page": 702,
+      "pdf_page_index": 721,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n721/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p702.txt",
+      "extract_sha256": "952e1e7a5b162cd2b40c81b45b3f52f62d154a1a5342d2c65fb813409a426aea"
+    },
+    {
+      "printed_page": 703,
+      "pdf_page_index": 722,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n722/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p703.txt",
+      "extract_sha256": "2ed67b56ba742bd150f76d7b67fe6420374b81436894c2fe59b8f39263365351"
+    },
+    {
+      "printed_page": 704,
+      "pdf_page_index": 723,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n723/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p704.txt",
+      "extract_sha256": "b6bf67c4905345d2b03ca50b2803312538e1eaab1f32a7dd8d7fa3c0686d0295"
+    },
+    {
+      "printed_page": 707,
+      "pdf_page_index": 726,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n726/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p707.txt",
+      "extract_sha256": "a8d08ddce23bfdf6c2f8a56203f3ac281b58bf983a64921fe2dcd4955b2f1db1"
+    },
+    {
+      "printed_page": 708,
+      "pdf_page_index": 727,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n727/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p708.txt",
+      "extract_sha256": "cac03b5a9e85e1793d60256a0ed50e25e4c2f19bbfd3070884b6fa22b17e145b"
+    },
+    {
+      "printed_page": 709,
+      "pdf_page_index": 728,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n728/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p709.txt",
+      "extract_sha256": "d208d6e6014858db39dc7cf2d67e5251f7c1078aca5e8edd0da78466a8851747"
+    },
+    {
+      "printed_page": 711,
+      "pdf_page_index": 730,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n730/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p711.txt",
+      "extract_sha256": "3be5858abbef5dd235ba1f13b8077cd8213902a369c29535f61269bbd559ee0f"
+    },
+    {
+      "printed_page": 712,
+      "pdf_page_index": 731,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n731/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p712.txt",
+      "extract_sha256": "71e43e89650918e3dc0264777623ab4490063d7a3f7c955168cad5f240f1d7a1"
+    },
+    {
+      "printed_page": 715,
+      "pdf_page_index": 734,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n734/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p715.txt",
+      "extract_sha256": "18f831bb898e628f5a63610f33d3fcdd0288419419a947598f3e338283658696"
+    },
+    {
+      "printed_page": 716,
+      "pdf_page_index": 735,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n735/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p716.txt",
+      "extract_sha256": "6218fd9a5c6340189835ed16a8599b260123eac9f40b61f9cec1dafaaa94992b"
+    },
+    {
+      "printed_page": 717,
+      "pdf_page_index": 736,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n736/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p717.txt",
+      "extract_sha256": "9062212e3f29009ada7f40db5e75ec06cbc77bf061e5603b7249ed65dd452ca0"
+    },
+    {
+      "printed_page": 895,
+      "pdf_page_index": 914,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n914/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p895.txt",
+      "extract_sha256": "9163d1661a23711c5955bd30162081e864a00770af3cf9d3e97d7a50008923d8"
+    },
+    {
+      "printed_page": 896,
+      "pdf_page_index": 915,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n915/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p896.txt",
+      "extract_sha256": "a39ff032b678b3d0f6bbd2a7d30ad389489cb0558639d7f08969b744ef2e2105"
+    },
+    {
+      "printed_page": 929,
+      "pdf_page_index": 948,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n948/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p929.txt",
+      "extract_sha256": "dfa609991117186edb05c200e5d553786e6bd509c168a04ee82c7874dfea0e37"
+    },
+    {
+      "printed_page": 930,
+      "pdf_page_index": 949,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n949/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p930.txt",
+      "extract_sha256": "f12c76285306da6b6eaac22e6714b9880b018fa2c2a3f83822b526d293b852bd"
+    },
+    {
+      "printed_page": 931,
+      "pdf_page_index": 950,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n950/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p931.txt",
+      "extract_sha256": "b4592842a56ea06184a435aa9083d36cb6b87327393f0daec4ab777f00d93acf"
+    },
+    {
+      "printed_page": 932,
+      "pdf_page_index": 951,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n951/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p932.txt",
+      "extract_sha256": "ab63f0deb1fbecbddc17288d12ad630448c227dbac34730e371770ac94f15e4a"
+    },
+    {
+      "printed_page": 933,
+      "pdf_page_index": 952,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n952/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p933.txt",
+      "extract_sha256": "1de8ec1e15ae8122a05c06954c91a22a8e8eec65217a969168b4b90ed7060537"
+    },
+    {
+      "printed_page": 934,
+      "pdf_page_index": 953,
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n953/mode/1up",
+      "local_extract": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p934.txt",
+      "extract_sha256": "361d43ac5d7945266c1fc2194219b242a13656463d0910640ec38fd9ec87211d"
+    }
+  ],
+  "inspected_images": [
+    {
+      "printed_page": 123,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p123.png",
+      "sha256": "a00e411b754d8f55431756b1ca99df59840958b19863778e2375340402977db8",
+      "finding": "Printed4oclock/6intended/8arrival confirmed; not OCR-corrected."
+    },
+    {
+      "printed_page": 703,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p703.png",
+      "sha256": "b3f203e15bf69065b3adc1e54d3467ef1b413adbd872f5c4f1664d5de75a59bf",
+      "finding": "Seven regiments and City Troop across overnight; positive orders/failed communication confirmed."
+    },
+    {
+      "printed_page": 934,
+      "path": "C:\\Pyrrhic\\mandate-research-sources\\S99\\OR-I-II-p934.png",
+      "sha256": "6f63ad36a5f33d25d04b1174e69083753cfdf10e900eb2456dd8ffecffc51e04",
+      "finding": "17Juneheading, morning16th intelligence and yesterday/lastnight; instructions received15th confirmed."
+    }
+  ],
+  "local_archive": "C:\\Pyrrhic\\mandate-research-sources\\S99"
+}
