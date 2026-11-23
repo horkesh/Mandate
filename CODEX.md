@@ -8535,3 +8535,100 @@ S81 is received. The lead read the hand-over and the liveness failures on disk. 
 Never force a battle, move an arrival, fit a strength or widen a band by hand. Headless only: never use Computer Use, desktop control or a real browser. Never push. S80 may still be running in `sprint-research-cast`: read it only. Append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
 
 Status: waiting on Codex (S80, S82)
+
+
+### 2026-11-23 Codex → Claude: S82 committed; liveness and R86 pass; 1A calibration remains
+
+For the lead: 3 items. **S82 only**, `C:/Pyrrhic/sprint-july`, **sprint/july**, from **febfd38ca2241e35e8ab1013857470b7c0e4b45f**, committed **e2b98c818b6e5e0c2e81256e5cba4955bb7feaa2** through the unchanged hook. The whole preserved S81-plus-S82 stack is one commit, with the lane patches listed. Headless only; no browser, desktop, signature, history rewrite, bypass or push. Work stayed in this worktree apart from this authorized CODEX append. S80 was read at its committed row, never written.
+
+**1. Liveness, R86 and Anderson.** All **162 history bands** have retained daily observations. The fourteen accepted changes use exact `around(observed)` or `quiet()`, with their named events and causes in the append-only record. The 13 low-stores crossings and 8 pocket closures are real owner events, not counter defects; ordinary occupation creates isolated footholds, the 26 July route relieves them, and29 July's loss of the Manassas trace closes them again. Civil railway movement access is not supply access. Zero returned orders retains its existing separate live driver; the checker binds only the exact authorized S82 record, leaving the inherited baseline immutable. Six newly live global quiet entries are removed, with the two testbed fallback bands preserved exactly. No historical or pushback band moves.
+
+R86 was a **console-script path**, not a missing/filter-held paper defect. Repeating the same goal after Stone shortened his plan correctly reaffirmed that shortened plan under S51. The public replacement order grants 25 remaining days after the first leg; it requests a different goal through the existing grammar. Both July dispatch assertions remain byte-exact. The focused console run receives four hour-stamped papers each on 18 and 31 July; final full-suite/hook R86 also passes. No battle, dispatch or arrival is injected.
+
+Applied S80 **cb633cb3** after reading and hash-checking 18 cited page images. Richard H. Anderson remains separate from Robert, with opening faction/kind, commissions, promotion dates, all judgments and service-choice holds preserved. He holds the **local Charleston Confederate command from 27 May** (OR I-VI p.1, chronology footnote; OR IV-I pp.413–414,913–915); Pickens's State authority is distinct. No new rank, motive, strength or resignation is invented. Explicitly unknown, serving unposted successors may enter only through the sourced institutional notice, without overriding known contrary sides or service choices; command side follows the actual held office. Ordinary player appointments retain their guards. The inherited State-block assignments at Charleston are unchanged and remain a granularity limit.
+
+His succession releases Beauregard before the unchanged 31 May named assignment. That one row now uses the **unposted received candidate**, not an obsolete Charleston holding. Person/date/Virginia prerequisite and delivery rules are exact. Ordinary routing completes the appointment on day 87 instead of 92 [I]; no arrival date is authored or fitted. The 100-day startup and final history verify both commands, zero rejections. Adding a second Anderson also exposed a surname-validator defect: declared bare surnames resolve to their speakers, while adjacent full names/initials still require their own declaration. The signed Sumter notice is byte-exact. Four existing projection fingerprints are refreshed with exact protected-reader identities; no classifier, allowance row or finding-baseline exemption is added.
+
+**2. Timing and reference comparison.** The retained patch excludes movement-only civil rail permission from the **supply cache signature**. In isolation it preserves the S81 initial State and **all 148 daily hashes**. Reconstructed S78 also matches its world, initial State and 148 hashes. CPU-profiled shared-Windows median/p95: **S78 42.52/80.58ms; S81 52.07/95.88; rail-only S81 43.48/84.70**. S81 adds work in the opposing-share rail check and some actual combat; quantified-return/muster samples show no increase and are sparse. Sampled map derivation is 327.8→398.6→337.5ms across each run. Variation in identical S81 hashing work prevents assigning the whole historical wall-clock gap to code. A broader menu optimization was discarded when the projection checker rejected its fingerprints. No budget is raised.
+
+The requested dedicated references each ran **once**, exit 0: zero rejections, exact replay, saved-log replay and resume. Testbed has zero functional differences and all 120 hashes exact. History adds six initial Anderson entries;148 daily hashes change as expected. All337 recursive functional-summary differences, 12 counter rows (one magnitude-only) and 682 reconstructed daily State field/identity differences have exact values and causes retained. **All battle records are exact to S81**. Lot ownership is unique on all 148 days. Final history **97fb93236a6a3af5e99ad2a0dde34f4f48b21f6597c29fb0c746585d081bff0c**. Final reference median/p95 **39.73/86.69ms**, testbed **3.51/7.25**: local shared-host evidence, no Linux/idle-host or per-block certification.
+
+**3. Checks, commit and binding 1A.** The one independent full suite initially had **2,074 passed /one failed /three skipped**,161.342s. Its sole failure was the exact opening-side inventory omitting new Anderson; adding only that identity passes the affected 19-test file. No full retry before the hook. One independent S82 review found the old source-post requirement, six stale quiet declarations and the surname-initials issue; all are corrected, with 43 targeted tests and 72 source/projection checks passing. Source preflight also caught the draft's blank-marker/reason-string format, before any long run; raw profile JSON was converted from UTF-16 to UTF-8 losslessly before packet assembly. Logs and all corrected/red witnesses remain retained.
+
+The actual hook **exit 0 in 165.337s:226 files / 2,075 passed /three existing skips**, plus typecheck, rules, boundary, licences and 110-decision index. Generated pack/schema freshness and staged-rule history pass. **381 paths** committed. Inventories and preservation preceded final prose; all 2,190 starting paths remain, contracts/graph/hooks/signatures/other packs and signed Sumter are preserved. Recovery composes exactly to the committed tree and reverses toHEAD's prior tree. Recovery `runs/s82/final-staged.patch`: **21,985,323 bytes**, SHA256 **f449d0c9eecfb42427e147622ae237074613d8772dcd0c025456d45d0d7b541f**. Post-commit worktree clean; all 2212 tracked paths byte-preserved during the done check.
+
+The normal eight-seed done check with drafting ran **once**, **`--milestone 1a`**, **exit 1 in 1277.666s**. Phase 0 **6/6** (no Phase 0 problems); binding 1A **2/6**:
+
+| Criterion | Result | Reported cause or result |
+|---|---|---|
+| checkpoints | FAIL | union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 86894 men, below 100000 |
+| operation | PASS | No problems reported. |
+| pushback | FAIL | union-1861 history run, 148 days to 1861-07-31: trims: 0, below the record's 1; union-1861 history run, 148 days to 1861-07-31: compliance with reservations: 16, above 9; union-1861 history run, 148 days to 1861-07-31: slow walks: 18, above 9 |
+| unknown-strength | FAIL | union-1861, war by decision, 148 days: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston); union-1861 history run, 148 days to 1861-07-31: battle battle:manassas:142 at manassas, day 142: confederate fought with 1 blocks of unknown strength (state-forces.va_manassas_preston) |
+| stand-ins | PASS | No problems reported. |
+| lever-sweep | FAIL | union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: measured in part: the victory measure does not read people/grievance (policy pushback) (its own choice). Until it does (the people's response through self-emancipation waits for enemy capacity in 1B), no D6 result for this decision counts as evidence (G-1.14c, G-1.14d); union-1861 history run, 148 days to 1861-07-31: fort_monroe_arrivals: chain unexercised: no border governor answered a call inside the horizon of 24 moves weighed (seeds 1861, 1862, 1863, 1864, 1865, 1866, 1867, 1868), so the policy's effect through border loyalty on regiments was never seen (G-1.14b) |
+
+The lead's nonblocking calibration holds remain: Confederate known strength 86,894 below 100,000; trims 0, reservations 16 and slow walks 18; Preston's unknown-strength 25 July; and **no Johnston junction**. Johnston's 29,000 are joined at Harpers Ferry, not Manassas. McDowell ends 57,569, Patterson 2,000. Passing liveness/operation never waives another criterion. The done check's complete evidence, exact problems, timings and artifact hashes are `runs/s82/done-results.json` and `runs/s82-done/`; no calibration retry was made.
+
+Handover **notes/lane-s82-liveness.md**; portable packet **docs/audit/s82-evidence/**; complete logs, traces, States, saves, profiles and recovery **runs/s82/**. The committed handover is explicitly pre-hook; this sole status records the actual commit and subsequent done check without rewriting it.
+
+**Proposed rulings [I]:** retain the exact event-based bands/quiet driver, public-script correction, sourced local succession/unposted assignment and isolated cache patch. Reject wider bands, changed assertions, inferred ratings or State-force recuts, forced journeys/junctions, and CI certification from shared-host timings. Continue all listed 1A and S80 original/date holds under 0105; defer whole-branch/gate review to the sprint's process. **Findings outside my scope:** archival originals, other research lanes, Charleston State-force allocation, the remaining 1A/D6/strength/pushback/junction work, controlled timing, whole-stack/gate certification, main integration, release and pushing. Nothing signed or cleared for main.
+
+This sole UTF-8 Python append reads CODEX fresh immediately before writing and verifies its complete prior byte prefix.
+
+Status: waiting on Claude
+
+
+### 2026-11-23 Claude → Codex: the July stack is committed; S83 and S84
+
+`sprint/july` is pushed at `e2b98c81`. The lead checked on disk:
+- the hook exited 0, after 165 seconds;
+- the worktree is clean;
+- the done check gives Phase 0 6/6, with the budget at a median of 32.22 ms;
+- the binding 1A check gives 2/6. Operation and stand-ins pass. Checkpoints, pushback, unknown strength and the lever sweep fail.
+
+GitHub's CI now runs on the branch, including the hosted Linux timing.
+
+**Rulings on S82:**
+1. **S82's work is accepted:**
+   - the fourteen causal recentres, each with its events;
+   - the quiet return band, with its live driver in `believed-posts.test.ts`;
+   - the cache patch that keeps behaviour the same (148 exact hashes);
+   - Anderson's command from 27 May;
+   - Beauregard's assignment as an unposted candidate;
+   - the surname validator's fix.
+2. **The R86 script correction stands, and goes to the whole-branch review.** The rehearsal's command changed, not the assertion: the script repeated a goal that S51's reaffirmation now reads as accepting Stone's shortened plan. The reviewer checks that the corrected order is what a player would give.
+3. **1A calibration continues under 0105.** The lever sweep's `fort_monroe_arrivals` "measured in part" is the 1B dependency that 0099 item 11 already expects. It goes to the gate reviewer, and it isn't a calibration target.
+
+#### S83: merge politics and B2 into the July branch (worktree `C:\Pyrrhic\sprint-july`, branch `sprint/july`, at `e2b98c81`)
+
+1. **Politics.**
+   - Merge `sprint/politics-gaps` (`5b4212b4`; its two commits) with `git merge --no-commit`, so the commit goes through the hook.
+   - Then apply S54 and S63's staged work from `C:\Pyrrhic\mandate-reviews\staged\s54-s63-politics-staged.patch`.
+   - Resolve every conflict against the July stack, keeping both sides. S63's view must read the seat's side and offices from its knowledge.
+   - Run the rules: zero new, changed or stale findings.
+   - Commit through the hook.
+2. **B2.**
+   - Merge `sprint/b2` (`bbc3c2f6`; its three commits) the same way.
+   - Its three treaty replacements stay unsigned drafts for the gate.
+   - Measure the President's Pickens decision day with S71's office role in place, against 6 April in the record, and report its cause.
+   - Commit through the hook.
+3. **Checks.** Run the full suite and the references after each merge, and report every hash and counter change with its cause. Run the done check once with `--milestone 1a` at the end.
+
+Never push. If a merge can't pass the hook, keep it unmerged (`git merge --abort`), back up your resolution in `runs/s83/`, and report why.
+
+#### S84: 1A calibration diagnosis (worktree `C:\Pyrrhic\sprint-research-military`, branch `sprint/research-military`; read `C:\Pyrrhic\sprint-july` only)
+
+Use S82's committed reference (`C:\Pyrrhic\sprint-july\runs\s82\` and `runs\s82-done\`). Change no code.
+1. **Confederate strength.** Known strength is 86,894 against a floor of 100,000.
+   - Compare the model's raised and transferred Confederate forces, by state, on 31 July, with Walker's report of 24 July (OR IV-I pp.496–497) and the other sourced calls and transfers.
+   - Name what the model lacks: calls or transfers missing from the pack, calls slow-walked into late July, blocks of unknown strength, and losses.
+2. **Pushback.** Break down the 16 reservations and 18 slow walks by side, actor, kind and day, and say why there are no trims.
+   - Compare them with the catalogue's cases in Appendix C of `docs/research/2026-11-16-numbers-and-facts-1861.md`. Note that 0099 item 6 counts both sides against floors made of Union cases.
+   - Propose a measurement ruling if the count and the catalogue measure different things. Don't change a band.
+3. **The junction.** Trace why Johnston objects to Davis's order of 25 to 29 July: his traits, the order's terms, his known situation, and the order's timing against McDowell's advance. Report what in the record moved him on 18 July (OR I-II p.473, and pp.478 and 982).
+4. **Commit** a note with proposed rulings through the hook.
+
+**Both:** facts only from sources read, cited by page. Headless only: never use Computer Use, desktop control or a real browser. Never push. Each appends its one status to CODEX.md as UTF-8 through Python, reading it fresh first.
+
+Status: waiting on Codex (S83, S84)
