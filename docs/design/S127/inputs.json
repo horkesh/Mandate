@@ -1,0 +1,199 @@
+{
+  "base": "6e68cdedddaa4877efa9d7d62da59a25d486ff66",
+  "kernel_commit": "499607bbdf45df47b18538977cac5f0282779f09",
+  "inputs": [
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/world/mandates.ts",
+      "sha256": "fb8422631979477560d02064e74698e5018d74a94b3391e9fbf9e9a06ab47169",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/command/authority.ts",
+      "sha256": "377da3017c4cfc150651ddf5e47a44748dc1c9341dd2434f1740dfd476e2b1ff",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/tick/mandates.ts",
+      "sha256": "373cfe476f05e9b6dc41d8284cd3fc9fc4391fa9b105955152607cef607d2691",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/seats/local-actions.ts",
+      "sha256": "0069741c79f067272a3ac16fe1bb39e5fe02c83c8f6c8e4f2841997de4e84969",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/planner/route.ts",
+      "sha256": "b2d641f2a9752dd982c36e7146a58ab56972dfac67b39fa217c46ed6d1867f9d",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/planner/context.ts",
+      "sha256": "8275158b34d2fd4a0047cbdcc03742852aa9cd67b29fa1848e2378b8f19b6079",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/planner/input.ts",
+      "sha256": "4ba7ab2c6a485ffb9d09d7c3692b789a5686e7efc6530c095c25f03d8f8c3d9d",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/planner/axes.ts",
+      "sha256": "2b59454b6069c0fb9c92fd990c01bb8ea6bd1f9c8170c83bce424c2f1f630a90",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/planner/score.ts",
+      "sha256": "9a28132fce0687d4834610bd735e8c03db40417cb0ede6d69178e28b1faf121f",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/supply/supply.ts",
+      "sha256": "02f291c5323f2e046dc4bc44f19984baff03ae8a4494ffc667913afe7a80825e",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/forces/stores.ts",
+      "sha256": "e6721a94d8a7895a522d01b487fe68426c7e5f2da0276b30d2618191b262b882",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/forces/detachments.ts",
+      "sha256": "6b5a16c1bfa908963cbea9f0af3328db41fc0d5f1ccb00b2a369ea5d69c35dd1",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packages/kernel/src/tick/tick.ts",
+      "sha256": "4fe5c56a2db1f8eec488ec87cacb880d95752229f4516fde283157a975ba10d7",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packs/union-1861/source/world/regions.csv",
+      "sha256": "4ad5857be8dca63af6ad94e86f308e4db130b33b8a211d39a54ef0d33450f5d8",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "packs/union-1861/source/world/edges.csv",
+      "sha256": "03a60cdc6da6770e13d095df6f7f03403a8198d3d0f97188d0a322b2d33fbe28",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "docs/research/S123/source-reading.json",
+      "sha256": "b48c0bda517399d73dc29358260d6d2cc2b8f805cd52258efb5dfc602233e4f9",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "worktree": "C:\\Pyrrhic\\sprint-mandates",
+      "commit": "499607bbdf45df47b18538977cac5f0282779f09",
+      "path": "docs/research/S123/sources/OR-I-II-p668.txt",
+      "sha256": "8fe19d66364e36c5825272d43ad2cc555d50b5e5bdb3dd0408c5d8918c11399e",
+      "bytes": "git blob; LF; no working-tree substitution"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S115-ATTACK-OR-DEMONSTRATE.md",
+      "sha256": "1a09c73c4393aa097d08ba53eef51303fbf961383832899aeb47cf70cd5a091c",
+      "bytes": "working file read only; raw bytes"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S115\\tests.csv",
+      "sha256": "4a523fb4775aa11ffa46a9edb73838cc789868cde9db471925f9ba450f3b9cd8",
+      "bytes": "working file read only; raw bytes"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S115\\source-pages.csv",
+      "sha256": "400d7fc061400d92c012f5cb38d137715caec1bf9775c4c37c5ced77d277d4ed",
+      "bytes": "working file read only; raw bytes"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S115\\readings\\OR-I-II-p166.txt",
+      "sha256": "d0fd3894376f31c3b998c4327a187f1f52eb56e88fdd36d3f17557fa1a0c1137",
+      "bytes": "working file read only; raw bytes"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-pushback\\docs\\design\\S115\\readings\\OR-I-II-p168.txt",
+      "sha256": "e4cf7b37f756bb7068d7155ed353195131a7fd9b14a88c426842115bb087856d",
+      "bytes": "working file read only; raw bytes"
+    },
+    {
+      "path": "C:\\Pyrrhic\\sprint-design\\docs\\design\\S110-RECEIPTS-LETTERS-AUTHORITY.md",
+      "sha256": "3ea5a31416b1581aabd9da593db33819ffe295783ef8b0e776c3a9b1de9c664c",
+      "bytes": "working file read only; raw bytes"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0121-letters-receipts-and-authority-a-commander-receives.md",
+      "sha256": "56d409275911d7f7e002873d15ffd3f3ecee3407a04ac7b38433e83d69b97aa5",
+      "bytes": "working file read only; raw bytes"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0123-attack-or-demonstrate-is-a-duty-to-detain.md",
+      "sha256": "558a05ab276c7a5b6e4de7ed9cc2715244f91a54a8e4054e7abc2c1a7c178b2c",
+      "bytes": "working file read only; raw bytes"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0124-standing-authority-comes-from-an-assignment.md",
+      "sha256": "8fc45815cea0af9afb235ba71e1791609cdd2340e2c8dbd65a2aa96e8896f928",
+      "bytes": "working file read only; raw bytes"
+    },
+    {
+      "path": "C:\\Pyrrhic\\ByOrderOfThePresident\\docs\\decisions\\0107-the-sprint-continues-on-codexs-renewed-allowance.md",
+      "sha256": "a6db84cbb26fb9457a1067c2c7444d544f63d52221bc86c6b408bcaa715ceb3f",
+      "bytes": "working file read only; raw bytes"
+    }
+  ],
+  "source_readings": [
+    {
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_page": 668,
+      "path": "OR-I-II-p668.txt",
+      "url": "https://archive.org/details/warofrebellion02secrrich/page/n687/mode/1up",
+      "sha256": "8fe19d66364e36c5825272d43ad2cc555d50b5e5bdb3dd0408c5d8918c11399e",
+      "reading": "Retained primary OCR read in full from committed S123; no fresh scan or network verification"
+    },
+    {
+      "work": "Official Records, series I, volume II (1880)",
+      "printed_pages": [
+        166,
+        168
+      ],
+      "paths": [
+        "../S115/readings/OR-I-II-p166.txt",
+        "../S115/readings/OR-I-II-p168.txt"
+      ],
+      "receipts": "../S115/source-pages.csv",
+      "reading": "Existing retained primary OCR read in full; raw byte hashes in inputs; original normalized page hashes and URLs in S115 receipt"
+    }
+  ],
+  "kernel_reading_scope": "Named functions and relevant excerpts; region rows and edge/tick semantics, not historical verification of all map citations"
+}
