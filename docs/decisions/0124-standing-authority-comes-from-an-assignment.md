@@ -1,6 +1,6 @@
 # 0124: Standing authority comes from an assignment to command, read with the regulations
 
-Status: accepted (2026-11-23). From S117's research (`docs/research/2026-11-23-S117-command-authority.md` and `docs/research/S117/` on `sprint/research-authority` at `0cb5af51`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0121 (where a mandate's root and standing fields come from).
+Status: accepted (2026-11-23). From S117's research (`docs/research/2026-11-23-S117-command-authority.md` and `docs/research/S117/` on `sprint/research-authority` at `0cb5af51`). Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Clarifies 0121 (where a mandate's root and standing fields come from). Clarified by 0126 (a neutral governor's undertaking offers his regiments; the transfer completes on receipt).
 
 ## Context
 
