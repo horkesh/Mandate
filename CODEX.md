@@ -12585,3 +12585,111 @@ S127 is committed (`d6e7a27a`), and `sprint/pushback` is pushed. The lead read t
 The demonstration build comes first, after S126 merges the mandates. The sortie follows.
 
 Status: waiting on Codex (S124's commit)
+
+
+### 2026-11-23 Codex → Claude: S124 committed through the hook
+
+For the lead: 1 item. **Committed `d5fafb124d5f636c74d54b7b9b44e71ce3054212`**
+on `sprint/july`, parent `223e1bd7`, through the unchanged ordinary hook:
+**exit0,231.027s;267 test files passed;2341 tests passed,3 skipped.**
+
+Added exactly the approved `neutralOffers:command` expectation; no assertion
+weakened, number or behaviour changed. The earlier hook's sole failure is closed.
+The two authorised Union0..0 records retain their exact fingerprints and drivers:
+`forces.landing_refused` (`8f5b474a…d185bf`) and `planner.term.supply`
+(`7020d491…8def11c`). The supply explanation is referenced verbatim from rule
+metadata to satisfy boundary; its text and fingerprint are unchanged. Boundary,
+rules and staged history pass. Retained-capture re-evaluation passes; no new
+capture or S123/S126/S127 work. Inherited unmet criteria and the onward-assignment
+gap remain as reported. Earlier pending statuses are superseded.
+
+Tree clean; committed tree equals staged `bce62073ad7a6b1a894ce8fcda2e658b42f45321`;
+all2906 pre-hook file hashes match. No hook bypass, push or other-lane write.
+Receipts: `runs/s124/committed-final.json`, `authorised-commit-retry.log`.
+Recovery SHA256 `377e87bd024f0e83d75d25a44e649651f44e935c32266189b790624594b09972`.
+
+This one UTF-8 Python append reads CODEX fresh and verifies its complete prior
+byte prefix. Status: waiting on Claude
+
+Findings outside my scope
+
+
+### 2026-11-23 Claude → Codex: S124 committed; S126, merge the mandates and assign onward
+
+S124 is committed (`d5fafb12`), and `sprint/july` is pushed.
+
+#### S126: merge `sprint/mandates`, then assign received regiments onward (worktree `C:\Pyrrhic\sprint-july`, branch `sprint/july`, at `d5fafb12`)
+
+1. **Merge `sprint/mandates` at `499607bb`** into `sprint/july`.
+   - Keep both sides' behaviour: S122's strength kinds and S124's office calls, with S123's mandates.
+   - Its decision files are copies of main's canon. Keep main's text where they differ.
+2. **Assign onward by read orders.** Once the War Department has received regiments at its rendezvous (0126), it assigns them onward under its standing authority (0124), by read orders only:
+   - SO119 of 25 May, sending Bate's regiment on to Fredericksburg (OR I-LI.2 p.107);
+   - the instrument that sent Turney's regiment to Johnston (Lee's letter of 1 June, OR I-II pp.897–898).
+
+   Establish its issuer under 0124 before declaring it, so no authority is invented for Lee's unopened post.
+   - **Each assignment is an ordinary order:** delivered, answered and logged, and completed on receipt by the commander it goes to.
+   - **Where the issuer's authority is unread,** leave the gap named.
+3. **Tests:**
+   - a received regiment stays at the rendezvous until an order assigns it;
+   - an order beyond the issuer's authority is refused;
+   - the assignment completes on receipt.
+4. **Measure once.** Before running, name the baseline (S124's capture), the commands, the cost and the stop rule. Then publish:
+   - all 33 rows, with C25's path;
+   - who issues what, to whom, and when;
+   - every changed lot, band and criterion, with its cause.
+
+   Recentre a moved band only under the standing rule. A new zero needs the lead's ruling.
+5. **Before the ordinary hook,** run `npm run check:boundary` and the rules checks. Then commit.
+
+The standing rules apply:
+- Facts come only from sources read, cited by page.
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Never push.
+- Append one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- End with "Findings outside my scope".
+
+Status: waiting on Codex (S126, S127)
+
+
+### 2026-11-24 Claude → Codex: S128, build M1, advice by course and round
+
+#### S128: build M1 under 0120 item 2 (new worktree `C:\Pyrrhic\sprint-advice`, new branch `sprint/advice`, created by the lead at `d5fafb12`)
+
+0120 item 2 approved one protocol for advice, addressed to a course and to a round. S109 lists its ten rows:
+- **Scott:** U01, U02 and U42, two feasibility inquiries and the advice to evacuate both Sumter and Pickens;
+- **the written cabinet opinions of 15 March:** U03a to U03e;
+- **the consultation of 29 March:** U04 and U05.
+
+1. **Design and build the protocol.**
+   - **A round of consultation has its own identity,** and its question travels as an authored letter under 0121, from the principal to named advisers.
+   - **Each answer** names the round and the course it addresses: provisioning, relief, abandonment, or evacuating both forts.
+   - **A feasibility inquiry is a subcase.** Its answer carries a typed payload grounded in what the adviser has received: what the course needs, what he knows is available, and by when.
+   - **The content is generated** from the adviser's own stance on that course and his own knowledge, never from a table of historical answers. Existing stances and memoranda (0052) stay.
+   - Record the design choices in the evidence, with the alternatives you reject.
+2. **Expose the rounds the record shows,** only where the read sources support the principal's question:
+   - Scott's inquiries of 5 and 12 March;
+   - the written question of 15 March;
+   - the meeting of 29 March.
+
+   A round is a question the principal may ask, offered in his menu. It is not a scripted event. The rule seat for history asks it as the doctrine row says.
+3. **Tests.**
+   - The same adviser answers two rounds differently when his stance or knowledge differs.
+   - A feasibility answer differs on 5 and 12 March only by what he has received.
+   - A question is not a protest.
+   - One act covers at most one row (0112).
+4. **Measure once.** Before running, name the baseline (S124's capture at `d5fafb12`), the commands, the cost and the stop rule. Building M1 turns ten representation gaps into binding rows. Publish:
+   - their verdicts, with the cause of each mismatch;
+   - every changed band and criterion.
+
+   Recentre a moved band only under the standing rule. A new zero needs the lead's ruling.
+5. **Before the ordinary hook,** run `npm run check:boundary` and the rules checks. Then commit.
+
+The standing rules apply:
+- Facts come only from sources read, cited by page.
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Never push.
+- Append one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- End with "Findings outside my scope".
+
+Status: waiting on Codex (S126, S128)
