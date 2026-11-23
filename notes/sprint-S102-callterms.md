@@ -27,7 +27,7 @@ push, rewrite, bypass or signature. Whole-branch/gate review remains deferred.
    C05/C07 comply. Pickens reserves at7 on the reserve, not C09's missing call.
    No new historical credit follows from these diagnostic changes.
 
-3. **Checks and remaining gate.** Cheap application audit **3,760 checks**;
+3. **Checks and binding result.** Cheap application audit **3,760 checks**;
    final ownership/governor/relay/schema tests **55/55**; startup replay,
    typecheck, rules, boundary, licences and decisions pass. First hook rejected
    the missing immutable declarations; consolidated naming/ownership correction
@@ -36,9 +36,16 @@ push, rewrite, bypass or signature. Whole-branch/gate review remains deferred.
    testbed artifacts reused. Corrected build hook **exit0,316.424s,
    244 files /2,182 passed /5 normal skips**, full Git fixtures included.
    All2,466 starting paths,29 signed files,46 protected inputs and four local
-   aliases preserved. This measurement commit's actual hook and the **one normal
-   eight-seed, drafting-retained `--milestone 1a` done check** are recorded in
-   `runs/s102/` and the sole final CODEX status; this pre-gate note predicts no pass.
+   aliases are preserved. Measurement committed **ae217736**, hook exit0,
+   243.364s,244 files /2,184 passed /3 normal timing skips. The **single normal
+   eight-seed, drafting-retained binding done check** completed **exit1,
+   1481.532s: Phase0 5/6,1A 2/6**. All268 checked hashes/non-clock
+   fields and complete coverage repeat the reference packet; all2501 pre-gate
+   tracked files remain byte-exact. [Full criteria](../docs/audit/s102-evidence/done-check.json)
+   retain every failure. No second binding run or acceptance waiver. Final
+   documentation-hook and recovery receipts are in runs/s102 and the sole CODEX status.
+   New measured budget failure: **43.85 ms median versus40 ms** (history39.18 ms).
+   No code/host cause is inferred without profiling, and no timing retry is added.
 
 Proposed ruling [I]: retain per-paper reading and the recorded/unscored boundary.
 The unchanged0–9 reservation window leaves qualified historical replies above
@@ -47,8 +54,24 @@ fitted traits/weights/thresholds, invented inventories, reply-derived issuer
 terms, July12 backdating, duplicate levies and raw-count coverage credit.
 All13 represented coverage failures and the100,000-men checkpoint remain unmet.
 
+
+| Milestone | Criterion | Result | Problems |
+| --- | --- | --- | ---: |
+| phase0 | behaviour | PASS | 0 |
+| phase0 | hash | PASS | 0 |
+| phase0 | resume | PASS | 0 |
+| phase0 | liveness | PASS | 0 |
+| phase0 | section-ten | PASS | 0 |
+| phase0 | budget | FAIL | 1 |
+| 1A | checkpoints | FAIL | 1 |
+| 1A | operation | PASS | 0 |
+| 1A | pushback | FAIL | 13 |
+| 1A | unknown-strength | FAIL | 2 |
+| 1A | stand-ins | PASS | 0 |
+| 1A | lever-sweep | FAIL | 2 |
+
 ## Findings outside my scope
 
 Exact contractual consent/organisation/support execution, unread originals and
 complete material balances; S100 and queued S99 build; repairs to unmet1A
-criteria; formal review/signatures, hosted CI, main integration, release and pushing.
+criteria or the failed timing budget; formal review/signatures, hosted CI, main integration, release and pushing.

@@ -161,11 +161,23 @@ are unchanged except for the explicitly named call selectors/profiles and
 generated schemas. Final inventories, staged-tree/hook receipts and recovery
 proof stay in `runs/s102/`.
 
-The build and measurement commits must pass the normal unchanged hook. The
-normal eight-seed, drafting-retained binding done check follows those commits
-once, with `--milestone 1a`. Its actual result, and final commit/hook receipts,
-are recorded in the sole fresh-read UTF-8 Python CODEX append and the lane note;
-this measurement report does not predict that gate's result. Standing/whole-
+Build `f5e3ceed` and measurement `ae217736` passed the unchanged normal hook.
+Exactly one normal eight-seed, drafting-retained `--milestone 1a` check then
+completed with **exit1, Phase0 5/6,1A 2/6**, in 1481.532s.
+[done-check.json](done-check.json) retains all twelve criteria, every failed
+problem, timing evidence and artifact paths. All268 checked reference hashes
+and non-clock fields and the complete named coverage score are exact. The
+check preserves all2501 pre-gate tracked files byte-for-byte. No second
+binding check, fitted threshold or acceptance waiver. Final documentation-hook
+and recovery receipts are recorded under runs/s102 and in the sole CODEX status.
+The new measured Phase0 failure is the Union reference's **43.85 ms median,
+81.46 ms p95**, against the unchanged **40 ms median** limit. The same check's
+history timing is **39.18 ms median,79.43 ms p95**; testbed is3.96 ms median.
+These clock observations do not establish whether host load or this change
+caused the failure. No isolated profiling campaign or timing retry was added.
+[criterion-changes.json](criterion-changes.json) compares every criterion with
+S98; all **19 current problems** remain explicit, including this budget failure.
+Standing/whole-
 branch and sensitive-history gate review remain deferred under 0106/0107.
 
 Proposed ruling [I]: retain per-paper reading and the recorded/unscored boundary;
