@@ -12,4 +12,4 @@ Commit normally through the unchanged hook (expected several minutes); pass requ
 
 ## Findings outside my scope
 
-The term/muster evidence gap remains open. Remaining original-record retrievals and identity joins, S74/S73, pack application, timing certification, integration and release remain with their owners. One fresh-read UTF-8 Python append to the main CODEX file reports the actual commit result. Never push.
+Unfinished S75 work: remaining original-record retrievals and identity joins are still required by the original request; the evidence gap and acceptance criterion remain open. Separate work outside S75 comprises S74/S73, pack application, timing certification, integration and release. One fresh-read UTF-8 Python append to the main CODEX file reports the actual commit result. Never push.

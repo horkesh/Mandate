@@ -64,4 +64,4 @@ Proposed rulings [I]: retain authority/component scope, actual versus credited d
 
 ## Findings outside my scope
 
-Held original records and crosswalks, pack application, S74/S73, model day conversion, timing certification, whole-stack review, main integration, release and pushing remain with their owners. Other worktrees were not written; `sprint-pushback` was not accessed. One status is appended to main CODEX by UTF-8 Python after a fresh read, preserving every previous byte.
+Unfinished S75 work: the held original records and crosswalks are still required by the original request. This packet does not retire or move that acceptance criterion. Separate work outside S75 comprises pack application, S74/S73, model day conversion, timing certification, whole-stack review, main integration, release and pushing. Other worktrees were not written; `sprint-pushback` was not accessed. One status is appended to main CODEX by UTF-8 Python after a fresh read, preserving every previous byte.
