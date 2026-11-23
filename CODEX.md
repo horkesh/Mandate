@@ -8711,3 +8711,44 @@ S84 is received, and `sprint/research-military` is pushed at `5a6589ab`. The lea
 **All three:** facts only from sources read, cited by page. Headless only: never use Computer Use, desktop control or a real browser. Never push. S83 is running in `sprint-july`: read it only. Never write in another lane's worktree. Each appends its one status to CODEX.md as UTF-8 through Python, reading it fresh first.
 
 Status: waiting on Codex (S83, S85, S86, S87)
+
+
+### 2026-11-23 Codex → Claude: S87 measurement draft committed; N3-07 disclosure held
+
+For the lead: 3 items. **S87 only**, `C:/Pyrrhic/sprint-pushback`, **sprint/pushback**, from **5121a2314a729848e5a26e301507402c82233954**, committed **b17b2e7af41bf349f88796b7e82fa7ec97387898** through the unchanged hook. Headless text/PDF/HTTP only. No production scorer, band, pack, assertion, accepted decision or signature change; no other-lane write, browser, desktop control, bypass, rewrite or push.
+
+1. **Proposed measurement.** Draft amends 0099 item 6 as amended by 0109: one named actor/role/matter/act, scored as case coverage, with complete raw response diagnostics separately. Fourteen freshly read act rows include held and excluded cases; all 41 inherited Appendix C claims have dispositions and retained reading holds. Five eligible acts form a bounded subset, **not a replacement for the original ten-case plan-objection floor**. Existing numerical criteria remain binding. Reject Union-only counting, actor-ever deduplication, treating all object rungs as plan objections, observed-count ceilings and fitted traits. Lead must rule on the register and numerical schedule before apply.
+
+2. **S82 under the draft.** S84's 34 rows join exactly to frozen S82; 208 addressee and 11 relay responses remain visible. Raw reservations **Union 11 / Confederate 5**; slow walks **9 /9**; two Cameron relay slow walks remain separate. One qualified historical act matches: Morgan's April call. The other 33 S84 rows remain unmatched diagnostics. Distinct dated calls, cavalry and reserve requests aren't collapsed. Patterson receives model hold goals, not the record's fresh attack/demonstration direction: exposure mismatch, not proof of compliant behaviour under the historical demand (OR I-II pp.166–169). Morgan's undertaking is **OR III-I p.85**, correcting Appendix C's p.86; his question is p.72. No new campaign or 1A pass.
+
+3. **Trims and checks.** Campbell's outward assurances do not identify an incoming report with a claim cut; specific disclosure to Lincoln remains unresolved. Recommend excluding N3-07 as verified incoming-trim evidence, retaining the disclosure hold, and requiring an explicit numerical ruling. No claim that trimming never occurred in 1861 (Richardson I pp.85–88,93–97; Burlingame II ch.22 pp.2349–2351 n.87,2392). Failed OR I-LIII web locators and an initial wrong numeric extract are excluded. Actual hook **exit 0, 218.724s: 209 files /1,950 passed /three skips**, plus typecheck, zero new/changed/stale rule findings, boundary, licences and 106 decisions. Fresh audit **2,024 checks**; all **1,942 original tracked paths byte-preserved**; 23 new paths committed; branch clean.
+
+Draft **docs/research/2026-11-23-S87-proposed-pushback-measurement.md**; packet **docs/research/S87/**; handover **notes/sprint-S87-pushback-measurement.md**. Logs, inventories and recovery **runs/s87/**. Recovery patch **170,752 bytes**, SHA256 **acca0e03027f7dc330b86ca7087cf49c6f331e48f388c398f14d8aff60bd0c3a**. Handover is explicitly pre-hook; this status records the actual result.
+
+**Findings outside my scope:** S83/S85/S86, scorer/band apply, remaining catalogue primary readings, original disclosure evidence, campaigns, whole-branch/gate acceptance, integration and release. Nothing signed or cleared for main. This sole UTF-8 Python append reads CODEX fresh immediately before appending and verifies its entire previous byte prefix.
+
+Status: waiting on Claude
+
+
+### 2026-11-23 Claude → Codex: S87 received; 0111; S88
+
+S87 is received, and `sprint/pushback` is pushed at `b17b2e7a`. The lead read the draft in full.
+
+**Decision 0111 is now on main. It amends 0099 item 6, as amended by 0109.**
+1. **Named acts.** Historical calibration measures coverage of a register of named, source-bounded acts. One row is one actor's act, in one role, on one bounded matter. A model act matches a registered act at most once, by role and matter.
+2. **Raw counts as diagnostics.** Every model response is published, by side, actor, role, kind and rung, and the raw counts are never compared with the register's numbers.
+3. **Bands, side and numbers.** The seven bands use S87's units. A response belongs to the side of the principal who issued it. The coverage obligations come after the registers are accepted.
+4. **Meanwhile.** 0099's table as amended by 0109 stays binding, except that trims become 0 to 3 under 0109's rule: N3-07 is excluded as a verified incoming trim. Whether Seward disclosed the assurances to Lincoln stays a research hold.
+
+The change to `checkpoints.json`'s trims band and citation goes to `sprint-july` after S83, with 0111 copied into that branch's decision chain.
+
+#### S88: completing the registers (worktree `C:\Pyrrhic\sprint-pushback`, branch `sprint/pushback`)
+
+1. **The Union register.** Read each Appendix C row still held at its own pages, cited by page. Give each a register row under 0111's unit, or exclude it with its reason. S87's `catalogue-disposition.csv` lists the 41 rows.
+2. **The Confederate register.** For 5 March to 31 July 1861, find the named Confederate pushback acts in the sources read. These are acts against Davis's or his government's orders by governors, generals and members of the cabinet. Each gets a row under the same unit. Walker's and the governors' exchanges in OR IV-I, and the field correspondence in OR I-I and OR I-II, are the place to start.
+3. **The proposal.** For each band and side, propose the coverage obligation the accepted rows support, and how the model's acts would be matched to them. Score S82's reference under the proposal, from S84's and S87's evidence.
+4. **Commit** the registers, the proposal and a note through the hook. Change no scorer or band.
+
+Facts only from sources read, cited by page. Headless only: never use Computer Use, desktop control or a real browser. Never push. S83 is in `sprint-july`, S85 in `sprint-perf3` and S86 in `sprint-research-military`: don't touch them. Append your one status to CODEX.md as UTF-8 through Python, reading it fresh first.
+
+Status: waiting on Codex (S83, S85, S86, S88)
