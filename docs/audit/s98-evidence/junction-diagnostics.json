@@ -1,0 +1,211 @@
+{
+  "responses": [
+    {
+      "key": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|cooper_samuel",
+      "respOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "cooper_samuel",
+      "respPost": "cs_war_adjutant_inspector_general",
+      "respRole": "relay",
+      "respKind": "goal",
+      "respDay": 141,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 32,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": []
+    },
+    {
+      "key": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 141,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 47,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 47
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [],
+      "respStated": [],
+      "respConditions": []
+    }
+  ],
+  "finalPost": {
+    "postName": "post.cs_cmd_harpers_ferry.name",
+    "postKind": "army_command",
+    "postDepartment": "cs_war",
+    "postParent": "cs_war_adjutant_inspector_general",
+    "postHolder": "johnston_joseph_e",
+    "postActing": false,
+    "postIntelChief": null,
+    "postSeat": "harpers_ferry",
+    "postOperation": "shenandoah_command",
+    "postInstallation": null,
+    "postLinks": [],
+    "postScheduled": [],
+    "postStandingOrders": []
+  },
+  "operation": {
+    "opPost": "cs_cmd_harpers_ferry",
+    "opCommander": "johnston_joseph_e",
+    "opOrder": "m.141.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+    "opPlan": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+    "opMethod": "direct",
+    "opPosture": "relieve",
+    "opObjective": "manassas",
+    "opStartDay": 142,
+    "opEndDay": null,
+    "opOutcome": null,
+    "opAxes": [
+      {
+        "oaxName": "main",
+        "oaxPost": "cs_cmd_harpers_ferry",
+        "oaxBlocks": [
+          "state-forces.cs_tn_infantry_tennessee",
+          "raised.st_gov_tennessee.d125",
+          "state-forces.cs_tn_cavalry_tennessee",
+          "state-forces.va_harpers_ferry"
+        ],
+        "oaxRoute": {
+          "routeFrom": "harpers_ferry",
+          "routeTo": "manassas",
+          "routeLegs": [
+            {
+              "legEdge": "road:harpers_ferry:loudoun_fauquier",
+              "legFrom": "harpers_ferry",
+              "legTo": "loudoun_fauquier",
+              "legType": "road",
+              "legDays": 4000,
+              "legThreat": 253,
+              "legSupply": 0,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            },
+            {
+              "legEdge": "road:loudoun_fauquier:manassas",
+              "legFrom": "loudoun_fauquier",
+              "legTo": "manassas",
+              "legType": "road",
+              "legDays": 3000,
+              "legThreat": 0,
+              "legSupply": 0,
+              "legObstacleDays": 0,
+              "legObstacle": null,
+              "legHeld": false
+            }
+          ],
+          "routeCost": 7253,
+          "routeDays": 7000
+        },
+        "oaxPhases": [
+          {
+            "phaseKind": "concentrate",
+            "phaseStart": 0,
+            "phaseDays": 4000,
+            "phaseRegion": "harpers_ferry"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 4000,
+            "phaseDays": 4000,
+            "phaseRegion": "loudoun_fauquier"
+          },
+          {
+            "phaseKind": "march",
+            "phaseStart": 8000,
+            "phaseDays": 3000,
+            "phaseRegion": "manassas"
+          }
+        ],
+        "oaxObjective": "manassas",
+        "oaxStage": "march",
+        "oaxSince": 146,
+        "oaxUntil": null,
+        "oaxRepulses": 0,
+        "oaxPursuit": null,
+        "oaxSteps": [],
+        "oaxArrived": null,
+        "oaxLog": [
+          {
+            "axevDay": 142,
+            "axevStage": "assemble",
+            "axevReason": "opened",
+            "axevRegion": "harpers_ferry"
+          },
+          {
+            "axevDay": 146,
+            "axevStage": "march",
+            "axevReason": "concentrated",
+            "axevRegion": "harpers_ferry"
+          }
+        ]
+      }
+    ],
+    "opRequests": [],
+    "opEncirclement": null,
+    "opEncirclementWhy": null
+  },
+  "interpretation": "Both replies are on day141 (24 July). Johnston now complies with willingness47 and no unsupported caution/temperament terms. His relief operation opens142, marches146 and has no arrival by148. This is a cast-only model observation, no historical withdrawal or S96 implementation. The capture does not retain a transport envelope for the same-day order; no route is inferred."
+}

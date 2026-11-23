@@ -1,0 +1,515 @@
+{
+  "exits": {
+    "application-final": {
+      "exit": 0,
+      "seconds": 0.27,
+      "args": [
+        "python",
+        "docs/audit/s98-evidence/verify.py",
+        "--live"
+      ]
+    },
+    "application-verify-fixed": {
+      "exit": 0,
+      "seconds": 0.271,
+      "args": [
+        "python",
+        "runs/s98/verify-application.py"
+      ]
+    },
+    "application-verify": {
+      "exit": 1,
+      "seconds": 0.13,
+      "args": [
+        "python",
+        "runs/s98/verify-application.py"
+      ]
+    },
+    "band-review-corrected": {
+      "exit": 0,
+      "seconds": 0.561,
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s98/bands.ts"
+      ]
+    },
+    "band-review-correction-final": {
+      "exit": 0,
+      "seconds": 0.566,
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s98/bands.ts"
+      ]
+    },
+    "band-review-final": {
+      "exit": 0,
+      "seconds": 0.877,
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s98/bands.ts"
+      ]
+    },
+    "band-review": {
+      "exit": 0,
+      "seconds": 0.877,
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s98/bands.ts"
+      ]
+    },
+    "boundary-corrected": {
+      "exit": 0,
+      "seconds": 0.59,
+      "args": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ]
+    },
+    "boundary-correction-final": {
+      "exit": 0,
+      "seconds": 0.584,
+      "args": [
+        "npm.cmd",
+        "run",
+        "check:boundary"
+      ]
+    },
+    "cast-apply": {
+      "exit": 0,
+      "seconds": 0.138,
+      "args": [
+        "python",
+        "runs/s98/apply.py"
+      ]
+    },
+    "cast-green-fixed": {
+      "exit": 0,
+      "seconds": 2.921,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s98-cast-evidence.test.ts",
+        "packs/union-1861/test/opening-cause.test.ts"
+      ]
+    },
+    "cast-green": {
+      "exit": 1,
+      "seconds": 0.57,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s98-cast-evidence.test.ts",
+        "packs/union-1861/test/opening.test.ts"
+      ]
+    },
+    "cast-red": {
+      "exit": 1,
+      "seconds": 0.595,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packs/union-1861/test/s98-cast-evidence.test.ts"
+      ]
+    },
+    "ci-green": {
+      "exit": 0,
+      "seconds": 9.414,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/ci-workflow.test.ts",
+        "tools/test/no-skips.test.ts"
+      ]
+    },
+    "ci-red": {
+      "exit": 1,
+      "seconds": 9.269,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/ci-workflow.test.ts",
+        "tools/test/no-skips.test.ts"
+      ]
+    },
+    "commit-cast-corrected": {
+      "exit": 0,
+      "seconds": 192.736,
+      "args": [
+        "git",
+        "commit",
+        "-F",
+        "runs/s98/commit-cast-message.txt"
+      ]
+    },
+    "commit-cast": {
+      "exit": 1,
+      "seconds": 185.321,
+      "args": [
+        "git",
+        "commit",
+        "-F",
+        "runs/s98/commit-cast-message.txt"
+      ]
+    },
+    "commit-ci": {
+      "exit": 0,
+      "seconds": 192.53,
+      "args": [
+        "git",
+        "commit",
+        "-F",
+        "runs/s98/commit-ci-message.txt"
+      ]
+    },
+    "comparison": {
+      "exit": 0,
+      "seconds": 0.099,
+      "args": [
+        "python",
+        "runs/s98/compare.py"
+      ]
+    },
+    "decisions-final": {
+      "exit": 0,
+      "seconds": 0.618,
+      "args": [
+        "npm.cmd",
+        "run",
+        "check:decisions"
+      ]
+    },
+    "decisions-fixed": {
+      "exit": 0,
+      "seconds": 0.648,
+      "args": [
+        "npm.cmd",
+        "run",
+        "check:decisions"
+      ]
+    },
+    "decisions": {
+      "exit": 1,
+      "seconds": 2.224,
+      "args": [
+        "npm.cmd",
+        "run",
+        "check:decisions"
+      ]
+    },
+    "done-check": {
+      "exit": 1,
+      "seconds": 1401.04,
+      "args": [
+        "npm.cmd",
+        "run",
+        "run:done-check",
+        "--",
+        "--label",
+        "s98-done",
+        "--milestone",
+        "1a"
+      ]
+    },
+    "generate-corrected": {
+      "exit": 0,
+      "seconds": 2.098,
+      "args": [
+        "npm.cmd",
+        "run",
+        "pack:generate",
+        "--",
+        "union-1861"
+      ]
+    },
+    "generate-final-check": {
+      "exit": 0,
+      "seconds": 2.082,
+      "args": [
+        "npm.cmd",
+        "run",
+        "pack:generate",
+        "--",
+        "union-1861",
+        "--check"
+      ]
+    },
+    "generate-fixed": {
+      "exit": 1,
+      "seconds": 1.324,
+      "args": [
+        "npm.cmd",
+        "run",
+        "pack:generate",
+        "--",
+        "union-1861"
+      ]
+    },
+    "generate": {
+      "exit": 1,
+      "seconds": 1.372,
+      "args": [
+        "npm.cmd",
+        "run",
+        "pack:generate",
+        "--",
+        "union-1861"
+      ]
+    },
+    "install": {
+      "exit": 0,
+      "seconds": 4.943,
+      "args": [
+        "npm.cmd",
+        "ci"
+      ]
+    },
+    "licences": {
+      "exit": 0,
+      "seconds": 0.63,
+      "args": [
+        "npm.cmd",
+        "run",
+        "check:licences"
+      ]
+    },
+    "quiet-drivers": {
+      "exit": 0,
+      "seconds": 2.317,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/kernel/test/combat.test.ts",
+        "packages/kernel/test/operations.test.ts",
+        "packages/kernel/test/believed-posts.test.ts",
+        "packages/cli/test/planner.test.ts",
+        "-t",
+        "a trapped garrison with nowhere to go surrenders|a cut-off force strong enough to fight breaks out|driven back, an axis withdraws, pauses and tries again|an order sent before the report arrives is accepted, and bounces on arrival|S41 time live control",
+        "--no-file-parallelism"
+      ]
+    },
+    "quiet-green-fixed": {
+      "exit": 0,
+      "seconds": 0.601,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/liveness-causes.test.ts"
+      ]
+    },
+    "quiet-green": {
+      "exit": 1,
+      "seconds": 0.6,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/liveness-causes.test.ts"
+      ]
+    },
+    "quiet-red": {
+      "exit": 1,
+      "seconds": 0.643,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/liveness-causes.test.ts"
+      ]
+    },
+    "receipt-correction": {
+      "exit": 0,
+      "seconds": 0.6,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/liveness-causes.test.ts",
+        "tools/test/rule-history.test.ts",
+        "packs/union-1861/test/s98-cast-evidence.test.ts"
+      ]
+    },
+    "receipts-correction-final": {
+      "exit": 0,
+      "seconds": 0.598,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/liveness-causes.test.ts",
+        "tools/test/rule-history.test.ts",
+        "packs/union-1861/test/s98-cast-evidence.test.ts"
+      ]
+    },
+    "references": {
+      "exit": 1,
+      "seconds": 79.033,
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s98/references.ts"
+      ]
+    },
+    "rules-corrected": {
+      "exit": 1,
+      "seconds": 2.172,
+      "args": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ]
+    },
+    "rules-correction-final": {
+      "exit": 0,
+      "seconds": 2.166,
+      "args": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ]
+    },
+    "rules": {
+      "exit": 0,
+      "seconds": 2.162,
+      "args": [
+        "npm.cmd",
+        "run",
+        "check:rules"
+      ]
+    },
+    "smoke": {
+      "exit": 0,
+      "seconds": 5.813,
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "runs/s98/references.ts",
+        "--smoke"
+      ]
+    },
+    "staged-fixture-preflight": {
+      "exit": 0,
+      "seconds": 6.955,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "tools/test/staged-check.test.ts",
+        "-t",
+        "own|workspace|snapshot|staged tree|rules|history|ledger"
+      ]
+    },
+    "timing-proof": {
+      "exit": 1,
+      "seconds": 0.108,
+      "args": [
+        "node",
+        "--import",
+        "tsx",
+        "tools/no-skips.ts",
+        "runs/s98/timing.json"
+      ]
+    },
+    "timing": {
+      "exit": 1,
+      "seconds": 156.896,
+      "args": [
+        "node",
+        "node_modules/vitest/vitest.mjs",
+        "run",
+        "packages/cli/test/done-check.test.ts",
+        "packages/cli/test/planner.test.ts",
+        "packages/kernel/test/map-performance.test.ts",
+        "--no-file-parallelism",
+        "--reporter=default",
+        "--reporter=json",
+        "--outputFile.json=runs/s98/timing.json"
+      ]
+    },
+    "typecheck-final": {
+      "exit": 0,
+      "seconds": 1.47,
+      "args": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ]
+    },
+    "typecheck": {
+      "exit": 0,
+      "seconds": 1.553,
+      "args": [
+        "npm.cmd",
+        "run",
+        "typecheck"
+      ]
+    }
+  },
+  "ciHook": {
+    "files": 241,
+    "passed": 2167,
+    "skipped": 5
+  },
+  "castHook": {
+    "files": 242,
+    "passed": 2173,
+    "skipped": 3
+  },
+  "rejectedCastHook": {
+    "files": 242,
+    "passed": 2173,
+    "skipped": 3,
+    "rejection": "pack boundary: setting names in package explanation strings"
+  },
+  "quietControls": {
+    "passed": 5,
+    "selected": true
+  },
+  "exactQuietRecordMutationChecksPassed": true,
+  "referenceCaptureExit": 1,
+  "referenceRejudgedWithoutSimulation": true,
+  "all324SavedBandRowsPass": true,
+  "application": {
+    "checks": 9078,
+    "atomicApplications": 110,
+    "holds": 72,
+    "keeps": 26,
+    "drafts": 12,
+    "remainingOriginalUnknowns": 67,
+    "sourcePages": 28,
+    "allOtherWorldDataExact": true,
+    "allUnrelatedPeopleAndColumnsExact": true,
+    "priorProvenancePrefixExact": true,
+    "readOnlyResearchPacketExact": true,
+    "aliases": {
+      "cli": "C:\\Pyrrhic\\sprint-july\\packages\\cli",
+      "kernel": "C:\\Pyrrhic\\sprint-july\\packages\\kernel",
+      "pack-format": "C:\\Pyrrhic\\sprint-july\\packages\\pack-format",
+      "rule-seats": "C:\\Pyrrhic\\sprint-july\\packages\\rule-seats"
+    }
+  },
+  "donePreservation": {
+    "paths": 2459,
+    "allWorkingBytesExact": true
+  },
+  "noHostedLinuxCertification": true,
+  "independentReviewClaim": false,
+  "scope": "S98 only; no S96 access, browser/desktop control, push, bypass, signature or history rewrite"
+}

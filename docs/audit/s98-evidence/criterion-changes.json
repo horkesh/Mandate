@@ -1,0 +1,105 @@
+[
+  {
+    "id": "behaviour",
+    "milestone": "phase0",
+    "passedBefore": true,
+    "passesNow": true,
+    "removedProblems": [],
+    "addedProblems": []
+  },
+  {
+    "id": "hash",
+    "milestone": "phase0",
+    "passedBefore": true,
+    "passesNow": true,
+    "removedProblems": [],
+    "addedProblems": []
+  },
+  {
+    "id": "resume",
+    "milestone": "phase0",
+    "passedBefore": true,
+    "passesNow": true,
+    "removedProblems": [],
+    "addedProblems": []
+  },
+  {
+    "id": "liveness",
+    "milestone": "phase0",
+    "passedBefore": true,
+    "passesNow": true,
+    "removedProblems": [],
+    "addedProblems": []
+  },
+  {
+    "id": "section-ten",
+    "milestone": "phase0",
+    "passedBefore": true,
+    "passesNow": true,
+    "removedProblems": [],
+    "addedProblems": []
+  },
+  {
+    "id": "budget",
+    "milestone": "phase0",
+    "passedBefore": true,
+    "passesNow": true,
+    "removedProblems": [],
+    "addedProblems": []
+  },
+  {
+    "id": "checkpoints",
+    "milestone": "1A",
+    "passedBefore": false,
+    "passesNow": false,
+    "removedProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 94376 men, below 100000"
+    ],
+    "addedProblems": [
+      "union-1861 history run, 148 days to 1861-07-31: men_confederate (1861-07-31, day 148): confederate has 88452 men, below 100000"
+    ]
+  },
+  {
+    "id": "operation",
+    "milestone": "1A",
+    "passedBefore": true,
+    "passesNow": true,
+    "removedProblems": [],
+    "addedProblems": []
+  },
+  {
+    "id": "pushback",
+    "milestone": "1A",
+    "passedBefore": false,
+    "passesNow": false,
+    "removedProblems": [],
+    "addedProblems": []
+  },
+  {
+    "id": "unknown-strength",
+    "milestone": "1A",
+    "passedBefore": false,
+    "passesNow": false,
+    "removedProblems": [
+      "union-1861, war by decision, 148 days: battle battle:harpers_ferry:147 at harpers_ferry, day 147: confederate fought with 1 blocks of unknown strength (state-forces.va_harpers_ferry)",
+      "union-1861 history run, 148 days to 1861-07-31: battle battle:harpers_ferry:147 at harpers_ferry, day 147: confederate fought with 1 blocks of unknown strength (state-forces.va_harpers_ferry)"
+    ],
+    "addedProblems": []
+  },
+  {
+    "id": "stand-ins",
+    "milestone": "1A",
+    "passedBefore": true,
+    "passesNow": true,
+    "removedProblems": [],
+    "addedProblems": []
+  },
+  {
+    "id": "lever-sweep",
+    "milestone": "1A",
+    "passedBefore": false,
+    "passesNow": false,
+    "removedProblems": [],
+    "addedProblems": []
+  }
+]
