@@ -1,0 +1,131 @@
+{
+  "verified_pages": [
+    {
+      "key": "NEW:S80-HEITMAN",
+      "page": "164",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\HEITMAN-p164.jpg",
+      "sha256": "0d327b61d03851d0c3c7dd2a8a4611c362930e4b5de907d0b238522adebe4800",
+      "scope": "Richard Herron Anderson entry; adjacent Robert Anderson entry used only to exclude that identity."
+    },
+    {
+      "key": "NEW:S80-AP1",
+      "page": "70",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\AP1-p70.jpg",
+      "sha256": "1653f0cb7d98f19656865c09cafb6661674ab0cd7d68c758e6489967ba0b73c7",
+      "scope": "Richard Herron Anderson entry; no motive or character rating admitted."
+    },
+    {
+      "key": "NEW:S80-WRIGHT",
+      "page": "28",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\WRIGHT-p28.jpg",
+      "sha256": "c55a31bb95a1e085bdb95c9509f2ee41fccfb7c501557053b42931aacbc96f34",
+      "scope": "Richard H. Anderson entry only; conflicting birth/appointment observations retained, not silently reconciled."
+    },
+    {
+      "key": "NEW:S80-WRIGHT",
+      "page": "56",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\WRIGHT-p56.jpg",
+      "sha256": "22efb911e59686bf96f14d14f03ed7681f271661abbd03bd34cce94c8cfbfb81",
+      "scope": "Richard H. Anderson entry only; conflicting birth/appointment observations retained, not silently reconciled."
+    },
+    {
+      "key": "NEW:S80-WALKER",
+      "page": "17",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\WALKER-p17.jpg",
+      "sha256": "d7b6021b5e4d4f295011cab26385317e82954ef651fd467b9ef84d9e8694b027",
+      "scope": "Birth sentence; retrospective praise excluded."
+    },
+    {
+      "key": "NEW:S80-WALKER",
+      "page": "52",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\WALKER-p52.jpg",
+      "sha256": "fd2acecfd8966e4b189c69a59746e71a7efb9deda4683fdf34129acf79170198",
+      "scope": "February15 resignation claim only; author’s secession narrative excluded."
+    },
+    {
+      "key": "NEW:S80-WALKER",
+      "page": "59",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\WALKER-p59-corrected.jpg",
+      "sha256": "260ee91df201458fabbab810e409fc5b668efcbd74d6cc78775793d2f916defb",
+      "scope": "State colonel and First South Carolina Regular Infantry identification; quoted Dunovant regiment praise is not a personal rating."
+    },
+    {
+      "key": "NEW:S80-WALKER",
+      "page": "60",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\WALKER-p59.jpg",
+      "sha256": "936ae2ecc967dbf17505e4b098482320650fbf345fa83b792cba0fdd90b1c6f9",
+      "scope": "May31 brigadier date claim only; later campaigns and author’s praise excluded."
+    },
+    {
+      "key": "NEW:S80-WALKER",
+      "page": "256",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\WALKER-p256-corrected.jpg",
+      "sha256": "1cd3c9323face9420c0a062e5298c744305b3959e0822a586751693d01102485",
+      "scope": "Reported tomb inscription: Heron spelling and exact life dates; no direct inspection of tomb claimed."
+    },
+    {
+      "key": "NEW:S80-OR-I-VI",
+      "page": "1",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\OR6-pdf13.png",
+      "sha256": "473e1cdbb9223db4f8f5360b4820fd72aa58c61246c4708957f65def3fb99517",
+      "scope": "Chronology footnote: May27 transfer to R. H. Anderson, separate State volunteers to Pickens; Ripley August21 line."
+    },
+    {
+      "key": "NEW:S80-OR-IV-I",
+      "page": "413",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\OR-IV-I-p413.jpg",
+      "sha256": "9c2080d2b8f9c7da0a7f6bf488442497e0a9eec3f6385ea29e1d5978c0a3047f",
+      "scope": "June30 heading and State/Confederate distinction; p414 identifies Colonel R.H.Anderson as a former US Army officer commanding in/around Charleston. No headcounts applied."
+    },
+    {
+      "key": "NEW:S80-OR-IV-I",
+      "page": "414",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\OR-IV-I-p414.jpg",
+      "sha256": "1d349fe212fb869fe6c7b8b22d899e6a273b18f412b7f0e28501ccdbe6c8b0cc",
+      "scope": "June30 heading and State/Confederate distinction; p414 identifies Colonel R.H.Anderson as a former US Army officer commanding in/around Charleston. No headcounts applied."
+    },
+    {
+      "key": "NEW:S80-OR-IV-I",
+      "page": "913",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\OR-IV-I-p913.png",
+      "sha256": "68268749a1fa215aec5093951561e38c56e88f4105f740699f8d65b70ee94088",
+      "scope": "South Carolina heading, State commissions/transfer discussion, July25 Colonel and July27 Brigadier R.H.Anderson references. Retrospective narration is distinguished from quoted July instructions."
+    },
+    {
+      "key": "NEW:S80-OR-IV-I",
+      "page": "914",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\OR-IV-I-p914.png",
+      "sha256": "5d7d6c93bff4ed03c61091221c1b01ae8c03158a466be8d2d74ac13956f4ba4b",
+      "scope": "South Carolina heading, State commissions/transfer discussion, July25 Colonel and July27 Brigadier R.H.Anderson references. Retrospective narration is distinguished from quoted July instructions."
+    },
+    {
+      "key": "NEW:S80-OR-IV-I",
+      "page": "915",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\OR-IV-I-p915.png",
+      "sha256": "3b50c0d983605d79c810eb2720c930b45b89e32598af0e73b65ea9112bafc4c4",
+      "scope": "South Carolina heading, State commissions/transfer discussion, July25 Colonel and July27 Brigadier R.H.Anderson references. Retrospective narration is distinguished from quoted July instructions."
+    },
+    {
+      "key": "NEW:S80-JCC-I",
+      "page": "306",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\JCC-I-p306-corrected.jpg",
+      "sha256": "2315a224a0e4da64c127d6d195287e9d5539caddd4d2547409737d2535ea00a9",
+      "scope": "August1 session context and transmitted brigadier list (pp306-307); November29 cavalry-major list giving rank from March16 (p496). These are not March5 commissions or personality evidence."
+    },
+    {
+      "key": "NEW:S80-JCC-I",
+      "page": "307",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\JCC-I-p307-corrected.jpg",
+      "sha256": "e3338830292ff0ae63e8eae472f4977a9d18b18e352a9f55109f6200efb911d8",
+      "scope": "August1 session context and transmitted brigadier list (pp306-307); November29 cavalry-major list giving rank from March16 (p496). These are not March5 commissions or personality evidence."
+    },
+    {
+      "key": "NEW:S80-JCC-I",
+      "page": "496",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S80\\JCC-I-p496-corrected.jpg",
+      "sha256": "e9355f0440911dab3df4d179fecc0485b105d2f10e21d04dbb339bac347bd345",
+      "scope": "August1 session context and transmitted brigadier list (pp306-307); November29 cavalry-major list giving rank from March16 (p496). These are not March5 commissions or personality evidence."
+    }
+  ],
+  "note": "Headless file reading and local static image inspection only; no browser or desktop. These receipts assert selected passages, not entire books. Initial wrong mappings excluded; see source-reading.json and external retrieval JSONs."
+}
