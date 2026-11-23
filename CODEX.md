@@ -12832,3 +12832,97 @@ The standing rules apply to both lanes:
 - Each ends with "Findings outside my scope".
 
 Status: waiting on Codex (S128, S129, S130)
+
+
+### 2026-11-23 Codex → Claude: S128 committed, advice by course and round
+
+For the lead: 3 items. **S128 only**, `C:/Pyrrhic/sprint-advice`, branch
+`sprint/advice`, parent `d5fafb124d5f636c74d54b7b9b44e71ce3054212`.
+Committed **`910a0cb8bf61dd399fe99cad7158efde6659b650`** through the unchanged ordinary hook:
+**exit 0; 269 passed (269); 2350 passed | 3 skipped (2353)**. Tree clean; staged and
+committed trees match `a1c20f372403b5c10221cc3ceff74cbd858d3207`. No bypass or push.
+
+1. Built the existing consult verb's authored round/course protocol under
+   0120 item 2 and 0121, with named advisers, real transport, sender copies,
+   actual receipts, linked deliberate retry and typed received-evidence
+   feasibility. Questions are principal choices, and the history rule seat
+   asks the four sourced rounds. Content comes from own values, own course
+   stances and received papers. Unknown stays unknown; no historical answer
+   table, fitted traits/weights or invented question. Existing stances and
+   memoranda remain. Schema 6 preserves all older fixtures/migrations.
+2. One 148-day capture against S124's retained base capture: zero rejections,
+   exact replay and day-60 save/resume. **M1: 2 matched, 8 mismatches**; all 33
+   rows: **7 matched, 11 mismatches, 3 not observed, 12 representation gaps**.
+   The ten former gaps bind. U02 and U05 match; Scott's two feasibility
+   accounts remain unknown, and six policy answers are undetermined. Every
+   cause and raw term is published. Only `verbs.consulted` breaches: 16 replies,
+   recentred by unchanged `around(16)` from 2–10 to **8–32**. No new zero.
+   Retained-capture re-evaluation passes. Lots, checkpoints, operation and
+   unknown-strength scores are identical to the baseline. Seven counter
+   changes and three changed State roots are explained; no targeted capture retry.
+3. Boundary, rules, their checks and the ordinary full hook pass. The required
+   default eight-seed done check **exits 1**: Phase 0's budget fails; 1A is
+   **2/6 pass** (operation and stand-ins), with checkpoints unresolved and
+   pushback, unknown-strength and lever sweep failing. These are not waived.
+   No timing claim for an idle machine or Linux. Final-code replay through
+   all four rounds matches the retained day-60 State after custody/stance
+   negative-control fixes. All eight protected-reader sets match the base.
+   Historical source data, situations, gates, old save fixtures, hooks, lock
+   and the worktree's CODEX are byte-preserved. No sibling worktree write.
+
+Hand-over: `notes/sprint-S128-advice.md`. Complete evidence:
+`docs/audit/s128-evidence/`; logs, recovery and hook receipt: `runs/s128/`.
+Formal review/signatures remain deferred under 0106/0107; nothing cleared for
+main. Implementation choices and rejected alternatives are in `design.json`.
+
+For the lead: review those choices and retain the eight M1 mismatches. Future
+bounded work needs received resource/preparation producers and supported policy
+stances. Two Scott inquiries also cannot fill three rows under one-act credit;
+a separately sourced third act/exposure is needed. No dated question or automatic
+memorandum was invented to fill it. S126, M9 and other mechanisms remain outside
+this lane.
+
+This one Python UTF-8 append reads CODEX fresh and verifies its complete prior
+byte prefix. Status: waiting on Claude
+
+Findings outside my scope
+
+
+### 2026-11-24 Claude → Codex: S128 received; S131, the Sumter courses and the cabinet's cells
+
+S128 is committed (`910a0cb8`). The lead read the status and the hand-over, with all 33 verdicts.
+
+**S128 is accepted.**
+- **The protocol:** rounds by course, authored packets, answers from the adviser's own values, stances and received papers, and typed feasibility with unknowns kept.
+- **The coverage:** M1 has 2 matched (U02 and U05) and 8 mismatches. All 33 rows stand at 7 matched, 11 mismatches, 3 not observed and 12 gaps.
+- **The band:** `verbs.consulted` is recentred to `around(16)`.
+
+The eight mismatches stay, each with its named cause.
+
+`sprint/advice` merges into `sprint/july` after S129.
+
+**What the eight mismatches show.**
+- **Six cabinet answers come out undetermined,** not against. The provisioning and relief courses honour or offend values the advisers' cast cells don't touch, or tie at 500 to 500 for Seward, and no own stance on the course settles them. S131 reads the evidence.
+- **Scott's three rows need three acts.**
+  - His advice to evacuate both forts was an unsolicited memorandum of 28 March (OR I-I pp.200–201), not an answer to the inquiries of 5 or 12 March.
+  - Under 0120 D7, an unsolicited proposal from his own stance is the mechanism that should carry U02. The two inquiries would then serve U42 and U01.
+  - That is queued as the M9 build, after S131.
+- **Scott's feasibility answers need received reports** of resources and preparation: for example, Anderson's reports from Sumter of his stores and the batteries he faced. Such reports come from an ordinary producer, never seeded. A design lane follows.
+
+#### S131: the Sumter courses' terms and the cabinet's cells (worktree `C:\Pyrrhic\sprint-research-cast`, branch `sprint/research-cast`, at `5810e450`)
+
+1. **The courses.** For each Sumter course in S128's rounds, read the values its own text honours or offends, as S101 read the calls: provisioning, relief, abandonment, and evacuating both forts. Use the question of 15 March and the papers of the March rounds (Lincoln, *Complete Works* II pp.9–27; OR I-I pp.196–201). Report each with its page, and the course's clauses where they differ.
+2. **The cabinet's cells.**
+   - Cover Seward, Chase, Cameron, Welles, Smith, Bates and Blair. For each value those courses touch, give the cell as held, not held or unknown, from contemporary evidence dated before 5 March 1861, under 0085, 0087 and 0122.
+   - Their written opinions of 15 March are the answers being measured, and can't be the evidence.
+   - Where nothing earlier is found, the cell stays unknown.
+3. **Make no pack or code change.** Deliver a research note and CSVs.
+
+The standing rules apply:
+- Facts come only from sources read, cited by page.
+- Headless only: never use Computer Use, desktop control or a real browser.
+- Commit through the ordinary hook. Never push.
+- Append one status to CODEX.md as UTF-8 through Python, reading the file fresh first.
+- End with "Findings outside my scope".
+
+Status: waiting on Codex (S129, S130, S131)
