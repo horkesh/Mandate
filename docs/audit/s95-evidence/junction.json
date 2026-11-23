@@ -1,0 +1,256 @@
+{
+  "responses": [
+    {
+      "key": "m.140.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|cooper_samuel",
+      "respOrder": "m.140.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "cooper_samuel",
+      "respPost": "cs_war_adjutant_inspector_general",
+      "respRole": "relay",
+      "respKind": "goal",
+      "respDay": 140,
+      "respActual": "comply",
+      "respDeclared": "comply",
+      "respWillingness": 32,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 32
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": []
+    },
+    {
+      "key": "m.140.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e",
+      "respOrder": "m.140.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "respPerson": "johnston_joseph_e",
+      "respPost": "cs_cmd_harpers_ferry",
+      "respRole": "addressee",
+      "respKind": "goal",
+      "respDay": 147,
+      "respActual": "object",
+      "respDeclared": "object",
+      "respWillingness": -224,
+      "respTerms": [
+        {
+          "respTermName": "values",
+          "respTermAmount": -200
+        },
+        {
+          "respTermName": "temperament",
+          "respTermAmount": -51
+        },
+        {
+          "respTermName": "regard",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "deterrence",
+          "respTermAmount": 27
+        },
+        {
+          "respTermName": "capacity",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "disposition",
+          "respTermAmount": 0
+        },
+        {
+          "respTermName": "grievances",
+          "respTermAmount": 0
+        }
+      ],
+      "respReasons": [
+        {
+          "kind": "values_offended",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respStated": [
+        {
+          "kind": "values_offended",
+          "value": "caution"
+        },
+        {
+          "kind": "shielded_by_standing"
+        }
+      ],
+      "respConditions": []
+    }
+  ],
+  "messages": [
+    {
+      "id": "m.140.cooper_samuel.johnston_joseph_e.order.cs_cmd_harpers_ferry",
+      "msgOrigin": "m.140.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "msgFrom": "cooper_samuel",
+      "msgTo": "johnston_joseph_e",
+      "msgToPost": "cs_cmd_harpers_ferry",
+      "msgRole": "addressee",
+      "msgRoute": "courier",
+      "msgSentDay": 140,
+      "msgArriveDay": 147,
+      "msgVia": [
+        "cs_war_adjutant_inspector_general"
+      ],
+      "msgPending": [],
+      "msgOrder": {
+        "orderKind": "goal",
+        "orderGoal": {
+          "goalObjective": "manassas",
+          "goalPosture": "relieve",
+          "goalRisk": 500,
+          "goalDeadlineDays": 30,
+          "goalRail": true,
+          "goalRiver": false,
+          "goalSea": false,
+          "goalNeutral": false,
+          "goalCommitted": [],
+          "goalAwaitWord": false,
+          "goalApproveAsDrafted": true
+        },
+        "orderEdit": null,
+        "orderCall": null,
+        "orderIssuer": "davis_jefferson",
+        "orderTarget": "cs_cmd_harpers_ferry",
+        "orderBypass": false,
+        "orderIssuedDay": 140
+      },
+      "msgVerb": null,
+      "msgReport": null,
+      "msgTruth": null
+    }
+  ],
+  "operations": [
+    {
+      "id": "op:cs_cmd_harpers_ferry:148",
+      "opPost": "cs_cmd_harpers_ferry",
+      "opCommander": "johnston_joseph_e",
+      "opOrder": "m.140.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+      "opPlan": "direct:least_cost:harpers_ferry>loudoun_fauquier>manassas",
+      "opMethod": "direct",
+      "opPosture": "relieve",
+      "opObjective": "manassas",
+      "opStartDay": 148,
+      "opEndDay": null,
+      "opOutcome": null,
+      "opAxes": [
+        {
+          "oaxName": "main",
+          "oaxPost": "cs_cmd_harpers_ferry",
+          "oaxBlocks": [
+            "state-forces.cs_tn_infantry_tennessee",
+            "raised.st_gov_georgia.d126.2",
+            "raised.st_gov_georgia.d129",
+            "state-forces.cs_tn_cavalry_tennessee",
+            "state-forces.va_harpers_ferry"
+          ],
+          "oaxRoute": {
+            "routeFrom": "harpers_ferry",
+            "routeTo": "manassas",
+            "routeLegs": [
+              {
+                "legEdge": "road:harpers_ferry:loudoun_fauquier",
+                "legFrom": "harpers_ferry",
+                "legTo": "loudoun_fauquier",
+                "legType": "road",
+                "legDays": 4000,
+                "legThreat": 576,
+                "legSupply": 0,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              },
+              {
+                "legEdge": "road:loudoun_fauquier:manassas",
+                "legFrom": "loudoun_fauquier",
+                "legTo": "manassas",
+                "legType": "road",
+                "legDays": 3000,
+                "legThreat": 0,
+                "legSupply": 1884,
+                "legObstacleDays": 0,
+                "legObstacle": null,
+                "legHeld": false
+              }
+            ],
+            "routeCost": 9460,
+            "routeDays": 7000
+          },
+          "oaxPhases": [
+            {
+              "phaseKind": "concentrate",
+              "phaseStart": 0,
+              "phaseDays": 4000,
+              "phaseRegion": "harpers_ferry"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 4000,
+              "phaseDays": 4000,
+              "phaseRegion": "loudoun_fauquier"
+            },
+            {
+              "phaseKind": "march",
+              "phaseStart": 8000,
+              "phaseDays": 3000,
+              "phaseRegion": "manassas"
+            }
+          ],
+          "oaxObjective": "manassas",
+          "oaxStage": "assemble",
+          "oaxSince": 148,
+          "oaxUntil": 152,
+          "oaxRepulses": 0,
+          "oaxPursuit": null,
+          "oaxSteps": [],
+          "oaxArrived": null,
+          "oaxLog": [
+            {
+              "axevDay": 148,
+              "axevStage": "assemble",
+              "axevReason": "opened",
+              "axevRegion": "harpers_ferry"
+            }
+          ]
+        }
+      ],
+      "opRequests": [],
+      "opEncirclement": null,
+      "opEncirclementWhy": null
+    }
+  ],
+  "interpretation": "Cooper forwards on day 140, Johnston receives at Harpers Ferry on 147 and openly objects; the rule driver retries his own sent relieve letter and operation opens day 148, assembling until 152. No July march/arrival or historical hold-goal exposure is claimed."
+}

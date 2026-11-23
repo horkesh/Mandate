@@ -1,0 +1,1582 @@
+[
+  {
+    "id": "U01",
+    "actor": "scott_winfield",
+    "matter": "Sumter relief feasibility, March 12 inquiry",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries.; needed: a scoped feasibility assessment answering a particular proposed course in packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts"
+  },
+  {
+    "id": "U02",
+    "actor": "scott_winfield",
+    "matter": "Evacuating both Sumter and Pickens",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json"
+  },
+  {
+    "id": "U03a",
+    "actor": "seward_william_h",
+    "matter": "March 15 written Sumter provisioning consultation",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json"
+  },
+  {
+    "id": "U03b",
+    "actor": "cameron_simon",
+    "matter": "March 15 written Sumter provisioning consultation",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json"
+  },
+  {
+    "id": "U03c",
+    "actor": "welles_gideon",
+    "matter": "March 15 written Sumter provisioning consultation",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json"
+  },
+  {
+    "id": "U03d",
+    "actor": "smith_caleb_b",
+    "matter": "March 15 written Sumter provisioning consultation",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json"
+  },
+  {
+    "id": "U03e",
+    "actor": "bates_edward",
+    "matter": "March 15 written Sumter provisioning consultation",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json"
+  },
+  {
+    "id": "U04",
+    "actor": "seward_william_h",
+    "matter": "March 29 renewed relief consultation",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json"
+  },
+  {
+    "id": "U05",
+    "actor": "blair_montgomery",
+    "matter": "March 29 proposed Sumter abandonment",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The existing consultation carries one situation subject and recommended option, but no addressed proposal or inquiry-round identity. Evacuating both forts, provisioning, renewed relief and proposed abandonment cannot be equated with one undifferentiated consultation. Existing stances/advice remain diagnostics, not evidence that advice content is wholly absent.; needed: consultation rounds and the proposed course each advice act addresses in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/people/people.ts Stance; packs/union-1861/situations/sumter_garrison.json"
+  },
+  {
+    "id": "U14",
+    "actor": "seward_william_h",
+    "matter": "Some Thoughts administration policy and direction",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "Consultation option advice has no structured unsolicited administration programme or transfer of policy direction.; needed: an unsolicited policy programme and delegation proposal with an answer in packages/kernel/src/log/commands.ts; packages/kernel/src/knowledge/report.ts"
+  },
+  {
+    "id": "U25a",
+    "actor": "hicks_thomas_h",
+    "matter": "Troop transit through Maryland after Baltimore alternative",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "A field commander goal and a governor troop-raising call do not carry a governor alternative for troop transit through his state.; needed: civil troop-transit negotiation and alternative-route consent in packages/kernel/src/log/commands.ts; packages/kernel/src/messages/transit.ts"
+  },
+  {
+    "id": "U25b",
+    "actor": "brown_george_w",
+    "matter": "Protecting troops marching around Baltimore",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The mayor is absent from the cast; no civic request carries his conditional protection undertaking. Adding a person alone would not encode the matter.; needed: a civic addressee and conditional troop-protection undertaking in packs/union-1861/source/world/people.csv; packages/kernel/src/messages/transit.ts"
+  },
+  {
+    "id": "U32",
+    "actor": "patterson_robert",
+    "matter": "Changing Valley depot and line before active operations",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "Goals hold, take or relieve a place; they do not ask a commander to change his depot and supply base before an advance.; needed: a depot/base-of-supply change request and counterproposal in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts"
+  },
+  {
+    "id": "U33",
+    "actor": "patterson_robert",
+    "matter": "Fresh attack or demonstration direction in Valley",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The goal grammar has hold, take and relieve, with no demonstrate-or-attack direction. The observed hold goals do not expose that demand.; needed: an attack-or-demonstrate instruction and its answer in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts"
+  },
+  {
+    "id": "U34",
+    "actor": "patterson_robert",
+    "matter": "Fresh July 17-18 attack/demonstration direction",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The goal grammar has hold, take and relieve, with no demonstrate-or-attack direction. The observed hold goals do not expose that demand.; needed: an attack-or-demonstrate instruction and its answer in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts"
+  },
+  {
+    "id": "U39",
+    "actor": "morgan_edwin_d",
+    "matter": "April Union militia requisition",
+    "beforeVerdict": "matched",
+    "verdict": "mismatch",
+    "beforeActs": [
+      {
+        "id": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|comply_with_reservations|41",
+        "creditKey": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|",
+        "order": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "side": "union",
+        "actor": "morgan_edwin_d",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply_with_reservations",
+        "declared": "comply_with_reservations",
+        "day": 41,
+        "post": "st_gov_new_york",
+        "callId": null,
+        "termDays": 90
+      }
+    ],
+    "afterActs": [
+      {
+        "id": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|comply|41",
+        "creditKey": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york|morgan_edwin_d|addressee|",
+        "order": "m.41.lincoln_abraham.morgan_edwin_d.call.st_gov_new_york",
+        "side": "union",
+        "actor": "morgan_edwin_d",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 41,
+        "post": "st_gov_new_york",
+        "callId": null,
+        "termDays": 90
+      }
+    ],
+    "matched": null,
+    "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it."
+  },
+  {
+    "id": "U40",
+    "actor": "mccauley_charles_s",
+    "matter": "Peremptory Merrimack removal to Philadelphia",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "Land force transfers do not carry a named warship removal and engineering-readiness matter.; needed: a naval vessel removal/readiness instruction and repeated deferral in packages/kernel/src/log/commands.ts; packages/kernel/src/forces/"
+  },
+  {
+    "id": "U42",
+    "actor": "scott_winfield",
+    "matter": "March 5 first Sumter relief assessment",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "Consult records an option recommendation, not the force, preparation and feasibility assessment on these distinct relief inquiries.; needed: a scoped feasibility assessment answering a particular proposed course in packages/kernel/src/tick/verbs.ts; packages/kernel/src/knowledge/report.ts"
+  },
+  {
+    "id": "C01",
+    "actor": "brown_joseph_e",
+    "matter": "First Pensacola contingent mustering",
+    "beforeVerdict": "mismatch",
+    "verdict": "mismatch",
+    "beforeActs": [
+      {
+        "id": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply|4",
+        "creditKey": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|",
+        "order": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "side": "confederate",
+        "actor": "brown_joseph_e",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 4,
+        "post": "st_gov_georgia",
+        "callId": "cs_mar09_georgia",
+        "termDays": 365
+      }
+    ],
+    "afterActs": [
+      {
+        "id": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply|4",
+        "creditKey": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|",
+        "order": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "side": "confederate",
+        "actor": "brown_joseph_e",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 4,
+        "post": "st_gov_georgia",
+        "callId": "cs_mar09_georgia",
+        "termDays": 365
+      }
+    ],
+    "matched": null,
+    "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+    "combinedResponses": [
+      {
+        "key": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+        "respOrder": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "respPerson": "brown_joseph_e",
+        "respPost": "st_gov_georgia",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respCallId": "cs_mar09_georgia",
+        "respDay": 4,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 149,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": []
+      }
+    ],
+    "pre0113Responses": [
+      {
+        "id": "cs_mar09_georgia",
+        "order": "m.4.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 4,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 127,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 45
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ],
+    "interpretation": "The matcher and sourced historical obligation are unchanged. Compare the actual call response and its terms; reduced arbitrary resistance does not create the distinct historical objection/advice or a match."
+  },
+  {
+    "id": "C02",
+    "actor": "brown_joseph_e",
+    "matter": "April additional regiments for Virginia",
+    "beforeVerdict": "mismatch",
+    "verdict": "mismatch",
+    "beforeActs": [
+      {
+        "id": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply|48",
+        "creditKey": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|",
+        "order": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "side": "confederate",
+        "actor": "brown_joseph_e",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 48,
+        "post": "st_gov_georgia",
+        "callId": "cs_apr22_absolute_georgia",
+        "termDays": 365
+      }
+    ],
+    "afterActs": [
+      {
+        "id": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply|48",
+        "creditKey": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|",
+        "order": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "side": "confederate",
+        "actor": "brown_joseph_e",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 48,
+        "post": "st_gov_georgia",
+        "callId": "cs_apr22_absolute_georgia",
+        "termDays": 365
+      }
+    ],
+    "matched": null,
+    "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+    "combinedResponses": [
+      {
+        "key": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+        "respOrder": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "respPerson": "brown_joseph_e",
+        "respPost": "st_gov_georgia",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respCallId": "cs_apr22_absolute_georgia",
+        "respDay": 48,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 149,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": []
+      }
+    ],
+    "pre0113Responses": [
+      {
+        "id": "cs_apr22_absolute_georgia",
+        "order": "m.48.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 48,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 127,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 45
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ],
+    "interpretation": "The matcher and sourced historical obligation are unchanged. Compare the actual call response and its terms; reduced arbitrary resistance does not create the distinct historical objection/advice or a match."
+  },
+  {
+    "id": "C03",
+    "actor": "moore_thomas_o",
+    "matter": "April active Virginia regiments and earlier readiness call",
+    "beforeVerdict": "mismatch",
+    "verdict": "mismatch",
+    "beforeActs": [
+      {
+        "id": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|object|48",
+        "creditKey": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|",
+        "order": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "side": "confederate",
+        "actor": "moore_thomas_o",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "object",
+        "declared": "object",
+        "day": 48,
+        "post": "st_gov_louisiana",
+        "callId": "cs_apr22_absolute_louisiana",
+        "advice": "withdraw-order"
+      }
+    ],
+    "afterActs": [
+      {
+        "id": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|comply|48",
+        "creditKey": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|",
+        "order": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "side": "confederate",
+        "actor": "moore_thomas_o",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 48,
+        "post": "st_gov_louisiana",
+        "callId": "cs_apr22_absolute_louisiana",
+        "termDays": 365
+      }
+    ],
+    "matched": null,
+    "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+    "combinedResponses": [
+      {
+        "key": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+        "respOrder": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "respPerson": "moore_thomas_o",
+        "respPost": "st_gov_louisiana",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respCallId": "cs_apr22_absolute_louisiana",
+        "respDay": 48,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 144,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -96
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 40
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": []
+      }
+    ],
+    "pre0113Responses": [
+      {
+        "id": "cs_apr22_absolute_louisiana",
+        "order": "m.48.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 48,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -49,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 27
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ],
+    "interpretation": "The matcher and sourced historical obligation are unchanged. Compare the actual call response and its terms; reduced arbitrary resistance does not create the distinct historical objection/advice or a match."
+  },
+  {
+    "id": "C04",
+    "actor": "pickens_francis_w",
+    "matter": "Sending South Carolina volunteers to Virginia",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "The transfer grammar carries force and destination but no regiment-integrity or permanent-service consent terms.; needed: organisation integrity and gubernatorial consent terms on a troop transfer in packages/kernel/src/messages/transit.ts VerbBody; packages/kernel/src/tick/verbs.ts"
+  },
+  {
+    "id": "C05",
+    "actor": "harris_isham_g",
+    "matter": "Initial three Virginia regiments",
+    "beforeVerdict": "mismatch",
+    "verdict": "mismatch",
+    "beforeActs": [
+      {
+        "id": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g|addressee|object|128",
+        "creditKey": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g|addressee|",
+        "order": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "side": "confederate",
+        "actor": "harris_isham_g",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "object",
+        "declared": "object",
+        "day": 128,
+        "post": "st_gov_tennessee",
+        "callId": "cs_apr22_absolute_tennessee",
+        "regiments": 3,
+        "termDays": 365,
+        "advice": "withdraw-order"
+      }
+    ],
+    "afterActs": [
+      {
+        "id": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g|addressee|object|128",
+        "creditKey": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g|addressee|",
+        "order": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "side": "confederate",
+        "actor": "harris_isham_g",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "object",
+        "declared": "object",
+        "day": 128,
+        "post": "st_gov_tennessee",
+        "callId": "cs_apr22_absolute_tennessee",
+        "regiments": 3,
+        "termDays": 365,
+        "advice": "withdraw-order"
+      }
+    ],
+    "matched": null,
+    "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+    "combinedResponses": [
+      {
+        "key": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee|harris_isham_g",
+        "respOrder": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "respPerson": "harris_isham_g",
+        "respPost": "st_gov_tennessee",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respCallId": "cs_apr22_absolute_tennessee",
+        "respDay": 128,
+        "respActual": "object",
+        "respDeclared": "object",
+        "respWillingness": -122,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -135
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "too_timid",
+            "gap": 338
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "too_timid",
+            "gap": 338
+          }
+        ],
+        "respConditions": []
+      }
+    ],
+    "pre0113Responses": [
+      {
+        "id": "cs_apr22_absolute_tennessee",
+        "order": "m.124.davis_jefferson.harris_isham_g.call.st_gov_tennessee",
+        "day": 128,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -125,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -135
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 10
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ],
+    "interpretation": "The matcher and sourced historical obligation are unchanged. Compare the actual call response and its terms; reduced arbitrary resistance does not create the distinct historical objection/advice or a match."
+  },
+  {
+    "id": "C06",
+    "actor": "bragg_braxton",
+    "matter": "Preventing Pickens reinforcement at dock",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "Land goals do not express stopping shipborne reinforcement at its dock without an island landing.; needed: dock interception of naval reinforcement with supply/transport qualifications in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts"
+  },
+  {
+    "id": "C07",
+    "actor": "letcher_john",
+    "matter": "Reserve corps organization and appointments",
+    "beforeVerdict": "mismatch",
+    "verdict": "mismatch",
+    "beforeActs": [
+      {
+        "id": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|object|120",
+        "creditKey": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|",
+        "order": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "side": "confederate",
+        "actor": "letcher_john",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "object",
+        "declared": "object",
+        "day": 120,
+        "post": "st_gov_virginia",
+        "callId": "cs_jun30_reserve_virginia",
+        "advice": "withdraw-order"
+      }
+    ],
+    "afterActs": [
+      {
+        "id": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|object|120",
+        "creditKey": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john|addressee|",
+        "order": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "side": "confederate",
+        "actor": "letcher_john",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "object",
+        "declared": "object",
+        "day": 120,
+        "post": "st_gov_virginia",
+        "callId": "cs_jun30_reserve_virginia",
+        "advice": "withdraw-order"
+      }
+    ],
+    "matched": null,
+    "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+    "combinedResponses": [
+      {
+        "key": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia|letcher_john",
+        "respOrder": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "respPerson": "letcher_john",
+        "respPost": "st_gov_virginia",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respCallId": "cs_jun30_reserve_virginia",
+        "respDay": 120,
+        "respActual": "object",
+        "respDeclared": "object",
+        "respWillingness": -14,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -81
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 67
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [],
+        "respStated": [],
+        "respConditions": []
+      }
+    ],
+    "pre0113Responses": [
+      {
+        "id": "cs_jun30_reserve_virginia",
+        "order": "m.120.davis_jefferson.letcher_john.call.st_gov_virginia",
+        "day": 120,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -39,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -81
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 42
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ],
+    "interpretation": "The matcher and sourced historical obligation are unchanged. Compare the actual call response and its terms; reduced arbitrary resistance does not create the distinct historical objection/advice or a match."
+  },
+  {
+    "id": "C09",
+    "actor": "pickens_francis_w",
+    "matter": "Later two armed regiments",
+    "beforeVerdict": "exposure_mismatch",
+    "verdict": "exposure_mismatch",
+    "beforeActs": [
+      {
+        "id": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|slow_walk|4",
+        "creditKey": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|",
+        "order": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "side": "confederate",
+        "actor": "pickens_francis_w",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "slow_walk",
+        "declared": "comply",
+        "day": 4,
+        "post": "st_gov_south_carolina",
+        "callId": "cs_mar09_south_carolina",
+        "termDays": 365
+      },
+      {
+        "id": "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|slow_walk|34",
+        "creditKey": "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|",
+        "order": "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "side": "confederate",
+        "actor": "pickens_francis_w",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "slow_walk",
+        "declared": "comply",
+        "day": 34,
+        "post": "st_gov_south_carolina",
+        "callId": "cs_apr08_south_carolina"
+      },
+      {
+        "id": "m.43.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|slow_walk|43",
+        "creditKey": "m.43.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|",
+        "order": "m.43.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "side": "confederate",
+        "actor": "pickens_francis_w",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "slow_walk",
+        "declared": "comply",
+        "day": 43,
+        "post": "st_gov_south_carolina",
+        "callId": "cs_apr16_south_carolina"
+      },
+      {
+        "id": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|slow_walk|124",
+        "creditKey": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|",
+        "order": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "side": "confederate",
+        "actor": "pickens_francis_w",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "slow_walk",
+        "declared": "comply",
+        "day": 124,
+        "post": "st_gov_south_carolina",
+        "callId": "cs_jun30_reserve_south_carolina",
+        "regiments": 3,
+        "termDays": null
+      }
+    ],
+    "afterActs": [
+      {
+        "id": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|comply|4",
+        "creditKey": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|",
+        "order": "m.4.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "side": "confederate",
+        "actor": "pickens_francis_w",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 4,
+        "post": "st_gov_south_carolina",
+        "callId": "cs_mar09_south_carolina",
+        "termDays": 365
+      },
+      {
+        "id": "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|comply|34",
+        "creditKey": "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|",
+        "order": "m.34.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "side": "confederate",
+        "actor": "pickens_francis_w",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 34,
+        "post": "st_gov_south_carolina",
+        "callId": "cs_apr08_south_carolina"
+      },
+      {
+        "id": "m.43.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|comply|43",
+        "creditKey": "m.43.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|",
+        "order": "m.43.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "side": "confederate",
+        "actor": "pickens_francis_w",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 43,
+        "post": "st_gov_south_carolina",
+        "callId": "cs_apr16_south_carolina"
+      },
+      {
+        "id": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|comply|124",
+        "creditKey": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina|pickens_francis_w|addressee|",
+        "order": "m.120.davis_jefferson.pickens_francis_w.call.st_gov_south_carolina",
+        "side": "confederate",
+        "actor": "pickens_francis_w",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 124,
+        "post": "st_gov_south_carolina",
+        "callId": "cs_jun30_reserve_south_carolina",
+        "regiments": 3,
+        "termDays": null
+      }
+    ],
+    "matched": null,
+    "reason": "Same actor and role, but the observed requests address different matters. The represented historical request was not issued."
+  },
+  {
+    "id": "C10",
+    "actor": "brown_joseph_e",
+    "matter": "Reserve corps and appointment authority",
+    "beforeVerdict": "mismatch",
+    "verdict": "mismatch",
+    "beforeActs": [
+      {
+        "id": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|comply|121",
+        "creditKey": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|",
+        "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+        "side": "confederate",
+        "actor": "brown_joseph_e",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 121,
+        "post": "st_gov_georgia",
+        "callId": "cs_jun30_reserve_georgia",
+        "regiments": 3,
+        "termDays": null
+      }
+    ],
+    "afterActs": [
+      {
+        "id": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|comply|121",
+        "creditKey": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e|addressee|",
+        "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+        "side": "confederate",
+        "actor": "brown_joseph_e",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 121,
+        "post": "st_gov_georgia",
+        "callId": "cs_jun30_reserve_georgia",
+        "regiments": 3,
+        "termDays": null
+      }
+    ],
+    "matched": null,
+    "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+    "combinedResponses": [
+      {
+        "key": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2|brown_joseph_e",
+        "respOrder": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+        "respPerson": "brown_joseph_e",
+        "respPost": "st_gov_georgia",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respCallId": "cs_jun30_reserve_georgia",
+        "respDay": 121,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 115,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": []
+      }
+    ],
+    "pre0113Responses": [
+      {
+        "id": "cs_jun30_reserve_georgia",
+        "order": "m.117.davis_jefferson.brown_joseph_e.call.st_gov_georgia.2",
+        "day": 121,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 104,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 22
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ],
+    "interpretation": "The matcher and sourced historical obligation are unchanged. Compare the actual call response and its terms; reduced arbitrary resistance does not create the distinct historical objection/advice or a match."
+  },
+  {
+    "id": "C11",
+    "actor": "moore_thomas_o",
+    "matter": "Reserve corps raising and support",
+    "beforeVerdict": "mismatch",
+    "verdict": "mismatch",
+    "beforeActs": [
+      {
+        "id": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|object|121",
+        "creditKey": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|",
+        "order": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "side": "confederate",
+        "actor": "moore_thomas_o",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "object",
+        "declared": "object",
+        "day": 121,
+        "post": "st_gov_louisiana",
+        "callId": "cs_jun30_reserve_louisiana",
+        "regiments": 3,
+        "termDays": null,
+        "advice": "withdraw-order"
+      }
+    ],
+    "afterActs": [
+      {
+        "id": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|comply|121",
+        "creditKey": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o|addressee|",
+        "order": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "side": "confederate",
+        "actor": "moore_thomas_o",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 121,
+        "post": "st_gov_louisiana",
+        "callId": "cs_jun30_reserve_louisiana",
+        "regiments": 3,
+        "termDays": null
+      }
+    ],
+    "matched": null,
+    "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+    "combinedResponses": [
+      {
+        "key": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana|moore_thomas_o",
+        "respOrder": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "respPerson": "moore_thomas_o",
+        "respPost": "st_gov_louisiana",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respCallId": "cs_jun30_reserve_louisiana",
+        "respDay": 121,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 117,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -96
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 13
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": []
+      }
+    ],
+    "pre0113Responses": [
+      {
+        "id": "cs_jun30_reserve_louisiana",
+        "order": "m.117.davis_jefferson.moore_thomas_o.call.st_gov_louisiana",
+        "day": 121,
+        "actual": "object",
+        "declared": "object",
+        "willingness": -67,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -76
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 9
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ],
+    "interpretation": "The matcher and sourced historical obligation are unchanged. Compare the actual call response and its terms; reduced arbitrary resistance does not create the distinct historical objection/advice or a match."
+  },
+  {
+    "id": "C12",
+    "actor": "brown_joseph_e",
+    "matter": "Later two armed regiments versus State brigade",
+    "beforeVerdict": "mismatch",
+    "verdict": "mismatch",
+    "beforeActs": [
+      {
+        "id": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply|124",
+        "creditKey": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|",
+        "order": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "side": "confederate",
+        "actor": "brown_joseph_e",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 124,
+        "post": "st_gov_georgia",
+        "callId": "cs_jul01_extra_georgia",
+        "regiments": 2,
+        "termDays": null
+      }
+    ],
+    "afterActs": [
+      {
+        "id": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|comply|124",
+        "creditKey": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e|addressee|",
+        "order": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "side": "confederate",
+        "actor": "brown_joseph_e",
+        "role": "addressee",
+        "kind": "call",
+        "actual": "comply",
+        "declared": "comply",
+        "day": 124,
+        "post": "st_gov_georgia",
+        "callId": "cs_jul01_extra_georgia",
+        "regiments": 2,
+        "termDays": null
+      }
+    ],
+    "matched": null,
+    "reason": "The same request received a contrary actual response or advice; declared compliance cannot hide it.",
+    "combinedResponses": [
+      {
+        "key": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia|brown_joseph_e",
+        "respOrder": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "respPerson": "brown_joseph_e",
+        "respPost": "st_gov_georgia",
+        "respRole": "addressee",
+        "respKind": "call",
+        "respCallId": "cs_jul01_extra_georgia",
+        "respDay": 124,
+        "respActual": "comply",
+        "respDeclared": "comply",
+        "respWillingness": 115,
+        "respTerms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 33
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ],
+        "respReasons": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respStated": [
+          {
+            "kind": "values_honoured",
+            "value": "duty"
+          }
+        ],
+        "respConditions": []
+      }
+    ],
+    "pre0113Responses": [
+      {
+        "id": "cs_jul01_extra_georgia",
+        "order": "m.120.davis_jefferson.brown_joseph_e.call.st_gov_georgia",
+        "day": 124,
+        "actual": "comply",
+        "declared": "comply",
+        "willingness": 104,
+        "terms": [
+          {
+            "respTermName": "values",
+            "respTermAmount": 200
+          },
+          {
+            "respTermName": "temperament",
+            "respTermAmount": -118
+          },
+          {
+            "respTermName": "regard",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "deterrence",
+            "respTermAmount": 22
+          },
+          {
+            "respTermName": "capacity",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "disposition",
+            "respTermAmount": 0
+          },
+          {
+            "respTermName": "grievances",
+            "respTermAmount": 0
+          }
+        ]
+      }
+    ],
+    "interpretation": "The matcher and sourced historical obligation are unchanged. Compare the actual call response and its terms; reduced arbitrary resistance does not create the distinct historical objection/advice or a match."
+  },
+  {
+    "id": "C14",
+    "actor": "holmes_theophilus_h",
+    "matter": "Supporting Commander Lewis river expedition",
+    "beforeVerdict": "not_observed",
+    "verdict": "not_observed",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "No act observed for this actor, role and represented matter."
+  },
+  {
+    "id": "C15",
+    "actor": "johnston_joseph_e",
+    "matter": "Keeping force at Harpers Ferry",
+    "beforeVerdict": "not_observed",
+    "verdict": "exposure_mismatch",
+    "beforeActs": [],
+    "afterActs": [
+      {
+        "id": "m.140.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e|addressee|object|147",
+        "creditKey": "m.140.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry|johnston_joseph_e|addressee|",
+        "order": "m.140.davis_jefferson.cooper_samuel.order.cs_cmd_harpers_ferry",
+        "side": "confederate",
+        "actor": "johnston_joseph_e",
+        "role": "addressee",
+        "kind": "goal",
+        "actual": "object",
+        "declared": "object",
+        "day": 147,
+        "post": "cs_cmd_harpers_ferry",
+        "objective": "manassas",
+        "posture": "relieve"
+      }
+    ],
+    "matched": null,
+    "reason": "Same actor and role, but the observed requests address different matters. The represented historical request was not issued."
+  },
+  {
+    "id": "C16",
+    "actor": "holmes_theophilus_h",
+    "matter": "Conditional withdrawal from Mathias Point",
+    "beforeVerdict": "representation_gap",
+    "verdict": "representation_gap",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "Hold/take/relieve goals and generic transfers do not carry the stated conditional withdrawal and responsibility terms.; needed: conditional withdrawal tied to an enemy landing, with commander responsibility in packages/kernel/src/plans/goal.ts; packages/kernel/src/messages/transit.ts"
+  },
+  {
+    "id": "C25",
+    "actor": "holmes_theophilus_h",
+    "matter": "Retaining the main force at Fredericksburg",
+    "beforeVerdict": "not_observed",
+    "verdict": "not_observed",
+    "beforeActs": [],
+    "afterActs": [],
+    "matched": null,
+    "reason": "No act observed for this actor, role and represented matter."
+  }
+]

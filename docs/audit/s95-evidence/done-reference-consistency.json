@@ -1,0 +1,21 @@
+{
+  "runs": [
+    {
+      "pack": "union-1861",
+      "dailyHashes": 148,
+      "allNonClockFieldsExact": true,
+      "finalHash": "ca9d2b3842eaacea1ad036822545431a4d6ff34967756b340e6446ade8923034"
+    },
+    {
+      "pack": "testbed",
+      "dailyHashes": 120,
+      "allNonClockFieldsExact": true,
+      "finalHash": "160f67761bda23a1fe11ebacd92099ccbde4ff757171e00de45926136e1158db"
+    }
+  ],
+  "coverageExact": true,
+  "trackedBytes": {
+    "paths": 2392,
+    "allWorkingBytesExact": true
+  }
+}
