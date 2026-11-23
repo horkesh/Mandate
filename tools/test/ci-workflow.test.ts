@@ -95,9 +95,21 @@ describe('the CI workflow', () => {
     // The seats layer's run hashes every day, replays its log and resumes from a save (lane 0.6).
     expect(all.check).toMatch(/run: npm run run:seats -- testbed \d+ --resume-at \d+ --label ci-determinism/);
     // The Phase 0 done check (lane 0.8) hashes every day on both packs and writes the summaries the comparison reads.
-    expect(all.check).toMatch(/run: npm run run:done-check -- --label ci-determinism/);
+    expect(all.check).toMatch(/npm run run:done-check -- --label ci-determinism/);
     expect(all.determinism).toMatch(/needs: check/);
     expect(all.determinism).toMatch(/compare-runs\.ts ci-results\/determinism-ubuntu-24\.04 ci-results\/determinism-windows-2025/);
+  });
+
+  it('makes only the Windows done-check budget advisory and puts its timings in the job summary (0117)', () => {
+    const step = all.check!.slice(all.check!.indexOf('- id: done_check'), all.check!.indexOf('- id: upload'));
+    expect(step).toContain("${{ matrix.os == 'windows-2025' && '--budget-advisory' || '' }}");
+    expect(step).toContain('npm run run:done-check -- --label ci-determinism');
+    expect(step).not.toContain('continue-on-error');
+    expect(workflow.match(/--budget-advisory/g)).toHaveLength(1);
+    expect(step).toContain('tee -a "$GITHUB_STEP_SUMMARY"');
+    expect(step).toContain('shell: bash');
+    expect(step).toContain('set -o pipefail');
+    expect(step).toContain('exit "$status"');
   });
 
   it('fetches no LFS objects on any checkout, and refuses art pushed into plain git (lane 0.7l)', () => {

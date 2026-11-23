@@ -1,7 +1,7 @@
 /**
  * The Phase 0 done check (FOUNDATION section 12; lane 0.8), and 1A's beside it (lane 1.14), written to fresh folders in runs/.
  *
- *   npm run run:done-check [-- --label <name>] [--no-drafting] [--milestone 1a]
+ *   npm run run:done-check [-- --label <name>] [--no-drafting] [--milestone 1a] [--budget-advisory]
  *
  * Runs the Union pack for 148 days, 5 March to 31 July 1861, its war opened by each side's own decision (lane 1.11), and the testbed for 120, each with a
  * hash every day, a replay, a mid-run save resumed, a repeat run and a timed run, then judges the six
@@ -10,7 +10,8 @@
  * criteria set the exit status; with `--milestone 1a`, 1A's do too. Each checked run's summary goes to its own folder under `runs/<label>/`, so CI
  * can compare Linux and Windows hashes with `tools/compare-runs.ts`. Also reports what a day of plan drafting
  * costs on the Union graph (the kernel planner's `draft` since lane 1.2, every held command with a block), which is
- * information for 0062's daily cap (a pack rule, `planner.dailyDraftCap`) and not a criterion. Exits 1 if any criterion has a problem.
+ * information for 0062's daily cap (a pack rule, `planner.dailyDraftCap`) and not a criterion. Exits 1 if any binding criterion has a problem.
+ * `--budget-advisory` (0117, Windows CI) reports the budget in full but excludes it from the exit status. Local runs bind by default.
  */
 import { runDoneCheck } from './done-check.ts';
 import { measureDrafting } from './drafting-measure.ts';
@@ -27,6 +28,7 @@ const label = flag('label') ?? 'done-check';
 const milestone = flag('milestone');
 if (milestone !== undefined && milestone !== '1a') throw new Error(`--milestone takes 1a, not ${milestone}`);
 const require1A = milestone === '1a';
+const budgetAdvisory = argv.includes('--budget-advisory');
 
 const result = runDoneCheck({
   onChecked: (summary, saves) => {
@@ -53,7 +55,7 @@ const report = (title: string, milestone: 'phase0' | '1A') => {
   }
   lines.push('');
 };
-report('Phase 0 done check', 'phase0');
+report(`Phase 0 done check${budgetAdvisory ? ' (budget advisory: reported in full; excluded from exit status by --budget-advisory, 0117)' : ''}`, 'phase0');
 report(`1A done check (lane 1.14's harness: measured and reported${require1A ? '; binding on this run (--milestone 1a)' : '; it does not set the exit status until the lead makes it binding'})`, '1A');
 lines.push('tick cost per day (requests, seats and tick; no hashing):');
 for (const r of [...result.runs, ...result.history]) {
@@ -71,4 +73,5 @@ if (!argv.includes('--no-drafting')) {
   writeRunFile(dir, 'drafting.json', `${JSON.stringify(d, null, 2)}\n`);
 }
 console.log(lines.join('\n'));
-process.exit((require1A ? result.passed1A : result.passed) ? 0 : 1);
+const bindingCriteria = result.criteria.filter((c) => (require1A || c.milestone === 'phase0') && (!budgetAdvisory || c.id !== 'budget'));
+process.exit(bindingCriteria.every((c) => c.problems.length === 0) ? 0 : 1);

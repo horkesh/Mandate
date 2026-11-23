@@ -1,6 +1,6 @@
 # 0115: The tick budget is measured on its own
 
-Status: accepted (2026-11-23). The ruling 0106 item 5 reserved for the lead, made with the profile in hand. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0106.
+Status: accepted (2026-11-23). The ruling 0106 item 5 reserved for the lead, made with the profile in hand. Decided by the lead under the working style in `CLAUDE.md`; the owner can overturn it. Amends 0106. Clarified by 0117 (the budget binds on Linux; Windows reports it).
 
 ## Context
 

@@ -125,7 +125,17 @@ jobs:
       - id: done_check
         name: Phase 0 done check (union-1861 at war for 75 days and the testbed for 120; a hash every day, replay, resume, liveness gate, tick budget)
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
-        run: npm run run:done-check -- --label ci-determinism
+        shell: bash
+        # 0117: Windows reports the same budget, but only Linux binds it.
+        # Keep the complete report, including Windows timings, in the job summary.
+        run: |
+          set -o pipefail
+          echo '```text' >> "$GITHUB_STEP_SUMMARY"
+          set +e
+          npm run run:done-check -- --label ci-determinism ${{ matrix.os == 'windows-2025' && '--budget-advisory' || '' }} | tee -a "$GITHUB_STEP_SUMMARY"
+          status=$?
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
 
       - id: upload
         name: Upload determinism summaries
