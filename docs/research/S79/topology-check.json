@@ -1,0 +1,310 @@
+{
+  "scope": "Undirected rail-only source topology to Manassas, using source weights. Not transit time certification, operational trace, permissions, capacity or actual itinerary.",
+  "paths": {
+    "nashville": {
+      "sum_source_length_days": 15,
+      "legs": [
+        {
+          "from_region": "nashville",
+          "to_region": "murfreesboro",
+          "line": "nashville_and_chattanooga"
+        },
+        {
+          "from_region": "murfreesboro",
+          "to_region": "tn_rim_south",
+          "line": "nashville_and_chattanooga"
+        },
+        {
+          "from_region": "tn_rim_south",
+          "to_region": "chattanooga",
+          "line": "nashville_and_chattanooga"
+        },
+        {
+          "from_region": "chattanooga",
+          "to_region": "tn_cleveland",
+          "line": "east_tennessee_and_georgia"
+        },
+        {
+          "from_region": "tn_cleveland",
+          "to_region": "knoxville",
+          "line": "east_tennessee_and_georgia"
+        },
+        {
+          "from_region": "knoxville",
+          "to_region": "tn_holston",
+          "line": "east_tennessee_and_virginia"
+        },
+        {
+          "from_region": "tn_holston",
+          "to_region": "tn_upper_east",
+          "line": "east_tennessee_and_virginia"
+        },
+        {
+          "from_region": "tn_upper_east",
+          "to_region": "southwest_virginia",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "southwest_virginia",
+          "to_region": "roanoke_new_river",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "roanoke_new_river",
+          "to_region": "lynchburg",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "lynchburg",
+          "to_region": "charlottesville",
+          "line": "orange_and_alexandria"
+        },
+        {
+          "from_region": "charlottesville",
+          "to_region": "culpeper_orange",
+          "line": "virginia_central"
+        },
+        {
+          "from_region": "culpeper_orange",
+          "to_region": "loudoun_fauquier",
+          "line": "orange_and_alexandria"
+        },
+        {
+          "from_region": "loudoun_fauquier",
+          "to_region": "manassas",
+          "line": "orange_and_alexandria"
+        }
+      ]
+    },
+    "chattanooga": {
+      "sum_source_length_days": 12,
+      "legs": [
+        {
+          "from_region": "chattanooga",
+          "to_region": "tn_cleveland",
+          "line": "east_tennessee_and_georgia"
+        },
+        {
+          "from_region": "tn_cleveland",
+          "to_region": "knoxville",
+          "line": "east_tennessee_and_georgia"
+        },
+        {
+          "from_region": "knoxville",
+          "to_region": "tn_holston",
+          "line": "east_tennessee_and_virginia"
+        },
+        {
+          "from_region": "tn_holston",
+          "to_region": "tn_upper_east",
+          "line": "east_tennessee_and_virginia"
+        },
+        {
+          "from_region": "tn_upper_east",
+          "to_region": "southwest_virginia",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "southwest_virginia",
+          "to_region": "roanoke_new_river",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "roanoke_new_river",
+          "to_region": "lynchburg",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "lynchburg",
+          "to_region": "charlottesville",
+          "line": "orange_and_alexandria"
+        },
+        {
+          "from_region": "charlottesville",
+          "to_region": "culpeper_orange",
+          "line": "virginia_central"
+        },
+        {
+          "from_region": "culpeper_orange",
+          "to_region": "loudoun_fauquier",
+          "line": "orange_and_alexandria"
+        },
+        {
+          "from_region": "loudoun_fauquier",
+          "to_region": "manassas",
+          "line": "orange_and_alexandria"
+        }
+      ]
+    },
+    "knoxville": {
+      "sum_source_length_days": 10,
+      "legs": [
+        {
+          "from_region": "knoxville",
+          "to_region": "tn_holston",
+          "line": "east_tennessee_and_virginia"
+        },
+        {
+          "from_region": "tn_holston",
+          "to_region": "tn_upper_east",
+          "line": "east_tennessee_and_virginia"
+        },
+        {
+          "from_region": "tn_upper_east",
+          "to_region": "southwest_virginia",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "southwest_virginia",
+          "to_region": "roanoke_new_river",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "roanoke_new_river",
+          "to_region": "lynchburg",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "lynchburg",
+          "to_region": "charlottesville",
+          "line": "orange_and_alexandria"
+        },
+        {
+          "from_region": "charlottesville",
+          "to_region": "culpeper_orange",
+          "line": "virginia_central"
+        },
+        {
+          "from_region": "culpeper_orange",
+          "to_region": "loudoun_fauquier",
+          "line": "orange_and_alexandria"
+        },
+        {
+          "from_region": "loudoun_fauquier",
+          "to_region": "manassas",
+          "line": "orange_and_alexandria"
+        }
+      ]
+    },
+    "charleston": {
+      "sum_source_length_days": 11,
+      "legs": [
+        {
+          "from_region": "charleston",
+          "to_region": "georgetown_pee_dee",
+          "line": "northeastern"
+        },
+        {
+          "from_region": "georgetown_pee_dee",
+          "to_region": "cape_fear",
+          "line": "wilmington_and_manchester"
+        },
+        {
+          "from_region": "cape_fear",
+          "to_region": "nc_coastal_plain",
+          "line": "wilmington_and_weldon"
+        },
+        {
+          "from_region": "nc_coastal_plain",
+          "to_region": "southside",
+          "line": "petersburg"
+        },
+        {
+          "from_region": "southside",
+          "to_region": "lynchburg",
+          "line": "south_side"
+        },
+        {
+          "from_region": "lynchburg",
+          "to_region": "charlottesville",
+          "line": "orange_and_alexandria"
+        },
+        {
+          "from_region": "charlottesville",
+          "to_region": "culpeper_orange",
+          "line": "virginia_central"
+        },
+        {
+          "from_region": "culpeper_orange",
+          "to_region": "loudoun_fauquier",
+          "line": "orange_and_alexandria"
+        },
+        {
+          "from_region": "loudoun_fauquier",
+          "to_region": "manassas",
+          "line": "orange_and_alexandria"
+        }
+      ]
+    },
+    "atlanta": {
+      "sum_source_length_days": 14,
+      "legs": [
+        {
+          "from_region": "atlanta",
+          "to_region": "ga_etowah",
+          "line": "western_and_atlantic"
+        },
+        {
+          "from_region": "ga_etowah",
+          "to_region": "ga_dalton",
+          "line": "western_and_atlantic"
+        },
+        {
+          "from_region": "ga_dalton",
+          "to_region": "tn_cleveland",
+          "line": "east_tennessee_and_georgia"
+        },
+        {
+          "from_region": "tn_cleveland",
+          "to_region": "knoxville",
+          "line": "east_tennessee_and_georgia"
+        },
+        {
+          "from_region": "knoxville",
+          "to_region": "tn_holston",
+          "line": "east_tennessee_and_virginia"
+        },
+        {
+          "from_region": "tn_holston",
+          "to_region": "tn_upper_east",
+          "line": "east_tennessee_and_virginia"
+        },
+        {
+          "from_region": "tn_upper_east",
+          "to_region": "southwest_virginia",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "southwest_virginia",
+          "to_region": "roanoke_new_river",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "roanoke_new_river",
+          "to_region": "lynchburg",
+          "line": "virginia_and_tennessee"
+        },
+        {
+          "from_region": "lynchburg",
+          "to_region": "charlottesville",
+          "line": "orange_and_alexandria"
+        },
+        {
+          "from_region": "charlottesville",
+          "to_region": "culpeper_orange",
+          "line": "virginia_central"
+        },
+        {
+          "from_region": "culpeper_orange",
+          "to_region": "loudoun_fauquier",
+          "line": "orange_and_alexandria"
+        },
+        {
+          "from_region": "loudoun_fauquier",
+          "to_region": "manassas",
+          "line": "orange_and_alexandria"
+        }
+      ]
+    }
+  }
+}

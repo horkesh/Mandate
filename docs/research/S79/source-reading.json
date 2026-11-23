@@ -1,0 +1,740 @@
+{
+  "request": "S79 only",
+  "baseline": "fac0bc345c255160025fa1cf05af17d37018b4f7",
+  "ledger": {
+    "path": "C:\\Pyrrhic\\sprint-july\\docs\\audit\\s77-evidence\\confederate-block-ledger.csv",
+    "sha256": "acac55123cfa50ff85591c319c0d44631062f16621ebb9c082a39a11a09993ac",
+    "rows": 3955,
+    "unknown_blocks": 25,
+    "unknown_day_rows": 1523
+  },
+  "policy": "Facts only from selected sources read, cited by printed page. Values remain scoped observations; no parent-total division, nominal headcount, future backfill or pack application. Research drafts; no signatures.",
+  "sources": [
+    {
+      "key": "OR I-II",
+      "title": "OR I-II",
+      "url": "https://archive.org/details/warofrebellion02secrrich",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion02secrrich\\warofrebellion02secrrich.pdf",
+      "sha256": "e80f90602c6393aa7cd3a008195007f455d0ba138217403dd3c461beee270c0e",
+      "bytes": 124529063,
+      "locators": [
+        {
+          "printed_page": "42",
+          "pdf_page": 62,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p42.txt",
+          "sha256": "cef149ee3d54e7fa9f73ca17a63cef87366e6d927b366be6edf7e06a6bed7697",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "41",
+          "pdf_page": 61,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p41.txt",
+          "sha256": "32a6d6de4d2f25ac61f9b6b1be9e0733b41513f8a79820fb5a842ddfedff9e5a",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "470",
+          "pdf_page": 490,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p470.txt",
+          "sha256": "2f6cc4f4bb581073f9c2ac573add5353b9c31657b81871fdc9d48aace0b8548c",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "471",
+          "pdf_page": 491,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p471.txt",
+          "sha256": "a6cfd41bcaf5c9ec79bd103b432d254bb04a615d4bc72bfad06cd20ac1af5a61",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "473",
+          "pdf_page": 493,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p473.txt",
+          "sha256": "cb9c84c3d5b6389936f7bfca161f8e10eb6dea2274d66674dc2724a433e88476",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "474",
+          "pdf_page": 494,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p474.txt",
+          "sha256": "e3335e2fadd8c3b5ca3b70c2aa5db63c5a1168d9088559797ff71320c63e7025",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "524",
+          "pdf_page": 544,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p524.txt",
+          "sha256": "7039282b89477077e82410616740330ebafd0e06bc7adffe7f4e202d832a18dc",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "525",
+          "pdf_page": 545,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p525.txt",
+          "sha256": "9f457752b728ea3a9b1495446af7cb010441753710ed003311469b6309c5f018",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "526",
+          "pdf_page": 546,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p526.txt",
+          "sha256": "02b770f5fe3c6238a65f7a10faed54bc581f8cf3690505f06741aa2bb7df83cf",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "527",
+          "pdf_page": 547,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p527.txt",
+          "sha256": "5ba7815ea52ed5d071a0488e4e7633960a52074a8b5e380a4a95ac3f512758e5",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "549",
+          "pdf_page": 569,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p549.txt",
+          "sha256": "0006752cbd38c3bda2bb7c66193514a966416af9ee98021cab499997d7dfcdcc",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "550",
+          "pdf_page": 570,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p550.txt",
+          "sha256": "8f9a0fe1eaca4fa91cadc38eca1a9261ad6a79519dd22c61528166b2b1444a2f",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "551",
+          "pdf_page": 571,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p551.txt",
+          "sha256": "3f7027fc0cf8f22494525e2ad6390dabd15b83f1935431de57218a3a8fc8db4e",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "568",
+          "pdf_page": 588,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p568.txt",
+          "sha256": "c8bd554b55d4a1850f7b12351af589735dc705e31a0533f92036cbddfe6a8f61",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "569",
+          "pdf_page": 589,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p569.txt",
+          "sha256": "3536331a6e46fc9d3efdd0d650b108f91b1f7b9af73bfcd0578239b74ee8246a",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "570",
+          "pdf_page": 590,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p570.txt",
+          "sha256": "43621070f4c79fa1a7aacb41a6fdbe854c4b12cb1d39a4837cab46e937f95e6b",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "809",
+          "pdf_page": 829,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p809.txt",
+          "sha256": "8ca085974cf61775edd64aa2424059fda08de9e79c4226b81c8695d421f251b0",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "810",
+          "pdf_page": 830,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p810.txt",
+          "sha256": "c0ea913b750adad30846e3db0c0f28c3992932680bb67a2bb4369bb70503afb4",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "814",
+          "pdf_page": 834,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p814.txt",
+          "sha256": "0f70a7dcbbb3a49a89e7122271ee0d4334d803ce2715528da1e4c6dc0567d5a8",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "821",
+          "pdf_page": 841,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p821.txt",
+          "sha256": "657a935caabaee9194977bc0e6f8b58169546d51f8c43e96188a4b0f62a7bbcb",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "826",
+          "pdf_page": 846,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p826.txt",
+          "sha256": "4f7e4e2677108fac9cd23af02d35aca261428579b6c43886e130a1641bfdf8d3",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "841",
+          "pdf_page": 861,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p841.txt",
+          "sha256": "42a18d9adfe32ad9d14d848e6cbd40f4ca14f693b24e8ff8ae1fcd1092c4eaf7",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "879",
+          "pdf_page": 899,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p879.txt",
+          "sha256": "230c386f8f143b5e4887236ff32ee707308af50092353048241f0af741783bb8",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "889",
+          "pdf_page": 909,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p889.txt",
+          "sha256": "b434a1894c0f417cfffa965b2cc88d3b7ef8557e1030d926b581ed0913314ada",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "890",
+          "pdf_page": 910,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p890.txt",
+          "sha256": "86390bce711dc8a73c753f085c16877bcf86ed4ef2b693a7c7eff7115f894e6c",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "895",
+          "pdf_page": 915,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p895.txt",
+          "sha256": "9163d1661a23711c5955bd30162081e864a00770af3cf9d3e97d7a50008923d8",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "927",
+          "pdf_page": 947,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p927.txt",
+          "sha256": "93fa30d394041aaf78f60746a2fa1a5c026d382a9f4fd9bd23be987eedd41519",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "928",
+          "pdf_page": 948,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p928.txt",
+          "sha256": "ca5bb03372d5dc88ffc94e7492c87c4c957f8239e241f15862cbf7e2ace8461c",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "929",
+          "pdf_page": 949,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-II-p929.txt",
+          "sha256": "dfa609991117186edb05c200e5d553786e6bd509c168a04ee82c7874dfea0e37",
+          "reading": "Selected passages/headings; not every word."
+        }
+      ]
+    },
+    {
+      "key": "OR I-IV",
+      "title": "OR I-IV",
+      "url": "https://archive.org/details/warofrebellion04secrrich",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion04secrrich\\warofrebellion04secrrich.pdf",
+      "sha256": "886e69a1cf4e6b187012a8bffb72f860aa20c0fb6e52dc7a9e883381e2bd29cc",
+      "bytes": 86460275,
+      "locators": [
+        {
+          "printed_page": "92",
+          "pdf_page": 112,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-IV-p92.txt",
+          "sha256": "0c6fc092eb4ee02515cec22d371f4e08c8d2aa7491331d6296cb7c21fef6b8ca",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "93",
+          "pdf_page": 113,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-IV-p93.txt",
+          "sha256": "918ec85b2746a4e26795f88d87db8a3dc75f91b2e0e49ad99fe9c2aa59f4b64b",
+          "reading": "Selected passages/headings; not every word."
+        }
+      ]
+    },
+    {
+      "key": "OR I-VI",
+      "title": "OR I-VI",
+      "url": "https://archive.org/details/warofrebellion06unit",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S4\\warofrebellion06unit\\warofrebellion06unit.pdf",
+      "sha256": "66c844d691b9902dd4b889b3e7808167cedd8bd04a4637a35e742c8e003ad52e",
+      "bytes": 95917965,
+      "locators": [
+        {
+          "printed_page": "1",
+          "pdf_page": 13,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-VI-p1.txt",
+          "sha256": "70335cf801a4c2bab609ced8ba4adbe853ca0a8b02145dcba46ceaea7e03f7d6",
+          "reading": "Selected passages/headings; not every word."
+        }
+      ]
+    },
+    {
+      "key": "Ashcroft1862",
+      "title": "John Ashcroft, Railway Directory for1862",
+      "url": "https://archive.org/details/ashcroftsrailway1862ashc",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\ashcroftsrailway1862ashc.pdf",
+      "sha256": "7171aff73b74caae6799e834cdab8ee2c4bf6ce40ac65c04d36480334d8eebae",
+      "bytes": 18802605,
+      "locators": [
+        {
+          "printed_page": "108",
+          "pdf_page": 114,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Ashcroft1862-p108.txt",
+          "sha256": "814bfd3456684ece15fd9cfee130be4fc2adac0aa01d93df844216fcf9cab844",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "109",
+          "pdf_page": 115,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Ashcroft1862-p109.txt",
+          "sha256": "8724c736b5424f0de76135be87c95d0a556e03282d986c05472f55ea9b2e98bf",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "111",
+          "pdf_page": 117,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Ashcroft1862-p111.txt",
+          "sha256": "3c400b494ab91db429d2e2597f5e407d1908bcea81db51d5540cde874af372e2",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "113",
+          "pdf_page": 119,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Ashcroft1862-p113.txt",
+          "sha256": "c896b65175b81715edbc543e5b5f0f344a68d3bbaab1901848578b27f440757f",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "115",
+          "pdf_page": 121,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Ashcroft1862-p115.txt",
+          "sha256": "784ca611afc650dd579c3f3d2844f8576687f3bdadd14056eb20f5b453dcfd8d",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "117",
+          "pdf_page": 123,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Ashcroft1862-p117.txt",
+          "sha256": "3120b65cf185b30c466a9c8471014f6b6bea4bda4bb955a07b52f7df5b96e65b",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "118",
+          "pdf_page": 124,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Ashcroft1862-p118.txt",
+          "sha256": "4c6d34b608bf604f27248824d7de0114d4532864e56e8399ffc15a24b3a80b2a",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "119",
+          "pdf_page": 125,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Ashcroft1862-p119.txt",
+          "sha256": "93150ef5c332752cdbee28c1f7eb7653c05b0258b081a089968767b924146eea",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "136",
+          "pdf_page": 142,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Ashcroft1862-p136.txt",
+          "sha256": "00786f2ec66ba5951961c61fd7409c821ac5b877138670a39fc789e0a893e02d",
+          "reading": "Selected passages/headings; not every word."
+        }
+      ]
+    },
+    {
+      "key": "NCRR1856",
+      "title": "Seventh Annual Report of President and Directors, North-Carolina Railroad Company, July10,1856",
+      "url": "https://archive.org/details/annualreportofpr1856nort",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\annualreportofpr1856nort.pdf",
+      "sha256": "4ccf583d986e3099514d611cc9a1207f4bcdc59063b9a6b1f17f8164f2082ecc",
+      "bytes": 2945428,
+      "locators": [
+        {
+          "printed_page": "10",
+          "pdf_page": 12,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\NCRR1856-p10.txt",
+          "sha256": "469a469d607adaf7abefc3c1db42b1b1f7be5f312380a2e07e24c932f8fb8c4d",
+          "reading": "Selected passages/headings; not every word."
+        }
+      ]
+    },
+    {
+      "key": "Carter",
+      "title": "James D. Carter, Railroads of the South before1860 (MA thesis, North Texas State College,1950)",
+      "url": "https://digital.library.unt.edu/ark:/67531/metadc699726/m2/1/high_res_d/1002604081-Carter.pdf",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\Carter.pdf",
+      "sha256": "9d5323c215af7bb5f4c660fccb1a4794ff99684aec446924fa47d2f0405be100",
+      "bytes": 12860006,
+      "locators": [
+        {
+          "printed_page": "105",
+          "pdf_page": 111,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p105.txt",
+          "sha256": "d33fcffefa000106b7facc456f5a282059b5688171c0c8e28517ea99ef960968",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "106",
+          "pdf_page": 112,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p106.txt",
+          "sha256": "5a74b340cf15b4d2b83fc6cda34658ad60cd9c0844b0da9e80663c3c5d73b86a",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "111",
+          "pdf_page": 117,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p111.txt",
+          "sha256": "b69a322103534b585a0000909c31f7e784b0a304c4b580f8027ab818472fb7c9",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "120",
+          "pdf_page": 126,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p120.txt",
+          "sha256": "11ea43ab1a38cd351e225ef67264144fda7cb18ab84577e18fe87e9234cea4d9",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "121",
+          "pdf_page": 127,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p121.txt",
+          "sha256": "e42be2b799b64f898c0ac8e62fcb7fb21a9da2e3062813d1b9f11eb9381a7866",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "122",
+          "pdf_page": 128,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p122.txt",
+          "sha256": "9a942cef45f76b422801f3254d861368f85abe90267dd401d0981c1728fb078d",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "123",
+          "pdf_page": 129,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p123.txt",
+          "sha256": "8d7de897336e75424eecadf460699c6d64ccefdfd1d60f6cb636f2c60015fc84",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "124",
+          "pdf_page": 130,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p124.txt",
+          "sha256": "d39f664a347995f2ba1e964c988375daa377c6f6716b1cdca657b98c5fa243ae",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "125",
+          "pdf_page": 131,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p125.txt",
+          "sha256": "72fbec3a8e5d370117f49cf6fea1e94cf980053a564e7e0792974288021a5cee",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "126",
+          "pdf_page": 132,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p126.txt",
+          "sha256": "f92cfbee5807efb1de84e0638372e03507c230f4943666704b1f44df71a433f2",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "127",
+          "pdf_page": 133,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p127.txt",
+          "sha256": "95e76c585b5d808cdf86691620afb42a49ca37cdfeac8311dfe71b8854966e6e",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "128",
+          "pdf_page": 134,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p128.txt",
+          "sha256": "52528e736a2f295e6b473896c53204a799196aa5dcd9f57efd3e8b3ec1701d65",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "135",
+          "pdf_page": 141,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p135.txt",
+          "sha256": "91501986334691932460933ff6f3367c87938707abd927a3aaa648aba10e9ddb",
+          "reading": "Selected passages/headings; not every word."
+        },
+        {
+          "printed_page": "136",
+          "pdf_page": 142,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\Carter-p136.txt",
+          "sha256": "06cb531bd9db76bed664905b24623c40b9f8ee2f527f4080f3364cf670399953",
+          "reading": "Selected passages/headings; not every word."
+        }
+      ]
+    },
+    {
+      "key": "OR I-I",
+      "url": "https://archive.org/details/cu31924077725913",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S73\\OR-I-1-correct-pages.json",
+      "sha256": "358b88fe5764158c9dd3673294595cbed0eddc9d1397800cbb79d6614c9a3627",
+      "bytes": 2715898,
+      "locators": [
+        {
+          "printed_page": "454",
+          "scan_index": 473,
+          "header": "454  OPERATIONS    IN    FLORIDA.  ICilu-.  TV-   , Wae  Department,  A.  G.  O.,",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p454.txt",
+          "sha256": "60d124d6d9d4367fc09a6cc4003dbf7bb3789501f64406de28777caedf05049f",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "575",
+          "scan_index": 594,
+          "header": "Chap,  vn.]  REPORTS.  575 ton ;  one  company  of  cavalry  at  Fort  Lancaster ;  two  companies  of  car-",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p575.txt",
+          "sha256": "7617e53e9a59195741b3c14bd39d6c2c24f7023e5257f69970c27f1b5979a375",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "576",
+          "scan_index": 595,
+          "header": "576  OPERATIONS    IN   TKXAS   AND   NEW   MEXICO.  [Chap.  Vn. there  it  is  Hoped  that  you  will  be  strong  enough  to  make  prisoners  of",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p576.txt",
+          "sha256": "4595b30ed6ef99ffc2d5a0247a8a303dfc39b92ec8260fbb43b8961244df30a9",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "577",
+          "scan_index": 596,
+          "header": "CHAP.  VII.)  EEPOETS.  577 [Inclosure  \"No.  4.)",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p577.txt",
+          "sha256": "3e4280f600481cd33e745cfe12240af71368e48d677112061bc4b6e8e5f8352e",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "610",
+          "scan_index": 629,
+          "header": "610  OPEEATIONS   IK   TEXAS   AND   NEW   MEXICO.         fCuAr.  TU. In  advance  of  the  organization  of  the  regular  army,  the  Congress  of",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p610.txt",
+          "sha256": "3df664c2791825ea080d2d01cfa3bbac5b22bebc707c89817411eff66a0faa77",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "611",
+          "scan_index": 630,
+          "header": "CaiP.  vn.]  CORRESPONDENCE,   ETC. CONFEDERATE.  611 Nature  has  given  us  very  good  defenses  in  our  sand  banks,  but  it  is",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p611.txt",
+          "sha256": "0946ec1a77d6fb8d28c1e38062c1c08ed575c6133bd1843965decefc97c898de",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "617",
+          "scan_index": 636,
+          "header": "Chap.  VII.1  CORRESPONDENCE,    ETC. CONFEDERATE.  617 Federal  troops,  and  the  scarcity  of  grass,  the  mules  have  been  greatly",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p617.txt",
+          "sha256": "1f0a508bce0cbac9b742cb960affff57f920531e6bafedaf79e425e7e8e2b3ea",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "618",
+          "scan_index": 637,
+          "header": "618  OPERATIONS   IN   TEXAS   AND   NEW   MEXICO.  fCHAP.  Til. Colorado,  and  having  a  partial  personal  knowledge  of  that  entire  region",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p618.txt",
+          "sha256": "1e9e6612e9942557526ffd2cba5c9d31efd7202cb9ccb41e788c96348fbee98a",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "630",
+          "scan_index": 649,
+          "header": "630  OPEEATIONS   IN   TEXAS   AND   NEW   MEXICO.         IChap.  VII. enable  them  to  be  of  any  permanent  service  to  the  country,  they  must",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p630.txt",
+          "sha256": "eb50db50b32c39b3300123f2376b2f2020fc4f86a636ae4c8318cb3b1e4fe933",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "631",
+          "scan_index": 650,
+          "header": "Chap.  VII.  1  CORRESPONDENCE,    ETC. CONFEDERATE.  631 regiment  of  State  troops  will  be  in  the  field  furnished  from  the  stores",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p631.txt",
+          "sha256": "2168545d1ce35c7fc998cd3293a4a9b4ec91f0704c28aac1a00bf62b60b617b8",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "632",
+          "scan_index": 651,
+          "header": "632  OPEEATIONS    IN    TEXAS   AND   NEW   MEXICO.  [Chap.  TH. General  Oedbes,  )  Hdqks.  Department  of  Texas,",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p632.txt",
+          "sha256": "564ebd5e4c341f3348c6e2e17979206f01c76a493bc45a55d07f569ad1fc8d84",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "635",
+          "scan_index": 654,
+          "header": "Chap.  VII.]  COREESPONDENCE,    ETC. CONFEDEKATE.  635 their  gallant  opponents.  There  was  no  exultation  over  the  surrender  of",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p635.txt",
+          "sha256": "a7804a49652dfc474623fe994ec72daacb96fe0b1df880ae86276219caa8aa92",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        },
+        {
+          "printed_page": "636",
+          "scan_index": 655,
+          "header": "636  OPERATIONS    IN    TEXAS   AND   NEW   MEXICO.  [Chap.  vn. Adjutant  and  Inspector  General's  Office,",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-I-I-p636.txt",
+          "sha256": "c682bffef07a492629b8dd03bbf0195d1544a1c7504b10a7f7ab2a4b1857f977",
+          "reading": "Selected correspondence passages; not whole-volume reading."
+        }
+      ]
+    },
+    {
+      "key": "OR IV-I first scan",
+      "url": "https://archive.org/details/cu31924079579524",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\cu31924079579524_djvu.txt",
+      "sha256": "aa23178b67455b5dd5c8d2589e9ac0fcbdaf82eaac29bc4411f625db69cbb2d4",
+      "bytes": 2342787,
+      "reading": "Bounded keyword searches and cited passages; selected text/page evidence retained separately.",
+      "locators": [
+        {
+          "printed_page": "192",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-IV-I-p192-bounded.txt",
+          "sha256": "8fa4b5d9ba4740c4cdec83adcc580a8b061569da46b70f7758c3fdfdc22862ab",
+          "reading": "Bounded OCR passage beginning at printed-page header; may continue onto following page."
+        },
+        {
+          "printed_page": "209",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-IV-I-p209-bounded.txt",
+          "sha256": "1d83c370b0f649730eea36c2e74aa2209f517b3bbccd6e3bcd88d6aca8fe6689",
+          "reading": "Bounded OCR passage beginning at printed-page header; may continue onto following page."
+        },
+        {
+          "printed_page": "413-415",
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-IV-I-June30-letter.txt",
+          "sha256": "13f4de03f3cb0a85196fb39cec749473acbdefdba9ad4ea0090bf64f930d51c8",
+          "reading": "June30 letter and printed-page breaks; critical413-414 paragraphs read, not entire next item."
+        }
+      ]
+    },
+    {
+      "key": "OR IV-I second scan",
+      "url": "https://archive.org/details/cu31924079579532",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\OR-IV-1.pdf",
+      "sha256": "19a330fa1af80199a7cd7e21753b01e67a0f7b7335a413a7ee37e7eb7fa68796",
+      "bytes": 37578662,
+      "reading": "Bounded keyword searches and cited passages; selected text/page evidence retained separately.",
+      "locators": [
+        {
+          "printed_page": "913",
+          "pdf_page": 307,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-IV-I-p913.txt",
+          "sha256": "104d865e1d686416cbe4a40688194cdf56e45e06ff311dc0cc30e371343c0b93",
+          "reading": "February10,1862 retrospective State military communication and quoted July correspondence."
+        },
+        {
+          "printed_page": "914",
+          "pdf_page": 308,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-IV-I-p914.txt",
+          "sha256": "2fd1e43ecace7c9a3a241a72e5bc0f0dd3892bf522a71d2d5351db9710f6b7de",
+          "reading": "February10,1862 retrospective State military communication and quoted July correspondence."
+        },
+        {
+          "printed_page": "915",
+          "pdf_page": 309,
+          "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR-IV-I-p915.txt",
+          "sha256": "5f5b8c7771b60db15ac57e178b7e4fb541c6384487d5b553a63dcb500d5383d1",
+          "reading": "February10,1862 retrospective State military communication and quoted July correspondence."
+        }
+      ]
+    },
+    {
+      "key": "OR I-LI.2",
+      "url": "https://archive.org/details/warofrebellion512unit",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S75\\warofrebellion512unit_djvu.txt",
+      "sha256": "8c7e5c2419f4e64b0921dce50b4cad4520928641122e297899fbaa996f59b82d",
+      "bytes": 3874655,
+      "reading": "Bounded keyword searches and cited passages; selected text/page evidence retained separately."
+    },
+    {
+      "key": "OR4p413",
+      "url": "https://ehistory.osu.edu/books/official-records/127/0413",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR4p413.md",
+      "sha256": "e16dda44b70ed546e94400fb53b2b079935c0a90e0e8d91ba8da58600d8ecb1b",
+      "bytes": 4437,
+      "reading": "Page transcription read; OSU omissions checked against retained scan OCR for critical June30 wording."
+    },
+    {
+      "key": "OR4p414",
+      "url": "https://ehistory.osu.edu/books/official-records/127/0414",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR4p414.md",
+      "sha256": "9612f7380c0cb10815b5453215cf820a6c3684c524ff5a5eb9d2232bd98efa3d",
+      "bytes": 4487,
+      "reading": "Page transcription read; OSU omissions checked against retained scan OCR for critical June30 wording."
+    },
+    {
+      "key": "OR4p487",
+      "url": "https://ehistory.osu.edu/books/official-records/127/0487",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR4p487.md",
+      "sha256": "d4bf99c462a5c573b7fa00f5bdc793d7a03469f1b1b13a803b67d1e59e5716cb",
+      "bytes": 4156,
+      "reading": "Page transcription read; OSU omissions checked against retained scan OCR for critical June30 wording."
+    },
+    {
+      "key": "OR4p914",
+      "url": "https://ehistory.osu.edu/books/official-records/127/0914",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR4p914.md",
+      "sha256": "837567e79707b8518f8c04136f602c7f62dde90ef3b9559aaa7dac8ff3a0319a",
+      "bytes": 4748,
+      "reading": "Page transcription read; OSU omissions checked against retained scan OCR for critical June30 wording."
+    },
+    {
+      "key": "OR4p915",
+      "url": "https://ehistory.osu.edu/books/official-records/127/0915",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\OR4p915.md",
+      "sha256": "98ee86a1c65e8360350b98063423bf23cf810355e60cb355860fe7383fc539f4",
+      "bytes": 4449,
+      "reading": "Page transcription read; OSU omissions checked against retained scan OCR for critical June30 wording."
+    },
+    {
+      "key": "railReport0",
+      "url": "https://www.csa-railroads.com/Essays/Orignial%20Docs/AR/AR,_V_and_T_7-1-61_P.htm",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\railReport0.md",
+      "sha256": "272991b0d950d094c01391b1cd54211683e764c3604f2a72569e2fd46bb658ee",
+      "bytes": 11775,
+      "reading": "Finding aid/report transcription; no printed-page claims derived from this unpaginated site."
+    },
+    {
+      "key": "railReport1",
+      "url": "https://csa-railroads.com/Essays/Orignial%20Docs/AR/AR,_ET_and_V_11-1-61_P.htm",
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\reading\\railReport1.md",
+      "sha256": "9bb93e34be50d49424ef1cda2564be6013051e8ea8de55e33c24a7b49fe5fb5d",
+      "bytes": 8194,
+      "reading": "Finding aid/report transcription; no printed-page claims derived from this unpaginated site."
+    }
+  ],
+  "images_inspected": [
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\OR2-pdf861.png",
+      "sha256": "978bb7b298ee2416ac380d73fe1a362afe2d85ec15487bc0f979c7670961c5d4"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\OR6-pdf13.png",
+      "sha256": "473e1cdbb9223db4f8f5360b4820fd72aa58c61246c4708957f65def3fb99517"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\ASH-pdf115.png",
+      "sha256": "329cc90cbf6526d24a662a87beeee6d4f8afb8542b6178708710b26d57b0f814"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\ASH-pdf117.png",
+      "sha256": "c454f22efa9fb21feedd02d2640145847e27db51ef5d85a6ae6af70d1d6356e7"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\ASH-pdf119.png",
+      "sha256": "94256d93a1dbad1f1380b1c2ff1a481a072e7e48b1b4c762f6932b6b07436c12"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\ASH-pdf142.png",
+      "sha256": "7a0406202be8fe43cc00076d4f83646ffd1feaad2f0f8441b69f477254a1b643"
+    },
+    {
+      "artifact": "C:\\Pyrrhic\\mandate-research-sources\\S79\\NCRR-p10.png",
+      "sha256": "11cde6183baad4092e13d279450b74f75c6ea582eab05d24a3e62d4830d4622d"
+    }
+  ],
+  "retrieval_limits": [
+    "No manuscript original muster/morning return acquired; a printed enclosure marked not found is not a claim about archival survival.",
+    "OSU direct requests403; Firecrawl obtained selected transcriptions.",
+    "NC legislature direct PDF403; not read/cited as evidence.",
+    "First IA guide batch had a30-second redirect timeout; unavailable railway guide excluded.",
+    "OR-I-1-Cornell.pdf from S73 is126bytes and unreadable; excluded. Valid S73 scan-page text reused with explicit index.",
+    "Ashcroft1862 Southern entries explicitly use best obtainable information; they are not a June-July1861 gauge survey."
+  ]
+}
